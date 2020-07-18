@@ -74,11 +74,8 @@ class Lesson < ActiveRecord::Base
       lesson.save! if lesson.changed?
 
       next if script_lessons.include?(lesson)
-      if !!raw_lesson[:lockable]
-        lesson.assign_attributes(relative_position: (lockable_count += 1))
-      else
-        lesson.assign_attributes(relative_position: (non_lockable_count += 1))
-      end
+      !!raw_lesson[:lockable] ? lesson.assign_attributes(relative_position: (lockable_count += 1)) : lesson.assign_attributes(relative_position: (non_lockable_count += 1))
+
       lesson.assign_attributes(absolute_position: (lesson_position += 1))
       lesson.save! if lesson.changed?
       script_lessons << lesson

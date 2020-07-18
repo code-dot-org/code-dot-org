@@ -66,14 +66,8 @@ class LessonGroup < ApplicationRecord
           position: 1
         )
       else
-        Plc::LearningModule::RESERVED_LESSON_GROUPS_FOR_PLC.each do |reserved_lesson_group|
-          if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
-            raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
-          end
-        end
-        if raw_lesson_group[:display_name].blank?
-          raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
-        end
+        LessonGroup.prevent_changing_plc_display_name(raw_lesson_group)
+        LessonGroup.prevent_blank_display_name(raw_lesson_group)
 
         new_lesson_group = false
 
@@ -86,9 +80,7 @@ class LessonGroup < ApplicationRecord
           new_lesson_group = true
         end
 
-        if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-          raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
-        end
+        LessonGroup.prevent_changing_display_name(new_lesson_group, raw_lesson_group, lesson_group)
 
         lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
         lesson_group.save! if lesson_group.changed?
@@ -101,9 +93,35 @@ class LessonGroup < ApplicationRecord
         script_lessons << lesson
       end
 
+      LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group)
       script_lesson_groups << lesson_group
     end
     [script_lesson_groups, script_lessons]
+  end
+
+  def self.prevent_blank_display_name(raw_lesson_group)
+    if raw_lesson_group[:display_name].blank?
+      raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
+    end
+  end
+
+  def self.prevent_changing_plc_display_name(raw_lesson_group)
+    Plc::LearningModule::RESERVED_LESSON_GROUPS_FOR_PLC.each do |reserved_lesson_group|
+      if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
+        raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
+      end
+    end
+  end
+
+  def self.prevent_changing_display_name(new_lesson_group, raw_lesson_group, lesson_group)
+    if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
+      raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
+    end
+  end
+
+  # All lesson groups should have lessons in them
+  def self.prevent_lesson_group_with_no_lessons(lesson_group)
+    raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if lesson_group.lessons.count < 1
   end
 
   def localized_display_name
