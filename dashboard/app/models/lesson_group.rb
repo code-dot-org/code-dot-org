@@ -57,7 +57,7 @@ class LessonGroup < ApplicationRecord
       # or none of the lessons have lesson groups. We know we have hit this case if
       # there are more than one lesson group for a script but the lesson group key
       # for the first lesson is blank
-      if raw_lesson_groups[0][:key].nil?
+      if raw_lesson_group[:key].nil?
         if raw_lesson_groups.length > 1
           raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
         end
@@ -82,7 +82,7 @@ class LessonGroup < ApplicationRecord
           new_lesson_group = true
         end
 
-        LessonGroup.prevent_changing_display_name(new_lesson_group, raw_lesson_group, lesson_group)
+        LessonGroup.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
 
         lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
         lesson_group.save! if lesson_group.changed?
@@ -115,7 +115,7 @@ class LessonGroup < ApplicationRecord
     end
   end
 
-  def self.prevent_changing_display_name(new_lesson_group, raw_lesson_group, lesson_group)
+  def self.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
     if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
       raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
     end
