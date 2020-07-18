@@ -46,7 +46,7 @@ class LessonGroup < ApplicationRecord
   # for that key matches the already saved display name
   # 3. PLC courses use certain lesson group keys for module types. We reserve those
   # keys so they can only map to the display_name for their PLC purpose
-  def self.add_lesson_groups(raw_lesson_groups, script)
+  def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
     script_lesson_groups = []
     script_lessons = []
     lockable_count = 0
@@ -82,7 +82,7 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position)
+      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
       lesson_position += lesson_group.lessons.length
       new_lessons.each do |lesson|
         lesson.lockable ? lockable_count += 1 : non_lockable_count += 1

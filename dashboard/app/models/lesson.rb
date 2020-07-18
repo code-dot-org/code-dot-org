@@ -51,7 +51,7 @@ class Lesson < ActiveRecord::Base
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position)
+  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
     script_lessons = []
 
     raw_lessons.each do |raw_lesson|

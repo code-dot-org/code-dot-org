@@ -52,7 +52,7 @@ class ScriptLevel < ActiveRecord::Base
     challenge
   )
 
-  def self.add_script_level(raw_script_levels, script, new_suffix, editor_experiment)
+  def self.add_script_level(script, raw_script_levels, new_suffix, editor_experiment)
     script_level_position = Hash.new(0)
     chapter = 0
 
