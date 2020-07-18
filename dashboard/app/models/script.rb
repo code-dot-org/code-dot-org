@@ -926,6 +926,10 @@ class Script < ActiveRecord::Base
   def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
+
+    script.prevent_duplicate_lesson_groups(raw_lesson_groups)
+    Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+
     raw_lessons = []
 
     #recreate raw_lessons from raw_lesson_groups
@@ -971,8 +975,6 @@ class Script < ActiveRecord::Base
       end
     end
 
-    Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
-
     script.lessons = script_lessons
     script.reload.lessons
     script.generate_plc_objects
@@ -980,20 +982,27 @@ class Script < ActiveRecord::Base
     script
   end
 
-  # Only consecutive lessons can have the same lesson group.
-  # Raise an error if non adjacent lessons have the same lesson
-  # group
-  def self.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
-    previous_lesson_groups = []
-    current_lesson_group = nil
+  # If there is more than 1 lesson group then the key should never
+  # be nil because this means some lessons are in a lesson group
+  # and some are not
+  def self.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+    return if raw_lesson_groups.length < 2
 
-    script_lessons.each do |lesson|
-      next if lesson.lesson_group.key == current_lesson_group
-      if previous_lesson_groups.include?(lesson.lesson_group.key)
-        raise "Only consecutive lessons can have the same lesson group. Lesson Group #{lesson.lesson_group.key} is on two non-consecutive lessons."
+    raw_lesson_groups.each do |lesson_group|
+      if lesson_group[:key].nil?
+        raise "Expect if one lesson has a lesson group all lessons have lesson groups."
       end
-      previous_lesson_groups.append(current_lesson_group)
-      current_lesson_group = lesson.lesson_group.key
+    end
+  end
+
+  # Lesson groups can only show up once in a script
+  def prevent_duplicate_lesson_groups(raw_lesson_groups)
+    previous_lesson_groups = []
+    raw_lesson_groups.each do |lesson_group|
+      if previous_lesson_groups.include?(lesson_group[:key])
+        raise "Duplicate Lesson Group. Lesson Group: #{lesson_group[:key]} is used twice in Script: #{name}."
+      end
+      previous_lesson_groups.append(lesson_group[:key])
     end
   end
 

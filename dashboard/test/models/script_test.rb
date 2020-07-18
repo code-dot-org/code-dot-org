@@ -2071,7 +2071,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. Lesson Lesson1 does not have a lesson group.', raise.message
+    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups.', raise.message
   end
 
   test 'raises error if two non-consecutive lessons have the same lesson group' do
@@ -2096,7 +2096,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Only consecutive lessons can have the same lesson group. Lesson Group content is on two non-consecutive lessons.', raise.message
+    assert_equal 'Duplicate Lesson Group. Lesson Group: content is used twice in Script: lesson-group-test-script.', raise.message
   end
 
   test 'raises error if trying to create a lesson group with no lessons in it' do
