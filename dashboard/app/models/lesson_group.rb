@@ -38,29 +38,23 @@ class LessonGroup < ApplicationRecord
     display_name
   )
 
+  # Finds or creates Lesson Groups with the correct position.
+  # In addition it check for 3 things:
+  # 1. That all the lesson groups specified by the editor have a key and
+  # display name.
+  # 2. If the lesson group key is an existing key that the given display name
+  # for that key matches the already saved display name
+  # 3. PLC courses use certain lesson group keys for module types. We reserve those
+  # keys so they can only map to the display_name for their PLC purpose
   def self.add_lesson_groups(raw_lesson_groups, script)
     script_lesson_groups = []
     script_lessons = []
     lockable_count = 0
     non_lockable_count = 0
     lesson_position = 0
-    # Finds or creates Lesson Groups with the correct position.
-    # In addition it check for 3 things:
-    # 1. That all the lesson groups specified by the editor have a key and
-    # display name.
-    # 2. If the lesson group key is an existing key that the given display name
-    # for that key matches the already saved display name
-    # 3. PLC courses use certain lesson group keys for module types. We reserve those
-    # keys so they can only map to the display_name for their PLC purpose
+
     raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-      # We want a script to either have all of its lessons have lesson groups
-      # or none of the lessons have lesson groups. We know we have hit this case if
-      # there are more than one lesson group for a script but the lesson group key
-      # for the first lesson is blank
       if raw_lesson_group[:key].nil?
-        if raw_lesson_groups.length > 1
-          raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
-        end
         lesson_group = LessonGroup.find_or_create_by(
           key: '',
           script: script,

@@ -968,12 +968,6 @@ class Script < ActiveRecord::Base
     script
   end
 
-  # Go through all the script levels for this lesson, except the last one,
-  # and raise an exception if any of them are a multi-page assessment.
-  # (That's when the script level is marked assessment, and the level itself
-  # has a pages property and more than one page in that array.)
-  # This is because only the final level in a lesson can be a multi-page
-  # assessment.
   def self.prevent_multi_page_assessment_outside_final_level(lesson)
     lesson.script_levels.each do |script_level|
       if !script_level.end_of_stage? && script_level.long_assessment?
