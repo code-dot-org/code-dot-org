@@ -21,7 +21,7 @@ function getCookie(key) {
 
 $(document).ready(function() {
   var already_shown = !!getCookie('hide_thank_donors');
-  if (!already_shown && screen.width > 970) {
+  if (!already_shown && screen.width > 720) {
     $('#thank-donors-modal').modal('show');
     setCookie('hide_thank_donors', '1');
   }
