@@ -52,9 +52,7 @@ class Lesson < ActiveRecord::Base
   include CodespanOnlyMarkdownHelper
 
   def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
-    script_lessons = []
-
-    raw_lessons.each do |raw_lesson|
+    raw_lessons.map do |raw_lesson|
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
           name: raw_lesson[:name],
@@ -72,9 +70,8 @@ class Lesson < ActiveRecord::Base
       )
       lesson.save! if lesson.changed?
 
-      script_lessons << lesson
+      lesson
     end
-    script_lessons
   end
 
   def script
