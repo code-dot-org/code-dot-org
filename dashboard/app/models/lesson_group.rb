@@ -20,7 +20,8 @@ class LessonGroup < ApplicationRecord
   include SerializedProperties
 
   belongs_to :script
-  has_many :lessons, -> {order('absolute_position ASC')}
+  has_many :lessons, -> {order(:absolute_position)}
+  has_many :script_levels, through: :lessons
 
   validates :position, numericality: {greater_than: 0}
 
