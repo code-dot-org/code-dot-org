@@ -38,6 +38,10 @@ class LessonGroup < ApplicationRecord
 
   def self.add_lesson_groups(raw_lesson_groups, script)
     script_lesson_groups = []
+    script_lessons = []
+    lockable_count = 0
+    non_lockable_count = 0
+    lesson_position = 0
     # Finds or creates Lesson Groups with the correct position.
     # In addition it check for 3 things:
     # 1. That all the lesson groups specified by the editor have a key and
@@ -54,14 +58,13 @@ class LessonGroup < ApplicationRecord
       if raw_lesson_groups[0][:key].nil?
         if raw_lesson_groups.length > 1
           raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
-        elsif raw_lesson_groups.length == 1
-          lesson_group = LessonGroup.find_or_create_by(
-            key: '',
-            script: script,
-            user_facing: false,
-            position: 1
-          )
         end
+        lesson_group = LessonGroup.find_or_create_by(
+          key: '',
+          script: script,
+          user_facing: false,
+          position: 1
+        )
       else
         Plc::LearningModule::RESERVED_LESSON_GROUPS_FOR_PLC.each do |reserved_lesson_group|
           if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
@@ -90,9 +93,17 @@ class LessonGroup < ApplicationRecord
         lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
         lesson_group.save! if lesson_group.changed?
       end
+
+      new_lessons = Lesson.add_lessons(raw_lesson_group, script, lockable_count, non_lockable_count, lesson_position)
+      lesson_position += lesson_group.lessons.length
+      new_lessons.each do |lesson|
+        lesson.lockable ? lockable_count += 1 : non_lockable_count += 1
+        script_lessons << lesson
+      end
+
       script_lesson_groups << lesson_group
     end
-    script_lesson_groups
+    [script_lesson_groups, script_lessons]
   end
 
   def localized_display_name
