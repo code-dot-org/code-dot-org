@@ -93,6 +93,7 @@ class Level < ActiveRecord::Base
   def self.add_levels(raw_levels, script, new_suffix, editor_experiment)
     script_level_levels = []
     levels_by_key = script.levels.index_by(&:key)
+
     raw_levels.each do |raw_level|
       raw_level.symbolize_keys!
 
