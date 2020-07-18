@@ -948,9 +948,7 @@ class Script < ActiveRecord::Base
 
     raw_script_levels = raw_lessons.map {|lesson| lesson[:script_levels]}.flatten
 
-    script.lesson_groups = raw_script_levels.empty? ? [] : LessonGroup.add_lesson_groups(raw_lesson_groups, script)
-
-    script_lessons = Lesson.add_lessons(raw_lesson_groups, script)
+    script.lesson_groups, script_lessons = raw_script_levels.empty? ? [[], []] : LessonGroup.add_lesson_groups(raw_lesson_groups, script)
 
     script_levels_by_lesson = {}
     script_level_position = Hash.new(0)

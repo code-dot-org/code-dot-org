@@ -49,43 +49,39 @@ class Lesson < ActiveRecord::Base
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(raw_lesson_groups, script)
+  def self.add_lessons(raw_lesson_group, script, lockable_count, non_lockable_count, lesson_position)
     script_lessons = []
-    lockable_count = 0
-    non_lockable_count = 0
-    lesson_position = 0
+
     # Set/create Lesson containing custom ScriptLevel
-    raw_lesson_groups.each do |raw_lesson_group|
-      raw_lesson_group[:lessons].each do |raw_lesson|
-        # find the lesson group for this lesson
-        lesson_group = LessonGroup.find_by!(
-          key: raw_lesson_group[:key].presence || "",
-          script: script,
-          user_facing: raw_lesson_group[:key].present?
-        )
+    raw_lesson_group[:lessons].each do |raw_lesson|
+      # find the lesson group for this lesson
+      lesson_group = LessonGroup.find_by!(
+        key: raw_lesson_group[:key].presence || "",
+        script: script,
+        user_facing: raw_lesson_group[:key].present?
+      )
 
-        # check if that lesson exists for the script otherwise create a new lesson
-        lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
-          Lesson.find_or_create_by(
-            name: raw_lesson[:name],
-            script: script
-          ) do |s|
-            s.relative_position = 0 # will be updated below, but cant be null
-          end
-
-        lesson.assign_attributes(lesson_group: lesson_group, lockable: !!raw_lesson[:lockable], visible_after: raw_lesson[:visible_after])
-        lesson.save! if lesson.changed?
-
-        next if script_lessons.include?(lesson)
-        if !!raw_lesson[:lockable]
-          lesson.assign_attributes(relative_position: (lockable_count += 1))
-        else
-          lesson.assign_attributes(relative_position: (non_lockable_count += 1))
+      # check if that lesson exists for the script otherwise create a new lesson
+      lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
+        Lesson.find_or_create_by(
+          name: raw_lesson[:name],
+          script: script
+        ) do |s|
+          s.relative_position = 0 # will be updated below, but cant be null
         end
-        lesson.assign_attributes(absolute_position: (lesson_position += 1))
-        lesson.save! if lesson.changed?
-        script_lessons << lesson
+
+      lesson.assign_attributes(lesson_group: lesson_group, lockable: !!raw_lesson[:lockable], visible_after: raw_lesson[:visible_after])
+      lesson.save! if lesson.changed?
+
+      next if script_lessons.include?(lesson)
+      if !!raw_lesson[:lockable]
+        lesson.assign_attributes(relative_position: (lockable_count += 1))
+      else
+        lesson.assign_attributes(relative_position: (non_lockable_count += 1))
       end
+      lesson.assign_attributes(absolute_position: (lesson_position += 1))
+      lesson.save! if lesson.changed?
+      script_lessons << lesson
     end
     script_lessons
   end
