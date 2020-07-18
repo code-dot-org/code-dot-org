@@ -952,10 +952,10 @@ class Script < ActiveRecord::Base
 
     raw_script_levels = raw_lessons.map {|lesson| lesson[:script_levels]}.flatten
 
-    script.lesson_groups, script_lessons = LessonGroup.add_lesson_groups(raw_lesson_groups, script)
+    script.lesson_groups, script_lessons = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
 
     # Overwrites current script levels
-    script.script_levels = ScriptLevel.add_script_level(raw_script_levels, script, new_suffix, editor_experiment)
+    script.script_levels = ScriptLevel.add_script_level(script, raw_script_levels, new_suffix, editor_experiment)
 
     script_lessons.each do |lesson|
       Script.prevent_multi_page_assessment_outside_final_level(lesson)
