@@ -5619,3 +5619,19 @@ bg:
               display_name: Съдържание
             cspSurvey:
               display_name: Съдържание
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание

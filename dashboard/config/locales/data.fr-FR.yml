@@ -550,7 +550,7 @@ fr:
     video:
       name:
         maze_intro: Introduction au Dédale
-        artist_intro: Présentation de l'Artiste
+        artist_intro: Introduction à l'Artiste
         farmer_intro: Présentation de la Fermière
         flappy_intro: Introduction à Flappy l’oiseau
         loop_times: Bloc « Répéter plusieurs fois »

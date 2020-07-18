@@ -19,6 +19,11 @@ pl:
       pair_programmer: 'Programujesz w parze z uczniem, który nie ma tutaj dostępu. Aby mieć dostęp, przerwij programowanie w parze i spróbuj ponownie.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "jest nieważny. Miej na uwadze to że każdy link może zostać jednorazowo zużyty do zresetowania Twojego hasła, i tylko najnowszy link będzie działać."
       messages:
         blank: "jest wymagane"
         blank_plural: "są wymagane"

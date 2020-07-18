@@ -1093,7 +1093,7 @@ es-MX:
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
       gamelab_objectSpritePointer:
-        text: "{SPRITE}" 
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: Patrullar hacia arriba y abajo
       gamelab_playSound:

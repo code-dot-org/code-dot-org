@@ -279,12 +279,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal time, level.updated_at.to_i
   end
 
-  test 'update_ideal_level_source does nothing for maze levels' do
-    level = Maze.first
-    level.update_ideal_level_source
-    assert_nil level.ideal_level_source
-  end
-
   test 'artist levels are seeded with solutions' do
     level = Artist.where(level_num: 'custom').first # custom levels have solutions
     assert level.solution_blocks
