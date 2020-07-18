@@ -34,10 +34,10 @@ class Script < ActiveRecord::Base
   include Rails.application.routes.url_helpers
 
   include Seeded
+  has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
+  has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
+  has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
-  has_many :lesson_groups, -> {order('position ASC')}, dependent: :destroy
-  has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ lessons, are ordered by chapter, see Script#add_script
-  has_many :lessons, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -930,60 +930,13 @@ class Script < ActiveRecord::Base
     script.prevent_duplicate_lesson_groups(raw_lesson_groups)
     Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
-    raw_lessons = []
-
-    #recreate raw_lessons from raw_lesson_groups
-    raw_lesson_groups.each do |lesson_group|
-      lesson_group[:lessons].each do |lesson|
-        temp_lesson = lesson.merge(
-          {
-            script_levels: lesson[:script_levels].map do |sl|
-              sl.merge(
-                {
-                  lesson: lesson[:name]
-                }
-              )
-            end
-          }
-        )
-        raw_lessons << temp_lesson
-      end
-    end
-
-    raw_script_levels = raw_lessons.map {|lesson| lesson[:script_levels]}.flatten
-
-    script.lesson_groups, script_lessons = LessonGroup.add_lesson_groups(raw_lesson_groups, script)
-
-    # Overwrites current script levels
-    script.script_levels = ScriptLevel.add_script_level(raw_script_levels, script, new_suffix, editor_experiment)
-
-    script_lessons.each do |lesson|
-      Script.prevent_multi_page_assessment_outside_final_level(lesson)
-    end
+    script.lesson_groups, script_lessons = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
 
     script.lessons = script_lessons
     script.reload.lessons
     script.generate_plc_objects
 
     script
-  end
-
-  # Go through all the script levels for this lesson, except the last one,
-  # and raise an exception if any of them are a multi-page assessment.
-  # (That's when the script level is marked assessment, and the level itself
-  # has a pages property and more than one page in that array.)
-  # This is because only the final level in a lesson can be a multi-page
-  # assessment.
-  def self.prevent_multi_page_assessment_outside_final_level(lesson)
-    lesson.script_levels.each do |script_level|
-      if !script_level.end_of_stage? && script_level.long_assessment?
-        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
-      end
-    end
-
-    if lesson.lockable && !lesson.script_levels.last.assessment?
-      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
-    end
   end
 
   # If there is more than 1 lesson group then the key should never
