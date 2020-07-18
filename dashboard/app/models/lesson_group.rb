@@ -38,20 +38,21 @@ class LessonGroup < ApplicationRecord
     display_name
   )
 
-  def self.add_lesson_groups(raw_lesson_groups, script)
+  # Finds or creates Lesson Groups with the correct position.
+  # In addition it check for 3 things:
+  # 1. That all the lesson groups specified by the editor have a key and
+  # display name.
+  # 2. If the lesson group key is an existing key that the given display name
+  # for that key matches the already saved display name
+  # 3. PLC courses use certain lesson group keys for module types. We reserve those
+  # keys so they can only map to the display_name for their PLC purpose
+  def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
     script_lesson_groups = []
     script_lessons = []
     lockable_count = 0
     non_lockable_count = 0
     lesson_position = 0
-    # Finds or creates Lesson Groups with the correct position.
-    # In addition it check for 3 things:
-    # 1. That all the lesson groups specified by the editor have a key and
-    # display name.
-    # 2. If the lesson group key is an existing key that the given display name
-    # for that key matches the already saved display name
-    # 3. PLC courses use certain lesson group keys for module types. We reserve those
-    # keys so they can only map to the display_name for their PLC purpose
+
     raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
       # We want a script to either have all of its lessons have lesson groups
       # or none of the lessons have lesson groups. We know we have hit this case if
@@ -88,7 +89,7 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position)
+      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
       lesson_position += lesson_group.lessons.length
       new_lessons.each do |lesson|
         lesson.lockable ? lockable_count += 1 : non_lockable_count += 1
