@@ -32,7 +32,7 @@ export function searchAssets(
       return resultSet.union(assetLibrary.aliases[nextAlias]);
     }, Immutable.Set());
 
-  if (categoryQuery !== '' && categoryQuery !== 'category_all') {
+  if (categoryQuery !== '' && categoryQuery !== 'all') {
     let categoryResultSet = Immutable.Set(
       assetLibrary.categories[categoryQuery]
     );
