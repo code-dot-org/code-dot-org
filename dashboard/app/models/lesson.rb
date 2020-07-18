@@ -54,9 +54,7 @@ class Lesson < ActiveRecord::Base
   def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position)
     script_lessons = []
 
-    # Set/create Lesson containing custom ScriptLevel
     raw_lessons.each do |raw_lesson|
-      # check if that lesson exists for the script otherwise create a new lesson
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
           name: raw_lesson[:name],
@@ -65,14 +63,15 @@ class Lesson < ActiveRecord::Base
           s.relative_position = 0 # will be updated below, but cant be null
         end
 
-      lesson.assign_attributes(lesson_group: lesson_group, lockable: !!raw_lesson[:lockable], visible_after: raw_lesson[:visible_after])
+      lesson.assign_attributes(
+        absolute_position: (lesson_position += 1),
+        lesson_group: lesson_group,
+        lockable: !!raw_lesson[:lockable],
+        visible_after: raw_lesson[:visible_after],
+        relative_position: !!raw_lesson[:lockable] ? (lockable_count += 1) : (non_lockable_count += 1)
+      )
       lesson.save! if lesson.changed?
 
-      next if script_lessons.include?(lesson)
-      !!raw_lesson[:lockable] ? lesson.assign_attributes(relative_position: (lockable_count += 1)) : lesson.assign_attributes(relative_position: (non_lockable_count += 1))
-
-      lesson.assign_attributes(absolute_position: (lesson_position += 1))
-      lesson.save! if lesson.changed?
       script_lessons << lesson
     end
     script_lessons
