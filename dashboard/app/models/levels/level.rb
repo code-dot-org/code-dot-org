@@ -91,10 +91,9 @@ class Level < ActiveRecord::Base
   )
 
   def self.add_levels(raw_levels, script, new_suffix, editor_experiment)
-    script_level_levels = []
     levels_by_key = script.levels.index_by(&:key)
 
-    raw_levels.each do |raw_level|
+    raw_levels.map do |raw_level|
       raw_level.symbolize_keys!
 
       # Concepts are comma-separated, indexed by name
@@ -137,11 +136,9 @@ class Level < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
       end
 
-      level.save!
-
-      script_level_levels << level
+      level.save! if level.changed?
+      level
     end
-    script_level_levels
   end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
