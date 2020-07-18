@@ -30,7 +30,7 @@ class Lesson < ActiveRecord::Base
 
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
-  has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
+  has_many :script_levels, -> {order(:position)}, inverse_of: :lesson, foreign_key: 'stage_id'
   has_many :levels, through: :script_levels
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
@@ -51,9 +51,8 @@ class Lesson < ActiveRecord::Base
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
-    lesson_group_lessons = []
-    chapter = 0
+  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position)
+    script_lessons = []
 
     # Set/create Lesson containing custom ScriptLevel
     raw_lessons.each do |raw_lesson|
@@ -69,42 +68,14 @@ class Lesson < ActiveRecord::Base
       lesson.assign_attributes(lesson_group: lesson_group, lockable: !!raw_lesson[:lockable], visible_after: raw_lesson[:visible_after])
       lesson.save! if lesson.changed?
 
-      next if lesson_group_lessons.include?(lesson)
+      next if script_lessons.include?(lesson)
       !!raw_lesson[:lockable] ? lesson.assign_attributes(relative_position: (lockable_count += 1)) : lesson.assign_attributes(relative_position: (non_lockable_count += 1))
 
       lesson.assign_attributes(absolute_position: (lesson_position += 1))
       lesson.save! if lesson.changed?
-
-      # Overwrites current script levels
-      lesson.script_levels = ScriptLevel.add_script_level(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
-      lesson.save! if lesson.changed?
-
-      Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
-
-      lesson_group_lessons << lesson
-
-      # Todo Remove once clean up position
-      chapter += lesson.script_levels.length
+      script_lessons << lesson
     end
-    lesson_group_lessons
-  end
-
-  # Go through all the script levels for this lesson, except the last one,
-  # and raise an exception if any of them are a multi-page assessment.
-  # (That's when the script level is marked assessment, and the level itself
-  # has a pages property and more than one page in that array.)
-  # This is because only the final level in a lesson can be a multi-page
-  # assessment.
-  def self.prevent_multi_page_assessment_outside_final_level(lesson)
-    lesson.script_levels.each do |script_level|
-      if !script_level.end_of_stage? && script_level.long_assessment?
-        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
-      end
-    end
-
-    if lesson.lockable && !lesson.script_levels.last.assessment?
-      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
-    end
+    script_lessons
   end
 
   def script

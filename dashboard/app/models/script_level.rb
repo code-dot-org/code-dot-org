@@ -52,15 +52,17 @@ class ScriptLevel < ActiveRecord::Base
     challenge
   )
 
-  def self.add_script_level(script, lesson, raw_script_levels, chapter, new_suffix, editor_experiment)
-    lesson_script_levels = []
+  def self.add_script_level(raw_script_levels, script, new_suffix, editor_experiment)
+    script_level_position = Hash.new(0)
+    chapter = 0
 
-    raw_script_levels.each_with_index do |raw_script_level, index|
+    raw_script_levels.map do |raw_script_level|
       raw_script_level.symbolize_keys!
 
       assessment = raw_script_level.delete(:assessment)
       named_level = raw_script_level.delete(:named_level)
       bonus = raw_script_level.delete(:bonus)
+      lesson_name = raw_script_level.delete(:lesson)
       properties = raw_script_level.delete(:properties) || {}
 
       levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
@@ -73,26 +75,35 @@ class ScriptLevel < ActiveRecord::Base
 
       script_level_attributes = {
         script_id: script.id,
-        stage_id: lesson.id,
         chapter: (chapter += 1),
         named_level: named_level,
         bonus: bonus,
-        assessment: assessment,
-        properties: properties.with_indifferent_access
+        assessment: assessment
       }
+      script_level_attributes[:properties] = properties.with_indifferent_access
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
-      script_level_attributes[:position] = index + 1
+
+      if lesson_name
+        # check if that lesson exists for the script otherwise create a new lesson
+        lesson = script.lessons.detect {|s| s.name == lesson_name} ||
+          Lesson.find_by(
+            name: lesson_name,
+            script: script
+          )
+
+        script_level.assign_attributes(stage_id: lesson.id, position: (script_level_position[lesson.id] += 1))
+        script_level.save! if script_level.changed?
+        lesson.script_levels << script_level
+      end
       script_level.assign_attributes(script_level_attributes)
       script_level.save! if script_level.changed?
-
-      lesson_script_levels << script_level
+      script_level
     end
-    lesson_script_levels
   end
 
   def script
