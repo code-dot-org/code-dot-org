@@ -52,9 +52,8 @@ class ScriptLevel < ActiveRecord::Base
     challenge
   )
 
-  def self.add_script_level(script, raw_script_levels, new_suffix, editor_experiment)
-    script_level_position = Hash.new(0)
-    chapter = 0
+  def self.add_script_level(script, lesson, raw_script_levels, chapter, new_suffix, editor_experiment)
+    script_level_position = 0
 
     raw_script_levels.map do |raw_script_level|
       raw_script_level.symbolize_keys!
@@ -71,7 +70,9 @@ class ScriptLevel < ActiveRecord::Base
 
       script_level_attributes = {
         script_id: script.id,
+        stage_id: lesson.id,
         chapter: (chapter += 1),
+        position: (script_level_position += 1),
         named_level: raw_script_level[:named_level],
         bonus: raw_script_level[:bonus],
         assessment: raw_script_level[:assessment],
@@ -84,18 +85,6 @@ class ScriptLevel < ActiveRecord::Base
         sl.levels = levels
       end
 
-      if raw_script_level[:lesson]
-        # check if that lesson exists for the script otherwise create a new lesson
-        lesson = script.lessons.detect {|s| s.name == raw_script_level[:lesson]} ||
-          Lesson.find_by(
-            name: raw_script_level[:lesson],
-            script: script
-          )
-
-        script_level.assign_attributes(stage_id: lesson.id, position: (script_level_position[lesson.id] += 1))
-        script_level.save! if script_level.changed?
-        lesson.script_levels << script_level
-      end
       script_level.assign_attributes(script_level_attributes)
       script_level.save! if script_level.changed?
       script_level
