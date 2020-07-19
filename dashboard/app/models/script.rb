@@ -34,7 +34,7 @@ class Script < ActiveRecord::Base
   include Rails.application.routes.url_helpers
 
   include Seeded
-  has_many :lesson_groups, -> {order('position ASC')}, dependent: :destroy
+  has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
   has_many :lessons, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
   has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
