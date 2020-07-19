@@ -35,7 +35,7 @@ class Script < ActiveRecord::Base
 
   include Seeded
   has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
-  has_many :lessons, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
+  has_many :lessons, through: :lesson_groups
   has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
   has_many :users, through: :user_scripts
@@ -930,10 +930,11 @@ class Script < ActiveRecord::Base
     script.prevent_duplicate_lesson_groups(raw_lesson_groups)
     Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
-    script.lesson_groups, script_lessons = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+    temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+    script.reload
+    script.lesson_groups = temp_lgs
+    script.save!
 
-    script.lessons = script_lessons
-    script.reload.lessons
     script.generate_plc_objects
 
     script

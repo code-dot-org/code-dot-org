@@ -91,7 +91,7 @@ class Lesson < ActiveRecord::Base
   # assessment.
   def self.prevent_multi_page_assessment_outside_final_level(lesson)
     lesson.script_levels.each do |script_level|
-      if !script_level.end_of_stage? && script_level.long_assessment?
+      if lesson.script_levels.last != script_level && script_level.long_assessment?
         raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
       end
     end
