@@ -1467,10 +1467,12 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     script.curriculum_path = '//example.com/foo/{LESSON}'
+    script.save!
     assert_equal '//example.com/foo/1', script.lessons.first.lesson_plan_html_url
     assert_equal '//example.com/foo/2', script.lessons.last.lesson_plan_html_url
 
     script.curriculum_path = nil
+    script.save!
     assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.lessons.first.lesson_plan_html_url
   end
 

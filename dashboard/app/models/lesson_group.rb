@@ -47,13 +47,12 @@ class LessonGroup < ApplicationRecord
   # 3. PLC courses use certain lesson group keys for module types. We reserve those
   # keys so they can only map to the display_name for their PLC purpose
   def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
-    script_lesson_groups = []
-    script_lessons = []
     lockable_count = 0
     non_lockable_count = 0
     lesson_position = 0
+    position = 0
 
-    raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
+    raw_lesson_groups&.map do |raw_lesson_group|
       if raw_lesson_group[:key].nil?
         lesson_group = LessonGroup.find_or_create_by(
           key: '',
@@ -78,21 +77,23 @@ class LessonGroup < ApplicationRecord
 
         LessonGroup.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
 
-        lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
+        lesson_group.assign_attributes(position: position += 1, properties: {display_name: raw_lesson_group[:display_name]})
         lesson_group.save! if lesson_group.changed?
       end
 
+      LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group, raw_lesson_group[:lessons].length)
+
       new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
+      lesson_group.lessons = new_lessons
+      lesson_group.save!
+
       lesson_position += lesson_group.lessons.length
       new_lessons.each do |lesson|
         lesson.lockable ? lockable_count += 1 : non_lockable_count += 1
-        script_lessons << lesson
       end
 
-      LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group)
-      script_lesson_groups << lesson_group
+      lesson_group
     end
-    [script_lesson_groups, script_lessons]
   end
 
   def self.prevent_blank_display_name(raw_lesson_group)
@@ -116,8 +117,8 @@ class LessonGroup < ApplicationRecord
   end
 
   # All lesson groups should have lessons in them
-  def self.prevent_lesson_group_with_no_lessons(lesson_group)
-    raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if lesson_group.lessons.count < 1
+  def self.prevent_lesson_group_with_no_lessons(lesson_group, num_lessons)
+    raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if num_lessons < 1
   end
 
   def localized_display_name
