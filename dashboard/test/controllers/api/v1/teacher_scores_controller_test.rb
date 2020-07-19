@@ -159,7 +159,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal section.students.count, 11
 
-    assert_queries 13 do
+    assert_queries 14 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
   end
