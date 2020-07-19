@@ -30,7 +30,7 @@ class Lesson < ActiveRecord::Base
 
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
-  has_many :script_levels, -> {order(:position)}, inverse_of: :lesson, foreign_key: 'stage_id'
+  has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
@@ -52,6 +52,8 @@ class Lesson < ActiveRecord::Base
   include CodespanOnlyMarkdownHelper
 
   def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
+    chapter = 0
+
     raw_lessons.map do |raw_lesson|
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
@@ -69,6 +71,11 @@ class Lesson < ActiveRecord::Base
         relative_position: !!raw_lesson[:lockable] ? (lockable_count += 1) : (non_lockable_count += 1)
       )
       lesson.save! if lesson.changed?
+
+      lesson.script_levels = ScriptLevel.add_script_level(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
+      lesson.save!
+
+      chapter += lesson.script_levels.length
 
       lesson
     end
