@@ -932,27 +932,11 @@ class Script < ActiveRecord::Base
 
     script.lesson_groups, script_lessons = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
 
-    script_lessons.each do |lesson|
-      Script.prevent_multi_page_assessment_outside_final_level(lesson)
-    end
-
     script.lessons = script_lessons
     script.reload.lessons
     script.generate_plc_objects
 
     script
-  end
-
-  def self.prevent_multi_page_assessment_outside_final_level(lesson)
-    lesson.script_levels.each do |script_level|
-      if !script_level.end_of_stage? && script_level.long_assessment?
-        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
-      end
-    end
-
-    if lesson.lockable && !lesson.script_levels.last.assessment?
-      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
-    end
   end
 
   # If there is more than 1 lesson group then the key should never
