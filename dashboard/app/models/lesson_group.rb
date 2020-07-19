@@ -20,7 +20,7 @@ class LessonGroup < ApplicationRecord
   include SerializedProperties
 
   belongs_to :script
-  has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
+  has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy, class_name: 'Lesson'
   has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
 
