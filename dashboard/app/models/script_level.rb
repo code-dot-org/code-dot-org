@@ -30,9 +30,9 @@ class ScriptLevel < ActiveRecord::Base
   include SharedConstants
   include Rails.application.routes.url_helpers
 
-  belongs_to :script, inverse_of: :script_levels
+  belongs_to :script
   belongs_to :lesson_group
-  belongs_to :lesson, inverse_of: :script_levels, foreign_key: 'stage_id'
+  belongs_to :lesson, foreign_key: 'stage_id'
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
 
