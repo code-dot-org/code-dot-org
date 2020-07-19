@@ -53,14 +53,12 @@ class ScriptLevel < ActiveRecord::Base
   )
 
   def self.add_script_level(script, lesson, raw_script_levels, chapter, new_suffix, editor_experiment)
-    script_level_position = 0
+    lesson_script_levels = []
 
-    raw_script_levels.map do |raw_script_level|
+    raw_script_levels.each_with_index do |raw_script_level, index|
       raw_script_level.symbolize_keys!
 
       properties = raw_script_level.delete(:properties) || {}
-
-      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
 
       if new_suffix && properties[:variants]
         properties[:variants] = properties[:variants].map do |old_level_name, value|
@@ -72,12 +70,15 @@ class ScriptLevel < ActiveRecord::Base
         script_id: script.id,
         stage_id: lesson.id,
         chapter: (chapter += 1),
-        position: (script_level_position += 1),
+        position: index + 1,
         named_level: raw_script_level[:named_level],
         bonus: raw_script_level[:bonus],
         assessment: raw_script_level[:assessment],
         properties: properties.with_indifferent_access
       }
+
+      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
+
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
@@ -85,10 +86,9 @@ class ScriptLevel < ActiveRecord::Base
         sl.levels = levels
       end
 
-      script_level.assign_attributes(script_level_attributes)
-      script_level.save! if script_level.changed?
-      script_level
+      lesson_script_levels << script_level
     end
+    lesson_script_levels
   end
 
   def script

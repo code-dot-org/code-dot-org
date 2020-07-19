@@ -52,9 +52,10 @@ class Lesson < ActiveRecord::Base
   include CodespanOnlyMarkdownHelper
 
   def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
+    lesson_group_lessons = []
     chapter = 0
 
-    raw_lessons.map do |raw_lesson|
+    raw_lessons.each do |raw_lesson|
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
           name: raw_lesson[:name],
@@ -70,16 +71,37 @@ class Lesson < ActiveRecord::Base
         visible_after: raw_lesson[:visible_after],
         relative_position: !!raw_lesson[:lockable] ? (lockable_count += 1) : (non_lockable_count += 1)
       )
-      lesson.save! if lesson.changed?
+      lesson.save!
 
-      lesson.script_levels = ScriptLevel.add_script_level(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
+      temp_sls = ScriptLevel.add_script_level(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
+      lesson.reload
+      lesson.script_levels = temp_sls
       lesson.save!
 
       chapter += lesson.script_levels.length
 
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
 
-      lesson
+      lesson_group_lessons << lesson
+    end
+    lesson_group_lessons
+  end
+
+  # Go through all the script levels for this lesson, except the last one,
+  # and raise an exception if any of them are a multi-page assessment.
+  # (That's when the script level is marked assessment, and the level itself
+  # has a pages property and more than one page in that array.)
+  # This is because only the final level in a lesson can be a multi-page
+  # assessment.
+  def self.prevent_multi_page_assessment_outside_final_level(lesson)
+    lesson.script_levels.each do |script_level|
+      if !script_level.end_of_stage? && script_level.long_assessment?
+        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
+      end
+    end
+
+    if lesson.lockable && !lesson.script_levels.last.assessment?
+      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
     end
   end
 

@@ -170,6 +170,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
     script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
     scripts, _ = Script.setup([script_file_3_lessons])
+
     assert_equal 3, scripts[0].lessons.count
     first = scripts[0].lessons[0]
     second = scripts[0].lessons[1]
@@ -2167,6 +2168,7 @@ endvariants
       {name: 'lesson-group-test-script'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
+
     assert_equal '', script.lessons[0].lesson_group.key
 
     script = Script.add_script(
