@@ -678,7 +678,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def associated_online_course
-    ::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+    ::UnitGroup.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 
   # Get all the teachers that have actually attended this workshop via the attendence.
@@ -814,7 +814,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   def pre_survey_course
     return nil unless pre_survey?
-    Course.find_by_name! pre_survey_course_name
+    UnitGroup.find_by_name! pre_survey_course_name
   rescue ActiveRecord::RecordNotFound
     # Raise a RuntimeError if the course name is not found, so we'll be notified in Honeybadger
     # Otherwise the RecordNotFound error will result in a 404, and we won't know.
