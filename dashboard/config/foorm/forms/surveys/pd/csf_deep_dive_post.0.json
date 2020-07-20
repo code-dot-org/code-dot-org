@@ -183,15 +183,15 @@
           "rows": [
             {
               "value": "work_collaboratively",
-              "text": "I can ensure that students work collaboratively when writing code. \t\t\t\t\t\t\t"
+              "text": "I can ensure that students work collaboratively when writing code."
             },
             {
               "value": "share_ideas",
-              "text": "I can ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group or large-group discussion. \t\t\t\t\t\t\t"
+              "text": "I can ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group or large-group discussion."
             },
             {
               "value": "failure_normalized",
-              "text": "I can create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process. \t\t\t\t\t\t\t"
+              "text": "I can create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
             },
             {
               "value": "support_problem_solving",
@@ -241,23 +241,23 @@
           "rows": [
             {
               "value": "access_lesson_plans",
-              "text": "access teacher-facing lesson plans online for CS Fundamentals courses. \t\t\t\t\t\t\t\t"
+              "text": "access teacher-facing lesson plans online for CS Fundamentals courses."
             },
             {
               "value": "view_student_work",
-              "text": "view student work through the teacher dashboard on the Code.org website. \t\t\t\t\t\t\t\t"
+              "text": "view student work through the teacher dashboard on the Code.org website."
             },
             {
               "value": "access_sample_solutions",
-              "text": "access sample solutions to programming puzzles on the Code.org website.\t\t\t\t\t"
+              "text": "access sample solutions to programming puzzles on the Code.org website."
             },
             {
               "value": "create_student_sections",
-              "text": "create sections of students on the Code.org website \t\t\t\t\t\t\t\t"
+              "text": "create sections of students on the Code.org website."
             },
             {
               "value": "manage_student_sections",
-              "text": "manage sections of students on the Code.org website (move students between sections, reset passwords, etc). "
+              "text": "manage sections of students on the Code.org website (move students between sections, reset passwords, etc)."
             }
           ]
         }
