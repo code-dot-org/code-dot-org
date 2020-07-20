@@ -26030,6 +26030,46 @@ pt:
               name: Desenvolva um projeto
             Swimming Fish with Sprite Lab:
               name: Peixe nadando com o Sprite Lab
+            Programming with Angry Birds:
+              name: Programando com Angry Birds
+            Debugging with Scrat:
+              name: Depurando com Scrat
+            Collecting Treasure with Laurel:
+              name: Coletando tesouros com Laurel
+            Creating Art with Code:
+              name: Criando arte com código
+            Sticker Art with Loops:
+              name: Adesivo de arte com loops
+            Nested Loops in Maze:
+              name: Laços Aninhados no Labirinto
+            Snowflakes with Anna and Elsa:
+              name: Flocos de neve com Anna e Elsa
+            If/Else with Bee:
+              name: If/Else com Abelha
+            While Loops with the Farmer:
+              name: While Loops com o agricultor
+            Harvesting with Conditionals:
+              name: Colhendo com Condicionais
+            Functions with Harvester:
+              name: Funções com a colheitadeira
+            Functions with Artist:
+              name: Funções com Artista
+            Variables with Artist:
+              name: Variáveis com Artist
+            Changing Variables with Bee:
+              name: Alterando variáveis ​​com abelha
+            Changing Variables with Artist:
+              name: Alterando variáveis ​​com Artist
+            For Loops with Bee:
+              name: Para Loops com Abelha
+            For Loops with Artist:
+              name: Para Loops com o artista
+            Swimming Fish in Sprite Lab:
+              name: Aprendendo Sprite Lab
+            Alien Dance Party:
+              name: Festa dançante alienígena
+            Behaviors in Sprite Lab:
+              name: Comportamentos no Lab Sprite
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -26106,6 +26146,46 @@ pt:
               name: Desenvolva um projeto
             Swimming Fish with Sprite Lab:
               name: Peixe nadando com o Sprite Lab
+            Programming with Angry Birds:
+              name: Programando com Angry Birds
+            Debugging with Scrat:
+              name: Depurando com Scrat
+            Collecting Treasure with Laurel:
+              name: Coletando tesouros com Laurel
+            Creating Art with Code:
+              name: Criando arte com código
+            Sticker Art with Loops:
+              name: Adesivo de arte com loops
+            Nested Loops in Maze:
+              name: Laços Aninhados no Labirinto
+            Snowflakes with Anna and Elsa:
+              name: Flocos de neve com Anna e Elsa
+            If/Else with Bee:
+              name: If/Else com Abelha
+            While Loops with the Farmer:
+              name: While Loops com o agricultor
+            Harvesting with Conditionals:
+              name: Colhendo com Condicionais
+            Functions with Harvester:
+              name: Funções com a colheitadeira
+            Functions with Artist:
+              name: Funções com Artista
+            Variables with Artist:
+              name: Variáveis com Artist
+            Changing Variables with Bee:
+              name: Alterando variáveis ​​com abelha
+            Changing Variables with Artist:
+              name: Alterando variáveis ​​com Artist
+            For Loops with Bee:
+              name: Para Loops com Abelha
+            For Loops with Artist:
+              name: Para Loops com o artista
+            Swimming Fish in Sprite Lab:
+              name: Aprendendo Sprite Lab
+            Alien Dance Party:
+              name: Festa dançante alienígena
+            Behaviors in Sprite Lab:
+              name: Comportamentos no Lab Sprite
         pre-express-2020:
           title: Pré-leitor Express (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
@@ -26146,6 +26226,16 @@ pt:
             Make a Game in Play Lab:
               name: Faça um jogo no Play Lab
               description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
+            Loops with Scrat:
+              name: Repetições com Scrat
+            Loops with Laurel:
+              name: Repetições com Laurel
+            Drawing Gardens with Loops:
+              name: Desenho jardins com repetições
+            On the Move with Events:
+              name: Em Movimento com os Eventos
+            A Royal Battle with Events:
+              name: Um Battle Royal com eventos
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciamento
@@ -26188,6 +26278,16 @@ pt:
             Make a Game in Play Lab:
               name: Faça um jogo no Play Lab
               description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
+            Loops with Scrat:
+              name: Repetições com Scrat
+            Loops with Laurel:
+              name: Repetições com Laurel
+            Drawing Gardens with Loops:
+              name: Desenho jardins com repetições
+            On the Move with Events:
+              name: Em Movimento com os Eventos
+            A Royal Battle with Events:
+              name: Um Battle Royal com eventos
         csp1-2020:
           stages:
             new stage:
@@ -27282,3 +27382,10 @@ pt:
           lesson_groups:
             lg_1:
               display_name: Conteúdo
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: Módulo 1
+          lessons:
+            Module 1:
+              name: Módulo 1
