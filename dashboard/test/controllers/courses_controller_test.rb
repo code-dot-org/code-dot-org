@@ -33,7 +33,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
 
-  test_user_gets_response_for :index, response: :success, user: :user, queries: 3
+  test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
   # Tests for show
 
