@@ -1032,6 +1032,10 @@ pl:
           CHOICE:
             '"this"': tego
             '"other"': inne
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundy
       gamelab_hideTitleScreen:
         text: ukryj ekran tytułowy
       gamelab_isTouchingEdges:
