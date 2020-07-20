@@ -58,7 +58,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.login_required?
     assert_equal 'Level 1', script.levels[0].name
 
-    assert_equal false, Script.find(2).login_required?
+    assert_equal false, Script.find_by(name: 'Hour of Code').login_required?
 
     assert_equal false, create(:script).login_required?
   end
@@ -720,31 +720,6 @@ class ScriptTest < ActiveSupport::TestCase
   test 'professional_learning_course?' do
     refute Script.find_by_name('flappy').professional_learning_course?
     assert Script.find_by_name('ECSPD').professional_learning_course?
-  end
-
-  test 'hoc?' do
-    assert Script.find_by_name('dance').hoc?
-    assert Script.find_by_name('flappy').hoc?
-    assert Script.find_by_name('mc').hoc?
-    assert Script.find_by_name('hourofcode').hoc?
-    assert Script.find_by_name('Hour of Code').hoc?
-    assert Script.find_by_name('frozen').hoc?
-    assert Script.find_by_name('playlab').hoc?
-    assert_not Script.find_by_name('20-hour').hoc?
-    assert_not Script.find_by_name('course1').hoc?
-    assert_not Script.find_by_name('course2').hoc?
-    assert_not Script.find_by_name('course3').hoc?
-    assert_not Script.find_by_name('course4').hoc?
-  end
-
-  test 'minecraft?' do
-    assert_not Script.find_by_name('flappy').minecraft?
-    assert Script.find_by_name('mc').minecraft?
-  end
-
-  test 'twenty_hour?' do
-    assert Script.find_by_name('20-hour').twenty_hour?
-    assert_not Script.find_by_name('mc').twenty_hour?
   end
 
   test 'should summarize script' do
@@ -1950,7 +1925,7 @@ endvariants
 
   test "script_names_by_curriculum_umbrella returns the correct script names" do
     assert_equal(
-      [@csf_script.name, @csf_script_2019.name],
+      ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_script.name, @csf_script_2019.name],
       Script.script_names_by_curriculum_umbrella('CSF')
     )
     assert_equal(
