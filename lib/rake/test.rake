@@ -69,7 +69,7 @@ namespace :test do
         ChatClient.log message
         ChatClient.message 'server operations', message, color: 'green'
       else
-        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed.'
         ChatClient.log message, color: 'red'
         ChatClient.message 'server operations', message, color: 'red', notify: 1
         raise "Eyes tests failed"
