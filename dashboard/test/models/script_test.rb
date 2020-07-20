@@ -2272,6 +2272,38 @@ endvariants
     assert_equal 2, script.lesson_groups[1].position
   end
 
+  test 'script levels have the correct chapter and position value' do
+    l1 = create :level
+    l2 = create :level
+    l3 = create :level
+    l4 = create :level
+    new_dsl = <<-SCRIPT
+      lesson_group 'content', display_name: 'Content'
+      lesson 'Lesson1'
+      level '#{l1.name}'
+      level '#{l2.name}'
+
+      lesson_group 'content2', display_name: 'Content'
+      lesson 'Lesson2'
+      level '#{l3.name}'
+      level '#{l4.name}'
+    SCRIPT
+
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
+    )
+
+    assert_equal 1, script.script_levels[0].chapter
+    assert_equal 1, script.script_levels[0].position
+    assert_equal 2, script.script_levels[1].chapter
+    assert_equal 2, script.script_levels[1].position
+    assert_equal 3, script.script_levels[2].chapter
+    assert_equal 1, script.script_levels[2].position
+    assert_equal 4, script.script_levels[3].chapter
+    assert_equal 2, script.script_levels[3].position
+  end
+
   private
 
   def has_hidden_script?(scripts)
