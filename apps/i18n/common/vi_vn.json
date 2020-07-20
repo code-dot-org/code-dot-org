@@ -401,7 +401,6 @@
   "deleteProject": "Xoá dự án",
   "deleteSection": "Xóa phần",
   "deleteSectionConfirm": "Bạn có chắc bạn muốn xóa bỏ phần này không? Bạn sẽ không thể quay lại bước này.",
-  "deleteSectionHideSuggestion": "Nếu bạn chỉ muốn xoá mục này khỏi danh sách các phần, hãy xem xét sử dụng tùy chọn 'Ẩn mục' để thay thế.",
   "description": "Mô tả",
   "designMode": "Thiết kế",
   "dialogCancel": "Huỷ",

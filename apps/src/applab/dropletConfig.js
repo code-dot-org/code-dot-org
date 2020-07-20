@@ -680,6 +680,14 @@ export var blocks = [
   },
 
   {
+    func: 'doSomeML',
+    parent: api,
+    category: 'ML',
+    paletteParams: ['id', 'callback'],
+    params: ['"id"', 'function (value) {\n  \n}']
+  },
+
+  {
     func: 'moveForward',
     parent: api,
     category: 'Turtle',
@@ -1169,6 +1177,12 @@ export const categories = {
   Goals: {
     id: 'goals',
     color: 'deeppurple',
+    blocks: []
+  },
+  ML: {
+    id: 'ML',
+    color: 'blue',
+    rgb: color.blue,
     blocks: []
   }
 };

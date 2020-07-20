@@ -494,7 +494,6 @@
   "deleteProjectConfirm": "Weet je zeker dat je je project wil verwijderen? Je kunt dit niet meer ongedaan maken.",
   "deleteSection": "Verwijder sectie",
   "deleteSectionConfirm": "Weet u zeker dat u deze sectie wilt verwijderen? U kunt dit niet ongedaan maken.",
-  "deleteSectionHideSuggestion": "Als u deze sectie simpel wilt verwijderen van uw lijst van secties, overweeg dan het gebruiken van de 'Verberg Sectie' optie.",
   "deleteUsedImage": "{name} wordt gebruikt op {value, plural, one {1 plek} other {# plekken}} in deze applicatie. Als je het verwijdert, zal het plaatje niet meer zichtbaar zijn op de andere plekken. Weet je zeker dat je het wil verwijderen?",
   "deleting": "Verwijderen",
   "description": "Omschrijving",

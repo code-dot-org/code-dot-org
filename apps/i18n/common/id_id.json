@@ -502,7 +502,6 @@
   "deleteProjectConfirm": "Apakah Anda benar-benar ingin menghapus proyek Anda? Anda tidak dapat membatalkan tindakan ini.",
   "deleteSection": "Hapus bagian",
   "deleteSectionConfirm": "Apakah anda yakin ingin menghapus bagian ini? Anda tidak akan dapat membatalkan ini.",
-  "deleteSectionHideSuggestion": "Jika anda hanya ingin menghapus bagian ini dari daftar bagian, coba gunakan opsi'sembunyikan bagian' begitupun sebaliknya.",
   "deleteUsedImage": "{name}digunakan di{value, plural,one {1place} other {# places}} dalam aplikasi ini.Jika anda menghapusnya,gambar tidak akan muncul dibeberapa tempat tersebut.apakah anda yakin ingin menghapusnya?",
   "deleting": "Menghapus",
   "description": "Deskripsi",

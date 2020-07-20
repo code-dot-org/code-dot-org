@@ -6438,6 +6438,15 @@ sk-SK:
           </block></xml>, ktorú už máš na pracovnej ploche.
 
         Pre dokončenie úlohy dostaň Jorgeho ku vlajke!
+      courseA_playLab_events3_2020: |-
+        Pomôž psovi Jorgemu rozbehnúť sa, pripoj blok <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> k bloku udalosti <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml>, ktorú už máš na pracovnej ploche.
+
+        Na ovládanie Jorgeho použi šípky na klávesnici alebo šípky na pracovnej ploche. Dostaň ho k vlajke a dokonči level!
       courseA_playLab_events4_2018: Teraz pridaj ešte jeden blok s udalosťou, aby
         sa Jorge posunul doprava po kliknutí na šípku vpravo.
       courseA_playLab_events5: Pridaj udalosti tak, aby sa Jorge hýbal hore a dole

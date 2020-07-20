@@ -58,7 +58,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.login_required?
     assert_equal 'Level 1', script.levels[0].name
 
-    assert_equal false, Script.find(2).login_required?
+    assert_equal false, Script.find_by(name: 'Hour of Code').login_required?
 
     assert_equal false, create(:script).login_required?
   end
@@ -89,14 +89,14 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:lessons]
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:lesson_groups]
 
     # Set different level name in tested script
-    parsed_script.map {|lesson| lesson[:scriptlevels]}.flatten[4][:levels][0]['name'] = "Level 1"
+    parsed_script[0][:lessons][1][:script_levels][1][:levels][0][:name] = "Level 1"
 
     # Set different 'hidden' option from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), hidden: false}
-    script = Script.add_script(options, [], parsed_script)
+    script = Script.add_script(options, parsed_script)
     assert_equal script_id, script.script_levels[4].script_id
     assert_not_equal script_level_id, script.script_levels[4].id
   end
@@ -109,15 +109,13 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
     old_script = Script.add_script(
       {name: 'old script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'old script name', old_script.name
 
     new_script = Script.add_script(
       {name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'new script name', new_script.name
 
@@ -133,15 +131,13 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
     old_script = Script.add_script(
       {name: 'old script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'old script name', old_script.name
 
     new_script = Script.add_script(
       {name: 'new script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'new script name', new_script.name
 
@@ -150,8 +146,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     old_script = Script.add_script(
       {name: 'old script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'old script name', old_script.name
 
@@ -249,9 +244,10 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'lessons are in order' do
     script = create(:script, name: 's1')
-    create(:lesson, script: script)
-    last = create(:lesson, script: script)
-    create(:lesson, script: script)
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    create(:lesson, script: script, lesson_group: lesson_group)
+    last = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:lesson, script: script, lesson_group: lesson_group)
 
     last.move_to_bottom
 
@@ -262,10 +258,11 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'calling next_level on last script_level points to next lesson' do
     script = create(:script, name: 'test2')
-    first_lesson = create(:lesson, script: script, absolute_position: 1)
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    first_lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
 
     first_lesson_last_level = create(:script_level, script: script, lesson: first_lesson, position: 1)
-    second_lesson = create(:lesson, script: script, absolute_position: 2)
+    second_lesson = create(:lesson, script: script, absolute_position: 2, lesson_group: lesson_group)
     second_lesson_first_level = create(:script_level, script: script, lesson: second_lesson, position: 1)
     create(:script_level, script: script, lesson: second_lesson, position: 2)
 
@@ -316,7 +313,7 @@ class ScriptTest < ActiveSupport::TestCase
       "lesson 'lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
 
-    script = Script.add_script({name: 'test script'}, script_data[:lesson_groups], script_data[:lessons])
+    script = Script.add_script({name: 'test script'}, script_data[:lesson_groups])
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
@@ -325,26 +322,38 @@ class ScriptTest < ActiveSupport::TestCase
   test 'allow applab and gamelab levels in hidden scripts' do
     Script.add_script(
       {name: 'test script', hidden: true},
-      [],
-      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [{
+        key: "my_key",
+        display_name: "Content",
+        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
+      }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: true},
-      [],
-      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [{
+        key: "my_key",
+        display_name: "Content",
+        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
+      }] # From level.yml fixture
     )
   end
 
   test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      [],
-      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [{
+        key: "my_key",
+        display_name: "Content",
+        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
+      }] # From level.yml fixture# From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      [],
-      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [{
+        key: "my_key",
+        display_name: "Content",
+        lessons: [{name: "Lesson1", script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
+      }] # From level.yml fixture
     )
   end
 
@@ -713,34 +722,10 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
-  test 'hoc?' do
-    assert Script.find_by_name('dance').hoc?
-    assert Script.find_by_name('flappy').hoc?
-    assert Script.find_by_name('mc').hoc?
-    assert Script.find_by_name('hourofcode').hoc?
-    assert Script.find_by_name('Hour of Code').hoc?
-    assert Script.find_by_name('frozen').hoc?
-    assert Script.find_by_name('playlab').hoc?
-    assert_not Script.find_by_name('20-hour').hoc?
-    assert_not Script.find_by_name('course1').hoc?
-    assert_not Script.find_by_name('course2').hoc?
-    assert_not Script.find_by_name('course3').hoc?
-    assert_not Script.find_by_name('course4').hoc?
-  end
-
-  test 'minecraft?' do
-    assert_not Script.find_by_name('flappy').minecraft?
-    assert Script.find_by_name('mc').minecraft?
-  end
-
-  test 'twenty_hour?' do
-    assert Script.find_by_name('20-hour').twenty_hour?
-    assert_not Script.find_by_name('mc').twenty_hour?
-  end
-
   test 'should summarize script' do
     script = create(:script, name: 'single-lesson-script')
-    lesson = create(:lesson, script: script, name: 'lesson 1')
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
     script.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
@@ -754,9 +739,10 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'should summarize script with peer reviews' do
     script = create(:script, name: 'script-with-peer-review', peer_reviews_to_complete: 1)
-    lesson = create(:lesson, script: script, name: 'lesson 1')
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
-    lesson = create(:lesson, script: script, name: 'lesson 2')
+    lesson = create(:lesson, script: script, name: 'lesson 2', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
 
     summary = script.summarize
@@ -790,11 +776,12 @@ class ScriptTest < ActiveSupport::TestCase
       Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
       @script = create(:script, name: 'script-with-visible-after')
-      stage_no_visible_after = create(:lesson, script: @script, name: 'Stage 1')
+      @lesson_group = create(:lesson_group, key: 'key1', script: @script)
+      stage_no_visible_after = create(:lesson, script: @script, name: 'Stage 1', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: stage_no_visible_after)
-      stage_future_visible_after = create(:lesson, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700')
+      stage_future_visible_after = create(:lesson, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: stage_future_visible_after)
-      stage_past_visible_after = create(:lesson, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700')
+      stage_past_visible_after = create(:lesson, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700', lesson_group: @lesson_group)
       create(:script_level, script: @script, lesson: stage_past_visible_after)
     end
 
@@ -825,7 +812,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'should generate a shorter summary for header' do
     script = create(:script, name: 'single-lesson-script')
-    lesson = create(:lesson, script: script, name: 'lesson 1')
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
 
     expected = {
@@ -840,7 +828,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'should exclude lessons if include_lessons is false' do
     script = create(:script, name: 'single-lesson-script')
-    lesson = create(:lesson, script: script, name: 'lesson 1')
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: script, lesson: lesson)
 
     assert_nil script.summarize(false)[:lessons]
@@ -998,7 +987,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     level = create :level
     create :script_level, lesson: lesson, levels: [level], bonus: true
 
@@ -1100,7 +1090,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment3';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups], script_data[:lessons])
+    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups])
 
     # Everything has Lesson <number> when nothing is lockable
     assert (/^Lesson 1:/.match(script.lessons[0].localized_title))
@@ -1116,7 +1106,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups], script_data[:lessons])
+    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups])
 
     # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
     assert (/^Lesson/.match(script.lessons[0].localized_title).nil?)
@@ -1132,7 +1122,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups], script_data[:lessons])
+    script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups])
 
     # When only second lesson is lockable, we count non-lockable lessons appropriately
     assert (/^Lesson 1:/.match(script.lessons[0].localized_title))
@@ -1150,7 +1140,7 @@ class ScriptTest < ActiveSupport::TestCase
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     assert_raises do
-      Script.add_script({name: 'test_script'}, script_data[:lesson_groups], script_data[:lessons])
+      Script.add_script({name: 'test_script'}, script_data[:lesson_groups])
     end
   end
 
@@ -1217,7 +1207,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'FreeResponse level is listed in text_response_levels' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     level = create :free_response
     create :script_level, script: script, lesson: lesson, levels: [level]
 
@@ -1226,7 +1217,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'Multi level is not listed in text_response_levels' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     level = create :multi
     create :script_level, script: script, lesson: lesson, levels: [level]
 
@@ -1235,7 +1227,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'contained FreeResponse level is listed in text_response_levels' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     contained_level = create :free_response, name: 'Contained Free Response'
     level = create :maze, properties: {contained_level_names: [contained_level.name]}
     create :script_level, script: script, lesson: lesson, levels: [level]
@@ -1245,7 +1238,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'contained Multi level is not listed in text_response_levels' do
     script = create :script
-    lesson = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     contained_level = create :multi, name: 'Contained Multi'
     level = create :maze, properties: {contained_level_names: [contained_level.name]}
     create :script_level, script: script, lesson: lesson, levels: [level]
@@ -1288,8 +1282,9 @@ class ScriptTest < ActiveSupport::TestCase
 
   test "logged_out_age_13_required?" do
     script = create :script, login_required: false
+    lesson_group = create :lesson_group, script: script
     level = create :applab
-    lesson = create :lesson, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson, levels: [level]
 
     # return true when we have an applab level
@@ -1301,8 +1296,9 @@ class ScriptTest < ActiveSupport::TestCase
 
     # returns false if we don't have any applab/gamelab/weblab levels
     script = create :script, login_required: false
+    lesson_group = create :lesson_group, script: script
     level = create :maze
-    lesson = create :lesson, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson, levels: [level]
     assert_equal false, script.logged_out_age_13_required?
   end
@@ -1310,9 +1306,10 @@ class ScriptTest < ActiveSupport::TestCase
   test "get_bonus_script_levels" do
     student = create :student
     script = create :script
-    lesson1 = create :lesson, script: script
-    create :lesson, script: script
-    lesson3 = create :lesson, script: script
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, script: script, lesson_group: lesson_group
+    create :lesson, script: script, lesson_group: lesson_group
+    lesson3 = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson1, bonus: true
     create :script_level, script: script, lesson: lesson1, bonus: true
     create :script_level, script: script, lesson: lesson3, bonus: true
@@ -1344,15 +1341,13 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.challenge
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
 
     refute script.script_levels.first.challenge
@@ -1370,15 +1365,13 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert script.script_levels.first.bonus
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
 
     refute script.script_levels.first.bonus
@@ -1401,8 +1394,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:lesson_groups],
-      script_data[:lessons]
+      script_data[:lesson_groups]
     )
     assert script.project_widget_visible
 
@@ -1412,8 +1404,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:lesson_groups],
-      script_data[:lessons]
+      script_data[:lesson_groups]
     )
 
     refute script.project_widget_visible
@@ -1436,8 +1427,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:lesson_groups],
-      script_data[:lessons]
+      script_data[:lesson_groups]
     )
     assert script.script_announcements
 
@@ -1447,8 +1437,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:lesson_groups],
-      script_data[:lessons]
+      script_data[:lesson_groups]
     )
 
     refute script.script_announcements
@@ -1470,8 +1459,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'curriculumTestScript',
         properties: Script.build_property_hash(script_data),
       },
-      script_data[:lesson_groups],
-      script_data[:lessons],
+      script_data[:lesson_groups]
     )
     assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.lessons.first.lesson_plan_html_url
     with_locale(:'it-IT') do
@@ -1735,8 +1723,10 @@ endvariants
 
   test "get_assessment_script_levels returns a list of script levels" do
     script = create(:script, name: 'test-level-group')
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
     level_group = create(:level_group, name: 'assessment 1')
-    script_level = create(:script_level, levels: [level_group], assessment: true, script: script)
+    script_level = create(:script_level, lesson: lesson, levels: [level_group], assessment: true, script: script)
 
     assessment_script_levels = script.get_assessment_script_levels
     assert_equal assessment_script_levels[0], script_level
@@ -1935,7 +1925,7 @@ endvariants
 
   test "script_names_by_curriculum_umbrella returns the correct script names" do
     assert_equal(
-      [@csf_script.name, @csf_script_2019.name],
+      ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_script.name, @csf_script_2019.name],
       Script.script_names_by_curriculum_umbrella('CSF')
     )
     assert_equal(
@@ -1982,8 +1972,7 @@ endvariants
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal script.lesson_groups.count, 1
     assert_equal script.lessons[0].lesson_group.user_facing, false
@@ -2002,8 +1991,7 @@ endvariants
     raise = assert_raises do
       Script.add_script(
         {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-        ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
     assert_equal "The key content is a reserved key. It must have the display name: Content.", raise.message
@@ -2021,8 +2009,7 @@ endvariants
     raise = assert_raises do
       Script.add_script(
         {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-        ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
     assert_equal 'Validation failed: Key Expect all levelbuilder created lesson groups to have key.', raise.message
@@ -2040,8 +2027,7 @@ endvariants
     raise = assert_raises do
       Script.add_script(
         {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-        ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
     assert_equal 'Expect all lesson groups to have display names. The following lesson group does not have a display name: content1', raise.message
@@ -2061,8 +2047,7 @@ endvariants
     raise = assert_raises do
       Script.add_script(
         {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-        ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
     assert_equal 'Expect key and display name to match. The Lesson Group with key: content1 has display_name: Content', raise.message
@@ -2083,8 +2068,7 @@ endvariants
     raise = assert_raises do
       Script.add_script(
         {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-        ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
     assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. Lesson Lesson1 does not have a lesson group.', raise.message
@@ -2109,8 +2093,7 @@ endvariants
     raise = assert_raises do
       Script.add_script(
         {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-        ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
     assert_equal 'Only consecutive lessons can have the same lesson group. Lesson Group content is on two non-consecutive lessons.', raise.message
@@ -2130,8 +2113,7 @@ endvariants
     raise = assert_raises do
       Script.add_script(
         {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-        ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
     assert_equal 'Every lesson group should have at least one lesson. Lesson Group required has no lessons.', raise.message
@@ -2156,8 +2138,7 @@ endvariants
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal script.lesson_groups[0].key, 'required'
@@ -2182,15 +2163,13 @@ endvariants
     SCRIPT
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal '', script.lessons[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal 'required', script.lessons[0].lesson_group.key
@@ -2210,15 +2189,13 @@ endvariants
     SCRIPT
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
     assert_equal 'required', script.lessons[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal 'content', script.lessons[0].lesson_group.key
@@ -2237,16 +2214,14 @@ endvariants
     SCRIPT
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal 'required', script.lessons[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal '', script.lessons[0].lesson_group.key
@@ -2276,8 +2251,7 @@ endvariants
     SCRIPT
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal 'content2', script.lesson_groups[0].key
@@ -2287,8 +2261,7 @@ endvariants
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups],
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal 'content', script.lesson_groups[0].key
