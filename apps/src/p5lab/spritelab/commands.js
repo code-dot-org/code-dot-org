@@ -51,6 +51,10 @@ export const commands = {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
+  isKeyPressed(key) {
+    return actionCommands.isKeyPressed.apply(this, [key]);
+  },
+
   isTouchingEdges(spriteArg) {
     return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
   },
