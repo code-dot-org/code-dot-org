@@ -306,7 +306,7 @@ es:
               name: Laberinto
         frozen:
           title: Programa con Ana y Elsa
-          description: Vamos a usar un código para explorar junto a Ana y Elsa la magia y la belleza del hielo. ¡Crearás copos de nieve y patrones a medida que patinas sobre hielo y crearás un paisaje invernal que luego puedes compartir con tus amigos!
+          description: Vamos a usar código unirnos a Ana y Elsa mientras exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que patinas sobre hielo y harás un paraíso invernal que luego puedes compartir con tus amigos!
           description_short: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
           stages:
             Artist:
@@ -26062,6 +26062,46 @@ es:
               name: Aprender sprites con Laboratorio de Sprite
             End of Course Project:
               name: Proyecto de fin de curso
+            Programming with Angry Birds:
+              name: Programación con Angry Birds
+            Debugging with Scrat:
+              name: Depuración con Scrat
+            Collecting Treasure with Laurel:
+              name: Recoger tesoros con Laurel
+            Creating Art with Code:
+              name: Crear arte con código
+            Sticker Art with Loops:
+              name: Arte con stickers y bucles
+            Nested Loops in Maze:
+              name: Bucles anidados en Laberinto
+            Snowflakes with Anna and Elsa:
+              name: Copos de nieve con Anna y Elsa
+            If/Else with Bee:
+              name: Condicionales con Abeja
+            While Loops with the Farmer:
+              name: Bucles 'mientras' en la Granjera
+            Harvesting with Conditionals:
+              name: Cosechar con condicionales
+            Functions with Harvester:
+              name: Funciones en Cosechadora
+            Functions with Artist:
+              name: Funciones de Artista
+            Variables with Artist:
+              name: Variables con Artista
+            Changing Variables with Bee:
+              name: Cambiar variables con Abeja
+            Changing Variables with Artist:
+              name: Cambiar variables con Artista
+            For Loops with Bee:
+              name: Bucles 'desde' con la Abeja
+            For Loops with Artist:
+              name: Bucles `desde'`con Artista
+            Swimming Fish in Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            Alien Dance Party:
+              name: Fiesta de baile extraterrestre
+            Behaviors in Sprite Lab:
+              name: Editar comportamientos
           lesson_groups:
             csf_warmup:
               display_name: Actividad previa
@@ -26130,6 +26170,46 @@ es:
               name: Aprender sprites con Laboratorio de Sprite
             End of Course Project:
               name: Proyecto de fin de curso
+            Programming with Angry Birds:
+              name: Programación con Angry Birds
+            Debugging with Scrat:
+              name: Depuración con Scrat
+            Collecting Treasure with Laurel:
+              name: Recoger tesoros con Laurel
+            Creating Art with Code:
+              name: Crear arte con código
+            Sticker Art with Loops:
+              name: Arte con stickers y bucles
+            Nested Loops in Maze:
+              name: Bucles anidados en Laberinto
+            Snowflakes with Anna and Elsa:
+              name: Copos de nieve con Anna y Elsa
+            If/Else with Bee:
+              name: Condicionales con Abeja
+            While Loops with the Farmer:
+              name: Bucles 'mientras' en la Granjera
+            Harvesting with Conditionals:
+              name: Cosechar con condicionales
+            Functions with Harvester:
+              name: Funciones en Cosechadora
+            Functions with Artist:
+              name: Funciones de Artista
+            Variables with Artist:
+              name: Variables con Artista
+            Changing Variables with Bee:
+              name: Cambiar variables con Abeja
+            Changing Variables with Artist:
+              name: Cambiar variables con Artista
+            For Loops with Bee:
+              name: Bucles 'desde' con la Abeja
+            For Loops with Artist:
+              name: Bucles `desde'`con Artista
+            Swimming Fish in Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            Alien Dance Party:
+              name: Fiesta de baile extraterrestre
+            Behaviors in Sprite Lab:
+              name: Editar comportamientos
         pre-express-2020:
           title: Curso Express para prelectores (2019)
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -26169,6 +26249,16 @@ es:
               description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
             Make a Game in Play Lab:
               description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar los eventos en el Laboratorio de juegos y aplicar todas las habilidades de programación que aprendieron para crear un juego animado. ¡Es el momento de ser creativos y crear un juego en el Laboratorio de juegos!
+            Loops with Scrat:
+              name: Bucles con Scrat
+            Loops with Laurel:
+              name: Bucles con Laurel
+            Drawing Gardens with Loops:
+              name: Dibujar jardines con bucles
+            On the Move with Events:
+              name: En movimiento con eventos
+            A Royal Battle with Events:
+              name: Una batalla real con eventos
           lesson_groups:
             csf_sequencing:
               display_name: Secuencias
@@ -26210,6 +26300,16 @@ es:
               description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
             Make a Game in Play Lab:
               description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar los eventos en el Laboratorio de juegos y aplicar todas las habilidades de programación que aprendieron para crear un juego animado. ¡Es el momento de ser creativos y crear un juego en el Laboratorio de juegos!
+            Loops with Scrat:
+              name: Bucles con Scrat
+            Loops with Laurel:
+              name: Bucles con Laurel
+            Drawing Gardens with Loops:
+              name: Dibujar jardines con bucles
+            On the Move with Events:
+              name: En movimiento con eventos
+            A Royal Battle with Events:
+              name: Una batalla real con eventos
         csp1-2020:
           stages:
             new stage:
@@ -27350,3 +27450,10 @@ es:
           lesson_groups:
             lg_1:
               display_name: Contenido
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: Módulo 1
+          lessons:
+            Module 1:
+              name: Módulo 1
