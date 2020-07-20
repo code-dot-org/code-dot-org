@@ -27622,6 +27622,10 @@ en:
               display_name: 'Chapter 2: Styling and CSS'
             cspSurvey:
               display_name: Survey
+            csd2_1v2:
+              display_name: 'Chapter 1: Creating Webpages'
+            csd2_2v2:
+              display_name: 'Chapter 2: Multi-page Websites'
           lessons:
             Exploring Web Pages:
               name: Exploring Web Pages
