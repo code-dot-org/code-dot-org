@@ -1018,6 +1018,10 @@ th:
         options:
           CHOICE:
             '"this"': นี่
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': วินาที
       gamelab_hideTitleScreen:
         text: หน้าจอซ่อนชื่อเรื่อง
       gamelab_isTouchingEdges:
