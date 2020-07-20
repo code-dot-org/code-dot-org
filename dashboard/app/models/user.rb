@@ -1774,7 +1774,7 @@ class User < ActiveRecord::Base
     end
 
     current_level = user_level.level
-    should_allow_pairing = current_level.should_allow_pairing? && script.should_allow_pairing?(current_level.id)
+    should_allow_pairing = current_level.should_allow_pairing?(script.id)
 
     if should_allow_pairing && pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|

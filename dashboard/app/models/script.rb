@@ -1756,20 +1756,6 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # Determine whether a level in a script should allow pairing based on its
-  # parent level.
-  # TODO: "LevelGroup" levels currently don't have access to their parent level
-  # once they do, simply access the parent level as part of the should_allow_pairing?
-  # check in level.rb
-  def should_allow_pairing?(level_id)
-    pairing_disabled_levels = levels.select {|level| !level.should_allow_pairing?}
-    !pairing_disabled_levels.detect do |level|
-      level.levels.detect do |child_level|
-        child_level&.id == level_id
-      end
-    end
-  end
-
   def get_feedback_for_section(section)
     rubric_performance_headers = {
       performanceLevel1: "Extensive Evidence",
