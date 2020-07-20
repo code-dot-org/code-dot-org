@@ -339,7 +339,10 @@ module SharedConstants
       "lightSensor.getAveragedValue": null,
       "lightSensor.setScale": null,
       "lightSensor.threshold": null,
-      "compass.getHeading": null
+      "compass.getHeading": null,
+
+      // ML
+      "doSomeML": null
     }
   JSON
 

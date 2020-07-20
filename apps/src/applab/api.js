@@ -507,6 +507,10 @@ export function penRGB(r, g, b, a) {
   return Applab.executeCmd(null, 'penRGB', {r: r, g: g, b: b, a: a});
 }
 
+export function doSomeML(elementId, callback) {
+  return Applab.executeCmd(null, 'doSomeML', {elementId, callback});
+}
+
 export function drawChart(chartId, chartType, chartData, options, callback) {
   return Applab.executeCmd(null, 'drawChart', {
     chartId: chartId,
