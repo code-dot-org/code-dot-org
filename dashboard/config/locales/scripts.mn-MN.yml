@@ -38392,6 +38392,46 @@ mn:
               name: Шидтэний лабтай хамтарсан виртуал гэрийн тэжээвэр амьтан
             Swimming Fish with Sprite Lab:
               name: Шидтэний лабтай хамтарсан сэлж буй загас
+            Programming with Angry Birds:
+              name: Ууртай шувуугаар програмчлах
+            Debugging with Scrat:
+              name: Скратаар алдааг засах
+            Collecting Treasure with Laurel:
+              name: Лаурельтай хамт эрдэнэс цуглуулах
+            Creating Art with Code:
+              name: Код бүхий урлагийг бий болгох
+            Sticker Art with Loops:
+              name: Гогцоо бүхий наах урлаг
+            Nested Loops in Maze:
+              name: Ээдрээ дээрх сараалжилсан гогцоо
+            Snowflakes with Anna and Elsa:
+              name: Анна, Эльсатай хамтарсан цасан ширхгүүд
+            If/Else with Bee:
+              name: Зөгийтэй хамтарсан хэрэв/өөр
+            While Loops with the Farmer:
+              name: Фермертэй хамтарсан Байхад гогцоо
+            Harvesting with Conditionals:
+              name: Нөхцлүүдтэй ургац хураах
+            Functions with Harvester:
+              name: Ургац хураагчтай хамтарсан функцүүд
+            Functions with Artist:
+              name: Зураачийнтай хамтарсан функцүүд
+            Variables with Artist:
+              name: Зураачтай хамтарсан хувьсагчид
+            Changing Variables with Bee:
+              name: Зөгийтэй хамт хувьсагчдыг өөрчлөх
+            Changing Variables with Artist:
+              name: Зураачтай хамтарсан хувьсагчдыг өөрчлөх
+            For Loops with Bee:
+              name: Зөгийтэй хамтарсан -д зориулав гогцоо
+            For Loops with Artist:
+              name: Зураачтай хамтарсан -д зориулав гогцоо
+            Swimming Fish in Sprite Lab:
+              name: Шидтэний лабораторид суралцах
+            Alien Dance Party:
+              name: Харийнхны бүжгийн үдэшлэг
+            Behaviors in Sprite Lab:
+              name: Шидтэний лаб дахь зан чанар
           lesson_groups:
             csf_warmup:
               display_name: Бие халаалт
@@ -38456,6 +38496,46 @@ mn:
               name: Шидтэний лабтай хамтарсан виртуал гэрийн тэжээвэр амьтан
             Swimming Fish with Sprite Lab:
               name: Шидтэний лабтай хамтарсан сэлж буй загас
+            Programming with Angry Birds:
+              name: Ууртай шувуугаар програмчлах
+            Debugging with Scrat:
+              name: Скратаар алдааг засах
+            Collecting Treasure with Laurel:
+              name: Лаурельтай хамт эрдэнэс цуглуулах
+            Creating Art with Code:
+              name: Код бүхий урлагийг бий болгох
+            Sticker Art with Loops:
+              name: Гогцоо бүхий наах урлаг
+            Nested Loops in Maze:
+              name: Ээдрээ дээрх сараалжилсан гогцоо
+            Snowflakes with Anna and Elsa:
+              name: Анна, Эльсатай хамтарсан цасан ширхгүүд
+            If/Else with Bee:
+              name: Зөгийтэй хамтарсан хэрэв/өөр
+            While Loops with the Farmer:
+              name: Фермертэй хамтарсан Байхад гогцоо
+            Harvesting with Conditionals:
+              name: Нөхцлүүдтэй ургац хураах
+            Functions with Harvester:
+              name: Ургац хураагчтай хамтарсан функцүүд
+            Functions with Artist:
+              name: Зураачийнтай хамтарсан функцүүд
+            Variables with Artist:
+              name: Зураачтай хамтарсан хувьсагчид
+            Changing Variables with Bee:
+              name: Зөгийтэй хамт хувьсагчдыг өөрчлөх
+            Changing Variables with Artist:
+              name: Зураачтай хамтарсан хувьсагчдыг өөрчлөх
+            For Loops with Bee:
+              name: Зөгийтэй хамтарсан -д зориулав гогцоо
+            For Loops with Artist:
+              name: Зураачтай хамтарсан -д зориулав гогцоо
+            Swimming Fish in Sprite Lab:
+              name: Шидтэний лабораторид суралцах
+            Alien Dance Party:
+              name: Харийнхны бүжгийн үдэшлэг
+            Behaviors in Sprite Lab:
+              name: Шидтэний лаб дахь зан чанар
         pre-express-2020:
           title: Урьдчилан унших Шуурхай (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг
@@ -38531,6 +38611,16 @@ mn:
                 лаборатори дээр үйл явдлыг хэрхэн ашиглаж сурах, хүүхэлдэйн тоглоом
                 үүсгэхэд сурсан кодчлолын бүх чадвараа ашиглах боломжтой болно. Тоглоомын
                 лаборатори дээр бүтээлчээр тоглох цаг боллоо!
+            Loops with Scrat:
+              name: Скраттай гогцоо
+            Loops with Laurel:
+              name: Лаурелтай гогцоо
+            Drawing Gardens with Loops:
+              name: Цэцэрлэгийг гогцоотой зурах
+            On the Move with Events:
+              name: Үйл явдалтай хамт хөдөлж байна
+            A Royal Battle with Events:
+              name: Үйл явдлуудтай хааны тулаан
           lesson_groups:
             csf_sequencing:
               display_name: Дараалуулах
@@ -38604,6 +38694,16 @@ mn:
                 лаборатори дээр үйл явдлыг хэрхэн ашиглаж сурах, хүүхэлдэйн тоглоом
                 үүсгэхэд сурсан кодчлолын бүх чадвараа ашиглах боломжтой болно. Тоглоомын
                 лаборатори дээр бүтээлчээр тоглох цаг боллоо!
+            Loops with Scrat:
+              name: Скраттай гогцоо
+            Loops with Laurel:
+              name: Лаурелтай гогцоо
+            Drawing Gardens with Loops:
+              name: Цэцэрлэгийг гогцоотой зурах
+            On the Move with Events:
+              name: Үйл явдалтай хамт хөдөлж байна
+            A Royal Battle with Events:
+              name: Үйл явдлуудтай хааны тулаан
         csp1-2020:
           stages:
             new stage:
@@ -40080,3 +40180,10 @@ mn:
           lessons:
             Lesson:
               name: Хичээл
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: Модуль 1
+          lessons:
+            Module 1:
+              name: Модуль 1
