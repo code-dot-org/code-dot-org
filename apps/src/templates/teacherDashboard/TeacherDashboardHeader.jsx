@@ -141,7 +141,7 @@ export default connect(
     // However in this case, we need hidden sections in the redux tree in case
     // the selected section is hidden.
     let sections = sortedSectionsList(state.teacherSections.sections).filter(
-      s => !s.hidden
+      section => !section.hidden
     );
     let selectedSectionId = state.teacherSections.selectedSectionId;
     let selectedSection = state.teacherSections.sections[selectedSectionId];

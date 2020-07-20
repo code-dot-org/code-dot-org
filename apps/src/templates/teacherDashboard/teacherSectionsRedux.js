@@ -1018,7 +1018,7 @@ export function assignedScriptName(state) {
 
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
-  return sortSectionsList(allSections || []).filter(s => !s.hidden);
+  return sortSectionsList(allSections || []).filter(section => !section.hidden);
 }
 
 /**
@@ -1196,11 +1196,11 @@ export function sectionsForDropdown(
   courseId,
   onCourseOverview
 ) {
-  return sortedSectionsList(state.sections).map(s => ({
-    ...s,
+  return sortedSectionsList(state.sections).map(section => ({
+    ...section,
     isAssigned:
-      (scriptId !== null && s.scriptId === scriptId) ||
-      (courseId !== null && s.courseId === courseId && onCourseOverview)
+      (scriptId !== null && section.scriptId === scriptId) ||
+      (courseId !== null && section.courseId === courseId && onCourseOverview)
   }));
 }
 
