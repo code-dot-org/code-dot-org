@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  before_action :setup_i18n_tracking
+
   around_action :with_locale
 
   before_action :fix_crawlers_with_bad_accept_headers
@@ -141,6 +143,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit PERMITTED_USER_FIELDS}
+  end
+
+  # Capture the current request URL for i18n string tracking
+  def setup_i18n_tracking
+    Thread.current[:current_request_url] = request.url
   end
 
   def with_locale
