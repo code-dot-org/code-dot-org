@@ -70,7 +70,7 @@ ________________
 ## CS Fundamentals Facilitator Support Documents
 
 - [CS Fundamentals Facilitator Playbook](https://docs.google.com/document/d/1kJ42QppLmoB1mOkubTRF54HjH6oGUK-EpPKqE_BRSK0/edit?ts=5a96c3a5) - Toolkit for CS Fundamentals Facilitators
-- [CS Fundamentals Workshop Process Document](https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit) - Guide for CS Fundamentals Facilitators and Regional Partners to manage K-5 workshops
+- [CS Fundamentals Workshop Process Document](https://docs.google.com/document/d/1eMA0RT-id5dsVZS0p_UUt4FKMnjzf-uUBUY1y_Z7hr0/edit) - Guide for CS Fundamentals Facilitators and Regional Partners to manage K-5 workshops
 - [CS Fundamentals Facilitator Landing Page](https://curriculum.code.org/plcsf/) - See full list of resources and agendas for CS Fundamentals Facilitators
 - <a href="/educate/regional-partner/playbook/payments#csftravel">CS Fundamentals Facilitator Travel Policy</a>
 

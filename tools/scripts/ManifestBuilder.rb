@@ -209,12 +209,16 @@ The animation has been skipped.
     end
     alias_map = build_alias_map(animation_metadata)
     category_map = build_category_map(animation_metadata)
+    normalized_category_map = {}
+    category_map.each do |key, value|
+      normalized_category_map[key.tr(' ', '_')] = value
+    end
 
     info "Uploading file to S3"
     AWS::S3.upload_to_bucket(
       DEFAULT_S3_BUCKET,
       "manifests/spritelabCostumeLibrary.#{locale}.json",
-      generate_json(animation_metadata, alias_map, category_map),
+      generate_json(animation_metadata, alias_map, normalized_category_map),
       acl: 'public-read',
       no_random: true,
       content_type: 'json'
