@@ -246,13 +246,14 @@ class ApplicationController < ActionController::Base
 
   def pairings=(pairings_from_params)
     # remove pairings
-    if pairings_from_params.blank?
+    if pairings_from_params[:pairings].blank?
       session[:pairings] = []
+      session[:pairing_section_id] = nil
       return
     end
 
     # replace pairings
-    session[:pairings] = pairings_from_params.map do |pairing_param|
+    session[:pairings] = pairings_from_params[:pairings].map do |pairing_param|
       other_user = User.find(pairing_param[:id])
       if current_user.can_pair_with? other_user
         other_user.id
@@ -261,17 +262,29 @@ class ApplicationController < ActionController::Base
         nil
       end
     end.compact
+
+    session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end
 
   def pairings
     return [] if session[:pairings].blank?
-
-    User.find(session[:pairings])
+    if pairing_still_enabled
+      User.find(session[:pairings])
+    else
+      # clear the pairing data from the session cookie
+      self.pairings = {pairings: []}
+      return []
+    end
   end
 
   # @return [Array of Integers] an array of user IDs of users paired with the
   #   current user.
   def pairing_user_ids
+    unless pairing_still_enabled
+      # clear the pairing data from the session cookie
+      self.pairings = {pairings: []}
+    end
+
     # TODO(asher): Determine whether we need to guard against it being nil.
     session[:pairings].nil? ? [] : session[:pairings]
   end
@@ -282,5 +295,11 @@ class ApplicationController < ActionController::Base
       session.delete(:sign_up_type)
       session.delete(:sign_up_tracking_expiration)
     end
+  end
+
+  private
+
+  def pairing_still_enabled
+    session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
 end

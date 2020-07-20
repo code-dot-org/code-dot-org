@@ -948,6 +948,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     assert_difference('UserLevel.count', 2) do # both get a UserLevel
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
@@ -965,6 +966,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairings = 3.times.map {create(:follower, section: section).student_user}
     session[:pairings] = pairings.map(&:id)
+    session[:pairing_section_id] = section.id
 
     assert_difference('UserLevel.count', 4) do # all 4 people
       assert_difference('PairedUserLevel.count', 3) do # there are 3 PairedUserLevel links
@@ -985,6 +987,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
 
@@ -1005,6 +1008,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
 
@@ -1019,6 +1023,28 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_driver_user_level.best_result
 
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
+  end
+
+  test "milestone with pairings stops updating levels when pairing is disabled" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
+    section.update!(pairing_allowed: false)
+
+    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+
+    assert_no_difference('UserLevel.count') do # no new UserLevel is created
+      assert_no_difference('PairedUserLevel.count') do # no PairedUserLevel is created
+        post :milestone, params: @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_driver_user_level.reload
+    assert_equal 100, existing_driver_user_level.best_result
+
+    assert_equal [], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
 
   test "milestone fails to update locked/readonly level" do
