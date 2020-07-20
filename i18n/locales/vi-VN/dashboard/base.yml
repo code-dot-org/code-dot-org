@@ -867,6 +867,8 @@ vi:
       school_name: 'Tên trường'
       school_city: 'Thành phố của trường'
       school_country: 'Quốc gia'
+      colombian_school_city: 'Thành phố của trường'
+      colombian_school_name: 'Tên trường'
     form_entries:
       gender:
         male: 'Nam'
