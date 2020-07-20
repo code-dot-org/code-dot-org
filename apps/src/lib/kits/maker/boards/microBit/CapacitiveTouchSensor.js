@@ -5,9 +5,19 @@ export default class CapacitiveTouchSensor extends EventEmitter {
     super();
     this.board = board;
 
-    // Flag to only trigger event on first of type
-    this.connect = false;
+    // The sensor continuously samples the value, so this flag tracks the changes
+    // in state so we only emit the 'up' and 'down' event once per state change
+    this.connected = false;
+
+    // When unconnected, the sensor reads values in the low 200s
     this.releaseReading = 200;
+
+    // When connected, the sensor reads values over 400
+    this.connectedDelta = 200;
+
+    // Allowance for triggering a change event
+    this.allowanceDelta = 100;
+
     this.readSensorTimer = null;
     this.board.mb.setPinMode(this.board.pin, 2);
     this.board.mb.clearChannelData();
@@ -23,14 +33,20 @@ export default class CapacitiveTouchSensor extends EventEmitter {
   }
 
   start() {
-    this.board.mb.streamAnalogChannel(this.board.pin); // enable temp sensor
+    this.board.mb.streamAnalogChannel(this.board.pin); // enable cap touch sensor
     this.readSensorTimer = setInterval(() => {
       let currentValue = this.board.mb.analogChannel[this.board.pin];
       if (this.board.mb.analogChannel[this.board.pin] !== 255) {
-        if (currentValue > this.releaseReading + 200 && !this.connect) {
+        if (
+          currentValue > this.releaseReading + this.connectedDelta &&
+          !this.connect
+        ) {
           this.emit('down');
           this.connect = true;
-        } else if (currentValue < this.releaseReading + 100 && this.connect) {
+        } else if (
+          currentValue < this.releaseReading + this.allowanceDelta &&
+          this.connect
+        ) {
           this.emit('up');
           this.connect = false;
         }
@@ -39,7 +55,7 @@ export default class CapacitiveTouchSensor extends EventEmitter {
   }
 
   stop() {
-    this.board.mb.stopStreamingAnalogChannel(this.board.pin); // disable temp sensor
+    this.board.mb.stopStreamingAnalogChannel(this.board.pin); // disable cap touch sensor
     clearInterval(this.readSensorTimer);
     this.readSensorTimer = null;
   }
