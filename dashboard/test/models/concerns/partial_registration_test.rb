@@ -83,6 +83,40 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     refute_equal user.oauth_refresh_token, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['oauth_refresh_token']
   end
 
+  test 'persist_attributes puts other potentially large attributes into the cache' do
+    session = fake_empty_session
+    user = build :student, :google_sso_provider,
+      school: 'fake-school',
+      full_address: 'fake-full-address'
+
+    PartialRegistration.persist_attributes session, user
+
+    # Values are in cache
+    assert_equal user.school,
+      CDO.shared_cache.read(PartialRegistration.cache_key('school', user))
+    assert_equal user.full_address,
+      CDO.shared_cache.read(PartialRegistration.cache_key('full_address', user))
+
+    # ...not in session
+    refute session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY].key? 'school'
+    refute session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY].key? 'full_address'
+  end
+
+  test 'persist_attributes omits irrelevant attributes from the session and the cache' do
+    session = fake_empty_session
+    user = build :student, :google_sso_provider
+
+    PartialRegistration.persist_attributes session, user
+
+    PartialRegistration::ATTRIBUTES_TO_DROP.each do |attr_name|
+      # Values are not in the cache...
+      refute CDO.shared_cache.exist? PartialRegistration.cache_key(attr_name, user)
+
+      # ...nor in the session
+      refute session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY].key? attr_name
+    end
+  end
+
   test 'round-trip preserves important attributes' do
     session = fake_empty_session
     user = build :user, :google_sso_provider
