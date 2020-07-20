@@ -16,9 +16,9 @@ class RegistrationsController < Devise::RegistrationsController
   def new
     session[:user_return_to] ||= params[:user_return_to]
     if PartialRegistration.in_progress?(session)
-      user_params = params[:user] || {}
+      user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
-      @user = User.new_with_session(user_params, session)
+      @user = User.new_with_session(user_params.permit(:user_type), session)
     else
       save_default_sign_up_user_type
       @already_hoc_registered = params[:already_hoc_registered]
