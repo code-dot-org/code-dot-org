@@ -76,6 +76,18 @@ module RegistrationsControllerTests
       assert_nil assigns(:user).user_type
     end
 
+    test 'visting sign-up with a user_type queryparam when sign-up is in progress, the queryparam wins' do
+      get '/users/sign_up?user[user_type]=student'
+      start_email_password_signup
+      assert_template partial: '_finish_sign_up'
+      assert_equal 'student', assigns(:user).user_type
+
+      get '/users/sign_up?user[user_type]=teacher'
+      assert_response :success, response.body
+      assert_template partial: '_finish_sign_up'
+      assert_equal 'teacher', assigns(:user).user_type
+    end
+
     private
 
     def start_email_password_signup

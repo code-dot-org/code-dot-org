@@ -5,10 +5,8 @@ import {Provider} from 'react-redux';
 import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
-import LessonProgress from './components/progress/LessonProgress.jsx';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
-import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
@@ -76,7 +74,7 @@ progress.showDisabledBubblesAlert = function() {
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
  */
-progress.renderStageProgress = function(
+progress.generateStageProgress = function(
   scriptData,
   stageData,
   progressData,
@@ -123,13 +121,6 @@ progress.renderStageProgress = function(
   if (progressData.isVerifiedTeacher) {
     store.dispatch(setVerified());
   }
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <LessonProgress />
-    </Provider>,
-    document.querySelector('.progress_container')
-  );
 };
 
 /**
@@ -191,33 +182,8 @@ progress.renderCourseProgress = function(scriptData) {
   );
 };
 
-/**
- * @param {HTMLElement} element - DOM element we want to render into
- * @param {string} scriptName - name of current script
- * @param {string} currentLevelId - Level that we're current on.
- * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
- * @param {bool} student_detail_progress_view - Should we default to progress view
- *   user has
- */
-progress.renderMiniView = function(
-  element,
-  scriptName,
-  currentLevelId,
-  linesOfCodeText,
-  student_detail_progress_view
-) {
+progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  if (student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <MiniView linesOfCodeText={linesOfCodeText} />
-    </Provider>,
-    element
-  );
-
   $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
     queryUserProgress(store, scriptData, currentLevelId);

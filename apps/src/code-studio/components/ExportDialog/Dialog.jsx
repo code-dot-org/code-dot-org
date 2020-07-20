@@ -29,7 +29,7 @@ function recordExport(type) {
       study: 'finish-dialog-export',
       study_group: 'v1',
       event: 'project-export',
-      project_id: project.getCurrentId(),
+      project_id: project.getCurrentId ? project.getCurrentId() : undefined,
       data_string: type
     },
     {includeUserId: true}

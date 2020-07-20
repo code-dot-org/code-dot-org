@@ -9,29 +9,6 @@ When /^I add code for a canvas and a button$/ do
   add_code_to_editor(code)
 end
 
-When /^I add code for a library function$/ do
-  code =
-    "// my library function\\n" \
-    "function myLibrary() {}"
-  add_code_to_editor(code)
-end
-
-Given /^I publish a basic library$/ do
-  steps <<-STEPS
-    And I start a new Applab project
-    And I wait for the page to fully load
-    And I wait for initial project save to complete
-    And I switch to text mode
-    When I add code for a library function
-    Then I open the library publish dialog
-    And I wait until element "#ui-test-library-description" is visible
-    And I press keys "My library" for element "#ui-test-library-description"
-    And I click selector "label:contains('Select all functions')"
-    Then I click selector "#ui-test-publish-library"
-    And I wait until element "b:contains('Successfully published your library:')" is visible
-  STEPS
-end
-
 And /^Applab HTML has a button$/ do
   code = @browser.execute_script "return Applab.levelHtml"
   expect(/button/.match(code).nil?).to be(false)
@@ -140,15 +117,6 @@ When /^I navigate to the embedded version of my project with source hidden$/ do
     And I click selector "#project-share li:contains('Embed')"
     And I click selector "#project-share label:contains('Hide ability to view code')"
     And I copy the embed code into a new document
-  STEPS
-end
-
-Then /^I open the library publish dialog/ do
-  steps <<-STEPS
-    When I open the share dialog
-    And I click selector "#project-share a:contains('Show advanced options')" if it exists
-    And I click selector "#project-share li:contains('Share as library')"
-    And I click selector "button:contains('Share as library')"
   STEPS
 end
 

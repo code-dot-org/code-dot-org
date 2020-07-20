@@ -147,8 +147,10 @@ export const commands = {
   },
 
   // Sprite commands
-  countByAnimation(animation) {
-    return spriteCommands.countByAnimation(animation);
+  countByAnimation(spriteArg) {
+    if (spriteArg.costume) {
+      return spriteCommands.countByAnimation(spriteArg.costume);
+    }
   },
 
   createNewSprite(name, animation, location) {
@@ -179,6 +181,14 @@ export const commands = {
     ]);
   },
 
+  makeNumSprites(num, animation) {
+    for (let i = 0; i < num; i++) {
+      spriteCommands.makeSprite.apply(this, [
+        {animation: animation, location: locationCommands.randomLocation()}
+      ]);
+    }
+  },
+
   setAnimation(spriteArg, animation) {
     spriteCommands.setAnimation(spriteArg, animation);
   },
@@ -186,6 +196,10 @@ export const commands = {
   // World commands
   comment(text) {
     worldCommands.comment(text);
+  },
+
+  getTime(unit) {
+    return worldCommands.getTime.apply(this, [unit]);
   },
 
   hideTitleScreen() {

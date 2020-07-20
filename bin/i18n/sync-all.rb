@@ -47,7 +47,7 @@ class I18nSync
       sync_up if should_i "sync up"
       create_in_up_pr if @options[:with_pull_request]
       sync_down if should_i "sync down"
-      sync_out if should_i "sync out"
+      sync_out(true) if should_i "sync out"
       create_down_out_pr if @options[:with_pull_request]
       checkout_staging
     elsif @options[:command]
@@ -66,7 +66,7 @@ class I18nSync
         sync_down
       when 'out'
         puts "Distributing translations from i18n/locales out into codebase"
-        sync_out
+        sync_out(true)
         if @options[:with_pull_request]
           create_down_out_pr
         end

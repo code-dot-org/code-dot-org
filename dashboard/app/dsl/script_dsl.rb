@@ -221,6 +221,10 @@ class ScriptDSL < BaseDSL
         @current_scriptlevel[:properties][:variants][name] = levelprops
       end
 
+      @current_scriptlevel[:assessment] = assessment if assessment
+      @current_scriptlevel[:bonus] = bonus if bonus
+      @current_scriptlevel[:named_level] = named if named
+
       if progression
         # Variant levels must always have the same progression (or no progression)
         current_progression = @current_scriptlevel[:properties][:progression]
@@ -229,9 +233,8 @@ class ScriptDSL < BaseDSL
         end
         @current_scriptlevel[:properties][:progression] = progression
       end
-      if challenge
-        @current_scriptlevel[:properties][:challenge] = challenge
-      end
+
+      @current_scriptlevel[:properties][:challenge] = challenge if challenge
     else
       script_level = {
         levels: [level]
