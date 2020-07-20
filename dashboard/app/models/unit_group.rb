@@ -14,12 +14,14 @@
 #
 require 'cdo/script_constants'
 
-class Course < ApplicationRecord
+class UnitGroup < ApplicationRecord
+  self.table_name = 'courses'
+
   # Some Courses will have an associated Plc::Course, most will not
-  has_one :plc_course, class_name: 'Plc::Course'
-  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy
+  has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
+  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_course_scripts, source: :script
-  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript', dependent: :destroy
+  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
 
   after_save :write_serialization
 
@@ -80,10 +82,10 @@ class Course < ApplicationRecord
     serialization = File.read(path)
     hash = JSON.parse(serialization)
 
-    course = Course.find_or_create_by!(name: hash['name'])
-    course.update_scripts(hash['script_names'], hash['alternate_scripts'])
-    course.properties = hash['properties']
-    course.save!
+    unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
+    unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
+    unit_group.properties = hash['properties']
+    unit_group.save!
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -131,7 +133,7 @@ class Course < ApplicationRecord
   # @param alternate_scripts [Array<Hash>] Updated list of alternate scripts in this course
   # @param course_strings[Hash{String => String}]
   def persist_strings_and_scripts_changes(scripts, alternate_scripts, course_strings)
-    Course.update_strings(name, course_strings)
+    UnitGroup.update_strings(name, course_strings)
     update_scripts(scripts, alternate_scripts) if scripts
     save!
   end
@@ -148,7 +150,7 @@ class Course < ApplicationRecord
   def write_serialization
     # Only save non-plc course, and only in LB mode
     return unless Rails.application.config.levelbuilder_mode && !plc_course
-    File.write(Course.file_path(name), serialize)
+    File.write(UnitGroup.file_path(name), serialize)
   end
 
   # @param new_scripts [Array<String>]
@@ -163,7 +165,7 @@ class Course < ApplicationRecord
 
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
-      course_script = CourseScript.find_or_create_by!(course: self, script: script) do |cs|
+      course_script = CourseScript.find_or_create_by!(unit_group: self, script: script) do |cs|
         cs.position = index + 1
       end
       course_script.update!(position: index + 1)
@@ -174,7 +176,7 @@ class Course < ApplicationRecord
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
       position = default_course_scripts.find_by(script: default_script).position
-      course_script = CourseScript.find_or_create_by!(course: self, script: alternate_script) do |cs|
+      course_script = CourseScript.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
         cs.position = position
         cs.experiment_name = hash['experiment_name']
         cs.default_script = default_script
@@ -188,7 +190,7 @@ class Course < ApplicationRecord
 
     scripts_to_delete.each do |script_name|
       script = Script.find_by_name!(script_name)
-      CourseScript.where(course: self, script: script).destroy_all
+      CourseScript.where(unit_group: self, script: script).destroy_all
     end
     # Reload model so that default_course_scripts is up to date
     transaction {reload}
@@ -218,7 +220,7 @@ class Course < ApplicationRecord
 
   def self.all_courses
     Rails.cache.fetch('valid_courses/all') do
-      Course.all
+      UnitGroup.all
     end
   end
 
@@ -231,11 +233,11 @@ class Course < ApplicationRecord
     # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
     if user && has_any_course_experiments?(user)
-      return Course.valid_courses_without_cache
+      return UnitGroup.valid_courses_without_cache
     end
 
     courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
-      Course.valid_courses_without_cache
+      UnitGroup.valid_courses_without_cache
     end
 
     if user && has_any_pilot_access?(user)
@@ -247,7 +249,7 @@ class Course < ApplicationRecord
   end
 
   def self.valid_course_infos(user: nil)
-    return Course.valid_courses(user: user).map {|c| c.assignable_info(user)}
+    return UnitGroup.valid_courses(user: user).map {|c| c.assignable_info(user)}
   end
 
   # @param user [User]
@@ -259,7 +261,7 @@ class Course < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table.
   def self.valid_courses_without_cache
-    Course.all.select(&:visible?)
+    UnitGroup.all.select(&:visible?)
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
@@ -274,7 +276,7 @@ class Course < ApplicationRecord
   # Users should only be able to assign one of their valid courses.
   def assignable?(user)
     if user&.teacher?
-      Course.valid_course_id?(id)
+      UnitGroup.valid_course_id?(id)
     end
   end
 
@@ -322,7 +324,7 @@ class Course < ApplicationRecord
     return [] unless family_name
 
     # Include visible courses, plus self if not already included
-    courses = Course.valid_courses(user: user).clone
+    courses = UnitGroup.valid_courses(user: user).clone
     courses.append(self) unless courses.any? {|c| c.id == id}
 
     versions = courses.
@@ -382,7 +384,7 @@ class Course < ApplicationRecord
       end
     end
 
-    course_sections = user.sections_as_student.where(course: self)
+    course_sections = user.sections_as_student.where(unit_group: self)
     unless course_sections.empty?
       alternates.each do |cs|
         course_sections.each do |section|
@@ -415,7 +417,7 @@ class Course < ApplicationRecord
 
     # Redirect user to the latest assigned course in this course family,
     # if one exists and it is newer than the current course.
-    latest_assigned_version = Course.latest_assigned_version(family_name, user)
+    latest_assigned_version = UnitGroup.latest_assigned_version(family_name, user)
     latest_assigned_version_year = latest_assigned_version&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > version_year
     latest_assigned_version.link
@@ -424,7 +426,7 @@ class Course < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user = nil)
-    latest_course_version = Course.latest_stable_version(family_name)
+    latest_course_version = UnitGroup.latest_stable_version(family_name)
     is_latest = latest_course_version == self
 
     # All users can see the latest course version.
@@ -439,11 +441,11 @@ class Course < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a course family.
-  # @return [Course] Returns the latest stable version in a course family.
+  # @return [UnitGroup] Returns the latest stable version in a course family.
   def self.latest_stable_version(family_name)
     return nil unless family_name.present?
 
-    Course.
+    UnitGroup.
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
       # select only stable courses.
@@ -455,12 +457,12 @@ class Course < ApplicationRecord
 
   # @param family_name [String] The family name for a course family.
   # @param user [User]
-  # @return [Course] Returns the latest version in a course family that the user is assigned to.
+  # @return [UnitGroup] Returns the latest version in a course family that the user is assigned to.
   def self.latest_assigned_version(family_name, user)
     return nil unless family_name && user
     assigned_course_ids = user.section_courses.pluck(:id)
 
-    Course.
+    UnitGroup.
       # select only courses assigned to this user.
       where(id: assigned_course_ids).
       # select only courses in the same course family.
@@ -486,7 +488,7 @@ class Course < ApplicationRecord
     return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
-    Course.
+    UnitGroup.
       joins(:default_course_scripts).
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
@@ -532,7 +534,7 @@ class Course < ApplicationRecord
 
   def self.course_cache_from_db
     {}.tap do |cache|
-      Course.with_associated_models.find_each do |course|
+      UnitGroup.with_associated_models.find_each do |course|
         cache[course.name] = course
         cache[course.id.to_s] = course
       end
@@ -554,7 +556,7 @@ class Course < ApplicationRecord
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     # unlike script cache, we don't throw on miss
-    Course.find_by(find_by => id_or_name)
+    UnitGroup.find_by(find_by => id_or_name)
   end
 
   def self.get_from_cache(id_or_name)
@@ -595,7 +597,7 @@ class Course < ApplicationRecord
     # will fail to detect if a user was previously assigned to a pilot course in
     # which they made no progress.
 
-    is_assigned = user.sections_as_student.any? {|s| s.course == self}
+    is_assigned = user.sections_as_student.any? {|s| s.unit_group == self}
     has_progress = !!UserScript.find_by(user: user, script: default_scripts)
     has_pilot_teacher = user.teachers.any? {|t| has_pilot_experiment?(t)}
     (is_assigned || has_progress) && has_pilot_teacher
@@ -606,6 +608,6 @@ class Course < ApplicationRecord
   def self.has_any_pilot_access?(user = nil)
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
-    all_courses.any? {|course| course.has_pilot_experiment?(user)}
+    all_courses.any? {|unit_group| unit_group.has_pilot_experiment?(user)}
   end
 end

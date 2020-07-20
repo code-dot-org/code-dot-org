@@ -1266,10 +1266,10 @@ class User < ActiveRecord::Base
     return false if sections_as_student.empty?
 
     # Can't hide a script that isn't part of a course
-    course = script.try(:course)
-    return false unless course
+    unit_group = script.try(:unit_group)
+    return false unless unit_group
 
-    get_student_hidden_ids(course.id, false).include?(script.id)
+    get_student_hidden_ids(unit_group.id, false).include?(script.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1287,10 +1287,10 @@ class User < ActiveRecord::Base
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(course = nil)
-    return [] if !teacher? && course.nil?
+  def get_hidden_script_ids(unit_group = nil)
+    return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
+    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -1545,12 +1545,12 @@ class User < ActiveRecord::Base
   end
 
   def assigned_script?(script)
-    section_scripts.include?(script) || section_courses.include?(script&.course)
+    section_scripts.include?(script) || section_courses.include?(script&.unit_group)
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    scripts.map(&:course).compact.concat(section_courses).uniq
+    scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1656,7 +1656,7 @@ class User < ActiveRecord::Base
 
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:course).compact.uniq
+    all_sections.map(&:unit_group).compact.uniq
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
@@ -1668,8 +1668,8 @@ class User < ActiveRecord::Base
     all_sections.each do |section|
       if section.script.present?
         all_scripts << section.script
-      elsif section.course.present?
-        all_scripts.concat(section.course.default_scripts)
+      elsif section.unit_group.present?
+        all_scripts.concat(section.unit_group.default_scripts)
       end
     end
 
