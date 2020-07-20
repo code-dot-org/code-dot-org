@@ -7369,6 +7369,16 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Sticker Art with Loops:
+              name: Циклы в исполнителе Художник
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
+            While Loops with the Farmer:
+              name: Цикл while в Фермере
+            For Loops with Bee:
+              name: Цикл for в Пчеле
+            For Loops with Artist:
+              name: Цикл for в Художнике
           lesson_groups:
             csf_warmup:
               display_name: Разогреть
@@ -7397,6 +7407,16 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Sticker Art with Loops:
+              name: Циклы в исполнителе Художник
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
+            While Loops with the Farmer:
+              name: Цикл while в Фермере
+            For Loops with Bee:
+              name: Цикл for в Пчеле
+            For Loops with Artist:
+              name: Цикл for в Художнике
         pre-express-2020:
           description_audience: 'Возраст: 4-8'
           stages:
@@ -7409,6 +7429,10 @@ ru:
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
             Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Loops with Laurel:
+              name: Циклы в Собирателе
+            Drawing Gardens with Loops:
               name: Циклы в исполнителе Художник
           lesson_groups:
             csf_sequencing:
@@ -7427,6 +7451,10 @@ ru:
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
             Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Loops with Laurel:
+              name: Циклы в Собирателе
+            Drawing Gardens with Loops:
               name: Циклы в исполнителе Художник
         csp1-2020:
           stages:
