@@ -51,9 +51,7 @@ class Lesson < ActiveRecord::Base
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, new_suffix, editor_experiment)
-    chapter = 0
-
+  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, chapter, new_suffix, editor_experiment)
     raw_lessons.map do |raw_lesson|
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
