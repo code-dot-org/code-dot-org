@@ -1021,6 +1021,10 @@ zh-CN:
           CHOICE:
             '"this"': 这
             '"other"': 其他
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': " 秒"
       gamelab_hideTitleScreen:
         text: 隐藏标题屏幕
       gamelab_isTouchingEdges:
