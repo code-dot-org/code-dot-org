@@ -31,7 +31,6 @@ class ScriptLevel < ActiveRecord::Base
   include Rails.application.routes.url_helpers
 
   belongs_to :script
-  belongs_to :lesson_group
   belongs_to :lesson, foreign_key: 'stage_id'
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level

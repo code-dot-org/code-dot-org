@@ -26,9 +26,6 @@
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
-  belongs_to :script
-  belongs_to :lesson_group
-  belongs_to :lesson
   has_and_belongs_to_many :script_levels
   belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
   belongs_to :user
