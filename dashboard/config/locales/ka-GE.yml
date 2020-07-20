@@ -1082,6 +1082,8 @@ ka:
       school_name: სკოლის სახელი
       school_city: სკოლის ქალაქი
       school_country: სკოლის ქვეყანა
+      colombian_school_city: სკოლის ქალაქი
+      colombian_school_name: სკოლის სახელი
       workshop_organizer: სემინარის ორგანიზატორი
       workshop_facilitator: სემინარის თანაშემწე
       workshop_course: სემინარის კურსი
