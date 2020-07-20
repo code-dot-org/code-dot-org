@@ -200,6 +200,10 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
       gamelab_keyPressed:
         options:
           CONDITION:
