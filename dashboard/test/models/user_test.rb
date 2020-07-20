@@ -2780,6 +2780,37 @@ class UserTest < ActiveSupport::TestCase
     assert student.account_age_days == 10
   end
 
+  test 'first_sign_in returns time of first sign in' do
+    now = DateTime.now.utc.iso8601
+
+    student = create :student
+    SignIn.create(
+      user_id: student.id,
+      sign_in_at: now,
+      sign_in_count: 1
+    )
+
+    assert_equal now, student.first_sign_in_date.utc.iso8601
+  end
+
+  test 'days_since_first_sign_in returns days for student who has signed in' do
+    student = create :student
+
+    SignIn.create(
+      user_id: student.id,
+      sign_in_at: DateTime.now - 10,
+      sign_in_count: 1
+    )
+
+    assert_equal 10, student.days_since_first_sign_in
+  end
+
+  test 'days_since_first_sign_in returns nil for student who has not signed in' do
+    student = create :student
+
+    assert_nil student.days_since_first_sign_in
+  end
+
   test 'new users must have valid email addresses' do
     assert_creates User do
       create :user, email: 'valid@example.net'
