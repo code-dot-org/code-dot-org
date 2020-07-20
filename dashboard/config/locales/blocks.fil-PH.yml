@@ -1020,6 +1020,10 @@ fil:
           CHOICE:
             '"this"': ito
             '"other"': iba
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': mga segundo
       gamelab_hideTitleScreen:
         text: itago ang title screen
       gamelab_isTouchingEdges:
