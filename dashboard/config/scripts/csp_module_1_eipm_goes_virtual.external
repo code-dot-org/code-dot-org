@@ -1,0 +1,12 @@
+name 'CSP Module 1 EIPM goes virtual'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# EIPM in different learning enviroments (optional)
+
+## Do this: 
+* If you are teaching in a virtual, hybrid, or socially distanced setting, read the Curriculum Guidance for Virtual/Hybrid for EIPM. You can also find this resource linked off of the Unit 4 curriculum page.  [link forthcoming]
+
+MARKDOWN

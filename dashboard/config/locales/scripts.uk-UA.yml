@@ -5210,3 +5210,19 @@ uk:
               display_name: Зміст
             cspSurvey:
               display_name: Зміст
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Зміст
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Зміст
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Зміст
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Зміст

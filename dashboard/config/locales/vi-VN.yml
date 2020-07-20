@@ -763,6 +763,7 @@ vi:
     sports:
       body: Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao.
     text-compression:
+      title: Nén văn bản
       body: Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản
         bằng cách thay thế các mẫu với các ký hiệu.
     unplugged:

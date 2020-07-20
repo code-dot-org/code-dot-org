@@ -15,7 +15,8 @@ import NameFailureError from '../../NameFailureError';
 
 const styles = {
   buttonWrapper: {
-    float: 'left'
+    float: 'left',
+    display: 'flex'
   }
 };
 
@@ -141,6 +142,16 @@ const EditProjectName = connect(
 )(UnconnectedEditProjectName);
 
 export default class EditableProjectName extends React.Component {
+  static propTypes = {
+    onChangedWidth: PropTypes.func
+  };
+
+  componentDidUpdate() {
+    if (this.props.onChangedWidth) {
+      this.props.onChangedWidth();
+    }
+  }
+
   state = {
     editName: false
   };

@@ -3136,3 +3136,19 @@ sl:
               display_name: Vsebina
             cspSurvey:
               display_name: Vsebina
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Vsebina
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Vsebina
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Vsebina
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Vsebina

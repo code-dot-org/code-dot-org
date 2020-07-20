@@ -495,7 +495,6 @@
   "deleteProjectConfirm": "Você realmente quer excluir o seu projeto? Você não pode desfazer esta ação.",
   "deleteSection": "Excluir seção",
   "deleteSectionConfirm": "Você tem certeza que deseja deletar essa seção? Você não sera capaz de desfazer isso.",
-  "deleteSectionHideSuggestion": "Se você deseja simplesmente remover esta seção da sua lista de seções, considere usar a opção 'Esconder seção'.",
   "deleteUsedImage": "{name} é utilizada em {value, plural, one {1 lugar} other {# lugares}} nessa aplicação. Se você exclui-lá, ela não aparecerá em nenhum desses lugares. Você tem certeza que deseja exclui-lá?",
   "deleting": "Excluindo",
   "description": "Descrição",

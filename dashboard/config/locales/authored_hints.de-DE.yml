@@ -11718,28 +11718,28 @@ de-DE:
         courseC_collector_prog3_b: Versuche die Schaltfläche "Schritt" zu verwenden,
           um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?
         courseC_collector_prog3_c: Wenn du Probleme hast, diese Aufgabe zu lösen,
-          schreibe alle Bewegungen auf ein Blatt Papier.
+          schreibe alle Bewegungen auf ein Blatt Papier!
       courseC_collector_prog3_2018:
         courseC_collector_prog3_a: Das Programm wird nur diejenigen Bausteine ausführen,
           welche mit dem <xml><block type="when_run"/></xml> Baustein verbunden sind.
         courseC_collector_prog3_b: Versuche die Schaltfläche "Schritt" zu verwenden,
           um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?
         courseC_collector_prog3_c: Wenn du Probleme hast, diese Aufgabe zu lösen,
-          schreibe alle Bewegungen auf ein Blatt Papier.
+          schreibe alle Bewegungen auf ein Blatt Papier!
       courseC_collector_prog3_2019:
         courseC_collector_prog3_a: Das Programm wird nur diejenigen Bausteine ausführen,
           welche mit dem <xml><block type="when_run"/></xml> Baustein verbunden sind.
         courseC_collector_prog3_b: Versuche die Schaltfläche "Schritt" zu verwenden,
           um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?
         courseC_collector_prog3_c: Wenn du Probleme hast, diese Aufgabe zu lösen,
-          schreibe alle Bewegungen auf ein Blatt Papier.
+          schreibe alle Bewegungen auf ein Blatt Papier!
       courseC_collector_prog3_2020:
         courseC_collector_prog3_a: Das Programm wird nur diejenigen Bausteine ausführen,
           welche mit dem <xml><block type="when_run"/></xml> Baustein verbunden sind.
         courseC_collector_prog3_b: Versuche die Schaltfläche "Schritt" zu verwenden,
           um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?
         courseC_collector_prog3_c: Wenn du Probleme hast, diese Aufgabe zu lösen,
-          schreibe alle Bewegungen auf ein Blatt Papier.
+          schreibe alle Bewegungen auf ein Blatt Papier!
       courseC_collector_prog4:
         courseC_collector_prog4_a: Wenn du nicht mehr weiterkommst, schreibe alle
           Schritte auf ein Blatt Papier.
@@ -12743,89 +12743,89 @@ de-DE:
         courseC_maze_loops_challenge1_b: Kannst du dich daran erinnern, wie du Schleifen
           verwendet hast, um ein Treppenmuster zu wiederholen?
       courseC_maze_programming1:
-        courseC_maze_programming1_0: Überprüfe, ob alle Bausteine richtig eingerastet
-          sind, und klicke dann nochmals auf 'Ausführen'.
+        courseC_maze_programming1_0: Überprüfe, ob alle Blöcke richtig eingerastet
+          sind, und klicke dann nochmals auf 'Ausführen'!
       courseC_maze_programming1_2018:
-        courseC_maze_programming1_0: Überprüfe, ob alle Bausteine richtig eingerastet
-          sind, und klicke dann nochmals auf 'Ausführen'.
+        courseC_maze_programming1_0: Überprüfe, ob alle Blöcke richtig eingerastet
+          sind, und klicke dann nochmals auf 'Ausführen'!
       courseC_maze_programming1_2019:
-        courseC_maze_programming1_0: Überprüfe, ob alle Bausteine richtig eingerastet
-          sind, und klicke dann nochmals auf 'Ausführen'.
+        courseC_maze_programming1_0: Überprüfe, ob alle Blöcke richtig eingerastet
+          sind, und klicke dann nochmals auf 'Ausführen'!
       courseC_maze_programming1_2020:
-        courseC_maze_programming1_0: Überprüfe, ob alle Bausteine richtig eingerastet
-          sind, und klicke dann nochmals auf 'Ausführen'.
+        courseC_maze_programming1_0: Überprüfe, ob alle Blöcke richtig eingerastet
+          sind, und klicke dann nochmals auf 'Ausführen'!
       courseC_maze_programming2:
         courseC_maze_programming2_a: Um einen <xml><block type="maze_moveForward"/></xml>
-          Baustein zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim
-          <xml><block type="when_run"/></xml> Baustein einrasten.
-        courseC_maze_programming2_b: Überprüfe, ob alle Bausteine richtig eingerastet
-          sind, und klicke dann nochmals auf 'Ausführen'.
+          Block zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim <xml><block
+          type="when_run"/></xml> Block einrasten.
+        courseC_maze_programming2_b: Überprüfe, ob alle Blöcke richtig eingerastet
+          sind, und klicke dann nochmals auf 'Ausführen'!
       courseC_maze_programming2_2018:
         courseC_maze_programming2_a: Um einen <xml><block type="maze_moveForward"/></xml>
-          Baustein zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim
-          <xml><block type="when_run"/></xml> Baustein einrasten.
-        courseC_maze_programming2_b: Überprüfe, ob alle Bausteine richtig eingerastet
-          sind, und klicke dann nochmals auf 'Ausführen'.
+          Block zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim <xml><block
+          type="when_run"/></xml> Block einrasten.
+        courseC_maze_programming2_b: Überprüfe, ob alle Blöcke richtig eingerastet
+          sind, und klicke dann nochmals auf 'Ausführen'!
       courseC_maze_programming2_2019:
         courseC_maze_programming2_a: Um einen <xml><block type="maze_moveForward"/></xml>
-          Baustein zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim
-          <xml><block type="when_run"/></xml> Baustein einrasten.
-        courseC_maze_programming2_b: Überprüfe, ob alle Bausteine richtig eingerastet
-          sind, und klicke dann nochmals auf 'Ausführen'.
+          Block zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim <xml><block
+          type="when_run"/></xml> Block einrasten.
+        courseC_maze_programming2_b: Überprüfe, ob alle Blöcke richtig eingerastet
+          sind, und klicke dann nochmals auf 'Ausführen'!
       courseC_maze_programming2_2020:
         courseC_maze_programming2_a: Um einen <xml><block type="maze_moveForward"/></xml>
-          Baustein zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim
-          <xml><block type="when_run"/></xml> Baustein einrasten.
-        courseC_maze_programming2_b: Überprüfe, ob alle Bausteine richtig eingerastet
-          sind, und klicke dann nochmals auf 'Ausführen'.
+          Block zu verwenden, ziehe ihn aus der Werkzeugkiste und lass ihn beim <xml><block
+          type="when_run"/></xml> Block einrasten.
+        courseC_maze_programming2_b: Überprüfe, ob alle Blöcke richtig eingerastet
+          sind, und klicke dann nochmals auf 'Ausführen'!
       courseC_maze_programming3:
-        courseC_maze_programming3_a: Versuche zunächst, den Code auszuführen, um zu
-          sehen, an welcher Stelle er nicht funktioniert.
+        courseC_maze_programming3_a: Führe zuerst den Code aus, um zu sehen, was falsch
+          läuft!
         courseC_maze_programming3_b: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
 
-          Um einen Baustein aus der Mitte deines Codes zu löschen, ziehe alle Bausteine darunter in einen anderen Teil des Arbeitsbereiches.
+          Um einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches!
 
-          Ziehe den Baustein, den du löschen möchtest, zurück in die Werkzeugkiste.
+          Ziehe nun den Block, den du löschen möchtest, zurück in die Werkzeugkiste!
 
-          Danach setzt du die anderen Bausteine wieder dorthin, wo sie hingehören.
+          Zuletzt setzt du die anderen Blöcke wieder dorthin wo sie hingehören.
       courseC_maze_programming3_2018:
-        courseC_maze_programming3_a: Versuche zunächst, den Code auszuführen, um zu
-          sehen, an welcher Stelle er nicht funktioniert.
+        courseC_maze_programming3_a: Führe zuerst den Code aus, um zu sehen, was falsch
+          läuft!
         courseC_maze_programming3_b: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
 
-          Um einen Baustein aus der Mitte deines Codes zu löschen, ziehe alle Bausteine darunter in einen anderen Teil des Arbeitsbereiches.
+          Um einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches!
 
-          Ziehe den Baustein, den du löschen möchtest, zurück in die Werkzeugkiste.
+          Ziehe nun den Block, den du löschen möchtest, zurück in die Werkzeugkiste!
 
-          Danach setzt du die anderen Bausteine wieder dorthin, wo sie hingehören.
+          Zuletzt setzt du die anderen Blöcke wieder dorthin wo sie hingehören.
       courseC_maze_programming3_2019:
-        courseC_maze_programming3_a: Versuche zunächst, den Code auszuführen, um zu
-          sehen, an welcher Stelle er nicht funktioniert.
+        courseC_maze_programming3_a: Führe zuerst den Code aus, um zu sehen, was falsch
+          läuft!
         courseC_maze_programming3_b: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
 
-          Um einen Baustein aus der Mitte deines Codes zu löschen, ziehe alle Bausteine darunter in einen anderen Teil des Arbeitsbereiches.
+          Um einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches!
 
-          Ziehe den Baustein, den du löschen möchtest, zurück in die Werkzeugkiste.
+          Ziehe nun den Block, den du löschen möchtest, zurück in die Werkzeugkiste!
 
-          Danach setzt du die anderen Bausteine wieder dorthin, wo sie hingehören.
+          Zuletzt setzt du die anderen Blöcke wieder dorthin wo sie hingehören.
       courseC_maze_programming3_2020:
-        courseC_maze_programming3_a: Versuche zunächst, den Code auszuführen, um zu
-          sehen, an welcher Stelle er nicht funktioniert.
+        courseC_maze_programming3_a: Führe zuerst den Code aus, um zu sehen, was falsch
+          läuft!
         courseC_maze_programming3_b: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
 
-          Um einen Baustein aus der Mitte deines Codes zu löschen, ziehe alle Bausteine darunter in einen anderen Teil des Arbeitsbereiches.
+          Um einen Block aus der Mitte deines Codes zu löschen, ziehe alle Blöcke darunter in einen anderen Teil des Arbeitsbereiches!
 
-          Ziehe den Baustein, den du löschen möchtest, zurück in die Werkzeugkiste.
+          Ziehe nun den Block, den du löschen möchtest, zurück in die Werkzeugkiste!
 
-          Danach setzt du die anderen Bausteine wieder dorthin, wo sie hingehören.
+          Zuletzt setzt du die anderen Blöcke wieder dorthin wo sie hingehören.
       courseC_maze_programming4:
-        courseC_maze_programming4_a: Vergiss nicht, dass du dich in die Richtung vom
-          _Vogel_ aus gesehen drehst. Wenn du dich nach rechts drehst, wird der Vogel
-          nach unten gerichtet sein.
+        courseC_maze_programming4_a: Denk daran, bei einer Drehung drehst du dich
+          vom Standpunkt des _Vogels_ aus!  Wenn du nach rechts drehst, wird der Vogel
+          nach unten zeigen.
         courseC_maze_programming4_b: |-
           Um dem Weg zu folgen:
 
@@ -12835,9 +12835,9 @@ de-DE:
           -   in die andere Richtung drehen
           -   vorwärts bewegen
       courseC_maze_programming4_2018:
-        courseC_maze_programming4_a: Vergiss nicht, dass du dich in die Richtung vom
-          _Vogel_ aus gesehen drehst. Wenn du dich nach rechts drehst, wird der Vogel
-          nach unten gerichtet sein.
+        courseC_maze_programming4_a: Denk daran, bei einer Drehung drehst du dich
+          vom Standpunkt des _Vogels_ aus!  Wenn du nach rechts drehst, wird der Vogel
+          nach unten zeigen.
         courseC_maze_programming4_b: |-
           Um dem Weg zu folgen:
 
@@ -12847,9 +12847,9 @@ de-DE:
           -   in die andere Richtung drehen
           -   vorwärts bewegen
       courseC_maze_programming4_2019:
-        courseC_maze_programming4_a: Vergiss nicht, dass du dich in die Richtung vom
-          _Vogel_ aus gesehen drehst. Wenn du dich nach rechts drehst, wird der Vogel
-          nach unten gerichtet sein.
+        courseC_maze_programming4_a: Denk daran, bei einer Drehung drehst du dich
+          vom Standpunkt des _Vogels_ aus!  Wenn du nach rechts drehst, wird der Vogel
+          nach unten zeigen.
         courseC_maze_programming4_b: |-
           Um dem Weg zu folgen:
 
@@ -12859,9 +12859,9 @@ de-DE:
           -   in die andere Richtung drehen
           -   vorwärts bewegen
       courseC_maze_programming4_2020:
-        courseC_maze_programming4_a: Vergiss nicht, dass du dich in die Richtung vom
-          _Vogel_ aus gesehen drehst. Wenn du dich nach rechts drehst, wird der Vogel
-          nach unten gerichtet sein.
+        courseC_maze_programming4_a: Denk daran, bei einer Drehung drehst du dich
+          vom Standpunkt des _Vogels_ aus!  Wenn du nach rechts drehst, wird der Vogel
+          nach unten zeigen.
         courseC_maze_programming4_b: |-
           Um dem Weg zu folgen:
 
@@ -12874,118 +12874,109 @@ de-DE:
         courseC_maze_programming5_a: Versuche, die Schaltfläche "Step" zu verwenden,
           um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes
           tun musst?
-        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen, damit du diese
-          Aufgabe lösen kannst. Weißt du, in welche Richtung er sich drehen muss?
+        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen, um die Aufgabe
+          zu lösen. Findest du heraus in welche Richtung?
         courseC_maze_programming5_c: In der Lösung werden zwei 'vorwärts bewegen'
-          Bausteine, eine Drehung, und zwei weitere 'vorwärts bewegen' Bausteine enthalten
-          sein.
+          Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein.
       courseC_maze_programming5_2018:
         courseC_maze_programming5_a: Versuche, die Schaltfläche "Step" zu verwenden,
           um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes
           tun musst?
-        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen, damit du diese
-          Aufgabe lösen kannst. Weißt du, in welche Richtung er sich drehen muss?
+        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen, um die Aufgabe
+          zu lösen. Findest du heraus in welche Richtung?
         courseC_maze_programming5_c: In der Lösung werden zwei 'vorwärts bewegen'
-          Bausteine, eine Drehung, und zwei weitere 'vorwärts bewegen' Bausteine enthalten
-          sein.
+          Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein.
       courseC_maze_programming5_2019:
         courseC_maze_programming5_a: Versuche, die Schaltfläche "Step" zu verwenden,
           um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes
           tun musst?
-        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen, damit du diese
-          Aufgabe lösen kannst. Weißt du, in welche Richtung er sich drehen muss?
+        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen, um die Aufgabe
+          zu lösen. Findest du heraus in welche Richtung?
         courseC_maze_programming5_c: In der Lösung werden zwei 'vorwärts bewegen'
-          Bausteine, eine Drehung, und zwei weitere 'vorwärts bewegen' Bausteine enthalten
-          sein.
+          Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein.
       courseC_maze_programming5_2020:
         courseC_maze_programming5_a: Versuche, die Schaltfläche "Step" zu verwenden,
           um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes
           tun musst?
-        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen, damit du diese
-          Aufgabe lösen kannst. Weißt du, in welche Richtung er sich drehen muss?
+        courseC_maze_programming5_b: Der Vogel muss sich einmal drehen, um die Aufgabe
+          zu lösen. Findest du heraus in welche Richtung?
         courseC_maze_programming5_c: In der Lösung werden zwei 'vorwärts bewegen'
-          Bausteine, eine Drehung, und zwei weitere 'vorwärts bewegen' Bausteine enthalten
-          sein.
+          Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein.
       courseC_maze_programming6:
-        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten, dieses Rätsel zu
+        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten, diese Aufgabe zu
           lösen!
-        courseC_maze_programming6_b: Verfolge den Weg vom Vogel zum Schwein mit dem
-          Finger. Welche Schritte hast du gemacht?
-        courseC_maze_programming6_c: Vergiss nicht, dich zuerst zu drehen, weil der
-          Vogel am Anfang direkt auf eine Wand zusteuert.
+        courseC_maze_programming6_b: Verfolge mit dem Finger den Weg vom Vogel zum
+          Schwein. Welche Schritte hast du gemacht?
+        courseC_maze_programming6_c: Denk daran, den Vogel zuerst zu drehen, da er
+          vor einer Wand steht!
         courseC_maze_programming6_d: Steckst du fest? Schau dir diesen Weg an!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten, dieses Rätsel zu
           lösen!
-        courseC_maze_programming6_b: Verfolge den Weg vom Vogel zum Schwein mit dem
-          Finger. Welche Schritte hast du gemacht?
-        courseC_maze_programming6_c: Vergiss nicht, dich zuerst zu drehen, weil der
-          Vogel am Anfang direkt auf eine Wand zusteuert.
+        courseC_maze_programming6_b: Verfolge mit dem Finger den Weg vom Vogel zum
+          Schwein. Welche Schritte hast du gemacht?
+        courseC_maze_programming6_c: Denk daran, den Vogel zuerst zu drehen, da er
+          vor einer Wand steht!
         courseC_maze_programming6_d: Steckst du fest? Schau dir diesen Weg an!
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten, dieses Rätsel zu
           lösen!
-        courseC_maze_programming6_b: Verfolge den Weg vom Vogel zum Schwein mit dem
-          Finger. Welche Schritte hast du gemacht?
-        courseC_maze_programming6_c: Vergiss nicht, dich zuerst zu drehen, weil der
-          Vogel am Anfang direkt auf eine Wand zusteuert.
+        courseC_maze_programming6_b: Verfolge mit dem Finger den Weg vom Vogel zum
+          Schwein. Welche Schritte hast du gemacht?
+        courseC_maze_programming6_c: Denk daran, den Vogel zuerst zu drehen, da er
+          vor einer Wand steht!
         courseC_maze_programming6_d: Steckst du fest? Schau dir diesen Weg an!
       courseC_maze_programming6_2020:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten, dieses Rätsel zu
           lösen!
-        courseC_maze_programming6_b: Verfolge den Weg vom Vogel zum Schwein mit dem
-          Finger. Welche Schritte hast du gemacht?
-        courseC_maze_programming6_c: Vergiss nicht, dich zuerst zu drehen, weil der
-          Vogel am Anfang direkt auf eine Wand zusteuert.
+        courseC_maze_programming6_b: Verfolge mit dem Finger den Weg vom Vogel zum
+          Schwein. Welche Schritte hast du gemacht?
+        courseC_maze_programming6_c: Denk daran, den Vogel zuerst zu drehen, da er
+          vor einer Wand steht!
         courseC_maze_programming6_d: Steckst du fest? Schau dir diesen Weg an!
       courseC_maze_programming7:
-        courseC_maze_programming7_a: Vergiss nicht, die Schaltfläche "Schritt" zu
-          verwenden, um die Fehler Baustein für Baustein zu suchen.
+        courseC_maze_programming7_a: Vergiss nicht, die "Schritt" Taste zu benutzen,
+          um Block für Block nach Fehlern zu suchen!
         courseC_maze_programming7_b: Wenn du Probleme hast, diese Aufgabe zu lösen,
-          schreibe alle Bewegungen auf ein Blatt Papier.
+          schreibe alle Bewegungen auf ein Blatt Papier!
       courseC_maze_programming7_2018:
-        courseC_maze_programming7_a: Vergiss nicht, die Schaltfläche "Schritt" zu
-          verwenden, um die Fehler Baustein für Baustein zu suchen.
+        courseC_maze_programming7_a: Vergiss nicht, die "Schritt" Taste zu benutzen,
+          um Block für Block nach Fehlern zu suchen!
         courseC_maze_programming7_b: Wenn du Probleme hast, diese Aufgabe zu lösen,
-          schreibe alle Bewegungen auf ein Blatt Papier.
+          schreibe alle Bewegungen auf ein Blatt Papier!
       courseC_maze_programming7_2019:
-        courseC_maze_programming7_a: Vergiss nicht, die Schaltfläche "Schritt" zu
-          verwenden, um die Fehler Baustein für Baustein zu suchen.
+        courseC_maze_programming7_a: Vergiss nicht, die "Schritt" Taste zu benutzen,
+          um Block für Block nach Fehlern zu suchen!
         courseC_maze_programming7_b: Wenn du Probleme hast, diese Aufgabe zu lösen,
-          schreibe alle Bewegungen auf ein Blatt Papier.
+          schreibe alle Bewegungen auf ein Blatt Papier!
       courseC_maze_programming7_2020:
-        courseC_maze_programming7_a: Vergiss nicht, die Schaltfläche "Schritt" zu
-          verwenden, um die Fehler Baustein für Baustein zu suchen.
+        courseC_maze_programming7_a: Vergiss nicht, die "Schritt" Taste zu benutzen,
+          um Block für Block nach Fehlern zu suchen!
         courseC_maze_programming7_b: Wenn du Probleme hast, diese Aufgabe zu lösen,
-          schreibe alle Bewegungen auf ein Blatt Papier.
+          schreibe alle Bewegungen auf ein Blatt Papier!
       courseC_maze_programming8:
-        courseC_maze_programming8_a: Vergiss nicht, dass du die Schaltfläche "Schritt"
-          verwenden kannst, wenn du nicht mehr weiterkommst, um deinen Code Zeile
-          für Zeile zu prüfen.
-        courseC_maze_programming8_b: Hab keine Angst, einen Fehler zu machen! Versuche
-          weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
-          zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
-          nicht gelöst ist.
+        courseC_maze_programming8_a: Denk daran, die "Schritt" Taste zu benutzen,
+          falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile zu prüfen!
+        courseC_maze_programming8_b: 'Hab keine Angst, einen Fehler zu machen! Versuche
+          weitere Blöcke hinzuzufügen und den Code auszuführen! Dann siehst du, was
+          passiert, auch wenn die Aufgabe noch nicht vollständig gelöst ist. '
       courseC_maze_programming8_2018:
-        courseC_maze_programming8_a: Vergiss nicht, dass du die Schaltfläche "Schritt"
-          verwenden kannst, wenn du nicht mehr weiterkommst, um deinen Code Zeile
-          für Zeile zu prüfen.
+        courseC_maze_programming8_a: Denk daran, die "Schritt" Taste zu benutzen,
+          falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile zu prüfen!
         courseC_maze_programming8_b: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
       courseC_maze_programming8_2019:
-        courseC_maze_programming8_a: Vergiss nicht, dass du die Schaltfläche "Schritt"
-          verwenden kannst, wenn du nicht mehr weiterkommst, um deinen Code Zeile
-          für Zeile zu prüfen.
+        courseC_maze_programming8_a: Denk daran, die "Schritt" Taste zu benutzen,
+          falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile zu prüfen!
         courseC_maze_programming8_b: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
       courseC_maze_programming8_2020:
-        courseC_maze_programming8_a: Vergiss nicht, dass du die Schaltfläche "Schritt"
-          verwenden kannst, wenn du nicht mehr weiterkommst, um deinen Code Zeile
-          für Zeile zu prüfen.
+        courseC_maze_programming8_a: Denk daran, die "Schritt" Taste zu benutzen,
+          falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile zu prüfen!
         courseC_maze_programming8_b: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
@@ -16669,8 +16660,8 @@ de-DE:
           einmal schreiben kannst, dann lass es laufen, um herauszufinden, wohin du
           von dort aus gehen musst.
       courseD_maze_ramp7:
-        courseD_maze_ramp7_b: Vergiss nicht, die Schaltfläche "Schritt" zu verwenden,
-          um die Fehler Baustein für Baustein zu suchen.
+        courseD_maze_ramp7_b: Vergiss nicht, die "Schritt" Taste zu benutzen, um Block
+          für Block nach Fehlern zu suchen!
         courseD_maze_ramp7_a: Verwende Wiederholungs-Bausteine, um entweder einen
           einzelnen Baustein oder ein Stück Code immer wieder auszuführen.
         courseD_maze_ramp7_c: Wenn du deinen Code weiter vereinfachen möchtest, kannst
@@ -16996,8 +16987,8 @@ de-DE:
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
       courseD_scrat_ramp8:
-        courseD_maze_ramp7_b: Vergiss nicht, die Schaltfläche "Schritt" zu verwenden,
-          um die Fehler Baustein für Baustein zu suchen.
+        courseD_maze_ramp7_b: Vergiss nicht, die "Schritt" Taste zu benutzen, um Block
+          für Block nach Fehlern zu suchen!
         courseD_maze_ramp7_a: Verwende Wiederholungs-Bausteine, um entweder einen
           einzelnen Baustein oder ein Stück Code immer wieder auszuführen.
         courseD_maze_ramp7_c: Hab keine Angst, einen Fehler zu machen! Versuche weitere

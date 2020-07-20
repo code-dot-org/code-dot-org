@@ -506,7 +506,6 @@
   "deleteProjectConfirm": "Wollen Sie wirklich Ihr Projekt löschen? Sie können diese Aktion nicht rückgängig machen.",
   "deleteSection": "Lerngruppe löschen",
   "deleteSectionConfirm": "Willst du diese Lerngruppe löschen? Du kannst dies nicht mehr rückgängig machen.",
-  "deleteSectionHideSuggestion": "Wenn Sie nur diese Lerngruppe aus Ihrer Lerngruppenliste entfernen möchten, ziehen Sie auch die Option \"Lerngruppe verstecken\" in Erwägung.",
   "deleteUsedImage": "{name} wird in {value, plural, one {1 Stelle} other{# Stellen}} in dieser App benutzt. Wenn du es löschst, wird es an keiner dieser Stellen mehr angezeigt werden. Bist du dir sicher, dass du es löschen möchtest?",
   "deleting": "Löschen",
   "description": "Beschreibung",
