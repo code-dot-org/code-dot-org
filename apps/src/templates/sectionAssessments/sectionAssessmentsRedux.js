@@ -52,7 +52,7 @@ const MultiAnswerStatus = {
   INCORRECT: 'incorrect'
 };
 
-const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
 
 export const ASSESSMENT_FEEDBACK_OPTION_ID = 0;
 
