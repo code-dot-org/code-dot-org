@@ -36,7 +36,7 @@ scripts_map = {
   'pre-express-2017' => 'pre-express-2017'
 }
 
-@courses = {}
+@unit_groups = {}
 @plc_courses = {}
 @scripts = {}
 @plc_course_units = {}
@@ -80,8 +80,8 @@ scripts_map.each do |_script_id, name|
   script = Script.find_by_name name
   @scripts[name] = script.attributes
 
-  script.courses&.each do |course|
-    @courses[course.name] = course.attributes
+  script.unit_groups&.each do |unit_group|
+    @unit_groups[unit_group.name] = unit_group.attributes
   end
 
   plc_course_unit = script.plc_course_unit
@@ -91,7 +91,7 @@ scripts_map.each do |_script_id, name|
     @plc_course_units[plc_course_unit.unit_name] = plc_cu_attributes
     if plc_course_unit.plc_course
       @plc_courses[plc_course_unit.plc_course.name] = plc_course_unit.plc_course.attributes
-      @courses[plc_course_unit.plc_course.course.name] = plc_course_unit.plc_course.course.attributes
+      @unit_groups[plc_course_unit.plc_course.unit_group.name] = plc_course_unit.plc_course.unit_group.attributes
     end
   end
 
@@ -127,9 +127,9 @@ def yamlize(hsh)
   return hsh.to_yaml[4..-1]
 end
 
-prefix = "../test/fixtures/"
+prefix = Rails.root.join('test/fixtures/')
 
-File.new("#{prefix}courses.yml", 'w').write(yamlize(@courses))
+File.new("#{prefix}courses.yml", 'w').write(yamlize(@unit_groups))
 File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
 File.new("#{prefix}script.yml", 'w').write(yamlize(@scripts))
 File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))
