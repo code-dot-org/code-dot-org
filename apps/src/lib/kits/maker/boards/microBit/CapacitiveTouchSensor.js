@@ -26,7 +26,7 @@ export default class CapacitiveTouchSensor extends EventEmitter {
     Object.defineProperties(this, {
       isPressed: {
         get: function() {
-          return this.connect;
+          return this.connected;
         }
       }
     });
@@ -39,16 +39,16 @@ export default class CapacitiveTouchSensor extends EventEmitter {
       if (this.board.mb.analogChannel[this.board.pin] !== 255) {
         if (
           currentValue > this.releaseReading + this.connectedDelta &&
-          !this.connect
+          !this.connected
         ) {
           this.emit('down');
-          this.connect = true;
+          this.connected = true;
         } else if (
           currentValue < this.releaseReading + this.allowanceDelta &&
-          this.connect
+          this.connected
         ) {
           this.emit('up');
-          this.connect = false;
+          this.connected = false;
         }
       }
     }, 50);
