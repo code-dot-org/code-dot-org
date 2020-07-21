@@ -2278,7 +2278,7 @@ endvariants
     l3 = create :level
     l4 = create :level
     l5 = create :level
-    new_dsl = <<-SCRIPT
+    dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
       lesson 'Lesson1'
       level '#{l1.name}'
@@ -2295,7 +2295,7 @@ endvariants
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal 1, script.script_levels[0].chapter
@@ -2308,6 +2308,22 @@ endvariants
     assert_equal 1, script.script_levels[3].position
     assert_equal 5, script.script_levels[4].chapter
     assert_equal 2, script.script_levels[4].position
+  end
+
+  test 'raise error if lesson with no levels' do
+    dsl = <<-SCRIPT
+      lesson_group 'content', display_name: 'Content'
+      lesson 'Lesson1'
+
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'lesson-group-test-script'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    assert_equal 'Lessons must have at least one level in them.  Lesson: Lesson1.', raise.message
   end
 
   private
