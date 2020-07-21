@@ -202,6 +202,10 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_keyPressed:
         options:
           CONDITION:

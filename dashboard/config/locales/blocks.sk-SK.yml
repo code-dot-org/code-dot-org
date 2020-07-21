@@ -969,6 +969,8 @@ sk:
         text: postava {SPRITE} začni {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} odrazí sa {TARGET}"
       gamelab_changePropBy:
         text: zmeň {PROPERTY} {SPRITE} o {VAL}
         options:
@@ -1017,10 +1019,16 @@ sk:
         options:
           CHOICE:
             '"this"': toto
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundy
       gamelab_hideTitleScreen:
         text: schovať úvodnú obrazovku
       gamelab_isTouchingEdges:
         text: "{SPRITE} sa dotýka okrajov"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE}sa dotýka{TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} skoč {LOCATION}"
       gamelab_keyPressed:
@@ -1172,6 +1180,8 @@ sk:
             '"while"': pokiaľ
       gamelab_subjectSpritePointer:
         text: klikla {SPRITE}
+      gamelab_tumbling:
+        text: omieľanie
       gamelab_turn:
         text: otočiť {SPRITE} {DIRECTION} {N} stupňov
         options:

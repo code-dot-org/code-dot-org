@@ -5954,6 +5954,10 @@ nn:
           stages:
             Spelling Bee:
               name: Stavekonkurranse
+            On the Move with Events:
+              name: Hendingar i Spellab
+            A Royal Battle with Events:
+              name: Hendingar i Spellab
           lesson_groups:
             csf_sequencing:
               display_name: Sekvensiering
@@ -5964,6 +5968,10 @@ nn:
           lessons:
             Spelling Bee:
               name: Stavekonkurranse
+            On the Move with Events:
+              name: Hendingar i Spellab
+            A Royal Battle with Events:
+              name: Hendingar i Spellab
         csp1-2020:
           stages:
             Binary Numbers:

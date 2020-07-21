@@ -210,6 +210,10 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_keyPressed:
         options:
           CONDITION:
