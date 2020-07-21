@@ -1016,6 +1016,8 @@ en:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'comment: {COMMENT}'
+      gamelab_countByAnimation:
+        text: number of {SPRITE}
       gamelab_createNewSprite:
         text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
       gamelab_destroy:
@@ -1024,6 +1026,8 @@ en:
         text: being draggable
       gamelab_edgesDisplace:
         text: edges block {SPRITE} from moving
+      gamelab_getAllSprites:
+        text: all sprites
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1040,6 +1044,12 @@ en:
           CHOICE:
             '"this"': this
             '"other"': other
+      gamelab_getTime:
+        text: time in {UNIT}
+        options:
+          UNIT:
+            '"seconds"': seconds
+            '"frames"': frames
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_isTouchingEdges:
