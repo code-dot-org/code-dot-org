@@ -81,5 +81,11 @@ export const commands = {
       console.log('predictions length 0');
       opts.callback(null);
     }
+
+    // Start next prediction almost immediately.  Use setTimeout to avoid a
+    // recursive call.
+    setTimeout(() => {
+      Applab.executeCmd(null, 'doSomeML', opts);
+    }, 0);
   }
 };
