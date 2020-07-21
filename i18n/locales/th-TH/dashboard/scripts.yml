@@ -4463,6 +4463,24 @@ th:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Programming with Angry Birds:
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+            Creating Art with Code:
+              name: การสร้างศิลปะด้วยโค้ด
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Snowflakes with Anna and Elsa:
+              name: ลูปซ้อนลูป ในเกม Frozen
+            If/Else with Bee:
+              name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+            While Loops with the Farmer:
+              name: ลูปขณะที่ (while loops) กับเกมเกษตรกร
+            Harvesting with Conditionals:
+              name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+            Functions with Harvester:
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            For Loops with Bee:
+              name: ลูป For ในเรื่องผึ้ง
           lesson_groups:
             csf_warmup:
               display_name: อุ่นเครื่อง
@@ -4499,6 +4517,24 @@ th:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Programming with Angry Birds:
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+            Creating Art with Code:
+              name: การสร้างศิลปะด้วยโค้ด
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Snowflakes with Anna and Elsa:
+              name: ลูปซ้อนลูป ในเกม Frozen
+            If/Else with Bee:
+              name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+            While Loops with the Farmer:
+              name: ลูปขณะที่ (while loops) กับเกมเกษตรกร
+            Harvesting with Conditionals:
+              name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+            Functions with Harvester:
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            For Loops with Bee:
+              name: ลูป For ในเรื่องผึ้ง
         pre-express-2020:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           stages:
@@ -4521,6 +4557,8 @@ th:
               name: ลูปกับศิลปิน
             Tell a Story in Play Lab:
               description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
+            Loops with Laurel:
+              name: ลูปไปกับลอเรล
           lesson_groups:
             csf_loops:
               display_name: ลูป
@@ -4546,6 +4584,8 @@ th:
               name: ลูปกับศิลปิน
             Tell a Story in Play Lab:
               description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
+            Loops with Laurel:
+              name: ลูปไปกับลอเรล
         csp1-2020:
           lesson_groups:
             cspSurvey:

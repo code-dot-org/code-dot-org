@@ -203,6 +203,10 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       gamelab_keyPressed:
         options:
           CONDITION:

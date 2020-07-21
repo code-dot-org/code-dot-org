@@ -1014,6 +1014,10 @@ is:
         options:
           CHOICE:
             '"this"': þetta
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekúndur
       gamelab_hideTitleScreen:
         text: fela titilinn
       gamelab_isTouchingEdges:

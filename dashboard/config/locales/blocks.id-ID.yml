@@ -1021,6 +1021,10 @@ id:
           CHOICE:
             '"this"': ini
             '"other"': lainnya
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       gamelab_hideTitleScreen:
         text: menyembunyikan judul layar
       gamelab_isTouchingEdges:

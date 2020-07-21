@@ -37,6 +37,14 @@ se:
               name: 'Uvlu: Mohkit'
             'Bee: Sequence':
               name: 'Uvlu: Sekveansa'
+            Building a Foundation:
+              name: Hukset Vuođu
+            Getting Loopy:
+              name: Šaddat Gáiggasin
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
+            Happy Maps:
+              name: Movttegis Kárttat
             'Jigsaw: Learn to drag and drop':
               name: 'Bihttáspeallu: Oahpa movt geassit ja luoitit'
             'Maze: Debugging':
@@ -45,10 +53,16 @@ se:
               name: 'Labirynta: Mohkit'
             'Maze: Sequence':
               name: 'Labirynta: Sekveansa'
+            Move it, Move it:
+              name: Sirdde, Sirdde
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
             Spelling Bee:
               name: Stávengilvu
             'Studio: Create a Story':
               name: 'Speallan-lab: Ráhkat Muitalusa'
+            The Big Event:
+              name: Stuora Dáhpáhus
           lessons:
             'Artist: Loops':
               name: 'Dáiddár: Mohkit'
@@ -60,6 +74,14 @@ se:
               name: 'Uvlu: Mohkit'
             'Bee: Sequence':
               name: 'Uvlu: Sekveansa'
+            Building a Foundation:
+              name: Hukset Vuođu
+            Getting Loopy:
+              name: Šaddat Gáiggasin
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
+            Happy Maps:
+              name: Movttegis Kárttat
             'Jigsaw: Learn to drag and drop':
               name: 'Bihttáspeallu: Oahpa movt geassit ja luoitit'
             'Maze: Debugging':
@@ -68,10 +90,16 @@ se:
               name: 'Labirynta: Mohkit'
             'Maze: Sequence':
               name: 'Labirynta: Sekveansa'
+            Move it, Move it:
+              name: Sirdde, Sirdde
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
             Spelling Bee:
               name: Stávengilvu
             'Studio: Create a Story':
               name: 'Speallan-lab: Ráhkat Muitalusa'
+            The Big Event:
+              name: Stuora Dáhpáhus
         course2:
           title: Kursa 2
           description: Kursa 2 lea heivehuvvon ohppiide geat máhttet lohkat ja geain
@@ -96,14 +124,24 @@ se:
               name: 'Uvlu: Vihkeohcan'
             'Bee: Loops':
               name: 'Uvlu: Mohkit'
+            Binary Bracelets:
+              name: Binára Giehtabáttit
             Flappy:
               name: Flappy
+            Getting Loopy:
+              name: Šaddat Gáiggasin
             'Maze: Loops':
               name: 'Labirynta: Mohkit'
             'Maze: Sequence':
               name: 'Labirynta: Sekveansa'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
             'Studio: Create a Story':
               name: 'Speallan-lab: Ráhkat Muitalusa'
+            The Big Event:
+              name: Stuora Dáhpáhus
+            Your Digital Footprint:
+              name: Du Digitála Luodda
           lessons:
             'Artist: Debugging':
               name: 'Dáiddár: Vihkeohcan'
@@ -119,14 +157,24 @@ se:
               name: 'Uvlu: Vihkeohcan'
             'Bee: Loops':
               name: 'Uvlu: Mohkit'
+            Binary Bracelets:
+              name: Binára Giehtabáttit
             Flappy:
               name: Flappy
+            Getting Loopy:
+              name: Šaddat Gáiggasin
             'Maze: Loops':
               name: 'Labirynta: Mohkit'
             'Maze: Sequence':
               name: 'Labirynta: Sekveansa'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
             'Studio: Create a Story':
               name: 'Speallan-lab: Ráhkat Muitalusa'
+            The Big Event:
+              name: Stuora Dáhpáhus
+            Your Digital Footprint:
+              name: Du Digitála Luodda
         course3:
           title: Kursa 3
           description: Kursa 3 lea ráhkaduvvon ohppiide geat leat čađahan Kursa 2.
@@ -155,12 +203,22 @@ se:
               name: 'Uvlu: Funkšuvnnat'
             'Bee: Nested Loops':
               name: 'Uvlu: Mohkit Mohkiin'
+            Crowdsourcing:
+              name: Joavkočohkken
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
             'Farmer: While Loops':
               name: 'Boanda: Geardduhit-mohkiid'
+            Functional Suncatchers:
+              name: Doaibmi Beaivváščoaggit
+            Internet:
+              name: Interneahtta
             Maze:
               name: Labirynta
             'Maze: Conditionals':
               name: 'Labirynta: Eavttut'
+            Songwriting:
+              name: Lávlagiid čállit
             'Studio: Create a Game':
               name: 'Speallan-lab: Ráhkat Spealu'
             'Studio: Create a Story':
@@ -182,12 +240,22 @@ se:
               name: 'Uvlu: Funkšuvnnat'
             'Bee: Nested Loops':
               name: 'Uvlu: Mohkit Mohkiin'
+            Crowdsourcing:
+              name: Joavkočohkken
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
             'Farmer: While Loops':
               name: 'Boanda: Geardduhit-mohkiid'
+            Functional Suncatchers:
+              name: Doaibmi Beaivváščoaggit
+            Internet:
+              name: Interneahtta
             Maze:
               name: Labirynta
             'Maze: Conditionals':
               name: 'Labirynta: Eavttut'
+            Songwriting:
+              name: Lávlagiid čállit
             'Studio: Create a Game':
               name: 'Speallan-lab: Ráhkat Spealu'
             'Studio: Create a Story':
@@ -486,6 +554,8 @@ se:
               name: Evalueren Blohkat
             Making Pictures:
               name: Ráhkat Govaid
+            The Design Recipe:
+              name: Designa Ráhkadanneava
           lessons:
             Defining Simple Functions:
               name: Definere Eaŋkilis Funkšuvnnaid
@@ -495,6 +565,8 @@ se:
               name: Evalueren Blohkat
             Making Pictures:
               name: Ráhkat Govaid
+            The Design Recipe:
+              name: Designa Ráhkadanneava
         K5PD:
           stages:
             Computer Science Pedagogy:
@@ -1083,6 +1155,8 @@ se:
               name: Streaŋggat ja Govat
             The Big Game:
               name: Stuora Speallu
+            The Design Recipe:
+              name: Designa Ráhkadanneava
           lessons:
             Computer Science Pedagogy:
               name: DihtorDiehtaga Pedagogihkka
@@ -1096,6 +1170,8 @@ se:
               name: Streaŋggat ja Govat
             The Big Game:
               name: Stuora Speallu
+            The Design Recipe:
+              name: Designa Ráhkadanneava
         ECSPD-NexTech:
           stages:
             Growth Mindset:
@@ -1308,6 +1384,8 @@ se:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Epidemic Model Extensions:
               name: Epidemiija Modealla Guhkideamit
@@ -1317,6 +1395,8 @@ se:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
         sciencePD3:
           stages:
             Decode and Share:
@@ -1431,6 +1511,8 @@ se:
               name: Sam Girdisáhpán
             Strings and Images:
               name: Streaŋggat ja Govat
+            The Design Recipe:
+              name: Designa Ráhkadanneava
           lessons:
             Big Game - Animation:
               name: Stuora Speallu - Animašuvdna
@@ -1458,6 +1540,8 @@ se:
               name: Sam Girdisáhpán
             Strings and Images:
               name: Streaŋggat ja Govat
+            The Design Recipe:
+              name: Designa Ráhkadanneava
         allthethings:
           stages:
             Anonymous student survey:
@@ -1792,6 +1876,8 @@ se:
               name: Oahpahit Bargobihtáiguin
             Teaching with the Design Recipe:
               name: Oahpahit Designa Ráhkadanneavvagiin
+            The Design Recipe:
+              name: Designa Ráhkadanneava
             Welcome!:
               name: Bures boahtin!
           lessons:
@@ -1801,6 +1887,8 @@ se:
               name: Oahpahit Bargobihtáiguin
             Teaching with the Design Recipe:
               name: Oahpahit Designa Ráhkadanneavvagiin
+            The Design Recipe:
+              name: Designa Ráhkadanneava
             Welcome!:
               name: Bures boahtin!
         sciencePD2b:
@@ -1817,6 +1905,8 @@ se:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Advanced StarLogo Nova:
               name: Avanserta StarLogo Nova
@@ -1830,6 +1920,8 @@ se:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
         equity-pd:
           stages:
             Code.org Equity PD:
@@ -1855,6 +1947,8 @@ se:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Advanced StarLogo Nova:
               name: Avanserta StarLogo Nova
@@ -1868,6 +1962,8 @@ se:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
         Equity-OnlinePD:
           stages:
             Creating Equitable Learning Environments:
@@ -1901,6 +1997,8 @@ se:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Advanced StarLogo Nova:
               name: Avanserta StarLogo Nova
@@ -1914,6 +2012,8 @@ se:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
         ECSPD2-iZone:
           stages:
             Unit 1, Day 10 Telling a Story with Data:
@@ -2027,6 +2127,41 @@ se:
               name: Bures boahtin Kursii!
             Wrap Up and Next Steps:
               name: Loahpat ja Boahttevaš Dásit
+        asUnplugged:
+          stages:
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            Building a Foundation:
+              name: Hukset Vuođu
+            Getting Loopy:
+              name: Šaddat Gáiggasin
+            Happy Maps:
+              name: Movttegis Kárttat
+            Move it, Move it:
+              name: Sirdde, Sirdde
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Songwriting:
+              name: Lávlagiid čállit
+            The Big Event:
+              name: Stuora Dáhpáhus
+          lessons:
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            Building a Foundation:
+              name: Hukset Vuođu
+            Getting Loopy:
+              name: Šaddat Gáiggasin
+            Happy Maps:
+              name: Movttegis Kárttat
+            Move it, Move it:
+              name: Sirdde, Sirdde
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Songwriting:
+              name: Lávlagiid čállit
+            The Big Event:
+              name: Stuora Dáhpáhus
         vigenere:
           description: Geavat Vigenere Cipher Widget suokkardallat dieđuid krypteremiin
             ja dekryptermiin.
@@ -2344,6 +2479,8 @@ se:
               name: Jurddaš Čađaheami Birra
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Earth Science Challenges:
               name: Máilmmi Diehtaga Hástalusat
@@ -2355,6 +2492,8 @@ se:
               name: Jurddaš Čađaheami Birra
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
         algebraPD3b:
           stages:
             Close and Next Steps:
@@ -2643,6 +2782,8 @@ se:
               name: Árvvoštallat DihtorModeallaid
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             "(optional) Refresh your connection to Complex Adaptive Systems":
               name: "(válljenvejolašvuohta) Ođasmahte iežat oktavuođa Kompleaksa HeivehanSystemaide"
@@ -2650,6 +2791,8 @@ se:
               name: Árvvoštallat DihtorModeallaid
             Welcome!:
               name: Bures boahtin!
+            Wrap-Up:
+              name: Čoahkkáigeassu
         cspunit5:
           stages:
             Create PT:
@@ -3514,6 +3657,8 @@ se:
               name: Dáhpáhusat Neahtahaga
             'Jigsaw: Learn to drag and drop':
               name: 'Bihttáspeallu: Oahpa movt geassit ja luoitit'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
           lessons:
             Events:
               name: Dáhpáhusaid
@@ -3521,6 +3666,19 @@ se:
               name: Dáhpáhusat Neahtahaga
             'Jigsaw: Learn to drag and drop':
               name: 'Bihttáspeallu: Oahpa movt geassit ja luoitit'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+        grade4:
+          stages:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            Songwriting:
+              name: Lávlagiid čállit
+          lessons:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            Songwriting:
+              name: Lávlagiid čállit
         grade1:
           stages:
             Events:
@@ -3548,6 +3706,8 @@ se:
               name: 'Uvlu: Mohkiid vaste'
             'Bee: Functions with Parameters':
               name: 'Uvlu: Funkšuvnnat main leat paramehterat'
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
             'Play Lab: Variables':
               name: 'Speallan-lab: Variábelat'
             'Unplugged: Envelope Variables':
@@ -3567,6 +3727,8 @@ se:
               name: 'Uvlu: Mohkiid vaste'
             'Bee: Functions with Parameters':
               name: 'Uvlu: Funkšuvnnat main leat paramehterat'
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
             'Play Lab: Variables':
               name: 'Speallan-lab: Variábelat'
             'Unplugged: Envelope Variables':
@@ -3778,9 +3940,21 @@ se:
           stages:
             Flappy:
               name: Flappy
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+            The Big Event:
+              name: Stuora Dáhpáhus
           lessons:
             Flappy:
               name: Flappy
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+            The Big Event:
+              name: Stuora Dáhpáhus
         k5concepts:
           stages:
             Events:
@@ -3796,6 +3970,8 @@ se:
               name: Oahpahit Bargobihtáiguin
             Teaching with the Design Recipe:
               name: Oahpahit Designa Ráhkadanneavvagiin
+            The Design Recipe:
+              name: Designa Ráhkadanneava
             Welcome!:
               name: Bures boahtin!
           lessons:
@@ -3805,6 +3981,8 @@ se:
               name: Oahpahit Bargobihtáiguin
             Teaching with the Design Recipe:
               name: Oahpahit Designa Ráhkadanneavvagiin
+            The Design Recipe:
+              name: Designa Ráhkadanneava
             Welcome!:
               name: Bures boahtin!
         csd1-2017:
@@ -3835,9 +4013,17 @@ se:
               name: Iskka Muittu Variábeliiguin
         fesbinary:
           stages:
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            Binary Images:
+              name: Binára Govat
             Play Lab:
               name: Speallan-lab
           lessons:
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            Binary Images:
+              name: Binára Govat
             Play Lab:
               name: Speallan-lab
         csd2-2017:
@@ -3855,22 +4041,94 @@ se:
           lesson_groups:
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+        coursea-draft:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
+        courseb-draft:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+        coursec-draft:
+          stages:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            Building a Foundation:
+              name: Hukset Vuođu
+          lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            Building a Foundation:
+              name: Hukset Vuođu
         coursed-draft:
           stages:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
             'Unplugged: Binary':
               name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
           lessons:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
             'Unplugged: Binary':
               name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
+        coursee-draft:
+          stages:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
+          lessons:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
         coursef-draft:
           stages:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
           lessons:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
         classic-hoc-impact-study:
@@ -3905,6 +4163,8 @@ se:
               name: Ođđasit Ráhkadit 1. ja 2. Fása
             Thinking Ahead to Implementation:
               name: Ovdagihtii Smiehttat Čađaheami
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Welcome!:
               name: Bures boahtin!
@@ -3918,6 +4178,8 @@ se:
               name: Ođđasit Ráhkadit 1. ja 2. Fása
             Thinking Ahead to Implementation:
               name: Ovdagihtii Smiehttat Čađaheami
+            Wrap-Up:
+              name: Čoahkkáigeassu
         2016_sciencePD_phase2b:
           stages:
             Welcome!:
@@ -3932,6 +4194,8 @@ se:
               name: Ođđasit Ráhkadit 1. ja 2. Fása
             Thinking Ahead to Implementation:
               name: Ovdagihtii Smiehttat Čađaheami
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Welcome!:
               name: Bures boahtin!
@@ -3945,6 +4209,8 @@ se:
               name: Ođđasit Ráhkadit 1. ja 2. Fása
             Thinking Ahead to Implementation:
               name: Ovdagihtii Smiehttat Čađaheami
+            Wrap-Up:
+              name: Čoahkkáigeassu
         sciencepd3-2016:
           stages:
             Welcome Back!:
@@ -3984,11 +4250,15 @@ se:
               name: Bures boahtin!
             Thinking About Implementation:
               name: Jurddaš Čađaheami Birra
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Welcome!:
               name: Bures boahtin!
             Thinking About Implementation:
               name: Jurddaš Čađaheami Birra
+            Wrap-Up:
+              name: Čoahkkáigeassu
         science-pd-ol-pt-5:
           stages:
             Welcome!:
@@ -3999,6 +4269,8 @@ se:
               name: Eallima Diehtaga Hástalusat
             Physical Science Challenges:
               name: Fysikalaš Diehtaga Hástalusat
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Welcome!:
               name: Bures boahtin!
@@ -4008,6 +4280,8 @@ se:
               name: Eallima Diehtaga Hástalusat
             Physical Science Challenges:
               name: Fysikalaš Diehtaga Hástalusat
+            Wrap-Up:
+              name: Čoahkkáigeassu
         sciencepd5:
           stages:
             Welcome!:
@@ -4018,6 +4292,8 @@ se:
               name: Eallima Diehtaga Hástalusat
             Physical Science Challenges:
               name: Fysikalaš Diehtaga Hástalusat
+            Wrap-Up:
+              name: Čoahkkáigeassu
           lessons:
             Welcome!:
               name: Bures boahtin!
@@ -4027,6 +4303,8 @@ se:
               name: Eallima Diehtaga Hástalusat
             Physical Science Challenges:
               name: Fysikalaš Diehtaga Hástalusat
+            Wrap-Up:
+              name: Čoahkkáigeassu
         csp5-support:
           stages:
             Unit 5 Overview:
@@ -4088,6 +4366,13 @@ se:
           lessons:
             Making Music:
               name: Ráhkat Musihka
+        coursee-ramp:
+          stages:
+            'Real Life Algorithms: Dice Race':
+              name: 'Duohta-máilmmi Algoritmmat: Birccu bálkestit'
+          lessons:
+            'Real Life Algorithms: Dice Race':
+              name: 'Duohta-máilmmi Algoritmmat: Birccu bálkestit'
         csd6-2017:
           stages:
             Making Music:
@@ -4124,18 +4409,85 @@ se:
           lessons:
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+        coursea-2017:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+        courseb-2017:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+        coursec-2017:
+          stages:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+          lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
         coursee-2017:
           stages:
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Building a Foundation:
+              name: Hukset Vuođu
           lessons:
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Building a Foundation:
+              name: Hukset Vuođu
+        coursef-2017:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+        express-2017:
+          stages:
+            Internet:
+              name: Interneahtta
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Building a Foundation:
+              name: Hukset Vuođu
+          lessons:
+            Internet:
+              name: Interneahtta
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Building a Foundation:
+              name: Hukset Vuođu
         pre-express-2017:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
             Spelling Bee:
               name: Stávengilvu
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
             Spelling Bee:
               name: Stávengilvu
         csp3-research-mxghyt:
@@ -4172,28 +4524,85 @@ se:
               name: Mohkiid ráhkadit ja Sahtedohko Nummarat
             Practice PT - Design a Digital Scene:
               name: Hárjehala PT - Designe Digitála Lávddi
+        e-f-ramp:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
         new-d:
           stages:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
             'Unplugged: Binary':
               name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
+            Building a Foundation:
+              name: Hukset Vuođu
           lessons:
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
             'Unplugged: Binary':
               name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
+            Building a Foundation:
+              name: Hukset Vuođu
         csp3-a:
           lesson_groups:
             csp3_1:
               display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
+        new-express:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+        new-e:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
         new-f:
           stages:
+            Building a Foundation:
+              name: Hukset Vuođu
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
           lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -4253,13 +4662,40 @@ se:
           lessons:
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
+        course-e-2018:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
         course-f-2018:
           stages:
+            Building a Foundation:
+              name: Hukset Vuođu
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
           lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
         csd3-1819draft:
           lesson_groups:
             cspSurvey:
@@ -4272,6 +4708,105 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+        coursea-2018:
+          stages:
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
+          lessons:
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
+        express-2018:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            'Unplugged: Binary':
+              name: Binára Govat
+            Crowdsourcing:
+              name: Joavkočohkken
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            'Unplugged: Binary':
+              name: Binára Govat
+            Crowdsourcing:
+              name: Joavkočohkken
+        courseb-2018:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            Copyright and Creativity:
+              name: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            Copyright and Creativity:
+              name: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
+        coursed-2018:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            'Unplugged: Binary':
+              name: Binára Govat
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            'Unplugged: Binary':
+              name: Binára Govat
+        coursec-2018:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            Binary Bracelets:
+              name: Binára Giehtabáttit
         csd6-2018:
           stages:
             Making Music:
@@ -4282,13 +4817,44 @@ se:
           lessons:
             Making Music:
               name: Ráhkat Musihka
+        coursee-2018:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+            Crowdsourcing:
+              name: Joavkočohkken
+            Copyright and Creativity:
+              name: Digitála Juohkin
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+            Crowdsourcing:
+              name: Joavkočohkken
+            Copyright and Creativity:
+              name: Digitála Juohkin
         coursef-2018:
           stages:
+            Building a Foundation:
+              name: Hukset Vuođu
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
           lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
         csp1-2018:
           stages:
             Personal Innovations:
@@ -4596,11 +5162,23 @@ se:
               display_name: Maŋŋil Kurssa Iskkadeapmi
         pre-express-2018:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
             Spelling Bee:
               name: Stávengilvu
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            Copyright and Creativity:
+              name: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
             Spelling Bee:
               name: Stávengilvu
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            Copyright and Creativity:
+              name: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
         frozen-2018:
           stages:
             Artist:
@@ -4622,51 +5200,230 @@ se:
           lessons:
             Artist:
               name: Dáiddár
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Crowdsourcing:
+              name: Joavkočohkken
+            Digital Sharing:
+              name: Digitála Juohkin
+              description_teacher: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea
+                luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte
+                veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit
+                eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin.
+                Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid
+                mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
+
+'
+          lesson_groups:
+            csf_internet:
+              display_name: Interneahtta
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Crowdsourcing:
+              name: Joavkočohkken
+            Digital Sharing:
+              name: Digitála Juohkin
+              description_teacher: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea
+                luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte
+                veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit
+                eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin.
+                Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid
+                mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
+
+'
         coursed-2019:
+          stages:
+            Relay Programming:
+              description_teacher: Dát doaibma álgá oanehis lekšuvnnain movt ohcat
+                boastuvuođaid ja movt nagodit, ja de viidáseappot gilvalit áiggiin
+                go oahppit juohkásit joavkkuide ja ovttasbarget čállit prográmma,
+                ovtta neavvaga hávális.
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            'Unplugged: Binary':
+              name: Binára Govat
           lesson_groups:
             csf_events:
               display_name: Dáhpáhusaid
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+          lessons:
+            Relay Programming:
+              description_teacher: Dát doaibma álgá oanehis lekšuvnnain movt ohcat
+                boastuvuođaid ja movt nagodit, ja de viidáseappot gilvalit áiggiin
+                go oahppit juohkásit joavkkuide ja ovttasbarget čállit prográmma,
+                ovtta neavvaga hávális.
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+            'Unplugged: Binary':
+              name: Binára Govat
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Hukset Vuođu
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
+            Digital Sharing:
+              name: Digitála Juohkin
+            Simon Says:
+              name: Simmon Sihtá
+            Songwriting:
+              name: Lávlagiid čállit
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+          lessons:
+            Building a Foundation:
+              name: Hukset Vuođu
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
+            Digital Sharing:
+              name: Digitála Juohkin
+            Simon Says:
+              name: Simmon Sihtá
+            Songwriting:
+              name: Lávlagiid čállit
         express-2019:
           stages:
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Binary Bracelets:
+              name: Binára Giehtabáttit
             'Unplugged: Binary':
               name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
           lessons:
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Binary Bracelets:
+              name: Binára Giehtabáttit
             'Unplugged: Binary':
               name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
+            Internet:
+              name: Interneahtta
+            Crowdsourcing:
+              name: Joavkočohkken
         csd1-2019:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
         coursec-2019:
+          stages:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            Powerful Passwords:
+              name: Vuoibmás Čoavddasánit
+            Picturing Data:
+              name: Presenteret Dátaid
           lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+          lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            Powerful Passwords:
+              name: Vuoibmás Čoavddasánit
+            Picturing Data:
+              name: Presenteret Dátaid
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
         coursea-2019:
+          stages:
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
           lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+          lessons:
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
         courseb-2019:
+          stages:
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
           lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+          lessons:
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
         pre-express-2019:
           stages:
+            Your Digital Footprint:
+              name: Du Digitála Luodda
             Spelling Bee:
               name: Stávengilvu
           lesson_groups:
             csf_events:
               display_name: Dáhpáhusaid
           lessons:
+            Your Digital Footprint:
+              name: Du Digitála Luodda
             Spelling Bee:
               name: Stávengilvu
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
         csd2-2019:
           lesson_groups:
             cspSurvey:
@@ -4954,6 +5711,17 @@ se:
               name: Sáddet Binára Dieđuid Interneahta Simulatorain
             Binary Numbers:
               name: Binára Nummarat
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Joavkočohkken
+            Building a Foundation:
+              name: Hukset Vuođu
+          lessons:
+            Crowdsourcing:
+              name: Joavkočohkken
+            Building a Foundation:
+              name: Hukset Vuođu
         csd-post-survey-2018:
           lesson_groups:
             cspSurvey:
@@ -5038,14 +5806,59 @@ se:
               name: Dáhpáhusaid
             Sprite Lab:
               name: Sprite-lab
+        time4cs-original-unit-1:
+          stages:
+            Simon Says:
+              name: Simmon Sihtá
+            Access Ability:
+              name: BeassanVejolašvuohta
+          lessons:
+            Simon Says:
+              name: Simmon Sihtá
+            Access Ability:
+              name: BeassanVejolašvuohta
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Joavkočohkken
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+          lessons:
+            Crowdsourcing:
+              name: Joavkočohkken
         time4cs-control-unit-1:
+          stages:
+            Simon Says:
+              name: Simmon Sihtá
+            Access Ability:
+              name: BeassanVejolašvuohta
           lesson_groups:
             csf_events:
               display_name: Dáhpáhusaid
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+          lessons:
+            Simon Says:
+              name: Simmon Sihtá
+            Access Ability:
+              name: BeassanVejolašvuohta
         time4cs-experiment-unit-1:
+          stages:
+            Simon Says:
+              name: Simmon Sihtá
+            Access Ability:
+              name: BeassanVejolašvuohta
           lesson_groups:
             csf_events:
               display_name: Dáhpáhusaid
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+          lessons:
+            Simon Says:
+              name: Simmon Sihtá
+            Access Ability:
+              name: BeassanVejolašvuohta
         csd2-2020:
           lesson_groups:
             cspSurvey:
@@ -5077,26 +5890,161 @@ se:
             cspSurvey:
               display_name: Iskkadeapmi
         coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
           lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+          lessons:
+            Going Places Safely:
+              name: Mannat Sihkkaris Sajiide
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
         courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
           lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+          lessons:
+            Your Digital Footprint:
+              name: Du Digitála Luodda
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
         coursec-2020:
+          stages:
+            Powerful Passwords:
+              name: Vuoibmás Čoavddasánit
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            Picturing Data:
+              name: Presenteret Dátaid
           lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+          lessons:
+            Powerful Passwords:
+              name: Vuoibmás Čoavddasánit
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+            Picturing Data:
+              name: Presenteret Dátaid
         coursed-2020:
+          stages:
+            Relay Programming:
+              description_teacher: Dát doaibma álgá oanehis lekšuvnnain movt ohcat
+                boastuvuođaid ja movt nagodit, ja de viidáseappot gilvalit áiggiin
+                go oahppit juohkásit joavkkuide ja ovttasbarget čállit prográmma,
+                ovtta neavvaga hávális.
+            'Unplugged: Binary':
+              name: Binára Govat
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
           lesson_groups:
             csf_events:
               display_name: Dáhpáhusaid
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+          lessons:
+            Relay Programming:
+              description_teacher: Dát doaibma álgá oanehis lekšuvnnain movt ohcat
+                boastuvuođaid ja movt nagodit, ja de viidáseappot gilvalit áiggiin
+                go oahppit juohkásit joavkkuide ja ovttasbarget čállit prográmma,
+                ovtta neavvaga hávális.
+            'Unplugged: Binary':
+              name: Binára Govat
+            Digital Citizenship:
+              name: Digitála Stáhtaborgárvuohta
+        coursee-2020:
+          stages:
+            Simon Says:
+              name: Simmon Sihtá
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+            Digital Sharing:
+              name: Digitála Juohkin
+              description_teacher: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea
+                luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte
+                veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit
+                eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin.
+                Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid
+                mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
+
+'
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+          lessons:
+            Simon Says:
+              name: Simmon Sihtá
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+            Digital Sharing:
+              name: Digitála Juohkin
+              description_teacher: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea
+                luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte
+                veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit
+                eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin.
+                Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid
+                mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
+
+'
         coursef-2020:
           stages:
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Crowdsourcing:
+              name: Joavkočohkken
+            Digital Sharing:
+              name: Digitála Juohkin
+              description_teacher: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea
+                luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte
+                veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit
+                eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin.
+                Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid
+                mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
+
+'
             AI for Oceans:
               name: AI Mearaide
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
           lessons:
+            Envelope Variables:
+              name: Konvoluhtta Variábelat
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+            Crowdsourcing:
+              name: Joavkočohkken
+            Digital Sharing:
+              name: Digitála Juohkin
+              description_teacher: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea
+                luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte
+                veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit
+                eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin.
+                Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid
+                mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
+
+'
             AI for Oceans:
               name: AI Mearaide
         pre-express-2020:
