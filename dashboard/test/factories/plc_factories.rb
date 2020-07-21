@@ -40,7 +40,7 @@ FactoryGirl.define do
       sequence(:name) {|n| "plc-course-#{n}"}
     end
     after(:build) do |plc_course, evaluator|
-      create(:course, name: evaluator.name, plc_course: plc_course)
+      create(:unit_group, name: evaluator.name, plc_course: plc_course)
     end
   end
 end
