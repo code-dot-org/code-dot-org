@@ -236,6 +236,7 @@ class I18nSync
       next if locale == 'en-US'
       I18nScriptUtils.git_add_and_commit(
         [
+          "dashboard/config/locales/*#{locale}.json",
           "dashboard/config/locales/*#{locale}.yml",
           "i18n/locales/#{locale}/dashboard",
         ],

@@ -13,9 +13,9 @@ class ScriptTest < ActiveSupport::TestCase
     # Level names match those in 'test.script'
     @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
-    @course = create(:course)
+    @unit_group = create(:unit_group)
     @script_in_course = create(:script, hidden: true)
-    create(:course_script, position: 1, course: @course, script: @script_in_course)
+    create(:course_script, position: 1, unit_group: @unit_group, script: @script_in_course)
 
     @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
     @script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
@@ -27,7 +27,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csf_script_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
     # ensure that we have freshly generated caches with this course/script
-    Course.clear_cache
+    UnitGroup.clear_cache
     Script.clear_cache
   end
 
@@ -39,9 +39,9 @@ class ScriptTest < ActiveSupport::TestCase
     Script.script_family_cache
 
     # Also populate course_cache, as it's used by course_link
-    Course.stubs(:should_cache?).returns true
-    @@course_cached ||= Course.course_cache_to_cache
-    Course.course_cache
+    UnitGroup.stubs(:should_cache?).returns true
+    @@course_cached ||= UnitGroup.course_cache_to_cache
+    UnitGroup.course_cache
 
     # NOTE: ActiveRecord collection association still references an active DB connection,
     # even when the data is already eager loaded.
@@ -58,7 +58,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.login_required?
     assert_equal 'Level 1', script.levels[0].name
 
-    assert_equal false, Script.find(2).login_required?
+    assert_equal false, Script.find_by(name: 'Hour of Code').login_required?
 
     assert_equal false, create(:script).login_required?
   end
@@ -573,13 +573,13 @@ class ScriptTest < ActiveSupport::TestCase
   test 'redirect_to_script_url returns script url of latest assigned script version in family for script belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
-    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
-    create :course_script, course: csp_2017, script: csp1_2017, position: 1
-    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    create :course_script, unit_group: csp_2017, script: csp1_2017, position: 1
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create :course_script, course: csp_2018, script: csp1_2018, position: 1
-    section = create :section, course: csp_2018
+    create :course_script, unit_group: csp_2018, script: csp1_2018, position: 1
+    section = create :section, unit_group: csp_2018
     section.students << student
 
     assert_equal csp1_2018.link, csp1_2017.redirect_to_script_url(student)
@@ -637,11 +637,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can_view_version? is true if student has progress in course script belongs to' do
-    course = create :course, family_name: 'script-fam'
+    unit_group = create :unit_group, family_name: 'script-fam'
     script1 = create :script, name: 'script1', family_name: 'script-fam'
-    create :course_script, course: course, script: script1, position: 1
+    create :course_script, unit_group: unit_group, script: script1, position: 1
     script2 = create :script, name: 'script2', family_name: 'script-fam'
-    create :course_script, course: course, script: script2, position: 2
+    create :course_script, unit_group: unit_group, script: script2, position: 2
     student = create :student
     student.scripts << script1
 
@@ -686,15 +686,15 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'self.latest_assigned_version returns latest assigned script in family if script is in course family' do
-    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
-    create :course_script, course: csp_2017, script: csp1_2017, position: 1
-    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    create :course_script, unit_group: csp_2017, script: csp1_2017, position: 1
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create :course_script, course: csp_2018, script: csp1_2018, position: 1
+    create :course_script, unit_group: csp_2018, script: csp1_2018, position: 1
 
     student = create :student
-    section = create :section, course: csp_2017
+    section = create :section, unit_group: csp_2017
     section.students << student
 
     assert_equal csp1_2017, Script.latest_assigned_version('csp', student)
@@ -720,31 +720,6 @@ class ScriptTest < ActiveSupport::TestCase
   test 'professional_learning_course?' do
     refute Script.find_by_name('flappy').professional_learning_course?
     assert Script.find_by_name('ECSPD').professional_learning_course?
-  end
-
-  test 'hoc?' do
-    assert Script.find_by_name('dance').hoc?
-    assert Script.find_by_name('flappy').hoc?
-    assert Script.find_by_name('mc').hoc?
-    assert Script.find_by_name('hourofcode').hoc?
-    assert Script.find_by_name('Hour of Code').hoc?
-    assert Script.find_by_name('frozen').hoc?
-    assert Script.find_by_name('playlab').hoc?
-    assert_not Script.find_by_name('20-hour').hoc?
-    assert_not Script.find_by_name('course1').hoc?
-    assert_not Script.find_by_name('course2').hoc?
-    assert_not Script.find_by_name('course3').hoc?
-    assert_not Script.find_by_name('course4').hoc?
-  end
-
-  test 'minecraft?' do
-    assert_not Script.find_by_name('flappy').minecraft?
-    assert Script.find_by_name('mc').minecraft?
-  end
-
-  test 'twenty_hour?' do
-    assert Script.find_by_name('20-hour').twenty_hour?
-    assert_not Script.find_by_name('mc').twenty_hour?
   end
 
   test 'should summarize script' do
@@ -889,13 +864,13 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_course_unit_version_warning' do
-    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
-    create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
+    create(:course_script, unit_group: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018')
-    create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
+    create(:course_script, unit_group: csp_2018, script: csp1_2018, position: 1)
 
     refute csp1_2017.summarize[:show_course_unit_version_warning]
 
@@ -937,13 +912,13 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize only shows one version warning' do
-    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', version_year: '2017')
-    create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
+    create(:course_script, unit_group: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
-    create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
+    create(:course_script, unit_group: csp_2018, script: csp1_2018, position: 1)
 
     user = create(:student)
     create(:user_script, user: user, script: csp1_2017)
@@ -1274,25 +1249,25 @@ class ScriptTest < ActiveSupport::TestCase
 
   test "course_link retuns nil if script is in no courses" do
     script = create :script
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
 
     assert_nil script.course_link
   end
 
   test "course_link returns nil if script is in two courses" do
     script = create :script
-    course = create :course, name: 'csp'
-    other_course = create :course, name: 'othercsp'
-    create :course_script, position: 1, course: course, script: script
-    create :course_script, position: 1, course: other_course, script: script
+    unit_group = create :unit_group, name: 'csp'
+    other_course = create :unit_group, name: 'othercsp'
+    create :course_script, position: 1, unit_group: unit_group, script: script
+    create :course_script, position: 1, unit_group: other_course, script: script
 
     assert_nil script.course_link
   end
 
   test "course_link returns course_path if script is in one course" do
     script = create :script
-    course = create :course, name: 'csp'
-    create :course_script, position: 1, course: course, script: script
+    unit_group = create :unit_group, name: 'csp'
+    create :course_script, position: 1, unit_group: unit_group, script: script
 
     assert_equal '/courses/csp', script.course_link
   end
@@ -1300,9 +1275,9 @@ class ScriptTest < ActiveSupport::TestCase
   test 'course_link uses cache' do
     populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
-    Course.stubs(:should_cache?).returns true
+    UnitGroup.stubs(:should_cache?).returns true
     script = Script.get_from_cache(@script_in_course.name)
-    assert_equal "/courses/#{@course.name}", script.course_link
+    assert_equal "/courses/#{@unit_group.name}", script.course_link
   end
 
   test "logged_out_age_13_required?" do
@@ -1705,7 +1680,7 @@ endvariants
     script = create(:script)
     alternate_script = build(:script)
 
-    Course.stubs(:has_any_course_experiments?).returns(true)
+    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
     Rails.cache.stubs(:fetch).returns([script])
     script.stubs(:alternate_script).returns(alternate_script)
 
@@ -1717,7 +1692,7 @@ endvariants
     user = create(:user)
     script = create(:script)
 
-    Course.stubs(:has_any_course_experiments?).returns(true)
+    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
     Rails.cache.stubs(:fetch).returns([script])
     script.stubs(:alternate_script).returns(nil)
 
@@ -1950,7 +1925,7 @@ endvariants
 
   test "script_names_by_curriculum_umbrella returns the correct script names" do
     assert_equal(
-      [@csf_script.name, @csf_script_2019.name],
+      ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_script.name, @csf_script_2019.name],
       Script.script_names_by_curriculum_umbrella('CSF')
     )
     assert_equal(

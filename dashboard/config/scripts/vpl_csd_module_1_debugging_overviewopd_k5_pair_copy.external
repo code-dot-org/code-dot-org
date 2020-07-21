@@ -15,7 +15,7 @@ Bugs are opportunities to:
 
 Your role as the teacher is to avoid directly debugging for your students, but to instead guide students in better taking advantage of these opportunities. 
 
-## Revisting the Debugging Process
+## Revisiting the Debugging Process
 
 As we begin adding more complexity to our programs in Game Lab, more opportunities for bugs arise. One common barrier to supporting students during a programming unit is knowing how to support them effectively when they encounter bugs while programming. 
 
