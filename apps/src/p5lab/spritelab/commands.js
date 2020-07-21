@@ -181,6 +181,14 @@ export const commands = {
     ]);
   },
 
+  makeNumSprites(num, animation) {
+    for (let i = 0; i < num; i++) {
+      spriteCommands.makeSprite.apply(this, [
+        {animation: animation, location: locationCommands.randomLocation()}
+      ]);
+    }
+  },
+
   setAnimation(spriteArg, animation) {
     spriteCommands.setAnimation(spriteArg, animation);
   },

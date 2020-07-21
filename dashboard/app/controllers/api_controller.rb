@@ -108,7 +108,7 @@ class ApiController < ApplicationController
     @user_header_options = {}
     @user_header_options[:current_user] = current_user
     @user_header_options[:show_pairing_dialog] = show_pairing_dialog
-    @user_header_options[:session_pairings] = session[:pairings]
+    @user_header_options[:session_pairings] = pairing_user_ids
     @user_header_options[:loc_prefix] = 'nav.user.'
   end
 
@@ -462,11 +462,14 @@ class ApiController < ApplicationController
     event = original_data['event']
     project_id = original_data['project_id'] || nil
     FirehoseClient.instance.put_record(
-      study: 'firehose-error-unreachable',
-      event: event,
-      project_id: project_id,
-      data_string: params.require(:error_text),
-      data_json: original_data.to_json
+      :analysis,
+      {
+        study: 'firehose-error-unreachable',
+        event: event,
+        project_id: project_id,
+        data_string: params.require(:error_text),
+        data_json: original_data.to_json
+      }
     )
   end
 
