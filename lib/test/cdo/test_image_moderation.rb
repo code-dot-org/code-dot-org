@@ -31,7 +31,7 @@ class ImageModerationTest < Minitest::Test
     test_err = AzureContentModerator::AzureError.new('Test error')
     AzureContentModerator.any_instance.stubs(:rate_image).raises(test_err)
     Honeybadger.expects(:notify).once.with(test_err)
-    FirehoseClient.any_instance.expects(:put_record).with({study: 'azure-content-moderation', study_group: 'v1', event: 'moderation-error', data_string: test_err})
+    FirehoseClient.any_instance.expects(:put_record).with(:analysis, {study: 'azure-content-moderation', study_group: 'v1', event: 'moderation-error', data_string: test_err})
     assert_equal :everyone, ImageModeration.rate_image(@image_body, @content_type)
   end
 end

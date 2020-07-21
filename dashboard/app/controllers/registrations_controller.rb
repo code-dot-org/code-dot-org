@@ -16,9 +16,9 @@ class RegistrationsController < Devise::RegistrationsController
   def new
     session[:user_return_to] ||= params[:user_return_to]
     if PartialRegistration.in_progress?(session)
-      user_params = params[:user] || {}
+      user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
-      @user = User.new_with_session(user_params, session)
+      @user = User.new_with_session(user_params.permit(:user_type), session)
     else
       save_default_sign_up_user_type
       @already_hoc_registered = params[:already_hoc_registered]
@@ -489,26 +489,32 @@ class RegistrationsController < Devise::RegistrationsController
   def log_account_deletion_to_firehose(current_user, dependent_users)
     # Log event for user initiating account deletion.
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit-v2',
-      event: 'initiated-account-deletion',
-      user_id: current_user.id,
-      data_json: {
-        user_type: current_user.user_type,
-        dependent_user_ids: dependent_users.pluck(:id),
-      }.to_json
+      :analysis,
+      {
+        study: 'user-soft-delete-audit-v2',
+        event: 'initiated-account-deletion',
+        user_id: current_user.id,
+        data_json: {
+          user_type: current_user.user_type,
+          dependent_user_ids: dependent_users.pluck(:id),
+        }.to_json
+      }
     )
 
     # Log separate events for dependent users destroyed in user-initiated account deletion.
     # This should only happen for teachers.
     dependent_users.each do |user|
       FirehoseClient.instance.put_record(
-        study: 'user-soft-delete-audit-v2',
-        event: 'dependent-account-deletion',
-        user_id: user[:id],
-        data_json: {
-          user_type: user[:user_type],
-          deleted_by_id: current_user.id,
-        }.to_json
+        :analysis,
+        {
+          study: 'user-soft-delete-audit-v2',
+          event: 'dependent-account-deletion',
+          user_id: user[:id],
+          data_json: {
+            user_type: user[:user_type],
+            deleted_by_id: current_user.id,
+          }.to_json
+        }
       )
     end
   end

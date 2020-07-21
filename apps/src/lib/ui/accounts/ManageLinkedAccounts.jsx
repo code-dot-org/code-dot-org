@@ -7,7 +7,6 @@ import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
-import {disconnect} from './manageLinkedAccountsRedux';
 
 const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
@@ -39,8 +38,7 @@ class ManageLinkedAccounts extends React.Component {
     authenticityToken: PropTypes.string.isRequired,
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
-    isCleverStudent: PropTypes.bool.isRequired,
-    disconnect: PropTypes.func.isRequired
+    isCleverStudent: PropTypes.bool.isRequired
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -178,21 +176,13 @@ class ManageLinkedAccounts extends React.Component {
 
 export const UnconnectedManageLinkedAccounts = ManageLinkedAccounts;
 
-export default connect(
-  state => ({
-    authenticationOptions: state.manageLinkedAccounts.authenticationOptions,
-    authenticityToken: state.manageLinkedAccounts.authenticityToken,
-    userHasPassword: state.manageLinkedAccounts.userHasPassword,
-    isGoogleClassroomStudent:
-      state.manageLinkedAccounts.isGoogleClassroomStudent,
-    isCleverStudent: state.manageLinkedAccounts.isCleverStudent
-  }),
-  dispatch => ({
-    disconnect(id) {
-      dispatch(disconnect(id));
-    }
-  })
-)(ManageLinkedAccounts);
+export default connect(state => ({
+  authenticationOptions: state.manageLinkedAccounts.authenticationOptions,
+  authenticityToken: state.manageLinkedAccounts.authenticityToken,
+  userHasPassword: state.manageLinkedAccounts.userHasPassword,
+  isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
+  isCleverStudent: state.manageLinkedAccounts.isCleverStudent
+}))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
   static propTypes = {

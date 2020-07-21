@@ -45,7 +45,7 @@ class Script < ActiveRecord::Base
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   has_many :course_scripts
-  has_many :courses, through: :course_scripts
+  has_many :unit_groups, through: :course_scripts
 
   scope :with_associated_models, -> do
     includes(
@@ -96,15 +96,15 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course?
-      course = Course.find_by_name(professional_learning_course)
-      unless course
-        course = Course.new(name: professional_learning_course)
-        course.plc_course = Plc::Course.create!(course: course)
-        course.save!
+      unit_group = UnitGroup.find_by_name(professional_learning_course)
+      unless unit_group
+        unit_group = UnitGroup.new(name: professional_learning_course)
+        unit_group.plc_course = Plc::Course.create!(unit_group: unit_group)
+        unit_group.save!
       end
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
-        plc_course_id: course.plc_course.id,
+        plc_course_id: unit_group.plc_course.id,
         unit_name: I18n.t("data.script.name.#{name}.title"),
         unit_description: I18n.t("data.script.name.#{name}.description")
       )
@@ -214,7 +214,7 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    has_any_course_experiments = Course.has_any_course_experiments?(user)
+    has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
     with_hidden = !has_any_course_experiments && user.hidden_script_access?
     scripts = with_hidden ? all_scripts : visible_scripts
 
@@ -502,17 +502,20 @@ class Script < ActiveRecord::Base
 
   def self.log_redirect(old_script_name, new_script_name, request, event_name, user_type)
     FirehoseClient.instance.put_record(
-      study: 'script-family-redirect',
-      event: event_name,
-      data_string: request.path,
-      data_json: {
-        old_script_name: old_script_name,
-        new_script_name: new_script_name,
-        method: request.method,
-        url: request.url,
-        referer: request.referer,
-        user_type: user_type
-      }.to_json
+      :analysis,
+      {
+        study: 'script-family-redirect',
+        event: event_name,
+        data_string: request.path,
+        data_json: {
+          old_script_name: old_script_name,
+          new_script_name: new_script_name,
+          method: request.method,
+          url: request.url,
+          referer: request.referer,
+          user_type: user_type
+        }.to_json
+      }
     )
   end
 
@@ -528,13 +531,13 @@ class Script < ActiveRecord::Base
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
     # No redirect if script or its course are not versioned.
-    current_version_year = version_year || course&.version_year
+    current_version_year = version_year || unit_group&.version_year
     return nil unless current_version_year.present?
 
     # Redirect user to the latest assigned script in this family,
     # if one exists and it is newer than the current script.
     latest_assigned_version = Script.latest_assigned_version(family_name, user)
-    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.course&.version_year
+    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.unit_group&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
     latest_assigned_version.link
   end
@@ -562,7 +565,7 @@ class Script < ActiveRecord::Base
     return true unless user.student?
 
     # A student can view the script version if they have progress in it or the course it belongs to.
-    has_progress = user.scripts.include?(self) || course&.has_progress?(user)
+    has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
     return true if has_progress
 
     # A student can view the script version if they are assigned to it.
@@ -1441,7 +1444,7 @@ class Script < ActiveRecord::Base
       }
     end
 
-    has_older_course_progress = course.try(:has_older_version_progress?, user)
+    has_older_course_progress = unit_group.try(:has_older_version_progress?, user)
     has_older_script_progress = has_older_version_progress?(user)
     user_script = user && user_scripts.find_by(user: user)
 
@@ -1455,7 +1458,7 @@ class Script < ActiveRecord::Base
       title: localized_title,
       description: localized_description,
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
-      course_id: course.try(:id),
+      course_id: unit_group.try(:id),
       hidden: hidden,
       is_stable: is_stable,
       loginRequired: login_required,
@@ -1476,7 +1479,7 @@ class Script < ActiveRecord::Base
       curriculum_path: curriculum_path,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
-      show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
+      show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions(user),
       supported_locales: supported_locales,
@@ -1575,7 +1578,7 @@ class Script < ActiveRecord::Base
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
-    return [] unless courses.empty?
+    return [] unless unit_groups.empty?
     with_hidden = user&.hidden_script_access?
     scripts = Script.
       where(family_name: family_name).
@@ -1664,22 +1667,22 @@ class Script < ActiveRecord::Base
 
   # A script is considered to have a matching course if there is exactly one
   # course for this script
-  def course
+  def unit_group
     return nil if course_scripts.length != 1
-    Course.get_from_cache(course_scripts[0].course_id)
+    UnitGroup.get_from_cache(course_scripts[0].course_id)
   end
 
   # @return {String|nil} path to the course overview page for this script if there
   #   is one.
   def course_link(section_id = nil)
-    return nil unless course
-    path = course_path(course)
+    return nil unless unit_group
+    path = course_path(unit_group)
     path += "?section_id=#{section_id}" if section_id
     path
   end
 
   def course_title
-    course.try(:localized_title)
+    unit_group.try(:localized_title)
   end
 
   # If there is an alternate version of this script which the user should be on
@@ -1687,7 +1690,7 @@ class Script < ActiveRecord::Base
   # return nil.
   def alternate_script(user)
     course_scripts.each do |cs|
-      alternate_cs = cs.course.select_course_script(user, cs)
+      alternate_cs = cs.unit_group.select_course_script(user, cs)
       return alternate_cs.script if cs != alternate_cs
     end
     nil
@@ -1838,6 +1841,6 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_version_year_options
-    Course.get_version_year_options
+    UnitGroup.get_version_year_options
   end
 end
