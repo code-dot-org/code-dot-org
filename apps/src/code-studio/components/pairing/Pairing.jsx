@@ -62,7 +62,7 @@ export default class Pairing extends React.Component {
 
     $.ajax({
       url: this.props.source,
-      data: JSON.stringify({pairings}),
+      data: JSON.stringify({pairings, sectionId: this.selectedSection().id}),
       contentType: 'application/json; charset=utf-8',
       method: 'PUT',
       dataType: 'json',

@@ -25882,6 +25882,46 @@ zh-CN:
               name: 虚拟宠物
             Swimming Fish with Sprite Lab:
               name: 在精灵图实验室学习精灵图
+            Programming with Angry Birds:
+              name: 迷宫编程
+            Debugging with Scrat:
+              name: 斯奎特和调试
+            Collecting Treasure with Laurel:
+              name: 在收集器中编程
+            Creating Art with Code:
+              name: 艺术家里的编程
+            Sticker Art with Loops:
+              name: 艺术家里的循环
+            Nested Loops in Maze:
+              name: 迷宫里的嵌套循环
+            Snowflakes with Anna and Elsa:
+              name: 冰雪奇缘里的嵌套循环
+            If/Else with Bee:
+              name: 蜜蜂里的条件
+            While Loops with the Farmer:
+              name: 当在农民循环中
+            Harvesting with Conditionals:
+              name: 收割者里的条件和循环
+            Functions with Harvester:
+              name: 收割者中的函数
+            Functions with Artist:
+              name: 艺术家之间的功能
+            Variables with Artist:
+              name: 艺术家和变量
+            Changing Variables with Bee:
+              name: 蜜蜂与改变变量
+            Changing Variables with Artist:
+              name: 小艺术家与改变变量
+            For Loops with Bee:
+              name: 蜜蜂式里的循环
+            For Loops with Artist:
+              name: 对于艺术家里的循环
+            Swimming Fish in Sprite Lab:
+              name: 在精灵图实验室学习精灵图
+            Alien Dance Party:
+              name: 外星人舞蹈派对
+            Behaviors in Sprite Lab:
+              name: 编辑行为
           lesson_groups:
             csf_warmup:
               display_name: 热身
@@ -25946,6 +25986,46 @@ zh-CN:
               name: 虚拟宠物
             Swimming Fish with Sprite Lab:
               name: 在精灵图实验室学习精灵图
+            Programming with Angry Birds:
+              name: 迷宫编程
+            Debugging with Scrat:
+              name: 斯奎特和调试
+            Collecting Treasure with Laurel:
+              name: 在收集器中编程
+            Creating Art with Code:
+              name: 艺术家里的编程
+            Sticker Art with Loops:
+              name: 艺术家里的循环
+            Nested Loops in Maze:
+              name: 迷宫里的嵌套循环
+            Snowflakes with Anna and Elsa:
+              name: 冰雪奇缘里的嵌套循环
+            If/Else with Bee:
+              name: 蜜蜂里的条件
+            While Loops with the Farmer:
+              name: 当在农民循环中
+            Harvesting with Conditionals:
+              name: 收割者里的条件和循环
+            Functions with Harvester:
+              name: 收割者中的函数
+            Functions with Artist:
+              name: 艺术家之间的功能
+            Variables with Artist:
+              name: 艺术家和变量
+            Changing Variables with Bee:
+              name: 蜜蜂与改变变量
+            Changing Variables with Artist:
+              name: 小艺术家与改变变量
+            For Loops with Bee:
+              name: 蜜蜂式里的循环
+            For Loops with Artist:
+              name: 对于艺术家里的循环
+            Swimming Fish in Sprite Lab:
+              name: 在精灵图实验室学习精灵图
+            Alien Dance Party:
+              name: 外星人舞蹈派对
+            Behaviors in Sprite Lab:
+              name: 编辑行为
         pre-express-2020:
           title: 学前儿童的速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -25985,6 +26065,16 @@ zh-CN:
               description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
             Make a Game in Play Lab:
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
+            Loops with Scrat:
+              name: 斯奎特和循环
+            Loops with Laurel:
+              name: 收集器中的循环
+            Drawing Gardens with Loops:
+              name: 用循环来画花园
+            On the Move with Events:
+              name: 游戏实验室中的事件
+            A Royal Battle with Events:
+              name: 游戏实验室中的事件
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -26026,6 +26116,16 @@ zh-CN:
               description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
             Make a Game in Play Lab:
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
+            Loops with Scrat:
+              name: 斯奎特和循环
+            Loops with Laurel:
+              name: 收集器中的循环
+            Drawing Gardens with Loops:
+              name: 用循环来画花园
+            On the Move with Events:
+              name: 游戏实验室中的事件
+            A Royal Battle with Events:
+              name: 游戏实验室中的事件
         csp1-2020:
           stages:
             new stage:
@@ -27088,3 +27188,10 @@ zh-CN:
           lesson_groups:
             lg_1:
               display_name: 内容
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: 模块 1
+          lessons:
+            Module 1:
+              name: 模块 1

@@ -408,6 +408,10 @@ ka:
         options:
           CHOICE:
             '"other"': სხვა
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': წამები
       gamelab_keyPressed:
         options:
           CONDITION:

@@ -184,7 +184,9 @@ describe('Pairing component', function() {
 
       // verify that the right data is sent to the server
       let data = server.requests[server.requests.length - 1].requestBody;
-      expect('{"pairings":[{"id":11,"name":"First student"}]}').to.equal(data);
+      expect(
+        '{"pairings":[{"id":11,"name":"First student"}],"sectionId":1}'
+      ).to.equal(data);
     });
   });
 

@@ -987,6 +987,10 @@ mi:
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
             '"tint"': tae
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
       gamelab_jumpTo:
         text: "{SPRITE} pēke atu ki {LOCATION}"
       gamelab_keyPressed:
