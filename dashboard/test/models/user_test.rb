@@ -2834,6 +2834,37 @@ class UserTest < ActiveSupport::TestCase
     assert student.account_age_days == 10
   end
 
+  test 'first_sign_in returns time of first sign in' do
+    now = DateTime.now.utc.iso8601
+
+    student = create :student
+    SignIn.create(
+      user_id: student.id,
+      sign_in_at: now,
+      sign_in_count: 1
+    )
+
+    assert_equal now, student.first_sign_in_date.utc.iso8601
+  end
+
+  test 'days_since_first_sign_in returns days for student who has signed in' do
+    student = create :student
+
+    SignIn.create(
+      user_id: student.id,
+      sign_in_at: DateTime.now - 10,
+      sign_in_count: 1
+    )
+
+    assert_equal 10, student.days_since_first_sign_in
+  end
+
+  test 'days_since_first_sign_in returns nil for student who has not signed in' do
+    student = create :student
+
+    assert_nil student.days_since_first_sign_in
+  end
+
   test 'new users must have valid email addresses' do
     assert_creates User do
       create :user, email: 'valid@example.net'
@@ -3146,12 +3177,12 @@ class UserTest < ActiveSupport::TestCase
   class AssignedCoursesAndScripts < ActiveSupport::TestCase
     setup do
       @student = create :student
-      @course = create :course, name: 'course'
+      @course = create :unit_group, name: 'course'
     end
 
     test "it returns assigned courses" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
+      section = create :section, user_id: teacher.id, unit_group: @course
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
 
       assigned_courses = @student.assigned_courses
@@ -3194,14 +3225,14 @@ class UserTest < ActiveSupport::TestCase
 
     test "it checks for assigned courses and scripts, assigned course" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
+      section = create :section, user_id: teacher.id, unit_group: @course
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
       assert @student.assigned_course_or_script?
     end
 
     test "it checks for assigned courses and scripts, assigned course and assigned visible script" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
+      section = create :section, user_id: teacher.id, unit_group: @course
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
       visible_script = create :script, name: 'visible-script'
       @student.assign_script(visible_script)
@@ -3239,14 +3270,14 @@ class UserTest < ActiveSupport::TestCase
       @student = create :student
       teacher = create :teacher
 
-      course = create :course, name: 'csd'
-      create :course_script, course: course, script: (create :script, name: 'csd1'), position: 1
-      create :course_script, course: course, script: (create :script, name: 'csd2'), position: 2
+      course = create :unit_group, name: 'csd'
+      create :course_script, unit_group: course, script: (create :script, name: 'csd1'), position: 1
+      create :course_script, unit_group: course, script: (create :script, name: 'csd2'), position: 2
 
       other_script = create :script, name: 'other'
       @student.assign_script(other_script)
 
-      section = create :section, user_id: teacher.id, course: course
+      section = create :section, user_id: teacher.id, unit_group: course
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
     end
 
@@ -3279,15 +3310,15 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       teacher = create :teacher
 
-      course = create :course, name: 'testcourse'
-      course_script1 = create :course_script, course: course, script: (create :script, name: 'testscript1'), position: 1
-      create :course_script, course: course, script: (create :script, name: 'testscript2'), position: 2
+      course = create :unit_group, name: 'testcourse'
+      course_script1 = create :course_script, unit_group: course, script: (create :script, name: 'testscript1'), position: 1
+      create :course_script, unit_group: course, script: (create :script, name: 'testscript2'), position: 2
       create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
 
       other_script = create :script, name: 'otherscript'
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
 
-      section = create :section, user_id: teacher.id, course: course
+      section = create :section, user_id: teacher.id, unit_group: course
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
       courses_and_scripts = student.recent_courses_and_scripts(true)
@@ -3303,10 +3334,10 @@ class UserTest < ActiveSupport::TestCase
       @student = create :student
       @teacher = create :teacher
       @grand_teacher = create :teacher
-      @course = create :course, name: 'csd'
+      @course = create :unit_group, name: 'csd'
     end
     test "it returns courses in which a teacher exists as a student" do
-      grand_section = create :section, user_id: @grand_teacher.id, course: @course
+      grand_section = create :section, user_id: @grand_teacher.id, unit_group: @course
       Follower.create!(section_id: grand_section.id, student_user_id: @teacher.id, user: @grand_teacher)
 
       courses = @teacher.section_courses
@@ -3315,7 +3346,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it returns courses in which a teacher exists as a teacher" do
-      section = create :section, user_id: @teacher.id, course: @course
+      section = create :section, user_id: @teacher.id, unit_group: @course
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
 
       courses = @teacher.section_courses
@@ -3324,7 +3355,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it returns courses in which a student exists as a student" do
-      section = create :section, user_id: @teacher.id, course: @course
+      section = create :section, user_id: @teacher.id, unit_group: @course
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
 
       courses = @student.section_courses
@@ -3343,9 +3374,9 @@ class UserTest < ActiveSupport::TestCase
     single_script = create :script
     (create :section, script: single_script).students << student
     course_script = create :script
-    course_with_script = create :course
-    create :course_script, course: course_with_script, script: course_script, position: 1
-    (create :section, course: course_with_script).students << student
+    course_with_script = create :unit_group
+    create :course_script, unit_group: course_with_script, script: course_script, position: 1
+    (create :section, unit_group: course_with_script).students << student
 
     assert_equal [single_script, course_script], student.section_scripts
   end
@@ -3624,13 +3655,13 @@ class UserTest < ActiveSupport::TestCase
 
       # explicitly disable LB mode so that we don't create a .course file
       Rails.application.config.stubs(:levelbuilder_mode).returns false
-      @course = create :course
+      @course = create :unit_group
 
       @script2 = create :script
       @script3 = create :script
-      create :course_script, position: 1, course: @course, script: @script
-      create :course_script, position: 2, course: @course, script: @script2
-      create :course_script, position: 2, course: @course, script: @script3
+      create :course_script, position: 1, unit_group: @course, script: @script
+      create :course_script, position: 2, unit_group: @course, script: @script2
+      create :course_script, position: 2, unit_group: @course, script: @script3
     end
 
     def put_student_in_section(student, teacher, script, course=nil)
