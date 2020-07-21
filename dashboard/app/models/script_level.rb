@@ -51,7 +51,8 @@ class ScriptLevel < ActiveRecord::Base
     challenge
   )
 
-  def self.add_script_level(script, lesson, raw_script_levels, chapter, new_suffix, editor_experiment)
+  # Chapter values order all the script_levels in a script.
+  def self.add_script_levels(script, lesson, raw_script_levels, chapter, new_suffix, editor_experiment)
     script_level_position = 0
 
     raw_script_levels.map do |raw_script_level|

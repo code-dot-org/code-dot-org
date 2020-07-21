@@ -2277,16 +2277,20 @@ endvariants
     l2 = create :level
     l3 = create :level
     l4 = create :level
+    l5 = create :level
     new_dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
       lesson 'Lesson1'
       level '#{l1.name}'
       level '#{l2.name}'
 
-      lesson_group 'content2', display_name: 'Content'
       lesson 'Lesson2'
       level '#{l3.name}'
+
+      lesson_group 'content2', display_name: 'Content'
+      lesson 'Lesson3'
       level '#{l4.name}'
+      level '#{l5.name}'
     SCRIPT
 
     script = Script.add_script(
@@ -2301,7 +2305,9 @@ endvariants
     assert_equal 3, script.script_levels[2].chapter
     assert_equal 1, script.script_levels[2].position
     assert_equal 4, script.script_levels[3].chapter
-    assert_equal 2, script.script_levels[3].position
+    assert_equal 1, script.script_levels[3].position
+    assert_equal 5, script.script_levels[4].chapter
+    assert_equal 2, script.script_levels[4].position
   end
 
   private

@@ -70,7 +70,7 @@ class Lesson < ActiveRecord::Base
       )
       lesson.save! if lesson.changed?
 
-      lesson.script_levels = ScriptLevel.add_script_level(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
+      lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
       lesson.save!
 
       chapter += lesson.script_levels.length
