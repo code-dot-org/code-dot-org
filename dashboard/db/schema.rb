@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200701201654) do
+ActiveRecord::Schema.define(version: 20200721174548) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -341,14 +341,6 @@ ActiveRecord::Schema.define(version: 20200701201654) do
     t.index ["course_id"], name: "index_course_scripts_on_course_id", using: :btree
     t.index ["default_script_id"], name: "index_course_scripts_on_default_script_id", using: :btree
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
-  end
-
-  create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name"
-    t.text     "properties", limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.index ["name"], name: "index_courses_on_name", using: :btree
   end
 
   create_table "donor_schools", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1540,6 +1532,14 @@ ActiveRecord::Schema.define(version: 20200701201654) do
     t.index ["user_level_id"], name: "index_teacher_scores_on_user_level_id", using: :btree
   end
 
+  create_table "unit_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.text     "properties", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["name"], name: "index_unit_groups_on_name", using: :btree
+  end
+
   create_table "user_geos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                             null: false
     t.datetime "created_at",                          null: false
@@ -1779,14 +1779,14 @@ ActiveRecord::Schema.define(version: 20200701201654) do
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
-  add_foreign_key "plc_courses", "courses"
+  add_foreign_key "plc_courses", "unit_groups", column: "course_id"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
-  add_foreign_key "sections", "courses"
+  add_foreign_key "sections", "unit_groups", column: "course_id"
   add_foreign_key "state_cs_offerings", "schools", column: "state_school_id", primary_key: "state_school_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
