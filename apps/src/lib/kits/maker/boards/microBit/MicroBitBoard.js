@@ -147,6 +147,7 @@ export default class MicroBitBoard extends EventEmitter {
     if (this.prewiredComponents_) {
       cleanupMicroBitComponents(
         this.prewiredComponents_,
+        this.dynamicComponents_,
         true /* shouldDestroyComponents */
       );
     }
@@ -183,6 +184,7 @@ export default class MicroBitBoard extends EventEmitter {
   reset() {
     cleanupMicroBitComponents(
       this.prewiredComponents_,
+      this.dynamicComponents_,
       false /* shouldDestroyComponents */
     );
   }
