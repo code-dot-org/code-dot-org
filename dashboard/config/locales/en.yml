@@ -1152,3 +1152,5 @@ en:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
     not_now: "Not now"
+  behaviors:
+    this_sprite: "this sprite"
