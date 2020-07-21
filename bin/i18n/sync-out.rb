@@ -265,7 +265,7 @@ def distribute_translations(upload_manifests)
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
-      basename = File.basename(loc_file, '.yml')
+      basename = File.basename(loc_file, ext)
 
       # Special case the un-prefixed Yaml file.
       destination = (basename == "base") ?
