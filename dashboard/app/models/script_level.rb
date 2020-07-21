@@ -298,8 +298,9 @@ class ScriptLevel < ActiveRecord::Base
     }
 
     if progression
+      summary[:progression] = progression
       localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
-      summary[:progression] = localized_progression_name
+      summary[:progression_display_name] = localized_progression_name
     end
 
     if named_level

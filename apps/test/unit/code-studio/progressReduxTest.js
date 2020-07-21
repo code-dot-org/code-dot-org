@@ -631,6 +631,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.unplugged,
             icon: null,
@@ -648,6 +649,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.assessment,
             icon: null,
@@ -665,6 +667,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.assessment,
             icon: null,
@@ -684,6 +687,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
@@ -701,6 +705,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
@@ -718,6 +723,7 @@ describe('progressReduxTest', () => {
               'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
             name: undefined,
             progression: undefined,
+            progressionDisplayName: undefined,
             readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
@@ -833,6 +839,7 @@ describe('progressReduxTest', () => {
       assert.deepEqual(progressionsFromLevels(levels), [
         {
           name: undefined,
+          display_name: undefined,
           start: 0,
           levels: levels
         }
@@ -862,6 +869,7 @@ describe('progressReduxTest', () => {
       assert.equal(progressions.length, 2);
       assert.deepEqual(progressions[0], {
         name: 'Progression 1',
+        display_name: 'Progression 1',
         start: 0,
         levels: levels.slice(0, 2)
       });
@@ -898,17 +906,20 @@ describe('progressReduxTest', () => {
         {
           status: 'not_tried',
           url: '/step1/level1',
-          progression: 'Progression 1'
+          progression: 'Progression 1',
+          progressionDisplayName: 'Progression 1'
         },
         {
           status: 'perfect',
           url: '/step2/level1',
-          progression: 'Progression 1'
+          progression: 'Progression 1',
+          progressionDisplayName: 'Progression 1'
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
-          progression: 'Progression 2'
+          progression: 'Progression 2',
+          progressionDisplayName: 'Progression 2'
         }
       ];
 
@@ -916,6 +927,7 @@ describe('progressReduxTest', () => {
       assert.equal(progressions.length, 2);
       assert.deepEqual(progressions[0], {
         name: 'Progression 1',
+        display_name: 'Progression 1',
         start: 0,
         levels: levels.slice(0, 2)
       });
