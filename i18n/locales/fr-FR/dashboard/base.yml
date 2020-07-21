@@ -966,6 +966,8 @@ fr:
       school_name: 'Nom de l''école'
       school_city: 'Ville de l’École'
       school_country: 'Pays de l’École'
+      colombian_school_city: 'Ville de l’École'
+      colombian_school_name: 'Nom de l''école'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'

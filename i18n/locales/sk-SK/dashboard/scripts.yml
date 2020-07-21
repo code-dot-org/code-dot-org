@@ -11459,6 +11459,44 @@ sk:
               name: Plávajúca ryba so Sprite Labom
             End of Course Project:
               name: Záverečný projekt
+            Programming with Angry Birds:
+              name: Programovanie s Angry Birds
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
+            Collecting Treasure with Laurel:
+              name: Zbieranie pokladov s Laurel
+            Creating Art with Code:
+              name: Umenie s pomocou kódu
+            Sticker Art with Loops:
+              name: Pečiatkovanie v cykloch
+            Nested Loops in Maze:
+              name: Vnorené cykly v bludisku
+            Snowflakes with Anna and Elsa:
+              name: Snehové vločky s Annou a Elsou
+            If/Else with Bee:
+              name: Podmienky "ak/inak" s včelou
+            While Loops with the Farmer:
+              name: Cykly "pokiaľ" s Farmárkou
+            Harvesting with Conditionals:
+              name: Zber úrody s podmienkami
+            Functions with Harvester:
+              name: Funkcie so Záhradníčkou
+            Functions with Artist:
+              name: Funkcie s Umelcom
+            Variables with Artist:
+              name: Premenné s Umelcom
+            Changing Variables with Bee:
+              name: Meniace sa premenné s včelou
+            Changing Variables with Artist:
+              name: Meniace sa premenné s Umelcom
+            For Loops with Bee:
+              name: Cykly "for" s včelou
+            For Loops with Artist:
+              name: Cykly "for" s Umelcom
+            Swimming Fish in Sprite Lab:
+              name: Spoznaj Sprite Lab
+            Alien Dance Party:
+              name: Mimozemská tanečná párty
           lesson_groups:
             csf_warmup:
               display_name: Úvodná aktivita
@@ -11523,6 +11561,44 @@ sk:
               name: Plávajúca ryba so Sprite Labom
             End of Course Project:
               name: Záverečný projekt
+            Programming with Angry Birds:
+              name: Programovanie s Angry Birds
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
+            Collecting Treasure with Laurel:
+              name: Zbieranie pokladov s Laurel
+            Creating Art with Code:
+              name: Umenie s pomocou kódu
+            Sticker Art with Loops:
+              name: Pečiatkovanie v cykloch
+            Nested Loops in Maze:
+              name: Vnorené cykly v bludisku
+            Snowflakes with Anna and Elsa:
+              name: Snehové vločky s Annou a Elsou
+            If/Else with Bee:
+              name: Podmienky "ak/inak" s včelou
+            While Loops with the Farmer:
+              name: Cykly "pokiaľ" s Farmárkou
+            Harvesting with Conditionals:
+              name: Zber úrody s podmienkami
+            Functions with Harvester:
+              name: Funkcie so Záhradníčkou
+            Functions with Artist:
+              name: Funkcie s Umelcom
+            Variables with Artist:
+              name: Premenné s Umelcom
+            Changing Variables with Bee:
+              name: Meniace sa premenné s včelou
+            Changing Variables with Artist:
+              name: Meniace sa premenné s Umelcom
+            For Loops with Bee:
+              name: Cykly "for" s včelou
+            For Loops with Artist:
+              name: Cykly "for" s Umelcom
+            Swimming Fish in Sprite Lab:
+              name: Spoznaj Sprite Lab
+            Alien Dance Party:
+              name: Mimozemská tanečná párty
         pre-express-2020:
           title: Zrýchlený kurz pre predškolákov (2020)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
@@ -11550,6 +11626,16 @@ sk:
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
             Tell a Story in Play Lab:
               description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
+            Loops with Scrat:
+              name: Cykly so Scratom
+            Loops with Laurel:
+              name: Cykly s Laurel
+            Drawing Gardens with Loops:
+              name: Kreslenie v záhrade pomocou cyklov
+            On the Move with Events:
+              name: Udalosti v pohybe
+            A Royal Battle with Events:
+              name: Kráľovská bitka s udalosťami
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -11579,6 +11665,16 @@ sk:
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
             Tell a Story in Play Lab:
               description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
+            Loops with Scrat:
+              name: Cykly so Scratom
+            Loops with Laurel:
+              name: Cykly s Laurel
+            Drawing Gardens with Loops:
+              name: Kreslenie v záhrade pomocou cyklov
+            On the Move with Events:
+              name: Udalosti v pohybe
+            A Royal Battle with Events:
+              name: Kráľovská bitka s udalosťami
         csp1-2020:
           stages:
             Binary Numbers:

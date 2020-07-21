@@ -30395,6 +30395,28 @@ tr:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
               name: Sanatçı-Şununla say Döngüleri
+            Programming with Angry Birds:
+              name: Labirentte Programlama
+            Collecting Treasure with Laurel:
+              name: Koleksiyoncu programlama
+            Creating Art with Code:
+              name: Sanatçı Programlama
+            Sticker Art with Loops:
+              name: Sanatçıların Döngüleri
+            Nested Loops in Maze:
+              name: Labirentte İçiçe Döngüler
+            Snowflakes with Anna and Elsa:
+              name: Frozen'da İç İçe Döngüler
+            If/Else with Bee:
+              name: Koşullar-Arı
+            While Loops with the Farmer:
+              name: Çiftçi Döngüleri
+            Functions with Artist:
+              name: Sanatçı- Fonksiyonlar
+            For Loops with Bee:
+              name: Arı - şununla say döngüleri
+            For Loops with Artist:
+              name: Sanatçı-Şununla say Döngüleri
           lesson_groups:
             csf_warmup:
               display_name: Isınma
@@ -30438,6 +30460,28 @@ tr:
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
+              name: Sanatçı-Şununla say Döngüleri
+            Programming with Angry Birds:
+              name: Labirentte Programlama
+            Collecting Treasure with Laurel:
+              name: Koleksiyoncu programlama
+            Creating Art with Code:
+              name: Sanatçı Programlama
+            Sticker Art with Loops:
+              name: Sanatçıların Döngüleri
+            Nested Loops in Maze:
+              name: Labirentte İçiçe Döngüler
+            Snowflakes with Anna and Elsa:
+              name: Frozen'da İç İçe Döngüler
+            If/Else with Bee:
+              name: Koşullar-Arı
+            While Loops with the Farmer:
+              name: Çiftçi Döngüleri
+            Functions with Artist:
+              name: Sanatçı- Fonksiyonlar
+            For Loops with Bee:
+              name: Arı - şununla say döngüleri
+            For Loops with Artist:
               name: Sanatçı-Şununla say Döngüleri
         pre-express-2020:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
@@ -30494,6 +30538,14 @@ tr:
                 etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün
                 kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak
                 için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
+            Loops with Laurel:
+              name: Toplayıcıda Döngüler
+            Drawing Gardens with Loops:
+              name: Sanatçıların Döngüleri
+            On the Move with Events:
+              name: Play Lab' da Olaylar
+            A Royal Battle with Events:
+              name: Play Lab' da Olaylar
           lesson_groups:
             csf_loops:
               display_name: Döngüler
@@ -30548,6 +30600,14 @@ tr:
                 etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün
                 kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak
                 için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
+            Loops with Laurel:
+              name: Toplayıcıda Döngüler
+            Drawing Gardens with Loops:
+              name: Sanatçıların Döngüleri
+            On the Move with Events:
+              name: Play Lab' da Olaylar
+            A Royal Battle with Events:
+              name: Play Lab' da Olaylar
         csp1-2020:
           stages:
             new stage:

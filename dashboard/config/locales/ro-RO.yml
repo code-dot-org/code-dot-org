@@ -1159,6 +1159,8 @@ ro:
       school_name: Numele școlii
       school_city: Orașul în care se află școala
       school_country: Țara școlii
+      colombian_school_city: Orașul în care se află școala
+      colombian_school_name: Numele școlii
     form_entries:
       gender:
         male: De sex masculin

@@ -957,6 +957,8 @@ es-MX:
       school_name: 'Nombre de la escuela'
       school_city: 'Ciudad de la escuela'
       school_country: 'País en el que está la escuela'
+      colombian_school_city: 'Ciudad de la escuela'
+      colombian_school_name: 'Nombre de la escuela'
       ages: '¿A qué grupos de edades enseñas este año?'
       subjects: '¿Qué materias enseñas este año?'
       resources: '¿Cuáles de los siguientes recursos educativos de ciencias de la computación utilizas?'

@@ -2256,14 +2256,22 @@ tr-TR:
       courseC_PlayLab_events9_2020: "Waddles the Penguen (aktör1) Octavia the Octopus
         (aktör 3)'a çarpınca bir puan kazanmak için bir blok ekleyebilir misiniz?
         \nOyunu oynayın ve puan kazanana dek Waddles'ı ok tuşlarıyla hareket ettirin!"
-      courseC_PlayLab_eventsA: Arkaplanı ve Waddles the Penguin'in hızını değiştirmek
-        için "çalıştığı zaman" olayına blok ekleyin.
-      courseC_PlayLab_eventsA_2018: Arkaplanı ve Waddles the Penguin'in hızını değiştirmek
-        için "çalıştığı zaman" olayına blok ekleyin.
-      courseC_PlayLab_eventsA_2019: Arkaplanı ve Waddles the Penguin'in hızını değiştirmek
-        için "çalıştığı zaman" olayına blok ekleyin.
-      courseC_PlayLab_eventsA_2020: Arkaplanı ve Waddles the Penguin'in hızını değiştirmek
-        için "çalıştığı zaman" olayına blok ekleyin.
+      courseC_PlayLab_eventsA: |-
+        Arkaplanı ve Waddles the Penguin'in hızını değiştirmek için "çalıştığı zaman" olayına blok ekleyin.
+
+        Oyunu oynayın ve puan alana denk Waddles'ı oklarla hareket ettirin.
+      courseC_PlayLab_eventsA_2018: |-
+        Arkaplanı ve Waddles the Penguin'in hızını değiştirmek için "çalıştığı zaman" olayına blok ekleyin.
+
+        Oyunu oynayın ve puan alana denk Waddles'ı oklarla hareket ettirin.
+      courseC_PlayLab_eventsA_2019: |-
+        Arkaplanı ve Waddles the Penguin'in hızını değiştirmek için "çalıştığı zaman" olayına blok ekleyin.
+
+        Oyunu oynayın ve puan alana denk Waddles'ı oklarla hareket ettirin.
+      courseC_PlayLab_eventsA_2020: |-
+        Arkaplanı ve Waddles the Penguin'in hızını değiştirmek için "çalıştığı zaman" olayına blok ekleyin.
+
+        Oyunu oynayın ve puan alana denk Waddles'ı oklarla hareket ettirin.
       courseC_PlayLab_eventsFP: Kendi hikayenizi oluşturun? Bitirdiğinizde arkadaşlarınızla
         paylaşmak için "Bitir" düğmesine basın. İpuçlarında hikaye fikirlerini inceleyin.
       courseC_PlayLab_eventsFP_2018: Kendi hikayenizi oluşturun? Bitirdiğinizde arkadaşlarınızla

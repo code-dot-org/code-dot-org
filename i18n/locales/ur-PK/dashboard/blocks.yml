@@ -988,6 +988,10 @@ ur:
         options:
           CHOICE:
             '"this"': یہ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': سیکنڈز
       gamelab_hideTitleScreen:
         text: عنوان کی سکرین چھپائیں
       gamelab_isTouchingEdges:

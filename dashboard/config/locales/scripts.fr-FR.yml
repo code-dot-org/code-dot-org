@@ -41826,6 +41826,46 @@ fr:
               name: Animal de compagnie virtuel avec le Labo des Lutins
             Swimming Fish with Sprite Lab:
               name: Des Poissons qui Nagent, avec le Labo des Lutins
+            Programming with Angry Birds:
+              name: Programmation avec Angry Birds
+            Debugging with Scrat:
+              name: Déboguer avec Scrat
+            Collecting Treasure with Laurel:
+              name: Collecter le Trésor avec Laurel
+            Creating Art with Code:
+              name: Créer de l'Art avec du Code
+            Sticker Art with Loops:
+              name: L'Art de l'Autocollant avec les Boucles
+            Nested Loops in Maze:
+              name: Les Boucles Imbriquées dans le Labyrinthe
+            Snowflakes with Anna and Elsa:
+              name: Les Flocons de Neige avec Anna et Elsa
+            If/Else with Bee:
+              name: Si/Sinon avec l'Abeille
+            While Loops with the Farmer:
+              name: Les Boucles Tant Que avec la Fermière
+            Harvesting with Conditionals:
+              name: Récolter avec les Conditions
+            Functions with Harvester:
+              name: Les Fonctions avec la Moissonneuse
+            Functions with Artist:
+              name: Les Fonctions avec L'Artiste
+            Variables with Artist:
+              name: Les Variables avec L'Artiste
+            Changing Variables with Bee:
+              name: Modifier des Variables avec l'Abeille
+            Changing Variables with Artist:
+              name: Modifier des Variables avec l'Artiste
+            For Loops with Bee:
+              name: Les Boucles For avec l'Abeille
+            For Loops with Artist:
+              name: Les Boucles For avec l'Artiste
+            Swimming Fish in Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Soirée Dansante des Extraterrestres
+            Behaviors in Sprite Lab:
+              name: Les Comportements dans le Labo des Lutins
           lesson_groups:
             csf_warmup:
               display_name: Échauffement
@@ -41890,6 +41930,46 @@ fr:
               name: Animal de compagnie virtuel avec le Labo des Lutins
             Swimming Fish with Sprite Lab:
               name: Des Poissons qui Nagent, avec le Labo des Lutins
+            Programming with Angry Birds:
+              name: Programmation avec Angry Birds
+            Debugging with Scrat:
+              name: Déboguer avec Scrat
+            Collecting Treasure with Laurel:
+              name: Collecter le Trésor avec Laurel
+            Creating Art with Code:
+              name: Créer de l'Art avec du Code
+            Sticker Art with Loops:
+              name: L'Art de l'Autocollant avec les Boucles
+            Nested Loops in Maze:
+              name: Les Boucles Imbriquées dans le Labyrinthe
+            Snowflakes with Anna and Elsa:
+              name: Les Flocons de Neige avec Anna et Elsa
+            If/Else with Bee:
+              name: Si/Sinon avec l'Abeille
+            While Loops with the Farmer:
+              name: Les Boucles Tant Que avec la Fermière
+            Harvesting with Conditionals:
+              name: Récolter avec les Conditions
+            Functions with Harvester:
+              name: Les Fonctions avec la Moissonneuse
+            Functions with Artist:
+              name: Les Fonctions avec L'Artiste
+            Variables with Artist:
+              name: Les Variables avec L'Artiste
+            Changing Variables with Bee:
+              name: Modifier des Variables avec l'Abeille
+            Changing Variables with Artist:
+              name: Modifier des Variables avec l'Artiste
+            For Loops with Bee:
+              name: Les Boucles For avec l'Abeille
+            For Loops with Artist:
+              name: Les Boucles For avec l'Artiste
+            Swimming Fish in Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Soirée Dansante des Extraterrestres
+            Behaviors in Sprite Lab:
+              name: Les Comportements dans le Labo des Lutins
         pre-express-2020:
           description: Apprends les bases de l'informatique et de la sécurité sur
             internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
@@ -41974,6 +42054,16 @@ fr:
                 et d'appliquer toutes les compétences de codage qu'ils ont apprises
                 pour créer un jeu animé. Il est temps de faire preuve de créativité
                 et de créer une histoire dans le Labo du Jeu !
+            Loops with Scrat:
+              name: Les Boucles avec Scrat
+            Loops with Laurel:
+              name: Les Boucles avec Laurel
+            Drawing Gardens with Loops:
+              name: Dessiner des Jardins avec des Boucles
+            On the Move with Events:
+              name: En Déplacement avec les Événements
+            A Royal Battle with Events:
+              name: Une Bataille Royale avec des Événements
           lesson_groups:
             csf_sequencing:
               display_name: Séquençage
@@ -42058,6 +42148,16 @@ fr:
                 et d'appliquer toutes les compétences de codage qu'ils ont apprises
                 pour créer un jeu animé. Il est temps de faire preuve de créativité
                 et de créer une histoire dans le Labo du Jeu !
+            Loops with Scrat:
+              name: Les Boucles avec Scrat
+            Loops with Laurel:
+              name: Les Boucles avec Laurel
+            Drawing Gardens with Loops:
+              name: Dessiner des Jardins avec des Boucles
+            On the Move with Events:
+              name: En Déplacement avec les Événements
+            A Royal Battle with Events:
+              name: Une Bataille Royale avec des Événements
         csp1-2020:
           stages:
             new stage:
@@ -43733,3 +43833,10 @@ fr:
           lesson_groups:
             lg_1:
               display_name: Contenu
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: Module 1
+          lessons:
+            Module 1:
+              name: Module 1
