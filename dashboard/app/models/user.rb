@@ -201,6 +201,7 @@ class User < ActiveRecord::Base
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :sign_ins
   has_many :user_geos, -> {order 'updated_at desc'}
 
   before_validation :normalize_parent_email
@@ -1265,10 +1266,10 @@ class User < ActiveRecord::Base
     return false if sections_as_student.empty?
 
     # Can't hide a script that isn't part of a course
-    course = script.try(:course)
-    return false unless course
+    unit_group = script.try(:unit_group)
+    return false unless unit_group
 
-    get_student_hidden_ids(course.id, false).include?(script.id)
+    get_student_hidden_ids(unit_group.id, false).include?(script.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1286,10 +1287,10 @@ class User < ActiveRecord::Base
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(course = nil)
-    return [] if !teacher? && course.nil?
+  def get_hidden_script_ids(unit_group = nil)
+    return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
+    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -1544,12 +1545,12 @@ class User < ActiveRecord::Base
   end
 
   def assigned_script?(script)
-    section_scripts.include?(script) || section_courses.include?(script&.course)
+    section_scripts.include?(script) || section_courses.include?(script&.unit_group)
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    scripts.map(&:course).compact.concat(section_courses).uniq
+    scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1655,7 +1656,7 @@ class User < ActiveRecord::Base
 
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:course).compact.uniq
+    all_sections.map(&:unit_group).compact.uniq
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
@@ -1667,8 +1668,8 @@ class User < ActiveRecord::Base
     all_sections.each do |section|
       if section.script.present?
         all_scripts << section.script
-      elsif section.course.present?
-        all_scripts.concat(section.course.default_scripts)
+      elsif section.unit_group.present?
+        all_scripts.concat(section.unit_group.default_scripts)
       end
     end
 
@@ -1689,6 +1690,15 @@ class User < ActiveRecord::Base
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
+  end
+
+  def first_sign_in_date
+    sign_ins.find_by(sign_in_count: 1)&.sign_in_at
+  end
+
+  def days_since_first_sign_in
+    return nil if first_sign_in_date.nil?
+    (DateTime.now - first_sign_in_date.to_datetime).to_i
   end
 
   # This method is meant to indicate a user has made progress (i.e. made a milestone
@@ -1740,6 +1750,7 @@ class User < ActiveRecord::Base
     new_csf_level_perfected = false
 
     user_level = nil
+    script = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
@@ -1772,7 +1783,10 @@ class User < ActiveRecord::Base
       user_level.atomic_save!
     end
 
-    if pairing_user_ids
+    current_level = user_level.level
+    should_allow_pairing = current_level.should_allow_pairing?(script.id)
+
+    if should_allow_pairing && pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,
