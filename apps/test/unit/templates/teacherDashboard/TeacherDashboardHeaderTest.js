@@ -5,6 +5,8 @@ import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
+// Note: The UnconnectedTeacherDashboadHeader assumes the sections it receives
+// have already been filtered (to remove hidden sections) and sorted
 const MOCK_SECTIONS = [
   {
     id: 3,
@@ -68,7 +70,7 @@ describe('TeacherDashboardHeader', () => {
     expect(wrapper.contains('Course D (2019)')).to.equal(false);
   });
 
-  it('renders dropdown button with links to sections, highlighting current section, ignoring hidden section', () => {
+  it('renders dropdown button with links to sections, highlighting current section', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let dropdownButton = wrapper.find('DropdownButton');
     expect(dropdownButton).to.have.lengthOf(1);
