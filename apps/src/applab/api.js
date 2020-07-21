@@ -507,6 +507,14 @@ export function penRGB(r, g, b, a) {
   return Applab.executeCmd(null, 'penRGB', {r: r, g: g, b: b, a: a});
 }
 
+export function initLiveCamera(elementId, callback) {
+  return Applab.executeCmd(null, 'initLiveCamera', {elementId, callback});
+}
+
+export function initMLModel(elementId, callback) {
+  return Applab.executeCmd(null, 'initMLModel', {elementId, callback});
+}
+
 export function doSomeML(elementId, callback) {
   return Applab.executeCmd(null, 'doSomeML', {elementId, callback});
 }

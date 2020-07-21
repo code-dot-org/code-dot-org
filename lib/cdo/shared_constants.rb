@@ -342,6 +342,8 @@ module SharedConstants
       "compass.getHeading": null,
 
       // ML
+      "initLiveCamera": null,
+      "initMLModel": null,
       "doSomeML": null
     }
   JSON

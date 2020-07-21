@@ -680,6 +680,20 @@ export var blocks = [
   },
 
   {
+    func: 'initLiveCamera',
+    parent: api,
+    category: 'ML',
+    paletteParams: ['id', 'callback'],
+    params: ['"id"', 'function (value) {\n  \n}']
+  },
+  {
+    func: 'initMLModel',
+    parent: api,
+    category: 'ML',
+    paletteParams: ['id', 'callback'],
+    params: ['"id"', 'function (value) {\n  \n}']
+  },
+  {
     func: 'doSomeML',
     parent: api,
     category: 'ML',

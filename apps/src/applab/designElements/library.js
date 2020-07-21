@@ -27,7 +27,8 @@ var ElementType = utils.makeEnum(
   'SCREEN',
   'CHART',
   'SLIDER',
-  'PHOTO_SELECT'
+  'PHOTO_SELECT',
+  'LIVE_CAMERA'
 );
 
 var elements = {};
@@ -44,6 +45,7 @@ elements[ElementType.SCREEN] = require('./screen');
 elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
 elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
+elements[ElementType.LIVE_CAMERA] = require('./liveCamera');
 
 export default {
   ElementType: ElementType,
@@ -157,6 +159,8 @@ export default {
           default:
             return ElementType.TEXT_INPUT;
         }
+      case 'video':
+        return ElementType.LIVE_CAMERA;
     }
     let errorMessage =
       'Project contains an element with an unknown type' +

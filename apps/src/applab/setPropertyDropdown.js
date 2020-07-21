@@ -432,6 +432,19 @@ PROPERTIES[ElementType.PHOTO_SELECT] = {
   ]
 };
 
+PROPERTIES[ElementType.LIVE_CAMERA] = {
+  propertyNames: [
+    'width',
+    'height',
+    'x',
+    'y',
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
+  ]
+};
+
 // Initialize dropdownOptions and infoForFriendlyNames fields in PROPERTIES map.
 for (var elementType in PROPERTIES) {
   var elementProperties = PROPERTIES[elementType];

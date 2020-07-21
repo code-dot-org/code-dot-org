@@ -167,7 +167,8 @@ export default function sanitizeHtml(
     'th',
     'tr',
     'u',
-    'ul'
+    'ul',
+    'video'
   ];
   if (!persistingHtml) {
     // Spans are allowed when using write(), but we don't want to persist them
