@@ -41,6 +41,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     classmate_1 = create(:follower, section: section).student_user
     classmate_2 = create(:follower, section: section).student_user
     session[:pairings] = [classmate_1.id, classmate_2.id]
+    session[:pairing_section_id] = section.id
 
     params = {
       script_id: 1,
@@ -89,7 +90,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     navigator_initial = HintViewRequest.where(user: navigator).count
 
     sign_in driver
-    @controller.send :pairings=, [navigator]
+    @controller.send :pairings=, {pairings: [navigator], section_id: section.id}
     post :create, params: {
       script_id: Script.first.id,
       level_id: Script.first.script_levels.first.level,
