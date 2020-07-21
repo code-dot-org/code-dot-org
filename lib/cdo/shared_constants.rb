@@ -342,7 +342,8 @@ module SharedConstants
       "compass.getHeading": null,
 
       // ML
-      "doSomeML": null
+      "doSomeML": null,
+      "doSomeDifferentML": null
     }
   JSON
 

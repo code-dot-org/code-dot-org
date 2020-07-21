@@ -688,6 +688,14 @@ export var blocks = [
   },
 
   {
+    func: 'doSomeDifferentML',
+    parent: api,
+    category: 'ML',
+    paletteParams: ['id', 'callback'],
+    params: ['"id"', 'function (value) {\n  \n}']
+  },
+
+  {
     func: 'moveForward',
     parent: api,
     category: 'Turtle',

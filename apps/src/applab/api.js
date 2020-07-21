@@ -511,6 +511,10 @@ export function doSomeML(elementId, callback) {
   return Applab.executeCmd(null, 'doSomeML', {elementId, callback});
 }
 
+export function doSomeDifferentML(elementId, callback) {
+  return Applab.executeCmd(null, 'doSomeDifferentML', {elementId, callback});
+}
+
 export function drawChart(chartId, chartType, chartData, options, callback) {
   return Applab.executeCmd(null, 'drawChart', {
     chartId: chartId,

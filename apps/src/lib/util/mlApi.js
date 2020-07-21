@@ -8,6 +8,10 @@ import * as handposeCore from '@tensorflow-models/handpose';
  * Must be mixed in to the app's command list (see applab/commands.js)
  */
 export const commands = {
+  async doSomeDifferentML(opts) {
+    console.log('do some different ML');
+  },
+
   async doSomeML(opts) {
     let model = await handposeCore.load();
 
