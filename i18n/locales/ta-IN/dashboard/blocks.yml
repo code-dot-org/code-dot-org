@@ -917,6 +917,10 @@ ta:
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
             '"tint"': டின்ட்
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': விநாடிகள்
       gamelab_jumpTo:
         text: "{SPRITE} குதிக்கவும் {LOCATION}"
       gamelab_keyPressed:

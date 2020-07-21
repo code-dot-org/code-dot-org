@@ -982,6 +982,10 @@ ms:
         options:
           CHOICE:
             '"this"': ini
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': saat
       gamelab_hideTitleScreen:
         text: sembunyikan skrin tajuk
       gamelab_isTouchingEdges:

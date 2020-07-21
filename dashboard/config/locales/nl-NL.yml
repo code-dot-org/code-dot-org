@@ -900,6 +900,8 @@ nl:
       school_name: Naam van de school
       school_city: School Stad
       school_country: Land van de school
+      colombian_school_city: School Stad
+      colombian_school_name: Naam van de school
     form_entries:
       gender:
         male: Man

@@ -851,6 +851,10 @@ te:
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
             '"tint"': టింట్
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': సెకండ్లు
       gamelab_jumpTo:
         text: "{SPRITE} జంప్ చేయండి {LOCATION} కు"
       gamelab_keyPressed:

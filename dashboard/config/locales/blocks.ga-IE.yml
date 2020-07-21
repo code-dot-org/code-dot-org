@@ -1006,6 +1006,10 @@ ga:
         options:
           CHOICE:
             '"this"': é seo
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': soicind
       gamelab_hideTitleScreen:
         text: cuir an scáileán teidil i bhfolach
       gamelab_isTouchingEdges:

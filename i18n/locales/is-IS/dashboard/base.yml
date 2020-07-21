@@ -961,6 +961,8 @@ is:
       school_name: 'Nafn skóla'
       school_city: 'Bær skóla'
       school_country: 'Land skóla'
+      colombian_school_city: 'Bær skóla'
+      colombian_school_name: 'Nafn skóla'
       ages: 'Hvaða aldurshóp(um) kennir þú þetta árið?'
       subjects: 'Hvaða fag/fög kennir þú þetta árið?'
       resources: 'Hvaða eftirfarandi tilföng notar þú fyrir tölvunarfræði?'

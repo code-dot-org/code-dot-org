@@ -43538,6 +43538,46 @@ de:
               name: Schwimmende Fische mit Sprite Lab.
             End of Course Project:
               name: Projekt am Ende des Kurses
+            Programming with Angry Birds:
+              name: Programmieren mit Angry Birds
+            Debugging with Scrat:
+              name: Fehlerbeseitigung (Debuggen) mit Scrat
+            Collecting Treasure with Laurel:
+              name: Den Schatz mit Laurel sammeln
+            Creating Art with Code:
+              name: Kunst erschaffen mit Code
+            Sticker Art with Loops:
+              name: Sticker-Kunst mit Schleifen
+            Nested Loops in Maze:
+              name: Eingebettete Schleifen im Labyrinth
+            Snowflakes with Anna and Elsa:
+              name: Schneeflocken mit Anna und Elsa
+            If/Else with Bee:
+              name: Wenn/Sonst mit der Biene
+            While Loops with the Farmer:
+              name: Während Schleifen mit dem Farmer
+            Harvesting with Conditionals:
+              name: Ernten mit Bedingungen
+            Functions with Harvester:
+              name: Funktionen mit der Erntearbeiterin
+            Functions with Artist:
+              name: Funktionen mit dem Künstler
+            Variables with Artist:
+              name: Variablen mit dem Künstler
+            Changing Variables with Bee:
+              name: Verändern von Variablen mit der Biene
+            Changing Variables with Artist:
+              name: Verändern von Variablen mit dem Künstler
+            For Loops with Bee:
+              name: "`Für´-Schleifen mit der Biene"
+            For Loops with Artist:
+              name: "`Für´-Schleifen mit dem Künstler"
+            Swimming Fish in Sprite Lab:
+              name: Schwimmende Fische in Sprite Lab
+            Alien Dance Party:
+              name: Tanzparty für Aliens
+            Behaviors in Sprite Lab:
+              name: Behaviors im Sprite-Labor
           lesson_groups:
             csf_warmup:
               display_name: Aufwärmübung
@@ -43618,6 +43658,46 @@ de:
               name: Schwimmende Fische mit Sprite Lab.
             End of Course Project:
               name: Projekt am Ende des Kurses
+            Programming with Angry Birds:
+              name: Programmieren mit Angry Birds
+            Debugging with Scrat:
+              name: Fehlerbeseitigung (Debuggen) mit Scrat
+            Collecting Treasure with Laurel:
+              name: Den Schatz mit Laurel sammeln
+            Creating Art with Code:
+              name: Kunst erschaffen mit Code
+            Sticker Art with Loops:
+              name: Sticker-Kunst mit Schleifen
+            Nested Loops in Maze:
+              name: Eingebettete Schleifen im Labyrinth
+            Snowflakes with Anna and Elsa:
+              name: Schneeflocken mit Anna und Elsa
+            If/Else with Bee:
+              name: Wenn/Sonst mit der Biene
+            While Loops with the Farmer:
+              name: Während Schleifen mit dem Farmer
+            Harvesting with Conditionals:
+              name: Ernten mit Bedingungen
+            Functions with Harvester:
+              name: Funktionen mit der Erntearbeiterin
+            Functions with Artist:
+              name: Funktionen mit dem Künstler
+            Variables with Artist:
+              name: Variablen mit dem Künstler
+            Changing Variables with Bee:
+              name: Verändern von Variablen mit der Biene
+            Changing Variables with Artist:
+              name: Verändern von Variablen mit dem Künstler
+            For Loops with Bee:
+              name: "`Für´-Schleifen mit der Biene"
+            For Loops with Artist:
+              name: "`Für´-Schleifen mit dem Künstler"
+            Swimming Fish in Sprite Lab:
+              name: Schwimmende Fische in Sprite Lab
+            Alien Dance Party:
+              name: Tanzparty für Aliens
+            Behaviors in Sprite Lab:
+              name: Behaviors im Sprite-Labor
         pre-express-2020:
           title: Schnellkurs für Leseanfänger (2020)
           description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in
@@ -43705,6 +43785,16 @@ de:
                 und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein
                 animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ
                 zu werden und in Play Lab ein Spiel zu erstellen!
+            Loops with Scrat:
+              name: Schleifen mit Scrat
+            Loops with Laurel:
+              name: Schleifen mit Laurel
+            Drawing Gardens with Loops:
+              name: Gärten mit Schleifen zeichnen
+            On the Move with Events:
+              name: Aktionen mit Ereignissen
+            A Royal Battle with Events:
+              name: Royal Battle mit Ereignissen
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -43789,6 +43879,16 @@ de:
                 und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein
                 animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ
                 zu werden und in Play Lab ein Spiel zu erstellen!
+            Loops with Scrat:
+              name: Schleifen mit Scrat
+            Loops with Laurel:
+              name: Schleifen mit Laurel
+            Drawing Gardens with Loops:
+              name: Gärten mit Schleifen zeichnen
+            On the Move with Events:
+              name: Aktionen mit Ereignissen
+            A Royal Battle with Events:
+              name: Royal Battle mit Ereignissen
         csp1-2020:
           stages:
             new stage:
@@ -46162,3 +46262,10 @@ de:
           lesson_groups:
             lg_1:
               display_name: Inhalt
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: Modul 1
+          lessons:
+            Module 1:
+              name: Modul 1
