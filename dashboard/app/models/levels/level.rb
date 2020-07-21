@@ -275,6 +275,21 @@ class Level < ActiveRecord::Base
     end
   end
 
+  def should_allow_pairing?(current_script_id)
+    if type == "LevelGroup"
+      return false
+    end
+
+    # A level could have multiple parents. Find the one associated with the current script.
+    current_parent = parent_levels.find do |parent|
+      parent.script_levels.find do |script|
+        script&.script_id == current_script_id
+      end
+    end
+
+    !(current_parent && current_parent.type == "LevelGroup")
+  end
+
   def self.level_file_path(level_name)
     level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
     raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?

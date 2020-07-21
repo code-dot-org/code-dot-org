@@ -5,7 +5,7 @@ module RaceInterstitialHelper
     return false if user.races
     return false if user.teacher?
     return false if user.under_13?
-    return false if user.account_age_days < 7
+    return false if user.days_since_first_sign_in && user.days_since_first_sign_in < 7
 
     # Restrict to cases where we can successfully geolocate to the US
     return false if user.current_sign_in_ip.nil?
