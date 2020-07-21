@@ -53,6 +53,8 @@ class Lesson < ActiveRecord::Base
 
   def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, chapter, new_suffix, editor_experiment)
     raw_lessons.map do |raw_lesson|
+      Lesson.prevent_empty_lesson(raw_lesson)
+
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
           name: raw_lesson[:name],
@@ -79,6 +81,10 @@ class Lesson < ActiveRecord::Base
 
       lesson
     end
+  end
+
+  def self.prevent_empty_lesson(raw_lesson)
+    raise "Lessons must have at least one level in them.  Lesson: #{raw_lesson[:name]}." if raw_lesson[:script_levels].empty?
   end
 
   # Go through all the script levels for this lesson, except the last one,
