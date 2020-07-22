@@ -152,6 +152,8 @@ class ApplicationController < ActionController::Base
     (PERMITTED_USER_FIELDS << UI_TEST_ATTRIBUTES).flatten!
   end
 
+  PERMITTED_USER_FIELDS.freeze
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit PERMITTED_USER_FIELDS}
