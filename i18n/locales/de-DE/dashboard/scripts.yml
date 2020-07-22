@@ -26283,6 +26283,46 @@ de:
               name: Schwimmende Fische mit Sprite Lab.
             End of Course Project:
               name: Projekt am Ende des Kurses
+            Programming with Angry Birds:
+              name: Programmieren mit Angry Birds
+            Debugging with Scrat:
+              name: Fehlerbeseitigung (Debuggen) mit Scrat
+            Collecting Treasure with Laurel:
+              name: Den Schatz mit Laurel sammeln
+            Creating Art with Code:
+              name: Kunst erschaffen mit Code
+            Sticker Art with Loops:
+              name: Sticker-Kunst mit Schleifen
+            Nested Loops in Maze:
+              name: Eingebettete Schleifen im Labyrinth
+            Snowflakes with Anna and Elsa:
+              name: Schneeflocken mit Anna und Elsa
+            If/Else with Bee:
+              name: Wenn/Sonst mit der Biene
+            While Loops with the Farmer:
+              name: Während Schleifen mit dem Farmer
+            Harvesting with Conditionals:
+              name: Ernten mit Bedingungen
+            Functions with Harvester:
+              name: Funktionen mit der Erntearbeiterin
+            Functions with Artist:
+              name: Funktionen mit dem Künstler
+            Variables with Artist:
+              name: Variablen mit dem Künstler
+            Changing Variables with Bee:
+              name: Verändern von Variablen mit der Biene
+            Changing Variables with Artist:
+              name: Verändern von Variablen mit dem Künstler
+            For Loops with Bee:
+              name: '`Für´-Schleifen mit der Biene'
+            For Loops with Artist:
+              name: '`Für´-Schleifen mit dem Künstler'
+            Swimming Fish in Sprite Lab:
+              name: Schwimmende Fische in Sprite Lab
+            Alien Dance Party:
+              name: Tanzparty für Aliens
+            Behaviors in Sprite Lab:
+              name: Behaviors im Sprite-Labor
           lesson_groups:
             csf_warmup:
               display_name: Aufwärmübung
@@ -26363,6 +26403,46 @@ de:
               name: Schwimmende Fische mit Sprite Lab.
             End of Course Project:
               name: Projekt am Ende des Kurses
+            Programming with Angry Birds:
+              name: Programmieren mit Angry Birds
+            Debugging with Scrat:
+              name: Fehlerbeseitigung (Debuggen) mit Scrat
+            Collecting Treasure with Laurel:
+              name: Den Schatz mit Laurel sammeln
+            Creating Art with Code:
+              name: Kunst erschaffen mit Code
+            Sticker Art with Loops:
+              name: Sticker-Kunst mit Schleifen
+            Nested Loops in Maze:
+              name: Eingebettete Schleifen im Labyrinth
+            Snowflakes with Anna and Elsa:
+              name: Schneeflocken mit Anna und Elsa
+            If/Else with Bee:
+              name: Wenn/Sonst mit der Biene
+            While Loops with the Farmer:
+              name: Während Schleifen mit dem Farmer
+            Harvesting with Conditionals:
+              name: Ernten mit Bedingungen
+            Functions with Harvester:
+              name: Funktionen mit der Erntearbeiterin
+            Functions with Artist:
+              name: Funktionen mit dem Künstler
+            Variables with Artist:
+              name: Variablen mit dem Künstler
+            Changing Variables with Bee:
+              name: Verändern von Variablen mit der Biene
+            Changing Variables with Artist:
+              name: Verändern von Variablen mit dem Künstler
+            For Loops with Bee:
+              name: '`Für´-Schleifen mit der Biene'
+            For Loops with Artist:
+              name: '`Für´-Schleifen mit dem Künstler'
+            Swimming Fish in Sprite Lab:
+              name: Schwimmende Fische in Sprite Lab
+            Alien Dance Party:
+              name: Tanzparty für Aliens
+            Behaviors in Sprite Lab:
+              name: Behaviors im Sprite-Labor
         pre-express-2020:
           title: Schnellkurs für Leseanfänger (2020)
           description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
@@ -26371,28 +26451,48 @@ de:
           stages:
             Learn to Drag and Drop:
               name: Erlerne Drag und Drop
+              description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.
             Sequencing with Scrat:
               name: Sequenzen mit Scrat
+              description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.
             Programming in Maze:
               name: Programmieren im Labyrinth
+              description_teacher: Unter Verwendung von Figuren aus Angry Birds entwickeln die SchülerInnen sequentielle Algorithmen, um einen Vogel von einer Seite eines Labyrinths zu einem Schwein auf der anderen Seite zu bringen. Dazu ordnen sie Codebausteine in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.
             Programming with Rey and BB-8:
               name: Programmieren mit Rey und BB-8
+              description_teacher: In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren.
             Programming in Harvester:
               name: Programmieren mit der Erntearbeiterin
+              description_teacher: 'Die SchülerInnen wenden die erlernten Programmierkonzepte auf die Harvester-Umgebung an. Anstatt die Figur nur an ein Ziel zu bringen, sollen die SchülerInnen nun mit einem neuen Baustein Mais sammeln. Die SchülerInnen werden weiterhin Kenntnisse für die Verwendung mit sequentiellen Algorithmen entwickeln und mit dem Debugging-Verfahren beginnen.'
             Spelling Bee:
               name: Buchstabierwettbewerb
             Loops in Ice Age:
               name: Schleifen in Ice Age
             Loops in Collector:
               name: Schleifen im Kollektor
+              description_teacher: In dieser Lektion vertiefen die Schüler das Konzept der Schleifen. Hier sammelt Laurel die Abenteurerin mit Schleifen Schätze in offenen Höhlen. Dann wird ein neuer Block `sammele Schätze` vorgestellt, der Laurel auf ihrer Reise helfen soll.
             Ocean Scene with Loops:
               name: Meeresszene mit Schleifen
+              description_teacher: Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.
             Loops in Artist:
               name: Schleifen beim Künstler
+              description_teacher: Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion am Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier verwenden die SchülerInnen Schleifen, um Muster zu erzeugen. Am Ende dieses Levels haben Sie die Möglichkeit, eigene Bilder mit Hilfe von Schleifen zu erstellen.
             Tell a Story in Play Lab:
               name: Erzählen Sie eine Geschichte in Play Lab
+              description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!
             Make a Game in Play Lab:
               name: Erstellen Sie ein Spiel in Play Lab
+              description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab ein Spiel zu erstellen!
+            Loops with Scrat:
+              name: Schleifen mit Scrat
+            Loops with Laurel:
+              name: Schleifen mit Laurel
+            Drawing Gardens with Loops:
+              name: Gärten mit Schleifen zeichnen
+            On the Move with Events:
+              name: Aktionen mit Ereignissen
+            A Royal Battle with Events:
+              name: Royal Battle mit Ereignissen
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -26403,28 +26503,48 @@ de:
           lessons:
             Learn to Drag and Drop:
               name: Erlerne Drag und Drop
+              description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.
             Sequencing with Scrat:
               name: Sequenzen mit Scrat
+              description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.
             Programming in Maze:
               name: Programmieren im Labyrinth
+              description_teacher: Unter Verwendung von Figuren aus Angry Birds entwickeln die SchülerInnen sequentielle Algorithmen, um einen Vogel von einer Seite eines Labyrinths zu einem Schwein auf der anderen Seite zu bringen. Dazu ordnen sie Codebausteine in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.
             Programming with Rey and BB-8:
               name: Programmieren mit Rey und BB-8
+              description_teacher: In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren.
             Programming in Harvester:
               name: Programmieren mit der Erntearbeiterin
+              description_teacher: 'Die SchülerInnen wenden die erlernten Programmierkonzepte auf die Harvester-Umgebung an. Anstatt die Figur nur an ein Ziel zu bringen, sollen die SchülerInnen nun mit einem neuen Baustein Mais sammeln. Die SchülerInnen werden weiterhin Kenntnisse für die Verwendung mit sequentiellen Algorithmen entwickeln und mit dem Debugging-Verfahren beginnen.'
             Spelling Bee:
               name: Buchstabierwettbewerb
             Loops in Ice Age:
               name: Schleifen in Ice Age
             Loops in Collector:
               name: Schleifen im Kollektor
+              description_teacher: In dieser Lektion vertiefen die Schüler das Konzept der Schleifen. Hier sammelt Laurel die Abenteurerin mit Schleifen Schätze in offenen Höhlen. Dann wird ein neuer Block `sammele Schätze` vorgestellt, der Laurel auf ihrer Reise helfen soll.
             Ocean Scene with Loops:
               name: Meeresszene mit Schleifen
+              description_teacher: Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.
             Loops in Artist:
               name: Schleifen beim Künstler
+              description_teacher: Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion am Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier verwenden die SchülerInnen Schleifen, um Muster zu erzeugen. Am Ende dieses Levels haben Sie die Möglichkeit, eigene Bilder mit Hilfe von Schleifen zu erstellen.
             Tell a Story in Play Lab:
               name: Erzählen Sie eine Geschichte in Play Lab
+              description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!
             Make a Game in Play Lab:
               name: Erstellen Sie ein Spiel in Play Lab
+              description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab ein Spiel zu erstellen!
+            Loops with Scrat:
+              name: Schleifen mit Scrat
+            Loops with Laurel:
+              name: Schleifen mit Laurel
+            Drawing Gardens with Loops:
+              name: Gärten mit Schleifen zeichnen
+            On the Move with Events:
+              name: Aktionen mit Ereignissen
+            A Royal Battle with Events:
+              name: Royal Battle mit Ereignissen
         csp1-2020:
           stages:
             new stage:
@@ -26913,6 +27033,8 @@ de:
               name: Kurs-Ressourcen
             Debugging:
               name: Debugging/Fehlerbeseitigung
+            Module 1:
+              name: Modul 1
           title: Jess' Drehbuch
           lessons:
             Our First Stage:
@@ -26933,6 +27055,8 @@ de:
               name: Kurs-Ressourcen
             Debugging:
               name: Debugging/Fehlerbeseitigung
+            Module 1:
+              name: Modul 1
         csd2-virtual:
           title: Einführung in Web Lab - im eigenen Tempo
           description: Sie lernen, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und weitergeben können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Allgemeinheit teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse wie Fehlerbeseitigung/Debugging und Kommentieren. Am Ende der Lerneinheit haben Sie eine private Website erstellt, die Sie im Internet veröffentlichen können.
@@ -27753,3 +27877,50 @@ de:
               display_name: Inhalt
             cspSurvey:
               display_name: Inhalt
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Unterricht
+          lessons:
+            Lesson:
+              name: Unterricht
+          lesson_groups:
+            lg_1:
+              display_name: Inhalt
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Unterricht
+          lessons:
+            Lesson:
+              name: Unterricht
+          lesson_groups:
+            lg_1:
+              display_name: Inhalt
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Unterricht
+          lessons:
+            Lesson:
+              name: Unterricht
+          lesson_groups:
+            lg_1:
+              display_name: Inhalt
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Unterricht
+          lessons:
+            Lesson:
+              name: Unterricht
+          lesson_groups:
+            lg_1:
+              display_name: Inhalt
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: Modul 1
+          lessons:
+            Module 1:
+              name: Modul 1

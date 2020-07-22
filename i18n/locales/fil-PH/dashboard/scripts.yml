@@ -18832,6 +18832,30 @@ fil:
               name: Mga For Loops sa Bee
             For Loops in Artist:
               name: Mga Loops sa Artist
+            Programming with Angry Birds:
+              name: Pag-Program sa Maze
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+            Collecting Treasure with Laurel:
+              name: Pag-program sa Kolektor
+            Creating Art with Code:
+              name: Pag-program sa Artist
+            Nested Loops in Maze:
+              name: Naka-nest na mga Loops sa Maze
+            Snowflakes with Anna and Elsa:
+              name: Naka-nest na mga Loop sa Frozen
+            If/Else with Bee:
+              name: Mga Kondisyonal sa Bee
+            While Loops with the Farmer:
+              name: Mga While Loops sa Farmer
+            Harvesting with Conditionals:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            Functions with Artist:
+              name: Mga Function sa Artist
+            For Loops with Bee:
+              name: Mga For Loops sa Bee
+            For Loops with Artist:
+              name: Mga Loops sa Artist
           lesson_groups:
             csf_loops:
               display_name: Mga loop
@@ -18874,6 +18898,30 @@ fil:
               name: Mga For Loops sa Bee
             For Loops in Artist:
               name: Mga Loops sa Artist
+            Programming with Angry Birds:
+              name: Pag-Program sa Maze
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+            Collecting Treasure with Laurel:
+              name: Pag-program sa Kolektor
+            Creating Art with Code:
+              name: Pag-program sa Artist
+            Nested Loops in Maze:
+              name: Naka-nest na mga Loops sa Maze
+            Snowflakes with Anna and Elsa:
+              name: Naka-nest na mga Loop sa Frozen
+            If/Else with Bee:
+              name: Mga Kondisyonal sa Bee
+            While Loops with the Farmer:
+              name: Mga While Loops sa Farmer
+            Harvesting with Conditionals:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            Functions with Artist:
+              name: Mga Function sa Artist
+            For Loops with Bee:
+              name: Mga For Loops sa Bee
+            For Loops with Artist:
+              name: Mga Loops sa Artist
         pre-express-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
@@ -18881,12 +18929,19 @@ fil:
           stages:
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
+            Sequencing with Scrat:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
             Programming in Maze:
               name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
             Spelling Bee:
               name: Spelling Bee
+            Ocean Scene with Loops:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
+            Tell a Story in Play Lab:
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
           lesson_groups:
             csf_loops:
               display_name: Mga loop
@@ -18895,12 +18950,19 @@ fil:
           lessons:
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
+            Sequencing with Scrat:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
             Programming in Maze:
               name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
             Spelling Bee:
               name: Spelling Bee
+            Ocean Scene with Loops:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
+            Tell a Story in Play Lab:
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
         csp1-2020:
           stages:
             new stage:

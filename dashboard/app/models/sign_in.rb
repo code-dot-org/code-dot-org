@@ -14,4 +14,5 @@
 #
 
 class SignIn < ActiveRecord::Base
+  belongs_to :user
 end

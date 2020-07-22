@@ -1055,13 +1055,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pre_survey_units_and_lessons' do
-    course = create :course, name: 'pd-workshop-pre-survey-test'
+    course = create :unit_group, name: 'pd-workshop-pre-survey-test'
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
       create(:script).tap do |script|
-        create :course_script, course: course, script: script, position: (next_position += 1)
+        create :course_script, unit_group: course, script: script, position: (next_position += 1)
+        create :lesson_group, script: script
         I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
-        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name}
+        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 
@@ -1093,11 +1094,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # With valid course name
     workshop.stubs(:pre_survey?).returns(true)
     workshop.stubs(:pre_survey_course_name).returns(course_name)
-    Course.expects(:find_by_name!).with(course_name).returns(mock_course)
+    UnitGroup.expects(:find_by_name!).with(course_name).returns(mock_course)
     assert_equal mock_course, workshop.pre_survey_course
 
     # With invalid course name
-    Course.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    UnitGroup.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
     e = assert_raises RuntimeError do
       workshop.pre_survey_course
     end

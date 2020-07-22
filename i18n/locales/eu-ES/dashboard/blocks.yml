@@ -613,6 +613,10 @@ eu:
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
             '"tint"': tinta
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundu
       gamelab_keyPressed:
         options:
           CONDITION:

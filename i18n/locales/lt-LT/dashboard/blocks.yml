@@ -244,6 +244,10 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       gamelab_keyPressed:
         options:
           CONDITION:

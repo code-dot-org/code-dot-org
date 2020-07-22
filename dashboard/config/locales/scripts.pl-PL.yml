@@ -11124,6 +11124,18 @@ pl:
               name: Pętle for w pszczole
             For Loops in Artist:
               name: Pętle for w artyście
+            Behaviors with Sprite Lab:
+              name: Zachowania w Sprite Lab
+            Programming with Angry Birds:
+              name: Programowanie w labiryncie
+            Nested Loops in Maze:
+              name: Zagnieżdżone pętle w labiryncie
+            If/Else with Bee:
+              name: Wyrażenie warunkowe w pszczole
+            For Loops with Bee:
+              name: Pętle for w pszczole
+            For Loops with Artist:
+              name: Pętle for w artyście
           lesson_groups:
             csf_loops:
               display_name: Pętle
@@ -11151,6 +11163,18 @@ pl:
             For Loops in Bee:
               name: Pętle for w pszczole
             For Loops in Artist:
+              name: Pętle for w artyście
+            Behaviors with Sprite Lab:
+              name: Zachowania w Sprite Lab
+            Programming with Angry Birds:
+              name: Programowanie w labiryncie
+            Nested Loops in Maze:
+              name: Zagnieżdżone pętle w labiryncie
+            If/Else with Bee:
+              name: Wyrażenie warunkowe w pszczole
+            For Loops with Bee:
+              name: Pętle for w pszczole
+            For Loops with Artist:
               name: Pętle for w artyście
         pre-express-2020:
           description_audience: W wieku 4-8
@@ -11304,11 +11328,43 @@ pl:
               name: nowy etap
             Debugging:
               name: Debugowanie
+            Virtual Professional Learning Overview:
+              name: Omówienie wirtualnego profesjonalnego uczenia się
+            Module 2:
+              name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 8:
+              name: Moduł 8
+            Module 7:
+              name: Moduł 7
           lessons:
             new stage:
               name: nowy etap
             Debugging:
               name: Debugowanie
+            Virtual Professional Learning Overview:
+              name: Omówienie wirtualnego profesjonalnego uczenia się
+            Module 2:
+              name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 8:
+              name: Moduł 8
+            Module 7:
+              name: Moduł 7
         csd2-virtual:
           stages:
             Intro to HTML:
@@ -11760,20 +11816,28 @@ pl:
           stages:
             new lesson:
               name: nowa lekcja
+            lesson 2:
+              name: lekcja 2
             Buttons and Events:
               name: Przyciski i wydarzenia
           lessons:
             new lesson:
               name: nowa lekcja
+            lesson 2:
+              name: lekcja 2
             Buttons and Events:
               name: Przyciski i wydarzenia
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
+            lg_1:
+              display_name: DISPLAYNAME
             cspSurvey:
               display_name: Ankieta
             csp5_1:
               display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+            cs_lg:
+              display_name: LG GOOD
         csd3-virtual:
           description_short: Programowanie
           stages:
@@ -11861,3 +11925,81 @@ pl:
               display_name: Treści
             cspSurvey:
               display_name: Treści
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        kaitie-test-script:
+          stages:
+            new lesson:
+              name: nowa lekcja
+            Module 2:
+              name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 7:
+              name: Moduł 7
+            Module 8:
+              name: Moduł 8
+          lessons:
+            new lesson:
+              name: nowa lekcja
+            Module 2:
+              name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 7:
+              name: Moduł 7
+            Module 8:
+              name: Moduł 8
+          lesson_groups:
+            lesson group:
+              display_name: wyświetl nazwisko

@@ -6,10 +6,16 @@ class ActivitiesControllerTest < ActionController::TestCase
   include UsersHelper
 
   def stub_firehose
-    FirehoseClient.instance.stubs(:put_record).with do |args|
+    FirehoseClient.instance.stubs(:put_record).with do |stream, args|
       @firehose_record = args
+      @firehose_stream = stream
       true
     end
+  end
+
+  def teardown
+    @firehose_record = nil
+    @firehose_stream = nil
   end
 
   setup do
@@ -778,6 +784,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert @firehose_record[:event], 'share_filtering_error'
     assert @firehose_record[:data_string], 'OpenURI::HTTPError: something broke'
     refute_nil @firehose_record[:data_json]["level_source_id"]
+    assert_equal :analysis, @firehose_stream
   end
 
   test 'sharing program with IO::EAGAINWaitReadable error logs' do
@@ -800,6 +807,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert @firehose_record[:event], 'share_filtering_error'
     assert @firehose_record[:data_string], 'IO::EAGAINWaitReadable: Resource temporarily unavailable'
     refute_nil @firehose_record[:data_json]["level_source_id"]
+    assert_equal :analysis, @firehose_stream
   end
 
   test 'sharing program with swear word in Spanish rejects word' do
@@ -891,7 +899,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       "lesson 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups], script_dsl[0][:lessons])
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
 
     last_level_in_first_stage = script.lessons.first.script_levels.last
     post :milestone,
@@ -940,6 +948,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     assert_difference('UserLevel.count', 2) do # both get a UserLevel
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
@@ -957,6 +966,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairings = 3.times.map {create(:follower, section: section).student_user}
     session[:pairings] = pairings.map(&:id)
+    session[:pairing_section_id] = section.id
 
     assert_difference('UserLevel.count', 4) do # all 4 people
       assert_difference('PairedUserLevel.count', 3) do # there are 3 PairedUserLevel links
@@ -977,6 +987,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
 
@@ -997,6 +1008,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     section = create(:follower, student_user: @user).section
     pairing = create(:follower, section: section).student_user
     session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
 
     existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
 
@@ -1011,6 +1023,28 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_driver_user_level.best_result
 
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
+  end
+
+  test "milestone with pairings stops updating levels when pairing is disabled" do
+    section = create(:follower, student_user: @user).section
+    pairing = create(:follower, section: section).student_user
+    session[:pairings] = [pairing.id]
+    session[:pairing_section_id] = section.id
+    section.update!(pairing_allowed: false)
+
+    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+
+    assert_no_difference('UserLevel.count') do # no new UserLevel is created
+      assert_no_difference('PairedUserLevel.count') do # no PairedUserLevel is created
+        post :milestone, params: @milestone_params
+        assert_response :success
+      end
+    end
+
+    existing_driver_user_level.reload
+    assert_equal 100, existing_driver_user_level.best_result
+
+    assert_equal [], existing_driver_user_level.navigator_user_levels.map(&:user)
   end
 
   test "milestone fails to update locked/readonly level" do

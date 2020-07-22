@@ -12252,6 +12252,8 @@ is:
               name: Stafsetning
             Loops in Ice Age:
               name: Lykkjur í Ísöld
+            Loops with Laurel:
+              name: Lykkjur með Láru
           lesson_groups:
             csf_sequencing:
               display_name: Skipanaröð
@@ -12266,6 +12268,8 @@ is:
               name: Stafsetning
             Loops in Ice Age:
               name: Lykkjur í Ísöld
+            Loops with Laurel:
+              name: Lykkjur með Láru
         csp1-2020:
           stages:
             new stage:
@@ -12957,4 +12961,20 @@ is:
             csd3_2:
               display_name: Innihald
             cspSurvey:
+              display_name: Innihald
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Innihald
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Innihald
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Innihald
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
               display_name: Innihald

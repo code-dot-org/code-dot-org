@@ -6,7 +6,7 @@ FactoryGirl.define do
   factory :course_script do
   end
 
-  factory :course do
+  factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
@@ -863,11 +863,8 @@ FactoryGirl.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        sublevels = [create(:sublevel), create(:sublevel), create(:sublevel)]
-        lg.properties['pages'] = [
-          {levels: [sublevels[0].name, sublevels[1].name]},
-          {levels: [sublevels[2].name]}
-        ]
+        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
       end
     end
   end

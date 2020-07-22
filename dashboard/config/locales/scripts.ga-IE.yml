@@ -5512,6 +5512,12 @@ ga:
               name: Peata Fíorúil i Saotharlann na Sprideanna
             Swimming Fish with Sprite Lab:
               name: Éisc ar snámh i Saotharlann na Sprideanna
+            Swimming Fish in Sprite Lab:
+              name: Ag foghlaim Saotharlann na Sprideanna
+            Alien Dance Party:
+              name: Cóisir Dhamhsa Eachtardhomhanda
+            Behaviors in Sprite Lab:
+              name: Iompair i Saotharlann na Sprideanna
           lesson_groups:
             csf_warmup:
               display_name: Réamhchleachtadh
@@ -5540,6 +5546,12 @@ ga:
               name: Peata Fíorúil i Saotharlann na Sprideanna
             Swimming Fish with Sprite Lab:
               name: Éisc ar snámh i Saotharlann na Sprideanna
+            Swimming Fish in Sprite Lab:
+              name: Ag foghlaim Saotharlann na Sprideanna
+            Alien Dance Party:
+              name: Cóisir Dhamhsa Eachtardhomhanda
+            Behaviors in Sprite Lab:
+              name: Iompair i Saotharlann na Sprideanna
         pre-express-2020:
           description_short: 'Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí:
             scoth an ábhair ónár gcúrsaí do ghasúir sa chiondargairdín agus sa chéad
@@ -5762,4 +5774,44 @@ ga:
             csd3_2:
               display_name: Ábhar
             cspSurvey:
+              display_name: Ábhar
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Ceacht
+          lessons:
+            Lesson:
+              name: Ceacht
+          lesson_groups:
+            lg_1:
+              display_name: Ábhar
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Ceacht
+          lessons:
+            Lesson:
+              name: Ceacht
+          lesson_groups:
+            lg_1:
+              display_name: Ábhar
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Ceacht
+          lessons:
+            Lesson:
+              name: Ceacht
+          lesson_groups:
+            lg_1:
+              display_name: Ábhar
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Ceacht
+          lessons:
+            Lesson:
+              name: Ceacht
+          lesson_groups:
+            lg_1:
               display_name: Ábhar

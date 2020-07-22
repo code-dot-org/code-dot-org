@@ -1011,6 +1011,10 @@ sv:
         options:
           CHOICE:
             '"this"': detta
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       gamelab_hideTitleScreen:
         text: Dölj titel skärm
       gamelab_isTouchingEdges:

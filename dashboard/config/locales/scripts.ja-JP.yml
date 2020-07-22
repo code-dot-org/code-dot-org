@@ -4507,6 +4507,10 @@ ja:
               name: めいろ のプログラミング
             Loops in Artist:
               name: アーティストくりかえし
+            Programming with Angry Birds:
+              name: めいろ のプログラミング
+            Sticker Art with Loops:
+              name: アーティストくりかえし
           lesson_groups:
             csf_warmup:
               display_name: ウォームアップ
@@ -4529,6 +4533,10 @@ ja:
               name: めいろ のプログラミング
             Loops in Artist:
               name: アーティストくりかえし
+            Programming with Angry Birds:
+              name: めいろ のプログラミング
+            Sticker Art with Loops:
+              name: アーティストくりかえし
         pre-express-2020:
           stages:
             Learn to Drag and Drop:
@@ -4543,6 +4551,14 @@ ja:
               name: アーティストくりかえし
             Loops in Artist:
               name: アーティストくりかえし
+            Loops with Laurel:
+              name: くりかえし あつめる
+            Drawing Gardens with Loops:
+              name: アーティストくりかえし
+            On the Move with Events:
+              name: プレイ ラボのイベント
+            A Royal Battle with Events:
+              name: プレイ ラボのイベント
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -4563,6 +4579,14 @@ ja:
               name: アーティストくりかえし
             Loops in Artist:
               name: アーティストくりかえし
+            Loops with Laurel:
+              name: くりかえし あつめる
+            Drawing Gardens with Loops:
+              name: アーティストくりかえし
+            On the Move with Events:
+              name: プレイ ラボのイベント
+            A Royal Battle with Events:
+              name: プレイ ラボのイベント
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -4691,4 +4715,44 @@ ja:
             csd3_2:
               display_name: 内容
             cspSurvey:
+              display_name: 内容
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
+              display_name: 内容
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: レッスン
+          lessons:
+            Lesson:
+              name: レッスン
+          lesson_groups:
+            lg_1:
               display_name: 内容

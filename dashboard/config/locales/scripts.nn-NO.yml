@@ -6008,6 +6008,10 @@ nn:
           stages:
             Spelling Bee:
               name: Stavekonkurranse
+            On the Move with Events:
+              name: Hendingar i Spellab
+            A Royal Battle with Events:
+              name: Hendingar i Spellab
           lesson_groups:
             csf_sequencing:
               display_name: Sekvensiering
@@ -6018,6 +6022,10 @@ nn:
           lessons:
             Spelling Bee:
               name: Stavekonkurranse
+            On the Move with Events:
+              name: Hendingar i Spellab
+            A Royal Battle with Events:
+              name: Hendingar i Spellab
         csp1-2020:
           stages:
             Binary Numbers:
@@ -6173,4 +6181,44 @@ nn:
             csd3_2:
               display_name: Innhald
             cspSurvey:
+              display_name: Innhald
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
+              display_name: Innhald
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Leksjon
+          lessons:
+            Lesson:
+              name: Leksjon
+          lesson_groups:
+            lg_1:
               display_name: Innhald

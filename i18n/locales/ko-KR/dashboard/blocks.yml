@@ -1013,6 +1013,10 @@ ko:
         options:
           CHOICE:
             '"this"': 이
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
       gamelab_hideTitleScreen:
         text: 제목 화면 숨기기
       gamelab_isTouchingEdges:

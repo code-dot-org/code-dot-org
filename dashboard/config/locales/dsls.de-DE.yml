@@ -3278,59 +3278,59 @@ de-DE:
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
-          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel wird in den Sprengstoff laufen.
-          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Der Vogel läuft in das TNT.
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
         questions:
-        - text: Lies dir den nachfolgenden Code sorgfältig durch. Was passiert, wenn
-            du auf "Ausführen" klickst?
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
-          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel wird in den Sprengstoff laufen.
-          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Der Vogel läuft in das TNT.
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
         questions:
-        - text: Lies dir den nachfolgenden Code sorgfältig durch. Was passiert, wenn
-            du auf "Ausführen" klickst?
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
-          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel wird in den Sprengstoff laufen.
-          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Der Vogel läuft in das TNT.
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
         questions:
-        - text: Lies dir den nachfolgenden Code sorgfältig durch. Was passiert, wenn
-            du auf "Ausführen" klickst?
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
-          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel wird in den Sprengstoff laufen.
-          feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
+        - text: Der Vogel läuft in das TNT.
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
         questions:
-        - text: Lies dir den nachfolgenden Code sorgfältig durch. Was passiert, wenn
-            du auf "Ausführen" klickst?
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 wird sich nicht bewegen.

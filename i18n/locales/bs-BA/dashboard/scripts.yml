@@ -4656,6 +4656,10 @@ bs:
         pre-express-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             Spelling Bee:
               name: Spelovanje
           lesson_groups:
@@ -4664,6 +4668,10 @@ bs:
             csf_events:
               display_name: Događaji
           lessons:
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             Spelling Bee:
               name: Spelovanje
         csp1-2020:

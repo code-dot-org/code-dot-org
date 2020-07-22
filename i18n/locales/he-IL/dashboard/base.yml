@@ -879,6 +879,8 @@ he:
       school_name: 'שם בית הספר'
       school_city: 'יישוב בית הספר'
       school_country: 'ארץ בית הספר'
+      colombian_school_city: 'יישוב בית הספר'
+      colombian_school_name: 'שם בית הספר'
       ages: 'איזה גיל(אים) אתה מלמד השנה?'
       subjects: 'איזה נושא(אים) אתה מלמד השנה?'
       resources: 'באיזה מהמשאבים הבאים ללימוד מדעי המחשב אתה משתמש?'

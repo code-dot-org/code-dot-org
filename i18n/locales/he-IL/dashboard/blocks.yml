@@ -1013,6 +1013,10 @@ he:
         options:
           CHOICE:
             '"this"': זה
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': שניות
       gamelab_hideTitleScreen:
         text: הסתר כותרת מסך
       gamelab_isTouchingEdges:

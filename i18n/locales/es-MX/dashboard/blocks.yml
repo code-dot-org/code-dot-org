@@ -988,7 +988,7 @@ es-MX:
       gamelab_clickedOn:
         text: cuando {SPRITE} haz clic
       gamelab_clickedSpritePointer:
-        text: clic en sprite
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_createNewSprite:
@@ -1015,6 +1015,10 @@ es-MX:
           CHOICE:
             '"this"': este
             '"other"': otro
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_hideTitleScreen:
         text: ocultar pantalla de título
       gamelab_isTouchingEdges:
@@ -1092,7 +1096,7 @@ es-MX:
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
       gamelab_objectSpritePointer:
-        text: clic en sprite
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: Patrullar hacia arriba y abajo
       gamelab_playSound:
@@ -1173,7 +1177,7 @@ es-MX:
             '"when"': cuando
             '"while"': mientras
       gamelab_subjectSpritePointer:
-        text: clic en sprite
+        text: "{SPRITE}"
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:
