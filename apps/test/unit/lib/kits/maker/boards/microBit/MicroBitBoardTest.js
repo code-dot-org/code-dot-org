@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
+import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -354,6 +355,16 @@ describe('MicroBitBoard', () => {
             const newButton = board.createButton(pin);
             expect(newButton.pullup).to.be.false;
           });
+      });
+    });
+  });
+
+  describe(`createCapacitiveTouchSensor(pin)`, () => {
+    it('makes a CapacitiveTouchSensor controller', () => {
+      return board.connect().then(() => {
+        const pin = 1;
+        const newSensor = board.createCapacitiveTouchSensor(pin);
+        expect(newSensor).to.be.an.instanceOf(CapacitiveTouchSensor);
       });
     });
   });

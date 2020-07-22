@@ -288,6 +288,7 @@ module SharedConstants
       "boardConnected": null,
       "var myLed = createLed": null,
       "var myButton = createButton": null,
+      "var mySensor = createCapacitiveTouchSensor": null,
 
       // Circuit Playground
       "on": null,
