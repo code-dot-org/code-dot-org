@@ -34,10 +34,10 @@ class Script < ActiveRecord::Base
   include Rails.application.routes.url_helpers
 
   include Seeded
+  has_many :lesson_groups, -> {order(:position)}, dependent: :destroy
+  has_many :lessons, through: :lesson_groups
+  has_many :script_levels, through: :lessons
   has_many :levels, through: :script_levels
-  has_many :lesson_groups, -> {order('position ASC')}, dependent: :destroy
-  has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ lessons, are ordered by chapter, see Script#add_script
-  has_many :lessons, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -927,297 +927,43 @@ class Script < ActiveRecord::Base
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
   def self.add_script(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
-    raw_lessons = []
-
-    #recreate raw_lessons from raw_lesson_groups
-    raw_lesson_groups.each do |lesson_group|
-      lesson_group[:lessons].each do |lesson|
-        temp_lesson = lesson.merge(
-          {
-            lesson: lesson[:name],
-            script_levels: lesson[:script_levels].map do |sl|
-              sl.merge(
-                {
-                  lesson: lesson[:name],
-                  levels: sl[:levels].map do |level|
-                    level.merge(
-                      {
-                        lesson_lockable: lesson[:lockable],
-                        assessment: sl[:assessment],
-                        named_level: sl[:named_level],
-                        lesson_group: lesson_group[:key],
-                        bonus: sl[:bonus]
-                      }
-                    )
-                  end
-                }
-              )
-            end
-          }
-        )
-        raw_lessons << temp_lesson
-      end
-    end
-
-    raw_script_levels = raw_lessons.map {|lesson| lesson[:script_levels]}.flatten
-
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
-    chapter = 0
-    lesson_position = 0; script_level_position = Hash.new(0)
-    script_lessons = []
-    script_lesson_groups = []
-    script_levels_by_lesson = {}
-    levels_by_key = script.levels.index_by(&:key)
-    lockable_count = 0
-    non_lockable_count = 0
 
-    unless raw_script_levels.empty?
-      # We want a script to either have all of its lessons have lesson groups
-      # or none of the lessons have lesson groups. We know we have hit this case if
-      # there are more than one lesson group for a script but the lesson group key
-      # for the first lesson is blank
-      if raw_lesson_groups[0][:key].nil? && raw_lesson_groups.length > 1
-        raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{raw_lesson_groups[0][:lessons][0][:name]} does not have a lesson group."
-      elsif raw_lesson_groups.length == 1 && raw_lesson_groups[0][:key].nil?
-        lesson_group = LessonGroup.find_or_create_by(
-          key: '',
-          script: script,
-          user_facing: false,
-          position: 1
-        )
+    script.prevent_duplicate_lesson_groups(raw_lesson_groups)
+    Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
-        script_lesson_groups << lesson_group
-      else
-        # Finds or creates Lesson Groups with the correct position.
-        # In addition it check for 3 things:
-        # 1. That all the lesson groups specified by the editor have a key and
-        # display name.
-        # 2. If the lesson group key is an existing key that the given display name
-        # for that key matches the already saved display name
-        # 3. PLC courses use certain lesson group keys for module types. We reserve those
-        # keys so they can only map to the display_name for their PLC purpose
-        raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-          Plc::LearningModule::RESERVED_LESSON_GROUPS_FOR_PLC.each do |reserved_lesson_group|
-            if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
-              raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
-            end
-          end
-          if raw_lesson_group[:display_name].blank?
-            raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
-          end
+    temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+    script.reload
+    script.lesson_groups = temp_lgs
+    script.save!
 
-          new_lesson_group = false
-
-          lesson_group = LessonGroup.find_or_create_by(
-            key: raw_lesson_group[:key],
-            script: script,
-            user_facing: true
-          ) do
-            # if you got in here, this is a new lesson_group
-            new_lesson_group = true
-          end
-
-          lesson_group.assign_attributes(position: index + 1, properties: {display_name: raw_lesson_group[:display_name]})
-          lesson_group.save! if lesson_group.changed?
-
-          if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-            raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
-          end
-
-          script_lesson_groups << lesson_group
-        end
-      end
-    end
-
-    script.lesson_groups = script_lesson_groups
-
-    # Overwrites current script levels
-    script.script_levels = raw_script_levels.map do |raw_script_level|
-      raw_script_level.symbolize_keys!
-
-      assessment = nil
-      named_level = nil
-      bonus = nil
-      lesson_group_key = nil
-      lockable = nil
-
-      levels = raw_script_level[:levels].map do |raw_level|
-        raw_level.symbolize_keys!
-
-        # Concepts are comma-separated, indexed by name
-        raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-        end
-
-        raw_level_data = raw_level.dup
-        assessment = raw_level.delete(:assessment)
-        named_level = raw_level.delete(:named_level)
-        bonus = raw_level.delete(:bonus)
-        lesson_group_key = raw_level.delete(:lesson_group)
-        lockable = !!raw_level.delete(:lesson_lockable)
-
-        key = raw_level.delete(:name)
-
-        if raw_level[:level_num] && !key.starts_with?('blockly')
-          # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-          key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
-        end
-
-        level =
-          if new_suffix && !key.starts_with?('blockly')
-            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
-          else
-            levels_by_key[key] || Level.find_by_key(key)
-          end
-
-        if key.starts_with?('blockly')
-          # this level is defined in levels.js. find/create the reference to this level
-          level = Level.
-            create_with(name: 'blockly').
-            find_or_create_by!(Level.key_to_params(key))
-          level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
-          if level.video_key && !raw_level[:video_key]
-            raw_level[:video_key] = nil
-          end
-
-          level.update(raw_level)
-        elsif raw_level[:video_key]
-          level.update(video_key: raw_level[:video_key])
-        end
-
-        unless level
-          raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
-        end
-
-        level
-      end
-
-      lesson_name = raw_script_level.delete(:lesson)
-      properties = raw_script_level.delete(:properties) || {}
-
-      if new_suffix && properties[:variants]
-        properties[:variants] = properties[:variants].map do |old_level_name, value|
-          ["#{old_level_name}_#{new_suffix}", value]
-        end.to_h
-      end
-
-      script_level_attributes = {
-        script_id: script.id,
-        chapter: (chapter += 1),
-        named_level: named_level,
-        bonus: bonus,
-        assessment: assessment
-      }
-      script_level_attributes[:properties] = properties.with_indifferent_access
-      script_level = script.script_levels.detect do |sl|
-        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
-          sl.levels == levels
-      end || ScriptLevel.create!(script_level_attributes) do |sl|
-        sl.levels = levels
-      end
-
-      # Set/create Lesson containing custom ScriptLevel
-      if lesson_name
-        # find the lesson group for this lesson
-        lesson_group = LessonGroup.find_by!(
-          key: lesson_group_key.presence || "",
-          script: script,
-          user_facing: lesson_group_key.present?
-        )
-
-        # check if that lesson exists for the script otherwise create a new lesson
-        lesson = script.lessons.detect {|s| s.name == lesson_name} ||
-          Lesson.find_or_create_by(
-            name: lesson_name,
-            script: script
-          ) do |s|
-            s.relative_position = 0 # will be updated below, but cant be null
-          end
-
-        lesson.assign_attributes(lesson_group: lesson_group, lockable: lockable)
-        lesson.save! if lesson.changed?
-
-        script_level_attributes[:stage_id] = lesson.id
-        script_level_attributes[:position] = (script_level_position[lesson.id] += 1)
-        script_level.reload
-        script_level.assign_attributes(script_level_attributes)
-        script_level.save! if script_level.changed?
-        (script_levels_by_lesson[lesson.id] ||= []) << script_level
-        unless script_lessons.include?(lesson)
-          if lockable
-            lesson.assign_attributes(relative_position: (lockable_count += 1))
-          else
-            lesson.assign_attributes(relative_position: (non_lockable_count += 1))
-          end
-          lesson.assign_attributes(absolute_position: (lesson_position += 1))
-          lesson.save! if lesson.changed?
-          script_lessons << lesson
-        end
-      end
-      script_level.assign_attributes(script_level_attributes)
-      script_level.save! if script_level.changed?
-      script_level
-    end
-
-    script_lessons.each do |lesson|
-      # make sure we have an up to date view
-      lesson.reload
-      lesson.script_levels = script_levels_by_lesson[lesson.id]
-
-      # Go through all the script levels for this lesson, except the last one,
-      # and raise an exception if any of them are a multi-page assessment.
-      # (That's when the script level is marked assessment, and the level itself
-      # has a pages property and more than one page in that array.)
-      # This is because only the final level in a lesson can be a multi-page
-      # assessment.
-      lesson.script_levels.each do |script_level|
-        if !script_level.end_of_stage? && script_level.long_assessment?
-          raise "Only the final level in a lesson may be a multi-page assessment.  Script: #{script.name}"
-        end
-      end
-
-      if lesson.lockable && !lesson.script_levels.last.assessment?
-        raise 'Expect lockable lessons to have an assessment as their last level'
-      end
-
-      raw_lesson = raw_lessons.find {|rs| rs[:lesson].downcase == lesson.name.downcase}
-      lesson.visible_after = raw_lesson[:visible_after]
-      lesson.save! if lesson.changed?
-    end
-
-    Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
-    Script.prevent_lesson_group_with_no_lessons(script)
-
-    script.lessons = script_lessons
-    script.reload.lessons
     script.generate_plc_objects
 
     script
   end
 
-  # All lesson groups should have lessons in them
-  def self.prevent_lesson_group_with_no_lessons(script)
-    script.lesson_groups.each do |lesson_group|
-      next if lesson_group.lessons.count > 0
-      raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons."
+  # If there is more than 1 lesson group then the key should never
+  # be nil because this means some lessons are in a lesson group
+  # and some are not
+  def self.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+    return if raw_lesson_groups.length < 2
+
+    raw_lesson_groups.each do |lesson_group|
+      if lesson_group[:key].nil?
+        raise "Expect if one lesson has a lesson group all lessons have lesson groups."
+      end
     end
   end
 
-  # Only consecutive lessons can have the same lesson group.
-  # Raise an error if non adjacent lessons have the same lesson
-  # group
-  def self.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
+  # Lesson groups can only show up once in a script
+  def prevent_duplicate_lesson_groups(raw_lesson_groups)
     previous_lesson_groups = []
-    current_lesson_group = nil
-
-    script_lessons.each do |lesson|
-      next if lesson.lesson_group.key == current_lesson_group
-      if previous_lesson_groups.include?(lesson.lesson_group.key)
-        raise "Only consecutive lessons can have the same lesson group. Lesson Group #{lesson.lesson_group.key} is on two non-consecutive lessons."
+    raw_lesson_groups.each do |lesson_group|
+      if previous_lesson_groups.include?(lesson_group[:key])
+        raise "Duplicate Lesson Group. Lesson Group: #{lesson_group[:key]} is used twice in Script: #{name}."
       end
-      previous_lesson_groups.append(current_lesson_group)
-      current_lesson_group = lesson.lesson_group.key
+      previous_lesson_groups.append(lesson_group[:key])
     end
   end
 
@@ -1377,10 +1123,6 @@ class Script < ActiveRecord::Base
   def self.update_i18n(existing_i18n, lessons_i18n, script_name = '', metadata_i18n = {})
     if metadata_i18n != {}
       stage_descriptions = metadata_i18n.delete(:stage_descriptions)
-      # temporarily include "stage" strings under both "stages" and "lessons"
-      # while we transition from the former term to the latter.
-      # TODO FND-1122
-      metadata_i18n['stages'] = {}
       metadata_i18n['lessons'] = {}
       unless stage_descriptions.nil?
         JSON.parse(stage_descriptions).each do |stage|
@@ -1389,7 +1131,6 @@ class Script < ActiveRecord::Base
             'description_student' => stage['descriptionStudent'],
             'description_teacher' => stage['descriptionTeacher']
           }
-          metadata_i18n['stages'][stage_name] = stage_data
           metadata_i18n['lessons'][stage_name] = stage_data
         end
       end
@@ -1549,19 +1290,14 @@ class Script < ActiveRecord::Base
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
-    # temporarily include "stage" strings under both "stages" and "lessons"
-    # while we transition from the former term to the latter.
-    # TODO FND-1122
-    data['stages'] = {}
     data['lessons'] = {}
-    lessons.each do |stage|
-      stage_data = {
-        'name' => stage.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
+    lessons.each do |lesson|
+      lesson_data = {
+        'name' => lesson.name,
+        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.name}.description_student", default: ''),
+        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.name}.description_teacher", default: '')
       }
-      data['stages'][stage.name] = stage_data
-      data['lessons'][stage.name] = stage_data
+      data['lessons'][lesson.name] = lesson_data
     end
 
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
