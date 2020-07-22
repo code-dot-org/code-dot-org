@@ -11,6 +11,10 @@ FactoryGirl.define do
     trait :with_unit_group do
       association(:content_root, factory: :unit_group)
     end
+
+    trait :with_unit do
+      association(:content_root, factory: :script)
+    end
   end
 
   factory :course_script do

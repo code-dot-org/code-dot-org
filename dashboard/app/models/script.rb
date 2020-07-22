@@ -46,6 +46,7 @@ class Script < ActiveRecord::Base
   belongs_to :user
   has_many :course_scripts
   has_many :unit_groups, through: :course_scripts
+  has_one :course_version, as: :content_root
 
   scope :with_associated_models, -> do
     includes(
