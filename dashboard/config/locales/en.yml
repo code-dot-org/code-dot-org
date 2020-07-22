@@ -1037,6 +1037,10 @@ en:
       school_name: 'School Name'
       school_city: 'School City'
       school_country: 'School Country'
+      colombian_school_city: 'School City'
+      colombian_school_department: 'School Department'
+      colombian_school_municipality: 'School Municipality'
+      colombian_school_name: 'School Name'
       ages: 'Which age(s) do you teach this year?'
       subjects: 'Which subject(s) do you teach this year?'
       resources: 'Which of the following CS education resources do you use?'
@@ -1056,6 +1060,7 @@ en:
       school_country:
         canada: 'Canada'
         chile: 'Chile'
+        colombia: 'Colombia'
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Mexico'
