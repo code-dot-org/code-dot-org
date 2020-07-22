@@ -5,6 +5,7 @@ import React from 'react';
 import SectionSelector from './SectionSelector.jsx';
 import StudentSelector from './StudentSelector.jsx';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * A component for managing pair programming.
@@ -56,6 +57,23 @@ export default class Pairing extends React.Component {
   handleAddPartners = studentIds => {
     const pairings = this.selectedSection().students.filter(
       student => studentIds.indexOf(student.id) !== -1
+    );
+
+    firehoseClient.putRecord(
+      {
+        study: 'pairing',
+        study_group: 'pairing',
+        event: 'initiating-pairing',
+        data_json: JSON.stringify({
+          location: window.location.href,
+          number_partners: pairings.length,
+          section_id: this.selectedSection().id
+        })
+      },
+      {
+        includeUserId: true,
+        useProgressScriptId: true
+      }
     );
 
     this.props.handleClose && this.props.handleClose();
