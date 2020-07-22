@@ -359,6 +359,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     # Sign in as teacher and create a new script.
     sign_in @teacher
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     # Set up an anonymous assessment in that script.
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -385,7 +387,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    create :script_level, script: script, levels: [level1], assessment: true
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # student_1 through student_5 did the survey, just submitting a free response.
     @students.each_with_index do |student, student_index|
