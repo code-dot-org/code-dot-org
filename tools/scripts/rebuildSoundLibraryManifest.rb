@@ -293,7 +293,7 @@ The sound has been skipped.
             categories.push (a.delete_prefix "category_")
           end
         end
-        metadata['aliases'] = aliases.reject {|a| a.start_with? "category_"}
+        metadata['aliases'] = aliases.map {|a| (a.start_with? "category_") ? (a.delete_prefix "category_") : a}
         metadata['categories'] = categories
       rescue Aws::Errors::ServiceError => service_error
         next <<-WARN
