@@ -4,6 +4,7 @@ import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
 import Dialog, {Title, Body} from '../../templates/Dialog';
+import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   description: {
@@ -42,7 +43,13 @@ export class ConfirmEnableMakerDialog extends Component {
               {msg.enableMakerDialogSetupPageLinkText()}
             </a>
           </div>
-          <div style={style.warning}>{msg.enableMakerDialogWarning()}</div>
+          {experiments.isEnabled('microbit') ? (
+            <div style={style.warning}>{msg.enableMakerDialogWarning()}</div>
+          ) : (
+            <div style={style.warning}>
+              {msg.enableMakerDialogWarningOnlyCP()}
+            </div>
+          )}
         </Body>
       </Dialog>
     );
