@@ -709,6 +709,10 @@ pl-PL:
         użyj funkcji "build bridge".
       Function intro Ryan_2020: Aby przerzucić pomost i dostać się do pochodni, dwukrotnie
         użyj funkcji "build bridge".
+      Geometric Sun: 'Pomysł na projekt: Stwórz wzór korzystając z koncepcji geometrycznych
+        takich, jak kształty. Wymaga to wytrwałości oraz planowania!'
+      Geometric Sun_2018: 'Pomysł na projekt: Stwórz wzór korzystając z koncepcji
+        geometrycznych takich, jak kształty. Wymaga to wytrwałości oraz planowania!'
       Guess The Number: Buduj, co chcesz. To jest przykład gry w zgadywanie numeru!
       HOC 2018 Level_1: Weź łódkę z kufra.
       HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
@@ -920,9 +924,17 @@ pl-PL:
         naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy zestaw
         rur.
       OPD-K5-forloops-5: Pomóż pszczółce zebrać cały nektar.
+      OPD-K5-projects-2: Wybierz tło i mapę, a także wybierz postać, która będzie
+        bohaterem Twojej gry.
+      OPD-K5-projects-4: Dodaj przynajmniej dwie postaci do swojej gry i spraw, by
+        się poruszały.
+      OPD-K5-projects-5: Znajdź jakieś ciekawe sposoby zmiany punktacji w Twojej grze.
+        Zdobądź punkty, aby pokazać coś innego niż 0, by kontynuować.
       OPD-K5-projects-6: Teraz poświęć trochę czasu, żeby upewnić się, że gra działa
         tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa twoją grę,
         a następnie zagraj, aby spełnić jeden z tych warunków.
+      OPD-K5-projects-7: Ukończyłeś! Teraz możesz zagrać w swoją grę lub udostępnić
+        ją znajomym i kolegom z klasy!
       Overworld Avoid Monsters: Wpadnięcie na Pełzaka to zły pomysł. Ostrożnie omijaj
         Pełzaki, aby bezpiecznie dotrzeć do domu.
       Overworld Avoid Monsters_2019: Wpadnięcie na Pełzaka to zły pomysł. Ostrożnie
@@ -1168,6 +1180,13 @@ pl-PL:
         sposób na obejście przeszkód?"
       course2_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
+      course3_artist_functions_challenge1: Po zdefiniowaniu funkcji możesz ją wywoływać
+        ponownie bez końca, kiedy chcesz i gdzie chcesz! Wypróbuj ten kod, aby przekonać
+        się jak to działa, a następnie zmień go, aby stworzyć własny, efektowny wzór!
+      course3_artist_functions_challenge2: Wypróbuj ten kod, aby przekonać się, jak
+        działa, a następnie nadaj programowi własnego charakteru!
+      course3_bee_functions_challenge1: Jesteś sam na sam z tym wyzwaniem! Ta "pszczółka"
+        może być trudniejsza, niż się wydaje!
       course3_bee_functions_challenge2: Jesteś sam na sam z tym wyzwaniem!
       course3_bee_functions_challenge4: Wykorzystaj wszystko czego się nauczyłeś,
         aby rozwiązać tę łamigłówkę!
@@ -1180,10 +1199,18 @@ pl-PL:
         komend "skręć"."_
       course3_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
+      course3_playLab_challenge1: Coś powinno się wydarzyć, gdy zdobędziesz wystarczającą
+        ilość punktów lub gdy zabraknie Ci punktów. Dodaj jakiś kod do funkcji "Wygraj
+        grę" lub "Przegraj grę", aby gra działała tak, jak powinna. Kliknij wskazówki,
+        aby uzyskać jakieś sugestie!
       course4_artist_binary_challenge1: Możesz użyć tylko binarnych wartości (0 lub
         1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       course4_artist_binary_challenge2: Czy jesteś wystarczająco wytrwały, aby przywrócić
         to logo do normy?
+      course4_artist_concept_challenge2: Utwórz pięć wzorów wiatraczka przy pomocy
+        poniższego kodu.
+      course4_artist_functions_challenge2: Wypróbuj ten kod, aby przekonać się, jak
+        działa, a następnie nadaj programowi własnego charakteru!
       course4_artist_fwp_challenge1: Uruchom ten program i wprowadzaj zmiany, aby
         zobaczyć co się dzieje. Czy możesz powiedzieć, co robi ten program? (Lub usuń
         go i zastąp go czymś zupełnie inny)
@@ -1499,12 +1526,28 @@ pl-PL:
         ale w złej kolejności!
       courseB_maze_seq_challenge2_2020: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!
+      courseC19_playLab_EOC1: Wybierz tło i mapę, a także wybierz postać, która będzie
+        bohaterem Twojej gry.
+      courseC19_playLab_EOC1_2020: Wybierz tło i mapę, a także wybierz postać, która
+        będzie bohaterem Twojej gry.
+      courseC19_playLab_EOC3: Dodaj przynajmniej dwie postaci do swojej gry i spraw,
+        by się poruszały.
+      courseC19_playLab_EOC3_2020: Dodaj przynajmniej dwie postaci do swojej gry i
+        spraw, by się poruszały.
+      courseC19_playLab_EOC4: Znajdź jakieś ciekawe sposoby zmiany punktacji w Twojej
+        grze. Zdobądź punkty, aby pokazać coś innego niż 0, by kontynuować.
+      courseC19_playLab_EOC4_2020: Znajdź jakieś ciekawe sposoby zmiany punktacji
+        w Twojej grze. Zdobądź punkty, aby pokazać coś innego niż 0, by kontynuować.
       courseC19_playLab_EOC5: Teraz poświęć trochę czasu, żeby upewnić się, że gra
         działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa twoją
         grę, a następnie zagraj, aby spełnić jeden z tych warunków.
       courseC19_playLab_EOC5_2020: Teraz poświęć trochę czasu, żeby upewnić się, że
         gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa
         twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.
+      courseC19_playLab_EOC6: Ukończyłeś! Teraz możesz zagrać w swoją grę lub udostępnić
+        ją znajomym i kolegom z klasy!
+      courseC19_playLab_EOC6_2020: Ukończyłeś! Teraz możesz zagrać w swoją grę lub
+        udostępnić ją znajomym i kolegom z klasy!
       courseC_PlayLab_events1: Spraw, by Pies Jorge (postać 1) powie "Cześć."
       courseC_PlayLab_events1_2018: Spraw, by Pies Jorge (postać 1) powie "Cześć."
       courseC_PlayLab_events1_2019: Spraw, by Pies Jorge (postać 1) powie "Cześć."
@@ -1665,6 +1708,38 @@ pl-PL:
         a następnie narysuj linię. '
       courseC_artist_loopsPrePre1a_2020: 'Doprowadź grafika na środek obszaru gry,
         a następnie narysuj linię. '
+      courseC_artist_prog1: Baw się blokami w przyborniku, aż zobaczysz, do czego
+        służą!
+      courseC_artist_prog1_2018: Baw się blokami w przyborniku, aż zobaczysz, do czego
+        służą!
+      courseC_artist_prog1_2019: Baw się blokami w przyborniku, aż zobaczysz, do czego
+        służą!
+      courseC_artist_prog1_2020: Baw się blokami w przyborniku, aż zobaczysz, do czego
+        służą!
+      courseC_artist_prog2: Przeciągaj blok na ekran, aby grafik rysował nad szarymi
+        liniami na obrazku. (Każda linia ma długość 100 pikseli)
+      courseC_artist_prog2_2018: Przeciągaj blok na ekran, aby grafik rysował nad
+        szarymi liniami na obrazku. (Każda linia ma długość 100 pikseli)
+      courseC_artist_prog2_2019: Przeciągaj blok na ekran, aby grafik rysował nad
+        szarymi liniami na obrazku. (Każda linia ma długość 100 pikseli)
+      courseC_artist_prog2_2020: Przeciągaj blok na ekran, aby grafik rysował nad
+        szarymi liniami na obrazku. (Każda linia ma długość 100 pikseli)
+      courseC_artist_prog3: Każdy bok wewnętrznego kwadratu ma 100 pikseli, a wszystkie
+        kąty mają po 90 stopni.
+      courseC_artist_prog3_2018: Każdy bok wewnętrznego kwadratu ma 100 pikseli, a
+        wszystkie kąty mają po 90 stopni.
+      courseC_artist_prog3_2019: Każdy bok wewnętrznego kwadratu ma 100 pikseli, a
+        wszystkie kąty mają po 90 stopni.
+      courseC_artist_prog3_2020: Każdy bok wewnętrznego kwadratu ma 100 pikseli, a
+        wszystkie kąty mają po 90 stopni.
+      courseC_artist_prog4: Skończ tworzenie rakiety Starli, aby mogła ruszyć w pościg
+        za swoim zwierzakiem.
+      courseC_artist_prog4_2018: Skończ tworzenie rakiety Starli, aby mogła ruszyć
+        w pościg za swoim zwierzakiem.
+      courseC_artist_prog4_2019: Skończ tworzenie rakiety Starli, aby mogła ruszyć
+        w pościg za swoim zwierzakiem.
+      courseC_artist_prog4_2020: Skończ tworzenie rakiety Starli, aby mogła ruszyć
+        w pościg za swoim zwierzakiem.
       courseC_artist_prog5: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
         Wszystkie trzy boki mają taką samą długość.'
       courseC_artist_prog5_2018: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
@@ -1673,6 +1748,34 @@ pl-PL:
         Wszystkie trzy boki mają taką samą długość.'
       courseC_artist_prog5_2020: 'Ten dom potrzebuje dachu ! Narysuj trójkąt. Wskazówka:
         Wszystkie trzy boki mają taką samą długość.'
+      courseC_artist_prog6: Narysuj romb o bokach o długości 200 pikseli.
+      courseC_artist_prog6_2018: Narysuj romb o bokach o długości 200 pikseli.
+      courseC_artist_prog6_2019: Narysuj romb o bokach o długości 200 pikseli.
+      courseC_artist_prog6_2020: Narysuj romb o bokach o długości 200 pikseli.
+      courseC_artist_prog7: "**Wyzwanie:** Ten tag ma charakter specjalny!  Czy jesteś
+        w stanie wymyślić, jak narysować obrys?"
+      courseC_artist_prog7_2018: "**Wyzwanie:** Ten tag ma charakter specjalny!  Czy
+        jesteś w stanie wymyślić, jak narysować obrys?"
+      courseC_artist_prog7_2019: "**Wyzwanie:** Ten tag ma charakter specjalny!  Czy
+        jesteś w stanie wymyślić, jak narysować obrys?"
+      courseC_artist_prog7_2020: "**Wyzwanie:** Ten tag ma charakter specjalny!  Czy
+        jesteś w stanie wymyślić, jak narysować obrys?"
+      courseC_artist_prog8: |-
+        Jeszcze jeden tag. To jest trójkąt dla Pi.
+        (Każdy bok ma 150 pikseli)
+      courseC_artist_prog8_2018: |-
+        Jeszcze jeden tag. To jest trójkąt dla Pi.
+        (Każdy bok ma 150 pikseli)
+      courseC_artist_prog8_2019: |-
+        Jeszcze jeden tag. To jest trójkąt dla Pi.
+        (Każdy bok ma 150 pikseli)
+      courseC_artist_prog8_2020: |-
+        Jeszcze jeden tag. To jest trójkąt dla Pi.
+        (Każdy bok ma 150 pikseli)
+      courseC_artist_prog_challenge1: Narysuj pomieszczenia dla każdego ze zwierzaków.
+      courseC_artist_prog_challenge1_2018: Narysuj pomieszczenia dla każdego ze zwierzaków.
+      courseC_artist_prog_challenge1_2019: Narysuj pomieszczenia dla każdego ze zwierzaków.
+      courseC_artist_prog_challenge1_2020: Narysuj pomieszczenia dla każdego ze zwierzaków.
       courseC_artist_prog_challenge2a: _Pomóż mi narysować żółte linie na tej drodze!_
       courseC_artist_prog_challenge2a_2018: _Pomóż mi narysować żółte linie na tej
         drodze!_
@@ -1955,6 +2058,18 @@ pl-PL:
         to żołędzia.
       courseC_maze_debugging6_2020: Zorientuj się, co poszło nie tak i doprowadź Scrata
         to żołędzia.
+      courseC_maze_debugging7: "**Wyzwanie.** Zdebuguj ten poziom przestawiają, dodając
+        i usuwając bloki."
+      courseC_maze_debugging7_2018: "**Wyzwanie.** Zdebuguj ten poziom przestawiają,
+        dodając i usuwając bloki."
+      courseC_maze_debugging7_2019: "**Wyzwanie.** Zdebuguj ten poziom przestawiają,
+        dodając i usuwając bloki."
+      courseC_maze_debugging7_2020: "**Wyzwanie.** Zdebuguj ten poziom przestawiają,
+        dodając i usuwając bloki."
+      courseC_maze_debugging9: Prowadź debugowanie tego poziomu do momentu doprowadzenia
+        Scrata do żołędzia.
+      courseC_maze_debugging9_2018: Prowadź debugowanie tego poziomu do momentu doprowadzenia
+        Scrata do żołędzia.
       courseC_maze_debugging_challenge1: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2018: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2019: _"Czy ja właśnie chodzę w kółko?"_
@@ -2289,32 +2404,32 @@ pl-PL:
       courseD_artist_nestedLoops2_2020: Tym razem rozwiąż to zadanie używając jak
         najmniejszej liczby bloków.
       courseD_artist_nestedLoops3: |-
-        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni wiersz okien dla tego budynku.
+        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni rząd okien dla tego budynku.
 
-        Oknami są kwadraty rozmiaru 20 pikseli, każdych odrębnych 20 pikseli.
+        Oknami są kwadraty rozmiaru 20 pikseli, każdy w odległości 20 pikseli.
       courseD_artist_nestedLoops3_2018: |-
-        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni wiersz okien dla tego budynku.
+        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni rząd okien dla tego budynku.
 
-        Oknami są kwadraty rozmiaru 20 pikseli, każdych odrębnych 20 pikseli.
+        Oknami są kwadraty rozmiaru 20 pikseli, każdy w odległości 20 pikseli.
       courseD_artist_nestedLoops3_2019: |-
-        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni wiersz okien dla tego budynku.
+        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni rząd okien dla tego budynku.
 
-        Oknami są kwadraty rozmiaru 20 pikseli, każdych odrębnych 20 pikseli.
+        Oknami są kwadraty rozmiaru 20 pikseli, każdy w odległości 20 pikseli.
       courseD_artist_nestedLoops3_2020: |-
-        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni wiersz okien dla tego budynku.
+        Skorzystaj ze swoich nowych umiejętności, aby szybko narysować ostatni rząd okien dla tego budynku.
 
-        Oknami są kwadraty rozmiaru 20 pikseli, każdych odrębnych 20 pikseli.
+        Oknami są kwadraty rozmiaru 20 pikseli, każdy w odległości 20 pikseli.
       courseD_artist_nestedLoops4: Świetnie! Zrób to samo z tymi okręgami.
       courseD_artist_nestedLoops4_2018: Świetnie! Zrób to samo z tymi okręgami.
       courseD_artist_nestedLoops4_2019: Świetnie! Zrób to samo z tymi okręgami.
       courseD_artist_nestedLoops4_2020: Świetnie! Zrób to samo z tymi okręgami.
-      courseD_artist_nestedLoops5: Co się stanie, jeśli również wykonać skręt o 90
+      courseD_artist_nestedLoops5: Co się stanie, jeśli również wykonasz skręt o 90
         stopni pomiędzy okręgami?
-      courseD_artist_nestedLoops5_2018: Co się stanie, jeśli również wykonać skręt
+      courseD_artist_nestedLoops5_2018: Co się stanie, jeśli również wykonasz skręt
         o 90 stopni pomiędzy okręgami?
-      courseD_artist_nestedLoops5_2019: Co się stanie, jeśli również wykonać skręt
+      courseD_artist_nestedLoops5_2019: Co się stanie, jeśli również wykonasz skręt
         o 90 stopni pomiędzy okręgami?
-      courseD_artist_nestedLoops5_2020: Co się stanie, jeśli również wykonać skręt
+      courseD_artist_nestedLoops5_2020: Co się stanie, jeśli również wykonasz skręt
         o 90 stopni pomiędzy okręgami?
       courseD_artist_nestedLoops7: Użyj tego, czego się nauczyłeś, aby wykonać ten
         rysunek.
@@ -2560,7 +2675,7 @@ pl-PL:
       courseD_collector_debugging_challenge2: Czy jesteś ekspertem od zagnieżdżonych
         pętli? Pokaż czego nauczyłeś się do tej pory i zbierz cały skarb!
       courseD_collector_nested_loops_challenge2a: Pomóż Laurel zebrać przynajmniej
-        dwie sterty skarbu.
+        dwa stosy skarbu.
       courseD_collector_ramp10: Pomóż Laurel zebrać cały skarb.
       courseD_collector_ramp8: Pomóż Laurel zebrać cały skarb.
       courseD_collector_ramp9: Pomóż Laurel zebrać cały skarb.
@@ -2699,22 +2814,97 @@ pl-PL:
         razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
       courseD_scrat_ramp8: Wykorzystaj to, czego się nauczyłeś, aby doprowadzić Scrata
         to żołędzia.
+      courseE_artist_concept1: 'Odtwórz ten obrazek. '
+      courseE_artist_concept1_2018: 'Odtwórz ten obrazek. '
+      courseE_artist_concept4: Odtwórz ten rysunek.
+      courseE_artist_concept4_2018: Odtwórz ten rysunek.
       courseE_artist_concept_challenge1: Nie bój się popełniać błędów próbując. Nie
         oczekuj, że wszystko będzie doskonałe za pierwszym razem. Kliknij tutaj, jeśli
         chcesz zobaczyć więcej wskazówek!
       courseE_artist_concept_challenge1_2018: Nie bój się popełniać błędów próbując.
         Nie oczekuj, że wszystko będzie doskonałe za pierwszym razem. Kliknij tutaj,
         jeśli chcesz zobaczyć więcej wskazówek!
+      courseE_artist_concept_challenge2: Utwórz pięć wzorów wiatraczka przy pomocy
+        poniższego kodu.
+      courseE_artist_concept_challenge2_2018: Utwórz pięć wzorów wiatraczka przy pomocy
+        poniższego kodu.
       courseE_artist_functions1: "Pomóż zombie narysować okulary używając kwadratów
         o bokach 100 pikseli.  \\\r Połączenie między szkłami okularów ma 75 pikseli."
+      courseE_artist_functions10: Tym razem, użyj rzędów 8 sześciokątów o bokach o
+        długości 25 pikseli.
+      courseE_artist_functions10_2018: Tym razem, użyj rzędów 8 sześciokątów o bokach
+        o długości 25 pikseli.
+      courseE_artist_functions10_2019: Tym razem, użyj rzędów 8 sześciokątów o bokach
+        o długości 25 pikseli.
+      courseE_artist_functions10_2020: Tym razem, użyj rzędów 8 sześciokątów o bokach
+        o długości 25 pikseli.
       courseE_artist_functions1_copy: "Pomóż zombie narysować okulary używając kwadratów
         o bokach 100 pikseli.  \\\r Połączenie między szkłami okularów ma 75 pikseli."
+      courseE_artist_functions2: 'Tym razem użyj funkcji "Narysuj kwadrat", aby utworzyć
+        okulary. '
       courseE_artist_functions2_2018: 'Tym razem użyj funkcji `draw a square`, aby
         utworzyć okulary. '
       courseE_artist_functions2_2019: 'Tym razem użyj funkcji `draw a square`, aby
         utworzyć okulary. '
       courseE_artist_functions2_2020: 'Tym razem użyj funkcji `draw a square`, aby
         utworzyć okulary. '
+      courseE_artist_functions2_copy: 'Tym razem użyj funkcji "Narysuj kwadrat", aby
+        utworzyć okulary. '
+      courseE_artist_functions3: Możesz wykonać ten rysunek poprzez dodanie bloku
+        powtarzania.
+      courseE_artist_functions3_copy: Możesz wykonać ten rysunek poprzez dodanie bloku
+        powtarzania.
+      courseE_artist_functions4: Teraz możesz narysować gwiazdę, spróbuj narysować
+        cztery gwiazdy!
+      courseE_artist_functions4_copy: Teraz możesz narysować gwiazdę, spróbuj narysować
+        cztery gwiazdy!
+      courseE_artist_functions5: Narysuj tylko te trzy gwiazdy, aby ukończyć rozwiązywanie
+        tej łamigłówki.
+      courseE_artist_functions5_2018: Narysuj tylko te trzy gwiazdy, aby ukończyć
+        rozwiązywanie tej łamigłówki.
+      courseE_artist_functions5_2019: Narysuj tylko te trzy gwiazdy, aby ukończyć
+        rozwiązywanie tej łamigłówki.
+      courseE_artist_functions5_2020: Narysuj tylko te trzy gwiazdy, aby ukończyć
+        rozwiązywanie tej łamigłówki.
+      courseE_artist_functions5_copy: Narysuj tylko te trzy gwiazdy, aby ukończyć
+        rozwiązywanie tej łamigłówki.
+      courseE_artist_functions6: Zrób to okno poprzez narysowanie kwadratu, a następnie
+        obróć o 90 stopni, zanim zaczniesz rysować kolejny i tak dalej.
+      courseE_artist_functions7: Spróbuj rozwiać tę łamigłówkę poprzez utworzenie
+        "Narysuj okno", a następnie wywołania tego pięć razy. Uwaga na drzwi!
+      courseE_artist_functions7_2018: Spróbuj rozwiać tę łamigłówkę poprzez utworzenie
+        "Narysuj okno", a następnie wywołania tego pięć razy. Uwaga na drzwi!
+      courseE_artist_functions7_2019: Spróbuj rozwiać tę łamigłówkę poprzez utworzenie
+        "Narysuj okno", a następnie wywołania tego pięć razy. Uwaga na drzwi!
+      courseE_artist_functions7_2020: Spróbuj rozwiać tę łamigłówkę poprzez utworzenie
+        "Narysuj okno", a następnie wywołania tego pięć razy. Uwaga na drzwi!
+      courseE_artist_functions8: 'Wyzwanie: Utwórz tyle funkcji ile Twoim zdaniem
+        Ci potrzeba, aby to zrobić rysując kwadraty wielkości 50 pikseli.'
+      courseE_artist_functions9: 'Utwórz obrazek z użyciem tylko jednego z podanych
+        bloków. '
+      courseE_artist_functions_challenge1: Po zdefiniowaniu funkcji możesz ją wywoływać
+        ponownie bez końca, kiedy chcesz i gdzie chcesz! Wypróbuj ten kod, aby przekonać
+        się jak to działa, a następnie zmień go, aby stworzyć własny, efektowny wzór!
+      courseE_artist_functions_challenge1_2018: Po zdefiniowaniu funkcji możesz ją
+        wywoływać ponownie bez końca, kiedy chcesz i gdzie chcesz! Wypróbuj ten kod,
+        aby przekonać się jak to działa, a następnie zmień go, aby stworzyć własny,
+        efektowny wzór!
+      courseE_artist_functions_challenge1_2019: Po zdefiniowaniu funkcji możesz ją
+        wywoływać ponownie bez końca, kiedy chcesz i gdzie chcesz! Wypróbuj ten kod,
+        aby przekonać się jak to działa, a następnie zmień go, aby stworzyć własny,
+        efektowny wzór!
+      courseE_artist_functions_challenge1_2020: Po zdefiniowaniu funkcji możesz ją
+        wywoływać ponownie bez końca, kiedy chcesz i gdzie chcesz! Wypróbuj ten kod,
+        aby przekonać się jak to działa, a następnie zmień go, aby stworzyć własny,
+        efektowny wzór!
+      courseE_artist_functions_challenge2: Wypróbuj ten kod, aby przekonać się, jak
+        działa, a następnie nadaj programowi własnego charakteru!
+      courseE_artist_functions_challenge2_2018: Wypróbuj ten kod, aby przekonać się,
+        jak działa, a następnie nadaj programowi własnego charakteru!
+      courseE_artist_functions_challenge2_2019: Wypróbuj ten kod, aby przekonać się,
+        jak działa, a następnie nadaj programowi własnego charakteru!
+      courseE_artist_functions_challenge2_2020: Wypróbuj ten kod, aby przekonać się,
+        jak działa, a następnie nadaj programowi własnego charakteru!
       courseE_artist_ramp8: Teraz utwórz kwadrat z wykorzystaniem Grafika!
       courseE_artist_ramp8_2: Teraz utwórz kwadrat z wykorzystaniem Grafika!
       courseE_artist_ramp9: Użyj tego, czego się nauczyłeś(-aś), by narysować ten
@@ -2725,6 +2915,17 @@ pl-PL:
         pętli. '
       courseE_bee_concept1_2018: 'Zbierz cały nektar z każdego kwiatka. Użyj zagnieżdżonej
         pętli. '
+      courseE_bee_concept2: 'Pomóż pszczółce zrobić cały miód. '
+      courseE_bee_concept2_2018: 'Pomóż pszczółce zrobić cały miód. '
+      courseE_bee_concept3: Zbierz cały nektar, używając jak najmniejszej liczby bloków.
+      courseE_bee_concept3_2018: Zbierz cały nektar, używając jak najmniejszej liczby
+        bloków.
+      courseE_bee_concept4: O-oo! Pszczółka nie jest pewna czy zbierze nektar lub
+        zrobi miód. Czy możesz jej pomóc?
+      courseE_bee_concept4_2018: O-oo! Pszczółka nie jest pewna czy zbierze nektar
+        lub zrobi miód. Czy możesz jej pomóc?
+      courseE_bee_concept5: Pomóż pszczółce zebrać nektar z kwiatków?
+      courseE_bee_concept5_2018: Pomóż pszczółce zebrać nektar z kwiatków?
       courseE_bee_functions1: Zbierz cały nektar z każdego kwiatka.
       courseE_bee_functions10: Rozwiąż tę zagadkę, tworząc funkcję, która pomaga pszczółce
         zrobić cały miód przed powrotem do głównej ścieżki.
@@ -2734,10 +2935,58 @@ pl-PL:
         łamigłówce.
       courseE_bee_functions4: Użyj funkcji "move and get nectar" (przejdź i pobierz
         nektar), aby zebrać cały nektar.
+      courseE_bee_functions5: 'Teraz napisz funkcję pozwalającą na zbieranie nektaru
+        z kwiatków. '
+      courseE_bee_functions6: Utwórz funkcję i wywołaj ją, by zebrać nektar z każdego
+        kwiatka i zrobić miód na każdym plastrze miodu.
+      courseE_bee_functions7: 'Stwórz swoją własną funkcję, która powoduje chodzenie
+        po ścieżce, zbieranie nektaru, produkowanie miodu i powrót pszczółki na początek
+        ścieżki. Zbierz cały nektar i zrób cały miód. '
+      courseE_bee_functions8: Utwórz funkcję, która będzie powodowała zbieranie nektaru
+        z każdego kwiatka.
+      courseE_bee_functions9: Utwórz funkcję, aby zbierać nektar z każdego kwiatka.
+      courseE_bee_functions_challenge1: Jesteś sam na sam z tym wyzwaniem! Ta "pszczółka"
+        może być trudniejsza, niż się wydaje!
       courseE_bee_functions_challenge2: Rozwiąż to wyzwanie na własną rękę!
+      courseE_farmer_concept1: Czy potrafisz napisać program, który wypełni te dziury
+        tak, by zniwelować teren?
+      courseE_farmer_concept1_2018: Czy potrafisz napisać program, który wypełni te
+        dziury tak, by zniwelować teren?
       courseE_farmer_concept2: Zbierz wszystkie dynie.
       courseE_farmer_concept2_2018: Zbierz wszystkie dynie.
+      courseE_farmer_functions1: Pomóż pani żniwiarce dotrzeć do dyni i zebrać ją.
+      courseE_farmer_functions10b: Użyj swojej nowej funkcji dwukrotnie, by rozwiązać
+        tę zagadkę.
+      courseE_farmer_functions1_2018: Pomóż pani żniwiarce dotrzeć do dyni i zebrać
+        ją.
+      courseE_farmer_functions1_2019: Pomóż pani żniwiarce dotrzeć do dyni i zebrać
+        ją.
+      courseE_farmer_functions1_2020: Pomóż pani żniwiarce dotrzeć do dyni i zebrać
+        ją.
+      courseE_farmer_functions1a: Teraz pomóż żniwiarce zebrać kukurydzę, sałatę **i**
+        dynię.
+      courseE_farmer_functions2b: Pomóż żniwiarce zebrać kukurydzę i dynie.
+      courseE_farmer_functions2b_2018: Pomóż żniwiarce zebrać kukurydzę i dynie.
+      courseE_farmer_functions2b_2019: Pomóż żniwiarce zebrać kukurydzę i dynie.
+      courseE_farmer_functions2b_2020: Pomóż żniwiarce zebrać kukurydzę i dynie.
+      courseE_farmer_functions2ba: Pomóż pani farmer zebrać kukurydzę i dynie korzystając
+        z funkcji "kukurydza i dynia".
+      courseE_farmer_functions2ba_2019: Pomóż pani farmer zebrać kukurydzę i dynie
+        korzystając z funkcji "kukurydza i dynia".
+      courseE_farmer_functions2ba_2020: Pomóż pani farmer zebrać kukurydzę i dynie
+        korzystając z funkcji "kukurydza i dynia".
+      courseE_farmer_functions3c: Teraz sam wypełnij funkcję wyciągając bloki z kodu
+        i opuszczając je do **definicji funkcji**.
       courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę łamigłówkę.
+      courseE_farmer_functions5c: Tutaj Twoja funkcja się przyda.
+      courseE_farmer_functions6c: Co musisz dodać do tego programu, aby sprawdzić
+        czy kiełkuje kukurydza czy sałata?
+      courseE_farmer_functions7b: Pomóż pani żniwiarce odnaleźć drogę na tej mylącej
+        ścieżce i dotrzeć do dyni skręcając w lewo przy kukurydzy i w prawo przy sałacie.
+      courseE_farmer_functions8b: "**Wyzwanie.** Zbierz wszystkie dynie posługując
+        się metodą z poprzedniej łamigłówki. "
+      courseE_farmer_functions9b: Czy jesteś w stanie wymyślić, wzór, którego potrzebujesz,
+        aby rozwiązać tę łamigłówkę?
       courseE_farmer_ramp11a: Jest stos, zatem usuń brud.
       courseE_farmer_ramp11a_2018: Jest stos, zatem usuń brud.
       courseE_farmer_ramp11a_2019: Jest stos, zatem usuń brud.
@@ -2746,9 +2995,39 @@ pl-PL:
       courseE_farmer_ramp11b_2018: Jest stos, zatem usuń brud.
       courseE_farmer_ramp11b_2019: Jest stos, zatem usuń brud.
       courseE_farmer_ramp11b_2020: Jest stos, zatem usuń brud.
+      courseE_farmer_ramp12f: 'Idź przed siebie, aż dojdziesz do sałaty, następnie
+        skręć w lewo **jeśli** po lewej stronie jest ścieżka. Jeśli nie, skręć w prawo. '
+      courseE_farmer_ramp12f_2018: 'Idź przed siebie, aż dojdziesz do sałaty, następnie
+        skręć w lewo **jeśli** po lewej stronie jest ścieżka. Jeśli nie, skręć w prawo. '
+      courseE_farmer_ramp12f_2019: 'Idź przed siebie, aż dojdziesz do sałaty, następnie
+        skręć w lewo **jeśli** po lewej stronie jest ścieżka. Jeśli nie, skręć w prawo. '
+      courseE_farmer_ramp12f_2020: 'Idź przed siebie, aż dojdziesz do sałaty, następnie
+        skręć w lewo **jeśli** po lewej stronie jest ścieżka. Jeśli nie, skręć w prawo. '
+      courseE_farmer_ramp12g: 'Idź przed siebie, aż dojdziesz do sałaty, następnie
+        skręć w lewo **jeśli** po lewej stronie jest ścieżka. Jeśli nie, skręć w prawo. '
+      courseE_farmer_ramp12g_2018: 'Idź przed siebie, aż dojdziesz do sałaty, następnie
+        skręć w lewo **jeśli** po lewej stronie jest ścieżka. Jeśli nie, skręć w prawo. '
+      courseE_farmer_ramp12g_2019: 'Idź przed siebie, aż dojdziesz do sałaty, następnie
+        skręć w lewo **jeśli** po lewej stronie jest ścieżka. Jeśli nie, skręć w prawo. '
+      courseE_farmer_ramp12g_2020: 'Idź przed siebie, aż dojdziesz do sałaty, następnie
+        skręć w lewo **jeśli** po lewej stronie jest ścieżka. Jeśli nie, skręć w prawo. '
+      courseE_playLab_challenge1: Coś powinno się wydarzyć, gdy zdobędziesz wystarczającą
+        ilość punktów lub gdy zabraknie Ci punktów. Dodaj jakiś kod do funkcji "Wygraj
+        grę" lub "Przegraj grę", aby gra działała tak, jak powinna. Kliknij wskazówki,
+        aby uzyskać jakieś sugestie!
+      courseE_playLab_scaffold1: Wybierz tło i mapę, a także wybierz postać, która
+        będzie bohaterem Twojej gry.
+      courseE_playLab_scaffold2: 'Użyj procedury obsługi i działania w ramach zdarzeń,
+        aby sprawić, by Twój bohater się ruszał.  '
+      courseE_playLab_scaffold3: Dodaj przynajmniej dwie postaci do swojej gry i spraw,
+        by się poruszały.
+      courseE_playLab_scaffold4: Znajdź jakieś ciekawe sposoby zmiany punktacji w
+        Twojej grze. Zdobądź punkty, aby pokazać coś innego niż 0, by kontynuować.
       courseE_playLab_scaffold5: Teraz poświęć trochę czasu, żeby upewnić się, że
         gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa
         twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.
+      courseE_playLab_scaffold6: Ukończyłeś! Teraz możesz zagrać w swoją grę lub udostępnić
+        ją znajomym i kolegom z klasy!
       courseF_artist_for7: Zrób trzy niewielkie zmiany w kodzie z poprzedniego poziomu,
         aby to otrzymać!
       courseF_artist_for7_2018: Zrób trzy niewielkie zmiany w kodzie z poprzedniego
@@ -2920,7 +3199,26 @@ pl-PL:
       grade5_artist_binary9: "Oto obszar do rysowania o większej rozdzielczości -
         16 na 16 pikseli!\\\r\\\r Co się stanie, kiedy zaczniemy tworzyć z użyciem
         bitów?"
+      iceage_click_hello: 'Czy możesz pomóc Sidowi zawołać swoich znajomych, gdy  klikniesz
+        w niego? '
       iceage_free_play: "Czas stworzyć swoją własną grę\nlub historyjkę! "
+      iceage_hello1: Pomóż Sidowi powiedzieć "Cześć!" przeciągając blok "Powiedz"
+        na zewnątrz i łącząc go do dolnej części wydarzenia "Po uruchomieniu".
+      iceage_hello2: Pomóż Mannny'emu i Sidowi przywitać się ze sobą wykorzystując
+        dwukrotnie blok "Aktor\_\_\_mówi".
+      iceage_move_events: Napisz kod, aby pomóc Scratowi zebrać wszystkie żołędzie!
+      iceage_move_to_actor: Połącz blok z wydarzeniem "Gdy postać dotknie", aby odtworzyć
+        dźwięk, który wydaje Diego, gdy znajdzie Manny'ego.
+      iceage_move_to_flag: Wiewiórka Scrat szuka żołędzia!  Czy możesz mu pomóc przejść
+        ostatnie 200 pikseli?
+      iceage_repeat: Pomóż babci Granny trochę poćwiczyć powtarzając przemieszczanie
+        w lewo i w prawo.
+      iceage_sound_and_points: 'Czy możesz ukończyć ten program, aby działał w taki
+        sposób, abyś mógł wykonać zarówno **Odtwórz dźwięk** i **Zdobądź punkt**,
+        gdy Sid zderzy się z babcią Granny? '
+      iceage_throw_hearts: Użyj komendy "Postać **\_\_\_**rzuca", aby  skłonić Sida
+        (postać 1) do rzucania sercami w babcię Granny (postać 2) i ustaw nastrój
+        babci Granny jako pełny szczęścia, gdy zostanie trafiona sercami.
       iceage_warn_ice_age: |-
         Zamień scenerię na oblodzone tło i
         ustaw prędkość Sida (aktor 1) na "szybko".

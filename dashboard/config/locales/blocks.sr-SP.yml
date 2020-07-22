@@ -446,6 +446,10 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунде
       gamelab_keyPressed:
         options:
           CONDITION:

@@ -22,7 +22,7 @@ vi:
           title: Khóa học 1
           description: Bắt đầu với Khoá học 1 cho trẻ mới biết đọc. Học viên sẽ được thiết kế các chương trình máy tính có thể giúp họ học cách hợp tác với người khác, phát triển các kỹ năng giải quyết vấn đề, và nỗ lực vượt qua các việc khó. Học viên sẽ có thể tạo ra một trò chơi hoặc câu chuyện riêng mà họ có thể chia sẻ. Phù hợp cho lớp K-1 (6 tuổi).
           description_short: Khóa học 1 được thiết kế cho trẻ mới biết đọc.
-          description_audience: Lứa tuổi 4 + (trước khi biết đọc)
+          description_audience: 4-6 tuổi
           stages:
             'Artist: Loops':
               name: 'Nghệ sĩ: vòng'
@@ -11625,6 +11625,8 @@ vi:
               name: Bữa Tiệc Khiêu Vũ
             Programming in Maze:
               name: Lập trình trong mê cung
+            Debugging with Scrat:
+              name: Gỡ lỗi với Scrat
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -11643,6 +11645,8 @@ vi:
               name: Bữa Tiệc Khiêu Vũ
             Programming in Maze:
               name: Lập trình trong mê cung
+            Debugging with Scrat:
+              name: Gỡ lỗi với Scrat
         pre-express-2020:
           stages:
             Sequencing with Scrat:

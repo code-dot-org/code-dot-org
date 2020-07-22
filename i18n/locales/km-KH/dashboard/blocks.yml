@@ -280,6 +280,10 @@ km:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
       gamelab_keyPressed:
         options:
           CONDITION:
