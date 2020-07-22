@@ -65,18 +65,11 @@ class LessonGroup < ApplicationRecord
         LessonGroup.prevent_changing_plc_display_name(raw_lesson_group)
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
 
-        new_lesson_group = false
-
         lesson_group = LessonGroup.find_or_create_by(
           key: raw_lesson_group[:key],
           script: script,
           user_facing: true
-        ) do
-          # if you got in here, this is a new lesson_group
-          new_lesson_group = true
-        end
-
-        LessonGroup.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
+        )
 
         lesson_group.assign_attributes(position: position += 1, properties: {display_name: raw_lesson_group[:display_name]})
         lesson_group.save! if lesson_group.changed?
