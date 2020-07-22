@@ -132,20 +132,15 @@ $almost_white: #eee;
   transform: translateX(-50%);
 }
 
-#thank-donors-modal .scroll-box {
-  height: 224px;
-  width: 642px;
-  border-top: 1px solid $border_gray;
-  border-bottom: 1px solid $border_gray;
-  padding: 0;
-  overflow: auto;
-  overflow-y: scroll;
-}
-
 #thank-donors-modal .donor-container {
   display: flex;
   flex-wrap: wrap;
   width: 642px;
+  height: 224px;
+  border-top: 1px solid $border_gray;
+  border-bottom: 1px solid $border_gray;
+  padding: 0;
+  overflow: hidden;
 }
 
 #thank-donors-modal .donor {
