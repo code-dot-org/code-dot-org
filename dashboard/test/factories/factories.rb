@@ -4,8 +4,8 @@ FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
   factory :course_version do
-    sequence(:key) {|n| "202#{n-1}"}
-    sequence(:display_name) {|n| "2#{n-1}-2#{n}"}
+    sequence(:key) {|n| "202#{n - 1}"}
+    sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
     with_unit_group
 
     trait :with_unit_group do
