@@ -861,6 +861,10 @@ mr:
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
             '"tint"': रंग
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': सेकंद
       gamelab_jumpTo:
         text: "{SPRITE} वर जा {LOCATION}"
       gamelab_keyPressed:

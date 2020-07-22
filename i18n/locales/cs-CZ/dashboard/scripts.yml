@@ -5396,6 +5396,22 @@ cs:
               name: Cykly pokud (while) s farmářkou
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
+            Programming with Angry Birds:
+              name: Programujeme s Angry Birds
+            Collecting Treasure with Laurel:
+              name: Sbíráme poklady s Laurel
+            Creating Art with Code:
+              name: Malujeme s pomocí kódu
+            Sticker Art with Loops:
+              name: Razítka v cyklech
+            Nested Loops in Maze:
+              name: Vnořené cykly v bludišti
+            If/Else with Bee:
+              name: Pokud/jinak se včelkou
+            While Loops with the Farmer:
+              name: Cykly pokud (while) s farmářkou
+            Harvesting with Conditionals:
+              name: Zahradničení s podmínkami
           lesson_groups:
             csf_sequencing:
               display_name: Sekvence
@@ -5420,6 +5436,22 @@ cs:
               name: Cykly pokud (while) s farmářkou
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
+            Programming with Angry Birds:
+              name: Programujeme s Angry Birds
+            Collecting Treasure with Laurel:
+              name: Sbíráme poklady s Laurel
+            Creating Art with Code:
+              name: Malujeme s pomocí kódu
+            Sticker Art with Loops:
+              name: Razítka v cyklech
+            Nested Loops in Maze:
+              name: Vnořené cykly v bludišti
+            If/Else with Bee:
+              name: Pokud/jinak se včelkou
+            While Loops with the Farmer:
+              name: Cykly pokud (while) s farmářkou
+            Harvesting with Conditionals:
+              name: Zahradničení s podmínkami
         pre-express-2020:
           stages:
             Programming with Rey and BB-8:

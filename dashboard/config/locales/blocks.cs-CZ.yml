@@ -1017,6 +1017,10 @@ cs:
         options:
           CHOICE:
             '"this"': tento
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekund
       gamelab_hideTitleScreen:
         text: skrýt titulní obrazovku
       gamelab_isTouchingEdges:

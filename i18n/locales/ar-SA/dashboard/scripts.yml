@@ -25977,6 +25977,46 @@ ar:
               name: تصميم مشروع
             Swimming Fish with Sprite Lab:
               name: السمكة السبّاحة في مختبر النقوش المتحركة
+            Programming with Angry Birds:
+              name: البرمجة مع لعبة الطيور الغاضبة
+            Debugging with Scrat:
+              name: تصحيح الأخطاء مع سكرات
+            Collecting Treasure with Laurel:
+              name: تجميع الكنز مع لوريل
+            Creating Art with Code:
+              name: إنشاء فنون باستخدام التعليمة البرمجية
+            Sticker Art with Loops:
+              name: فن الملصقات مع الحلقات
+            Nested Loops in Maze:
+              name: الحلقات المتداخلة في المتاهة
+            Snowflakes with Anna and Elsa:
+              name: رقاقات الثلج مع آنا وإلسا
+            If/Else with Bee:
+              name: قالب "If/Else" مع النحلة
+            While Loops with the Farmer:
+              name: حلقات While مع المزارع
+            Harvesting with Conditionals:
+              name: الحصاد باستخدام التعبيرات الشرطية
+            Functions with Harvester:
+              name: الدوال مع الحاصدة
+            Functions with Artist:
+              name: الدوال مع الرسام
+            Variables with Artist:
+              name: المتغيرات مع الرسام
+            Changing Variables with Bee:
+              name: تغيير المتغيرات مع النحلة
+            Changing Variables with Artist:
+              name: تغيير المتغيرات مع الرسام
+            For Loops with Bee:
+              name: حلقات For مع النحلة
+            For Loops with Artist:
+              name: حلقات For مع الرسام
+            Swimming Fish in Sprite Lab:
+              name: السمكة السبّاحة في مختبر النقوش المتحركة
+            Alien Dance Party:
+              name: حفلة رقص الكائنات الفضائية
+            Behaviors in Sprite Lab:
+              name: السلوكيات في مختبر النقوش المتحركة
           lesson_groups:
             csf_warmup:
               display_name: تجهيز
@@ -26053,6 +26093,46 @@ ar:
               name: تصميم مشروع
             Swimming Fish with Sprite Lab:
               name: السمكة السبّاحة في مختبر النقوش المتحركة
+            Programming with Angry Birds:
+              name: البرمجة مع لعبة الطيور الغاضبة
+            Debugging with Scrat:
+              name: تصحيح الأخطاء مع سكرات
+            Collecting Treasure with Laurel:
+              name: تجميع الكنز مع لوريل
+            Creating Art with Code:
+              name: إنشاء فنون باستخدام التعليمة البرمجية
+            Sticker Art with Loops:
+              name: فن الملصقات مع الحلقات
+            Nested Loops in Maze:
+              name: الحلقات المتداخلة في المتاهة
+            Snowflakes with Anna and Elsa:
+              name: رقاقات الثلج مع آنا وإلسا
+            If/Else with Bee:
+              name: قالب "If/Else" مع النحلة
+            While Loops with the Farmer:
+              name: حلقات While مع المزارع
+            Harvesting with Conditionals:
+              name: الحصاد باستخدام التعبيرات الشرطية
+            Functions with Harvester:
+              name: الدوال مع الحاصدة
+            Functions with Artist:
+              name: الدوال مع الرسام
+            Variables with Artist:
+              name: المتغيرات مع الرسام
+            Changing Variables with Bee:
+              name: تغيير المتغيرات مع النحلة
+            Changing Variables with Artist:
+              name: تغيير المتغيرات مع الرسام
+            For Loops with Bee:
+              name: حلقات For مع النحلة
+            For Loops with Artist:
+              name: حلقات For مع الرسام
+            Swimming Fish in Sprite Lab:
+              name: السمكة السبّاحة في مختبر النقوش المتحركة
+            Alien Dance Party:
+              name: حفلة رقص الكائنات الفضائية
+            Behaviors in Sprite Lab:
+              name: السلوكيات في مختبر النقوش المتحركة
         pre-express-2020:
           title: دروس سريعة للأطفال قبل تعلم القراءة (2020)
           description: تعلم علوم الكمبيوتر من خلال تجربة الدروس أدناه بالسرعة التي تناسبك! تعلم كيفية إنشاء برامج الكمبيوتر، وتطوير مهارات حل المشكلات، وشق طريقك مارًا بمجموعة من التحديات الممتعة! أنشئ ألعابًا ومشاريع إبداعية لمشاركتها مع الأصدقاء والعائلة والمعلمين.
@@ -26093,6 +26173,16 @@ ar:
             Make a Game in Play Lab:
               name: تصميم لعبة في مختبر اللعب
               description_teacher: في هذا النشاط عبر الإنترنت، ستتاح للطلاب الفرصة لتعلم كيفية استخدام الأحداث في مختبر الألعاب وكيفية تطبيق جميع مهارات البرمجة التي تعلموها لإنشاء لعبة رسوم متحركة. حان الوقت للإبداع وإنشاء لعبة في مختبر الألعاب!
+            Loops with Scrat:
+              name: الحلقات مع سكرات
+            Loops with Laurel:
+              name: الحلقات مع لوريل
+            Drawing Gardens with Loops:
+              name: رسم الحدائق باستخدام الحلقات
+            On the Move with Events:
+              name: أثناء التنقل مع الأحداث
+            A Royal Battle with Events:
+              name: معركة ملكية باستخدام الأحداث
           lesson_groups:
             csf_sequencing:
               display_name: التجزيء
@@ -26135,6 +26225,16 @@ ar:
             Make a Game in Play Lab:
               name: تصميم لعبة في مختبر اللعب
               description_teacher: في هذا النشاط عبر الإنترنت، ستتاح للطلاب الفرصة لتعلم كيفية استخدام الأحداث في مختبر الألعاب وكيفية تطبيق جميع مهارات البرمجة التي تعلموها لإنشاء لعبة رسوم متحركة. حان الوقت للإبداع وإنشاء لعبة في مختبر الألعاب!
+            Loops with Scrat:
+              name: الحلقات مع سكرات
+            Loops with Laurel:
+              name: الحلقات مع لوريل
+            Drawing Gardens with Loops:
+              name: رسم الحدائق باستخدام الحلقات
+            On the Move with Events:
+              name: أثناء التنقل مع الأحداث
+            A Royal Battle with Events:
+              name: معركة ملكية باستخدام الأحداث
         csp1-2020:
           stages:
             new stage:
@@ -27475,3 +27575,10 @@ ar:
           lesson_groups:
             lg_1:
               display_name: محتوى
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: الوحدة 1
+          lessons:
+            Module 1:
+              name: الوحدة 1

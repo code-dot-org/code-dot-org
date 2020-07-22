@@ -986,6 +986,8 @@ zh-CN:
       school_name: 学校名称
       school_city: 学校所在城市
       school_country: 学校所在国家
+      colombian_school_city: 学校所在城市
+      colombian_school_name: 学校名称
       ages: 今年将教什么年纪的学生？
       subjects: 今年教的科目是什么？
       resources: 您使用以下哪种计算机科学教育资源？

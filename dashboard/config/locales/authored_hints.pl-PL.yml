@@ -173,10 +173,10 @@ pl-PL:
           Potrzebujesz pomocy z obliczania kątów?\
           \*\* 360/12 = 30 \*\*
       2-3 Artist Nested Loops 5:
-        2-3_Artist_Nested_Loops_5_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
-          o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
-          \  \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone
-          o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
+        2-3_Artist_Nested_Loops_5_a: "Spróbuj użyć bloku \"skok do przodu\", aby przejść
+          z górnej części jednego kwadratu do miejsca, w którym rozpocznie się rysowanie
+          następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są
+          one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
       2-3 Artist Nested Loops 7:
         2-3_Artist_Nested_Loops_7_a: "Jaki powinien być Twój ruch w każdej pętli?
           \  \n\nIle to jest 360/10?"
@@ -1327,6 +1327,23 @@ pl-PL:
       OPD-K5-events-6:
         courseC_flappy_events5_a: Musisz użyć bloku "Zdobądź punkt", aby przejść ten
           poziom.
+      OPD-K5-projects-2:
+        courseE_playLab_scaffold1_a: Blok "Ustaw postać 1 w obrazku???" może być użyty
+          w celu dodania postaci do sceny.
+        courseE_playLab_scaffold1_b: Wstaw blok "Ustaw postać" w ramach "Po uruchomieniu",
+          aby Twoja postać pojawiła się na początku programu.
+        courseE_playLab_scaffold1_c: Użyj "Ustaw tło???", aby wybrać tło dla Twojej
+          sceny.
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_a: Wyciągnij menu rozwijane wydarzenia "Gdy strzałka
+          **\_**", aby zmienić kierunek elementów sterujących bloku.
+        courseE_playLab_scaffold1_b: Powinieneś mieć cztery bloki wydarzeń "Gdy strzałka"
+          z kierunkiem poruszania się pod każdym z nich.
+        courseE_playLab_scaffold1_c: Kiedy skończysz, powinieneś być w stanie poruszać
+          swoim bohaterem przy pomocy klawiszy strzałek!
+      OPD-K5-projects-5:
+        courseE_playLab_scaffold4_a: Użyj "Zdobądź punkt", aby dodać punkt oraz "Usuń
+          punkt", aby odjąć punkt.
       OPD-K5-variables-1:
         grade5_artist_variables_triangles1_a: Musisz pamiętać, że aby utworzyć wewnętrzny
           kąt o 60 stopniach w tym trójkącie artysta musi się obrócić o 120 stopni.
@@ -1680,14 +1697,24 @@ pl-PL:
           raz, możesz stworzyć ten sam projekt w ostatnim rogu. Możesz też "skoczyć
           do" innych pozycji albo zmienić wszystko całkowicie w jaki tylko chcesz
           sposób!
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge1_a: Ten blok "Skocz do" pozwala Ci przenieść
+          grafika zombie na dowolny piksel na siatce wtedy, kiedy chcesz. To działa
+          na zasadzie przenoszenia go o pewną liczbę pikseli w prawo i o pewną liczbę
+          pikseli w dół. Liczy się to zawsze od górnego lewego rogu, co oznacza, że
+          to nie ma znaczenia gdzie jest grafik zombie _przed_ uruchomieniem komendy!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
           spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
           ich działanie. Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
+        courseE_bee_functions_challenge1_b: Pamiętaj, aby zbudować kod wewnątrz zielonego
+          bloku funkcji.
       course3_bee_functions_challenge2:
         courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
           spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
           ich działanie. Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
+        courseE_bee_functions_challenge1_b: Pamiętaj, aby zbudować kod wewnątrz zielonego
+          bloku funkcji.
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Przycisk `STEP` może być bardzo pomocny
           w tym wyzwaniu.
@@ -1707,6 +1734,28 @@ pl-PL:
         courseC_maze_debugging_challenge2_c: Są dwie ścieżki, którymi możesz podążać,
           używając tylko bloku "idź naprzód" i tylko czterech skrętów. Jeśli znajdziesz
           sposób na użycie bloku "powtórz", może ich być nawet więcej!
+      course3_playLab_challenge1:
+        courseE_playLab_challenge1_a: "Oto kilka rzeczy, które możesz zrobić, gdy
+          gracz zwycięży w ramach gry:\n\n-   Sprawić, by dinozaur znikł.\n-   Zatrzymać
+          wiewiórki.\n-   Sprawić, by i wiewiórki, i dinozaur ucieszyły się. \n-   Ustawić
+          nowe tło.\n-   Sprawić, by rycerz podziękował graczowi za pomoc.\n-   Sprawić,
+          by wszystkie postaci zniknęły i wyświetlić komunikat: \"Wygrywasz!\"."
+        courseE_playLab_challenge1_b: "Oto kilka rzeczy, które możesz zrobić, gdy
+          gracz przegrywa w ramach gry:\n\n-   Sprawić, by rycerz znikł.\n-   Sprawić,
+          by wiewiórki były smutne.\n-   Sprawić, by dinozaur coś powiedział. \n-
+          \  Ustawić nowe tło.\n-   Sprawić, by wszystkie postaci zniknęły i wyświetlić
+          komunikat: \"Koniec gry\"."
+      course4_artist_concept_challenge2:
+        courseE_artist_concept_challenge2_a: 'Po zdefiniowaniu funkcji możesz ją wywoływać
+          ponownie bez końca, kiedy chcesz i gdzie chcesz! '
+        courseE_artist_concept_challenge2_b: 'Możesz skakać do dwóch różnych pozycji
+          na płótnie malarskim czyli w obszarze roboczym  z użyciem tej komendy:'
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge1_a: Ten blok "Skocz do" pozwala Ci przenieść
+          grafika zombie na dowolny piksel na siatce wtedy, kiedy chcesz. To działa
+          na zasadzie przenoszenia go o pewną liczbę pikseli w prawo i o pewną liczbę
+          pikseli w dół. Liczy się to zawsze od górnego lewego rogu, co oznacza, że
+          to nie ma znaczenia gdzie jest grafik zombie _przed_ uruchomieniem komendy!
       course4_bee_fwp_challenge1:
         courseF_bee_fwp_challenge1_b: |-
           Zobacz ile gotowej do żniw kukurydzy w każdym z miejsc. Czy widzisz wzór liczenia? Parametr `Length` powinien być wykorzystany do ustawienia maksymalnej wartości w `for loop`.
@@ -3373,6 +3422,40 @@ pl-PL:
         courseB_starWars_prog9_a: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć
           co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
         courseB_starWars_prog9_b: Jest wiele sposobów na rozwiązanie tej zagadki.
+      courseC19_playLab_EOC1:
+        courseE_playLab_scaffold1_a: Blok "Ustaw postać 1 w obrazku???" może być użyty
+          w celu dodania postaci do sceny.
+        courseE_playLab_scaffold1_b: Wstaw blok "Ustaw postać" w ramach "Po uruchomieniu",
+          aby Twoja postać pojawiła się na początku programu.
+        courseE_playLab_scaffold1_c: Użyj "Ustaw tło???", aby wybrać tło dla Twojej
+          sceny.
+      courseC19_playLab_EOC1_2020:
+        courseE_playLab_scaffold1_a: Blok "Ustaw postać 1 w obrazku???" może być użyty
+          w celu dodania postaci do sceny.
+        courseE_playLab_scaffold1_b: Wstaw blok "Ustaw postać" w ramach "Po uruchomieniu",
+          aby Twoja postać pojawiła się na początku programu.
+        courseE_playLab_scaffold1_c: Użyj "Ustaw tło???", aby wybrać tło dla Twojej
+          sceny.
+      courseC19_playLab_EOC2:
+        courseE_playLab_scaffold1_a: Wyciągnij menu rozwijane wydarzenia "Gdy strzałka
+          **\_**", aby zmienić kierunek elementów sterujących bloku.
+        courseE_playLab_scaffold1_b: Powinieneś mieć cztery bloki wydarzeń "Gdy strzałka"
+          z kierunkiem poruszania się pod każdym z nich.
+        courseE_playLab_scaffold1_c: Kiedy skończysz, powinieneś być w stanie poruszać
+          swoim bohaterem przy pomocy klawiszy strzałek!
+      courseC19_playLab_EOC2_2020:
+        courseE_playLab_scaffold1_a: Wyciągnij menu rozwijane wydarzenia "Gdy strzałka
+          **\_**", aby zmienić kierunek elementów sterujących bloku.
+        courseE_playLab_scaffold1_b: Powinieneś mieć cztery bloki wydarzeń "Gdy strzałka"
+          z kierunkiem poruszania się pod każdym z nich.
+        courseE_playLab_scaffold1_c: Kiedy skończysz, powinieneś być w stanie poruszać
+          swoim bohaterem przy pomocy klawiszy strzałek!
+      courseC19_playLab_EOC4:
+        courseE_playLab_scaffold4_a: Użyj "Zdobądź punkt", aby dodać punkt oraz "Usuń
+          punkt", aby odjąć punkt.
+      courseC19_playLab_EOC4_2020:
+        courseE_playLab_scaffold4_a: Użyj "Zdobądź punkt", aby dodać punkt oraz "Usuń
+          punkt", aby odjąć punkt.
       courseC_PlayLab_events1:
         courseC_PlayLab_events1_a: |-
           Dołącz ten blok do bloku "W toku działania":
@@ -3940,6 +4023,240 @@ pl-PL:
           narysuję linię automatycznie.
         courseC_artist_prog2_b: Masz problem z zakrętem? Użyj bloku "skręć w prawo
           o 90 stopni".
+      courseC_artist_prog3:
+        courseC_artist_prog3_a: |-
+          W celu utworzenia tego okna narysuj o kwadrat o bokach o długości 100 pikseli.
+
+          -   Przejdź do przodu
+          -   Wykonaj obrót
+              \--   Przejdź do przodu
+          -   Wykonaj obrót
+          -   Przejdź do przodu
+          -   Wykonaj obrót
+          -   Przejdź do przodu
+        courseC_artist_prog3_b: Czy chcesz utworzyć krótszy kod? W tej łamigłówce
+          spróbuj użyć pętli.
+      courseC_artist_prog3_2018:
+        courseC_artist_prog3_a: |-
+          W celu utworzenia tego okna narysuj o kwadrat o bokach o długości 100 pikseli.
+
+          -   Przejdź do przodu
+          -   Wykonaj obrót
+              \--   Przejdź do przodu
+          -   Wykonaj obrót
+          -   Przejdź do przodu
+          -   Wykonaj obrót
+          -   Przejdź do przodu
+        courseC_artist_prog3_b: Czy chcesz utworzyć krótszy kod? W tej łamigłówce
+          spróbuj użyć pętli.
+      courseC_artist_prog3_2019:
+        courseC_artist_prog3_a: |-
+          W celu utworzenia tego okna narysuj o kwadrat o bokach o długości 100 pikseli.
+
+          -   Przejdź do przodu
+          -   Wykonaj obrót
+              \--   Przejdź do przodu
+          -   Wykonaj obrót
+          -   Przejdź do przodu
+          -   Wykonaj obrót
+          -   Przejdź do przodu
+        courseC_artist_prog3_b: Czy chcesz utworzyć krótszy kod? W tej łamigłówce
+          spróbuj użyć pętli.
+      courseC_artist_prog3_2020:
+        courseC_artist_prog3_a: |-
+          W celu utworzenia tego okna narysuj o kwadrat o bokach o długości 100 pikseli.
+
+          -   Przejdź do przodu
+          -   Wykonaj obrót
+              \--   Przejdź do przodu
+          -   Wykonaj obrót
+          -   Przejdź do przodu
+          -   Wykonaj obrót
+          -   Przejdź do przodu
+        courseC_artist_prog3_b: Czy chcesz utworzyć krótszy kod? W tej łamigłówce
+          spróbuj użyć pętli.
+      courseC_artist_prog4:
+        courseC_artist_prog4_a: Narysuj trójkąt na górze, aby skończyć tworzenie rakiety!
+        courseC_artist_prog4_b: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog4_c: |-
+          Aby narysować trójkąt będziesz chciał skorzystać z następujących komend
+
+          -   Idź do przodu
+          -   Skręć w lewo o 120 stopni
+          -   Idź do przodu
+          -   Skręć w lewo o 120 stopni
+          -   Idź do przodu
+      courseC_artist_prog4_2018:
+        courseC_artist_prog4_a: Narysuj trójkąt na górze, aby skończyć tworzenie rakiety!
+        courseC_artist_prog4_b: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog4_c: |-
+          Aby narysować trójkąt będziesz chciał skorzystać z następujących komend
+
+          -   Idź do przodu
+          -   Skręć w lewo o 120 stopni
+          -   Idź do przodu
+          -   Skręć w lewo o 120 stopni
+          -   Idź do przodu
+      courseC_artist_prog4_2019:
+        courseC_artist_prog4_a: Narysuj trójkąt na górze, aby skończyć tworzenie rakiety!
+        courseC_artist_prog4_b: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog4_c: |-
+          Aby narysować trójkąt będziesz chciał skorzystać z następujących komend
+
+          -   Idź do przodu
+          -   Skręć w lewo o 120 stopni
+          -   Idź do przodu
+          -   Skręć w lewo o 120 stopni
+          -   Idź do przodu
+      courseC_artist_prog4_2020:
+        courseC_artist_prog4_a: Narysuj trójkąt na górze, aby skończyć tworzenie rakiety!
+        courseC_artist_prog4_b: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog4_c: |-
+          Aby narysować trójkąt będziesz chciał skorzystać z następujących komend
+
+          -   Idź do przodu
+          -   Skręć w lewo o 120 stopni
+          -   Idź do przodu
+          -   Skręć w lewo o 120 stopni
+          -   Idź do przodu
+      courseC_artist_prog5:
+        courseC_artist_prog5_a: 'Zwolnij tempo przewijania w dół, aż będziesz w stanie
+          uruchomić i przechodzić wiersze kodu po kolei, aby zobaczyć, gdzie coś poszło
+          nie tak, jak powinno. '
+        courseC_artist_prog5_c: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog5_d: 'Każdy obrót należy wykonać pod kątem 90 stopni. '
+      courseC_artist_prog5_2018:
+        courseC_artist_prog5_a: 'Zwolnij tempo przewijania w dół, aż będziesz w stanie
+          uruchomić i przechodzić wiersze kodu po kolei, aby zobaczyć, gdzie coś poszło
+          nie tak, jak powinno. '
+        courseC_artist_prog5_d: 'Każdy obrót należy wykonać pod kątem 90 stopni. '
+      courseC_artist_prog5_2019:
+        courseC_artist_prog5_a: 'Zwolnij tempo przewijania w dół, aż będziesz w stanie
+          uruchomić i przechodzić wiersze kodu po kolei, aby zobaczyć, gdzie coś poszło
+          nie tak, jak powinno. '
+        courseC_artist_prog5_d: 'Każdy obrót należy wykonać pod kątem 90 stopni. '
+      courseC_artist_prog5_2020:
+        courseC_artist_prog5_a: 'Zwolnij tempo przewijania w dół, aż będziesz w stanie
+          uruchomić i przechodzić wiersze kodu po kolei, aby zobaczyć, gdzie coś poszło
+          nie tak, jak powinno. '
+        courseC_artist_prog5_d: 'Każdy obrót należy wykonać pod kątem 90 stopni. '
+      courseC_artist_prog6:
+        courseC_artist_prog6_a: Grafik jest gotowy, patrzy we właściwą stronę, aby
+          narysować pierwszą linię.
+        courseC_artist_prog6_b: Ten romb to tak naprawdę kwadrat stojący na wierzchołku.
+        courseC_artist_prog6_c: Z uwagi na fakt, że romb jest też kwadratem, sprawdź,
+          czy każdy kąt w rogu ma 90 stopni.
+      courseC_artist_prog6_2018:
+        courseC_artist_prog6_a: Grafik jest gotowy, patrzy we właściwą stronę, aby
+          narysować pierwszą linię.
+        courseC_artist_prog6_b: Ten romb to tak naprawdę kwadrat stojący na wierzchołku.
+        courseC_artist_prog6_c: Z uwagi na fakt, że romb jest też kwadratem, sprawdź,
+          czy każdy kąt w rogu ma 90 stopni.
+      courseC_artist_prog6_2019:
+        courseC_artist_prog6_a: Grafik jest gotowy, patrzy we właściwą stronę, aby
+          narysować pierwszą linię.
+        courseC_artist_prog6_b: Ten romb to tak naprawdę kwadrat stojący na wierzchołku.
+        courseC_artist_prog6_c: Z uwagi na fakt, że romb jest też kwadratem, sprawdź,
+          czy każdy kąt w rogu ma 90 stopni.
+      courseC_artist_prog6_2020:
+        courseC_artist_prog6_a: Grafik jest gotowy, patrzy we właściwą stronę, aby
+          narysować pierwszą linię.
+        courseC_artist_prog6_b: Ten romb to tak naprawdę kwadrat stojący na wierzchołku.
+        courseC_artist_prog6_c: Z uwagi na fakt, że romb jest też kwadratem, sprawdź,
+          czy każdy kąt w rogu ma 90 stopni.
+      courseC_artist_prog7:
+        courseC_artist_prog7_a: Każdy kąt ma 45 lub 90 stopni.
+        courseC_artist_prog7_b: |-
+          Czy po pierwszym kroku wszystko jest w porządku?\
+          Czy po drugim kroku wszystko jest w porządku?\
+          Gdzie sprawy poszły nie tak, jak powinny?
+        courseC_artist_prog7_c: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog7_d: |-
+          Będziesz chciał skorzystać z następujących komend:
+
+          -   Idź do przodu
+          -   Skręć w prawo o 45 stopni
+          -   Idź do przodu
+          -   Skręć w prawo o 90 stopni
+          -   Idź do przodu
+          -   Skręć w prawo o 45 stopni
+
+          Powtórz ten schemat 2 razy!
+      courseC_artist_prog7_2018:
+        courseC_artist_prog7_a: Każdy kąt ma 45 lub 90 stopni.
+        courseC_artist_prog7_b: |-
+          Czy po pierwszym kroku wszystko jest w porządku?\
+          Czy po drugim kroku wszystko jest w porządku?\
+          Gdzie sprawy poszły nie tak, jak powinny?
+        courseC_artist_prog7_c: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog7_d: |-
+          Będziesz chciał skorzystać z następujących komend:
+
+          -   Idź do przodu
+          -   Skręć w prawo o 45 stopni
+          -   Idź do przodu
+          -   Skręć w prawo o 90 stopni
+          -   Idź do przodu
+          -   Skręć w prawo o 45 stopni
+
+          Powtórz ten schemat 2 razy!
+      courseC_artist_prog7_2019:
+        courseC_artist_prog7_a: Każdy kąt ma 45 lub 90 stopni.
+        courseC_artist_prog7_b: |-
+          Czy po pierwszym kroku wszystko jest w porządku?\
+          Czy po drugim kroku wszystko jest w porządku?\
+          Gdzie sprawy poszły nie tak, jak powinny?
+        courseC_artist_prog7_c: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog7_d: |-
+          Będziesz chciał skorzystać z następujących komend:
+
+          -   Idź do przodu
+          -   Skręć w prawo o 45 stopni
+          -   Idź do przodu
+          -   Skręć w prawo o 90 stopni
+          -   Idź do przodu
+          -   Skręć w prawo o 45 stopni
+
+          Powtórz ten schemat 2 razy!
+      courseC_artist_prog7_2020:
+        courseC_artist_prog7_a: Każdy kąt ma 45 lub 90 stopni.
+        courseC_artist_prog7_b: |-
+          Czy po pierwszym kroku wszystko jest w porządku?\
+          Czy po drugim kroku wszystko jest w porządku?\
+          Gdzie sprawy poszły nie tak, jak powinny?
+        courseC_artist_prog7_c: Możesz użyć menu rozwijanego na blokach "Obróć", aby
+          przekonać się, jaki kąt jest potrzebny!
+        courseC_artist_prog7_d: |-
+          Będziesz chciał skorzystać z następujących komend:
+
+          -   Idź do przodu
+          -   Skręć w prawo o 45 stopni
+          -   Idź do przodu
+          -   Skręć w prawo o 90 stopni
+          -   Idź do przodu
+          -   Skręć w prawo o 45 stopni
+
+          Powtórz ten schemat 2 razy!
+      courseC_artist_prog_challenge1:
+        courseC_artist_prog_challenge1_a: Możesz to narysować w formie prostokąta
+          przedzielonego linią w środku lub jako dwa różne kwadraty!
+      courseC_artist_prog_challenge1_2018:
+        courseC_artist_prog_challenge1_a: Możesz to narysować w formie prostokąta
+          przedzielonego linią w środku lub jako dwa różne kwadraty!
+      courseC_artist_prog_challenge1_2019:
+        courseC_artist_prog_challenge1_a: Możesz to narysować w formie prostokąta
+          przedzielonego linią w środku lub jako dwa różne kwadraty!
+      courseC_artist_prog_challenge1_2020:
+        courseC_artist_prog_challenge1_a: Możesz to narysować w formie prostokąta
+          przedzielonego linią w środku lub jako dwa różne kwadraty!
       courseC_artist_prog_challenge2a:
         courseC_artist_prog_challenge2_a: Po narysowaniu pierwszej linii, obróć się
           w lewo zanim narysujesz drugą linię.
@@ -4745,21 +5062,77 @@ pl-PL:
           -   Co Scrat powinien zrobić?
           -   Co Scrat robi?
           -   Jakie informacje to ze sobą niesie?
+        courseC_maze_debugging6_b: |-
+          Po znalezieniu i naprawieniu pierwszego błędu, dopilnuj, aby wykorzystać proces debugowania i znaleźć kolejny.
+
+          Powtarzaj proces debugowania do czasu zadziałania programu!
       courseC_maze_debugging6_2018:
         courseC_maze_debugging6_a: |-
           -   Co Scrat powinien zrobić?
           -   Co Scrat robi?
           -   Jakie informacje to ze sobą niesie?
+        courseC_maze_debugging6_b: |-
+          Po znalezieniu i naprawieniu pierwszego błędu, dopilnuj, aby wykorzystać proces debugowania i znaleźć kolejny.
+
+          Powtarzaj proces debugowania do czasu zadziałania programu!
       courseC_maze_debugging6_2019:
         courseC_maze_debugging6_a: |-
           -   Co Scrat powinien zrobić?
           -   Co Scrat robi?
           -   Jakie informacje to ze sobą niesie?
+        courseC_maze_debugging6_b: |-
+          Po znalezieniu i naprawieniu pierwszego błędu, dopilnuj, aby wykorzystać proces debugowania i znaleźć kolejny.
+
+          Powtarzaj proces debugowania do czasu zadziałania programu!
       courseC_maze_debugging6_2020:
         courseC_maze_debugging6_a: |-
           -   Co Scrat powinien zrobić?
           -   Co Scrat robi?
           -   Jakie informacje to ze sobą niesie?
+        courseC_maze_debugging6_b: |-
+          Po znalezieniu i naprawieniu pierwszego błędu, dopilnuj, aby wykorzystać proces debugowania i znaleźć kolejny.
+
+          Powtarzaj proces debugowania do czasu zadziałania programu!
+      courseC_maze_debugging7:
+        courseC_maze_debugging7_a: "\\-- Czy po pierwszym kroku wszystko jest w porządku?\n\n-
+          \  Czy po drugim kroku wszystko jest w porządku? \n-   Gdzie sprawy poszły
+          nie tak, jak powinny?"
+        courseC_maze_debugging7_b: Nie zapomnij użyć przycisku „Krok”, aby uruchamiać
+          i przechodzić każdy wiersz programu po kolei!
+        courseC_maze_debugging7_c: |-
+          Po znalezieniu i naprawieniu pierwszego błędu, dopilnuj, aby wykorzystać proces debugowania i znaleźć kolejny.
+
+          Powtarzaj proces debugowania do czasu zadziałania programu!
+      courseC_maze_debugging7_2018:
+        courseC_maze_debugging7_a: "\\-- Czy po pierwszym kroku wszystko jest w porządku?\n\n-
+          \  Czy po drugim kroku wszystko jest w porządku? \n-   Gdzie sprawy poszły
+          nie tak, jak powinny?"
+        courseC_maze_debugging7_b: Nie zapomnij użyć przycisku „Krok”, aby uruchamiać
+          i przechodzić każdy wiersz programu po kolei!
+        courseC_maze_debugging7_c: |-
+          Po znalezieniu i naprawieniu pierwszego błędu, dopilnuj, aby wykorzystać proces debugowania i znaleźć kolejny.
+
+          Powtarzaj proces debugowania do czasu zadziałania programu!
+      courseC_maze_debugging7_2019:
+        courseC_maze_debugging7_a: "\\-- Czy po pierwszym kroku wszystko jest w porządku?\n\n-
+          \  Czy po drugim kroku wszystko jest w porządku? \n-   Gdzie sprawy poszły
+          nie tak, jak powinny?"
+        courseC_maze_debugging7_b: Nie zapomnij użyć przycisku „Krok”, aby uruchamiać
+          i przechodzić każdy wiersz programu po kolei!
+        courseC_maze_debugging7_c: |-
+          Po znalezieniu i naprawieniu pierwszego błędu, dopilnuj, aby wykorzystać proces debugowania i znaleźć kolejny.
+
+          Powtarzaj proces debugowania do czasu zadziałania programu!
+      courseC_maze_debugging7_2020:
+        courseC_maze_debugging7_a: "\\-- Czy po pierwszym kroku wszystko jest w porządku?\n\n-
+          \  Czy po drugim kroku wszystko jest w porządku? \n-   Gdzie sprawy poszły
+          nie tak, jak powinny?"
+        courseC_maze_debugging7_b: Nie zapomnij użyć przycisku „Krok”, aby uruchamiać
+          i przechodzić każdy wiersz programu po kolei!
+        courseC_maze_debugging7_c: |-
+          Po znalezieniu i naprawieniu pierwszego błędu, dopilnuj, aby wykorzystać proces debugowania i znaleźć kolejny.
+
+          Powtarzaj proces debugowania do czasu zadziałania programu!
       courseC_maze_loops_challenge1a:
         courseC_maze_loops_challenge1_a: Pomyśl o tej  ścieżce tak, jakby była dwoma
           różnymi elementami.  Każdy ma wzór, który możesz powtórzyć.
@@ -5486,36 +5859,40 @@ pl-PL:
 
           ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
         courseD_artist_nestedLoops1a_b: Jeśli utworzysz swój trójkąt przy pomocy pętli,
-          grafik powinien być kierowany w tym samym kierunku, w którym rozpoczął.
+          grafik powinien być skierowany w tym samym kierunku, w którym rozpoczął.
           To znacznie ułatwi wykonywanie skrętów o 60 stopni.
-        courseD_artist_nestedLoops1a_c: Jeśli pragniesz koloru, skorzystaj z bloku
-          "Ustaw kolor" w swoim kodzie. Nie musisz dopasować kolorów w obrazie szablonu.
+        courseD_artist_nestedLoops1a_c: Jeśli chcesz zastosować kolory, skorzystaj
+          z bloku "Ustaw kolor" w swoim kodzie. Nie musisz dopasować kolorów w obrazie
+          szablonu.
       courseD_artist_nestedLoops1a_2018:
         courseD_artist_nestedLoops1a_b: Jeśli utworzysz swój trójkąt przy pomocy pętli,
-          grafik powinien być kierowany w tym samym kierunku, w którym rozpoczął.
+          grafik powinien być skierowany w tym samym kierunku, w którym rozpoczął.
           To znacznie ułatwi wykonywanie skrętów o 60 stopni.
-        courseD_artist_nestedLoops1a_c: Jeśli pragniesz koloru, skorzystaj z bloku
-          "Ustaw kolor" w swoim kodzie. Nie musisz dopasować kolorów w obrazie szablonu.
+        courseD_artist_nestedLoops1a_c: Jeśli chcesz zastosować kolory, skorzystaj
+          z bloku "Ustaw kolor" w swoim kodzie. Nie musisz dopasować kolorów w obrazie
+          szablonu.
       courseD_artist_nestedLoops1a_2019:
         courseD_artist_nestedLoops1a_a: |-
           Będziesz musiał narysować w sumie 6 trójkątów. Po zakończeniu rysowania każdego trójkąta, obróć go o 60 stopni i przejdź do rozpoczęcia rysowania kolejnego.
 
           ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
         courseD_artist_nestedLoops1a_b: Jeśli utworzysz swój trójkąt przy pomocy pętli,
-          grafik powinien być kierowany w tym samym kierunku, w którym rozpoczął.
+          grafik powinien być skierowany w tym samym kierunku, w którym rozpoczął.
           To znacznie ułatwi wykonywanie skrętów o 60 stopni.
-        courseD_artist_nestedLoops1a_c: Jeśli pragniesz koloru, skorzystaj z bloku
-          "Ustaw kolor" w swoim kodzie. Nie musisz dopasować kolorów w obrazie szablonu.
+        courseD_artist_nestedLoops1a_c: Jeśli chcesz zastosować kolory, skorzystaj
+          z bloku "Ustaw kolor" w swoim kodzie. Nie musisz dopasować kolorów w obrazie
+          szablonu.
       courseD_artist_nestedLoops1a_2020:
         courseD_artist_nestedLoops1a_a: |-
           Będziesz musiał narysować w sumie 6 trójkątów. Po zakończeniu rysowania każdego trójkąta, obróć go o 60 stopni i przejdź do rozpoczęcia rysowania kolejnego.
 
           ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
         courseD_artist_nestedLoops1a_b: Jeśli utworzysz swój trójkąt przy pomocy pętli,
-          grafik powinien być kierowany w tym samym kierunku, w którym rozpoczął.
+          grafik powinien być skierowany w tym samym kierunku, w którym rozpoczął.
           To znacznie ułatwi wykonywanie skrętów o 60 stopni.
-        courseD_artist_nestedLoops1a_c: Jeśli pragniesz koloru, skorzystaj z bloku
-          "Ustaw kolor" w swoim kodzie. Nie musisz dopasować kolorów w obrazie szablonu.
+        courseD_artist_nestedLoops1a_c: Jeśli chcesz zastosować kolory, skorzystaj
+          z bloku "Ustaw kolor" w swoim kodzie. Nie musisz dopasować kolorów w obrazie
+          szablonu.
       courseD_artist_nestedLoops2:
         courseD_artist_nestedLoops2_a: Dokonaj zagnieżdżenia swoich pętli otaczając
           swój trójkąt przy pomocy kolejnej pętli "Powtarzaj".
@@ -5537,99 +5914,103 @@ pl-PL:
         courseD_artist_nestedLoops2_b: Pamiętaj o umieszczeniu wewnątrz pętli bloku
           "Wykonaj skręt" tak, aby artysta wykonał skręt po każdym trójkącie.
       courseD_artist_nestedLoops3:
-        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
-          o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
-          \  \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone
-          o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
+        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku \"skok do przodu\", aby
+          przejść z górnej części jednego kwadratu do miejsca, w którym rozpocznie
+          się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli
+          wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz
+          skoczyć?"
         courseD_artist_nestedLoops3_b: Nie zapomnij skorzystać z zagnieżdżonej pętli,
           aby szybko rozwiązać to zadanie.
         courseD_artist_nestedLoops3_c: Rozpocznij od wykorzystania pętli "Powtarzaj",
-          aby wykonać jeden prostokąt. Następnie powtórz ten kwadrat 8 razy, przeskakując
+          aby wykonać jeden kwadrat. Następnie powtórz ten kwadrat 8 razy, przeskakując
           o 40 pikseli pomiędzy nimi.
       courseD_artist_nestedLoops3_2018:
-        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
-          o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
-          \  \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone
-          o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
+        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku \"skok do przodu\", aby
+          przejść z górnej części jednego kwadratu do miejsca, w którym rozpocznie
+          się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli
+          wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz
+          skoczyć?"
         courseD_artist_nestedLoops3_b: Nie zapomnij skorzystać z zagnieżdżonej pętli,
           aby szybko rozwiązać to zadanie.
         courseD_artist_nestedLoops3_c: Rozpocznij od wykorzystania pętli "Powtarzaj",
-          aby wykonać jeden prostokąt. Następnie powtórz ten kwadrat 8 razy, przeskakując
+          aby wykonać jeden kwadrat. Następnie powtórz ten kwadrat 8 razy, przeskakując
           o 40 pikseli pomiędzy nimi.
       courseD_artist_nestedLoops3_2019:
-        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
-          o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
-          \  \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone
-          o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
+        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku \"skok do przodu\", aby
+          przejść z górnej części jednego kwadratu do miejsca, w którym rozpocznie
+          się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli
+          wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz
+          skoczyć?"
         courseD_artist_nestedLoops3_b: Nie zapomnij skorzystać z zagnieżdżonej pętli,
           aby szybko rozwiązać to zadanie.
         courseD_artist_nestedLoops3_c: Rozpocznij od wykorzystania pętli "Powtarzaj",
-          aby wykonać jeden prostokąt. Następnie powtórz ten kwadrat 8 razy, przeskakując
+          aby wykonać jeden kwadrat. Następnie powtórz ten kwadrat 8 razy, przeskakując
           o 40 pikseli pomiędzy nimi.
       courseD_artist_nestedLoops3_2020:
-        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
-          o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
-          \  \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone
-          o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
+        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku \"skok do przodu\", aby
+          przejść z górnej części jednego kwadratu do miejsca, w którym rozpocznie
+          się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli
+          wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz
+          skoczyć?"
         courseD_artist_nestedLoops3_b: Nie zapomnij skorzystać z zagnieżdżonej pętli,
           aby szybko rozwiązać to zadanie.
         courseD_artist_nestedLoops3_c: Rozpocznij od wykorzystania pętli "Powtarzaj",
-          aby wykonać jeden prostokąt. Następnie powtórz ten kwadrat 8 razy, przeskakując
+          aby wykonać jeden kwadrat. Następnie powtórz ten kwadrat 8 razy, przeskakując
           o 40 pikseli pomiędzy nimi.
       courseD_artist_nestedLoops4:
         courseD_artist_nestedLoops4_d: W celu rozwiązania tego w sposób poprawny,
-          trzeba przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twój
-          okrą będzie nieco wykrzywiony!
+          trzeba przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twoje
+          okręgi będą nieco wykrzywione!
         courseD_artist_nestedLoops4_a: |-
           W celu utworzenia okręgu:
 
           -   powtórz 360 razy
               -   przejdź do przodu o 1 piksel
-              -   wykonaj skręt o 2 stopień
-        courseD_artist_nestedLoops4_b: Nie zapomnij przeskoczyć do przodu po utworzeniu
-          każdego okręgu.
+              -   wykonaj skręt o 1 stopień
+        courseD_artist_nestedLoops4_b: Nie zapomnij przeskoczyć do przodu o 50 pikseli
+          pomiędzy poszczególnymi okręgami.
         courseD_artist_nestedLoops4_c: Użyj zagnieżdżonej pętli, aby narysować swoje
           okręgi 4 razy.
       courseD_artist_nestedLoops4_2018:
         courseD_artist_nestedLoops4_d: W celu rozwiązania tego w sposób poprawny,
-          trzeba przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twój
-          okrą będzie nieco wykrzywiony!
+          trzeba przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twoje
+          okręgi będą nieco wykrzywione!
         courseD_artist_nestedLoops4_a: |-
           W celu utworzenia okręgu:
 
           -   powtórz 360 razy
               -   przejdź do przodu o 1 piksel
-              -   wykonaj skręt o 2 stopień
-        courseD_artist_nestedLoops4_b: Nie zapomnij przeskoczyć do przodu po utworzeniu
-          każdego okręgu.
+              -   wykonaj skręt o 1 stopień
+        courseD_artist_nestedLoops4_b: Nie zapomnij przeskoczyć do przodu o 50 pikseli
+          pomiędzy poszczególnymi okręgami.
         courseD_artist_nestedLoops4_c: Użyj zagnieżdżonej pętli, aby narysować swoje
           okręgi 4 razy.
       courseD_artist_nestedLoops4_2019:
         courseD_artist_nestedLoops4_d: W celu rozwiązania tego w sposób poprawny,
-          trzeba przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twój
-          okrą będzie nieco wykrzywiony!
+          trzeba przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twoje
+          okręgi będą nieco wykrzywione!
         courseD_artist_nestedLoops4_a: |-
           W celu utworzenia okręgu:
 
           -   powtórz 360 razy
               -   przejdź do przodu o 1 piksel
-              -   wykonaj skręt o 2 stopień
-        courseD_artist_nestedLoops4_b: Nie zapomnij przeskoczyć do przodu po utworzeniu
-          każdego okręgu.
+              -   wykonaj skręt o 1 stopień
+        courseD_artist_nestedLoops4_b: Nie zapomnij przeskoczyć do przodu o 50 pikseli
+          pomiędzy poszczególnymi okręgami.
         courseD_artist_nestedLoops4_c: Użyj zagnieżdżonej pętli, aby narysować swoje
           okręgi 4 razy.
       courseD_artist_nestedLoops4_2020:
         courseD_artist_nestedLoops4_d: W celu rozwiązania tego w sposób poprawny,
-          trzeba przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twój
-          okrą będzie nieco wykrzywiony!
+          trzeba przemieścić **przed** wykonaniem skrętu; w przeciwnym razie Twoje
+          okręgi będą nieco wykrzywione!
         courseD_artist_nestedLoops4_a: |-
           W celu utworzenia okręgu:
 
           -   powtórz 360 razy
               -   przejdź do przodu o 1 piksel
-              -   wykonaj skręt o 2 stopień
-        courseD_artist_nestedLoops4_b: Nie zapomnij przeskoczyć do przodu po utworzeniu
-          każdego okręgu.
+              -   wykonaj skręt o 1 stopień
+        courseD_artist_nestedLoops4_b: Nie zapomnij przeskoczyć do przodu o 50 pikseli
+          pomiędzy poszczególnymi okręgami.
         courseD_artist_nestedLoops4_c: Użyj zagnieżdżonej pętli, aby narysować swoje
           okręgi 4 razy.
       courseD_artist_nestedLoops5:
@@ -5893,7 +6274,7 @@ pl-PL:
 
           Ten obrazek został utworzony  wykorzystaniem pojedynczej pętli zagnieżdżonej, która powtarza pięciokąt (o bokach o długości 50 pikseli) 15 razy z wykorzystaniem skrętu o 48 stopni.
       courseD_artist_nestedLoops_challenge1:
-        courseD_artist_nestedLoops_challenge1_a: Zacznij zmieniać kolor na niebieski,
+        courseD_artist_nestedLoops_challenge1_a: Zacznij od zmiany koloru na niebieski,
           a później utwórz pięciokąt o boku o długości 50 pikseli oraz skrętów w lewo
           pod kątem 45 stopni.
         courseD_artist_nestedLoops_challenge1_b: Dodaj kod, aby zmienić kolor na niebieski,
@@ -5904,7 +6285,7 @@ pl-PL:
         courseD_artist_nestedLoops_challenge1_d: Wprowadź cały swój kod do środka
           pętli "Powtórz 4 razy", aby zakończyć czynność.
       courseD_artist_nestedLoops_challenge1_2018:
-        courseD_artist_nestedLoops_challenge1_a: Zacznij zmieniać kolor na niebieski,
+        courseD_artist_nestedLoops_challenge1_a: Zacznij od zmiany koloru na niebieski,
           a później utwórz pięciokąt o boku o długości 50 pikseli oraz skrętów w lewo
           pod kątem 45 stopni.
         courseD_artist_nestedLoops_challenge1_b: Dodaj kod, aby zmienić kolor na niebieski,
@@ -5915,7 +6296,7 @@ pl-PL:
         courseD_artist_nestedLoops_challenge1_d: Wprowadź cały swój kod do środka
           pętli "Powtórz 4 razy", aby zakończyć czynność.
       courseD_artist_nestedLoops_challenge1_2019:
-        courseD_artist_nestedLoops_challenge1_a: Zacznij zmieniać kolor na niebieski,
+        courseD_artist_nestedLoops_challenge1_a: Zacznij od zmiany koloru na niebieski,
           a później utwórz pięciokąt o boku o długości 50 pikseli oraz skrętów w lewo
           pod kątem 45 stopni.
         courseD_artist_nestedLoops_challenge1_b: Dodaj kod, aby zmienić kolor na niebieski,
@@ -5926,7 +6307,7 @@ pl-PL:
         courseD_artist_nestedLoops_challenge1_d: Wprowadź cały swój kod do środka
           pętli "Powtórz 4 razy", aby zakończyć czynność.
       courseD_artist_nestedLoops_challenge1_2020:
-        courseD_artist_nestedLoops_challenge1_a: Zacznij zmieniać kolor na niebieski,
+        courseD_artist_nestedLoops_challenge1_a: Zacznij od zmiany koloru na niebieski,
           a później utwórz pięciokąt o boku o długości 50 pikseli oraz skrętów w lewo
           pod kątem 45 stopni.
         courseD_artist_nestedLoops_challenge1_b: Dodaj kod, aby zmienić kolor na niebieski,
@@ -5970,6 +6351,8 @@ pl-PL:
           albo odwrotnie!
         courseD_artist_ramp12_b: Spróbuj podzielić problem na 2 części wykorzystując
           2 pętle.
+        courseD_artist_ramp12_c: Możesz użyć menu rozwijanego na blokach "Obróć",
+          aby przekonać się, jaki kąt jest potrzebny!
       courseD_autorun_binary2_2019:
         courseD_artist_binary2_a: Po prostu kliknij "Uruchom", aby zobaczyć ten program
           w akcji!
@@ -6012,24 +6395,24 @@ pl-PL:
           nie wydaje Ci się że rozwiązałeś zadanie.
       courseD_bee_conditionals1_predict1:
         courseD_bee_conditionals1_a: Będziesz musiał skorzystać z bloku "Jeśli", aby
-          sprawdzić, czy pod chmurka jest kwiatek, zanim podejmiesz próbę zebrania
-          nektaru.
+          sprawdzić, czy pod chmurką znajduje się kwiatek, zanim podejmiesz próbę
+          zebrania nektaru.
       courseD_bee_conditionals1_predict1_2018:
         courseD_bee_conditionals1_a: Będziesz musiał skorzystać z bloku "Jeśli", aby
-          sprawdzić, czy pod chmurka jest kwiatek, zanim podejmiesz próbę zebrania
-          nektaru.
+          sprawdzić, czy pod chmurką znajduje się kwiatek, zanim podejmiesz próbę
+          zebrania nektaru.
       courseD_bee_conditionals1_predict1_2019:
         courseD_bee_conditionals1_a: Będziesz musiał skorzystać z bloku "Jeśli", aby
-          sprawdzić, czy pod chmurka jest kwiatek, zanim podejmiesz próbę zebrania
-          nektaru.
+          sprawdzić, czy pod chmurką znajduje się kwiatek, zanim podejmiesz próbę
+          zebrania nektaru.
       courseD_bee_conditionals1_predict1_2020:
         courseD_bee_conditionals1_a: Będziesz musiał skorzystać z bloku "Jeśli", aby
-          sprawdzić, czy pod chmurka jest kwiatek, zanim podejmiesz próbę zebrania
-          nektaru.
+          sprawdzić, czy pod chmurką znajduje się kwiatek, zanim podejmiesz próbę
+          zebrania nektaru.
       courseD_bee_conditionals1_predict1_copy:
         courseD_bee_conditionals1_a: Będziesz musiał skorzystać z bloku "Jeśli", aby
-          sprawdzić, czy pod chmurka jest kwiatek, zanim podejmiesz próbę zebrania
-          nektaru.
+          sprawdzić, czy pod chmurką znajduje się kwiatek, zanim podejmiesz próbę
+          zebrania nektaru.
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!
@@ -6195,7 +6578,7 @@ pl-PL:
 
           Będziesz chciał skorzystać z bloku warunkowego ('Jeśli' lub ' Jeśli/ A jeśli nie') do rozwiązania zadania.
         courseD_bee_conditionals7_b: Jeśli pod chmurką nie będzie kwiatka, musi być
-          plaster miodu tak, że nie trzeba się przejmować przypadkiem pustego miejsca.
+          plaster miodu aby nie trzeba było się przejmować przypadkiem pustego miejsca.
         courseD_bee_conditionals7_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
       courseD_bee_conditionals7_2018:
@@ -6206,7 +6589,7 @@ pl-PL:
 
           Będziesz chciał skorzystać z bloku warunkowego ('Jeśli' lub ' Jeśli/ A jeśli nie') do rozwiązania zadania.
         courseD_bee_conditionals7_b: Jeśli pod chmurką nie będzie kwiatka, musi być
-          plaster miodu tak, że nie trzeba się przejmować przypadkiem pustego miejsca.
+          plaster miodu aby nie trzeba było się przejmować przypadkiem pustego miejsca.
         courseD_bee_conditionals7_hintVid2: Obejrzyj ten film, aby otrzymać pomoc
           w rozwiązaniu tej zagadki.
       courseD_bee_conditionals7_2019:
@@ -6215,14 +6598,14 @@ pl-PL:
 
           Będziesz chciał skorzystać z bloku warunkowego ('Jeśli' lub ' Jeśli/ A jeśli nie') do rozwiązania zadania.
         courseD_bee_conditionals7_b: Jeśli pod chmurką nie będzie kwiatka, musi być
-          plaster miodu tak, że nie trzeba się przejmować przypadkiem pustego miejsca.
+          plaster miodu aby nie trzeba było się przejmować przypadkiem pustego miejsca.
       courseD_bee_conditionals7_2020:
         courseD_bee_conditionals7_a: |-
           \*\* Pamiętaj: \*\* To zadanie zmienia się za każdym uruchomieniem.
 
           Będziesz chciał skorzystać z bloku warunkowego ('Jeśli' lub ' Jeśli/ A jeśli nie') do rozwiązania zadania.
         courseD_bee_conditionals7_b: Jeśli pod chmurką nie będzie kwiatka, musi być
-          plaster miodu tak, że nie trzeba się przejmować przypadkiem pustego miejsca.
+          plaster miodu aby nie trzeba było się przejmować przypadkiem pustego miejsca.
       courseD_bee_conditionals7_predict2:
         courseD_bee_conditionals7_a: |-
           \*\* Pamiętaj: \*\* To zadanie zmienia się za każdym uruchomieniem.
@@ -6363,8 +6746,8 @@ pl-PL:
             </block></xml>
       courseD_bee_debugging_challenge1a:
         courseD_bee_debugging_challenge1_b: W celu rozwiązania tego zadania, spraw,
-          by pszczółka przeszła trasą takiego samego wzorca, aby robić miód, którą
-          podąża zbierając nektar.
+          by pszczółka aby zrobić miód, zastosowała ten sam wzór, którym podąża zbierając
+          nektar.
         courseD_bee_debugging_challenge1_c: |-
           Po dotarciu przez pszczółkę do dolnego wiersza, niech powtórzy te komendy:
 
@@ -6393,7 +6776,7 @@ pl-PL:
           Gdzie sprawy poszły nie tak, jak trzeba?
         courseD_collector_debugging1_b: Czy widzisz już jakieś wzorce, które pozwoliłyby
           uprościć stosowanie pętli 'Powtarzaj'?
-        courseD_collector_debugging1_c: 'Pamiętaj o korzystaniu z bloku "Powtarzaj"
+        courseD_collector_debugging1_c: 'Pamiętaj o korzystaniu z bloku "Zbieraj"
           w celu zebrania skarbu, gdy już do niego dotrzesz. '
       courseD_collector_debugging10_predict1:
         courseD_collector_debugging9_a: Jest wiele sposobów na rozwiązanie tego zadania...
@@ -6408,7 +6791,7 @@ pl-PL:
           A w drugim?
 
           Gdzie sprawy poszły nie tak, jak trzeba?
-        courseD_collector_debugging1_c: 'Pamiętaj o korzystaniu z bloku "Powtarzaj"
+        courseD_collector_debugging1_c: 'Pamiętaj o korzystaniu z bloku "Zbieraj"
           w celu zebrania skarbu, gdy już do niego dotrzesz. '
       courseD_collector_debugging1a_2019:
         courseD_collector_debugging1_a: |-
@@ -6417,7 +6800,7 @@ pl-PL:
           A w drugim?
 
           Gdzie sprawy poszły nie tak, jak trzeba?
-        courseD_collector_debugging1_c: 'Pamiętaj o korzystaniu z bloku "Powtarzaj"
+        courseD_collector_debugging1_c: 'Pamiętaj o korzystaniu z bloku "Zbieraj"
           w celu zebrania skarbu, gdy już do niego dotrzesz. '
       courseD_collector_debugging1a_2020:
         courseD_collector_debugging1_a: |-
@@ -6426,7 +6809,7 @@ pl-PL:
           A w drugim?
 
           Gdzie sprawy poszły nie tak, jak trzeba?
-        courseD_collector_debugging1_c: 'Pamiętaj o korzystaniu z bloku "Powtarzaj"
+        courseD_collector_debugging1_c: 'Pamiętaj o korzystaniu z bloku "Zbieraj"
           w celu zebrania skarbu, gdy już do niego dotrzesz. '
       courseD_collector_debugging2:
         courseD_collector_debugging2_a: |-
@@ -6716,12 +7099,12 @@ pl-PL:
           "Gdy postać 1 dotknie postaci 3."
       courseD_playLab_cond5:
         courseD_playLab_cond5_a: Stosuj zastrzeżenie warunkowe "Jeśli", w ramach którego
-          porównuje sie czy "punktacja jest > 5, aby rozwiązać to zadanie.
+          porównuje się czy "punktacja jest >" 5, aby rozwiązać to zadanie.
         courseD_playLab_cond5_b: Można użyć więcej niż jednej pętli 'Powtarzaj bez
           końca' w obszarze roboczym.
       courseD_playLab_cond5_2018:
         courseD_playLab_cond5_a: Stosuj zastrzeżenie warunkowe "Jeśli", w ramach którego
-          porównuje sie czy "punktacja jest > 5, aby rozwiązać to zadanie.
+          porównuje się czy "punktacja jest >" 5, aby rozwiązać to zadanie.
         courseD_playLab_cond5_b: Można użyć więcej niż jednej pętli 'Powtarzaj bez
           końca' w obszarze roboczym.
       courseD_playLab_cond6:
@@ -6751,25 +7134,113 @@ pl-PL:
           między blokami i szukać błędów.
         courseD_maze_ramp7_a: Użyj bloków "Powtarzaj", aby nieustannie uruchamiać
           albo pojedynczy blok, albo fragment kodu.
+      courseE_artist_concept1:
+        courseE_artist_concept1_a: Sześciokąty mają boki długości 50 pikseli i obroty
+          o kąt 60 stopni w prawo.
+        courseE_artist_concept1_b: Spróbuj użyć tutaj funkcji, tak abyś nie musiał
+          wielokrotnie pisać kodu sześciokąta.
+        courseE_artist_concept1_c: Użyj bloku "Ustaw szerokość" zanim każde wywołanie
+          funkcji zmienia szerokość pióra.
+      courseE_artist_concept1_2018:
+        courseE_artist_concept1_a: Sześciokąty mają boki długości 50 pikseli i obroty
+          o kąt 60 stopni w prawo.
+        courseE_artist_concept1_b: Spróbuj użyć tutaj funkcji, tak abyś nie musiał
+          wielokrotnie pisać kodu sześciokąta.
+        courseE_artist_concept1_c: Użyj bloku "Ustaw szerokość" zanim każde wywołanie
+          funkcji zmienia szerokość pióra.
+      courseE_artist_concept4:
+        courseE_artist_concept4_a: Tę łamigłówkę można rozwiązać na kilka sposobów.  Czy
+          możesz zrobić plan?
+        courseE_artist_concept4_b: Spróbuj utworzyć jeden kwadrat. Następnie zrób
+          rząd kwadratów. Co będzie następne?
+        courseE_artist_concept4_c: Po narysowaniu rzędu kwadratów, możesz albo odwrócić
+          się do tyłu i narysować kolejny rząd kwadratów idąc w lewo lub możesz skoczyć
+          z powrotem na stronę lewą figury, aby narysować inny rząd kwadratów idąc
+          w prawo. Co wolisz?
+      courseE_artist_concept4_2018:
+        courseE_artist_concept4_a: Tę łamigłówkę można rozwiązać na kilka sposobów.  Czy
+          możesz zrobić plan?
+        courseE_artist_concept4_b: Spróbuj utworzyć jeden kwadrat. Następnie zrób
+          rząd kwadratów. Co będzie następne?
+        courseE_artist_concept4_c: Po narysowaniu rzędu kwadratów, możesz albo odwrócić
+          się do tyłu i narysować kolejny rząd kwadratów idąc w lewo lub możesz skoczyć
+          z powrotem na stronę lewą figury, aby narysować inny rząd kwadratów idąc
+          w prawo. Co wolisz?
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30**
           i wymaga obrotu w prawo o **60 stopni**.  '
         courseE_artist_concept_challenge1_b: '2/3 trójkąta ma bok o **długość 30**
           i wymaga obrotu w prawo o **120 stopni**. '
+        courseE_artist_concept_challenge1_c: |-
+          To jest wzór, który być może zechcesz powtórzyć, aby stworzyć pełny kształt:
+
+          ![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)
       courseE_artist_concept_challenge1_2018:
         courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30**
           i wymaga obrotu w prawo o **60 stopni**.  '
         courseE_artist_concept_challenge1_b: '2/3 trójkąta ma bok o **długość 30**
           i wymaga obrotu w prawo o **120 stopni**. '
+        courseE_artist_concept_challenge1_c: |-
+          To jest wzór, który być może zechcesz powtórzyć, aby stworzyć pełny kształt:
+
+          ![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)
+      courseE_artist_concept_challenge2:
+        courseE_artist_concept_challenge2_a: 'Po zdefiniowaniu funkcji możesz ją wywoływać
+          ponownie bez końca, kiedy chcesz i gdzie chcesz! '
+        courseE_artist_concept_challenge2_b: 'Możesz skakać do dwóch różnych pozycji
+          na płótnie malarskim czyli w obszarze roboczym  z użyciem tej komendy:'
+      courseE_artist_concept_challenge2_2018:
+        courseE_artist_concept_challenge2_a: 'Po zdefiniowaniu funkcji możesz ją wywoływać
+          ponownie bez końca, kiedy chcesz i gdzie chcesz! '
+        courseE_artist_concept_challenge2_b: 'Możesz skakać do dwóch różnych pozycji
+          na płótnie malarskim czyli w obszarze roboczym  z użyciem tej komendy:'
       courseE_artist_functions1:
         courseE_artist_functions1_a: Kwadraty mają boki o długości 100 pikseli, czyli
           musisz przesunąć się do przodu o 175 pikseli zanim narysujesz drugi kwadrat.
         courseE_artist_functions1_b: To dobrze rysować nakładające się linie do okularów.
+        courseE_artist_functions1_c: Spróbuj użyć pętli "Powtarzaj", aby narysować
+          kwadratowe oprawki do okularów przy pomocy krótszego kodu.
+      courseE_artist_functions10:
+        courseD_artist_functions10_b: Ten rysunek bardzo przypomina ostatni, ale funkcja
+          "Rysuj linię" służy teraz do rysowania innego kształtu.
+        courseD_artist_functions10_a: 'Aby uniknąć wielokrotnego wykorzystywania bloków
+          "Idź do przodu", utwórz funkcję "Rysuj sześciokąt" i wywołaj to wiele razy. '
+        courseD_artist_functions10_c: Czy widzisz, gdzie w tym rysunku można użyć
+          funkcji zwanej "Rzędem sześciokątów"?
+      courseE_artist_functions10_2018:
+        courseD_artist_functions10_b: Ten rysunek bardzo przypomina ostatni, ale funkcja
+          "Rysuj linię" służy teraz do rysowania innego kształtu.
+        courseD_artist_functions10_a: 'Aby uniknąć wielokrotnego wykorzystywania bloków
+          "Idź do przodu", utwórz funkcję "Rysuj sześciokąt" i wywołaj to wiele razy. '
+        courseD_artist_functions10_c: Czy widzisz, gdzie w tym rysunku można użyć
+          funkcji zwanej "Rzędem sześciokątów"?
+      courseE_artist_functions10_2019:
+        courseD_artist_functions10_b: Ten rysunek bardzo przypomina ostatni, ale funkcja
+          "Rysuj linię" służy teraz do rysowania innego kształtu.
+        courseD_artist_functions10_a: 'Aby uniknąć wielokrotnego wykorzystywania bloków
+          "Idź do przodu", utwórz funkcję "Rysuj sześciokąt" i wywołaj to wiele razy. '
+        courseD_artist_functions10_c: Czy widzisz, gdzie w tym rysunku można użyć
+          funkcji zwanej "Rzędem sześciokątów"?
+      courseE_artist_functions10_2020:
+        courseD_artist_functions10_b: Ten rysunek bardzo przypomina ostatni, ale funkcja
+          "Rysuj linię" służy teraz do rysowania innego kształtu.
+        courseD_artist_functions10_a: 'Aby uniknąć wielokrotnego wykorzystywania bloków
+          "Idź do przodu", utwórz funkcję "Rysuj sześciokąt" i wywołaj to wiele razy. '
+        courseD_artist_functions10_c: Czy widzisz, gdzie w tym rysunku można użyć
+          funkcji zwanej "Rzędem sześciokątów"?
       courseE_artist_functions1_copy:
         courseE_artist_functions1_a: Kwadraty mają boki o długości 100 pikseli, czyli
           musisz przesunąć się do przodu o 175 pikseli zanim narysujesz drugi kwadrat.
         courseE_artist_functions1_b: To dobrze rysować nakładające się linie do okularów.
+        courseE_artist_functions1_c: Spróbuj użyć pętli "Powtarzaj", aby narysować
+          kwadratowe oprawki do okularów przy pomocy krótszego kodu.
       courseE_artist_functions2:
+        courseD_artist_functions2_b: Funkcja, którą piszesz, nie powinna zawierać
+          Twojego całego programu, tylko jego część, przy pomocy której rysuje się
+          kwadrat o bokach o długości 100 pikseli.
+        courseD_artist_functions2_c: 'Użyj zielonego bloku "Rysuj kwadrat", aby "wywołać"
+          swoją funkcję w ramach kwadratu "Po uruchomieniu". W innym wypadku, kod
+          w Twojej funkcji nie uruchomi się. '
         courseD_artist_functions2_a: "Twój program powinien:\n\n-   uzyć funkcji,
           \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
       courseE_artist_functions2_2018:
@@ -6782,16 +7253,306 @@ pl-PL:
         courseD_artist_functions2_a: "Twój program powinien:\n\n-   uzyć funkcji,
           \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
       courseE_artist_functions2_copy:
+        courseD_artist_functions2_b: Funkcja, którą piszesz, nie powinna zawierać
+          Twojego całego programu, tylko jego część, przy pomocy której rysuje się
+          kwadrat o bokach o długości 100 pikseli.
+        courseD_artist_functions2_c: 'Użyj zielonego bloku "Rysuj kwadrat", aby "wywołać"
+          swoją funkcję w ramach kwadratu "Po uruchomieniu". W innym wypadku, kod
+          w Twojej funkcji nie uruchomi się. '
         courseD_artist_functions2_a: "Twój program powinien:\n\n-   uzyć funkcji,
           \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
+      courseE_artist_functions3:
+        courseD_artist_functions3_a: |-
+          W celu rozwiązania tej łamigłówki, musisz dodać pętlę, która powtarza kod startowy 8 razy.
+
+          Jeśli nie pamiętasz czym jest kod startowy, kliknij "Rozpocznij od nowa" w górnym prawym rogu obszaru roboczego.
+        courseD_artist_functions3_b: Twoja pętla powinna posiadać wewnątrz 3 bloki
+          kodu startowego.
+      courseE_artist_functions3_copy:
+        courseD_artist_functions3_a: |-
+          W celu rozwiązania tej łamigłówki, musisz dodać pętlę, która powtarza kod startowy 8 razy.
+
+          Jeśli nie pamiętasz czym jest kod startowy, kliknij "Rozpocznij od nowa" w górnym prawym rogu obszaru roboczego.
+        courseD_artist_functions3_b: Twoja pętla powinna posiadać wewnątrz 3 bloki
+          kodu startowego.
+      courseE_artist_functions4:
+        courseD_artist_functions4_a: Spróbuj użyć funkcję!
+        courseD_artist_functions4_b: Wyciągnij blok funkcji "Narysuj gwiazdę" z przybornika,
+          aby rozpocząć budowanie swojej funkcji. Powinna mieć taki sam kod jak poprzednia
+          łamigłówka, ponieważ rysujesz wzór tej samej gwiazdy.
+        courseD_artist_functions4_c: Użyj zielonego bloku "Narysuj gwiazdę", aby przywołać
+          tę funkcję w swoim programie głównym. Nie zapomnij przeskoczyć do przodu
+          od gwiazdy do gwiazy!
+      courseE_artist_functions4_copy:
+        courseD_artist_functions4_a: Spróbuj użyć funkcję!
+        courseD_artist_functions4_b: Wyciągnij blok funkcji "Narysuj gwiazdę" z przybornika,
+          aby rozpocząć budowanie swojej funkcji. Powinna mieć taki sam kod jak poprzednia
+          łamigłówka, ponieważ rysujesz wzór tej samej gwiazdy.
+        courseD_artist_functions4_c: Użyj zielonego bloku "Narysuj gwiazdę", aby przywołać
+          tę funkcję w swoim programie głównym. Nie zapomnij przeskoczyć do przodu
+          od gwiazdy do gwiazy!
+      courseE_artist_functions5:
+        courseD_artist_functions5_a: Nie poddawaj się! Pamiętaj, czego się uczyłeś.
+        courseD_artist_functions5_b: Funkcje ułatwiają przywoływanie zapisanego kodu
+          w dowolnym momencie, nie tylko z wnętrza pętli!
+        courseD_artist_functions5_c: Rozpocznij od przeciągania kodu, aby uzyskać
+          kształt gwiazdy do funkcji "Narysuj gwiazdę", a następnie użyj tej funkcji,
+          aby przeciągnąć trzy gwiazdy!
+      courseE_artist_functions5_2018:
+        courseD_artist_functions5_a: Nie poddawaj się! Pamiętaj, czego się uczyłeś.
+        courseD_artist_functions5_b: Funkcje ułatwiają przywoływanie zapisanego kodu
+          w dowolnym momencie, nie tylko z wnętrza pętli!
+      courseE_artist_functions5_2019:
+        courseD_artist_functions5_a: Nie poddawaj się! Pamiętaj, czego się uczyłeś.
+        courseD_artist_functions5_b: Funkcje ułatwiają przywoływanie zapisanego kodu
+          w dowolnym momencie, nie tylko z wnętrza pętli!
+      courseE_artist_functions5_2020:
+        courseD_artist_functions5_a: Nie poddawaj się! Pamiętaj, czego się uczyłeś.
+        courseD_artist_functions5_b: Funkcje ułatwiają przywoływanie zapisanego kodu
+          w dowolnym momencie, nie tylko z wnętrza pętli!
+      courseE_artist_functions5_copy:
+        courseD_artist_functions5_a: Nie poddawaj się! Pamiętaj, czego się uczyłeś.
+        courseD_artist_functions5_b: Funkcje ułatwiają przywoływanie zapisanego kodu
+          w dowolnym momencie, nie tylko z wnętrza pętli!
+        courseD_artist_functions5_c: Rozpocznij od przeciągania kodu, aby uzyskać
+          kształt gwiazdy do funkcji "Narysuj gwiazdę", a następnie użyj tej funkcji,
+          aby przeciągnąć trzy gwiazdy!
+      courseE_artist_functions6:
+        grade4_artist_functions_windows0_a: 'Teraz skup się tylko na narysowaniu jednego
+          okna. W kolejnej łamigłówce utworzymy funkcję. '
+        grade4_artist_functions_windows0_b: 'Spróbuj wykorzystać pętle zagnieżdżone.
+          Wewnętrzna pętla będzie robić kwadrat, a zewnętrzna będzie go czterokrotnie
+          obracać. '
+      courseE_artist_functions7:
+        courseD_artist_functions7_a: 'Spróbuj najpierw utworzyć swoją funkcję, a potem,
+          po jednym, dodawać okna. '
+        courseD_artist_functions7_b: 'Nie powinna wystąpić potrzeba dodawania jakiś
+          dodatkowych pętli powtarzania. Wystarczy, aby grafik przeskoczyło o 100
+          pikseli od jednego okna na górze, do drugiego, a potem w dół 150 pikseli,
+          aby dostać się do okien dolnych. '
+      courseE_artist_functions7_2018:
+        courseD_artist_functions7_a: 'Spróbuj najpierw utworzyć swoją funkcję, a potem,
+          po jednym, dodawać okna. '
+      courseE_artist_functions7_2019:
+        courseD_artist_functions7_a: 'Spróbuj najpierw utworzyć swoją funkcję, a potem,
+          po jednym, dodawać okna. '
+      courseE_artist_functions7_2020:
+        courseD_artist_functions7_a: 'Spróbuj najpierw utworzyć swoją funkcję, a potem,
+          po jednym, dodawać okna. '
       courseE_artist_functions8:
+        courseD_artist_functions8_f: Potrzebny Ci jest tylko jeden blok "Idź to przodu",
+          ale potrzebujesz więcej bloków "Skocz do przodu" i/lub "Skocz do tyłu"!
+        courseD_artist_functions8_a: "Rozpocznij od tworzenia funkcji dla kwadratu,
+          a następnie spróbuj utworzyć funkcję dla wiersza kwadratów. \n\nW jaki sposób
+          skorzystałbyś z funkcji \"Narysuj rzędu kwadratów\", aby wykonać ten obrazek?"
+        courseD_artist_functions8_d: |-
+          Aby sporządzić rząd kwadratów
+
+          -   trzykrotnie powtórz czynność
+          -   narysuj kwadrat o boku o długości  **50 pikseli**
+              -   przeskocz o **100 pikseli**
+        courseD_artist_functions8_b: Pomyśl o każdym wierszu na tym obrazku jako o
+          rzędzie trzech kwadratów. Ile jest tam wierszy kwadratów i gdzie zaczniesz
+          przeciągać każdy z nich?
+        courseD_artist_functions8_c: Na koniec każdego rzędu kwadratów, grafik będzie
+          musiał skakać w dół i z powrotem zanim narysuje kolejny rząd kwadratów.
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2018:
+        courseD_artist_functions8_f: Potrzebny Ci jest tylko jeden blok "Idź to przodu",
+          ale potrzebujesz więcej bloków "Skocz do przodu" i/lub "Skocz do tyłu"!
+        courseD_artist_functions8_a: "Rozpocznij od tworzenia funkcji dla kwadratu,
+          a następnie spróbuj utworzyć funkcję dla wiersza kwadratów. \n\nW jaki sposób
+          skorzystałbyś z funkcji \"Narysuj rzędu kwadratów\", aby wykonać ten obrazek?"
+        courseD_artist_functions8_d: |-
+          Aby sporządzić rząd kwadratów
+
+          -   trzykrotnie powtórz czynność
+          -   narysuj kwadrat o boku o długości  **50 pikseli**
+              -   przeskocz o **100 pikseli**
+        courseD_artist_functions8_b: Pomyśl o każdym wierszu na tym obrazku jako o
+          rzędzie trzech kwadratów. Ile jest tam wierszy kwadratów i gdzie zaczniesz
+          przeciągać każdy z nich?
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019:
+        courseD_artist_functions8_f: Potrzebny Ci jest tylko jeden blok "Idź to przodu",
+          ale potrzebujesz więcej bloków "Skocz do przodu" i/lub "Skocz do tyłu"!
+        courseD_artist_functions8_a: "Rozpocznij od tworzenia funkcji dla kwadratu,
+          a następnie spróbuj utworzyć funkcję dla wiersza kwadratów. \n\nW jaki sposób
+          skorzystałbyś z funkcji \"Narysuj rzędu kwadratów\", aby wykonać ten obrazek?"
+        courseD_artist_functions8_d: |-
+          Aby sporządzić rząd kwadratów
+
+          -   trzykrotnie powtórz czynność
+          -   narysuj kwadrat o boku o długości  **50 pikseli**
+              -   przeskocz o **100 pikseli**
+        courseD_artist_functions8_b: Pomyśl o każdym wierszu na tym obrazku jako o
+          rzędzie trzech kwadratów. Ile jest tam wierszy kwadratów i gdzie zaczniesz
+          przeciągać każdy z nich?
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2020:
+        courseD_artist_functions8_f: Potrzebny Ci jest tylko jeden blok "Idź to przodu",
+          ale potrzebujesz więcej bloków "Skocz do przodu" i/lub "Skocz do tyłu"!
+        courseD_artist_functions8_a: "Rozpocznij od tworzenia funkcji dla kwadratu,
+          a następnie spróbuj utworzyć funkcję dla wiersza kwadratów. \n\nW jaki sposób
+          skorzystałbyś z funkcji \"Narysuj rzędu kwadratów\", aby wykonać ten obrazek?"
+        courseD_artist_functions8_d: |-
+          Aby sporządzić rząd kwadratów
+
+          -   trzykrotnie powtórz czynność
+          -   narysuj kwadrat o boku o długości  **50 pikseli**
+              -   przeskocz o **100 pikseli**
+        courseD_artist_functions8_b: Pomyśl o każdym wierszu na tym obrazku jako o
+          rzędzie trzech kwadratów. Ile jest tam wierszy kwadratów i gdzie zaczniesz
+          przeciągać każdy z nich?
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions9:
+        courseD_artist_functions9_e: Czy jesteś w stanie zauważyć wszystkie cztery
+          miejsca, w których można w tym rysunku wykorzystać "Rząd trójkątów"?
+        courseD_artist_functions9_a: |-
+          Tę łamigłówkę można podzielić na trzy części:
+
+          -   utworzenie funkcji "Rysuj trójkąt"
+          -   utworzenie funkcji "Rysuj rząd trójkątów"
+          -   wykorzystanie funkcji "Rysuj rząd trójkątów" cztery razy, aby skończyć rysunek
+        courseD_artist_functions9_b: Ten rysunek jest wykonany poprzez narysowanie
+          rzędu trójkątów cztery razy i obrócenia o 60 lub 120 stopni przed narysowaniem
+          kolejnego rzędu trójkątów.
+        courseD_artist_functions9_c: |-
+          Aby narysować rząd kwadratów
+
+          -   czterokrotnie powtórz czynność
+          -   narysuj trójkąt
+              -   przeskocz o 50 pikseli
+        courseD_artist_functions9_d: |-
+          Aby narysować romb:
+
+          -   powtórz dwukrotnie 2
+              -   narysuj rząd trójkątów
+          -   obróć o 60 stopni
+              -   narysuj rząd trójkątów
+          -   obróć o 612 stopni
+      courseE_artist_functions9_2018:
+        courseD_artist_functions9_e: Czy jesteś w stanie zauważyć wszystkie cztery
+          miejsca, w których można w tym rysunku wykorzystać "Rząd trójkątów"?
+        courseD_artist_functions9_a: |-
+          Tę łamigłówkę można podzielić na trzy części:
+
+          -   utworzenie funkcji "Rysuj trójkąt"
+          -   utworzenie funkcji "Rysuj rząd trójkątów"
+          -   wykorzystanie funkcji "Rysuj rząd trójkątów" cztery razy, aby skończyć rysunek
+        courseD_artist_functions9_b: Ten rysunek jest wykonany poprzez narysowanie
+          rzędu trójkątów cztery razy i obrócenia o 60 lub 120 stopni przed narysowaniem
+          kolejnego rzędu trójkątów.
+        courseD_artist_functions9_c: |-
+          Aby narysować rząd kwadratów
+
+          -   czterokrotnie powtórz czynność
+          -   narysuj trójkąt
+              -   przeskocz o 50 pikseli
+        courseD_artist_functions9_d: |-
+          Aby narysować romb:
+
+          -   powtórz dwukrotnie 2
+              -   narysuj rząd trójkątów
+          -   obróć o 60 stopni
+              -   narysuj rząd trójkątów
+          -   obróć o 612 stopni
+      courseE_artist_functions9_2019:
+        courseD_artist_functions9_e: Czy jesteś w stanie zauważyć wszystkie cztery
+          miejsca, w których można w tym rysunku wykorzystać "Rząd trójkątów"?
+        courseD_artist_functions9_a: |-
+          Tę łamigłówkę można podzielić na trzy części:
+
+          -   utworzenie funkcji "Rysuj trójkąt"
+          -   utworzenie funkcji "Rysuj rząd trójkątów"
+          -   wykorzystanie funkcji "Rysuj rząd trójkątów" cztery razy, aby skończyć rysunek
+        courseD_artist_functions9_b: Ten rysunek jest wykonany poprzez narysowanie
+          rzędu trójkątów cztery razy i obrócenia o 60 lub 120 stopni przed narysowaniem
+          kolejnego rzędu trójkątów.
+        courseD_artist_functions9_c: |-
+          Aby narysować rząd kwadratów
+
+          -   czterokrotnie powtórz czynność
+          -   narysuj trójkąt
+              -   przeskocz o 50 pikseli
+        courseD_artist_functions9_d: |-
+          Aby narysować romb:
+
+          -   powtórz dwukrotnie 2
+              -   narysuj rząd trójkątów
+          -   obróć o 60 stopni
+              -   narysuj rząd trójkątów
+          -   obróć o 612 stopni
+      courseE_artist_functions9_2020:
+        courseD_artist_functions9_e: Czy jesteś w stanie zauważyć wszystkie cztery
+          miejsca, w których można w tym rysunku wykorzystać "Rząd trójkątów"?
+        courseD_artist_functions9_a: |-
+          Tę łamigłówkę można podzielić na trzy części:
+
+          -   utworzenie funkcji "Rysuj trójkąt"
+          -   utworzenie funkcji "Rysuj rząd trójkątów"
+          -   wykorzystanie funkcji "Rysuj rząd trójkątów" cztery razy, aby skończyć rysunek
+        courseD_artist_functions9_b: Ten rysunek jest wykonany poprzez narysowanie
+          rzędu trójkątów cztery razy i obrócenia o 60 lub 120 stopni przed narysowaniem
+          kolejnego rzędu trójkątów.
+        courseD_artist_functions9_c: |-
+          Aby narysować rząd kwadratów
+
+          -   czterokrotnie powtórz czynność
+          -   narysuj trójkąt
+              -   przeskocz o 50 pikseli
+        courseD_artist_functions9_d: |-
+          Aby narysować romb:
+
+          -   powtórz dwukrotnie 2
+              -   narysuj rząd trójkątów
+          -   obróć o 60 stopni
+              -   narysuj rząd trójkątów
+          -   obróć o 612 stopni
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_a: 'Jeśli wywołasz funkcję jeszcze jeden
+          raz, możesz stworzyć ten sam wzór w ostatnim rogu. '
+        courseE_artist_functions_challenge1_b: Możesz też wykonać komendę "Skocz do"
+          innych pozycji i zmienić cały wzór tak, jak chcesz!
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_a: 'Jeśli wywołasz funkcję jeszcze jeden
+          raz, możesz stworzyć ten sam wzór w ostatnim rogu. '
+        courseE_artist_functions_challenge1_b: Możesz też wykonać komendę "Skocz do"
+          innych pozycji i zmienić cały wzór tak, jak chcesz!
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_a: 'Jeśli wywołasz funkcję jeszcze jeden
+          raz, możesz stworzyć ten sam wzór w ostatnim rogu. '
+        courseE_artist_functions_challenge1_b: Możesz też wykonać komendę "Skocz do"
+          innych pozycji i zmienić cały wzór tak, jak chcesz!
+      courseE_artist_functions_challenge1_2020:
+        courseE_artist_functions_challenge1_a: 'Jeśli wywołasz funkcję jeszcze jeden
+          raz, możesz stworzyć ten sam wzór w ostatnim rogu. '
+        courseE_artist_functions_challenge1_b: Możesz też wykonać komendę "Skocz do"
+          innych pozycji i zmienić cały wzór tak, jak chcesz!
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge1_a: Ten blok "Skocz do" pozwala Ci przenieść
+          grafika zombie na dowolny piksel na siatce wtedy, kiedy chcesz. To działa
+          na zasadzie przenoszenia go o pewną liczbę pikseli w prawo i o pewną liczbę
+          pikseli w dół. Liczy się to zawsze od górnego lewego rogu, co oznacza, że
+          to nie ma znaczenia gdzie jest grafik zombie _przed_ uruchomieniem komendy!
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge1_a: Ten blok "Skocz do" pozwala Ci przenieść
+          grafika zombie na dowolny piksel na siatce wtedy, kiedy chcesz. To działa
+          na zasadzie przenoszenia go o pewną liczbę pikseli w prawo i o pewną liczbę
+          pikseli w dół. Liczy się to zawsze od górnego lewego rogu, co oznacza, że
+          to nie ma znaczenia gdzie jest grafik zombie _przed_ uruchomieniem komendy!
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge1_a: Ten blok "Skocz do" pozwala Ci przenieść
+          grafika zombie na dowolny piksel na siatce wtedy, kiedy chcesz. To działa
+          na zasadzie przenoszenia go o pewną liczbę pikseli w prawo i o pewną liczbę
+          pikseli w dół. Liczy się to zawsze od górnego lewego rogu, co oznacza, że
+          to nie ma znaczenia gdzie jest grafik zombie _przed_ uruchomieniem komendy!
+      courseE_artist_functions_challenge2_2020:
+        courseE_artist_functions_challenge1_a: Ten blok "Skocz do" pozwala Ci przenieść
+          grafika zombie na dowolny piksel na siatce wtedy, kiedy chcesz. To działa
+          na zasadzie przenoszenia go o pewną liczbę pikseli w prawo i o pewną liczbę
+          pikseli w dół. Liczy się to zawsze od górnego lewego rogu, co oznacza, że
+          to nie ma znaczenia gdzie jest grafik zombie _przed_ uruchomieniem komendy!
       courseE_artist_ramp8:
         courseE_artist_ramp8_a: Użyj bloku "Idź do przodu o 100 pikseli" i zmieć 100
           na 200, aby narysować bok.
@@ -6813,17 +7574,133 @@ pl-PL:
       courseE_artist_ramp9:
         courseD_artist_ramp12_a: W jakim wymiarze to jest podobne do kwadratu? Czym
           się różni?
+        courseD_artist_ramp12_b: Możesz użyć menu rozwijanego na blokach "Obróć",
+          aby przekonać się, jaki kąt jest potrzebny!
         courseD_artist_ramp12_c: Aby narysować każdy bok, musisz pójść do przodu o
           100 pikseli, a następnie skręcić w lewo o 120 stopni. Ile boków potrzebujesz?
       courseE_artist_ramp9_2:
         courseD_artist_ramp12_a: W jakim wymiarze to jest podobne do kwadratu? Czym
           się różni?
+        courseD_artist_ramp12_b: Możesz użyć menu rozwijanego na blokach "Obróć",
+          aby przekonać się, jaki kąt jest potrzebny!
         courseD_artist_ramp12_c: Aby narysować każdy bok, musisz pójść do przodu o
           100 pikseli, a następnie skręcić w lewo o 120 stopni. Ile boków potrzebujesz?
+      courseE_bee_concept1:
+        courseE_bee_concept1_b: Czy istnieją jakieś inne wzory, które się_tutaj_powtarzają?
+        courseE_bee_concept1_a: Jeśli nie rozumiesz, w jaki sposób należy korzystać
+          tutaj z pętli zagnieżdżonych, spróbuj zapisać instrukcje krok po kroku na
+          kartce papieru. Zakreśl kółkiem wzory, które widzisz.
+      courseE_bee_concept1_2018:
+        courseE_bee_concept1_b: Czy istnieją jakieś inne wzory, które się_tutaj_powtarzają?
+        courseE_bee_concept1_a: Jeśli nie rozumiesz, w jaki sposób należy korzystać
+          tutaj z pętli zagnieżdżonych, spróbuj zapisać instrukcje krok po kroku na
+          kartce papieru. Zakreśl kółkiem wzory, które widzisz.
+      courseE_bee_concept2:
+        courseE_bee_concept2_a: Czy pomoże tutaj pętla "Podczas, gdy"?
+        courseE_bee_concept2_d: Możesz nawet sprawdzić puste miejsca, aby zobaczyć
+          czy miód wynosi>0.
+        courseE_bee_concept2_b: Możesz używać pętli "Podczas, gdy", aby przemieścić
+          się do końca każdej ścieżki i zebrać cały miód z każdego miejsca.
+        courseE_bee_concept2_c: W którą stronę powinna skręcić pszczółka po każdej
+          ścieżce?
+      courseE_bee_concept2_2018:
+        courseE_bee_concept2_a: Czy pomoże tutaj pętla "Podczas, gdy"?
+        courseE_bee_concept2_b: Możesz używać pętli "Podczas, gdy", aby przemieścić
+          się do końca każdej ścieżki i zebrać cały miód z każdego miejsca.
+        courseE_bee_concept2_c: W którą stronę powinna skręcić pszczółka po każdej
+          ścieżce?
+      courseE_bee_concept3:
+        courseE_bee_concept3a_a: Spróbuj użyć zagnieżdżonych pętli "Powtarzaj", aby
+          rozwiązać tę łamigłówka.
+        courseE_bee_concept3a_b: Jeśli nie jesteś w stanie wymyślić, gdzie umieścić
+          pętle, spróbuj napisać swój kod krok po kroku oraz szukać wzorców.
+        courseE_bee_concept3a_c: Istnieją trzy grupy kwiatków, więc zewnętrzna pętla
+          "Powtarzaj" powinna się powtórzyć trzy razy.
+      courseE_bee_concept3_2018:
+        courseE_bee_concept3a_b: Jeśli nie jesteś w stanie wymyślić, gdzie umieścić
+          pętle, spróbuj napisać swój kod krok po kroku oraz szukać wzorców.
+      courseE_bee_concept4:
+        courseE_bee_concept4_a: 'Stawierdzenie "Jeśli/ Jeśli nie" powinno się tutaj
+          bardzo przydać. '
+        courseE_bee_concept4_b: Wzór kaskadowy może Ci pomów przejść wszystkie kwiatki
+          i plastry miodu.
+        courseE_bee_concept4_c: Jeśli jesteś przy kwiatku ile razy musisz zebrać nektar?
+          Czy dla wszystkich kwiatków jest ta sama liczba?
+      courseE_bee_concept4_2018:
+        courseE_bee_concept4_a: 'Stawierdzenie "Jeśli/ Jeśli nie" powinno się tutaj
+          bardzo przydać. '
+        courseE_bee_concept4_b: Wzór kaskadowy może Ci pomów przejść wszystkie kwiatki
+          i plastry miodu.
+        courseE_bee_concept4_c: Jeśli jesteś przy kwiatku ile razy musisz zebrać nektar?
+          Czy dla wszystkich kwiatków jest ta sama liczba?
+      courseE_bee_concept5:
+        courseE_bee_concept5_a: Kwiatki rosną wzdłuż klasycznej ścieżki. Możesz wyśledzić
+          prostokąt z wykorzystaniem "Gdy jest ścieżka biegnąca naprzód", nawet przy
+          różnej liczbie kwadratów po każdej stronie.
+        courseE_bee_concept5_c: Oto obraz prostokątnej ścieżki, którą mogła obrać
+          pszczółka.
+        courseE_bee_concept5_b: Możesz sprawdzić każdy kwadrat pod kątem kwiatka z
+          wykorzystaniem bloku "Jeśli" nawet, jeżeli już wiesz, że tam go nie ma.
+      courseE_bee_concept5_2018:
+        courseE_bee_concept5_a: Kwiatki rosną wzdłuż klasycznej ścieżki. Możesz wyśledzić
+          prostokąt z wykorzystaniem "Gdy jest ścieżka biegnąca naprzód", nawet przy
+          różnej liczbie kwadratów po każdej stronie.
+        courseE_bee_concept5_c: Oto obraz prostokątnej ścieżki, którą mogła obrać
+          pszczółka.
+        courseE_bee_concept5_b: Możesz sprawdzić każdy kwadrat pod kątem kwiatka z
+          wykorzystaniem bloku "Jeśli" nawet, jeżeli już wiesz, że tam go nie ma.
+      courseE_bee_functions1:
+        courseE_bee_functions1_a: 'Należy pamiętać, że skręty w lewo i w prawo są
+          wykonywane z punktu widzenia pszczółki. '
+        courseE_bee_functions1_b: Aby skrócić swój kod użyj pętli "Powtarzaj" podczas
+          zbierania nektaru.
+        courseE_bee_functions1_c: 'Należy pamiętać, że skręty w lewo i w prawo są
+          wykonywane z perspektywy pszczółki. '
+      courseE_bee_functions10:
+        courseE_bee_functions10_a: Będziesz potrzebować pętli "Podczas, gdy", aby
+          zebrać cały miód, ponieważ jego ilość różni się w poszczególnych plastrach.
+        courseE_bee_functions10_b: Uwzględnij obroty i ruch w swojej funkcji tak,
+          abyś mógł ją wywołać, gdy pszczółka będzie na ścieżce głównej.
+        courseE_bee_functions10_c: Pamiętaj o wywołaniu swojej funkcji w programie
+          głównym!
+      courseE_bee_functions2:
+        courseE_bee_functions2_b: Ten blok <xml><block type="procedures_callnoreturn"><mutation
+          name="get 2 nectar"/></block></xml> przywołuje przyznaną Ci funkcję.
+        courseE_bee_functions2_c: Być może zechcesz przejść do przodu i zebrać 2 nektary
+          dwukrotnie, aby rozwiązać tę łamigłówkę.
+      courseE_bee_functions3:
+        courseE_bee_functions3_a: 'Twoja funkcja w tej łamigłówce ma tylko zbierać
+          nektar, nie powinna zawierać w sobie żadnych bloków "Idź do przodu" ani
+          "Skręć". '
+        courseE_bee_functions3_b: 'Wywołaj swoją funkcję "Uzyskaj 5" w ramach bloku
+          "Po uruchomieniu". '
+        courseE_bee_functions3_c: Twój program główny będzie kontrolować całość ruchu,
+          funkcja powoduje tylko to, co wydarzy się, gdy pszczółka dotrze do kwiatka.
+        courseE_bee_functions3_d: Spróbuj skorzystać z tej ścieżki.
+      courseE_bee_functions4:
+        courseE_bee_functions4_a: Twoja funkcja będzie już umożliwiać przemieszczanie
+          się wzdłuż ścieżek bocznych oraz sprawianie, że pszczółka będzie wracać
+          do drogi głównej. Nie musisz już niczego dodawać do swojego programu.
+        courseE_bee_functions4_b: Użyj zielonego bloku "Przejdź i zbierz nektar",
+          aby wywołać tę funkcję.
+        courseE_bee_functions4_c: Nie musisz niczego zmieniać w tej funkcji, po prostu
+          użyj jej w swoim programie.
+      courseE_bee_functions5:
+        courseE_bee_functions5_a: Edytuj funkcję tak, aby rozwiązała łamigłówkę bez
+          konieczności wprowadzania zmian do programu głównego.
+        courseE_bee_functions5_c: Blok "Idź do przodu" można zmienić w blok "Idź do
+          tyłu". Użyj go zamiast obracania wszystkiego dookoła na końcu ścieżek!
+        courseE_bee_functions5_b: "Twoja funkcja powinna sprawiać, że pszczółka będzie
+          wykonywać następujące komendy: \n\n-   Skręć\n-   Idź do przodu\n-   Zbierz
+          cały nektar\n-   Idź do tyłu\n-   Odwróć się z powrotem w kierunku,  którego
+          wyruszyła pszczółka"
       courseE_bee_functions6:
         courseE_bee_functions6_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj
           budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
           Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_b: W tym przypadku pomocne może być poruszanie się
+          wewnątrz funkcji, ale nie wszystkie spośród Twoich bloków "Idź" muszą tam
+          być.
       courseE_bee_functions7:
         courseE_bee_functions7_a: "Jeśli łamigłówka wydaje Ci się za trudna, spróbuj
           budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
@@ -6832,14 +7709,254 @@ pl-PL:
           Pamiętaj, aby budować kodu wewnątrz zielonego bloku funkcji.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseE_bee_functions7_c: Tak funkcja powinna powodować obrót pszczółki tak,
+          by podążała ścieżką, zbierała nektar, produkowała miód, a następnie odwróć
+          pszczółkę i spraw, by wróciła z powrotem.
+      courseE_bee_functions8:
+        courseE_bee_functions8_a: Ta funkcja będzie musiała tylko powodować zbieranie
+          nektaru. Spróbuj użyć pętli zamiast pętli powtarzania.
+        courseE_bee_functions8_b: Użyj "Gdy ilość nektaru > 0", aby sprawdzić, czy
+          zebrałeś cały nektar.
+        courseE_bee_functions8_c: 'W Twoim głównym programie potrzebny będzie wzorzec
+          ruchu kaskadowego. Pamiętaj, Twój główny program jest kodem w ramach bloku
+          "Po uruchomieniu". '
+      courseE_bee_functions9:
+        courseE_bee_functions9_a: Możesz skorzystać dokładnie z tej samej funkcji
+          dla tej łamigłówki, jak w poprzedniej łamigłówce. Musisz tylko utworzyć
+          funkcję służącą do zbierania całego nektaru, gdy dotrzesz do każdego kwiatka.
+        courseE_bee_functions9_b: Mimo, że wiesz, ile nektaru znajduje się w niektórych
+          kwiatkach, pętla "Podczas, gdy" może sprawić, że jedna funkcja będzie działać
+          dla wszystkich z nich.
       courseE_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
           spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
           ich działanie. Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
+        courseE_bee_functions_challenge1_b: Pamiętaj, aby zbudować kod wewnątrz zielonego
+          bloku funkcji.
       courseE_bee_functions_challenge2:
         courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
           spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
           ich działanie. Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
+        courseE_bee_functions_challenge1_b: Pamiętaj, aby zbudować kod wewnątrz zielonego
+          bloku funkcji.
+      courseE_farmer_concept1:
+        courseE_farmer_concept1_a: Blok "Gdy jest tu dziura" pomoże Ci wypełnić dowolną
+          dziurę, aż do uzyskania płaskiej powierzchni.
+        courseE_farmer_concept1_b: Możesz posłużyć się wzorem kaskadowym aby dotrzeć
+          do dziur.
+      courseE_farmer_concept1_2018:
+        courseE_farmer_concept1_a: Blok "Gdy jest tu dziura" pomoże Ci wypełnić dowolną
+          dziurę, aż do uzyskania płaskiej powierzchni.
+        courseE_farmer_concept1_b: Możesz posłużyć się wzorem kaskadowym aby dotrzeć
+          do dziur.
+      courseE_farmer_concept2:
+        courseE_farmer_concept2_a: Wszystkie ścieżki mają taką samą długość, ale są
+          oddalone o inną liczbę kwadratów. Tutaj pętla nie jest idealnym rozwiązaniem.
+          Wypróbuj funkcję.
+        courseE_farmer_concept2_b: Funkcja, która sprawia, że skręca się, idzie ścieżką,
+          zbiera dynie i wraca do głównej ścieżki poziomej może być tu przydatna.
+        courseE_farmer_concept2_c: 'Twój główny program jest w stanie wywołać tę funkcje
+          przy pomocy zielonego bloku "Zrób coś". '
+      courseE_farmer_concept2_2018:
+        courseE_farmer_concept2_a: Wszystkie ścieżki mają taką samą długość, ale są
+          oddalone o inną liczbę kwadratów. Tutaj pętla nie jest idealnym rozwiązaniem.
+          Wypróbuj funkcję.
+        courseE_farmer_concept2_b: Funkcja, która sprawia, że skręca się, idzie ścieżką,
+          zbiera dynie i wraca do głównej ścieżki poziomej może być tu przydatna.
+        courseE_farmer_concept2_c: 'Twój główny program jest w stanie wywołać tę funkcje
+          przy pomocy zielonego bloku "Zrób coś". '
+      courseE_farmer_concept3:
+        grade3_robotFarmer_ConditionalsIntro_8_b: Co powinieneś zrobić, gdy już dojdziesz
+          do końca ścieżki?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Użyj pętli "Powtarzaj", aby uruchamiać
+          kod wielokrotnie w przypadku każdej prostej ścieżki.
+      courseE_farmer_concept3_2018:
+        grade3_robotFarmer_ConditionalsIntro_8_b: Co powinieneś zrobić, gdy już dojdziesz
+          do końca ścieżki?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Użyj pętli "Powtarzaj", aby uruchamiać
+          kod wielokrotnie w przypadku każdej prostej ścieżki.
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_a: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+        courseE_farmer_functions1_b: Musisz zebrać tylko jedną dynię, ale czy możesz
+          użyć pętli, aby się do niej dostać?
+      courseE_farmer_functions10b:
+        courseE_farmer_functions10b_a: 'Będziesz musiał najpierw odtworzyć swoją funkcję. '
+        courseE_farmer_functions10b_b: W którą stronę musisz skręcić po pierwszej
+          dyni?
+        courseE_farmer_functions10b_c: Przyjrzyj się ponownie ostatniej łamigłówce
+          i zastanów, czy potrzebujesz pomocy przy tworzeniu funkcji.
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_a: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+        courseE_farmer_functions1_b: Musisz zebrać tylko jedną dynię, ale czy możesz
+          użyć pętli, aby się do niej dostać?
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_a: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+        courseE_farmer_functions1_b: Musisz zebrać tylko jedną dynię, ale czy możesz
+          użyć pętli, aby się do niej dostać?
+      courseE_farmer_functions1_2020:
+        courseE_farmer_functions1_a: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+        courseE_farmer_functions1_b: Musisz zebrać tylko jedną dynię, ale czy możesz
+          użyć pętli, aby się do niej dostać?
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_a: 'Przemyśl stwierdzenia warunkowe: "Jeśli/Jeśli
+          nie" krok po kroku. Co należy zrobić, jeśli stoisz przy kukurydzy?'
+        courseE_farmer_functions1a_b: Użyj bloku "Powtarzaj aż do", aby dotrzeć do
+          dyni!
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_b: Użyj bloku "Powtarzaj aż do", aby dotrzeć do
+          dyni!
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_b: Użyj bloku "Powtarzaj aż do", aby dotrzeć do
+          dyni!
+      courseE_farmer_functions1a_2020:
+        courseE_farmer_functions1a_b: Użyj bloku "Powtarzaj aż do", aby dotrzeć do
+          dyni!
+      courseE_farmer_functions2b:
+        courseE_farmer_functions2b_a: Możesz użyć "Powtarzaj aż do dyni", aby dostać
+          się do krańców obu ścieżek.
+        courseE_farmer_functions2b_b: Nie ma kukurydzy na ścieżce łączącej, więc możesz
+          iść dalej i skręcić.
+        courseE_farmer_functions2b_c: Będziesz potrzebować dwóch odrębnych bloków
+          "Powtarzaj aż do", aby zebrać cały plon.
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions2b_b: Nie ma kukurydzy na ścieżce łączącej, więc możesz
+          iść dalej i skręcić.
+        courseE_farmer_functions2b_c: Będziesz potrzebować dwóch odrębnych bloków
+          "Powtarzaj aż do", aby zebrać cały plon.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions2b_b: Nie ma kukurydzy na ścieżce łączącej, więc możesz
+          iść dalej i skręcić.
+        courseE_farmer_functions2b_c: Będziesz potrzebować dwóch odrębnych bloków
+          "Powtarzaj aż do", aby zebrać cały plon.
+      courseE_farmer_functions2b_2020:
+        courseE_farmer_functions2b_b: Nie ma kukurydzy na ścieżce łączącej, więc możesz
+          iść dalej i skręcić.
+        courseE_farmer_functions2b_c: Będziesz potrzebować dwóch odrębnych bloków
+          "Powtarzaj aż do", aby zebrać cały plon.
+      courseE_farmer_functions2ba:
+        courseE_farmer_functions2ba_a: Użyj zielonego bloku "kukurydza i dynia", aby
+          wywołać tę funkcję.
+        courseE_farmer_functions2ba_b: Przeciągnij wszystkie bloki razem do obszaru
+          roboczego w ramach "Po uruchomieniu", aby zobaczyć, jak działa ta funkcja.
+      courseE_farmer_functions3c:
+        courseE_farmer_functions3c_a: Jaka sekwencja często powtarza się w tym programie?
+          Czy możesz przeciągnąć te bloki do funkcji?
+        courseE_farmer_functions3c_b: 'Nie zapomnij wywołać swojej funkcji w programie
+          głównym po każdym usunięciu bloków. '
+      courseE_farmer_functions4b:
+        courseE_farmer_functions4b_b: Pamiętaj, aby skręcić po każdej ścieżce.
+        courseE_farmer_functions4b_c: Zielone bloki "kukurydza i dynia" są w zakładce
+          "Funkcje" w przyborniku.
+      courseE_farmer_functions5c:
+        courseE_farmer_functions5c_a: Czy istnieją jakieś inne wzory, które możesz
+          zapętlić w ramach tej łamigłówki?
+      courseE_farmer_functions6c:
+        courseE_farmer_functions6c_a: Edytuj swoją funkcję, aby sprawdzić również
+          sałatę.
+        courseE_farmer_functions6c_b: Czy blok "jeśli/ jeśli nie" pomoże sprawdzić,
+          czy jest gdzieś w okolicy sałata?
+        courseE_farmer_functions6c_c: Nie zapomnij sprawdzać kukurydzy!
+      courseE_farmer_functions7b:
+        courseE_farmer_functions7b_a: Tutaj nie potrzebujesz funkcji, ale możesz ją
+          stworzyć, jeśli Ci w czymś pomoże!
+        courseE_farmer_functions7b_b: 'Użyj stwierdzenia warunkowego "Jeśli/ Jeśli
+          nie", aby sprawdzić uprawy,  a potem skręć w zależności od tego, jaką uprawę
+          znajdziesz. '
+        courseE_farmer_functions7b_c: Pętla "Powtarzaj aż do dyni" może pomóc przejść
+          cały labirynt.
+      courseE_farmer_functions8b:
+        courseE_farmer_functions8b_a: Spróbuj uruchomić kod, aby zobaczyć, co on powoduje.
+          Co musisz zrobić po tym?
+        courseE_farmer_functions8b_b: Przeciągnij wszystkie bloki początkowe do funkcji
+          tak, abyś mógł ich użyć więcej niż jeden raz.
+        courseE_farmer_functions8b_c: Ile razy musisz wywołać funkcję?
+      courseE_farmer_functions9b:
+        courseE_farmer_functions9b_a: Czy możesz użyć zagnieżdżonych stwierdzeń warunkowych
+          "Jeśli" oraz "Jeśli/ Jeśli nie", aby przejść po ścieżce?
+        courseE_farmer_functions9b_b: Wykorzystaj "Powtarzaj aż do dyni", aby przejść
+          przez wszystkie ścieżki.
+        courseE_farmer_functions9b_c: Być może zechcesz przejść ścieżki tak, jakby
+          to były kwadraty powiększające się po każdej pętli.
+      courseE_farmer_ramp11a:
+        courseE_farmer_ramp12_a: 'Zamiast stosowania pętli "Powtarzaj", aby powiedzieć
+          farmerowi, ile razy ma zebrać łopatą brud, użyj bloku "Gdy jest stos".  '
+        courseE_farmer_ramp12_b: Musisz przejść do przodu tylko raz, aby dotrzeć do
+          brudu.
+      courseE_farmer_ramp11a_2018:
+        courseE_farmer_ramp12_a: 'Zamiast stosowania pętli "Powtarzaj", aby powiedzieć
+          farmerowi, ile razy ma zebrać łopatą brud, użyj bloku "Gdy jest stos".  '
+        courseE_farmer_ramp12_b: Musisz przejść do przodu tylko raz, aby dotrzeć do
+          brudu.
+      courseE_farmer_ramp11a_2019:
+        courseE_farmer_ramp12_a: 'Zamiast stosowania pętli "Powtarzaj", aby powiedzieć
+          farmerowi, ile razy ma zebrać łopatą brud, użyj bloku "Gdy jest stos".  '
+        courseE_farmer_ramp12_b: Musisz przejść do przodu tylko raz, aby dotrzeć do
+          brudu.
+      courseE_farmer_ramp11a_2020:
+        courseE_farmer_ramp12_a: 'Zamiast stosowania pętli "Powtarzaj", aby powiedzieć
+          farmerowi, ile razy ma zebrać łopatą brud, użyj bloku "Gdy jest stos".  '
+        courseE_farmer_ramp12_b: Musisz przejść do przodu tylko raz, aby dotrzeć do
+          brudu.
+      courseE_farmer_ramp12f:
+        courseE_farmer_ramp12f_b: 'Użyj bloku "jeśli/ jeśli nie", aby mi pomóc pani
+          farmerce zadecydować, czy musi skręcić w prawo czy w lewo. '
+      courseE_farmer_ramp12f_2018:
+        courseE_farmer_ramp12f_b: 'Użyj bloku "jeśli/ jeśli nie", aby mi pomóc pani
+          farmerce zadecydować, czy musi skręcić w prawo czy w lewo. '
+      courseE_farmer_ramp12f_2019:
+        courseE_farmer_ramp12f_b: 'Użyj bloku "jeśli/ jeśli nie", aby mi pomóc pani
+          farmerce zadecydować, czy musi skręcić w prawo czy w lewo. '
+      courseE_farmer_ramp12f_2020:
+        courseE_farmer_ramp12f_b: 'Użyj bloku "jeśli/ jeśli nie", aby mi pomóc pani
+          farmerce zadecydować, czy musi skręcić w prawo czy w lewo. '
+      courseE_farmer_ramp12g:
+        courseE_farmer_ramp12G_b: 'Użyj bloku "jeśli/ jeśli nie", aby mi pomóc pani
+          farmerce zadecydować, czy musi skręcić w prawo czy w lewo. '
+      courseE_farmer_ramp12g_2018:
+        courseE_farmer_ramp12G_b: 'Użyj bloku "jeśli/ jeśli nie", aby mi pomóc pani
+          farmerce zadecydować, czy musi skręcić w prawo czy w lewo. '
+      courseE_farmer_ramp12g_2019:
+        courseE_farmer_ramp12G_b: 'Użyj bloku "jeśli/ jeśli nie", aby mi pomóc pani
+          farmerce zadecydować, czy musi skręcić w prawo czy w lewo. '
+      courseE_farmer_ramp12g_2020:
+        courseE_farmer_ramp12G_b: 'Użyj bloku "jeśli/ jeśli nie", aby mi pomóc pani
+          farmerce zadecydować, czy musi skręcić w prawo czy w lewo. '
+      courseE_playLab_challenge1:
+        courseE_playLab_challenge1_a: "Oto kilka rzeczy, które możesz zrobić, gdy
+          gracz zwycięży w ramach gry:\n\n-   Sprawić, by dinozaur znikł.\n-   Zatrzymać
+          wiewiórki.\n-   Sprawić, by i wiewiórki, i dinozaur ucieszyły się. \n-   Ustawić
+          nowe tło.\n-   Sprawić, by rycerz podziękował graczowi za pomoc.\n-   Sprawić,
+          by wszystkie postaci zniknęły i wyświetlić komunikat: \"Wygrywasz!\"."
+        courseE_playLab_challenge1_b: "Oto kilka rzeczy, które możesz zrobić, gdy
+          gracz przegrywa w ramach gry:\n\n-   Sprawić, by rycerz znikł.\n-   Sprawić,
+          by wiewiórki były smutne.\n-   Sprawić, by dinozaur coś powiedział. \n-
+          \  Ustawić nowe tło.\n-   Sprawić, by wszystkie postaci zniknęły i wyświetlić
+          komunikat: \"Koniec gry\"."
+      courseE_playLab_scaffold1:
+        courseE_playLab_scaffold1_a: Blok "Ustaw postać 1 w obrazku???" może być użyty
+          w celu dodania postaci do sceny.
+        courseE_playLab_scaffold1_b: Wstaw blok "Ustaw postać" w ramach "Po uruchomieniu",
+          aby Twoja postać pojawiła się na początku programu.
+        courseE_playLab_scaffold1_c: Użyj "Ustaw tło???", aby wybrać tło dla Twojej
+          sceny.
+      courseE_playLab_scaffold2:
+        courseE_playLab_scaffold1_a: Wyciągnij menu rozwijane wydarzenia "Gdy strzałka
+          **\_**", aby zmienić kierunek elementów sterujących bloku.
+        courseE_playLab_scaffold1_b: Powinieneś mieć cztery bloki wydarzeń "Gdy strzałka"
+          z kierunkiem poruszania się pod każdym z nich.
+        courseE_playLab_scaffold1_c: Kiedy skończysz, powinieneś być w stanie poruszać
+          swoim bohaterem przy pomocy klawiszy strzałek!
+      courseE_playLab_scaffold4:
+        courseE_playLab_scaffold4_a: Użyj "Zdobądź punkt", aby dodać punkt oraz "Usuń
+          punkt", aby odjąć punkt.
+      courseE_playLab_scaffold5:
+        courseE_playLab_scaffold5_a: Musisz wygrać lub przegrać, aby ukończyć ten
+          poziom. Użyj blok "Zakończ grę jako wygraną" lub "Zakończ grę jako przegraną",
+          aby zakończyć.
       courseF_artist_for4:
         courseF_artist_for4_a: |-
           **Jaka jest najmniejsza liczba, którą będziesz potrzebował?
@@ -7222,7 +8339,53 @@ pl-PL:
         grade5_artist_variables_triangles1_b: Aby skrócić swój kod użyj pętli 'powtórz'.
         grade5_artist_variables_triangles1_c: Wewnątrz pętli musisz pójść do przodu
           50 pikseli, a następnie skręcić w lewo o 120 stopni.
+      iceage_click_hello:
+        iceage_click_hello_a: Dodaj przynajmniej jeden blok "Postać 1 mówi" do wydarzenia
+          "Po kliknięciu", aby ukończyć rozwiązywanie tej łamigłówki.
+      iceage_free_play:
+        iceage_free_play_a: 'Czy możesz sprawić, aby Sid odbył z Mannym walkę na kryształy
+          lodowe?  '
+        iceage_free_play_b: Spraw, by babcia Granny udała się w pościg za Diego. Zakończ
+          grę jako zwycięską, gdy go złapie.
+        iceage_free_play_c: Czy możesz sprawić, by Sid rzucał płatki śniegu w Diego
+          i sprawić, by z każdym celnym rzutem Diego stawał się większy? Zakończ grę
+          jako zwycięską, gdy Diego zostanie 5 razy trafiony.
       iceage_hello1:
         iceage_hello1_a: Aby rozwiązać to zadanie musisz dodać tylko jeden blok. Przeciągnij
           blok 'postać mówi' do obszaru roboczego i połącz go z blokiem 'po uruchomieniu',
           który już się tam znajduje. Następnie wpisz "Cześć!" w dołączonym bloku.
+      iceage_hello2:
+        iceage_hello2_a: 'Aby rozwiązać tę łamigłówkę trzeba skłonić Sida, aby coś
+          powiedział z wykorzystaniem bloku "Postać 1 mówi". Trzeba będzie również
+          skłonić Manny''ego, aby coś powiedział przy pomocy bloku "Postać 2 mówi". '
+      iceage_move_events:
+        iceage_move_events_a: 'Do każdego wydarzenia "Gdy strzałka ****\_****" będzie
+          trzeba dołączyć komendę "Przemieść postać 1", aby rozwiązać tę łamigłówkę. '
+      iceage_move_to_actor:
+        iceage_move_to_actor_a: Jeśli chodzi o tę łamigłówkę, czy możesz albo przemieścić
+          Diego o 200 pikseli lub przemieścić Manny'ego o 200 pikseli.
+        iceage_move_to_actor_b: Dołącz blok "Odtwórz ****\_\_\_****dźwięk" do wydarzenia
+          "Gdy postać 1 dotknie postać 2", aby ukończyć to zadanie.
+      iceage_move_to_flag:
+        iceage_hello3_a: Użyj bloku "Przesuń postać 1 w prawo o 200 pikseli", aby
+          ukończyć tę łamigłówkę.
+      iceage_repeat:
+        iceage_repeat_a: Użyj bloków "Przesuń postać 1 w lewo" i "Przesuń postać 1
+          w prawo", aby rozwiązać tę łamigłówkę.
+      iceage_sound_and_points:
+        iceage_sound_and_points_a: Trzeba będzie dodać dwa bloki poniżej wydarzenia
+          "Gdy postać 1 dotknie postaci 2."
+        iceage_sound_and_points_b: Będziesz potrzebować bloku "Zdobądź punkt" i bloku
+          "Odtwórz dźwięk \_\_\_aby przejść ten poziom.
+      iceage_throw_hearts:
+        iceage_throw_hearts_a: Kiedy chcesz rzucać sercami w babcię? Kiedy przyciska
+          się strzałkę? Kiedy klikasz w Sida? Kiedy klikasz w babcię Granny? Wybór
+          należy do Ciebie!
+        iceage_throw_hearts_b: Otrzymanie serca uszczęśliwia babcię, będziesz musiał
+          połączyć blok "Ustaw nastrój postaci 2 na szczęśliwy" poniżej wydarzenia
+          "Gdy postać 2 dotknie pocisku.
+      iceage_warn_ice_age:
+        iceage_warn_ice_age_a: 'Powinieneś tylko dodać dwa bloki, aby doprowadzić
+          tę łamigłówkę do punktu, w którym powinna się znaleźć. '
+        iceage_warn_ice_age_b: Dodaj oba nowe bloki poniżej wydarzenia "Po uruchomieniu",
+          aby sprawić, by wydarzyły się natychmiast po uruchomieniu programu.

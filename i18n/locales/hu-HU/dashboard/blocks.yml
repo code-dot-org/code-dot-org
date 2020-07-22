@@ -1015,6 +1015,10 @@ hu:
         options:
           CHOICE:
             '"this"': ez
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': másodperc
       gamelab_hideTitleScreen:
         text: címoldal elrejtése
       gamelab_isTouchingEdges:

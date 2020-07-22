@@ -970,6 +970,10 @@ nn:
         options:
           CHOICE:
             '"this"': denne
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekund
       gamelab_hideTitleScreen:
         text: skjul tittelskjerm
       gamelab_jumpTo:

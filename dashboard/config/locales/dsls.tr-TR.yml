@@ -2011,9 +2011,9 @@ tr-TR:
             hangisini oluşturacak?
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - text: 'Arı, buluta gidip nektar almaya çalışacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek
-            varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
@@ -2029,9 +2029,9 @@ tr-TR:
             Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - text: 'Arı, buluta gidip nektar almaya çalışacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek
-            varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
@@ -2047,9 +2047,9 @@ tr-TR:
             Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - text: 'Arı, buluta gidip nektar almaya çalışacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek
-            varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
@@ -2065,9 +2065,9 @@ tr-TR:
             Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
-        - text: 'Arı, buluta gidip nektar almaya çalışacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek
-            varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
@@ -2083,9 +2083,9 @@ tr-TR:
             Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra sizce ne olacak?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
-        - text: 'Arı, buluta gidip nektar almaya çalışacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek
-            varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
@@ -2970,9 +2970,9 @@ tr-TR:
             ne olacak?'
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - text: 'Arı, buluta gidip nektar almaya çalışacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek
-            varsa nektar almaya çalışmasını sağlar.
+        - text: Arı, buluta gidip ne olursa olsun nektar almaya çalışacak
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+            çiçek varsa nektar almaya çalışmasını sağlar.
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!

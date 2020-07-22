@@ -919,6 +919,8 @@ hi:
       school_name: 'स्कूल का नाम'
       school_city: 'स्कूल का शहर'
       school_country: 'स्कूल देश'
+      colombian_school_city: 'स्कूल का शहर'
+      colombian_school_name: 'स्कूल का नाम'
       ages: 'इस वर्ष आप कौन-से आयु वर्ग(वर्गों) को सिखा रहे हैं?'
       subjects: 'इस वर्ष आप कौन-सा विषय सिखा रहे हैं?'
       resources: 'आप निम्नलिखित में से कौन-से CS शिक्षा संसाधनों का उपयोग करते हैं?'

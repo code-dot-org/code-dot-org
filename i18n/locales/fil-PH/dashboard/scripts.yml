@@ -18832,6 +18832,30 @@ fil:
               name: Mga For Loops sa Bee
             For Loops in Artist:
               name: Mga Loops sa Artist
+            Programming with Angry Birds:
+              name: Pag-Program sa Maze
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+            Collecting Treasure with Laurel:
+              name: Pag-program sa Kolektor
+            Creating Art with Code:
+              name: Pag-program sa Artist
+            Nested Loops in Maze:
+              name: Naka-nest na mga Loops sa Maze
+            Snowflakes with Anna and Elsa:
+              name: Naka-nest na mga Loop sa Frozen
+            If/Else with Bee:
+              name: Mga Kondisyonal sa Bee
+            While Loops with the Farmer:
+              name: Mga While Loops sa Farmer
+            Harvesting with Conditionals:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            Functions with Artist:
+              name: Mga Function sa Artist
+            For Loops with Bee:
+              name: Mga For Loops sa Bee
+            For Loops with Artist:
+              name: Mga Loops sa Artist
           lesson_groups:
             csf_loops:
               display_name: Mga loop
@@ -18873,6 +18897,30 @@ fil:
             For Loops in Bee:
               name: Mga For Loops sa Bee
             For Loops in Artist:
+              name: Mga Loops sa Artist
+            Programming with Angry Birds:
+              name: Pag-Program sa Maze
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+            Collecting Treasure with Laurel:
+              name: Pag-program sa Kolektor
+            Creating Art with Code:
+              name: Pag-program sa Artist
+            Nested Loops in Maze:
+              name: Naka-nest na mga Loops sa Maze
+            Snowflakes with Anna and Elsa:
+              name: Naka-nest na mga Loop sa Frozen
+            If/Else with Bee:
+              name: Mga Kondisyonal sa Bee
+            While Loops with the Farmer:
+              name: Mga While Loops sa Farmer
+            Harvesting with Conditionals:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            Functions with Artist:
+              name: Mga Function sa Artist
+            For Loops with Bee:
+              name: Mga For Loops sa Bee
+            For Loops with Artist:
               name: Mga Loops sa Artist
         pre-express-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
