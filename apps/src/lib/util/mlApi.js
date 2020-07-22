@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import * as tf from '@tensorflow/tfjs';
 import * as handposeCore from '@tensorflow-models/handpose';
-
+import * as mobilenet from '@tensorflow-models/mobilenet';
 /**
  * Export a set of native code functions that student code can execute via the
  * interpreter.
@@ -9,7 +9,18 @@ import * as handposeCore from '@tensorflow-models/handpose';
  */
 export const commands = {
   async doSomeDifferentML(opts) {
-    console.log('do some different ML');
+    const img = document.querySelector('#img-to-classify');
+
+    // Load the model.
+    const model = await mobilenet.load();
+
+    // Classify the image.
+    const predictions = await model.classify(img);
+
+    opts.callback(predictions);
+
+    console.log('Predictions: ');
+    console.log(predictions);
   },
 
   async doSomeML(opts) {

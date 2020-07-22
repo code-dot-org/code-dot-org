@@ -2220,6 +2220,11 @@
   resolved "https://registry.yarnpkg.com/@tensorflow-models/handpose/-/handpose-0.0.5.tgz#0385ba82a7d81d4ac38cf4fd37be5a014dea2d42"
   integrity sha512-sygyoOp0AU8COlTZJCq/j2YtfhroY2/aWjDa+enYk7Kw7XxLxIefvRG+UixRxQe24VWlAmVKDFxNGTR265G9DA==
 
+"@tensorflow-models/mobilenet@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@tensorflow-models/mobilenet/-/mobilenet-2.0.4.tgz#7f40771fcc650f50febd49be72372d39c15f6f95"
+  integrity sha512-fkcxDBldlYitDCV88xETwAQoBIC8xYKdDu80uBDuBZBfNC4k/jeVbZHM28WjvTDsJN7d7dYO4NbIkRAH0XHKSQ==
+
 "@tensorflow/tfjs-backend-cpu@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-backend-cpu/-/tfjs-backend-cpu-2.0.1.tgz#959a5bbc7f956ff37c4fbced2db75cd299ce76c4"
