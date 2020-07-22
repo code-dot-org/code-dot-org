@@ -148,11 +148,11 @@
      ],
      "rows": [
       {
-       "value": "ensure_students_collaborate",
+       "value": "work_collaboratively",
        "text": "I can ensure that students work collaboratively when writing code."
       },
       {
-       "value": "ensure_students_share",
+       "value": "share_ideas",
        "text": "I can ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group or large-group discussion."
       },
       {
@@ -160,7 +160,7 @@
        "text": "I can create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
       },
       {
-       "value": "support_solving_problems",
+       "value": "support_problem_solving",
        "text": "I can support students in solving the various problems they encounter while working on programming activities."
       }
      ]
@@ -172,8 +172,8 @@
     },
     {
      "type": "matrix",
-     "name": "codeorg_familiarity",
-     "title": "Right now I know exactly how to...",
+     "name": "codeorg_tools_familiarity",
+     "title": "Right now, I know exactly how to...",
      "columns": [
       {
        "value": "1",

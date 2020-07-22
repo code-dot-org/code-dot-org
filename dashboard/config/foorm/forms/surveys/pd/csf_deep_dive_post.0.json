@@ -316,7 +316,7 @@
               "text": "I can ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group or large-group discussion."
             },
             {
-              "value": "failure_normalized",
+              "value": "normalize_failure",
               "text": "I can create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
             },
             {
@@ -332,7 +332,7 @@
         },
         {
           "type": "matrix",
-          "name": "know_how_to",
+          "name": "codeorg_tools_familiarity",
           "title": "Right now, I know exactly how to...",
           "columns": [
             {
@@ -378,11 +378,11 @@
               "text": "access sample solutions to programming puzzles on the Code.org website."
             },
             {
-              "value": "create_student_sections",
+              "value": "create_sections",
               "text": "create sections of students on the Code.org website."
             },
             {
-              "value": "manage_student_sections",
+              "value": "manage_sections",
               "text": "manage sections of students on the Code.org website (move students between sections, reset passwords, etc)."
             }
           ]
