@@ -1265,7 +1265,8 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
           password_confirmation: password,
           name: name,
           age: '16',
-          terms_of_service_version: '1'
+          terms_of_service_version: '1',
+          sign_in_count: 2
         }.merge(user_opts)
       },
       code: code
