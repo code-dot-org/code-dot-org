@@ -18,4 +18,23 @@
 
 class CourseVersion < ApplicationRecord
   belongs_to :content_root, polymorphic: true
+
+  def self.update_course_version(content_root)
+    # TODO: should we delete the existing CourseVersion and Course if is_course is removed from a script?
+    return nil unless content_root.is_course?
+
+    # TODO: Once the Course model is added, change this to just be version_year, since then the
+    # unique index will be on (course_id, key).
+    key = "#{content_root.family_name}-#{content_root.version_year}"
+
+    course_version = CourseVersion.find_or_create_by(
+      key: key,
+      display_name: content_root.version_year,
+      content_root: content_root,
+    )
+
+    # TODO: add relevant properties from content root to course_version
+
+    course_version
+  end
 end
