@@ -2232,6 +2232,11 @@ ko-KR:
         content1: 설명 입력
       csf_putting_a_stop_to_online_meanness:
         content1: 설명 입력
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # 나의 온라인 마을
+
+          ## 온라인에서 안전한 장소를 가는 방법은 무엇일까?
       grade2_multi_collector_A_predict1:
         answers:
         - {}

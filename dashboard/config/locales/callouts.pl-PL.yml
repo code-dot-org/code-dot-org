@@ -440,17 +440,17 @@ pl-PL:
         courseA_artist_loops7_1: Ta liczba znaczy, że tylko jeden spośród bloków tego
           typu może być użyty w ostatecznej odpowiedzi.
       courseA_artist_loops8:
-        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem przez
-          linię zawsze, gdy będziesz tego potrzebować?
+        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem po linii,
+          jeśli tego potrzebujesz?
       courseA_artist_loops8_2018:
-        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem przez
-          linię zawsze, gdy będziesz tego potrzebować?
+        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem po linii,
+          jeśli tego potrzebujesz?
       courseA_artist_loops8_2019:
-        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem przez
-          linię zawsze, gdy będziesz tego potrzebować?
+        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem po linii,
+          jeśli tego potrzebujesz?
       courseA_artist_loops8_2020:
-        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem przez
-          linię zawsze, gdy będziesz tego potrzebować?
+        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem po linii,
+          jeśli tego potrzebujesz?
       courseA_collector_loops1:
         courseA_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie
           martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
@@ -783,6 +783,44 @@ pl-PL:
           trudne i wymagać kilku prób.
 
 '
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: Zacznij używając tego bloku, aby pomóc utworzyć
+          pierwszy kwadrat.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Zacznij używając tego bloku, aby pomóc utworzyć
+          pierwszy kwadrat.
+      courseE_artist_functions2:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions2_2020:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: Twoje bloki służące do tworzenia funkcji zostały
+          przeniesione w ramach tej etykiety do przybornika.
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: Twoje bloki służące do tworzenia funkcji zostały
+          przeniesione w ramach tej etykiety do przybornika.
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: Twoje bloki służące do tworzenia funkcji zostały
+          przeniesione w ramach tej etykiety do przybornika.
+      courseE_artist_functions8a_2020:
+        courseD_artist_functions8_1: Twoje bloki służące do tworzenia funkcji zostały
+          przeniesione w ramach tej etykiety do przybornika.
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Przedłuż działanie programu
           dodając więcej kodu na dole.
@@ -829,6 +867,51 @@ pl-PL:
       courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Możesz zmienić ten numer.
         courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions13_2020:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+      courseE_farmer_functions1_2020:
+        courseE_farmer_functions1_2: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions1a_2020:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions2b_2020:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać postacie do
           innych części przestrzeni gry.

@@ -954,6 +954,8 @@ sk:
       school_name: 'Názov školy'
       school_city: 'Mesto'
       school_country: 'Krajina'
+      colombian_school_city: 'Mesto'
+      colombian_school_name: 'Názov školy'
       ages: 'Ktoré ročníky vyučujute tento rok?'
       subjects: 'Ktoré predmety vyučujute tento rok?'
       resources: 'Ktoré z nasledovných zdrojov používate pri výučbe informatiky?'

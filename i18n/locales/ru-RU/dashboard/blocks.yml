@@ -1015,6 +1015,10 @@ ru:
         options:
           CHOICE:
             '"this"': Это
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_hideTitleScreen:
         text: скрыть экран заголовка
       gamelab_isTouchingEdges:

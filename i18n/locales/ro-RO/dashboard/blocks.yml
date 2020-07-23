@@ -1017,6 +1017,10 @@ ro:
         options:
           CHOICE:
             '"this"': acest
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
       gamelab_hideTitleScreen:
         text: ascend ecranul cu titlu
       gamelab_isTouchingEdges:

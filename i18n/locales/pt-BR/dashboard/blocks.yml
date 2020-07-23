@@ -1019,6 +1019,10 @@ pt:
           CHOICE:
             '"this"': este
             '"other"': outro
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_hideTitleScreen:
         text: esconder a tela do título
       gamelab_isTouchingEdges:

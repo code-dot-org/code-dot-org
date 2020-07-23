@@ -868,6 +868,8 @@ hu:
       school_name: Iskola neve
       school_city: Iskola városa
       school_country: Iskola országa
+      colombian_school_city: Iskola városa
+      colombian_school_name: Iskola neve
       email_opt_in: Küldhetünk e-maileket a nemzetközi Code-org programról, tanfolyami
         újdonságokról és számítógép-tudománnyal kapcsolatos hírekről?
     form_entries:

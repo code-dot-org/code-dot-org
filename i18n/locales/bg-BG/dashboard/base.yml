@@ -822,6 +822,7 @@ bg:
       email: 'Имейл'
       school_name: 'Име на училището'
       school_country: 'Училищен район'
+      colombian_school_name: 'Име на училището'
     form_entries:
       gender:
         male: 'Мъж'

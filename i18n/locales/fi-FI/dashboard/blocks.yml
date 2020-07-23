@@ -1011,6 +1011,10 @@ fi:
         options:
           CHOICE:
             '"this"': tätä
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
       gamelab_hideTitleScreen:
         text: piilota otsikkonäyttö
       gamelab_isTouchingEdges:

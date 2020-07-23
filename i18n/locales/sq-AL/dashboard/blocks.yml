@@ -240,6 +240,10 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekondat
       gamelab_keyPressed:
         options:
           CONDITION:
