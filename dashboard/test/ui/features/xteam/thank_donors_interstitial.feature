@@ -26,7 +26,7 @@ Feature: Thank Donors Interstitial
     Then I wait to see "#thank-donors-modal"
     And I see no difference for "thank donors interstitial"
 
-    When I click "#thank-donors-modal"
+    When I click "#dismiss-thank-donors"
     Then I wait until element "#thank-donors-modal" is not visible
     And I see no difference for "thank donors interstitial closed"
     And I close my eyes
