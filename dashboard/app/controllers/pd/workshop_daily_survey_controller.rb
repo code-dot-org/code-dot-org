@@ -309,6 +309,23 @@ module Pd
       render_csf_survey(PRE_DEEPDIVE_SURVEY, workshop)
     end
 
+    # Display CSF201 (Deep Dive) pre-workshop survey using Foorm.
+    # Temporary separate method for testing--will eventually replace new_csf_pre201
+    # once all CSF201 surveys are converted to Foorm
+    # GET workshop_survey/foorm/csf/pre201
+    def new_csf_pre201_foorm
+      # Find the closest CSF 201 workshop the current user enrolled in.
+      workshop = Pd::Workshop.
+        where(course: COURSE_CSF, subject: SUBJECT_CSF_201).
+        enrolled_in_by(current_user).nearest
+
+      return render :not_enrolled unless workshop
+      return render :too_late unless workshop.state != STATE_ENDED
+
+      survey_name = PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201]
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: 0)
+    end
+
     # Display CSF101 (Intro) post-workshop survey.
     # The survey, on submit, will display thanks.
     # GET /pd/workshop_survey/csf/post101(/:enrollment_code)
@@ -344,8 +361,8 @@ module Pd
       render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
     end
 
-    # Display CSF201 (Deep Dive) pre-workshop survey using Foorm.
-    # Temporary separate method for testing--will eventually replace new_csf_pre201
+    # Display CSF201 (Deep Dive) post-workshop survey using Foorm.
+    # Temporary separate method for testing--will eventually replace new_csf_post201
     # once all CSF201 surveys are converted to Foorm
     # GET workshop_survey/foorm/csf/post201
     def new_csf_post201_foorm

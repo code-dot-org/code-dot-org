@@ -51,6 +51,10 @@ export const commands = {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
+  isKeyPressed(key) {
+    return actionCommands.isKeyPressed.apply(this, [key]);
+  },
+
   isTouchingEdges(spriteArg) {
     return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
   },
@@ -117,6 +121,10 @@ export const commands = {
   },
 
   // Event commands
+  atTime(n, unit, callback) {
+    eventCommands.atTime(n, unit, callback);
+  },
+
   checkTouching(condition, sprite1, sprite2, callback) {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
