@@ -1,0 +1,6 @@
+hideable_lessons true
+student_detail_progress_view true
+
+lesson 'Module 1'
+level 'OPL - CSD-PL AYWS1 Debugging Intro', progression: 'Module 1 Overview'
+

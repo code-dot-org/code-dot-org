@@ -18171,3 +18171,21 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        vpl-csd-2020:
+          lessons:
+            Module 1:
+              name: Module 1
+          lesson_groups: {}
+          title: CS Discoveries Virtual Professional Learning 2020 - 21
+          description_audience: ''
+          description_short: ''
+          description: ''
+        vpl-csp-2020:
+          lessons:
+            Module 1:
+              name: Module 1
+          lesson_groups: {}
+          title: CS Principles Virtual Professional Learning
+          description_audience: ''
+          description_short: ''
+          description: ''
