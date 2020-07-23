@@ -1907,19 +1907,17 @@ draw() - USEFUL?
 
   // Variables
   {
+    func: 'console.log',
+    parent: consoleApi,
+    category: 'Variables',
+    paletteParams: ['message'],
+    params: ['"message"']
+  },
+  {
     func: 'comment_Variables',
     block: '// Comment',
     expansion: '// ',
     category: 'Variables'
-  },
-
-  // Functions
-  {
-    func: 'console.log',
-    parent: consoleApi,
-    category: 'Functions',
-    paletteParams: ['message'],
-    params: ['"message"']
   },
 
   // Data
