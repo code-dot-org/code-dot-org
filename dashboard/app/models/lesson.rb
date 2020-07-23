@@ -51,7 +51,7 @@ class Lesson < ActiveRecord::Base
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(script, lesson_group, raw_lessons, lockable_count, non_lockable_count, lesson_position, chapter, new_suffix, editor_experiment)
+  def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
 
@@ -64,18 +64,16 @@ class Lesson < ActiveRecord::Base
         end
 
       lesson.assign_attributes(
-        absolute_position: (lesson_position += 1),
+        absolute_position: (counters.lesson_position += 1),
         lesson_group: lesson_group,
         lockable: !!raw_lesson[:lockable],
         visible_after: raw_lesson[:visible_after],
-        relative_position: !!raw_lesson[:lockable] ? (lockable_count += 1) : (non_lockable_count += 1)
+        relative_position: !!raw_lesson[:lockable] ? (counters.lockable_count += 1) : (counters.non_lockable_count += 1)
       )
       lesson.save! if lesson.changed?
 
-      lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], chapter, new_suffix, editor_experiment)
+      lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment)
       lesson.save!
-
-      chapter += lesson.script_levels.length
 
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
 

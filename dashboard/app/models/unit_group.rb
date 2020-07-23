@@ -22,6 +22,7 @@ class UnitGroup < ApplicationRecord
   has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_course_scripts, source: :script
   has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
+  has_one :course_version, as: :content_root
 
   after_save :write_serialization
 
