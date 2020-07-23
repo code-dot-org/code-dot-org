@@ -3,4 +3,12 @@ student_detail_progress_view true
 
 lesson 'Module 1'
 level 'CSP-PL AYWS1 Workshop Overview', progression: 'Module 1 Overview (~5 minutes)'
+level 'CSP Module 1 Unit 3 Context', progression: 'Wrapping up Unit 3 (~20 minutes)'
+level 'CSP - Unit 4 tasks overview', progression: 'Unit 4 Overview (~30 minutes)'
+level 'CSP-PL - U4 L12 Practice PT 1', progression: 'Unit 4 Overview (~30 minutes)'
+level 'CSP-PL U4 L12 Practice PT 2', progression: 'Unit 4 Overview (~30 minutes)'
+level 'CSP Module 1 Unit 4 Reflection', progression: 'Unit 4 Overview (~30 minutes)'
+level 'CSP Module 1 EIPM Reflection', progression: 'Introducing EIPM (~25 minutes)'
+level 'CSP Module 1 EIPM goes virtual', progression: 'Introducing EIPM (~25 minutes)'
+level 'CSP - Module 1 Wrap Up', progression: 'Module 1 Asynchronous Wrap Up (~10 minutes)'
 
