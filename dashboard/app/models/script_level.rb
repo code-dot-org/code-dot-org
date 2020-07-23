@@ -52,7 +52,7 @@ class ScriptLevel < ActiveRecord::Base
   )
 
   # Chapter values order all the script_levels in a script.
-  def self.add_script_levels(script, lesson, raw_script_levels, chapter, new_suffix, editor_experiment)
+  def self.add_script_levels(script, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
     script_level_position = 0
 
     raw_script_levels.map do |raw_script_level|
@@ -71,7 +71,7 @@ class ScriptLevel < ActiveRecord::Base
       script_level_attributes = {
         script_id: script.id,
         stage_id: lesson.id,
-        chapter: (chapter += 1),
+        chapter: (counters.chapter += 1),
         position: (script_level_position += 1),
         named_level: raw_script_level[:named_level],
         bonus: raw_script_level[:bonus],
