@@ -9,19 +9,23 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @student = create(:follower, section: @section).student_user
   end
 
+  CSP_COURSE_NAME = 'csp-2017'
+  CSP_COURSE_SOFT_LAUNCHED_NAME = 'csp-2018-soft-launched'
+
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @course = create(:course)
+    @course = create(:unit_group)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
 
     @script = create(:script)
     @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_course = create(:course, name: 'csp-2017')
+    @csp_course = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
+    @csp_course_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
     @csp_script = create(:script, name: 'csp1')
-    create(:course_script, course: @csp_course, script: @csp_script, position: 1)
+    create(:course_script, unit_group: @csp_course, script: @csp_script, position: 1)
   end
 
   test 'logged out cannot list sections' do
@@ -240,11 +244,22 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 'Glulx', returned_section.name
   end
 
-  test 'default name is New Section' do
+  test 'default name is Untitled Section' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
       name: '',
+    }
+
+    assert_equal 'Untitled Section', returned_json['name']
+    assert_equal 'Untitled Section', returned_section.name
+  end
+
+  test 'default name is used if provided name is all whitespace' do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      name: " \r\n\t",
     }
 
     assert_equal 'Untitled Section', returned_json['name']
@@ -328,40 +343,40 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     refute_equal 'ABCDEF', returned_section.code
   end
 
-  test 'can set stage_extras to TRUE or FALSE during creation' do
+  test 'can set lesson_extras to TRUE or FALSE during creation' do
     sign_in @teacher
     [true, false].each do |desired_value|
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        stage_extras: desired_value,
+        lesson_extras: desired_value,
       }
 
-      assert_equal desired_value, returned_json['stage_extras']
-      assert_equal desired_value, returned_section.stage_extras
+      assert_equal desired_value, returned_json['lesson_extras']
+      assert_equal desired_value, returned_section.lesson_extras
     end
   end
 
-  test 'default stage_extras value is FALSE' do
+  test 'default lesson_extras value is FALSE' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
     }
 
-    assert_equal false, returned_json['stage_extras']
-    assert_equal false, returned_section.stage_extras
+    assert_equal false, returned_json['lesson_extras']
+    assert_equal false, returned_section.lesson_extras
   end
 
-  test 'cannot set stage_extras to an invalid value' do
+  test 'cannot set lesson_extras to an invalid value' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      stage_extras: 'KREBF',
+      lesson_extras: 'KREBF',
     }
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_equal true, returned_json['stage_extras']
-    assert_equal true, returned_section.stage_extras
+    assert_equal true, returned_json['lesson_extras']
+    assert_equal true, returned_section.lesson_extras
   end
 
   test 'can set pairing_allowed to TRUE or FALSE during creation' do
@@ -400,17 +415,21 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal true, returned_section.pairing_allowed
   end
 
-  test 'can create with a course id but no script id' do
-    sign_in @teacher
-    post :create, params: {
-      login_type: Section::LOGIN_TYPE_EMAIL,
-      course_id: @csp_course.id,
-    }
+  [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
+    test "can create with a course id but no script id - #{existing_course_name}" do
+      existing_course = UnitGroup.find_by(name: existing_course_name)
 
-    assert_equal @csp_course.id, returned_json['course_id']
-    assert_equal @csp_course, returned_section.course
-    assert_nil returned_json['script']['id']
-    assert_nil returned_section.script
+      sign_in @teacher
+      post :create, params: {
+        login_type: Section::LOGIN_TYPE_EMAIL,
+        course_id: existing_course.id,
+      }
+
+      assert_equal existing_course.id, returned_json['course_id']
+      assert_equal existing_course, returned_section.unit_group
+      assert_nil returned_json['script']['id']
+      assert_nil returned_section.script
+    end
   end
 
   test 'cannot assign an invalid course id' do
@@ -423,7 +442,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # TODO: Better to fail here?
 
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
   test 'can create with a script id but no course id' do
@@ -436,7 +455,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal @script.id, returned_json['script']['id']
     assert_equal @script, returned_section.script
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
   test 'cannot assign an invalid script id' do
@@ -451,21 +470,25 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_json['script']['id']
     assert_nil returned_section.script
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
-  test 'can create with both a course id and a script id' do
-    sign_in @teacher
-    post :create, params: {
-      login_type: Section::LOGIN_TYPE_EMAIL,
-      course_id: @csp_course.id,
-      script: {id: @csp_script.id},
-    }
+  [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
+    test "can create with both a course id and a script id - #{existing_course_name}" do
+      existing_course = UnitGroup.find_by(name: existing_course_name)
 
-    assert_equal @csp_course.id, returned_json['course_id']
-    assert_equal @csp_course, returned_section.course
-    assert_equal @csp_script.id, returned_json['script']['id']
-    assert_equal @csp_script, returned_section.script
+      sign_in @teacher
+      post :create, params: {
+        login_type: Section::LOGIN_TYPE_EMAIL,
+        course_id: existing_course.id,
+        script: {id: @csp_script.id},
+      }
+
+      assert_equal existing_course.id, returned_json['course_id']
+      assert_equal existing_course, returned_section.unit_group
+      assert_equal @csp_script.id, returned_json['script']['id']
+      assert_equal @csp_script, returned_section.script
+    end
   end
 
   test 'creating a section with a script assigns the script to the creating user' do
@@ -524,7 +547,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: can update section you own" do
-    Course.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:valid_course_id?).returns(true)
 
     sign_in @teacher
     section_with_script = create(
@@ -533,7 +556,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       script_id: Script.flappy_script.id,
       login_type: Section::LOGIN_TYPE_WORD,
       grade: "1",
-      stage_extras: true,
+      lesson_extras: true,
       pairing_allowed: false,
       hidden: true
     )
@@ -544,7 +567,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       name: "My Section",
       login_type: Section::LOGIN_TYPE_PICTURE,
       grade: "K",
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       hidden: false
     }
@@ -558,9 +581,32 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
     assert_equal("K", section_with_script.grade)
-    assert_equal(false, section_with_script.stage_extras)
+    assert_equal(false, section_with_script.lesson_extras)
     assert_equal(true, section_with_script.pairing_allowed)
     assert_equal(false, section_with_script.hidden)
+
+    post :update, params: {
+      id: section_with_script.id,
+      lesson_extras: true,
+    }
+    section_with_script = Section.find(section_with_script.id)
+    assert_equal(true, section_with_script.lesson_extras)
+  end
+
+  test "update: name is ignored if empty or all whitespace" do
+    UnitGroup.stubs(:valid_course_id?).returns(true)
+
+    section = create :section, name: 'Old section name'
+    sign_in section.teacher
+
+    post :update, params: {
+      id: section.id,
+      name: " \r\n\t"
+    }
+    assert_response :success
+
+    section.reload
+    assert_equal 'Old section name', section.name
   end
 
   test "update: course_id is cleared if not provided and script has no default course" do
@@ -588,7 +634,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section.reload
     assert_response :success
     assert_equal @csp_script.id, section.script_id
-    assert_equal @csp_script.course.id, section.course_id
+    assert_equal @csp_script.unit_group.id, section.course_id
   end
 
   test "update: script_id is cleared if not provided" do
@@ -606,7 +652,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: course_id is not updated if invalid" do
-    Course.stubs(:valid_course_id?).returns(false)
+    UnitGroup.stubs(:valid_course_id?).returns(false)
 
     sign_in @teacher
     section = create(:section, user: @teacher, course_id: nil)

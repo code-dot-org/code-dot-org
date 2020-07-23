@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import $ from 'jquery';
+import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
-import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -20,6 +20,15 @@ import {
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
+import {
+  assignmentVersionShape,
+  sectionForDropdownShape
+} from '@cdo/apps/templates/teacherDashboard/shapes';
+import AssignmentVersionSelector, {
+  setRecommendedAndSelectedVersions
+} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   main: {
@@ -50,7 +59,7 @@ const styles = {
   }
 };
 
-export default class CourseOverview extends Component {
+class CourseOverview extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -70,17 +79,14 @@ export default class CourseOverview extends Component {
     scripts: PropTypes.array.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    versions: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        version_year: PropTypes.string.isRequired,
-        version_title: PropTypes.string.isRequired,
-        can_view_version: PropTypes.bool.isRequired
-      })
-    ).isRequired,
+    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
-    redirectToCourseUrl: PropTypes.string
+    redirectToCourseUrl: PropTypes.string,
+    showAssignButton: PropTypes.bool,
+    userId: PropTypes.number,
+    // Redux
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
   constructor(props) {
@@ -90,12 +96,12 @@ export default class CourseOverview extends Component {
     this.state = {showRedirectDialog};
   }
 
-  onChangeVersion = event => {
-    const courseName = event.target.value;
-    if (courseName !== this.props.name) {
+  onChangeVersion = versionYear => {
+    const course = this.props.versions.find(v => v.year === versionYear);
+    if (course && course.name.length > 0 && course.name !== this.props.name) {
       const sectionId = queryParams('section_id');
       const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`/courses/${courseName}${queryString}`);
+      utils.navigateToHref(`/courses/${course.name}${queryString}`);
     }
   };
 
@@ -135,6 +141,7 @@ export default class CourseOverview extends Component {
       descriptionStudent,
       descriptionTeacher,
       sectionsInfo,
+      sectionsForDropdown,
       teacherResources,
       isTeacher,
       viewAs,
@@ -144,7 +151,9 @@ export default class CourseOverview extends Component {
       versions,
       showVersionWarning,
       showRedirectWarning,
-      redirectToCourseUrl
+      redirectToCourseUrl,
+      showAssignButton,
+      userId
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -163,8 +172,14 @@ export default class CourseOverview extends Component {
       hasVerifiedResources;
 
     // Only display viewable versions in course version dropdown.
-    const filteredVersions = versions.filter(
-      version => version.can_view_version
+    const filteredVersions = versions.filter(version => version.canViewVersion);
+    const selectedVersion = filteredVersions.find(
+      v => v.name === this.props.name
+    );
+    setRecommendedAndSelectedVersions(
+      filteredVersions,
+      null, // Ignore locale for courses.
+      selectedVersion && selectedVersion.year
     );
 
     return (
@@ -178,6 +193,7 @@ export default class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification
             type={NotificationType.warning}
@@ -199,24 +215,11 @@ export default class CourseOverview extends Component {
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {filteredVersions.length > 1 && (
-            <span style={styles.versionWrapper}>
-              <span style={styles.versionLabel}>
-                {i18n.courseOverviewVersionLabel()}
-              </span>
-              &nbsp;
-              <select
-                onChange={this.onChangeVersion}
-                value={name}
-                style={styles.versionDropdown}
-                id="version-selector"
-              >
-                {filteredVersions.map(version => (
-                  <option key={version.name} value={version.name}>
-                    {version.version_title}
-                  </option>
-                ))}
-              </select>
-            </span>
+            <AssignmentVersionSelector
+              onChangeVersion={this.onChangeVersion}
+              versions={filteredVersions}
+              rightJustifiedPopupMenu={true}
+            />
           )}
         </div>
         <div style={styles.description}>
@@ -227,12 +230,13 @@ export default class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification />}
         {isTeacher && (
           <div>
-            <LabeledSectionSelector />
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
+              sectionsForDropdown={sectionsForDropdown}
               id={id}
               title={title}
               resources={teacherResources}
+              showAssignButton={showAssignButton}
             />
           </div>
         )}
@@ -243,9 +247,22 @@ export default class CourseOverview extends Component {
             name={script.name}
             id={script.id}
             description={script.description}
+            assignedSectionId={script.assigned_section_id}
+            courseId={id}
+            showAssignButton={showAssignButton}
           />
         ))}
       </div>
     );
   }
 }
+
+export const UnconnectedCourseOverview = CourseOverview;
+export default connect((state, ownProps) => ({
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    null,
+    ownProps.id,
+    true
+  )
+}))(CourseOverview);

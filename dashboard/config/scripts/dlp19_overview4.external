@@ -1,0 +1,30 @@
+name 'dlp19_overview4'
+title 'Deeper Learning Description'
+description 'description here'
+markdown <<MARKDOWN
+# Deeper Learning Program
+
+## How are submissions evaluated?
+After your reflections are submitted, they will be reviewed by one of Code.org’s Lead Reviewers, a veteran facilitator who has completed the Facilitator Development Program. The Lead Reviewer will evaluate your work and give it one of two statuses: “Yes, meets” or “No, does not meet”. They will also leave detailed feedback about why you earned that status. In order to successfully complete the module and receive payment, all of your reflections in a module need to receive a “Yes” status. You will have multiple opportunities to update your reflections based on feedback from the Lead Reviewers. You can expect to receive Lead Reviewer feedback on your reflections within 10 days after the reflection’s submission date.
+### **Guidelines for Review**
+ An acceptable response has clear, convincing and consistent evidence of your
+- commitment to the role of a Code.org facilitator 
+- understanding of the Code.org Professional Learning Values
+- application of the approaches to those values
+- knowledge of the curriculum content including resources, supports, and tools. 
+
+Each submission is reviewed holistically as ‘meets requirements’ or ‘does not meet requirements’.  Each response receives feedback on how it does or does not meet the criteria including suggestions for improvement or growth.  Based on the feedback (lead reviewers or peers), submissions may be edited and resubmitted until they meet the requirements or the final deadline (Jan 31 for M1 and M2,  May 1 for M3 and M4).
+. 
+ 
+
+![](https://images.code.org/706444b6e2ffe5b92c588f641ef7a344-image-1564452021907.PNG)
+
+## How do I get support?
+- Read the teacher forum for that unit to see common questions teachers have asked and helpful information others have shared.
+- Visit the Deeper Learning forum to ask questions of the facilitator community and lead reviewers
+- Contact facilitators@code.org
+- Still need support? For more in-depth guidance or coaching, request a 15-min 1:1 with Andrea 
+
+
+
+MARKDOWN

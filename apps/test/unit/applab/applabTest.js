@@ -1,8 +1,7 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {assert, expect} from '../../util/configuredChai';
+import {assert, expect} from '../../util/deprecatedChai';
 import project from '@cdo/apps/code-studio/initApp/project';
-import i18n from '@cdo/apps/code-studio/i18n';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
 
@@ -522,6 +521,18 @@ describe('applab', () => {
     });
   });
 
+  describe("Turtle mode's speed in debugger", () => {
+    it('will slow the speed of how fast each block is run in the workspace when speed is set as turtle mode ', () => {
+      Applab.setStepSpeed(0);
+      assert.equal(Applab.scale.stepSpeed, 1500);
+    });
+
+    it('will not affect how fast each block is run in the workspace when speed is set as rabbit mode', () => {
+      Applab.setStepSpeed(1);
+      assert.equal(Applab.scale.stepSpeed, 0);
+    });
+  });
+
   describe('Applab.init()', () => {
     before(() => sinon.stub(Applab, 'render'));
     after(() => Applab.render.restore());
@@ -564,9 +575,6 @@ describe('applab', () => {
   describe('The applab.makeFooterMenuItems ', () => {
     beforeEach(() => {
       sinon.stub(project, 'getUrl');
-      i18n.t.callsFake(function(txt) {
-        return txt;
-      });
     });
 
     afterEach(() => {
@@ -579,7 +587,7 @@ describe('applab', () => {
       );
       var footItems = Applab.makeFooterMenuItems(true);
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === commonMsg.openWorkspace()
+        item => item.text === commonMsg.howItWorks()
       );
       var reportAbuseIndex = footItems.findIndex(
         item => item.text === commonMsg.reportAbuse()
@@ -593,7 +601,7 @@ describe('applab', () => {
       );
       var footItems = Applab.makeFooterMenuItems(true);
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === commonMsg.openWorkspace()
+        item => item.text === commonMsg.howItWorks()
       );
       var makeOwnIndex = footItems.findIndex(
         item => item.text === applabMsg.makeMyOwnApp()
@@ -607,7 +615,7 @@ describe('applab', () => {
       );
       var footItems = Applab.makeFooterMenuItems(true);
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === commonMsg.openWorkspace()
+        item => item.text === commonMsg.howItWorks()
       );
       var reportAbuseIndex = footItems.findIndex(
         item => item.text === commonMsg.reportAbuse()

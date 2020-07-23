@@ -6,8 +6,12 @@ import ImagePickerPropertyRow from './ImagePickerPropertyRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
+import designMode from '../designMode';
+import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
+import themeValues from '../themeValues';
+import {getStore} from '../../redux';
 
 class ScreenProperties extends React.Component {
   static propTypes = {
@@ -142,15 +146,21 @@ class ScreenEvents extends React.Component {
 export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
+  themeValues: themeValues.screen,
 
   create: function() {
+    let pageConstants = getStore().getState().pageConstants;
+    let width =
+      pageConstants && pageConstants.widgetMode
+        ? applabConstants.WIDGET_WIDTH
+        : applabConstants.APP_WIDTH;
     const element = document.createElement('div');
     element.setAttribute('class', 'screen');
     element.setAttribute('tabIndex', '1');
     element.style.display = 'block';
     element.style.height =
       applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT + 'px';
-    element.style.width = applabConstants.APP_WIDTH + 'px';
+    element.style.width = width + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
     // We want our screen to be behind canvases. By setting any z-index on the
@@ -160,6 +170,12 @@ export default {
     // see http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
     element.style.position = 'absolute';
     element.style.zIndex = 0;
+    // New screens are created with the same theme as is currently active
+    const currentTheme = elementLibrary.getCurrentTheme(
+      designMode.activeScreen()
+    );
+    element.setAttribute('data-theme', currentTheme);
+    elementLibrary.setAllPropertiesToCurrentTheme(element, element);
 
     return element;
   },
@@ -171,7 +187,32 @@ export default {
     // Properly position existing screens, so that canvases appear correctly.
     element.style.position = 'absolute';
     element.style.zIndex = 0;
-
     element.setAttribute('tabIndex', '1');
+
+    if (!element.getAttribute('data-theme')) {
+      element.setAttribute(
+        'data-theme',
+        applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
+      );
+    }
+
+    if (element.style.backgroundColor === '') {
+      element.style.backgroundColor = this.themeValues.backgroundColor[
+        applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
+      ];
+    }
+  },
+  readProperty: function(element, name) {
+    if (name === 'theme') {
+      return element.getAttribute('data-theme');
+    }
+    throw `unknown property name ${name}`;
+  },
+  onPropertyChange: function(element, name, value) {
+    if (name === 'theme') {
+      designMode.changeThemeForScreen(element, value);
+      return true;
+    }
+    return false;
   }
 };

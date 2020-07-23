@@ -26,7 +26,7 @@ class ChannelsApi < Sinatra::Base
       dont_cache
       content_type :json
       JSON.pretty_generate(
-        {storage_id: storage_id('user')}
+        {storage_id: get_storage_id}
       )
     end
   end
@@ -46,7 +46,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      StorageApps.new(storage_id('user')).to_a.to_json
+      StorageApps.new(get_storage_id).to_a.to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -64,7 +64,7 @@ class ChannelsApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    storage_app = StorageApps.new(storage_id('user'))
+    storage_app = StorageApps.new(get_storage_id)
 
     begin
       _, remix_parent_id = storage_decrypt_channel_id(request.GET['parent']) if request.GET['parent']
@@ -115,7 +115,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      StorageApps.new(storage_id('user')).get(id).to_json
+      StorageApps.new(get_storage_id).get(id).to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -129,7 +129,7 @@ class ChannelsApi < Sinatra::Base
   delete %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
     begin
-      StorageApps.new(storage_id('user')).delete(id)
+      StorageApps.new(get_storage_id).delete(id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -156,14 +156,25 @@ class ChannelsApi < Sinatra::Base
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
+    # Set libraryPublishedAt timestamp if we are publishing a project library.
+    publish_library = value.delete('publishLibrary')
+    value = value.merge('libraryPublishedAt' => Time.now) if publish_library
+
     # Channels for project-backed levels are created without a project_type. The
     # type is then determined by client-side logic when the project is updated.
     project_type = value.delete('projectType')
 
     begin
-      value = StorageApps.new(storage_id('user')).update(id, value, request.ip, project_type: project_type)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
+      value = StorageApps.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => e
+      if e.class == ProfanityPrivacyError
+        dont_cache
+        status 422
+        content_type :json
+        return {nameFailure: e.flagged_text}.to_json
+      else
+        bad_request
+      end
     end
 
     dont_cache
@@ -189,7 +200,7 @@ class ChannelsApi < Sinatra::Base
 
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.
-    StorageApps.new(storage_id('user')).publish(channel_id, project_type, current_user).to_json
+    StorageApps.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
   end
 
   #
@@ -199,7 +210,7 @@ class ChannelsApi < Sinatra::Base
   #
   post %r{/v3/channels/([^/]+)/unpublish} do |channel_id|
     not_authorized unless owns_channel?(channel_id)
-    StorageApps.new(storage_id('user')).unpublish(channel_id)
+    StorageApps.new(get_storage_id).unpublish(channel_id)
     {publishedAt: nil}.to_json
   end
 
@@ -213,7 +224,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      value = StorageApps.new(storage_id('user')).set_content_moderation(channel_id, true)
+      value = StorageApps.new(get_storage_id).set_content_moderation(channel_id, true)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -230,7 +241,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      value = StorageApps.new(storage_id('user')).set_content_moderation(channel_id, false)
+      value = StorageApps.new(get_storage_id).set_content_moderation(channel_id, false)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -251,6 +262,26 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # GET /v3/channels/<channel-id>/share-failure
+  #
+  # Get an indication of why a project can't be shared.
+  #
+  get %r{/v3/channels/([^/]+)/share-failure} do |id|
+    dont_cache
+    content_type :json
+    language = request.language
+
+    value = explain_share_failure(id)
+    intl_value = language != 'en' ?
+      explain_share_failure(id, language) : nil
+    {
+      share_failure: value,
+      intl_share_failure: intl_value,
+      language: language
+    }.to_json
+  end
+
+  #
   #
   # GET /v3/channels/<channel-id>/sharing_disabled
   #
@@ -260,7 +291,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      value = StorageApps.new(storage_id('user')).get_sharing_disabled(id, current_user_id)
+      value = StorageApps.new(get_storage_id).get_sharing_disabled(id, current_user_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -277,7 +308,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      value = StorageApps.new(storage_id('user')).get_abuse(id)
+      value = StorageApps.get_abuse(id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -292,8 +323,32 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/abuse$} do |id|
     dont_cache
     content_type :json
+    # Reports of abuse from verified teachers are more reliable than reports
+    # from students so we increase the abuse score enough to block the project
+    # with only one report from a verified teacher.
+    amount = verified_teacher? ? 20 : 10
     begin
-      value = StorageApps.new(storage_id('user')).increment_abuse(id)
+      value = StorageApps.new(get_storage_id).increment_abuse(id, amount)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {abuse_score: value}.to_json
+  end
+
+  #
+  # POST /v3/channels/<channel-id>/buffer_abuse_score
+  #
+  # Set an abuse score to -50 to buffer against false
+  # reporting. Used for featured projects.
+  #
+  post %r{/v3/channels/([^/]+)/buffer_abuse_score$} do |id|
+    # UserPermission::PROJECT_VALIDATOR
+    not_authorized unless project_validator?
+
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(get_storage_id).buffer_abuse_score(id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -312,7 +367,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      value = StorageApps.new(storage_id('user')).reset_abuse(id)
+      value = StorageApps.new(get_storage_id).reset_abuse(id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -325,5 +380,9 @@ class ChannelsApi < Sinatra::Base
   # This method is included here so that it can be stubbed in tests.
   def project_validator?
     has_permission?("project_validator")
+  end
+
+  def verified_teacher?
+    has_permission?("authorized_teacher")
   end
 end

@@ -28,9 +28,11 @@ def destroy_storage_id_cookie
 end
 
 def storage_decrypt(encrypted)
-  decrypter = OpenSSL::Cipher.new 'AES-128-CBC'
-  decrypter.decrypt
-  decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
+  $storage_id_decrypter ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |decrypter|
+    decrypter.decrypt
+    decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
+  end
+  (decrypter = $storage_id_decrypter).reset
   plain = decrypter.update(encrypted)
   plain << decrypter.final
 end
@@ -66,9 +68,11 @@ def valid_encrypted_channel_id(encrypted)
 end
 
 def storage_encrypt(plain)
-  encrypter = OpenSSL::Cipher.new('AES-128-CBC')
-  encrypter.encrypt
-  encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
+  $storage_id_encrypter ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |encrypter|
+    encrypter.encrypt
+    encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
+  end
+  (encrypter = $storage_id_encrypter).reset
   encrypted = encrypter.update(plain.to_s)
   encrypted << encrypter.final
 end
@@ -87,9 +91,7 @@ def storage_encrypt_channel_id(storage_id, storage_app_id)
   Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{storage_app_id}")).tr('=', '')
 end
 
-def storage_id(endpoint)
-  return nil if endpoint == 'shared'
-  raise ArgumentError, "Unknown endpoint: `#{endpoint}`" unless endpoint == 'user'
+def get_storage_id
   @user_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
@@ -157,6 +159,7 @@ def storage_id_from_cookie
   return nil if encrypted.empty?
   storage_id = storage_decrypt_id(encrypted)
   return nil if storage_id == 0
+  return nil unless user_storage_ids_table.where(id: storage_id, user_id: nil).first
   storage_id
 end
 
@@ -166,7 +169,7 @@ end
 
 def owns_channel?(encrypted_channel_id)
   owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-  owner_storage_id == storage_id('user')
+  owner_storage_id == get_storage_id
 rescue ArgumentError, OpenSSL::Cipher::CipherError
   false
 end

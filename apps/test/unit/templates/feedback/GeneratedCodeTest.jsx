@@ -1,26 +1,21 @@
-/* eslint-disable react/no-danger */
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import GeneratedCode from '@cdo/apps/templates/feedback/GeneratedCode';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 describe('GeneratedCode', () => {
-  it('renders successfully', () => {
-    const wrapper = shallow(
-      <GeneratedCode message="Test message" code="Test code" />
-    );
+  const wrapper = shallow(
+    <GeneratedCode message="Test message" code="Test code" />
+  );
+
+  it('renders code explicitly in ltr', () => {
+    expect(wrapper).to.containMatchingElement(<pre dir="ltr">Test code</pre>);
+  });
+
+  it('renders message with markdown support', () => {
     expect(wrapper).to.containMatchingElement(
-      <div className="generated-code-container">
-        <p
-          className="generatedCodeMessage"
-          dangerouslySetInnerHTML={{__html: 'Test message'}}
-        />
-        <pre
-          className="generatedCode"
-          dir="ltr"
-          dangerouslySetInnerHTML={{__html: 'Test code'}}
-        />
-      </div>
+      <SafeMarkdown markdown="Test message" />
     );
   });
 });

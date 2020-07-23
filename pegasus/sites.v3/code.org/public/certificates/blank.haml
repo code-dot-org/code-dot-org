@@ -4,16 +4,12 @@ theme: responsive
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
-  "twitter:url": "http://<%= request.host_with_port %>/certificates/blank %>"
-  "twitter:image:src" : "http://<%= request.host_with_port %>/images/hour_of_code_certificate-640.jpg"
   "twitter:image:width" : "640"
   "twitter:image:height" : "451"
   "twitter:title": "I just finished the Hour of Code"
   "twitter:description": "Over 400 million Hours of Code have been served in 180+ countries and 45+ languages. Anyone can learn an hour of computer science."
   "og:title": "I just finished the Hour of Code"
   "og:description": "Over 400 million Hours of Code have been served in 180+ countries and 45+ languages. Anyone can learn an hour of computer science."
-  "og:image" : "http://<%= request.host_with_port %>/images/hour_of_code_certificate-640.jpg"
-  "og:url" : "http://<%= request.host_with_port %>/certificates/blank %>"
   "og:image:width": "640"
   "og:image:height": "451"
   "og:video": ""
@@ -21,6 +17,13 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+
+:ruby
+  @header["social"]["twitter:url"] = "http://#{request.host_with_port}/certificates/blank"
+  @header["social"]["twitter:image:src"] = "http://#{request.host_with_port}/images/hour_of_code_certificate-640.jpg"
+  @header["social"]["og:image"] = "http://#{request.host_with_port}/images/hour_of_code_certificate-640.jpg"
+  @header["social"]["og:url"] = "http://#{request.host_with_port}/certificates/blank"
+
 #hoc-certificate
   %a{:href=>"/printcertificate"}
     %img{:src=>"/images/hour_of_code_certificate.jpg", :alt=>"Certificate for Completion of One Hour of Code"}
@@ -35,14 +38,7 @@ social:
       #blurb.col-mobile-56.mobile-pad-right
         %br.desktop-feature
 
-        .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
-          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          -if request.locale == 'en-US'
-            %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
-              =count_string
-          -else
-            =count_string
-          %h4.desktop-feature=I18n.t(:anybody_can_learn)
+        = view :try_hoc_count
         %br
 
       #getstarted.col-mobile-44

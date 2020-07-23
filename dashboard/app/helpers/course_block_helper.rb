@@ -4,9 +4,9 @@ module CourseBlockHelper
     include LocaleHelper
   end
 
-  #
-  # Given a Script ID or a string, returns an object that represents
-  # a tall course block (_course_tall_block.haml), if one exists.
+  # Given a Script ID or string and an optional course family name, returns
+  # an object that represents a tall course block (_course_tall_block.haml), if
+  # one exists.
   #
   # Example return value:
   # {
@@ -18,7 +18,7 @@ module CourseBlockHelper
   #   audience: "Pre-reader"
   # }
   #
-  def self.get_tall_course_block(id)
+  def self.get_tall_course_block(id, family_name = nil)
     default = {
       url: script_url(id),
       title: I18n.t("upsell.#{id}.title"),
@@ -31,14 +31,20 @@ module CourseBlockHelper
         url: CDO.code_org_url('/educate/applab'),
         body: I18n.t('upsell.applab.body_short')
       },
+      'gamelab' => {
+        url: CDO.code_org_url('/educate/gamelab'),
+        body: I18n.t('upsell.gamelab.body')
+      },
+      'weblab' => {
+        url: CDO.code_org_url('/educate/weblab'),
+        title: "Web Lab",
+        body: I18n.t('upsell.weblab.body')
+      },
       'conditionals' => {
         url: CDO.code_org_url('/hourofcode/unplugged-conditionals-with-cards'),
         title: I18n.t('upsell.unplugged_conditionals.title'),
         body: I18n.t('upsell.unplugged_conditionals.body'),
         teacher_guide: CDO.code_org_url("/hourofcode/unplugged-conditionals-with-cards")
-      },
-      'gallery' => {
-        url: '/gallery'
       },
       Script::APPLAB_INTRO => {
         url: script_reset_url(Script::APPLAB_INTRO),
@@ -102,6 +108,11 @@ module CourseBlockHelper
         audience: data_t_suffix('script.name', id, 'description_audience')
       },
       Script::DANCE_PARTY_NAME => {
+        body: data_t_suffix('script.name', id, 'description_short'),
+        url: CDO.code_org_url('/dance'),
+        image_url: CDO.shared_image_url("courses/logo_tall_#{id}.gif")
+      },
+      Script::DANCE_PARTY_2019_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
         url: CDO.code_org_url('/dance'),
         image_url: CDO.shared_image_url("courses/logo_tall_#{id}.gif")
@@ -173,8 +184,24 @@ module CourseBlockHelper
       Script::TWENTY_HOUR_NAME => {
         title: I18n.t('upsell.20hour.title'),
         body: I18n.t('upsell.20hour.body')
+      },
+      Script::OCEANS_NAME => {
+        url: CDO.code_org_url('/oceans'),
+        title: data_t_suffix('script.name', id, 'title'),
+        body: data_t_suffix('script.name', id, 'description_short')
       }
     }
+
+    # The CourseA-F families should all be rendered the same.
+    if [Script::COURSEA, Script::COURSEB, Script::COURSEC, Script::COURSED, Script::COURSEE, Script::COURSEF].include? family_name
+      return {
+        url: script_url(id),
+        image_url: CDO.shared_image_url("courses/logo_tall_#{family_name}.jpg"),
+        title: data_t_suffix('script.name', id, 'title'),
+        body: data_t_suffix('script.name', id, 'description_short'),
+        audience: data_t_suffix('script.name', id, 'description_audience')
+      }
+    end
 
     default.merge!(block_override_data[id] || {})
   end

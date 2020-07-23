@@ -1,0 +1,50 @@
+name 'Tips For Working on Your Own_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Use online documentation - some new commands
+
+You'll see we've included a more full toolbox of commands for you to use and experiment with.  Some of the commands may be new to you, but you can probably figure out how to use them if you **read the documentation**.
+
+<img src="https://images.code.org/9214289573bee13904597e374ece8d15-image-1477513058922.png" style="width: 650px; display: block; margin: auto">
+
+<div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 650px; margin: auto;">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Hover your mouse over a block and it will show a tool tip with a brief explanation.</p>
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Click on "see examples" to expand the documentation. It gives more explanation plus code examples that show how it works.</p>
+</div>
+Click Continue when you are ready!
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tip
+
+You may want to review the 3 things on this page as a whole class to kickoff to the upcoming project.
+
+Especially true for talking about "coding buddies" which is a form of collaboration.
+
+For this and future projects it's worth pointing out that *even if you're doing independent work, you can have a buddy to help you with technical problems and to bounce ideas off of.*  Remind students that:
+
+  * It's not a competition!
+  * Work on your own ideas, be generous when helping others. 
+  * You should *always write your own code* but you can have a friend help you spot problems.
+
+Plagiarism can present a gray area for students here.  
+
+"Help" means:
+
+  * Helping a friend work through their ideas
+  * Helping a friend get "unstuck" from a bug of a particular kind.
+  * Suggesting a strategy for getting something done.
+  * Pointing out a cool idea
+
+"Help" **does not** mean:
+
+  * Writing code for a friend
+  * Giving your project to a friend to use as a starting point
+  * Telling your friend what to do
+MARKDOWN

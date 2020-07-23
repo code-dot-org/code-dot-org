@@ -1,7 +1,7 @@
 login_required true
 has_lesson_plan true
 
-stage 'Introduction'
+lesson 'Introduction'
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -19,10 +19,10 @@ level 'courseC_video_angles'
 level 'courseD_artist_ramp12'
 level 'courseD_farmer_ramp13'
 
-stage 'Algorithms: Graph Paper Programming'
+lesson 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
 
-stage 'Events in Bounce'
+lesson 'Events in Bounce'
 level 'elementary_video_pairProgramming'
 skin 'bounce'
 level_concept_difficulty '{"sequencing":1,"events":2}'
@@ -55,7 +55,7 @@ skin 'bounce'
 level_concept_difficulty '{"sequencing":1,"events":1}'
 level 'bounce_12'
 
-stage 'Nested Loops'
+lesson 'Nested Loops'
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
 level 'courseD_bee_nestedLoops2_predict1'
@@ -67,9 +67,9 @@ level 'courseD_maze_nestedLoops6'
 level 'courseD_bee_nestedLoops7', challenge: true
 level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
-assessment 'courseD_bee_nestedLoops9_predict2'
+level 'courseD_bee_nestedLoops9_predict2', assessment: true
 
-stage 'Nested Loops in Artist'
+lesson 'Nested Loops in Artist'
 level 'courseD_artist_nestedLoops1'
 level 'courseD_artist_nestedLoops1a'
 level 'courseD_video_nestedLoopsArtist'
@@ -81,13 +81,13 @@ level 'courseD_artist_nestedLoops7'
 level 'courseD_artist_nestedLoops8'
 level 'courseD_artist_nestedLoops9', challenge: true
 level 'courseD_artist_nestedLoops10'
-assessment 'courseD_artist_nestedLoops9_predict1'
+level 'courseD_artist_nestedLoops9_predict1', assessment: true
 level 'courseD_artist_nestedLoopsFP'
 
-stage 'Algorithms: Relay Programming'
+lesson 'Algorithms: Relay Programming'
 level 'RelayProgramming'
 
-stage 'Debugging in Bee'
+lesson 'Debugging in Bee'
 level 'courseC_video_debugging'
 level 'courseD_bee_debugging1'
 level 'courseD_bee_debugging2'
@@ -98,9 +98,9 @@ level 'courseD_bee_debugging6', challenge: true
 level 'courseD_bee_debugging7'
 level 'courseD_bee_debugging8'
 level 'courseD_bee_debugging9'
-assessment 'courseD_bee_debugging9_predict1'
+level 'courseD_bee_debugging9_predict1', assessment: true
 
-stage 'While Loops in Farmer'
+lesson 'While Loops in Farmer'
 level 'courseD_farmer_while1'
 level 'courseD_farmer_while2'
 level 'courseD_farmer_while3'
@@ -113,12 +113,12 @@ level 'courseD_farmer_while7'
 level 'courseD_farmer_while8', challenge: true
 level 'courseD_farmer_while9'
 level 'courseD_farmer_while10'
-assessment 'courseD_farmer_while10_predict2'
+level 'courseD_farmer_while10_predict2', assessment: true
 
-stage 'Conditionals with Cards'
+lesson 'Conditionals with Cards'
 level 'Conditionals'
 
-stage 'Conditionals in Bee'
+lesson 'Conditionals in Bee'
 level 'courseD_bee_conditionalsVid1'
 level 'courseD_bee_conditionals1_predict1'
 level 'courseD_bee_conditionals2'
@@ -133,7 +133,7 @@ level 'courseD_bee_conditionals8', challenge: true
 level 'courseD_bee_conditionals9'
 level 'courseD_bee_conditionals10'
 
-stage 'Conditionals & Loops in Maze'
+lesson 'Conditionals & Loops in Maze'
 level 'courseD_maze_until1'
 level 'courseD_video_repeatUntil'
 level 'courseD_maze_until2_predict1'
@@ -146,9 +146,9 @@ level 'courseD_video_ifElse'
 level 'courseD_maze_until8'
 level 'courseD_maze_until9', challenge: true
 level 'courseD_maze_until10'
-assessment 'courseD_maze_until10_predict2'
+level 'courseD_maze_until10_predict2', assessment: true
 
-stage 'Conditionals & Loops in Farmer'
+lesson 'Conditionals & Loops in Farmer'
 level 'courseD_farmer_condLoops1'
 level 'courseD_farmer_condLoops2'
 level 'courseD_farmer_condLoops3'
@@ -158,12 +158,12 @@ level 'courseD_farmer_condLoops6'
 level 'courseD_farmer_condLoops7', challenge: true
 level 'courseD_farmer_condLoops8'
 level 'courseD_farmer_condLoops9'
-assessment 'courseD_farmer_condLoops9_predict1'
+level 'courseD_farmer_condLoops9_predict1', assessment: true
 
-stage 'Digital Citizenship'
+lesson 'Digital Citizenship'
 level 'courseD_unplugged_digitalCitizenship'
 
-stage 'Build a Play Lab Game'
+lesson 'Build a Play Lab Game'
 level 'courseD_playLab_cond1'
 level 'courseD_playLab_cond2'
 level 'courseD_playLab_cond3'
@@ -172,10 +172,10 @@ level 'courseD_playLab_cond5'
 level 'courseD_playLab_cond6'
 level 'courseD_playLab_condFP'
 
-stage 'Unplugged: Binary'
+lesson 'Unplugged: Binary'
 level 'BinaryImages'
 
-stage 'Artist Binary'
+lesson 'Artist Binary'
 level 'courseD_external_binary1'
 level 'courseD_artist_binary1'
 level 'courseD_artist_binary2'
@@ -185,5 +185,5 @@ level 'courseD_artist_binary5'
 level 'courseD_artist_binary6'
 level 'courseD_artist_binary7'
 level 'courseD_artist_binary8'
-assessment 'courseD_artist_binary8_predict1'
+level 'courseD_artist_binary8_predict1', assessment: true
 level 'courseD_artist_binaryFP'

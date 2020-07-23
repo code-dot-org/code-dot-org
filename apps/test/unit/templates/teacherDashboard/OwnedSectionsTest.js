@@ -1,7 +1,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedOwnedSections as OwnedSections} from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import RosterDialog from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
@@ -88,13 +88,15 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections {...defaultProps} hiddenSectionIds={[13]} />
     );
+    // Show archived sections
     wrapper
       .find('Button')
-      .at(1)
+      .first()
       .simulate('click');
+    // Hide archived sections
     wrapper
       .find('Button')
-      .at(1)
+      .first()
       .simulate('click');
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
     expect(

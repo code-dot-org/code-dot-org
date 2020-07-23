@@ -1,4 +1,4 @@
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
 import SoundLibrary from '@cdo/apps/code-studio/components/SoundLibrary';

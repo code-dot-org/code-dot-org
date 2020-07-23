@@ -171,7 +171,7 @@ export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
   songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,
-  userType: state.progress.userType,
+  userType: state.currentUser.userType,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.songs.runIsStarting
 }))(DanceVisualizationColumn);

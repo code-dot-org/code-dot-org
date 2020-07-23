@@ -60,7 +60,7 @@
     "makerlab_enabled": "false",
     "instructions_important": "false",
     "encrypted_examples": "Ti55dXNr65xWBPrAclIgNOkHC74i5SzuUW1ty+EpAoJ+Y5iKtflx+1rzQY4a\nJJN1\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",

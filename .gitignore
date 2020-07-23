@@ -7,11 +7,13 @@
 *~
 **/.bundle
 **/.vscode
+dashboard/brakeman_security_report.htm
 .DS_Store
 .dropbox
 .tmputils
 .rakeTasks
 .idea/
+jsconfig.json
 /bin/i18n/*_credentials.yml
 npm-debug.log
 /.dropbox.cache
@@ -33,7 +35,7 @@ npm-debug.log
 /apps/src/util/sharedConstants.js
 /apps/src/applab/sharedApplabBlocks.js
 /apps/src/applab/sharedApplabGoalBlocks.js
-/apps/src/gamelab/sharedGamelabBlocks.js
+/apps/src/p5lab/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
 /apps/test/entry-tests.js
 /apps/test/interpreter/test-results-new*.json
@@ -50,8 +52,7 @@ npm-debug.log
 /coverage
 /crontab
 /dashboard/config/newrelic.yml
-/dashboard/db/ui_test_data.commit
-/dashboard/db/ui_test_data.sql
+/dashboard/db/ui_test_data.*
 /dashboard/public/blockly
 /dashboard/public/code-studio
 /dashboard/public/shared
@@ -66,5 +67,4 @@ npm-debug.log
 /rebuild-apps
 /rebuild-shared
 /rebuild-code-studio
-/shared/js/node_modules/
 /tools/scripts/brokenLinkChecker/node_modules/

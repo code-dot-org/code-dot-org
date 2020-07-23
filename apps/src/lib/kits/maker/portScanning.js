@@ -25,7 +25,7 @@ export const CIRCUIT_PLAYGROUND_EXPRESS_PID = 0x8018;
 
 /**
  * Scan system serial ports for a device compatible with Maker Toolkit.
- * @returns {Promise.<string>} resolves to a serial port name for a viable
+ * @returns {Promise.<string>} resolves to a serial port object for a viable
  *   device, or rejects if no such device can be found.
  */
 export function findPortWithViableDevice() {
@@ -35,7 +35,7 @@ export function findPortWithViableDevice() {
     .then(list => {
       const bestOption = getPreferredPort(list);
       if (bestOption) {
-        return bestOption.comName;
+        return bestOption;
       } else {
         return Promise.reject(
           new ConnectionFailedError(
@@ -68,14 +68,18 @@ export function ensureAppInstalled() {
  * @returns {Promise.<Array.<SerialPortInfo>>}
  */
 function listSerialDevices() {
-  const SerialPortType = isNodeSerialAvailable()
-    ? SerialPort
-    : ChromeSerialPort;
-  return new Promise((resolve, reject) => {
-    SerialPortType.list((error, list) =>
-      error ? reject(error) : resolve(list)
-    );
-  });
+  let SerialPortType;
+  if (isNodeSerialAvailable()) {
+    SerialPortType = SerialPort;
+    return SerialPortType.list();
+  } else {
+    SerialPortType = ChromeSerialPort;
+    return new Promise((resolve, reject) => {
+      SerialPortType.list((error, list) =>
+        error ? reject(error) : resolve(list)
+      );
+    });
+  }
 }
 
 /**

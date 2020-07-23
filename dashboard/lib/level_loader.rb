@@ -2,8 +2,9 @@ require 'set'
 
 class LevelLoader
   # Top-level entry point, called by rake seed:custom_levels
-  def self.load_custom_levels
-    import_levels 'config/scripts/**/*.level'
+  def self.load_custom_levels(level_name)
+    levels_glob = level_name ? "config/scripts/**/#{level_name}.level" : 'config/scripts/**/*.level'
+    import_levels levels_glob
   end
 
   #
@@ -41,6 +42,11 @@ class LevelLoader
           map {|path| load_custom_level path, level_md5s_by_name}.
           compact.
           select(&:changed?)
+
+      if [:development, :adhoc].include?(rack_env) && !CDO.properties_encryption_key
+        puts "WARNING: skipping seeding encrypted levels because CDO.properties_encryption_key is not defined"
+        changed_levels.reject!(&:encrypted?)
+      end
 
       # activerecord-import (with MySQL, anyway) doesn't save associated
       # models, so we've got to do this manually.

@@ -1,0 +1,20 @@
+name 'csp-u3-exam1-debug1_2020'
+height 'auto'
+
+question ‘What will the “background-color” of the “topButton” be when the program is finished running?’
+
+wrong ‘red’
+wrong ‘orange’
+right ‘blue’
+wrong ‘green’
+
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/ed170a0267bc844ebfe29afd9d6f8a0e-image-1567611181886.32.39 AM.png" style="height:100px">
+MARKDOWN

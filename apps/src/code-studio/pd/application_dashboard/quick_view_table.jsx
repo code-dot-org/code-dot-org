@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
-import {StatusColors, ApplicationStatuses} from './constants';
+import {StatusColors, getApplicationStatuses} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
@@ -95,18 +96,28 @@ export class QuickViewTable extends React.Component {
     let columns = [];
     columns.push(
       {
+        property: 'id',
+        header: {
+          label: 'Actions'
+        },
+        cell: {
+          formatters: [this.formatActionsCell]
+        }
+      },
+      {
         property: 'created_at',
         header: {
           label: 'Submitted',
           transforms: [sortable]
         },
         cell: {
-          format: created_at => {
-            return new Date(created_at).toLocaleDateString('en-us', {
-              month: 'long',
-              day: 'numeric'
-            });
-          }
+          formatters: [
+            created_at =>
+              new Date(created_at).toLocaleDateString('en-us', {
+                month: 'long',
+                day: 'numeric'
+              })
+          ]
         }
       },
       {
@@ -137,9 +148,11 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: status =>
-            ApplicationStatuses[this.props.viewType][status] ||
-            _.upperFirst(status),
+          formatters: [
+            status =>
+              getApplicationStatuses(this.props.viewType)[status] ||
+              _.upperFirst(status)
+          ],
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
@@ -153,7 +166,7 @@ export class QuickViewTable extends React.Component {
       columns.push({
         property: 'locked',
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         },
         header: {
           label: 'Locked?',
@@ -171,13 +184,13 @@ export class QuickViewTable extends React.Component {
             transforms: [sortable]
           },
           cell: {
-            format: this.formatPrincipalApprovalCell
+            formatters: [this.formatPrincipalApprovalCell]
           }
         },
         {
           property: 'meets_criteria',
           header: {
-            label: 'Meets Minimum Requirements',
+            label: 'Meets Guidelines',
             transforms: [sortable]
           }
         },
@@ -192,13 +205,6 @@ export class QuickViewTable extends React.Component {
           property: 'friendly_scholarship_status',
           header: {
             label: 'Scholarship Teacher?',
-            transforms: [sortable]
-          }
-        },
-        {
-          property: 'total_score',
-          header: {
-            label: 'Bonus Points',
             transforms: [sortable]
           }
         }
@@ -236,7 +242,7 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatNotesTooltip,
+          formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
               style: {...styles.notesCell}
@@ -244,16 +250,6 @@ export class QuickViewTable extends React.Component {
           ]
         }
       });
-    });
-
-    columns.push({
-      property: 'id',
-      header: {
-        label: 'Actions'
-      },
-      cell: {
-        format: this.formatActionsCell
-      }
     });
 
     this.columns = columns;
@@ -328,7 +324,16 @@ export class QuickViewTable extends React.Component {
 
   formatPrincipalApprovalCell = (principal_approval_state, props) => {
     if (principal_approval_state) {
-      return <span>{principal_approval_state}</span>;
+      return (
+        <div>
+          <span>{principal_approval_state}</span>
+          <PrincipalApprovalButtons
+            applicationId={props.rowData.id}
+            showResendEmailButton={props.rowData.allow_sending_principal_email}
+            onChange={this.handlePrincipalApprovalButtonsChange}
+          />
+        </div>
+      );
     }
 
     return (

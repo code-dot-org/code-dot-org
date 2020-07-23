@@ -38,13 +38,12 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_S18_L4_C1\",\r\n  \"callout_text\": \"This block creates a new function.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"functionParams_none\\\"]\",\r\n  \"on\": \"callout1\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"functions\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }, \r\n {\r\n  \"localization_key\": \"CSD_U3_L18_S4_C2\",\r\n  \"callout_text\": \"Functions area\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"callout2\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"// Create your functions here\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n },\r\n  {\r\n  \"localization_key\": \"CSD_U3_S18_L4_C1\",\r\n  \"callout_text\": \"This block calls your function.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"callMyFunction\\\"]\",\r\n  \"on\": \"callout3\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"functions\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "encrypted_examples": "32m9KJG02mGuPGeg/Bpqc5gOeKDFWjDD/PjwWZaSoVv+VODpqMoKPSbc7ALO\nyAyz\n",
+    "encrypted_examples": "Ry9Syp5c6xe/4aKoLBK3x2wIuQSmnR1wqyXhhi5pZpM7FRM3BoFk0tqVJqpo\niWrvFIuz0IAOIsV6673YpzLzfQ==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "parent_level_id": 11434,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/",
@@ -62,11 +61,13 @@
       "/docs/concepts/javascript/if-else-statements/",
       "/docs/concepts/javascript/functions/"
     ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 23:48:48 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:09:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:48:48 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:09:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-28 21:18:28 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -94,32 +94,43 @@ class InlineAudio extends React.Component {
     // Provided by redux
     // To Log TTS usage
     puzzleNumber: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    isOnCSFPuzzle: PropTypes.bool
   };
 
   state = {
     audio: undefined,
     playing: false,
     error: false,
-    hover: false
+    hover: false,
+    loaded: false
   };
 
+  componentDidMount() {
+    this.getAudioElement();
+  }
+
   componentWillUpdate(nextProps) {
-    if (
+    const audioTargetWillChange =
       this.props.src !== nextProps.src ||
-      this.props.message !== nextProps.message
-    ) {
+      this.props.message !== nextProps.message;
+
+    if (audioTargetWillChange) {
       // unload current Audio object
       const audio = this.state.audio;
-
       if (audio) {
-        audio.src = undefined;
+        audio.pause();
+        audio.removeAttribute('src');
         audio.load();
       }
 
+      // remove reference to existing Audio object, so a new one will be
+      // created next time we try to play. Also clear the playing and error
+      // states, since we are essentially starting fresh.
       this.setState({
         audio: undefined,
-        playing: false
+        playing: false,
+        error: false
       });
     }
   }
@@ -131,6 +142,14 @@ class InlineAudio extends React.Component {
 
     const src = this.getAudioSrc();
     const audio = new Audio(src);
+    // iOS Safari does not automatically attempt to load the audio source,
+    // so we need to manually load.
+    audio.load();
+
+    audio.addEventListener('canplay', () => {
+      this.setState({loaded: true});
+    });
+
     audio.addEventListener('ended', e => {
       this.setState({
         playing: false
@@ -158,16 +177,16 @@ class InlineAudio extends React.Component {
   getAudioSrc() {
     if (this.props.src) {
       return this.props.src;
+    } else if (this.props.message && VOICES[this.props.locale]) {
+      const voice = VOICES[this.props.locale];
+      const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
+
+      const message = this.props.message.replace('"???"', 'the question marks');
+      const hash = MD5(message).toString();
+      const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
+
+      return `${TTS_URL}/${voicePath}/${contentPath}`;
     }
-
-    const voice = VOICES[this.props.locale];
-    const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
-
-    const message = this.props.message.replace('"???"', 'the question marks');
-    const hash = MD5(message).toString();
-    const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
-
-    return `${TTS_URL}/${voicePath}/${contentPath}`;
   }
 
   toggleAudio = () => {
@@ -185,7 +204,8 @@ class InlineAudio extends React.Component {
       data_json: JSON.stringify({
         userId: this.props.userId,
         puzzleNumber: this.props.puzzleNumber,
-        src: this.props.src
+        src: this.props.src,
+        csfStyleInstructions: this.props.isOnCSFPuzzle
       })
     });
   }
@@ -203,6 +223,7 @@ class InlineAudio extends React.Component {
     if (
       this.props.textToSpeechEnabled &&
       !this.state.error &&
+      this.state.loaded &&
       this.isLocaleSupported() &&
       this.getAudioSrc()
     ) {
@@ -212,6 +233,7 @@ class InlineAudio extends React.Component {
           style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
           onMouseOver={this.toggleHover}
           onMouseOut={this.toggleHover}
+          onClick={this.toggleAudio}
         >
           <div
             style={[
@@ -238,7 +260,6 @@ class InlineAudio extends React.Component {
               this.props.style && this.props.style.button,
               this.state.hover && styles.hover
             ]}
-            onClick={this.toggleAudio}
           >
             <i
               className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
@@ -263,6 +284,7 @@ export default connect(function propsFromStore(state) {
       state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
     locale: state.pageConstants.locale,
     userId: state.pageConstants.userId,
-    puzzleNumber: state.pageConstants.puzzleNumber
+    puzzleNumber: state.pageConstants.puzzleNumber,
+    isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed
   };
 })(StatelessInlineAudio);

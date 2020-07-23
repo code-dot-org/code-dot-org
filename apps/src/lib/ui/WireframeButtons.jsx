@@ -111,6 +111,8 @@ SendToPhoneButton.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
+// ESLint doesn't seem to understand our inherited-proptypes pattern here
+/* eslint-disable react/prop-types */
 const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
   <div className="WireframeButtons_active">
     <SendToPhone
@@ -126,6 +128,7 @@ SendToPhoneControls.propTypes = _.pick(WireframeButtons.propTypes, [
   'channelId',
   'isLegacyShare'
 ]);
+/* eslint-enable react/prop-types */
 
 const styles = {
   main: {

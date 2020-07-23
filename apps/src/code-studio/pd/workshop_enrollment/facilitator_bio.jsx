@@ -2,8 +2,8 @@
  * Facilitator bio as used on the workshop enrollment form
  */
 import React from 'react';
-import marked from 'marked';
 import {FacilitatorPropType} from './enrollmentConstants';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default class FacilitatorBio extends React.Component {
   static propTypes = {
@@ -19,9 +19,9 @@ export default class FacilitatorBio extends React.Component {
   bio = () => {
     if (this.props.facilitator.bio) {
       return (
-        <div
-          dangerouslySetInnerHTML={{__html: marked(this.props.facilitator.bio)}} // eslint-disable-line react/no-danger
-        />
+        <div>
+          <SafeMarkdown markdown={this.props.facilitator.bio} />
+        </div>
       );
     } else {
       return (

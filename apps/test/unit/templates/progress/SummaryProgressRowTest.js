@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import SummaryProgressRow from '@cdo/apps/templates/progress/SummaryProgressRow';
@@ -23,7 +23,7 @@ describe('SummaryProgressRow', () => {
     const wrapper = shallow(
       <SummaryProgressRow {...baseProps} lessonIsVisible={() => false} />
     );
-    assert.equal(wrapper.node, null);
+    assert.equal(wrapper.html(), null);
   });
 
   it('renders with dashed border when lessonIsVisible for teachers only', () => {

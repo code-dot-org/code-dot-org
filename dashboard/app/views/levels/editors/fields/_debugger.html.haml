@@ -1,0 +1,7 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#debuggingTools"}}
+  Debugger
+
+#debuggingTools.in.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
+  = render partial: 'levels/editors/fields/watchers_ui', locals: {f: f}

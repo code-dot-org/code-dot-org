@@ -10,7 +10,7 @@
 #  updated_at       :datetime
 #  best_result      :integer
 #  script_id        :integer
-#  level_source_id  :integer
+#  level_source_id  :integer          unsigned
 #  submitted        :boolean
 #  readonly_answers :boolean
 #  unlocked_at      :datetime
@@ -42,6 +42,11 @@ class UserLevel < ActiveRecord::Base
   scope :attempted, -> {where.not(best_result: nil)}
   scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
   scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
+
+  def self.by_stage(stage)
+    levels = stage.script_levels.map(&:level_ids).flatten
+    where(script: stage.script, level: levels)
+  end
 
   def readonly_requires_submitted
     if readonly_answers? && !submitted?
@@ -91,6 +96,14 @@ class UserLevel < ActiveRecord::Base
     return most_recent_user.name, most_recent.level_source_id, most_recent_user
   end
 
+  def self.most_recent_navigator(script, level, user)
+    most_recent = find_by(script: script, level: level, user: user).try(:navigator_user_levels).try(:last)
+    return nil unless most_recent
+
+    most_recent_user = most_recent.user || DeletedUser.instance
+    return most_recent_user.name, most_recent.level_source_id, most_recent_user
+  end
+
   def paired?
     driver? || navigator?
   end
@@ -102,17 +115,11 @@ class UserLevel < ActiveRecord::Base
   def after_submit
     submitted_level = Level.cache_find(level_id)
 
-    # Create peer reviews after submitting a peer_reviewable solution
+    # Some levels that belong to the professional learning program are peer reviewable.
+    # When submitting such a level, we create a record for a pending peer review, so that
+    # it becomes available for another teacher in the program to review.
     if submitted_level.try(:peer_reviewable?)
-      submitted_script_level = submitted_level.script_levels.find_by(script_id: script_id)
-      learning_module = submitted_script_level&.stage&.plc_learning_module
-      assignment_exists = learning_module && Plc::EnrollmentModuleAssignment.exists?(
-        user_id: user_id,
-        plc_learning_module: learning_module
-      )
-      if assignment_exists
-        PeerReview.create_for_submission(self, level_source_id)
-      end
+      PeerReview.create_for_submission(self, level_source_id)
     end
   end
 
@@ -166,9 +173,9 @@ class UserLevel < ActiveRecord::Base
   end
 
   # Get number of passed levels per user for the given set of user IDs
-  # @param [Array<Integer>] user_ids
+  # @param [ActiveRecord::Relation<Collection<User>>] users
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
-  def self.count_passed_levels_for_users(user_ids)
-    where(user_id: user_ids).passing.group(:user_id).count
+  def self.count_passed_levels_for_users(users)
+    joins(:user).merge(users).passing.group(:user_id).count
   end
 end

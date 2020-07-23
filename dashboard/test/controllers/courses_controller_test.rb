@@ -9,13 +9,22 @@ class CoursesControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
+    @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_course
+    @pilot_student = create(:follower, section: @pilot_section).student_user
+
     Script.stubs(:should_cache?).returns true
-    plc_course = create :plc_course, name: 'My Plc'
-    @course_plc = plc_course.course
-    @course_regular = create :course, name: 'non-plc-course'
+    Script.clear_cache
+
+    @course_regular = create :unit_group, name: 'non-plc-course'
 
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
+  end
+
+  teardown do
+    Script.clear_cache
   end
 
   # Tests for index
@@ -24,29 +33,13 @@ class CoursesControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
 
-  test_user_gets_response_for :index, response: :success, user: :user, queries: 3
+  test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
   # Tests for show
-
-  test "show: plc courses get sent to user_course_enrollments_controller" do
-    get :show, params: {course_name: @course_plc.name}
-    assert_template 'plc/user_course_enrollments/index'
-  end
-
-  test "show: plc course names get titleized" do
-    get :show, params: {course_name: 'my_plc'}
-    assert_template 'plc/user_course_enrollments/index'
-  end
 
   test "show: regular courses get sent to show" do
     get :show, params: {course_name: @course_regular.name}
     assert_template 'courses/show'
-  end
-
-  test "show: regular courses do not get titlized" do
-    assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {course_name: 'non_plc_course'}
-    end
   end
 
   test "show: non existant course throws" do
@@ -55,52 +48,77 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
-  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}, queries: 7
+  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}, queries: 8
 
   test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 2
 
-  # For now, this test passes due to hard-coded logic in CoursesController#show.
-  # This test ensures that hard-coded logic is not removed without being replaced
-  # by the appropriate db-driven redirection logic.
   test "show: redirect to latest stable version in course family" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: true
+    create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020'
     get :show, params: {course_name: 'csp'}
-    assert_redirected_to '/courses/csp-2018'
+    assert_redirected_to '/courses/csp-2019'
 
-    create :course, name: 'csd-2017', family_name: 'csd', version_year: '2017'
-    create :course, name: 'csd-2018', family_name: 'csd', version_year: '2018'
+    create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', is_stable: true
+    create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2019'
     get :show, params: {course_name: 'csd'}
-    assert_redirected_to '/courses/csd-2018'
+    assert_redirected_to '/courses/csd-2019'
   end
 
-  # Right now, all course versions are considered stable, but in the future, we will track an is_stable property for
-  # each course, and the following tests regarding "latest stable version" need be updated.
+  test "show: redirect from new unstable version to assigned version" do
+    student = create :student
+    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :follower, section: create(:section, unit_group: csp2017), student_user: student
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
+
+    sign_in student
+    get :show, params: {course_name: 'csp-2019'}
+
+    assert_redirected_to '/courses/csp-2017/?redirect_warning=true'
+  end
+
   test "show: redirect to latest stable version in course family for logged out user" do
     sign_out @teacher
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     get :show, params: {course_name: 'csp-2017'}
 
     assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
   end
 
+  test "show: do not redirect to latest stable version if no_redirect query param provided" do
+    sign_out @teacher
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+
+    get :show, params: {course_name: 'csp-2017', no_redirect: "true"}
+    assert_response :ok
+    get :show, params: {course_name: 'csp-2017'}
+    assert_response :ok
+  end
+
   test "show: redirect to latest stable version in course family for student" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     sign_in create(:student)
     get :show, params: {course_name: 'csp-2017'}
+    assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
 
+    get :show, params: {course_name: 'csp-2019'}
     assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
   end
 
   test "show: do not redirect student to latest stable version in course family if they have progress" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018'
 
-    Course.any_instance.stubs(:has_progress?).returns(true)
+    UnitGroup.any_instance.stubs(:has_progress?).returns(true)
     sign_in create(:student)
     get :show, params: {course_name: 'csp-2017'}
 
@@ -109,9 +127,9 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: do not redirect student to latest stable version in course family if they are assigned" do
     student = create :student
-    csp2017 = create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :follower, section: create(:section, course: csp2017), student_user: student
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :follower, section: create(:section, unit_group: csp2017), student_user: student
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018'
 
     sign_in student
     get :show, params: {course_name: 'csp-2017'}
@@ -120,12 +138,50 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: do not redirect teacher to latest stable version in course family" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
 
     get :show, params: {course_name: 'csp-2017'}
 
     assert_response :ok
+  end
+
+  no_access_msg = "You don&#39;t have access to this course."
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{course_name: @pilot_course.name}},
+                              name: 'signed out user cannot view pilot script'
+
+  test_user_gets_response_for(:show, response: :success, user: :student,
+                              params: -> {{course_name: @pilot_course.name}}, name: 'student cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {{course_name: @pilot_course.name}},
+                              name: 'teacher without pilot access cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+                              params: -> {{course_name: @pilot_course.name, section_id: @pilot_section.id}},
+                              name: 'pilot teacher can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
+                              params: -> {{course_name: @pilot_course.name}}, name: 'pilot student can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+                              params: -> {{course_name: @pilot_course.name}}, name: 'levelbuilder can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
   end
 
   # Tests for create
@@ -142,7 +198,7 @@ class CoursesControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     post :create, params: {course: {name: 'csp'}}
-    Course.find_by_name!('csp')
+    UnitGroup.find_by_name!('csp')
     assert_redirected_to '/courses/csp/edit'
   end
 
@@ -158,7 +214,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "update: fails without levelbuilder permission" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
     create :script, name: 'script1'
     create :script, name: 'script2'
 
@@ -169,12 +225,12 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to default_course_scripts" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
     create :script, name: 'script1'
     create :script, name: 'script2'
 
     post :update, params: {course_name: 'csp', scripts: ['script1', 'script2']}
-    default_course_scripts = Course.find_by_name('csp').default_course_scripts
+    default_course_scripts = UnitGroup.find_by_name('csp').default_course_scripts
     assert_equal 2, default_course_scripts.length
     assert_equal ['script1', 'script2'], default_course_scripts.map(&:script).map(&:name)
 
@@ -184,7 +240,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to alternate_course_scripts" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
     create :script, name: 'script1'
     create :script, name: 'script2'
     create :script, name: 'script2-alt'
@@ -201,7 +257,7 @@ class CoursesControllerTest < ActionController::TestCase
         }
       ]
     }
-    course = Course.find_by_name('csp')
+    course = UnitGroup.find_by_name('csp')
     assert_equal 3, course.default_course_scripts.length
     assert_equal ['script1', 'script2', 'script3'], course.default_course_scripts.map(&:script).map(&:name)
 
@@ -222,10 +278,38 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes localizeable strings" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp-2017'
+    create :unit_group, name: 'csp-2017'
 
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles'}
-    assert_equal "Computer Science Principles ('17-'18)", Course.find_by_name!('csp-2017').summarize[:title]
+    assert_equal "Computer Science Principles ('17-'18)", UnitGroup.find_by_name!('csp-2017').summarize[:title]
+  end
+
+  test "update: persists changes to course_params" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course = create :unit_group, name: 'csp-2019'
+
+    assert_nil course.version_year
+    assert_nil course.family_name
+    refute course.has_verified_resources
+    refute course.visible?
+    refute course.is_stable?
+
+    post :update, params: {
+      course_name: course.name,
+      version_year: '2019',
+      family_name: 'csp',
+      has_verified_resources: 'on',
+      visible: 'on',
+      is_stable: 'on'
+    }
+    course.reload
+
+    assert_equal '2019', course.version_year
+    assert_equal 'csp', course.family_name
+    assert course.has_verified_resources
+    assert course.visible?
+    assert course.is_stable?
   end
 
   # tests for edit
@@ -243,7 +327,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "edit: renders edit page for regular courses" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :unit_group, name: 'csp'
 
     get :edit, params: {course_name: 'csp'}
     assert_template 'courses/edit'

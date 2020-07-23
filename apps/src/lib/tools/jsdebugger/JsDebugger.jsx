@@ -110,6 +110,7 @@ class JsDebugger extends React.Component {
     isDebuggerPaused: PropTypes.bool.isRequired,
     isDebuggingSprites: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
+    isEditWhileRun: PropTypes.bool.isRequired,
     stepSpeed: PropTypes.number.isRequired,
     isOpen: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
@@ -132,7 +133,9 @@ class JsDebugger extends React.Component {
       watchersHidden: false,
       open: props.isOpen,
       openedHeight: 120,
-      consoleWidth: 0
+      consoleWidth: 0,
+      // For Google Analytics to see if student has opened the debugger
+      userInteracted: false
     };
   }
 
@@ -244,6 +247,9 @@ class JsDebugger extends React.Component {
   }
 
   onMouseUpDebugResizeBar = () => {
+    if (this.props.debugButtons) {
+      this.setState({userInteracted: true});
+    }
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingDebugResizeBar) {
       document.body.removeEventListener(
@@ -295,6 +301,9 @@ class JsDebugger extends React.Component {
     if (this.props.isOpen) {
       this.props.close();
     } else {
+      if (this.props.debugButtons) {
+        this.setState({userInteracted: true});
+      }
       this.props.open();
     }
   };
@@ -322,6 +331,20 @@ class JsDebugger extends React.Component {
     }
   };
 
+  setDebugHeight = height => {
+    if (!this.props.isOpen) {
+      this.props.open();
+      this.setState({
+        open: true,
+        openedHeight: height
+      });
+    } else {
+      this.setState({
+        openedHeight: height
+      });
+    }
+  };
+
   /**
    *  Handle mouse moves while dragging the debug resize bar.
    */
@@ -345,17 +368,8 @@ class JsDebugger extends React.Component {
       MIN_DEBUG_AREA_HEIGHT,
       Math.min(MAX_DEBUG_AREA_HEIGHT, window.innerHeight - event.pageY - offset)
     );
-    if (!this.props.isOpen) {
-      this.props.open();
-      this.setState({
-        open: true,
-        openedHeight: newDbgHeight
-      });
-    } else {
-      this.setState({
-        openedHeight: newDbgHeight
-      });
-    }
+
+    this.setDebugHeight(newDbgHeight);
 
     codeTextbox.style.bottom = newDbgHeight + 'px';
     // Toggle transition style to 'none' to allow height to update immediately
@@ -426,7 +440,6 @@ class JsDebugger extends React.Component {
 
     const watchersResizeRect = this._watchersResizeBar.getBoundingClientRect();
     const watchersResizeRight = newWatchersWidth - watchersResizeRect.width / 2;
-
     watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
     this._debugConsole.getWrappedInstance().root.style.right =
       newWatchersWidth + 'px';
@@ -449,7 +462,7 @@ class JsDebugger extends React.Component {
 
   render() {
     const {appType, isAttached, canRunNext, isRunning} = this.props;
-    const hasFocus = this.props.isDebuggerPaused;
+    const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';
 
@@ -568,7 +581,7 @@ class JsDebugger extends React.Component {
               />
               <span style={styles.noUserSelect} className="header-text">
                 {this.state.watchersHidden
-                  ? 'Show Watch'
+                  ? i18n.debugShowWatchHeader()
                   : i18n.debugWatchHeader()}
               </span>
             </PaneSection>
@@ -602,7 +615,12 @@ class JsDebugger extends React.Component {
             />
           )}
         </PaneHeader>
-        {this.props.debugButtons && <DebugButtons style={openStyle} />}
+        {this.props.debugButtons && (
+          <DebugButtons
+            style={openStyle}
+            userInteracted={this.state.userInteracted}
+          />
+        )}
         {this.props.debugConsole && (
           <DebugConsole
             style={openStyle}
@@ -640,6 +658,7 @@ export default connect(
     debugSlider: !!state.pageConstants.showDebugSlider,
     appType: state.pageConstants.appType,
     isRunning: state.runState.isRunning,
+    isEditWhileRun: state.runState.isEditWhileRun,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     isDebuggingSprites: state.runState.isDebuggingSprites,
     stepSpeed: state.runState.stepSpeed,

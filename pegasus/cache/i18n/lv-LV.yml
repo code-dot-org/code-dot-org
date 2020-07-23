@@ -18,14 +18,14 @@ lv-LV:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ja esi informātikas skolotājs, apskati citus CSEdWeek
     resursus</a>'
+  csedweek_banner_teachers_text: Ja esi informātikas skolotājs, apskati citus CSEdWeek
+    resursus
   n_have_learned_an_hoc: "<h1>Izmēģini</h1><h2>Programmēšanas stundu</h2><h3># jau
     notikušas</h3>"
   anybody_can_learn: Jebkurš var iemācīties.
   learn_now: Mācīties tagad
   petition_message: Katram skolēnam katrā skolā būtu jābūt iespējai apgūt programmēšanu
   petition_sign_message: 'Ja tu piekrītat, rakstiet savu vārdu šeit. Pievienojies
-    # citiem.'
-  petition_sign_message_support: 'Ja atbalsti mūs, ieraksti savu vārdu. Pievienojies
     # citiem.'
   petition_join_others: 'Pievienojies # citiem'
   name: Vārds
@@ -238,6 +238,7 @@ lv-LV:
   homepage_action_text_learn: Sāc mācīties
   homepage_action_text_signpetition: Paraksti petīciju
   homepage_signpetition_dropdown: Es piekrītu &#x25BE;
+  homepage_signpetition_dropdown_text: es piekrītu
   homepage_banner_text_main: Code.org un koledžu padome veido apvienību, lai uzlabotu
     dažādību datorzinībās.
   homepage_banner_text_link: Uzzini vairāk
@@ -458,6 +459,7 @@ lv-LV:
   dashboard_sections_print_secrets: Tad jūs varat izdrukāt lapiņas, kas satur informāciju
     par kontiem, kas individuāli tiek izdalīti taviem skolēniem.
   dashboard_sections_switch_section: 'Pārslēgt sadaļu:'
+  dashboard_sections_close: Aizvērt
   dashboard_students_add_multiple: 'Ieraksti vai iekopē savu skolēnu vārdus, vienu
     katrā rindā:'
   dashboard_students_new_section: Tu izveidoji jaunu sadaļu! Tagad pievieno skolēnus,
@@ -613,8 +615,6 @@ lv-LV:
   course2_name: Kurss 2
   course3_name: Kurss 3
   course4_name: 4. kurss
-  math_category_name: Matemātika
-  hoc_category_name: Programmēšanas stunda
   applab_name: Aplikāciju laborotorija
   applab_gradelevel: Vecums 13+
   codeorg_gradelevel: Vecums no 4-104
@@ -668,6 +668,7 @@ lv-LV:
   coursee_gradelevel: Vecumā no 8-12
   coursee-2017_gradelevel: Vecumā no 8-12
   coursee-2018_gradelevel: Vecumā no 8-12
+  coursee-2019_gradelevel: Vecumā no 8-12
   accelerated_gradelevel: Vecumā no 10 gadiem (pēc 3. kursa)
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
@@ -1179,6 +1180,8 @@ lv-LV:
   header_educate_hoc: Programmēšanas stunda
   header_about_us: Par mums
   header_about_partners: Partneri
+  header_legal_privacy: Privātuma politika
+  header_legal_tos: Nosacījumi
   header_documentation: Dokumentācija
   user_header_label: Sveiki, %{username}
   user_header_team: Komanda

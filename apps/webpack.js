@@ -3,20 +3,26 @@ var webpack = require('webpack');
 var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
-var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
-// Certain packages ship in ES6 and need to be transpiled for our purposes -
-// especially for tests, which run on PhantomJS with _zero_ ES6 support.
+// Certain packages ship in ES6 and need to be transpiled for our purposes.
 var toTranspileWithinNodeModules = [
   // All of our @cdo-aliased files should get transpiled as they are our own
   // source files.
   path.resolve(__dirname, 'node_modules', '@cdo'),
   // playground-io ships in ES6 as of 0.3.0
   path.resolve(__dirname, 'node_modules', 'playground-io'),
-  path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
-  path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
-  path.resolve(__dirname, 'node_modules', 'json-parse-better-errors')
+  path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
+  // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
+  path.resolve(__dirname, 'node_modules', 'parse5'),
+  path.resolve(__dirname, 'node_modules', 'vmsg'),
+  path.resolve(
+    __dirname,
+    'node_modules',
+    'microsoft-cognitiveservices-speech-sdk'
+  )
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -47,7 +53,15 @@ var baseConfig = {
       '@cdo/gamelab/locale': path.resolve(
         __dirname,
         'src',
+        'p5lab',
         'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/spritelab/locale': path.resolve(
+        __dirname,
+        'src',
+        'p5lab',
+        'spritelab',
         'locale-do-not-import.js'
       ),
       '@cdo/weblab/locale': path.resolve(
@@ -82,12 +96,22 @@ var baseConfig = {
   module: {
     rules: [
       {test: /\.exported_json$/, loader: 'raw-loader'},
-      {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
+      {
+        test: /\.ejs$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'test')
+        ],
+        loader: 'ejs-webpack-loader'
+      },
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {
         test: /\.scss$/,
-        loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {loader: 'sass-loader', options: {includePaths: [scssIncludePath]}}
+        ]
       },
       {test: /\.interpreted.js$/, loader: 'raw-loader'},
       {test: /\.exported_js$/, loader: 'raw-loader'},
@@ -135,40 +159,23 @@ if (envConstants.HOT) {
 
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
-  baseConfig.module.rules.splice(
-    -1,
-    1,
-    {
-      test: /\.jsx?$/,
-      enforce: 'pre',
-      include: [path.resolve(__dirname, 'test')].concat(
-        toTranspileWithinNodeModules
-      ),
-      loader: 'babel-loader',
-      query: {
-        cacheDirectory: true,
-        compact: false
-      }
-    },
-    {
-      test: /\.jsx?$/,
-      enforce: 'pre',
-      loader: 'babel-istanbul-loader',
-      include: path.resolve(__dirname, 'src'),
-      exclude: [
-        path.resolve(__dirname, 'src', 'lodash.js'),
-
-        // we need to turn off coverage for this file
-        // because we have tests that actually make assertions
-        // about the contents of the compiled version of this file :(
-        path.resolve(__dirname, 'src', 'flappy', 'levels.js')
-      ],
-      query: {
-        cacheDirectory: true,
-        compact: false
-      }
+  baseConfig.module.rules.push({
+    test: /\.jsx?$/,
+    enforce: 'post',
+    loader: 'istanbul-instrumenter-loader',
+    include: path.resolve(__dirname, 'src'),
+    exclude: [
+      // we need to turn off instrumentation for this file
+      // because we have tests that actually make assertions
+      // about the contents of the compiled version of this file :(
+      path.resolve(__dirname, 'src', 'flappy', 'levels.js')
+    ],
+    query: {
+      cacheDirectory: true,
+      compact: false,
+      esModules: true
     }
-  );
+  });
 }
 
 var devtool = process.env.DEV ? 'cheap-inline-source-map' : 'inline-source-map';
@@ -302,7 +309,7 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {Array} options.externals - list of webpack externals
  */
 function create(options) {
-  var outputDir = options.output;
+  var outputDir = options.outputDir;
   var entries = options.entries;
   var minify = options.minify;
   var watch = options.watch;
@@ -310,16 +317,23 @@ function create(options) {
   var piskelDevMode = options.piskelDevMode;
   var plugins = options.plugins;
   var externals = options.externals;
+  var optimization = options.optimization;
+  var mode = options.mode;
+
+  // When minifying, this generates a 20-hex-character hash.
+  const suffix = minify ? 'wp[contenthash].min.js' : '.js';
 
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-      filename: '[name].' + (minify ? 'min.' : '') + 'js'
+      filename: `[name]${suffix}`
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
     externals: externals,
+    optimization: optimization,
+    mode: mode,
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
@@ -336,20 +350,6 @@ function create(options) {
     keepalive: watch,
     failOnError: !watch
   });
-
-  if (minify) {
-    config.plugins = config.plugins.concat([
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        },
-        // Don't generate source maps for our minified code, as these are expensive
-        // and we haven't been using them.
-        sourceMap: false
-      }),
-      new UnminifiedWebpackPlugin()
-    ]);
-  }
 
   if (watch) {
     config.plugins = config.plugins.concat(

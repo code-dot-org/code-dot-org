@@ -27,13 +27,6 @@ div#visualizationResizeBar {
   height: $workspace-headers-height;
 }
 
-// Override appliction.scss's defined width for applab, so that embed levels
-// get a better width. Non embed levels will be handled by responsive media
-// queries
-.small-footer-base {
-  width: 340px;
-}
-
 /*
  * Shrink the visualization area on small displays.
  *
@@ -238,6 +231,16 @@ div#visualizationResizeBar {
   }
 }
 
+.widgetWidth {
+  width: 600px !important;
+  max-width: 600px !important;
+}
+
+.widgetHeight {
+  height: 450px !important;
+  max-height: 450px !important;
+}
+
 #visualizationColumn.wireframeShare {
   max-width: none !important;
   // If you change this width and height,
@@ -439,11 +442,6 @@ div#visualizationResizeBar {
   color: white;
 }
 
-#manageAssetsModal {
-  width: 800px;
-  margin-left: -400px;
-}
-
 .assetRow {
   border-bottom: 1px solid #999;
 }
@@ -488,10 +486,6 @@ div#visualizationResizeBar {
 .chooseAssetDropdownOption {
   color: $link_color;
   text-decoration: underline;
-}
-
-.droplet-dropdown {
-  z-index: 500 !important;
 }
 
 // We don't want -webkit-user-select: none for our contenteditable div, otherwise
@@ -548,4 +542,25 @@ div#visualizationResizeBar {
 #designModeViz .ui-resizable-s {
   width: calc(100% - 12px);
   bottom: 0;
+}
+
+// Theme dropdown needs to use classes for styling
+.theme-dropdown {
+  .Select-value {
+    height: 44px;
+    .theme-dropdown-label {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+  .Select-menu, .Select-menu-outer {
+    height: 516px;
+    max-height: 516px;
+  }
+
+  .Select-control {
+    height: 44px;
+  }
 }

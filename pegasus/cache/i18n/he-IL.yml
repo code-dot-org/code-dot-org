@@ -19,12 +19,12 @@ he-IL:
     הקוד שלכם</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">האם אתה מורה למדעי המחשב? ראה עוד משאבים של CSEdWeek</a>'
+  csedweek_banner_teachers_text: 'האם אתה מורה למדעי המחשב? ראה עוד משאבים של '
   n_have_learned_an_hoc: "<h1>נסו</h1><h2>שעת קוד</h2><h3># מוגשת</h3>"
   anybody_can_learn: כל אחד יכול ללמוד.
   learn_now: למד עכשיו
   petition_message: כל תלמיד בכל בית-ספר זכאי להזדמנות ללמוד מדעי המחשב
   petition_sign_message: 'אם אתה מסכים, חתום בשמך. הצטרף ל- # אחרים.'
-  petition_sign_message_support: אם אתם תומכים בנו חיתמו את שמכם. צרפו# נוספים.
   petition_join_others: 'הצטרף #לאחרים'
   name: שם
   email: דואר אלקטרוני
@@ -270,7 +270,7 @@ he-IL:
   homepage_slot_text_hoc: שעה של קוד
   homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
   homepage_slot_text_studio: כל המדריכים שלנו
-  homepage_slot_text_course4: קורס 4
+  homepage_slot_text_course4: מסלול 4
   homepage_slot_text_shop: חנות
   homepage_slot_text_flappy: קוד מתנופף
   homepage_action_text_num_served: "# למדו"
@@ -283,6 +283,7 @@ he-IL:
   homepage_action_text_learn: התחל ללמוד
   homepage_action_text_signpetition: חתום על העצומה
   homepage_signpetition_dropdown: חתום על העצומה שלנו;
+  homepage_signpetition_dropdown_text: מסכים
   homepage_banner_text_main: Code.org והנהלת המכללה יוצרים ברית לשפר את המגוון במדעי
     המחשב.
   homepage_banner_text_link: למד עוד
@@ -312,7 +313,7 @@ he-IL:
   homepage_slot_text_link_buy: השתתף
   homepage_slot_text_link_donate: תרום
   homepage_header_donors: code.org מודה לתומכיו
-  homepage_donors_seall: ראה הכל
+  homepage_donors_seall: לכל הפעילויות
   homepage_donors_donate: תרום
   homepage_below_hero_announcement_text: אנו דואגים לפרטיותך ואנחנו מכניסים עדכונים
     למדיניות הפרטיות שלנו אשר יכנסו לתוקף ב25 למאי.
@@ -373,13 +374,23 @@ he-IL:
     של מיינקראפט.
   mc_gradelevel: לגילאי 6 ומעלה
   mc_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
+  minecraft_agent: המסע של הגיבור במיינקראפט
+  minecraft_designer: מעצב מיינקראפט
+  minecraft_adventurer: הרפתקן מיינקראפט
+  minecraft_tutorials: מדריכי שעה של קוד - מיינקראפט
+  minecraft_specs: שפות רבות | טאבלטים ודפדפנים מודרניים | כיתות ב+
   minecraft_agent_button: התחל
-  minecraft_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט
+  minecraft_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט
     משלך.
   minecraft_designer_button: התחל
+  minecraft_adventurer_description: השתמש בקוד כדי לצאת עם אלכס או סטיב להרפתקה.
   minecraft_adventurer_button: התחל
+  minecraft_no_internet: אין אינטרנט?
   minecraft_subtitle: 'שעת הקוד: גרסת מיינקראפט'
   sports_watch_video: צפה בסרטון
+  video_title_steph_curry: שעה של קוד עם סטף קרי
+  video_2min: 2 דק'
+  no_internet: אין אינטרנט?
   are_you_teacher: האם אתה מורה?
   volunteer_engineer_submission_intro_signup: אנא הכנס את הפרטים הבאים אם אתה סטודנט
     למחשבים או מומחה תוכנה. עליך להיות לפחות בן 18 כדי להירשם כמתנדב. שים לב שכל השדות
@@ -547,10 +558,14 @@ he-IL:
     התלמידים שלך יוספו לקבוצה החדשה הזו ויעזבו את הקבוצה הקודמת.
   dashboard_sections_move_to_section: 'העבר לקבוצה:'
   dashboard_sections_enter_code: 'הכנס קוד קבוצה:'
+  dashboard_sections_other_section: מורה אחר
   dashboard_sections_both_sections: האם תרצה שהתלמיד(ים) יהיו בשתי הקבוצות?
   dashboard_sections_yes_both: כן, ברצוני להעתיק תלמיד(ים) כך שיישארו בקבוצה זו ויהיו
     גם בקבוצה החדשה
   dashboard_sections_no_move: לא, ברצוני שהתלמיד(ים) יהיו רק בקבוצה החדשה.
+  dashboard_sections_move_students: העבר תלמידים
+  dashboard_sections_assign_hoc_script_desc: משתתף בשעת קוד?
+  dashboard_sections_assign_activity: שייך קורס
   dashboard_error_other_section: אם אתה מעביר תלמידים בין קבוצות שונות שלך, בחר את
     הקבוצה מהרשימה הנפתחת. בחר רק 'קבוצה אחרת' כדי להעביר את התלמידים לקבוצה של מורה
     אחר.
@@ -663,6 +678,7 @@ he-IL:
   carousel_heading_webpages: למד ליצור דפי אינטרנט
   carousel_heading_robots: למד לתכנת בעזרת רובוטים
   carousel_heading_ide: פלטפורמות פופולריות בקרב מורים
+  carousel_heading_mobtabelem: עבור טלפונים ומחשבי לוח (טאבלטים)
   educator_notes: הערות מורה
   how_to_teach_hoc: איך ללמד שעת קוד
   more_resources_educators: משאבים נוספים עבור מורים ומחנכים
@@ -709,10 +725,10 @@ he-IL:
   playlab_name: מעבדת הצעצועים
   infinity_name: אינסוף מעבדת הצעצועים
   artist_name: אמן
-  course1_name: קורס 1
-  course2_name: קורס 2
-  course3_name: קורס 3
-  course4_name: קורס 4
+  course1_name: מסלול 1
+  course2_name: מסלול 2
+  course3_name: מסלול 3
+  course4_name: מסלול 4
   coursed-draft_name: קורס ד'
   coursed_name: קורס ד'
   coursed-2017_name: קורס ד' (2017)
@@ -722,8 +738,6 @@ he-IL:
   classicmaze_name: מבוך קלאסי
   iceage_name: עידן הקרח
   minecraft_name: מיינקראפט
-  math_category_name: מתמטיקה
-  hoc_category_name: שעה של קוד
   applab_name: מעבדת היישומים
   gamelab_name: מעבדת המשחקים
   applab_gradelevel: גילאי 13+
@@ -781,6 +795,8 @@ he-IL:
   coursee-2017_gradelevel: גילאי 8-12
   coursed-2018_gradelevel: כיתות ח' ומעלה
   coursee-2018_gradelevel: גילאי 8-12
+  coursed-2019_gradelevel: כיתות ח' ומעלה
+  coursee-2019_gradelevel: גילאי 8-12
   accelerated_gradelevel: גילאי 10-18
   codeorg_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
   codeintl_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
@@ -1151,6 +1167,9 @@ he-IL:
   compatibility_unsupported_browser: הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}',
     target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות
     בחלק מן הפונקציונליות הקיימת.
+  compatibility_unsupported_browser_markdown: הדפדפן שלך אינו נתמך. אנא שדרג אותו
+    <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>.
+    תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת.
   flappy_shortcode: נופף
   header_home: בית
   header_my_dashboard: לוח הבקרה שלי
@@ -1186,10 +1205,13 @@ he-IL:
   header_about: אודות
   header_teacher_community: קהילת המורים
   header_report_bug: דווח תקלה
+  header_legal_privacy: הצהרת פרטיות
+  header_legal_tos: תנאים
   header_tutorials: מדריכים
   header_documentation: מסמכים
   user_header_label: היי %{username}
   user_header_team: צוות
+  user_header_my_projects: הפרויקטים שלי
   user_header_settings: החשבון שלי
   user_header_logout: התנתק
   user_header_signin: התחבר
@@ -1202,7 +1224,11 @@ he-IL:
   view_all_sections: הצג את כל הקבוצות
   view_section: הצג קבוצה
   view_named_section: הצג %{section_name}
+  privacy_doc_explanation: לחץ כאן כדי לגשת למסמך הפרטיות שלנו כדי לשתף או להדפיס
+    אותו עבור תלמידיך.
   sign_in_instruct_code: 'הכנס את קוד הקבוצה שלהם: %{section_code}.'
+  sign_in_overview_cards: תלמידים יכולים למצוא את כל המידע הזה, כולל %{secret} הסודי
+    שלהם, תחת כרטיסיית ההתחברות מטה.
   reset_student_password_instructions: באפשרותך לאפס את ה<word/picture> הסודי לכל
     אחד מהתלמידים על ידי לחיצה על הכרטיסיה "נהל תלמידים" לקבוצה זו, לחיצה על לחצן
     "הצג הסוד" שתחת עמודה "סיסמה" ולחיצה על כפתור "אפס סיסמה".
@@ -1236,16 +1262,30 @@ he-IL:
   hoc_overview_start_tutorial: התחל
   hoc2018_creativity_create: צור
   hoc2018_creativity_what_will_you_create: מה אתם תיצרו?
-  hoc2018_mc_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט
+  hoc2018_mc_page_title: מדריכי שעה של קוד - מיינקראפט
+  hoc2018_mc_details: שפות רבות | טאבלטים ודפדפנים מודרניים | כיתות ב+
+  hoc2018_mc_aquatic_title: 'מיינקראפט: מסע ימי'
+  hoc2018_mc_hero_title: המסע של הגיבור במיינקראפט
+  hoc2018_mc_designer_title: מעצב מיינקראפט
+  hoc2018_mc_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט
     משלך.
+  hoc2018_mc_adventurer_title: הרפתקן מיינקראפט
+  hoc2018_mc_adventurer_description: השתמש בקוד כדי לצאת עם אלכס או סטיב להרפתקה.
   hoc2018_mc_start: התחל
+  hoc2018_mc_no_internet: אין אינטרנט?
+  hoc2018_mc_educators: למורים
   hoc2018_mc_educators_box2_button: הורד
+  hoc2018_mc_video_2min: 2 דק'
+  hoc2018_mc_video_title_steph_curry: שעה של קוד עם סטף קרי
   hoc2018_mc_homepage_what_create: מה אתם תיצרו?
   hoc2018_mc_homepage_join_us: הצטרף אלינו
   hoc2018_mc_homepage_try_it: נסו זאת
   hoc2018_mc_minecraft_education: לימוד בעזרת מיינקרפט
   hoc2018_mc_continue_learning: המשך ללמוד עם מיינקרפט.
   hoc2018_mc_go_to_mc_education: עבור ללימוד בעזרת מיינקרפט
+  hoc2018_mc_short_description_shorter: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות
+    ולבנות עולמות תת-ימיים עם קוד.
+  hoc2018_mc_journey: מסע במיינקראפט עם קוד.
   hoc2018_dance_party_main_heading: מסיבת ריקודים
   hoc2018_dance_party_subheading: עזרו לתרגם את "מסיבת ריקודים"
   hoc2018_dance_create_your_own_dance_title: צרו מסיבת ריקודים משלכם
@@ -1285,3 +1325,4 @@ he-IL:
   hoc2018_dance_video2: מסיבת ריקודים - אירועים
   hoc2018_dance_video3: מסיבת ריקודים - תכונות
   hoc2018_dance_video4: מסיבת ריקודים - סיום
+  hoc2018_mc_with_microsoft: 'בשיתוף עם: '

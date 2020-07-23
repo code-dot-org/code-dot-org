@@ -1,12 +1,28 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
+import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 
 describe('PersonalProjectsTable', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({publishDialog, deleteDialog});
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
   // In the fake data used, the recency of the projects' updatedAt field is consistent with the numbering in the name; for example, the project named "Personal Project 1" has the most recent updatedAt time.
   it('renders project rows in order of recency of updatedAt ', () => {
     const wrapper = mount(

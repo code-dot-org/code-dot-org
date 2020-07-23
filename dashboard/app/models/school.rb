@@ -40,7 +40,7 @@ class School < ActiveRecord::Base
   has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
 
-  has_one :ap_school_code, class_name: 'Census::ApSchoolCode'
+  has_many :ap_school_code, class_name: 'Census::ApSchoolCode'
   has_one :ib_school_code, class_name: 'Census::IbSchoolCode'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}
@@ -53,17 +53,35 @@ class School < ActiveRecord::Base
     end.compact.join(' ')
   end
 
+  def most_recent_school_stats
+    school_stats_by_year.order(school_year: :desc).first
+  end
+
   # Determines if this is a high-needs school for the purpose of distributing Maker Toolkit
   # discount codes - this is not a definition we apply broadly.
   # @return [Boolean] True if high-needs, false otherwise.
   def maker_high_needs?
-    # As of January 2019, "high-needs" is defined as having >= 40% of the student population
+    # As of January 2020, "high-needs" is defined as having >= 50% of the student population
     # eligible for free-and-reduced lunch programs.
-    stats = school_stats_by_year.order(school_year: :desc).first
+    stats = most_recent_school_stats
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
     end
-    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.4
+    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.5
+  end
+
+  # Determines if school meets Amazon Fugure Engineer criteria.
+  # Eligible if the school is any of the following:
+  # a) title I school,
+  # b) >40% URM students,
+  # or c) >40% of students eligible for free and reduced meals.
+  def afe_high_needs?
+    stats = most_recent_school_stats
+    return false if stats.nil?
+
+    # To align with maker_high_needs? definition above,
+    # returning false if we don't have all data for a given school.
+    stats.title_i_eligible? || (stats.urm_percent || 0) >= 40 || (stats.frl_eligible_percent || 0) >= 40
   end
 
   # Public school ids from NCES are always 12 digits, possibly with
@@ -99,12 +117,8 @@ class School < ActiveRecord::Base
       School.transaction do
         merge_from_csv(schools_tsv)
       end
-      # this also needs to be commented out to prevent seeding
-      # of new schools until school_districts table is updated
-      # b/c we'll get foreign key errors if this were to be executed
-      # (i.e., schools added without appropriate school districts)
-      # else
-      #   School.seed_from_s3
+    else
+      School.seed_from_s3
     end
   end
 

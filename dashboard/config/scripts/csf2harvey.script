@@ -1,11 +1,13 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 
-stage 'Snowflakes', flex_category: 'end_of_course_project'
-named_level 'harvey_snowflake_artist1'
-named_level 'harvey_snowflake_artist2'
-named_level 'expresslink'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'Snowflakes'
+level 'harvey_snowflake_artist1', named: true
+level 'harvey_snowflake_artist2', named: true
+level 'expresslink', named: true
 
-stage 'Binary'
-named_level 'harvey_pixelation'
+lesson_group 'content', display_name: 'Content'
+lesson 'Binary'
+level 'harvey_pixelation', named: true

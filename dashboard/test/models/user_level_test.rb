@@ -14,6 +14,43 @@ class UserLevelTest < ActiveSupport::TestCase
     @driver_user_level.navigator_user_levels << @navigator_user_level
   end
 
+  test "by_stage" do
+    script = create :script
+    stage = create :lesson, script: script
+    script_level = create :script_level, script: script, lesson: stage
+    level = script_level.levels.first
+
+    stage_user_level = create :user_level, script: script, level: level
+    other_user_level = create :user_level
+
+    assert_includes UserLevel.by_stage(stage), stage_user_level
+    refute_includes UserLevel.by_stage(stage), other_user_level
+  end
+
+  test "by_stage will find all levels for each script_level" do
+    script = create :script
+    stage = create :lesson, script: script
+    first_level = create :level
+    second_level = create :level
+    create :script_level,
+      script: script,
+      lesson: stage,
+      levels: [
+        first_level,
+        second_level
+      ]
+
+    assert_equal UserLevel.by_stage(stage), []
+
+    first_user_level = create :user_level, script: script, level: first_level
+
+    assert_equal UserLevel.by_stage(stage), [first_user_level]
+
+    second_user_level = create :user_level, script: script, level: second_level
+
+    assert_equal UserLevel.by_stage(stage), [first_user_level, second_user_level]
+  end
+
   test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
     # these exist in production. example:
     # #<UserLevel id: 28907915, user_id: 852686, level_id: 5,
@@ -193,10 +230,13 @@ class UserLevelTest < ActiveSupport::TestCase
   test 'unsubmitting destroys unclaimed peer reviews' do
     level = create(:free_response, peer_reviewable: true)
     script = create :script
+    level_source = create :level_source
 
     ul = UserLevel.create(
       user: @user,
       level: level,
+      script: script,
+      level_source: level_source,
       attempts: 0,
       submitted: true,
       best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
@@ -215,10 +255,13 @@ class UserLevelTest < ActiveSupport::TestCase
   test 'other changes do not destroy unclaimed peer reviews' do
     level = create(:free_response, peer_reviewable: true)
     script = create :script
+    level_source = create :level_source
 
     ul = UserLevel.create(
       user: @user,
       level: level,
+      script: script,
+      level_source: level_source,
       attempts: 0,
       submitted: true,
       best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
@@ -244,9 +287,9 @@ class UserLevelTest < ActiveSupport::TestCase
     teacher = create :teacher
     teacher.permission = UserPermission::AUTHORIZED_TEACHER
 
-    stage = create(:stage, lockable: true)
+    stage = create(:lesson, lockable: true)
 
-    script_level = create :script_level, levels: [@level], stage: stage
+    script_level = create :script_level, levels: [@level], lesson: stage
 
     ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
     ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
@@ -279,7 +322,7 @@ class UserLevelTest < ActiveSupport::TestCase
       create :student, :with_puzzles, num_puzzles: 10 - n
     end
 
-    passing_level_counts = UserLevel.count_passed_levels_for_users(students.map(&:id))
+    passing_level_counts = UserLevel.count_passed_levels_for_users(User.where(id: students.map(&:id)))
     assert_equal(
       {
         students[0].id => 10,

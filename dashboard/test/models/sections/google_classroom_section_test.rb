@@ -26,4 +26,15 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
       assert_equal 'Test Section B', section_2.name
     end
   end
+
+  test 'strips emoji from section name' do
+    owner = create :teacher
+    section = GoogleClassroomSection.from_service(
+      '101',
+      owner.id,
+      [],
+      "\u{1F600} Test Section A \u{1F600}"
+    )
+    assert_equal 'Test Section A', section.name
+  end
 end

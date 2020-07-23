@@ -1,10 +1,10 @@
 :ruby
-  student_accounts_percent = "30%"
-  female_students = "15M"
+  student_accounts_percent = "40%"
+  female_students = "20M"
   project_count = fetch_project_count['rounded_down_millions']
   project_count = project_count.to_s + "M"
   teacher_users = "1M"
-  states_policy_change = "48"
+  states_policy_change = "50"
 
   top_statistic_number = student_accounts_percent
   top_statistic_phrase = "of U.S. students have accounts on Code.org"
@@ -27,15 +27,16 @@
     },
     {
       number: states_policy_change,
-      phrase: "U.S. states changed policy to support computer science",
+      phrase: "All 50 states support computer science",
       link: '/advocacy'
     },
   ]
 
   showing_below_hero_announcement = Homepage.get_below_hero_announcement[:showing]
 
-- if !showing_below_hero_announcement
-  .make-difference We're making a difference
+-# Use false temporary to hide this when showing the special2020 banner.
+- if false && !showing_below_hero_announcement
+  .every-student Every student in every school should have the opportunity to learn computer science
 
 .statistics
   %a.nounderscorehover.col-20.stats-box.linktag{href: CDO.studio_url('/courses'), id: "stats-0"}

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -14,6 +15,8 @@ import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
+import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   clear: {
@@ -22,7 +25,7 @@ const styles = {
   }
 };
 
-export default class TeacherHomepage extends Component {
+export class UnconnectedTeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
     hocLaunch: PropTypes.string,
@@ -32,17 +35,21 @@ export default class TeacherHomepage extends Component {
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
-    showCensusBanner: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
+    showCensusBanner: PropTypes.bool.isRequired,
+    donorBannerName: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
-    schoolYear: PropTypes.number
+    schoolYear: PropTypes.number,
+    specialAnnouncement: shapes.specialAnnouncement,
+    beginGoogleImportRosterFlow: PropTypes.func
   };
 
   state = {
-    showCensusBanner: this.props.showCensusBanner
+    showCensusBanner: this.props.showCensusBanner,
+    donorBannerName: this.props.donorBannerName
   };
 
   bindCensusBanner = banner => {
@@ -142,22 +149,31 @@ export default class TeacherHomepage extends Component {
     $('#flashes')
       .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
       .show();
+
+    // A special on-load behavior: If requested by queryparam, automatically
+    // launch the Google Classroom rostering flow.
+    const {queryStringOpen, beginGoogleImportRosterFlow} = this.props;
+    if (queryStringOpen === 'rosterDialog') {
+      beginGoogleImportRosterFlow();
+    }
   }
 
   render() {
     const {
-      hocLaunch,
       courses,
       topCourse,
       announcement,
-      joinedSections
+      joinedSections,
+      ncesSchoolId,
+      censusQuestion,
+      schoolYear,
+      teacherId,
+      teacherName,
+      teacherEmail,
+      canViewAdvancedTools,
+      isEnglish,
+      specialAnnouncement
     } = this.props;
-    const {ncesSchoolId, censusQuestion, schoolYear} = this.props;
-    const {teacherId, teacherName, teacherEmail} = this.props;
-    const {canViewAdvancedTools, queryStringOpen, isEnglish} = this.props;
-
-    // Show the special announcement for now.
-    const showSpecialAnnouncement = true;
 
     // Hide the regular announcement/notification for now.
     const showAnnouncement = false;
@@ -167,13 +183,8 @@ export default class TeacherHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock
-            hocLaunch={hocLaunch}
-            hasIncompleteApplication={
-              !!sessionStorage['Teacher1920Application']
-            }
-          />
+        {isEnglish && specialAnnouncement && (
+          <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
         )}
         {announcement && showAnnouncement && (
           <div>
@@ -181,7 +192,7 @@ export default class TeacherHomepage extends Component {
               type={announcement.type || 'bullhorn'}
               notice={announcement.heading}
               details={announcement.description}
-              dismissible={false}
+              dismissible={true}
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}
@@ -218,7 +229,13 @@ export default class TeacherHomepage extends Component {
             <br />
           </div>
         )}
-        <TeacherSections queryStringOpen={queryStringOpen} />
+        {isEnglish && this.state.donorBannerName && (
+          <div>
+            <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
+            <div style={styles.clear} />
+          </div>
+        )}
+        <TeacherSections />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
@@ -235,3 +252,8 @@ export default class TeacherHomepage extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({}),
+  {beginGoogleImportRosterFlow}
+)(UnconnectedTeacherHomepage);

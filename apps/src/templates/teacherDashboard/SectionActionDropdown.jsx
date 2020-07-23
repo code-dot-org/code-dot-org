@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
 import {sortableSectionShape, OAuthSectionTypes} from './shapes.jsx';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {
@@ -113,35 +113,36 @@ class SectionActionDropdown extends Component {
 
     return (
       <span>
-        <QuickActionsCell>
-          <PopUpMenu.Item
-            href={teacherDashboardUrl(sectionData.id, '/progress')}
-          >
-            {i18n.sectionViewProgress()}
-          </PopUpMenu.Item>
-          <PopUpMenu.Item href={teacherDashboardUrl(sectionData.id, '/manage')}>
-            {i18n.manageStudents()}
-          </PopUpMenu.Item>
-          {sectionData.loginType !== OAuthSectionTypes.google_classroom &&
-            sectionData.loginType !== OAuthSectionTypes.clever && (
-              <PopUpMenu.Item
-                href={teacherDashboardUrl(
-                  sectionData.id,
-                  '/print_signin_cards'
-                )}
-              >
-                {sectionData.loginType === SectionLoginType.email
-                  ? i18n.joinInstructions()
-                  : i18n.printLoginCards()}
-              </PopUpMenu.Item>
-            )}
-          <MenuBreak />
+        <QuickActionsCell type={'header'}>
           <PopUpMenu.Item
             onClick={this.onClickEdit}
             className="edit-section-details-link"
           >
             {i18n.editSectionDetails()}
           </PopUpMenu.Item>
+          <PopUpMenu.Item
+            href={teacherDashboardUrl(sectionData.id, '/progress')}
+            className="view-progress-link"
+          >
+            {i18n.sectionViewProgress()}
+          </PopUpMenu.Item>
+          <PopUpMenu.Item
+            href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+            className="manage-students-link"
+          >
+            {i18n.manageStudents()}
+          </PopUpMenu.Item>
+          {sectionData.loginType !== OAuthSectionTypes.google_classroom &&
+            sectionData.loginType !== OAuthSectionTypes.clever && (
+              <PopUpMenu.Item
+                href={teacherDashboardUrl(sectionData.id, '/login_info')}
+                className="print-login-link"
+              >
+                {sectionData.loginType === SectionLoginType.email
+                  ? i18n.joinInstructions()
+                  : i18n.printLoginCards()}
+              </PopUpMenu.Item>
+            )}
           <PrintCertificates
             sectionId={sectionData.id}
             assignmentName={sectionData.assignmentNames[0]}
@@ -177,15 +178,17 @@ class SectionActionDropdown extends Component {
           <h2 style={styles.heading}>{i18n.deleteSection()}</h2>
           <div>{i18n.deleteSectionConfirm()}</div>
           <br />
-          <div>{i18n.deleteSectionHideSuggestion()}</div>
+          <div>{i18n.deleteSectionArchiveSuggestion()}</div>
           <DialogFooter>
             <Button
+              __useDeprecatedTag
               class="ui-test-cancel-delete"
               text={i18n.dialogCancel()}
               onClick={this.onCancelDelete}
               color="gray"
             />
             <Button
+              __useDeprecatedTag
               class="ui-test-confirm-delete"
               text={i18n.delete()}
               onClick={this.onConfirmDelete}

@@ -1,8 +1,12 @@
 class ScriptsController < ApplicationController
-  before_action :require_levelbuilder_mode, except: :show
+  include VersionRedirectOverrider
+
+  before_action :require_levelbuilder_mode, except: [:show, :edit, :update]
+  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
   before_action :authenticate_user!, except: :show
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_redirect_override, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
 
@@ -28,7 +32,8 @@ class ScriptsController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong script overview page.
-    if redirect_script = redirect_script(@script, request.locale)
+    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script)
+    if !override_redirect && redirect_script = redirect_script(@script, request.locale)
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
       return
     end
@@ -39,6 +44,22 @@ class ScriptsController < ApplicationController
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
+    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
+
+    # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
+    if current_user && current_user.levelbuilder?
+      notice_text = ""
+      @script.lessons.each do |stage|
+        next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
+
+        formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
+        num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
+        lesson_visible_after_message = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
+        notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
+      end
+      flash[:notice] = notice_text.html_safe
+    end
   end
 
   def index
@@ -54,9 +75,9 @@ class ScriptsController < ApplicationController
   def create
     @script = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
-      redirect_to @script, notice: I18n.t('crud.created', model: Script.model_name.human)
+      redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
-      render 'new'
+      render json: @script.errors
     end
   end
 
@@ -71,13 +92,33 @@ class ScriptsController < ApplicationController
     end
 
     @script.destroy
-    filename = "config/scripts/#{@script.name}.script"
-    File.delete(filename) if File.exist?(filename)
+    if Rails.application.config.levelbuilder_mode
+      filename = "config/scripts/#{@script.name}.script"
+      File.delete(filename) if File.exist?(filename)
+    end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
   end
 
   def edit
+    beta = params[:beta].present?
+    if @script.script_levels.any?(&:has_experiment?)
+      beta = false
+      beta_warning = "The beta Script Editor is not available, because it does not support level variants with experiments."
+    end
     @show_all_instructions = params[:show_all_instructions]
+    @script_data = {
+      script: @script ? @script.summarize_for_edit : {},
+      has_course: @script&.unit_groups&.any?,
+      i18n: @script ? @script.summarize_i18n : {},
+      beta: beta,
+      betaWarning: beta_warning,
+      levelKeyList: beta && Level.key_list,
+      lessonLevelData: @script_file,
+      locales: options_for_locale_select,
+      script_families: ScriptConstants::FAMILY_NAMES,
+      version_year_options: Script.get_version_year_options,
+      is_levelbuilder: current_user.levelbuilder?
+    }
   end
 
   def update
@@ -94,13 +135,13 @@ class ScriptsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    render 'levels/instructions', locals: {stages: script.stages}
+    render 'levels/instructions', locals: {stages: script.lessons}
   end
 
   private
 
   def set_script_file
-    @script_file = ScriptDSL.serialize_stages(@script)
+    @script_file = ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake
@@ -115,8 +156,17 @@ class ScriptsController < ApplicationController
   end
 
   def set_script
-    @script = Script.get_from_cache(params[:id])
-    if current_user && @script&.pilot? && !@script.has_pilot_access?(current_user)
+    script_id = params[:id]
+    @script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
+      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
+      Script.get_from_cache(script_id)
+    raise ActiveRecord::RecordNotFound unless @script
+
+    if ScriptConstants::FAMILY_NAMES.include?(script_id)
+      Script.log_redirect(script_id, @script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
+    end
+
+    if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
     end
   end
@@ -128,20 +178,26 @@ class ScriptsController < ApplicationController
   def general_params
     h = params.permit(
       :visible_to_teachers,
+      :curriculum_umbrella,
+      :family_name,
+      :version_year,
+      :project_sharing,
       :login_required,
-      :hideable_stages,
+      :hideable_lessons,
       :curriculum_path,
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
       :student_detail_progress_view,
       :project_widget_visible,
-      :exclude_csf_column_in_legend,
-      :stage_extras_available,
+      :lesson_extras_available,
       :has_verified_resources,
       :has_lesson_plan,
+      :tts,
+      :is_stable,
       :script_announcements,
       :pilot_experiment,
+      :editor_experiment,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
@@ -163,6 +219,12 @@ class ScriptsController < ApplicationController
       :description,
       :stage_descriptions
     ).to_h
+  end
+
+  def set_redirect_override
+    if params[:id] && params[:no_redirect]
+      VersionRedirectOverrider.set_script_redirect_override(session, params[:id])
+    end
   end
 
   def redirect_script(script, locale)

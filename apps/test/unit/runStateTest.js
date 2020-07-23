@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/deprecatedChai';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 var testUtils = require('./../util/testUtils');
 
@@ -6,6 +6,35 @@ var runState = require('@cdo/apps/redux/runState');
 
 describe('runState', () => {
   testUtils.setExternalGlobals();
+
+  describe('stepSpeed', function() {
+    var reducer = runState.default;
+
+    it('is initially 1', function() {
+      var state = reducer(null, {});
+      assert.strictEqual(state.stepSpeed, 1);
+    });
+
+    it('remains 1 when set to null', function() {
+      var state = reducer(null, runState.setStepSpeed(null));
+      assert.strictEqual(state.stepSpeed, 1);
+    });
+
+    it('remains 1 when set to undefined', function() {
+      var state = reducer(null, runState.setStepSpeed(undefined));
+      assert.strictEqual(state.stepSpeed, 1);
+    });
+
+    it('can be set to 0.0', function() {
+      var state = reducer(null, runState.setStepSpeed(0.0));
+      assert.strictEqual(state.stepSpeed, 0);
+    });
+
+    it('can be set to a decimal', function() {
+      var state = reducer(null, runState.setStepSpeed(0.5));
+      assert.strictEqual(state.stepSpeed, 0.5);
+    });
+  });
 
   describe('isRunning reducer', function() {
     var reducer = runState.default;

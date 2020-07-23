@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 ## Lesson 1: What is Big Data?
 **Lesson Type:**  External Tools | Individual and Group Discovery
 
-<a href = “https://curriculum.code.org/csp/unit4/1/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit4/1/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 
 In this lesson, students are introduced to the concept of “big data,” where it comes from, what makes it “big,” and how people use big data to solve problems. Students are asked to consider how much of their lives are “datafied” or could be, and the teacher will show the projected growth of data in the world.  This is the lead in to a unit focusing primarily on the Big Ideas of Data and Global Impact through the lense of Big Data.  
@@ -20,7 +20,7 @@ Big data is a big deal right now, both in the field of computer science and more
 **Lesson Type:** Research | Presentation | Practice PT
 
 
-<a href = “https://curriculum.code.org/csp/unit4/2/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit4/2/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 
 Being able to research modern computing innovations and gain insight into how those innovations are using data is a key skill of computer scientists.  In this lesson students will conduct a small amount of research to explore a computing innovation that leverages the use of data. Students will research a topic of personal interest and respond to questions about about how that innovation produces, uses, or consumes data. Students will learn to look at how data is used with an increasingly critical eye, but this lesson merely sets the table. Having intuitions about how data is used, or how it’s not used, can improve one’s judgment about modern technology and other innovations that increasingly use, produce, and rely on massive amounts of data to do their work. The lesson is intended to give students practice with doing research of this nature and provides a small amount of scaffolding to help students figure out what to look for. 
@@ -33,7 +33,7 @@ While this lesson is not officially labeled as a practice PT, it is intended to 
 ## Lesson 3: Identifying People with Data
 **Lesson Type:** External Tools | Individual and Group Discovery
 
-<a href = “https://curriculum.code.org/csp/unit4/3/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit4/3/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 While there are many potential benefits associated with the collection and analysis of large amounts of data, these advances pose a constant risk to our collective security and privacy. Large-scale data breaches mean that the details of our personal, professional, and financial lives may be at risk. Students begin this lesson by investigating some of the world’s biggest data breaches to get a sense for how frequently data breaches happen within companies and organizations, and what kinds of data and information is lost or given up.  This lesson focuses on Enduring Understanding 3.3: **There are trade offs when representing information as digital data**, and more specifically: 
 <br>
@@ -47,7 +47,7 @@ In order to prevent personal data from being linked to an individual person, per
 **Lesson Type:** External Tools | Individual and Group Discovery
 
 
-<a href = “https://curriculum.code.org/csp/unit4/4/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit4/4/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 Many consumers are unaware, or lack a sophisticated understanding, of how information about us is being collected and tracked by the technology we use every day. This issue goes beyond instances when data is stolen from companies or organizations we willingly provide it to. Instead, using computational tools, our movements through the physical and virtual world are being automatically tracked, stored, and analyzed. This lesson speaks to the Big Idea of Global Impact, creating an opportunity for students to **analyze the beneficial and harmful effects of computing (7.3.1)**. 
 <br>

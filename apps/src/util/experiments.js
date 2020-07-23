@@ -19,17 +19,16 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // Specific experiment names
 experiments.REDUX_LOGGING = 'reduxLogging';
-experiments.COMMENT_BOX_TAB = 'commentBoxTab';
-experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
-
-// This is a per user experiment and is defined in experiments.rb
-// On the front end we are treating it as an experiment group.
-experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
-experiments.TEACHER_EXP_2018_LIST = [experiments.COMMENT_BOX_TAB];
-experiments.MINI_RUBRIC_2019 = '2019-mini-rubric';
-experiments.TEACHER_DASHBOARD_REACT = 'teacher-dashboard-react';
+experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
+experiments.MICROBIT = 'microbit';
+experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
+  'teacher-dashboard-section-buttons';
+experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
+  'teacher-dashboard-section-buttons-alternate-text';
+experiments.TEXT_TO_SPEECH_BLOCK = 'text-to-speech-block';
+experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
@@ -106,16 +105,6 @@ experiments.isEnabled = function(key) {
       window.appOptions.experiments &&
       window.appOptions.experiments.includes(key)
     );
-
-  // Check for parent experiment
-  if (
-    storedExperiments
-      .map(obj => obj.key)
-      .includes(experiments.TEACHER_EXP_2018) &&
-    experiments.TEACHER_EXP_2018_LIST.includes(key)
-  ) {
-    enabled = true;
-  }
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];

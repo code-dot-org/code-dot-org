@@ -17,12 +17,11 @@ cd apps
 
 # Machine setup (OSX with Homebrew)
 brew install node
-npm install -g grunt-cli yarn@1.6.0
+npm install -g grunt-cli yarn@1.16.0
 
 # Perform first full build
 yarn
 npm run build
-npm rebuild node-sass
 
 # automatically rebuild every time you make changes to source files
 yarn start
@@ -74,14 +73,14 @@ npm test
 To run an individual test, use the `--entry` option with `npm run test:entry` to target a file:
 
 ```
-npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
+npm run test:entry -- --entry=./test/unit/gridUtilsTest.js
 ```
 
 This option also works on directories, in which case all files within that
 directory and any subdirectories will be run:
 
 ```
-npm run test:entry -- --entry ./test/unit/applab/
+npm run test:entry -- --entry=./test/unit/applab/
 ```
 
 It's also possible to run an individual test or subset of tests with:
@@ -97,7 +96,7 @@ LEVEL_TYPE=applab npm run test:integration
 
 You can also use the `--grep` flag with integration tests:
 ```
-LEVEL_TYPE=applab npm run test:integration --grep ec_data_blocks
+LEVEL_TYPE=applab npm run test:integration --grep=ec_data_blocks
 ```
 
 ##### Rerun Tests Automatically #####
@@ -166,8 +165,8 @@ if (IN_UNIT_TEST) {
 These if statements will be removed from production source files at build time.
 
 The test runner starts a server which can serve files in the apps directory to
-your test code. Only whitelisted files and directories are available. See the
-`config.karma.options.files` array in `Gruntfile.js` for the whitelist. When
+your test code. Only allowlisted files and directories are available. See the
+`config.karma.options.files` array in `Gruntfile.js` for the allowlist. When
 fetching files served by the test runner, prefix the file path with
 `/base/`. For example, to load the `test/audio/assets/win.mp3` file in an
 `<audio>` tag inside your test, you could write:
@@ -225,7 +224,7 @@ A static version of the styleguide is hosted at https://code-dot-org.github.io/c
 
 ![code-studio-common bundle](https://user-images.githubusercontent.com/1070243/44691985-abe8dc80-aa15-11e8-95a3-0835ca3529df.png)
 
-Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer). 
+Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 
 
 ### Localization

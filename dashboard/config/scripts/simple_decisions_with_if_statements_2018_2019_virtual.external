@@ -1,0 +1,42 @@
+name 'Simple Decisions with if-statements_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+description 'description here'
+css 'unplugged'
+markdown <<MARKDOWN
+# Having Your App Make Decisions
+
+Now that you have variables keeping track of useful information in an app, the next thing you probably want to do is make decisions based on their values.
+
+For example: **"if the count reaches 20 then switch screens"**
+
+**NOTE:** we're going to learn all about `if` statements later on.  For now, we need *just* enough to make our program end. 
+
+## Add an if-statement to the event handler
+
+We want to add an `if` statement into the event handler to check the value of `count` *immediately after* we update its value.  Here's what the full event handler should look like:
+
+![](https://images.code.org/a65dec71bc103397f2ceed603f328531-image-1446154248803.png)
+
+**Notice: use `==` to compare values.** 
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Teacher Note - We're not teaching if statements...yet
+
+While there is a lot of text here this is NOT actually where we learn formally about `if` statements.  That comes in the next set of lessons.
+
+We simply want the game to be able to end, and for that we need a simple `if` statement that hopefully won't stretch students too far.
+
+**All that's needed** here is enough understanding to write a simple  `if` statement to end the game. Like this:
+
+	if (score == 20){
+	    setScreen(...);
+	}
+
+So if students get hung up on this page just encourage them to move on.
+MARKDOWN

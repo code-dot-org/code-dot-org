@@ -1,104 +1,14 @@
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
-  factory :pd_workshop, class: 'Pd::Workshop' do
-    association :organizer, factory: :workshop_organizer
-    funded false
-    on_map true
-    location_name 'Hogwarts School of Witchcraft and Wizardry'
-    course Pd::Workshop::COURSES.first
-    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
-    trait :teachercon do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
-    end
-    trait :local_summer_workshop do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    end
-    trait :local_summer_workshop_upcoming do
-      local_summer_workshop
-      num_sessions 5
-      sessions_from {Date.today + 3.months}
-    end
-    trait :fit do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_FIT
-    end
-    capacity 10
-    transient do
-      num_sessions 0
-      num_facilitators 0
-      sessions_from {Date.today + 9.hours} # Start time of the first session, then one per day after that.
-      each_session_hours 6
-      num_enrollments 0
-      enrolled_and_attending_users 0
-      enrolled_unattending_users 0
-      num_completed_surveys 0
-      randomized_survey_answers false
-      assign_session_code false
-    end
-    trait :with_codes_assigned do
-      assign_session_code true
-    end
-    after(:build) do |workshop, evaluator|
-      # Sessions, one per day starting today
-      evaluator.num_sessions.times do |i|
-        params = [{
-          workshop: workshop,
-          start: evaluator.sessions_from + i.days,
-          duration_hours: evaluator.each_session_hours
-        }]
-        params.prepend :with_assigned_code if evaluator.assign_session_code
-        workshop.sessions << build(:pd_session, *params)
-      end
-      evaluator.num_enrollments.times do
-        workshop.enrollments << build(:pd_enrollment, workshop: workshop)
-      end
-      evaluator.enrolled_and_attending_users.times do
-        teacher = create :teacher
-        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
-        workshop.sessions.each do |session|
-          session.attendances << build(:pd_attendance, session: session, teacher: teacher)
-        end
-      end
-      evaluator.enrolled_unattending_users.times do
-        teacher = create :teacher
-        workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
-      end
-    end
-
-    trait :funded do
-      funded true
-      funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
-    end
-
-    after(:create) do |workshop, evaluator|
-      workshop.sessions.map(&:save)
-
-      evaluator.num_facilitators.times do
-        workshop.facilitators << (create :facilitator, course: workshop.course)
-      end
-
-      evaluator.num_completed_surveys.times do
-        enrollment = create :pd_enrollment, workshop: workshop
-        if workshop.teachercon?
-          create :pd_teachercon_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
-        elsif workshop.local_summer?
-          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
-        else
-          raise 'Num_completed_surveys trait unsupported for this workshop type'
-        end
-      end
-    end
-  end
-
+  # example zip: 35010
   factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
     mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
     cost_scholarship_information "Some **important** information about scholarships."
     additional_program_information "And some _additional_ program information."
   end
 
+  # example zip: 60415
   factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
     # Link to partner-specific site.
     contact_name "Illinois Contact"
@@ -106,15 +16,17 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, state: "IL")]}
   end
 
+  # example zip: 42001
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
-    apps_open_date_csp_teacher {Date.today - 5.days}
-    apps_open_date_csd_teacher {Date.today - 6.days}
-    apps_close_date_csp_teacher {Date.today - 2.days}
-    apps_close_date_csd_teacher {Date.today - 3.days}
+    apps_open_date_csp_teacher {(Date.current - 5.days).strftime("%Y-%m-%d")}
+    apps_open_date_csd_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_csp_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_csd_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
+  # example zip: 07001
   factory :regional_partner_newjersey, parent: :regional_partner_with_summer_workshops do
     # No contact details, no workshop application dates, and no workshops.
     contact_name nil
@@ -127,41 +39,38 @@ FactoryGirl.define do
     pd_workshops {[]}
   end
 
+  # example zip: 97202
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
-    apps_open_date_csp_teacher {Date.today + 5.days}
-    apps_open_date_csd_teacher {Date.today + 6.days}
-    apps_close_date_csp_teacher {Date.today + 14.days}
-    apps_close_date_csd_teacher {Date.today + 15.days}
+    apps_open_date_csp_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_csp_teacher {(Date.current + 14.days).strftime("%Y-%m-%d")}
+    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
+  # example zip: 82001
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
     # CSD dates but no CSP dates.
     apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
     apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher {Date.today + 15.days}
+    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
+  # example zip: 90210
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
     contact_name "Beverly Hills Contact"
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
-  end
-
-  factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
-    num_sessions 1
-    started_at {Time.zone.now}
-    ended_at {Time.zone.now}
   end
 
   factory :pd_session, class: 'Pd::Session' do
     transient do
       duration_hours 6
     end
-    association :workshop, factory: :pd_workshop
-    start {Date.today + 9.hours}
+    association :workshop, factory: :workshop
+    start {Date.current + 9.hours}
     self.end {start + duration_hours.hours}
 
     trait :with_assigned_code do
@@ -169,62 +78,8 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
-    association :user, factory: :teacher, strategy: :create
-    transient do
-      application_hash {build :pd_teacher_application_hash, user: user}
-    end
-    application {application_hash.to_json}
-    primary_email {application_hash['primaryEmail']}
-    secondary_email {application_hash['secondaryEmail']}
-  end
-
-  # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
-  factory :pd_teacher_application_hash, class: 'Hash' do
-    transient do
-      user nil
-      association :school, factory: :public_school, strategy: :build
-      association :school_district, strategy: :build
-      course 'csd'
-    end
-
-    initialize_with do
-      {
-        school: school.id,
-        'school-district' => school_district.id,
-        firstName: 'Rubeus',
-        lastName: 'Hagrid',
-        primaryEmail: user ? user.email : 'rubeus@hogwarts.co.uk',
-        secondaryEmail: 'rubeus+also@hogwarts.co.uk',
-        principalPrefix: 'Mrs.',
-        principalFirstName: 'Minerva',
-        principalLastName: 'McGonagall',
-        principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: course,
-        phoneNumber: '555-555-5555',
-        gradesAtSchool: [10],
-        genderIdentity: 'Male',
-        grades2016: [7, 8],
-        subjects2016: ['Math', 'Care of Magical Creatures'],
-        grades2017: [10, 11],
-        subjects2017: ['Computer Science', 'Care of Magical Creatures'],
-        committedToSummer: 'Yes',
-        ableToAttendAssignedSummerWorkshop: 'Yes',
-        allStudentsShouldLearn: '4',
-        allStudentsCanLearn: '4',
-        newApproaches: '4',
-        allAboutContent: '4',
-        allAboutProgramming: '4',
-        csCreativity: '4',
-        currentCsOpportunities: ['lunch clubs'],
-        whyCsIsImportant: 'robots',
-        whatTeachingSteps: 'learn and practice'
-      }.stringify_keys
-    end
-  end
-
   factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    start_date {Date.today}
+    start_date {Date.current}
     fixed_payment 50
   end
 
@@ -273,7 +128,7 @@ FactoryGirl.define do
       form_data_hash {build :pd_regional_partner_program_registration_hash}
       regional_partner {create :regional_partner}
     end
-    user {regional_partner.contact}
+    user {(create :regional_partner_program_manager, regional_partner: regional_partner).program_manager}
     teachercon 1
     form_data {form_data_hash.to_json}
   end
@@ -534,13 +389,6 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
-    workshop_name '2017: workshop'
-    course 'csd'
-    association :user, factory: :teacher, strategy: :create
-    association :teacher_application, factory: :pd_teacher_application, strategy: :create
-  end
-
   factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
     association :user, factory: :facilitator, strategy: :create
     tc1_arrive {Date.new(2017, 8, 23)}
@@ -548,7 +396,7 @@ FactoryGirl.define do
   end
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
-    association :workshop, factory: :pd_workshop
+    association :workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
     email {"participant_#{(User.maximum(:id) || 0) + 1}@example.com.xx"}
@@ -560,6 +408,20 @@ FactoryGirl.define do
       full_name {user.name} # sets first_name and last_name
       email {user.email}
     end
+
+    trait :with_attendance do
+      after(:create) do |enrollment|
+        create_list(:pd_attendance, 1, enrollment: enrollment)
+      end
+    end
+  end
+
+  factory :pd_scholarship_info, class: 'Pd::ScholarshipInfo' do
+    association :user, factory: :teacher
+
+    course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
+    application_year Pd::Application::ApplicationConstants::YEAR_19_20
+    scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -572,6 +434,42 @@ FactoryGirl.define do
     association :enrollment, factory: :pd_enrollment
   end
 
+  # Creates a teacher optionally enrolled in a workshop,
+  # or marked attended on either all (true) or a specified list of workshop sessions.
+  factory :pd_workshop_participant, parent: :teacher do
+    transient do
+      workshop nil
+      enrolled true
+      attended false
+      cdo_scholarship_recipient false
+    end
+    after(:create) do |teacher, evaluator|
+      raise 'workshop required' unless evaluator.workshop
+      create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
+      if evaluator.attended
+        attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
+        attended_sessions.each do |session|
+          create :pd_attendance, session: session, teacher: teacher
+        end
+      end
+
+      scholarship_params = {
+        user: teacher,
+        course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
+        application_year: evaluator.workshop.school_year
+      }
+
+      # We have an after_create hook on the enrollment model (see :set_default_scholarship_info)
+      # that creates a ScholarshipInfo entry in certain cases (namely, if the enrollment is in a CSF workshop).
+      # Skip creating a new ScholarshipInfo entry if one has already been created
+      # when the enrollment is created above.
+      if evaluator.cdo_scholarship_recipient && Pd::ScholarshipInfo.find_by(scholarship_params).nil?
+        create :pd_scholarship_info,
+          scholarship_params
+      end
+    end
+  end
+
   factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
     association :school_district
     course Pd::Workshop::COURSES.first
@@ -582,18 +480,6 @@ FactoryGirl.define do
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
     association :facilitator
     course Pd::Workshop::COURSES.first
-  end
-
-  factory :pd_workshop_material_order, class: 'Pd::WorkshopMaterialOrder' do
-    association :enrollment, factory: :pd_enrollment
-    association :user, factory: :teacher
-    street '1501 4th Ave'
-    apartment_or_suite 'Suite 900'
-    city 'Seattle'
-    state 'WA'
-    add_attribute :zip_code, '98101'
-    phone_number '555-111-2222'
-    address_override "0"
   end
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
@@ -635,148 +521,25 @@ FactoryGirl.define do
         )
       end
     end
+  end
 
-    # Sample data generated by submitting the actual form 2018-10-12.
+  factory :pd_regional_partner_mini_contact, class: 'Pd::RegionalPartnerMiniContact' do
+    user nil
+    regional_partner nil
+    form_data {build(:pd_regional_partner_mini_contact_hash).to_json}
+  end
 
-    trait :found_district_only do
-      initialize_with do
-        {
-          "firstName" => "Sybill",
-          "lastName" => "Trelawney",
-          "email" => "trelawney@example.com",
-          "role" => "Teacher",
-          "gradeLevels" => ["High School (9-12)"],
-          "notes" => "A question for my regional partner",
-          "optIn" => "No",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "5000000",
-          "school-district-other" => false,
-          "school" => "",
-          "school-other" => false,
-          "school-district-name" => "",
-          "school-name" => "",
-          "school-zipcode" => ""
-        }
-      end
-    end
-
-    trait :found_district_and_school do
-      initialize_with do
-        {
-          "firstName" => "Minerva",
-          "lastName" => "McGonigall",
-          "email" => "mcgonigall@example.com",
-          "role" => "Teacher",
-          "gradeLevels" => ["High School (9-12)"],
-          "notes" => "A question for my regional partner",
-          "optIn" => "No",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "5000000",
-          "school-district-other" => false,
-          "school" => "500000000000",
-          "school-other" => false,
-          "school-district-name" => "",
-          "school-name" => "",
-          "school-zipcode" => ""
-        }
-      end
-    end
-
-    trait :found_district_other_school do
-      initialize_with do
-        {
-          "firstName" => "Albus",
-          "lastName" => "Dumbledore",
-          "email" => "dumbledore@example.com",
-          "role" => "School Administrator",
-          "jobTitle" => "Headmaster",
-          "gradeLevels" => ["High School (9-12)", "Middle School (6-8)", "Elementary School (K-5)"],
-          "notes" => "A question for my regional partner",
-          "optIn" => "No",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "5000000",
-          "school-district-other" => false,
-          "school" => "",
-          "school-other" => true,
-          "school-district-name" => "",
-          "school-name" => "Hogwarts",
-          "school-zipcode" => "99999"
-        }
-      end
-    end
-
-    trait :other_district_only do
-      initialize_with do
-        {
-          "firstName" => "Filius",
-          "lastName" => "Flitwick",
-          "email" => "flitwick@example.com",
-          "role" => "Teacher",
-          "gradeLevels" => ["High School (9-12)"],
-          "notes" => "A question for my regional partner",
-          "optIn" => "No",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "",
-          "school-district-other" => true,
-          "school" => "",
-          "school-other" => false,
-          "school-district-name" => "The Wizarding Schools",
-          "school-name" => "",
-          "school-zipcode" => ""
-        }
-      end
-    end
-
-    trait :other_district_and_school do
-      initialize_with do
-        {
-          "firstName" => "Severus",
-          "lastName" => "Snape",
-          "email" => "snape@example.com",
-          "role" => "District Administrator",
-          "gradeLevels" => ["Elementary School (K-5)", "Middle School (6-8)"],
-          "jobTitle" => "Professor",
-          "optIn" => "No",
-          "notes" => "A question for my regional partner",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "",
-          "school-district-other" => true,
-          "school" => "",
-          "school-other" => false,
-          "school-district-name" => "The Wizarding Schools",
-          "school-name" => "Hogwarts",
-          "school-zipcode" => "99999"
-        }
-      end
-    end
-
-    trait :private_school do
-      initialize_with do
-        {
-          "firstName" => "Igor",
-          "lastName" => "Karkaroff",
-          "email" => "karkaroff@example.com",
-          "role" => "School Administrator",
-          "jobTitle" => "Headmaster",
-          "gradeLevels" => ["High School (9-12)"],
-          "optIn" => "No",
-          "notes" => "A question for my regional partner",
-          "school-type" => "private",
-          "school-state" => "OR",
-          "school-district" => "",
-          "school-district-other" => false,
-          "school" => "",
-          "school-other" => false,
-          "school-district-name" => "",
-          "school-name" => "Durmstrang Institute",
-          "school-zipcode" => "99999"
-        }
-      end
+  factory :pd_regional_partner_mini_contact_hash, class: 'Hash' do
+    initialize_with do
+      {
+        mini: true,
+        name: 'name',
+        email: 'foo@bar.com',
+        zip: '45242',
+        notes: 'Sample notes to regional partner',
+        role: 'Teacher',
+        grade_levels: %w(K-5 6-8)
+      }
     end
   end
 
@@ -1113,6 +876,164 @@ FactoryGirl.define do
   end
 
   # default to csp
+  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher2021_application_hash_common, class: 'Hash' do
+    country 'United States'
+    first_name 'Severus'
+    last_name 'Snape'
+    alternate_email 'ilovepotions@gmail.com'
+    phone '5558675309'
+    gender_identity 'Male'
+    race ['Other']
+    add_attribute :zip_code, '98101'
+    association :school
+    principal_first_name 'Albus'
+    principal_last_name 'Dumbledore'
+    principal_title 'Dr.'
+    principal_email 'socks@hogwarts.edu'
+    principal_confirm_email 'socks@hogwarts.edu'
+    principal_phone_number '5555882300'
+    current_role 'Teacher'
+    previous_yearlong_cdo_pd ['CS in Science']
+    committed 'Yes'
+    willing_to_travel 'Up to 50 miles'
+    agree 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
+    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
+    interested_in_online_program 'Yes'
+
+    initialize_with do
+      attributes.dup.tap do |hash|
+        # School in the form data is meant to be an id, but in the factory it can be provided as a School object
+        # In that case, replace it with the id from the associated model
+        hash[:school] = hash[:school].id if hash[:school].is_a? School
+      end.transform_keys(&ruby_to_js_style_keys)
+    end
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
+      csp_how_offer 'As an AP course'
+    end
+
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
+    end
+
+    trait :with_custom_school do
+      school(-1)
+      school_name 'Code.org'
+      school_address '1501 4th Ave'
+      school_city 'Seattle'
+      school_state 'Washington'
+      school_zip_code '98101'
+      school_type 'Public school'
+    end
+
+    trait :with_multiple_workshops do
+      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
+
+      after(:build) do |hash|
+        hash.delete 'ableToAttendSingle'
+      end
+    end
+  end
+
+  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval2021_application_hash, parent: :pd_principal_approval2021_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2021_application_hash_common, parent: :form_data_hash do
+    title 'Dr.'
+    first_name 'Albus'
+    last_name 'Dumbledore'
+    email 'albus@hogwarts.edu'
+    confirm_principal true
+
+    trait :approved_no do
+      do_you_approve 'No'
+    end
+
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2021Application.options[:committed_to_master_schedule][0]
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2021Application.options[:pay_fee][0]
+    end
+
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
+    end
+  end
+
+  factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
+    association :teacher_application, factory: :pd_teacher2021_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2021_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to csp
   factory :pd_teacher1920_application_hash, parent: :pd_teacher1920_application_hash_common do
     csp
   end
@@ -1183,7 +1104,6 @@ FactoryGirl.define do
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
-      how_heard Pd::Application::PrincipalApproval1920Application.options[:how_heard][0]
     end
 
     trait :replace_course_yes_csp do
@@ -1511,10 +1431,276 @@ FactoryGirl.define do
     day 5
   end
 
+  factory :pd_survey_question, class: 'Pd::SurveyQuestion' do
+    form_id 12345
+    questions '{}'
+  end
+
   factory :pd_application_email, class: 'Pd::Application::Email' do
     association :application, factory: :pd_teacher1920_application
     email_type 'confirmation'
     application_status 'confirmation'
     to {application.user.email}
+  end
+
+  factory :foorm_form, class: 'Foorm::Form' do
+    sequence(:name) {|n| "FormName#{n}"}
+    version 0
+    questions '{}'
+  end
+
+  factory :basic_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/sample"
+    foorm_submission_metadata
+    answers '{}'
+  end
+
+  factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+    day 5
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_high]
+    end
+  end
+
+  factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/summer_workshop_post_survey"
+    foorm_submission_metadata
+
+    trait :answers_low do
+      answers '{
+        "overall_success": {
+          "more_prepared": "1",
+          "know_help":"1",
+          "pd_suitable_experience":"1",
+          "connected_community": "1",
+          "would_recommend":"1",
+          "absolute_best_pd":"1"
+        },
+        "teacher_engagement": {
+          "activities_engaging": "1",
+          "participated":"1",
+          "frequently_talk_about":"1",
+          "planning_to_use": "1"
+        },
+        "teaching_in_general_matrix": {
+          "formally_assess_learning": "1",
+          "recruit_strategies":"1",
+          "retain_strategies":"1"
+        },
+       "expertise_rating": 1,
+       "two_things_liked": "things",
+       "permission_promotional": "yes_with_name"
+      }'
+    end
+
+    trait :answers_high do
+      answers '{
+        "overall_success": {
+          "more_prepared": "7",
+          "know_help":"7",
+          "pd_suitable_experience":"7",
+          "connected_community": "7",
+          "would_recommend":"7",
+          "absolute_best_pd":"7"
+        },
+        "teacher_engagement": {
+          "activities_engaging": "7",
+          "participated":"7",
+          "frequently_talk_about":"7",
+          "planning_to_use": "7"
+        },
+        "teaching_in_general_matrix": {
+          "formally_assess_learning": "7",
+          "recruit_strategies":"7",
+          "retain_strategies":"7"
+        },
+       "expertise_rating": 5,
+       "two_things_liked": "things",
+       "permission_promotional": "yes_with_name"
+      }'
+    end
+  end
+
+  factory :day_0_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+    day 0
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_high]
+    end
+  end
+
+  factory :daily_workshop_day_0_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/summer_workshop_pre_survey"
+    foorm_submission_metadata
+
+    trait :answers_low do
+      answers '{
+        "course_length_weeks":"5_fewer",
+        "teaching_cs_matrix":{"committed_to_teaching_cs": "1", "like_teaching_cs": "1", "understand_cs": "1", "skills_cs": "1"},
+        "expertise_rating":1,
+        "birth_year": "1990",
+        "racial_ethnic_identity": ["black_aa","white"]
+      }'
+    end
+
+    trait :answers_high do
+      answers '{
+        "course_length_weeks":"30_more",
+        "teaching_cs_matrix":{"committed_to_teaching_cs": "7", "like_teaching_cs": "7", "understand_cs": "7", "skills_cs": "7"},
+        "expertise_rating":5,
+        "birth_year": "1983",
+        "racial_ethnic_identity": ["black_aa","hispanic_latino"]
+      }'
+    end
+  end
+
+  factory :foorm_form_with_inconsistent_questions, class: 'Foorm::Form' do
+    name "surveys/pd/sample_survey"
+    version 0
+    created_at "2020-03-26 21:58:28"
+    updated_at "2020-03-26 21:58:28"
+    questions '{
+      "pages": [
+          {
+            "name": "teaching_context",
+            "elements": [
+            {
+              "type": "rating",
+              "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
+              "name": "expertise_rating",
+              "indent": 12,
+              "titleLocation": "hidden",
+              "minRate": 2,
+              "minRateDescription": "Strongly aligned with A",
+              "maxRateDescription": "Strongly aligned with B!"
+            }]
+          }
+        ]
+      }'
+  end
+
+  factory :csf_intro_post_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :user, factory: :teacher
+    association :pd_workshop, factory: :csf_101_workshop
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_high]
+    end
+  end
+
+  factory :csf_intro_post_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_csf_intro_post"
+    foorm_submission_metadata
+
+    trait :answers_low do
+      answers '{
+      "overall_success": {
+        "more_prepared": "1",
+        "where_to_go":"1",
+        "suitable_my_level":"1",
+        "feel_community": "1",
+        "would_recommend":"1",
+        "best_pd":"1"
+      },
+      "teacher_engagement": {
+        "engaging": "1",
+        "active":"1",
+        "ideas":"1"
+      },
+      "supported": "lots",
+      "permission": "no"
+    }'
+    end
+
+    trait :answers_high do
+      answers '{
+      "overall_success": {
+        "more_prepared": "7",
+        "where_to_go":"7",
+        "suitable_my_level":"7",
+        "feel_community": "7",
+        "would_recommend":"7",
+        "best_pd":"7"
+      },
+      "teacher_engagement": {
+        "engaging": "7",
+        "active":"7",
+        "ideas":"7"
+      },
+      "supported": "lots",
+      "permission": "yes_name"
+    }'
+    end
+  end
+
+  factory :csf_intro_post_facilitator_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csf_101_workshop
+    association :user, factory: :teacher
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:csf_intro_post_facilitator_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:csf_intro_post_facilitator_foorm_submission, :answers_high]
+    end
+  end
+
+  factory :csf_intro_post_facilitator_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_csf_intro_post"
+    foorm_submission_metadata
+
+    trait :answers_low do
+      answers '{
+      "facilitatorId": 1,
+      "facilitatorName": "Facilitator1",
+      "facilitator_effectiveness":{
+        "demonstrated_knowledge":"1",
+        "built_equitable":"1",
+        "on_track":"1",
+        "productive_discussions":"1",
+        "ways_equitable":"1",
+        "healthy_relationship":"1"
+      },
+      "k5_facilitator_did_well":"things done well"
+    }'
+    end
+
+    trait :answers_high do
+      answers '{
+      "facilitatorId": 1,
+      "facilitatorName": "Facilitator1",
+      "facilitator_effectiveness":{
+        "demonstrated_knowledge":"7",
+        "built_equitable":"7",
+        "on_track":"7",
+        "productive_discussions":"7",
+        "ways_equitable":"7",
+        "healthy_relationship":"7"
+      },
+      "k5_facilitator_did_well":"things done well"
+    }'
+    end
+  end
+
+  trait :foorm_submission_metadata do
+    form_version 0
   end
 end

@@ -1,26 +1,22 @@
 import React from 'react';
-import {mount} from 'enzyme';
-import {assert} from '../../../util/configuredChai';
+import {shallow} from 'enzyme';
+import {assert} from '../../../util/deprecatedChai';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
-import {Provider} from 'react-redux';
-import {stubRedux, restoreRedux, getStore} from '@cdo/apps/redux';
 
 describe('ProjectHeader', () => {
-  beforeEach(stubRedux);
-  afterEach(restoreRedux);
-
-  const store = getStore();
-
   it('Project count data renders properly in subheading ', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <ProjectHeader canViewAdvancedTools={true} projectCount={10} />
-      </Provider>
+    const wrapper = shallow(
+      <ProjectHeader canViewAdvancedTools={true} projectCount={10000000} />
     );
+
+    // Expect the number to be formatted to the appropriate client locale
+    // (which can change depending on the browser running this test)
+    const localeFormattedCount = Number(10000000).toLocaleString();
+
     assert.equal(
       wrapper.find(HeaderBanner).props().subHeadingText,
-      'Over 10 million projects created'
+      `${localeFormattedCount} projects created`
     );
   });
 });

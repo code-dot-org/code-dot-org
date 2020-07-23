@@ -20,7 +20,7 @@ const styles = {
 };
 
 export const FinishButton = () => (
-  <button id="finishButton" className="share">
+  <button type="button" id="finishButton" className="share">
     <img src="/blockly/media/1x1.gif" />
     {msg.finish()}
   </button>
@@ -29,6 +29,7 @@ export const FinishButton = () => (
 export const RunButton = Radium(props => (
   <span id="runButtonWrapper">
     <button
+      type="button"
       id="runButton"
       className={classNames([
         'launch',
@@ -51,6 +52,7 @@ RunButton.displayName = 'RunButton';
 
 export const ResetButton = Radium(props => (
   <button
+    type="button"
     id="resetButton"
     // See apps/style/common.scss for these class definitions
     className={classNames([
@@ -77,13 +79,13 @@ ResetButton.displayName = 'ResetButton';
 export const UnconnectedGameButtons = props => (
   <div>
     <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
-      {!props.playspacePhoneFrame && (
+      {!(props.playspacePhoneFrame || props.widgetMode) && (
         <RunButton
           hidden={props.hideRunButton}
           runButtonText={props.runButtonText}
         />
       )}
-      {!props.playspacePhoneFrame && <ResetButton />}
+      {!(props.playspacePhoneFrame || props.widgetMode) && <ResetButton />}
       {
         ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
       }
@@ -101,6 +103,7 @@ UnconnectedGameButtons.propTypes = {
   playspacePhoneFrame: PropTypes.bool,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
+  widgetMode: PropTypes.bool,
   showFinishButton: PropTypes.bool,
   children: PropTypes.node
 };
@@ -111,5 +114,6 @@ export default connect(state => ({
   runButtonText: state.pageConstants.runButtonText,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   nextLevelUrl: state.pageConstants.nextLevelUrl,
-  showSkipButton: state.pageConstants.isChallengeLevel
+  showSkipButton: state.pageConstants.isChallengeLevel,
+  widgetMode: state.pageConstants.widgetMode
 }))(UnconnectedGameButtons);

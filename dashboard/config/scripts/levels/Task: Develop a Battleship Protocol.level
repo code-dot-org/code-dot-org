@@ -5,18 +5,19 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "long_instructions": "# Task: Create a Battleship Protocol\r\n\r\nOne of the best ways to prepare to teach a lesson is by actually doing the activity yourself.  As you complete the activity, consider the misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.  \r\n<br>\r\nWhile completing this activity, note: \r\n\r\n1. There are many 'correct' answers as long as the rules are used consistently. </li>\r\n2. Challenge yourself to develop an *efficient* protocol.  In this case, this means you should consider the fewest number of bits necessary to encode the whole message. </li>\r\n3. If you have already looked at the exemplar protocol in this lesson, try to create your own unique protocol.  This will help you empathize with students as you think about the design process necessary to develop the protocol.</li>\r\n<br>\r\n\r\n><a href=”https://docs.google.com/document/d/1hq1UNK1Q4K0LHqmu0_yeO0a0NQKHzC8W--Q0QaISHVI/edit” target=_blank> Click here for the Battleship Protocols Activity Guide >> </a>\r\n<br>\r\n><a href= \"https://code.org/curriculum/docs/csp/U2L03-battleship-exemplar.png\" target=_blank > Click here for an exemplar solution >> </a>\r\n\r\n<br><br>\r\n\r\nUse the space below to share your protocol.",
+    "long_instructions": "# Task: Create a Battleship Protocol\r\n\r\nOne of the best ways to prepare to teach a lesson is by actually doing the activity yourself.  As you complete the activity, consider the misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.  \r\n<br>\r\nWhile completing this activity, note: \r\n\r\n1. There are many 'correct' answers as long as the rules are used consistently. </li>\r\n2. Challenge yourself to develop an *efficient* protocol.  In this case, this means you should consider the fewest number of bits necessary to encode the whole message. </li>\r\n3. If you have already looked at the exemplar protocol in this lesson, try to create your own unique protocol.  This will help you empathize with students as you think about the design process necessary to develop the protocol.</li>\r\n<br>\r\n\r\n><a href=\"https://docs.google.com/document/d/1hq1UNK1Q4K0LHqmu0_yeO0a0NQKHzC8W--Q0QaISHVI/edit\" target=_blank> Click here for the Battleship Protocols Activity Guide >> </a>\r\n<br>\r\n><a href= \"https://code.org/curriculum/docs/csp/U2L03-battleship-exemplar.png\" target=_blank > Click here for an exemplar solution >> </a>\r\n\r\n<br><br>\r\n\r\nUse the space below to share your protocol.",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
     "instructions_important": "false",
-    "optional": "false"
+    "optional": "false",
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-15 00:49:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 00:49:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-06 17:22:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

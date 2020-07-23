@@ -1,6 +1,6 @@
 - content_for(:head) do
-  %script{src: asset_path('js/blockly.js')}
-  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
+  %script{src: webpack_asset_path('js/blockly.js')}
+  %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
 
   :scss
@@ -34,6 +34,6 @@
   %div
     = f.submit class: 'btn', id: 'shared_function_submit'
 
-%script{src: minifiable_asset_path('js/shared_blockly_functions/edit.js'), data: {blockpool: @block_pool.to_json}}
+%script{src: webpack_asset_path('js/shared_blockly_functions/edit.js'), data: {blockpool: @block_pool.to_json}}
 
 = link_to 'Back', shared_blockly_functions_path

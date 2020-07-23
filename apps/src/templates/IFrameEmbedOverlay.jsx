@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {singleton as studioApp} from '../StudioApp';
+import msg from '@cdo/locale';
 
 const PHONE_MARGIN = 68;
 const PLAY_BUTTON_SIZE = 26;
@@ -98,9 +99,7 @@ class IFrameEmbedOverlay extends Component {
         onClick={this.onClick}
       >
         {this.state.tooYoung ? (
-          <div className="alert alert-danger">
-            {window.dashboard.i18n.t('errors.messages.too_young')}
-          </div>
+          <div className="alert alert-danger">{msg.tooYoung()}</div>
         ) : (
           <div>
             <div style={styles.overlay.clickText}>Tap or click to run</div>

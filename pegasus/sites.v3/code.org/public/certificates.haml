@@ -10,15 +10,18 @@ theme: responsive
 -script_name = script == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
 -small_certificate_image_url = "/images/fit-240/#{certificate_template_for(script)}"
 
-%h1 Print a batch of certificates
+%h1=I18n.t :print_batch_certificates
 %div.clear
   %div{:style=>"float: left; margin: 0 40px 0 0;"}<
     %img{:src=>small_certificate_image_url}
+  %div{:style=>"float: left; width: 360px; margin-top: 20px;"}<
+    != I18n.t(:enter_certificate_names, script_name: script_name, markdown: true)
   %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
-    Enter up to 30 names, <strong>one per line</strong>. A printable page with personalized #{script_name} certificates will be generated.
-  %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
-    Want a blank certificate template to write in your students' names?
-    %a{href: '/images/hour_of_code_certificate.jpg', target: '_blank'} Print one here.
+    = I18n.t :want_a_blank_certificate_template
+    -# We need a space after want_a_blank_certificate_template as these sentences are translated separately
+    -# but appear on the same line.
+    != " "
+    %a{href: "/images/#{certificate_template_for(script)}", target: '_blank'}=I18n.t :print_one_here_certificates
 %br
 %form{:method=>"post", :action=>'/printcertificates'}
   -if script
@@ -27,14 +30,13 @@ theme: responsive
     -if request.params['names']
       - request.params['names'].each do |name|
         =CGI::unescape(name)
-        ="&#x000A;"
+        !="&#x000A;"
   %br
   %br
-  %p It is recommended that you choose <strong>Landscape</strong> when you print the certificates.
-  %button{:type=>"submit"}
-    Print Certificates
+  != I18n.t(:landscape_recommended_certificates, markdown: true)
+  %button{:type=>"submit"}=I18n.t :print_certificates
 
 #print_option.col-50
   %h2{:style=>'margin-top:20px; margin-bottom:10px'}
-    Print ice art from Frozen tutorials
+    = I18n.t :print_ice_art_from_frozen
   = view :frozen_print_gallery

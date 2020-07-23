@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {navigateToHref} from '@cdo/apps/utils';
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
+import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   container: {
@@ -18,13 +19,15 @@ const styles = {
 class SelectSectionDropdown extends React.Component {
   static propTypes = {
     // Provided by redux.
-    sections: PropTypes.object,
+    sections: PropTypes.array,
     selectedSectionId: PropTypes.number
   };
 
   onChange = event => {
-    const sectionId = event.target.value;
-    navigateToHref(`/teacher_dashboard/sections/${sectionId}`);
+    let toSectionId = event.target.value;
+    let fromSectionId = this.props.selectedSectionId;
+    switchToSection(toSectionId, fromSectionId);
+    recordSwitchToSection(toSectionId, fromSectionId, 'from_select');
   };
 
   render() {
@@ -38,9 +41,9 @@ class SelectSectionDropdown extends React.Component {
           value={selectedSectionId}
           style={styles.dropdown}
         >
-          {Object.keys(sections).map(id => (
-            <option key={id} value={id}>
-              {sections[id].name}
+          {(sections || []).map(section => (
+            <option key={section.id} value={section.id}>
+              {section.name}
             </option>
           ))}
         </select>
@@ -52,6 +55,6 @@ class SelectSectionDropdown extends React.Component {
 export const UnconnectedSelectSectionDropdown = SelectSectionDropdown;
 
 export default connect(state => ({
-  sections: state.teacherSections.sections,
+  sections: getVisibleSections(state),
   selectedSectionId: state.teacherSections.selectedSectionId
 }))(SelectSectionDropdown);

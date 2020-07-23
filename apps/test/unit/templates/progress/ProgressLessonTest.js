@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLesson as ProgressLesson} from '@cdo/apps/templates/progress/ProgressLesson';
@@ -41,7 +41,7 @@ describe('ProgressLesson', () => {
       />
     );
 
-    assert.equal(wrapper.node, null);
+    assert.equal(wrapper.html(), null);
   });
 
   it('renders with dashed border when only visible for teachers', () => {

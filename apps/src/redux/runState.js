@@ -4,6 +4,7 @@
 import _ from 'lodash';
 
 const SET_IS_RUNNING = 'runState/SET_IS_RUNNING';
+const SET_IS_EDIT_WHILE_RUN = 'runState/SET_IS_EDIT_WHILE_RUN';
 const SET_IS_DEBUGGER_PAUSED = 'runState/SET_IS_DEBUGGER_PAUSED';
 const SET_STEP_SPEED = 'runState/SET_STEP_SPEED';
 const SET_AWAITING_CONTAINED_RESPONSE =
@@ -12,6 +13,7 @@ const SET_IS_DEBUGGING_SPRITES = 'runState/SET_IS_DEBUGGING_SPRITES';
 
 const initialState = {
   isRunning: false,
+  isEditWhileRun: false,
   isDebuggerPaused: false,
   nextStep: null,
   stepSpeed: 1,
@@ -36,6 +38,12 @@ export default function reducer(state, action) {
     });
   }
 
+  if (action.type === SET_IS_EDIT_WHILE_RUN) {
+    return _.assign({}, state, {
+      isEditWhileRun: action.isEditWhileRun
+    });
+  }
+
   if (action.type === SET_IS_DEBUGGER_PAUSED) {
     return _.assign({}, state, {
       isRunning: action.isDebuggerPaused ? true : state.isRunning,
@@ -45,9 +53,11 @@ export default function reducer(state, action) {
   }
 
   if (action.type === SET_STEP_SPEED) {
-    return _.assign({}, state, {
-      stepSpeed: action.stepSpeed
-    });
+    if (typeof action.stepSpeed === 'number') {
+      return _.assign({}, state, {
+        stepSpeed: action.stepSpeed
+      });
+    }
   }
 
   if (action.type === SET_AWAITING_CONTAINED_RESPONSE) {
@@ -75,6 +85,14 @@ export default function reducer(state, action) {
 export const setIsRunning = isRunning => ({
   type: SET_IS_RUNNING,
   isRunning: isRunning
+});
+
+/**
+ * @param {boolean} isRunning - Whether the app is currently running or not.
+ */
+export const setIsEditWhileRun = isEditWhileRun => ({
+  type: SET_IS_EDIT_WHILE_RUN,
+  isEditWhileRun: isEditWhileRun
 });
 
 /**

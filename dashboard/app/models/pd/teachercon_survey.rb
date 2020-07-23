@@ -16,9 +16,6 @@
 class Pd::TeacherconSurvey < ActiveRecord::Base
   include Pd::FacilitatorSpecificForm
 
-  belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
-  validates_presence_of :pd_enrollment
-
   DISAGREES = [
     'Strongly Disagree',
     'Disagree',
@@ -40,6 +37,9 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
     "Leaning toward B",
     "Strongly aligned with B",
   ].freeze
+
+  belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
+  validates_presence_of :pd_enrollment
 
   def self.public_fields
     (

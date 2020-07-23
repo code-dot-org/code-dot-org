@@ -82,6 +82,21 @@ export default class WorkshopDetails extends React.Component {
     );
   }
 
+  fee() {
+    if (this.props.workshop.course === 'CS Fundamentals') {
+      return (
+        <div className="row">
+          <div className="span2" style={styles.label}>
+            <strong>Fee:</strong>
+          </div>
+          <div className="span2">{this.props.workshop.fee || 'No cost!'}</div>
+        </div>
+      );
+    }
+
+    return null;
+  }
+
   regionalPartner() {
     if (this.props.workshop.regional_partner) {
       return (
@@ -130,6 +145,7 @@ export default class WorkshopDetails extends React.Component {
         {this.sessionDates()}
         {this.location()}
         {this.courseAndSubject()}
+        {this.fee()}
         {this.regionalPartner()}
         {this.organizerAndNotes()}
       </div>

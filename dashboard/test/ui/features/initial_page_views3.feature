@@ -5,7 +5,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Given I am on "http://studio.code.org/reset_session"
 
   @no_circle
-  @dashboard_db_access
   Scenario Outline: Temporarily circle disabled simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     And I am a student
@@ -29,9 +28,10 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Then I see no difference for "initial load"
     And I close my eyes
     Examples:
-      | url                                                               | test_name                    |
-      | http://studio.code.org/                                           | logged out studio homepage   |
-      | http://studio.code.org/s/allthethings                             | logged out script progress   |
+      | url                                               | test_name                  |
+      | http://studio.code.org/                           | logged out studio homepage |
+      | http://studio.code.org/s/allthethings             | logged out script progress |
+      | http://code.org/educate/regional-partner/playbook | regional partner playbook  |
 
   @no_circle
   Scenario Outline: Temporarily eyes disabled simple page view without instructions dialog

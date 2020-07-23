@@ -21,6 +21,8 @@ hu-HU:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Számítástechnika tanár vagy? Nézz meg más CSEdWeek anyagokat
     is!</a>'
+  csedweek_banner_teachers_text: Számítástechnika tanár vagy? Nézz meg más CSEdWeek
+    anyagokat is!
   n_have_learned_an_hoc: "<h1>Próbálj ki egy</h1><h2>Kódolás óráját</h2><h3># ember
     már kipróbálta</h3>"
   anybody_can_learn: Mindenki tanulhat.
@@ -28,7 +30,6 @@ hu-HU:
   petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
     hogy számítástechnikát tanuljon
   petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
-  petition_sign_message_support: 'Ha támogatsz, írd alá. Csatlakozz egy # fős csapathoz.'
   petition_join_others: "# ember vár, hogy csatlakozz"
   name: Név
   email: Email
@@ -39,6 +40,7 @@ hu-HU:
     és a programozási koncepciókról a következő tanfolyamon.
   og_title: Minden gyermek megérdemli lehetőséget
   og_title_soon: Közeleg a Kódolás Órája
+  og_title_here: A Kódolás Órája elérkezett!
   og_description: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
     hogy számítástechnikát tanuljon.
   csedweek_og_title: A kódolás órája elérkezett
@@ -91,6 +93,7 @@ hu-HU:
   congratulations_volunteer: Gratulálunk, most, hogy kipróbáltad a Kódolás óráját,
     <a href="https://code.org/volunteer">regisztrálj be egy osztállyal</a> és segíts
     a tanulóknak egy órán át a kódolásról tanulni!
+  congratulations_on_completing_course: Gratulálunk a tanfolyam %{course}-nak elvégzéséhez!
   congrats_next_tutorials_title: Ezután próbálja meg ezeket a tanfolyamokat
   congrats_next_tutorials_desc: Próbáld ki ezeket a rövidebb, egy órás gyakorlatokat,
     vagy próbáld ki <a href="%{current_path}/next">egy partnerünk gyakorlatát</a>.
@@ -98,6 +101,8 @@ hu-HU:
   view_course: Tanfolyam megtekintése
   view_unit: Egység megtekintése
   make_app: Egy alkalmazás létrehozása
+  congrats_guest_speaker_title: Találj vendégelőadót a tanórádra
+  congrats_guest_speaker_cta: Találj vendégelőadót
   third_party_gradelevel_2to8: 2-8. évfolyam
   third_party_gradelevel_4to12: 4-12. évfolyam
   third_party_gradelevel_5to12: 5-12. évfolyam
@@ -139,6 +144,7 @@ hu-HU:
   if_you_enjoyed: Ha tetszett a tanulás, akkor kérje meg barátait is, hogy próbálják
     ki! Szeretnénk, hogy az egész világ tanuljon.
   personalize_certificate: Legyen névre szóló az okleveled
+  print_certificates: Oklevelek nyomtatása
   share_achievement: Oszd meg az elért eredményed
   beyond_hour_message: Haladj tovább a <a href='http://studio.code.org'>többi kurzussal</a>,
     vagy nézd meg, hogy mit lehet <a href='/learn/beyond'>Tanulni a Következő Órában</a>.
@@ -184,6 +190,12 @@ hu-HU:
   learn_back_to_minecraft: Folytasd a tanulást a Minecrafttal
   just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
   just_did_course4: Épp most csináltam végig a 4. tanfolyamot - nézd meg! @codeorg
+  just_did_coursea: Épp most fejeztem be az A tanfolyamot - nézd meg! @codeorg
+  just_did_courseb: Épp most fejeztem be a B tanfolyamot - nézd meg! @codeorg
+  just_did_coursec: Épp most fejeztem be a C tanfolyamot - nézd meg! @codeorg
+  just_did_coursed: Épp most fejeztem be a D tanfolyamot - nézd meg! @codeorg
+  just_did_coursee: Épp most fejeztem be az E tanfolyamot - nézd meg! @codeorg
+  just_did_coursef: Épp most fejeztem be az F tanfolyamot - nézd meg! @codeorg
   twitter_teach_cs: 10-ből 9 ember szerint már az általános iskolában el kellene kezdeni
     az informatika tanítását. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Ismerd meg a Kódolás Óráját
@@ -212,7 +224,7 @@ hu-HU:
   studiobar_elementary_title: Kurzusok alsósoknak
   studiobar_elementary_body: Három új tanfolyamunk k &#8209; 5 nek
   studiobar_dance_title: Táncos buli
-  studiobar_dance_body: Hozd létre és oszd meg saját táncos bulidat
+  studiobar_dance_body: Hozd létre, és oszd meg a saját Táncos bulidat
   studiobar_hoc_title: A kódolás órája
   studiobar_hoc_body: Tanulj programozni az Angry Birds-el
   studiobar_flappy_title: Flappy kód
@@ -290,6 +302,7 @@ hu-HU:
   homepage_action_text_learn: Kezdj tanulni
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: Írd alá a petíciót &#x25BE;
+  homepage_signpetition_dropdown_text: Egyetértek
   homepage_diversity_pledge: Csatlakozz a diverzitási peticióhoz
   homepage_banner_text_prizes: 'Újra közeledik a Kódolás órája, december 7-13. '
   homepage_banner_link_prizes: Csatlakozz a történelem legnagyobb tanulási eseményéhez!
@@ -876,26 +889,10 @@ hu-HU:
   course3_name: 3. tanfolyam
   course4_name: 4. tanfolyam
   accelerated_name: Gyorsított tanfolyam
-  csp1-2017_name: '1. lecke: Az internet'
-  csp2-2017_name: '2. fejezet: Digitális információ'
-  csp1-2018_name: '1. lecke: Az internet'
-  csp2-2018_name: '2. fejezet: Digitális információ'
-  csp1_name: '1. lecke: Az internet'
-  csp2_name: '2. fejezet: Digitális információ'
-  cspassessment_name: Teljes teszt - 50 kérdés
-  cspexam1-mWU7ilDYM9_name: Teszt 1. része - 25 kérdés
-  cspexam2-AKwgAh1ac5_name: Teszt 2. része - 25 kérdés
-  cspunit3_gradelevel: 9-12. évfolyam
   20-hour_name: Gyorsított tanfolyam
   classicmaze_name: Hagyományos Útvesztö
   iceage_name: Jégkorszak
   minecraft_name: Minecraft
-  math_category_name: Matematika
-  hoc_category_name: A kódolás órája
-  csf_category_name: A számítógép-tudomány alapjai
-  csf_2017_category_name: A számítógép-tudomány alapjai (2017)
-  csf_2018_category_name: A számítógép-tudomány alapjai (2018)
-  csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
   applab_name: App Lab
   sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: Kor 13+
@@ -958,6 +955,8 @@ hu-HU:
   coursee-2017_gradelevel: 8-tól 12 éves korig
   coursed-2018_gradelevel: 8+ évfolyam
   coursee-2018_gradelevel: 8-tól 12 éves korig
+  coursed-2019_gradelevel: 8+ évfolyam
+  coursee-2019_gradelevel: 8-tól 12 éves korig
   accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -1593,6 +1592,8 @@ hu-HU:
   header_teacher_community: Tanári közösség
   header_help_support: 'Segítség és támogatás '
   header_report_bug: Hiba jelentése
+  header_legal_privacy: Adatvédelmi Elvek
+  header_legal_tos: Feltételek
   header_tutorials: Gyakorlatok
   header_documentation: Dokumentáció
   user_header_label: Üdv %{username}
@@ -1608,6 +1609,7 @@ hu-HU:
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Összes projekt áttekintése...
+  user_header_view_my_projects: Projektjeim megtekintése
   view_all_sections: Minden csoport megtekintése
   signing_in: Bejelentkezés
   applab_tile_start_tutorial: Kezdés
@@ -1618,6 +1620,11 @@ hu-HU:
   account_sign_up_child_accept_terms: Megerősítem, hogy a szülőm vagy törvényes gondviselőm
     engedélyt adott, hogy használjam Code.org szolgáltatásait.
   hoc_overview_dance_title: Táncos buli
+  hoc_overview_dance_subtitle: Programozz le egy Táncos bulit, és oszd meg barátaiddal.
+    Közreműködik Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara és még 25-en!
+  hoc_overview_dance_2019_subtitle: 'Programozz le egy Táncos bulit, és oszd meg barátaiddal.
+    Közreműködik Katy Perry, Shawn Mendes, Panic! A diszkóban: Lil Nas X, Jonas Brothers,
+    Nicki Minaj és még 34-en!'
   hoc_overview_partner_activities_title: További tevékenységek a partnerektől
   hoc_overview_partner_activities_body: A Code.org és partnerei által fejlesztett
     Kódolás Órája weboldal több mint 100 számítástechnikai programot kínál minden
@@ -1676,6 +1683,7 @@ hu-HU:
   hoc2018_mc_teacher_guide: Oktatói útmutató megtekintése
   hoc2018_mc_minecraft_education: Minecraft oktatás
   hoc2018_mc_continue_learning: Folytasd a tanulást a Minecraft-tal.
+  hoc2018_mc_go_to_mc_education: Irány a Minecraft oktatás
   hoc2018_mc_journey: Utazás a Minecraft világában kóddal.
   hoc2018_dance_party_main_heading: Táncos buli
   hoc2018_dance_create_your_own_dance_title: Hozd létre saját táncos bulidat

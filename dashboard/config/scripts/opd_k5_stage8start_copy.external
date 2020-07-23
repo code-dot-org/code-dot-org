@@ -1,0 +1,32 @@
+name 'OPD-K5 Stage8Start_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Best Practices > Stage overview
+
+<img src="https://images.code.org/1faca2c2dd1c9bd64ab5def347524d9c-image-1434398377360.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+**You’ve made your way through the majority of the content for this course. Congratulations!**   
+
+In Stage 1, you reviewed the course information.  
+In Stage 2, you explored computer science as a discipline.  
+In Stage 3, you prepared to master the basics of computer science.  
+In Stages 4-8, you played the role of the student yourself.  
+Now, let’s transition to an exploration of how you might teach what you’ve learned to young people.  
+
+
+By completing Stage 9, you will:
+
+- Review best practices for teaching computer science
+
+> ## Looking ahead:
+> The best practices we will cover in this stage include:
+
+>- Establishing a positive classroom culture that supports self-directed learning, experimentation and failure
+- Knowing when and how to apply instructional design strategies from other subject areas
+- Using strategic grouping strategies such as "pair programming"
+- Explicitly teaching meta-cognitive problem solving strategies
+- "Unplugging" and teaching some core concepts with minimal or no technology
+- Other best practices suggested by the Code.org teacher community
+
+We'll also provide an opportunity for you to share your best practices with our community.
+MARKDOWN

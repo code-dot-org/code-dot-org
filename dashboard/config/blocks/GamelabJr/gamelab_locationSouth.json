@@ -1,8 +1,0 @@
-{
-  "category": "Location",
-  "config": {
-    "func": "locationSouth",
-    "blockText": "south",
-    "returnType": "Location"
-  }
-}

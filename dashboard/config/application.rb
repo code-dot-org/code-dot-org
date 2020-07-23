@@ -26,15 +26,15 @@ module Dashboard
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
-      require 'cdo/rack/whitelist'
+      require 'cdo/rack/allowlist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
-      config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
 
       require 'rack/cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Cache, ignore_headers: []
 
-      config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
+      config.middleware.insert_after Rack::Cache, Rack::Allowlist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
     end
 
@@ -84,7 +84,7 @@ module Dashboard
     # config.time_zone = 'Central Time (US & Canada)'
 
     # By default, config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = ['en-US']
@@ -102,19 +102,30 @@ module Dashboard
       end
     end
 
-    config.pretty_sharedjs = CDO.pretty_js
+    config.after_initialize do
+      # For some reason custom fallbacks need to be set on the I18n module
+      # itself and can't be configured using config.i18n.fallbacks.
+      # Following examples from: https://github.com/ruby-i18n/i18n/wiki/Fallbacks
+      # and http://pawelgoscicki.com/archives/2015/02/enabling-i18n-locale-fallbacks-in-rails/
+      I18n.fallbacks.map(es: :'es-MX')
+      I18n.fallbacks.map(pt: :'pt-BR')
+    end
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
 
+    # Whether to fallback to assets pipeline if a precompiled asset is missed.
+    config.assets.compile = !CDO.optimize_rails_assets
+
+    # Generate digests for assets URLs which do not contain webpack hashes.
+    config.assets.digest = CDO.optimize_rails_assets
+
     config.assets.precompile += %w(
       js/*
       css/*.css
-      assets/**/*
-      angularProjects.js
-      levels/*
+      levels/*.css
       jquery.handsontable.full.css
       jquery.handsontable.full.js
       video-js/*.css
@@ -154,5 +165,8 @@ module Dashboard
     console do
       ARGV.push '-r', root.join('lib/console.rb')
     end
+
+    # Use custom routes for error codes
+    config.exceptions_app = routes
   end
 end

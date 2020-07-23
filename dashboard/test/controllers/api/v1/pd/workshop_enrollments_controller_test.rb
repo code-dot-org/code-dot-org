@@ -6,13 +6,13 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     @program_manager = create :program_manager
     @facilitator = create :facilitator
 
-    @organizer_workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator]
+    @organizer_workshop = create :workshop, organizer: @organizer, facilitators: [@facilitator]
     @organizer_workshop_enrollment = create :pd_enrollment, workshop: @organizer_workshop
 
-    @workshop = create :pd_workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
+    @workshop = create :workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
     @enrollment = create :pd_enrollment, workshop: @workshop
 
-    @unrelated_workshop = create :pd_workshop
+    @unrelated_workshop = create :workshop
     @unrelated_enrollment = create :pd_enrollment, workshop: @unrelated_workshop
   end
 
@@ -39,6 +39,23 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_routing(
       {method: :delete, path: "/api/v1/pd/enrollments/#{@enrollment.code}"},
       {controller: CONTROLLER_PATH, action: 'cancel', enrollment_code: @enrollment.code.to_s}
+    )
+
+    assert_routing(
+      {method: :post, path: "/api/v1/pd/enrollment/#{@enrollment.id}/scholarship_info"},
+      {controller: CONTROLLER_PATH, action: 'update_scholarship_info', enrollment_id: @enrollment.id.to_s}
+    )
+
+    assert_routing(
+      {method: :post, path: "/api/v1/pd/enrollments/move"},
+      {controller: CONTROLLER_PATH, action: 'move', enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id},
+      {},
+      {enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id}
+    )
+
+    assert_routing(
+      {method: :post, path: "/api/v1/pd/enrollment/#{@enrollment.id}/edit"},
+      {controller: CONTROLLER_PATH, action: 'edit', id: @enrollment.id.to_s}
     )
   end
 
@@ -225,6 +242,24 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     refute_nil enrollment.code
   end
 
+  test 'CSF Intro enrollments can be created' do
+    assert_creates(Pd::Enrollment) do
+      post :create, params: {
+        workshop_id: @workshop.id,
+        school_info: school_info_params,
+        csf_intro_intent: 'Yes',
+        csf_intro_other_factors: [
+          "I want to learn computer science concepts.",
+          "I have available time on my schedule for teaching computer science."
+        ]
+      }.merge(enrollment_test_params)
+      assert_response :success
+      assert_equal RESPONSE_MESSAGES[:SUCCESS], JSON.parse(@response.body)["workshop_enrollment_status"]
+    end
+    enrollment = Pd::Enrollment.last
+    refute_nil enrollment.code
+  end
+
   test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
     params = enrollment_test_params.merge(
       {
@@ -298,6 +333,98 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   test 'creating an enrollment on an unknown workshop id returns 404' do
     post :create, params: enrollment_test_params.merge({workshop_id: 'nonsense'})
     assert_response 404
+  end
+
+  test 'admin can update scholarship info' do
+    workshop = create :summer_workshop
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in create(:admin)
+
+    assert_nil enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 200
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, JSON.parse(@response.body)["scholarship_status"]
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
+  end
+
+  test 'program managers can update scholarship info' do
+    workshop = create :summer_workshop, organizer: @program_manager
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in @program_manager
+
+    assert_nil enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 200
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, JSON.parse(@response.body)["scholarship_status"]
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
+  end
+
+  test 'facilitators cannot update scholarship info' do
+    workshop = create :summer_workshop
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in workshop.facilitators.first
+
+    assert_nil enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 403
+    assert_nil enrollment.scholarship_status
+  end
+
+  test 'move' do
+    origin_workshop = create :pd_workshop, num_sessions: 1, enrolled_and_attending_users: 1,
+      enrolled_unattending_users: 1
+    attendance = Pd::Attendance.for_workshop(origin_workshop).first
+    attendance.update(pd_enrollment_id: origin_workshop.enrollments.first.id)
+    destination_workshop = create :pd_workshop
+
+    admin = create :workshop_admin
+    sign_in admin
+
+    assert_equal 2, origin_workshop.enrollments.length
+    assert_equal 1, Pd::Attendance.for_workshop(origin_workshop).count
+
+    assert_equal 0, destination_workshop.enrollments.length
+
+    post :move, params: {
+      destination_workshop_id: destination_workshop.id,
+      enrollment_ids: origin_workshop.enrollments.pluck(:id)
+    }
+
+    origin_workshop.reload
+    destination_workshop.reload
+
+    assert_equal 0, origin_workshop.enrollments.length
+    assert_equal 0, Pd::Attendance.for_workshop(origin_workshop).count
+
+    assert_equal 2, destination_workshop.enrollments.length
+  end
+
+  test 'edit' do
+    workshop = create :summer_workshop
+    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', workshop: workshop
+
+    admin = create :workshop_admin
+    sign_in admin
+
+    post :edit, params: {
+      id: enrollment.id,
+      first_name: 'Harry',
+      last_name: 'Potter'
+    }
+
+    enrollment.reload
+    assert_equal 'Harry', enrollment.first_name
+    assert_equal 'Potter', enrollment.last_name
+  end
+
+  test 'non-workshop-admins cannot move enrollments' do
+    sign_in @program_manager
+
+    post :move, params: {
+      destination_workshop_id: @unrelated_workshop.id,
+      enrollment_ids: [@enrollment.id]
+    }
+    assert_response 403
   end
 
   private

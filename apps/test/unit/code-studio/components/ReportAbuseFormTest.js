@@ -1,5 +1,5 @@
-import {assert} from '../../../util/configuredChai';
-import {getChannelIdFromUrl} from '@cdo/apps/code-studio/components/ReportAbuseForm';
+import {assert} from '../../../util/reconfiguredChai';
+import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
 
 describe('ReportAbuseForm', () => {
   it('getChannelIdFromUrl returns the channel id for codeprojects', () => {

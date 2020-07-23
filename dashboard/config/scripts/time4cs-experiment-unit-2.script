@@ -1,0 +1,89 @@
+login_required true
+hideable_lessons true
+pilot_experiment 'time4cs-experiment'
+editor_experiment 'broward'
+
+lesson_group 'time4cs_c1', display_name: 'Collection 1: The Everglades & its Ecosystems'
+lesson 'Introduction to the Problem'
+level 'BrowardTestMarkdownLevel'
+level 'BrowardTestMarkdownLevel2'
+
+lesson 'Crowdsourcing (Integrated lesson)'
+level 'BrowardTestMarkdownLevel'
+level 'BrowardTestMarkdownLevel2'
+
+lesson 'Everglades Habitats'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Evaluating a Project in Sprite Lab'
+level 'BrowardTestMarkdownLevel'
+
+lesson_group 'time4cs_c2', display_name: 'Collection 2: Food Chains (in the Everglades)'
+lesson 'Food Chains'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Conditionals with Cards (Integrated Lesson)- Part 1'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Alligator Holes'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Food Chain Game'
+level 'BrowardTestMarkdownLevel'
+
+lesson_group 'time4cs_c3', display_name: 'Collection 3: Native Species (in the Everglades)'
+lesson 'Invasive Species'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Conditionals with Cards (Integrated Lesson)- Part 2'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'I am in Big Trouble'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Conditionals in Sprite Lab'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Nested Loops in Maze'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Fancy Shapes using Nested Loops'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Nested Loops with Frozen'
+level 'BrowardTestMarkdownLevel'
+
+lesson_group 'time4cs_c4', display_name: 'Collection 4: Impact of Invasive Species (on the Everglades)'
+lesson 'Fishy Business'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Songwriting (Integrated Lesson)'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Functions in Minecraft'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Functions with Harvester'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Functions with Artist'
+level 'BrowardTestMarkdownLevel'
+
+lesson_group 'time4cs_c5', display_name: 'Collection 5: Citizens Take Action'
+lesson 'Pythons impacting native populations'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Functions in Sprite Lab'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Python Problem- Current Solutions'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'End of Course Project (integrated- project planning lesson)'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Debate- Pythons impacting native populations'
+level 'BrowardTestMarkdownLevel'
+
+lesson 'Work on Project'
+level 'BrowardTestMarkdownLevel'

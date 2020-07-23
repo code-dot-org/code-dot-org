@@ -1,6 +1,7 @@
+tts true
 hidden false
 
-stage 'Sports'
+lesson 'Sports'
 skin 'sports'
 level 'bounce_1_sports'
 skin 'sports'

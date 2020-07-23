@@ -1,0 +1,58 @@
+%p
+  Dear
+  = @application.principal_greeting + ','
+
+%p
+  A teacher at your school,
+  = @application.applicant_full_name + ','
+  has submitted an application to participate in
+  = @application.effective_regional_partner_name + "'s"
+  Professional Learning Program in order to prepare to teach the
+  = @application.course_name
+  curriculum during the school year.
+  We are excited that this teacher is committed to computer science education!
+  = link_to 'Six different studies show', 'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536'
+  that children who study computer science perform better in other subjects,
+  excel at problem solving,
+  and are 17% more likely to attend college.
+
+%p
+  %strong
+    We need your approval in order for us to consider
+    = @application.applicant_full_name + "'s"
+    application.
+
+%p
+  Please take five minutes to complete
+  = link_to('this form', @application.principal_approval_url)
+  as soon as possible.
+  Please note that
+  = @application.first_name + "'s"
+  application is not considered complete until we receive this form.
+
+%p
+  Registration for the Professional Learning Program may have a cost,
+  but there may also be scholarships available. Please
+  = link_to 'review this page', 'https://code.org/educate/professional-learning/program-information'
+  to see the cost of the program in your region.
+
+%p
+  For participating teachers the following commitment is strongly recommended:
+  %ul
+    %li To attend one, five-day summer workshop
+    %li To attend up to four, one-day local workshops during the school year (usually held on Saturdays)
+    %li To teach the course in the school year.
+
+%p
+  For more information about
+  = link_to('Code.org', 'https://code.org') + "'s"
+  professional development programs, please visit
+  = link_to('https://code.org/educate', 'https://code.org/educate')
+  and refer to this
+  = link_to('brochure', 'https://code.org/files/programs/codeorg-program-brochure.pdf')
+  that highlights how to bring computer science to your school.
+  Please send any additional questions to your regional partner below.
+  Thank you very much for your support of computer science for all!
+
+%p
+  = render partial: 'partner_signature'

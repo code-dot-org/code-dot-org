@@ -9,6 +9,12 @@ class VideoTest < ActiveSupport::TestCase
     VideosController.any_instance.stubs(:upload_to_s3).returns('_fake_s3_url_')
   end
 
+  test "cannot create a video key with a name that contains a colon(s)" do
+    video = Video.new(key: 'Tech:Hub sea:tac', download: 'no_download_link')
+    refute video.valid?
+    assert video.errors.include?(:key)
+  end
+
   test "check_i18n_names" do
     # does not raise exception ..
     Video.check_i18n_names

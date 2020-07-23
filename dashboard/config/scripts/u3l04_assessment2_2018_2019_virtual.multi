@@ -1,0 +1,19 @@
+name 'U3L04 Assessment2_2018_2019_virtual'
+title 'Multiple Choice: Functions and Top-Down Design'
+
+question 'Which of the following statements about writing functions and Top-Down Design is NOT true?'
+wrong 'Writing functions helps manage complexity in a program.'
+wrong 'Top-Down Design leads to programs which feature multiple layers of abstraction.'
+right 'Two programmers solving the same problem using Top-Down Design should arrive at identical programs.' 
+wrong 'Top-Down Design relies upon identifying sub-problems of a larger problem.'
+wrong 'Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+* Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
+	* Explanation: Often, there are multiple correct ways to arrive at a solution. Two programmers working separately on the same problem could come up with different ways to solve that problem, so their programs will also be different.
+MARKDOWN

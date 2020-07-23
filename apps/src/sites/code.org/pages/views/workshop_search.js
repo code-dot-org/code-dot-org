@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import MarkerClusterer from 'node-js-marker-clusterer';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const markerCustererOptions = {
   imagePath: getScriptData('workshopSearch').imagePath,
@@ -34,7 +35,13 @@ function initializeMap() {
 function loadWorkshops() {
   markerClusterer = new MarkerClusterer(gmap, [], markerCustererOptions);
 
-  $.get('/dashboardapi/v1/pd/k5workshops')
+  const deepDiveOnly = $('#properties').attr('data-deep-dive-only');
+  let url = '/dashboardapi/v1/pd/k5workshops';
+  if (deepDiveOnly !== undefined) {
+    url += '?deep_dive_only=1';
+  }
+
+  $.get(url)
     .done(function(data) {
       processPdWorkshops(data);
     })
@@ -54,22 +61,28 @@ function processPdWorkshops(workshops) {
       markersByLocation[hash] = createNewMarker(
         latLng,
         workshop.location_name,
-        infoWindowContent
+        infoWindowContent,
+        workshop.subject
       );
     } else {
       // Extend existing marker.
       infoWindowContent = compileHtml(workshop, false);
       markersByLocation[hash].infoWindowContent += infoWindowContent;
+      // Upgrade any marker containing a deep dive workshop to the deep dive icon
+      if (workshop.subject === SubjectNames.SUBJECT_CSF_201) {
+        markersByLocation[hash].icon = iconForSubject(workshop.subject);
+      }
     }
   });
 }
 
-function createNewMarker(latLng, title, infoWindowContent) {
+function createNewMarker(latLng, title, infoWindowContent, subject) {
   var marker = new google.maps.Marker({
     position: latLng,
     map: gmap,
     title: title,
-    infoWindowContent: infoWindowContent
+    infoWindowContent: infoWindowContent,
+    icon: iconForSubject(subject)
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(this.get('infoWindowContent'));
@@ -78,6 +91,14 @@ function createNewMarker(latLng, title, infoWindowContent) {
   markerClusterer.addMarker(marker);
   return marker;
 }
+
+const iconForSubject = subject => ({
+  url:
+    subject === SubjectNames.SUBJECT_CSF_201
+      ? 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png'
+      : 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
+  scaledSize: new google.maps.Size(40, 40)
+});
 
 function completeProcessingPdWorkshops() {
   addGeocomplete();
@@ -96,6 +117,10 @@ function compileHtml(workshop, first) {
     '<div class="workshop-location-name"><strong>' +
     workshop.location_name +
     '</strong></div>';
+
+  // Add the workshop subject
+  html +=
+    '<div class="workshop-subject">' + workshop.subject + ' Workshop</div>';
 
   // Add the date(s).
   html += '<div class="workshop-dates">';

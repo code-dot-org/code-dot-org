@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
 import StudentSections from './StudentSections';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
@@ -14,8 +16,11 @@ export default class StudentHomepage extends Component {
   static propTypes = {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
+    hasFeedback: PropTypes.bool,
     sections: shapes.sections,
-    canViewAdvancedTools: PropTypes.bool
+    canViewAdvancedTools: PropTypes.bool,
+    studentId: PropTypes.number.isRequired,
+    isEnglish: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -26,17 +31,20 @@ export default class StudentHomepage extends Component {
   }
 
   render() {
-    const {courses, sections, topCourse} = this.props;
-    const {canViewAdvancedTools} = this.props;
+    const {courses, sections, topCourse, hasFeedback, isEnglish} = this.props;
+    const {canViewAdvancedTools, studentId} = this.props;
 
     return (
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
+        {isEnglish && <SpecialAnnouncement isTeacher={false} />}
+        {hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
           isTeacher={false}
+          hasFeedback={hasFeedback}
         />
         <ProjectWidgetWithData
           canViewFullList={true}

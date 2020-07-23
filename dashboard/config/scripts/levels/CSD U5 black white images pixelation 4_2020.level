@@ -1,0 +1,25 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-02-18T17:32:47.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "long_instructions": "# Do This\r\n\r\nAdd eyebrows to this smiley face. Remember to use the \"Readable Format\" if you get stuck.\r\n\r\n![](https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png)",
+    "instructions_important": "false",
+    "display_name": "Black and White Pixelation Widget",
+    "version": "1",
+    "hex": "false",
+    "skip_dialog": true,
+    "href": "pixelation/pixelation.html",
+    "data": "1111111111111111111111111111111110110111111111111110111111011011111101110111101111100001111111111111",
+    "short_instructions": "Add eyebrows to the smiley face (click here to see the image)",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "false",
+    "parent_level_id": 16374,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Pixelation>

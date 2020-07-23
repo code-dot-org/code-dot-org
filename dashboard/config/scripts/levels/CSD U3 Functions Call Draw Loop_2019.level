@@ -11,7 +11,7 @@
     "start_blocks": "var flyman = createSprite(400,200);\r\nflyman.velocityX = -1;\r\nflyman.setAnimation(\"flyMan_fly\");\r\n\r\nfunction draw(){\r\ndrawSprites();\r\n}\r\n\r\nfunction treesBackground(){\r\n noStroke();\r\n background(rgb(0,200,255));\r\n \r\n fill(\"green\");\r\n rect(0,380,400,20);\r\n \r\n fill(\"yellow\");\r\n ellipse(350,50,20,20);\r\n \r\n strokeWeight(20);\r\n stroke(rgb(150,100,0));\r\n line(20,300,20,380);\r\n line(80,300,80,380);\r\n line(120,300,120,380);\r\n line(160,300,160,380);\r\n line(200,300,200,380);\r\n line(250,300,250,380);\r\n fill(\"green\");\r\n noStroke();\r\n ellipse(20,300,100,100);\r\n ellipse(80,300,110,110);\r\n ellipse(120,300,95,95);\r\n ellipse(160,300,110,110);\r\n ellipse(200,300,100,100);\r\n ellipse(250,300,100,100);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -64,20 +64,22 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
-    "encrypted_examples": "98TQoiB/FYSBd/uGDj7Hs/K/HzNUfLw3sZ2rBaeQjTesO/XWhwderA+B1xcu\nFDP7\n",
+    "encrypted_examples": "zaE3epoTTvtWzLAKiFK+BgYpKiuH9PgD5YYSUPWe5eSEc0xN0UIN9r/5javh\n3xayaAuujoWf4X9CPeQE9h6gSg==\n",
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "parent_level_id": 11379,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "map_reference": "/docs/concepts/javascript/functions/",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "video_key": "csd_gamelab_functions",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 22:56:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 22:56:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:14:37 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 19:59:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

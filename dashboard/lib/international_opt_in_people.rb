@@ -5,19 +5,23 @@
 #
 module InternationalOptInPeople
   INTERNATIONAL_OPT_IN_FACILITATORS = [
+    "Centro de Innovación - Mineduc",
     "Eleanor Cheah",
     "Rodrigo Fabrega",
-    "Justin Feller & Beth Zigmont",
     "Weena Naowaprateep",
-    "My facilitator is not listed"
+    "Beth Zigmont & Hana Zimmerman Karl",
+    I18n.t('pd.international_opt_in.facilitator_not_listed'),
+    I18n.t('pd.international_opt_in.facilitator_not_applicable')
   ].freeze
 
   INTERNATIONAL_OPT_IN_PARTNERS = [
     "Aksorn",
+    "Computadores para Educar",
     "Cuantrix",
     "Fundacion Kodea",
     "Malaysia Digital Economy Corporation",
+    "Mineduc",
     "Wix.com",
-    "My organizer is not listed"
+    I18n.t('pd.international_opt_in.organizer_not_listed')
   ].freeze
 end

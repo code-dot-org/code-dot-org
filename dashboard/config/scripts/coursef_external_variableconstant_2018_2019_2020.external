@@ -1,0 +1,13 @@
+name 'courseF_external_variableConstant_2018_2019_2020'
+
+markdown <<MARKDOWN
+<h2>More on Variables</h2>
+
+
+<img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+<h3>You've just learned one great way to use a variable...as a constant!  
+When you use a variable as a constant, you are setting a value one time, then using that *same* value multiple times in your program without changing it after you click "Run".  </h3>
+<br/><hr/>
+<h3>In the next part of the series, you will write code with variables that *do* change inside the program.</h3>
+
+MARKDOWN

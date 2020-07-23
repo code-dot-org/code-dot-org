@@ -228,20 +228,26 @@
     "makerlab_enabled": "true",
     "parent_level_id": 12542,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/docs/concepts/maker-toolkit/circuits-and-leds/"
     ],
     "map_reference": "/docs/concepts/maker-toolkit/circuits-and-buttons/",
-    "mini_rubric": "false",
-    "text_mode_at_start": "false"
+    "mini_rubric": "true",
+    "text_mode_at_start": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "rubric_key_concept": "Develop an interactive physical prototype that integrates hardware and software, including simple circuits.  ",
+    "rubric_performance_level_1": "The program works as described, with an external button that controls the buzzer and two external LEDs controlled by the left and right buttons.  The color LEDs turn on in the dark.",
+    "rubric_performance_level_2": "The program works generally as described, with an external button triggering response from the board, and external LEDs controlled by board interaction.",
+    "rubric_performance_level_3": "The program incorporates some elements of the design, including at least one external element that is connected to the board with a circuit and either responds to or triggers a response from the board.",
+    "rubric_performance_level_4": "The program does not incorporate external elements or the external elements cannot interact with the board."
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:06:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:10:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:15:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-01 20:10:44 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-11 08:36:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:06:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:10:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:15:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-01 20:10:44 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-11 08:36:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 21:09:42 +0000\",\"changed\":[\"code_functions\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

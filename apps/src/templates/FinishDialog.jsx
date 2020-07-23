@@ -7,7 +7,7 @@ import GeneratedCode from './feedback/GeneratedCode';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
 import Confetti from 'react-dom-confetti';
-import StageProgress from '@cdo/apps/code-studio/components/progress/StageProgress';
+import LessonProgress from '@cdo/apps/code-studio/components/progress/LessonProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -423,6 +423,7 @@ export class UnconnectedFinishDialog extends Component {
   getButtons() {
     const showCode = !this.state.showingCode ? (
       <button
+        type="button"
         key="showcode"
         style={{...styles.button, ...styles.showCodeButton}}
         onClick={() =>
@@ -436,6 +437,7 @@ export class UnconnectedFinishDialog extends Component {
       </button>
     ) : (
       <button
+        type="button"
         key="hidecode"
         style={{...styles.button, ...styles.showCodeButton}}
         onClick={() =>
@@ -451,6 +453,7 @@ export class UnconnectedFinishDialog extends Component {
 
     return [
       <button
+        type="button"
         key="replay"
         style={{...styles.button, ...styles.replayButton}}
         onClick={this.props.onReplay}
@@ -459,6 +462,7 @@ export class UnconnectedFinishDialog extends Component {
       </button>,
       showCode,
       <button
+        type="button"
         key="continue"
         style={{...styles.button, ...styles.continueButton}}
         onClick={this.props.onContinue}
@@ -514,7 +518,7 @@ export class UnconnectedFinishDialog extends Component {
                   }}
                 >
                   <div style={styles.mastery}>
-                    <StageProgress stageTrophyEnabled />
+                    <LessonProgress lessonTrophyEnabled />
                   </div>
                   {this.props.feedbackImage && (
                     <div style={styles.share}>
@@ -525,6 +529,7 @@ export class UnconnectedFinishDialog extends Component {
                         }}
                       />
                       <button
+                        type="button"
                         style={styles.shareButton}
                         onClick={() => shareProject(this.props.getShareUrl())}
                       >

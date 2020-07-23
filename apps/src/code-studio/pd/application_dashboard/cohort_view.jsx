@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
-import CohortCalculator from './cohort_calculator';
+import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType
 } from '../components/regional_partner_dropdown';
@@ -99,16 +99,6 @@ class CohortView extends React.Component {
     if (this.state.loading) {
       return <Spinner />;
     } else {
-      let accepted = 0;
-      let registered = 0;
-      if (this.state.applications !== null) {
-        accepted = this.state.applications.filter(
-          app => app.status === 'accepted'
-        ).length;
-        registered = this.state.applications.filter(
-          app => app.registered_workshop === 'Yes'
-        ).length;
-      }
       return (
         <div>
           {this.state.applications && (
@@ -117,15 +107,17 @@ class CohortView extends React.Component {
               regionalPartnerFilterValue={
                 this.props.regionalPartnerFilter.value
               }
-              accepted={accepted}
-              registered={registered}
+              accepted={countAcceptedApplications(this.state.applications)}
             />
           )}
+
           {this.props.showRegionalPartnerDropdown && (
             <RegionalPartnerDropdown />
           )}
+
           <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
+
           <Row>
             <Col md={6} sm={6}>
               <Button
@@ -139,6 +131,7 @@ class CohortView extends React.Component {
               </Button>
             </Col>
           </Row>
+
           <CohortViewTable
             data={this.state.applications}
             viewType={this.props.route.viewType}

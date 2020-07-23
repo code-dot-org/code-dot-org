@@ -1,9 +1,10 @@
 name 'cspu5_assess1_increase_2018_2019'
+editor_experiment ''
 wrong '5'
 wrong '8'
 wrong '10'
 right '13'
-wrong 'Error.  Cannot make a new variable x inside function increase()'
+wrong 'Error. Cannot make a new variable x inside function increase()'
 
 markdown <<MARKDOWN
 What is the output to the console after the following code segment is executed?

@@ -5,7 +5,7 @@
     .col-33
       %img.quote-image{src: circle[:img]}
       - if circle[:subtext].nil?
-        %p.quote-title= circle[:text]
+        %p.quote-title!= circle[:text]
       - else
         %p.testimonial-title= circle[:text]
         %p.testimonial-subtitle= circle[:subtext]

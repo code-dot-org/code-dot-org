@@ -1,7 +1,7 @@
 /* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
-import * as dontMarshalApi from './dontMarshalApi';
+import dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
@@ -9,6 +9,7 @@ import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {getTables, getColumns} from '@cdo/apps/storage/getColumnDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
 import {
@@ -17,6 +18,7 @@ import {
 } from './setPropertyDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
+import experiments from '../util/experiments';
 
 var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
 var DEFAULT_HEIGHT = (
@@ -34,6 +36,7 @@ var stringMethodPrefix = '[string].';
 var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
+var arrayBlockPrefix = 'list.';
 
 // Configure shared APIs for App Lab
 // We wrap this because it runs before window.Applab exists
@@ -214,7 +217,14 @@ export var blocks = [
     category: 'UI controls',
     paletteParams: ['id'],
     params: ['"id"'],
-    dropdown: {0: idDropdownWithSelector('img')},
+    dropdown: {
+      0: function() {
+        return [
+          ...idDropdownWithSelector('img')(),
+          ...idDropdownWithSelector('.img-upload')()
+        ];
+      }
+    },
     type: 'value'
   },
   {
@@ -225,7 +235,7 @@ export var blocks = [
     params: ['"id"', '"https://code.org/images/logo.png"'],
     dropdown: {
       0: idDropdownWithSelector('img'),
-      1: function() {
+      1: () => {
         return getAssetDropdown('image');
       }
     },
@@ -519,7 +529,19 @@ export var blocks = [
     params: ['imgData', '0', '0', '255', '255', '255'],
     dontMarshal: true
   },
-
+  {
+    func: 'getColumn',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'column'],
+    params: ['"mytable"', '"mycolumn"'],
+    nativeIsAsync: true,
+    type: 'value',
+    dropdown: {
+      0: getTables(),
+      1: getColumns()
+    }
+  },
   {
     func: 'startWebRequest',
     parent: api,
@@ -590,7 +612,7 @@ export var blocks = [
     params: [
       '"mytable"',
       '{}',
-      "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"
+      "function(records) {\n  for (var i =0; i < records.length; i++) {\n    console.log(records[i].id + ': ' + records[i].name);\n  }\n}"
     ],
     allowFunctionDrop: {2: true, 3: true}
   },
@@ -788,7 +810,7 @@ export var blocks = [
   {
     func: 'console.log',
     parent: consoleApi,
-    category: 'Variables',
+    category: 'Functions',
     paletteParams: ['message'],
     params: ['"message"']
   },
@@ -853,6 +875,12 @@ export var blocks = [
     type: 'value'
   },
   {
+    func: 'declareAssign_list_123',
+    block: 'var list = [1, 2, 3];',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
     func: 'declareAssign_list_abd',
     block: 'var list = ["a", "b", "d"];',
     category: 'Variables',
@@ -871,6 +899,16 @@ export var blocks = [
     noAutocomplete: true,
     tipPrefix: arrayMethodPrefix,
     type: 'property'
+  },
+  {
+    func: 'join',
+    blockPrefix: arrayBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.join',
+    tipPrefix: arrayBlockPrefix,
+    paletteParams: ['separator'],
+    params: ['"-"'],
+    type: 'value'
   },
   {
     func: 'insertItem',
@@ -1092,6 +1130,10 @@ export var blocks = [
     noAutocomplete: true
   }
 ];
+
+if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
+  blocks.push({...audioApiDropletConfig.playSpeech, category: 'UI controls'});
+}
 
 export const categories = {
   'UI controls': {

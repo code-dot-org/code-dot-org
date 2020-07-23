@@ -5,7 +5,7 @@
 # to reduce the scale impact on Rails servers.
 #
 # To reduce the likelihood of abuse, the code only proxies content with an
-# allowed whitelist of media types. We will need to monitor usage to detect
+# allowed list of media types. We will need to monitor usage to detect
 # abuse and potentially add other abuse prevention measures (e.g. a signature
 # based on a secret.)
 
@@ -38,6 +38,8 @@ class MediaProxyController < ApplicationController
 
   # Return the proxied media at the given URL.
   def get
+    # Restrictive Content Security Policy for proxied media.
+    response.headers['Content-Security-Policy'] = "default-src 'none'; frame-ancestors 'none'; style-src 'self' 'unsafe-inline'"
     render_proxied_url(
       params[:u],
       allowed_content_types: ALLOWED_CONTENT_TYPES,

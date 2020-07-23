@@ -13,7 +13,6 @@ import {
   Organizer,
   CsfFacilitator,
   Facilitator,
-  Partner,
   ProgramManager
 } from './permission';
 import $ from 'jquery';
@@ -56,12 +55,8 @@ export class WorkshopIndex extends React.Component {
     this.context.router.push('/reports');
   };
 
-  handleOrganizerSurveyResultsClick = () => {
-    this.context.router.push('/organizer_survey_results');
-  };
-
-  handleSurveyResultsClick = () => {
-    this.context.router.push('/survey_results');
+  handleLegacySurveySummariesClick = () => {
+    this.context.router.push('/legacy_survey_summaries');
   };
 
   handleFilterClick = e => {
@@ -78,7 +73,8 @@ export class WorkshopIndex extends React.Component {
     const canDelete = this.props.permission.hasAny(
       WorkshopAdmin,
       Organizer,
-      ProgramManager
+      ProgramManager,
+      CsfFacilitator
     );
     const canCreate = this.props.permission.hasAny(
       WorkshopAdmin,
@@ -90,6 +86,10 @@ export class WorkshopIndex extends React.Component {
       WorkshopAdmin,
       Organizer,
       ProgramManager
+    );
+    const canSeeLegacySurveySummaries = this.props.permission.hasAny(
+      Facilitator,
+      CsfFacilitator
     );
 
     return (
@@ -109,14 +109,9 @@ export class WorkshopIndex extends React.Component {
               Attendance Reports
             </Button>
           )}
-          {this.props.permission.has(Partner) && (
-            <Button onClick={this.handleOrganizerSurveyResultsClick}>
-              Organizer Survey Results
-            </Button>
-          )}
-          {this.props.permission.hasAny(Facilitator, CsfFacilitator) && (
-            <Button onClick={this.handleSurveyResultsClick}>
-              Facilitator Survey Results
+          {canSeeLegacySurveySummaries && (
+            <Button onClick={this.handleLegacySurveySummariesClick}>
+              Legacy Facilitator Survey Summaries
             </Button>
           )}
           <Button
@@ -135,7 +130,7 @@ export class WorkshopIndex extends React.Component {
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('In Progress')}
         />
-        <h2>Upcoming</h2>
+        <h2>Not Started</h2>
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           queryParams={filterParams.notStarted}

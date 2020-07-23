@@ -1,6 +1,5 @@
 # Code.org
 
-[![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging)
 [![Coverage Status](https://codecov.io/gh/code-dot-org/code-dot-org/branch/staging/graph/badge.svg)](https://codecov.io/gh/code-dot-org/code-dot-org)
 
 Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [code.org/about](https://code.org/about).
@@ -21,6 +20,17 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md).
 ## What's in this repo?
 Here's a quick overview of the major landmarks:
 
+### Documentation
+
+* [SETUP](./SETUP.md): Instructions to get everything up and running.
+* [TESTING](./TESTING.md): How to be sure nothing broke.
+* [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
+* Our [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+* There are many more topical guides in the [docs](./docs) folder.
+* In addition, several sections of the repository have their own documentation:
+  * [apps/README](./apps/README.md)
+  * [blockly/README](https://github.com/code-dot-org/blockly/blob/master/README.md)
+
 ### [dashboard](./dashboard)
 
 The server for our [**Code Studio** learning platform](https://studio.code.org/), a [Ruby on Rails](http://rubyonrails.org/) application responsible for:
@@ -37,7 +47,6 @@ The server for [the **Code.org** website](https://code.org/), a [Sinatra](http:/
 * [code.org](https://code.org)
 * [hourofcode.com](https://hourofcode.com)
 * [csedweek.org](https://csedweek.org)
-* [Teacher Dashboard](http://code.org/teacher-dashboard)
 
 ### [apps](./apps)
 
@@ -47,17 +56,6 @@ Start here if you are looking for:
 * Tools like [Artist](https://studio.code.org/projects/artist), [Play Lab](https://studio.code.org/projects/playlab) and [App Lab](https://code.org/educate/applab)
 * Other core puzzle types: Maze, Farmer, Bee, Bounce, Calc, Eval
 * Other JS code consumed by dashboard and pegasus.
-
-### Documentation
-
-* [SETUP](./SETUP.md): Instructions to get everything up and running.
-* [TESTING](./TESTING.md): How to be sure nothing broke.
-* [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
-* Our [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
-* There are many more topical guides in the [docs](./docs) folder.
-* In addition, several sections of the repository have their own documentation:
-  * [apps/README](./apps/README.md)
-  * [blockly/README](https://github.com/code-dot-org/blockly/blob/master/README.md)
 
 ### Everything else
 

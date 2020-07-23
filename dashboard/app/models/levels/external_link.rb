@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -27,7 +27,6 @@ class ExternalLink < Level
   serialized_attrs %w(
     link_title
     url
-    teacher_markdown
   )
 
   validates_presence_of :url

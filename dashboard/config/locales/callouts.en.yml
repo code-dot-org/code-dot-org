@@ -485,6 +485,7 @@ en:
       CSD U3 game variables_2019_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 if else predict_callout: {}
       CSD U3 keydown conditional-2018_callout: {}
       CSD U3 keydown conditional_callout: {}
       CSD U3 keydown conditional_2018_callout: {}
@@ -786,6 +787,8 @@ en:
       Fish Tank 2-validated_callout: {}
       Fish Tank 2-validated_2019_callout: {}
       Fish Tank 2-validated_simple_callout: {}
+      Fish Tank 3-validated_2019_callout:
+        spritelab_comment: Use this block to leave yourself or your teacher notes about how your code works.
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Use this drop-down to create different snowflakes!
       Frozen Project Toolbox (Old)_callout:
@@ -910,6 +913,7 @@ en:
         bee_for_loop: Enter the largest number of nectar you want the bee to collect here
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: The tool box got a new look! The "Actions" blocks are in here now.
+      New 2019 Sprite Lab Project_callout: {}
       New App Lab Project_callout: {}
       New Artist Project_callout:
         New Artist Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program
@@ -1070,6 +1074,8 @@ en:
         craft_what_is_iron: Mine this iron!
       Underground Iron_2019_callout:
         craft_what_is_iron: Mine this iron!
+      Virtual Pet 2_2019_callout: {}
+      Virtual Pet Template_2019_callout: {}
       WebLab PS test - 1-12_callout:
         version_history_button: Check out version history
       WhileAdventure_callout:
@@ -1099,9 +1105,17 @@ en:
         artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
       behaviors 1_callout:
         behaviors_edit: Click here to see how this behavior works.
+      behaviors 3a_callout:
+        behavior_callout: Why isn't this behavior working for the middle star?
+        star2_callout: Remove this costume block and use the "this sprite" block instead.
+        this_sprite_callout: Testing
       behaviors 4_callout:
         behaviors_edit: Click here to see how this behavior works.
+      behaviors 4a_callout:
+        behaviors_edit: Click here to see how this behavior works.
       behaviors 5_callout:
+        behaviors_edit: Add code to this behavior.
+      behaviors free play_callout:
         behaviors_edit: Add code to this behavior.
       comment_intro_maze_2018_callout: {}
       comment_intro_maze_2018_2019_callout: {}
@@ -1157,10 +1171,9 @@ en:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
-      courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseA_collector_loops1_2018_callout: {}
       courseA_collector_loops1_2019_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: Use this block to collect the treasure.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_2018_callout:
@@ -1181,8 +1194,7 @@ en:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_forVideoTest_artist_callout: {}
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp2_2018_callout: {}
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseA_maze_ramp2a_2018_callout:
@@ -1190,7 +1202,8 @@ en:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
-      courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseA_maze_ramp3a_2019_callout: {}
       courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp3b_2019_callout: {}
@@ -1248,7 +1261,8 @@ en:
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp2_2019_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
-      courseB_Scrat_ramp3a_2019_callout: {}
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp3b_2019_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
@@ -1268,9 +1282,9 @@ en:
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_collector_loops1_2018_callout:
-        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseB_collector_loops1_1: Use this block to collect the treasure.
       courseB_collector_loops1_2019_callout:
-        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseB_collector_loops1_1: Use this block to collect the treasure.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq1_2018_callout:
@@ -1308,6 +1322,10 @@ en:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: This block is very important for this project. Be sure to use it!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Add this to the middle of your program.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
       courseC_artist_loopsPrePre1a_2018_callout:
@@ -1358,7 +1376,7 @@ en:
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Grey blocks cannot be deleted!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: These gray blocks are locked and cannot be deleted!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_debugging9_2019_callout:
@@ -1596,9 +1614,11 @@ en:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
-      courseE_aboutme_5_callout:
-        courseE_aboutme_4_callout_1: Click here!
-      courseE_aboutme_6_callout: {}
+      courseE_aboutme_1_callout: {}
+      courseE_aboutme_2_callout: {}
+      courseE_aboutme_4_callout: {}
+      courseE_aboutme_5_callout: {}
+      courseE_aboutme_7_callout: {}
       courseE_artist_concept_challenge2_callout: {}
       courseE_artist_concept_challenge2_2018_callout: {}
       courseE_artist_concept_challenge2_2019_callout: {}

@@ -1,0 +1,11 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -{ 'About Us'=>'/about','Impact'=>'/alt-about/our-impact', 'Leadership'=>'/about/leadership','Full Team'=>'/about/team', 'Donors'=>'/about/donors', 'Partners'=>'/about/partners','Diversity Council'=>'/about/diversity-council','Newsroom'=>'/about/news', 'Jobs'=>'/about/jobs', 'Contact Us'=>'/contact', 'FAQs'=>'/faq'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr
+
+-# Changes here should match About navigation links in mobile_header_responsive.

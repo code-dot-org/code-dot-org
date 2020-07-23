@@ -142,21 +142,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to script_path(pilot_script)
   end
 
-  test "student with assigned course or script during account takeover will go to index" do
-    student = create :student
-    script = create :script
-    sign_in student
-    student.assign_script(script)
-    begin_fake_account_takeover
-    get :index
-
-    assert_redirected_to '/home'
-  end
-
-  def begin_fake_account_takeover
-    @request.session[HomeController::ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-  end
-
   test "redirect index when signed out" do
     assert_queries 0 do
       get :index
@@ -228,40 +213,6 @@ class HomeControllerTest < ActionController::TestCase
     @request.headers["User-Agent"] = "weebly-agent"
     get :index
     assert_response :success
-  end
-
-  def setup_user_with_gallery
-    @user = create(:user)
-    5.times do
-      create :gallery_activity,
-        level_source: create(:level_source, level_source_image: create(:level_source_image)),
-        user: @user,
-        autosaved: true
-    end
-    sign_in @user
-  end
-
-  test "do not show gallery activity pagination when not signed in" do
-    assert_queries 0 do
-      get :gallery_activities
-    end
-    assert_redirected_to_sign_in
-  end
-
-  test "show gallery activity pagination when signed in" do
-    setup_user_with_gallery
-
-    assert_queries 13 do
-      get :gallery_activities
-    end
-    assert_response :success
-
-    assert_select 'div.gallery_activity img', 5
-  end
-
-  test "do not show gallery when not logged in" do
-    get :index
-    assert_select 'h4', text: "Gallery", count: 0
   end
 
   test "do not show admin links when not admin" do
@@ -354,7 +305,8 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 11 do
+    query_count = 16
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -362,7 +314,8 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    assert_queries 13 do
+    query_count = 18
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -370,7 +323,8 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    assert_queries 9 do
+    query_count = 14
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -379,7 +333,8 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    assert_queries 10 do
+    query_count = 15
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -387,7 +342,8 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'teachers cannot see dashboard links' do
     sign_in create(:terms_of_service_teacher)
-    assert_queries 9 do
+    query_count = 13
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Workshop Dashboard'
@@ -395,7 +351,8 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see application dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    assert_queries 9 do
+    query_count = 14
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -405,7 +362,8 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    assert_queries 13 do
+    query_count = 18
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -414,7 +372,8 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see application dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    assert_queries 13 do
+    query_count = 18
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -424,7 +383,8 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 11 do
+    query_count = 16
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Application Dashboard'

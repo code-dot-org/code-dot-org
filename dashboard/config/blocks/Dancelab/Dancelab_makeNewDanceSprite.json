@@ -14,54 +14,57 @@
         "name": "COSTUME",
         "options": [
           [
-            "Alien",
+            "alien",
             "\"ALIEN\""
           ],
           [
-            "Bear",
+            "bear",
             "\"BEAR\""
           ],
           [
-            "Cat",
+            "cat",
             "\"CAT\""
           ],
           [
-            "Dog",
+            "dog",
             "\"DOG\""
           ],
           [
-            "Duck",
+            "duck",
             "\"DUCK\""
           ],
           [
-            "Frog",
+            "frog",
             "\"FROG\""
           ],
           [
-            "Moose",
+            "moose",
             "\"MOOSE\""
           ],
           [
-            "Pineapple",
+            "pineapple",
             "\"PINEAPPLE\""
           ],
           [
-            "Robot",
+            "robot",
             "\"ROBOT\""
           ],
           [
-            "Shark",
+            "shark",
             "\"SHARK\""
           ],
           [
-            "Unicorn",
+            "sloth",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorn",
             "\"UNICORN\""
           ]
         ]
       },
       {
         "name": "NAME",
-        "assignment": true,
         "customInput": "spritePicker"
       },
       {

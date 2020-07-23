@@ -25,6 +25,7 @@ class DuplicateElementButton extends React.Component {
     return (
       <div style={styles.main}>
         <button
+          type="button"
           style={[commonStyles.button, styles.duplicateButton]}
           onClick={this.handleDuplicate}
         >

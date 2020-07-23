@@ -20,15 +20,14 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
 
   self.table_name = 'pd_fit_weekend_registrations'
 
+  YES = 'Yes'.freeze
+  NO = 'No'.freeze
+  YES_OR_NO = [YES, NO].freeze
+
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
 
   after_initialize :set_registration_year
   before_validation :set_registration_year
-
-  after_create :update_application_status
-  def update_application_status
-    pd_application.update!(status: 'withdrawn') unless accepted?
-  end
 
   after_create :send_fit_weekend_confirmation_email
   def send_fit_weekend_confirmation_email
@@ -40,10 +39,6 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
   def set_registration_year
     self.registration_year = nil
   end
-
-  YES = 'Yes'.freeze
-  NO = 'No'.freeze
-  YES_OR_NO = [YES, NO].freeze
 
   def self.options
     {

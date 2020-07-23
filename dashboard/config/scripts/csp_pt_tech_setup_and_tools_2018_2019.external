@@ -1,4 +1,5 @@
 name 'csp-pt-tech-setup-and-tools_2018_2019'
+editor_experiment ''
 markdown <<MARKDOWN
 # Tech Setup and Tools for the AP Performance Tasks
 
@@ -59,7 +60,7 @@ You are required to make a PDF of your written responses to prompts. It's recomm
 
 **Microsoft Office (Word, PowerPoint)**
 
-* * In Word, Powerpoint, and other Microsoft Office programs you will “Save as PDF.” Visit the Microsoft Office support page for more information about “Save as PDF.”  To save a Word or Powerpoint document as PDF:
+* In Word, Powerpoint, and other Microsoft Office programs you will “Save as PDF.” Visit the Microsoft Office support page for more information about “Save as PDF.”  To save a Word or Powerpoint document as PDF:
 	* Open your Word or Powerpoint document.
     * From the top menu select “File,” and select “Save As.”
     * In the dialog window, go to the drop-down menu for “Save as type,” and select “PDF.”
@@ -157,7 +158,7 @@ If you have not made any screencapture videos in class to this point students ma
 You will need to use 3rd party screen capture software. We recommend investigating options that will work for your school's software requirements. Here are two options:
     
   * Online/Web: [Screencast-o-matic](https://screencast-o-matic.com) (may require download depending on browser/plugins)
-  * Windows / Mac: [Jing from Techsmith](https://www.techsmith.com/jing.html) (requires download)
+  * Windows / Mac: [Snagit from Techsmith](https://www.techsmith.com/screen-capture.html) (requires download and signing up for a free trial)
 
 
 MARKDOWN
@@ -167,6 +168,5 @@ teacher_markdown <<MARKDOWN
 
 * Here is the [AP Digital Portfolio: Teacher User Guide for AP Computer Science Principles](https://apcentral.collegeboard.org/pdf/computer-science-principles-digital-portfolio-teacher-guide.pdf)
 * You will need to follow these instructions to setup your class and to approve students
-
 * The Video screen capture requires using 3rd party software. We recommend investigating options that will work for your school's software requirements. 
 MARKDOWN

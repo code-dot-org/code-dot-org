@@ -25,7 +25,7 @@ end
 
 When(/^I drag the Angle Helper circle to coordinates \((\d*),(\d*)\)$/) do |x, y|
   @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousedown')")
-  @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousemove', {offsetX: #{x}, offsetY: #{y}})")
+  @browser.execute_script("var rect_ = $('.blocklyWidgetDiv svg')[0].getBoundingClientRect();Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousemove', {clientX: #{x} + rect_.left, clientY: #{y} + rect_.top})")
   @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mouseup')")
 end
 
@@ -41,7 +41,7 @@ Then(/^the Angle Helper circle is at coordinates \((\d*),(\d*)\)$/) do |x, y|
   # use a short timeout to accomodate the smoothing animation on the
   # angle helper circle
   wait_short_until do
-    @browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cx')) === #{x};")
-    @browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cy')) === #{y};")
+    @browser.execute_script("return parseInt(($('.blocklyWidgetDiv circle')[1]).getAttribute('cx')) === #{x};")
+    @browser.execute_script("return parseInt(($('.blocklyWidgetDiv circle')[1]).getAttribute('cy')) === #{y};")
   end
 end

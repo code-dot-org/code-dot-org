@@ -1,23 +1,15 @@
 ---
-<%
-  row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first
-  raise Sinatra::NotFound unless row
-%>
 title: "Certificate for Completion of One Hour of Code"
 theme: responsive
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
-  "twitter:url": "http://<%= request.host_with_port %>/certificates/<%= row[:session] %>"
-  "twitter:image:src" : "http://<%= request.host_with_port %>/api/hour/certificate/<%= row[:session] %>-640.jpg"
   "twitter:image:width" : "640"
   "twitter:image:height" : "451"
   "twitter:title": "I just finished the Hour of Code"
   "twitter:description": "Join tens of millions students to learn an hour of computer science. It's the largest learning event in world history."
   "og:title": "I just finished the Hour of Code"
   "og:description": "Join tens of millions students to learn an hour of computer science. It's the largest learning event in world history."
-  "og:image" : "http://<%= request.host_with_port %>/api/hour/certificate/<%= row[:session] %>-640.jpg"
-  "og:url" : "http://<%= request.host_with_port %>/certificates/<%= row[:session] %>"
   "og:image:width": "640"
   "og:image:height": "451"
   "og:video": ""
@@ -25,7 +17,16 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
--row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first || {name:'', session:''}
+
+:ruby
+  row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first
+  raise Sinatra::NotFound unless row
+
+  @header["social"]["twitter:url"] = "http://#{request.host_with_port}/certificates/#{row[:session]}"
+  @header["social"]["twitter:image:src"] = "http://#{request.host_with_port}/api/hour/certificate/#{row[:session]}-640.jpg"
+  @header["social"]["og:image"] = "http://#{request.host_with_port}/api/hour/certificate/#{row[:session]}-640.jpg"
+  @header["social"]["og:url"] = "http://#{request.host_with_port}/certificates/#{row[:session]}"
+
 #hoc-certificate
   %a{:href=>"/printcertificate/#{row[:session]}"}
     %img{:src=>"/api/hour/certificate/#{row[:session]}.jpg", :alt=>"Certificate for Completion of One Hour of Code"}
@@ -40,14 +41,7 @@ social:
       #blurb.col-mobile-56.mobile-pad-right
         %br.desktop-feature
 
-        .count{:style=>"font-size: 42px; line-height: 42px; font-family: 'Gotham 5r', sans-serif;"}
-          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          -if request.locale == 'en-US'
-            %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
-              =count_string
-          -else
-            =count_string
-          %h4.desktop-feature=I18n.t(:anybody_can_learn)
+        = view :try_hoc_count
         %br
 
       #getstarted.col-mobile-44

@@ -1,0 +1,86 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:54.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
+      "setPosition": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "encrypted_examples": "/dEE8YtpmsgrMaiXJjm2LgD/Y45hj+TfNhoQsmtHAz1r1pDjBCiMsp1Rb12z\naqQW\n",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "CSPU5_clickerGame_v1_template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"firstTimeSetPosition\",\r\n  \"callout_text\": \"Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"setPosition\\\"]\",\r\n  \"on\": \"setPosHover\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"UI Controls\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "parent_level_id": 17090,
+    "name_suffix": "_virtual",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "short_instructions": "Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.",
+    "long_instructions": "# Using setPosition\r\n\r\n<img src=\"https://images.code.org/b664824ffeb3347b2e0b6d12447b4e8b-image-1476891499229.gif\" style=\"width: 150px; float: right;\">\r\n\r\nWe've set up a small project for you with a button (id: `moveBtn`) already added in design mode.\r\n\r\n**Do this:** \r\n* Use  [setPosition](#triggercallout=setPosHover) to move the button to the middle of the screen when clicked. \r\n* Once you've got the button moving to the middle of the screen click **\"Finish\"** to move on to the next challenge.\r\n\r\n**How?**\r\n1. Add an `onEvent` block\r\n2. Drag a `setPosition` command into the event handler function\r\n3. Set the x,y coordinate so that the button ends up in the middle of the screen.\r\n   * You'll need to experiment a little bit to find coordinates that work for you.\r\n   * Hover over the screen to find a good starting point.\r\n\r\n**Tip**: When you see a command that is linked like this: [setPosition](#triggercallout=setPosHover) click it! It will show you other hints.\r\n\r\n",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-11 00:54:32 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2020-04-02 16:03:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 19:20:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 20:49:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

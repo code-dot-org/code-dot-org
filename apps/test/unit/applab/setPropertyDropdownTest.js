@@ -1,4 +1,5 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
+import photoSelect from '@cdo/apps/applab/designElements/photoSelect';
 var testUtils = require('../../util/testUtils');
 
 var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
@@ -34,6 +35,20 @@ describe('setPropertyDropdown', function() {
       'picture'
     );
     assert.equal(info.internalName, 'picture');
+
+    // Check that icon-color maps to internal property textColor for photo select elements only
+    const photoSelectElement = photoSelect.create();
+    info = setPropertyDropdown.getInternalPropertyInfo(
+      photoSelectElement,
+      'icon-color'
+    );
+    assert.equal(info.internalName, 'textColor');
+
+    info = setPropertyDropdown.getInternalPropertyInfo(
+      {tagName: 'img'},
+      'icon-color'
+    );
+    assert.equal(info.internalName, 'icon-color');
 
     info = setPropertyDropdown.getInternalPropertyInfo(
       {tagName: 'img'},

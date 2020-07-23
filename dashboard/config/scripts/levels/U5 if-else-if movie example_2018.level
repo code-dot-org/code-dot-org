@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:02:35.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -60,17 +56,21 @@
     "start_blocks": "var age = promptNum(\"How many years old are you?\");\r\n\r\nconsole.log(\"You can see an R movie alone\");\r\nconsole.log(\"You can see a PG-13 movie alone\");\r\nconsole.log(\"You can see a PG movie alone\");\r\nconsole.log(\"Uh. You're too young for most things.\");\r\nconsole.log(\"Thanks for verifying!\");\r\n\r\n\r\n",
     "lock_zero_param_functions": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "encrypted_examples": "RuCxAioErp45Q2JZmxlgAQT7u4hNkvWz1SjGr2MseWPBmgCj5WSFyo5gBGA1\nctKY\n",
     "parent_level_id": 7544,
     "name_suffix": "_2018",
-    "preload_asset_list": null,
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:02:35.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-02-15 04:19:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

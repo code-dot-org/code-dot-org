@@ -1,8 +1,11 @@
 ---
-title: <%= hoc_s(:not_found_title) %>
 nav: blank
 rightbar: blank
 ---
+
+:ruby
+  @header["title"] = hoc_s(:not_found_title)
+
 %h1= hoc_s(:not_found_desc)
 %p{style: 'font-size: 1.5em; line-height: 1.5em;'}= hoc_s(:not_found_instructions)
 %ul{style: 'font-size: 1.25em; line-height: 1.5em; min-height: 240px;'}

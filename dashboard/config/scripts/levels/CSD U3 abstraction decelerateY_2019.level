@@ -75,7 +75,7 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "PCNh0HGpQpogwKqFu/Cin+jd6XAhF1m/RbYkMp8684C2+H9Ag56HWaOsJ/Dh\n1+Q3\n",
+    "encrypted_examples": "XqYj0b92U7N4+NzqVykJ8EkadXklgsfAbeUB2cHJeiDECROOft+uM4iS88wZ\n1e77R0dQVeukb7cklM3JGZ5YnA==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -83,17 +83,23 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 11346,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/velocity/",
       "/docs/concepts/game-lab/the-counter-pattern/"
     ],
     "map_reference": "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
-    "mini_rubric": "false"
+    "mini_rubric": "true",
+    "encrypted": "false",
+    "rubric_key_concept": "Model complex movement on a coordinate plane",
+    "rubric_performance_level_1": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.  The rock reaches a reasonable height, and there are no extra blocks of code.",
+    "rubric_performance_level_2": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.",
+    "rubric_performance_level_3": "The rock starts to move up the screen, and its velocity continually changes in some way as the program is being run.",
+    "rubric_performance_level_4": "There is no change to the rock's velocity as the program is run.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-15 17:19:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 18:36:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 17:19:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 18:36:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-01 20:02:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-01 20:02:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 16:31:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

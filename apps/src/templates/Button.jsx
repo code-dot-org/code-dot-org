@@ -15,12 +15,14 @@ const ButtonColor = {
   gray: 'gray',
   blue: 'blue',
   white: 'white',
-  red: 'red'
+  red: 'red',
+  green: 'green'
 };
 
 const ButtonSize = {
   default: 'default',
-  large: 'large'
+  large: 'large',
+  narrow: 'narrow'
 };
 
 const styles = {
@@ -28,7 +30,9 @@ const styles = {
     display: 'inline-block',
     fontSize: 12,
     fontFamily: '"Gotham 4r", sans-serif',
-    border: '1px solid ' + color.border_gray,
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
     borderBottomLeftRadius: 3,
     borderBottomRightRadius: 3,
     borderTopLeftRadius: 3,
@@ -42,6 +46,7 @@ const styles = {
     overflow: 'hidden',
     whiteSpace: 'nowrap'
   },
+  updated: {lineHeight: '12px'},
   icon: {
     marginRight: 5
   },
@@ -115,6 +120,22 @@ const styles = {
         backgroundColor: color.lightest_red,
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
+    },
+    [ButtonColor.green]: {
+      color: color.white,
+      backgroundColor: color.level_perfect,
+      fontWeight: 'bold',
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.charcoal,
+        borderColor: color.lightest_gray,
+        backgroundColor: color.lightest_gray
+      },
+      ':disabled': {
+        backgroundColor: color.lightest_gray,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
+      }
     }
   },
   sizes: {
@@ -128,6 +149,12 @@ const styles = {
       height: 40,
       paddingLeft: 30,
       paddingRight: 30,
+      lineHeight: '40px'
+    },
+    [ButtonSize.narrow]: {
+      height: 40,
+      paddingLeft: 10,
+      paddingRight: 10,
       lineHeight: '40px'
     }
   }
@@ -150,7 +177,8 @@ class Button extends React.Component {
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
-    pendingText: PropTypes.string
+    pendingText: PropTypes.string,
+    __useDeprecatedTag: PropTypes.bool
   };
 
   onKeyDown = event => {
@@ -177,7 +205,8 @@ class Button extends React.Component {
       id,
       tabIndex,
       isPending,
-      pendingText
+      pendingText,
+      __useDeprecatedTag
     } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
@@ -187,12 +216,19 @@ class Button extends React.Component {
       throw new Error('Expect at least one of href/onClick');
     }
 
-    const Tag = href ? 'a' : 'div';
+    let Tag = 'button';
+    if (__useDeprecatedTag) {
+      Tag = href ? 'a' : 'div';
+    }
+
+    const sizeStyle = __useDeprecatedTag
+      ? styles.sizes[size]
+      : {...styles.sizes[size], ...styles.updated};
 
     return (
       <Tag
         className={className}
-        style={[styles.main, styles.colors[color], styles.sizes[size], style]}
+        style={[styles.main, styles.colors[color], sizeStyle, style]}
         href={disabled ? 'javascript:void(0);' : href}
         target={target}
         disabled={disabled}

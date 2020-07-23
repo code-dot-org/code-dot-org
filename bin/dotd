@@ -52,18 +52,22 @@ def check_for_cdo_keys
 end
 
 # Prints the script intro to the console.
-def puts_script_intro
-  puts <<-EOS.unindent
+def puts_script_intro(dotd_name)
+  puts <<~EOS
 
-    #{bold 'Welcome to Robo-Dev-of-the-Day!'}
+    #{bold "Hi #{dotd_name}! Welcome to Robo-Dev-of-the-Day!"}
+  EOS
+
+  if dotd_name == ENV['USER']
+    puts dim '(Customize your name with the CDODEV_DOTD_NAME environment variable.)'
+  end
+
+  puts <<~EOS
 
     #{bold 'Documentation'}
 
       Dev-of-the-Day Checklist
-      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
-
-      Known Issues
-      #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
+      #{dim 'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
   EOS
 end
@@ -100,7 +104,7 @@ def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
   warn_if_old_commit test_green_commit
 
-  DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
+  DevelopersTopic.set_dtp "pending confirmation (@#{dotd_name})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
@@ -113,13 +117,13 @@ def do_dtp(dotd_name)
   )
   print_database_changes production_pr_number
   dtp_auto_merged = should_i "merge DTP (#{GitHub.url(production_pr_number)})" do
+    DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
     GitHub.merge_pull_request(
       production_pr_number,
       "DTP (Test > Production: #{test_green_commit})"
     )
   end
   GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
-  delete_branch branch_name
   @logger.info "DTPs #{test_green_commit} in #{GitHub.url(production_pr_number)}"
 end
 
@@ -139,7 +143,6 @@ def do_dtl(dotd_name)
     head: branch_name,
     title: "DTL (Test > Levelbuilder: #{test_green_commit})"
   )
-  delete_branch branch_name
   puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
   @logger.info "DTLs #{test_green_commit} in #{GitHub.url(levelbuilder_pr_number)}"
 end
@@ -330,7 +333,7 @@ def puts_quit_message
   puts <<-EOS.unindent
 
     #{bold 'Something weird going on? Take a look at: '\
-      'http://wiki.code.org/display/PROD/Daily+Deployment'}
+      'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
     You can find a log of your day at #{LOG_FILE}
 
@@ -342,26 +345,6 @@ end
 def flush_and_gets
   $stdin.iflush
   gets
-end
-
-# Prompts the user for their name, returning it.
-# @return [String] The name of the user.
-def ask_for_name
-  name = ''
-  until name != ''
-    print 'Who are you? '
-    name = flush_and_gets.chomp
-  end
-
-  puts <<-EOS.unindent_with_indent(2)
-
-    Hi #{name}!
-
-  EOS
-
-  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DOTD")
-
-  name
 end
 
 # Prompts the user whether block should be executed by asking question,
@@ -492,21 +475,6 @@ def create_branch_from_commit(branch_name, commit)
   )
 end
 
-# Deletes the specified branch, both from the test server and from GitHub.
-# @param [String] branch_name The name of the branch to delete.
-def delete_branch(branch_name)
-  # We use the test server as a workspace because we don't want to require that
-  # the DOTD script be run from within the repo.
-  run_on(
-    'test',
-    [
-      'cd test',
-      "git branch -D #{branch_name}",
-      "git push origin --delete #{branch_name}"
-    ].join(' && ')
-  )
-end
-
 # The main method of the script, responsible for dispatching control flow to other methods.
 def main
   check_for_cdo_keys
@@ -518,11 +486,13 @@ def main
   Slack.join_room('infra-staging')
   Slack.join_room('infra-test')
   Slack.join_room('infra-production')
+  Slack.join_room('infra-honeybadger')
   Slack.join_room('levelbuilder')
 
-  puts_script_intro
-  dotd_name = ask_for_name
+  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV['USER']
+  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
+  puts_script_intro(dotd_name)
   loop do
     dotd_menu(dotd_name)
   end

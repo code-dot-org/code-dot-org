@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
+import $ from 'jquery';
 
 const styles = {
   deleteWarning: {
@@ -23,11 +23,13 @@ export default class AssetRow extends React.Component {
     timestamp: PropTypes.string,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     size: PropTypes.number,
-    useFilesApi: PropTypes.bool.isRequired,
+    api: PropTypes.object.isRequired,
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
     soundPlayer: PropTypes.object,
     projectId: PropTypes.string,
+    levelName: PropTypes.string,
+    hideDelete: PropTypes.bool,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
@@ -36,7 +38,8 @@ export default class AssetRow extends React.Component {
 
   state = {
     action: 'normal',
-    actionText: ''
+    actionText: '',
+    attemptedUsedDelete: false
   };
 
   /**
@@ -73,8 +76,7 @@ export default class AssetRow extends React.Component {
   handleDelete = () => {
     this.setState({action: 'deleting', actionText: ''});
 
-    let api = this.props.useFilesApi ? filesApi : assetsApi;
-    api.deleteFile(this.props.name, this.props.onDelete, () => {
+    this.props.api.deleteFile(this.props.name, this.props.onDelete, () => {
       this.setState({
         action: 'confirming delete',
         actionText: i18n.errorDeleting()
@@ -97,34 +99,64 @@ export default class AssetRow extends React.Component {
     this.props.onChoose();
   };
 
+  attemptBadDelete = () => {
+    this.setState({attemptedUsedDelete: true});
+  };
+
   render() {
     let actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
-      flex = <button onClick={this.chooseAsset}>{i18n.choose()}</button>;
+      flex = (
+        <button type="button" onClick={this.chooseAsset}>
+          {i18n.choose()}
+        </button>
+      );
     } else {
       const size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';
     }
+
+    let usage = $('#visualization').find(
+      `[src*="${encodeURIComponent(this.props.name)}"]`
+    ).length;
 
     switch (this.state.action) {
       case 'normal':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <button className="btn-danger" onClick={this.confirmDelete}>
-              <i className="fa fa-trash-o" />
-            </button>
+            {!this.props.hideDelete && (
+              <button
+                type="button"
+                className={usage > 0 ? '' : 'btn-danger'}
+                onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
+              >
+                <i className="fa fa-trash-o" />
+              </button>
+            )}
+
+            {this.state.attemptedUsedDelete && (
+              <div style={styles.deleteWarning}>
+                {i18n.cannotDeleteUsedImage()}
+              </div>
+            )}
           </td>
         );
         break;
       case 'confirming delete':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <button className="btn-danger" onClick={this.handleDelete}>
+            <button
+              type="button"
+              className="btn-danger"
+              onClick={this.handleDelete}
+            >
               Delete File
             </button>
-            <button onClick={this.cancelDelete}>Cancel</button>
+            <button type="button" onClick={this.cancelDelete}>
+              Cancel
+            </button>
             <div style={styles.deleteWarning}>
               {i18n.confirmDeleteExplanation()}
             </div>
@@ -154,8 +186,9 @@ export default class AssetRow extends React.Component {
             type={this.props.type}
             name={this.props.name}
             timestamp={this.props.timestamp}
-            useFilesApi={this.props.useFilesApi}
+            api={this.props.api}
             soundPlayer={this.props.soundPlayer}
+            levelName={this.props.levelName}
           />
         </td>
         <td>{this.props.name}</td>

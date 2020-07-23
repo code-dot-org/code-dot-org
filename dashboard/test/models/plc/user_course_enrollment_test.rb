@@ -9,7 +9,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     @course_unit1 = create(:plc_course_unit, plc_course: @course, unit_order: 1)
   end
 
-  test 'Enrolling user in a task creates unit enrollments' do
+  test 'Enrolling user in a course creates unit enrollments' do
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
 
     assert_equal [@course_unit2, @course_unit1], enrollment.plc_unit_assignments.map(&:plc_course_unit)
@@ -18,9 +18,8 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
 
   test 'test bulk enrollments' do
     user_from_id = create :teacher
-    @student = create :student
     student_email = 'some_student@code.org'
-    @student.update(email: student_email)
+    @student = create :student, email: student_email
     nonexistent_email = 'wrong-email@wrong.com'
 
     created_enrollments, nonexistent_users, nonteacher_users, other_failure_users =
@@ -45,7 +44,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
     expected_summary = {
       courseName: @course.name,
-      link: Rails.application.routes.url_helpers.course_path(@course.get_url_name),
+      link: Rails.application.routes.url_helpers.course_path(@course.unit_group),
       status: enrollment.status,
       courseUnits: [
         {

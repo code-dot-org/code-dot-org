@@ -28,7 +28,6 @@ class ManageStudentNameCell extends Component {
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
-    scriptId: PropTypes.number,
     scriptName: PropTypes.string
   };
 
@@ -44,18 +43,24 @@ class ManageStudentNameCell extends Component {
       username,
       email,
       editedValue,
-      scriptId,
       scriptName
     } = this.props;
-    const studentUrl = scriptUrlForStudent(sectionId, scriptId, scriptName, id);
+    const studentUrl = scriptUrlForStudent(sectionId, scriptName, id);
 
     return (
       <div>
         {!this.props.isEditing && (
           <div>
-            <a style={tableLayoutStyles.link} href={studentUrl} target="_blank">
-              {name}
-            </a>
+            {studentUrl && (
+              <a
+                style={tableLayoutStyles.link}
+                href={studentUrl}
+                target="_blank"
+              >
+                {name}
+              </a>
+            )}
+            {!studentUrl && <span>{name}</span>}
             {username && (
               <div style={styles.details}>
                 {i18n.usernameLabel() + username}
@@ -84,7 +89,6 @@ class ManageStudentNameCell extends Component {
 
 export default connect(
   state => ({
-    scriptId: state.scriptSelection.scriptId,
     scriptName: getSelectedScriptName(state)
   }),
   dispatch => ({

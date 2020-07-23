@@ -3,60 +3,30 @@ en:
   data:
     block_categories:
       Actions: Actions
-      Loops: Loops
-      Functions: Functions
-      Color: Color
-      Brushes: Brushes
-      Math: Math
-      Logic: Logic
-      Variables: Variables
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
-      Conditionals: Conditionals
-      Events: Events
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
-      Text: Text
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      Default: Default
-      Behaviors: Behaviors
-      Locations: Locations
-      Bunny Game: Bunny Game
-      everythingelse: everythingelse
-      World: World
-      Sprites: Sprites
-      Location: Location
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Dancers: Dancers
-      Groups: Groups
       Advanced: Advanced
-      Start: Start
-      Music: Music
-      Dancing: Dancing
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
-      Booleans: Booleans
-      Functional: Functional
-      While Events: While Events
-      Sprite Properties: Sprite Properties
-      Predefined: Predefined
-      test: test
-      test2: test2
-      Use These Blocks: Use These Blocks
-      Do Not Use: Do Not Use
-      Foo: Foo
-      Name: Name
-      NEW BLOCKS: NEW BLOCKS
+      Behaviors: Behaviors
+      Brushes: Brushes
+      Color: Color
+      Comment: Comment
+      Comments: Comments
+      Conditionals: Conditionals
+      Dancers: Dancers
+      Default: Default
+      Events: Events
+      Functions: Functions
       'Functions ': 'Functions '
       Game/Score: Game/Score
-      Function: Function
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
+      Logic: Logic
+      Loops: Loops
+      Math: Math
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
+      Text: Text
+      Variables: Variables
+      'Variables ': 'Variables '
+      World: World

@@ -1,0 +1,19 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-02-18T17:35:11.000Z",
+  "level_num": "custom",
+  "user_id": 568,
+  "properties": {
+    "instructions_important": "false",
+    "reference": "/docs/concepts/maker-toolkit/playing-notes/index.html",
+    "parent_level_id": 16570,
+    "name_suffix": "_2020",
+    "display_name": "Making Music",
+    "long_instructions": "Today you’re going to learn how to use and create **functions**.\r\n\r\nCreating a function lets you make your own blocks! There are two parts to a function: \r\n\r\nMaking a newly named block that has all of the code you want to run inside of it. \r\n-xml of function definition- \r\n\r\nThe single green block itself that you use, or call, to run the function you created.\r\n-xml of function call-\r\n\r\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-21 18:08:52 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 18:09:25 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-19 20:49:28 +0000\",\"changed\":[\"markdown_instructions\",\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</Map>

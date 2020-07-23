@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import {ViewType, setViewType} from '../../viewAsRedux';
+import {ViewType, changeViewType} from '../../viewAsRedux';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 const styles = {
@@ -27,7 +27,8 @@ const styles = {
 class ViewAsToggle extends React.Component {
   static propTypes = {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    setViewType: PropTypes.func.isRequired
+    changeViewType: PropTypes.func.isRequired,
+    logToFirehose: PropTypes.func
   };
 
   componentDidMount() {
@@ -38,12 +39,12 @@ class ViewAsToggle extends React.Component {
   }
 
   onChange = viewType => {
-    const {setViewType} = this.props;
+    const {changeViewType} = this.props;
 
     updateQueryParam('viewAs', viewType);
 
     if (viewType === ViewType.Student && queryParams('user_id')) {
-      // In this case, the setViewType thunk is going to do a reload and we dont
+      // In this case, the changeViewType thunk is going to do a reload and we dont
       // want to change our UI.
     } else {
       // Ideally all the things we would want to hide would be redux backed, and
@@ -52,7 +53,11 @@ class ViewAsToggle extends React.Component {
       $('.hide-as-student').toggle(viewType === ViewType.Teacher);
     }
 
-    setViewType(viewType);
+    changeViewType(viewType);
+
+    if (this.props.logToFirehose) {
+      this.props.logToFirehose('toggle_view', {view_type: viewType});
+    }
   };
 
   render() {
@@ -64,10 +69,18 @@ class ViewAsToggle extends React.Component {
         <div style={styles.viewAs}>{commonMsg.viewPageAs()}</div>
         <div style={styles.toggleGroup}>
           <ToggleGroup selected={viewAs} onChange={this.onChange}>
-            <button className="uitest-viewAsStudent" value={ViewType.Student}>
+            <button
+              type="button"
+              className="uitest-viewAsStudent"
+              value={ViewType.Student}
+            >
               {commonMsg.student()}
             </button>
-            <button className="uitest-viewAsTeacher" value={ViewType.Teacher}>
+            <button
+              type="button"
+              className="uitest-viewAsTeacher"
+              value={ViewType.Teacher}
+            >
               {commonMsg.teacher()}
             </button>
           </ToggleGroup>
@@ -82,8 +95,8 @@ export default connect(
     viewAs: state.viewAs
   }),
   dispatch => ({
-    setViewType(viewAs) {
-      dispatch(setViewType(viewAs));
+    changeViewType(viewAs) {
+      dispatch(changeViewType(viewAs));
     }
   })
 )(UnconnectedViewAsToggle);

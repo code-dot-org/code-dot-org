@@ -124,6 +124,7 @@
     "encrypted_examples": "lfUOSjsjTMcYsObheZNbs2gj2mlzGFlFf4WAmy7F/m8+BUib7w0urJaXIcsu\nQ+JS\n",
     "parent_level_id": 13767,
     "name_suffix": "_2019",
+    "show_debug_watch": "true",
     "preload_asset_list": null
   },
   "published": true

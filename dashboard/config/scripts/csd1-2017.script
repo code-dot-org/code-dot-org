@@ -1,7 +1,6 @@
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit1/standards/"]]
 has_verified_resources true
@@ -11,35 +10,40 @@ new_name 'csd1-2017'
 family_name 'csd1'
 version_year '2017'
 is_stable true
+project_sharing true
+curriculum_umbrella 'CSD'
 
-stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csd-pre-survey-2017-levelgroup'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Discoveries Pre-survey', lockable: true
+level 'csd-pre-survey-2017-levelgroup', assessment: true
 
-stage 'Intro to Problem Solving', flex_category: 'csd1_1'
-named_level 'Unit 1 Lesson 1 Overview'
+lesson_group 'csd1_1', display_name: 'Chapter 1: The Problem Solving Process'
+lesson 'Intro to Problem Solving'
+level 'Unit 1 Lesson 1 Overview', named: true
 
-stage 'The Problem Solving Process', flex_category: 'csd1_1'
-named_level 'Unit 1 Lesson 2 Overview'
+lesson 'The Problem Solving Process'
+level 'Unit 1 Lesson 2 Overview', named: true
 
-stage 'Exploring Problem Solving', flex_category: 'csd1_1'
-named_level 'Unit 1 Lesson 3 Overview'
+lesson 'Exploring Problem Solving'
+level 'Unit 1 Lesson 3 Overview', named: true
 
-stage 'What is a Computer?', flex_category: 'csd1_2'
-named_level 'Unit 1 Lesson 4 Overview'
-named_level 'CSD What Makes a Computer a Computer Video'
+lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
+lesson 'What is a Computer?'
+level 'Unit 1 Lesson 4 Overview', named: true
+level 'CSD What Makes a Computer a Computer Video', named: true
 
-stage 'Input and Output', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 5 Overview'
+lesson 'Input and Output'
+level 'CSD U1 Lesson 5 Overview', named: true
 
-stage 'Processing', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 6 Overview'
+lesson 'Processing'
+level 'CSD U1 Lesson 6 Overview', named: true
 
-stage 'Storage', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 7 Overview'
+lesson 'Storage'
+level 'CSD U1 Lesson 7 Overview', named: true
 
-stage 'Apps and Problem Solving', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 8 Overview'
+lesson 'Apps and Problem Solving'
+level 'CSD U1 Lesson 8 Overview', named: true
 
-stage 'Project - Propose an App', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 9 Overview'
-assessment 'csd-pulse-check-survey-1-levelgroup U1Ch2', progression: 'Reflection'
+lesson 'Project - Propose an App'
+level 'CSD U1 Lesson 9 Overview', named: true
+level 'csd-pulse-check-survey-1-levelgroup U1Ch2', progression: 'Reflection', assessment: true

@@ -2,6 +2,7 @@ require 'sequel'
 require 'sequel/connection_pool/threaded'
 require 'cdo/cache'
 require pegasus_dir 'data/static_models'
+require 'dynamic_config/gatekeeper'
 
 # Connects to database.  Uses the Sequel connection_validator:
 #   http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html
@@ -10,7 +11,7 @@ require pegasus_dir 'data/static_models'
 # @param validation_frequency [number] How often to validate the connection. If set to -1,
 #   validate each time a request is made.
 # @param query_timeout [number] The execution timeout for SELECT statements, in seconds.
-def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil)
+def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil, multi_statements: false)
   reader = reader.gsub 'mysql:', 'mysql2:'
   writer = writer.gsub 'mysql:', 'mysql2:'
 
@@ -62,8 +63,15 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
     db_options[:init_command] = "SET SESSION MAX_EXECUTION_TIME = #{query_timeout * 1000}"
   end
 
-  if (reader_uri = URI(reader)).host != URI(writer).host
-    db_options[:servers] = {read_only: {host: reader_uri.host}}
+  if multi_statements
+    # Configure connection with the MULTI_STATEMENTS flag set that allows multiple statements in one database call.
+    db_options[:flags] = ::Mysql2::Client::MULTI_STATEMENTS
+  end
+
+  if (reader_uri = URI(reader)) != URI(writer) &&
+    Gatekeeper.allows('pegasus_read_replica')
+
+    db_options[:servers] = {read_only: Sequel::Database.send(:uri_to_options, reader_uri)}
   end
   db = Sequel.connect writer, db_options
 

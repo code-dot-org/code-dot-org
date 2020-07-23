@@ -1,0 +1,81 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:43:00.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.",
+    "x": "200",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "true",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[]",
+    "long_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.\r\n\r\n___\r\n### Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)",
+    "instructions_important": "false",
+    "tts_long_instructions_override": "The artist saw something funny in the distance.  Draw what you think he saw.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "parent_level_id": 15673,
+    "name_suffix": "_2020",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.\r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.\r\n",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "encrypted_examples": "7EmneWrGMyGev6KaE8in0x2jFqdAlueyi2vH5CdCyQrrZK326af+/xrPFxLT\n6tfTbb6amhO1udC2MB51uncj8Dt84rpKRl9E1GiusLHc1t6Auek22ZgM4Usk\nTBTAHlZ3GpHsPsn4oqbsev/wcIBE9BmWAZ5fxBHpzEGD2Sz+vim6PXuJQ0hZ\nlb1PDYqBRYp0JHI44uGQDW+IkCY2eFQTMA==\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 17:20:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-12-04 16:52:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-06-19 14:17:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-03 17:15:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-03 17:32:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"teacher_markdown\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+
+</xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="simple_jump_up"/>
+        <block type="simple_jump_left"/>
+        <block type="simple_jump_right"/>
+        <block type="simple_jump_down"/>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_up_left"/>
+        <block type="simple_move_down_right"/>
+        <block type="simple_move_down_left"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Artist>

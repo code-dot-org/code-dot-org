@@ -11,8 +11,6 @@ import {AllPublishableProjectTypes} from '../util/sharedConstants';
 
 export function shareProject(shareUrl) {
   dashboard.project.saveIfSourcesChanged().then(() => {
-    var i18n = window.dashboard.i18n;
-
     var dialogDom = document.getElementById('project-share-dialog');
     if (!dialogDom) {
       dialogDom = document.createElement('div');
@@ -46,7 +44,6 @@ export function shareProject(shareUrl) {
         <ShareDialog
           isProjectLevel={!!dashboard.project.isProjectLevel()}
           allowSignedOutShare={appType === 'dance'}
-          i18n={i18n}
           shareUrl={shareUrl}
           selectedSong={selectedSong}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}

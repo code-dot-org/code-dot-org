@@ -5,6 +5,7 @@ require 'cdo/graphics/certificate_image'
 require 'cdo/pegasus/donor'
 require 'dynamic_config/gatekeeper'
 require 'cdo/shared_constants'
+require 'cdo/asset_helper'
 
 module ApplicationHelper
   include LocaleHelper
@@ -31,7 +32,7 @@ module ApplicationHelper
   end
 
   def gender_options
-    User::GENDER_OPTIONS.map do |key, value|
+    Policies::Gender::OPTIONS.map do |key, value|
       [(key ? t(key) : ''), value]
     end
   end
@@ -117,11 +118,7 @@ module ApplicationHelper
   end
 
   def teacher_dashboard_section_progress_url(section)
-    CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}"
-  end
-
-  def teacher_dashboard_student_progress_url(section, user)
-    CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
+    "/teacher_dashboard/sections/#{section.id}/progress"
   end
 
   # used by sign-up to retrieve the user return_to URL from the session and delete it.
@@ -213,11 +210,6 @@ module ApplicationHelper
       course: script.name,
       course_title: data_t_suffix('script.name', script.name, 'title')
     )
-  end
-
-  def minifiable_asset_path(path)
-    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs || params[:pretty_sharedjs]
-    asset_path(path)
   end
 
   # Returns a client state object for the current session and cookies.

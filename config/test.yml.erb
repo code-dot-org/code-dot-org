@@ -1,0 +1,46 @@
+github_webhook_secret: !Secret
+slack_set_last_dtt_green_token: !Secret
+slack_start_build_token: !Secret
+azure_content_moderation_key: !Secret
+saucelabs_authkey: !Secret
+saucelabs_username: !Secret
+
+# Disable Secrets for CI, unit-test runs,
+# and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
+<% if ci_test || !chef_managed -%>
+<%= clear_secrets %>
+
+dashboard_honeybadger_api_key: '00000000'
+pegasus_honeybadger_api_key:   '00000000'
+google_safe_browsing_key: fake_api_key
+pusher_app_id:             fake_app_id
+pusher_application_key:    fake_application_key
+pusher_application_secret: fake_application_secret
+poste_secret: not a real secret
+dashboard_devise_pepper: not a pepper!
+dashboard_secret_key_base: not a secret
+google_maps_api_key: boguskey
+db_writer: 'mysql://root@localhost/'
+firebase_shared_secret: fake_firebase_shared_secret
+<% end -%>
+
+db_cluster_id: test-cluster
+netsim_enable_metrics: true
+stub_school_data: true
+daemon: true
+use_pusher: <%=!ci_test%>
+
+# Since channel ids are derived from user id and other sequential integer ids
+# use a new S3 sources directory for each Test Build to prevent a UI test
+# from inadvertently using a channel id from a previous Test Build.
+# CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
+# https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
+# Detect Circle environment just to be safe.
+sources_s3_directory: sources_test<%=ENV['CIRCLECI'] ? '' : "/#{GitUtils.git_revision_short(root_dir)}"%>
+
+# Disable this for test by default, it won't make much sense if we keep wiping
+# the DB.
+disable_s3_image_uploads: true
+
+# provide a unique path for firebase channels data for ci, to avoid conflicts in channel ids.
+firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'

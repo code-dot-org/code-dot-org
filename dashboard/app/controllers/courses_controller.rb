@@ -1,13 +1,16 @@
 class CoursesController < ApplicationController
+  include VersionRedirectOverrider
+
   before_action :require_levelbuilder_mode, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
-  authorize_resource except: [:index]
+  before_action :set_redirect_override, only: [:show]
+  authorize_resource class: 'UnitGroup', except: [:index]
 
   def index
     view_options(full_width: true, responsive_content: true, has_i18n: true)
     respond_to do |format|
       format.html do
-        @is_teacher = (current_user && current_user.teacher?) || (!current_user && params[:view] == 'teacher')
+        @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
         @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
@@ -15,27 +18,24 @@ class CoursesController < ApplicationController
         @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
-        courses = Course.valid_courses(user: current_user)
-        render json: courses
+        course_infos = UnitGroup.valid_course_infos(user: current_user)
+        render json: course_infos
       end
     end
   end
 
   def show
-    # csp and csd are each "course families", each containing two "course versions",
-    # one with version year 2017 and one with version year 2018. When the url
-    # of a course family is requested, redirect to a specific course version.
+    # csp and csd are each "course families", each containing multiple "course versions".
+    # When the url of a course family is requested, redirect to a specific course version.
     #
-    # For now, Hard-code the redirection logic because there are only two course
-    # families to worry about. In the future we will want to make this redirect
-    # happen based on the data in the DB so it can be configured via levelbuilder.
-    redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-    case params[:course_name]
-    when 'csd'
-      redirect_to "/courses/csd-2018#{redirect_query_string}"
-      return
-    when 'csp'
-      redirect_to "/courses/csp-2018#{redirect_query_string}"
+    # For now, use hard-coded list to determine whether the given course_name is actually a course family name.
+    if UnitGroup::FAMILY_NAMES.include?(params[:course_name])
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to_course = UnitGroup.all_courses.
+          select {|c| c.family_name == params[:course_name] && c.is_stable?}.
+          sort_by(&:version_year).
+          last
+      redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"
       return
     end
 
@@ -44,15 +44,8 @@ class CoursesController < ApplicationController
       return
     end
 
-    course = Course.get_from_cache(params[:course_name])
-    unless course
-      # PLC courses have different ways of getting to name. ideally this goes
-      # away eventually
-      course_name = params[:course_name].tr('-', '_').titleize
-      course = Course.get_from_cache(course_name)
-      # only support this alternative course name for plc courses
-      raise ActiveRecord::RecordNotFound unless course.try(:plc_course)
-    end
+    course = UnitGroup.get_from_cache(params[:course_name])
+    raise ActiveRecord::RecordNotFound unless course
 
     if course.plc_course
       authorize! :show, Plc::UserCourseEnrollment
@@ -61,11 +54,23 @@ class CoursesController < ApplicationController
       return
     end
 
+    if course.pilot?
+      authenticate_user!
+      unless course.has_pilot_access?(current_user)
+        render :no_access
+        return
+      end
+    end
+
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
-    if redirect_course = redirect_course(course)
+    override_redirect = VersionRedirectOverrider.override_course_redirect?(session, course)
+    if !override_redirect && redirect_course = redirect_course(course)
       redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
+
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
+    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == course.id})}
 
     render 'show', locals: {course: course, redirect_warning: params[:redirect_warning] == 'true'}
   end
@@ -74,7 +79,7 @@ class CoursesController < ApplicationController
   end
 
   def create
-    course = Course.new(name: params.require(:course).require(:name))
+    course = UnitGroup.new(name: params.require(:course).require(:name))
     if course.save
       redirect_to action: :edit, course_name: course.name
     else
@@ -83,15 +88,17 @@ class CoursesController < ApplicationController
   end
 
   def update
-    course = Course.find_by_name!(params[:course_name])
+    course = UnitGroup.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
-    course.update_attribute(:has_verified_resources, !!params[:has_verified_resources])
-    redirect_to course
+    # Convert checkbox values from a string ("on") to a boolean.
+    [:has_verified_resources, :visible, :is_stable].each {|key| params[key] = !!params[key]}
+    course.update(course_params)
+    redirect_to course_path(course)
   end
 
   def edit
-    course = Course.find_by_name!(params[:course_name])
+    course = UnitGroup.find_by_name!(params[:course_name])
 
     # We don't support an edit experience for plc courses
     raise ActiveRecord::ReadOnlyRecord if course.try(:plc_course)
@@ -109,14 +116,24 @@ class CoursesController < ApplicationController
 
   private
 
+  def course_params
+    params.permit(:version_year, :family_name, :has_verified_resources, :pilot_experiment, :visible, :is_stable).to_h
+  end
+
+  def set_redirect_override
+    if params[:course_name] && params[:no_redirect]
+      VersionRedirectOverrider.set_course_redirect_override(session, params[:course_name])
+    end
+  end
+
   def redirect_course(course)
     # Return nil if course is nil or we know the user can view the version requested.
     return nil if !course || course.can_view_version?(current_user)
 
     # Redirect the user to the latest assigned course in this family, or to the latest course in this family if none
     # are assigned.
-    redirect_course = Course.latest_assigned_version(course.family_name, current_user)
-    redirect_course ||= Course.latest_version(course.family_name)
+    redirect_course = UnitGroup.latest_assigned_version(course.family_name, current_user)
+    redirect_course ||= UnitGroup.latest_stable_version(course.family_name)
 
     # Do not redirect if we are already on the correct course.
     return nil if redirect_course == course

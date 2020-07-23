@@ -1,0 +1,710 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Albert Gallatin Area SHS,PA-101260303-6001,420210006001,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Connellsville Area SHS,PA-101261302-5228,420666005228,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Uniontown Area SHS,PA-101268003-2184,422415002184,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waynesburg Central HS,PA-101301403-5118,420543005118,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Greene JSHS,PA-101308503-8442,422544007638,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Avella Area JSHS,PA-101630504-4165,420276004165,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Avella Area JSHS,PA-101630504-4165,420276004165,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bentworth SHS,PA-101630903-4188,420336004188,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bentworth SHS,PA-101630903-4188,420336004188,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethlehem-Center SHS,PA-101631003-4181,420360004181,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burgettstown MS/HS,PA-101631203-4195,420450004195,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canon-McMillan SHS,PA-101631703-4217,420489004217,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canon-McMillan SHS,PA-101631703-4217,420489004217,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canon-McMillan SHS,PA-101631703-4217,420489004217,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charleroi Area HS,PA-101631803-4715,420564004715,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chartiers-Houston JSHS,PA-101631903-4235,420573009975,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fort Cherry JSHS,PA-101632403-4242,420996004242,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peters Twp HS,PA-101636503-5083,421896005083,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ringgold SHS,PA-101637002-7019,422040007238,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ringgold MS,PA-101637002-8103,422040004271,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Trinity SHS,PA-101638003-6012,422376006012,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington HS,PA-101638803-4286,422499004286,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington HS,PA-101638803-4286,422499004286,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+City CHS,PA-102020001-7727,420009400663,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+City CHS,PA-102020001-7727,420009400663,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+City CHS,PA-102020001-7727,420009400663,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+The New Academy CS,PA-102020003-7846,420013300866,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittsburgh Allderdice HS,PA-102027451-0409,421917000409,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittsburgh Perry HS,PA-102027451-0416,421917000416,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittsburgh Brashear HS,PA-102027451-6915,421917006915,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittsburgh Brashear HS,PA-102027451-6915,421917006915,109993,Computer Science III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittsburgh Science and Technology Academ,PA-102027451-8107,421917006989,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittsburgh Science and Technology Academ,PA-102027451-8107,421917006989,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittsburgh Milliones 6-12,PA-102027451-8110,421917007345,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Propel CS-Homestead,PA-103020002-7772,420011100749,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springdale JSHS,PA-103020603-0029,420219000029,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springdale JSHS,PA-103020603-0029,420219000029,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springdale JSHS,PA-103020603-0029,420219000029,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Avonworth HS,PA-103020753-5199,420282005199,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Avonworth HS,PA-103020753-5199,420282005199,109993,Computer Science III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Avonworth MS,PA-103020753-7669,420282000559,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine-Richland HS,PA-103021003-0315,420285000315,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine-Richland HS,PA-103021003-0315,420285000315,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baldwin SHS,PA-103021102-0050,420297000050,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brentwood SHS,PA-103021453-0070,420414000070,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chartiers Valley HS,PA-103021752-6706,420570006706,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chartiers Valley HS,PA-103021752-6706,420570006706,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clairton MS/HS,PA-103021903-8094,420603007346,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clairton MS/HS,PA-103021903-8094,420603007346,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cornell HS,PA-103022103-8087,420681007335,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Deer Lakes HS,PA-103022253-0513,420754000513,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Allegheny JSHS,PA-103022803-8340,420806007559,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elizabeth Forward SHS,PA-103023153-0144,420909000144,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fox Chapel Area HS,PA-103023912-0156,421007000156,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gateway SHS,PA-103024102-0170,421062000170,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hampton HS,PA-103024603-5190,421140005190,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McKeesport Area SHS,PA-103026002-6105,421494006105,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Moon SHS,PA-103026343-4951,421583004951,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Moon SHS,PA-103026343-4951,421583004951,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt Lebanon SHS,PA-103026402-0254,421611000254,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Allegheny HS,PA-103026852-8305,421701007482,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Allegheny HS,PA-103026852-8305,421701007482,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northgate MSHS,PA-103026873-0053,421777000053,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northgate MSHS,PA-103026873-0053,421777000053,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Hills SHS,PA-103026902-7101,421722007122,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Hills SHS,PA-103026902-7101,421722007122,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn Hills SHS,PA-103027352-0309,421859000309,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn Hills SHS,PA-103027352-0309,421859000309,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Plum SHS,PA-103027503-0435,421935000435,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Plum SHS,PA-103027503-0435,421935000435,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Quaker Valley HS,PA-103027753-0448,421986000448,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Quaker Valley HS,PA-103027753-0448,421986000448,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Quaker Valley HS,PA-103027753-0448,421986000448,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverview JSHS,PA-103028203-6928,422043006928,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shaler Area HS,PA-103028302-0460,422120000460,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shaler Area HS,PA-103028302-0460,422120000460,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westinghouse Arts Academy CS,PA-103028425-8392,420089607608,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Fayette Twp HS,PA-103028703-0470,422058000470,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Fayette Twp HS,PA-103028703-0470,422058000470,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Fayette Twp HS,PA-103028703-0470,422058000470,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Fayette MS,PA-103028703-7490,422058000258,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Park SHS,PA-103028753-0467,422206000467,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Saint Clair HS,PA-103029203-0492,422457000492,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Saint Clair HS,PA-103029203-0492,422457000492,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Saint Clair HS,PA-103029203-0492,422457000492,10159,IB Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Saint Clair HS,PA-103029203-0492,422457000492,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Saint Clair HS,PA-103029203-0492,422457000492,109994,Computer Science IV,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Allegheny SHS,PA-103029403-0509,422520000509,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Allegheny SHS,PA-103029403-0509,422520000509,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Allegheny SHS,PA-103029403-0509,422520000509,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Jefferson HS,PA-103029553-0523,422559000523,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Mifflin Area HS,PA-103029603-0536,422568000536,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland Hills JSHS,PA-103029902-0107,421650007214,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland Hills JSHS,PA-103029902-0107,421650007214,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butler Area IHS,PA-104101252-6690,420459006690,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butler Area SHS,PA-104101252-8344,420459007554,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butler Area SHS,PA-104101252-8344,420459007554,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butler Area SHS,PA-104101252-8344,420459007554,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Butler Area SD,PA-104101252-8344,420459007554,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Karns City HS,PA-104103603-1154,420960001154,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Karns City HS,PA-104103603-1154,420960001154,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Karns City HS,PA-104103603-1154,420960001154,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mars Area SHS,PA-104105003-1159,421479001159,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mars Area SHS,PA-104105003-1159,421479001159,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mars Area MS,PA-104105003-5363,421479005363,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mars Area MS,PA-104105003-5363,421479005363,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Slippery Rock Area HS,PA-104107503-1172,422166001172,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Knoch HS,PA-104107803-1177,422193001177,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Knoch HS,PA-104107803-1177,422193001177,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ryan Gloyer MS,PA-104107903-5311,422244005311,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seneca Valley HS,PA-104107903-8318,422244007521,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seneca Valley HS,PA-104107903-8318,422244007521,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seneca Valley HS,PA-104107903-8318,422244007521,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seneca Valley HS,PA-104107903-8318,422244007521,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln JSHS,PA-104372003-2675,420924002675,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln JSHS,PA-104372003-2675,420924002675,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lincoln JSHS,PA-104372003-2675,420924002675,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mohawk SHS,PA-104375003-2686,421554002686,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union Area HS,PA-104377003-2712,422406002712,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilmington Area HS,PA-104378003-2721,422652002721,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilmington Area MS,PA-104378003-7352,422652000033,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grove City Area HS,PA-104432903-3145,421122003145,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hickory HS,PA-104433303-3150,421182003150,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeview HS,PA-104433903-3155,421308003155,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mercer Area SHS,PA-104435003-3158,421512003158,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mercer Area SHS,PA-104435003-3158,421512003158,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mercer Area SHS,PA-104435003-3158,421512003158,109993,Computer Science III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sharon HS,PA-104435603-8093,422133007321,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Middlesex Area JSHS,PA-104437503-6129,422565006129,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Middlesex Area JSHS,PA-104437503-6129,422565006129,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conneaut Area Senior High,PA-105201033-8224,420659007439,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conneaut Area Senior High,PA-105201033-8224,420659007439,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conneaut Area Senior High,PA-105201033-8224,420659007439,109993,Computer Science III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cochranton JSHS,PA-105201352-1632,420708001632,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meadville Area SHS,PA-105201352-1654,420708001654,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cambridge Springs JSHS,PA-105204703-1629,421874001629,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cambridge Springs JSHS,PA-105204703-1629,421874001629,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saegertown JSHS,PA-105204703-6136,421874006136,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwest PA Collegiate Academy,PA-105252602-7515,420930000273,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwest PA Collegiate Academy,PA-105252602-7515,420930000273,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Erie HS,PA-105252602-8417,420930007612,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairview MS,PA-105253303-2032,420957002032,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairview HS,PA-105253303-6737,420957006737,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fort LeBoeuf SHS,PA-105253553-2037,420999002037,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+General McLane HS,PA-105253903-2040,421065002040,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Iroquois JSHS,PA-105256553-4817,421221004817,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McDowell HS,PA-105257602-8071,421533007320,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McDowell HS,PA-105257602-8071,421533007320,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwestern SHS,PA-105258503-6745,421788006745,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union City HS,PA-105259103-2075,422409002075,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tidioute Community CS,PA-105620001-7833,420013600874,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Keystone JSHS,PA-106166503-1486,421272001486,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dubois Area SHS,PA-106172003-6156,420783006156,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson County-DuBois AVTS,PA-106333407-5180,421233505180,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oil City SHS,PA-106616203-4931,421809004931,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oil City SHS,PA-106616203-4931,421809004931,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Titusville SHS,PA-106617203-1668,422349001668,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belle Vernon Area HS,PA-107650603-4930,420321004930,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin Regional SHS,PA-107652603-4360,421023004360,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin Regional SHS,PA-107652603-4360,421023004360,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greater Latrobe SHS,PA-107653102-4845,421098004845,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greater Latrobe SHS,PA-107653102-4845,421098004845,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greater Latrobe JHS,PA-107653102-6957,421098006957,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greensburg-Salem HS,PA-107653203-4373,421092004373,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greensburg-Salem HS,PA-107653203-4373,421092004373,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greensburg-Salem HS,PA-107653203-4373,421092004373,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hempfield Area SHS,PA-107653802-4404,421176004404,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hempfield Area SHS,PA-107653802-4404,421176004404,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hempfield Area SHS,PA-107653802-4404,421176004404,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Pleasant Area HS,PA-107655903-4458,421617004458,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norwin SHS,PA-107656502-4717,421794004717,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norwin SHS,PA-107656502-4717,421794004717,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norwin SHS,PA-107656502-4717,421794004717,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norwin SHS,PA-107656502-4717,421794004717,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn MS,PA-107657103-4492,421866004492,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Trafford MS,PA-107657103-6189,421866006189,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn Trafford HS,PA-107657103-6648,421866006648,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southmoreland SHS,PA-107657503-6191,422241006191,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southmoreland SHS,PA-107657503-6191,422241006191,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chestnut Ridge SHS,PA-108051503-0732,420588000732,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Altoona Area HS,PA-108070502-0913,420234000913,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Altoona Area HS,PA-108070502-0913,420234000913,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greater Altoona CTC,PA-108070607-6193,428008007049,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hollidaysburg Area SHS,PA-108073503-5207,421194005207,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hollidaysburg Area SHS,PA-108073503-5207,421194005207,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cambria Heights SHS,PA-108111203-5212,420474005212,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Hills JSHS,PA-108112203-8382,420994007586,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest Hills JSHS,PA-108112203-8382,420994007586,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn Cambria HS,PA-108116003-1213,421377001213,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richland HS,PA-108116503-7941,422025006079,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richland HS,PA-108116503-7941,422025006079,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westmont Hilltop JSHS,PA-108118503-8379,422613007578,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conemaugh Twp Area MS/SHS,PA-108561803-3978,420642003978,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Star HS,PA-108565503-3988,421011503988,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shade JSHS,PA-108567204-4006,422118004006,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Somerset Area Jr-Sr HS,PA-108567703-8274,422184007509,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Windber Area HS,PA-108569103-4026,422661004026,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Windber Area HS,PA-108569103-4026,422661004026,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Johnsonburg Area HS,PA-109243503-6218,421257006218,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St Marys Area SHS,PA-109248003-5169,422064005169,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bradford Area HS,PA-109420803-4691,420402004691,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bradford Area HS,PA-109420803-4691,420402004691,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bradford Area HS,PA-109420803-4691,420402004691,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bradford Area HS,PA-109420803-4691,420402004691,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Port Allegany JSHS,PA-109426303-3111,421953003111,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Port Allegany JSHS,PA-109426303-3111,421953003111,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northern Potter JSHS,PA-109535504-3875,421770003875,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bellefonte Area HS,PA-110141103-1343,420324001343,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bellefonte Area HS,PA-110141103-1343,420324001343,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penns Valley Area JSHS,PA-110147003-6231,421881006231,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Curwensville Area JSHS,PA-110171803-1529,420714001529,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Curwensville Area JSHS,PA-110171803-1529,420714001529,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harmony Area JSHS,PA-110173504-8316,421152007545,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Moshannon Valley JSHS,PA-110175003-1550,421596001550,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Moshannon Valley JSHS,PA-110175003-1550,421596001550,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Philipsburg-Osceola Area HS,PA-110177003-1560,421902001560,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forbes Road JSHS,PA-111292304-2246,420987002246,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Union Area SHS,PA-111316003-7944,421602006104,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Huntingdon Co HS/MS,PA-111317503-2313,422232002313,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Juniata JSHS,PA-111343603-2394,421260002394,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Juniata JSHS,PA-111343603-2394,421260002394,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Juniata SHS,PA-111343603-6255,421260006255,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Juniata SHS,PA-111343603-6255,421260006255,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mifflin Co JHS,PA-111444602-8186,421529007397,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mifflin Co HS,PA-111444602-8187,421529007398,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mifflin Co HS,PA-111444602-8187,421529007398,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Oxford SHS,PA-112011603-0017,420655000017,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Oxford SHS,PA-112011603-0017,420655000017,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Oxford SHS,PA-112011603-0017,420655000017,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Oxford SHS,PA-112011603-0017,420655000017,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gettysburg Area HS,PA-112013753-6271,421071006271,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Littlestown SHS,PA-112015203-0014,421398000014,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Littlestown SHS,PA-112015203-0014,421398000014,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Littlestown SHS,PA-112015203-0014,421398000014,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chambersburg Area SHS,PA-112281302-2191,420555002191,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James Buchanan HS,PA-112286003-6280,422274006280,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waynesboro Area SHS,PA-112289003-2243,422511002243,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central York HS,PA-112671303-4545,420549004545,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central York HS,PA-112671303-4545,420549004545,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dallastown Area SHS,PA-112671603-4553,420723004553,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dallastown Area SHS,PA-112671603-4553,420723004553,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dallastown Area SHS,PA-112671603-4553,420723004553,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dover Area HS,PA-112671803-4558,420768004558,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastern York HS,PA-112672203-4564,420879004564,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northeastern SHS,PA-112674403-4577,421752004577,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Red Lion Area SHS,PA-112675503-4598,422010004598,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Red Lion Area SHS,PA-112675503-4598,422010004598,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Eastern MS,PA-112676203-7699,422217000611,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Western SHS,PA-112676403-4608,422247004608,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Susquehannock HS,PA-112676503-4614,422238004614,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Grove Area HS,PA-112676703-4623,422259004623,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Grove Area HS,PA-112676703-4623,422259004623,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West York Area HS,PA-112678503-6705,422598006705,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West York Area HS,PA-112678503-6705,422598006705,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York Co School of Technology,PA-112679107-5168,422681005168,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York Suburban SHS,PA-112679403-4658,422685004658,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York Suburban SHS,PA-112679403-4658,422685004658,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York Suburban SHS,PA-112679403-4658,422685004658,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conestoga Valley SHS,PA-113361703-2532,420648002532,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conestoga Valley SHS,PA-113361703-2532,420648002532,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conestoga Valley SHS,PA-113361703-2532,420648002532,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Donegal HS,PA-113362203-2539,420765002539,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Donegal HS,PA-113362203-2539,420765002539,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Donegal HS,PA-113362203-2539,420765002539,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Donegal HS,PA-113362203-2539,420765002539,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Garden Spot SHS,PA-113362303-2554,420882002554,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Garden Spot SHS,PA-113362303-2554,420882002554,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elizabethtown Area SHS,PA-113362403-2562,420912002562,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ephrata SHS,PA-113362603-6293,420927006293,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ephrata SHS,PA-113362603-6293,420927006293,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ephrata SHS,PA-113362603-6293,420927006293,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hempfield SHS,PA-113363103-2578,421179002578,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hempfield SHS,PA-113363103-2578,421179002578,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lampeter-Strasburg SHS,PA-113363603-2607,421311002607,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lampeter-Strasburg SHS,PA-113363603-2607,421311002607,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCaskey Campus,PA-113364002-2596,421314002596,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCaskey Campus,PA-113364002-2596,421314002596,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCaskey Campus,PA-113364002-2596,421314002596,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCaskey Campus,PA-113364002-2596,421314002596,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCaskey Campus,PA-113364002-2596,421314002596,109993,Computer Science III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manheim Twp HS,PA-113364503-2623,421458002623,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manheim Twp HS,PA-113364503-2623,421458002623,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn Manor HS,PA-113365203-2633,421863002633,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pequea Valley HS,PA-113365303-2649,421890002649,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warwick SHS,PA-113369003-2663,422496002663,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warwick SHS,PA-113369003-2663,422496002663,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warwick SHS,PA-113369003-2663,422496002663,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Warwick SHS,PA-113369003-2663,422496002663,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Annville Cleona HS,PA-113380303-2725,420249002725,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Annville Cleona HS,PA-113380303-2725,420249002725,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Crest HS,PA-113381303-4800,420684004800,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Crest HS,PA-113381303-4800,420684004800,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Crest HS,PA-113381303-4800,420684004800,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Crest HS,PA-113381303-4800,420684004800,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon SHS,PA-113384603-5155,421344005155,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon SHS,PA-113384603-5155,421344005155,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon SHS,PA-113384603-5155,421344005155,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lebanon SHS,PA-113384603-5155,421344005155,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northern Lebanon SHS,PA-113385003-2760,421764002760,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northern Lebanon SHS,PA-113385003-2760,421764002760,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palmyra Area SHS,PA-113385303-2766,421839002766,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boyertown Area SHS,PA-114060753-6306,420396006306,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boyertown Area SHS,PA-114060753-6306,420396006306,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conrad Weiser HS,PA-114061103-0777,420678000777,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conrad Weiser HS,PA-114061103-0777,420678000777,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conrad Weiser HS,PA-114061103-0777,420678000777,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conrad Weiser HS,PA-114061103-0777,420678000777,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fleetwood SHS,PA-114062503-5023,420978005023,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fleetwood SHS,PA-114062503-5023,420978005023,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fleetwood SHS,PA-114062503-5023,420978005023,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Governor Mifflin SHS,PA-114063003-0802,421086000802,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamburg Area HS,PA-114063503-0808,421134000808,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hamburg Area HS,PA-114063503-0808,421134000808,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oley Valley SHS,PA-114066503-6318,421815006318,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Reading SHS,PA-114067002-8116,422004000859,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Reading SHS,PA-114067002-8116,422004000859,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Reading SHS,PA-114067002-8116,422004000859,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Schuylkill Valley HS,PA-114067503-0864,422097000864,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Schuylkill Valley HS,PA-114067503-0864,422097000864,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Schuylkill Valley HS,PA-114067503-0864,422097000864,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tulpehocken JSHS,PA-114068003-4670,422382004670,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Twin Valley HS,PA-114068103-0873,422400000873,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Twin Valley HS,PA-114068103-0873,422400000873,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson HS,PA-114069103-6980,422658006980,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson HS,PA-114069103-6980,422658006980,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyomissing Area JSHS,PA-114069353-0887,422676000887,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyomissing Area JSHS,PA-114069353-0887,422676000887,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyomissing Area JSHS,PA-114069353-0887,422676000887,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyomissing Area JSHS,PA-114069353-0887,422676000887,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyomissing Area JSHS,PA-114069353-0887,422676000887,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyomissing Area JSHS,PA-114069353-0887,422676000887,109993,Computer Science III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyomissing Area JSHS,PA-114069353-0887,422676000887,109994,Computer Science IV,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Big Spring HS,PA-115210503-1677,420366001677,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Camp Hill SHS,PA-115211003-1682,420486001682,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Camp Hill SHS,PA-115211003-1682,420486001682,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland Valley HS,PA-115211603-1701,420711001701,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland Valley HS,PA-115211603-1701,420711001701,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland Valley HS,PA-115211603-1701,420711001701,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland Perry AVTS,PA-115211657-5277,428018007059,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cumberland Perry AVTS,PA-115211657-5277,428018007059,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Pennsboro Area SHS,PA-115212503-1707,420858001707,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shippensburg Area SHS,PA-115218003-5221,422157005221,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boiling Springs HS,PA-115218303-6328,422205006328,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Cliff HS,PA-115219002-1732,422583001732,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Commonwealth Charter Academy CS,PA-115220002-7774,420011900756,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Commonwealth Charter Academy CS,PA-115220002-7774,420011900756,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsylvania Distance Learning CS,PA-115220003-7821,420012500839,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Dauphin SHS,PA-115221402-1745,420540001745,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Dauphin East SHS,PA-115221402-1746,420540001746,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dauphin County Technical School,PA-115221607-5278,420738505278,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hershey HS,PA-115221753-4801,420759004801,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hershey HS,PA-115221753-4801,420759004801,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Halifax Area HS,PA-115222504-6330,421131006330,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Halifax Area HS,PA-115222504-6330,421131006330,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lower Dauphin HS,PA-115224003-1776,421410001776,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middletown Area HS,PA-115226003-1790,421524001790,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middletown Area HS,PA-115226003-1790,421524001790,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Capital Area School for the Arts Charter,PA-115227010-8278,420087607493,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newport HS,PA-115504003-7930,421689003413,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Susquenita HS,PA-115506003-3589,422304003589,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Susquenita HS,PA-115506003-3589,422304003589,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Susquenita HS,PA-115506003-3589,422304003589,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Susquenita HS,PA-115506003-3589,422304003589,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Susquenita HS,PA-115506003-3589,422304003589,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Perry SHS,PA-115508003-3596,422574003596,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Perry SHS,PA-115508003-3596,422574003596,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Perry SHS,PA-115508003-3596,422574003596,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northern HS,PA-115674603-6345,421776006345,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northern HS,PA-115674603-6345,421776006345,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berwick Area HS,PA-116191103-1605,420348001605,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berwick Area HS,PA-116191103-1605,420348001605,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bloomsburg Area HS,PA-116191203-1612,420384001612,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Columbia SHS,PA-116191503-1619,420537001619,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Columbia SHS,PA-116191503-1619,420537001619,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Columbia HS,PA-116197503-1627,422226001627,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Columbia HS,PA-116197503-1627,422226001627,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Danville Area SHS,PA-116471803-3425,420732003425,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Danville Area SHS,PA-116471803-3425,420732003425,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Susq-Cyber CS,PA-116493130-7567,420002800368,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milton HS,PA-116495003-3541,421548003541,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Selinsgrove Area HS,PA-116557103-3969,422112003969,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lewisburg HS,PA-116604003-4085,421359004085,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Athens Area HS,PA-117080503-0958,420267000958,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Canton JSHS,PA-117081003-0988,420492000988,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northeast Bradford JSHS,PA-117083004-0964,421746000964,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyalusing Valley JSHS,PA-117089003-1005,422670001005,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Montgomery JSHS,PA-117415004-3040,421566003040,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cowanesque Valley JSHS,PA-117596003-4058,421773004058,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cowanesque Valley JSHS,PA-117596003-4058,421773004058,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cowanesque Valley JSHS,PA-117596003-4058,421773004058,109993,Computer Science III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Williamson SHS,PA-117596003-6373,421773006373,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wellsboro Area HS,PA-117598503-4080,422517004080,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wellsboro Area HS,PA-117598503-4080,422517004080,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wellsboro Area HS,PA-117598503-4080,422517004080,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dallas SHS,PA-118401603-2869,420720002869,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hazleton Area HS,PA-118403302-7348,421170000026,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hazleton Area HS,PA-118403302-7348,421170000026,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwest Area HS,PA-118406003-2958,421779002958,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittston Area SHS,PA-118406602-5058,421920005058,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pittston Area SHS,PA-118406602-5058,421920005058,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James M Coughlin JSHS,PA-118408852-3007,422630003007,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+G A R Memorial JSHS,PA-118408852-3008,422630003008,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+G A R Memorial JSHS,PA-118408852-3008,422630003008,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elmer L Meyers JSHS,PA-118408852-3009,422630003009,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elmer L Meyers JSHS,PA-118408852-3009,422630003009,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Elmer L Meyers JSHS,PA-118408852-3009,422630003009,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyoming Area Sec Ctr,PA-118409203-6390,422673006390,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyoming Valley West SHS,PA-118409302-6391,422595006391,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyoming Valley West SHS,PA-118409302-6391,422595006391,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyoming Valley West SHS,PA-118409302-6391,422595006391,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wyoming Valley West SHS,PA-118409302-6391,422595006391,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Abington Heights HS,PA-119350303-5091,420201005091,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Abington Heights HS,PA-119350303-5091,420201005091,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carbondale Area JSHS,PA-119351303-2420,420498002420,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeland JSHS,PA-119354603-6404,421305006404,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeland JSHS,PA-119354603-6404,421305006404,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Pocono HS,PA-119356503-2446,421731002446,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverside JSHS,PA-119357003-2496,422325002496,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Scranton HS,PA-119357402-2489,422109002489,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Scranton HS,PA-119357402-6413,422109006413,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Scranton HS,PA-119357402-6413,422109006413,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blue Ridge HS,PA-119581003-4034,420390004034,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest City Regional HS,PA-119583003-6419,420993006419,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Forest City Regional HS,PA-119583003-6419,420993006419,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Montrose Area JSHS,PA-119584503-4044,421581004044,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Montrose Area JSHS,PA-119584503-4044,421581004044,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Susquehanna Community JSHS,PA-119586503-4054,422298004054,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wallenpaupack Area HS,PA-119648303-4310,422475004310,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Honesdale HS,PA-119648703-4295,422497004295,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Damascus Area Sch,PA-119648703-6424,422497006424,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Preston Sch,PA-119648703-6425,422497006425,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wayne Highlands MS,PA-119648703-6865,422497006865,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Western Wayne HS,PA-119648903-6704,422607006704,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Western Wayne HS,PA-119648903-6704,422607006704,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Western Wayne HS,PA-119648903-6704,422607006704,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lackawanna Trail JSHS,PA-119665003-4528,421299004528,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Stroudsburg SHS South,PA-120452003-6935,420867006935,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Stroudsburg SHS South,PA-120452003-6935,420867006935,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Stroudsburg SHS North,PA-120452003-7641,420867000518,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Stroudsburg SHS North,PA-120452003-7641,420867000518,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Stroudsburg SHS North,PA-120452003-7641,420867000518,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Stroudsburg SHS North,PA-120452003-7641,420867000518,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Valley HS,PA-120455203-3210,421929003210,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Valley HS,PA-120455203-3210,421929003210,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Valley HS,PA-120455203-3210,421929003210,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pleasant Valley HS,PA-120455203-3210,421929003210,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pocono Mountain East HS,PA-120455403-3216,421950003216,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pocono Mountain East HS,PA-120455403-3216,421950003216,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pocono Mountain West HS,PA-120455403-7738,421950000679,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pocono Mountain West HS,PA-120455403-7738,421950000679,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pocono Mountain West HS,PA-120455403-7738,421950000679,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stroudsburg HS,PA-120456003-3224,422286003224,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bangor Area HS,PA-120480803-3434,420300003434,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty HS,PA-120481002-3465,420357003465,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty HS,PA-120481002-3465,420357003465,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty HS,PA-120481002-3465,420357003465,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom HS,PA-120481002-4957,420357004957,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom HS,PA-120481002-4957,420357004957,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom HS,PA-120481002-4957,420357004957,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Easton Area HS,PA-120483302-3482,420885003482,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Easton Area HS,PA-120483302-3482,420885003482,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Easton Area HS,PA-120483302-3482,420885003482,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Easton Area HS,PA-120483302-3482,420885003482,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nazareth Area HS,PA-120484803-3495,421638003495,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nazareth Area HS,PA-120484803-3495,421638003495,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northampton Area HS,PA-120484903-3505,421737003505,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson Area HS,PA-120488603-3522,422655003522,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Delaware Valley HS,PA-120522003-5261,420753005261,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Delaware Valley HS,PA-120522003-5261,420753005261,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Delaware Valley HS,PA-120522003-5261,420753005261,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jim Thorpe Area HS,PA-121135003-1307,421254001307,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jim Thorpe Area HS,PA-121135003-1307,421254001307,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jim Thorpe Area HS,PA-121135003-1307,421254001307,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehighton Area MS,PA-121135503-1314,421350001314,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehighton Area HS,PA-121135503-1315,421350001315,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lehighton Area HS,PA-121135503-1315,421350001315,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weatherly Area SHS,PA-121139004-1327,422514001327,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weatherly Area SHS,PA-121139004-1327,422514001327,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weatherly Area MS,PA-121139004-6838,422514006838,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Allen HS,PA-121390302-2794,420228002794,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Louis E Dieruff HS,PA-121390302-2795,420228002795,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emmaus HS,PA-121392303-2809,420855002809,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emmaus HS,PA-121392303-2809,420855002809,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emmaus HS,PA-121392303-2809,420855002809,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emmaus HS,PA-121392303-2809,420855002809,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emmaus HS,PA-121392303-2809,420855002809,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwestern Lehigh HS,PA-121394603-2821,421785002821,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkland HS,PA-121395103-2829,421851002829,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Salisbury SHS,PA-121395603-2833,422073002833,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Lehigh SHS,PA-121395703-2839,422235002839,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Lehigh SHS,PA-121395703-2839,422235002839,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southern Lehigh SHS,PA-121395703-2839,422235002839,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitehall HS,PA-121397803-2848,422625002848,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Whitehall HS,PA-121397803-2848,422625002848,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bensalem Twp HS,PA-122091002-5116,420333005116,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bensalem Twp HS,PA-122091002-5116,420333005116,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bensalem Twp HS,PA-122091002-5116,420333005116,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bensalem Twp HS,PA-122091002-5116,420333005116,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bensalem Twp HS,PA-122091002-5116,420333005116,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bristol HS,PA-122091303-1014,420420001014,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bristol HS,PA-122091303-1014,420420001014,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Tennent HS,PA-122092002-1040,420519001040,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+William Tennent HS,PA-122092002-1040,420519001040,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Bucks HS-West,PA-122092102-1043,420531001043,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Bucks HS-East,PA-122092102-5133,420531005133,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Bucks HS-South,PA-122092102-7790,420531000785,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Council Rock HS North,PA-122092353-5096,420696005096,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Council Rock HS North,PA-122092353-5096,420696005096,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Council Rock HS North,PA-122092353-5096,420696005096,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Council Rock HS South,PA-122092353-7749,420696000691,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Council Rock HS South,PA-122092353-7749,420696000691,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Council Rock HS South,PA-122092353-7749,420696000691,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Hope-Solebury HS,PA-122097604-1084,421686001084,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Hope-Solebury HS,PA-122097604-1084,421686001084,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palisades HS,PA-122098003-1094,421833001094,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palisades HS,PA-122098003-1094,421833001094,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennridge HS,PA-122098103-1100,421875001100,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennridge HS,PA-122098103-1100,421875001100,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsbury HS,PA-122098202-4682,421884004682,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Abington SHS,PA-123460302-3241,420204003241,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cheltenham HS,PA-123461302-3260,420576003260,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cheltenham HS,PA-123461302-3260,420576003260,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cheltenham HS,PA-123461302-3260,420576003260,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Plymouth-Whitemarsh SHS,PA-123461602-3333,421947003333,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hatboro-Horsham SHS,PA-123463603-3272,421161003272,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hatboro-Horsham SHS,PA-123463603-3272,421161003272,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hatboro-Horsham SHS,PA-123463603-3272,421161003272,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hatboro-Horsham SHS,PA-123463603-3272,421161003272,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jenkintown Middle/High School,PA-123463803-8049,421242007327,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lower Merion HS,PA-123464502-3295,421416003295,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harriton SHS,PA-123464502-3296,421416003296,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lower Moreland HS,PA-123464603-4960,421419004960,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lower Moreland HS,PA-123464603-4960,421419004960,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lower Moreland HS,PA-123464603-4960,421419004960,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Murray Avenue Sch,PA-123464603-7212,421419007282,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Methacton HS,PA-123465303-3305,421425003305,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Methacton HS,PA-123465303-3305,421425003305,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Methacton HS,PA-123465303-3305,421425003305,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Norriton MS,PA-123465602-3265,421698003265,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Norristown Area HS,PA-123465602-6729,421698006729,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Penn SHS,PA-123465702-5345,421728005345,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Penn SHS,PA-123465702-5345,421728005345,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Perkiomen Valley HS,PA-123466103-3328,421893003328,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pottsgrove SHS,PA-123466303-3338,421965003338,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pottsgrove SHS,PA-123466303-3338,421965003338,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pottsgrove SHS,PA-123466303-3338,421965003338,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Souderton Area SHS,PA-123467103-3354,422187003354,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Souderton Area SHS,PA-123467103-3354,422187003354,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Souderton Area SHS,PA-123467103-3354,422187003354,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring-Ford SHS 9-12 Ctr,PA-123467303-3367,422256003367,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring-Ford SHS 9-12 Ctr,PA-123467303-3367,422256003367,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring-Ford SHS 9-12 Ctr,PA-123467303-3367,422256003367,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Dublin HS,PA-123468303-5078,422439005078,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Merion HS,PA-123468402-3395,422448003395,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Merion HS,PA-123468402-3395,422448003395,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Merion HS,PA-123468402-3395,422448003395,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Merion HS,PA-123468402-3395,422448003395,109994,Computer Science IV,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Perkiomen HS,PA-123468603-5081,422454005081,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Perkiomen HS,PA-123468603-5081,422454005081,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wissahickon SHS,PA-123469303-3247,420240003247,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wissahickon SHS,PA-123469303-3247,420240003247,101523,Computer Programming III,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wissahickon SHS,PA-123469303-3247,420240003247,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester County IU 24,PA-124151607-7293,420290000015,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester County IU 24,PA-124151607-7293,420290000015,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsylvania Leadership CS,PA-124150004-7819,420012700837,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsylvania Leadership CS,PA-124150004-7819,420012700837,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsylvania Leadership CS,PA-124150004-7819,420012700837,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsylvania Leadership CS,PA-124150004-7819,420012700837,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsylvania Leadership CS,PA-124150004-7819,420012700837,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Avon Grove HS,PA-124150503-1367,420279001367,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Avon Grove HS,PA-124150503-1367,420279001367,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester Co Technical College HS-Brandywi,PA-124151607-7292,420290000011,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester Co Technical College HS-Pickerin,PA-124151607-7293,420290000015,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester Co Technical College HS-Pennocks,PA-124151607-7860,420290006770,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coatesville Area SHS,PA-124151902-5012,420624005012,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Downingtown HS West Campus,PA-124152003-1387,420771001387,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Downingtown HS West Campus,PA-124152003-1387,420771001387,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Downingtown HS East Campus,PA-124152003-7759,420771000706,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Downingtown HS East Campus,PA-124152003-7759,420771000706,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Downingtown HS East Campus,PA-124152003-7759,420771000706,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Downingtown STEM Academy,PA-124152003-8174,420771007401,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collegium CS,PA-124153320-7628,420005000485,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collegium CS,PA-124153320-7628,420005000485,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Collegium CS,PA-124153320-7628,420005000485,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Great Valley HS,PA-124153503-1424,421087001424,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Great Valley HS,PA-124153503-1424,421087001424,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Great Valley HS,PA-124153503-1424,421087001424,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennett HS,PA-124154003-6482,421269006482,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennett HS,PA-124154003-6482,421269006482,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Octorara Area JSHS,PA-124156503-1414,421803001414,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Owen J Roberts HS,PA-124156603-1406,421827001406,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oxford Area HS,PA-124156703-1420,421830001420,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oxford Area HS,PA-124156703-1420,421830001420,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oxford Area HS,PA-124156703-1420,421830001420,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conestoga SHS,PA-124157802-1423,422364001423,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conestoga SHS,PA-124157802-1423,422364001423,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Unionville HS,PA-124158503-1443,422421001443,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Unionville HS,PA-124158503-1443,422421001443,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Unionville HS,PA-124158503-1443,422421001443,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stetson MS,PA-124159002-1451,422529001451,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stetson MS,PA-124159002-1451,422529001451,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+E N Peirce MS,PA-124159002-1452,422529001452,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+E N Peirce MS,PA-124159002-1452,422529001452,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester Henderson HS,PA-124159002-1453,422529001453,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester Henderson HS,PA-124159002-1453,422529001453,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester Henderson HS,PA-124159002-1453,422529001453,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J R Fugett MS,PA-124159002-5137,422529005137,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J R Fugett MS,PA-124159002-5137,422529005137,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester East HS,PA-124159002-6734,422529006734,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester East HS,PA-124159002-6734,422529006734,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester East HS,PA-124159002-6734,422529006734,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester Bayard Rustin HS,PA-124159002-7894,422529000969,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester Bayard Rustin HS,PA-124159002-7894,422529000969,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Chester Bayard Rustin HS,PA-124159002-7894,422529000969,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Achievement House CS,PA-125230001-7824,420012800843,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Achievement House CS,PA-125230001-7824,420012800843,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Garnet Valley HS,PA-125234103-1869,421059001869,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Haverford SHS,PA-125234502-1879,421167001879,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Haverford SHS,PA-125234502-1879,421167001879,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Interboro SHS,PA-125235103-1885,421217001885,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Interboro SHS,PA-125235103-1885,421217001885,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marple Newtown SHS,PA-125235502-1902,421476001902,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marple Newtown SHS,PA-125235502-1902,421476001902,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sun Valley HS,PA-125236903-1915,421858001915,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Radnor SHS,PA-125237603-1921,421992001921,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridley HS,PA-125237702-1934,422037001934,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Springfield HS,PA-125238502-1950,422260001950,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Darby SHS,PA-125239452-1972,422432001972,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Upper Darby SHS,PA-125239452-1972,422432001972,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Strath Haven HS,PA-125239603-5287,422479005287,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn Wood HS,PA-125239652-8231,422639007452,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Agora Cyber CS,PA-126510020-7858,420014000896,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Agora Cyber CS,PA-126510020-7858,420014000896,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Agora Cyber CS,PA-126510020-7858,420014000896,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Agora Cyber CS,PA-126510020-7858,420014000896,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Community Academy of Philadelphia CS,PA-126512840-7510,420001300318,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Imhotep Institute CHS,PA-126512980-7542,420003800393,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Imhotep Institute CHS,PA-126512980-7542,420003800393,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MAST Community Charter School,PA-126513150-7574,420005100488,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Philadelphia Academy CS,PA-126513280-7587,420006100503,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mastery CS - Hardy Williams,PA-126513290-7588,420006200504,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin Towne CHS,PA-126513450-7666,420007700554,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olney Charter High School,PA-126513452-8205,420084307386,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Masterman Julia R Sec Sch,PA-126515001-3808,421899003808,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roxborough HS,PA-126515001-3844,421899003844,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central HS,PA-108077503-0941,422253000941,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central HS,PA-108077503-0941,422253000941,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Philadelphia HS,PA-126515001-3859,421899003859,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington George HS,PA-126515001-6527,421899006527,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Parkway Northwest,PA-126515001-6548,421899006548,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin LC,PA-126515001-6822,421899006822,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin LC,PA-126515001-6822,421899006822,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carver HS,PA-126515001-7023,421899007023,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carver HS,PA-126515001-7023,421899007023,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy at Palumbo,PA-126515001-7904,421899000962,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academy at Palumbo,PA-126515001-7904,421899000962,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Science Leadership Academy,PA-126515001-7906,421899000923,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn Treaty Sch,PA-126515001-8293,421899007502,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Aliquippa JSHS,PA-127040503-8086,420213007336,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beaver Falls Area SHS,PA-127041503-0649,420363000649,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beaver Falls Area SHS,PA-127041503-0649,420363000649,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackhawk HS,PA-127041603-6707,420368806707,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackhawk HS,PA-127041603-6707,420368806707,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackhawk HS,PA-127041603-6707,420368806707,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackhawk HS,PA-127041603-6707,420368806707,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom Area SHS,PA-127042853-6563,421038006563,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom Area SHS,PA-127042853-6563,421038006563,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Freedom Area SHS,PA-127042853-6563,421038006563,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsylvania Cyber CS,PA-127043430-7650,420007100534,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pennsylvania Cyber CS,PA-127043430-7650,420007100534,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hopewell SHS,PA-127044103-0675,421203000675,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Brighton Area HS,PA-127045653-0695,421653000695,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverside HS,PA-127045853-0700,421743000700,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverside HS,PA-127045853-0700,421743000700,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rochester High School,PA-127046903-8000,422046000712,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Side MS,PA-127047404-6937,422223006937,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Shamokin JSHS,PA-128030852-7640,420259000517,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Shamokin JSHS,PA-128030852-7640,420259000517,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Shamokin JSHS,PA-128030852-7640,420259000517,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Armstrong JSHS,PA-128030852-8342,420259007569,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Armstrong JSHS,PA-128030852-8342,420259007569,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Armstrong JSHS,PA-128030852-8342,420259007569,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Armstrong SD,PA-128030852-8342,420259007569,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Armstrong SD,PA-128030852-8342,420259007569,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Homer-Center JSHS,PA-128323303-2331,421329002331,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Indiana Area SHS,PA-128323703-2325,421215002325,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Indiana Area SHS,PA-128323703-2325,421215002325,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marion Center Area JR/SR HS,PA-128325203-2339,421473002339,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Purchase Line JSHS,PA-128327303-2350,421983002350,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Purchase Line JSHS,PA-128327303-2350,421983002350,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Purchase Line JSHS,PA-128327303-2350,421983002350,10155,Java Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+United JSHS,PA-128328003-2358,422424002358,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+United JSHS,PA-128328003-2358,422424002358,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+United JSHS,PA-128328003-2358,422424002358,109992,Computer Science II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blue Mountain HS,PA-129540803-3891,420387003891,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mahanoy Area JSHS,PA-129544503-8403,421443007626,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Schuylkill JSHS,PA-129545003-3883,421011003883,10153,Visual Basic (VB) Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Schuylkill JSHS,PA-129545003-3883,421011003883,10154,C++ Programming,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine Grove Area HS,PA-129546003-3910,421914003910,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pine Grove Area HS,PA-129546003-3910,421914003910,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pottsville Area HS,PA-129546103-3924,421971003924,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pottsville Area HS,PA-129546103-3924,421971003924,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pottsville Area HS,PA-129546103-3924,421971003924,10157,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Schuylkill Technology Centers-South Camp,PA-129546907-7066,428062007104,10156,Computer Programming-Other Language,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tamaqua Area SHS,PA-129547603-5070,422322005070,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Williams Valley JSHS,PA-129548803-3914,422640003914,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Williams Valley JSHS,PA-129548803-3914,422640003914,101522,Computer Programming II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+John B. Stetson Charter School,PA-133513315-8149,420083907353,10152,Computer Programming I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Propel CS-Braddock Hills,PA-160028259-8129,420083307363,10999,Computer Science I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

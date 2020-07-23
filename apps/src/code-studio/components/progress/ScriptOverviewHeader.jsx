@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ScriptAnnouncements from './ScriptAnnouncements';
 import {
   announcementShape,
@@ -18,6 +18,12 @@ import {
   dismissedRedirectWarning,
   onDismissRedirectWarning
 } from '@cdo/apps/util/dismissVersionRedirect';
+import AssignmentVersionSelector, {
+  setRecommendedAndSelectedVersions
+} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -50,13 +56,6 @@ const styles = {
   }
 };
 
-export const scriptVersionShape = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  version_year: PropTypes.string.isRequired,
-  version_title: PropTypes.string.isRequired,
-  can_view_version: PropTypes.bool.isRequired
-});
-
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -67,6 +66,15 @@ export const scriptVersionShape = PropTypes.shape({
  */
 class ScriptOverviewHeader extends Component {
   static propTypes = {
+    showCourseUnitVersionWarning: PropTypes.bool,
+    showScriptVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
+    showHiddenUnitWarning: PropTypes.bool,
+    courseName: PropTypes.string,
+    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
+    userId: PropTypes.number,
+
+    // provided by redux
     plcHeaderProps: PropTypes.shape({
       unitName: PropTypes.string.isRequired,
       courseViewPath: PropTypes.string.isRequired
@@ -81,22 +89,22 @@ class ScriptOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    showCourseUnitVersionWarning: PropTypes.bool,
-    showScriptVersionWarning: PropTypes.bool,
-    showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
-    showHiddenUnitWarning: PropTypes.bool,
-    courseName: PropTypes.string
+    localeEnglishName: PropTypes.string
   };
 
   componentDidMount() {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
-  onChangeVersion = event => {
-    const scriptName = event.target.value;
-    if (scriptName !== this.props.scriptName) {
-      window.location.href = `/s/${scriptName}`;
+  onChangeVersion = versionYear => {
+    const script = this.props.versions.find(v => v.year === versionYear);
+    if (
+      script &&
+      script.name.length > 0 &&
+      script.name !== this.props.scriptName
+    ) {
+      const queryParams = window.location.search || '';
+      window.location.href = `/s/${script.name}${queryParams}`;
     }
   };
 
@@ -138,18 +146,6 @@ class ScriptOverviewHeader extends Component {
         currentAnnouncements.push(element);
       }
     });
-
-    // Checks if the non-verified teacher announcement should be shown
-    if (currentView === 'Teacher') {
-      if (!this.props.isVerifiedTeacher && this.props.hasVerifiedResources) {
-        currentAnnouncements.push({
-          notice: i18n.verifiedResourcesNotice(),
-          details: i18n.verifiedResourcesDetails(),
-          link: 'https://support.code.org/hc/en-us/articles/115001550131',
-          type: NotificationType.information
-        });
-      }
-    }
     return currentAnnouncements;
   };
 
@@ -167,8 +163,14 @@ class ScriptOverviewHeader extends Component {
       showRedirectWarning,
       versions,
       showHiddenUnitWarning,
-      courseName
+      courseName,
+      userId,
+      isVerifiedTeacher,
+      hasVerifiedResources
     } = this.props;
+
+    const displayVerifiedResources =
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
 
     const displayVersionWarning =
       showRedirectWarning &&
@@ -182,8 +184,14 @@ class ScriptOverviewHeader extends Component {
     }
 
     // Only display viewable versions in script version dropdown.
-    const filteredVersions = versions.filter(
-      version => version.can_view_version
+    const filteredVersions = versions.filter(version => version.canViewVersion);
+    const selectedVersion = filteredVersions.find(
+      v => v.name === this.props.scriptName
+    );
+    setRecommendedAndSelectedVersions(
+      filteredVersions,
+      this.props.localeEnglishName,
+      selectedVersion && selectedVersion.year
     );
 
     return (
@@ -199,6 +207,10 @@ class ScriptOverviewHeader extends Component {
             announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
           />
+        )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
+        {displayVerifiedResources && (
+          <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
         )}
         {displayVersionWarning && (
           <Notification
@@ -239,24 +251,11 @@ class ScriptOverviewHeader extends Component {
                 {betaTitle && <span className="betatext">{betaTitle}</span>}
               </h1>
               {filteredVersions.length > 1 && (
-                <span style={styles.versionWrapper}>
-                  <span style={styles.versionLabel}>
-                    {i18n.courseOverviewVersionLabel()}
-                  </span>
-                  &nbsp;
-                  <select
-                    onChange={this.onChangeVersion}
-                    value={scriptName}
-                    style={styles.versionDropdown}
-                    id="version-selector"
-                  >
-                    {filteredVersions.map(version => (
-                      <option key={version.name} value={version.name}>
-                        {version.version_year}
-                      </option>
-                    ))}
-                  </select>
-                </span>
+                <AssignmentVersionSelector
+                  onChangeVersion={this.onChangeVersion}
+                  versions={filteredVersions}
+                  rightJustifiedPopupMenu={true}
+                />
               )}
             </div>
             <p style={styles.description}>{scriptDescription}</p>
@@ -278,8 +277,9 @@ export default connect(state => ({
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,
   betaTitle: state.progress.betaTitle,
-  isSignedIn: state.progress.signInState === SignInState.SignedIn,
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  localeEnglishName: state.locales.localeEnglishName
 }))(ScriptOverviewHeader);

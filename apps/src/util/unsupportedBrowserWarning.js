@@ -17,12 +17,11 @@ export var checkForUnsupportedBrowsersOnLoad = function() {
       if (isMobileDevice()) {
         if (appOptions.app === 'applab') {
           textDivId = '#applab-unsupported-tablet';
-        } else if (
-          appOptions.app === 'gamelab' &&
-          !appOptions.valueTypeTabShapeMap
-        ) {
+        } else if (appOptions.app === 'gamelab') {
           textDivId = '#gamelab-unsupported-tablet';
         }
+      } else if (isIE11() && appOptions.app === 'fish') {
+        textDivId = '#oceans-unsupported-browser';
       } else if (isIE11() && appOptions.app === 'weblab') {
         textDivId = '#weblab-unsupported-browser';
       } else if (

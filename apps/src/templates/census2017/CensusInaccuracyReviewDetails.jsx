@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Table} from 'reactabular';
+import * as Table from 'reactabular-table';
 import Button from '../Button';
 import color from '../../util/color';
 
@@ -145,6 +145,7 @@ export default class CensusInaccuracyReviewDetails extends Component {
           {school.name} ({school.city}, {school.state})
         </h2>
         <Button
+          __useDeprecatedTag
           onClick={this.returnToMainList}
           size="large"
           text="Back to main list"
@@ -221,12 +222,14 @@ export default class CensusInaccuracyReviewDetails extends Component {
           {this.state.notes && (
             <div>
               <Button
+                __useDeprecatedTag
                 onClick={this.submitInvestigationWithOverride}
                 size="large"
                 text={overrideText}
               />
               <br />
               <Button
+                __useDeprecatedTag
                 onClick={this.submitInvestigationWithoutOverride}
                 size="large"
                 text="Resolve without override"

@@ -1,0 +1,9 @@
+name 'csp3_U3_turtle_subgoal_mc_levelgroup_2018_2019_virtual'
+title 'One of these things is not like the other'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp3_subgoal_mc_levelgroup_preamble_2018_2019_virtual'
+level 'csp_U3_turtle_subgoal_q1_mc_2018_2019_virtual'
+level 'csp_U3_turtle_subgoal_q2_mc_2018_2019_virtual'

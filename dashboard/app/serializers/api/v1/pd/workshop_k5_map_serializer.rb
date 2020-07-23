@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopK5MapSerializer < ActiveModel::Serializer
-  attributes :id, :location_name, :location_address, :sessions, :processed_location
+  attributes :id, :subject, :location_name, :location_address, :sessions, :processed_location
 
   def processed_location
     return nil unless object.processed_location

@@ -1,0 +1,19 @@
+name 'csp-u3-exam1-development-process-2_2020'
+height 'auto'
+
+question ‘Which of the following best describes the purpose of a design specification?’
+
+wrong ‘Tracking errors that arise through user testing’
+wrong ‘Documenting comments that will need to be added to a program’
+right ‘Describing the requirements for how a program will work or users will interact with it’
+wrong ‘Listing detailed questions that will be asked of users during interviews’
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

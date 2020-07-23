@@ -1,0 +1,44 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#mini_rubric"}}
+  Mini Rubric
+
+#mini_rubric.in.collapse
+  %p
+    These levels may contain an optional mini-rubric that teachers can use to evaluate student learning.
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :mini_rubric, description: "Show a mini-rubric on this level"}
+
+  .rubric-concept
+    = f.label :rubric_key_concept, 'Mini-rubric key concept'
+    = f.text_area :rubric_key_concept,
+  placeholder: 'Key concept the rubric evaluates. Shown to teachers and students',
+  rows: 3, class: "input-block-level"
+
+  .rubric-performance
+    = f.label :rubric_criterias, 'Mini-rubric criteria'
+    .rubric-criteria
+      = f.label :rubric_performance_level_1, 'Extensive Evidence'
+      .row
+        .span6
+          = f.text_area :rubric_performance_level_1,
+          placeholder: 'Recommended criteria details; displayed to teachers and students as a part of the mini-rubric.',
+          rows: 3, class: "input-block-level"
+    .rubric-criteria
+      = f.label :rubric_performance_level_2, 'Convincing Evidence'
+      .row
+        .span6
+          = f.text_area :rubric_performance_level_2,
+          placeholder: 'Recommended criteria details; displayed to teachers and students as a part of the mini-rubric.',
+          rows: 3, class: "input-block-level"
+    .rubric-criteria
+      = f.label :rubric_performance_level_3, 'Limited Evidence'
+      .row
+        .span6
+          = f.text_area :rubric_performance_level_3,
+          placeholder: 'Recommended criteria details; displayed to teachers and students as a part of the mini-rubric.',
+          rows: 3, class: "input-block-level"
+    .rubric-criteria
+      = f.label :rubric_performance_level_4, 'No Evidence'
+      .row
+        .span6
+          = f.text_area :rubric_performance_level_4,
+          placeholder: 'Recommended criteria details; displayed to teachers and students as a part of the mini-rubric.',
+          rows: 3, class: "input-block-level"

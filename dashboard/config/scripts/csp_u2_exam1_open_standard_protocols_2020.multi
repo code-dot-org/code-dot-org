@@ -1,0 +1,12 @@
+name 'csp-u2-exam1-open-standard-protocols_2020'
+height 'auto'
+
+question 'Which of the following best describes the protocols used on the Internet?'
+wrong ‘The protocols of the Internet are designed by government agencies to ensure they remain free to use’
+wrong ‘The protocols of the Internet are secret to maintain the privacy and security of people using them’
+wrong ‘Each device connected to the Internet will use a protocol designed by the company that manufactured it’
+right ‘The protocols of the Internet are open and used by all devices connected to the network’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

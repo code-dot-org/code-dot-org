@@ -12,7 +12,9 @@ import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
+import {themeOptions, CLASSIC_THEME_INDEX} from '../constants';
+import themeValues, {CLASSIC_TEXT_INPUT_PADDING} from '../themeValues';
+import elementLibrary from './library';
 
 class TextInputProperties extends React.Component {
   static propTypes = {
@@ -201,20 +203,18 @@ class TextInputEvents extends React.Component {
 export default {
   PropertyTab: TextInputProperties,
   EventTab: TextInputEvents,
+  themeValues: themeValues.textInput,
 
   create: function() {
     const element = document.createElement('input');
     element.style.margin = '0px';
     element.style.width = '200px';
     element.style.height = '30px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
-    element.style.color = '#000000';
-    element.style.backgroundColor = '';
-    elementUtils.setDefaultBorderStyles(element, {
-      forceDefaults: true,
-      textInput: true
-    });
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     return element;
   },
@@ -222,8 +222,18 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
-    // Set the font family for older projects that didn't set them on create:
+    // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
+    // Set the padding for older projects that didn't set it on create:
+    if (element.style.padding === '') {
+      element.style.padding = CLASSIC_TEXT_INPUT_PADDING;
+    }
+    // Set the background color for older projects that didn't set it on create:
+    if (element.style.backgroundColor === '') {
+      element.style.backgroundColor = this.themeValues.backgroundColor[
+        themeOptions[CLASSIC_THEME_INDEX]
+      ];
+    }
 
     $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {

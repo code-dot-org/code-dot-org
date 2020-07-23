@@ -23,11 +23,14 @@ const OPTIONS_GAMELAB = [
   'sprite.height'
 ];
 
-const buttonSize = '34px';
+const buttonSize = '28px';
 const valueAndInputWidth = 'calc(100% - 41px)';
-const inputElementHeight = 29;
+const inputElementHeight = 23;
 
 const styles = {
+  autocompleteDropdown: {
+    zIndex: 2 // Needed so the dropdown appears over the coding space (z-index 1)
+  },
   watchContainer: {
     width: '100%',
     height: '100%'
@@ -58,13 +61,20 @@ const styles = {
     margin: 0,
     padding: 0
   },
-  watchValue: {
+  watchItemDescription: {
     whiteSpace: 'nowrap',
-    height: buttonSize,
-    lineHeight: buttonSize,
+    minHeight: buttonSize,
     marginLeft: 3,
     overflow: 'hidden',
     width: valueAndInputWidth
+  },
+  watchValueArray: {
+    whiteSpace: 'normal'
+  },
+  watchValue: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    minHeight: '28px'
   },
   watchInputSection: {
     clear: 'both'
@@ -114,7 +124,7 @@ class Watchers extends React.Component {
    */
   renderValue(obj) {
     if (!this.props.isRunning) {
-      return <span className="watch-value">{WATCH_VALUE_NOT_RUNNING}</span>;
+      return <span style={styles.watchValue}>{WATCH_VALUE_NOT_RUNNING}</span>;
     }
 
     const descriptor = nonValueDescriptor(obj);
@@ -122,7 +132,7 @@ class Watchers extends React.Component {
 
     if (isError) {
       return (
-        <span className="watch-value watch-unavailable">
+        <span style={styles.watchValue} className="watch-unavailable">
           {i18n.debugWatchNotAvailable()}
         </span>
       );
@@ -131,20 +141,26 @@ class Watchers extends React.Component {
     switch (descriptor) {
       case 'null':
       case 'undefined':
-        return <span className="watch-value">{descriptor}</span>;
+        return <span style={styles.watchValue}>{descriptor}</span>;
       case 'regexp':
-        return <span className="watch-value">[regexp]</span>;
+        return <span style={styles.watchValue}>[regexp]</span>;
       case 'array':
-        return <span className="watch-value">[array]</span>;
+        return (
+          <span style={styles.watchValueArray}>
+            {`[list (${obj.length})]`}
+            <br />
+            {`[${parseArray(obj)}]`}
+          </span>
+        );
       case 'function':
         // [function MyFunctionName]
         return (
-          <span className="watch-value">
+          <span style={styles.watchValue}>
             {`[${obj.toString().match(/(.*)\(/)[1]}]`}
           </span>
         );
       default:
-        return <span className="watch-value">{obj.toString()}</span>;
+        return <span style={styles.watchValue}>{obj.toString()}</span>;
     }
   }
 
@@ -377,7 +393,7 @@ class Watchers extends React.Component {
                 >
                   ×
                 </div>
-                <div style={styles.watchValue}>
+                <div style={styles.watchItemDescription}>
                   <span className="watch-variable">{varName}</span>
                   <span className="watch-separator">: </span>
                   {this.renderValue(varValue)}
@@ -398,6 +414,7 @@ class Watchers extends React.Component {
                   attachment: 'together'
                 }
               ]}
+              style={styles.autocompleteDropdown}
             >
               <input
                 placeholder="Variable / Property"
@@ -461,4 +478,27 @@ function nonValueDescriptor(obj) {
 
 function wrapValue(index, length) {
   return (index + length) % length;
+}
+
+function parseArray(array) {
+  let parsedArray = '';
+  array.forEach((element, index, array) => {
+    if (element === null) {
+      parsedArray += 'null';
+    } else if (Array.isArray(element)) {
+      parsedArray += 'list (' + element.length + ')';
+    } else if (typeof element === 'string') {
+      parsedArray += '"' + element + '"';
+    } else if (typeof element === 'object') {
+      parsedArray += 'object {}';
+    } else {
+      parsedArray += element;
+    }
+
+    if (index !== array.length - 1) {
+      parsedArray += ', ';
+    }
+  });
+
+  return parsedArray;
 }

@@ -74,7 +74,7 @@
     "all_animations_single_frame": "true",
     "project_template_level_name": "CSD U3 abstraction jumping template_2019",
     "instructions_important": "false",
-    "encrypted_examples": "2h1yzx2YWeYE02H76j1EdxZBn4J9Y8yXumg4kbqU+C7C4KiflksPbNluD54i\nZDCs\n",
+    "encrypted_examples": "JZOG90LMBwEBvcM2DBZ/BvFISD0B383IyHPyLOC+KGMY32ZVQsQAJtF4rpzG\n5RzNkcBpLQQd7Buv2hHF7T+IXg==\n",
     "show_debug_watch": "true",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -83,18 +83,19 @@
     "expand_debugger": "false",
     "parent_level_id": 11370,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
       "/docs/concepts/game-lab/sprites/collision-detection/",
       "/docs/concepts/game-lab/sprites/velocity/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/sprite-interactions/",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-23 20:55:31 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 19:14:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-23 20:55:31 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 19:14:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 19:42:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -10,4 +10,4 @@ subject: New Translation Volunteer
 - Email [<%= email_s %>](<%= email_s %>)
 - See database for languages
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

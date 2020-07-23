@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Api::V1::Pd::SessionAttendanceSerializerTest < ::ActionController::TestCase
   setup do
-    @workshop = create :pd_workshop, num_sessions: 1
+    @workshop = create :workshop, num_sessions: 1
     @workshop.start!
   end
 

@@ -2,7 +2,7 @@
 Installs and configures Nginx buffering proxy.
 
 ## Requirements
-Ubuntu 14.04
+Ubuntu 18.04
 
 #### apt packages installed (from PPA)
 - `nginx`

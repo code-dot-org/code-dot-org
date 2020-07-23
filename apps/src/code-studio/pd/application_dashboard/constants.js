@@ -46,34 +46,6 @@ export const StatusColors = {
 };
 
 /**
- * Valid statuses for this year's applications.
- * Format per application type is {value: label}
- */
-export const ApplicationStatuses = {
-  teacher: {
-    unreviewed: 'Unreviewed',
-    pending: 'Pending',
-    waitlisted: 'Waitlisted',
-    declined: 'Declined',
-    accepted_not_notified: 'Accepted - Not notified',
-    accepted_notified_by_partner: 'Accepted - Notified by partner',
-    accepted_no_cost_registration: 'Accepted - No cost registration',
-    registration_sent: 'Registration Sent',
-    paid: 'Paid',
-    withdrawn: 'Withdrawn'
-  },
-  facilitator: {
-    unreviewed: 'Unreviewed',
-    pending: 'Pending',
-    interview: 'Interview',
-    waitlisted: 'Waitlisted',
-    accepted: 'Accepted',
-    declined: 'Declined',
-    withdrawn: 'Withdrawn'
-  }
-};
-
-/**
  * Statuses that represent "finalized" applications
  */
 export const ApplicationFinalStatuses = [
@@ -98,3 +70,43 @@ export const ScholarshipStatusRequiredStatuses = [
   'registration_sent',
   'paid'
 ];
+
+/**
+ * Valid statuses for this year's applications.
+ * Format per application type is {value: label}
+ */
+export function getApplicationStatuses(type, addAutoEmail = true) {
+  if (type === 'teacher') {
+    return {
+      unreviewed: 'Unreviewed',
+      pending: 'Pending',
+      waitlisted: `Waitlisted${autoEmailText(addAutoEmail)}`,
+      declined: `Declined${autoEmailText(addAutoEmail)}`,
+      accepted_not_notified: 'Accepted - Not notified',
+      accepted_notified_by_partner: 'Accepted - Notified by partner',
+      accepted_no_cost_registration: `Accepted - No cost registration${autoEmailText(
+        addAutoEmail
+      )}`,
+      registration_sent: `Registration Sent${autoEmailText(addAutoEmail)}`,
+      paid: 'Paid',
+      withdrawn: 'Withdrawn'
+    };
+  } else if (type === 'facilitator') {
+    return {
+      unreviewed: 'Unreviewed',
+      pending: 'Pending',
+      interview: 'Interview',
+      waitlisted: 'Waitlisted',
+      accepted: 'Accepted',
+      declined: 'Declined',
+      withdrawn: 'Withdrawn'
+    };
+  }
+}
+
+function autoEmailText(addAutoEmail) {
+  if (addAutoEmail) {
+    return ' (auto-email)';
+  }
+  return '';
+}

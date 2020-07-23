@@ -2,11 +2,14 @@ require 'test_helper'
 
 module Api::V1::Pd
   class WorkshopSurveyReportControllerTest < ::ActionController::TestCase
+    include Pd::WorkshopConstants
+
     self.use_transactional_test_case = true
     setup_all do
       @facilitator = create :facilitator
       @program_manager = create :program_manager
-      @workshop = create(:pd_workshop, organizer: @program_manager, facilitators: [@facilitator])
+      @workshop = create(:workshop, organizer: @program_manager, facilitators: [@facilitator])
+      @admin = create :workshop_admin
     end
 
     setup do
@@ -16,28 +19,9 @@ module Api::V1::Pd
 
     API = '/api/v1/pd/workshops'
 
-    test_user_gets_response_for(
-      :workshop_survey_report,
-      user: :workshop_admin,
-      params: -> {{workshop_id: @workshop.id}}
-    )
-
-    test 'facilitators can view their survey' do
-      sign_in @facilitator
-      get :workshop_survey_report, params: {workshop_id: @workshop.id}
-      assert_response :success
-
-      @controller = WorkshopSurveyReportController.new
-
-      other_facilitator = create :facilitator
-      other_workshop = create(:pd_workshop, organizer: @program_manager, facilitators: [other_facilitator])
-      get :workshop_survey_report, params: {workshop_id: other_workshop.id}
-      assert_response :forbidden
-    end
-
     test 'teachercon survey report for facilitator' do
-      teachercon_1 = create :pd_workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
-      teachercon_2 = create :pd_workshop, :teachercon, facilitators: teachercon_1.facilitators, num_sessions: 5, num_completed_surveys: 10
+      teachercon_1 = create :workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+      teachercon_2 = create :workshop, :teachercon, facilitators: teachercon_1.facilitators, num_sessions: 5, num_completed_surveys: 10
 
       [teachercon_1, teachercon_2].each do |teachercon|
         teachercon.start!
@@ -61,8 +45,8 @@ module Api::V1::Pd
     end
 
     test 'teachercon survey report for workshop organizer' do
-      teachercon_1 = create :pd_workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
-      teachercon_2 = create :pd_workshop, :teachercon, organizer: teachercon_1.organizer, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+      teachercon_1 = create :workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+      teachercon_2 = create :workshop, :teachercon, organizer: teachercon_1.organizer, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
 
       [teachercon_1, teachercon_2].each do |teachercon|
         teachercon.start!
@@ -91,8 +75,8 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'teachercon survey report for program manager workshop organizer' do
-      teachercon_1 = create :pd_workshop, :teachercon, organizer: @program_manager, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
-      teachercon_2 = create :pd_workshop, :teachercon, organizer: teachercon_1.organizer, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+      teachercon_1 = create :workshop, :teachercon, organizer: @program_manager, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
+      teachercon_2 = create :workshop, :teachercon, organizer: teachercon_1.organizer, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
 
       [teachercon_1, teachercon_2].each do |teachercon|
         teachercon.start!
@@ -179,82 +163,62 @@ module Api::V1::Pd
       )
     end
 
-    test_user_gets_response_for(
-      :workshop_survey_report,
-      response: :forbidden,
-      user: :teacher,
-      params: -> {{workshop_id: @workshop.id}}
-    )
-
-    test 'facilitators can see results for local summer workshops' do
-      workshop = create :pd_workshop, :local_summer_workshop, facilitators: [@facilitator]
-      sign_in @facilitator
-
-      @controller.expects(:generate_workshop_daily_session_summary)
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
-      assert_response :success
-    end
-
-    test 'facilitators can see results for teachercons' do
-      workshop = create :pd_workshop, :teachercon, facilitators: [@facilitator]
-      sign_in @facilitator
-
-      @controller.expects(:generate_workshop_daily_session_summary)
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
-      assert_response :success
-    end
-
     test 'facilitators cannot see results for other types of workshops' do
-      workshop = create :pd_workshop, facilitators: [@facilitator]
+      workshop = create :csf_intro_workshop, facilitators: [@facilitator]
       sign_in @facilitator
 
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+      get :generic_survey_report, params: {workshop_id: workshop.id}
+      result = JSON.parse(@response.body)
+
       assert_response :bad_request
-      assert_equal(
-        {'error' => 'Only call this route for new academic year workshops, 5 day summer workshops, local or TeacherCon'},
-        JSON.parse(@response.body)
+      assert result['errors']&.present?
+      assert result['errors'].first["message"]&.start_with?(
+        'Action generic_survey_report should not be used for this workshop'
       )
     end
 
-    test 'facilitators see filtered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @facilitator,
-        expected_facilitator_name_filter: @facilitator.name
-      )
+    test 'generic_survey_report: return empty result for workshop without responds' do
+      ayw_ws = create :csp_academic_year_workshop
+
+      expected_result = {
+        "course_name" => nil,
+        "questions" => {},
+        "this_workshop" => {},
+      }
+
+      sign_in @admin
+      get :generic_survey_report, params: {workshop_id: ayw_ws.id}
+      result = JSON.parse(@response.body).slice(*expected_result.keys)
+
+      assert_equal expected_result, result
+      assert_response :success
     end
 
-    test 'workshop admins see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: create(:workshop_admin),
-        expected_facilitator_name_filter: nil
-      )
+    test 'generic_survey_report: CSF201 workshop uses new pipeline' do
+      csf_201_ws = create :csf_deep_dive_workshop
+
+      WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report)
+
+      sign_in @admin
+      get :generic_survey_report, params: {workshop_id: csf_201_ws.id}
+
+      assert_response :success
     end
 
-    test 'workshop organizers see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @workshop.organizer,
-        expected_facilitator_name_filter: nil
-      )
-    end
+    test 'generic_survey_report: CSF101 workshop cannot invoke this action' do
+      csf_101_ws = create :csf_intro_workshop
 
-    test 'program managers see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @program_manager,
-        expected_facilitator_name_filter: nil
-      )
+      WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
+      WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report).never
+      Honeybadger.expects(:notify)
+
+      sign_in @admin
+      get :generic_survey_report, params: {workshop_id: csf_101_ws.id}
+
+      assert_response :bad_request
     end
 
     private
-
-    def assert_workshop_survey_report_facilitator_query(user:, expected_facilitator_name_filter:)
-      @controller.expects(:generate_summary_report).with do |params|
-        params[:facilitator_name] == expected_facilitator_name_filter
-      end
-
-      sign_in user
-      get :workshop_survey_report, params: {workshop_id: @workshop.id}
-      assert_response :success
-    end
 
     def build_sample_data
       facilitator_1 = create(:facilitator, name: 'Cersei')
@@ -262,9 +226,9 @@ module Api::V1::Pd
       facilitators = [facilitator_1, facilitator_2]
       organizer = create :program_manager
       create :workshop_admin
-      workshop_1 = create(:pd_workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
-      workshop_2 = create(:pd_workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
-      create(:pd_workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
+      workshop_1 = create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
+      workshop_2 = create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
+      create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
 
       workshop_1.enrollments.each do |enrollment|
         hash = build :pd_local_summer_workshop_survey_hash

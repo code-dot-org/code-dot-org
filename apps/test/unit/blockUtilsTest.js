@@ -9,7 +9,7 @@ import {
   createJsWrapperBlockCreator
 } from '@cdo/apps/block_utils';
 import {parseElement, serialize} from '@cdo/apps/xml.js';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 import sinon from 'sinon';
 import {allowConsoleWarnings} from '../util/testUtils';
 

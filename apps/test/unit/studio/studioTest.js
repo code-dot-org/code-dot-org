@@ -4,7 +4,7 @@ import {
   restoreOnWindow,
   allowConsoleErrors
 } from '../../util/testUtils';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {SVG_NS} from '@cdo/apps/constants';
 import Studio, {
   setSvgText,

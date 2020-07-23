@@ -70,7 +70,7 @@ This is the format that is used by the block-based version of code in app lab.  
 <img src="https://images.code.org/dae61cab9a0c71fa0d9b6e819873a2b8-image-1479495762083.png" style="float: left; margin-right: 20px">
 <br><br>
 <span style="color: #00adbc; font-size: 150%">2.</span>
-Here is the formatting that's similar to the *AP* pseudocode with `if`, `else`, and all of the curly braces, each on their own line. This is a perfectly valid way to format code as well.
+Here is the formatting that's similar to the <i>AP</i> pseudocode with <code>if</code>, <code>else</code>, and all of the curly braces, each on their own line. This is a perfectly valid way to format code as well.
 
 <div style="clear: both">&nbsp;</div>
 

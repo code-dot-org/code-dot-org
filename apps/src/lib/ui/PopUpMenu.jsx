@@ -21,7 +21,7 @@ const menuStyle = {
   borderRadius: 2,
   boxShadow: '3px 3px 3px gray',
   textAlign: 'left',
-  maxWidth: 200
+  maxWidth: 300
 };
 const tailBorderStyle = {
   position: 'absolute',
@@ -71,10 +71,11 @@ export default class PopUpMenu extends Component {
           targetPoint={this.props.targetPoint}
           offset={this.props.offset}
           className={this.props.className}
-          children={this.props.children}
           showTail={this.props.showTail}
           style={this.props.style}
-        />
+        >
+          {this.props.children}
+        </MenuBubble>
       </Portal>
     );
   }

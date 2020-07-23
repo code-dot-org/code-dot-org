@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
-import $ from 'jquery';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+
+import {UnlocalizedTimeAgo} from '../TimeAgo';
 
 const styles = {
   card: {
@@ -84,19 +86,6 @@ export default class ProjectCard extends React.Component {
     isDetailView: PropTypes.bool
   };
 
-  getLastModifiedTimestamp(timestamp) {
-    if (timestamp.toLocaleString) {
-      return timestamp.toLocaleString();
-    }
-    return timestamp.toString();
-  }
-
-  componentDidMount() {
-    if ($('.versionTimestamp').timeago) {
-      $('.versionTimestamp').timeago();
-    }
-  }
-
   render() {
     const {projectData, currentGallery, isDetailView} = this.props;
     const {type, channel} = this.props.projectData;
@@ -120,7 +109,7 @@ export default class ProjectCard extends React.Component {
         <div style={styles.card}>
           <div style={thumbnailStyle}>
             <a
-              href={url}
+              href={studio(url)}
               style={{width: '100%'}}
               target={isPublicGallery ? '_blank' : undefined}
             >
@@ -132,7 +121,7 @@ export default class ProjectCard extends React.Component {
           </div>
           <a
             style={styles.titleLink}
-            href={url}
+            href={studio(url)}
             target={isPublicGallery ? '_blank' : undefined}
           >
             <div
@@ -159,25 +148,19 @@ export default class ProjectCard extends React.Component {
           {shouldShowPublishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
-              <time
+              <UnlocalizedTimeAgo
                 style={styles.bold}
-                className="versionTimestamp"
-                dateTime={projectData.publishedAt}
-              >
-                {this.getLastModifiedTimestamp(projectData.publishedAt)}
-              </time>
+                dateString={projectData.publishedAt}
+              />
             </div>
           )}
           {isPersonalGallery && projectData.updatedAt && (
             <div style={styles.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
-              <time
+              <UnlocalizedTimeAgo
                 style={styles.bold}
-                className="versionTimestamp"
-                dateTime={projectData.updatedAt}
-              >
-                {this.getLastModifiedTimestamp(projectData.updatedAt)}
-              </time>
+                dateString={projectData.updatedAt}
+              />
             </div>
           )}
         </div>

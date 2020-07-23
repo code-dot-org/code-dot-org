@@ -1,5 +1,5 @@
 name 'CSD Map: Set Scale'
 display_name 'Changing Sensor Scale'
 markdown <<MARKDOWN
-<object data="https://docs.code.org/csd/sensor_setScale/" type="text/html"  style="width: 100%; height: 500px;"></object>
+<object data="https://studio.code.org/docs/csd/sensor_setScale/" type="text/html"  style="width: 100%; height: 500px;"></object>
 MARKDOWN

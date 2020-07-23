@@ -48,6 +48,7 @@ The <code>if</code> statement and Boolean expression are also the same as before
 <span style="color: #00adbc; font-size: 150%">4.</span> Finally the program picks up normal execution directly after the <code>if-else</code> block. At this point in the program, we know that <em>either</em> the code in the if-block <em>or</em> the else block has executed.
 
 ## Optional: What if you wanted to type the code instead of using blocks?
+
 <img src="https://images.code.org/d873962609e99f821249fde2007ca1bb-image-1479494721725.gif" style="float: right; margin-left: 10px">
 
 You can always type any of the code we compose in blocks.  Here is an animation showing a programmer adding an `else` clause to an if-statement. Notice that you can freely go back and forth between blocks and text. With text you also have a bit more leeway with formating.  
@@ -70,7 +71,7 @@ This is the format that is used by the block-based version of code in app lab.  
 <img src="https://images.code.org/dae61cab9a0c71fa0d9b6e819873a2b8-image-1479495762083.png" style="float: left; margin-right: 20px">
 <br><br>
 <span style="color: #00adbc; font-size: 150%">2.</span>
-Here is the formatting that's similar to the *AP* pseudocode with `if`, `else`, and all of the curly braces, each on their own line. This is a perfectly valid way to format code as well.
+Here is the formatting that's similar to the <i>AP</i> pseudocode with <code>if</code>, <code>else</code>, and all of the curly braces, each on their own line. This is a perfectly valid way to format code as well.
 
 <div style="clear: both">&nbsp;</div>
 

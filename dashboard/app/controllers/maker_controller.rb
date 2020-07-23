@@ -1,7 +1,7 @@
 require 'cdo/script_constants'
 
 class MakerController < ApplicationController
-  authorize_resource class: :maker_discount, except: [:home, :setup]
+  authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code]
 
   # Maker Toolkit is currently used in CSD unit 6.
   # Retrieves the current CSD unit 6 level that the user is working on.
@@ -13,30 +13,43 @@ class MakerController < ApplicationController
     current_level = current_user.next_unpassed_progression_level(csd_unit_6_script)
     @csd_unit_6 = {
       assignableName: data_t_suffix('script.name', csd_unit_6_script[:name], 'title'),
-      lessonName: current_level.stage.localized_title,
+      lessonName: current_level.lesson.localized_title,
       linkToOverview: script_path(csd_unit_6_script),
       linkToLesson: script_next_path(csd_unit_6_script, 'next')
     }
   end
 
+  ScriptAndCourse = Struct.new(:script, :course)
+
   def self.maker_script(for_user)
-    if any_csd_2017?(for_user) && !any_csd_2018?(for_user)
-      Script.get_from_cache(Script::CSD6_NAME)
-    else
-      Script.get_from_cache(Script::CSD6_2018_NAME)
+    maker_unit_scripts = Script.maker_unit_scripts.
+        sort_by(&:version_year).
+        reverse.
+        freeze
+    csd_courses = UnitGroup.all_courses.select {|c| c.family_name == UnitGroup::CSD}.freeze
+    # maker_years is a list of (script, course) tuples containing all visible versions of the CSD Unit on Maker.
+    # Ordered from most recent to least.
+    maker_years = maker_unit_scripts.map do |s|
+      ScriptAndCourse.new(s, csd_courses.find {|c| s.version_year == c.version_year})
+    end.freeze
+
+    # Assigned course or script should take precedence - show most recent version that's been assigned.
+    assigned = for_user.section_courses + for_user.section_scripts
+    maker_years.each do |year|
+      if assigned.include?(year.course) || assigned.include?(year.script)
+        return year.script
+      end
     end
-  end
 
-  def self.any_csd_2017?(for_user)
-    !for_user.user_scripts.joins(:script).
-      where(scripts: {name: ScriptConstants::CATEGORIES[:csd]}).empty? ||
-      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2017))
-  end
+    # Otherwise, show the most recent version with progress.
+    script_names = maker_years.map {|sc| sc.script.name}
+    progress = UserScript.lookup_hash(for_user, script_names)
+    maker_years.each do |year|
+      return year.script if progress[year.script.name]
+    end
 
-  def self.any_csd_2018?(for_user)
-    !for_user.user_scripts.joins(:script).
-      where(scripts: {name: ScriptConstants::CATEGORIES[:csd_2018]}).empty? ||
-      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2018))
+    # If none of the above applies, default to most recent.
+    maker_years.find {|y| y.script.is_stable?}.script
   end
 
   def setup
@@ -62,7 +75,9 @@ class MakerController < ApplicationController
     # Ensure we have an existing application and the school is eligible
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
     return head :not_found unless application
-    return head :forbidden unless application.full_discount?
+
+    school = School.find(application.school_id)
+    return head :forbidden unless school.try(:maker_high_needs?)
 
     # validate that we're eligible (this should be visible already, but we should
     # never have submitted this request if not eligible in these ways
@@ -88,13 +103,29 @@ class MakerController < ApplicationController
     return head :forbidden if application && application.has_confirmed_school?
 
     # Create our application
-    application = CircuitPlaygroundDiscountApplication.create!(
+    # For 2020, applications by default get the non "full discount" (ie, without shipping)
+    CircuitPlaygroundDiscountApplication.create!(
       user: current_user,
       school_id: school_id,
-      full_discount: school.maker_high_needs?
+      full_discount: (%w(AK HI).include? school.state)
     )
 
-    render json: {full_discount: application.full_discount?}
+    render json: {school_high_needs_eligible: school.try(:maker_high_needs?)}
+  end
+
+  # GET /maker/login_code
+  # renders a page for users to enter a login key
+  def login_code
+  end
+
+  # GET /maker/display_code
+  # renders a page for users to copy and paste a login key
+  def display_code
+    # Generate encrypted code to display to user
+    user_auth = current_user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+    @secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
+    )
   end
 
   # POST /maker/complete

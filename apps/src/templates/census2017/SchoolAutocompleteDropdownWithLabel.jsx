@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
-import 'react-virtualized/styles.css';
-import 'react-select/dist/react-select.css';
-import 'react-virtualized-select/styles.css';
 import i18n from '@cdo/locale';
 import {styles} from './censusFormStyles';
 
@@ -35,13 +32,16 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     singleLineLayout: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
     schoolDropdownOption: PropTypes.object,
-    schoolFilter: PropTypes.func
+    schoolFilter: PropTypes.func,
+    disabled: PropTypes.bool,
+    includeSchoolNotFoundCheckbox: PropTypes.bool
   };
 
   schoolDropdown = undefined;
 
   static defaultProps = {
-    showRequiredIndicator: true
+    showRequiredIndicator: true,
+    includeSchoolNotFoundCheckbox: true
   };
 
   sendToParent = selectValue => {
@@ -66,7 +66,11 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
   };
 
   render() {
-    const {showRequiredIndicator, singleLineLayout} = this.props;
+    const {
+      showRequiredIndicator,
+      singleLineLayout,
+      includeSchoolNotFoundCheckbox
+    } = this.props;
     const questionStyle = {
       ...styles.question,
       ...(singleLineLayout && singleLineLayoutStyles)
@@ -100,18 +104,21 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
             onChange={this.sendToParent}
             schoolDropdownOption={this.props.schoolDropdownOption}
             schoolFilter={this.props.schoolFilter}
+            disabled={this.props.disabled}
           />
-          <label style={checkboxStyle}>
-            <input
-              id="schoolNotFoundCheckbox"
-              type="checkbox"
-              onChange={this.handleSchoolNotFoundCheckbox.bind(this)}
-              checked={schoolNotFound}
-            />
-            <span style={styles.checkboxOption}>
-              {i18n.schoolNotFoundCheckboxLabel()}
-            </span>
-          </label>
+          {includeSchoolNotFoundCheckbox && (
+            <label style={checkboxStyle}>
+              <input
+                id="schoolNotFoundCheckbox"
+                type="checkbox"
+                onChange={this.handleSchoolNotFoundCheckbox.bind(this)}
+                checked={schoolNotFound}
+              />
+              <span style={styles.checkboxOption}>
+                {i18n.schoolNotFoundCheckboxLabel()}
+              </span>
+            </label>
+          )}
         </div>
         {singleLineLayout && showError && errorDiv}
       </div>

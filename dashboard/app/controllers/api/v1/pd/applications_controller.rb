@@ -7,6 +7,7 @@ module Api::V1::Pd
     # Api::CsvDownload must be included after load_and_authorize_resource so the auth callback runs first
     include Api::CsvDownload
     include Pd::Application::ApplicationConstants
+    include Pd::SharedApplicationConstants
 
     REGIONAL_PARTNERS_ALL = "all"
     REGIONAL_PARTNERS_NONE = "none"
@@ -75,15 +76,6 @@ module Api::V1::Pd
         end
       end
     end
-
-    COHORT_VIEW_STATUSES = %w(
-      accepted
-      accepted_not_notified
-      accepted_notified_by_partner
-      accepted_no_cost_registration
-      paid
-      withdrawn
-    )
 
     # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_value=:regional_partner
     def cohort_view
@@ -180,9 +172,8 @@ module Api::V1::Pd
 
             if locked_param != @application.locked?
               lock_changed = true
+              locked_param ? @application.lock! : @application.unlock!
             end
-
-            locked_param ? @application.lock! : @application.unlock!
           end
         end
 
@@ -213,7 +204,7 @@ module Api::V1::Pd
       email = params[:email]
       user = User.find_by_email email
       filtered_applications = @applications.where(
-        application_year: YEAR_19_20,
+        application_year: APPLICATION_CURRENT_YEAR,
         application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
         user: user
       )

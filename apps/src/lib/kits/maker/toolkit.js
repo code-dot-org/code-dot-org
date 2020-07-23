@@ -4,8 +4,8 @@
  */
 import {getStore} from '../../../redux';
 import trackEvent from '../../../util/trackEvent';
-import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
-import FakeBoard from './FakeBoard';
+import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
+import FakeBoard from './boards/FakeBoard';
 import * as commands from './commands';
 import * as dropletConfig from './dropletConfig';
 import MakerError, {
@@ -16,6 +16,8 @@ import MakerError, {
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import MicroBitBoard from './boards/microBit/MicroBitBoard';
+import experiments from '@cdo/apps/util/experiments';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -63,12 +65,11 @@ export function connect({interpreter, onDisconnect}) {
   }
 
   if (currentBoard) {
-    return Promise.reject(
-      new Error(
-        'Attempted to connect Maker Toolkit when ' +
-          'an existing board is already connected.'
-      )
-    );
+    commands.injectBoardController(currentBoard);
+    currentBoard.installOnInterpreter(interpreter);
+    // When the board is reset, the components are disabled. Re-enable now.
+    currentBoard.enableComponents();
+    return Promise.resolve();
   }
 
   const store = getStore();
@@ -93,7 +94,10 @@ export function connect({interpreter, onDisconnect}) {
       commands.injectBoardController(currentBoard);
       currentBoard.installOnInterpreter(interpreter);
       if (typeof onDisconnect === 'function') {
-        currentBoard.once('disconnect', onDisconnect);
+        currentBoard.once('disconnect', () => {
+          onDisconnect();
+          disconnect();
+        });
       }
       dispatch(redux.reportConnected());
       trackEvent('Maker', 'ConnectionSuccess');
@@ -110,6 +114,27 @@ export function connect({interpreter, onDisconnect}) {
         return Promise.reject(error);
       }
     });
+}
+
+/**
+ * Called when the board disconnects
+ * Throw away reference to the currentBoard, so that next time we run
+ * we make a new board.
+ */
+function disconnect() {
+  if (!redux.isEnabled(getStore().getState())) {
+    return;
+  }
+
+  const setDisconnected = () => {
+    currentBoard = null;
+    getStore().dispatch(redux.disconnect);
+  };
+  if (currentBoard) {
+    currentBoard.destroy().then(setDisconnected);
+  } else {
+    setDisconnected();
+  }
 }
 
 /**
@@ -133,9 +158,14 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    return findPortWithViableDevice().then(
-      port => new CircuitPlaygroundBoard(port)
-    );
+    if (experiments.isEnabled(experiments.MICROBIT)) {
+      //TODO - break out the applicable parts of findPortWithViableDevice
+      return findPortWithViableDevice().then(() => new MicroBitBoard());
+    } else {
+      return findPortWithViableDevice().then(
+        port => new CircuitPlaygroundBoard(port)
+      );
+    }
   }
 }
 
@@ -149,22 +179,10 @@ function shouldRunWithFakeBoard() {
 
 /**
  * Called when execution of the student app ends.
- * Resets the board state, disconnects and destroys the current board controller,
- * and puts maker UI back in a default state.
+ * Resets the board state and puts maker UI back in a default state.
  */
 export function reset() {
-  if (!redux.isEnabled(getStore().getState())) {
-    return;
-  }
-
-  const setDisconnected = () => {
-    currentBoard = null;
-    getStore().dispatch(redux.disconnect());
-  };
-
   if (currentBoard) {
-    currentBoard.destroy().then(setDisconnected);
-  } else {
-    setDisconnected();
+    currentBoard.reset();
   }
 }

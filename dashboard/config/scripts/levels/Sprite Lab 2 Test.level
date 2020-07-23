@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2019-03-08T23:10:32.000Z",
   "level_num": "custom",
   "user_id": 9,
@@ -39,7 +39,7 @@
     "pause_animations_by_default": "false",
     "edit_code": "false",
     "helper_libraries": [
-      "GameLabJr"
+      "NativeSpriteLab"
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",

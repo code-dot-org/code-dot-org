@@ -1,35 +1,32 @@
 name 'U3L25 Student Lesson Introduction'
-encrypted 'IlRjjKfAf1znYCYCtlWm07d7VShg1Z3976mHlk+lUgT+rw8/yTEzPeFIhBKs
-rXoYURQULvUgha1xjvYecoP4LvIdcOjYa+SJ/g9C7qqXt9qhNDiooIUgk0gL
-nigeCzWikyVTZ5xKegiQ+UA2ZuHnNOSt8bSZFFdUlhijZC0ad7I/+j5eKhWZ
-i7VKzdTvhDeNFEbsudD7vIIzjPFr1xtg/LKBhGr60iTaqYNf6KDPrpg/gIr9
-YZoBd13+yrruDnQSkURQoXAxrZWgR1Pfag1u2UE5/ei9du0dtBWs1agZxXs3
-GRxqiKNipUaHs1mIifqLo7CWUP7DmkQoZAHY+IDkaOs6fvQfmBDTqARaQ2Xt
-lk/HEIjw1JMOdLSMkDIc6TRQVdMzvcfEFhCwt+UYrvhDAocjkciyu+Mviysw
-0wgscc2OqdZgv38ZIDb6F90YncIzHfu0Z5mlh1NaItnhvYYKb4YTfutc5VVO
-EVkX9Vqq9Q6IQ0L6oB+T5mOY0a6PfDuaInGRPgUHBwxx21UX8lglWvjiPWJA
-tKSdx1Y9Q5b5WyI4N84ytC5nwP2PzYuLnuAlDC1HNd9g+6+VtfRb0ic+Gp0x
-RZA0du3gcBP5ZfAI3v98Gsp4y1Dy2knJMSNkicRJA0iFA4NPWXDViyRXOZO1
-2/T1l/xI7IWiiPgL7eFo3MAW4kr8EYej2gii8r3x+WBs3cJVItbZSrHX4ITg
-4wTnDMzoKFz963okQwblNCN1zdfxE/fmJ7dU8/y7Z3Nn2mpJP1idJ0tusxLp
-lF4K9LAnv92CvkOLEj9QztRe2/gYGRLVISBBx/YW1A+VcQ3pmeq0WAwMc+Dr
-I3UCGzDuBtmajkQke6XAPHRT/ZeM9CbTASotx6E0uZJIyrnmfwdee00HvRhj
-LBUT77jXpZ2m+HUTJREIBE1HH1O3eLsmcRjVtkwvizQwrcthztQp4UEj2jst
-DlSUWyOSAGB4PdjWOEpM4CoOMAp5byWNTCLivpXPbR0oAjQHbTpixr7gwYHg
-8ajPubkkYEF2a/jTimgzesUs9sr8IKyycDvp/ccXwXucCu7N1MXK287qp0Ll
-uQXcwbxo9hDGpxlpeLrsGWyLVDGeJmV9OKxLBKeub09IKf0I4ZyC1ZdVPPVp
-93Q+OUypGhRyLuyZyOvCl+1MP57HVvUdDtp9Lyz/Ylw+c3xdCHFxY4ftQf3N
-aSJjsYVGpLZKTwTNAE02G5/F7qbC0i6I/ftfaZ786+sFGmc3lHfE0jP7NqYj
-8ZlGBsWGYDvMHBdtlv9KSiJ/0yc+Zff27X9yhLZd6/7U7qv/TEt+kZH0+HTI
-/yhWqky+5B53IIz9L+DyhvVPO55qcnSsoWtUPR4yW/J5zvx17IYKnpIykb85
-86cI24XpsXaRCrg8bk+2ykDo409WuB5H8C/cCqkgb5IiMmwWC6frp/olPtFG
-jt9cmuV9oEGnT/9+QDOJMVXZzkc8Ig9fIKfBBHgIfbOfXYxPa2Q78YpPp+NO
-bH2n0VIw3esKuQ952XK5cAeNirqoQLckgDIqvTJ7PW8kd9/LbNjL/jybT5WT
-asorBRJeqMJaHteQlwKUen5I7SEtBvnRSm/BVGOyX+zCMkq85q2PE94F+Xnj
-Xg+QHegeaZznb6QICInetzvAZ8TxIj61zD3hjaWDY4B0D1eAZ54XOxiphuU+
-WY22YDvQXNz5xOs++u5/2MvlMwXsRqSiBXxacbNtQp88DNVbyUaXBFMbipV3
-M1Vm98Gqhqob39i2sGwusmMmRsehI+w+VxRGhgn+zlak9HsfT0Uy8jDsHfP6
-XvfZVSVX9fF5K12K/33iSa+Zjf+oK+3fUvPlXVJPiQdKW+3LUwygKuvbSEQX
-LpdBzlVM2vdKvNcz62EiyytDoz48ZrP7ta5yskVSlefZ6goYFMSRf2VsuXCT
-4PJRWFgb95nNXZLCuy5ZiQ==
-'
+title 'Compound Conditionals'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 20 - Compound Conditional Logic
+
+## Background
+
+Compound conditionals allow programs to evaluate multiple Boolean expressions together using `AND`, `OR` and `NOT` operators. This enables programmers to write `if` statements with more complex conditions *without* having to deeply nest or chain together multiple `if`, `else`, `else-if` statements.
+
+## Lesson
+
+* Worksheet - Compound Conditionals (link below).  Evaluate `if-else` statements and compound conditionals composed of AND , OR , and NOT.
+* Practice writing compound boolean expressions in App Lab.
+* Add `if` statements that use compound boolean expressions to the Movie Bot example project.
+
+## Resources
+
+* Worksheet: <a href="https://docs.google.com/document/d/1hQay7DviSRYaVQr54ijMFgNhJNrnPt4-ASzHOxic5zM/" target="_blank"> Compound Conditionals</a>
+* Tutorial video: Introduction to Conditionals Part 3 - AND & OR Operators
+
+[![](https://images.code.org/c94773ce66507e5181d3a3966d27bb95-image-1571251375515.42.37 AM.png)](https://www.youtube.com/watch?v=kyFdniI-ZZs)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Answer Key:**
+
+[Worksheet KEY - Compound Conditionals](https://docs.google.com/document/d/1gRIUcz-g9pnZ-68cfmtgXa9V0mFIwLOVxNTNBSn5fLU)
+MARKDOWN

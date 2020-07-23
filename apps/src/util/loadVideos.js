@@ -1,8 +1,10 @@
 import testImageAccess from '../code-studio/url_test';
 
-export function loadVideos(force_fallback) {
-  if (force_fallback) {
-    setupVideos('fallback');
+// forcePlayer can be "youtube", "fallback", or false if we just want to
+// detect the appropriate player.
+export function loadVideos(forcePlayer) {
+  if (forcePlayer) {
+    setupVideos(forcePlayer);
   } else {
     testImageAccess(
       'https://www.youtube-nocookie.com/favicon.ico?' + Math.random(),
@@ -24,18 +26,14 @@ export function loadVideos(force_fallback) {
 // Parameter player is either "youtube" or "fallback".
 function setupVideos(player) {
   if (player === 'fallback') {
-    const doc = document,
-      video_css = doc.createElement('link'),
-      video = doc.createElement('script'),
-      video_ie = doc.createElement('script');
+    const doc = document;
+    let video_css = doc.createElement('link');
+    let video = doc.createElement('script');
 
     video_css.type = 'text/css';
     video_css.href = '/css/video-js.min.css';
     video_css.rel = 'stylesheet';
     doc.getElementsByTagName('head')[0].appendChild(video_css);
-    video_ie.type = 'text/javascript';
-    video_ie.src = '/js/videojs-ie8.min.js';
-    doc.body.appendChild(video_ie);
     video.type = 'text/javascript';
     video.src = '/js/video.min.js';
     doc.body.appendChild(video);
@@ -54,9 +52,10 @@ function setupVideos(player) {
           '<video ' +
             'style="position:absolute; top: 0; left: 0; width: 100%; height: 100%" ' +
             'width="100%" height="100%" ' +
-            'class="video-js lazyload" ' +
+            'class="video-js lazyload vjs-big-play-centered" ' +
             'preload="none" ' +
-            'controls preload="auto" >' +
+            'data-setup=\'{"nativeControlsForTouch": true}\' ' +
+            'controls>' +
             '  <source src="' +
             downloadPath +
             '" type="video/mp4"/>' +

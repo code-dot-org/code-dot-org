@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
-import GameLab from '@cdo/apps/gamelab/GameLab';
+import {expect} from '../../util/deprecatedChai';
+import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
 import Sounds from '@cdo/apps/Sounds';
 import {
   getStore,
@@ -10,7 +10,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import reducers from '@cdo/apps/gamelab/reducers';
+import reducers from '@cdo/apps/p5lab/reducers';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setExternalGlobals} from '../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
@@ -56,7 +56,8 @@ describe('GameLab', () => {
         setPageConstants: sinon.spy(),
         init: sinon.spy(),
         isUsingBlockly: () => false,
-        loadLibraries: () => Promise.resolve()
+        loadLibraries: () => Promise.resolve(),
+        loadLibraryBlocks: sinon.spy()
       };
     });
 
@@ -68,17 +69,16 @@ describe('GameLab', () => {
       beforeEach(() => instance.injectStudioApp(studioApp));
 
       describe('Muting', () => {
-        let muteSpy;
         let unmuteSpy;
         beforeEach(() => {
-          muteSpy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
           unmuteSpy = sinon.stub(Sounds.getSingleton(), 'unmuteURLs');
-          instance.gameLabP5.p5 = sinon.spy();
-          instance.gameLabP5.p5.allSprites = sinon.spy();
-          instance.gameLabP5.p5.allSprites.removeSprites = sinon.spy();
-          instance.gameLabP5.p5.redraw = sinon.spy();
-          instance.gameLabP5.setLoop = sinon.spy();
-          instance.gameLabP5.startExecution = sinon.spy();
+          instance.p5Wrapper.p5 = sinon.spy();
+          instance.p5Wrapper.p5.allSprites = sinon.spy();
+          instance.p5Wrapper.p5.allSprites.removeSprites = sinon.spy();
+          instance.p5Wrapper.p5.redraw = sinon.spy();
+          instance.p5Wrapper.p5.World = sinon.spy();
+          instance.p5Wrapper.setLoop = sinon.spy();
+          instance.p5Wrapper.startExecution = sinon.spy();
           instance.initInterpreter = sinon.spy();
           instance.onP5Setup = sinon.spy();
           instance.reset = sinon.spy();
@@ -89,22 +89,11 @@ describe('GameLab', () => {
         });
 
         afterEach(() => {
-          muteSpy.restore();
           unmuteSpy.restore();
         });
 
-        it('Rerun mutes URLs', () => {
-          instance.rerunSetupCode();
-          expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
-        });
-
-        it('Execute mutes if not looping', () => {
-          instance.execute(false /* shouldLoop */);
-          expect(Sounds.getSingleton().muteURLs).to.have.been.calledOnce;
-        });
-
-        it('Execute unmutes if looping', () => {
-          instance.execute(true /* shouldLoop */);
+        it('Execute unmutes URLs', () => {
+          instance.execute();
           expect(Sounds.getSingleton().unmuteURLs).to.have.been.calledOnce;
         });
       });

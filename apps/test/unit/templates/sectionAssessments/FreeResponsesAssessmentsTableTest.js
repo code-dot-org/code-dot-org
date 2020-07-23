@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import FreeResponsesAssessmentsTable from '@cdo/apps/templates/sectionAssessments/FreeResponsesAssessmentsTable';
 import {questionOne} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 
@@ -22,6 +22,7 @@ describe('FreeResponsesAssessmentsTable', () => {
     expect(tableHeaders).to.have.length(2);
 
     const tableRows = wrapper.find('tr');
-    expect(tableRows).to.have.length(5);
+    // Depends on length of the fixture - one row per answer, plus a header row.
+    expect(tableRows).to.have.length(questionOne.length + 1);
   });
 });

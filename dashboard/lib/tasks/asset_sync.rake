@@ -13,7 +13,12 @@ namespace :assets do
   desc 'Synchronize newly-added assets to S3'
   task sync: :record_manifest_files do
     m = manifest
-    changed_paths = (m.files.to_a - @manifest_files.to_a).
+
+    # Only compare digest to determine whether a path has changed.
+    new_files = m.files.transform_values {|f| f['digest']}.to_a
+    old_files = @manifest_files.transform_values {|f| f['digest']}.to_a
+
+    changed_paths = (new_files - old_files).
       map {|key, _| [key, File.join(m.dir, key)]}.to_h
     next if changed_paths.empty?
 
@@ -45,7 +50,7 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   end
 
   # Patch Sprockets to skip digesting already-digested webpack ('wp') assets.
-  # Webpack adds its own hash to imported image files and doesn't have any
+  # Webpack adds its own hash to various files and doesn't have any
   # knowledge of Sprockets digests, so the Sprockets processed-asset digest
   # path should equal the logical path for these assets.
   #
@@ -54,10 +59,25 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   # updated if there are any changes to Sprockets processors.
   module NoDoubleDigest
     def digest_path
-      logical_path.match?(/wp\h{32}/) ? logical_path : super
+      logical_path.match?(WP_REGEX) ? logical_path : super
     end
   end
   Sprockets::Asset.prepend NoDoubleDigest
+
+  # Patch Sprockets to un-digest logical paths being saved to manifest on disk.
+  # This allows webpack asset versions to be grouped together and deleted as expected by `assets:clean`.
+  module UnDigestManifest
+    def json_encode(obj)
+      obj['files'].each {|_, attrs| attrs['logical_path'].sub!(WP_REGEX, '')}
+      super
+    end
+  end
+  Sprockets::Manifest.prepend UnDigestManifest
+
+  # The webpack hash can be either a 20- or 32-character hexadecimal string.
+  # Search Gruntfile.js and webpack.js for [hash] and [contenthash] to
+  # see when webpack might generate content hashes of each length.
+  WP_REGEX = /wp\h{20,32}/
 end
 
 Rake::Task['assets:precompile'].enhance([:record_manifest_files]) do

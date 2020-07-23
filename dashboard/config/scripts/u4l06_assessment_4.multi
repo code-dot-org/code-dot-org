@@ -1,5 +1,5 @@
 name 'U4L06 Assessment 4'
-question '  In AppLab, when inserting a new row in a table a callback function is used:'
+question 'In AppLab, when inserting a new row in a table a callback function is used:'
 wrong 'to secure the data.'
 wrong 'to identify the user of the app.'
 wrong 'to allow for corrections in the inserted row.'

@@ -1,4 +1,5 @@
 require 'rest-client'
+require 'cdo/cache_method'
 
 class TestFlakiness
   def self.sauce_username
@@ -39,60 +40,82 @@ class TestFlakiness
   # Summarizes the job results from SauceLabs.
   # @param num_requests [Integer] The number of API calls.
   # @param per_request [Integer] The number of results per call.
-  # @return [Array] Of summary including name, and total and failed counts.
+  # @return [Hash] Of summary by name including total and failed counts.
   def self.summarize_by_job(num_requests = NUM_REQUESTS, per_request = PER_REQUEST)
     jobs = []
     num_requests.times do
       jobs += get_jobs(limit: per_request, skip: jobs.count)
     end
     jobs.group_by {|job| job['name']}.map do |name, samples|
-      {
-        name: name,
-        total: samples.count,
-        failed: samples.count {|job| !job["passed"]}
+      passed = samples.select {|job| job['passed']}
+      next if passed.empty?
+      summary = {
+        'name' => name,
+        'total' => samples.count,
+        'failed' => samples.count - passed.count,
+        'fail_rate' => (1.0 * (samples.count - passed.count) / samples.count).round(2),
+        'duration' => 1.0 * passed.sum {|job| job['end_time'].to_f - job['start_time'].to_f} / passed.count
       }
-    end
-  end
-
-  # Calculates the flakiness per test
-  # @return [Hash] The test name to flakiness score.
-  def self.calculate_test_flakiness
-    name_to_flakiness = {}
-    summarize_by_job.each do |summary|
-      if summary[:total] > MIN_SAMPLES
-        name_to_flakiness[summary[:name]] = (1.0 * summary[:failed] / summary[:total]).round(2)
-      end
-    end
-    name_to_flakiness
+      [name, summary]
+    end.compact.to_h
   end
 
   # Recommends a number of re-runs based on the flakiness score.
   # @param flakiness [Float] The flakiness score.
   # @return [Array] The recommended number of re-runs and confidence factor.
   def self.recommend_reruns(flakiness)
-    recommended_reruns = Math.log(MAX_FAILURE_RATE, flakiness).ceil
-    max_reruns = [1, [recommended_reruns, 5].min].max
+    recommended_reruns = Math.log(MAX_FAILURE_RATE, flakiness)
+    max_reruns = [1, [recommended_reruns, 5].min].max.ceil
     confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
     return [max_reruns, confidence]
   end
 
-  CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/flakiness.json").freeze
+  CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze
   CACHE_TTL = 86400 # 1 day of seconds
 
-  def self.cache_test_flakiness
+  using CacheMethod
+
+  cached def self.test_summary
     if File.exist?(CACHE_FILENAME) &&
         (Time.now - File.mtime(CACHE_FILENAME)) < CACHE_TTL
       return JSON.parse(File.read(CACHE_FILENAME))
     end
 
-    @@test_flakiness = calculate_test_flakiness
-
-    File.open(CACHE_FILENAME, 'w') {|f| f.write(JSON.dump(@@test_flakiness))}
-
-    @@test_flakiness
+    summarize_by_job.reject {|_, s| s['total'] < MIN_SAMPLES}.tap do |summary|
+      File.write(CACHE_FILENAME, JSON.dump(summary))
+    end
   end
 
-  def self.test_flakiness
-    @@test_flakiness ||= cache_test_flakiness
+  cached def self.test_flakiness
+    test_summary.transform_values {|s| s['fail_rate']}
+  end
+
+  cached def self.test_duration
+    test_summary.transform_values {|s| s['duration'].round(2)}
+  end
+
+  cached def self.test_estimate
+    test_summary.transform_values {|s| (recommend_reruns(s['fail_rate']).first * s['duration']).round(2)}
+  end
+
+  # Retrieves / calculates flakiness for given test run identifier.
+  # Combines all values containing the provided identifier as a prefix into a combined summary.
+  cached def self.summary_for(method, test_run_identifier)
+    flakiness = self.method(method).call
+
+    # Combine all scenario-specific identifiers.
+    scenario_estimates = flakiness.select {|name, _| name =~ /#{test_run_identifier}.+/}
+    scenario = scenario_estimates.values.sum
+    scenario = scenario.to_f / scenario_estimates.length if method == :test_flakiness
+
+    feature = flakiness[test_run_identifier]
+    if scenario_estimates.empty?
+      feature
+    elsif feature.nil?
+      scenario
+    else
+      # If values for scenarios and feature both exist, average the two.
+      (scenario + feature) / 2.0
+    end
   end
 end

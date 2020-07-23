@@ -108,11 +108,13 @@ class TopCourse extends Component {
         </div>
         <div style={[styles.buttonBox, localeStyle]}>
           <Button
+            __useDeprecatedTag
             href={linkToOverview}
             color={Button.ButtonColor.gray}
             text={i18n.viewCourse()}
           />
           <Button
+            __useDeprecatedTag
             href={linkToLesson}
             color={Button.ButtonColor.orange}
             text={i18n.continueLesson()}

@@ -22,7 +22,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     @plc_course_unit = create :plc_course_unit, plc_course: @plc_course
     @learning_module = create :plc_learning_module, plc_course_unit: @plc_course_unit
 
-    @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
+    @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson
     @script = @script_level.script
 
     @user = create :user
@@ -35,9 +35,6 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   setup do
     @script.reload
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
-
     PeerReviewMailer.stubs(:review_completed_receipt).returns(stub(:deliver_now))
   end
 
@@ -47,14 +44,6 @@ class PeerReviewTest < ActiveSupport::TestCase
     end
 
     assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status).to_set
-  end
-
-  test 'submitting a peer reviewed level when I am not enrolled in the module should not create PeerReview objects' do
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(false)
-
-    assert_no_difference('PeerReview.count') do
-      track_progress @level_source.id
-    end
   end
 
   test 'submitting a non peer reviewable level should not create Peer Review objects' do
@@ -245,10 +234,6 @@ class PeerReviewTest < ActiveSupport::TestCase
     submitter_2 = create :teacher
     submitter_3 = create :teacher
 
-    [submitter_1, submitter_2, submitter_3].each do |submitter|
-      Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: submitter.id, plc_learning_module: @learning_module).returns(true)
-    end
-
     level_source_1 = create(:level_source, data: 'Some answer')
     level_source_2 = create(:level_source, data: 'Other answer')
     level_source_3 = create(:level_source, data: 'Unreviewed answer')
@@ -397,7 +382,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_1, level_2, level_3 = create_list(:free_response, 4, peer_reviewable: true)
 
     [level_1, level_2, level_3].each do |level|
-      script_level = create :script_level, levels: [level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
+      script_level = create :script_level, levels: [level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson
       level_source = create :level_source, level: level
       track_progress(level_source.id, @user, script_level)
     end
@@ -414,7 +399,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     base_expected = {
       submitter: @user.name,
       course_name: @plc_course.name,
-      unit_name: @learning_module.name,
+      unit_name: @plc_course_unit.name,
     }
 
     level_1_pr_1 = PeerReview.find_by(level: level_1, status: nil)
@@ -525,7 +510,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   def track_progress(level_source_id, user = @user, script_level = @script_level)
     # this is what creates the peer review objects
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: user.id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,

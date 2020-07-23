@@ -1,8 +1,6 @@
-module UserMultiAuthHelper
-  def set_multi_auth_status
-    migrate_to_multi_auth if CDO.new_users_use_multi_auth
-  end
+require 'cdo/honeybadger'
 
+module UserMultiAuthHelper
   def oauth_tokens_for_provider(provider)
     if migrated?
       authentication_option = AuthenticationOption.find_by(
@@ -92,7 +90,8 @@ module UserMultiAuthHelper
     self.oauth_token = nil
     self.oauth_token_expiration = nil
     self.oauth_refresh_token = nil
-    save
+    save!
+    reload
   end
 
   def demigrate_from_multi_auth
@@ -119,5 +118,6 @@ module UserMultiAuthHelper
 
     authentication_options.delete_all
     save
+    reload
   end
 end

@@ -14,17 +14,18 @@ module Cdo
     # Returns a MemCacheStore if memcached is configured, otherwise nil.
     def self.memcached
       @@memcached ||= begin
+        memcached_hosts = CDO.memcached_hosts
         # Use dalli-elasticache for AWS ElastiCache Auto Discovery of Memcached nodes.
         if CDO.memcached_endpoint
           begin
-            CDO.memcached_hosts = Dalli::ElastiCache.new(CDO.memcached_endpoint).servers
+            memcached_hosts = Dalli::ElastiCache.new(CDO.memcached_endpoint).servers
           rescue => e # Notify if Auto Discovery fails.
             Honeybadger.notify(e)
           end
         end
-        return nil unless CDO.memcached_hosts.present?
+        return nil unless memcached_hosts.present?
 
-        ActiveSupport::Cache::MemCacheStore.new CDO.memcached_hosts, {
+        ActiveSupport::Cache::MemCacheStore.new memcached_hosts, {
           value_max_bytes: 64.megabytes # max size of single value
         }
       end
@@ -40,4 +41,4 @@ module Cdo
   end
 end
 
-CDO.shared_cache = Cdo::SharedCache.cache
+CDO_SHARED_CACHE = Cdo::SharedCache.cache

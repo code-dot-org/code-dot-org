@@ -3,6 +3,8 @@ import React from 'react';
 import yaml from 'js-yaml';
 import SetupChecklist from './SetupChecklist';
 import SetupChecker from '../util/SetupChecker';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 import {
   isCodeOrgBrowser,
   isChromeOS,
@@ -10,7 +12,6 @@ import {
   isWindows,
   isLinux
 } from '../util/browserChecks';
-import SurveySupportSection from './SurveySupportSection';
 import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
@@ -77,16 +78,16 @@ class Downloads extends React.Component {
     return (
       <div>
         <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
-          <button value={WINDOWS}>
+          <button type="button" value={WINDOWS}>
             <FontAwesome icon="windows" /> Windows
           </button>
-          <button value={MAC}>
+          <button type="button" value={MAC}>
             <FontAwesome icon="apple" /> Mac
           </button>
-          <button value={LINUX}>
+          <button type="button" value={LINUX}>
             <FontAwesome icon="linux" /> Linux
           </button>
-          <button value={CHROMEBOOK}>
+          <button type="button" value={CHROMEBOOK}>
             <FontAwesome icon="chrome" /> Chromebook
           </button>
         </ToggleGroup>
@@ -94,7 +95,9 @@ class Downloads extends React.Component {
         {MAC === platform && <MacDownloads />}
         {LINUX === platform && <LinuxDownloads />}
         {CHROMEBOOK === platform && <ChromebookInstructions />}
-        <SurveySupportSection />
+        <h2>{i18n.support()}</h2>
+        <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
+        <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
       </div>
     );
   }
@@ -122,6 +125,7 @@ class WindowsDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Windows (${
               installer.version
             })`}
@@ -173,6 +177,7 @@ class MacDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Mac (${installer.version})`}
             icon="download"
             color={ButtonColor.orange}
@@ -223,6 +228,7 @@ class LinuxDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Linux (${
               installer.version
             })`}

@@ -2,7 +2,7 @@
   "category": "Actions",
   "config": {
     "func": "moveInDirection",
-    "blockText": "aalab move {SPRITE} {DISTANCE} pixels {DIRECTION}",
+    "blockText": "move {SPRITE} {DISTANCE} pixels {DIRECTION}",
     "args": [
       {
         "name": "SPRITE",

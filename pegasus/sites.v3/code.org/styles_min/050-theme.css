@@ -74,11 +74,6 @@ body {
 
 
 /* styling for the embedded dashboard components... */
-#user_hero #contents {
-  margin: 10px 0px;
-  padding-left: 5px;
-  width: 100%;
-}
 
 #sign_in_or_user {
   margin: .6875em 0 0 30px;

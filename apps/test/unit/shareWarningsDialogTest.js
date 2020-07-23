@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';
@@ -112,7 +112,7 @@ describe('ShareWarningsDialog', () => {
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
     expect(dialog).to.containMatchingElement(
-      <button>{commonMsg.dialogOK()}</button>
+      <button type="button">{commonMsg.dialogOK()}</button>
     );
     expect(closeSpy).not.to.have.been.called;
     dialog.find('button').simulate('click');
@@ -133,7 +133,7 @@ describe('ShareWarningsDialog', () => {
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
     expect(dialog).to.containMatchingElement(
-      <button>{commonMsg.dialogOK()}</button>
+      <button type="button">{commonMsg.dialogOK()}</button>
     );
     expect(closeSpy).not.to.have.been.called;
     dialog.find('button').simulate('click');
@@ -154,7 +154,7 @@ describe('ShareWarningsDialog', () => {
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
     expect(dialog).to.containMatchingElement(
-      <button>{commonMsg.dialogOK()}</button>
+      <button type="button">{commonMsg.dialogOK()}</button>
     );
     expect(closeSpy).not.to.have.been.called;
     const ageDropdown = dialog.find('AgeDropdown');
@@ -181,7 +181,7 @@ describe('ShareWarningsDialog', () => {
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
     expect(dialog).to.containMatchingElement(
-      <button>{commonMsg.dialogOK()}</button>
+      <button type="button">{commonMsg.dialogOK()}</button>
     );
     expect(closeSpy).not.to.have.been.called;
     expect(tooYoungSpy).not.to.have.been.called;

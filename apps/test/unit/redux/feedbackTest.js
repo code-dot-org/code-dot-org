@@ -1,5 +1,5 @@
 import reducer, * as feedback from '@cdo/apps/redux/feedback';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 
 describe('feedback redux module', () => {
   it('has expected default state', () => {

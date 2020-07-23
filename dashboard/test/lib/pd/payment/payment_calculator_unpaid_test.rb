@@ -3,14 +3,13 @@ require 'test_helper'
 module Pd::Payment
   class PaymentCalculatorUnpaidTest < ActiveSupport::TestCase
     setup do
-      @workshop = create :pd_ended_workshop,
+      @workshop = create :workshop,
+        :ended,
         funded: true,
         on_map: true,
         course: Pd::Workshop::COURSE_CSD,
-        num_sessions: 2
-
-      # 2 facilitators
-      @workshop.facilitators += create_list(:facilitator, 2)
+        num_sessions: 2,
+        num_facilitators: 2
 
       # 10 qualified teachers: 1 at partial (1 day) attendance, and 9 more at full (2 days) attendance
       create :pd_workshop_participant, workshop: @workshop,

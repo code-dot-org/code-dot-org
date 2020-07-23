@@ -1,4 +1,6 @@
 name 'Social Sleuth_2018_2019'
+editor_experiment ''
+display_name 'Social Sleuth'
 
 teacher_markdown <<MARKDOWN
 #### Social Sleuth

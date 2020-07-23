@@ -30,10 +30,12 @@ Dashboard::Application.configure do
   #config.action_mailer.perform_deliveries = false
   #config.action_mailer.raise_delivery_errors = false
 
-  # If you want to use mailcatcher, use these options instead:
-  #   config.action_mailer.perform_deliveries = true
-  #   config.action_mailer.delivery_method = :smtp
-  #   config.action_mailer.smtp_settings = { address: 'localhost', port: 1025 }
+  # If you want to use mailcatcher, specify `use_mailcatcher: true` in locals.yml.
+  if CDO.use_mailcatcher
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {address: 'localhost', port: 1025}
+  end
   # and run:
   #   `gem install mailcatcher`
   #   `mailcatcher --ip=0.0.0.0`
@@ -49,20 +51,14 @@ Dashboard::Application.configure do
   # number of complex assets.
   # config.assets.debug = true
 
-  config.assets.digest = false
-
   config.assets.quiet = true
 
-  # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = true
+  # skip precompiling of all assets on the first request for any asset.
+  config.assets.check_precompiled_asset = false
 
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time
   config.skip_script_preload = true
-
-  # Disable this for developers by default, it won't make much sense because we
-  # have our own db.
-  CDO.disable_s3_image_uploads = true
 
   # Set to :debug to see everything in the log.
   config.log_level = :debug

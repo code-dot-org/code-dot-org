@@ -5,6 +5,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
     only: [:join_session, :confirm_join_session]
 
+  def csd_or_csp_workshop
+    [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].include?(@workshop.course)
+  end
+
   # GET /pd/workshops/1/enroll
   def new
     view_options(no_footer: true, answerdash: true)
@@ -30,15 +34,15 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           workshop_enrollment_status: "full"
         }.to_json
       }
-    elsif [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].include?(@workshop.course) && !current_user
+    elsif !current_user
       render :logged_out
+    elsif current_user.teacher? && !current_user.email.present?
+      render '/pd/application/teacher_application/no_teacher_email'
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
-      if current_user
-        @enrollment.full_name = current_user.name
-        @enrollment.email = current_user.email
-        @enrollment.email_confirmation = current_user.email
-      end
+      @enrollment.full_name = current_user.name
+      @enrollment.email = current_user.email
+      @enrollment.email_confirmation = current_user.email
 
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
 
@@ -56,11 +60,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }
       end
 
-      sign_in_prompt_data = {
-        info_icon: ActionController::Base.helpers.asset_url("info_icon.png", type: :image),
-        sign_in_url: CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
-      }
-
       # We only want to ask each signed-in teacher about demographics once a year.
       # In this enrollment, we'll only ask if they haven't already submitted a
       # teacher application for the current year (since it asks the same), and if
@@ -76,15 +75,16 @@ class Pd::WorkshopEnrollmentController < ApplicationController
             {
               organizer: @workshop.organizer,
               regional_partner: @workshop.regional_partner,
-              course_url: @workshop.course_url
+              course_url: @workshop.course_url,
+              fee: @workshop.fee,
+              properties: nil
             }
           ),
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
-          sign_in_prompt_data: sign_in_prompt_data,
           workshop_enrollment_status: "unsubmitted",
-          previous_courses: Pd::TeacherCommonApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
+          previous_courses: Pd::Teacher2021ApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
           collect_demographics: collect_demographics
         }.to_json
       }

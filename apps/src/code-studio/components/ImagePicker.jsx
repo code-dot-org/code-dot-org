@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {getStore} from '@cdo/apps/redux';
 import AssetManager from './AssetManager';
 import color from '../../util/color';
 import IconLibrary from './IconLibrary';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 
 const extensionFilter = {
-  image: '.jpg, .jpeg, .gif, .png',
+  // Note: .jfif files will be converted to .jpg by the server.
+  image: '.jpg, .jpeg, .jfif, .gif, .png',
   audio: '.mp3',
   document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx'
 };
@@ -82,7 +84,7 @@ export default class ImagePicker extends React.Component {
       !this.props.typeFilter || this.props.typeFilter === 'image';
     if (this.props.assetChosen && imageTypeFilter) {
       modeSwitch = (
-        <div>
+        <div id="modeSwitch">
           <p onClick={this.setFileMode} style={styles.fileModeToggle}>
             My Files
           </p>
@@ -95,7 +97,15 @@ export default class ImagePicker extends React.Component {
     }
 
     const disableAudio =
-      this.props.disableAudioRecording || this.props.assetChosen;
+      this.props.disableAudioRecording || !!this.props.assetChosen;
+
+    const reduxState = getStore().getState();
+    let levelName, isStartMode;
+    if (reduxState && reduxState.level) {
+      levelName = reduxState.level.name;
+      isStartMode = reduxState.level.isStartMode;
+    }
+
     const body =
       !this.props.assetChosen || this.state.mode === 'files' ? (
         <AssetManager
@@ -109,6 +119,8 @@ export default class ImagePicker extends React.Component {
           disableAudioRecording={disableAudio}
           imagePicker={true}
           elementId={this.props.elementId}
+          levelName={levelName}
+          isStartMode={isStartMode}
         />
       ) : (
         <IconLibrary assetChosen={this.getAssetNameWithPrefix} />

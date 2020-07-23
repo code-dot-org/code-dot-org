@@ -89,6 +89,7 @@ export function GoButton(props) {
   const {className, ...rest} = props;
   return (
     <button
+      type="button"
       className={classNames('primary', className)}
       style={style.GoButton}
       {...rest}

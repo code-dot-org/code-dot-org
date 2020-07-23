@@ -22,7 +22,7 @@ const JSDebuggerState = Immutable.Record({
   observer: null,
   watchIntervalId: null,
   commandHistory: null,
-  logOutput: '',
+  logOutput: [],
   maxLogLevel: '',
   isOpen: false
 });
@@ -45,6 +45,10 @@ function getRunApp(state) {
 
 export function isPaused(state) {
   return state.runState.isDebuggerPaused;
+}
+
+export function isEditWhileRun(state) {
+  return state.runState.isEditWhileRun;
 }
 
 function getObserver(state) {
@@ -83,6 +87,7 @@ export const selectors = {
   getCommandHistory,
   getJSInterpreter,
   isPaused,
+  isEditWhileRun,
   isAttached,
   canRunNext,
   getLogOutput,
@@ -102,6 +107,9 @@ export function initialize({runApp}) {
  */
 export function appendLog(output, level) {
   return (dispatch, getState) => {
+    // Errors and warnings should circumvent the react-inspector because they have
+    // their own styling
+    output['skipInspector'] = level === 'ERROR' || level === 'WARNING';
     const logLevel = level && level.toLowerCase();
     dispatch({type: APPEND_LOG, output, logLevel});
     if (!isOpen(getState())) {
@@ -122,7 +130,7 @@ export function attach(jsInterpreter) {
       dispatch(open());
     });
     observer.observe(jsInterpreter.onExecutionWarning, output =>
-      dispatch(appendLog(output, 'WARNING'))
+      dispatch(appendLog({output: output}, 'WARNING'))
     );
 
     const watchIntervalId = setInterval(() => {
@@ -241,16 +249,15 @@ export const actions = {
 
 // reducer
 
-function appendLogOutput(logOutput, output) {
-  if (logOutput.length > 0) {
-    logOutput += '\n';
-  }
-  if (typeof output !== 'string' && !(output instanceof String)) {
-    output = JSON.stringify(output);
-  }
+function appendLogOutput(logOutput, output, type) {
+  logOutput = logOutput || [];
+  switch (type) {
+    case APPEND_LOG:
+      return [...logOutput, output];
 
-  logOutput += output;
-  return logOutput;
+    default:
+      return logOutput;
+  }
 }
 
 function computeNewMaxLogLevel(prevMaxLogLevel, newLogLevel) {
@@ -282,11 +289,14 @@ export function reducer(state, action) {
     });
   } else if (action.type === APPEND_LOG) {
     return state.merge({
-      logOutput: appendLogOutput(state.logOutput, action.output),
+      logOutput: appendLogOutput(state.logOutput, action.output, action.type),
       maxLogLevel: computeNewMaxLogLevel(state.maxLogLevel, action.logLevel)
     });
   } else if (action.type === CLEAR_LOG) {
-    return state.merge({logOutput: '', maxLogLevel: ''});
+    return state.merge({
+      logOutput: [],
+      maxLogLevel: ''
+    });
   } else if (action.type === DETACH) {
     return state.merge({
       jsInterpreter: null,

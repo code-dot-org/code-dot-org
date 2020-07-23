@@ -12,7 +12,7 @@ export default class ColorPickerPropertyRow extends React.Component {
   };
 
   state = {
-    value: this.props.initialValue,
+    colorPickerText: this.props.initialValue,
     displayColorPicker: false
   };
 
@@ -22,6 +22,13 @@ export default class ColorPickerPropertyRow extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('mousedown', this.handlePageClick);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const {initialValue} = nextProps;
+    if (this.props.initialValue !== initialValue) {
+      this.setState({colorPickerText: initialValue});
+    }
   }
 
   handlePageClick = e => {
@@ -34,24 +41,20 @@ export default class ColorPickerPropertyRow extends React.Component {
     }
   };
 
-  handleChangeInternal = event => {
-    this.changeColor(event.target.value);
-  };
-
   handleColorChange = color => {
     if (color.rgb.a === 1) {
       // no transparency set
-      this.changeColor(color.hex);
+      this.changeElementColor(color.hex);
     } else {
-      this.changeColor(
+      this.changeElementColor(
         `rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`
       );
     }
   };
 
-  changeColor(color) {
+  changeElementColor(color) {
     this.props.handleChange(color);
-    this.setState({value: color});
+    this.setState({colorPickerText: color});
   }
 
   toggleColorPicker = () => {
@@ -60,13 +63,13 @@ export default class ColorPickerPropertyRow extends React.Component {
 
   render() {
     const buttonStyle = {
-      backgroundColor: this.state.value,
+      backgroundColor: this.state.colorPickerText,
       verticalAlign: 'top'
     };
     let colorPicker = this.state.displayColorPicker ? (
       <ColorPicker
         ref="colorPicker"
-        color={this.state.value}
+        color={this.state.colorPickerText}
         onChangeComplete={this.handleColorChange}
       />
     ) : null;
@@ -75,13 +78,17 @@ export default class ColorPickerPropertyRow extends React.Component {
         <div style={rowStyle.description}>{this.props.desc}</div>
         <div>
           <input
-            value={this.state.value}
-            onChange={this.handleChangeInternal}
+            value={this.state.colorPickerText}
+            onChange={e => this.setState({colorPickerText: e.target.value})}
+            onBlur={e => this.changeElementColor(e.target.value)}
             style={rowStyle.input}
           />
           <button
             ref="button"
-            className={this.state.value === '' ? 'rainbow-gradient' : undefined}
+            type="button"
+            className={
+              this.state.colorPickerText === '' ? 'rainbow-gradient' : undefined
+            }
             style={buttonStyle}
             onClick={this.toggleColorPicker}
           />

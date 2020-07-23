@@ -1,0 +1,544 @@
+# See config/README.md for info on this config format.
+
+env:
+_env:       <%=env == 'production' ? '' : "_#{env}"%>
+unit_test:  <%=!!ENV['UNIT_TEST']%>
+ci:         <%=!!ENV['CI']%>
+ci_test:    <%=unit_test || ci%>
+root_dir:   <%=__dir__%>
+name:       <%=`hostname`.strip%>
+rack_env:   :<%=env%>
+rack_envs:
+  - :development
+  - :production
+  - :adhoc
+  - :staging
+  - :test
+  - :levelbuilder
+  - :integration
+
+#### Third-party API credentials / configuration
+
+# OAuth provider credentials, used by Omniauth for authentication.
+dashboard_facebook_key:         !Secret
+dashboard_facebook_secret:      !Secret
+dashboard_google_key:           !Secret
+dashboard_google_secret:        !Secret
+dashboard_windowslive_key:      !Secret
+dashboard_windowslive_secret:   !Secret
+dashboard_microsoft_key:        !Secret
+dashboard_microsoft_secret:     !Secret
+dashboard_clever_key:           !Secret
+dashboard_clever_secret:        !Secret
+dashboard_schoolproject_key:    !Secret
+dashboard_schoolproject_secret: !Secret
+
+# Recaptcha
+recaptcha_site_key: !Secret
+recaptcha_secret_key: !Secret
+
+# Logentries (aka 'slog')
+logentries_secret: !Secret
+slog_token:
+
+# Twilio
+twilio_auth:               !Secret
+twilio_auth_test:          !Secret
+twilio_messaging_service:  !Secret
+twilio_phone_test_forward:
+twilio_phone_test_to:
+twilio_sid:                !Secret
+twilio_sid_test:           !Secret
+
+# Jotform
+jotform_api_key: !Secret
+jotform_min_dates:
+jotform_forms:
+  academic_year_1:
+    day_1:         92125650301142
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_2:
+    day_1:         92125614667157
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_3:
+    day_1:         92125413150141
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_4:
+    day_1:         92125122319145
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_1_2:
+    day_1:         92125650301142
+    day_2:         92125614667157
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  academic_year_3_4:
+    day_1:         92125413150141
+    day_2:         92125122319145
+    facilitator:   91372090131144
+    post_workshop: 92125916725157
+  virtual_1:
+    day_1:         92175136628158
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_2:
+    day_1:         92175665906164
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_3:
+    day_1:         92175784085164
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_4:
+    day_1:         92175722303149
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_5:
+    day_1:         92175483700154
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_6:
+    day_1:         92175857756170
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_7:
+    day_1:         92175683174161
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  virtual_8:
+    day_1:         92175542003146
+    facilitator:   92175282703154
+    post_workshop: 92174983603160
+  local:
+    day_0:       81307473693159
+    day_1:       81236323593153
+    day_2:       81368536787170
+    day_3:       81368909887175
+    day_4:       81368069687170
+    day_5:       81495142793161
+    facilitator: 81276605393158
+  local_summer:
+    day_0:       90986490369171
+    day_1:       90986506471163
+    day_2:       90986458251165
+    day_3:       90986477669179
+    day_4:       90986953273169
+    day_5:       90986517815167
+    facilitator: 91372090131144
+  post_course:
+    2018-2019: 90486182774164
+  csf:
+    pre201:      90066184161150
+    post201:     90065524560150
+    facilitator: 91405279991164
+
+# Learning Tools Interoperability (LTI)
+lti_credentials: !Secret
+
+# PagerDuty
+pagerduty_token: !Secret
+
+# Pardot
+pardot_password:
+pardot_user_key:
+pardot_username:
+
+# Honeybadger
+honeybadger_api_token:
+cronjobs_honeybadger_api_key:  !Secret
+dashboard_honeybadger_api_key: !Secret
+pegasus_honeybadger_api_key:   !Secret
+
+# Zendesk
+zendesk_dev_token: !Secret
+
+# Webpurify
+webpurify_key: !Secret
+
+# Github
+github_access_token:   !Secret
+github_webhook_secret:
+
+# Google API credentials (various)
+google_maps_client_id:    !Secret
+google_maps_api_key:
+google_maps_secret:       !Secret
+ga_account:               !Secret
+ga_profile_id:            !Secret
+google_safe_browsing_key: !Secret
+gdrive_export_secret:     !Secret
+
+# Mapbox
+mapbox_upload_token:
+mapbox_access_token:      !Secret
+
+# Crowdin
+crowdin_codeorg_api_key:
+
+# Azure Content Moderator
+azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
+azure_content_moderation_key:
+
+# Credentials for SauceLabs.com, used for running selenium tests against
+# multiple browsers
+saucelabs_username:
+saucelabs_authkey:
+
+# Credentials for applitools.com, used for running automated visual tests
+applitools_eyes_api_key:      !Secret
+applitools_eyes_api_key_view:
+
+# Slack API credentials
+slack_set_last_dtt_green_token:
+slack_start_build_token:
+slack_endpoint:                 !Secret
+slack_token:                    !Secret
+slack_log_room:                 <%=env%>
+hip_chat_logging:               false
+# Logging endpoint used by broken link checker.
+slack_endpoint_broken_links:
+
+# Credentials/configuration for connecting to Firebase to use data blocks or data browser
+# in Applab.
+firebase_name: cdo-v3-<%=env%>
+firebase_secret: !Secret
+firebase_shared_secret: !Secret
+firebase_channel_id_suffix: ''
+firebase_max_channel_writes_per_15_sec: 300
+firebase_max_channel_writes_per_60_sec: 600
+firebase_max_table_count: 10
+firebase_max_table_rows: 20000
+firebase_max_record_size: 4096
+firebase_max_property_size: 4096
+
+# Azure keys for speech service
+azure_speech_service_key: !Secret
+azure_speech_service_region: !Secret
+
+# Configuration Options for Pusher.com integration
+# Optional for most devs, very useful if working on Internet Simulator
+use_pusher: false
+pusher_app_id:             !Secret
+pusher_application_key:    !Secret
+pusher_application_secret: !Secret
+
+# Configuration options for Acapela-Group.com integration
+use_acapela:
+acapela_login:
+acapela_storage_app:
+acapela_storage_password:
+acapela_ephemeral_app:
+acapela_ephemeral_password:
+
+# Credentials for new relic logging. Used to log apps build times.
+new_relic_license_key:
+newrelic_logging: false
+
+# Credentials for Google-federated AWS access.
+aws_role:
+google_client_id:
+google_client_secret:
+
+# Static AWS SDK credentials (prefer Google-federated authentication if possible).
+aws_region: us-east-1
+aws_access_key:
+aws_secret_key:
+
+# Amazon Future Engineer integration
+afe_pardot_form_handler_url:
+csta_jotform_api_key: !Secret
+csta_jotform_form_id: !Secret
+
+### Service configurations (urls, endpoints, etc)
+
+freegeoip_host:
+geocoder_redis_url:
+solr_server: localhost
+
+# S3 bucket and (environment-specific) path-prefix configuration
+assets_bucket:             cdo-dist
+assets_bucket_prefix:      <%=env%>
+files_s3_bucket:           cdo-v3-files
+files_s3_directory:        files<%=_env%>
+animations_s3_bucket:      cdo-v3-animations
+animations_s3_directory:   animations<%=_env%>
+assets_s3_bucket:          cdo-v3-assets
+assets_s3_directory:       assets<%=_env%>
+sources_s3_bucket:         cdo-v3-sources
+sources_s3_directory:      sources<%=_env%>
+libraries_s3_bucket:       cdo-v3-libraries
+libraries_s3_directory:    libraries<%=_env%>
+videos_s3_bucket:          videos.code.org
+videos_url:                //videos.code.org
+
+# Memcached (ElastiCache)
+memcached_endpoint:
+memcached_hosts:
+
+# Redis (ElastiCache)
+redis_primary:
+redis_read_addresses:
+redis_read_ports:
+
+# Netsim
+netsim_redis_groups:
+netsim_enable_metrics: false
+netsim_max_routers: 20
+netsim_shard_expiry_seconds: 7200
+
+# DynamoDB table names for dcdo/gatekeeper
+dcdo_table_name:       dcdo_<%=env%>
+gatekeeper_table_name: gatekeeper_<%=env%>
+
+# Poste (internal transactional email processing framework)
+poste_host: <%= code_org_url.sub('//', '') %>
+poste_attachment_dir:
+poste_smtp_password: !Secret
+poste_smtp_server:   email-smtp.us-east-1.amazonaws.com
+poste_smtp_user:     !Secret
+poste_secret:        !Secret
+
+# Chef defaults
+chef_managed: false
+chef_local_mode: false
+chef_node_name: cdo-ci
+chef_org_name: code-dot-org
+chef_client_key: <%="#{ENV['HOME']}/.chef/#{chef_node_name}.pem"%>
+chef_validation_client_name: <%="#{chef_org_name}-validator"%>
+chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem"%>
+chef_server_url: '<%="https://api.opscode.com/organizations/#{chef_org_name}"%>'
+
+# Cloudfront keys for private content
+cloudfront_key_pair_id: !Secret
+cloudfront_private_key: !Secret
+
+# Discourse configuration
+discourse_sso_secret:
+
+### Application configuration defaults
+
+i18n_key_value:
+i18n_backend:
+cache:
+app_servers: {}
+rack_mini_profiler_enabled:
+https_development:
+default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
+skip_locales:
+secret_pictures_csv:
+no_https_store:
+expo_session_secret: !Secret
+firebase_debug:
+pd_teacher_application_list_secret_key:
+
+# Configure CloudFront to serve static, custom, student-friendly page when web application returns error HTTP response.
+custom_error_response: true
+
+# Whether rake:build should rebuild the apps package
+build_apps: false
+
+# Whether dashboard should use your local build of the apps package.
+# If false, dashboard will try to use a prepackaged version from S3.
+use_my_apps:
+
+optimize_webpack_assets: true
+
+optimize_rails_assets: true
+
+# Allows your local server to render non-English locales, defaults to false in development.
+# If false, choosing a locale other than English will have no effect.
+# Note: You may need to be in an incognito window to see changes
+# due to a difference in the language cookie between production and localhost.
+load_locales:
+
+# Whether to skip the slow `rake seed:all` command during `rake build`.
+# Until you manually run `rake seed:all` or disable this flag, you won't
+# see changes to: videos, concepts, levels, scripts, trophies, prize providers,
+# callouts, hints, secret words, or secret pictures.
+skip_seed_all:
+
+# Whether to store sprocket asset cache on disk or in memory. Setting this to
+# false reduces memory usage, but significantly slows down dev server startup.
+cache_assets_in_memory:
+
+# Encryption key required for decoding certain protected level sources.
+# Contributors should ask a Code.org engineer for this if needed.
+properties_encryption_key: !Secret
+
+# NOTE: When a new language is added to this set, make sure to also update
+# the redirection rules for the cdo-curriculum S3 bucket by running the
+# aws/s3/cdo-curriculum/redirection_rules.rb script. Otherwise, all links to
+# CB for that language will attempt to point to the language-specific version
+# of that content, even if we haven't translated that content yet.
+#
+# See the LANGUAGES setting in
+# https://github.com/mrjoshida/curriculumbuilder/blob/master/curriculumBuilder/settings.py
+# for the languages currently supported in CurriculumBuilder itself
+curriculum_languages: ['es-mx', 'it-it', 'th-th', 'sk-sk']
+
+start_circle_builds_branch:
+start_circle_builds_token:
+circle_build_num: <%=ENV['CIRCLE_BUILD_NUM']%>
+circle_node_index: <%=ENV['CIRCLE_NODE_INDEX']%>
+circle_run_identifier: <%=circle_build_num ? "CIRCLE-BUILD-#{circle_build_num}-#{circle_node_index}" : nil%>
+
+ignore_eyes_mismatches:
+
+# Keeps from taking eyes snapshots when running feature files
+disable_all_eyes_running:
+
+build_dashboard: true
+build_pegasus: true
+
+# Dashboard
+override_dashboard:
+dashboard_devise_secret:   !Secret
+dashboard_devise_pepper:   !Secret
+dashboard_secret_key_base: !Secret
+dashboard_host: 0.0.0.0
+dashboard_port: 3000
+dashboard_workers: 8
+dashboard_unicorn_name: dashboard
+dashboard_sock:
+
+# Causes dashboard-server to run pegasus as middleware, starting both in a
+# single command.  This is preferred (and default) in development mode.
+dashboard_enable_pegasus: false
+
+# Pegasus
+override_pegasus:
+pegasus_host:
+pegasus_sock:
+pegasus_port: 3000
+pegasus_unicorn_name: pegasus
+pegasus_workers: 8
+sinatra_session_secret:
+
+# Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
+read_only: false
+
+proxy: false # If true, generated URLs will not include explicit port numbers in development
+
+# Run dashboard-server with the level editing interface enabled (for admins)
+levelbuilder_mode:
+
+default_hoc_mode:   pre-hoc # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_launch: ''       # overridden by 'hoc_launch' DCDO param, except in :test
+
+localize_apps: false
+
+partners: []
+
+# Default Rack server ports for PDF-generation scripts.
+pdf_port_collate: 8081
+pdf_port_markdown: 8081
+
+# Specify `use_mailcatcher: true` if you are running mailcatcher on localhost.
+# You should have also run this once:
+#   `gem install mailcatcher`
+# And this each time you need to start mailcatcher in the background again:
+#   `mailcatcher --ip=0.0.0.0`
+use_mailcatcher:
+
+lint: false
+
+# Whether to stub schools and school_districts table with much smaller data,
+# saving a total of 4 min 30 sec during rake seed. Default: true (in development).
+stub_school_data: false
+
+disable_s3_image_uploads: false
+
+channels_api_secret: <%=poste_secret%>
+
+# Whether to prefix bundler commands with 'sudo'.
+# It may be useful to set this false when doing local development on Linux.
+bundler_use_sudo: <%=chef_managed%>
+
+daemon: <%=name == 'production-daemon'%>
+image_optim: <%=chef_managed && !ci_test%>
+
+# Used to export data on professional learning to gsheets
+applications_2020_2021_gsheet_key: !Secret
+enrollments_summer_2020_gsheet_key:
+
+# Referenced in Chef config, but not sure if they are still used anywhere?
+# TODO: verify these are intentionally no longer used and remove references from Chef config.
+build_blockly: false
+geocoder_read_replica_1:
+geocoder_read_replica_2:
+browserstack_username:
+browserstack_authkey:
+dashboard_powerschool_key:
+dashboard_powerschool_secret:
+x-dashboard_twitter_key:
+x-dashboard_twitter_secret:
+ga_service_account_email:
+ga_api_key:
+ga_api_secret:
+hipchat_secret:
+indiegogo_api_token:
+localize_blockly: true
+level_builder_port: 8082
+sendy_db_reader:
+sendy_db_writer:
+developers_channel_id:
+twilio_phone:
+level_sources_redis_url:
+discourse_sso_url:
+discourse_url:
+pledge_map_table_id:
+
+#### Parameters related to CloudFormation-stack deployment
+stack_name: <%=env%>
+cdn_enabled: <%=chef_managed%>
+
+# Application-stack parameters.
+instance_type:
+branch:
+database_username:
+
+# Data-stack parameters.
+rds_host:
+rds_identifier:
+rds_username:
+rds_password:
+redshift_database:
+redshift_username:
+rds_backup_account:
+logs_bucket:
+
+### Database configuration
+
+redshift_host:
+redshift_password:
+
+devinternal_db_writer: !Secret
+
+db_cluster_id:
+db_admin: !Secret
+reporting_db_admin:
+db_proxy_admin:
+
+db_writer: !Secret
+reporting_db_writer: <%=db_writer%>
+
+dashboard_db_name: dashboard_<%=env%>
+pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
+
+# Default reader endpoints to writer endpoint.
+db_reader: <%=db_writer%>
+reporting_db_reader: <%=reporting_db_writer%>
+
+# Default DB-specific endpoints to base endpoint plus db name.
+dashboard_db_reader:           '<%="#{db_reader}#{dashboard_db_name}"%>'
+dashboard_db_writer:           '<%="#{db_writer}#{dashboard_db_name}"%>'
+pegasus_db_reader:             '<%="#{db_reader}#{pegasus_db_name}"%>'
+pegasus_db_writer:             '<%="#{db_writer}#{pegasus_db_name}"%>'
+dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%>'
+dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
+pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
+pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'

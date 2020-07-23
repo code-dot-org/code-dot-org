@@ -10,7 +10,7 @@ import AbuseError from './AbuseError';
 import SendToPhone from './SendToPhone';
 import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
-import * as gamelabConstants from '../../gamelab/constants';
+import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
@@ -19,6 +19,8 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import QRCode from 'qrcode.react';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -121,6 +123,20 @@ const styles = {
     transform: 'translate(-50%,-50%)',
     msTransform: 'translate(-50%,-50%)',
     WebkitTransform: 'translate(-50%,-50%)'
+  },
+  sendToPhoneContainer: {
+    width: '100%',
+    marginTop: 15
+  },
+  sendToPhoneLeft: {
+    float: 'left',
+    width: '70%',
+    paddingRight: 20,
+    boxSizing: 'border-box'
+  },
+  sendToPhoneRight: {
+    float: 'right',
+    width: '30%'
   }
 };
 
@@ -141,9 +157,6 @@ function checkImageReachability(imageUrl, callback) {
  */
 class ShareAllowedDialog extends React.Component {
   static propTypes = {
-    i18n: PropTypes.shape({
-      t: PropTypes.func.isRequired
-    }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
     icon: PropTypes.string,
@@ -254,6 +267,8 @@ class ShareAllowedDialog extends React.Component {
       modalClass += ' no-modal-icon';
     }
 
+    const isDroplet =
+      this.props.appType === 'applab' || this.props.appType === 'gamelab';
     const artistTwitterHandle =
       SongTitlesToArtistTwitterHandle[this.props.selectedSong];
 
@@ -283,9 +298,7 @@ class ShareAllowedDialog extends React.Component {
       ? twitterShareUrlDance
       : twitterShareUrlDefault;
 
-    const showShareWarning =
-      !this.props.canShareSocial &&
-      (this.props.appType === 'applab' || this.props.appType === 'gamelab');
+    const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;
     if (this.props.appType === 'applab') {
       embedOptions = {
@@ -298,8 +311,8 @@ class ShareAllowedDialog extends React.Component {
       embedOptions = {
         // If you change this width and height, make sure to update the
         // #visualizationColumn.wireframeShare css
-        iframeHeight: gamelabConstants.GAME_HEIGHT + 357,
-        iframeWidth: gamelabConstants.GAME_WIDTH + 32
+        iframeHeight: p5labConstants.APP_HEIGHT + 357,
+        iframeWidth: p5labConstants.APP_WIDTH + 32
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
@@ -318,6 +331,7 @@ class ShareAllowedDialog extends React.Component {
               </div>
               <div style={{clear: 'both', height: 40}}>
                 <button
+                  type="button"
                   id="continue-button"
                   style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
                   onClick={this.close}
@@ -335,14 +349,14 @@ class ShareAllowedDialog extends React.Component {
                 className={modalClass}
                 style={{position: 'relative'}}
               >
-                <p className="dialog-title">
-                  {this.props.i18n.t('project.share_title')}
-                </p>
+                <p className="dialog-title">{i18n.shareTitle()}</p>
                 {this.props.isAbusive && (
                   <AbuseError
                     i18n={{
-                      tos: this.props.i18n.t('project.abuse.tos'),
-                      contact_us: this.props.i18n.t('project.abuse.contact_us')
+                      tos: i18n.tosLong({url: 'http://code.org/tos'}),
+                      contact_us: i18n.contactUs({
+                        url: 'https://code.org/contact'
+                      })
                     }}
                     className="alert-error"
                     style={styles.abuseStyle}
@@ -350,18 +364,14 @@ class ShareAllowedDialog extends React.Component {
                   />
                 )}
                 {showShareWarning && (
-                  <p style={styles.shareWarning}>
-                    {this.props.i18n.t('project.share_u13_warning')}
-                  </p>
+                  <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
                 )}
                 <div style={{clear: 'both'}}>
                   <div style={styles.thumbnail}>
                     <img style={styles.thumbnailImg} src={thumbnailUrl} />
                   </div>
                   <div>
-                    <p style={{fontSize: 20}}>
-                      {this.props.i18n.t('project.share_copy_link')}
-                    </p>
+                    <p style={{fontSize: 20}}>{i18n.shareCopyLink()}</p>
                     <input
                       type="text"
                       id="sharing-input"
@@ -386,6 +396,7 @@ class ShareAllowedDialog extends React.Component {
                   </a>
                   {canPublish && !isPublished && (
                     <button
+                      type="button"
                       id="share-dialog-publish-button"
                       style={
                         hasThumbnail ? styles.button : styles.buttonDisabled
@@ -455,11 +466,25 @@ class ShareAllowedDialog extends React.Component {
                   )}
                 </div>
                 {this.state.showSendToPhone && (
-                  <SendToPhone
-                    channelId={this.props.channelId}
-                    appType={this.props.appType}
-                    styles={{label: {marginTop: 15, marginBottom: 0}}}
-                  />
+                  <div>
+                    <div style={styles.sendToPhoneContainer}>
+                      <div style={styles.sendToPhoneLeft}>
+                        <SendToPhone
+                          channelId={this.props.channelId}
+                          appType={this.props.appType}
+                          isLegacyShare={false}
+                        />
+                      </div>
+                      <div style={styles.sendToPhoneRight}>
+                        <label>{i18n.scanQRCode()}</label>
+                        <QRCode
+                          value={this.props.shareUrl + '?qr=true'}
+                          size={90}
+                        />
+                      </div>
+                    </div>
+                    <div style={{clear: 'both'}} />
+                  </div>
                 )}
                 {canPublish && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
@@ -476,11 +501,9 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 )}
                 <div style={{clear: 'both', marginTop: 40}}>
-                  {(this.props.appType === 'applab' ||
-                    this.props.appType === 'gamelab') && (
+                  {isDroplet && (
                     <AdvancedShareOptions
                       allowExportExpo={this.props.allowExportExpo}
-                      i18n={this.props.i18n}
                       shareUrl={this.props.shareUrl}
                       exportApp={this.props.exportApp}
                       expanded={this.state.showAdvancedOptions}
@@ -495,6 +518,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
+        <LibraryCreationDialog channelId={this.props.channelId} />
       </div>
     );
   }

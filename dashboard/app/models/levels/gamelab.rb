@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -44,11 +44,10 @@ class Gamelab < Blockly
     debugger_disabled
     pause_animations_by_default
     start_animations
-    teacher_markdown
-    auto_run_setup
-    custom_setup_code
     validation_code
     helper_libraries
+    start_libraries
+    libraries_enabled
   )
 
   # List of possible skins, the first is used as a default.

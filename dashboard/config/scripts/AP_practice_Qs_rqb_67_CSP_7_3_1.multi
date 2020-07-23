@@ -1,10 +1,8 @@
 name 'AP_practice_Qs_rqb_67_CSP_7_3_1'
 type 'multi2'
-right 'What the beneficial and harmful effects of the innovation will be on the population
-'
+right 'What the beneficial and harmful effects of the innovation will be on the population'
 wrong 'What data is required for the innovation and how accessible it is'
-right 'How the cost of the innovation will affect the digital divide
-'
+right 'How the cost of the innovation will affect the digital divide'
 wrong 'What time and resource requirements to build the innovation will be'
 markdown <<MARKDOWN
 Which of the following should be considered when making an ethical decision concerning an innovation? 

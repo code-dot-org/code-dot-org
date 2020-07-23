@@ -18,7 +18,8 @@
 class Pd::RegionalPartnerMiniContact < ApplicationRecord
   include Pd::Form
 
-  UNMATCHED_FORM_EMAIL = 'anthonette@code.org'
+  # Most unmatched contacts are from an international source
+  UNMATCHED_FORM_EMAIL = 'international@code.org'
 
   belongs_to :user
   belongs_to :regional_partner
@@ -31,27 +32,27 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
   def send_regional_partner_contact_emails
     form = sanitize_and_trim_form_data_hash
 
-    # We don't have a known role here, so let's use another word.
-    form[:role] = "person"
+    # role is optional, use another word if role not given
+    form[:role] = "person" unless form[:role]
     form[:mini] = true
 
     if regional_partner_id
       partner = RegionalPartner.find(regional_partner_id)
-      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner)
+      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner: partner)
 
       if regional_partner_program_managers.empty?
         matched_but_no_pms = true
-        Pd::RegionalPartnerContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL, matched_but_no_pms).deliver_now
+        Pd::RegionalPartnerMiniContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL, matched_but_no_pms).deliver_now
       else
         regional_partner_program_managers.each do |rp_pm|
-          Pd::RegionalPartnerContactMailer.matched(form, rp_pm).deliver_now
+          Pd::RegionalPartnerMiniContactMailer.matched(form, rp_pm).deliver_now
         end
       end
     else
-      Pd::RegionalPartnerContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL).deliver_now
+      Pd::RegionalPartnerMiniContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL).deliver_now
     end
 
-    Pd::RegionalPartnerContactMailer.receipt(form, regional_partner).deliver_now
+    Pd::RegionalPartnerMiniContactMailer.receipt(form, regional_partner).deliver_now
   end
 
   def self.required_fields

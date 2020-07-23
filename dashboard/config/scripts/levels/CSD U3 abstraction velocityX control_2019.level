@@ -69,7 +69,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "instructions_important": "false",
-    "encrypted_examples": "AKJxfi0do9xsoOmr1Wv7O/qGNZ5MO1uF5Uo5L1uGmaNwfjrtYWtXFsafGVo1\n6V23\n",
+    "encrypted_examples": "6FQWLp6lrJsFL3UJPFR+ctfYyIpTKd15vbaItYJZKxgmRP8mrr8K8K8cmQnr\ndfRBLjApgclgpCOjTBJOKJ8dpA==\n",
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -77,18 +77,24 @@
     "parent_level_id": 11322,
     "name_suffix": "_2019",
     "long_instructions": "# Multiple Controls\r\n\r\nAs you saw in the last level, you can change the sprite's velocity with multiple `if` statements. In this program, the fish has three different types of movement, each of which should be controlled by its own `if` statement.\r\n\r\n# Do This\r\n* Look at the three `if` statements inside the draw loop.\r\n\r\n* Use a `sprite.velocityX` block inside each `if` statement to make the three following movements:\r\n  * If the user presses the right arrow key, move the fish to the right.\r\n  * If the fish gets to the right-hand side of the screen, move the fish to the left.\r\n  * If the fish gets to the left-hand side of the screen, stop the fish.",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/the-counter-pattern/",
       "/docs/concepts/javascript/if-statements/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
-    "mini_rubric": "false"
+    "mini_rubric": "true",
+    "encrypted": "false",
+    "rubric_key_concept": "Use conditionals to control the flow of a program; model two dimensional movement on a coordinate plane.",
+    "rubric_performance_level_1": "Pressing the right arrow key once causes the fish to swim to the right side of the screen, turn and swim to the left side of the screen, then stop.  There are no extra blocks in the program, and the counter pattern is not used.",
+    "rubric_performance_level_2": "Pressing the right arrow key once causes the fish sprite to swim right across the screen.  The counter pattern is not used.",
+    "rubric_performance_level_3": "Pressing the right arrow key once causes the fish sprite to move across the screen in some way.",
+    "rubric_performance_level_4": "Pressing the arrow key does not cause movement, or the movement stops as soon as the key is let up.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 16:16:07 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-21 21:56:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:21:50 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 16:16:07 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-21 21:56:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:21:50 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-01 07:30:41 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 21:50:14 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

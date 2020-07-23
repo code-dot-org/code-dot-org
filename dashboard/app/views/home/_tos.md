@@ -1,4 +1,4 @@
-Date of Last Revision: September 10, 2018
+Date of Last Revision: April 8, 2020
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the websites located at [https://code.org](https://code.org), [https://csedweek.org](https://csedweek.org), [https://www.k12cs.org](https://www.k12cs.org), [https://hourofcode.com](https://hourofcode.com), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”).
 
@@ -97,7 +97,7 @@ Users may include links to third party websites in User Content as long as the c
 
 Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS in their entirety, using the embedded video player provided, or by downloading the original video file IF a download link is provided, and with clear attribution to Code.org, (2) the videos are not incorporated into any mashups, (3) the videos are used for computer science education purposes, (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
 
-The celebrities and video “cast“ members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
+The celebrities and video “cast“ members appearing in Code.org tutorials and videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
 
 The artwork used in our tutorials is copyrighted and use of these tutorials does not grant you any rights to use the artwork in any other manner. Plants vs. Zombies are © 2016 [Electronic Arts Inc](http://www.ea.com/). Plants vs. Zombies and PopCap are trademarks of [Electronic Arts Inc](http://www.ea.com/). Angry Birds are © 2016 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds is a trademark of [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat and Ice Age are trademarks and © Twentieth Century Fox Licensing and Merchandising. Frozen is a trademark and © 2016 [Disney](http://www.disney.com). Star Wars is a trademark and © 2016 [Lucasfilm](http://www.lucasfilm.com) and [Disney](http://www.disney.com). Minecraft is a trademark and © 2016 [Microsoft](http://www.microsoft.com). The Amazing World of Gumball is a trademark and © [Cartoon Network](http://www.cartoonnetwork.com).
 

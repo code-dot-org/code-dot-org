@@ -1,17 +1,19 @@
 ---
-title: <%= hoc_s(:events_all_title) %>
 layout: wide
 nav: events_nav
 ---
 :ruby
+  @header["title"] = hoc_s(:events_all_title)
+
+:ruby
   require pegasus_dir 'helper_modules/forms'
-  HOC_YEAR = 2014.freeze
-  KIND = "HocSignup#{HOC_YEAR}".freeze
-  events = Forms.events_by_country(KIND)
-  us_events = Forms.events_by_state(KIND)
+  hoc_year = 2014.freeze
+  kind = "HocSignup#{hoc_year}".freeze
+  events = Forms.events_by_country(kind)
+  us_events = Forms.events_by_state(kind)
   us_events_count = us_events.inject(0) {|result, element| result + element[:count]}
 
-%h1= hoc_s(:events_all_old_title).gsub(/\@year/, HOC_YEAR.to_s)
+%h1= hoc_s(:events_all_old_title).gsub(/\@year/, hoc_year.to_s)
 
 %ul
   %li{class: "hoc-event-country"}
@@ -19,8 +21,8 @@ nav: events_nav
     %ul{style: "margin-top: 0; margin-bottom: 0;"}
       -us_events.each do |event|
         %li{class: "hoc-event-state"}
-          %a{href: "/events/#{HOC_YEAR}/us/#{event[:state_code].downcase}"}= "#{event[:state_code]} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
+          %a{href: "/events/#{hoc_year}/us/#{event[:state_code].downcase}"}= "#{event[:state_code]} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
 %ul
   -events.each do |event|
     %li{class: "hoc-event-country"}
-      %a{href: "/events/#{HOC_YEAR}/#{event[:country_code].downcase}"}= "#{country_name_from_code(event[:country_code])} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
+      %a{href: "/events/#{hoc_year}/#{event[:country_code].downcase}"}= "#{country_name_from_code(event[:country_code])} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"

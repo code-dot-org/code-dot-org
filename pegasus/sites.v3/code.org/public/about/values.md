@@ -4,25 +4,27 @@ nav: about_nav
 theme: responsive
 ---
 
-# Our core values and how we talk about them:
+# Our core values:
 
-## We think big, but act small
-We may seem like a large org, but our roots are as a tiny startup. We don’t want to be a "borg", whether internally or in the eyes of others. If in doubt, we ask “how would an agile startup do it?”  We don’t over-spend, so our funds can impact the most students.
+## We believe computer science is foundational for all students
+We believe that learning computer science is fundamental to active and informed participation in an increasingly digital society and provides all students with a critical lens for interpreting the world around them. Computer science offers life-changing and economic opportunities, whether they pursue careers in technology or not. We create high-quality, approachable experiences to engage all students in computer science.
 
-## We’re personal
-We sign our names to emails, appear in our own videos, and take a personal approach with our audiences.
+## We are committed to equity, access, and opportunity
+We believe every student in every school should have the opportunity to learn computer science regardless of gender, race, ethnicity, identity, family income, neighborhood, or where they are from. To achieve this goal, we work to identify and eliminate barriers that have prevented the inclusion and full participation of underrepresented groups in CS.
+
+As an organization, Code.org is committed to providing an inclusive environment, with equitable access and opportunity for growth and advancement for all Code.org staff regardless of gender, race, ethnicity, nationality, religion, age, marital status, sexual orientation, or identity.
+
+## We believe in the power of a collaborative education community
+We collaborate with teachers, facilitators, and [partners](/about/partners). We value, respect, and learn from the shared expertise of the growing professional computer science education community. We are committed to strengthening this community and we recognize, promote, and amplify the work of all members of this teacher-led movement.
 
 ## We’re agile and responsive to feedback
-We make decisions and move quickly. We are *always* open and thankful to receive feedback and criticism so we can make informed decisions or adjust direction. Our decisions aren’t set in stone, we’re always looking to improve. We have a bias for action, we don’t over-plan. We prefer to react to data than to plan without it.
+We act quickly but thoughtfully. We make decisions with available information, and actively collect new data to confirm understanding or inform change. We listen broadly and deeply to a diverse audience and are responsive to feedback.
 
-## We’re transparent
-We openly share good news *and* bad news. If we screw up, we own up. We make decisions based on data, and we want the numbers to speak for themselves. Everything we create is open-source. None of our work or our ideas are secret or protected (*unless* they’re other people’s secrets or brands. We protect those, of course). 
+## We act with integrity and transparency
+We act in the best interest of our student-focused mission. In this work, we are accountable to and transparent with our team, Board, donors, facilitators, partners, teachers, and community. We believe in trying new ideas, openly sharing our mistakes, and growing and learning from them. We proactively share information, research, data, processes, decisions, and results. Our products and curriculum are purposefully open for anyone to use or contribute. 
 
-## We’re thankful
-We’re lucky for the support of students, parents, educators, donors, and all the [partners](/about/partners) we work with. We strive to always [communicate our gratitude](https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924) with humility, and continue to work hard to earn this support. 
-
-## This is a community effort
-We consider anybody pursuing similar goals to be part of the movement. We’re here to lift all boats, *not* to compete. We should strive hard to recognize, promote and amplify the work of partners in our mission. We don’t compete with or bad-mouth other groups, in fact we promote them. If a school adopts *any* computer science curriculum, whether it’s ours or not, we’re one step closer to our goal. 
+## We believe broad impact requires thinking big and acting holistically
+We are creating sustainable change in education systems through policies, products, services, and partnerships that impact all levels of education, from the individual student or classroom to entire schools, districts, states, or countries. We strategically use available resources to make long-term investments that will have a positive, lasting impact on students' lives.
 
 # Messages our communications reflect
 
@@ -52,6 +54,3 @@ Ours is a grassroots revolution that’s fueled by the passion and support of te
 * Computer science should be a peer of biology or chemistry, and students should have a chance to learn all these things. (we’re not competing with other fields like math or science)
 * We want schools to teach foundational computer science concepts that will stand the test of time. (we’re not about any one coding language or platform)
 * We’re lucky to have the generous support of tech companies, but **[we make our own decisions](/about/donation-policy)**. (we’re not run by the tech industry, or by any of our donors)
-
-See [this blog post](http://blog.code.org/post/73963049605/the-secret-agenda-of-codeorg) from January 2014 addressing some of these misconceptions in detail.
-

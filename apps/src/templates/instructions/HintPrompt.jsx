@@ -27,12 +27,14 @@ const HintPrompt = ({onConfirm, onDismiss, borderColor}) => {
     <ChatBubble borderColor={borderColor} ttsMessage={message}>
       <p>{message}</p>
       <button
+        type="button"
         onClick={onConfirm}
         style={[buttonStyles.common, buttonStyles.yes]}
       >
         {msg.yes()}
       </button>
       <button
+        type="button"
         onClick={onDismiss}
         style={[buttonStyles.common, buttonStyles.no]}
       >

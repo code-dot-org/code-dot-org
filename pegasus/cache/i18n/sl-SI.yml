@@ -20,13 +20,13 @@ sl-SI:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ste učitelj računalništva in informatike? Oglejte si tudi
     druge CSEdWeek vire</a>'
+  csedweek_banner_teachers_text: Ste učitelj računalništva in informatike? Oglejte
+    si tudi druge CSEdWeek vire
   n_have_learned_an_hoc: "<h1>Poizkusi</h1><h2>Uro za kodo</h2><h3># served</h3>"
   anybody_can_learn: Vsakdo se lahko nauči.
   learn_now: Nauči se zdaj
   petition_message: Vsak učenec v vsaki šoli bi moral imeti možnost učenja računalništva
   petition_sign_message: 'Če se strinjate, podpišite se.  Pridružite se # ostalim.'
-  petition_sign_message_support: 'Če nas podpirate, se podpišite. Pridružite se #
-    ostalim.'
   petition_join_others: 'Pridruži se # ostalim'
   name: Ime
   email: Elektronska pošta
@@ -271,6 +271,7 @@ sl-SI:
   homepage_action_text_learn: Začni z učenjem
   homepage_action_text_signpetition: Podpiši peticijo
   homepage_signpetition_dropdown: Strinjam se &#x25BE;
+  homepage_signpetition_dropdown_text: Strinjam se
   homepage_diversity_pledge: Naredite zaprisego za nediskriminatorno vključevanje
   homepage_banner_text_prizes: 'Zopet se bliža Ura za kodo, od 7. do 13. decembra. '
   homepage_banner_link_prizes: 'Pridružite se največji izobraževalni prireditvi doslej. '
@@ -756,8 +757,6 @@ sl-SI:
   iceage_name: Ledena doba
   minecraft_name: Minecraft
   starwarsblocks_name: Vojna Zvezd (Kocke)
-  math_category_name: Matematika
-  hoc_category_name: Ura kode
   applab_gradelevel: Starost 13+
   applab_shortdescription_congrats: App Lab je okolje za programiranje, kjer lahko
     narediš enostavne aplikacije. Oblikuješ izgled aplikacije, kodiraš z bloki ali
@@ -821,6 +820,8 @@ sl-SI:
   coursee-2017_gradelevel: Starost 8-12
   coursed-2018_gradelevel: 8. razred in višje
   coursee-2018_gradelevel: Starost 8-12
+  coursed-2019_gradelevel: 8. razred in višje
+  coursee-2019_gradelevel: Starost 8-12
   accelerated_gradelevel: Starost 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
@@ -1374,6 +1375,8 @@ sl-SI:
   header_teach: Predavaj
   header_help_us: Pomagaj nam
   header_about: O programu
+  header_legal_privacy: Izjava o zasebnosti
+  header_legal_tos: Pogoje storitve
   user_header_label: Živjo %{username}
   user_header_team: Ekipa
   user_header_settings: Moj račun

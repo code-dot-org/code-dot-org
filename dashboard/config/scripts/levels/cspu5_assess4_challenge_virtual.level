@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T21:25:59.000Z",
+  "level_num": "custom",
+  "user_id": 532,
+  "properties": {
+    "long_instructions": "**Challenge Question:** Imagine a list that represents the height in feet of equidistant points along a mountainous path.  Here is an example of the data with a diagram that reflects the data. For example: \r\n\r\n![](https://images.code.org/8046cbdb63d7e7d68eb133c58362b099-image-1477862090668.png)\r\n\r\nA programmer wants to write a procedure that calculates the net elevation -  total number of feet a traveler goes up and down. For example, looking at the first 3 segments of travel, the net elevation is 7 feet (up 3, up 1, down 3).  \r\n\r\nWrite procedure (in either JavaScript or pseudocode) called processPath(data) that:\r\n\r\n* Accepts a list of elevation data as a parameter\r\n* For every value in the list\r\n\t* Compute the absolute difference between that value and the value next to it on the path\r\n\t* Add the difference to a running total\r\n* Return the total elevation traveled\r\n\r\nIn writing your procedure you should assume that you can call a function called _absDiff(a,b)_.\r\n\r\n![](https://images.code.org/0a7b91a830319d5d690ddf2efa264395-image-1477862205239.png)\r\n\r\nWrite the full procedure below.",
+    "instructions_important": "false",
+    "encrypted_solution": "0Wac2cnKqu+XXyhJGDvkMosWspkUzPmfomflUFs0GzFHzm5DzVZlcqWSls0Z\nOqfT0ZBzr44ZGP4lIN6+KN0IWhy98pI0gq7kSJ7gj7+WdsSDusKiTR8kqpsW\nG+s+J58MSYCZG+FpAAmxoqtSx1tDJ5EqkDGQpMsCtCwa3baBtIr1juslFUSa\n2Jbt0q/on1ZWUhbwtUJm1a+7I+UzOQWHTuU0nETmJqundVC1Nt3Y7dDQCFg9\n2xOdYM3e61kdOFVbQYGhqkynnrJf/dtdWr8Ab3T/cbKoXnVGY6NizRgtgEk=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17452,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

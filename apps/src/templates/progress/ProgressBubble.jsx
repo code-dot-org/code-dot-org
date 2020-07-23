@@ -6,7 +6,7 @@ import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
-import {getIconForLevel} from './progressHelpers';
+import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {levelType} from './progressTypes';
 import {
   DOT_SIZE,
@@ -18,6 +18,8 @@ import {
 } from './progressStyles';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
+import {SmallAssessmentIcon} from './SmallAssessmentIcon';
+import firehoseClient from '../../lib/util/firehose';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -43,11 +45,7 @@ const styles = {
       'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
     marginTop: 3,
     marginBottom: 3,
-    // ReactTooltip sets a zIndex of 999. However, because in some cases for us
-    // the ReactTooltip is inside of a rotated div, it ends up in a different
-    // stacking context, and the zIndex doesn't work. Instead we set it here on
-    // the top component
-    zIndex: 999
+    position: 'relative'
   },
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,
@@ -61,7 +59,8 @@ const styles = {
     width: SMALL_DOT_SIZE,
     height: SMALL_DOT_SIZE,
     borderRadius: SMALL_DOT_SIZE,
-    fontSize: 0
+    fontSize: 0,
+    alignItems: 'none'
   },
   smallDiamond: {
     width: SMALL_DIAMOND_SIZE,
@@ -79,6 +78,10 @@ const styles = {
   diamondContents: {
     // undo the rotation from the parent
     transform: 'rotate(-45deg)'
+  },
+  disabledStageExtras: {
+    backgroundColor: color.lighter_gray,
+    color: color.white
   }
 };
 
@@ -99,13 +102,31 @@ class ProgressBubble extends React.Component {
     // This prop is provided as a testing hook, in normal use it will just be
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
-    stageTrophyEnabled: PropTypes.bool,
+    lessonTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
-    hideToolTips: PropTypes.bool
+    hideToolTips: PropTypes.bool,
+    stageExtrasEnabled: PropTypes.bool,
+    hideAssessmentIcon: PropTypes.bool
   };
 
   static defaultProps = {
     currentLocation: window.location
+  };
+
+  recordProgressTabProgressBubbleClick = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'go_to_level',
+        data_json: JSON.stringify({
+          student_id: this.props.selectedStudentId,
+          level_url: this.props.level.url,
+          section_id: this.props.selectedSectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
@@ -115,9 +136,12 @@ class ProgressBubble extends React.Component {
       selectedSectionId,
       selectedStudentId,
       currentLocation,
-      stageTrophyEnabled,
-      pairingIconEnabled
+      lessonTrophyEnabled,
+      pairingIconEnabled,
+      hideAssessmentIcon
     } = this.props;
+
+    const levelIsAssessment = isLevelAssessment(level);
 
     const number = level.levelNumber;
     const url = level.url;
@@ -125,7 +149,8 @@ class ProgressBubble extends React.Component {
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
-    const hideNumber = levelIcon === 'lock' || level.paired;
+    const hideNumber =
+      level.letter || levelIcon === 'lock' || level.paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -133,12 +158,14 @@ class ProgressBubble extends React.Component {
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel &&
         (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level, disabled)
+      ...levelProgressStyle(level, disabled),
+      ...(disabled && level.bonus && styles.disabledStageExtras)
     };
 
     let href = '';
     if (!disabled && url) {
       const queryParams = queryString.parse(currentLocation.search);
+
       if (selectedSectionId) {
         queryParams.section_id = selectedSectionId;
       }
@@ -148,7 +175,12 @@ class ProgressBubble extends React.Component {
       const paramString = queryString.stringify(queryParams);
       href = url;
       if (paramString.length > 0) {
-        href += '?' + paramString;
+        // If href already has 1 or more query params, our delimiter will be '&'.
+        // If href has no query params, our delimiter is '?'.
+        // TODO: (madelynkasula) Refactor this logic to use queryString.parseUrl(href)
+        // instead. Our current version of query-string (4.1.0) does not yet have this method.
+        const delimiter = /\?/.test(href) ? '&' : '?';
+        href += delimiter + paramString;
       }
     }
 
@@ -164,6 +196,7 @@ class ProgressBubble extends React.Component {
         tooltipId={tooltipId}
         icon={levelIcon}
         text={tooltipText}
+        includeAssessmentIcon={levelIsAssessment}
       />
     );
 
@@ -172,8 +205,8 @@ class ProgressBubble extends React.Component {
         <ProgressPill
           levels={[level]}
           text={i18n.unpluggedActivity()}
-          fontSize={16}
           tooltip={this.props.hideToolTips ? null : tooltip}
+          progressStyle={true}
         />
       );
     }
@@ -187,7 +220,7 @@ class ProgressBubble extends React.Component {
       <div
         style={{
           // two pixels on each side for border, 2 pixels on each side for margin
-          width: stageTrophyEnabled ? width - 3 : width,
+          width: lessonTrophyEnabled ? width - 3 : width,
           display: 'flex',
           justifyContent: 'center'
         }}
@@ -196,24 +229,31 @@ class ProgressBubble extends React.Component {
           <div style={style} className="uitest-bubble">
             <div
               style={{
-                fontSize: level.paired ? 14 : 16,
+                fontSize: level.paired || level.bonus ? 14 : 16,
                 ...styles.contents,
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
             >
+              {level.letter && (
+                <span id="test-bubble-letter"> {level.letter} </span>
+              )}
               {levelIcon === 'lock' && <FontAwesome icon="lock" />}
               {pairingIconEnabled && level.paired && (
                 <FontAwesome icon="users" />
               )}
+              {level.bonus && <FontAwesome icon="flag-checkered" />}
               {!hideNumber && (
                 <span>
-                  {/*Text will not show up for smallBubble, but it's presence
+                  {/*Text will not show up for smallBubble, but its presence
                     causes bubble to be properly aligned vertically
                     */}
                   {smallBubble ? '' : number}
                 </span>
               )}
             </div>
+            {levelIsAssessment && !smallBubble && !hideAssessmentIcon && (
+              <SmallAssessmentIcon isDiamond={level.isConceptLevel} />
+            )}
           </div>
           {!this.props.hideToolTips && tooltip}
         </div>
@@ -221,12 +261,19 @@ class ProgressBubble extends React.Component {
     );
 
     // If we have an href, wrap in an achor tag
+    // Only record the click if we are in the progress tab (currently
+    // hideAssessmentIcon is only true for progress tab_
     if (href) {
       bubble = (
         <a
           href={href}
           style={{textDecoration: 'none'}}
           className="uitest-ProgressBubble"
+          onClick={
+            hideAssessmentIcon
+              ? this.recordProgressTabProgressBubbleClick
+              : null
+          }
         >
           {bubble}
         </a>

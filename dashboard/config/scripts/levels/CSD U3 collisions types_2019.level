@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Collision Types\r\n\r\nThere are four types of collisions that we use in Game Lab.  These blocks will cause a certain type of interaction between the _sprite_ and its _target_.\r\n\r\n## displace\r\n\r\nThe `displace` block causes the sprite to push the target as long as they are touching each other. The sprite keeps moving normally.\r\n\r\n## collide\r\n\r\nThe `collide` block makes the sprite stop when it runs into the target.  If the target is moving, it will push the sprite with it.  The target keeps moving normally.\r\n\r\n## bounce\r\n\r\nThe `bounce` block makes the sprite and the target bounce when they touch each other.  Both the sprite and the target change how they are moving.\r\n\r\n## bounceOff\r\n\r\nThe `bounceOff` block makes the sprite bounce off the target.  The target keeps moving normally.\r\n\r\n\r\n\r\n# Do This\r\n\r\nChoose the best block to model the basketball bouncing off the floor. ( [Show me where](#triggercallout=code_triggered) )\r\n\r\n[//]: # (https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png)\r\n\r\n[//]: # (https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png)",
+    "long_instructions": "# Collision Types\r\n\r\nThere are four types of collisions that we use in Game Lab: `displace`, `collide`, `bounce`, and `bounceOff`.  These blocks will cause a certain type of interaction between the _sprite_ and its _target_.\r\n\r\n# Do This\r\n\r\nChoose the best block to model the basketball bouncing off the floor. ( [Show me where](#triggercallout=code_triggered) )\r\n*Hint: You can try the different blocks out, or read more about them in the \"Help and Tips\" tab.\r\n[//]: # (https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png)\r\n\r\n[//]: # (https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -59,23 +59,24 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "encrypted_examples": "0klXlfHo501U4d5KtUNj/vfBKHDJQEhu3D6Zy8sQ2nI+41kOXYR1MQYNnICa\nISDf\n",
+    "encrypted_examples": "6SJ3iCkuxwbI/RAf2G+hkSR+H/TJKbp/dfAN0LYuYMvk4UFdp/taKR+TeEkx\nqZqIVK9U6UrMfPLyp9u3f286Sw==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "parent_level_id": 11362,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/collision-detection/",
       "/docs/concepts/game-lab/sprites/velocity/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/sprite-interactions/",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 23:44:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 19:09:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:44:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 19:09:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:34:21 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:45:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 17:45:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

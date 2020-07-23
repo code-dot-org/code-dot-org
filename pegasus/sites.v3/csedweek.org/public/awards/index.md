@@ -1,21 +1,78 @@
 ---
-title: 2018 Champions for Computer Science Awards
+title: 2019 Champions of Computer Science Awards
 nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# 2018 Champions for Computer Science Awards
+# 2019 Champions of Computer Science Awards
 
-In celebration of the 2018 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce the second annual Champions of Computer Science Awards. From developing tools and curriculum for students with disabilities, to providing needed tech equipment to underserved schools, these winners represent the students, teachers, schools, districts, and organizations working to make computer science education accessible for everyone.
+In celebration of the 2019 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to present the third annual Champions of Computer Science Awards! 
 <br>
 <br>
-Selected from a pool of more than 200 nominees, the winners were presented with their awards at a special 2018 CSEdWeek kickoff event on December 3rd featuring Melinda Gates of the Bill & Melinda Gates Foundation.
+From creating smart glasses using artificial intelligence to bringing CS curricula to an entire district, this year's Champions of CS have had a significant, positive impact on their communities. Click the thumbnails below to learn more about each of our winners.
 <br>
 <br>
 
-# Winners
+# Meet the Winners
+
+[col-33]
+
+<a href="/awards/2019/axel-toro">
+    <center><img src="/images/awards/2019/fit-540/axel-3.png" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Axel Toro</div>
+</a>
+
+[/col-33]
+
+[col-33]
+
+<a href="/awards/2019/ardrey-kell">
+    <center><img src="/images/awards/2019/fit-540/ardrey-kell-3.png" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Ardrey Kell High School</div>
+</a>
+
+[/col-33]
+
+[col-33]
+
+<a href="/awards/2019/mission-edc">
+    <center><img src="/images/awards/2019/fit-540/mission-1.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Mission EDC</div>
+</a>
+
+[/col-33]
+
+<div style="clear:both"></div>
+
+<br>
+<br>
+
+[col-33]
+
+<a href="/awards/2019/laginne-walker">
+    <center><img src="/images/awards/2019/fit-540/laginne-walker-2.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Laginne Walker</div>
+</a>
+
+[/col-33]
+
+[col-33]
+
+<a href="/awards/2019/paul-foster">
+    <center><img src="/images/awards/2019/fit-540/paul-foster-2.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Paul Foster</div>
+</a>
+
+[/col-33]
+
+<div style="clear:both"></div>
+
+<br>
+<br>
+
+# Last year's Winners
 
 [col-25]
 

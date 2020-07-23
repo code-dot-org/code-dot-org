@@ -6,6 +6,7 @@ import Radium from 'radium';
 import React from 'react';
 import {castValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
+import {WarningType} from '../constants';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -15,7 +16,9 @@ const INITIAL_STATE = {
 
 class AddKeyRow extends React.Component {
   static propTypes = {
-    onShowWarning: PropTypes.func.isRequired
+    onShowWarning: PropTypes.func.isRequired,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
@@ -30,23 +33,33 @@ class AddKeyRow extends React.Component {
 
   handleAdd = () => {
     if (this.state.key) {
-      this.setState({isAdding: true});
-      FirebaseStorage.setKeyValue(
-        this.state.key,
-        castValue(this.state.value),
-        () => this.setState(INITIAL_STATE),
-        msg => {
-          if (
-            msg.includes('The key is invalid') ||
-            msg.includes('The key was renamed')
-          ) {
-            this.props.onShowWarning(msg);
-          } else {
-            console.warn(msg);
+      this.props.hideError();
+      try {
+        this.setState({isAdding: true});
+        const value = castValue(
+          this.state.value,
+          /* allowUnquotedStrings */ false
+        );
+        FirebaseStorage.setKeyValue(
+          this.state.key,
+          value,
+          () => this.setState(INITIAL_STATE),
+          err => {
+            if (
+              err.type === WarningType.KEY_INVALID ||
+              err.type === WarningType.KEY_RENAMED
+            ) {
+              this.props.onShowWarning(err.msg);
+            } else {
+              console.warn(err.msg ? err.msg : err);
+            }
+            this.setState(INITIAL_STATE);
           }
-          this.setState(INITIAL_STATE);
-        }
-      );
+        );
+      } catch (e) {
+        this.setState({isAdding: false});
+        this.props.showError();
+      }
     }
   };
 

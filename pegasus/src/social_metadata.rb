@@ -4,6 +4,7 @@
 #   hourofcode.com/
 #   code.org/challenge
 #   code.org/dance
+#   hourofcode.com/thanks
 
 def get_social_metadata_for_page(request)
   videos = {
@@ -22,7 +23,12 @@ def get_social_metadata_for_page(request)
     hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
     mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
     mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
-    dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630}
+    dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
+    dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
+    hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
+    hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
+    oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
+    codeorg2019_social: {path: "/shared/images/social-media/codeorg2019_social.png", width: 1200, height: 630}
   }
 
   # Important:
@@ -31,46 +37,40 @@ def get_social_metadata_for_page(request)
   social_tags = {
     "code.org" => {
       "soon-hoc" => {
-        title: hoc_s(:social_hoc2018_what_create),
-        description: hoc_s(:social_hoc2018_every_student),
-        image: images[:creativity],
-        video: videos[:creativity_is]
+        title: hoc_s(:hoc2019_header),
+        description: hoc_s(:social_hoc2019_every_sudent),
+        image: images[:codeorg2019_social]
       },
       "soon-hoc-mc" => {
-        title: hoc_s(:social_hoc2018_what_create),
-        description: hoc_s(:social_hoc2018_every_student),
-        image: images[:creativity],
-        video: videos[:creativity_is]
+        title: hoc_s(:hoc2019_header),
+        description: hoc_s(:social_hoc2019_every_sudent),
+        image: images[:codeorg2019_social]
       },
       "soon-hoc-dance" => {
-        title: hoc_s(:social_hoc2018_what_create),
-        description: hoc_s(:social_hoc2018_every_student),
-        image: images[:creativity],
-        video: videos[:creativity_is]
+        title: hoc_s(:hoc2019_header),
+        description: hoc_s(:social_hoc2019_every_sudent),
+        image: images[:codeorg2019_social]
       },
       "actual-hoc" => {
         title: I18n.t(:og_title_here),
-        description: hoc_s(:social_hoc2018_every_student_try_what_create),
-        image: images[:creativity],
-        video: videos[:creativity_is]
+        description: hoc_s(:social_hoc2019_learn_computer_science),
+        image: images[:codeorg2019_social]
       },
       "actual-hoc-dance" => {
         title: I18n.t(:og_title_here),
-        description: hoc_s(:social_hoc2018_every_student_try_what_create),
-        image: images[:creativity],
-        video: videos[:creativity_is]
+        description: hoc_s(:social_hoc2019_learn_computer_science),
+        image: images[:codeorg2019_social]
       },
       "default" => {
-        title: hoc_s(:social_hoc2018_code_org_what_create),
-        description: hoc_s(:social_hoc2018_every_student),
-        image: images[:kids_with_ipads],
-        video: videos[:what_most_schools_dont_teach]
+        title: hoc_s(:hoc2019_header),
+        description: hoc_s(:social_hoc2019_every_sudent),
+        image: images[:codeorg2019_social]
       }
     },
     "csedweek.org" => {
       "soon-hoc" => {
         title: I18n.t(:csedweek_og_title),
-        description: I18n.t(:csedweek_og_description_soon),
+        description: hoc_s(:social_hoc2019_coming_dates),
         image: images[:cs_is_everything_thumbnail],
         video: videos[:computer_science_is_changing_everything]
       },
@@ -89,22 +89,19 @@ def get_social_metadata_for_page(request)
     },
     "hourofcode.com" => {
       "soon-hoc" => {
-        title: hoc_s(:social_hoc2018_hoc_coming_create),
-        description: hoc_s(:social_hoc2018_creativity_in_are_you),
-        image: images[:hoc_2018_creativity],
-        video: videos[:hour_of_code_worldwide]
+        title: hoc_s(:social_hoc_is_coming),
+        description: hoc_s(:social_hoc2019_hoc_is_about_csforgood),
+        image: images[:hoc_2019_social]
       },
       "actual-hoc" => {
         title: hoc_s(:social_hoc2018_hoc_here),
-        description: hoc_s(:social_hoc2018_creativity_in_are_you),
-        image: images[:hoc_2018_creativity],
-        video: videos[:hour_of_code_worldwide]
+        description: hoc_s(:social_hoc2019_hoc_is_about_csforgood),
+        image: images[:hoc_2019_social]
       },
       "default" => {
-        title: hoc_s(:social_hoc2018_join),
-        description: hoc_s(:social_hoc2018_creativity_in_are_you),
-        image: images[:hoc_2018_creativity],
-        video: videos[:hour_of_code_worldwide]
+        title: hoc_s(:meta_tag_og_title),
+        description: hoc_s(:social_hoc2019_hoc_is_about_csforgood),
+        image: images[:hoc_2019_social]
       }
     },
     "challenge" => {
@@ -149,9 +146,23 @@ def get_social_metadata_for_page(request)
     "dance" => {
       "default" => {
         title: hoc_s(:social_hoc2018_dance_party),
-        description: hoc_s(:social_hoc2018_dance_what_create),
-        image: images[:dance_2018]
+        description: hoc_s(:social_hoc2019_dance),
+        image: images[:dance_2019]
       }
+    },
+    "oceans" => {
+      "default" => {
+        title: hoc_s(:social_hoc2019_oceans_title),
+        description: hoc_s(:social_hoc2019_oceans_desc),
+        image: images[:oceans]
+      }
+    },
+    "thanks" => {
+      "default" => {
+        title: hoc_s(:meta_tag_og_title),
+        description: hoc_s(:meta_tag_og_description),
+        image: images[:hoc_thanks]
+      },
     }
   }
 
@@ -161,8 +172,12 @@ def get_social_metadata_for_page(request)
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"
     page = "dance"
+  elsif request.path == "/oceans" && request.site == "code.org"
+    page = "oceans"
   elsif request.path == "/" && ["code.org", "csedweek.org", "hourofcode.com"].include?(request.site)
     page = request.site
+  elsif request.path == "/thanks" && request.site == "hourofcode.com"
+    page = "thanks"
   else
     return {}
   end

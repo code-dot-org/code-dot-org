@@ -52,6 +52,7 @@ export default class HiddenForSectionToggle extends React.Component {
         className="uitest-togglehidden"
       >
         <Button
+          __useDeprecatedTag
           onClick={() => !disabled && onChange('visible')}
           text={i18n.visible()}
           color={Button.ButtonColor.gray}
@@ -60,6 +61,7 @@ export default class HiddenForSectionToggle extends React.Component {
           style={{...styles.button, ...styles.leftButton}}
         />
         <Button
+          __useDeprecatedTag
           onClick={() => !disabled && onChange('hidden')}
           text={i18n.hidden()}
           color={Button.ButtonColor.gray}

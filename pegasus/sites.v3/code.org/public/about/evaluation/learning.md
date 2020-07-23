@@ -29,7 +29,6 @@ Our evaluation partner, [Outlier Research & Evaluation](http://outlier.uchicago.
 Additionally, third party studies into the impact of CS on other subjects show promising results:
 
 - A study conducted by [College Board](https://code.org/files/CollegeBoardPreliminaryCSMemo.pdf) students who take the AP Computer Science exam earn higher AP Calculus and Statistics scores relative to peers who previously performed at a similar level in math. 
-- [A study](http://globaloria.com/wp-content/uploads/2015/05/Globaloria_Research_Overview.pdf) conducted by our partner, [Globaloria](http://www.globaloria.com), linked participation in CS courses to significant gains on standardized tests of math and reading in low-income middle school classrooms.
 - [An analysis](http://www.ccs.neu.edu/racket/pubs/sigcse-sfkf.pdf) by our partners at [Bootstrap](http://bootstrapworld.org) revealed the challenges of showing direct correlation, but did demonstrate that students who completed the Bootstrap curriculum (which incorporates computer science into an algebra class) showed some gains in understanding of mathematical concepts such as functional application and composition.
 
 See our [blog post](http://blog.code.org/post/125429946375/cs-other-subjects) for more information.

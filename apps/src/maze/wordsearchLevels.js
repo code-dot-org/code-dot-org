@@ -10,7 +10,10 @@ var wordSearchToolbox = function() {
     blockUtils.blockOfType('maze_moveNorth') +
       blockUtils.blockOfType('maze_moveSouth') +
       blockUtils.blockOfType('maze_moveEast') +
-      blockUtils.blockOfType('maze_moveWest')
+      blockUtils.blockOfType('maze_moveWest') +
+      `<block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>`
   );
 };
 

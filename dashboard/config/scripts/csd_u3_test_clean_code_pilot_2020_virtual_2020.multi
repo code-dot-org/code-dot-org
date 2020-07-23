@@ -1,0 +1,10 @@
+name 'CSD U3 Test clean code_pilot_2020_virtual_2020'
+title 'Question 1'
+type 'multi2'
+question 'A team of friends is creating a game together.  They want to make sure that everyone can understand the code that the others write.  Which of the following will make it easier for them to read each other\’s code? (Choose TWO)'
+wrong 'Use the counter pattern to increase the score'
+right 'Include descriptive comments in the program'
+wrong 'Use watchers to keep track of variable and sprite property values'
+right 'Give variables and functions names that make sense'
+wrong 'Declare variables outside of the draw loop, but update them inside the draw loop'
+

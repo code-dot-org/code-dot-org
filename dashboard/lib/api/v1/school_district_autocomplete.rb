@@ -12,7 +12,8 @@ class Api::V1::SchoolDistrictAutocomplete < AutocompleteHelper
 
     rows = SchoolDistrict.limit(limit).
       where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query).
-      order("MATCH(name,city) AGAINST('#{query}' IN BOOLEAN MODE) DESC, state, city, name")
+      # sanitize_sql_for_order won't be a public method until Rails 5.2
+      order(ActiveRecord::Base.send(:sanitize_sql_for_order, ["MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name", query]))
 
     return rows.map do |row|
       Serializer.new(row).attributes

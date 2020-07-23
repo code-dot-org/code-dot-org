@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 import React from 'react';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -24,14 +25,12 @@ export default class AbuseError extends React.Component {
     // our i18n strings
     return (
       <div className={this.props.className} style={this.props.style}>
-        <p
-          style={this.props.textStyle}
-          dangerouslySetInnerHTML={{__html: this.props.i18n.tos}}
-        />
-        <p
-          style={this.props.textStyle}
-          dangerouslySetInnerHTML={{__html: this.props.i18n.contact_us}}
-        />
+        <div>
+          <SafeMarkdown markdown={this.props.i18n.tos} />
+        </div>
+        <div>
+          <SafeMarkdown markdown={this.props.i18n.contact_us} />
+        </div>
       </div>
     );
   }

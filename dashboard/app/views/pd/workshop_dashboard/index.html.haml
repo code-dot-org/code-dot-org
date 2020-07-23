@@ -2,7 +2,7 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&libraries=places"}
-%script{src: minifiable_asset_path('js/pd/workshop_dashboard/index.js'), data: @script_data}
+%script{src: webpack_asset_path('js/pd/workshop_dashboard/index.js'), data: @script_data}
 
 #workshop-container
   -# populated by React

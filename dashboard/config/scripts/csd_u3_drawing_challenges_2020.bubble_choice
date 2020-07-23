@@ -1,0 +1,13 @@
+name 'CSD U3 drawing challenges_2020'
+display_name 'Drawing Challenges'
+description 'Try out some challenges!'
+
+sublevels
+
+level 'CSD U3 drawing challenge 2'
+level 'CSD U3 drawing challenge 3'
+level 'CSD U3 drawing challenge no fill_pilot'
+level 'CSD U3 picture_pilot'
+level 'CSD U3 challenge face_pilot'
+level 'CSD U3 challenge new shape_pilot'
+level 'CSD U3 L3 Freeplay_pilot'

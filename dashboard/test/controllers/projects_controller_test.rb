@@ -1,3 +1,4 @@
+require 'webmock/minitest'
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
@@ -18,13 +19,47 @@ class ProjectsControllerTest < ActionController::TestCase
   setup_all do
     @driver = create :user
     @navigator = create :user
-    section = create :section
-    section.add_student @driver
-    section.add_student @navigator
+    @section = create :section
+    @section.add_student @driver
+    @section.add_student @navigator
   end
 
-  test "get index" do
+  test "index" do
     get :index
+    assert_response :success
+
+    get :index, params: {tab_name: 'libraries'}
+    assert_response :success
+
+    get :index, params: {tab_name: 'public'}
+    assert_response :success
+  end
+
+  test "index: redirect to public tab if no user" do
+    sign_out :user
+
+    get :index
+    assert_redirected_to '/projects/public'
+
+    get :index, params: {tab_name: 'libraries'}
+    assert_redirected_to '/projects/public'
+
+    # Don't redirect if we're already on /projects/public
+    get :index, params: {tab_name: 'public'}
+    assert_response :success
+  end
+
+  test "index: redirect to '/' if user is admin" do
+    sign_in create(:admin)
+
+    get :index
+    assert_redirected_to '/'
+
+    get :index, params: {tab_name: 'libraries'}
+    assert_redirected_to '/'
+
+    # Don't redirect if we're already on /projects/public
+    get :index, params: {tab_name: 'public'}
     assert_response :success
   end
 
@@ -36,8 +71,9 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_sharing_meta_tags(
       url: "http://test.host/projects/artist/#{channel}",
       image: 'http://test.host/assets/sharing_drawing.png',
-      image_width: 500,
-      image_height: 261
+      image_width: 400,
+      image_height: 400,
+      small_thumbnail: true
     )
   end
 
@@ -133,7 +169,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @driver.update(age: 10)
     @navigator.update(age: 18)
     sign_in_with_request @driver
-    @controller.send :pairings=, [@navigator]
+    @controller.send :pairings=, {pairings: [@navigator], section_id: @section.id}
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
@@ -146,7 +182,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @driver.update(age: 18)
     @navigator.update(age: 10)
     sign_in_with_request @driver
-    @controller.send :pairings=, [@navigator]
+    @controller.send :pairings=, {pairings: [@navigator], section_id: @section.id}
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}
@@ -160,7 +196,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @navigator.update(age: 10)
     create :follower, user: (create :terms_of_service_teacher), student_user: @navigator
     sign_in_with_request @driver
-    @controller.send :pairings=, [@navigator]
+    @controller.send :pairings=, {pairings: [@navigator], section_id: @section.id}
 
     %w(applab gamelab).each do |lab|
       get :load, params: {key: lab}

@@ -5,7 +5,7 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 // Tab specific reducers can import actions from this file
 // if they need to respond to a script changing.
 
-const DEFAULT_SCRIPT_NAME = 'Express Course';
+const DEFAULT_SCRIPT_NAME = 'express-2017';
 
 // Action type constants
 export const SET_SCRIPT = 'scriptSelection/SET_SCRIPT';
@@ -17,41 +17,14 @@ export const setValidScripts = (
   validScripts,
   studentScriptIds,
   validCourses,
-  assignedCourseId
+  selectedSection
 ) => ({
   type: SET_VALID_SCRIPTS,
   validScripts,
   studentScriptIds,
   validCourses,
-  assignedCourseId
+  selectedSection
 });
-
-export const loadValidScripts = (section, validScripts) => {
-  return async (dispatch, getState) => {
-    const promises = [
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
-        dataType: 'json'
-      }),
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/courses`,
-        dataType: 'json'
-      })
-    ];
-    const [studentScriptsData, validCourses] = await Promise.all(promises);
-    const {studentScriptIds} = studentScriptsData;
-    dispatch(
-      setValidScripts(
-        validScripts,
-        studentScriptIds,
-        validCourses,
-        section.course_id
-      )
-    );
-  };
-};
 
 // Selectors
 export const getSelectedScriptName = state => {
@@ -61,16 +34,32 @@ export const getSelectedScriptName = state => {
   }
 
   const scripts = state.scriptSelection.validScripts;
-  let scriptName = null;
-  for (let i = 0; i < scripts.length; i++) {
-    const script = scripts[i];
-    if (script.id === scriptId) {
-      scriptName = script.script_name;
-      break;
-    }
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.script_name : null;
+};
+
+/* Get the user friendly name of a script(the unit or course name) */
+export const getSelectedScriptFriendlyName = state => {
+  const scriptId = state.scriptSelection.scriptId;
+  if (!scriptId) {
+    return null;
   }
 
-  return scriptName;
+  const scripts = state.scriptSelection.validScripts;
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.name : null;
+};
+
+/* Get the description of a script(the unit or course name) */
+export const getSelectedScriptDescription = state => {
+  const scriptId = state.scriptSelection.scriptId;
+  if (!scriptId) {
+    return null;
+  }
+
+  const scripts = state.scriptSelection.validScripts;
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.description : null;
 };
 
 /**
@@ -81,7 +70,8 @@ export const validScriptPropType = PropTypes.shape({
   category_priority: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  position: PropTypes.number
+  position: PropTypes.number,
+  description: PropTypes.string
 });
 
 // Initial state of scriptSelectionRedux
@@ -117,11 +107,18 @@ export default function scriptSelection(state = initialState, action) {
     let validScripts = action.validScripts;
     // Set defaultScript to Express Course to use if there are no validScripts
     const defaultScript = validScripts.find(
-      script => script.name === DEFAULT_SCRIPT_NAME
+      script => script.script_name === DEFAULT_SCRIPT_NAME
     );
 
     if (action.studentScriptIds && action.validCourses) {
       const idMap = {};
+      let actionScriptId =
+        action.selectedSection &&
+        action.selectedSection.script &&
+        action.selectedSection.script.id;
+      if (!!actionScriptId) {
+        idMap[actionScriptId] = true;
+      }
       // First, construct an id map consisting only of script ids which a
       // student has participated in.
       action.studentScriptIds.forEach(id => (idMap[id] = true));
@@ -132,7 +129,8 @@ export default function scriptSelection(state = initialState, action) {
       action.validCourses.forEach(course => {
         if (
           course.script_ids.some(id => idMap[id]) ||
-          (action.assignedCourseId && action.assignedCourseId === course.id)
+          (action.selectedSection &&
+            action.selectedSection.course_id === course.id)
         ) {
           course.script_ids.forEach(id => (idMap[id] = true));
         }
@@ -152,9 +150,9 @@ export default function scriptSelection(state = initialState, action) {
           scriptId = state.scriptId;
           break;
         // When there is an assigned course, set scriptId to the first script in the assigned course.
-        case !!action.assignedCourseId:
+        case !!(action.selectedSection && action.selectedSection.course_id):
           action.validCourses.forEach(course => {
-            if (course.id === action.assignedCourseId) {
+            if (course.id === action.selectedSection.course_id) {
               scriptId = course.script_ids[0];
             }
           });

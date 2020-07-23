@@ -5,8 +5,9 @@ import {
   WorkshopSearchErrors
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
+import Notification from '@cdo/apps/templates/Notification';
 import * as color from '../util/color';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -80,7 +81,8 @@ const styles = {
   },
   bigButton: {
     padding: '10px 20px 10px 20px',
-    height: 'initial'
+    height: 'initial',
+    marginTop: 22
   },
   clear: {
     clear: 'both'
@@ -215,11 +217,9 @@ class RegionalPartnerSearch extends Component {
     const appState = partnerInfo && partnerInfo.application_state.state;
     const appsOpenDate =
       partnerInfo && partnerInfo.application_state.earliest_open_date;
-
-    let applicationLink = studio('/pd/application/teacher');
-    if (this.state.nominated) {
-      applicationLink += '?nominated=true';
-    }
+    const appsPriorityDeadlineDate =
+      partnerInfo &&
+      partnerInfo.application_state.upcoming_priority_deadline_date;
 
     return (
       <div>
@@ -245,9 +245,11 @@ class RegionalPartnerSearch extends Component {
             <div>
               We are unable to find this ZIP code. You can still apply directly:
             </div>
-            <a href={applicationLink}>
-              <button style={styles.bigButton}>Start application</button>
-            </a>
+            <StartApplicationButton
+              buttonOnly={true}
+              nominated={this.state.nominated}
+              priorityDeadlineDate={appsPriorityDeadlineDate}
+            />
           </div>
         )}
 
@@ -297,9 +299,11 @@ class RegionalPartnerSearch extends Component {
                 </a>{' '}
                 for other Professional Development options in your area.
               </p>
-              <a href={applicationLink}>
-                <button style={styles.bigButton}>Start application</button>
-              </a>
+              <StartApplicationButton
+                buttonOnly={true}
+                nominated={this.state.nominated}
+                priorityDeadlineDate={appsPriorityDeadlineDate}
+              />
             </div>
           </div>
         )}
@@ -311,72 +315,64 @@ class RegionalPartnerSearch extends Component {
             <div style={styles.action}>
               {appState === WorkshopApplicationStates.currently_open &&
                 !partnerInfo.link_to_partner_application && (
-                  <a
+                  <StartApplicationButton
                     className="professional_learning_link"
                     id={`id-${partnerInfo.id}`}
-                    href={applicationLink}
-                  >
-                    <button style={styles.bigButton}>Start application</button>
-                  </a>
+                    nominated={this.state.nominated}
+                    priorityDeadlineDate={appsPriorityDeadlineDate}
+                  />
                 )}
 
               {appState === WorkshopApplicationStates.currently_open &&
                 partnerInfo.link_to_partner_application && (
-                  <a
+                  <StartApplicationButton
                     className="professional_learning_link"
                     id={`id-${partnerInfo.id}`}
-                    href={partnerInfo.link_to_partner_application}
-                    target="_blank"
-                  >
-                    <button style={styles.bigButton}>
-                      Apply on partner's site
-                    </button>
-                  </a>
+                    link={partnerInfo.link_to_partner_application}
+                    partnerSite={true}
+                    nominated={this.state.nominated}
+                    priorityDeadlineDate={appsPriorityDeadlineDate}
+                  />
                 )}
             </div>
 
-            <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
-            {workshopCollections[0].workshops.length === 0 &&
-              workshopCollections[1].workshops.length === 0 && (
-                <div>Workshop date and location information coming soon.</div>
-              )}
+            {appState !== WorkshopApplicationStates.now_closed && (
+              <div>
+                <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
+                {workshopCollections[0].workshops.length === 0 &&
+                  workshopCollections[1].workshops.length === 0 && (
+                    <div>Workshops not currently available in your region.</div>
+                  )}
 
-            {workshopCollections.map(
-              (collection, collectionIndex) =>
-                collection.workshops.length > 0 && (
-                  <div
-                    key={collectionIndex}
-                    style={{
-                      ...styles.workshopCollection,
-                      ...workshopCollectionStyle
-                    }}
-                  >
-                    <h4>{collection.heading}</h4>
-                    {collection.workshops.map((workshop, index) => (
-                      <div key={index} style={styles.workshop}>
-                        <div>{workshop.workshop_date_range_string}</div>
-                        <div>{workshop.location_name}</div>
-                        <div>{workshop.location_address}</div>
+                {workshopCollections.map(
+                  (collection, collectionIndex) =>
+                    collection.workshops.length > 0 && (
+                      <div
+                        key={collectionIndex}
+                        style={{
+                          ...styles.workshopCollection,
+                          ...workshopCollectionStyle
+                        }}
+                      >
+                        <h4>{collection.heading}</h4>
+                        {collection.workshops.map((workshop, index) => (
+                          <div key={index} style={styles.workshop}>
+                            <div>{workshop.workshop_date_range_string}</div>
+                            <div>{workshop.location_name}</div>
+                            <div>{workshop.location_address}</div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )
+                    )
+                )}
+              </div>
             )}
+
             <div style={styles.clear} />
 
             <div style={styles.action}>
-              {(workshopCollections[0].workshops.length > 0 ||
-                workshopCollections[1].workshops.length > 0) && (
-                <div>
-                  In addition to attending a five-day summer workshop, the
-                  professional learning program includes up to 4 required
-                  one-day, in-person academic year workshops during the 2019-20
-                  school year.
-                </div>
-              )}
-
               {appState === WorkshopApplicationStates.now_closed && (
-                <div>Applications are now closed.</div>
+                <h3>Applications are now closed.</h3>
               )}
 
               {appState === WorkshopApplicationStates.opening_at && (
@@ -396,7 +392,7 @@ class RegionalPartnerSearch extends Component {
                   notes={'Please notify me when I can apply!'}
                   sourcePageId="regional-partner-search-notify"
                 >
-                  <button style={styles.bigButton}>
+                  <button type="button" style={styles.bigButton}>
                     Notify me when I can apply
                   </button>
                 </RegionalPartnerMiniContactPopupLink>
@@ -407,21 +403,22 @@ class RegionalPartnerSearch extends Component {
               className="professional_learning_information"
               id={`id-${partnerInfo.id}`}
             >
-              {partnerInfo.cost_scholarship_information && (
-                <div>
-                  <h3>Scholarship, discounts, and cost information:</h3>
-                  <div style={styles.scholarship}>
-                    <UnsafeRenderedMarkdown
-                      markdown={partnerInfo.cost_scholarship_information}
-                    />
+              {appState !== WorkshopApplicationStates.now_closed &&
+                partnerInfo.cost_scholarship_information && (
+                  <div>
+                    <h3>Program information</h3>
+                    <div style={styles.scholarship}>
+                      <SafeMarkdown
+                        markdown={partnerInfo.cost_scholarship_information}
+                      />
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
               {partnerInfo.additional_program_information && (
                 <div>
-                  <h3>Additional program information:</h3>
-                  <UnsafeRenderedMarkdown
+                  <h3>More about your Regional Partner</h3>
+                  <SafeMarkdown
                     markdown={partnerInfo.additional_program_information}
                   />
                 </div>
@@ -457,27 +454,24 @@ class RegionalPartnerSearch extends Component {
             {/* These two links duplicate the buttons that appear above. */}
             {appState === WorkshopApplicationStates.currently_open &&
               !partnerInfo.link_to_partner_application && (
-                <a
+                <StartApplicationButton
                   className="professional_learning_link"
                   id={`id-${partnerInfo.id}`}
-                  href={applicationLink}
-                >
-                  <button style={styles.bigButton}>Start application</button>
-                </a>
+                  nominated={this.state.nominated}
+                  priorityDeadlineDate={appsPriorityDeadlineDate}
+                />
               )}
 
             {appState === WorkshopApplicationStates.currently_open &&
               partnerInfo.link_to_partner_application && (
-                <a
+                <StartApplicationButton
                   className="professional_learning_link"
                   id={`id-${partnerInfo.id}`}
-                  href={partnerInfo.link_to_partner_application}
-                  target="_blank"
-                >
-                  <button style={styles.bigButton}>
-                    Apply on partner's site
-                  </button>
-                </a>
+                  link={partnerInfo.link_to_partner_application}
+                  partnerSite={true}
+                  nominated={this.state.nominated}
+                  priorityDeadlineDate={appsPriorityDeadlineDate}
+                />
               )}
           </div>
         )}
@@ -485,6 +479,72 @@ class RegionalPartnerSearch extends Component {
     );
   }
 }
+
+const StartApplicationButton = ({
+  buttonOnly,
+  className,
+  id,
+  link,
+  partnerSite,
+  nominated,
+  priorityDeadlineDate
+}) => {
+  if (!link) {
+    link = studio('/pd/application/teacher');
+    if (nominated) {
+      link += '?nominated=true';
+    }
+  }
+  const target = partnerSite ? '_blank' : null;
+  const buttonText = partnerSite
+    ? "Apply on partner's site"
+    : 'Start application';
+
+  let notificationHeading, notificationText;
+  if (priorityDeadlineDate) {
+    notificationHeading = `Priority deadline for your region is ${priorityDeadlineDate}`;
+    notificationText = 'Sign up now to reserve your space!';
+  } else {
+    notificationHeading =
+      'We still have spaces in the Professional Learning Program!';
+    notificationText = 'It’s not too late to sign up.';
+  }
+
+  const button = (
+    <a className={className} id={id} target={target} href={link}>
+      <button type="button" style={styles.bigButton}>
+        {buttonText}
+      </button>
+    </a>
+  );
+
+  if (buttonOnly) {
+    return button;
+  } else {
+    return (
+      <div>
+        <Notification
+          type="information"
+          notice={notificationHeading}
+          details={notificationText}
+          dismissible={false}
+        >
+          {button}
+        </Notification>
+      </div>
+    );
+  }
+};
+
+StartApplicationButton.propTypes = {
+  buttonOnly: PropTypes.bool,
+  className: PropTypes.string,
+  id: PropTypes.string,
+  link: PropTypes.string,
+  partnerSite: PropTypes.bool,
+  nominated: PropTypes.bool,
+  priorityDeadlineDate: PropTypes.string
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

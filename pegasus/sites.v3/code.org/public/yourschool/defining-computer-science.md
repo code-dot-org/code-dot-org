@@ -5,7 +5,7 @@ social:
   "og:title": "Does your school teach computer science?"
   "og:description": "Expand computer science at your school or district. Join the thousands of schools who have already incorporated high quality computer science education into their curriculum and provide opportunities for the students in your local area."
 ---
-The K-12 Computer Science Access Report is a collaborative partnership between the Computer Science Teachers Association and Code.org to identify on a school-by-school basis where computer science is taught. The data we’ve already gathered is available on our [interactive map](https://code.org/yourschool).
+The K-12 Computer Science Access Report is a collaborative partnership between the Computer Science Teachers Association and Code.org to identify on a school-by-school basis where computer science is taught. The data we’ve already gathered is available on our [interactive map](https://code.org/yourschool). Read the [2019 State of Computer Science Education] (https://advocacy.code.org/2019_state_of_cs.pdf) (published September 2019) which includes a chapter on the K-12 Computer Science Access Report.  
 
 ## Overview of the data sources we use
 The data shown on the map on [code.org/yourschool](https://code.org/yourschool) comes from one of four sources:

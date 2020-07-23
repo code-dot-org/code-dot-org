@@ -1,12 +1,16 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {
   addColumnName,
   deleteColumnName,
   renameColumnName,
-  getColumnNames,
-  onColumnNames
+  getColumnNamesSnapshot,
+  onColumnsChange
 } from '@cdo/apps/storage/firebaseMetadata';
-import {init, getDatabase, getConfigRef} from '@cdo/apps/storage/firebaseUtils';
+import {
+  init,
+  getProjectDatabase,
+  getConfigRef
+} from '@cdo/apps/storage/firebaseUtils';
 
 describe('firebaseMetadata', () => {
   beforeEach(() => {
@@ -16,7 +20,7 @@ describe('firebaseMetadata', () => {
       firebaseAuthToken: 'test-firebase-auth-token',
       showRateLimitAlert: () => {}
     });
-    getDatabase().autoFlush();
+    getProjectDatabase().autoFlush();
     return getConfigRef()
       .set({
         limits: {
@@ -29,22 +33,22 @@ describe('firebaseMetadata', () => {
         maxTableCount: 3
       })
       .then(() => {
-        getDatabase().set(null);
+        getProjectDatabase().set(null);
       });
   });
 
   it('adds column names', done => {
-    getColumnNames('mytable')
+    getColumnNamesSnapshot(getProjectDatabase(), 'mytable')
       .then(columnNames => {
         expect(columnNames).to.deep.equal([]);
         return addColumnName('mytable', 'foo');
       })
-      .then(() => getColumnNames('mytable'))
+      .then(() => getColumnNamesSnapshot(getProjectDatabase(), 'mytable'))
       .then(columnNames => {
         expect(columnNames).to.deep.equal(['foo']);
         return addColumnName('mytable', 'bar');
       })
-      .then(() => getColumnNames('mytable'))
+      .then(() => getColumnNamesSnapshot(getProjectDatabase(), 'mytable'))
       .then(columnNames => {
         expect(columnNames).to.deep.equal(['foo', 'bar']);
         done();
@@ -55,7 +59,7 @@ describe('firebaseMetadata', () => {
     addColumnName('mytable', 'foo')
       .then(() => addColumnName('mytable', 'bar'))
       .then(() => renameColumnName('mytable', 'bar', 'baz'))
-      .then(() => getColumnNames('mytable'))
+      .then(() => getColumnNamesSnapshot(getProjectDatabase(), 'mytable'))
       .then(columnNames => {
         expect(columnNames).to.deep.equal(['foo', 'baz']);
         done();
@@ -66,7 +70,7 @@ describe('firebaseMetadata', () => {
     addColumnName('mytable', 'foo')
       .then(() => addColumnName('mytable', 'bar'))
       .then(() => deleteColumnName('mytable', 'foo'))
-      .then(() => getColumnNames('mytable'))
+      .then(() => getColumnNamesSnapshot(getProjectDatabase(), 'mytable'))
       .then(columnNames => {
         expect(columnNames).to.deep.equal(['bar']);
         done();
@@ -82,7 +86,7 @@ describe('firebaseMetadata', () => {
       ['foo', 'baz'],
       ['baz']
     ];
-    onColumnNames('mytable', columnNames => {
+    onColumnsChange(getProjectDatabase(), 'mytable', columnNames => {
       expect(columnNames).to.deep.equal(expectedNames[count]);
       count++;
       if (count === expectedNames.length) {

@@ -1,0 +1,19 @@
+name 'cspu5_assess1_eventprograms_2018_2019_virtual'
+right 'Event-driven programs do not implement algorithms.'
+wrong 'Some portions of an event-driven program may never execute while the program is running.'
+wrong 'An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.'
+wrong 'The order in which an event-driven program will run cannot always be known ahead of time.'
+wrong 'Event-driven programs can be run multiple times with different outcomes, based on user interactions.'
+
+
+markdown <<MARKDOWN
+Which of the following is FALSE about event-driven programs?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 1**
+
+An "Event-driven program" is a program that runs in relation to an event, such as user actions (mouse clicks, button presses, etc.) Depending on what the event is, multiple functions can be run in a certain order (as an algorithm) to execute a task. Or, a program can run with a specific flow depending on the event. This flow can be determined with a written algorithm.
+
+For example, a program is written to fix the size of an image by making it bigger with a click of a button. When the button is clicked, there can be code inside the event block that implements an algorithm that adds 10 pixels onto the current image.
+MARKDOWN

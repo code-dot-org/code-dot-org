@@ -151,6 +151,10 @@ class DownloadReplayVideoButton extends React.Component {
   }
 
   checkVideoUntilSuccess = (delay = 1000) => {
+    if (!this.hasReplayVideo()) {
+      return;
+    }
+
     if (this.state.videoExists) {
       return;
     }
@@ -206,6 +210,7 @@ class DownloadReplayVideoButton extends React.Component {
 
     return (
       <button
+        type="button"
         className="download-replay-video-button"
         style={style}
         disabled={!this.buttonEnabled()}

@@ -26,13 +26,14 @@ IDs are essential for a database to function properly.  This is why you cannot e
 
 **3. A record's ID is included with the object when you get it back from the database.**
 
- * The code below reads records from the database and displays the first object returned - you can see that the ID of the record is included as part of the object.
+* The code below reads records from the database and displays the first object returned - you can see that the ID of the record is included as part of the object.
  
  <img src="https://images.code.org/2a658a56adf07e0a56a632ae91b77a2e-image-1449865498016.png" style="width: 400px">
  
  <img src="https://images.code.org/34036447e49b99c786fcd47435c8f903-image-1449865910532.png" style="width: 800px">
  
- * Because the ID is part of the object you can refer to it like you would any other property using dot notation. Here is an example that just displays the id of the object:
+
+* Because the ID is part of the object you can refer to it like you would any other property using dot notation. Here is an example that just displays the id of the object:
  
  <img src="https://images.code.org/4244178ba967336ff4342a5237d8cee1-image-1449866622570.png" style="width: 400px">
  
@@ -41,7 +42,7 @@ IDs are essential for a database to function properly.  This is why you cannot e
 
 **4. The `id` property of an object is *required* for writing code to delete and update records.**
 
- * Now that you know about IDs, let's take a look at how to delete records with code...
+* Now that you know about IDs, let's take a look at how to delete records with code...
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

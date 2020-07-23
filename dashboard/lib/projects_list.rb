@@ -15,7 +15,8 @@ module ProjectsList
     minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
-    dance: ['dance']
+    dance: ['dance'],
+    library: ['applab', 'gamelab']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
@@ -33,7 +34,7 @@ module ProjectsList
       storage_id = storage_id_for_user_id(user_id)
       PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id)
+        project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
@@ -116,6 +117,68 @@ module ProjectsList
       return featured_published_projects
     end
 
+    # Retrieve a class set of libraries for a specified class section
+    # @param section The section that has all users whose libraries should
+    #                be returned.
+    # @return [Hash<Array<Hash>>] A hash of lists of published libraries.
+    def fetch_section_libraries(section)
+      project_types = PUBLISHED_PROJECT_TYPE_GROUPS[:library]
+      section_users = section.students + [section.user]
+
+      [].tap do |projects_list_data|
+        user_storage_ids = PEGASUS_DB[:user_storage_ids].
+          where(user_id: section_users.pluck(:id)).
+          select_hash(:id, :user_id)
+        user_storage_id_list = user_storage_ids.keys
+        PEGASUS_DB[:storage_apps].
+          where(storage_id: user_storage_id_list, state: 'active').
+          where(project_type: project_types).
+          where("value->'$.libraryName' IS NOT NULL").
+          each do |project|
+            # The channel id stored in the project's value field may not be reliable
+            # when apps are remixed, so recompute the channel id.
+            channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
+            project_owner = section_users.find {|user| user.id == user_storage_ids[project[:storage_id]]}
+            project_data = get_library_row_data(project, channel_id, section.name, project_owner)
+            if project_data && (project_owner.id != section.user_id || project_data[:sharedWith].include?(section.id))
+              projects_list_data << project_data
+            end
+          end
+      end
+    end
+
+    # Given an array of library objects (outlined below), returns the channel_ids for
+    # libraries that have been updated since the given version.
+    #
+    # @param libraries [Array<Hash>] Should be formatted as follows:
+    #   [{channel_id: 'abc123', version: 'xyz987'}]
+    #   where `version` corresponds to an S3 version of the library.
+    # @return [Array<String>] The channel_ids of libraries that have been updated since the given version.
+    def fetch_updated_library_channels(libraries)
+      project_ids = libraries.map do |library|
+        _, id = storage_decrypt_channel_id(library['channel_id'])
+        library['project_id'] = id
+        id
+      rescue
+        nil
+      end.compact.uniq
+
+      return [] if project_ids.nil_or_empty?
+
+      updated_library_channels = []
+      PEGASUS_DB[:storage_apps].where(id: project_ids).each do |project|
+        library = libraries.find {|lib| lib['project_id'] == project[:id]}
+        project_value = JSON.parse(project[:value])
+        next unless library && project_value['latestLibraryVersion']
+
+        if library['version'] != project_value['latestLibraryVersion']
+          updated_library_channels << library['channel_id']
+        end
+      end
+
+      updated_library_channels
+    end
+
     def project_and_featured_project_and_user_fields
       [
         :storage_apps__id___id,
@@ -139,9 +202,9 @@ module ProjectsList
         join(storage_apps, id: :storage_app_id).
         join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
         join(:users, id: Sequel[:user_storage_ids][:user_id]).
-        where(unfeatured_at: nil,
+        where(
+          unfeatured_at: nil,
           project_type: project_type.to_s,
-          abuse_score: 0,
           state: 'active'
         ).
         exclude(published_at: nil).
@@ -179,17 +242,42 @@ module ProjectsList
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_project_row_data(project, channel_id, student = nil)
+    def get_project_row_data(project, channel_id, student = nil, with_library = false)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
-      {
+
+      row_data = {
         channel: channel_id,
         name: project_value['name'],
         studentName: student&.name,
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at],
+        publishedAt: project[:published_at]
+      }
+
+      if with_library
+        row_data[:libraryName] = project_value['libraryName']
+        row_data[:libraryDescription] = project_value['libraryDescription']
+        row_data[:libraryPublishedAt] = project_value['libraryPublishedAt']
+        row_data[:sharedWith] = project_value['sharedWith'] ? project_value['sharedWith'] : []
+      end
+
+      row_data.with_indifferent_access
+    end
+
+    # pull various fields out of the user and project records to populate
+    # a data structure that can be used to populate a UI component displaying a
+    # single library or a list of libraries.
+    def get_library_row_data(project, channel_id, section_name, user = nil)
+      project_value = project[:value] ? JSON.parse(project[:value]) : {}
+      {
+        sectionName: section_name,
+        channel: channel_id,
+        name: project_value['libraryName'],
+        description: project_value['libraryDescription'],
+        userName: user&.name,
+        sharedWith: project_value['sharedWith'] ? project_value['sharedWith'] : []
       }.with_indifferent_access
     end
 
@@ -200,6 +288,7 @@ module ProjectsList
         :storage_apps__value___value,
         :storage_apps__project_type___project_type,
         :storage_apps__published_at___published_at,
+        :storage_apps__abuse_score___abuse_score,
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
@@ -215,7 +304,7 @@ module ProjectsList
             select(*project_and_user_fields).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
-            where(state: 'active', project_type: project_types, abuse_score: 0).
+            where(state: 'active', project_type: project_types).
             where {published_before.nil? || published_at < DateTime.parse(published_before)}.
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
@@ -231,9 +320,10 @@ module ProjectsList
     # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
     # @returns [hash, nil] containing fields relevant to the published project or
-    #  nil when the user has sharing_disabled = true for App Lab and Game Lab.
+    #  nil when the user has sharing_disabled = true for App Lab, Game Lab and Sprite Lab.
     def get_published_project_and_user_data(project_and_user)
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
+      return nil if project_and_user[:abuse_score] > 0
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
       StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {

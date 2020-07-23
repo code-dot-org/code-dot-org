@@ -1,12 +1,3 @@
-#!/bin/bash -x
-# UserData bootstrap script for CloudFormation stack instances.
-
-<% unless daemon -%>
-# Modify cloud-init to re-run this user-data script every time instance restarts.
-# Ref: http://stackoverflow.com/a/10455027
-sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
-<% end -%>
-
 # Bootstrap prerequisites
 apt-get update
 unattended-upgrade
@@ -14,10 +5,10 @@ apt-get -y install python3-pip curl
 test "$(pip3 show awscli)" || pip3 install awscli
 
 STACK=${AWS::StackName}
-CHEF_VERSION=12.7.2
+CHEF_VERSION=<%=CHEF_VERSION%>
 REGION=${AWS::Region}
 BRANCH=${Branch}
-S3_BUCKET=<%=s3_bucket%>
+S3_BUCKET=<%=S3_BUCKET%>
 ENVIRONMENT=<%=environment%>
 RUN_LIST='<%=run_list.to_json%>'
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
@@ -28,9 +19,9 @@ RESOURCE_ID=<%=resource_id%>
 export AWS_METADATA_SERVICE_TIMEOUT=30
 export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 
-<% if environment == 'adhoc' -%>
+<% if environment == :adhoc -%>
 # Redirect copy of stdout/stderr to a log file for later auditing.
-LOG=<%=log_name%>
+LOG=<%=TailLogs::LOG_NAME%>
 exec >> >(tee -i $LOG)
 exec 2>&1
 
@@ -56,11 +47,11 @@ aws logs put-retention-policy \
   --retention-in-days 1 \
   --region $REGION
 <% end -%>
-<% unless @load_balancer -%>
+<% unless load_balancer -%>
 # Fetch acmesmith-provisioned SSL certificate and key from S3
 aws configure set s3.signature_version s3v4
 SUBDOMAIN=<%=subdomain%>
-S3_PATH=s3://$S3_BUCKET/ssl/certs/$SUBDOMAIN
+S3_PATH=<%=ssl_certs_path%>
 CURRENT=$S3_PATH/$(aws s3 cp $S3_PATH/current -)
 function replace_newline() {
   sed 's/$/\\n/' | tr -d '\n'
@@ -69,12 +60,21 @@ CERT=$(aws s3 cp $CURRENT/cert.pem - | replace_newline)
 CHAIN=$(aws s3 cp $CURRENT/chain.pem - | replace_newline)
 KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
 <% end -%>
+
+<% if database -%>
+apt-get install -y  jq
+DB_SECRET_NAME=${DatabaseSecret}
+DB_SECRET=$(aws --region $REGION secretsmanager get-secret-value --secret-id $DB_SECRET_NAME --version-stage AWSCURRENT | jq -r ".SecretString")
+DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
+DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
+<% end -%>
+
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
 mkdir -p $(dirname $FIRST_BOOT)
 cat <<JSON > $FIRST_BOOT
 {
-<% unless @load_balancer -%>
+<% unless load_balancer -%>
   "cdo-nginx": {
     "ssl_cert": {
       "content": "$CERT"
@@ -95,14 +95,16 @@ cat <<JSON > $FIRST_BOOT
     "sync": true
   },
   "cdo-secrets": {
-<% if @frontends -%>
+<% if frontends -%>
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
     "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
-<% if TEMPLATE == 'cloud_formation_stack.yml.erb' && @database -%>
-    "db_writer": "mysql://${DatabaseUsername}:${DatabasePassword}@${Database.Endpoint.Address}:${Database.Endpoint.Port}/",
+<% if database -%>
+    "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.Endpoint.Address}:${AuroraCluster.Endpoint.Port}/",
+    "db_reader": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.ReadEndpoint.Address}:${AuroraCluster.Endpoint.Port}/",
+    "db_cluster_id": "${AuroraCluster}",
 <% end -%>
 <% unless cdn_enabled -%>
     "cdn_enabled": false,
@@ -114,7 +116,7 @@ cat <<JSON > $FIRST_BOOT
 <% end -%>
     "stack_name": "$STACK"
   },
-<% if local_mode -%>
+<% if CDO.chef_local_mode -%>
   "omnibus_updater": {
     "version": "$CHEF_VERSION"
   },
@@ -129,24 +131,11 @@ cat <<JSON > $FIRST_BOOT
 JSON
 
 # Provision via Chef.
-OPTIONS="<%=local_mode ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '$RUN_LIST' -e $ENVIRONMENT"
-sudo -u ubuntu bash -c "aws s3 cp s3://$S3_BUCKET/<%=CHEF_KEY%>/bootstrap-$STACK.sh - | sudo bash -s -- $OPTIONS"
+OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '$RUN_LIST' -e $ENVIRONMENT -v $CHEF_VERSION"
+sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s -- $OPTIONS"
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=<%=daemon ? 'SUCCESS' : 'FAILURE'%>
 
 <% unless daemon -%>
 # Workaround for version-controlled files modified by seed.
 sudo -u ubuntu bash -c "cd /home/ubuntu/$ENVIRONMENT && git reset --hard"
-<% end -%>
-
-# Signal CloudFormation resource.
-aws cloudformation signal-resource \
-  --unique-id $INSTANCE_ID \
-  --stack-name $STACK \
-  --logical-resource-id $RESOURCE_ID \
-  --status $STATUS \
-  --region $REGION \
-  || true
-
-<% if shutdown -%>
-shutdown -h now
 <% end -%>

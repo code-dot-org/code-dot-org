@@ -25,6 +25,10 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    unless allowed_ip_address?(url.host)
+      render_error_response 400, "Target IP address is restricted"
+      return
+    end
     unless allowed_hostname?(url, allowed_hostname_suffixes)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
@@ -78,9 +82,10 @@ module ProxyHelper
     render_error_response 400, "Invalid URI #{location}"
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH => e
     render_error_response 400, "Network error #{e.class} #{e.message}"
-  rescue OpenSSL::SSL::SSLError => e
-    raise e unless e.message =~ SSL_HOSTNAME_MISMATCH_REGEX
-    render_error_response 400, "Remote host SSL certificate error #{e.message}"
+  rescue OpenSSL::SSL::SSLError
+    render_error_response 400, "Remote host SSL certificate error"
+  rescue EOFError
+    render_error_response 400, "Remote host closed the connection before sending all data"
   end
 
   # Unlike render_proxied_url, this does not attempt to render the URL, but instead
@@ -128,6 +133,11 @@ module ProxyHelper
     return 400, "Network error #{e.class} #{e.message}"
   end
 
+  def dashboard_ip_address
+    @@dashboard_ip_address ||= IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
+  end
+  module_function :dashboard_ip_address
+
   private
 
   # Returns true if the url's hostname ends in one of the allowed suffixes.
@@ -146,5 +156,21 @@ module ProxyHelper
   def render_error_response(status, text)
     prevent_caching
     render plain: text, status: status
+  end
+
+  # Do not permit proxying to a server on our own private network, unless it is our own dashboard IP Address (we
+  # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
+  def allowed_ip_address?(hostname)
+    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
+    public_ip_address?(host_ip_address) || host_ip_address == ProxyHelper.dashboard_ip_address
+  end
+
+  def public_ip_address?(ip_address)
+    return (
+      !ip_address.link_local? &&
+      !ip_address.loopback? &&
+      !ip_address.private? &&
+      !IPAddr.new('0.0.0.0/8').include?(ip_address)
+    )
   end
 end

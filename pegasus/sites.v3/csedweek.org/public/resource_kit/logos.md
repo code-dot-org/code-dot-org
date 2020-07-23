@@ -4,7 +4,7 @@ nav: resource_kit_nav
 ---
 # Logos
 
-Feel free to use these logos in promoting the Hour of Code. 
+Feel free to use these logos in promoting the Hour of Code.
 (Click to open full-size versions.)
 <br />
 <br />
@@ -13,11 +13,11 @@ Feel free to use these logos in promoting the Hour of Code.
 <br />
 <br />
 
-[![image](/images/fit-200/square-logo.png)](/images/square-logo.png)
+[![image](/images/fit-200/square-logo.png)](/images/CSEdWeek_logo_square_red_RGB.png)
 <br />
 <br />
 
-[![image](/images/fit-200/square-logo-red.png)](/images/square-logo-red.png)
+[![image](/images/fit-200/square-logo-red.png)](/images/CSEdWeek_logo_square_whitebox_RGB.png)
 <br />
 <br />
 

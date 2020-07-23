@@ -197,7 +197,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 5,
-        "message": "drawAllSeaStars: App lab is expecting that you write a loop runs at least 5 times and repeatedly calls two commands: moveTo(x,y) and drawSeaStar(size).  It appears as though the sequence is slightly different or you're not running the loop 5 times."
+        "message": "drawAllSeaStars: App lab is expecting that you write a loop that runs at least 5 times and repeatedly calls two commands: moveTo(x,y) and drawSeaStar(size).  It appears as though the sequence is slightly different or you're not running the loop 5 times."
       },
       {
         "entries": [
@@ -229,7 +229,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 15,
-        "message": "drawAllFish: App lab is expecting that you write a loop runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
+        "message": "drawAllFish: App lab is expecting that you write a loop that runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
       },
       {
         "entries": [
@@ -260,12 +260,13 @@
     "name_suffix": "_2019",
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
+    "mini_rubric": "false",
     "preload_asset_list": null,
-    "mini_rubric": "false"
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-19 18:19:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-02-18 15:16:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-09-19 18:19:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-02-18 15:16:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-01 15:51:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

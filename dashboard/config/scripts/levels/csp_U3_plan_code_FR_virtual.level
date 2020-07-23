@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T16:56:03.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "<img src=\"https://images.code.org/01d3b0664443216b4363ec31914e592a-image-1506460763004.png\" style=\"float: right\">\r\n\r\n<br>\r\n\r\nIn this lesson we talked about how to build up solutions to larger programming problems with functions.  Plan the code that you would use to draw this image (shown at right). Describe each of the functions that you would create. You should not write all the code, only the names of the functions that you would create with a brief description of what each function would do. \r\n\r\nWrite your plan following the format:\r\n\r\n<div style=\"clear: both\"> </div>\r\n\r\n    Name of function - description of what it does\r\n\r\n    Name of function 2 - description of what it does\r\n    ...",
+    "instructions_important": "false",
+    "placeholder": "Write your plan here",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "TsKAapnBaXh9Fl1JXwAIwq+EC8PJGp7tIqGFReaO9CKZm4mEukvHfDlZgAn8\nMCWAVjp63GTSwlo2tAQV1gArIEuv3D3y3r5YPb04W1xJtdODd1ECB5yRiJ7E\n6cmF1+pq46hc80F7Hg5ty0EQeRHl8Fys68QA79RCED7oUp75iyAFaddoMUW6\nkQ/+6mHVttXUgfMSoLLBlXz/6jYXb0xjz7k4JRCO9EKLGUHLT5pnEUJDDlNt\nfRFeYgUr2hIIPzF3INtMZAdkISDcksJsT+OKqXpP/kgVfvI/rwAONXmWL2gi\nqVDXDAIhTDSQHgb2lJz4E43eoJxeeSPnh5wXXzNyg/UYaK6tDZkUzFPaiq9p\npcnNT5XhEoxvEfW0kVfOnNLSBYfvsBvFz/PfRl8+whzwHJgT5gRY/zbrrqkD\nDV4A/8IhcFdS0zPQOnHkDl89nMb0xm/uRA32RB6Vx0JezLHqTb9bEZegniM/\n/cxuxoGNV/gfIsMxnaEIv1M7xxvnU6/V2yamFDtuhOi8cV/zp9Lz1Q65B21A\nFsRlo0yQ6nqcJsNRlGyWlpBdmUcDw201iVT13xUFxv3ZLNOHOodrMQW7+Zo3\nKKSXJh1rdOzcp/KoUoxYHUYiIyHfmTqZ4i5CKsqYju81tWw4D3IAXNKVAvm3\nP0yeOFxpXRikSNYUQyTM+9Kv9u8KDd+eTPR1ql/4MsVj\n",
+    "parent_level_id": 16906,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-26 21:22:53 +0000\",\"changed\":[\"markdown_instructions\",\"placeholder\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-26 21:23:10 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-26 21:23:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-26 21:23:45 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-26 21:25:37 +0000\",\"changed\":[\"markdown_instructions\",\"placeholder\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-26 21:26:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-03 17:05:11 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-10 14:08:51 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-10 18:49:04 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</FreeResponse>

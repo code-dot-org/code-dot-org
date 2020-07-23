@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -42,6 +42,7 @@ class Applab < Blockly
     log_conditions
     data_tables
     data_properties
+    data_library_tables
     hide_view_data_button
     show_debug_watch
     expand_debugger
@@ -49,8 +50,11 @@ class Applab < Blockly
     fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
-    teacher_markdown
     helper_libraries
+    widget_mode
+    starter_assets
+    start_libraries
+    libraries_enabled
   )
 
   # List of possible skins, the first is used as a default.
@@ -135,5 +139,25 @@ class Applab < Blockly
 
   def self.palette
     SharedConstants::APPLAB_BLOCKS
+  end
+
+  # Add a starter asset to the level and save it in properties.
+  # Starter assets are stored as an object, where the key is the
+  # friendly filename and the value is the UUID filename stored in S3:
+  # {
+  #   # friendly_name => uuid_name
+  #   "welcome.png" => "123-abc-456.png"
+  # }
+  def add_starter_asset!(friendly_name, uuid_name)
+    self.starter_assets ||= {}
+    self.starter_assets[friendly_name] = uuid_name
+    save!
+  end
+
+  # Remove a starter asset by its key (friendly_name) from the level's properties.
+  def remove_starter_asset!(friendly_name)
+    return true unless starter_assets
+    starter_assets.delete(friendly_name)
+    save!
   end
 end

@@ -8,7 +8,7 @@ Internet Simulator | Group Problem Solving | Concept Invention
 Students are introduced to the Internet Simulator, a tool they will return to many times in the first two units of the course. Today, the Internet Simulator will be used to simulate a single shared wire, connecting two people. The wire can only be in one of two possible states (state A or state B) and either partner may set or read the state of the wire at any time, but this is the only way in which students may communicate. Students must invent a binary call-response protocol using this system. Coordination, speed and timing are problems that need to be solved. At the conclusion of the lesson, students compete to demonstrate the speed and accuracy of their protocols, and calculate the bit rate of their message exchange.
 
 <h2>
-<a href= "https://curriculum.code.org/csp/unit1/3" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"/></a>
+<a href= "https://curriculum.code.org/csp/unit1/3" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"></i></a>
 </h2>
 
 

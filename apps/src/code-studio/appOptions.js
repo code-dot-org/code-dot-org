@@ -10,12 +10,12 @@
  * @property {string} levelPosition
  * @property {AutoplayVideo} autoplayVideo
  * @property {SerializedAnimationList} initialAnimationList
+ * @property {Object} initialGeneratedProperties
  * @property {string} levelGameName
  * @property {string} skinId
  * @property {string} baseUrl
  * @property {string} app
  * @property {boolean} droplet
- * @property {'.min'|''} pretty - todo: no longer used?
  * @property {Level|Artist|Blockly} level
  * @property {boolean} showUnusedBlocks
  * @property {boolean} fullWidth
@@ -37,16 +37,19 @@
  * @property {?} authoredHintsUsedIds
  * @property {number} serverLevelId
  * @property {number} serverProjectLevelId
+ * @property {number} serverScriptLevelId
  * @property {string} gameDisplayName
  * @property {boolean} publicCaching
  * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
  *           false if they are 12 or younger, and undefined if we don't know
  *           (such as when they are not signed in).
+ * @property {boolean} verifiedTeacher
  * @property {boolean} hasContainedLevels
  * @property {boolean} hideSource
  * @property {string} share
  * @property {string} labUserId
  * @property {string} firebaseName
+ * @property {string} firebaseSharedAuthToken
  * @property {string} firebaseAuthToken
  * @property {string} firebaseChannelIdSuffix
  * @property {boolean} isSignedIn
@@ -54,7 +57,7 @@
  * @property {boolean} hasVerticalScrollbars
  * @property {boolean} showExampleTestButtons
  * @property {ReportOptions} report
- * @property {boolean} sendToPhone
+ * @property {boolean} isUS
  * @property {string} send_to_phone_url
  * @property {CopyrightStrings} copyrightStrings
  * @property {string} teacherMarkdown
@@ -110,6 +113,7 @@
  * @property {number} puzzle_number
  * @property {number} stage_total
  * @property {boolean} iframeEmbed
+ * @property {boolean} iframeEmbedAppAndCode
  * @property {?} lastAttempt
  * @property {boolean} submittable
  * @property {boolean} final_level
@@ -208,7 +212,6 @@
  * @augments MilestoneResponse
  * @property {?} timestamp
  * @property {{message: ?, type: ?, contents: ?}} share_failure
- * @property {string} save_to_gallery_url - URL to save this submission to the gallery.
  * @property {string} level_source
  * @property {string} level_source_id
  * @property {string} level_source_image_url

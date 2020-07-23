@@ -4,8 +4,10 @@ class UserScriptTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @script = create :script
+    @lesson_group = create :lesson_group, script: @script
+    @lesson = create :lesson, script: @script, lesson_group: @lesson_group
     @script_levels = 1.upto(10).map do
-      create :script_level, script: @script
+      create :script_level, script: @script, lesson: @lesson
     end
   end
 
@@ -15,7 +17,7 @@ class UserScriptTest < ActiveSupport::TestCase
   end
 
   def complete_level(script_level, result = 100)
-    @user.track_level_progress_async(script_level: script_level, new_result: result, submitted: false, level_source_id: nil, level: script_level.oldest_active_level, pairing_user_ids: nil)
+    User.track_level_progress(user_id: @user.id, script_id: script_level.script.id, new_result: result, submitted: false, level_source_id: nil, level_id: script_level.oldest_active_level.id)
   end
 
   def complete_all_levels
@@ -79,5 +81,9 @@ class UserScriptTest < ActiveSupport::TestCase
       completed_at: Time.now,
       last_progress_at: Time.now
     ).empty?
+  end
+
+  test "lookup hash" do
+    assert_equal ({'foo' => false, @script.name => true}), UserScript.lookup_hash(@user, ['foo', @script.name])
   end
 end

@@ -17,5 +17,9 @@ FactoryGirl.define do
   factory :queued_account_purge do
     user
     reason_for_review "Fake reason."
+
+    trait :autoretryable do
+      reason_for_review "Pardot::InvalidApiKeyException"
+    end
   end
 end

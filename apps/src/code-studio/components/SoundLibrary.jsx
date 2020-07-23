@@ -4,46 +4,59 @@ import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
 import * as color from '../../util/color';
 import Sounds from '../../Sounds';
+import SearchBar from '@cdo/apps/templates/SearchBar';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
 
 const SOUND_CATEGORIES = {
-  category_animals: 'Animals',
-  category_background: 'Background',
-  category_board_games: 'Board games',
-  category_digital: 'Digital',
-  category_female_voiceover: 'Female voiceovers',
-  category_instrumental: 'Instrumental',
-  category_male_voiceover: 'Male voiceovers',
-  category_objects: 'Objects',
-  category_all: 'All'
+  accent: 'Accent',
+  achievements: 'Achievements',
+  alerts: 'Alerts',
+  animals: 'Animals',
+  app: 'App',
+  background: 'Background',
+  bell: 'Bell',
+  board_games: 'Board games',
+  collect: 'Collect',
+  digital: 'Digital',
+  explosion: 'Explosion',
+  female_voiceover: 'Female voiceovers',
+  hits: 'Hits',
+  human: 'Human',
+  instrumental: 'Instrumental',
+  jump: 'Jump',
+  loops: 'Loops',
+  male_voiceover: 'Male voiceovers',
+  movement: 'Movement',
+  music: 'Music',
+  nature: 'Nature',
+  notifications: 'Notifications',
+  objects: 'Objects',
+  points: 'Points',
+  poof: 'Poof',
+  pop: 'Pop',
+  projectile: 'Projectile',
+  puzzle: 'Puzzle',
+  retro: 'Retro',
+  slide: 'Slide',
+  swing: 'Swing',
+  swish: 'Swish',
+  tap: 'Tap',
+  transition: 'Transition',
+  whoosh: 'Whoosh',
+  all: 'All'
 };
 
 const styles = {
-  searchArea: {
-    float: 'right',
-    position: 'relative',
-    margin: '10px 0'
-  },
-  input: {
-    width: 300,
-    border: '1px solid ' + color.light_gray,
-    borderRadius: 4,
-    padding: '3px 7px'
-  },
-  sound: {
-    position: 'absolute',
-    right: 5,
-    top: 5,
-    fontSize: 16,
-    color: color.light_gray
-  },
   button: {
     float: 'right',
     margin: '20px 0px'
   },
   categoryArea: {
     float: 'left',
-    marginBottom: 20
+    marginBottom: 20,
+    overflowY: 'scroll',
+    height: 320
   },
   allCategoriesText: {
     fontSize: 16,
@@ -58,6 +71,11 @@ const styles = {
   },
   categoryText: {
     fontSize: 14
+  },
+  searchBarContainer: {
+    width: '300px',
+    float: 'right',
+    marginBottom: 10
   }
 };
 
@@ -115,6 +133,7 @@ export default class SoundLibrary extends React.Component {
       category: '',
       search: ''
     });
+    this.sounds.stopAllAudio();
   };
 
   animationCategoriesRendering() {
@@ -141,13 +160,11 @@ export default class SoundLibrary extends React.Component {
             </span>
           )}
         </div>
-        <div style={styles.searchArea}>
-          <input
+        <div style={styles.searchBarContainer}>
+          <SearchBar
             onChange={this.search}
-            style={styles.input}
-            placeholder={'Search for a sound...'}
+            placeholderText={i18n.soundSearchPlaceholder()}
           />
-          <i className="fa fa-search" style={styles.sound} />
         </div>
         {this.state.category === '' && this.state.search === '' && (
           <div style={styles.categoryArea}>
@@ -164,6 +181,7 @@ export default class SoundLibrary extends React.Component {
               soundsRegistry={this.sounds}
             />
             <button
+              type="button"
               className={'primary'}
               onClick={this.onClickChoose}
               style={styles.button}

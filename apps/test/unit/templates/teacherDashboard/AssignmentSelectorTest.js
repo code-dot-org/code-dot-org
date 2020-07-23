@@ -1,10 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
+  localeEnglishName: 'English',
   section: {
     id: 11,
     name: 'foo',
@@ -34,7 +35,8 @@ const defaultProps = {
       assignment_family_name: 'csd',
       assignment_family_title: 'CS Discoveries',
       version_year: '2017',
-      version_title: "'17-'18"
+      version_title: "'17-'18",
+      is_stable: true
     },
     // script in course
     null_168: {
@@ -47,11 +49,12 @@ const defaultProps = {
       courseId: null,
       scriptId: 168,
       assignId: 'null_168',
-      path: '//localhost-studio.code.org:3000/s/csd1',
+      path: '//localhost-studio.code.org:3000/s/csd1-2019',
       assignment_family_name: 'csd1',
       assignment_family_title: 'Unit 1: Problem Solving',
       version_year: '2017',
-      version_title: '2017'
+      version_title: '2017',
+      is_stable: true
     },
     // script not in course
     null_6: {
@@ -68,7 +71,27 @@ const defaultProps = {
       assignment_family_name: 'flappy',
       assignment_family_title: 'Make a Flappy game',
       version_year: '2017',
-      version_title: '2017'
+      version_title: '2017',
+      is_stable: true,
+      supported_locales: ['Spanish']
+    },
+    // script not in course
+    null_7: {
+      id: 7,
+      name: 'Make a Flappy game',
+      script_name: 'flappy-2018',
+      category: 'Hour of Code',
+      position: 4,
+      category_priority: 2,
+      courseId: null,
+      scriptId: 7,
+      assignId: 'null_7',
+      path: '//localhost-studio.code.org:3000/s/flappy',
+      assignment_family_name: 'flappy',
+      assignment_family_title: 'Make a Flappy game',
+      version_year: '2018',
+      version_title: '2018',
+      is_stable: true
     }
   },
   assignmentFamilies: [
@@ -197,14 +220,14 @@ describe('AssignmentSelector', () => {
         .find('option')
         .at(0)
         .text(),
-      ''
+      'Unit 1: Problem Solving'
     );
     assert.equal(
       secondary
         .find('option')
         .at(1)
         .text(),
-      'Unit 1: Problem Solving'
+      ''
     );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
@@ -283,6 +306,61 @@ describe('AssignmentSelector', () => {
         .text(),
       'Unit 1: Problem Solving'
     );
+  });
+
+  // Make sure we are passing the proper recommended version to our child component, <AssignmentVersionSelector/>
+  describe('version recommendation', () => {
+    it('recommends the latest stable version supported in user locale', () => {
+      // Choose the 'Make a flappy game' script, which has both 2017 and 2018 versions.
+      // Make sure we are recommended 2017 version, which supports Spanish.
+      const wrapper = shallow(
+        <AssignmentSelector
+          {...defaultProps}
+          localeEnglishName="Spanish"
+          section={{
+            ...defaultProps.section,
+            courseId: null,
+            scriptId: 7
+          }}
+        />
+      );
+
+      const versionSelectorProps = wrapper
+        .find('AssignmentVersionSelector')
+        .props();
+
+      assert.equal(versionSelectorProps.versions.length, 2);
+      const recommendedVersion = versionSelectorProps.versions.find(
+        v => v.isRecommended
+      );
+      assert.equal(recommendedVersion.title, '2017');
+    });
+
+    it('recommends the latest stable version if no versions are supported in user locale', () => {
+      // Choose the 'Make a flappy game' script, which has both 2017 and 2018 versions.
+      // Make sure we are recommended 2018 version, since no versions support Slovak.
+      const wrapper = shallow(
+        <AssignmentSelector
+          {...defaultProps}
+          localeEnglishName="Slovak"
+          section={{
+            ...defaultProps.section,
+            courseId: null,
+            scriptId: 6
+          }}
+        />
+      );
+
+      const versionSelectorProps = wrapper
+        .find('AssignmentVersionSelector')
+        .props();
+
+      assert.equal(versionSelectorProps.versions.length, 2);
+      const recommendedVersion = versionSelectorProps.versions.find(
+        v => v.isRecommended
+      );
+      assert.equal(recommendedVersion.title, '2018');
+    });
   });
 
   it('shows two dropdowns if section has a course selected', () => {
@@ -410,7 +488,7 @@ describe('AssignmentSelector', () => {
         .find('select')
         .at(0)
         .simulate('change', {target: {value: 'csd'}});
-      spy.reset();
+      spy.resetHistory();
       wrapper
         .find('select')
         .at(1)

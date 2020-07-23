@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import Immutable from 'immutable';
 import {
   fakeLesson,
@@ -10,7 +10,9 @@ import {
   lessonIsLockedForAllStudents,
   getIconForLevel,
   stageLocked,
-  summarizeProgressInStage
+  summarizeProgressInStage,
+  isLevelAssessment,
+  stageIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -186,6 +188,22 @@ describe('progressHelpers', () => {
     });
   });
 
+  describe('isLevelAssessment', () => {
+    it('returns true if level kind is assessment', () => {
+      const level = {
+        kind: LevelKind.assessment
+      };
+      assert.equal(isLevelAssessment(level), true);
+    });
+
+    it('returns false if level kind is something other than assessment', () => {
+      const level = {
+        kind: LevelKind.puzzle
+      };
+      assert.equal(isLevelAssessment(level), false);
+    });
+  });
+
   describe('getIconForLevel', () => {
     it('strips fa- from level.icon if one is provided', () => {
       const level = {
@@ -204,6 +222,11 @@ describe('progressHelpers', () => {
       assert.equal(getIconForLevel(level1), 'scissors');
     });
 
+    it('uses flag-checkered icon if bonus level', () => {
+      const level = {bonus: true};
+      assert.equal(getIconForLevel(level), 'flag-checkered');
+    });
+
     it('throws if icon is invalid', () => {
       assert.throws(function() {
         const level = {
@@ -214,7 +237,24 @@ describe('progressHelpers', () => {
     });
   });
 
-  describe('summarizeProgressInState', () => {
+  describe('stageIsAllAssessment', () => {
+    it('returns true if all the levels are of kind assessment', () => {
+      const levels = fakeLevels(3);
+      levels[0].kind = LevelKind.assessment;
+      levels[1].kind = LevelKind.assessment;
+      levels[2].kind = LevelKind.assessment;
+      assert.equal(stageIsAllAssessment(levels), true);
+    });
+    it('returns false if not all the levels are of kind assessment', () => {
+      const levels = fakeLevels(3);
+      levels[0].kind = LevelKind.unplugged;
+      levels[1].kind = LevelKind.puzzle;
+      levels[2].kind = LevelKind.assessment;
+      assert.equal(stageIsAllAssessment(levels), false);
+    });
+  });
+
+  describe('summarizeProgressInStage', () => {
     it('summarizes all untried levels', () => {
       const levels = fakeLevels(3);
       const summarizedStage = summarizeProgressInStage(levels);
@@ -224,14 +264,16 @@ describe('progressHelpers', () => {
     });
 
     it('summarizes all completed levels', () => {
-      const levels = fakeLevels(4).map(level => ({
-        ...level,
-        status: LevelStatus.perfect
-      }));
+      const levels = fakeLevels(3);
+      levels[0].status = LevelStatus.perfect;
+      levels[1].status = LevelStatus.submitted;
+      levels[2].status = LevelStatus.readonly;
+
       const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 4);
+      assert.equal(summarizedStage.total, 3);
       assert.equal(summarizedStage.incomplete, 0);
-      assert.equal(summarizedStage.completed, 4);
+      assert.equal(summarizedStage.completed, 3);
+      assert.equal(summarizedStage.attempted, 0);
     });
 
     it('summarizes all attempted levels', () => {
@@ -261,6 +303,19 @@ describe('progressHelpers', () => {
       assert.equal(summarizedStage.completed, 3);
       assert.equal(summarizedStage.imperfect, 1);
       assert.equal(summarizedStage.attempted, 1);
+    });
+
+    it('does not summarize bonus levels', () => {
+      const levels = fakeLevels(1);
+      levels[0].status = LevelStatus.submitted;
+      levels[0].bonus = true;
+
+      const summarizedStage = summarizeProgressInStage(levels);
+      assert.equal(summarizedStage.total, 0);
+      assert.equal(summarizedStage.incomplete, 0);
+      assert.equal(summarizedStage.completed, 0);
+      assert.equal(summarizedStage.imperfect, 0);
+      assert.equal(summarizedStage.attempted, 0);
     });
   });
 });

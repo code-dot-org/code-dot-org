@@ -1,0 +1,65 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:40.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": null,
+      "appendItem": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [];"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "short_instructions": "Create an array of odd numbers 1-11 by using appendItem. (Click to see full instructions)",
+    "long_instructions": "# Adding Items to an Array\r\n\r\n<img src=\"https://images.code.org/c9244eb598416b5a3d9baac088bbaca8-image-1447267168567.39.06 PM.png\" style=\"width: 250px; float: right\">\r\n\r\nIn our last exercise we created our array and initialized it with some values. Another way to do this is to **add items to your array on separate lines**. The simplest way to do this is to add a new item to the end of your array using the `appendItem` command.\r\n\r\n<img src=\"https://images.code.org/74a2f2660d5aea8dec7dc4933f2c68d3-image-1447185901732.04.50 PM.png\" style=\"width: 250px; float:right; border: solid 1px black\">\r\n\r\nTo append means to add or to join. When you append an item to an array you actually add a new location to the end of the array that contains the new value, so that the total size of the array grows by one.  Since you can always add items to an array after creating it, it is very common to  **create an empty array and then add values in subsequent portions of your program**.\r\n\r\n# Do This:\r\n\r\n* **Read the documentation** for `appendItem`.\r\n* Create an **empty array** called `oddNumbers`.\r\n* Use `appendItem` to add the odd numbers 1-11 to your array.\r\n\r\n![](https://images.code.org/41883beff3cb9810fed37ae684dc1fe8-image-1448312407634.gif)\r\n\r\n* **Use `console.log`** to confirm your array is holding the correct values. The output should look like the example below.\r\n\r\n![](https://images.code.org/4daf7aff37f4796185fc608f20856a12-image-1489697355089.png)",
+    "slider_speed": "1",
+    "encrypted_examples": "5zVIrq9Sn/s6Px7PTS6NMthy2dzUfYRmJl3wfycz4XTYBnAWcj8c3cy7ldbl\n/zyk\n",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 17333,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

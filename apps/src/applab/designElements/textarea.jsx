@@ -13,7 +13,8 @@ import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
-import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
+import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';
+import elementLibrary from './library';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -133,7 +134,6 @@ class TextAreaProperties extends React.Component {
 
     // TODO:
     // bold/italics/underline (p2)
-    // textAlignment (p2)
     // enabled (p2)
   }
 }
@@ -192,20 +192,18 @@ class TextAreaEvents extends React.Component {
 export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
+  themeValues: themeValues.textArea,
 
   create: function() {
     const element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
     element.style.height = '100px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
-    element.style.color = '#000000';
-    element.style.backgroundColor = '#ffffff';
-    elementUtils.setDefaultBorderStyles(element, {
-      forceDefaults: true,
-      textInput: true
-    });
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     $(element).addClass('textArea');
 
@@ -217,8 +215,12 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
-    // Set the font family for older projects that didn't set them on create:
+    // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
+    // Set the padding for older projects that didn't set it on create:
+    if (element.style.padding === '') {
+      element.style.padding = CLASSIC_TEXT_AREA_PADDING;
+    }
 
     $(element).addClass('textArea');
 

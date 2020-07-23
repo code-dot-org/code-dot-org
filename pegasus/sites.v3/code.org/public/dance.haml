@@ -1,11 +1,17 @@
 ---
-title: "<%= I18n.t(:hoc2018_dance_party_landing_title) %>"
 theme: responsive
 ---
 
+:ruby
+  @header["title"] = I18n.t(:hoc2018_dance_party_landing_title)
+
+:javascript
+  window.pegasus = window.pegasus || {};
+  window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
+
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: minifiable_asset_path('js/code.org/public/dance.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/dance.js')}
 
 %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
@@ -18,6 +24,9 @@ theme: responsive
     %i.fa.fa-chevron-right.dance-chevron-icon
 
 =view :dance_teacher_resources
+
+.dance-text-versions-container
+  !=I18n.t(:hoc2019_dance_previous_versions, dance_2018_link: CDO.studio_url('/s/dance/reset'), dance_extras_2018_link: CDO.studio_url('/s/dance-extras/reset'), markdown: true)
 
 =view :dance_sponsor_logo
 
@@ -39,7 +48,23 @@ theme: responsive
   =view :dance_videos
 
 - if request.language == 'en'
+
+  %link{href: "/css/full-resource-block.css", rel: "stylesheet"}
+  %link{href: "/css/tools.css", rel: "stylesheet"}
+
   %h2= I18n.t(:hoc2018_dance_amazon_learn_more_future_engineer_subheading_title)
-  =view :dance_amazon_future_engineer
+
+  .full-resource-block{style: "margin-top: 20px;"}
+    %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
+      %img.full-resource-image{src: "/images/AFE-person-2019.jpg"}
+    .tutorial-info{style: "padding: 30px;"}
+      %span
+        %h2.resource-title Amazon Future Engineer
+        Amazon Future Engineer is a four-part, childhood-to-career program that aims to inspire and educate children and young adults from underserved and underrepresented communities to try computer science. Learn more at
+        %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
+          www.amazonfutureengineer.com
+
+%br/
+%br/
 
 .amazon-footer= I18n.t(:hoc2018_dance_amazon_future_engineer_footer)

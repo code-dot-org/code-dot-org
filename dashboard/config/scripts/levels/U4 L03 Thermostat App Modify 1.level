@@ -45,7 +45,7 @@
     "makerlab_enabled": "false",
     "long_instructions": "# Do This\r\n\r\n* Modify the thermostat app to make the buttons change the temperature by 2 degrees",
     "parent_level_id": 15807,
-    "map_reference": "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
+    "map_reference": "/docs/concepts/patterns/counter-patterns-with-event/",
     "mini_rubric": "false",
     "preload_asset_list": null
   },

@@ -1,4 +1,5 @@
 # Example configuration file set up with sensible defaults for local development.
+# See `config.yml.erb` for full list of available configuration options.
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
@@ -13,6 +14,8 @@ dashboard_enable_pegasus: true
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true
 
+# Keeps from taking eyes snapshots when running feature files
+#disable_all_eyes_running: true
 
 # Whether rake:build should rebuild the apps package
 build_apps: true
@@ -46,14 +49,10 @@ use_my_apps: true
 #stub_school_data: false
 
 
-# The Fusion Table ID for the census map shown at code.org/yourschool.  If this
-# is set to the ID for the production site, be careful not to run
-# update_census_map as it will overwrite that table.
-#census_map_table_id: ''
-
-
 # Encryption key required for decoding certain protected level sources.
-# Ask a Code.org dev for this if you need access to protected levels.
+# Code.org engineers should obtain this from cdo-secrets at:
+# https://manage.chef.io/organizations/code-dot-org/environments/development/attributes
+# Contributors should ask a Code.org engineer for this if needed.
 #properties_encryption_key: ''
 
 
@@ -91,3 +90,21 @@ use_my_apps: true
 # in Applab.
 #firebase_name: 'cdo-v3-dev'
 #firebase_secret:
+
+
+# Configuration and credentials for the Geocoder gem.  Google Maps provides a
+# street address geocoding service, while freegeoip provides an IP address
+# geocoding service.  (The former is "lookup" in the Geocoder config, while the
+# latter is "ip_lookup".)  We send both street address and IP address strings
+# into Geocoder#search and the appropriate service is used.
+#google_maps_client_id:
+#google_maps_secret:
+#freegeoip_host:
+
+
+# Specify `use_mailcatcher: true` if you are running mailcatcher on localhost.
+# You should have also run this once:
+#   `gem install mailcatcher`
+# And this each time you need to start mailcatcher in the background again:
+#   `mailcatcher --ip=0.0.0.0`
+#use_mailcatcher: true

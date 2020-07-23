@@ -1,13 +1,14 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 import sinon from 'sinon';
-import fakeFetch from 'fake-fetch';
 
 var testUtils = require('../../util/testUtils');
+import {expect} from '../../util/reconfiguredChai';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
 const assets = require('@cdo/apps/code-studio/assets');
 
+const WEBPACK_RUNTIME_JS_CONTENT = 'webpack-runtime.js content';
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
 const APPLAB_LOCALE_JS_CONTENT = 'applab_locale.js content';
 const APPLAB_API_JS_CONTENT = 'applab-api.js content';
@@ -42,11 +43,19 @@ a.third-rule {
 }
 `;
 
+const STYLE_CSS_CONTENT = `@font-face {
+  font-family: 'FontAwesome';
+  src: url("applab/fontawesome-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+`;
+
 const JQUERY_JS_CONTENT = 'jquery content';
 const PNG_ASSET_CONTENT = 'asset content';
 const FONTAWESOME_CONTENT = 'fontawesome content';
 
-describe('The Exporter,', function() {
+describe('Applab Exporter,', function() {
   var server;
   let stashedCookieKey;
 
@@ -54,6 +63,10 @@ describe('The Exporter,', function() {
 
   beforeEach(function() {
     server = sinon.fakeServerWithClock.create();
+    server.respondWith(
+      /\/blockly\/js\/webpack-runtime\.js\?__cb__=\d+/,
+      WEBPACK_RUNTIME_JS_CONTENT
+    );
     server.respondWith(
       /\/blockly\/js\/en_us\/common_locale\.js\?__cb__=\d+/,
       COMMON_LOCALE_JS_CONTENT
@@ -108,8 +121,13 @@ describe('The Exporter,', function() {
     server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
 
     // Needed to simulate fetch() response to '/projects/applab/fake_id/export_create_channel'
-    fakeFetch.install();
-    fakeFetch.respondWith(JSON.stringify({channel_id: 'new_fake_id'}));
+    sinon
+      .stub(window, 'fetch')
+      .returns(
+        Promise.resolve(
+          new Response(JSON.stringify({channel_id: 'new_fake_id'}))
+        )
+      );
 
     setAppOptions({
       levelGameName: 'Applab',
@@ -152,7 +170,8 @@ describe('The Exporter,', function() {
         stage_total: 1,
         iframeEmbed: false,
         lastAttempt: null,
-        submittable: false
+        submittable: false,
+        widgetMode: false
       },
       showUnusedBlocks: true,
       fullWidth: true,
@@ -190,7 +209,7 @@ describe('The Exporter,', function() {
         callback: null,
         sublevelCallback: null
       },
-      sendToPhone: true,
+      isUS: true,
       send_to_phone_url: 'http://localhost-studio.code.org:3000/sms/send',
       copyrightStrings: {
         thank_you:
@@ -225,7 +244,7 @@ describe('The Exporter,', function() {
 
   afterEach(function() {
     server.restore();
-    fakeFetch.restore();
+    window.fetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
   });
@@ -359,7 +378,7 @@ describe('The Exporter,', function() {
         assert.property(zipFiles, 'my-app/applab/applab-api.js');
         assert.equal(
           zipFiles['my-app/applab/applab-api.js'],
-          `${getAppOptionsFile()}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
+          `${WEBPACK_RUNTIME_JS_CONTENT}\n${getAppOptionsFile()}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
         );
       });
 
@@ -398,62 +417,14 @@ describe('The Exporter,', function() {
             '#divApplab inner text second line'
           );
         });
-
-        it('should have added the appModernDesign class to the elements', () => {
-          assert.equal(
-            el.querySelector('#clickMeButton').className,
-            'appModernDesign',
-            'appModernDesign className should be set on elements'
-          );
-        });
-
-        it('should have added the appModernDesign class to the screen', () => {
-          assert.equal(
-            el.querySelector('#screen1').className,
-            'screen appModernDesign',
-            'appModernDesign className should be set on screen'
-          );
-        });
-
-        it('should have removed all style attributes from the elements', () => {
-          assert.isNull(
-            el.querySelector('#clickMeButton').getAttribute('style'),
-            'style attributes should be removed'
-          );
-          assert.isNull(
-            el.querySelector('#\\31 Button').getAttribute('style'),
-            'style attributes should be removed'
-          );
-        });
-
-        it('should have added type attributes to all input elements', () => {
-          assert.equal(el.querySelector("input[type='text']").id, 'nameInput');
-        });
       });
 
       it('should contain a style.css file', function() {
         assert.property(zipFiles, 'my-app/style.css');
       });
 
-      it('style.css should contain appModernDesign classes for design mode elements', () => {
-        assert.include(
-          zipFiles['my-app/style.css'],
-          '#divApplab.appModern button.appModernDesign,\n' +
-            '#divApplab.appModern button.appModernDesign:hover {\n'
-        );
-      });
-
-      it('style.css should contain id specific styles for design mode elements', () => {
-        assert.include(
-          zipFiles['my-app/style.css'],
-          '#divApplab.appModern #clickMeButton {\n' +
-            '  background-color: red;\n' +
-            '}\n' +
-            '\n' +
-            '#divApplab.appModern #\\31 Button {\n' +
-            '  background-color: blue;\n' +
-            '}'
-        );
+      it('style.css should contain the fontawesome definition', () => {
+        assert.include(zipFiles['my-app/style.css'], STYLE_CSS_CONTENT);
       });
 
       it('should contain a code.js file', function() {
@@ -580,7 +551,7 @@ describe('The Exporter,', function() {
         assert.property(zipFiles, 'my-app/assets/applab-api.j');
         assert.equal(
           zipFiles['my-app/assets/applab-api.j'],
-          `${getAppOptionsFile(
+          `${WEBPACK_RUNTIME_JS_CONTENT}\n${getAppOptionsFile(
             true,
             'new_fake_id'
           )}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
@@ -630,62 +601,14 @@ describe('The Exporter,', function() {
             '#divApplab inner text second line'
           );
         });
-
-        it('should have added the appModernDesign class to the elements', () => {
-          assert.equal(
-            el.querySelector('#clickMeButton').className,
-            'appModernDesign',
-            'appModernDesign className should be set on elements'
-          );
-        });
-
-        it('should have added the appModernDesign class to the screen', () => {
-          assert.equal(
-            el.querySelector('#screen1').className,
-            'screen appModernDesign',
-            'appModernDesign className should be set on screen'
-          );
-        });
-
-        it('should have removed all style attributes from the elements', () => {
-          assert.isNull(
-            el.querySelector('#clickMeButton').getAttribute('style'),
-            'style attributes should be removed'
-          );
-          assert.isNull(
-            el.querySelector('#\\31 Button').getAttribute('style'),
-            'style attributes should be removed'
-          );
-        });
-
-        it('should have added type attributes to all input elements', () => {
-          assert.equal(el.querySelector("input[type='text']").id, 'nameInput');
-        });
       });
 
       it('should contain a style.css file', function() {
         assert.property(zipFiles, 'my-app/assets/style.css');
       });
 
-      it('style.css should contain appModernDesign classes for design mode elements', () => {
-        assert.include(
-          zipFiles['my-app/assets/style.css'],
-          '#divApplab.appModern button.appModernDesign,\n' +
-            '#divApplab.appModern button.appModernDesign:hover {\n'
-        );
-      });
-
-      it('style.css should contain id specific styles for design mode elements', () => {
-        assert.include(
-          zipFiles['my-app/assets/style.css'],
-          '#divApplab.appModern #clickMeButton {\n' +
-            '  background-color: red;\n' +
-            '}\n' +
-            '\n' +
-            '#divApplab.appModern #\\31 Button {\n' +
-            '  background-color: blue;\n' +
-            '}'
-        );
+      it('style.css should contain the fontawesome definition', () => {
+        assert.include(zipFiles['my-app/assets/style.css'], STYLE_CSS_CONTENT);
       });
 
       it('should contain a code.j file', function() {
@@ -734,12 +657,6 @@ describe('The Exporter,', function() {
     });
   });
 
-  describe('globally exposed functions', () => {
-    beforeEach(() => {
-      require('../../../build/package/js/applab-api.js');
-    });
-  });
-
   function runExportedApp(code, html, done, globalPromiseName) {
     server.respondImmediately = true;
     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
@@ -769,6 +686,8 @@ describe('The Exporter,', function() {
 
           new Function(getAppOptionsFile())();
           setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
+          // webpack-runtime must appear exactly once on any page containing webpack entries.
+          require('../../../build/package/js/webpack-runtime.js');
           require('../../../build/package/js/applab-api.js');
           new Function(zipFiles['my-app/code.js'])();
           if (globalPromiseName) {
@@ -830,11 +749,35 @@ describe('The Exporter,', function() {
         'webRequestPromise'
       );
     });
+
+    it('should run custom marshall methods', done => {
+      sinon.spy(window, 'write');
+      runExportedApp(
+        `
+        var a = 'abcdef'.split('');
+        insertItem(a, 3, 'hi');
+        write(a);
+        `,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        () => {
+          expect(window.write).to.have.been.calledWith([
+            'a',
+            'b',
+            'c',
+            'hi',
+            'd',
+            'e',
+            'f'
+          ]);
+          done();
+        }
+      );
+    });
   });
 });
 
 describe('getAppOptionsFile helper function', () => {
-  it('only exposes the app options that are whitelisted', () => {
+  it('only exposes the app options that are allowlisted', () => {
     setAppOptions({
       puzzleRatingsUrl: 'this should not show up',
       labUserId: 'this should not show up',
@@ -843,7 +786,7 @@ describe('getAppOptionsFile helper function', () => {
         isK1: 'this should not show up',
         skin: 'this should show up'
       },
-      keyMissingFromWhitelist: 'should not show up'
+      keyMissingFromAllowlist: 'should not show up'
     });
     assert.equal(
       getAppOptionsFile(),

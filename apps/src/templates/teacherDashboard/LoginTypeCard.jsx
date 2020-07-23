@@ -12,7 +12,8 @@ const styles = {
     // Set width to form a three-column layout on 970px teacher dashboard.
     width: 312,
     // Uniform height, even in different rows
-    height: 150,
+    flex: '0 0 auto',
+    minHeight: 150,
     padding: 16,
     marginBottom: 5,
     borderStyle: 'solid',

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import ScriptAnnouncementsEditor from '@cdo/apps/lib/script-editor/ScriptAnnouncementsEditor';
 
 const sampleAnnouncement = {

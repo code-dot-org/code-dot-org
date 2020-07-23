@@ -1,0 +1,32 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-04-10T17:54:07.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Use 0s and 1s to recreate the letter A.",
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\">\r\n\r\n# Make the letter 'A'\r\n\r\nUse 0's and 1's to create the letter A.\r\n\r\n",
+    "version": "1",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "true",
+    "parent_level_id": 18884,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "v1_initial_width": "3",
+    "v1_initial_height": "5",
+    "display_name": "Black & White Pixelation Widget: The letter A",
+    "bubble_choice_description": "Use 0's and 1's to create the letter A. ",
+    "thumbnail_url": "https://code.org/images/cspunit1/letterA.png"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-09 22:03:49 +0000\",\"changed\":[\"markdown_instructions\",\"video_key\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2019-07-22 15:00:03 +0000\",\"changed\":[\"version\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:00:39 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:01:28 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:32 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:52 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 17:56:21 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\",\"v1_hide_sliders\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 17:56:53 +0000\",\"changed\":[\"hide_encoding_controls\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 18:05:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>

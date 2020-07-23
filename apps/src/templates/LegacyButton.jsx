@@ -132,7 +132,7 @@ const BaseButton = Radium(function BaseButton({
   const config = BUTTON_TYPES[type];
   let styleArray = [style.base, config.style, sizeStyle];
   return (
-    <button {...props} style={[styleArray, props.style]}>
+    <button type="button" {...props} style={[styleArray, props.style]}>
       {children}
     </button>
   );

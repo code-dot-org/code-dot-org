@@ -1,4 +1,4 @@
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
@@ -61,7 +61,7 @@ describe('SoundListEntry', () => {
     sinon.stub(sounds, 'stopPlayingURL');
     wrapper.setProps({isSelected: false});
 
-    assert.equal(sounds.isPlayingURL(sourceURL), false);
+    assert.equal(sounds.isPlaying(sourceURL), false);
     expect(sounds.stopPlayingURL).to.have.been.calledOnce;
 
     sounds.stopPlayingURL.restore();

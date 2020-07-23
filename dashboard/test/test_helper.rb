@@ -9,11 +9,11 @@ Minitest.load_plugins
 Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
-if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when running tests if you want to see test coverage
+if ENV['COVERAGE'] || ENV['CIRCLECI'] || ENV['DRONE'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
   SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
-  if ENV['CIRCLECI']
+  if ENV['CIRCLECI'] || ENV['DRONE']
     require 'codecov'
     SimpleCov.formatter = SimpleCov::Formatter::Codecov
   end
@@ -34,22 +34,22 @@ ENV["RACK_ENV"] = "test"
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
-CDO.rack_env = :test if defined? CDO
+require 'mocha/mini_test'
+
+CDO.stubs(:rack_env).returns(:test) if defined? CDO
 Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
-CDO.override_pegasus = nil
-CDO.override_dashboard = nil
+CDO.stubs(override_pegasus: nil)
+CDO.stubs(override_dashboard: nil)
 
 Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
 Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
 require 'rails/test_help'
-
-require 'mocha/mini_test'
 
 # Raise exceptions instead of rendering exception templates.
 Dashboard::Application.config.action_dispatch.show_exceptions = false
@@ -72,6 +72,11 @@ class ActiveSupport::TestCase
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
 
+    Cdo::Metrics.client ||= Aws::CloudWatch::Client.new(stub_responses: true)
+
+    CDO.stubs(override_pegasus: nil)
+    CDO.stubs(override_dashboard: nil)
+
     set_env :test
 
     # how come this doesn't work:
@@ -86,6 +91,11 @@ class ActiveSupport::TestCase
     DCDO.clear
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    # Ensure that AssetHelper#webpack_asset_path does not raise an exception
+    # when called from unit tests. See comments on that method for details.
+    CDO.stubs(:optimize_webpack_assets).returns(false)
+    CDO.stubs(:use_my_apps).returns(true)
   end
 
   teardown do
@@ -102,22 +112,22 @@ class ActiveSupport::TestCase
 
   def set_env(env)
     Rails.env = env.to_s
-    CDO.rack_env = env
+    CDO.stubs(rack_env: env)
   end
 
   # some s3 helpers/mocks
   def expect_s3_upload
-    CDO.disable_s3_image_uploads = false
+    CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).returns(true)
   end
 
   def expect_s3_upload_failure
-    CDO.disable_s3_image_uploads = false
+    CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).returns(nil)
   end
 
   def expect_no_s3_upload
-    CDO.disable_s3_image_uploads = false
+    CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).never
   end
 
@@ -315,7 +325,7 @@ class ActiveSupport::TestCase
   #     freeze_time
   #     #...
   def self.freeze_time(time=nil)
-    time ||= Date.today + 9.hours
+    time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
     end
@@ -519,7 +529,6 @@ class ActionController::TestCase
     assert_select 'meta[content="https://www.facebook.com/Code.org"][property="article:publisher"]'
 
     assert_select 'meta[content="@codeorg"][name="twitter:site"]'
-    assert_select 'meta[content="photo"][name="twitter:card"]'
 
     {og: 'property', twitter: 'name'}.each do |namespace, attr|
       # descriptions
@@ -532,6 +541,12 @@ class ActionController::TestCase
       assert_select "meta[content='#{opts[:image_url]}'][#{attr}='#{namespace}:image']" if opts[:image_url]
       assert_select "meta[content='#{opts[:image_width]}'][#{attr}='#{namespace}:image:width']" if opts[:image_width]
       assert_select "meta[content='#{opts[:image_height]}'][#{attr}='#{namespace}:image:height']" if opts[:image_height]
+    end
+
+    if opts[:small_thumbnail]
+      assert_select 'meta[content="summary"][name="twitter:card"]'
+    else
+      assert_select 'meta[content="photo"][name="twitter:card"]'
     end
 
     if opts[:apple_mobile_web_app]
@@ -590,9 +605,9 @@ class StorageApps
   end
 end
 
-# Mock storage_id to generate random IDs. Seed with current user so that a user maintains
+# Mock get_storage_id to generate random IDs. Seed with current user so that a user maintains
 # the same id
-def storage_id(_)
+def get_storage_id
   return storage_id_for_user_id(current_user.id) if current_user
   Random.new.rand(1_000_000)
 end
@@ -617,21 +632,6 @@ end
 
 def json_response
   JSON.parse @response.body
-end
-
-# Increase the 2-second hardcoded start timeout for FakeSQS::TestIntegration to 30 seconds.
-# With the original timeout we were getting periodic "FakeSQS didn't start in time" errors.
-# See https://github.com/iain/fake_sqs/blob/master/lib/fake_sqs/test_integration.rb#L89
-module FakeSQS
-  module TestIntegrationExtensions
-    def wait_until_up(deadline = Time.now + 30)
-      super(deadline)
-    end
-  end
-
-  class TestIntegration
-    prepend TestIntegrationExtensions
-  end
 end
 
 # helper method for mailers to test whether urls in an email are partial paths

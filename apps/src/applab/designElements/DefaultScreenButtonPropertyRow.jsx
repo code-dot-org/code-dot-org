@@ -31,7 +31,11 @@ export default class DefaultScreenButtonPropertyRow extends React.Component {
 
     return (
       <div style={{marginLeft: 15}}>
-        <button style={defaultButtonStyle} onClick={this.handleMakeDefault}>
+        <button
+          type="button"
+          style={defaultButtonStyle}
+          onClick={this.handleMakeDefault}
+        >
           Make Default
         </button>
       </div>

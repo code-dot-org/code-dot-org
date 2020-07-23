@@ -6,7 +6,7 @@ import _ from 'lodash';
 export function generateFakePersonalProjects(n) {
   return _.range(n).map(i => ({
     name: 'Personal ' + i,
-    updatedAt: 'a day ago',
+    updatedAt: new Date().toISOString(),
     projectType: 'gamelab',
     id: 'abcd'
   }));
@@ -111,5 +111,22 @@ export const stubFakeUnfeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00'
+  }
+];
+
+export const stubFakeProjectLibraryData = [
+  {
+    name: 'Project w/ a Library',
+    type: 'applab',
+    channel: 'abc123',
+    publishedAt: '2015-12-31T23:59:59.999-08:00',
+    libraryName: 'My Cool Library'
+  },
+  {
+    name: 'Another Project Library',
+    type: 'applab',
+    channel: 'def456',
+    publishedAt: '2016-10-31T23:59:59.999-08:00',
+    libraryName: 'My Other Library'
   }
 ];

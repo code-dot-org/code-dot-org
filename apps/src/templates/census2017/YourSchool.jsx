@@ -12,7 +12,7 @@ import Notification, {NotificationType} from '../Notification';
 import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
-import CensusMap from './CensusMap';
+import CensusMapReplacement from './CensusMapReplacement';
 
 const styles = {
   heading: {
@@ -31,6 +31,10 @@ const styles = {
     fontSize: 20,
     marginLeft: 25,
     marginRight: 25
+  },
+
+  banner: {
+    marginBottom: 35
   }
 };
 
@@ -41,7 +45,6 @@ class YourSchool extends Component {
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
-    fusionTableId: PropTypes.string,
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number
   };
@@ -98,8 +101,8 @@ class YourSchool extends Component {
     const showExistingInaccuracy = this.state.showExistingInaccuracy;
     const existingInaccuracy = this.state.existingInaccuracy;
 
-    // Show the special announcement.
-    const showSpecialAnnouncement = true;
+    // Hide the special announcement.
+    const showSpecialAnnouncement = false;
 
     return (
       <div>
@@ -143,8 +146,7 @@ class YourSchool extends Component {
               schoolFilter={this.hasLocation}
             />
             <br />
-            <CensusMap
-              fusionTableId={this.props.fusionTableId}
+            <CensusMapReplacement
               school={schoolForMap}
               onTakeSurveyClick={this.handleTakeSurveyClick}
             />

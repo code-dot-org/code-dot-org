@@ -54,7 +54,7 @@
     "makerlab_enabled": "false",
     "instructions_important": "false",
     "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel_2019",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "parent_level_id": 13347,
     "name_suffix": "_2019",
     "mini_rubric": "false",

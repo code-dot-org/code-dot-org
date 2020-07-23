@@ -1,4 +1,6 @@
 name_s,url_s,description_t,role_s,kind_s
+Alfred Lin,leadership/alfred_lin,"Partner, Sequoia Capital",,director
+Anne Dinning,leadership/anne_dinning,"Managing Director, D. E. Shaw & Co.",,director
 Bobby Schnabel,leadership/bobby_schnabel,"Professor of Computer Science, University of Colorado Boulder",,director
 Brad Smith,leadership/brad_smith,"President, Chief Legal Officer, Microsoft",,director
 Hadi Partovi,leadership/hadi_partovi,"Founder and CEO, Code.org",,director
@@ -11,15 +13,14 @@ Salil Parekh,leadership/salil_parekh,"CEO and Managing Director, Infosys",,direc
 Susan Enfield,leadership/susan_enfield,Superintendent of Highline Public Schools,,director
 Vandana Sikka,leadership/vandana_sikka,"Founder and CEO, Learnee, Inc.",,director
 Anthony Suarez,leadership/anthony_suarez,Chief Technology Officer,,LT
-Alex Brenner,leadership/alex_brenner,Director of Accounting and Finance,,LT
-Alice Steinglass,leadership/alice_steinglass,President,,LT
-Carina Box,leadership/carina_box,Director of Outreach,,LT
+Amy Watson,leadership/amy_watson,Director of Finance,,LT
 Cameron Wilson,leadership/cameron_wilson,"Chief Operating Officer and President of <a href=""/advocacy"">Code.org Advocacy Coalition</a>",,LT
+Jackie Smalls,leadership/jackie_smalls,Chief Programs Officer,,LT
+Leonardo Ortiz Villacorta,leadership/leonardo_ortiz_villacorta,VP of International Partnerships,,LT
 Marina Taylor,leadership/marina_taylor,Director of Product,,LT
 Megan Godwin,,Director of People Ops,,LT
-Min Yoo,leadership/min_yoo,Director of Marketing,,LT
+Min Yoo,leadership/min_yoo,Director of Marketing & Development,,LT
 Pat Yongpradit,leadership/pat_yongpradit,Chief Academic Officer,,LT
-Sarah Filman,leadership/sarah_filman,VP of Education,,LT
 Alfred Thompson,http://blog.acthompson.net/,"Computer Science Teacher, Bishop Guertin High School",,education
 Angela Duckworth,https://angeladuckworth.com/,"Assistant Professor of Psychology, University of Pennsylvania",,education
 Anthony Owen,https://www.linkedin.com/in/anthonyaowen/,Arkansas Department of Education,,education

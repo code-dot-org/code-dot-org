@@ -23,19 +23,30 @@ module CaptureQueries
     end
   end
 
-  def assert_queries(num, &block)
+  def assert_queries(num, *args, &block)
     return yield if num.nil?
-    queries = capture_queries(&block)
+    queries = capture_queries(*args, &block)
     assert_equal num, queries.count, "Wrong query count:\n#{queries.join("\n")}\n"
   end
 
-  def assert_cached_queries(num, &block)
+  def assert_cached_queries(num, *args, &block)
     Retryable.retryable(on: Minitest::Assertion, tries: 2, sleep: 0) do
-      assert_queries(num, &block)
+      assert_queries(num, *args, &block)
     end
   end
 
-  def capture_queries(&block)
+  IGNORE_FILTERS = [
+    # Script/course-cache related queries don't count.
+    /(script|course)\.rb.*get_from_cache/,
+    # Level-cache queries don't count.
+    /script\.rb.*cache_find_(script_level|level)/,
+    # Ignore cached script id lookup
+    /lesson_extras_script_ids/,
+    # Ignore random updates to experiment cache.
+    /experiment\.rb.*update_cache/
+  ]
+
+  def capture_queries(ignore_filters: IGNORE_FILTERS, capture_filters: [], &block)
     queries = []
     query = lambda do |_name, start, finish, _id, payload|
       duration = finish - start
@@ -45,14 +56,8 @@ module CaptureQueries
       cleaner.add_silencer {|line| line =~ /application_controller.*with_locale/}
       backtrace = cleaner.clean(caller)
 
-      # Script/course-cache related queries don't count.
-      next if backtrace.any? {|line| line =~ /(script|course)\.rb.*get_from_cache/}
-      # Level-cache queries don't count.
-      next if backtrace.any? {|line| line =~ /script\.rb.*cache_find_(script_level|level)/}
-      # Ignore cached script id lookup
-      next if backtrace.any? {|line| line =~ /stage_extras_script_ids/}
-      # Ignore random updates to experiment cache.
-      next if backtrace.any? {|line| line =~ /experiment\.rb.*update_cache/}
+      next if ignore_filters.any? {|filter| backtrace.any? {|line| line =~ filter}}
+      next unless capture_filters.all? {|filter| backtrace.any? {|line| line =~ filter}}
 
       queries << "#{QueryLogger.log(duration, payload)}\n#{backtrace.join("\n")}"
     end

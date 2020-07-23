@@ -10,13 +10,12 @@ The following instructions are based on a tutorial your students will follow in 
 *NOTE: To make your own copy in your local Google Drive, click the “Open” icon: ![](https://images.code.org/0bd0989090eb89eb71134ad899ffc739-image-1454009835808.PNG)*
 
 > Want to jump to a specific chart type? Use the links below:
-
 >- <a href="#scatter">Scatter Plots</a>
-- <a href="#line">Line Charts</a>
-- <a href="#bar">Bar Charts</a>
-
+>- <a href="#line">Line Charts</a>
+>- <a href="#bar">Bar Charts</a>
 <hr />
 <a name = "scatter"></a>
+
 ## Making a Scatter Chart 
 
 **Scatter charts** are useful for finding relationships between two types of data. Here we will build a scatter chart that shows the relationship between movie reviewer age and average movie rating.
@@ -25,7 +24,7 @@ The following instructions are based on a tutorial your students will follow in 
 
 ### Select Data
 
-**Do This:** Select the “age” and “avg rating” columns, as show below.
+**Do This:** Select the "age" and "avg rating" columns, as show below.
 
 ![](https://images.code.org/ffaca4dab49fa2e0a71d75f4c6f9c2a2-image-1454102458528.gif)<br>
 *Select the "age" and "avg rating" columns*
@@ -45,7 +44,7 @@ Google gives suggestions of what kind of chart you can make from your data, but 
 * Experiment with the check boxes on the right, and notice how the chart preview changes.
 * Check **"Use row 1 as headers."** This makes sure your chart uses the column names in the first row of your spreadsheet.
 * Check **"Use column A as labels."** This tells the chart that column A is your horizontal or "x" axis.
-* Click **“Insert”** to add your chart to the spreadsheet.
+* Click **"Insert"** to add your chart to the spreadsheet.
 
 ![](https://images.code.org/097d30b261df0204fd6ec0f7a5af58bd-image-1454098624733.gif)
 *Change chart type and insert your scatter chart into the spreadsheet.*
@@ -71,7 +70,7 @@ At this point, your chart should look something like this:
 
 ### Select Data
 
-**Do This:** Select the **“age,”** **“avg rating women,”** and **“avg rating men"** columns.
+**Do This:** Select the **"age,"** **"avg rating women,"** and **"avg rating men"** columns.
 
 * Select the first column of data using the mouse.
 * Hold down the **"Control"** key, (or **"Command"** on a Mac) and select the additional columns of data.
@@ -91,9 +90,9 @@ To select cells in non-adjacent columns, you need to use some fancy hotkeys: <br
 
 **Do This:** Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
 
-* Set the chart type to **“Line chart.”**
-* Check the boxes for **“Use row 1 as headers”** and **“Use column A as labels.”**
-* Click **“Insert”** to add your chart to the spreadsheet.
+* Set the chart type to **"Line chart."**
+* Check the boxes for **"Use row 1 as headers"** and **"Use column A as labels."**
+* Click **"Insert"** to add your chart to the spreadsheet.
 
 ![](https://images.code.org/210a6d48dd0266ee192d7cd374839ddf-image-1454102597958.gif)
 *Change chart type and insert your line chart into the spreadsheet.*
@@ -104,17 +103,17 @@ At this point, your chart should look something like this:
 
 ![](https://images.code.org/87f354db26d09449f68a4fa56cb57352-image-1454102624517.PNG)
 
-<hr /> 
-
+<hr />
 <a name = "bar"></a>
-## Making a Bar Chart 
+
+## Making a Bar Chart
 
 **Bar charts** are useful for viewing data grouped by different categories.
 
 
 ### Select Data
 
-**Do This:** Select the **“age,”** **“number of women,”** and **“number of men”** columns
+**Do This:** Select the **"age,"** **"number of women,"** and **"number of men"** columns
 
 * Select the first column of data using the mouse
 * Hold down the **"Control"** key, (or **"Command"** on a Mac) and select the additional columns of data
@@ -138,9 +137,9 @@ At this point, your chart should look something like this:
 
 **Do This:** Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
 
-* Set the chart type to **“Column chart.”**
-* Check the boxes for **“Use row 1 as headers”** and **“Use column A as labels.”**
-* Click **“Insert”** to add your chart to the spreadsheet.
+* Set the chart type to **"Column chart."**
+* Check the boxes for **"Use row 1 as headers"** and **"Use column A as labels."**
+* Click **"Insert"** to add your chart to the spreadsheet.
 
 ![](https://images.code.org/700f3ade7e049c608d06c9d56952079c-image-1454103075843.gif)
 *Change chart type and insert your bar chart into the spreadsheet.*
