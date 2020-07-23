@@ -334,7 +334,7 @@ class ScriptDSL < BaseDSL
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
-    s << 'course true' if script.is_course
+    s << 'is_course true' if script.is_course
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
