@@ -14,7 +14,8 @@ module Pd
     }
 
     PRE_SURVEY_CONFIG_PATHS = {
-      SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_pre_survey'
+      SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_pre_survey',
+      SUBJECT_CSF_201 => 'surveys/pd/csf_deep_dive_pre'
     }
 
     FOORM_SUBMIT_API = '/api/v1/pd/foorm/workshop_survey_submission'

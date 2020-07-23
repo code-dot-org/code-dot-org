@@ -120,6 +120,27 @@ class LevelTest < ActiveSupport::TestCase
     assert_not custom_levels.include?(@level)
   end
 
+  test "should not allow pairing with levelgroup type levels" do
+    level = Level.create({type: "LevelGroup"})
+    assert_equal level.should_allow_pairing?(0), false
+  end
+
+  test "should allow pairing with non levelgroup type levels" do
+    level = Level.create
+    assert_equal level.should_allow_pairing?(0), true
+  end
+
+  test "should not allow pairing when the parent is a levelgroup" do
+    parent = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    child = create :level
+    parent.child_levels << child
+    script = create :script
+    create :script_level, script: script, levels: [parent]
+    assert_equal [parent], child.parent_levels
+
+    assert_equal child.should_allow_pairing?(script.id), false
+  end
+
   test "summarize returns object with expected fields" do
     summary = @level.summarize
     assert_equal(summary[:level_id], @level.id)

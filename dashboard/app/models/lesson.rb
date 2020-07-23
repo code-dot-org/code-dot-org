@@ -28,10 +28,12 @@ class Lesson < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  has_many :script_levels, -> {order('position ASC')}, inverse_of: :lesson, foreign_key: 'stage_id'
-  has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
+  has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
+  has_many :levels, through: :script_levels
+
+  has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
 
   self.table_name = 'stages'
@@ -48,6 +50,58 @@ class Lesson < ActiveRecord::Base
   validates_uniqueness_of :name, scope: :script_id
 
   include CodespanOnlyMarkdownHelper
+
+  def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
+    raw_lessons.map do |raw_lesson|
+      Lesson.prevent_empty_lesson(raw_lesson)
+
+      lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
+        Lesson.find_or_create_by(
+          name: raw_lesson[:name],
+          script: script
+        ) do |s|
+          s.relative_position = 0 # will be updated below, but cant be null
+        end
+
+      lesson.assign_attributes(
+        absolute_position: (counters.lesson_position += 1),
+        lesson_group: lesson_group,
+        lockable: !!raw_lesson[:lockable],
+        visible_after: raw_lesson[:visible_after],
+        relative_position: !!raw_lesson[:lockable] ? (counters.lockable_count += 1) : (counters.non_lockable_count += 1)
+      )
+      lesson.save! if lesson.changed?
+
+      lesson.script_levels = ScriptLevel.add_script_levels(script, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment)
+      lesson.save!
+
+      Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
+
+      lesson
+    end
+  end
+
+  def self.prevent_empty_lesson(raw_lesson)
+    raise "Lessons must have at least one level in them.  Lesson: #{raw_lesson[:name]}." if raw_lesson[:script_levels].empty?
+  end
+
+  # Go through all the script levels for this lesson, except the last one,
+  # and raise an exception if any of them are a multi-page assessment.
+  # (That's when the script level is marked assessment, and the level itself
+  # has a pages property and more than one page in that array.)
+  # This is because only the final level in a lesson can be a multi-page
+  # assessment.
+  def self.prevent_multi_page_assessment_outside_final_level(lesson)
+    lesson.script_levels.each do |script_level|
+      if lesson.script_levels.last != script_level && script_level.long_assessment?
+        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
+      end
+    end
+
+    if lesson.lockable && !lesson.script_levels.last.assessment?
+      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
+    end
+  end
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
