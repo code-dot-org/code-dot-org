@@ -59,6 +59,8 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # Legacy animation API, but do not delete, because old Gamelab and Spritelab projects will still
+  # have animations that use this api.
   # GET /api/v1/animation-library/<version-id>/<filename>
   #
   # Retrieve a file from the animation library
