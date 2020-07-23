@@ -741,6 +741,18 @@ export class WorkshopForm extends React.Component {
     this.loadAvailableFacilitators(course);
   };
 
+  handleSubjectChange = event => {
+    const subject = this.handleFieldChange(event);
+
+    // Coerce workshops with this subject to be regional virtual workshops
+    if (subject === 'Virtual Workshop Kickoff') {
+      this.handleVirtualChange(true);
+      this.setState({
+        virtual: true
+      });
+    }
+  };
+
   handleCustomizeFeeChange = event => {
     const customizeFee = event.target.value === 'yes';
     const fee = customizeFee ? '' : null;
@@ -1077,7 +1089,7 @@ export class WorkshopForm extends React.Component {
                   readOnly={this.props.readOnly}
                   inputStyle={this.getInputStyle()}
                   validation={validation}
-                  onChange={this.handleFieldChange}
+                  onChange={this.handleSubjectChange}
                 />
               )}
             </Col>
