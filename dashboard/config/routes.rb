@@ -525,6 +525,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
     get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
     get 'workshop_survey/foorm/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201_foorm'
+    get 'workshop_survey/foorm/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201_foorm'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
