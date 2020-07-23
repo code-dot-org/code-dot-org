@@ -144,6 +144,7 @@ class Script < ActiveRecord::Base
     project_sharing
     curriculum_umbrella
     tts
+    is_course
   )
 
   def self.twenty_hour_script
@@ -1396,7 +1397,8 @@ class Script < ActiveRecord::Base
       :has_lesson_plan,
       :is_stable,
       :project_sharing,
-      :tts
+      :tts,
+      :is_course
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path

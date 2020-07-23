@@ -7,6 +7,7 @@ has_lesson_plan true
 is_stable true
 tts true
 project_sharing true
+is_course true
 
 peer_reviews_to_complete 1
 curriculum_path 'fake_curriculum_path'
