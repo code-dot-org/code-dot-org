@@ -38,6 +38,8 @@ class LessonGroup < ApplicationRecord
     display_name
   )
 
+  Counters = Struct.new(:lockable_count, :non_lockable_count, :lesson_position, :chapter)
+
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:
   # 1. That all the lesson groups specified by the editor have a key and
@@ -47,11 +49,9 @@ class LessonGroup < ApplicationRecord
   # 3. PLC courses use certain lesson group keys for module types. We reserve those
   # keys so they can only map to the display_name for their PLC purpose
   def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
-    lockable_count = 0
-    non_lockable_count = 0
-    lesson_position = 0
-    position = 0
-    chapter = 0
+    lesson_group_position = 0
+
+    counters = Counters.new(0, 0, 0, 0)
 
     raw_lesson_groups&.map do |raw_lesson_group|
       if raw_lesson_group[:key].nil?
@@ -78,21 +78,15 @@ class LessonGroup < ApplicationRecord
 
         LessonGroup.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
 
-        lesson_group.assign_attributes(position: position += 1, properties: {display_name: raw_lesson_group[:display_name]})
+        lesson_group.assign_attributes(position: lesson_group_position += 1, properties: {display_name: raw_lesson_group[:display_name]})
         lesson_group.save! if lesson_group.changed?
       end
 
       LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group, raw_lesson_group[:lessons].length)
 
-      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], lockable_count, non_lockable_count, lesson_position, chapter, new_suffix, editor_experiment)
+      new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
       lesson_group.lessons = new_lessons
       lesson_group.save!
-
-      lesson_position += lesson_group.lessons.length
-      new_lessons.each do |lesson|
-        lesson.lockable ? lockable_count += 1 : non_lockable_count += 1
-        chapter += lesson.script_levels.length
-      end
 
       lesson_group
     end
