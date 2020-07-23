@@ -839,7 +839,7 @@ describe('progressReduxTest', () => {
       assert.deepEqual(progressionsFromLevels(levels), [
         {
           name: undefined,
-          display_name: undefined,
+          displayName: undefined,
           start: 0,
           levels: levels
         }
@@ -869,7 +869,7 @@ describe('progressReduxTest', () => {
       assert.equal(progressions.length, 2);
       assert.deepEqual(progressions[0], {
         name: 'Progression 1',
-        display_name: 'Progression 1',
+        displayName: 'Progression 1',
         start: 0,
         levels: levels.slice(0, 2)
       });
@@ -927,7 +927,7 @@ describe('progressReduxTest', () => {
       assert.equal(progressions.length, 2);
       assert.deepEqual(progressions[0], {
         name: 'Progression 1',
-        display_name: 'Progression 1',
+        displayName: 'Progression 1',
         start: 0,
         levels: levels.slice(0, 2)
       });

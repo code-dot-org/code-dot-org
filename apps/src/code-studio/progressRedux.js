@@ -709,7 +709,7 @@ export const progressionsFromLevels = levels => {
   let currentProgression = {
     start: 0,
     name: levels[0].progression || levels[0].name,
-    display_name: levels[0].progressionDisplayName || levels[0].name,
+    displayName: levels[0].progressionDisplayName || levels[0].name,
     levels: [levels[0]]
   };
   levels.slice(1).forEach((level, index) => {
@@ -722,7 +722,7 @@ export const progressionsFromLevels = levels => {
         // + 1 because we sliced off the first element
         start: index + 1,
         name: level.progression || level.name,
-        display_name: level.progressionDisplayName || level.name,
+        displayName: level.progressionDisplayName || level.name,
         levels: [level]
       };
     }
