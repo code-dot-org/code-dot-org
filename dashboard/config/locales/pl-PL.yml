@@ -115,6 +115,11 @@ pl:
       %{provider}. Będziesz musiał się zalogować, wpisując swoje hasło poniżej.
     use_clever: Przepraszamy, twoje konto Code.org nie jest podłączone do twojego
       %{provider}. Prosimy o zalogowanie się poprzez Portal Clever.
+    invalid_provider: Niestety, kont %{provider} nie można połączyć z kontami Code.org.
+    migration_required: Niestety nie możemy połączyć ani rozłączyć kont, które nadal
+      korzystają ze starej wersji konta. Zaktualizuj do nowej wersji konta.
+    disconnect_successful: Sukces! Konto zewnętrzne zostało odłączone od Twojego konta
+      Code.org.
   signup_form:
     student_count: "%{count} uczniów już się zarejestrowało."
     teacher_count: "%{count} nauczycieli już się zarejestrowało."
@@ -1121,6 +1126,8 @@ pl:
       school_name: Nazwa szkoły
       school_city: Miasto szkoły
       school_country: Kraj
+      colombian_school_city: Miasto szkoły
+      colombian_school_name: Nazwa szkoły
     form_entries:
       gender:
         male: Mężczyzna
@@ -1143,9 +1150,14 @@ pl:
       workshop_course:
         csd: Odkrycia CS
         csp: Podstawy Informatyki '16-'17
+        not_applicable: Nie dotyczy
       email_opt_in:
         opt_in_yes: Tak
         opt_in_no: Nie
+    international_opt_in:
+      facilitator_not_listed: Mojego facylitatora nie ma na liście
+      facilitator_not_applicable: Nie dotyczy
+      organizer_not_listed: Mojego organizatora nie ma na liście
   courses_category: Pełne Kursy
   cookie_banner:
     accept: Zgadzam się

@@ -1015,6 +1015,10 @@ nl:
         options:
           CHOICE:
             '"this"': Dit
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': seconden
       gamelab_hideTitleScreen:
         text: titelscherm verbergen
       gamelab_isTouchingEdges:

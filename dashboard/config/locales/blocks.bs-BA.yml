@@ -870,6 +870,10 @@ bs:
             '"rotation"': rotacija
             '"direction"': smijer kretanja
             '"tint"': nijanse
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_jumpTo:
         text: "{SPRITE} skoči na {LOCATION}"
       gamelab_keyPressed:

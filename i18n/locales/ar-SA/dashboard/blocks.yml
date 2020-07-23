@@ -1025,6 +1025,10 @@ ar:
           CHOICE:
             '"this"': هذا
             '"other"': أخرى
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ثوان
       gamelab_hideTitleScreen:
         text: إخفاء شاشة العنوان
       gamelab_isTouchingEdges:

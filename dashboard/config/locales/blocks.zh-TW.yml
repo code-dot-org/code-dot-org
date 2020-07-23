@@ -1025,6 +1025,10 @@ zh-TW:
           CHOICE:
             '"this"': 這個
             '"other"': 其它
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
       gamelab_hideTitleScreen:
         text: 標題畫面隱藏
       gamelab_isTouchingEdges:

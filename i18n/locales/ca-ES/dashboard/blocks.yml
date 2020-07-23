@@ -757,6 +757,10 @@ ca:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segons
       gamelab_jumpTo:
         text: "{SPRITE} salta a {LOCATION}"
       gamelab_keyPressed:

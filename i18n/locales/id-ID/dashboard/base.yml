@@ -960,6 +960,8 @@ id:
       school_name: 'Nama Sekolah'
       school_city: 'Kota sekolah'
       school_country: 'Negara Sekolah'
+      colombian_school_city: 'Kota sekolah'
+      colombian_school_name: 'Nama Sekolah'
       ages: 'Umur berapa kamu mengajar tahun ini?'
       subjects: 'Subjek mana kamu mengajar tahun ini?'
       resources: 'Sumber daya pendidikan CS mana yang Anda gunakan?'

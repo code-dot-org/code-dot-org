@@ -1019,6 +1019,10 @@ ja:
         options:
           CHOICE:
             '"this"': これ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
       gamelab_hideTitleScreen:
         text: タイトル画面を非表示にする
       gamelab_isTouchingEdges:

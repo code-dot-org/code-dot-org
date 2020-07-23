@@ -153,6 +153,29 @@ export function addEvent(type, args, callback) {
   inputEvents.push({type: type, args: args, callback: callback});
 }
 
+function atTimeEvent(inputEvent, p5Inst) {
+  if (inputEvent.args.unit === 'seconds') {
+    const previousTime = inputEvent.previousTime || 0;
+    inputEvent.previousTime = p5Inst.World.seconds;
+    // There are many ticks per second, but we only want to fire the event once (on the first tick where
+    // World.seconds matches the event argument)
+    if (
+      p5Inst.World.seconds === inputEvent.args.n &&
+      previousTime !== inputEvent.args.n
+    ) {
+      // Call callback with no extra args
+      return [{}];
+    }
+  } else if (inputEvent.args.unit === 'frames') {
+    if (p5Inst.frameCount === inputEvent.args.n) {
+      // Call callback with no extra args
+      return [{}];
+    }
+  }
+  // Don't call callback
+  return [];
+}
+
 function whenPressEvent(inputEvent, p5Inst) {
   if (p5Inst.keyWentDown(inputEvent.args.key)) {
     // Call callback with no extra args
@@ -267,6 +290,8 @@ function whileClickEvent(inputEvent, p5Inst) {
 
 function checkEvent(inputEvent, p5Inst) {
   switch (inputEvent.type) {
+    case 'atTime':
+      return atTimeEvent(inputEvent, p5Inst);
     case 'whenpress':
       return whenPressEvent(inputEvent, p5Inst);
     case 'whilepress':

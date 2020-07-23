@@ -1011,6 +1011,10 @@ vi:
         options:
           CHOICE:
             '"this"': điều này
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': giây
       gamelab_hideTitleScreen:
         text: ẩn màn hình tiêu đề
       gamelab_isTouchingEdges:

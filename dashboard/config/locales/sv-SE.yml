@@ -921,6 +921,7 @@ sv:
       email: E-post
       school_name: Skolnamn
       school_country: Skolans land
+      colombian_school_name: Skolnamn
     form_entries:
       gender:
         male: Man
