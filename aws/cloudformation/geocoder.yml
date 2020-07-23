@@ -175,8 +175,8 @@ Resources:
             Metric:
               Dimensions:
                 - Name: LoadBalancer
-                  Value: !Ref EcsElasticLoadBalancer
-              MetricName: RequestCount
+                  Value: 'app/ELB-geocoder/a026f133b72798cd'
+              MetricName: NewConnectionCount
               Namespace: 'AWS/ApplicationELB'
             Period: 300
             Stat: Sum
@@ -188,7 +188,7 @@ Resources:
             Metric:
               Dimensions:
                 - Name: LoadBalancer
-                  Value: !Ref EcsElasticLoadBalancer
+                  Value: 'app/ELB-geocoder/a026f133b72798cd'
               MetricName: HTTPCode_Target_5XX_Count
               Namespace: 'AWS/ApplicationELB'
             Period: 300
@@ -201,7 +201,7 @@ Resources:
             Metric:
               Dimensions:
                 - Name: LoadBalancer
-                  Value: !Ref EcsElasticLoadBalancer
+                  Value: 'app/ELB-geocoder/a026f133b72798cd'
               MetricName: HTTPCode_ELB_5XX_Count
               Namespace: 'AWS/ApplicationELB'
             Period: 300
