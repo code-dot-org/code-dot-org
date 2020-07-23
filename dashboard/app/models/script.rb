@@ -942,6 +942,8 @@ class Script < ActiveRecord::Base
 
     script.generate_plc_objects
 
+    CourseVersion.update_course_version(script)
+
     script
   end
 
