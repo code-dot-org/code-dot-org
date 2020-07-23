@@ -4953,6 +4953,12 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
           lesson_groups:
             csf_warmup:
               display_name: חימום
@@ -4979,6 +4985,12 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
         pre-express-2020:
           stages:
             Programming in Maze:
@@ -4996,6 +5008,8 @@ he:
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
                 אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            Loops with Scrat:
+              name: לולאות עם סקראט
           lesson_groups:
             csf_loops:
               display_name: חזרות
@@ -5017,6 +5031,8 @@ he:
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
                 אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            Loops with Scrat:
+              name: לולאות עם סקראט
         csp1-2020:
           lesson_groups:
             cspSurvey:

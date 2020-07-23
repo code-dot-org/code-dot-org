@@ -1012,6 +1012,10 @@ mn:
           CHOICE:
             '"this"': энэ
             '"other"': бусад
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секундууд
       gamelab_hideTitleScreen:
         text: гарчигны дэлгэцийг нуух
       gamelab_isTouchingEdges:
