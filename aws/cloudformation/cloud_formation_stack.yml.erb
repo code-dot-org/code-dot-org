@@ -71,13 +71,15 @@ Resources:
             Resource:
               - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/<%=CDO.dcdo_table_name%>"
               - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/<%=CDO.gatekeeper_table_name%>"
-          # Write analysis events to Firehose.
+          # Write to our Firehose streams
           # TODO: Import resources into stack.
           - Effect: Allow
             Action:
             - 'firehose:PutRecord'
             - 'firehose:PutRecordBatch'
-            Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+            Resource:
+              - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+              - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/i18n-string-tracking-events"
           # S3 access for student-libraries bucket
           - Effect: Allow
             Action:
