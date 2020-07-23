@@ -175,7 +175,7 @@ Resources:
             Metric:
               Dimensions:
                 - Name: LoadBalancer
-                  Value: 'app/ELB-geocoder/a026f133b72798cd'
+                  Value: !GetAtt EcsElasticLoadBalancer.LoadBalancerFullName
               MetricName: NewConnectionCount
               Namespace: 'AWS/ApplicationELB'
             Period: 300
@@ -188,7 +188,7 @@ Resources:
             Metric:
               Dimensions:
                 - Name: LoadBalancer
-                  Value: 'app/ELB-geocoder/a026f133b72798cd'
+                  Value: !GetAtt EcsElasticLoadBalancer.LoadBalancerFullName
               MetricName: HTTPCode_Target_5XX_Count
               Namespace: 'AWS/ApplicationELB'
             Period: 300
@@ -201,7 +201,7 @@ Resources:
             Metric:
               Dimensions:
                 - Name: LoadBalancer
-                  Value: 'app/ELB-geocoder/a026f133b72798cd'
+                  Value: !GetAtt EcsElasticLoadBalancer.LoadBalancerFullName
               MetricName: HTTPCode_ELB_5XX_Count
               Namespace: 'AWS/ApplicationELB'
             Period: 300
