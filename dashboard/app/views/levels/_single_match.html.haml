@@ -1,17 +1,7 @@
-.unplugged.match
+.unplugged.match{id: "level_#{level.id}"}
+  = render partial: 'levels/content', locals: {app: 'match', data: level.properties, content_class: level.question_content_class, source_level: level, hide_header: !standalone}
 
-  - data = level.properties
-  - app = 'match'
-
-  - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
-  - if question_content_blank
-    - question_content_class = nil
-  - else
-    - question_content_class = "question"
-
-  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
-
-  - if standalone && !(data['options'].try(:[], 'hide_submit'))
+  - if standalone && !(level.properties['options'].try(:[], 'hide_submit'))
     .buttons
       %a.btn.btn-large.btn-primary.next-stage.submitButton
         =t('submit')
@@ -20,47 +10,46 @@
 
   .clear
 
-  - data['answers'].each_with_index do |answer, i|
-    - answer['index'] = i
-
-  -# Shuffle answers until they are different to real answers.
-  - if data['answers'].length > 1   # avoid infinite loop
-    - begin shuffled_answers = data['answers'].shuffle end until (shuffled_answers && shuffled_answers != data['answers'])
-  - else
-    - shuffled_answers = data['answers']
-
-  - height = data['height'] || '40'
-  - giantmark_height = height.to_i > 72 ? 72 : 20
-  - gap_height = height.to_i/2 - giantmark_height/2
+  - giantmark_height = level.height.to_i > 72 ? 72 : 20
+  - gap_height = level.height.to_i/2 - giantmark_height/2
 
   .mainblock
     .column
-      %ul#questions
-        - data['questions'].each do |question|
-          %li{style: "height: #{height}px"}!= match_t(question['text'])
-    .column#answerdest
-      %ul#slots.draggablecolumn
-        - shuffled_answers.each do |answer|
-          %li.emptyslot{style: "height: #{height}px"}
+      %ul.match_questions
+        - level.localized_property(:questions).each do |question|
+          %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'])
+    .column.match_answerdest
+      %ul.match_slots.draggablecolumn
+        - level.answers.each do |_|
+          %li.emptyslot{style: "height: #{level.height}px"}
             .giantmark
               .gap{style: "height: #{gap_height}px"}
               .text{style: "font-size: #{giantmark_height}px; line-height: #{giantmark_height}px"}
                 ?
 
-    .column#correctmarkscolumn
-      %ul#correctmarks
-        - data['questions'].each_with_index do |question, index|
-          %li.correctmark{style: "height: #{height}px"}
-            .xmark{style: 'display: none;', id: "xmark_#{index}"}
+    .column.match_correctmarkscolumn
+      %ul.match_correctmarks
+        - level.questions.each_with_index do |question, index|
+          %li.correctmark{style: "height: #{level.height}px"}
+            .xmark{style: 'display: none;', id: "xmark_#{level.id}_#{index}"}
               %strong X
 
     .column
-      %ul#answers.draggablecolumn
-        - shuffled_answers.each do |answer|
-          %li.answer.answerlist{style: "height: #{height}px", originalIndex: answer['index']}!= match_t(answer['text'])
+      %ul.match_answers.draggablecolumn
+        - localized_answers = level.localized_property(:answers)
+        - level.shuffled_answer_indexes.each do |index|
+          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: index}!= render_multi_or_match_content(localized_answers[index]['text'])
 
     .clear
   - if standalone
-    = render partial: 'levels/dialog', locals: {app: app}
-  = render partial: 'levels/match_answer', locals: {data: data, height: height}
-  = render partial: 'levels/teacher_markdown', locals: {data: data}
+    = render partial: 'levels/dialog', locals: {app: 'match'}
+  = render partial: 'levels/match_answer', locals: {level: level}
+  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+
+  :javascript
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Match(
+      #{level.id},
+      "level_#{level.id}",
+      #{standalone},
+      "#{last_attempt}"
+    ));

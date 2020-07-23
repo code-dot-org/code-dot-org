@@ -1,394 +1,199 @@
 ---
-se:
+se-FI:
   data:
     authored_hints:
-      courseA_maze_ramp2_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+      CourseD_Dance_2020_01:
+        challenges: |-
+          **Válljenvejolaš hástalusat**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp2_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Vállje eará lávlaga maid čuojahat.
+          -   Sirdde du dánsára ođđa sadjái.
+          -   Bija eanet go ovtta dánsára.
+      CourseD_Dance_2020_02:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp2a_2018_authored_hint:
-        '1': Snap both `East` blocks to the bottom of the `when run` block.
-      courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   Dánsár ferte ovdanbuktit lihkastaga.
+          -   Fertet deaddilit njuollaboalu.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
-          Your code should look like this:
+          _Dát dássi nohkká maŋŋil 4 távtta._
+        challenges: |-
+          **Válljenvejolaš hástalusat**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          Geavat eanet go ovtta <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>-blohka.
+      CourseD_Dance_2020_03:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   Goappašat dánsára ferteba ovdanbuktit lihkastaga.
+          -   Fertet deaddit njuollaboaluid.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp4a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _Dát dássi nohkká 6 távtta maŋŋil._
+        challenges: |-
+          **Válljenvejolaš hástalusat**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp4a_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Bija dánsára responderet gurut ja olgeš guvlui njuollaboaluiguin.
+      CourseD_Dance_2020_05:
+        challenges: "**Válljenvejolaš hástalusat**\n\n-   Rievdat duogábeali juohke
+          háve go dánsárat rievdadit lihkastagaid. "
+      CourseD_Dance_2020_06:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp5a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Ráhkat njunušdánsára ja duogábeal-dánsáriid musihka njeallji vuosttaš távtta siskkobealde.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp5a_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _Dát dássi nohkká 7 távtta maŋŋil._
+        challenges: |-
+          **Válljenvejolaš hástalusat**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_seq5_2018_authored_hint:
-        '1': Try writing down the steps on paper to find a solution!
-        '2': |-
-          You will need to use this block:
+          -   Ráhkat máŋga joavkku mas leat duogábeal-dánsárat.
+      CourseD_Dance_2020_07:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
 
-          <xml><block type="maze_moveSouth"/></xml>
-      courseA_maze_seq5_2019_authored_hint:
-        '1': Try writing down the steps on paper to find a solution!
-        '2': |-
-          You will need to use this block:
+          -   Rievdat unnimus ovtta dánsára sturrodaga.
 
-          <xml><block type="maze_moveSouth"/></xml>
-      courseA_maze_seq5a_2018_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
-      courseA_maze_seq5a_2019_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
-      courseB_Scrat_ramp1_2018_authored_hint:
-        '1': If Scrat isn't doing what you want, make sure both of the blocks have
-          been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
-          try something else!
-      courseB_Scrat_ramp1_2019_authored_hint:
-        '1': If Scrat isn't doing what you want, make sure both of the blocks have
-          been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
-          try something else!
-      courseB_Scrat_ramp2_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _Dát dássi nohkká 6 távtta maŋŋil._
+        challenges: |-
+          **Válljenvejolaš hástalusat**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp2_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Eksperimentere lonuhemiin eará iešvuođaid dego govdodaga dahje jorrama.
+      CourseD_Dance_2020_08:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   Rievdadit ivnni unnimusat ovtta dánsáris.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
-          Your code should look like this:
+          _Dát dássi nohkká 6 távtta maŋŋil._
+        tint_hint: Fuomášit go ahte du dánsáris ii šaddan juste dakkár ivdni maid
+          ledjet válljen? Dát lea dan dihte go **ivnnit** seaguhit dan ivnni maid
+          don válljet dánsára ivnniin.
+      CourseD_Dance_2020_09:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   Deaddel "Válbmet" boalu!
+        repeat_every_ideas: |-
+          **Dárbbašat go ideaid?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   Rievdat vaikko galle geardde dánsára sturrodaga nu ahte stuorrugoahtá.
+          -   Rievdat vaikko galle geardde dánsára jorrama nu ahte jorragoahtá.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp4a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _Don sáhtát maiddái atnit negatiiva nummáriid ráhkadan dihte vuosteeffekta!_
+        next_previous: |-
+          **Válljenvejolaš hástalusat**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp4a_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Don sáhtát maid geavahit dán ođđa dáhpáhus-blohka go bláđet dánsenlihkastagaid listtu čađa bidjan dihte lihkastagaid  `(Sahtedohko)`, `(Boahtte)`, or `(Ovddit)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
+      CourseD_Dance_2020_bonus1:
+        alternate: Molsašuvvan-blohkka lea kategoriijas "Dánsárat".
+      Dance_2019_01:
+        challenges: |-
+          **Válljenvejolaš hástalusat**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp5a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Vállje eará lávlaga maid čuojahat.
+          -   Sirdde du dánsára ođđa sadjái.
+          -   Bija eanet go ovtta dánsára.
+      Dance_2019_02:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp5a_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Dánsár ferte ovdanbuktit lihkastaga.
+          -   Fertet deaddilit njuollaboalu.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseD_artist_5_2018_authored_hint:
-        '1': If you are switching your shapes, don't forget that you will need to
-          switch their angles, too!
-      courseD_artist_5_2018_2019_authored_hint:
-        '1': If you are switching your shapes, don't forget that you will need to
-          switch their angles, too!
+          _Dát dássi nohkká maŋŋil 4 távtta._
+        challenges: |-
+          **Válljenvejolaš hástalusat**
+
+          Geavat eanet go ovtta <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>-blohka.
+      Dance_2019_03:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
+
+          -   Goappašat dánsára ferteba ovdanbuktit lihkastaga.
+          -   Fertet deaddit njuollaboaluid.
+
+          _Dát dássi nohkká 6 távtta maŋŋil._
+        challenges: |-
+          **Válljenvejolaš hástalusat**
+
+          -   Bija dánsára responderet gurut ja olgeš guvlui njuollaboaluiguin.
+      Dance_2019_05:
+        challenges: "**Válljenvejolaš hástalusat**\n\n-   Rievdat duogábeali juohke
+          háve go dánsárat rievdadit lihkastagaid. "
+      Dance_2019_06:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
+
+          -   Ráhkat njunušdánsára ja duogábeal-dánsáriid musihka njeallji vuosttaš távtta siskkobealde.
+
+          _Dát dássi nohkká 7 távtta maŋŋil._
+        challenges: |-
+          **Válljenvejolaš hástalusat**
+
+          -   Ráhkat máŋga joavkku mas leat duogábeal-dánsárat.
+      Dance_2019_07:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
+
+          -   Rievdat unnimus ovtta dánsára sturrodaga.
+
+          _Dát dássi nohkká 6 távtta maŋŋil._
+        challenges: |-
+          **Válljenvejolaš hástalusat**
+
+          -   Eksperimentere lonuhemiin eará iešvuođaid dego govdodaga dahje jorrama.
+      Dance_2019_08:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
+
+          -   Rievdadit ivnni unnimusat ovtta dánsáris.
+
+          _Dát dássi nohkká 6 távtta maŋŋil._
+        tint_hint: Fuomášit go ahte du dánsáris ii šaddan juste dakkár ivdni maid
+          ledjet válljen? Dát lea dan dihte go **ivnnit** seaguhit dan ivnni maid
+          don válljet dánsára ivnniin.
+      Dance_2019_09:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
+
+          -   Deaddel "Válbmet" boalu!
+        repeat_every_ideas: |-
+          **Dárbbašat go ideaid?**
+
+          -   Rievdat vaikko galle geardde dánsára sturrodaga nu ahte stuorrugoahtá.
+          -   Rievdat vaikko galle geardde dánsára jorrama nu ahte jorragoahtá.
+
+          _Don sáhtát maiddái atnit negatiiva nummáriid ráhkadan dihte vuosteeffekta!_
+        next_previous: |-
+          **Válljenvejolaš hástalusat**
+
+          -   Don sáhtát maid geavahit dán ođđa dáhpáhus-blohka go bláđet dánsenlihkastagaid listtu čađa bidjan dihte lihkastagaid  `(Sahtedohko)`, `(Boahtte)`, or `(Ovddit)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
+      Dance_Party_05:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
+
+          -   Du dánsár ferte čađahit unnimusat 4 iešguđetlágan dánsenlihkastaga ovdal go dát dássi lea válbmanan.
+
+          _Dát dássi válbmana go leat leamaš 12 távtta._
+      Dance_Party_11b:
+        validation: |-
+          **Movt dán dási meaddel beasan?**
+
+          -   Geavat blohka `go gurut njuolla deaddiluvvo` oažžut Robota dánset ovtta lihkastaga, go deaddilat gurut njuola.
+
+          _Dát dássi válbmana go leat leamaš 7 távtta._
+      Dance_Party_extras_alternate_2019:
+        alternate: Molsašuvvan-blohkka lea kategoriijas "Dánsárat".
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Geahččal Ageantta bidjat hukset moadde šaldi nu ahte
+          juogo Alex dahje Steve sáhttiba vázzit ravddaid birra kárttas.

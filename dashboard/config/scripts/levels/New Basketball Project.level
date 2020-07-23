@@ -13,14 +13,34 @@
       "leftButton",
       "rightButton"
     ],
-    "min_workspace_height": 800,
-    "free_play": true,
+    "min_workspace_height": "800",
+    "free_play": "true",
     "is_project_level": true,
-    "short_instructions": "Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones.",
+    "short_instructions": "Create your own Basketball game. You can change all the rules. When you're done, click Share to let friends try your game on their phones.",
     "maze": "[[1,1,1,2,2,1,1,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,16,0,0,0,0,1]]",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "fail_on_ball_exit": "false",
+    "use_flag_goal": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-18 22:45:45 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"min_workspace_height\",\"free_play\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

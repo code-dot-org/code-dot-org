@@ -30,6 +30,27 @@ module Pd
     include JotFormBackedForm
     include Pd::WorkshopSurveyConstants
 
+    # Different categories have different valid days
+    # Not identical to the one in WorkshopDailySurvey
+    VALID_DAYS = {
+      LOCAL_CATEGORY => (1..5).to_a.freeze,
+      ACADEMIC_YEAR_1_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_2_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_3_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
+      ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
+      VIRTUAL_1_CATEGORY => [1].freeze,
+      VIRTUAL_2_CATEGORY => [1].freeze,
+      VIRTUAL_3_CATEGORY => [1].freeze,
+      VIRTUAL_4_CATEGORY => [1].freeze,
+      VIRTUAL_5_CATEGORY => [1].freeze,
+      VIRTUAL_6_CATEGORY => [1].freeze,
+      VIRTUAL_7_CATEGORY => [1].freeze,
+      VIRTUAL_8_CATEGORY => [1].freeze,
+      CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
+    }
+
     belongs_to :user
     belongs_to :pd_session, class_name: 'Pd::Session'
     belongs_to :pd_workshop, class_name: 'Pd::Workshop'
@@ -37,6 +58,15 @@ module Pd
 
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
       message: 'already has a submission for this workshop, session, facilitator, and form'
+
+    validates_presence_of(
+      :user_id,
+      :pd_workshop_id,
+      :pd_session_id,
+      :facilitator_id,
+      :day
+    )
+    validate :day_for_subject
 
     before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}
     def set_workshop_from_session
@@ -54,28 +84,6 @@ module Pd
       }
     end
 
-    validates_presence_of(
-      :user_id,
-      :pd_workshop_id,
-      :pd_session_id,
-      :facilitator_id,
-      :day
-    )
-
-    # Different categories have different valid days
-    # Not identical to the one in WorkshopDailySurvey
-    VALID_DAYS = {
-      LOCAL_CATEGORY => (1..5).to_a.freeze,
-      ACADEMIC_YEAR_1_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_2_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_3_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
-      ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
-    }
-
-    validate :day_for_subject
-
     def self.form_ids_for_subjects(subjects)
       subjects.map do |subject|
         form_id subject
@@ -89,7 +97,7 @@ module Pd
     def self.all_form_ids
       CATEGORY_MAP.keys.map do |subject|
         form_id(subject)
-      end
+      end.flatten.compact.uniq
     end
 
     def self.unique_attributes

@@ -1,5 +1,5 @@
 ---
-sq:
+sq-AL:
   data:
     display_name:
       CSD U2 Pair Programming Video: Programim në çift
@@ -50,7 +50,6 @@ sq:
       CSD U3 Variables Map: variabla
       CSD U3 Variables Map_2018: variabla
       CSD U3 Variables Map_2019: variabla
-      CSD U3 functions map: funksione
       CSD U6 for loop map: Për Ciklet
       CSD U6 for loop map_2018: Për Ciklet
       CSD U6 for loop map_2019: Për Ciklet
@@ -58,6 +57,3 @@ sq:
       CSD U6 functions paramters video_2018: Funksionet me parametra
       CSD U6 functions paramters video_2019: Funksionet me parametra
       'CSD: For Loop_2018': Për Ciklet
-      'CSD: For Loop_2019': Për Ciklet
-      MC_HOC_2017_FP10x10: Lojë Falas
-      MC_HOC_2017_FP10x10_RE: Lojë Falas

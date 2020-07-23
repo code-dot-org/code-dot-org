@@ -1,5 +1,5 @@
 name 'courseD_multi_maze_until10_predict2'
-question 'Look carefully at the code below.  What will happen after you click "Run"?'
+question 'Look carefully at the code below. What will happen after you click "Run"?'
 right 'The zombie will turn right immediately and get stuck.', feedback: 'Correct!'
 wrong 'The zombie will make it to the sunflower.', feedback: 'Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.'
 wrong 'The zombie will turn right on the first path and go around in circles forever.', feedback: 'Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.'

@@ -1,5 +1,5 @@
 name 'courseE_multi_farmer_functions11_predict'
-question 'Look at the functions defined below.  What will the harvester pick?'
+question 'Look at the functions defined below. What will the harvester pick?'
 wrong 'The harvester will pick two pumpkins.', feedback: 'Incorrect.  The harvester does not call "check and pick" until she gets to the corn.'
 wrong 'The harvester will pick all of the pumpkins.', feedback: 'Incorrect.  The harvester does not call "check and pick" until she gets to the corn.'
 wrong 'The harvester will pick the lettuce.', feedback: 'Incorrect. The harvester only makes one turn, and ends at the corn.'

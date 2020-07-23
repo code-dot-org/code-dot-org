@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -91,6 +92,7 @@ export const courseLinkFormatter = function(course, {rowData}) {
       )}
       {assignmentPaths.length < 1 && (
         <Button
+          __useDeprecatedTag
           text={i18n.coursesCardAction()}
           href={'/courses'}
           color={Button.ButtonColor.gray}
@@ -118,7 +120,7 @@ export const loginInfoFormatter = function(loginType, {rowData}) {
   return (
     <a
       style={tableLayoutStyles.link}
-      href={teacherDashboardUrl(rowData.id, '/print_signin_cards')}
+      href={teacherDashboardUrl(rowData.id, '/login_info')}
     >
       {sectionCode}
     </a>
@@ -126,10 +128,11 @@ export const loginInfoFormatter = function(loginType, {rowData}) {
 };
 
 export const studentsFormatter = function(studentCount, {rowData}) {
-  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage');
+  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage_students');
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button
+        __useDeprecatedTag
         text={i18n.addStudents()}
         href={manageStudentsUrl}
         color={Button.ButtonColor.gray}
@@ -216,7 +219,7 @@ class OwnedSectionsTable extends Component {
           props: {style: styles.hiddenCol}
         },
         cell: {
-          format: hiddenFormatter,
+          formatters: [hiddenFormatter],
           props: {style: styles.hiddenCol}
         }
       },
@@ -229,7 +232,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: sectionLinkFormatter,
+          formatters: [sectionLinkFormatter],
           props: {style: {...colStyle, ...styles.leftHiddenCol}}
         }
       },
@@ -241,7 +244,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: gradeFormatter,
+          formatters: [gradeFormatter],
           props: {style: colStyle}
         }
       },
@@ -254,7 +257,7 @@ class OwnedSectionsTable extends Component {
           }
         },
         cell: {
-          format: courseLinkFormatter,
+          formatters: [courseLinkFormatter],
           props: {style: colStyle}
         }
       },
@@ -266,7 +269,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: studentsFormatter,
+          formatters: [studentsFormatter],
           props: {style: colStyle}
         }
       },
@@ -279,7 +282,7 @@ class OwnedSectionsTable extends Component {
           }
         },
         cell: {
-          format: loginInfoFormatter,
+          formatters: [loginInfoFormatter],
           props: {style: colStyle}
         }
       },
@@ -289,7 +292,7 @@ class OwnedSectionsTable extends Component {
           props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
-          format: this.actionCellFormatter,
+          formatters: [this.actionCellFormatter],
           props: {style: {...tableLayoutStyles.cell, ...styles.colButton}}
         }
       }

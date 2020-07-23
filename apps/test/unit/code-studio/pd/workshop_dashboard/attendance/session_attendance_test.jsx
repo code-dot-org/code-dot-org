@@ -1,4 +1,4 @@
-import {expect} from '../../../../../util/configuredChai';
+import {expect} from '../../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
@@ -19,7 +19,8 @@ const DEFAULT_PROPS = {
   onSaving: () => {},
   onSaved: () => {},
   accountRequiredForAttendance: false,
-  enrollmentCount: 25
+  enrollmentCount: 25,
+  scholarshipWorkshop: false
 };
 const FAKE_API_RESPONSE = {
   session: {
@@ -39,7 +40,8 @@ const FAKE_API_RESPONSE = {
       user_id: 101,
       verified_teacher_account: true,
       attended: true,
-      puzzles_completed: 60
+      cdo_scholarship: true,
+      other_scholarship: false
     },
     {
       first_name: 'Adele',
@@ -49,7 +51,8 @@ const FAKE_API_RESPONSE = {
       user_id: 102,
       verified_teacher_account: true,
       attended: true,
-      puzzles_completed: 171
+      cdo_scholarship: false,
+      other_scholarship: true
     },
     {
       first_name: 'Grace',
@@ -59,7 +62,8 @@ const FAKE_API_RESPONSE = {
       user_id: 103,
       verified_teacher_account: true,
       attended: true,
-      puzzles_completed: 365
+      cdo_scholarship: false,
+      other_scholarship: false
     }
   ]
 };
@@ -89,23 +93,26 @@ describe('SessionAttendance', () => {
 
     // Displays a spinner at first while it waits for the server to provide
     // attendance data.
-    expect(wrapper).to.containMatchingElement(<Spinner />);
+    expect(wrapper.containsMatchingElement(<Spinner />)).to.be.ok;
     expect(server.requests).to.have.length(1);
 
     // After the server responds
     server.respond();
+    wrapper.update();
     // Has expected columns:
-    expect(wrapper).to.containMatchingElement(
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Verified Teacher Account</th>
-          <th>Present</th>
-        </tr>
-      </thead>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Verified Teacher Account</th>
+            <th>Present</th>
+          </tr>
+        </thead>
+      )
+    ).to.be.ok;
 
     // Has three rows:
     expect(wrapper.find('tbody tr')).to.have.length(3);
@@ -113,53 +120,56 @@ describe('SessionAttendance', () => {
     wrapper.unmount();
   });
 
-  it('includes a "Code Studio Account" column if account is required', () => {
-    const wrapper = mount(
-      <SessionAttendance
-        {...DEFAULT_PROPS}
-        accountRequiredForAttendance={true}
-      />
-    );
-
-    // After the server responds
-    server.respond();
-    // Has expected columns:
-    expect(wrapper).to.containMatchingElement(
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Code Studio Account</th>
-          <th>Verified Teacher Account</th>
-          <th>Present</th>
-        </tr>
-      </thead>
-    );
-
-    wrapper.unmount();
-  });
-
-  it('includes "Puzzles Completed" and "Attended" columns if course is CSF', () => {
+  it('includes "Attended" column if course is CSF', () => {
     const wrapper = mount(
       <SessionAttendance {...DEFAULT_PROPS} course={COURSE_CSF} />
     );
 
     // After the server responds
     server.respond();
+    wrapper.update();
     // Has expected columns:
-    expect(wrapper).to.containMatchingElement(
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Verified Teacher Account</th>
-          <th>Puzzles Completed</th>
-          <th>Attended</th>
-        </tr>
-      </thead>
+    expect(
+      wrapper.containsMatchingElement(
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Verified Teacher Account</th>
+            <th>Attended</th>
+          </tr>
+        </thead>
+      )
+    ).to.be.ok;
+
+    wrapper.unmount();
+  });
+
+  it('includes scholarship columns for scholarship workshops', () => {
+    const wrapper = mount(
+      <SessionAttendance {...DEFAULT_PROPS} scholarshipWorkshop={true} />
     );
+
+    // After the server responds
+    server.respond();
+    wrapper.update();
+    // Has expected columns:
+    expect(
+      wrapper.containsMatchingElement(
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Verified Teacher Account</th>
+            <th>Code.org Scholarship?</th>
+            <th>Other Scholarship?</th>
+            <th>Present</th>
+          </tr>
+        </thead>
+      )
+    ).to.be.ok;
 
     wrapper.unmount();
   });

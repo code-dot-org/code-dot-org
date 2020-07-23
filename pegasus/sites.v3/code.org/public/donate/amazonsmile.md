@@ -20,7 +20,7 @@ To learn more about AmazonSmile, check out the [program details](http://smile.am
 To shop AmazonSmile simply go to [smile.amazon.com](http://smile.amazon.com) from the web browser on your computer or mobile device. You can also download the AmazonSmile extension for your favorite browser:
 
 - [Chrome](https://chrome.google.com/webstore/detail/smile-always/jgpmhnmjbhgkhpbgelalfpplebgfjmbf?hl=en)
-- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazonsmileredirector/)
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-smile/reviews/)
 - [Safari](https://github.com/bosmacs/KeepOnSmiling/releases)
 - [Edge](https://www.windowscentral.com/official-amazon-assistant-extension-now-available-microsoft-edge)
 

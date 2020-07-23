@@ -47,7 +47,7 @@ class AdvocacySite
             },
             {
               text_actual: "National landscape state details",
-              url: "https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing",
+              url: "https://docs.google.com/document/d/e/2PACX-1vTIZJaNtmPRBNb7_ZFHBxsGwyZqBSdpJN0iJ_pOgF-K-MNYikEeKTTj49ezDkMFRb1C_1w45gSrkcq6/pub",
               new_tab: true
             },
             {
@@ -77,8 +77,8 @@ class AdvocacySite
               new_tab: true
             },
             {
-              text_actual: "Grow K-12 CS with the Perkins Act",
-              url: CDO.code_org_url("/files/RethinkingPerkins.pdf"),
+              text_actual: "Funding models document",
+              url: "https://docs.google.com/document/d/1yU2YS5YWHEZBN363pUUIy-FBqDDQVoOSFOsSb06qMbM/edit",
               new_tab: true
             },
             {
@@ -108,11 +108,6 @@ class AdvocacySite
               url: CDO.code_org_url("/promote/ap")
             },
             {
-              text_actual: "Funding models document",
-              url: "https://docs.google.com/document/d/1yU2YS5YWHEZBN363pUUIy-FBqDDQVoOSFOsSb06qMbM/edit",
-              new_tab: true
-            },
-            {
               text_actual: "State planning toolkit",
               url: "https://docs.google.com/document/d/13N843-BjK9JHXNWKFzJlxhpw7f6Y2pJF6tpV2aHM1HU/edit",
               new_tab: true
@@ -120,6 +115,10 @@ class AdvocacySite
             {
               text_actual: "Bring CS to your school or district",
               url: CDO.code_org_url("/yourschool")
+            },
+            {
+              text_actual: "Even more resources",
+              url: CDO.code_org_url("/promote/morestats")
             }
           ]
       }

@@ -3,23 +3,24 @@
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 
-
-- show_ui_tips = false
+-if current_user&.school_donor_name
+  - content_for :above_footer_content do
+    = render partial: 'home/donor_footer'
 
 -# Student modal
-- if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
+- if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
 -# Teacher modals
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   = render partial: 'layouts/terms_interstitial'
-- elsif (current_user && current_user.show_school_info_interstitial?) || @force_school_info_interstitial
+- elsif SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user) || @force_school_info_confirmation_dialog
+  = render partial: 'layouts/school_info_confirmation_dialog'
+- elsif SchoolInfoInterstitialHelper.show?(current_user) || @force_school_info_interstitial
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
-- else
-  - show_ui_tips = true
 
 - if current_user
-  = render partial: 'home/homepage', locals: {show_ui_tips: show_ui_tips}
+  = render partial: 'home/homepage'
 
 %br/
 %br/
@@ -30,21 +31,3 @@
 
 :javascript
   $("#section_code").placeholder();
-
-:javascript
-  $(document).ready(function() {
-    // Show teacher announcements for US or non-US depending on location.
-    $.getJSON( "/v2/client-location", function (data) {
-      country_code = data['country_code'];
-      if (country_code === 'US' || country_code === 'RD') {
-        $('#us-announcement').show();
-      } else {
-        $('#non-us-announcement').show();
-      }
-    });
-    $(".track-link").each(function () {
-      $(this).click(function () {
-        trackEvent('teacher_announcement','click', $(this).data('id'));
-      });
-    });
-  });

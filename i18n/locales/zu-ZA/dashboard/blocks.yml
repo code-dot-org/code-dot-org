@@ -16,6 +16,10 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -80,11 +84,23 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"height"': ubude
@@ -106,18 +122,18 @@ zu:
             '"when"': nini
       RyanLab_moveForward:
         text: qubekela phambili
-      aalab_checkTouching:
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"when"': nini
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': nini
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': nini
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       craft_ifPath:
         options:
           DIR:

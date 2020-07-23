@@ -3,6 +3,12 @@
 These scripts all require [the Crowdin CLI tool][1] version 2.0.17. Follow the
 instructions there to install for your system.
 
+These scripts also require some dependencies to be installed using NPM. Run the
+following command while in this directory
+```
+npm install
+```
+
 You will additionally need to add a `codeorg_credentials.yml` file to this
 directory (`{project root}/bin/i18n/`) containing the API key for the code.org
 project, and an `hourofcode_credentials.yml` file containing the API key for the

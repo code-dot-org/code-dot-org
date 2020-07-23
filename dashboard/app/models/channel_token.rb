@@ -33,12 +33,15 @@ class ChannelToken < ActiveRecord::Base
     storage_app = StorageApps.new(user_storage_id)
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      # your own channel
-      find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
-        # Get a new channel_id.
-        channel = create_channel ip, storage_app, data: data, standalone: false
-        _, ct.storage_app_id = storage_decrypt_channel_id(channel)
+    # Read from primary to minimize write conflicts.
+    SeamlessDatabasePool.use_master_connection do
+      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        # your own channel
+        find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
+          # Get a new channel_id.
+          channel = create_channel ip, storage_app, data: data, standalone: false
+          _, ct.storage_app_id = storage_decrypt_channel_id(channel)
+        end
       end
     end
   end

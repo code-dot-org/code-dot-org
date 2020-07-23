@@ -172,6 +172,7 @@ class StageLockDialog extends React.Component {
                 <td>1. {commonMsg.allowEditingInstructions()}</td>
                 <td>
                   <button
+                    type="button"
                     style={progressStyles.orangeButton}
                     onClick={this.allowEditing}
                   >
@@ -183,6 +184,7 @@ class StageLockDialog extends React.Component {
                 <td>2. {commonMsg.lockStageInstructions()}</td>
                 <td>
                   <button
+                    type="button"
                     style={progressStyles.orangeButton}
                     onClick={this.lockStage}
                   >
@@ -194,6 +196,7 @@ class StageLockDialog extends React.Component {
                 <td>3. {commonMsg.showAnswersInstructions()}</td>
                 <td>
                   <button
+                    type="button"
                     style={progressStyles.orangeButton}
                     onClick={this.showAnswers}
                   >
@@ -205,6 +208,7 @@ class StageLockDialog extends React.Component {
                 <td>4. {commonMsg.relockStageInstructions()}</td>
                 <td>
                   <button
+                    type="button"
                     style={progressStyles.orangeButton}
                     onClick={this.lockStage}
                   >
@@ -216,6 +220,7 @@ class StageLockDialog extends React.Component {
                 <td>5. {commonMsg.reviewResponses()}</td>
                 <td>
                   <button
+                    type="button"
                     style={progressStyles.whiteButton}
                     onClick={this.viewSection}
                   >
@@ -300,12 +305,14 @@ class StageLockDialog extends React.Component {
         </div>
         <div style={styles.buttonContainer}>
           <button
+            type="button"
             style={progressStyles.baseButton}
             onClick={this.props.handleClose}
           >
             {commonMsg.dialogCancel()}
           </button>
           <button
+            type="button"
             style={[progressStyles.blueButton, hiddenUnlessSelectedSection]}
             onClick={this.handleSave}
             disabled={this.props.saving}
@@ -324,7 +331,7 @@ export default connect(
     initialLockStatus: state.stageLock.lockStatus,
     isOpen: !!state.stageLock.lockDialogStageId,
     saving: state.stageLock.saving,
-    selectedSectionId: state.teacherSections.selectedSectionId
+    selectedSectionId: state.teacherSections.selectedSectionId.toString()
   }),
   dispatch => ({
     saveDialog(sectionId, lockStatus) {

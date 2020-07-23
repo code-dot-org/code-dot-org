@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Бул эмне үчүн маанилүү?
 
-Технологиялар планетадагы бардык тармактарды өзгөртүүдө. 2015-ж. АКШда ачылган 7 миллион жумушчу орду үчүн, анын ичинде, көркөм өнөр жана дизайн, код жазуу жөндөмүн талап кылган. But 65 percent of schools in the U.S. don't teach computer science. 21-кылымга өтүүгө убакыт келди. Окуучулар мектептен кийин медицина, бизнес, саясат же өнөр кесиби болобу - кай багытты тандашпасын, технологияларды өздөштүрө билүү аларга атаандаштыкта артыкчылык берерин баарыбыз жакшы билебиз. <br /> <br />
+Технологиялар планетадагы бардык тармактарды өзгөртүүдө. 2015-ж. АКШда ачылган 7 миллион жумушчу орду үчүн, анын ичинде, көркөм өнөр жана дизайн, код жазуу жөндөмүн талап кылган. But 55 percent of schools in the U.S. don't teach computer science. 21-кылымга өтүүгө убакыт келди. Окуучулар мектептен кийин медицина, бизнес, саясат же өнөр кесиби болобу - кай багытты тандашпасын, технологияларды өздөштүрө билүү аларга атаандаштыкта артыкчылык берерин баарыбыз жакшы билебиз. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Code.org тууралуу
 
-Code.org - 501c3 лицензиясынын негизинде иштеген, компүтердик билимди аялдардын жана бул ишке аз катышкан башка раса окуучулардын санын арбытуу аркылуу жайылтууну көздөгөн бейөкмөт уюм. Its vision is that every student in every school has the opportunity to learn computer programming. 2013-ж. иштеп баштагандан бери, Code.org жыл сайын Код сааты өнөктөштүгүн уюштуруп келет. Код саатына бүгүнкү күнү 100 милилондон ашык киши катышты. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Кенен маалыматты [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %) бул жерден табасыз.
+Code.org - 501c3 лицензиясынын негизинде иштеген, компүтердик билимди аялдардын жана бул ишке аз катышкан башка раса окуучулардын санын арбытуу аркылуу жайылтууну көздөгөн бейөкмөт уюм. Its vision is that every student in every school has the opportunity to learn computer programming. 2013-ж. иштеп баштагандан бери, Code.org жыл сайын Код сааты өнөктөштүгүн уюштуруп келет. Код саатына бүгүнкү күнү 100 милилондон ашык киши катышты. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![сүрөт](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![сүрөт](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![сүрөт](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![сүрөт](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![сүрөт](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![сүрөт](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -1,62 +1,129 @@
 ---
-ms:
+ms-MY:
   data:
     short_instructions:
-      20hr_farmer_stage9_1: Hai, saya ialah farmer. Saya perlukan pertolongan anda
-        untuk meratakan kawasan kebun saya supaya sedia untuk penanaman. Gerakkan
-        saya ke timbunan kotor dan gunakan "alihkan" blok utuk mengalihkannya.
-      20hr_farmer_stage9_11: 'Ianya masih gelap di luar. Gerakkan saya sepanjang lapangan.
-        Jika terdapat longgokan, keluarkan ia, dan jika ada lubang, timbuskan ia.
-        Petunjuk: gunakan menu dropdown dari pilihan di blok "Jika".'
-      20hr_farmer_stage9_2: Seterusnya, pindahkan saya ke lubang dan isi dengan DUA  penggali
-        kotoran, menggunakan blok "isi".
-      20hr_farmer_stage9_3: Pindahkan saya ke longgokan kotoran dan beritahu saya
-        berapa banyak penggali untuk mengalih keluar menggunakan blok-blok yang sedikit
-        mungkin.
-      20hr_farmer_stage9_4: 'Bolehkan anda membantu saya untuk membuang kesemua empat
-        longgokan kotor? Petunjuk: guna blok berulang jika boleh.'
-      20hr_farmer_stage9_5: 'Bantu saya untuk memasukkan kesemua lubang dengan 5 penggali
-        kotoran. Petunjuk: anda boleh meletakkan blok "berulang" dalam blok "sementara".'
-      20hr_farmer_stage9_6: Alihkan semua timbunan kotoran, gunakan blok yang sedikit
-        yang mungkin. Pilihan baru dalam menu dropdown di blok "manakala" beritahu
-        saya jika saya sedang berdiri di atas longgokan atau lubang.
-      20hr_farmer_stage9_7: Wow, saya mendapati lubang yang benar-benar dalam! Saya
-        tidak tahu berapa banyak penggali kotoran yang diperlukan. Bolehkah anda menulis
-        aturcara yang mengisinya sehingga dipenuhi tanah?
-      20hr_farmer_stage9_8: Bantu saya untuk mengisi lubang di hujung lapangan, gunakan
-        blok sedikit yang mungkin.
-      20hr_maze_stage2_13: OK, ini adalah sama, tetapi berbeza sedikit. Boleh lakukannya
-        hanya dengan 5 blok?
-      20hr_maze_stage2_7: Cuba bawa saya ke penceroboh hijau dengan hanya menggunakan
-        tiga blok.
-      App Lab test: ujian
+      CourseD_Dance_2020_01: Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya
+        dalam blok `persediaan`.
+      CourseD_Dance_2020_02: Blok `apabila anak panah atas ditekan` membolehkan anda
+        menjalankan kod apabila anak panah atas ditekan. Buatkan penari menepuk tangan
+        apabila anda menekan ke atas, atau cuba gerakan lain!
+      CourseD_Dance_2020_03: Tiba masanya untuk pertandingan menari! Atur cara setiap
+        penari untuk bergerak apabila anda menekan kekunci berbeza. Pilih gerakan
+        kegemaran anda untuk setiap penari atau tetapkannya kepada "(Rawak)" untuk
+        sesuatu yang tidak dapat diramalkan!
+      CourseD_Dance_2020_04: Buatkan penari anda memulakan gerakan baharu selepas
+        corak berirama keempat.
+      CourseD_Dance_2020_05: Buatkan penari anda memulakan gerakan baharu selepas
+        6 corak berirama sekarang!
+      CourseD_Dance_2020_06: Tubuh kumpulan penari sandaran di sekeliling penari utama
+        di tengah-tengah.
+      CourseD_Dance_2020_07: Tukar saiz kumpulan penari sandaran.
+      CourseD_Dance_2020_08: Cuba tukar warna seorang daripada penari anda (atau seluruh
+        kumpulan)!
+      CourseD_Dance_2020_09: Jadi kreatif dengan blok baharu ini!
+      CourseD_Dance_2020_10: Rasakan kegirangannya! Cipta tarian anda sendiri untuk
+        berkongsi dengan rakan anda.
+      CourseD_Dance_2020_bonus1: Pergi ke Depan dan ke Belakang! (Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      CourseD_Dance_2020_bonus3: Mari Kita Berada dalam Formasi!(Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      CourseD_Dance_Party_01: "\\_Seret blok `buat baharu` ke dalam ruang kerja dan
+        sambungkannya dalam blok `persediaan` untuk cipta penari pertama."
+      CourseD_Dance_Party_02: Buatkan rusa anda memulakan gerakan baharu selepas 4
+        corak berirama!
+      CourseD_Dance_Party_03: Buatkan penari anda memulakan gerakan baharu selepas
+        6 corak berirama sekarang!
+      CourseD_Dance_Party_04: Tambah kesan latar belakang kepada atur cara anda.
+      CourseD_Dance_Party_05: Gunakan blok baharu untuk membuatkan penari menukar
+        gerakan setiap 2 corak berirama.
+      CourseD_Dance_Party_06: Cipta penari sandaran yang dipanggil sebagai `penari_sandaran1`
+        untuk menari dengan kucing.
+      CourseD_Dance_Party_08: Bolehkah anda membuat kedua-dua penari sandaran bersaiz
+        sama?
+      CourseD_Dance_Party_09: Gunakan blok `tetapkan warna` untuk menukar warna penari.
+      CourseD_Dance_Party_10: Buatkan penari lain bertindak balas terhadap muzik dengan
+        menggunakan blok `mula mengikuti` juga.
+      CourseD_Dance_Party_11: Blok `apabila anak panah atas ditekan` membolehkan anda
+        menjalankan kod apabila anak panah atas ditekan. Cuba buatkan penari melakukan
+        gerakan pantas apabila anda menekan ke atas.
+      CourseD_Dance_Party_11_5: Gunakan blok "semua itik" untuk membuatkan semua itik
+        menari bersama.
+      CourseD_Dance_Party_11b: Buatkan "gerakan jatuh" Robot sekali apabila anda menekan
+        kekunci anak panah kanan dan "gerakan tepukan" sekali apabila anda menekan
+        kekunci anak panah atas. Lakukan gerakan jatuh-tepuk secepat yang mungkin!
+      CourseD_Dance_Party_12: Rasakan kegirangannya! Cipta tarian anda sendiri untuk
+        berkongsi dengan rakan anda.
       Crack Random Substitution: Arahan
-      Crack Random Substitution_2018: Arahan
-      Crack Random Substitution_2019: Arahan
       Crack a Caesar Cipher: Arahan
-      Crack a Caesar Cipher_2018: Arahan
-      Crack a Caesar Cipher_2019: Arahan
-      Kiki_StarWars_Test_3: teks
-      Kiki_StarWars_Test_4: teks
-      Kiki_StarWars_Test_5: teks
-      Kiki_StarWars_Test_5_Example: teks
-      The Vigenere Cipher Widget: Arahan
-      The Vigenere Cipher Widget_2018: Arahan
-      The Vigenere Cipher Widget_2019: Arahan
-      The Vigenere Cipher: Arahan
-      U2 frequency caesar: Arahan
-      U2 frequency random sub: Arahan
-      U2 vigenere cipher: Arahan
-      U4 vigenere cipher 2: Arahan
-      grade3_robotFarmer_ConditionalsIntro_11: 'Ianya masih gelap di luar. Gerakkan
-        saya sepanjang lapangan. Jika terdapat longgokan, keluarkan ia, dan jika ada
-        lubang, timbuskan ia. Petunjuk: gunakan menu dropdown dari pilihan di blok
-        "Jika".'
-      grade3_robotFarmer_ConditionalsIntro_6: Alihkan semua timbunan kotoran, gunakan
-        blok yang sedikit yang mungkin. Pilihan baru dalam menu dropdown di blok "manakala"
-        beritahu saya jika saya sedang berdiri di atas longgokan atau lubang.
-      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Bantu saya untuk memasukkan
-        kesemua lubang dengan 5 penggali kotoran. Petunjuk: anda boleh meletakkan
-        blok "berulang" dalam blok "sementara".'
-      grade4_frozen_functions0: Bolehkah anda memikirkan apa nombor untuk menggantikan
-        tanda soal untuk melukis bulatan?
+      Dance_2019_01: Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya
+        dalam blok `persediaan`.
+      Dance_2019_02: Blok `apabila anak panah atas ditekan` membolehkan anda menjalankan
+        kod apabila anak panah atas ditekan. Buatkan penari menepuk tangan apabila
+        anda menekan ke atas, atau cuba gerakan lain!
+      Dance_2019_03: Tiba masanya untuk pertandingan menari! Atur cara setiap penari
+        untuk bergerak apabila anda menekan kekunci berbeza. Pilih gerakan kegemaran
+        anda untuk setiap penari atau tetapkannya kepada "(Rawak)" untuk sesuatu yang
+        tidak dapat diramalkan!
+      Dance_2019_04: Buatkan penari anda memulakan gerakan baharu selepas corak berirama
+        keempat.
+      Dance_2019_05: Buatkan penari anda memulakan gerakan baharu selepas 6 corak
+        berirama sekarang!
+      Dance_2019_06: Tubuh kumpulan penari sandaran di sekeliling penari utama di
+        tengah-tengah.
+      Dance_2019_07: Tukar saiz kumpulan penari sandaran.
+      Dance_2019_08: Cuba tukar warna seorang daripada penari anda (atau seluruh kumpulan)!
+      Dance_2019_09: Jadi kreatif dengan blok baharu ini!
+      Dance_2019_10: Rasakan kegirangannya! Cipta tarian anda sendiri untuk berkongsi
+        dengan rakan anda.
+      Dance_Party_01: "\\_Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya
+        dalam blok `persediaan` untuk cipta penari pertama."
+      Dance_Party_02: Buatkan rusa anda memulakan gerakan baharu selepas 4 corak berirama!
+      Dance_Party_03: Buatkan penari anda memulakan gerakan baharu selepas 6 corak
+        berirama sekarang!
+      Dance_Party_04: Tambah kesan latar belakang kepada atur cara anda.
+      Dance_Party_05: Gunakan blok baharu untuk membuatkan penari menukar gerakan
+        setiap 2 corak berirama.
+      Dance_Party_06: Cipta penari sandaran yang dipanggil sebagai `penari_sandaran1`
+        untuk menari dengan kucing.
+      Dance_Party_08: Bolehkah anda membuat kedua-dua penari sandaran bersaiz sama?
+      Dance_Party_09: Gunakan blok `tetapkan warna` untuk menukar warna penari.
+      Dance_Party_10: Buatkan penari lain bertindak balas terhadap muzik dengan menggunakan
+        blok `mula mengikuti` juga.
+      Dance_Party_11: Blok `apabila anak panah atas ditekan` membolehkan anda menjalankan
+        kod apabila anak panah atas ditekan. Cuba buatkan penari melakukan gerakan
+        pantas apabila anda menekan ke atas.
+      Dance_Party_11_5: Gunakan blok "semua itik" untuk membuatkan semua itik menari
+        bersama.
+      Dance_Party_11b: Buatkan "gerakan jatuh" Robot sekali apabila anda menekan kekunci
+        anak panah kanan dan "gerakan tepukan" sekali apabila anda menekan kekunci
+        anak panah atas. Lakukan gerakan jatuh-tepuk secepat yang mungkin!
+      Dance_Party_12: Rasakan kegirangannya! Cipta tarian anda sendiri untuk berkongsi
+        dengan rakan anda.
+      Dance_Party_extras_alternate_2019: Pergi ke Depan dan ke Belakang! (Klik "Lebih
+        Banyak Lagi" untuk maklumat lanjut)
+      Dance_Party_extras_battle: Kru Tarian (Klik "Lebih Banyak Lagi" untuk maklumat
+        lanjut)
+      Dance_Party_extras_battle_2019: Kru Tarian (Klik "Lebih Banyak Lagi" untuk maklumat
+        lanjut)
+      Dance_Party_extras_every_beat: Not Perempat (Klik "Lebih Banyak Lagi" untuk
+        maklumat lanjut)
+      Dance_Party_extras_every_beat_2019: Not Perempat (Klik "Lebih Banyak Lagi" untuk
+        maklumat lanjut)
+      Dance_Party_extras_layout: Mari Kita Berada dalam Formasi!(Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      Dance_Party_extras_layout_2019: Mari Kita Berada dalam Formasi!(Klik "Lebih
+        Banyak Lagi" untuk maklumat lanjut)
+      Dance_Party_extras_mixed_2019: Lebih Banyak (Klik "Lebih Banyak Lagi" untuk
+        maklumat lanjut)
+      Dance_Party_extras_on_beat: Bes, Julat Tengah dan Trebel (Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      Dance_Party_extras_on_beat_2019: Bes, Julat Tengah dan Trebel (Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      Dance_Party_extras_speed: Percepatkannya, Perlahankannya (Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      Dance_Party_extras_speed_2019: Percepatkannya, Perlahankannya (Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      Dance_Party_extras_visible: Ke manakah mereka akan pergi?(Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)
+      Dance_Party_extras_visible_2019: Ke manakah mereka akan pergi?(Klik "Lebih Banyak
+        Lagi" untuk maklumat lanjut)

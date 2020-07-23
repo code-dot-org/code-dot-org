@@ -1,0 +1,303 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+ACHILLE HS,OK-07-I003-07-I003-705,400237000002,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ADAIR HS,OK-46-I002-46-I002-705,400246000009,2531,Computer Programming I,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ADAIR HS,OK-46-I002-46-I002-705,400246000009,2532,Computer Programming II,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALTUS HS,OK-33-I018-33-I018-705,400285000030,2531,Computer Programming I,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALTUS HS,OK-33-I018-33-I018-705,400285000030,2531,Computer Programming I,54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ANADARKO HS,OK-08-I020-08-I020-705,400300000050,2511,Advanced Programming (Not For Math Credit),16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ANTLERS HS,OK-64-I013-64-I013-705,400306000057,2531,Computer Programming I,83,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARAPAHO-BUTLER HS,OK-20-I005-20-I005-715,400312029657,2531,Computer Programming I,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ASTEC CHARTER HS,OK-55-G004-55-G004-972,400078302399,2531,Computer Programming I,94,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BARNSDALL HS,OK-57-I029-57-I029-715,400357029727,2531,Computer Programming I,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BARTLESVILLE HS,OK-74-I030-74-I030-705,400363029826,2535,Advanced Placement Computer Science A,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BARTLESVILLE HS,OK-74-I030-74-I030-705,400363029826,2536,Advanced Placement Computer Science Principles,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BILLINGS HS,OK-52-I002-52-I002-705,400436000141,2531,Computer Programming I,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BINGER-ONEY HS,OK-08-I168-08-I168-705,403360329846,2511,Advanced Programming (Not For Math Credit),6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BIXBY HS,OK-72-I004-72-I004-705,400450000148,2531,Computer Programming I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BIXBY HS,OK-72-I004-72-I004-705,400450000148,2531,Computer Programming I,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BIXBY HS,OK-72-I004-72-I004-705,400450000148,2532,Computer Programming II,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BIXBY HS,OK-72-I004-72-I004-705,400450000148,2532,Computer Programming II,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLANCHARD HS,OK-47-I029-47-I029-705,400468000160,2531,Computer Programming I,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLANCHARD HS,OK-47-I029-47-I029-705,400468000160,2535,Advanced Placement Computer Science A,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLANCHARD HS,OK-47-I029-47-I029-705,400468000160,2536,Advanced Placement Computer Science Principles,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLUEJACKET HS,OK-18-I020-18-I020-705,400483000165,2531,Computer Programming I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLUEJACKET HS,OK-18-I020-18-I020-705,400483000165,2532,Computer Programming II,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOISE CITY HS,OK-13-I002-13-I002-705,400486000167,2531,Computer Programming I,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOISE CITY HS,OK-13-I002-13-I002-705,400486000167,2531,Computer Programming I,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOISE CITY HS,OK-13-I002-13-I002-705,400486000167,2531,Computer Programming I,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOSWELL HS,OK-12-I001-12-I001-715,400504029640,2531,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRAY-DOYLE HS,OK-69-I042-69-I042-705,400534000190,2531,Computer Programming I,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRIDGE CREEK HS,OK-26-I095-26-I095-705,400540029677,2531,Computer Programming I,50,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRIDGE CREEK HS,OK-26-I095-26-I095-705,400540029677,2532,Computer Programming II,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRIDGE CREEK HS,OK-26-I095-26-I095-705,400540029677,2531,Computer Programming I,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRINK JHS,OK-14-I002-14-I002-610,402025002214,2531,Computer Programming I,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRISTOW HS,OK-19-I002-19-I002-705,400546000193,2535,Advanced Placement Computer Science A,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW FRESHMAN ACADEMY,OK-72-I003-72-I003-700,400549002796,2531,Computer Programming I,106,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW FRESHMAN ACADEMY,OK-72-I003-72-I003-700,400549002796,2531,Computer Programming I,113,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2511,Advanced Programming (Not For Math Credit),13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2511,Advanced Programming (Not For Math Credit),35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2531,Computer Programming I,76,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2531,Computer Programming I,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2531,Computer Programming I,146,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2531,Computer Programming I,139,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2536,Advanced Placement Computer Science Principles,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2531,Computer Programming I,74,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN ARROW HS,OK-72-I003-72-I003-720,400549002795,2531,Computer Programming I,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BROKEN BOW HS,OK-48-I074-48-I074-705,400552000209,2531,Computer Programming I,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUFFALO HS,OK-30-I004-30-I004-715,400576029684,2531,Computer Programming I,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUFFALO HS,OK-30-I004-30-I004-715,400576029684,2531,Computer Programming I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUFFALO HS,OK-30-I004-30-I004-715,400576029684,2532,Computer Programming II,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUTNER HS,OK-67-I015-67-I015-705,400600000228,2536,Advanced Placement Computer Science Principles,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CALVIN HS,OK-32-I048-32-I048-705,400627000244,2511,Advanced Programming (Not For Math Credit),19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANADIAN HS,OK-61-I002-61-I002-705,400639000249,2532,Computer Programming II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANEY HS,OK-03-I026-03-I026-705,400642029614,2531,Computer Programming I,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANUTE HS,OK-75-I011-75-I011-705,400651000256,2531,Computer Programming I,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARL ALBERT HS,OK-55-I052-55-I052-705,401995000952,2531,Computer Programming I,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARL ALBERT HS,OK-55-I052-55-I052-705,401995000952,2535,Advanced Placement Computer Science A,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL JHS,OK-14-I002-14-I002-685,402025001606,2531,Computer Programming I,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHELSEA HS,OK-66-I003-66-I003-705,400738000293,2531,Computer Programming I,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHEYENNE HS,OK-65-I007-65-I007-705,400750000300,2535,Advanced Placement Computer Science A,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHISHOLM HS,OK-24-I042-24-I042-705,402178001088,2531,Computer Programming I,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHISHOLM MS,OK-24-I042-24-I042-505,402178002105,2531,Computer Programming I,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLEVELAND HS,OK-59-I006-59-I006-705,400804000332,2531,Computer Programming I,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLEVELAND HS,OK-59-I006-59-I006-705,400804000332,2531,Computer Programming I,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLINTON HS,OK-20-I099-20-I099-705,400807010335,2535,Advanced Placement Computer Science A,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLINTON HS,OK-20-I099-20-I099-705,400807010335,2536,Advanced Placement Computer Science Principles,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COLLINSVILLE HS,OK-72-I006-72-I006-705,400837000349,2511,Advanced Programming (Not For Math Credit),6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMANCHE HS,OK-69-I002-69-I002-705,400846000354,2531,Computer Programming I,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMANCHE HS,OK-69-I002-69-I002-705,400846000354,2531,Computer Programming I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COYLE HS,OK-42-I014-42-I014-705,400894000376,2511,Advanced Programming (Not For Math Credit),6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CURTIS INGE MS,OK-14-I040-14-I040-510,402163002370,2531,Computer Programming I,64,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CURTIS INGE MS,OK-14-I040-14-I040-510,402163002370,2532,Computer Programming II,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CUSHING HS,OK-60-I067-60-I067-705,400924000387,2531,Computer Programming I,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DALE HS,OK-63-I002-63-I002-705,400939001994,2532,Computer Programming II,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DALE HS,OK-63-I002-63-I002-705,400939001994,2532,Computer Programming II,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DAVIS HS,OK-50-I010-50-I010-705,400951000410,2532,Computer Programming II,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEER CREEK HS,OK-55-I006-55-I006-705,400957000413,2531,Computer Programming I,77,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEL CITY HS,OK-55-I052-55-I052-710,401995000957,2531,Computer Programming I,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOVE SCIENCE ACADEMY HS,OK-55-E024-55-E024-991,400079902858,2531,Computer Programming I,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOVE SCIENCE ACADEMY HS,OK-55-E024-55-E024-991,400079902858,2532,Computer Programming II,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOVE SCIENCE ACADEMY HS,OK-55-E024-55-E024-991,400079902858,2536,Advanced Placement Computer Science Principles,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOVE SCIENCE ACADEMY TULSA HS,OK-72-G003-72-G003-991,400075302851,2531,Computer Programming I,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOVE SCIENCE ACADEMY TULSA HS,OK-72-G003-72-G003-991,400075302851,2532,Computer Programming II,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DOVE SCIENCE ACADEMY TULSA HS,OK-72-G003-72-G003-991,400075302851,2536,Advanced Placement Computer Science Principles,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DRUMRIGHT HS,OK-19-I039-19-I039-705,401020000441,2511,Advanced Programming (Not For Math Credit),25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DRUMRIGHT HS,OK-19-I039-19-I039-705,401020000441,2531,Computer Programming I,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAST CENTRAL HS,OK-72-I001-72-I001-710,403024001607,2531,Computer Programming I,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAST CENTRAL HS,OK-72-I001-72-I001-710,403024001607,2536,Advanced Placement Computer Science Principles,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EISENHOWER HS,OK-16-I008-16-I008-705,401725000809,2535,Advanced Placement Computer Science A,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EL RENO HS,OK-09-I034-09-I034-705,401065000484,2531,Computer Programming I,121,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ELK CITY HS,OK-05-I006-05-I006-705,401074000495,2531,Computer Programming I,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ELK CITY HS,OK-05-I006-05-I006-705,401074000495,2532,Computer Programming II,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMERSON ALTERNATIVE ED. (HS),OK-55-I089-55-I089-710,402277001928,2531,Computer Programming I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMPIRE HS,OK-69-I021-69-I021-715,401089029761,2531,Computer Programming I,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMPIRE HS,OK-69-I021-69-I021-715,401089029761,2532,Computer Programming II,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMPIRE HS,OK-69-I021-69-I021-715,401089029761,2531,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMPIRE HS,OK-69-I021-69-I021-715,401089029761,2532,Computer Programming II,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ENID HS,OK-24-I057-24-I057-705,401092000513,2511,Advanced Programming (Not For Math Credit),12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ENID HS,OK-24-I057-24-I057-705,401092000513,2531,Computer Programming I,65,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ENID HS,OK-24-I057-24-I057-705,401092000513,2532,Computer Programming II,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ENID HS,OK-24-I057-24-I057-705,401092000513,2532,Computer Programming II,111,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ERICK HS,OK-05-I051-05-I051-715,401104029615,2531,Computer Programming I,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ERICK HS,OK-05-I051-05-I051-715,401104029615,2532,Computer Programming II,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FAIRVIEW HS,OK-44-I084-44-I084-705,401128000539,2531,Computer Programming I,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FLETCHER HS,OK-16-I009-16-I009-715,401170029648,2531,Computer Programming I,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FLETCHER HS,OK-16-I009-16-I009-715,401170029648,2532,Computer Programming II,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FLETCHER HS,OK-16-I009-16-I009-715,401170029648,2531,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORGAN HS,OK-04-I123-04-I123-705,401188000554,2531,Computer Programming I,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORGAN HS,OK-04-I123-04-I123-705,401188000554,2532,Computer Programming II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORT GIBSON HS,OK-51-I003-51-I003-705,401197000558,2536,Advanced Placement Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORT SUPPLY HS,OK-77-I005-77-I005-705,401200000561,2511,Advanced Programming (Not For Math Credit),17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FOX HS,OK-10-I074-10-I074-705,401206000563,2511,Advanced Programming (Not For Math Credit),4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRONTIER HS,OK-52-I004-52-I004-705,400002029709,2531,Computer Programming I,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRONTIER HS,OK-52-I004-52-I004-705,400002029709,2532,Computer Programming II,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRONTIER HS,OK-52-I004-52-I004-705,400002029709,2532,Computer Programming II,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAHAM HS,OK-54-I054-54-I054-705,400078200609,2532,Computer Programming II,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRANITE HS,OK-28-I003-28-I003-715,401329029682,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GROVE HS,OK-21-I002-21-I002-705,401353000626,2532,Computer Programming II,72,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAMMON HS,OK-65-I066-65-I066-705,401365000647,2531,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAMMON HS,OK-65-I066-65-I066-705,401365000647,2531,Computer Programming I,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARDING CHARTER PREPARATORY HS,OK-55-E008-55-E008-978,400078402376,2531,Computer Programming I,124,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAWORTH HS,OK-48-I006-48-I006-705,401408000663,2531,Computer Programming I,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAWORTH HS,OK-48-I006-48-I006-705,401408000663,2532,Computer Programming II,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HEALDTON HS,OK-10-I055-10-I055-705,401413000666,2531,Computer Programming I,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HENNESSEY HS,OK-37-I016-37-I016-705,401434000678,2511,Advanced Programming (Not For Math Credit),8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HENNESSEY HS,OK-37-I016-37-I016-705,401434000678,2531,Computer Programming I,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGHLAND EAST JHS,OK-14-I002-14-I002-650,402025000993,2531,Computer Programming I,64,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGHLAND WEST JHS,OK-14-I002-14-I002-655,402025002215,2531,Computer Programming I,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOLDENVILLE HS,OK-32-I035-32-I035-705,401479000694,2511,Advanced Programming (Not For Math Credit),7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOLDENVILLE HS,OK-32-I035-32-I035-705,401479000694,2531,Computer Programming I,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOWE HS,OK-40-I067-40-I067-705,401512000709,2531,Computer Programming I,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOWE HS,OK-40-I067-40-I067-705,401512000709,2532,Computer Programming II,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HUGO HS,OK-12-I039-12-I039-705,401521000713,2511,Advanced Programming (Not For Math Credit),7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JENKS HS,OK-72-I005-72-I005-705,401572000739,2531,Computer Programming I,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JENKS HS,OK-72-I005-72-I005-705,401572000739,2511,Advanced Programming (Not For Math Credit),6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JENKS HS,OK-72-I005-72-I005-705,401572000739,2531,Computer Programming I,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JENKS HS,OK-72-I005-72-I005-705,401572000739,2535,Advanced Placement Computer Science A,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JENKS HS,OK-72-I005-72-I005-705,401572000739,2536,Advanced Placement Computer Science Principles,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JONES HS,OK-55-I009-55-I009-705,401584000744,2531,Computer Programming I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KELLYVILLE HS,OK-19-I031-19-I031-705,401617000754,2511,Advanced Programming (Not For Math Credit),10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KELLYVILLE HS,OK-19-I031-19-I031-705,401617000754,2511,Advanced Programming (Not For Math Credit),5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KEOTA HS,OK-31-I043-31-I043-705,401635000758,2531,Computer Programming I,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KEOTA HS,OK-31-I043-31-I043-705,401635000758,2532,Computer Programming II,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KEOTA HS,OK-31-I043-31-I043-705,401635000758,2531,Computer Programming I,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KETCHUM HS,OK-18-I006-18-I006-705,401638000761,2532,Computer Programming II,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIEFER HS,OK-19-I018-19-I018-705,401650000768,2531,Computer Programming I,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAVERNE HS,OK-30-I001-30-I001-705,401722000796,2535,Advanced Placement Computer Science A,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAVERNE HS,OK-30-I001-30-I001-705,401722000796,2536,Advanced Placement Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAVERNE HS,OK-30-I001-30-I001-705,401722000796,2536,Advanced Placement Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAWTON HS,OK-16-I008-16-I008-710,401725000819,2531,Computer Programming I,55,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEXINGTON HS,OK-14-I057-14-I057-705,401758000854,2531,Computer Programming I,62,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HS,OK-72-I014-72-I014-705,401776000859,2536,Advanced Placement Computer Science Principles,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HS,OK-72-I014-72-I014-705,401776000859,2536,Advanced Placement Computer Science Principles,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LOCUST GROVE HS,OK-46-I017-46-I017-705,401800000867,2531,Computer Programming I,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LOCUST GROVE HS,OK-46-I017-46-I017-705,401800000867,2532,Computer Programming II,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MAYSVILLE HS,OK-25-I007-25-I007-715,401938029669,2535,Advanced Placement Computer Science A,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCALESTER HS,OK-61-I080-61-I080-705,401944000922,2532,Computer Programming II,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MEMORIAL HS,OK-55-I012-55-I012-705,401059000474,2531,Computer Programming I,50,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MEMORIAL HS,OK-55-I012-55-I012-705,401059000474,2535,Advanced Placement Computer Science A,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MEMORIAL HS,OK-72-I001-72-I001-725,403024001650,2535,Advanced Placement Computer Science A,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MERRITT HS,OK-05-I002-05-I002-705,401980000941,2531,Computer Programming I,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MERRITT HS,OK-05-I002-05-I002-705,401980000941,2511,Advanced Programming (Not For Math Credit),12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MIDWEST CITY HS,OK-55-I052-55-I052-715,401995000963,2531,Computer Programming I,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MIDWEST CITY HS,OK-55-I052-55-I052-715,401995000963,2535,Advanced Placement Computer Science A,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MILBURN HS,OK-35-I029-35-I029-705,401998000977,2511,Advanced Programming (Not For Math Credit),13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MILL CREEK HS,OK-35-I002-35-I002-705,402004000980,2531,Computer Programming I,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MILL CREEK HS,OK-35-I002-35-I002-705,402004000980,2532,Computer Programming II,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOORE HS,OK-14-I002-14-I002-705,402025000998,2535,Advanced Placement Computer Science A,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOORE HS,OK-14-I002-14-I002-705,402025000998,2536,Advanced Placement Computer Science Principles,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOORELAND HS,OK-77-I002-77-I002-715,402028029839,2531,Computer Programming I,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MORRIS HS,OK-56-I003-56-I003-705,402031001008,2531,Computer Programming I,54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MORRIS HS,OK-56-I003-56-I003-705,402031001008,2532,Computer Programming II,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MORRIS HS,OK-56-I003-56-I003-705,402031001008,2511,Advanced Programming (Not For Math Credit),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MORRIS HS,OK-56-I003-56-I003-705,402031001008,2511,Advanced Programming (Not For Math Credit),26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MORRIS HS,OK-56-I003-56-I003-705,402031001008,2532,Computer Programming II,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MUSTANG HS,OK-09-I069-09-I069-705,402100001046,2531,Computer Programming I,219,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MUSTANG HS,OK-09-I069-09-I069-705,402100001046,2532,Computer Programming II,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MUSTANG HS,OK-09-I069-09-I069-705,402100001046,2535,Advanced Placement Computer Science A,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NAVAJO HS,OK-33-I001-33-I001-705,402118001053,2536,Advanced Placement Computer Science Principles,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORMAN HS,OK-14-I029-14-I029-705,402172001082,2531,Computer Programming I,37,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORMAN HS,OK-14-I029-14-I029-705,402172001082,2535,Advanced Placement Computer Science A,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORMAN NORTH HS,OK-14-I029-14-I029-710,402172002118,2531,Computer Programming I,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORMAN NORTH HS,OK-14-I029-14-I029-710,402172002118,2535,Advanced Placement Computer Science A,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORMAN NORTH HS,OK-14-I029-14-I029-710,402172002118,2536,Advanced Placement Computer Science Principles,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HS,OK-55-I012-55-I012-715,401059001979,2531,Computer Programming I,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HS,OK-55-I012-55-I012-715,401059001979,2531,Computer Programming I,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HS,OK-55-I012-55-I012-715,401059001979,2531,Computer Programming I,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HS,OK-55-I012-55-I012-715,401059001979,2535,Advanced Placement Computer Science A,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HS,OK-55-I012-55-I012-715,401059001979,2536,Advanced Placement Computer Science Principles,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OILTON HS,OK-19-I020-19-I020-715,402256001103,2532,Computer Programming II,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OILTON HS,OK-19-I020-19-I020-715,402256001103,2531,Computer Programming I,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OILTON HS,OK-19-I020-19-I020-715,402256001103,2531,Computer Programming I,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OKAY HS,OK-73-I001-73-I001-715,402262001107,2532,Computer Programming II,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OKAY HS,OK-73-I001-73-I001-715,402262001107,2531,Computer Programming I,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OKLAHOMA UNION HS,OK-53-I003-53-I003-705,400002129712,2531,Computer Programming I,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OKTAHA HS,OK-51-I008-51-I008-705,402283001216,2531,Computer Programming I,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OKTAHA HS,OK-51-I008-51-I008-705,402283001216,2532,Computer Programming II,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OWASSO HS,OK-72-I011-72-I011-715,402328001235,2535,Advanced Placement Computer Science A,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OWASSO HS,OK-72-I011-72-I011-715,402328001235,2531,Computer Programming I,137,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OWASSO HS,OK-72-I011-72-I011-715,402328001235,2531,Computer Programming I,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OWASSO HS,OK-72-I011-72-I011-715,402328001235,2511,Advanced Programming (Not For Math Credit),25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OWASSO HS,OK-72-I011-72-I011-715,402328001235,2531,Computer Programming I,109,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OWASSO HS,OK-72-I011-72-I011-715,402328001235,2511,Advanced Programming (Not For Math Credit),17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OWASSO HS,OK-72-I011-72-I011-715,402328001235,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OYA CHARTER MANITOU 9TH-12TH,OK-55-J001-55-J001-975,400078902808,2532,Computer Programming II,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PLAINVIEW HS,OK-10-I027-10-I027-705,402424001278,2531,Computer Programming I,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2531,Computer Programming I,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2531,Computer Programming I,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2531,Computer Programming I,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2531,Computer Programming I,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2531,Computer Programming I,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2532,Computer Programming II,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2532,Computer Programming II,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2532,Computer Programming II,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PONCA CITY HS,OK-36-I071-36-I071-705,402469001296,2532,Computer Programming II,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PORTER CONSOLIDATED HS,OK-73-I365-73-I365-720,403019701305,2531,Computer Programming I,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PORTER CONSOLIDATED HS,OK-73-I365-73-I365-720,403019701305,2532,Computer Programming II,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POTEAU HS,OK-40-I029-40-I029-705,402487001310,2511,Advanced Programming (Not For Math Credit),20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POTEAU HS,OK-40-I029-40-I029-705,402487001310,2532,Computer Programming II,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POTEAU HS,OK-40-I029-40-I029-705,402487001310,2531,Computer Programming I,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESTON HS,OK-56-I005-56-I005-705,402505001315,2531,Computer Programming I,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESTON HS,OK-56-I005-56-I005-705,402505001315,2531,Computer Programming I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESTON HS,OK-56-I005-56-I005-705,402505001315,2532,Computer Programming II,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESTON HS,OK-56-I005-56-I005-705,402505001315,2531,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRESTON HS,OK-56-I005-56-I005-705,402505001315,2511,Advanced Programming (Not For Math Credit),10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRYOR HS,OK-46-I001-46-I001-705,402520001322,2511,Advanced Programming (Not For Math Credit),15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRYOR HS,OK-46-I001-46-I001-705,402520001322,2532,Computer Programming II,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PRYOR JHS,OK-46-I001-46-I001-610,402520001323,2531,Computer Programming I,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PUTNAM CITY HS,OK-55-I001-55-I001-705,402529001342,2535,Advanced Placement Computer Science A,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RED OAK HS,OK-39-I002-39-I002-705,402559001366,2531,Computer Programming I,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RED OAK HS,OK-39-I002-39-I002-705,402559001366,2532,Computer Programming II,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RED OAK HS,OK-39-I002-39-I002-705,402559001366,2536,Advanced Placement Computer Science Principles,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROLAND HS,OK-68-I005-68-I005-705,402631001385,2511,Advanced Programming (Not For Math Credit),17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RYAN HS,OK-34-I001-34-I001-705,402661001394,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALINA HS,OK-46-I016-46-I016-705,402673002075,2532,Computer Programming II,50,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALINA HS,OK-46-I016-46-I016-705,402673002075,2511,Advanced Programming (Not For Math Credit),57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALINA HS,OK-46-I016-46-I016-705,402673002075,2532,Computer Programming II,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALINA HS,OK-46-I016-46-I016-705,402673002075,2531,Computer Programming I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALINA HS,OK-46-I016-46-I016-705,402673002075,2532,Computer Programming II,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALLISAW HS,OK-68-I001-68-I001-705,402679001401,2531,Computer Programming I,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALLISAW HS,OK-68-I001-68-I001-705,402679001401,2531,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SANTA FE HS,OK-55-I012-55-I012-720,401059001360,2535,Advanced Placement Computer Science A,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SANTA FE S PATHWAYS MID COLLEG,OK-55-E021-55-E021-970,400079602831,2531,Computer Programming I,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SENIOR HS,OK-26-I051-26-I051-705,402160029672,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHATTUCK HS,OK-23-I042-23-I042-705,402754001453,2531,Computer Programming I,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHATTUCK HS,OK-23-I042-23-I042-705,402754001453,2531,Computer Programming I,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHATTUCK HS,OK-23-I042-23-I042-705,402754001453,2535,Advanced Placement Computer Science A,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SKIATOOK HS,OK-72-I007-72-I007-705,402775001475,2531,Computer Programming I,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SMITHVILLE HS,OK-48-I014-48-I014-705,402784001479,2511,Advanced Programming (Not For Math Credit),1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SMITHVILLE HS,OK-48-I014-48-I014-705,402784001479,2531,Computer Programming I,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SMITHVILLE HS,OK-48-I014-48-I014-705,402784001479,2532,Computer Programming II,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SNYDER HS,OK-38-I004-38-I004-705,402793001482,2531,Computer Programming I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SNYDER HS,OK-38-I004-38-I004-705,402793001482,2532,Computer Programming II,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOPER HS,OK-12-I004-12-I004-705,402796001485,2511,Advanced Programming (Not For Math Credit),3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHEAST HS,OK-55-I089-55-I089-770,402277001895,2535,Advanced Placement Computer Science A,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHMOORE HS,OK-14-I002-14-I002-715,402025002395,2511,Advanced Programming (Not For Math Credit),14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHMOORE HS,OK-14-I002-14-I002-715,402025002395,2536,Advanced Placement Computer Science Principles,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STERLING HS,OK-16-I003-16-I003-705,402859001499,2532,Computer Programming II,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STERLING HS,OK-16-I003-16-I003-705,402859001499,2531,Computer Programming I,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STERLING HS,OK-16-I003-16-I003-705,402859001499,2532,Computer Programming II,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STILLWATER HS,OK-60-I016-60-I016-705,402868029742,2531,Computer Programming I,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STILWELL HS,OK-01-I025-01-I025-705,402871001512,2531,Computer Programming I,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STILWELL HS,OK-01-I025-01-I025-705,402871001512,2532,Computer Programming II,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STROUD HS,OK-41-I054-41-I054-705,402907001528,2536,Advanced Placement Computer Science Principles,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TALIHINA JHS,OK-40-I052-40-I052-610,402940001548,2531,Computer Programming I,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TECUMSEH HS,OK-63-I092-63-I092-710,402961001555,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TEXHOMA HS,OK-70-I061-70-I061-705,402982001563,2531,Computer Programming I,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THOMAS EDISON PREPARATORY HS,OK-72-I001-72-I001-712,403024001608,2535,Advanced Placement Computer Science A,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TIPTON HS,OK-71-I008-71-I008-715,403003029764,2531,Computer Programming I,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TULSA SCHL ARTS SCIENCES HS,OK-72-E004-72-E004-988,400077402862,2531,Computer Programming I,63,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TULSA SCHL ARTS SCIENCES HS,OK-72-E004-72-E004-988,400077402862,2535,Advanced Placement Computer Science A,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TURPIN HS,OK-04-I128-04-I128-705,403033001689,2511,Advanced Programming (Not For Math Credit),13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TUTTLE HS,OK-26-I097-26-I097-705,403042001695,2531,Computer Programming I,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TYRONE HS,OK-70-I053-70-I053-705,403048001699,2535,Advanced Placement Computer Science A,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNION HS FRESHMAN ACADEMY,OK-72-I009-72-I009-720,403060001526,2532,Computer Programming II,109,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VERDEN HS,OK-26-I099-26-I099-705,403108029679,2531,Computer Programming I,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VIAN HS,OK-68-I002-68-I002-705,403114001725,2532,Computer Programming II,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VIAN HS,OK-68-I002-68-I002-705,403114001725,2531,Computer Programming I,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VIAN HS,OK-68-I002-68-I002-705,403114001725,2532,Computer Programming II,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VIAN HS,OK-68-I002-68-I002-705,403114001725,2531,Computer Programming I,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WAGONER HS,OK-73-I019-73-I019-710,403135001737,2511,Advanced Programming (Not For Math Credit),17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WAYNOKA HS,OK-76-I003-76-I003-720,403204029830,2531,Computer Programming I,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEATHERFORD HS,OK-20-I026-20-I026-705,403207001776,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WELCH HS,OK-18-I017-18-I017-715,403219029652,2531,Computer Programming I,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST JHS,OK-14-I002-14-I002-680,402025001004,2531,Computer Programming I,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST JHS,OK-14-I002-14-I002-680,402025001004,2531,Computer Programming I,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WESTMOORE HS,OK-14-I002-14-I002-710,402025002070,2511,Advanced Programming (Not For Math Credit),43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WESTMOORE HS,OK-14-I002-14-I002-710,402025002070,2535,Advanced Placement Computer Science A,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WESTVILLE HS,OK-01-I011-01-I011-705,403240029611,2531,Computer Programming I,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WETUMKA HS,OK-32-I005-32-I005-705,403243001797,2531,Computer Programming I,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILBURTON HS,OK-39-I001-39-I001-705,403279001811,2511,Advanced Programming (Not For Math Credit),18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILSON HS,OK-10-I043-10-I043-705,403294001816,2531,Computer Programming I,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILSON HS,OK-10-I043-10-I043-705,403294001816,2532,Computer Programming II,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WISTER HS,OK-40-I049-40-I049-715,403297001818,2511,Advanced Programming (Not For Math Credit),6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WISTER HS,OK-40-I049-40-I049-715,403297001818,2531,Computer Programming I,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WOODWARD HS,OK-77-I001-77-I001-705,403318029838,2531,Computer Programming I,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WYANDOTTE HS,OK-58-I001-58-I001-715,403324029731,2531,Computer Programming I,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WYANDOTTE HS,OK-58-I001-58-I001-715,403324029731,2532,Computer Programming II,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WYANDOTTE HS,OK-58-I001-58-I001-715,403324029731,2532,Computer Programming II,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WYANDOTTE HS,OK-58-I001-58-I001-715,403324029731,2532,Computer Programming II,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WYNONA HS,OK-57-I030-57-I030-705,403333001837,2531,Computer Programming I,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WYNONA HS,OK-57-I030-57-I030-705,403333001837,2532,Computer Programming II,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WYNONA HS,OK-57-I030-57-I030-705,403333001837,2532,Computer Programming II,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

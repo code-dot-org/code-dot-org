@@ -1,0 +1,13 @@
+{
+  "category": "Start",
+  "config": {
+    "func": "whenSetup2",
+    "blockText": "setup",
+    "eventBlock": true,
+    "color": [
+      39,
+      1,
+      0.99
+    ]
+  }
+}

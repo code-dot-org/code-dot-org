@@ -1,0 +1,23 @@
+name 'U1L4 Multiple Choice_2020'
+title 'Multiple Choice: Coordination and Binary Messages'
+description ''
+wrong 'ABAB'
+right 'AABB'
+wrong 'AAAA'
+wrong 'BBBB'
+wrong 'ABBB'
+markdown <<MARKDOWN
+A binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend set the bit on the wire once every 2 seconds, but you read the wire once every second.  Assuming that the first bit was sent and read at the same time, what message did you receive instead? 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The answer is AABB.  If person 1 is setting the wire at a rate of one bit every 2 seconds, and person 2 is reading once per second you can look at the timeline...
+
+<pre>
+person 1(set)   A---------B---------A--------B
+person 2(read)  ^----^----^----^----
+</pre>
+
+You can see person 2 is going to read the wire twice while A is still on the wire.  
+
+MARKDOWN

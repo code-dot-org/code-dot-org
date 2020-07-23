@@ -247,6 +247,13 @@ module FakeDashboard
   end
   ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaTableFilter
 
+  # Patch Mysql2Adapter to stub create_view when loading the schema.
+  module SchemaViewFilter
+    def create_view(name, options)
+    end
+  end
+  ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaViewFilter
+
   # Patch Mysql2Adapter to create temporary tables instead of persistent ones.
   module TempTableFilter
     def create_table(name, options)

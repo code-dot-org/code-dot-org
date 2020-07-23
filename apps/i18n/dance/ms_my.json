@@ -1,2 +1,22 @@
 {
+  "danceFeedbackNeedNewDancer": "Anda perlu mengadakan penari.",
+  "danceFeedbackNoDancers": "Anda tiada penari.",
+  "danceFeedbackNoBackground": "Anda perlu menambah kesan latar belakang.",
+  "danceFeedbackTooManyDancers": "Berhati-hati! Jika anda letak blok `buat baharu` dalam `setiap 2 corak berirama`, anda akan mencipta ramai penari.",
+  "danceFeedbackUseSetSize": "Gunakan blok `tetapkan saiz penari2_sandaran` untuk menjadikan bilangan penari lebih kecil.",
+  "danceFeedbackUseSetTint": "Gunakan blok `tetapkan warna` untuk menukar warna penari.",
+  "danceFeedbackUseStartMapping": "Cuba menambah <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> blok kepada atur cara anda.",
+  "danceFeedbackStartNewMove": "Penari anda tidak melakukan gerakan baharu selepas corak berirama keempat.",
+  "danceFeedbackNeedDifferentDance": "Anda perlu menggunakan tarian berbeza.",
+  "danceFeedbackNeedEveryTwoMeasures": "Pastikan anda menggunakan blok `setiap 2 corak berirama`",
+  "danceFeedbackNeedMakeANewDancer": "Gunakan blok `buat baharu` untuk mencipta penari kedua.",
+  "danceFeedbackKeyEvent": "Pastikan anda melampirkan beberapa kod kepada blok <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> dan tekan kekunci semasa tarian anda sedang berjalan.",
+  "danceFeedbackDidntPress": "Pastikan untuk menekan kekunci anak panah semasa tarian anda sedang berjalan.",
+  "danceFeedbackPressedKey": "Anda menekan kekunci, tetapi penari anda tidak bertindak balas.",
+  "danceFeedbackNeedTwoDancers": "Anda perlu mengadakan dua orang penari.",
+  "danceFeedbackOnlyOneDancerMoved": "Hanya seorang daripada penari anda yang bergerak.",
+  "danceFeedbackNeedLead": "Anda juga perlu mencipta seorang penari utama dengan <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> blok.",
+  "danceFeedbackNeedBackup": "Anda perlu mencipta kumpulan penari sandaran dengan <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blok.",
+  "danceFeedbackSetSize": "Anda perlu menukar saiz sekurang-kurangnya seorang penari selepas muzik bermula.",
+  "measure": "Corak Berirama:"
 }

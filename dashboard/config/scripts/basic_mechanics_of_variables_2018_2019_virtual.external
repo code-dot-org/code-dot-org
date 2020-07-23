@@ -1,0 +1,42 @@
+name 'Basic mechanics of variables_2018_2019_virtual'
+title 'title'
+css 'unplugged'
+description 'description here'
+markdown <<MARKDOWN
+# What's happening in this lesson and next
+
+We are going to take the **next two lessons** to learn about how to work with variables and then incorporate them into our clicker game in order to keep score. Here's the breakdown:
+
+**This lesson:**
+
+* **Moving memory around:**
+ Get your hands dirty with some of the basic mechanics and properties of working with variables.
+
+* **Basic mechanics:**
+ To keep things simple we're going to complete some bare-bones examples so you get the basic ideas behind creating and using memory through variables. We'll primarily just be displaying text in the console rather than enhancing an app for now.
+
+* **Establishing a good "mental model" for working with variables:**
+ We all want to make cool apps, but having a good mental model before you get in too deep will allow you to go further and faster later on.
+ 
+* **Getting past misconceptions:**
+ Understanding the typical pitfalls of learning variables for the first time, combined with establishing a good mental model will make working with memory and variables in the future much easier.  
+
+**Next lesson:**
+
+* Adding variables to our apps.
+* Understanding when and where and to create variables so you can use them the way you want.
+* Useful things you can do with variables in apps.
+* Making decisions based on variables.
+
+# The Basic Mechanics of Variables
+Next section acquaints you with the bare-bones basic mechanics of using variables in programs, creating, assigning a value and displaying the value to the screen or console, so you can see what's going on.
+
+You will:
+
+* Know how to create a variable and assign it a value.
+* Know how to display to the screen.
+* Debug common problems with creation and display. 
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

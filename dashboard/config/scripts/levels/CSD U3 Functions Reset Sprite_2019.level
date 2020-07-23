@@ -11,7 +11,7 @@
     "start_blocks": "var flyman = createSprite();\r\nflyman.setAnimation(\"flyMan_fly\");\r\nsetFlyman();\r\n\r\nfunction draw(){\r\n  treesBackground();\r\n  if(flyman.x < -50){\r\n\r\n  }\r\n  drawSprites();\r\n}\r\n\r\nfunction setFlyman(){\r\n  flyman.x = 450;\r\n  flyman.y = 200;\r\n  flyman.velocityX = -1;\r\n}\r\n\r\nfunction treesBackground(){\r\n noStroke();\r\n background(color(0,200,255));\r\n \r\n fill(\"green\");\r\n rect(0,380,400,20);\r\n \r\n fill(\"yellow\");\r\n ellipse(350,50,20,20);\r\n \r\n strokeWeight(20);\r\n stroke(color(150,100,0));\r\n line(20,300,20,380);\r\n line(80,300,80,380);\r\n line(120,300,120,380);\r\n line(160,300,160,380);\r\n line(200,300,200,380);\r\n line(250,300,250,380);\r\n fill(\"green\");\r\n noStroke();\r\n ellipse(20,300,100,100);\r\n ellipse(80,300,110,110);\r\n ellipse(120,300,95,95);\r\n ellipse(160,300,110,110);\r\n ellipse(200,300,100,100);\r\n ellipse(250,300,100,100);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -40,19 +40,21 @@
     "all_animations_single_frame": "true",
     "show_debug_watch": "true",
     "teacher_markdown": "**Why Use Functions** \r\n\r\nThis and the next two levels introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels.",
-    "encrypted_examples": "m2oxUtj2asHs9b6GR1fab1PmWoNWjzSEiOvwY0K0xEGywvxPP5WfUEv8ABnl\nshvM\n",
+    "encrypted_examples": "EiEmWPMySJoO81zbOiwX4f08clUIJdJFx7GFfWIjpWp5y01JH/nCr5BUJDS2\np/6Bb11RRiUSIwH5b8zXNfzuUA==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "parent_level_id": 11380,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "map_reference": "/docs/concepts/javascript/functions/",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "video_key": "csd_gamelab_functions",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 22:56:52 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 22:56:52 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:14:52 +0000\",\"changed\":[\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 22:31:20 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

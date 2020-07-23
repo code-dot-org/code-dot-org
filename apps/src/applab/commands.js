@@ -8,7 +8,6 @@ import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
-import color from '../util/color';
 import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
@@ -23,15 +22,15 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
+import {getStore} from '../redux';
+import $ from 'jquery';
+import i18n from '@cdo/applab/locale';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-import {
-  ICON_PREFIX_REGEX,
-  defaultFontSizeStyle,
-  fontFamilyStyles
-} from './constants';
+import {ICON_PREFIX_REGEX} from './constants';
 
 var applabCommands = {};
 export default applabCommands;
@@ -103,32 +102,29 @@ function apiValidateDomIdExistence(
     };
     var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
-    var valid = !existsOutsideApplab && shouldExist === existsInApplab;
+    var valid = true;
+    var message;
+    if (existsOutsideApplab) {
+      message =
+        'is already being used outside of App Lab. Please use a different id.';
+      throw new Error(invalidIdMessage(funcName, varName, id, message));
+    }
 
-    if (!valid) {
-      var errorString = '';
-      if (existsOutsideApplab) {
-        errorString =
-          funcName +
-          '() ' +
-          varName +
-          ' parameter refers to an id ("' +
-          id +
-          '") which is already being used outside of App Lab. Please use a different id.';
-        throw new Error(errorString);
-      } else {
-        if (!callback || !callback(existsInApplab)) {
-          outputWarning(
-            funcName +
-              '() ' +
-              varName +
-              ' parameter refers to an id ("' +
-              id +
-              '") which ' +
-              (existsInApplab ? 'already exists.' : 'does not exist.')
-          );
-        }
-      }
+    if (
+      shouldExist !== existsInApplab &&
+      (!callback || !callback(existsInApplab))
+    ) {
+      valid = false;
+      message = existsInApplab ? 'already exists.' : 'does not exist.';
+      outputWarning(invalidIdMessage(funcName, varName, id, message));
+    }
+
+    var idContainsWhiteSpace = -1 !== id.search(/\s/);
+    if (idContainsWhiteSpace) {
+      valid = false;
+      var validId = id.replace(/\s+/g, '');
+      message = `contains whitespace. Change the id name to ("${validId}")`;
+      outputWarning(invalidIdMessage(funcName, varName, id, message));
     }
     opts[validatedDomKey] = valid;
   }
@@ -195,11 +191,11 @@ applabCommands.button = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.color = color.white;
-  newButton.style.backgroundColor = color.applab_button_teal;
-  newButton.style.fontSize = defaultFontSizeStyle;
-  newButton.style.fontFamily = fontFamilyStyles[0];
-  elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
+  newButton.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newButton,
+    Applab.activeScreen()
+  );
 
   return Boolean(
     newButton.appendChild(textNode) &&
@@ -806,7 +802,7 @@ applabCommands.drawImageURL = function(opts) {
   );
 
   var callback = function(success) {
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null, success);
     }
   };
@@ -900,14 +896,13 @@ applabCommands.textInput = function(opts) {
   newInput.value = opts.text;
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
-  newInput.style.fontSize = defaultFontSizeStyle;
-  newInput.style.fontFamily = fontFamilyStyles[0];
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  elementUtils.setDefaultBorderStyles(newInput, {
-    forceDefaults: true,
-    textInput: true
-  });
+  newInput.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newInput,
+    Applab.activeScreen()
+  );
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -924,9 +919,13 @@ applabCommands.textLabel = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
-  newLabel.style.fontSize = defaultFontSizeStyle;
-  newLabel.style.fontFamily = fontFamilyStyles[0];
-  elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
+  newLabel.style.borderStyle = 'solid';
+  // Set optimizeSpeed to ensure better text size consistency between Safari and Chrome
+  newLabel.style.textRendering = 'optimizeSpeed';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newLabel,
+    Applab.activeScreen()
+  );
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -989,11 +988,11 @@ applabCommands.dropdown = function(opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  newSelect.style.fontSize = defaultFontSizeStyle;
-  newSelect.style.fontFamily = fontFamilyStyles[0];
-  newSelect.style.color = color.white;
-  newSelect.style.backgroundColor = color.applab_button_teal;
-  elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
+  newSelect.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newSelect,
+    Applab.activeScreen()
+  );
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -1005,7 +1004,7 @@ applabCommands.getAttribute = function(opts) {
   return divApplab.contains(element) ? String(element[attribute]) : false;
 };
 
-// Whitelist of HTML Element attributes which can be modified, to
+// Allowlist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
 var MUTABLE_ATTRIBUTES = ['scrollTop'];
 
@@ -1160,7 +1159,7 @@ applabCommands.getImageURL = function(opts) {
       return element.getAttribute('data-canonical-image-url');
     } else if (
       element.tagName === 'LABEL' &&
-      element.className === 'img-upload'
+      $(element).hasClass('img-upload')
     ) {
       var fileObj = element.children[0].files[0];
       if (fileObj) {
@@ -1321,6 +1320,10 @@ function setSize_(elementId, width, height) {
   }
 }
 
+function invalidIdMessage(functionName, variableName, id, message) {
+  return `The ${functionName}() ${variableName} parameter refers to an id ("${id}") which ${message}`;
+}
+
 applabCommands.setProperty = function(opts) {
   apiValidateDomIdExistence(
     opts,
@@ -1329,15 +1332,10 @@ applabCommands.setProperty = function(opts) {
     opts.elementId,
     true,
     exists => {
+      var idExistsMessage = exists ? 'already exists.' : 'does not exist.';
+      var warningMessage = `${idExistsMessage} You should be able to find the list of all the possible ids in the dropdown (unless you created the element inside your code).`;
       outputWarning(
-        `The setProperty() id parameter refers to an id (“${
-          opts.elementId
-        }”) ` +
-          `which ${
-            exists ? 'already exists.' : 'does not exist.'
-          } You should be able to ` +
-          'find the list of all the possible ids in the dropdown (unless you created the ' +
-          'element inside your code).'
+        invalidIdMessage('setProperty', 'id', opts.elementId, warningMessage)
       );
       return true;
     }
@@ -1534,6 +1532,20 @@ applabCommands.onEvent = function(opts) {
           opts.eventName,
           applabCommands.onEventFired.bind(this, opts)
         );
+
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        if (opts.eventName === 'mousedown') {
+          domElement.addEventListener(
+            'touchstart',
+            applabCommands.onEventFired.bind(this, opts)
+          );
+        }
+        if (opts.eventName === 'mouseup') {
+          domElement.addEventListener(
+            'touchend',
+            applabCommands.onEventFired.bind(this, opts)
+          );
+        }
         // To allow INPUT type="range" (Slider) events to work on downlevel browsers, we need to
         // register a 'change' listener whenever an 'input' listner is requested.  Downlevel
         // browsers typically only sent 'change' events.
@@ -1551,6 +1563,11 @@ applabCommands.onEvent = function(opts) {
       case 'mousemove':
         domElement.addEventListener(
           opts.eventName,
+          applabCommands.onEventFired.bind(this, opts)
+        );
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        domElement.addEventListener(
+          'touchmove',
           applabCommands.onEventFired.bind(this, opts)
         );
         // Additional handler needed to ensure correct calculation of
@@ -1577,17 +1594,48 @@ function filterUrl(urlToCheck) {
     data: JSON.stringify({url: urlToCheck})
   })
     .success(data => {
-      let approved = data['approved'];
-      console.log('Url determined safe to open: ' + approved);
+      let response = data['approved']
+        ? REDIRECT_RESPONSE.APPROVED
+        : REDIRECT_RESPONSE.REJECTED;
+      getStore().dispatch(actions.addRedirectNotice(response, urlToCheck));
     })
     .fail((jqXhr, status) => {
-      console.log('Error. Please re-run program');
+      // When this query fails, default to the dialog that allows the user to choose
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.APPROVED, urlToCheck)
+      );
     });
 }
 
 applabCommands.openUrl = function(opts) {
-  apiValidateType(opts, 'openUrl', 'url', opts.url, 'string');
-  filterUrl(opts.url);
+  if (apiValidateType(opts, 'openUrl', 'url', opts.url, 'string')) {
+    // Studio and code.org links are immediately opened, other links are filtered
+    // Remove protocol from url string if present
+    let hostname = opts.url;
+    let protocols = ['https://', 'http://', 'www.'];
+    protocols.forEach(protocol => {
+      if (hostname.startsWith(protocol)) {
+        hostname = hostname.slice(protocol.length);
+      }
+    });
+    if (
+      hostname.startsWith('studio.code.org') ||
+      hostname.startsWith('code.org')
+    ) {
+      if (opts.url.startsWith('http')) {
+        window.open(opts.url);
+      } else {
+        // If url doesn't have a protocol, add one
+        window.open('https://' + opts.url);
+      }
+    } else if (hostname.startsWith('mailto')) {
+      getStore().dispatch(
+        actions.addRedirectNotice(REDIRECT_RESPONSE.UNSUPPORTED, opts.url)
+      );
+    } else {
+      filterUrl(opts.url);
+    }
+  }
 };
 
 applabCommands.onHttpRequestEvent = function(opts) {
@@ -1803,6 +1851,38 @@ var handleSetKeyValueSyncError = function(opts, message) {
   outputWarning(message);
 };
 
+applabCommands.getColumn = function(opts) {
+  apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
+  apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
+
+  Applab.storage.readRecords(
+    opts.table,
+    {},
+    handleGetColumn.bind(this, opts),
+    handleGetColumnError.bind(this, opts)
+  );
+};
+
+var handleGetColumn = function(opts, records) {
+  let columnList = [];
+  let columnName = opts.column;
+  let tableName = opts.table;
+  if (records === null) {
+    outputError(i18n.tableDoesNotExistError({tableName}));
+  } else {
+    records.forEach(row => columnList.push(row[opts.column]));
+    if (columnList.every(element => element === undefined)) {
+      outputError(i18n.columnDoesNotExistError({columnName, tableName}));
+    }
+  }
+  opts.callback(columnList);
+};
+
+var handleGetColumnError = function(opts, message) {
+  opts.callback([]);
+  outputWarning(message);
+};
+
 applabCommands.readRecords = function(opts) {
   // PARAMNAME: readRecords: table vs. tableName
   // PARAMNAME: readRecords: callback vs. callbackFunction
@@ -1834,6 +1914,10 @@ applabCommands.readRecords = function(opts) {
 };
 
 applabCommands.handleReadRecords = function(opts, records) {
+  if (records === null) {
+    let tableName = opts.table;
+    outputError(i18n.tableDoesNotExistError({tableName}));
+  }
   if (opts.onSuccess) {
     opts.onSuccess.call(null, records);
   }
@@ -2034,7 +2118,7 @@ applabCommands.drawChart = function(opts) {
     chartApi.warnings.forEach(function(warning) {
       outputWarning(warning.message);
     });
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
   };
@@ -2141,7 +2225,7 @@ applabCommands.drawChartFromRecords = function(opts) {
     chartApi.warnings.forEach(function(warning) {
       outputWarning(warning.message);
     });
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
   };

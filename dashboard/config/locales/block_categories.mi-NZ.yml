@@ -3,15 +3,12 @@ mi:
   data:
     block_categories:
       Actions: Ngā Hohenga
-      Loops: Ngā Koromeke
-      Functions: Ngā Taumahi
       Color: Tae
-      Math: Pāngarau
-      Logic: Ararau
-      Variables: Ngā Taurangi
       Conditionals: Ngā Here
       Events: Ngā Takunetanga
+      Functions: Ngā Taumahi
+      Logic: Ararau
+      Loops: Ngā Koromeke
+      Math: Pāngarau
       Text: Kuputuhi
-      test: whakamātautau
-      Name: Ingoa
-      Function: Taumahi
+      Variables: Ngā Taurangi

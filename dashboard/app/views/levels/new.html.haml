@@ -10,10 +10,6 @@
   %li= link_to 'Build a Playlab Level', new_level_path(type: 'Studio')
   %li
     =link_to 'Build a Sprite Lab Level', new_level_path(type: 'GamelabJr')
-    %ul
-      %li
-        Sprite Lab is still in beta and subject to change. Anything you
-        build could break or be deleted without notice.
   %li
     =link_to 'Build a Dance Lab Level', new_level_path(type: 'Dancelab')
     %ul
@@ -25,7 +21,7 @@
 %h2 Content
 %ul
   %li= link_to 'Build a Standalone Video Level', new_level_path(type: 'StandaloneVideo')
-  %li= link_to 'Build an Unplugged Level', new_level_path(type: 'Unplugged')
+  %li= link_to 'Build an Unplugged Level (deprecated)', new_level_path(type: 'Unplugged')
 
 %h2 DSL-Defined
 %ul
@@ -39,6 +35,7 @@
   %li= link_to 'Build a CurriculumReference Level', new_level_path(type: 'CurriculumReference')
   %li= link_to 'Build a Map Level', new_level_path(type: 'Map')
   %li= link_to 'Build a LevelGroup Level', new_level_path(type: 'LevelGroup')
+  %li= link_to 'Build a BubbleChoice Level', new_level_path(type: 'BubbleChoice')
 
 %h2 Advanced Apps
 %p These level types are not localized (en_us only!)
@@ -68,7 +65,7 @@
     = link_to t('crud.show'), level_path(level)
     = link_to t('crud.edit'), edit_level_path(level)
     = link_to t('crud.delete'), level_path(level, redirect: new_level_path), method: :delete
-    = link_to 'Clone', level_clone_path(level), method: :post
+    = link_to 'Clone', clone_level_path(level), method: :post
 
 %h2 All levels
 %ul

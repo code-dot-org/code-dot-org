@@ -2,8 +2,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import {shallow, mount} from 'enzyme';
-import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import Dialog, {
   Body,
   Buttons,
@@ -222,9 +221,7 @@ describe('ImportScreensDialog', () => {
           .at(1)
           .type()
       ).to.equal(Buttons);
-      expect(dialog)
-        .to.have.exactly(1)
-        .descendants(MultiCheckboxSelector);
+      expect(dialog.find('MultiCheckboxSelector').length).to.equal(1);
     });
 
     it('renders an Import button which calls onImport when clicked', () => {
@@ -257,15 +254,11 @@ describe('ImportScreensDialog', () => {
       });
 
       it('should have a Screens header', () => {
-        expect(checkboxSelector)
-          .to.have.prop('header')
-          .to.equal('Screens');
+        expect(checkboxSelector.prop('header')).to.equal('Screens');
       });
 
       it('should have no selected screens initially', () => {
-        expect(checkboxSelector)
-          .to.have.prop('selected')
-          .to.deep.equal([]);
+        expect(checkboxSelector.prop('selected')).to.deep.equal([]);
       });
 
       it('should keep track of the selected screens when they are changed', () => {
@@ -273,9 +266,7 @@ describe('ImportScreensDialog', () => {
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
         checkboxSelector = dialog.find('MultiCheckboxSelector');
-        expect(checkboxSelector)
-          .to.have.prop('selected')
-          .to.deep.equal(newSelected);
+        expect(checkboxSelector.prop('selected')).to.deep.equal(newSelected);
       });
     });
   });
@@ -313,15 +304,11 @@ describe('ImportScreensDialog', () => {
 
     describe('the asset list', () => {
       it('should have a Screens header', () => {
-        expect(checkboxSelector)
-          .to.have.prop('header')
-          .to.equal('Other Assets');
+        expect(checkboxSelector.prop('header')).to.equal('Other Assets');
       });
 
       it('should have no selected screens initially', () => {
-        expect(checkboxSelector)
-          .to.have.prop('selected')
-          .to.deep.equal([]);
+        expect(checkboxSelector.prop('selected')).to.deep.equal([]);
       });
 
       it('should keep track of the selected screens when they are changed', () => {
@@ -329,9 +316,7 @@ describe('ImportScreensDialog', () => {
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
         checkboxSelector = dialog.find('MultiCheckboxSelector');
-        expect(checkboxSelector)
-          .to.have.prop('selected')
-          .to.deep.equal(newSelected);
+        expect(checkboxSelector.prop('selected')).to.deep.equal(newSelected);
       });
     });
   });

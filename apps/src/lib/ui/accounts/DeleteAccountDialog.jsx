@@ -6,7 +6,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const GUTTER = 20;
 const styles = {
@@ -115,12 +115,10 @@ export default class DeleteAccountDialog extends React.Component {
           <div style={styles.bodyContainer}>
             <FontAwesome icon="exclamation-triangle" style={styles.icon} />
             <div style={styles.text}>
-              <UnsafeRenderedMarkdown markdown={renderedMarkdown(isTeacher)} />
+              <SafeMarkdown markdown={renderedMarkdown(isTeacher)} />
               {warnAboutDeletingStudents && (
                 <span>
-                  <UnsafeRenderedMarkdown
-                    markdown={i18n.deleteAccountDialog_body3()}
-                  />
+                  <SafeMarkdown markdown={i18n.deleteAccountDialog_body3()} />
                 </span>
               )}
             </div>

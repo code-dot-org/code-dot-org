@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2019-01-09T20:59:07.000Z",
   "level_num": "custom",
   "user_id": 833,
@@ -12,7 +12,7 @@
       "aalab"
     ],
     "helper_libraries": [
-      "GameLabJr",
+      "NativeSpriteLab",
       "aalab"
     ],
     "use_default_sprites": "true",

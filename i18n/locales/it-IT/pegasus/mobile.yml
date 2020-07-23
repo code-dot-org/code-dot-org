@@ -12,13 +12,16 @@
   csedweek_dates: "3-9 dicembre 2018"
   csedweek_banner_hoc: 'L''<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate la vostra Ora del Codice</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Sei un insegnante interessato all''Informatica? Guarda le altre risorse disponibili</a>'
+  csedweek_banner_teachers_text: "Sei un insegnante interessato all'Informatica? Guarda le altre risorse disponibili"
   n_have_learned_an_hoc: "<h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>"
+  try_hoc_num_served: "<h1>Prova un'</h1><h2>Ora del Codice</h2><h3>, ne hanno già fatte %{num}</h3>"
   anybody_can_learn: "Chiunque può imparare."
   learn_now: "Impara Adesso"
   petition_message: "Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare informatica"
   petition_sign_message: 'Se sei d''accordo, firma con il tuo nome.  Unisciti agli altri #.'
-  petition_sign_message_support: 'Per sostenerci, aggiungi il tuo nome. Unisciti agli altri #.'
+  petition_sign_message_num: "Se sei d'accordo, firma con il tuo nome. Unisciti agli altri %{num}."
   petition_join_others: 'Unisciti agli # altri'
+  petition_join_others_num: "Unisciti agli altri %{num}"
   name: "Nome"
   email: "Indirizzo di posta elettronica"
   zipcode: "CAP o Città"
@@ -43,10 +46,11 @@
   hoc2014_support: "Sostienilo &#x25BE;"
   hoc2014_whatishoc: "Cosa è l'Ora del Codice?"
   csedweek_map_header: "Eventi dell'Ora del Codice nel mondo"
+  csedweek_map_header_num: "%{num} Eventi dell'Ora del Codice nel mondo (Settimana di Educazione all'Informatica)"
   csedweek_map_signup: "Iscrivi il tuo evento"
   csedweek_map_search_placeholder: "Cerca eventi per l'Ora del codice"
   csedweek_map_search_search: "Cerca"
-  csedweek_map_search_reset: "Ripristina"
+  csedweek_map_search_reset: "Ricomincia"
   csedweek_map_legend_title: "Legenda"
   csedweek_map_legend_event: "Eventi de L'Ora del Codice"
   csedweek_map_legend_cs_tech_jam: "Eventi speciali"
@@ -97,7 +101,7 @@
   third_party_price_individual: 'Prezzo individuale: Prova gratuita & $25/mese'
   third_party_price_school: 'Prezzo della scuola: Progetti gratuiti & pro a $2500+'
   third_party_tynker_desc: "La piattaforma Tynker di computazione creativa aiuta i bambini a sviluppare il pensiero computazionale e le abilita' di programmazione in maniera divertente, intuitiva e fantasiosa. Il nostro innovativo linguaggio di programmazione visuale, corsi interattivi autoregolati e attivita' di programmazione basate sul gioco, forniscono un'introduzione semplice alla programmazione e permettono ai bambini di innovare e creare."
-  third_party_tynker_btn_curriculum: "Prova il Curriculum di Trynker per primi lettori"
+  third_party_tynker_btn_curriculum: "Prova il curriculum pre-scolare di Trynker"
   third_party_tynker_btn_site: "Visita Tynker"
   third_party_scratchjr_desc: "Scratch Junior e' un linguaggio di programmazione introduttivo che consente a bambini piccoli (eta' 5-7) di creare i propri giochi e le proprie storie interattive. I bambini collegano insieme dei blocchi di programmazione grafica per far muovere, saltare, ballare e cantare i personaggi. I bambini possono modificare i personaggi nell'editor di disegno, aggiungere le proprie voci e suoni, perfino aggiungere foto di se' stessi, e poi usare i blocchi di programmazione per dar vita ai propri personaggi."
   third_party_scratchjr_btn_curriculum: "Scarica il curriculum di Scratch Jr."
@@ -147,7 +151,14 @@
   get_a_certificate_message_after: "Clicca sull'attestato per scaricarlo o stamparlo. Se sei un insegnante di una scuola italiana scarica gli attestati dal sito di <a href=\"http://www.programmailfuturo.it/come/attestati-personalizzati\" target=\"_blank\">Programma il Futuro</a>.<br><br>\nPoi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>."
   thanks_for_submitting: "Grazie per l'invio!"
   if_you_enjoyed: "Se ti è piaciuto imparare, chiedi anche ai tuoi amici di provare!  Vogliamo che tutto il mondo impari."
-  personalize_certificate: "Personalizza il tuo attestato<br>(se sei in una scuola italiana usa l'attestato di <a href=\"http://www.programmailfuturo.it/come/attestati-personalizzati\" target=\"_blank\">Programma il Futuro</a>)"
+  personalize_certificate: "Personalizza il tuo attestato. Se preferisci, puoi anche usare l'attestato italiano di Programma il Futuro: www.programmailfuturo.it/come/attestati-personalizzati"
+  print_batch_certificates: "Stampa un insieme di attestati"
+  print_certificates: "Stampa gli attestati"
+  print_ice_art_from_frozen: "Stampa i disegni sul ghiaccio delle esercitazioni di Frozen"
+  want_a_blank_certificate_template: "Vuoi un modello di attestato in bianco su cui scrivere i nomi dei dei tuoi studenti?"
+  landscape_recommended_certificates: "Quando si stampano i certificati, si consiglia di impostare la stampante in modalità **Orizzontale** (_Landscape_)."
+  print_one_here_certificates: "Stampa un attestato."
+  enter_certificate_names: "Puoi inserire fino a 30 nomi, **uno per riga**. Verranno preparati per la stampa tutti i rispettivi attestati %{script_name} personalizzati."
   share_achievement: "Condividi il tuo successo"
   beyond_hour_message: "Vai avanti con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>."
   leaderboards_for_hoc: "Classifiche per l'Ora del Codice."
@@ -315,6 +326,7 @@
   homepage_action_text_signpetition: "Firma la petizione"
   homepage_action_text_wincelebritychat: "Vinci una conversazione con una celebrità"
   homepage_signpetition_dropdown: "Firma la nostra petizione &#x25BE;"
+  homepage_signpetition_dropdown_text: "Accetto"
   homepage_diversity_pledge: "Abbraccia la causa in favore delle diversità"
   homepage_banner_text_prizes: 'L''Ora di Codice sta per ripartire, 7-13 Dicembre. '
   homepage_banner_link_prizes: 'Partecipa all''evento didattico più popolare del mondo.'
@@ -423,18 +435,21 @@
   minecraft_agent: "Minecraft Il viaggio dell'eroe"
   minecraft_designer: "Programma il tuo Minecraft"
   minecraft_adventurer: "Un'avventura con Minecraft"
-  minecraft_tutorials: "I corsi di Minecraft per l'Ora del Codice"
+  minecraft_tutorials: "Le esercitazioni di Minecraft per l'Ora del Codice"
   minecraft_specs: "Molte lingue | Browser e tablet moderni | Da 7 anni in su"
+  minecraft_start_tutorial: "Inizia l'esercitazione"
   minecraft_agent_description: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
   minecraft_agent_button: "Inizia"
-  minecraft_designer_description: "Programma il comportamento degli animali e delle altre creature di Minecraft nella tua versione di questo gioco."
+  minecraft_designer_description: "Programma animali e altre creature di Minecraft nella tua versione di questo gioco."
   minecraft_designer_button: "Inizia"
   minecraft_adventurer_description: "Usa il codice per far vivere un'avventura ad Alex o Steve."
   minecraft_adventurer_button: "Inizia"
   minecraft_no_internet: "Non hai Internet?"
-  minecraft_download_adventurer: "Scarica la versione da usare <i>in locale</i> di \"Un avventura con Minecraft\"."
+  minecraft_download_adventurer: "Scarica la versione da usare <i>in locale</i> di \"Un'avventura con Minecraft\"."
   minecraft_subtitle: "L'Ora del Codice con Minecraft"
-  minecraft_store_camps: "Campi gratuiti per Ora di Codice Minecraft al Microsoft Store"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href=\"%{signup_store_camp}\"> Iscriviti</a> gratis alle esercitazioni dell'Ora del codice in un Microsoft Store in Australia, Canada, Puerto Rico o Stati Uniti per imparare come combinare la tua creatività con la programmazione."
+  minecraft_host_event: "Organizza un evento dell'Ora del Codice con Minecraft"
   minecraft_teach_resources: "Risorse per l'insegnante e piano di lavoro della lezione."
   minecraft_leader_guide: "Scarica le risorse per aiutarti a pianificare ed organizzare un evento."
   minecraft_future: "Aiuta tutti i giovani a prepararsi al futuro"
@@ -471,11 +486,11 @@
   watch_inspirational_videos: "Prima di iniziare, guarda uno di questi video stimolanti"
   video_title_cs_is_everything: "L'informatica sta cambiando ogni cosa"
   video_title_inspire_girl: "Convinci una ragazza a partecipare"
-  video_title_cs_intro: "Introduzione all'Informatica"
-  video_title_schools_dont_teach: "Cosa NON Insegnano nella maggior parte delle Scuole"
+  video_title_cs_intro: "Introduzione all'informatica"
+  video_title_schools_dont_teach: "Cosa NON insegnano nella maggior parte delle scuole"
   video_title_obama: "Il Presidente Obama a proposito dell'informatica"
-  video_title_hoc_is_here: "L'Ora del Codice è Qui - Chiunque Può Imparare"
-  video_title_anybody_can_learn: "Chiunque Può Imparare"
+  video_title_hoc_is_here: "L'Ora del Codice è qui - Chiunque può imparare"
+  video_title_anybody_can_learn: "Chiunque può imparare"
   video_title_steph_curry: "L'Ora del Codice con Steph Curry"
   video_title_draymond_green: "Ora del Codice con Draymond Green"
   video_title_russell_okung: "Ora del Codice con Russell Okung"
@@ -607,7 +622,7 @@
   dashboard_course_csins_desc: "Code.org ha collaborato con Project GUTS per fornire un'introduzione ai concetti di informatica all'interno di contesti di modellazione e simulazione."
   dashboard_course_ecs: "Esplorando l'Informatica"
   dashboard_course_ecs_desc: 'Esplorare l''Informatica in un corso annuale costituito da 6 unità. Interazione Uomo-Computer, Risoluzione Problemi, Web Design, Programmazione, Elaborazione ed Analisi dei Dati e Robotica.'
-  dashboard_course_csp: "Principi di informatica ® AP"
+  dashboard_course_csp: "Principi di informatica"
   dashboard_course_csp_desc: "I corsi di Code.org sono stati progettati in modo rigoroso, coinvolgente e approcciabile in modo da esplorare le idee alla base dei fondamenti dell'informatica."
   dashboard_landing_loading: "Sto caricando..."
   dashboard_action_cancel: "Annulla"
@@ -664,7 +679,7 @@
   dashboard_sections_table_secret: "Tipo di accesso"
   dashboard_sections_table_grade: "Livello"
   dashboard_sections_table_course: "Corso"
-  dashboard_sections_table_pairing_allowed: "Programmazione in Coppia"
+  dashboard_sections_table_pairing_allowed: "Programmazione in coppia"
   dashboard_sections_table_stage_extras: "Esercizi Supplementari"
   dashboard_sections_table_students: "Studenti"
   dashboard_sections_table_code: "Codice-Classe"
@@ -749,14 +764,14 @@
   dashboard_teacher_worksheet: "teacher worksheet"
   dashboard_curriculum_csina: 'Informatica in Algebra:'
   dashboard_curriculum_csins: 'Informatica nelle Scienze:'
-  dashboard_curriculum_csp: 'Principi di informatica ® AP:'
+  dashboard_curriculum_csp: 'Principi di informatica:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
-  dashboard_curriculum_csd: 'Alla Scoperta dell''Informatica (scuole medie - in inglese): '
+  dashboard_curriculum_csd: 'Alla scoperta dell''informatica: '
   dashboard_grade_k: "livello"
   dashboard_grade_other: "Altro"
   dashboard_login_word: "Parola"
   dashboard_login_picture: "Immagine"
-  dashboard_login_none: "Indirizzo di posta elettronica"
+  dashboard_login_none: "Indirizzo email"
   dashboard_stage: "Lezione"
   dashboard_puzzle: "Esercizio"
   dashboard_question: "Domanda"
@@ -864,8 +879,8 @@
   khanpl_name: "Un'introduzione a JavaScript"
   tynker_name: "Costruisci un gioco come vuoi tu"
   scratch_name: "Scopri la tua creatività con la programmazione"
-  thinkersmith_name: "I Miei Amici Robotici"
-  condcards_name: "Istruzioni condizionali con le Carte da Gioco"
+  thinkersmith_name: "I miei amici robotici"
+  condcards_name: "Istruzioni condizionali con le carte da gioco"
   codehs_name: "Imparare a programmare con il cane Karel"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "Costruisci un gioco con JavaScript"
@@ -921,41 +936,14 @@
   coursed-2018_name: Corso D (2018)
   coursee-2018_name: Corso E (2018)
   coursef-2018_name: Corso F (2018)
-  accelerated_name: "Corso rapido"
-  express_name: "Corso Rapido"
-  pre-express_name: Corso Rapido pre-scolare
-  express-2017_name: Corso Rapido (2017)
-  pre-express-2017_name: Corso Rapido pre-scolare (2017)
-  express-2018_name: Corso Rapido
+  express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
-  cspunit1_name: "Princìpi dell'Informatica - Unità 1"
-  cspunit2_name: "Princìpi dell'Informatica - Unità 2"
-  cspunit3_name: "Princìpi dell'Informatica - Unità 3"
-  cspunit4_name: "Princìpi dell'Informatica - Unità 4"
-  cspunit5_name: "Princìpi dell'Informatica - Unità 5"
-  cspunit6_name: 'Dopo il corso Princìpi dell''Informatica: uso di database nelle App'
-  csd5_name: 'Unit 5: Dati e società'
-  csd6_name: 'Unit 6: Informatica applicata'
-  csd5-2017_name: 'Unit 5: Dati e società'
-  csd6-2017_name: 'Unit 6: Informatica applicata'
-  csd5-2018_name: 'Unit 5: Dati e società'
-  csd6-2018_name: 'Unit 6: Informatica applicata'
-  csp1-2017_name: 'Unità 1: Internet'
-  csp2-2017_name: 'Unità 2: Informazioni digitali'
-  csppostap-2017_name: 'Messaggio AP: Database in Apps'
-  csp1-2018_name: 'Unità 1: Internet'
-  csp2-2018_name: 'Unità 2: Informazioni digitali'
-  csppostap-2018_name: 'Messaggio AP: Database in Apps'
-  csp1_name: 'Unità 1: Internet'
-  csp2_name: 'Unità 2: Informazioni digitali'
-  csp3-a_name: 'Unità 3: Introduzione alla programmazione (versione A)'
-  csp3-research-mxghyt_name: 'Unità 3: Introduzione alla programmazione (Obiettivi)'
-  csppostap_name: 'Messaggio AP: Database in Apps'
-  csp-post-survey_name: Sondaggio per studenti che hanno partecipato al corso
-  cspassessment_name: "Test completo - 50 domande"
-  cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
-  cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
-  cspunit3_gradelevel: "Da 14 a 17 anni"
+  express-2019_name: Corso Rapido (2017)
+  pre-express-2019_name: Corso Rapido pre-scolare (2019)
+  express-2020_name: Corso Rapido (2017)
+  accelerated_name: "Corso rapido"
+  express_name: "Corso Rapido (2018)"
+  pre-express_name: Corso Rapido pre-scolare
   20-hour_name: Corso rapido
   algebra_name: "L'informatica in algebra"
   AlgebraA_name: "Informatica nell'algebra Corso A"
@@ -966,18 +954,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Guerre Stellari (Blocchi)"
   hoc-encryption_name: Crittografia semplice
-  text-compression_name: Compressione del Testo
-  math_category_name: "Matematica"
-  hoc_category_name: "L'Ora del Codice"
-  csf_category_name: "Corsi base"
-  csf_2017_category_name: "Fondamenti di Informatica (2017)"
-  csf_2018_category_name: "Fondamenti di Informatica (2018)"
-  csf_international_category_name: "Fondamenti di Informatica (in Italiano)"
-  csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
-  csp_category_name: "Princìpi dell'Informatica (versione 2015-16)"
-  csp17_category_name: "CS Principles ('17-'18)"
-  csp_2018_category_name: "Principi di informatica ('18-'19)"
-  cspexams_category_name: "Prova pratica di principi d'informatica"
+  text-compression_name: Compressione del testo
   applab_name: "Sviluppo App"
   gamelab_name: "Sviluppo Giochi"
   basketball_name: "Crea una partita di basket"
@@ -1055,6 +1032,12 @@
   coursed-2018_gradelevel: Da 7 a 11 anni
   coursee-2018_gradelevel: Da 8 a 12 anni
   coursef-2018_gradelevel: Da 9 a 13 anni
+  coursea-2019_gradelevel: Da 4 a 7 anni
+  courseb-2019_gradelevel: Da 5 a 8 anni
+  coursec-2019_gradelevel: Da 6 a 10 anni
+  coursed-2019_gradelevel: Da 7 a 11 anni
+  coursee-2019_gradelevel: Da 8 a 12 anni
+  coursef-2019_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: "Da 10 anni in su (dopo il Corso 3)"
   codeorg_platformtext: "Browser moderni, smartphone, tablet"
   codeintl_platformtext: "Browser moderni, smartphone, tablet"
@@ -1143,7 +1126,7 @@
   frozen_shortdescription: "Usa la programmazione per unirti ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio."
   starwars_shortdescription: "Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana..."
   playlab_shortdescription: "Crea una storia o inventa un gioco col Laboratorio!"
-  infinity_shortdescription: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity come protagonisti!"
+  infinity_shortdescription: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity."
   artist_shortdescription: "Disegna fantastiche immagini e decorazioni con l'artista!"
   monsterocding_shortdescription: "Una colorata avventura dir programmazione autoguidata  per i bambini."
   allcancode_shortdescription: "Un gioco coinvolgente per guidare Marco tramite un linguaggio di programmazione visuale."
@@ -1158,21 +1141,27 @@
   coursea_shortdescription_congrats: "Introduzione all'informatica per bambini che non leggono ancora."
   courseb_shortdescription_congrats: "Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)"
   coursec_shortdescription_congrats: "Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi."
-  coursed_shortdescription_congrats: "Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora."
-  coursee_shortdescription_congrats: "Vengono ripresi brevemente i concetti dei corsi C e D e viene aggiunto il concetto di funzione."
+  coursed_shortdescription_congrats: "Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora."
+  coursee_shortdescription_congrats: "Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione."
   coursef_shortdescription_congrats: "Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi."
   coursea-2017_shortdescription_congrats: Introduzione all'informatica per bambini che non leggono ancora.
   courseb-2017_shortdescription_congrats: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
   coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
-  coursed-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
-  coursee-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
+  coursed-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
+  coursee-2017_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
   coursea-2018_shortdescription_congrats: Introduzione all'informatica per bambini che non leggono ancora.
   courseb-2018_shortdescription_congrats: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
   coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
-  coursed-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
-  coursee-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
+  coursed-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
+  coursee-2018_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
+  coursea-2019_shortdescription_congrats: Introduzione all'informatica per bambini che non leggono ancora.
+  courseb-2019_shortdescription_congrats: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
+  coursec-2019_shortdescription_congrats: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
+  coursed-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
+  coursee-2019_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
+  coursef-2019_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
   codeorg_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   codeintl_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   thinkersmithspanish_longdescription: "Usando un \"Vocabolario per Robot\" pre-definito gli studenti capiscono come guidarsi a vicenda per svolgere compiti specifici senza essersi prima accordati. Questa lezione insegna ai bambini la connessione tra simboli e azioni, nonché la preziosa capacità di debugging (correzione dei programmi). La lezione \"I miei amici robotici\" funziona meglio se sviluppata in gruppo e include una guida per l'insegnante per l'uso in aula."
@@ -1388,6 +1377,7 @@
   sphero_beyond_longdescription: "Se sei un educatore o un genitore, le lezioni SPRK permetteranno ai ragazzi di seguire un divertente corso accelerato per imparare a programmare dei robot ed affinare allo stesso tempo le loro capacità in scienze e matematica."
   compatibility_hide_this_warning: "Nascondi questo avviso"
   compatibility_unsupported_browser: "Il tuo browser non è supportato. Si prega di aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
+  compatibility_unsupported_browser_markdown: "Il tuo browser non è supportato. Per favore aggiorna il browser ad [uno dei nostri browser supportati](%{supported_browsers_url}). Prova comunque a visualizzare la pagina, ma aspettati che qualcosa non funzioni."
   flappy_shortcode: "sbatti le ali"
   header_home: "Home"
   header_my_dashboard: "Controllo"
@@ -1423,13 +1413,16 @@
   header_about: "Informazioni"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support'
-  header_report_bug: "Report Bug"
+  header_report_bug: "Report a problem"
+  header_legal_privacy: "Informativa sulla privacy"
+  header_legal_tos: "Termini di servizio"
   header_tutorials: "Corsi"
+  sprite_lab_documentation: "Documentazione Sviluppo App"
+  sprite_lab_tutorials: "Esercitazioni Sviluppo App"
   header_documentation: "Documentazione"
-  csp_name: "CS Principles"
-  full_course_category_name: "Corsi Avanzati"
   user_header_label: "Ciao %{username}"
   user_header_team: "Squadra"
+  user_header_my_projects: "Collezione Privata"
   user_header_settings: "Il mio account"
   user_header_logout: "Esci"
   user_header_signin: "Accedi"
@@ -1462,6 +1455,7 @@
   login_cards: "Schede di accesso"
   print_login_cards: "Stampa le schede di accesso"
   joining_section: "Iscrizione alla tua classe (una tantum)"
+  joining_section_overview: "Se alcuni studenti non si sono ancora iscritti alla tua classe, chiedigli di eseguire i seguenti passaggi. È una procedura una tantum. Iscrivendosi alla tua classe, gli studenti potranno vedere il corso assegnato e tu potrai monitorare i progressi di quanto faranno ogni volta che accederanno con utenza e password."
   joining_section_instruct_website: 'Crea un account su Code.org se non ne hanno già uno. Lo possono fare su https://studio.code.org/users/sign_up. Nota: lo possono anche fare con un indirizzo email ed una password o tramite Google, Facebook o Microsoft premendo su uno di questi pulsanti:'
   joining_section_instruct_account: "Accedere al loro account Code.org."
   joining_section_instruct_code: 'Accedere alla pagina %{code_org_url} ed inserire il codice classe: %{section_code}.'
@@ -1475,19 +1469,20 @@
   applab_tile_title: "Introduzione a Sviluppo App (da 13 anni in su)"
   applab_tile_subtitle: "Crea la tua app in JavaScript usando la programmazione a blocchi. Oppure, se ti sei già esercitato con i blocchi, spingi le tue abilità al livello successivo con la programmazione in formato testo."
   applab_tile_start_tutorial: "Inizia"
-  applab_tile_teacher_guide: "Visualizza la guida per l'insegnante"
+  applab_tile_teacher_guide: "Guida per l'insegnante (in inglese)"
   aquatic_name: 'Minecraft: Viaggio Acquatico'
   account_sign_up_email_opt_in: "Possiamo inviarti email sulle novità dei nostri corsi o su altre notizie legate all'informatica?"
   account_sign_up_child_accept_terms: "Confermo che i miei genitori o chi ne fa le veci mi hanno dato il permesso di utilizzare i servizi di Code.org."
   hoc_overview_dance_title: "Ballando col codice"
   hoc_overview_dance_subtitle: "Crea un progetto in \"Ballando col codice\" da condividere con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara e altri 25!"
+  hoc_overview_dance_2019_subtitle: "Divertiti con i tuoi amici \"Ballando col codice\" con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj e molti altri!"
   hoc_overview_title: "Attività dell'Ora del Codice di Code.org"
   hoc_overview_subtitle: "L'<a href=\"https://hourofcode.com\">Ora del Codice</a> è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni. Chiunque, in ogni parte del mondo, può organizzare un'Ora del Codice o provare una delle oltre 200 esercitazioni di un'ora, disponibili in oltre 45 lingue diverse."
   hoc_overview_partner_activities_title: "Altre attività dei nostri partner"
-  hoc_overview_partner_activities_body: "Nel sito dell'Ora del Codice puoi trovare più di 100 esercitazioni per tutte le età e livelli di esperienza, sviluppate da Code.org e partner."
-  hoc_overview_partner_activities_link: "Visualizza le attività"
+  hoc_overview_partner_activities_body: "Il sito Web “The Hour of Code” offre più di 100 attività legate all’informatica adatte a tutte le età e a tutti livelli di esperienza, sviluppate da Code.org e dai suoi partner."
+  hoc_overview_partner_activities_link: "Visualizza tutte le attività"
   hoc_overview_start_tutorial: "Inizia"
-  hoc_overview_view_teacher_guide: "Visualizza la guida per l'insegnante"
+  hoc_overview_view_teacher_guide: "Guida per l'insegnante (in inglese)"
   hoc2018_creativity: "creatività"
   hoc2018_creativity_create: "Crea"
   hoc2018_creativity_hoc_coming: "L'Ora del Codice è in arrivo…"
@@ -1499,27 +1494,33 @@
   hoc2018_creativity_courses: "Vai oltre l'Ora del Codice seguendo i corsi di Code.org"
   hoc2018_creativity_courses_link: "Vai oltre l'Ora del Codice seguendo i <a href=\"https://studio.code.org/courses\">corsi di Code.org</a>"
   hoc2018_homepage: "Iscrivi la tua classe per provare una delle oltre 150 NUOVE attività dell'Ora del Codice (3-9 dicembre)!"
-  hoc2018_mc_page_title: "I corsi di Minecraft per l'Ora del Codice"
+  hoc2018_mc_page_title: "Le esercitazioni di Minecraft per l'Ora del Codice"
   hoc2018_mc_details: "Molte lingue | Browser e tablet moderni | Da 7 anni in su"
   hoc2018_mc_aquatic_announcement: "Iscrivi la tua classe per provare una delle oltre 150 NUOVE attività dell'Ora del Codice (3-9 dicembre). Prova soprattutto la nostra nuovissima attività di Minecraft del 2018: il Viaggio Acquatico! Iscrivi oggi stesso la tua classe."
   hoc2018_mc_aquatic_title: "Minecraft Viaggio Acquatico"
   hoc2018_mc_aquatic_description: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
+  hoc2019_mc_aquatic_description: "Esplora e costruisci mondi sottomarini con la programmazione."
   hoc2018_mc_hero_title: "Minecraft Il viaggio dell'eroe"
   hoc2018_mc_hero_description: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
   hoc2018_mc_designer_title: "Programma il tuo Minecraft"
-  hoc2018_mc_designer_description: "Programma il comportamento degli animali e delle altre creature di Minecraft nella tua versione di questo gioco."
+  hoc2018_mc_designer_description: "Programma animali e altre creature di Minecraft nella tua versione di questo gioco."
   hoc2018_mc_adventurer_title: "Un'avventura con Minecraft"
   hoc2018_mc_adventurer_description: "Usa il codice per far vivere un'avventura ad Alex o Steve."
   hoc2018_mc_start: "Inizia"
   hoc2018_mc_no_internet: "Non hai Internet?"
-  hoc2018_mc_download_adventurer: "Scarica la versione da usare <i>in locale</i> di \"Un avventura con Minecraft\"."
-  hoc2018_mc_educators: "Per Insegnanti"
+  hoc2018_mc_download_adventurer: "Scarica la versione da usare <i>in locale</i> di \"Un'avventura con Minecraft\"."
+  hoc2018_mc_educators: "Per gli insegnanti"
   hoc2018_mc_educators_box1_title: "Programma con Minicraft"
+  hoc2018_mc_educators_box1_desc: 'Su Minecraft Education Edition si trovano risorse per la programmazione in Minecraft.'
   hoc2018_mc_educators_box1_button: "Inizia"
-  hoc2018_mc_educators_box2_title: "Scarica la Guida del Formatore"
+  hoc2018_mc_educators_box2_title: "Scarica la Guida per l'insegnante"
   hoc2018_mc_educators_box2_desc: "Questi strumenti ti aiuteranno ad organizzare un'Ora del Codice per coinvolgere i tuoi studenti sui temi dell'informatica."
   hoc2018_mc_educators_box2_button: "Scarica"
+  hoc2018_mc_educators_box3_title: "Partecipa ad un seminario gratuito per studenti"
+  hoc2018_mc_educators_box3_desc: "Visita un Microsoft Store nella tua zona per un'esercitazione gratuita dell'Ora del Codice. Per principianti ed esperti, dai sei anni in su. (Sono in USA.)"
+  hoc2018_mc_educators_box3_button: "Trova un seminario"
   hoc2018_mc_educators_box4_title: "Accedi ad ulteriori risorse di informatica"
+  hoc2018_mc_educators_box4_desc: "Contribuisci a migliorare la tua comunità diffondendo competenze digitali e risorse di formazione in informatica con Microsoft."
   hoc2018_mc_educators_box4_button: "Esplora le risorse disponibili"
   hoc2018_mc_watch_videos: "Prima di iniziare, guarda uno di questi video stimolanti"
   hoc2018_mc_videos_more: "Ulteriori<a href='%{inspiring_videos_playlist}'> video stimolanti</a> con modelli di ruolo e celebrità e <a href=\"https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro\" target=\"_blank\">un video in italiano di Programma il Futuro</a>"
@@ -1532,11 +1533,11 @@
   hoc2018_mc_video_title_sports: "Forza! Chiunque può imparare..."
   hoc2018_mc_video_title_cs_is_everything: "L'informatica sta cambiando ogni cosa"
   hoc2018_mc_video_title_inspire_girl: "Convinci una ragazza a partecipare"
-  hoc2018_mc_video_title_cs_intro: "Introduzione all'Informatica"
-  hoc2018_mc_video_title_schools_dont_teach: "Cosa NON Insegnano nella maggior parte delle Scuole"
+  hoc2018_mc_video_title_cs_intro: "Introduzione all'informatica"
+  hoc2018_mc_video_title_schools_dont_teach: "Cosa NON insegnano nella maggior parte delle scuole"
   hoc2018_mc_video_title_obama: "Il Presidente Obama a proposito dell'informatica"
-  hoc2018_mc_video_title_hoc_is_here: "L'Ora del Codice è Qui - Chiunque Può Imparare"
-  hoc2018_mc_video_title_anybody_can_learn: "Chiunque Può Imparare"
+  hoc2018_mc_video_title_hoc_is_here: "L'Ora del Codice è qui - Chiunque può imparare"
+  hoc2018_mc_video_title_anybody_can_learn: "Chiunque può imparare"
   hoc2018_mc_video_title_my_name_is_aracely: "Mi chiamo Aracely"
   hoc2018_mc_homepage_hoc_coming: "L'Ora del Codice è in arrivo..."
   hoc2018_mc_homepage_what_create: "Tu cosa creerai?"
@@ -1544,15 +1545,18 @@
   hoc2018_mc_homepage_watch_video: "Guarda il nostro video"
   hoc2018_mc_homepage_join_us: "Unisciti a noi"
   hoc2018_mc_homepage_try_it: "Prova"
+  hoc2018_mc_back: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività!"
   hoc2018_mc_back_journey: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
-  hoc2018_mc_teacher_guide: "Visualizza la guida per l'insegnante"
+  hoc2018_mc_teacher_guide: "Guida per l'insegnante (in inglese)"
   hoc2018_mc_minecraft_education: "Minecraft Education"
   hoc2018_mc_continue_learning: "Continua ad imparare con Minecraft."
   hoc2018_mc_go_to_mc_education: "Via su Minecraft Education"
   hoc2018_mc_short_description: "Usa la tua creatività e le competenze di problem solving per trovare il tesoro ed esplorare i mondi sottomarini grazie alla potenza della programmazione."
-  hoc2018_mc_short_description_shorter: "Usa la tua creatività e le competenze di problem solving per esplorare e costruire mondi sottomarini con la programmazione."
+  hoc2018_mc_short_description_shorter: "Usa la tua creatività e la tua abilità a risolvere i problemi per esplorare e costruire mondi sottomarini con la programmazione."
   hoc2018_mc_journey: "Viaggio attraverso Minecraft con la programmazione."
   hoc2018_dance_party_main_heading: "Ballando col codice"
+  hoc2018_dance_party_landing_title: "Balla"
+  hoc2018_dance_party_subheading: "Aiuta a tradurre Ballando col codice"
   hoc2018_dance_create_your_own_dance_title: "Crea il tuo progetto in \"Ballando col codice\""
   hoc2018_dance_party_box_title: "Ballando col codice"
   hoc2018_dance_party_box_description: "Crea un progetto con \"Ballando col codice\" e condividilo con i tuoi amici!"
@@ -1563,19 +1567,33 @@
   hoc2018_dance_keep_on_dancing_specs: "Lingua | Formato | Oltre i 13 anni"
   hoc2018_dance_keep_on_dancing_button: "Inizia la seconda parte"
   hoc2018_dance_teacher_resources_title: "Risorse per l'insegnante"
-  hoc2018_dance_teacher_resources_tile1_description: "Programmi di lezione, certificati e filtering della musica."
+  hoc2018_dance_teacher_resources_tile1_description: "Programmi di lezione, certificati e scelta della musica."
   hoc2018_dance_teacher_resources_tile1_button: "Piano di lavoro della lezione"
   hoc2018_dance_teacher_resources_tile2_title: "Ballando col Codice Unplugged (lezione tradizionale)"
   hoc2018_dance_teacher_resources_tile2_description: "Non sono necessari computer! Impara i concetti di programmazione creando tutti insieme una coreografia di ballo."
-  hoc2018_dance_teacher_resources_tile2_button: "Attività Tradizionale"
+  hoc2018_dance_teacher_resources_tile2_button: "Attività tradizionale"
   hoc2018_dance_featured_student_creations_title: "Creazioni degli studenti consigliate"
   hoc2018_dance_videos_section_heading: "Cerca l'ispirazione"
   hoc2018_dance_video_title_what_is_creativity: "Cos'è la creatività?"
   hoc2018_dance_view_creativity_video_playlist: "Cos'è la creatività? Visualizza la serie completa (5 min)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "In collaborazione con"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* è un programma completo di orientamento al lavoro per ispirare, educare e addestrare bambini e ragazzi di famiglie a basso reddito e di altre categorie svantaggiate affinché intraprendano una carriera in informatica. <a href='%{amazon_future_engineer_link}' target='_blank'>Maggiori informazioni</a>"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Ulteriori informazioni su Amazon Future Engineer"
+  hoc2018_dance_amazon_about_future_engineer_title: "Informazioni su Amazon Future Engineer"
+  hoc2018_dance_amazon_about_future_engineer_description: "Learn about Amazon’s kindergarten to career program to increase access to computer science education. Find information on how to get involved in our summer camps, high school CS classes, scholarships, and internships."
   hoc2018_dance_amazon_about_future_engineer_button: "Ulteriori informazioni"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "Try coding this summer"
+  hoc2018_dance_amazon_try_coding_this_summer_description: "Get involved in Amazon Future Engineer’s free, fun, and inclusive computer science camps! Summer camps are available for students from kindergarten through 8th grade in multiple locations in the US for summer 2019."
+  hoc2018_dance_amazon_try_coding_this_summer_button: "Join a camp"
+  hoc2018_dance_amazon_scholarship_programs_title: "Scholarship programs"
+  hoc2018_dance_amazon_scholarship_programs_description: "Amazon is offering scholarships of $10,000 per year for underserved students who have successfully completed or are currently enrolled in an AP CS course and intend to study a CS degree at a 4-year college or university in the United States."
   hoc2018_dance_amazon_scholarship_programs_button: "Applica ora"
+  hoc2018_dance_amazon_internships_title: "Come Intern at Amazon"
+  hoc2018_dance_amazon_internships_description: "Applications are now open for summer 2019 Amazon Future Engineer internships. Interns will partner with a manager, technical mentor, and other interns to innovate and create new features and services on behalf of Amazon customers. Internships are available in the US and Canada."
+  hoc2018_dance_amazon_internships_button: "Find an internship"
+  hoc2018_dance_amazon_k8_programs_title: "K-8 programs"
+  hoc2018_dance_amazon_funding_title: "Get funding for your CS degree"
+  hoc2018_dance_amazon_future_engineer_footer: "* Gli artisti che hanno permesso di usare la loro musica in questo tutorial non stanno sponsorizzando o sostenendo Amazon come parte della licenza d'uso della loro musica su Code.org.\n\n"
   hoc2018_dance_measure: "Battuta"
   hoc2018_dance_measure_colon: 'Battuta:'
   hoc2018_aquatic_video1: "Minecraft Viaggio Acquatico - Introduzione"
@@ -1590,3 +1608,5 @@
   page_not_found_header: '404 Pagina non trovata'
   page_not_found_description: "La pagina che stai cercando non esiste a questo indirizzo. Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage."
   page_not_found_button: "Ritorna alla homepage"
+  hoc2018_mc_with_microsoft: "In collaborazione con"
+  hoc2018_mc_thank_microsoft: "Ringraziamo Microsoft per il supporto che dà alla nostra missione per garantire che ogni bambino abbia l'opportunità di imparare l'informatica e le competenze per avere successo nel XXI secolo."

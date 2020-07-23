@@ -1,7 +1,7 @@
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import {Table} from 'reactabular';
+import * as Table from 'reactabular-table';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
@@ -10,7 +10,6 @@ import {
   loginInfoFormatter,
   studentsFormatter
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import Button from '@cdo/apps/templates/Button';
 
 const sectionRowData = [
@@ -30,7 +29,7 @@ const sectionRowData = [
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: [
       '//localhost-studio.code.org:3000/courses/csd',
-      '//localhost-studio.code.org:3000/s/csd1'
+      '//localhost-studio.code.org:3000/s/csd1-2019'
     ]
   },
   {
@@ -100,7 +99,7 @@ describe('OwnedSectionsTable', () => {
       const rowData = sectionRowData[0];
       const studentsCol = shallow(studentsFormatter(null, {rowData}));
       const link = studentsCol.prop('href');
-      assert.equal(pegasus('/teacher-dashboard#/sections/1/manage'), link);
+      assert.equal('/teacher_dashboard/sections/1/manage_students', link);
     });
 
     it('studentsFormatter shows the correct number of >0 students', () => {
@@ -121,7 +120,7 @@ describe('OwnedSectionsTable', () => {
       const rowData = sectionRowData[2];
       const studentsCol = shallow(studentsFormatter(null, {rowData}));
       const link = studentsCol.prop('href');
-      assert.equal(pegasus('/teacher-dashboard#/sections/3/manage'), link);
+      assert.equal('/teacher_dashboard/sections/3/manage_students', link);
     });
 
     it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
@@ -142,20 +141,14 @@ describe('OwnedSectionsTable', () => {
       const rowData = sectionRowData[0];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
-      assert.equal(
-        link,
-        pegasus('/teacher-dashboard#/sections/1/print_signin_cards')
-      );
+      assert.equal(link, '/teacher_dashboard/sections/1/login_info');
     });
 
     it('loginInfoFormatter has a link to the sign in cards for third party login', () => {
       const rowData = sectionRowData[1];
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
-      assert.equal(
-        link,
-        pegasus('/teacher-dashboard#/sections/2/print_signin_cards')
-      );
+      assert.equal(link, '/teacher_dashboard/sections/2/login_info');
     });
 
     it('gradeFormatter has grade text', () => {
@@ -185,7 +178,7 @@ describe('OwnedSectionsTable', () => {
       );
       assert.equal(
         sectionLink,
-        '//localhost-studio.code.org:3000/s/csd1?section_id=1'
+        '//localhost-studio.code.org:3000/s/csd1-2019?section_id=1'
       );
     });
 
@@ -219,7 +212,7 @@ describe('OwnedSectionsTable', () => {
       const rowData = sectionRowData[0];
       const sectionLinkCol = shallow(sectionLinkFormatter(null, {rowData}));
       const sectionLink = sectionLinkCol.prop('href');
-      assert.equal(sectionLink, pegasus('/teacher-dashboard#/sections/1'));
+      assert.equal(sectionLink, '/teacher_dashboard/sections/1');
     });
 
     it('sectionLinkFormatter contains section text', () => {

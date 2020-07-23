@@ -6,9 +6,9 @@ require 'cdo/properties'
 require 'json'
 
 class ContactRollups
-  # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
+  # Production database has a global max query execution timeout setting. This 30 minute setting can be used
   # to override the timeout for a specific session or query.
-  MAX_EXECUTION_TIME = 1_200_000
+  MAX_EXECUTION_TIME = 1_800_000
   MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 
   # Connection to read from Pegasus production database.
@@ -45,6 +45,16 @@ class ContactRollups
     CDO.dashboard_reporting_db_reader,
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
+
+  def self.mysql_multi_connection
+    # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
+    sequel_connect(
+      CDO.pegasus_reporting_db_writer,
+      CDO.pegasus_reporting_db_writer,
+      query_timeout: MAX_EXECUTION_TIME_SEC,
+      multi_statements: true
+    )
+  end
 
   # Columns to disregard
   EXCLUDED_COLUMNS = %w(id pardot_id pardot_sync_at updated_at).freeze
@@ -89,9 +99,25 @@ class ContactRollups
     coursed-2017
     coursee-2017
     coursef-2017
+    coursea-2018
+    courseb-2018
+    coursec-2018
+    coursed-2018
+    coursee-2018
+    coursef-2018
+    coursea-2019
+    courseb-2019
+    coursec-2019
+    coursed-2019
+    coursee-2019
+    coursef-2019
     20-hour
     express-2017
     pre-express-2017
+    express-2018
+    pre-express-2018
+    express-2019
+    pre-express-2019
   ).freeze
 
   CSF_SCRIPT_LIST = CSF_SCRIPT_ARRAY.map {|x| "'#{x}'"}.join(',')
@@ -118,7 +144,7 @@ class ContactRollups
     ProfessionalDevelopmentWorkshopSignup
   ).map {|s| "'#{s}'"}.join(',').freeze
 
-  hoc_year = DCDO.get("hoc_year", 2017)
+  hoc_year = DCDO.get("hoc_year", 2018)
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
@@ -134,7 +160,7 @@ class ContactRollups
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
   CENSUS_FORM_NAME = "Census".freeze
 
-  def self.build_contact_rollups
+  def self.build_contact_rollups(log_collector)
     start = Time.now
 
     PEGASUS_REPORTING_DB_WRITER.run "SET SQL_SAFE_UPDATES = 0"
@@ -142,21 +168,22 @@ class ContactRollups
     # on tables we are reading from during what can be multi-minute operations
     DASHBOARD_REPORTING_DB_READER.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     ActiveRecord::Base.connection.execute "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
-    create_destination_table
-    insert_from_pegasus_forms
-    insert_from_dashboard_contacts
-    insert_from_dashboard_pd_enrollments
-    insert_from_dashboard_census_submissions
-    update_geo_from_school_data
-    update_unsubscribe_info
-    update_roles
-    update_grades_taught
-    update_ages_taught
-    update_district
-    update_school
-    update_courses_facilitated
-    update_professional_learning_enrollment
-    update_professional_learning_attendance
+
+    log_collector.time!('create_destination_table') {create_destination_table}
+    log_collector.time!('insert_from_pegasus_forms') {insert_from_pegasus_forms}
+    log_collector.time!('insert_from_dashboard_contacts') {insert_from_dashboard_contacts}
+    log_collector.time!('insert_from_dashboard_pd_enrollments') {insert_from_dashboard_pd_enrollments}
+    log_collector.time!('insert_from_dashboard_census_submissions') {insert_from_dashboard_census_submissions}
+    log_collector.time!('update_geo_from_school_data') {update_geo_from_school_data}
+    log_collector.time!('update_unsubscribe_info') {update_unsubscribe_info}
+    log_collector.time!('update_roles') {update_roles}
+    log_collector.time!('update_grades_taught') {update_grades_taught}
+    log_collector.time!('update_ages_taught') {update_ages_taught}
+    log_collector.time!('update_district') {update_district}
+    log_collector.time!('update_school') {update_school}
+    log_collector.time!('update_courses_facilitated') {update_courses_facilitated}
+    log_collector.time!('update_professional_learning_enrollment') {update_professional_learning_enrollment}
+    log_collector.time!('update_professional_learning_attendance') {update_professional_learning_attendance}
 
     # record contacts' interactions with us based on forms
     FORM_INFOS.each do |form_info|
@@ -165,21 +192,23 @@ class ContactRollups
 
     # parse all forms that collect user-reported address/location or other data of interest
     FORM_KINDS_WITH_DATA.each do |kind|
-      update_data_from_forms(kind)
+      log_collector.time!("update_data_from_forms kind=#{kind}") {update_data_from_forms(kind)}
     end
 
     # Add contacts to the Teacher role based on form responses
-    update_teachers_from_forms
-    update_teachers_from_census_submissions
+    log_collector.time!('update_teachers_from_forms') {update_teachers_from_forms}
+    log_collector.time!('update_teachers_from_census_submissions') {update_teachers_from_census_submissions}
 
     # Set opt_in based on information collected in Dashboard Email Preference.
-    update_email_preferences
+    log_collector.time!('update_email_preferences') {update_email_preferences}
 
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
+
+    log_collector.info("#{count} records created in contact_rollups_daily table")
   end
 
-  def self.sync_contact_rollups_to_main
+  def self.sync_contact_rollups_to_main(log_collector)
     log("#{Time.now} Starting")
 
     num_inserts = 0
@@ -190,10 +219,21 @@ class ContactRollups
     # MySQL use the email index to sort by email.
 
     # Query all of the contacts in the latest daily contact rollup table (contact_rollups_daily) sorted by email.
-    contact_rollups_src = PEGASUS_REPORTING_DB_READER['SELECT * FROM contact_rollups_daily FORCE INDEX(contact_rollups_email_index) ORDER BY email']
+    src_query = <<-SQL.squish
+      SELECT * FROM contact_rollups_daily
+      FORCE INDEX(contact_rollups_email_index)
+      ORDER BY email
+    SQL
+    contact_rollups_src = PEGASUS_REPORTING_DB_READER[src_query]
+
     # Query all of the contacts in the master contact rollup table (contact_rollups_daily) sorted by email.
     # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
-    contact_rollups_dest = PEGASUS_DB_READER["SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email"]
+    dest_query = <<-SQL.squish
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups
+      FORCE INDEX(contact_rollups_email_index)
+      ORDER BY email
+    SQL
+    contact_rollups_dest = PEGASUS_DB_READER[dest_query]
 
     # Create iterators for both queries using the #stream method so we stream the results back rather than
     # trying to load everything in memory
@@ -255,14 +295,14 @@ class ContactRollups
         else
           # Update the destination record
           # log("#{Time.now} Update #{email_src} (src id: #{contact_rollup_src[:id]}; updated: #{output_row})")
-          PEGASUS_DB_WRITER[:contact_rollups].where(email: email_src).update(output_row)
+          PEGASUS_DB_WRITER[:contact_rollups].where(email: email_dest).update(output_row)
           num_updates += 1
         end
       end
 
       num_total = num_inserts + num_updates + num_unchanged
       if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
-        log "Total source rows processed: #{num_total}"
+        log "#{Time.now} Total source rows processed: #{num_total}. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged."
         time_last_output = Time.now
       end
 
@@ -271,12 +311,22 @@ class ContactRollups
     end
 
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
+    log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
+  rescue StandardError => error
+    log "#{Time.now} Error caught and re-raised: #{error.message}"
+    log "Current Source Record - #{contact_rollup_src}"
+    log "Current Destination Record - #{contact_rollup_dest}"
+
+    log_collector.info("Current source record = #{contact_rollup_src}")
+    log_collector.info("Current destination record = #{contact_rollup_dest}")
+
+    raise error
   end
 
   def self.create_destination_table
     start = Time.now
     log "Creating destination table"
-    # Ensure destination table exists and is empty. Since this code runs on the reporting replica and the destination
+    # Ensure destination table exists and is empty. Since this code runs on the clone and the destination
     # table should exist only there, we can't use a migration to create it. Create the destination table explicitly in code.
     # Create it based on master contact_rollups table. Create it every time to keep up with schema changes in contact_rollups.
     PEGASUS_REPORTING_DB_WRITER.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
@@ -473,11 +523,6 @@ class ContactRollups
     log_completion(start)
 
     start = Time.now
-    log "Updating Regional Partner role"
-    append_regional_partner_to_role_list
-    log_completion(start)
-
-    start = Time.now
     log "Updating CSF/CSD/CSP teacher roles"
     # CSF scripts don't have a course mapping - identify CSF teachers by
     # specific scripts
@@ -486,6 +531,10 @@ class ContactRollups
     # that way
     add_role_from_course_sections_taught("CSD Teacher", "csd-2017")
     add_role_from_course_sections_taught("CSP Teacher", "csp-2017")
+    add_role_from_course_sections_taught("CSD Teacher", "csd-2018")
+    add_role_from_course_sections_taught("CSP Teacher", "csp-2018")
+    add_role_from_course_sections_taught("CSD Teacher", "csd-2019")
+    add_role_from_course_sections_taught("CSP Teacher", "csp-2019")
     log_completion(start)
   end
 
@@ -543,15 +592,6 @@ class ContactRollups
     ) user_ids ON user_ids.user_id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), '#{role_name}')
     WHERE #{DEST_TABLE_NAME}.id > 0"
-  end
-
-  def self.append_regional_partner_to_role_list
-    PEGASUS_REPORTING_DB_WRITER.run "
-    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
-    INNER JOIN #{DASHBOARD_DB_NAME}.regional_partners AS regional_partners ON regional_partners.contact_id = users.id
-    SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), 'Regional Partner')
-    WHERE LENGTH(users.email) > 0 AND #{DEST_TABLE_NAME}.id > 0"
   end
 
   def self.update_courses_facilitated
@@ -678,11 +718,6 @@ class ContactRollups
       ELSE #{DEST_TABLE_NAME}.professional_learning_attended
     END
     WHERE #{DEST_TABLE_NAME}.email = src.email"
-  end
-
-  def self.mysql_multi_connection
-    # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
-    Sequel.connect(CDO.pegasus_reporting_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
   end
 
   # Extracts and formats address data from form data
@@ -945,7 +980,5 @@ class ContactRollups
     s.next
   rescue StopIteration
     nil
-  rescue StandardError => error
-    log "Error iterating over stream #{s} - #{error}"
   end
 end

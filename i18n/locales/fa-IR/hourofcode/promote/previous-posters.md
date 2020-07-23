@@ -1,18 +1,17 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
-layout: wide
-nav: promote_nav
+title: پوستر های ساعت کدنویسی های قبلی
 ---
-<%= view :signup_button %>
 
-# Past Hour of Code Posters
+{{ signup_button }}
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here](<%= resolve_url('/promote/resources#posters') %>).
+# پوستر های ساعت کدنویسی های قبلی
+
+### پوستر های ما را از از سال های قبل پیدا کنید و آنها را پرینت کنید و به دیوار کلاس بچسبانید! به دنبال جدیدترین پوسترها می گردید؟ [اینجا کلیک کنید.]({{ promote/promote_posters_url }})
 
 * * *
 
 <br />
 
-<%= view :promote_posters %>
+تبلیغ_پوسترها
 
-<%= view :signup_button %>
+{{ signup_button }}

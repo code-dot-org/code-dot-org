@@ -1,18 +1,17 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
-layout: wide
-nav: promote_nav
+title: Régebbi Kódolás órája poszterek
 ---
-<%= view :signup_button %>
 
-# Régebbi "Hour of Code" poszterek
+{{ signup_button }}
 
-### Keress egy előző évi posztert, melyet kinyomtatva kitehetsz az osztályterembe! Újabb posztereket keresel? <a href="<%= resolve_url('/promote/resources#posters') %>Kattints ide!</a>
+# Régebbi Kódolás órája poszterek
+
+### Keressen a korábbi évek plakátjai között, és akassza ki osztálytermében! A legújabb plakátot keresi? [Kattintson ide]({{ promote/promote_posters_url }}).
 
 * * *
 
 <br />
 
-<%= view :promote_posters %>
+{{ promote_posters }}
 
-<%= view :signup_button %>
+{{ signup_button }}

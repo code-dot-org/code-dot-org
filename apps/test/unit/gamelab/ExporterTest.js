@@ -1,9 +1,9 @@
-import {assert, expect} from '../../util/configuredChai';
+import {assert, expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import Exporter from '@cdo/apps/gamelab/Exporter';
+import Exporter from '@cdo/apps/p5lab/gamelab/Exporter';
 
 const emptyAnimationOpts = {
   animationList: {
@@ -15,6 +15,7 @@ const emptyAnimationOpts = {
   pauseAnimationsByDefault: false
 };
 
+const WEBPACK_RUNTIME_JS_CONTENT = 'webpack-runtime.js content';
 const P5_JS_CONTENT = 'p5.js content';
 const P5_PLAY_JS_CONTENT = 'p5.play.js content';
 const GAMELAB_API_MIN_JS_CONTENT = 'gamelab-api.min.js content';
@@ -41,6 +42,10 @@ describe('The Gamelab Exporter,', function() {
 
   beforeEach(function() {
     server = sinon.fakeServerWithClock.create();
+    server.respondWith(
+      /\/blockly\/js\/webpack-runtime\.js\?__cb__=\d+/,
+      WEBPACK_RUNTIME_JS_CONTENT
+    );
     server.respondWith(
       /\/blockly\/js\/p5play\/p5\.js\?__cb__=\d+/,
       P5_JS_CONTENT
@@ -211,7 +216,7 @@ describe('The Gamelab Exporter,', function() {
         assert.property(zipFiles, 'my-app/gamelab-api.js');
         assert.equal(
           zipFiles['my-app/gamelab-api.js'],
-          GAMELAB_API_MIN_JS_CONTENT
+          `${WEBPACK_RUNTIME_JS_CONTENT}\n${GAMELAB_API_MIN_JS_CONTENT}`
         );
       });
 
@@ -345,7 +350,7 @@ describe('The Gamelab Exporter,', function() {
         assert.property(zipFiles, 'my-app/assets/gamelab-api.j');
         assert.equal(
           zipFiles['my-app/assets/gamelab-api.j'],
-          GAMELAB_API_MIN_JS_CONTENT
+          `${WEBPACK_RUNTIME_JS_CONTENT}\n${GAMELAB_API_MIN_JS_CONTENT}`
         );
       });
 
@@ -405,12 +410,6 @@ describe('The Gamelab Exporter,', function() {
     });
   });
 
-  describe('globally exposed functions', () => {
-    beforeEach(() => {
-      require('../../../build/package/js/gamelab-api.js');
-    });
-  });
-
   function runExportedApp(code, animationOpts, done, globalPromiseName) {
     const originalP5 = window.p5;
     const originalPreload = window.preload;
@@ -442,6 +441,8 @@ describe('The Gamelab Exporter,', function() {
             );
             window.$ = require('jquery');
 
+            // webpack-runtime must appear exactly once on any page containing webpack entries.
+            require('../../../build/package/js/webpack-runtime.js');
             require('../../../build/package/js/gamelab-api.js');
 
             //

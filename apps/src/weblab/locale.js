@@ -1,2 +1,3 @@
 // locale for weblab
-module.exports = window.blockly.weblab_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('weblab_locale');

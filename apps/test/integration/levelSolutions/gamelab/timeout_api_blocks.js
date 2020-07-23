@@ -13,7 +13,6 @@ module.exports = {
         setTimeout(function() {
           console.log('done');
         }, 5);
-        
         var key = setTimeout(function() {
           console.log('do not expect this');
         }, 4);
@@ -25,7 +24,7 @@ module.exports = {
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;
-        assert.equal(debugOutput, 'done');
+        assert.equal(debugOutput, '"done"');
       }
     ),
 
@@ -45,7 +44,7 @@ module.exports = {
       `,
       function isProgramDone() {
         const debugOutput = document.getElementById('debug-output').textContent;
-        return debugOutput.split('\n').length >= 3;
+        return debugOutput.split('""').length >= 3;
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;
@@ -72,7 +71,7 @@ module.exports = {
       `,
       function isProgramDone() {
         const debugOutput = document.getElementById('debug-output').textContent;
-        return debugOutput.split('\n').length >= 3;
+        return debugOutput.split('""').length >= 3;
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;

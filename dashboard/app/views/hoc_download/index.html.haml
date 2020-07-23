@@ -15,9 +15,9 @@
       .capsule
         .indent
           %h3
-            != t('hoc_download.capsule_title')
+            = t('hoc_download.capsule_title')
           %h4
-            != t('hoc_download.capsule_desc', url: @hoc_url, app_name: @app_name)
+            != t('hoc_download.capsule_desc', url: @hoc_url, app_name: @app_name, markdown: true)
   .indent
     .row
       .span12
@@ -26,7 +26,7 @@
     .row
       .span12
         .smalltext
-          != t('hoc_download.instructions', url: CDO.code_org_url('/certificates'))
+          != t('hoc_download.instructions', url: CDO.code_org_url('/certificates', 'https:'), markdown: true)
         %br/
     .row
       .span12

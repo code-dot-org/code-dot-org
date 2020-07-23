@@ -6,6 +6,7 @@ import {
 } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import ScriptAnnouncements from '@cdo/apps/code-studio/components/progress/ScriptAnnouncements';
 import {NotificationType} from '@cdo/apps/templates/Notification';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
   announcement: {
@@ -77,7 +78,7 @@ const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
         </select>
       </div>
     </label>
-    <button className="btn" onClick={() => onRemove(index)}>
+    <button className="btn" type="button" onClick={() => onRemove(index)}>
       Remove
     </button>
   </div>
@@ -142,12 +143,16 @@ export default class ScriptAnnouncementsEditor extends Component {
           name="script_announcements"
           value={JSON.stringify(announcements)}
         />
-        <h4>Script Announcements</h4>
-        <div>
-          This can be used to provide one or more announcements that will show
-          up for signed in teachers, students, or teachers and students on the
-          script overview page.
-        </div>
+        <h4>
+          Script Announcements
+          <HelpTip>
+            <p>
+              This can be used to provide one or more announcements that will
+              show up for signed in teachers, students, or teachers and students
+              on the script overview page.
+            </p>
+          </HelpTip>
+        </h4>
         {announcements.map((announce, index) => (
           <Announce
             key={index}
@@ -158,7 +163,7 @@ export default class ScriptAnnouncementsEditor extends Component {
             onRemove={this.remove}
           />
         ))}
-        <button className="btn" onClick={this.add}>
+        <button className="btn" type="button" onClick={this.add}>
           Additional Announcement
         </button>
         {announcements.length > 0 && (

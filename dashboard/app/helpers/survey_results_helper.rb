@@ -1,5 +1,6 @@
 module SurveyResultsHelper
   DIVERSITY_SURVEY_ENABLED = false
+  NPS_SURVEY_ENABLED = false
 
   def show_diversity_survey?(kind)
     return false unless current_user
@@ -18,8 +19,17 @@ module SurveyResultsHelper
   end
 
   def show_nps_survey?(kind)
-    # Disable NPS survey
-    false
+    return false unless current_user
+    return false unless language == "en"
+    return false if current_user.under_13?
+    return false if existing_survey_result?(kind)
+    return false unless country_us?
+    return false unless account_existed_14_days?
+
+    return false unless SurveyResultsHelper::NPS_SURVEY_ENABLED
+
+    # There is no reason not to show the survey, so show the survey.
+    return true
   end
 
   def account_existed_14_days?
@@ -31,8 +41,8 @@ module SurveyResultsHelper
   end
 
   def country_us?
-    us_code_for_env = Rails.env.production? ? 'US' : 'RD'
-    request.location.try(:country_code) == us_code_for_env
+    request.location.try(:country_code) == 'US' ||
+      (!Rails.env.production? && request.location.try(:country_code) == 'RD')
   end
 
   def has_any_students?

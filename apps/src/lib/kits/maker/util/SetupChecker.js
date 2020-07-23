@@ -1,5 +1,5 @@
 /** @file Stubbable core setup check behavior for the setup page. */
-import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
+import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
 import {
   isCodeOrgBrowser,
@@ -53,6 +53,13 @@ export default class SetupChecker {
   detectCorrectFirmware() {
     this.boardController = new CircuitPlaygroundBoard(this.port);
     return this.boardController.connectToFirmware();
+  }
+
+  /**
+   * @return {Promise}
+   */
+  detectBoardType() {
+    return this.boardController.detectBoardType();
   }
 
   /**

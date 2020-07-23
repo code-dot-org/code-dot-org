@@ -36,7 +36,7 @@
 :javascript
   $(document).ready(function() {
 
-    var statistics = #{JSON.pretty_generate(statistics)};
+    var statistics = #{JSON.pretty_generate(statistics).html_safe};
 
     var id = '#stats-carousel';
     // Define the carousel using the ID.

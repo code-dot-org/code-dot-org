@@ -1,0 +1,26 @@
+name 'OPD-K5 Stage5Go_copy_2020'
+skip_dialog true
+markdown <<MARKDOWN
+# Unplugged Lesson: Conditionals with Cards
+
+> **Conditionals** are if-statements.
+
+***
+
+## **1. Review "<a href="https://curriculum.code.org/csf-20/coursed/11/" target="blank">Conditionals with Cards</a>" lesson plan from Course D:** 
+Course D is meant for Grade 3 students. Conditionals are not covered in Courses A, B, or C.
+<br/>
+
+## **2. Watch the student video: Conditionals with Cards (found in the lesson plan)**<br/>
+This is a video that you would show your students to help introduce the concept of conditionals and kick off the unplugged lesson.
+
+## **3. Watch a teacher model this lesson: "Conditionals with Cards" (found in the lesson plan)**<br/>
+This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. 
+
+***
+<a href="https://curriculum.code.org/csf-19/coursed/10/" target="blank">![](https://images.code.org/bab82e394a5adcd8d6bbe95a736212ec-image-1592842779925.png)</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

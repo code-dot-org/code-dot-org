@@ -46,10 +46,25 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "sign in page saves return to url in session" do
-    user_return_to = 'http://code.org/a-return-to-url'
-    get :new, params: {user_return_to:  user_return_to}
+    # Note that we currently have no restrictions on what the domain of the
+    # redirect url can be; we may at some point want to add domain
+    # restrictions, but if we do so we want to make sure that both
+    # studio.code.org and code.org are supported.
+    #
+    # See also the "sign up page saves return to url in session" test in
+    # registrations_controller_test
+    urls = [
+      "/foo",
+      "//studio.code.org/foo",
+      "//code.org/foo",
+      "//some_other_domain.com/foo"
+    ]
 
-    assert_equal user_return_to, session[:user_return_to]
+    urls.each do |url|
+      session.delete(:user_return_to)
+      get :new, params: {user_return_to: url}
+      assert_equal url, session[:user_return_to]
+    end
   end
 
   test "teachers go to specified return to url after signing in" do
@@ -189,31 +204,31 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '//test.code.org'
   end
 
-  test "facebook users go to oauth sign out page after logging out" do
+  test "facebook users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :facebook)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/facebook'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
-  test "google account users go to oauth sign out page after logging out" do
+  test "google account users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :google_oauth2)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/google_oauth2'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
-  test "microsoft account users go to oauth sign out page after logging out" do
+  test "microsoft account users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :windowslive)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/windowslive'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
   test "oauth sign out page for facebook" do

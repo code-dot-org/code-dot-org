@@ -1,7 +1,20 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 hy:
   errors:
     messages:
       not_saved: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
+      too_young: 'Այս բովանդակությունը տարիքային սահմանափակումներ տեղում է եւ մատչելի չէ երիտասարդ ուսանողների'
   activerecord:
     errors:
       messages:
@@ -20,6 +33,7 @@ hy:
         edit_header: 'Խմբագրել Հաշիվը Մանրամասներ'
         error:
           future: հակում է լինի ապագայում
+  beta: "բետա"
   hello: "Բարև աշխարհ"
   welcome_back: "Բարի վերադարձ, %{name}"
   your_professional_learning_plan: "Ձեր Մասնագիտական ​​ուսուցում Plan"
@@ -32,12 +46,9 @@ hy:
   okay: "Լավ"
   or: "կամ"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Ավելացնել ուսուցչին:'
       placeholder: "Բաժին օրենսգրքի (abcdef)"
-      instructions: "Please enter the code shared with you by your teacher. Its a 6 letter code like ABCDEF."
-    submit: 'Ավելացնել ուսուցիչ'
   add_hint_form:
     placeholder: 'Խնդրում ենք մուտքագրել Ձեր ակնարկ այստեղ'
     submit: 'Ավելացնել ակնարկ'
@@ -53,7 +64,6 @@ hy:
   of: "Հյուրատետր"
   more: "ԱՎԵԼԻ"
   less: "ՔԻՉ"
-  beta: "բետա"
   try_hoc: "Փորձեք ժամը օրենսգրքով, սեղմեք այստեղ >>"
   try_k8intro: "Փորձեք մեր K-8 Intro է Computer Science դասընթաց (15-25 ժամ)"
   k8intro: "K-8 Intro է Համակարգչային գիտություն դասընթաց (15-25 ժամ)"
@@ -65,8 +75,6 @@ hy:
   auth:
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Ստորագրվել է!'
-    signed_out: 'Դուք դուրս կգաք <a href=%{url}> Code.org </a>:'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: 'Արդեն ստորագրել:'
     notyet_signedup: "Havent միացել:"
     google_oauth2: 'Google Հաշվի'
@@ -81,6 +89,7 @@ hy:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     teacher_educator_guide: 'Տես մանկավարժ ուղեցույցը'
+    title: "Գրանցվել Code.org-ում"
     school_name: 'School Անուն (ըստ ցանկության)'
     school_address: 'Դպրոցը հասցեն (ըստ ցանկության)'
     address_placeholder: 'հասցեն, քաղաք, պետություն, փոստային'
@@ -180,13 +189,11 @@ hy:
     header:
       finished_hoc: "Ես ավարտեցի իմ Կոդի Ժամը"
       sign_in_to_save: 'Մուտք գործեք փրկելու առաջընթացը'
-      free_play:
-        playlab: 'Կատարել է Play Lab հավելվածը'
-        artist: 'Ոչ ոքի մի բան'
-        applab: 'Կատարել App Lab հավելվածը'
       project_gallery: "ծրագրեր"
       educate_hoc: "Կոդի ժամ"
       stats: "Վիճակագրություն"
+      legal_privacy: "Գաղտնիության քաղաքականություն"
+      legal_tos: "Ծառայությունների մատուցման պայմաններ"
     user:
       classroom: 'Ուսուցչի գլխավոր էջը'
       district_dashboard: 'District Dashboard'
@@ -199,9 +206,18 @@ hy:
       create: 'Ստեղծել'
       applab: 'App Lab'
       artist: 'Արտիստ'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
+      bounce: 'Ցատկում'
       flappy: 'Flappy'
+      frozen: 'սառած'
+      gumball: 'The Amazing World of Gumball'
+      iceage: 'Ice Age'
+      infinity: 'անվերջություն'
+      minecraft_adventurer: 'Արկածներ Minecraft-ի հետ'
+      minecraft_designer: 'Minecraft'
+      playlab: 'Play Lab'
+      starwars: 'Աստղային պատերազմներ'
+      starwarsblocks: 'Star Wars (Blocks)'
+      starwarsblocks_hour: 'Star Wars (Blocks)'
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: 'Ձեր առաջընթացը'
@@ -247,14 +263,12 @@ hy:
     delete_text: "Սեղմելով կոճակը, որը ջնջել Ձեր հաշիվը."
     delete_text_teacher_note: "Խնդրում ենք նկատի ունենալ, որ «ջնջել Ձեր հաշիվը չի ջնջել ձեր ուսանողներին հաշիվները:"
     delete_confirm: 'Համոզված եք, որ ցանկանում եք ջնջել Ձեր հաշիվը?'
+    update_email: "Թարմացնել"
   user_level:
     completed: 'Ավարտված'
     tried: 'փորձել'
   home:
     title: "Code Studio"
-    description: 'Կոդ Studio տունն է առցանց դասընթացների ստեղծած Code.org'
-    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
-    lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS"
     all_courses: "Ակնարկ դասընթացներ 1, 2, եւ 3-"
     lesson_plans: "դասերի պլաններ"
     signin_message: "Already registered? %{link}"
@@ -284,20 +298,10 @@ hy:
     test_videos_help: 'Test մեր նոր տեսամագնիտոֆոն ձեր դպրոցում'
     try_beta_courses: 'New! Փորձեք մեր բետա դասընթացներ K-5 ուսանողների'
     use_as_teacher: 'Օգտագործեք այս կայքը, որպես ուսուցիչ'
-    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
-    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: սրահ
     no_primary_course: "Փորձեք մի Code Studio դասընթաց"
     choose_next_course: "Փորձեք մի օրենսգիրք Studio դասընթաց ընտրելով մեկը ստորեւ"
     print_certificate: "Տպել վկայական"
-    announcement_title: "Announcements"
-    announcement_learn_more_button: "Սովորել ավելին"
-    announcement_try_now_button: "Փորձել հիմա"
-    announcement_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ յուրաքանչյուր ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային գիտությունը: Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ, կրթության առաջնորդները, 28 նահանգապետեր, եւ ղեկավարները Ամերիկաների խոշորագույն ընկերությունները միացել միասին բաց նամակ, խնդրելով ԱՄՆ Կոնգրեսին է ֆինանսավորել K-12 համակարգչային գիտության կրթություն:"
-    announcement_petition_button: "Հավելեք ձեր անունը"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "Ներկայիս բաժինը չի կարող լինել նույնը, քանի որ նոր բաժնում:"
@@ -366,7 +370,6 @@ hy:
   pdf_download: 'Բեռնել PDF'
   download_coming_soon: 'Բեռնվող գործունեության շուտով:'
   video_coming_soon: 'Վիդեո Շուտով!'
-  not_started: 'Ուսանողը չի փորձել այս մակարդակը.'
   share_code:
     title: "Սեղմեք Run տեսնել իմ ծրագիրը գործողության"
     bounce_og_title: "Check out my Bounce Game"
@@ -443,26 +446,12 @@ hy:
       title: "conditionals"
     widgets:
       cta: "Իմացեք, թե ինչպես"
-  gallery:
-    students_drew_these_with_code: "Ուսանողները ոչ-ոքի դրանք կոդով!"
-    students_made_these_with_code: "Ուսանողները դրանք կոդով!"
-    picture_count: "In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action."
-    activity_count: "In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action."
-    want_to_make_your_own: "Ցանկանում եք, որպեսզի ձեր սեփական."
-    how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
-    more: "More & rarr;"
-    caption_by_name_age: "by %{name}, age %{age}"
-    caption_time_ago: "%{time_ago} ago"
-    header: "սրահ"
-    header_playlab: "Պատմություններ եւ խաղեր"
-    header_artist: "ՕՐԵՆՍԳԻՐՔ, հոդված"
-    report_abuse: "Զեկուցել չարաշահման մասին"
   landing:
-    prerelease: "Այս դասընթացը է <span class = betatext> բետա </ span>. Սա նշանակում է, որ դա ոչ թե վերջնական տարբերակը, իհարկե, եւ ենթակա է վերանայման, ինչպես նաեւ հետադարձ ստացել եւ բարելավումներ են կատարվում:"
-    prerelease_hoc2014: "Սա Tutorial է <span class = betatext> բետա </ span>. Այն ենթակա է վերանայման, ինչպես նաեւ հետադարձ ստացել եւ բարելավումներ են կատարվում:"
     report_bug: "Report Bug"
     support: "Օգնություն ստանալ"
     help_resources: "Օգնություն եւ ռեսուրսներ"
+  free_response:
+    placeholder: "Մուտքագրեք Ձեր պատասխանն այստեղ"
   multi:
     wrong_title: "Սխալ պատասխանը"
     wrong_body: "Այս հարցի պատասխանը դու մտել ճիշտ չէ: Խնդրում եմ կրկին փորձեք!"
@@ -521,8 +510,6 @@ hy:
   age_interstitial:
     age: Ձեր տարիքը
     header: Հաշվի Տեղեկությունների թարմացման
-    message: "Էին գործընթացում թարմացնելու մեր փորձը Ձեզ տրամադրել հետ, նույնիսկ ուժեղ գաղտնիության պաշտպանության. Որպեսզի դա անել, մենք պետք առկա օգտվողներին մուտք գործել իրենց տարիքը Մականուն: <br/> Ինչպես միշտ, code.org երբեք չի վարձակալել, վաճառել կամ կիսվել այս տեղեկատվության հետ որեւէ երրորդ անձանց:"
-    sign_out: 'Եթե ​​դուք չեք ցանկանում ձեր տարիքը, դուք կարող եք <a href=%{url}> դուրս գալ </a>:'
   terms_interstitial:
     tos: "Ծառայությունների մատուցման պայմաններ"
     privacy: "Գաղտնիության քաղաքականություն"
@@ -535,6 +522,7 @@ hy:
     submit: "Հաստատել"
     decline: "փակել"
   zendesk_too_young_message: 'Ներեցեք, երիտասարդ օգտագործողները չեն կարող մուտք գործել մեր աջակցության կայքում. Դուք կարող եք թերթել <a href=http://support.code.org> support.code.org </a> առանց մուտք գործելու, կամ խնդրեք ձեր ծնողի կամ մանկավարժի կապնվել մեզ հետ է ձեզ համար.'
+  zendesk_too_young_message_markdown: 'Ներեցեք, երիտասարդ օգտագործողները չեն կարող մուտք գործել մեր աջակցության կայքում. Դուք կարող եք թերթել [support.code.org](http://support.code.org) առանց մուտք գործելու, կամ խնդրեք ձեր ծնողի կամ մանկավարժի կապնվել մեզ հետ է ձեզ համար.'
   progress:
     not_started: չի սկսվել
     in_progress: ընթացքի մեջ է
@@ -552,36 +540,21 @@ hy:
     create: "Ստեղծել ծրագիրը"
     create_a_project: 'Ստեղծել նոր նախագիծ:'
     new: "Ստեղծել նոր"
-    rename: "վերանվանել"
-    save: "Save"
-    delete: "Delete"
     exit: "Վերադարձ դեպի դասընթաց"
-    my_projects: "Իմ ծրագրեր"
     project_gallery: "ծրագրեր"
-    share: "Տարածել"
     share_title: Կիսեք Ձեր նախագիծը
     share_copy_link: "Պատճենահանել հղումը:"
     share_embed_description: "Դուք կարող եք տեղադրեք embed կոդը վերածել HTML էջում ցուցադրել նախագիծը մի կայքէջում:"
     embed: "պառկեցնել"
     advanced_share: "Ցույց տալ, առաջադեմ տարբերակները"
-    close: "փակել"
-    more: "More"
     name: "Անուն"
     updated: "Թարմացվել է"
     project_type: "Ծրագրի տեսակը"
     help_text: "Սեղմեք <strong> Կատարել App </ strong> կամ <strong> Ոչ ոքի բան </ strong> ներքեւինը սկսել նոր ծրագիր. <br /> Դուք կարող եք վերադառնալ եւ աշխատում ձեր նախագծերի ցանկացած ժամանակ:"
     need_help: "Փորձեք այդ դասընթացներ, որոնք կօգնեն ձեզ սկսել ձեր նոր ծրագրի"
-    really_delete: 'Delete?'
-    delete_yes: 'այո'
-    delete_no: 'ոչ'
     saved: "փրկվել"
     not_saved: "չի պահպանվել"
-    cancel: 'վերացնել'
-    delete_confirm_title: 'Համոզված եք, որ ցանկանում եք ջնջել այս նախագիծը:'
-    delete_confirm_text: "Deleting Ձեր նախագիծը մշտապես հեռացնել այն ձեր իմ ծրագրերում ցուցակում: Յուրաքանչյուրը դուք կիսում հղումը այլեւս չի կարողանա դիտել ձեր նախագիծը."
     view_all: 'Դիտել Իմ Ծրագրեր'
-    remix: 'remix'
-    click_to_remix: "Սեղմեք Remix է վազել դուրս ձեր սեփական տարբերակը:"
     edit_project: 'Խմբագրել Project'
     abuse:
       tos: "Այս ծրագիրն արդեն տեղեկացրել խախտելու համար Code.orgs <a href=http://code.org/tos> Ծառայության պայմաններ </a> եւ չի կարող կիսել մյուսների հետ:"
@@ -606,21 +579,14 @@ hy:
   peer_review:
     accepted:
       name: 'ընդունված է'
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
     rejected:
       name: 'Մերժվել է'
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
     escalated:
       name: 'փակուղային'
       description: 'Ես կցանկանայի ինստրուկտոր է վերանայել այս ներկայացնելու'
     instructor_feedback: 'Instructor Feedback'
     peer_feedback: 'Peer Feedback'
     outdated: 'This feedback was added for a previously submitted version'
-  flex_category:
-    required: 'Overview'
-    content: 'պարունակություն'
-    practice: 'Ուսուցիչի փորձեր'
-    csp2_1_2018: 'Unit 2: Digital Information'
   hoc_download:
     title: 'Hour of Code downloads'
     capsule_title: 'Do you have Internet?'
@@ -631,6 +597,9 @@ hy:
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_English: 'Download in English:'
+    download_in_Spanish: 'Download in Spanish:'
+    windows: 'Windows'
     mac: 'Mac OS X'
   pd:
     form_labels:
@@ -656,3 +625,4 @@ hy:
     accept: 'Ես համաձայն եմ'
   gdpr_dialog:
     yes: 'այո'
+  copy: 'պատճեն'

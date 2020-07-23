@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import VirtualizedSelect from 'react-virtualized-select';
-import 'react-virtualized/styles.css';
-import 'react-select/dist/react-select.css';
-import 'react-virtualized-select/styles.css';
+import loadable from '../util/loadable';
+const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
 import i18n from '@cdo/locale';
 import {styles} from './census2017/censusFormStyles';
 import {COUNTRIES} from '../geographyConstants';
@@ -30,7 +28,8 @@ export default class CountryAutocompleteDropdown extends Component {
     showRequiredIndicator: PropTypes.bool,
     value: PropTypes.string,
     fieldName: PropTypes.string,
-    singleLineLayout: PropTypes.bool
+    singleLineLayout: PropTypes.bool,
+    maxHeight: PropTypes.number
   };
 
   static defaultProps = {
@@ -46,7 +45,8 @@ export default class CountryAutocompleteDropdown extends Component {
       showRequiredIndicator,
       showErrorMsg,
       value,
-      singleLineLayout
+      singleLineLayout,
+      maxHeight
     } = this.props;
 
     const questionStyle = {
@@ -68,7 +68,6 @@ export default class CountryAutocompleteDropdown extends Component {
             {showError && !singleLineLayout && errorDiv}
           </div>
           <VirtualizedSelect
-            id="country"
             name={this.props.fieldName}
             options={COUNTRIES}
             value={value}
@@ -76,6 +75,7 @@ export default class CountryAutocompleteDropdown extends Component {
             placeholder={i18n.searchForCountry()}
             labelKey="value"
             matchPos="start"
+            maxHeight={maxHeight}
           />
         </div>
         {showError && singleLineLayout && errorDiv}

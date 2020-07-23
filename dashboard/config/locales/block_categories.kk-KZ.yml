@@ -3,18 +3,12 @@ kk:
   data:
     block_categories:
       Actions: Іс-әрекеттер
-      Loops: Ілмек
-      Functions: Функциялар
       Color: Түс
-      Math: Математика
-      Logic: Логика
-      Variables: Айнымалылар
       Conditionals: Шарттар
       Events: Шаралар
+      Functions: Функциялар
+      Logic: Логика
+      Loops: Ілмек
+      Math: Математика
       Text: Мәтін
-      Location: Тұрғылықты жер
-      Start: Бастау
-      Booleans: Бульдік тип
-      test: таңдау
-      Name: Атыңыз
-      Function: Функция
+      Variables: Айнымалылар

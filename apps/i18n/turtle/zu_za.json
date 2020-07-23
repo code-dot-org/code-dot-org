@@ -3,5 +3,7 @@
   "catTurtle": "Izenzo",
   "catLogic": "Ngokulandelana",
   "heightParameter": "ubude",
-  "jump": "gxuma"
+  "jump": "gxuma",
+  "moveBackward": "qubekela emuva",
+  "moveForward": "qubekela phambili"
 }

@@ -71,6 +71,38 @@ STATES_WITH_DC = [
   'Wyoming',
 ].freeze
 
+NO_CAPS_STATES_2019 = [
+  'Nebraska',
+  'Nevada',
+  'New Hampshire',
+  'New Jersey',
+  'New Mexico',
+  'New York',
+  'North Carolina',
+  'North Dakota',
+  'Ohio',
+  'Oklahoma',
+  'Oregon',
+  'Pennsylvania',
+  'Rhode Island',
+  'South Carolina',
+  'South Dakota',
+  'Tennessee',
+  'Texas',
+  'Utah',
+  'Vermont',
+  'Virginia',
+  'Washington',
+  'West Virginia',
+  'Wisconsin',
+  'Wyoming',
+].freeze
+
+SINGULAR_FEMALE_STATES_2019 = [
+  'New Jersey',
+  'Wyoming'
+]
+
 # An array of hashes, with each hash specifying the years to which it applies
 # and the cells to grab (as a hash from tab names to an array of cells).
 # Allows extraction of multiple tests (relevant as of 2017)
@@ -125,7 +157,7 @@ SPECS = [
     }
   },
   {
-    years: [2017, 2018],
+    years: [2017, 2018, 2019],
     tests: {
       csa: {
         All: %w(K12 K26 K33 K40 K75),
@@ -201,7 +233,7 @@ def get_url(year, state)
     return "http://media.collegeboard.com/digitalServices/misc/ap/#{state}-summary-#{year}.xlsx"
   end
 
-  if [2016, 2017, 2018].include? year
+  if [2016, 2017, 2018, 2019].include? year
     state = 'District of Columbia' if state == 'DC'
     state.tr!(' ', '-')
     state.downcase!
@@ -267,6 +299,15 @@ def get_tab_name(year, state, tab)
   end
   if year == 2016 && state == 'Alabama' && tab == 'All'
     return 'ALL'
+  end
+  if year == 2019 && state == 'Alabama' && tab == 'All'
+    return 'ALL '
+  end
+  if year == 2019 && !NO_CAPS_STATES_2019.include?(state)
+    return tab.upcase
+  end
+  if year == 2019 && SINGULAR_FEMALE_STATES_2019.include?(state) && tab == 'Females'
+    return 'Female'
   end
   tab.to_s
 end
@@ -375,7 +416,7 @@ def main
   if download == 'Y'
     if period == 'ALL'
       get_xlss
-    elsif (2007..2018).cover? period.to_i
+    elsif (2007..2019).cover? period.to_i
       get_xlss(period.to_i)
     else
       puts 'NOTHING DOWNLOADED'

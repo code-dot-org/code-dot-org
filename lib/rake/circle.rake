@@ -5,6 +5,7 @@ require 'cdo/circle_utils'
 require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
+require 'net/http'
 
 # CircleCI Build Tags
 # We provide some limited control over CircleCI's build behavior by adding these
@@ -28,20 +29,17 @@ SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 # Don't run any unit tests.
 SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
 
-# Run UI tests against ChromeLatestWin7
+# Run UI tests against Chrome
 SKIP_CHROME_TAG = 'skip chrome'.freeze
 
-# Run UI tests against Chrome44Win7
-TEST_CHROME_44_TAG = 'test chrome 44'.freeze
-
-# Run UI tests against Firefox45Win7
+# Run UI tests against Firefox
 TEST_FIREFOX_TAG = 'test firefox'.freeze
 
-# Run UI tests against IE11Win10
+# Run UI tests against IE11
 TEST_IE_TAG = 'test ie'.freeze
 TEST_IE_VERBOSE_TAG = 'test internet explorer'.freeze
 
-# Run UI tests against SafariYosemite
+# Run UI tests against Safari
 TEST_SAFARI_TAG = 'test safari'.freeze
 
 # Run UI tests against iPad, iPhone or both
@@ -76,7 +74,7 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task run_ui_tests: [:recompile_assets] do
+  task :run_ui_tests do
     unless CircleUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -97,9 +95,9 @@ namespace :circle do
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
       start_sauce_connect
-      RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
+      RakeUtils.wait_for_url('http://localhost:4445')
     end
-    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
+    RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
@@ -119,7 +117,7 @@ namespace :circle do
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
             " --feature #{container_eyes_features.join(',')}" \
-            " --config ChromeLatestWin7,iPhone" \
+            " --config Chrome,iPhone,IE11" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost-studio.code.org:3000" \
             " --circle" \
@@ -165,29 +163,15 @@ namespace :circle do
       RakeUtils.rake_stream_output 'seed:cached_ui_test'
     end
   end
-
-  desc 'Rebuild dashboard assets with updated locals.yml settings before running UI tests'
-  task :recompile_assets do
-    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
-      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
-      next
-    end
-
-    system 'rm', '-rf', dashboard_dir('tmp', 'cache', 'assets')
-    Dir.chdir(dashboard_dir) do
-      RakeUtils.rake 'assets:precompile'
-    end
-  end
 end
 
 # @return [Array<String>] names of browser configurations for this test run
 def browsers_to_run
   browsers = []
-  browsers << 'ChromeLatestWin7' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
-  browsers << 'Chrome44Win7' if CircleUtils.tagged?(TEST_CHROME_44_TAG)
-  browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
-  browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
-  browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)
+  browsers << 'Chrome' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'Firefox' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
+  browsers << 'IE11' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
+  browsers << 'Safari' if CircleUtils.tagged?(TEST_SAFARI_TAG)
   browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
   browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
   browsers
@@ -198,11 +182,23 @@ def test_eyes?
 end
 
 def start_sauce_connect
-  RakeUtils.system_stream_output 'wget https://s3.amazonaws.com/cdo-circle-utils/sc-build-3265-linux.tar.gz'
-  RakeUtils.system_stream_output 'tar -xzf sc-build-3265-linux.tar.gz'
-  Dir.chdir(Dir.glob('sc-build-3265')[0]) do
+  # Use latest sauce connect client for each run so we don't have to keep up with updates and end-of-lifes.
+  # If a newly-released version breaks the build, a quick fix to unblock the issue is to temporarily
+  # pin the version we use to the last working version, while we schedule the task to get the upgraded version
+  # working. You can do this by replacing `sc_download_url` with a hard-coded download url.
+
+  # Temporarily pinning sauceconnect version to 4.5.4 since 4.6.0 seems to have broken us.
+  #sc_version_info = JSON.parse(Net::HTTP.get(URI('https://saucelabs.com/versions.json')))
+  #sc_download_url = sc_version_info['Sauce Connect']['linux']['download_url']
+  sc_download_url = 'https://saucelabs.com/downloads/sc-4.5.4-linux.tar.gz'
+  tar_name = sc_download_url.split('/')[-1]
+  dir_name = tar_name.chomp('.tar.gz')
+
+  RakeUtils.system_stream_output "wget #{sc_download_url}"
+  RakeUtils.system_stream_output "tar -xzf #{tar_name}"
+  Dir.chdir(Dir.glob(dir_name)[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
-    RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains *.code.org,*.csedweek.org,*.hourofcode.com,*.codeprojects.org --wait-tunnel-shutdown && break; done"
+    RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains *.code.org,*.csedweek.org,*.hourofcode.com,*.codeprojects.org && break; done"
   end
 end
 

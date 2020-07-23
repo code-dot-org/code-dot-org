@@ -1,5 +1,5 @@
 ---
-lt:
+lt-LT:
   data:
     display_name:
       CSD U2 Pair Programming Video: Programavimas poroje
@@ -8,7 +8,6 @@ lt:
       CSD U3 Variables Map: Kintamieji
       CSD U3 Variables Map_2018: Kintamieji
       CSD U3 Variables Map_2019: Kintamieji
-      CSD U3 functions map: Komandų kūrimas
       CSD U6 for loop map: Kartojimas
       CSD U6 for loop map_2018: Kartojimas
       CSD U6 for loop map_2019: Kartojimas
@@ -16,4 +15,3 @@ lt:
       CSD U6 functions paramters video_2018: Komandos su parametrais
       CSD U6 functions paramters video_2019: Komandos su parametrais
       'CSD: For Loop_2018': Kartojimas
-      'CSD: For Loop_2019': Kartojimas

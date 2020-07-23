@@ -2,10 +2,13 @@
 require 'cdo/aws/dms'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/core_ext/numeric/time'
+require 'active_support/inflector'
+require 'cdo/redshift'
+self.tags.push key: 'environment', value: rack_env
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
-Description: Data layer for Tableau including RedShift cluster configuration and synchronization with RDS instance.
+Description: Data layer including RedShift cluster configuration and synchronization with RDS instance.
 # Parameters can be provided via CDO.underscored_parameter, e.g. via locals.yml:
 # redshift_password: abcdef
 # Parameters are only required for initial stack creation, and reused if not provided on stack update.
@@ -20,6 +23,11 @@ Parameters:
     Type: String
     NoEcho: true
   RDSHost:
+    Type: String
+  # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
+  RDSClusterEndpointRootDomain:
+    Type: String
+  ReportingCluster:
     Type: String
   RedshiftDatabase:
     Type: String
@@ -41,7 +49,7 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       AllowVersionUpgrade: true
-      AutomatedSnapshotRetentionPeriod: 1
+      AutomatedSnapshotRetentionPeriod: 5
       ClusterParameterGroupName: default.redshift-1.0
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
       ClusterType: single-node
@@ -57,8 +65,9 @@ Resources:
   TableauSync:
     Type: AWS::DMS::ReplicationInstance
     Properties:
+      AllowMajorVersionUpgrade: true
       AllocatedStorage: 250
-      EngineVersion: 2.4.0
+      EngineVersion: 3.1.3
       MultiAZ: true
       PubliclyAccessible: false
       ReplicationInstanceClass: dms.c4.4xlarge
@@ -75,6 +84,20 @@ Resources:
       Port: 3306
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
+      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
+  AuroraCloneEndpoint:
+    Type: AWS::DMS::Endpoint
+    Properties:
+      EndpointIdentifier: !Sub "AuroraCloneEndpoint-${AWS::StackName}"
+      EndpointType: source
+      EngineName: aurora
+      # At the time this template is rendered the Redshift Import Clone may not exist, so we can't use the RDS describe
+      # endpoints API to get this server name.
+      ServerName: !Sub "<%= RedshiftImport::CLONE_CLUSTER_ID %>.${RDSClusterEndpointRootDomain}"
+      Port: 3306
+      Username: !Ref RDSUsername
+      Password: !Ref RDSPassword
+      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
@@ -104,76 +127,85 @@ Resources:
          # Default value: 1000 KB (1 MB)
          writeBufferSize: 8.megabytes / 1.kilobyte
       }.map{|x|x.join('=')}.join(';')%>
-<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
+<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings, schedule| -%>
   DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
     Properties:
-      MigrationType: full-load-and-cdc
+      MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>
-      SourceEndpointArn: !Ref RDSEndpoint
+      ReplicationTaskIdentifier: <%= task_name %>-task
+      SourceEndpointArn: !Ref AuroraCloneEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
         <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
       TableMappings: !Sub |
-        <%= table_mappings.to_json %>
+          <%= table_mappings.to_json %>
+      Tags:
+        -
+          Key: schedule
+          Value: <%=schedule%>
 <% end -%>
-  ReportingDBParameters:
-    Type: AWS::RDS::DBParameterGroup
+  DMSS3Role:
+    Type: AWS::IAM::Role
     Properties:
-      Description: !Sub "Reporting Read Replica DB Parameters for ${AWS::StackName}."
-      Family: mysql5.7
-      Parameters:
-        # Allow redo log to grow larger before flushing for better write I/O efficiency.
-        innodb_adaptive_flushing_lwm: 40
-        # Improve insert/update concurrency for autoincrement tables.
-        innodb_autoinc_lock_mode: 2
-        # Reduce durability for better performance.
-        innodb_flush_log_at_trx_commit: 0
-        # Neighbor flushing reduces performance without any benefit on SSD.
-        innodb_flush_neighbors: 0
-        # IO capacity controls background flushing rate (IO/sec).
-        innodb_io_capacity: 1000
-        # IO capacity max controls maximum background flushing rate when certain thresholds are reached.
-        innodb_io_capacity_max: 3000
-        # Larger log buffer size allows larger transactions without writing to disk.
-        innodb_log_buffer_size: <%=16.megabytes%>
-        # Larger redo log file size allows write combining for better write I/O efficiency.
-        innodb_log_file_size: <%=2.gigabytes%>
-        # LRU scan depth controls LRU flushing rate (IO/sec).
-        innodb_lru_scan_depth: 1000
-        # Enable all InnoDB performance schema monitors for better debugging.
-        innodb_monitor_enable: all
-        # Random read ahead can improve overall read-query performance, important for reporting.
-        innodb_random_read_ahead: 1
-        # Increase number of threads for background reads (read-ahead)
-        innodb_read_io_threads: 8
-        # Increase sample pages for more accurate statistics for query plans.
-        innodb_stats_persistent_sample_pages: 60
-        # 'Splits an internal data structure used to coordinate threads, for higher concurrency in workloads with large numbers of waiting threads.'
-        # AWS recommended increasing to max (1024).
-        innodb_sync_array_size: 1024
-        # Number of threads for background writes
-        innodb_write_io_threads: 8
-        # Reporting DB currently needs write access for contact rollup staging table.
-        read_only: 0
-        # Don't resolve DNS on usernames.
-        skip_name_resolve: 1
-        # Use compression for replication.
-        slave_compressed_protocol: 1
-        # Enable slow query log.
-        slow_query_log: 1
-        # Reduce durability for better performance.
-        sync_binlog: 0
-        # Fully cache all open tables and table definitions.
-        table_definition_cache: 20000
-        table_open_cache: 20000
-        # Relax transaction isolation for improved concurrency under load.
-        tx_isolation: READ-COMMITTED
-        # Requirements for DMS Change Data Capture.
-        # Ref: https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-        binlog_format: ROW
-        binlog_checksum: NONE
+      RoleName: DMSS3Role
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: {Service: [dms.amazonaws.com]}
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: DMSRolePolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:PutObject'
+                  - 's3:DeleteObject'
+                  - 's3:PutObjectTagging'
+                  - 's3:ListBucket'
+                Resource: 'arn:aws:s3:::cdo-activities-archive*'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  AuroraS3Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AuroraS3Role
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: {Service: [rds.amazonaws.com]}
+            Action: 'sts:AssumeRole'
+      Policies:
+        # SELECT INTO OUTFILE S3 permissions:
+        # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.IAM.S3CreatePolicy.html
+        - PolicyName: SelectIntoOutfileS3
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:AbortMultipartUpload'
+                  - 's3:DeleteObject'
+                  - 's3:GetObject'
+                  - 's3:ListMultipartUploadParts'
+                  - 's3:PutObject'
+                Resource: 'arn:aws:s3:::cdo-activities-archive/*'
+              - Effect: Allow
+                Action:
+                  - 's3:ListBucket'
+                Resource: 'arn:aws:s3:::cdo-activities-archive'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+<%
+  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
+-%>
+  <%=key%>DBParameters:
+    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
+    Properties:
+      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
+      Family: <%=key.include?('Aurora') ? 'aurora-' : ''%>mysql5.7
+      Parameters: <%=values.compact.to_json%>
+<%end -%>
 <%
   # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
   # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5
@@ -254,7 +286,6 @@ Resources:
     Properties:
       AliasName: !Sub "alias/snapshot-${AWS::StackName}"
       TargetKeyId: !Ref DBSnapshotKey
-
 # ELB Access Logs tables defined in Glue Data Catalog.
   ELBLogsDatabase:
     Type: AWS::Glue::Database
@@ -314,9 +345,9 @@ Resources:
     Type: AWS::Glue::Crawler
     Properties:
       Name: elb_logs
-      Role: !ImportValue IAM-GlueRoleARN
+      Role: !GetAtt GlueRole.Arn
       Description: Update daily partitions generated by ELB Access Logs.
-      SchemaChangePolicy: 
+      SchemaChangePolicy:
         UpdateBehavior: LOG
         DeleteBehavior: LOG
       Schedule: {ScheduleExpression: 'cron(0 7 * * ? *)'}
@@ -325,16 +356,90 @@ Resources:
       Targets:
         S3Targets:
         - Path: !Sub 's3://${LogsBucket}/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/'
-  CrawlerConfiguration:
-    Type: Custom::CrawlerConfiguration
+      Configuration: '<%={Version: 1.0, CrawlerOutput: {Partitions: {AddOrUpdateBehavior: 'InheritFromTable'}}}.to_json%>'
+  GlueRole:
+    Type: AWS::IAM::Role
     Properties:
-      ServiceToken: !Sub 'arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:GlueConfiguration'
-      CrawlerName: !Ref ELBLogsCrawler
-      Configuration:
-        Version: '1.0'
-        CrawlerOutput:
-          Partitions:
-            AddOrUpdateBehavior: InheritFromTable
+      <%=service_role 'glue'%>
+      Policies:
+        - PolicyName: ReadLogs
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: 's3:GetObject'
+                Resource:
+                  - !Sub 'arn:aws:s3:::${LogsBucket}/*'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  CloudTrailLogsTable:
+    Type: AWS::Glue::Table
+    Properties:
+      DatabaseName: !Ref ELBLogsDatabase
+      CatalogId: !Ref AWS::AccountId
+      TableInput:
+        Name: cloudtrail
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: cloudtrail
+        PartitionKeys:
+          # Data is partitioned by year/month/day
+          - {Name: year, Type: bigint}
+          - {Name: month, Type: bigint}
+          - {Name: day, Type: bigint}
+        StorageDescriptor:
+          Location: !Sub 's3://${LogsBucket}/AWSLogs/${AWS::AccountId}/CloudTrail/'
+          Columns: <%=
+            # Ref: https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html#create-cloudtrail-table
+            str = <<~HIVE
+            eventversion STRING,
+            useridentity STRUCT<type:STRING,principalid:STRING,arn:STRING,accountid:STRING,invokedby:STRING,accesskeyid:STRING,userName:STRING,sessioncontext:STRUCT<attributes:STRUCT<mfaauthenticated:STRING,creationdate:STRING>,sessionissuer:STRUCT<type:STRING,principalId:STRING,arn:STRING,accountId:STRING,userName:STRING>>>,
+            eventtime STRING,
+            eventsource STRING,
+            eventname STRING,
+            awsregion STRING,
+            sourceipaddress STRING,
+            useragent STRING,
+            errorcode STRING,
+            errormessage STRING,
+            requestparameters STRING,
+            responseelements STRING,
+            additionaleventdata STRING,
+            requestid STRING,
+            eventid STRING,
+            resources ARRAY<STRUCT<ARN:STRING,accountId:STRING,type:STRING>>,
+            eventtype STRING,
+            apiversion STRING,
+            readonly STRING,
+            recipientaccountid STRING,
+            serviceeventdetails STRING,
+            sharedeventid STRING,
+            vpcendpointid STRING
+            HIVE
+            str.lines.map {|x| name, type = x.chomp.chomp(',').split(' '); {Name: name, Type: type.downcase}}.to_json
+          %>
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          InputFormat: com.amazon.emr.cloudtrail.CloudTrailInputFormat
+          SerdeInfo:
+            SerializationLibrary: com.amazon.emr.hive.serde.CloudTrailSerde
+            Parameters:
+              serialization.format: '1'
+  CloudTrailLogsCrawler:
+    Type: AWS::Glue::Crawler
+    Properties:
+      Name: cloudtrail_logs
+      Role: !GetAtt GlueRole.Arn
+      Description: Update daily partitions generated by CloudTrail Logs.
+      SchemaChangePolicy:
+        UpdateBehavior: LOG
+        DeleteBehavior: LOG
+      Schedule: {ScheduleExpression: 'cron(0 7 * * ? *)'}
+      DatabaseName: !Ref ELBLogsDatabase
+      TablePrefix: cloudtrail_logs_
+      Targets:
+        S3Targets:
+          - Path: !Sub 's3://${LogsBucket}/AWSLogs/${AWS::AccountId}/CloudTrail/'
+      Configuration: '<%={Version: 1.0, CrawlerOutput: {Partitions: {AddOrUpdateBehavior: 'InheritFromTable'}}}.to_json%>'
   CloudFrontLogsTable:
     Type: AWS::Glue::Table
     Properties:

@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 bn:
   errors:
     messages:
@@ -21,6 +33,7 @@ bn:
         edit_header: 'একাউন্ট বিস্তারিত সম্পাদনা করুন'
         error:
           future: ভবিষ্যতের হতে পারবে না
+  beta: "বেটা"
   hello: "হ্যালো ওয়ার্ল্ড"
   welcome_back: "স্বাগতম %{name}"
   submit: জমা করুন
@@ -30,11 +43,9 @@ bn:
   cancel: "বাতিল করুন"
   okay: "ঠিক আছে"
   or: "অথবা"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'শিক্ষক যুক্ত করুন:'
       placeholder: "অংশের কোড (ABCDEF)"
-    submit: 'শিক্ষক যুক্ত করুন'
   add_hint_form:
     placeholder: 'আপনার সংকেত দিন'
     submit: 'সংকেত যুক্ত করুন'
@@ -47,7 +58,6 @@ bn:
   of: "এর"
   more: "বেশি"
   less: "কম"
-  beta: "বেটা"
   try_hoc: "Hour of Code এ আসতে, এখানে ক্লিক করো>>"
   try_k8intro: "আমাদের 'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' করে দেখুন (১৫-২৫ ঘন্টা)"
   k8intro: "'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' (১৫-২৫ ঘন্টা)"
@@ -59,8 +69,6 @@ bn:
   auth:
     sign_in_with: '%{provider} এর সাথে সাইন ইন করো'
     signed_in: 'সাইনড ইন!'
-    signed_out: 'আপনি <a href="%{url}">Code.org</a> থেকে বের হয়ে গেছেন।'
-    sign_out_of: 'আপনি সাইন ইন করার জন্য %{provider} ব্যবহার করেছেন। %{provider} থেকে সাইন আউট করার জন্য <a href="%{url}">এখানে ক্লিক</a> করুন।'
     already_signedup: 'ইতিমধ্যে সাইন আপ করেছ?'
     notyet_signedup: "এখনো যোগ দেননি?"
     google_oauth2: 'গুগল অ্যাকাউন্ট'
@@ -92,7 +100,6 @@ bn:
     valid_password: "সঠিক পাসওয়ার্ড!"
     invalid_password: "পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে"
     mismatch_password: "আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না"
-    under_13_consent: "আমি যদি ১৩ বছরের নিচে হই, আমি নিশ্চিত করছি যে Code.org এর সেবা ব্যবহার করার ক্ষেত্রে আমার বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।"
     student_consent: "আমি নিশ্চিত করছি যে Code.org এর সেবা ব্যবহার করার ক্ষেত্রে আমার বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।"
     additional_information: "সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত তথ্যের প্রয়োজন।"
     user_type_button: "অ্যাকাউন্ট-এর ধরন আপডেট করুন"
@@ -104,6 +111,9 @@ bn:
     email_preference_yes: "\"হ্যাঁ\""
     email_preference_no: "না"
   school_info:
+    title: 'স্কুলের তথ্য (ঐচ্ছিক)'
+    school_country: 'স্কুলের দেশ'
+    select_school_type: 'স্কুলের ধরণ'
     other: 'অন্যান্য'
   signin_form:
     title: 'একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন'
@@ -167,12 +177,11 @@ bn:
     confirm: 'আপনি কি নিশ্চিত?'
   nav:
     header:
-      free_play:
-        playlab: 'একটি অ্যাপ তৈরি করুন'
-        applab: 'একটি অ্যাপ তৈরি করুন'
       project_gallery: "প্রকল্প"
       educate_hoc: "এক ঘন্টার কোড"
       stats: "পরিসংখ্যান"
+      legal_privacy: "গোপনীয়তার নীতি"
+      legal_tos: "সেবার শর্ত সমূহ"
     user:
       classroom: 'শিক্ষক হোম পেজ'
       label: 'হ্যালো %{username}'
@@ -183,9 +192,15 @@ bn:
       create: 'তৈরি করুন'
       applab: 'অ্যাপ ল্যাব'
       artist: 'শিল্পী'
-      playlab: 'প্লে ল্যাব'
-      minecraft: 'মাইনক্র্যাফট'
+      bounce: 'বল লাফানো'
       flappy: 'ফ্লাপি'
+      frozen: 'হিমায়িত'
+      gumball: 'গামবল'
+      iceage: 'বরফযুগ'
+      infinity: 'অসীম'
+      minecraft_designer: 'মাইনক্র্যাফট'
+      playlab: 'প্লে ল্যাব'
+      starwars: 'স্টার ওয়ার্স'
     popup:
       progress: 'আপনার অগ্রগতি'
       close: 'বন্ধ'
@@ -207,6 +222,8 @@ bn:
       section: 'শাখা'
       submitted_on: 'দাখিল করুন:'
       unsubmit: 'জমা না দেয়া'
+  user:
+    update_email: "আপডেট"
   user_level:
     completed: 'সম্পূর্ণ হয়েছে'
     tried: 'চেষ্টা করা হয়েছে'
@@ -221,11 +238,9 @@ bn:
     see_details: বিস্তারিত দেখুন
     view_course: কোর্স দেখুন
     trynow: 'এখন চেষ্টা করুন'
+    try_beta_courses: 'নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য পরীক্ষামূলক কোর্স ব্যাবহার করে দেখুন।'
     use_as_teacher: 'শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন'
     your_gallery: সংগ্রহশালা
-    announcement_title: "ঘোষণা"
-    announcement_learn_more_button: "আরও জানুন"
-    announcement_try_now_button: "এখন চেষ্টা করুন"
   gender:
     male: 'পুরুষ'
     female: 'মহিলা'
@@ -265,6 +280,7 @@ bn:
   upsell:
     applab:
       title: 'অ্যাপ ল্যাব'
+      body: "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।"
       audience: 'বয়সের ১৩+'
       cta: 'শিখুন কিভাবে'
     flappy:
@@ -297,10 +313,6 @@ bn:
       title: "শর্তযুক্ত"
     widgets:
       cta: "শিখুন কিভাবে"
-  gallery:
-    caption_time_ago: "%{time_ago} আগে"
-    header: "সংগ্রহশালা"
-    header_artist: "কোড শিল্প"
   landing:
     report_bug: "বাগ রিপোর্ট করুন"
     support: "সহায়তা নিন"
@@ -356,36 +368,25 @@ bn:
     projects: "প্রকল্প"
     create: "প্রকল্প তৈরি করুন"
     new: "নতুন তৈরি করুন"
-    rename: "পুনঃনামকরণ করুন"
-    save: "সংরক্ষন করন"
-    delete: "বাদ দিন"
     exit: "কোর্সের কাছে ফিরে যান।"
-    my_projects: "আমার প্রকল্প"
     project_gallery: "প্রকল্প"
-    share: "শেয়ার"
-    close: "বন্ধ"
-    more: "আরো"
     name: "নাম"
     updated: "আপডেট"
     project_type: "প্রকল্পের ধরন"
-    really_delete: 'বাদ দিবেন কি?'
-    delete_yes: '"হ্যাঁ"'
-    delete_no: 'না'
     saved: "গ্যালারিতে সংরক্ষিত!"
     not_saved: "সংরক্ষিত নয়"
-    cancel: 'বাতিল করুন'
     view_all: 'আমার প্রকল্প প্রদর্শন করুন'
-    remix: 'রিমিক্স'
     edit_project: 'প্রকল্প সম্পাদন করুন'
     abuse:
       report_abuse_form:
         abuse_type:
           other: 'অন্যান্য'
-  flex_category:
-    required: 'সংক্ষিপ্ত বিবরণ'
+  hoc_download:
+    minecraft_name: 'মাইনক্র্যাফট এক ঘণ্টার কোড'
   pd:
     form_labels:
       email: 'ই-মেইল'
+      school_country: 'স্কুলের দেশ'
     form_entries:
       gender:
         male: 'পুরুষ'
@@ -404,3 +405,4 @@ bn:
     accept: 'আমি একমত'
   gdpr_dialog:
     yes: '"হ্যাঁ"'
+  copy: 'অনুলিপি'

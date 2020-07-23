@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var Token = require('@cdo/apps/calc/token');

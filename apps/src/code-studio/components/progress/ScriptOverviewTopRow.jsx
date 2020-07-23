@@ -1,15 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
 import {
   stringForType,
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import Assigned from '@cdo/apps/templates/Assigned';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -38,19 +42,15 @@ const styles = {
     top: 0
   },
   dropdown: {
-    display: 'inline-block',
-    marginLeft: 10
+    display: 'inline-block'
   }
 };
 
-export default class ScriptOverviewTopRow extends React.Component {
+class ScriptOverviewTopRow extends React.Component {
   static propTypes = {
-    sectionsInfo: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
-      })
-    ).isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    selectedSectionId: PropTypes.number,
+    assignedSectionId: PropTypes.number,
     currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
     scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
@@ -59,12 +59,14 @@ export default class ScriptOverviewTopRow extends React.Component {
     scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    showAssignButton: PropTypes.bool
   };
 
   render() {
     const {
-      sectionsInfo,
+      sectionsForDropdown,
+      selectedSectionId,
       currentCourseId,
       professionalLearningCourse,
       scriptProgress,
@@ -73,7 +75,9 @@ export default class ScriptOverviewTopRow extends React.Component {
       scriptTitle,
       viewAs,
       isRtl,
-      resources
+      resources,
+      showAssignButton,
+      assignedSectionId
     } = this.props;
 
     return (
@@ -81,26 +85,21 @@ export default class ScriptOverviewTopRow extends React.Component {
         {!professionalLearningCourse && viewAs === ViewType.Student && (
           <div>
             <Button
+              __useDeprecatedTag
               href={`/s/${scriptName}/next`}
               text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
             />
             <Button
+              __useDeprecatedTag
               href="//support.code.org"
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
               size={Button.ButtonSize.large}
               style={{marginLeft: 10}}
             />
+            {assignedSectionId && <Assigned />}
           </div>
-        )}
-        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
-          <AssignToSection
-            sectionsInfo={sectionsInfo}
-            courseId={currentCourseId}
-            scriptId={scriptId}
-            assignmentName={scriptTitle}
-          />
         )}
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
@@ -118,6 +117,17 @@ export default class ScriptOverviewTopRow extends React.Component {
               </DropdownButton>
             </div>
           )}
+        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
+          <SectionAssigner
+            sections={sectionsForDropdown}
+            selectedSectionId={selectedSectionId}
+            assignmentName={scriptTitle}
+            showAssignButton={showAssignButton}
+            courseId={currentCourseId}
+            scriptId={scriptId}
+            forceReload={true}
+          />
+        )}
         <div style={isRtl ? styles.left : styles.right}>
           <span>
             <ProgressDetailToggle />
@@ -127,3 +137,14 @@ export default class ScriptOverviewTopRow extends React.Component {
     );
   }
 }
+
+export const UnconnectedScriptOverviewTopRow = ScriptOverviewTopRow;
+
+export default connect((state, ownProps) => ({
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    ownProps.scriptId,
+    ownProps.currentCourseId,
+    false
+  )
+}))(ScriptOverviewTopRow);

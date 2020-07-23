@@ -21,6 +21,11 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,12 +59,29 @@ kk:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": кездейсоқ
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': алмас
             '"random"': кездейсоқ
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"DUCK"': үйрек
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': үйрек
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
@@ -87,6 +109,7 @@ kk:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': алмас
             '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
@@ -121,7 +144,17 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': шама
@@ -131,6 +164,16 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': алмас
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -149,15 +192,14 @@ kk:
           CONDITION:
             '"when"': кезде
             '"while"': болған кезде
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': дұрыс
-            'false': Жалған
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': шама
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -170,10 +212,6 @@ kk:
             '"right"': оңға
             '"space"': кеңестік
             '"x"': x
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": кездейсоқ
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -186,11 +224,13 @@ kk:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': үңгір
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': қала
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': кездейсоқ
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': шөлдала
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': кемпірқосақ
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': су
+              асты
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': қыс
       gamelab_setProp:
         options:
           PROPERTY:
@@ -205,14 +245,6 @@ kk:
           CONDITION:
             '"when"': кезде
             '"while"': болған кезде
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': шама
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': шама
       gamelab_turn:
         options:
           DIRECTION:
@@ -226,13 +258,6 @@ kk:
             '"left"': солға
             '"right"': оңға
             '"space"': кеңестік
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": жоғары
-            "'down'": төмен
-            "'left'": солға
-            "'right'": оңға
       gamelab_whileKey:
         options:
           KEY:
@@ -273,6 +298,8 @@ kk:
             '"scale"': шама
       Mikelab_randomColor:
         text: кездейсоқ түс
+      Mikelab_repeatUntilComplete:
+        text: әрқашан қайтала
       Mikelab_setBG:
         options:
           BG:
@@ -322,53 +349,22 @@ kk:
         text: солға бұрылу
       RyanLab_turnRight:
         text: оңға бұрылу
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': шама
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': кезде
-            '"while"': болған кезде
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': кезде
-            '"while"': болған кезде
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': кезде
-            '"while"': болған кезде
-          KEY:
-            '"up"': жоғары
-            '"down"': төмен
-            '"left"': солға
-            '"right"': оңға
-            '"space"': кеңестік
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': қала
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': дұрыс
-            '"false"': Жалған
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': шама
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': мәңгі
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': көрсет
-            '"hide"': жасырылған бейнесі
+            '"random"': кездейсоқ
       binary_move:
         options:
           DIR:

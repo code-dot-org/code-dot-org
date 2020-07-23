@@ -4,8 +4,7 @@ import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
-import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/code-studio/redux';
+import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 
 const styles = {
   input: {
@@ -18,6 +17,9 @@ const styles = {
   },
   checkbox: {
     margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
   }
 };
 
@@ -25,25 +27,36 @@ export default class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    familyName: PropTypes.string,
+    versionYear: PropTypes.string,
+    visible: PropTypes.bool.isRequired,
+    isStable: PropTypes.bool.isRequired,
+    pilotExperiment: PropTypes.string,
     descriptionShort: PropTypes.string,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
-    hasVerifiedResources: PropTypes.bool.isRequired
+    hasVerifiedResources: PropTypes.bool.isRequired,
+    courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
     const {
       name,
       title,
+      familyName,
+      versionYear,
       descriptionShort,
       descriptionStudent,
       descriptionTeacher,
       scriptsInCourse,
       scriptNames,
-      teacherResources
+      teacherResources,
+      courseFamilies,
+      versionYearOptions
     } = this.props;
     return (
       <div>
@@ -56,6 +69,55 @@ export default class CourseEditor extends Component {
             defaultValue={title}
             style={styles.input}
           />
+        </label>
+        <label>
+          Family Name
+          <select
+            name="family_name"
+            defaultValue={familyName}
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {courseFamilies.map(familyOption => (
+              <option key={familyOption} value={familyOption}>
+                {familyOption}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Version Year
+          <select
+            name="version_year"
+            defaultValue={versionYear}
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {versionYearOptions.map(year => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </label>
+        <VisibleAndPilotExperiment
+          visible={this.props.visible}
+          pilotExperiment={this.props.pilotExperiment}
+          paramName="visible"
+        />
+        <label>
+          Can be recommended (aka stable)
+          <input
+            name="is_stable"
+            type="checkbox"
+            defaultChecked={this.props.isStable}
+            style={styles.checkbox}
+          />
+          <p>
+            If checked, this course will be eligible to be the recommended
+            version of the course. The most recent eligible version will be the
+            recommended version.
+          </p>
         </label>
         <label>
           Short Description (used in course cards on homepage)
@@ -101,7 +163,7 @@ export default class CourseEditor extends Component {
         <label>
           <h4>Scripts</h4>
           <div>
-            The dropdown(s) below represent the orded set of scripts in this
+            The dropdown(s) below represent the ordered set of scripts in this
             course. To remove a script, just set the dropdown to the default
             (first) value.
           </div>
@@ -122,14 +184,12 @@ export default class CourseEditor extends Component {
             resources={teacherResources}
             maxResources={3}
             renderPreview={resources => (
-              <Provider store={getStore()}>
-                <CourseOverviewTopRow
-                  sectionsInfo={[]}
-                  id={-1}
-                  title="Unused title"
-                  resources={resources}
-                />
-              </Provider>
+              <CourseOverviewTopRow
+                sectionsForDropdown={[]}
+                id={-1}
+                resources={resources}
+                showAssignButton={false}
+              />
             )}
           />
         </div>

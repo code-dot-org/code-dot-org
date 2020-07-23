@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
-
+import designMode from '../designMode';
+import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -25,7 +26,8 @@ var ElementType = utils.makeEnum(
   'CANVAS',
   'SCREEN',
   'CHART',
-  'SLIDER'
+  'SLIDER',
+  'PHOTO_SELECT'
 );
 
 var elements = {};
@@ -41,6 +43,7 @@ elements[ElementType.CANVAS] = require('./canvas');
 elements[ElementType.SCREEN] = require('./screen');
 elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
+elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
 
 export default {
   ElementType: ElementType,
@@ -121,12 +124,15 @@ export default {
    */
   getElementType: function(element, allowUnknown) {
     var tagname = element.tagName.toLowerCase();
-
     switch (tagname) {
       case 'button':
         return ElementType.BUTTON;
       case 'label':
-        return ElementType.LABEL;
+        if ($(element).hasClass('img-upload')) {
+          return ElementType.PHOTO_SELECT;
+        } else {
+          return ElementType.LABEL;
+        }
       case 'select':
         return ElementType.DROPDOWN;
       case 'div':
@@ -152,20 +158,62 @@ export default {
             return ElementType.TEXT_INPUT;
         }
     }
+    let errorMessage =
+      'Project contains an element with an unknown type' +
+      `\nType: ${element.tagName}` +
+      `\nId: ${element.id}` +
+      `\nClass: ${element.className}`;
     // Unknown elements are expected. Return null because we don't know type.
     if (allowUnknown) {
+      console.warn(errorMessage);
       return null;
     }
-    throw new Error('unknown element type');
+    // TODO: Gracefully handle errors from malformed design mode elements
+    throw new Error(errorMessage);
+  },
+
+  /**
+   * Gets the theme values for this element type (if specified).
+   */
+  getThemeValues: function(element) {
+    const elementType = this.getElementType(element);
+    const {themeValues} = elements[elementType] || {};
+    return themeValues;
+  },
+
+  getCurrentTheme: function(parentScreen) {
+    return (
+      (parentScreen && parentScreen.getAttribute('data-theme')) ||
+      themeOptions[DEFAULT_THEME_INDEX]
+    );
+  },
+
+  /**
+   * Sets all properties on the element to reflect the current theme
+   * of the parent screen. This function ignores any student customization
+   * on those properties and overwrites all theme properties.
+   */
+  setAllPropertiesToCurrentTheme: function(element, parentScreen) {
+    const currentTheme = this.getCurrentTheme(parentScreen);
+    const themeValues = this.getThemeValues(element);
+    for (const propName in themeValues) {
+      const propTheme = themeValues[propName];
+      const defaultValue = propTheme[currentTheme];
+      designMode.updateProperty(element, propName, defaultValue);
+    }
   },
 
   /**
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function(element, updateProperty) {
-    var elementType = this.getElementType(element);
-    if (elements[elementType] && elements[elementType].onDeserialize) {
+  onDeserialize: function(element, updateProperty, skipIfUnknown) {
+    var elementType = this.getElementType(element, skipIfUnknown);
+    if (
+      elementType &&
+      elements[elementType] &&
+      elements[elementType].onDeserialize
+    ) {
       elements[elementType].onDeserialize(element, updateProperty);
     }
   },
@@ -174,10 +222,14 @@ export default {
    * Gets data from an element before it is changed, should it be necessary to do so. This data will be passed to the
    * typeSpecificPropertyChange method below.
    */
-  getPreChangeData: function(element, name) {
+  getPreChangeData: function(element, name, batchChangeId) {
     var elementType = this.getElementType(element);
     if (elements[elementType].beforePropertyChange) {
-      return elements[elementType].beforePropertyChange(element, name);
+      return elements[elementType].beforePropertyChange(
+        element,
+        name,
+        batchChangeId
+      );
     }
     return null;
   },

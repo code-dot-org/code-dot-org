@@ -12,21 +12,30 @@ import RubricField from './RubricField';
 import {CommentArea} from './CommentArea';
 
 const styles = {
+  tabAreaHidden: {
+    display: 'none'
+  },
+  tabAreaVisible: {
+    display: 'block'
+  },
   button: {
-    margin: 10,
     fontWeight: 'bold'
   },
   errorIcon: {
     color: 'red',
     margin: 10
   },
-  time: {
-    height: 24,
-    paddingTop: 6,
+  timeTeacher: {
+    paddingTop: 8,
+    paddingLeft: 8,
     fontStyle: 'italic',
     fontSize: 12,
-    color: color.cyan,
-    backgroundColor: color.lightest_cyan
+    color: color.cyan
+  },
+  timeStudent: {
+    fontStyle: 'italic',
+    fontSize: 12,
+    color: color.cyan
   },
   footer: {
     display: 'flex',
@@ -35,8 +44,9 @@ const styles = {
   h1: {
     color: color.charcoal,
     marginTop: 8,
-    marginBottom: 12,
-    fontSize: 24,
+    marginBottom: 8,
+    fontSize: 18,
+    lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'normal'
   },
@@ -44,21 +54,25 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    margin: '0px 16px 20px 16px'
+    margin: '0px 16px 8px 16px'
   },
   keyConceptArea: {
-    flexGrow: 1,
-    marginRight: 28
+    marginRight: 28,
+    flexBasis: '40%'
   },
   keyConcepts: {
-    fontSize: 13,
-    color: color.charcoal
+    fontSize: 12,
+    color: color.charcoal,
+    margin: 0
   },
   rubricArea: {
-    flexGrow: 2
+    flexBasis: '60%'
   },
   commentAndFooter: {
-    margin: '0px 16px 16px 16px'
+    margin: '8px 16px 8px 16px'
+  },
+  form: {
+    margin: 0
   }
 };
 
@@ -68,21 +82,27 @@ const ErrorType = {
   Save: 'Save'
 };
 
-class TeacherFeedback extends Component {
+export class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
-    disabledMode: PropTypes.bool,
+    disabledMode: PropTypes.bool.isRequired,
     rubric: PropTypes.shape({
       keyConcept: PropTypes.string,
-      exceeds: PropTypes.string,
-      meets: PropTypes.string,
-      approaches: PropTypes.string,
-      noEvidence: PropTypes.string
+      performanceLevel1: PropTypes.string,
+      performanceLevel2: PropTypes.string,
+      performanceLevel3: PropTypes.string,
+      performanceLevel4: PropTypes.string
     }),
+    visible: PropTypes.bool.isRequired,
     //Provided by Redux
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']),
+    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverLevelId: PropTypes.number,
-    teacher: PropTypes.number
+    serverScriptLevelId: PropTypes.number,
+    teacher: PropTypes.number,
+    verifiedTeacher: PropTypes.bool,
+    displayKeyConcept: PropTypes.bool,
+    latestFeedback: PropTypes.array,
+    token: PropTypes.string
   };
 
   constructor(props) {
@@ -93,58 +113,35 @@ class TeacherFeedback extends Component {
     this.onRubricChange = this.onRubricChange.bind(this);
 
     this.state = {
-      comment: '',
-      performance: null,
+      comment:
+        this.props.latestFeedback[0] && this.props.latestFeedback[0].comment
+          ? this.props.latestFeedback[0].comment
+          : '',
+      performance:
+        this.props.latestFeedback[0] && this.props.latestFeedback[0].performance
+          ? this.props.latestFeedback[0].performance
+          : null,
       studentId: studentId,
-      latestFeedback: [],
+      latestFeedback: this.props.latestFeedback
+        ? this.props.latestFeedback
+        : [],
       submitting: false,
-      errorState: ErrorType.NoError,
-      token: null
+      errorState: ErrorType.NoError
     };
   }
 
   componentDidMount = () => {
-    const {user, serverLevelId, teacher} = this.props;
-    const {studentId} = this.state;
-
     window.addEventListener('beforeunload', event => {
       if (!this.feedbackIsUnchanged()) {
         event.preventDefault();
         event.returnValue = i18n.feedbackNotSavedWarning();
       }
     });
-
-    if (this.props.viewAs === ViewType.Student) {
-      $.ajax({
-        url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({
-          latestFeedback: data,
-          comment: data[0].comment,
-          performance: data[0].performance
-        });
-      });
-    } else if (!this.props.disabledMode) {
-      $.ajax({
-        url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${serverLevelId}&teacher_id=${teacher}`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      })
-        .done((data, textStatus, request) => {
-          this.setState({
-            latestFeedback: request.status === 204 ? [] : [data],
-            token: request.getResponseHeader('csrf-token'),
-            comment: request.status === 204 ? '' : data.comment,
-            performance: request.status === 204 ? null : data.performance
-          });
-        })
-        .fail((jqXhr, status) => {
-          this.setState({errorState: ErrorType.Load});
-        });
-    }
   };
+
+  componentWillUnmount() {
+    window.removeEventListener('beforeunload');
+  }
 
   onCommentChange = value => {
     this.setState({comment: value});
@@ -165,6 +162,7 @@ class TeacherFeedback extends Component {
       comment: this.state.comment,
       student_id: this.state.studentId,
       level_id: this.props.serverLevelId,
+      script_level_id: this.props.serverScriptLevelId,
       teacher_id: this.props.teacher,
       performance: this.state.performance
     };
@@ -175,7 +173,7 @@ class TeacherFeedback extends Component {
       contentType: 'application/json;charset=UTF-8',
       dataType: 'json',
       data: JSON.stringify({teacher_feedback: payload}),
-      headers: {'X-CSRF-Token': this.state.token}
+      headers: {'X-CSRF-Token': this.props.token}
     })
       .done(data => {
         this.setState({
@@ -220,41 +218,58 @@ class TeacherFeedback extends Component {
     const buttonDisabled =
       feedbackUnchanged ||
       this.state.submitting ||
-      this.state.errorState === ErrorType.Load;
+      this.state.errorState === ErrorType.Load ||
+      !this.props.verifiedTeacher;
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
 
-    const showFeedbackInputAreas = !(
-      this.props.disabledMode && this.props.viewAs === ViewType.Teacher
-    );
-    const placeholderText = latestFeedback
-      ? latestFeedback.comment
-      : i18n.feedbackPlaceholder();
+    const placeholderWarning = this.props.verifiedTeacher
+      ? i18n.feedbackPlaceholder()
+      : i18n.feedbackPlaceholderNonVerified();
+
+    const placeholderText =
+      latestFeedback && latestFeedback.comment
+        ? latestFeedback.comment
+        : placeholderWarning;
     const dontShowStudentComment =
       !this.state.comment && this.props.viewAs === ViewType.Student;
 
-    const dontShowStudentRubric =
-      !this.state.performance && this.props.viewAs === ViewType.Student;
+    const showFeedbackInputAreas =
+      !this.props.displayKeyConcept &&
+      !(!this.state.performance && this.props.viewAs === ViewType.Student);
 
-    const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
+    const rubricLevels = [
+      'performanceLevel1',
+      'performanceLevel2',
+      'performanceLevel3',
+      'performanceLevel4'
+    ];
+
+    // Instead of unmounting the component when switching tabs, hide and show it
+    // so a teacher does not lose the feedback they are giving if they switch tabs
+    const tabVisible = this.props.visible
+      ? styles.tabAreaVisible
+      : styles.tabAreaHidden;
+
+    const timeStyle =
+      this.props.viewAs === ViewType.Student
+        ? styles.timeStudent
+        : styles.timeTeacher;
+
+    // If a student has rubric feedback we want to expand that field
+    const expandPerformanceLevelForStudent =
+      this.props.viewAs === ViewType.Student &&
+      showFeedbackInputAreas &&
+      this.state.performance !== null;
 
     return (
-      <div>
+      <div style={tabVisible}>
         {this.state.errorState === ErrorType.Load && (
           <span>
             <i className="fa fa-warning" style={styles.errorIcon} />
             {i18n.feedbackLoadError()}
           </span>
         )}
-        {this.state.latestFeedback.length > 0 && (
-          <div style={styles.time} id="ui-test-feedback-time">
-            {i18n.lastUpdated({
-              time: moment
-                .min(moment(), moment(latestFeedback.created_at))
-                .fromNow()
-            })}
-          </div>
-        )}
-        {this.props.rubric && !dontShowStudentRubric && (
+        {this.props.rubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
               <h1 style={styles.h1}> {i18n.rubricKeyConceptHeader()} </h1>
@@ -262,11 +277,16 @@ class TeacherFeedback extends Component {
             </div>
             <div style={styles.rubricArea}>
               <h1 style={styles.h1}> {i18n.rubricHeader()} </h1>
-              <form>
+              <form style={styles.form}>
                 {rubricLevels.map(level => (
                   <RubricField
                     key={level}
                     showFeedbackInputAreas={showFeedbackInputAreas}
+                    expandByDefault={
+                      this.props.displayKeyConcept ||
+                      (expandPerformanceLevelForStudent &&
+                        this.state.performance === level)
+                    }
                     rubricLevel={level}
                     rubricValue={this.props.rubric[level]}
                     disabledMode={this.props.disabledMode}
@@ -278,7 +298,7 @@ class TeacherFeedback extends Component {
             </div>
           </div>
         )}
-        {showFeedbackInputAreas && !dontShowStudentComment && (
+        {!this.props.displayKeyConcept && !dontShowStudentComment && (
           <div style={styles.commentAndFooter}>
             <CommentArea
               disabledMode={this.props.disabledMode}
@@ -294,6 +314,7 @@ class TeacherFeedback extends Component {
               {this.props.viewAs === ViewType.Teacher && (
                 <div style={styles.button}>
                   <Button
+                    __useDeprecatedTag
                     id="ui-test-submit-feedback"
                     text={buttonText}
                     onClick={this.onSubmitFeedback}
@@ -308,6 +329,15 @@ class TeacherFeedback extends Component {
                   )}
                 </div>
               )}
+              {this.state.latestFeedback.length > 0 && (
+                <div style={timeStyle} id="ui-test-feedback-time">
+                  {i18n.lastUpdated({
+                    time: moment
+                      .min(moment(), moment(latestFeedback.created_at))
+                      .fromNow()
+                  })}
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -315,9 +345,11 @@ class TeacherFeedback extends Component {
     );
   }
 }
-
+export const UnconnectedTeacherFeedback = TeacherFeedback;
 export default connect(state => ({
   viewAs: state.viewAs,
   serverLevelId: state.pageConstants.serverLevelId,
-  teacher: state.pageConstants.userId
+  serverScriptLevelId: state.pageConstants.serverScriptLevelId,
+  teacher: state.pageConstants.userId,
+  verifiedTeacher: state.pageConstants.verifiedTeacher
 }))(TeacherFeedback);

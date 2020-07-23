@@ -37,15 +37,27 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "long_instructions": "# Save Your Contacts in the Cloud!\r\n\r\nNow that you know how to save objects to the database, you can make your contacts app save things permanently.\r\n\r\nRight now you'll add the ability for the app to save contacts to the database. In the next lesson, you'll learn how to pull data from the database back into the app.\r\n\r\n# Do This:\r\n\r\n**The contacts app you created in the previous lesson** is provided.\r\n\r\n  * Drag the `createRecord` block into the event handler code for the \"createContactButton\" and add it as the last lines of the function.\r\n  * Set the **first parameter** to be a descriptive table name like \"myContacts.\"\r\n  * Set the **second parameter** to object you created for the new contact (in the example the variable is called `newContact`.\r\n  * Run the app and **add a new contact**.\r\n  * In the Data Viewer, **confirm a new table was created and that it contains the contact you created**.\r\n\r\n![](https://images.code.org/36dd0fc06e93b1988a9df72a62c3f99f-image-1449266720880.gif)",
+    "long_instructions": "# Save Your Contacts in the Cloud!\r\n\r\nNow that you know how to save objects to the database, you can make your contacts app save things permanently.\r\n\r\nRight now you'll add the ability for the app to save contacts to the database. In the next lesson, you'll learn how to pull data from the database back into the app.\r\n\r\n# Do This:\r\n\r\n**The contacts app you created in the previous lesson** is provided.\r\n\r\n  * Drag the `createRecord` block into the event handler code for the \"saveContactBtn\" and add it as the last lines of the function.\r\n  * Set the **first parameter** to be a descriptive table name like \"myContacts.\"\r\n  * Set the **second parameter** to object you created for the new contact (in the example the variable is called `newContact`.\r\n  * Run the app and **add a new contact**.\r\n  * In the Data Viewer, **confirm a new table was created and that it contains the contact you created**.\r\n\r\n![](https://images.code.org/261baa7307fd8f2924727fb25cb5a7c1-image-1564517169535.gif)",
     "short_instructions": "Add code to your contacts app so that newly-added contacts are saved in a table. (Click to see full instructions)",
     "slider_speed": "1.0",
     "encrypted_examples": "J9hSKfnGyuJls1JRff9vByQVIDau0ayangXhOYfW6sqpUkFhiog2mIw9NS41\nYQs1\n",
     "parent_level_id": 4075,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-07-30 20:06:58 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

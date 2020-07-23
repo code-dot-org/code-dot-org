@@ -2,14 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {StatusColors} from './constants';
+import {StatusColors, getApplicationStatuses} from './constants';
 import {
   UNMATCHED_PARTNER_VALUE,
   ALL_PARTNERS_VALUE,
@@ -102,13 +103,22 @@ export class CohortViewTable extends React.Component {
 
     let columns = [
       {
+        property: 'id',
+        header: {
+          label: 'View Application'
+        },
+        cell: {
+          formatters: [this.formatViewButton]
+        }
+      },
+      {
         property: 'date_accepted',
         header: {
           label: 'Date Accepted',
           transforms: [sortable]
         },
         cell: {
-          format: this.formatDate
+          formatters: [this.formatDate]
         }
       },
       {
@@ -146,9 +156,11 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: status => {
-            return _.upperFirst(status);
-          },
+          formatters: [
+            status =>
+              getApplicationStatuses(this.props.viewType)[status] ||
+              _.upperFirst(status)
+          ],
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
@@ -175,7 +187,7 @@ export class CohortViewTable extends React.Component {
           label: 'Locked'
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       });
     }
@@ -213,10 +225,16 @@ export class CohortViewTable extends React.Component {
       )
     ) {
       columns.push({
-        property: 'registered_workshop',
+        property: 'registered_workshop_id',
         header: {
           label: 'Registered Workshop',
           transforms: [sortable]
+        },
+        cell: {
+          formatters: [
+            workshopId =>
+              workshopId ? this.formatWorkshopUrl(workshopId) : 'No'
+          ]
         }
       });
     }
@@ -235,7 +253,7 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatNotesTooltip,
+          formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
               style: {...styles.notesCell}
@@ -243,16 +261,6 @@ export class CohortViewTable extends React.Component {
           ]
         }
       });
-    });
-
-    columns.push({
-      property: 'id',
-      header: {
-        label: 'View Application'
-      },
-      cell: {
-        format: this.formatViewButton
-      }
     });
 
     this.columns = columns;
@@ -320,6 +328,18 @@ export class CohortViewTable extends React.Component {
       >
         View Application
       </Button>
+    );
+  };
+
+  formatWorkshopUrl = workshopId => {
+    return (
+      <a
+        href={
+          location.origin + '/pd/workshop_dashboard/workshops/' + workshopId
+        }
+      >
+        Workshop {workshopId}
+      </a>
     );
   };
 

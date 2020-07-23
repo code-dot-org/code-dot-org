@@ -38,9 +38,7 @@ require('@cdo/apps/code-studio/components/AbuseError');
 require('@cdo/apps/code-studio/components/ReportAbuseForm');
 require('@cdo/apps/code-studio/components/SendToPhone');
 require('@cdo/apps/code-studio/components/SmallFooter');
-require('@cdo/apps/code-studio/components/GridEditor');
 require('@cdo/apps/code-studio/components/Attachments');
-require('selectize');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -59,7 +57,6 @@ window.dashboard.header = require('@cdo/apps/code-studio/header');
 window.dashboard.videos = require('@cdo/apps/code-studio/videos');
 window.dashboard.assets = require('@cdo/apps/code-studio/assets');
 window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
-window.dashboard.teacher = require('@cdo/apps/code-studio/teacher');
 window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels

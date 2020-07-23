@@ -51,8 +51,9 @@ class Game < ActiveRecord::Base
   TEXT_COMPRESSION = 'text_compression'.freeze
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
-  SCRATCH = 'scratch'.freeze
   DANCE = 'dance'.freeze
+  SPRITELAB = 'spritelab'.freeze
+  FISH = 'fish'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -150,12 +151,16 @@ class Game < ActiveRecord::Base
     @@game_curriculum_reference ||= find_by_name('CurriculumReference')
   end
 
-  def self.scratch
-    @@game_scratch ||= find_by_name('Scratch')
-  end
-
   def self.dance
     @@game_dance ||= find_by_name('Dance')
+  end
+
+  def self.spritelab
+    @@game_spritelab ||= find_by_name('Spritelab')
+  end
+
+  def self.fish
+    @@game_fish ||= find_by_name('Fish')
   end
 
   def unplugged?
@@ -186,6 +191,7 @@ class Game < ActiveRecord::Base
       GAMELAB,
       WEBLAB,
       DANCE,
+      SPRITELAB
     ].include? app
   end
 
@@ -202,7 +208,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, SCRATCH, DANCE].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH].include? app
   end
 
   # True if the app takes responsibility for showing footer info
@@ -218,12 +224,18 @@ class Game < ActiveRecord::Base
     [APPLAB, GAMELAB].include? app
   end
 
+  def use_azure_speech_service?
+    [APPLAB, GAMELAB].include? app
+  end
+
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB].include? app
   end
 
   # Format: name:app:intro_video
   # Don't change the order of existing entries! Always append to the end of the list.
+  # The list contains no longer used level types in order to maintain the order
+  # including: Scratch
   GAMES_BY_INDEX = %w(
     Maze:maze:maze_intro
     Artist:turtle:artist_intro
@@ -288,6 +300,9 @@ class Game < ActiveRecord::Base
     CustomFlappy:flappy
     Scratch:scratch
     Dance:dance
+    Spritelab:spritelab
+    BubbleChoice:bubble_choice
+    Fish:fish
   )
 
   def self.setup

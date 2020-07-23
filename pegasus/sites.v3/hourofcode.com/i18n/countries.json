@@ -2,572 +2,287 @@
   "ac": {
     "full_name": "Africa",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "africa"
   },
   "ad": {
     "full_name": "Andorra",
     "default_language": "ca",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "europe"
   },
   "af": {
     "full_name": "Afghanistan",
     "default_language": "af",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "al": {
     "full_name": "Albania",
     "default_language": "sq",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 dhjetor",
-    "campaign_date_start_long": "3 dhjetor",
-    "campaign_date_short": "3-9 dhjetor",
-    "campaign_date_full": "3-9 dhjetor"
+    "type": "europe"
   },
   "ap": {
     "full_name": "Asia Pacific",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "ar": {
     "full_name": "Argentina",
     "default_language": "la",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 de dic",
-    "campaign_date_start_long": "3 de diciembre",
-    "campaign_date_short": "3-9 de dic",
-    "campaign_date_full": "3-9 de diciembre"
+    "type": "latam"
   },
   "au": {
     "full_name": "Australia",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "az": {
     "full_name": "Azerbaijan",
     "default_language": "az",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 dek.",
-    "campaign_date_start_long": "3 dekabr",
-    "campaign_date_short": "3-9 dekabr",
-    "campaign_date_full": "3-9 dekabr"
+    "type": "default"
   },
   "bg": {
     "full_name": "Bulgaria",
     "default_language": "bg",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 дек.",
-    "campaign_date_start_long": "3 декември",
-    "campaign_date_short": "Декември 3-9",
-    "campaign_date_full": "Декември 3-9"
+    "type": "europe"
   },
   "br": {
     "full_name": "Brazil",
     "default_language": "pt",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "dezembro 3-9, 2018",
-    "campaign_date_start_short": "3 de dez",
-    "campaign_date_start_long": "3 de dezembro",
-    "campaign_date_short": "3-9 de dez",
-    "campaign_date_full": "3-9 de dezembro"
+    "type": "latam"
   },
   "ca": {
     "full_name": "Canada",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "cn": {
     "full_name": "China",
     "default_language": "cn",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "12 月 3 日",
-    "campaign_date_start_long": "12 月 3 日",
-    "campaign_date_short": "12 月 3-9",
-    "campaign_date_full": "12 月 3-9"
+    "type": "default"
   },
   "co": {
     "full_name": "Colombia",
     "default_language": "es",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "octubre 1-7, 2018",
-    "campaign_date_start_short": "1 de oct",
-    "campaign_date_start_long": "1 de octubre",
-    "campaign_date_short": "1-7 de oct",
-    "campaign_date_full": "1-7 de octubre"
+    "type": "latam"
   },
   "cz": {
     "full_name": "Czech Republic",
     "default_language": "cs",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3. prosinec",
-    "campaign_date_start_long": "3. prosince",
-    "campaign_date_short": "Prosinec 3-9",
-    "campaign_date_full": "Prosinec 3-9"
+    "type": "europe"
   },
   "de": {
     "full_name": "Germany",
     "default_language": "de",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3. Dez.",
-    "campaign_date_start_long": "3. Dezember",
-    "campaign_date_short": "3.-9. Dez.",
-    "campaign_date_full": "3.-9. Dezember"
+    "type": "europe"
   },
   "dk": {
     "full_name": "Denmark",
     "default_language": "da",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3. dec.",
-    "campaign_date_start_long": "3. december",
-    "campaign_date_short": "3.-9. dec.",
-    "campaign_date_full": "3.-9. december"
+    "type": "europe"
   },
   "eg": {
     "full_name": "Egypt",
     "default_language": "ar",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 كانون الأول/ديسمبر",
-    "campaign_date_start_long": "3 كانون الأول/ديسمبر",
-    "campaign_date_short": "3-9 كانون الأول/ديسمبر",
-    "campaign_date_full": "3-9 كانون الأول/ديسمبر"
+    "type": "africa"
   },
   "es": {
     "full_name": "Spain",
     "default_language": "es",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "diciembre 3-9, 2018",
-    "campaign_date_start_short": "3 de dic",
-    "campaign_date_start_long": "3 de diciembre",
-    "campaign_date_short": "3-9 de dic",
-    "campaign_date_full": "3-9 de diciembre"
+    "type": "europe"
   },
   "eu": {
     "full_name": "European Union",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "europe"
   },
   "fr": {
     "full_name": "France",
     "default_language": "fr",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 déc",
-    "campaign_date_start_long": "3 décembre",
-    "campaign_date_short": "3 au 9 déc",
-    "campaign_date_full": "3 au 9 décembre"
+    "type": "europe"
   },
   "gr": {
     "full_name": "Greece",
     "default_language": "el",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 Δεκεμβρίου",
-    "campaign_date_start_long": "3 Δεκεμβρίου",
-    "campaign_date_short": "3-9 Δεκεμβρίου",
-    "campaign_date_full": "3-9 Δεκεμβρίου"
+    "type": "europe"
   },
   "hk": {
     "full_name": "Hong Kong",
     "default_language": "zh",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "12 月 3 日",
-    "campaign_date_start_long": "12 月 3 日",
-    "campaign_date_short": "12月3日～12月9日",
-    "campaign_date_full": "12月3日～12月9日"
+    "type": "default"
   },
   "hr": {
     "full_name": "Croatia",
     "default_language": "hr",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3. prosinca",
-    "campaign_date_start_long": "3. prosinca",
-    "campaign_date_short": "3. - 9. prosinca",
-    "campaign_date_full": "3. - 9. prosinca"
+    "type": "europe"
   },
   "hu": {
     "full_name": "Hungary",
     "default_language": "hu",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "dec 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "dec 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "europe"
   },
   "id": {
     "full_name": "Indonesia",
     "default_language": "id",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Tanggal 3 Desember",
-    "campaign_date_start_long": "Tanggal 3 Desember",
-    "campaign_date_short": "Tanggal 3-9 Desember",
-    "campaign_date_full": "Tanggal 3 hingga 9 Desember"
+    "type": "default"
   },
   "ie": {
     "full_name": "Ireland",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "europe"
   },
   "in": {
     "full_name": "India",
     "default_language": "hi",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "ir": {
     "full_name": "Iran",
     "default_language": "fa",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "it": {
     "full_name": "Italy",
     "default_language": "it",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 Dic.",
-    "campaign_date_start_long": "3 Dicembre",
-    "campaign_date_short": "3-9 Dic.",
-    "campaign_date_full": "Dal 3 al 9 Dicembre"
+    "type": "europe"
   },
   "jp": {
     "full_name": "Japan",
     "default_language": "ja",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "12月3日",
-    "campaign_date_start_long": "12月3日",
-    "campaign_date_short": "12月3−9日",
-    "campaign_date_full": "12月3−9日"
+    "type": "default"
   },
   "kr": {
     "full_name": "Korea",
     "default_language": "ko",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "12월 3일",
-    "campaign_date_start_long": "12월 3일",
-    "campaign_date_short": "12월 3일-9일",
-    "campaign_date_full": "12월 3일-9일"
+    "type": "default"
   },
   "la": {
     "full_name": "Latinoamérica",
     "default_language": "la",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "octubre 1-7, 2018",
-    "campaign_date_start_short": "1 de oct",
-    "campaign_date_start_long": "1 de octubre",
-    "campaign_date_short": "1-7 de oct",
-    "campaign_date_full": "1-7 de octubre"
+    "type": "latam"
   },
   "lk": {
     "full_name": "Sri Lanka",
     "default_language": "si",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "දෙසැම්බර් 3-9, 2018",
-    "campaign_date_start_short": "දෙසැ. 3",
-    "campaign_date_start_long": "දෙසැම්බර් 3",
-    "campaign_date_short": "දෙසැ. 3-9",
-    "campaign_date_full": "දෙසැම්බර් 3-9"
+    "type": "default"
   },
   "lv": {
     "full_name": "Latvia",
     "default_language": "lv",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "europe"
   },
   "ma": {
     "full_name": "Morocco",
     "default_language": "ar",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 كانون الأول/ديسمبر",
-    "campaign_date_start_long": "3 كانون الأول/ديسمبر",
-    "campaign_date_short": "3-9 كانون الأول/ديسمبر",
-    "campaign_date_full": "3-9 كانون الأول/ديسمبر"
+    "type": "africa"
   },
   "me": {
     "full_name": "Middle East",
     "default_language": "ar",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 كانون الأول/ديسمبر",
-    "campaign_date_start_long": "3 كانون الأول/ديسمبر",
-    "campaign_date_short": "3-9 كانون الأول/ديسمبر",
-    "campaign_date_full": "3-9 كانون الأول/ديسمبر"
+    "type": "default"
   },
   "my": {
     "full_name": "Malaysia",
     "default_language": "ms",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 Dis.",
-    "campaign_date_start_long": "3 Disember",
-    "campaign_date_short": "3-9 Dis.",
-    "campaign_date_full": "3-9 Disember"
+    "type": "default"
   },
   "mz": {
     "full_name": "Mozambique",
     "default_language": "po",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 de dez",
-    "campaign_date_start_long": "3 de dezembro",
-    "campaign_date_short": "3-9 de dez",
-    "campaign_date_full": "3-9 de dezembro"
+    "type": "africa"
   },
   "nl": {
     "full_name": "Netherlands",
     "default_language": "nl",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 dec.",
-    "campaign_date_start_long": "3 december",
-    "campaign_date_short": "3-9 dec",
-    "campaign_date_full": "3-9 december"
+    "type": "europe"
   },
   "no": {
     "full_name": "Norway",
     "default_language": "no",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "europe"
   },
   "np": {
     "full_name": "Nepal",
     "default_language": "ne",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "nz": {
     "full_name": "New Zealand",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "pe": {
     "full_name": "Peru",
     "default_language": "es",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "octubre 1-7, 2018",
-    "campaign_date_start_short": "1 de oct",
-    "campaign_date_start_long": "1 de octubre",
-    "campaign_date_short": "1-7 de oct",
-    "campaign_date_full": "1-7 de octubre"
+    "type": "latam"
   },
   "pk": {
     "full_name": "Pakistan",
     "default_language": "ur",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_logn": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "pl": {
     "full_name": "Poland",
     "default_language": "pl",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 grudnia",
-    "campaign_date_start_long": "3 grudnia",
-    "campaign_date_short": "3-9 grudnia",
-    "campaign_date_full": "3-9 grudnia"
+    "type": "europe"
   },
   "ps": {
     "full_name": "Palestine",
     "default_language": "ar",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 كانون الأول/ديسمبر",
-    "campaign_date_start_long": "3 كانون الأول/ديسمبر",
-    "campaign_date_short": "3-9 كانون الأول/ديسمبر",
-    "campaign_date_full": "3-9 كانون الأول/ديسمبر"
+    "type": "default"
   },
   "pt": {
     "full_name": "Portugal",
     "default_language": "po",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "dezembro 3-9, 2018",
-    "campaign_date_start_short": "3 de dez",
-    "campaign_date_start_long": "3 de dezembro",
-    "campaign_date_short": "3-9 de dez",
-    "campaign_date_full": "3-9 de dezembro"
+    "type": "europe"
   },
   "ro": {
     "full_name": "Romania",
     "default_language": "ro",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 decembrie",
-    "campaign_date_start_long": "3 decembrie",
-    "campaign_date_short": "3-9 decembrie",
-    "campaign_date_full": "3-9 decembrie"
+    "type": "europe"
   },
   "ru": {
     "full_name": "Russia",
     "default_language": "ru",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 декабря",
-    "campaign_date_start_long": "3 декабря",
-    "campaign_date_short": "3-9 декабря",
-    "campaign_date_full": "3-9 декабря"
+    "type": "europe"
   },
   "si": {
     "full_name": "Slovenia",
     "default_language": "sl",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "europe"
   },
   "se": {
     "full_name": "Sweden",
     "default_language": "sv",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "3-9 december 2018",
-    "campaign_date_start_short": "3:e December",
-    "campaign_date_start_long": "3 december",
-    "campaign_date_short": "3-9 december",
-    "campaign_date_full": "3-9 december"
+    "type": "europe"
   },
   "tr": {
     "full_name": "Turkey",
     "default_language": "tr",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 Ara.",
-    "campaign_date_start_long": "3 Aralık",
-    "campaign_date_short": "3-9 Aralık",
-    "campaign_date_full": "3-9 Aralık"
+    "type": "europe"
   },
   "ua": {
     "full_name": "Ukraine",
     "default_language": "uk",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "3 грудня",
-    "campaign_date_start_long": "3 грудня",
-    "campaign_date_short": "3-9 грудня",
-    "campaign_date_full": "3-9 грудня"
+    "type": "europe"
   },
   "uk": {
     "full_name": "United Kingdom",
     "default_language": "gb",
     "country_code": "gb",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "europe"
   },
   "us": {
     "full_name": "United States",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "vn": {
     "full_name": "Vietnam",
     "default_language": "vi",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "default"
   },
   "za": {
     "full_name": "South Africa",
     "default_language": "en",
-    "campaign_date_year": "2018",
-    "campaign_date_full_year": "December 3-9, 2018",
-    "campaign_date_start_short": "Dec. 3",
-    "campaign_date_start_long": "December 3",
-    "campaign_date_short": "Dec. 3-9",
-    "campaign_date_full": "December 3-9"
+    "type": "africa"
   }
 }

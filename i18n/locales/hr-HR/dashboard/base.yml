@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 hr:
   errors:
     messages:
@@ -21,6 +33,7 @@ hr:
         edit_header: 'Uredi podatke o računu'
         error:
           future: ne može biti u budućnosti
+  beta: "beta"
   hello: "Pozdrav svima"
   welcome_back: "Dobrodošao natrag, %{name}"
   submit: Pošalji
@@ -30,11 +43,9 @@ hr:
   cancel: "Odustani"
   okay: "U redu"
   or: "ili"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Dodajte učitelja:'
       placeholder: "Šifra odjeljenja (ABCDEF)"
-    submit: 'Dodaj učitelja'
   add_hint_form:
     placeholder: 'Molimo unesite vaš prijedlog'
     submit: 'Dodaj pomoć'
@@ -50,7 +61,6 @@ hr:
   of: "od"
   more: "VIŠE"
   less: "MANJE"
-  beta: "beta"
   try_hoc: "Isprobaj Sat programiranja, klikni ovdje >> "
   try_k8intro: "Isprobaj naš informatički tečaj za manju djecu 4-8 godina (15-25 sati)"
   k8intro: "Uvod u informatiku za manju djecu, 4-8 godina (15-25 sati)"
@@ -62,8 +72,6 @@ hr:
   auth:
     sign_in_with: 'Prijavi se s %{provider}'
     signed_in: 'Prijavljen!'
-    signed_out: 'Odjavili ste se iz<a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Koristili ste %{provider} da biste se prijavili. <a href="%{url}">Kliknite ovdje</a> da biste se odjavili %{provider}.'
     already_signedup: 'Jesi li već prijavljen?'
     notyet_signedup: "Još se niste pridružili?"
     google_oauth2: 'Google račun'
@@ -175,13 +183,10 @@ hr:
     header:
       finished_hoc: "Završih svoj Sat Kodiranja"
       sign_in_to_save: 'Prijavite se da bi spremili napredak'
-      free_play:
-        playlab: 'Napravi aplikaciju'
-        artist: 'Nacrtaj nešto'
-        calculate: 'Izračunajte nešto'
-        applab: 'Napravi aplikaciju'
       project_gallery: "Projekti"
       educate_hoc: "Hour of Code"
+      legal_privacy: "Pravila privatnosti"
+      legal_tos: "Uvjeti"
     user:
       classroom: 'Učiteljeva Početna stranica'
       district_dashboard: 'Regionalna nadzorna ploča'
@@ -194,9 +199,13 @@ hr:
       create: 'Stvori'
       applab: 'Laboratorij aplikacija'
       artist: 'Umjetnik'
-      playlab: 'Laboratorij igara'
-      minecraft: 'Minecraft'
+      bounce: 'Odskok'
       flappy: 'Flappy'
+      frozen: 'Snježno kraljevstvo'
+      infinity: 'Beskonačnost'
+      minecraft_designer: 'Minecraft'
+      playlab: 'Laboratorij igara'
+      starwars: 'Ratovi zvijezda'
     popup:
       progress_for_user: "Napredak %{name}"
       progress: 'Tvoj napredak'
@@ -241,14 +250,12 @@ hr:
     delete_text: "Klikom na donji gumb izbrisati ćete svoj račun."
     delete_text_teacher_note: "Napomena: brisanjem računa neće se izbrisati i račune vaših učenika."
     delete_confirm: 'Jeste li sigurni da želite izbrisati svoj račun?'
+    update_email: "Osvježi"
   user_level:
     completed: 'Završen'
     tried: 'Pokušan'
   home:
     title: "Code Studio"
-    description: 'Code Studio je početna stranica online tečajeva koje su stvorili Code.org'
-    lines_of_code: "%{lines_count} LINIJA KODA KOJE SU NAPISALI UČENICI"
-    lines_of_code_linebreak: "%{lines_count} LINIJA KODA <br/> KOJE JE NAPISALO %{students_count} MILIJUNA UČENIKA"
     all_courses: "Pregled tečajeva 1, 2 i 3"
     lesson_plans: "Nastavni planovi"
     signin_message: "Jeste li već registrirani? %{link}"
@@ -278,17 +285,10 @@ hr:
     test_videos_help: 'Isprobajte naš novi video player u školi'
     try_beta_courses: 'Novo! Isprobaj naše beta tečajeve za učenike razredne nastave'
     use_as_teacher: 'Koristite ovo sjedište kao učitelj'
-    heading_hoc2014: "<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>"
-    heading_elementary: "<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>"
-    heading_apps: "<h2>Zabava za</h2><h1>sve</h1>"
-    heading_legacy: "<h2>Naš općeniti tečaj za</h2><h1>sve uzraste</h1>"
     your_gallery: Galerija
     no_primary_course: "Probajte Code Studio tečaj"
     choose_next_course: "Probajte Code Studio tečaj odabirom sljedećih opcija niže"
     print_certificate: "Ispišite diplome"
-    announcement_learn_more_button: "Doznaj više"
-    announcement_try_now_button: "Probaj sad"
-    announcement_petition_button: "Unesi svoje ime"
   share:
     title: "Naučite o Code Studiu"
     description: "Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije i kodirati."
@@ -348,7 +348,6 @@ hr:
   pdf_download: 'Preuzmite PDF'
   download_coming_soon: 'Aktivnosti koje možete preuzeti stižu uskoro.'
   video_coming_soon: 'Video stiže uskoro!'
-  not_started: 'Učenik nije pokušao ovu razinu.'
   share_code:
     title: "Klikni 'Pokreni' da vidiš kako moj program radi"
     bounce_og_title: "Pogledaj moju igru Odbijanja"
@@ -408,25 +407,12 @@ hr:
       title: "Minecraft"
     unplugged_conditionals:
       title: "Uvjeti"
-  gallery:
-    students_drew_these_with_code: "Učenici su nacrtali ovo kodiranjem!"
-    students_made_these_with_code: "Učenici su nacrtali ovo kodiranjem!"
-    picture_count: "U proteklih <b>%{days}</b> dana, učenici su nacrtali <b>%{count}</b> slika pisanjem vlastitih računalnih programa. Kliknite na slike da biste vidjeli svaki program na djelu."
-    activity_count: "U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b> aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike i snimke ekrana da biste vidjeli svaki program na djelu."
-    want_to_make_your_own: "Želite li napraviti svoj vlastiti?"
-    more: "Više &rarr;"
-    caption_by_name_age: "od %{name}, dob %{age}"
-    caption_time_ago: "prije %{time_ago}"
-    header: "Galerija"
-    header_playlab: "Laboratorij igara"
-    header_artist: "Umjetnik"
-    report_abuse: "Prijava zloupotrebe"
   landing:
-    prerelease: "Ovaj tečaj je u <span class='betatext'> beta fazi</span>. To znači da ovo nije konačna verzija tečaja, te da podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
-    prerelease_hoc2014: "Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
     report_bug: "Prijavi grešku"
     support: "Dobivanje pomoći"
     support_url: "//support.code.org"
+  free_response:
+    placeholder: "Ovdje unesite vaš odgovor"
   multi:
     wrong_title: "Netočan odgovor"
     wrong_body: "Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!"
@@ -477,8 +463,6 @@ hr:
   age_interstitial:
     age: Tvoja dob
     header: Ažuriranje informacija o računu
-    message: "Mi smo u procesu nadogradnje da bismo vam pružili još jaču zaštitu privatnosti. Da bismo to učinili, trebamo da postojeći korisnici da unesu svoju dob. <br/>Kao i uvijek, code.org neće nikada iznajmiti, prodati ili podijeliti te informacije s drugim stranama."
-    sign_out: 'Ako ne želite unijeti svoju dob možete se<a href="%{url}">odjaviti</a>.'
   terms_interstitial:
     tos: "Uvjeti"
     privacy: "Pravila privatnosti"
@@ -491,6 +475,7 @@ hr:
     submit: "Pošalji"
     decline: "Zatvori"
   zendesk_too_young_message: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a> bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'
+  zendesk_too_young_message_markdown: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati [support.code.org](http://support.code.org) bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'
   progress:
     not_started: nije započelo
     in_progress: u tijeku
@@ -507,33 +492,18 @@ hr:
     create: "Stvaranje projekta"
     create_a_project: 'Stvaranje novog projekta:'
     new: "Kreiraj novi"
-    rename: "Preimenuj"
-    save: "Spremi"
-    delete: "izbriši"
     exit: "Povratak na tečaj"
-    my_projects: "Moji projekti"
     project_gallery: "Projekti"
-    share: "Podijeli"
     share_title: Podijelite svoj projekt
     share_copy_link: "Kopirajte link:"
-    close: "Zatvori"
-    more: "Više"
     name: "Ime"
     updated: "Obnovljeno"
     project_type: "Tip projekta"
     help_text: "Kliknite <strong>Napravi aplikaciju</strong> ili <strong>Nacrtaj nešto</strong> ispod da bi napravili novi Play Lab ili Artist projekt! <br/> Možete se vratiti i raditi na projektima u bilo koje vrijeme."
     need_help: "Treba vam pomoć kako započeti?"
-    really_delete: 'Izbrisati?'
-    delete_yes: 'Da'
-    delete_no: 'Ne'
     saved: "Spremljeno"
     not_saved: "Nije spremljeno"
-    cancel: 'Odustani'
-    delete_confirm_title: Jeste li sigurni da želite obrisati ovaj projekt?
-    delete_confirm_text: "Brisanje projekta trajno će ga ukloniti s popisa vaših projekata. Svatko tko ima link na njega ga više neće moći vidjeti."
     view_all: 'Moji projekti'
-    remix: 'Remiks'
-    click_to_remix: "Kliknite na \"Remiks\" da pokrenete svoju verziju!"
     edit_project: 'Uređivanje projekta'
     abuse:
       tos: "Ovaj projekat je prijavljen da krši <a href='http://code.org/tos'>Uvjete Korištenja</a> Code.org-a i zbog toga ne može biti podijeljen s ostalima."
@@ -555,8 +525,8 @@ hr:
           other: 'Ostalo'
         detail: 'Molimo vas da nam date što više detalja o sadržaju koji prijavljujete.'
         acknowledge: 'Slanjem ove informacije, vi prihvaćate da će se postupati u skladu s uvjetima %{link_start_privacy}Pravila privatnosti%{link_end} i %{link_start_tos}Uvjetima korištenja%{link_end}'
-  flex_category:
-    required: 'Pregled'
+  hoc_download:
+    minecraft_name: 'Minecraft Sat Kodiranja'
   pd:
     form_labels:
       email: 'E-mail'
@@ -580,3 +550,4 @@ hr:
     accept: 'Slažem se'
   gdpr_dialog:
     yes: 'Da'
+  copy: 'Kopiraj'

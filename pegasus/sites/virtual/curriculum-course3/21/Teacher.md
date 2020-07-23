@@ -74,7 +74,7 @@ In this stage, students will explore how nesting loops several levels deep can a
 
 Pair students, and assign each pair a basic geometric shape to examine. For that shape, they will do the following:
 
-- Write instructions to draw that shap using a loop
+- Write instructions to draw that shape using a loop
 - Write instructions to draw a row of that shape by repeating the previous loop
 - Write instructions to draw a complex pattern by repeating the previous loop
 - Use those instructions to walk another student through drawing that same pattern

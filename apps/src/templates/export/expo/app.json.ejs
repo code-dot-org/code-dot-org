@@ -2,15 +2,15 @@
   "expo": {
     "name": "<%- appName %>",
     "description": "<%- appName %> from Code.org Code Studio.",
-    "slug": "<%- appName.replace(/([^a-zA-Z0-9_\-]+)/gi, '-') %>",
+    "slug": "project-<%- projectId.toLowerCase().replace(/[^\w-]+/g, '-') %>",
     "privacy": "public",
-    "sdkVersion": "31.0.0",
+    "sdkVersion": "<%- sdkVersion %>",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./appassets/icon.png",
+    "icon": "<%- iconPath %>",
     "splash": {
-      "image": "./appassets/splash.png",
+      "image": "<%- splashImagePath %>",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -37,11 +37,11 @@
       ]
     },
     "ios": {
-      "bundleIdentifier": "org.code.studio.app.<%- projectId.replace(/([^a-zA-Z0-9\-]+)/gi, '-') %>",
+      "bundleIdentifier": "org.code.studio.app.<%- projectId.toLowerCase().replace(/([^a-zA-Z0-9\-]+)/g, '-') %>",
       "buildNumber": "1"
     },
     "android": {
-      "package": "org.code.studio.app_<%- projectId.replace(/([^a-zA-Z0-9\_]+)/gi, '_') %>",
+      "package": "org.code.studio.app_<%- projectId.toLowerCase().replace(/([^a-zA-Z0-9\_]+)/g, '_') %>",
       "permissions": [],
       "versionCode": 1
     }

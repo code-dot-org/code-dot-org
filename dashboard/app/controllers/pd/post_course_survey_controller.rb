@@ -21,13 +21,26 @@ module Pd
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
-        csp_or_csd: course
+        userEmail: current_user.email,
+        csp_or_csd: course,
       }
 
       @form_id = PostCourseSurvey.form_id
       @form_params = key_params.merge(
         submitRedirect: url_for(action: 'submit', params: {key: key_params})
       )
+
+      return if experimental_redirect! @form_id, @form_params
+
+      if CDO.newrelic_logging
+        NewRelic::Agent.record_custom_event(
+          "RenderJotFormView",
+          {
+            route: "GET /pd/post_course_survey/#{params[:course_initials]}",
+            form_id: @form_id
+          }
+        )
+      end
     end
 
     # POST /pd/post_course_survey/submit

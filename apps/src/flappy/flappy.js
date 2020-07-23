@@ -24,7 +24,7 @@ import {getStore} from '../redux';
 import {TestResults, ResultType} from '../constants';
 import placeholder from '../../static/flappy/placeholder.jpg';
 import {dataURIFromURI} from '../imageUtils';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 /**
  * Create a namespace for the application.
@@ -635,18 +635,6 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  if (
-    config.embed &&
-    config.level.longInstructions &&
-    !config.level.shortInstructions
-  ) {
-    // if we are an embedded level with long instructions but no short
-    // instructions, we want to display CSP-style instructions and not be
-    // centered
-    config.noInstructionsWhenCollapsed = true;
-    config.centerEmbedded = false;
-  }
-
   var onMount = function() {
     studioApp().init(config);
 
@@ -780,7 +768,7 @@ Flappy.runButtonClick = function() {
  */
 var displayFeedback = function() {
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
   if (!Flappy.waitingForReport) {
     dataURIFromURI(placeholder).then(feedbackImageUri => {
       studioApp().displayFeedback({

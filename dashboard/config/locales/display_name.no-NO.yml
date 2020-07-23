@@ -1,8 +1,19 @@
 ---
-'no':
+no-NO:
   data:
     display_name:
-      AppLab Intro 4 - Video Welcome: Velkommen til kodetimen
+      AB_Debug_Artist1: 'Kunstner Feilsøker #1 (AB)'
+      App Lab Intro 8 - Video Design Mode: 'Video: Designmodus'
+      App Lab Intro 8 - Video Getting Started: 'Video: Kom i gang'
+      App Lab Intro 8 - Video Images and Sounds: 'Video: Bilder og Lyder'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: Gjør den interaktiv'
+      App Lab Intro 8 - Video Share Your App: 'Video: Del Appen Din'
+      AppLab Intro 7 - Change Screen Color: Bytt Skjerm Farge
+      AppLab Intro 7 - Change Text 2: Endre Tekst
+      AppLab Intro 7 - Full Text: To Knapper
+      AppLab Intro 7 - onEvent intro: Få Knappene Til Å Virke
+      AppLab Intro 7 - onEvent twoButtons: Mer onEvent øvelser
+      AppLab Intro 7 - playSound: Bruk playSound
       CSD U2 Pair Programming Video: Parprogrammering
       CSD U2 Pair Programming Video_2018: Parprogrammering
       CSD U2 Pair Programming Video_2019: Parprogrammering
@@ -57,7 +68,6 @@
       CSD U3 Variables Map: Variabler
       CSD U3 Variables Map_2018: Variabler
       CSD U3 Variables Map_2019: Variabler
-      CSD U3 functions map: Funksjoner
       CSD U6 for loop map: For-løkker
       CSD U6 for loop map_2018: For-løkker
       CSD U6 for loop map_2019: For-løkker
@@ -65,19 +75,29 @@
       CSD U6 functions paramters video_2018: Funksjoner med parametre
       CSD U6 functions paramters video_2019: Funksjoner med parametre
       'CSD: For Loop_2018': For-løkker
-      'CSD: For Loop_2019': For-løkker
+      CourseD_Dance_2020_bonus1: Frem og Tilbake
+      CourseD_Dance_2020_bonus3: Kom i formasjon
+      CourseF_Oceans_Video_Machine_Learning: Maskiner lærer
+      CourseF_Oceans_Video_Societal_Implications: Samfunnsmessige implikasjoner
+      CourseF_Oceans_Video_Training_Data: Grunnlagsdata
+      Dance_Party_extras_alternate_2019: Frem og Tilbake
       Dance_Party_extras_battle: Dansegrupper
+      Dance_Party_extras_battle_2019: Dansegrupper
       Dance_Party_extras_every_beat: Firedelsnoter
+      Dance_Party_extras_every_beat_2019: Firedelsnoter
       Dance_Party_extras_layout: Kom i formasjon
+      Dance_Party_extras_layout_2019: Kom i formasjon
+      Dance_Party_extras_mixed_2019: Flere Knapper
       Dance_Party_extras_on_beat: Bass, mellomtone og diskant
+      Dance_Party_extras_on_beat_2019: Bass, mellomtone og diskant
       Dance_Party_extras_speed: Fortere, saktere
+      Dance_Party_extras_speed_2019: Fortere, saktere
       Dance_Party_extras_visible: Hvor ble det av dem?
-      MC_HOC_2017_FP10x10: Fritt spill
-      MC_HOC_2017_FP10x10_RE: Fritt spill
-      SG U3L07 More Subgoals: Dokumentasjon
+      Dance_Party_extras_visible_2019: Hvor ble det av dem?
+      Oceans_Video_Machine_Learning: Maskiner lærer
+      Oceans_Video_Societal_Implications: Samfunnsmessige implikasjoner
+      Oceans_Video_Training_Data: Grunnlagsdata
       courseA_video_Stevie: Stevie og det Store Prosjektet
       courseA_video_Stevie_2018: Stevie og det Store Prosjektet
-      courseA_video_Stevie_2019: Stevie og det Store Prosjektet
       courseB_video_Unspotted: Uoppdagede feil
       courseB_video_Unspotted_2018: Uoppdagede feil
-      courseB_video_Unspotted_2019: Uoppdagede feil

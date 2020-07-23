@@ -39,13 +39,12 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_S17_L8_C1\",\r\n  \"callout_text\": \"This block creates a new sprite.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"var sprite = createSprite\\\"]\",\r\n  \"on\": \"callout\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"sprites\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "siYPsk9nSmo28RSzbB/YObM6FFVVF0ydjO/clLkB+KRYASluBa3pFUjMt05g\n+0FU\n",
+    "encrypted_examples": "k+c7LMRxlDAr24UXZpdR8Yp9WJm599kyik9Jouf85KyPzPIemlGlcgD2U2jY\ne0x6N8jbKbMl1Z0JBnU9FAKWEw==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "parent_level_id": 11417,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
       "/docs/concepts/game-lab/sprites/sprite-properties/",
@@ -59,11 +58,13 @@
       "/docs/concepts/game-lab/shapes-and-parameters/",
       "/docs/concepts/javascript/functions/"
     ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 23:57:33 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:58:05 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 23:57:33 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:58:05 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-28 18:16:47 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

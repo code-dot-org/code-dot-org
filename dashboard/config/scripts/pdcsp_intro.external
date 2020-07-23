@@ -5,7 +5,7 @@ skip_dialog true
 markdown <<MARKDOWN
 ## Welcome!
 
-<img align="left" src="//code.org/images/edquote1.png" height="900" width="400" hspace="20">
+<img style="float:left; margin:0 20px" src="//code.org/images/edquote1.png" height="900" width="400">
 
 **Welcome to Code.org's K-5 Intro to Computer Science Online Professional Development Course.** 
 

@@ -10,16 +10,20 @@
     "hide_share_and_remix": "true",
     "long_instructions": "# Start Your Project\r\n\r\nNow that you have a plan for your personal website, you can start coding it here.  Don't worry if you can't do everything you want today.  You'll have plenty of chances to improve your work as you learn more about developing websites.\r\n\r\n# Do This\r\n* Use HTML to create the page that you sketched out.  Make sure it includes\r\n  * At least **two headings of different sizes**\r\n  * At least **one paragraph**\r\n* **Reflect** on your page by comparing to your sketch and showing it to your partner",
     "submittable": "false",
-    "encrypted_examples": "1j1OAjwIGy61vo2C0TXzxAxvU193w5w/PN6TgsvQ9PC64uiKlre/6ZPtE0mv\nMT9JuF9kMq6+QWFXdyqzI1mSXg==\n",
+    "encrypted_examples": "X5Zqmq8RCUja0GU8xGqwfXg19Q43X1qtAeRnpj4RsygGuPLtUqE9Zt+61FWZ\nEZmPZHyGRvaZsgK5vgCpkDfb9A==\n",
     "parent_level_id": 11491,
     "name_suffix": "_2019",
     "reference_links": [
       "/docs/csd-1718/html_tags/index.html"
     ],
-    "map_reference": "/docs/csd-1718/headers/index.html"
+    "map_reference": "/docs/csd-1718/headers/index.html",
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 21:42:38 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-05 22:32:03 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:44:36 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:22:16 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-28 21:42:38 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-05 22:32:03 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:44:36 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:22:16 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-22 19:14:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

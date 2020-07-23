@@ -521,3 +521,10 @@ nn:
         title: Dine digitale fotspor
         desc: Lærarar introduserer for elevane ideen om å putte informasjon om seg
           sjølv på nett skapar eit digital fotavtrykk eller "sti" som har konsekvensar.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Betingelser
+        desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill
+          og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss
+          eg trekk eit svart kort, får du poeng."

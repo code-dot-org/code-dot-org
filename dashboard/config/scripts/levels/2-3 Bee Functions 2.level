@@ -34,10 +34,11 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "true",
     "hint_prompt_attempts_threshold": 10,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-23 15:14:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2,
@@ -47,7 +48,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
               <mutation name="get 5"/>
@@ -58,10 +59,10 @@
           <mutation/>
           <title name="NAME">get 5</title>
           <statement name="STACK">
-            <block type="controls_repeat" deletable="false" editable="false">
+            <block type="controls_repeat" deletable="false" editable="false" next_connection_disabled="true" can_disconnect_from_parent="false">
               <title name="TIMES">5</title>
               <statement name="DO">
-                <block type="maze_nectar" deletable="false" editable="false"/>
+                <block type="maze_nectar" deletable="false" editable="false" next_connection_disabled="true" can_disconnect_from_parent="false"/>
               </statement>
             </block>
           </statement>

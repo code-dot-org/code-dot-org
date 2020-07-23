@@ -1,4 +1,5 @@
 name 'PS - Responding to User Input'
+editor_experiment ''
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
@@ -18,33 +19,26 @@ There's a lot to consume here and many of the details about how events work in A
 
 In Game Lab, we might use the following code to check if a sprite named "button" was clicked and do something about it:
 
-
 	function draw() {
-		if (mousePressedOver(button)) {
-   			// Do something
-   		}
+	  if (mousePressedOver(button)) {
+	    // Do something
+	  }
 	}
 
 
 In App Lab, given a button with the ID "button", we could write the following code to achieve the same goal:
 
-```javascript
-onEvent("button", "click", function () {
-	// Do something
-});
-
-```
+	onEvent("button", "click", function () {
+		// Do something
+	});
 
 In the App Lab example, the function is just another argument passed to the onEvent function, it just so happens that the argument must be a function itself. We could also define the function separately and write this same program as follows:
 
-```javascript
-function doSomething() {
-	// Do something
-}
-
-onEvent("button", "click", doSomething);
-
-```
+	function doSomething() {
+		// Do something
+	}
+	
+	onEvent("button", "click", doSomething);
 
 In the second example, notice that when we pass the function `doSomething` to the `onEvent` function we _don't_ include the parenthesis at the end. This is because we're actually passing the whole function as an object.
 MARKDOWN

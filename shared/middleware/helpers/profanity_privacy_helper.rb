@@ -1,6 +1,16 @@
 require 'cdo/share_filtering'
 require_relative './bucket_helper.rb'
 require_relative './source_bucket.rb'
+require 'cdo/firehose'
+
+class ProfanityPrivacyError < StandardError
+  def initialize(flagged_text)
+    @flagged_text = flagged_text
+    super
+  end
+
+  attr_reader :flagged_text
+end
 
 # The standard source filename used for blockly projects using channels.
 # Check whether it is defined—helpers can be double-included during test running.
@@ -18,12 +28,29 @@ def channel_policy_violation?(channel_id)
   profanity_privacy_violation?(BLOCKLY_SOURCE_FILENAME, body)
 end
 
-#
-# This method is designed to be an easy way for support staff or a dev to
-# figure out why sharing was automatically blocked for a particular project.
-# It's designed for use from dashboard-console, which is why it has no usages
-# within our repo.
-#
+def title_profanity_privacy_violation(name, locale)
+  share_failure = begin
+    ShareFiltering.find_name_failure(name, locale)
+  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => error
+    # If WebPurify or Geocoder are unavailable, default to viewable, but log error
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'share_filtering',
+        study_group: 'v0',
+        event: 'share_filtering_error',
+        data_string: "#{error.class.name}: #{error}",
+        data_json: {
+          name: name,
+          locale: locale
+        }.to_json
+      }
+    )
+    return false
+  end
+  share_failure
+end
+
 # @example
 #   explain_share_failure 'kkbjvA8CUoWEAJ0inKpzTQ'
 #

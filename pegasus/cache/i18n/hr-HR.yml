@@ -18,13 +18,13 @@ hr-HR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Jeste li učitelj Informatike? Pogledajte i druge CSEdWeek
     resurse</a>'
+  csedweek_banner_teachers_text: Jeste li učitelj Informatike? Pogledajte i druge
+    CSEdWeek resurse
   n_have_learned_an_hoc: "<h1>Pokušaj</h1> <h2>Sat Kodiranja</h2> <h3># posluženih</h3>"
   anybody_can_learn: Svatko može naučiti.
   learn_now: Nauči sad
   petition_message: Svi učenici u svim školama trebaju imati priliku naučiti informatiku
   petition_sign_message: 'Ako se slažeš, upiši svoje ime. Pridruži se # ostalih.'
-  petition_sign_message_support: 'Ako nas podržavaš, upiši svoje ime. Pridruži se
-    # ostalima.'
   petition_join_others: 'Pridruži se # ostalima'
   name: Ime
   email: E-mail
@@ -90,6 +90,9 @@ hr-HR:
   get_a_certificate_message_after: Klikni na certifikat da ga preuzmeš ili ispišeš.
     Nastavi s našim <a href='http://studio.code.org'>drugim tečajevima</a>, ili istraži
     više mogućnosti na <a href='/learn/beyond'>Saznaj više od Jednog sata kodiranja</a>.
+  get_a_certificate_message_after_markdown: Klikni na certifikat da ga preuzmeš ili
+    ispišeš. Nastavi s našim [drugim tečajevima](http://studio.code.org), ili istraži
+    više mogućnosti na [Saznaj više od Jednog sata kodiranja](/learn/beyond).
   thanks_for_submitting: Hvala na prijavi!
   if_you_enjoyed: Ako si uživao/la učeći, pozovi prijatelje da probaju također! Želimo
     cijeli svijet da nauči.
@@ -233,6 +236,7 @@ hr-HR:
   homepage_action_text_learn: Krenite s učenjem
   homepage_action_text_signpetition: Potpišite peticiju
   homepage_signpetition_dropdown: Slažem se &#x25BE;
+  homepage_signpetition_dropdown_text: Slažem se
   homepage_banner_text_prizes: 'Sat Kodiranja ponovno dolazi, Prosinac 7-13. '
   homepage_banner_link_prizes: 'Pridruži se najvećem edukacijskom događaju u povijesti. '
   homepage_banner_text_main: Code.org i College Board udružili su se da poboljšalju
@@ -637,8 +641,6 @@ hr-HR:
   20-hour_name: Ubrzani tečaj
   classicmaze_name: Klasični labirint
   minecraft_name: Minecraft
-  math_category_name: Matematika
-  hoc_category_name: Hour of Code
   applab_name: Laboratorij aplikacija
   codeorg_gradelevel: Dob 4-104
   codeintl_gradelevel: Dob 4-104
@@ -691,6 +693,7 @@ hr-HR:
   coursee_gradelevel: Dob 8-12
   coursee-2017_gradelevel: Dob 8-12
   coursee-2018_gradelevel: Dob 8-12
+  coursee-2019_gradelevel: Dob 8-12
   accelerated_gradelevel: Dob 10+ (nakon Tečaja 3)
   codeorg_platformtext: Suvremeni preglednici, mobiteli, tableti
   codeintl_platformtext: Suvremeni preglednici, mobiteli, tableti
@@ -1225,6 +1228,8 @@ hr-HR:
   header_courses: Tečajevi
   header_project_gallery: Projekti
   header_educate_hoc: Hour of Code
+  header_legal_privacy: Pravila privatnosti
+  header_legal_tos: Uvjeti
   user_header_label: Zdravo, %{username}
   user_header_settings: Moj račun
   user_header_logout: Odjava

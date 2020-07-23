@@ -29,6 +29,7 @@ bs:
         edit_header: Preuredi Detalje Računa
         error:
           future: ne može biti u budućnosti
+  beta: beta
   hello: Pozdrav svijete
   welcome_back: Dobrodošao/la natrag, %{name}
   your_professional_learning_plan: Vaš profesionalni plan učenja
@@ -42,13 +43,9 @@ bs:
   okay: U redu
   or: ili
   heading_x_of_y: "%{heading} (strana %{x} od %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Dodaj učitelja:'
       placeholder: Šifra Odjeljenja (ABCDEF)
-      instructions: Molimo unesite kôd koji je sa vama podijelio vaš učitelj. To je
-        kôd od 6 slova tipa "ABCDEF".
-    submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
     submit: Dodaj pomoć
@@ -64,7 +61,6 @@ bs:
   of: od
   more: VIŠE
   less: MANJE
-  beta: beta
   try_hoc: 'Isprobaj Sat Kodiranja, klikni ovdje >> '
   try_k8intro: Isprobaj naš informatički kurs za djecu u osnovnoj školi (15-25 sati)
   k8intro: Uvod u informatiku za osnovnu školu (15-25 sati)
@@ -76,9 +72,6 @@ bs:
   auth:
     sign_in_with: Prijavi se sa %{provider}
     signed_in: Prijavljen/a!
-    signed_out: Odjavili ste se iz<a href="%{url}">Code.org</a>.
-    sign_out_of: Koristili ste %{provider} da biste se prijavili. <a href="%{url}">Kliknite
-      ovdje</a> da biste se odjavili %{provider}.
     already_signedup: Jeste li već prijavljeni?
     notyet_signedup: Još se nisi pridružio/la?
     google_oauth2: Google Račun
@@ -147,8 +140,6 @@ bs:
     picture: Sada nađite svoju tajnu sliku
     words: Sada unesite vaše tajne riječi
     login: Prijava
-    student_privacy: Nauči više o tome zašto ne vidiš svoje puno ime<a href='%{student_privacy_blog}'
-      target='_blank'>ovdje</a>.
   password:
     reset_form:
       title: Zaboravio/la si šifru?
@@ -166,6 +157,8 @@ bs:
       privlačni, podučavaju osnovnim informatičkim pojmovima kroz zabavu i igru s
       puno uputstava. Nauči kodirati dok ti pomažu Bill Gates, Mark Zuckerberg Angry
       Birds i Plants vs. Zombies! :-) \n%{name}\n"
+  parent_mailer:
+    parent_email_added_subject: Dobrodošli na Code.org!
   teacher_mailer:
     new_teacher_subject: Dobrodošli na Code.org!
   section:
@@ -174,6 +167,7 @@ bs:
       word: Tajne riječi
       email: Email
       google_classroom: Google učionica
+      clever: Pametni račun
   follower:
     invite_sent: Pozivnica poslana
     added_teacher: "%{name} dodan kao vaš učitelj"
@@ -211,10 +205,6 @@ bs:
     header:
       finished_hoc: Završih svoj Sat Kodiranja
       sign_in_to_save: Prijavite se da biste snimili napredak
-      free_play:
-        playlab: Napravi Aplikaciju
-        artist: Nacrtaj Nešto
-        applab: Napravi Aplikaciju
       project_gallery: Projekti
       help_support: Pomoć i podrška
       documentation: Dokumentacija
@@ -228,6 +218,8 @@ bs:
       about_jobs: Poslovi
       help_us: Pomogni nam
       teach: Podučavaj
+      legal_privacy: Pravila Privatnosti
+      legal_tos: Uvjeti
     user:
       classroom: Početna Stranica za Učitelje
       district_dashboard: Nadzorna ploča za distrikte
@@ -243,9 +235,15 @@ bs:
       create: Kreiraj
       applab: Laboratorij za Aplikacije
       artist: Umjetnik
-      playlab: Play Lab
-      flappy: Flappy
+      bounce: Odskok
+      calc: Calc
       dance: Plesna zabava
+      eval: Eval
+      flappy: Flappy
+      frozen: Sniježno kraljevstvo
+      infinity: Beskonačnost
+      playlab: Play Lab
+      starwars: Zvijezdani ratovi
     popup:
       progress_for_user: Napredak za %{name}
       progress: Tvoj napredak
@@ -301,15 +299,13 @@ bs:
     enter_new_login_info: Unesite svoje nove podatke za prijavu
     enter_parent_email: Unesi email adresu od svog roditelja ili staratelja (za obnovu
       lozinke)
+    update_email: Osvježi
+    none: Nijedno
   user_level:
     completed: Kompletirano
     tried: Pokušano
   home:
     title: Code Studio
-    description: Code Studio je početna stranica online kurseva napravljenih u Code.org
-    lines_of_code: "%{lines_count} LINIJA KODA KOJE SU NAPISALI UČENICI"
-    lines_of_code_linebreak: "%{lines_count} LINIJA KODA <br/> NAPISANIH OD STRANE
-      %{students_count} MILIONA UČENIKA"
     all_courses: Pregled kurseva 1, 2 i 3
     lesson_plans: Nastavni planovi
     signin_message: Jeste li već registrirani? %{link}
@@ -348,19 +344,10 @@ bs:
     test_videos_help: Isprobajte naš novi video player u školi
     try_beta_courses: Novo! Isprobaj naše beta tečajeve za učenike razredne nastave
     use_as_teacher: Koristite ovo sjedište kao učitelj
-    heading_hoc2014: "<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>"
-    heading_elementary: "<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>"
-    heading_apps: "<h2>Zabava za</h2><h1>sve</h1>"
-    heading_legacy: "<h2>Naš opšti kurs za</h2><h1>sve uzraste</h1>"
     your_gallery: Galerija
     no_primary_course: Probajte Code Studio kurs
     choose_next_course: Probajte Code Studio kurs odabirom sljedećih opcija dole
     print_certificate: Ispiši Diplomu
-    announcement_title: Objave
-    announcement_learn_more_button: Nauči više
-    announcement_try_now_button: Probaj sad
-    announcement_watch_video_button: Pogledaj video
-    announcement_petition_button: Dodajte svoje ime
   move_students:
     all_students_must_be_in_current_section: Svi učenici trenutno moraju biti upisani
       u vaše odjeljenje.
@@ -427,7 +414,6 @@ bs:
   pdf_download: Preuzmite PDF
   download_coming_soon: Aktivnosti koje možete preuzeti stižu uskoro.
   video_coming_soon: Video stiže uskoro!
-  not_started: Studenti nisu probali ovaj nivo.
   share_code:
     title: Klikni 'Pokreni' da vidiš kako moj program radi
     bounce_og_title: Pogledaj moju igru Odbijanja
@@ -456,6 +442,8 @@ bs:
       title: Laboratorij za Aplikacije
       cta: Nauči kako
     dance:
+      title: Plesna zabava
+    dance-2019:
       title: Plesna zabava
     hoc:
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
@@ -501,34 +489,14 @@ bs:
       title: Uvjeti
     widgets:
       cta: Nauči kako
-  gallery:
-    students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
-    students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!
-    picture_count: U proteklih <b>%{days}</b> dana, učenici su nacrtali <b>%{count}</b>
-      slika pisanjem vlastitih računalnih programa. Kliknite na slike da biste vidjeli
-      svaki program na djelu.
-    activity_count: U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b>
-      aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike
-      i snimke ekrana da biste vidjeli svaki program na djelu.
-    want_to_make_your_own: Želite li napraviti svoj vlastiti?
-    more: Više &rarr;
-    caption_by_name_age: od %{name}, dob %{age}
-    caption_time_ago: prije %{time_ago}
-    header: Galerija
-    header_playlab: Play Lab
-    header_artist: Umjetnik
-    report_abuse: Prijava zloupotrebe
   landing:
-    prerelease: Ovaj kurs je u <span class='betatext'> beta fazi</span>. To znači
-      da ovo nije konačna verzija kursa, te da podliježe izmjenama u skladu s primljenim
-      povratnim informacijama i napravljenim poboljšanjima.
-    prerelease_hoc2014: Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe
-      izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima.
     report_bug: Prijavi Grešku
     support: Potraži Pomoći
     support_url: "//support.code.org"
     help_support: Pomoć i podrška
     documentation: Dokumentacija
+  free_response:
+    placeholder: Ovdje unesite vaš odgovor
   multi:
     wrong_title: Netačan odgovor
     wrong_body: Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!
@@ -584,11 +552,6 @@ bs:
   age_interstitial:
     age: Tvoja dob
     header: Ažuriranje informacija o računu
-    message: Mi smo u procesu nadogradnje da bismo vam pružili još jaču zaštitu privatnosti.
-      Da bismo to učinili, tražimo da postojeći korisnici unesu svoju dob. <br/>Kao
-      i uvijek, code.org neće nikada iznajmiti, prodati ili podijeliti te informacije
-      s drugim stranama.
-    sign_out: Ako ne želite unijeti svoju dob možete se<a href="%{url}">odjaviti</a>.
   terms_interstitial:
     tos: Uvjeti
     privacy: Pravila Privatnosti
@@ -611,6 +574,10 @@ bs:
     stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a>
     bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
     tebe.
+  zendesk_too_young_message_markdown: Nažalost, mlađi korisnici se ne mogu prijaviti
+    na našu stranicu za podršku. Možeš pregledavati [support.code.org](http://support.code.org)
+    bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
+    tebe.
   progress:
     not_started: nije započeto
     in_progress: u toku
@@ -628,22 +595,14 @@ bs:
     create: Stvori Projekt
     create_a_project: 'Stvori novi projekat:'
     new: Kreiraj novi
-    rename: Preimenuj
-    save: Snimi
-    delete: Izbriši
-    share_link_import_error_header: Nešto je pošlo naopako.
     exit: Povratak na Kurs
-    my_projects: Moji Projekti
     project_gallery: Projekti
     publish: Objavi
-    share: Podijeli
     share_title: Podijeli svoj projekat
     share_copy_link: 'Kopiraj link:'
     advanced_share: Pokažite napredne opcije
     no_projects: Trenutno nemate projekata. Kliknite na jednu od tipki iznad da započnete
       projekat.
-    close: Zatvori
-    more: Više
     name: Ime
     updated: Ažurirano
     project_type: Tip projekta
@@ -651,18 +610,9 @@ bs:
       ispod da bi napravili novi Play Lab ili Artist projekat! <br/> Možete se vratiti
       i raditi na projektima u bilo koje vrijeme.
     need_help: Treba vam pomoć kako započeti?
-    really_delete: Izbrisati?
-    delete_yes: Da
-    delete_no: Ne
     saved: Spremljeno
     not_saved: Nije spremljeno
-    cancel: Poništi
-    delete_confirm_title: Jeste li sigurni da želite obrisati ovaj projekat?
-    delete_confirm_text: Brisanje projekta trajno će ga ukloniti s popisa vaših projekata.
-      Svako ko ima link na njega ga više neće moći vidjeti.
     view_all: Pregledaj Moje Projekte
-    remix: Remix
-    click_to_remix: Klikni na "Remix" da bi otpočeo svoju verziju!
     edit_project: Uredi Projekat
     abuse:
       tos: Ovaj projekat je prijavljen da krši <a href='http://code.org/tos'>Uvjete
@@ -698,9 +648,6 @@ bs:
       name: Prihvaćeno
     rejected:
       name: Odbijeno
-  flex_category:
-    required: Pregled
-    csd5_2: 'Poglavlje 2: Rješavanje problema podataka'
   external_links:
     leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od
       strane Code.org-a.
@@ -719,8 +666,10 @@ bs:
       jednom preuzmete i instalirate na sve računare. Bilješka: učenici se neće moći
       prijaviti na Code Studio, sačuvati napredak, ili isprintati certifikate. Nastavnici
       mogu unaprijed isprintati certifikate <a href="%{url}}">ovdje</a>.'
+    minecraft_name: Sata Kodiranja Minecraft-a
     download_in_Albanian: 'Skinite na albanskom:'
     download_in_Arabic: 'Skinite na arapskom:'
+  return_unit_overview: Idite na pregled kursa
   return_course_overview: Idite na pregled kursa
   view_all_units: Vidi sve jedinice
   pd:
@@ -746,3 +695,4 @@ bs:
     accept: Slažem se
   gdpr_dialog:
     true: Da
+  copy: Kopiraj

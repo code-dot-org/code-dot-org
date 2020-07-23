@@ -2,22 +2,17 @@ class ScriptDSL < BaseDSL
   def initialize
     super
     @id = nil
-    @stage = nil
-    @stage_flex_category = nil
-    @stage_lockable = false
+    @lesson_groups = []
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
-    @scriptlevels = []
-    @stages = []
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
-    @hideable_stages = false
-    @exclude_csf_column_in_legend = false
+    @hideable_lessons = false
     @student_detail_progress_view = false
     @teacher_resources = []
-    @stage_extras_available = false
+    @lesson_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
     @has_lesson_plan = false
@@ -31,6 +26,10 @@ class ScriptDSL < BaseDSL
     @is_stable = nil
     @supported_locales = []
     @pilot_experiment = nil
+    @editor_experiment = nil
+    @project_sharing = nil
+    @curriculum_umbrella = nil
+    @tts = false
   end
 
   integer :id
@@ -39,14 +38,15 @@ class ScriptDSL < BaseDSL
 
   boolean :hidden
   boolean :login_required
-  boolean :hideable_stages
-  boolean :exclude_csf_column_in_legend
+  boolean :hideable_lessons
   boolean :student_detail_progress_view
-  boolean :stage_extras_available
+  boolean :lesson_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
   boolean :has_lesson_plan
   boolean :is_stable
+  boolean :project_sharing
+  boolean :tts
 
   string :wrapup_video
   string :script_announcements
@@ -55,6 +55,8 @@ class ScriptDSL < BaseDSL
   string :version_year
   string :curriculum_path
   string :pilot_experiment
+  string :editor_experiment
+  string :curriculum_umbrella
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -72,38 +74,64 @@ class ScriptDSL < BaseDSL
     @pilot_experiment = experiment
   end
 
-  def stage(name, properties = {})
-    if @stage
-      @stages << {
-        stage: @stage,
-        scriptlevels: @scriptlevels,
-        stage_extras_disabled: @stage_extras_disabled,
+  def lesson_group(key, properties = {})
+    if key
+      @lesson_groups << {
+        key: key,
+        display_name: properties[:display_name],
+        lessons: []
       }.compact
     end
-    @stage = name
-    @stage_flex_category = properties[:flex_category]
-    @stage_lockable = properties[:lockable]
-    @scriptlevels = []
-    @concepts = []
-    @skin = nil
-    @stage_extras_disabled = nil
+  end
+
+  def lesson(name, properties = {})
+    # For scripts that don't use lesson groups create a blank non-user facing lesson group
+    if name
+      if @lesson_groups.empty?
+        @lesson_groups << {
+          key: nil,
+          display_name: nil,
+          lessons: []
+        }
+      end
+
+      @lesson_groups.last[:lessons] << {
+        name: name,
+        lockable: properties[:lockable],
+        visible_after: determine_visible_after_time(properties[:visible_after]),
+        script_levels: []
+      }.compact
+    end
+  end
+
+  # If visible_after value is blank default to next wednesday at 8am PDT
+  # Otherwise use the supplied time
+  def determine_visible_after_time(visible_after_value)
+    if visible_after_value == ''
+      current_time = Time.now
+      raw_diff_to_wed = 3 - current_time.wday
+      # Make sure it is the next wednesday not the one that just passed
+      diff_to_next_wed = raw_diff_to_wed % 7
+      next_wednesday = current_time + diff_to_next_wed.day
+      visible_after_value = Time.new(next_wednesday.year, next_wednesday.month, next_wednesday.day, 8, 0, 0, '-07:00').to_s
+    end
+
+    visible_after_value
   end
 
   def parse_output
-    stage(nil)
+    lesson(nil)
     {
       id: @id,
-      stages: @stages,
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
-      hideable_stages: @hideable_stages,
-      exclude_csf_column_in_legend: @exclude_csf_column_in_legend,
+      hideable_lessons: @hideable_lessons,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
-      stage_extras_available: @stage_extras_available,
+      lesson_extras_available: @lesson_extras_available,
       has_verified_resources: @has_verified_resources,
       has_lesson_plan: @has_lesson_plan,
       curriculum_path: @curriculum_path,
@@ -115,7 +143,12 @@ class ScriptDSL < BaseDSL
       version_year: @version_year,
       is_stable: @is_stable,
       supported_locales: @supported_locales,
-      pilot_experiment: @pilot_experiment
+      pilot_experiment: @pilot_experiment,
+      editor_experiment: @editor_experiment,
+      project_sharing: @project_sharing,
+      curriculum_umbrella: @curriculum_umbrella,
+      tts: @tts,
+      lesson_groups: @lesson_groups
     }
   end
 
@@ -130,11 +163,17 @@ class ScriptDSL < BaseDSL
   string :skin
   string :video_key_for_next_level
 
+  # If someone forgets we moved away from assessment as level type and puts
+  # assessment as level type it will just nicely convert allow us to not fail but
+  # it will convert it for the future to use the assessment: true syntax
   def assessment(name, properties = {})
     properties[:assessment] = true
     level(name, properties)
   end
 
+  # If someone forgets we moved away from named_level and puts
+  # named_level it will just nicely convert allow us to not fail but
+  # it will convert it for the future to use the named: true syntax
   def named_level(name, properties = {})
     properties[:named_level] = true
     level(name, properties)
@@ -148,14 +187,15 @@ class ScriptDSL < BaseDSL
   def level(name, properties = {})
     active = properties.delete(:active)
     progression = properties.delete(:progression)
-    target = properties.delete(:target)
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
+    assessment = properties.delete(:assessment)
+
+    named = properties.delete(:named)
+    bonus = properties.delete(:bonus)
 
     level = {
       name: name,
-      stage_flex_category: @stage_flex_category,
-      stage_lockable: @stage_lockable,
       skin: @skin,
       concepts: @concepts.join(','),
       level_concept_difficulty: @level_concept_difficulty || {},
@@ -181,6 +221,10 @@ class ScriptDSL < BaseDSL
         @current_scriptlevel[:properties][:variants][name] = levelprops
       end
 
+      @current_scriptlevel[:assessment] = assessment if assessment
+      @current_scriptlevel[:bonus] = bonus if bonus
+      @current_scriptlevel[:named_level] = named if named
+
       if progression
         # Variant levels must always have the same progression (or no progression)
         current_progression = @current_scriptlevel[:properties][:progression]
@@ -189,46 +233,55 @@ class ScriptDSL < BaseDSL
         end
         @current_scriptlevel[:properties][:progression] = progression
       end
-      if challenge
-        @current_scriptlevel[:properties][:challenge] = challenge
-      end
+
+      @current_scriptlevel[:properties][:challenge] = challenge if challenge
     else
       script_level = {
-        stage: @stage,
         levels: [level]
       }
 
-      if progression || target || challenge
+      script_level[:assessment] = assessment if assessment
+      script_level[:bonus] = bonus if bonus
+      script_level[:named_level] = named if named
+
+      if progression || challenge
         script_level[:properties] = {}
         script_level[:properties][:progression] = progression if progression
-        script_level[:properties][:target] = true if target
         script_level[:properties][:challenge] = true if challenge
       end
 
-      @scriptlevels << script_level
+      current_lesson_group = @lesson_groups.length - 1
+      current_lesson = @lesson_groups[current_lesson_group][:lessons].length - 1
+      @lesson_groups[current_lesson_group][:lessons][current_lesson][:script_levels] << script_level
     end
   end
 
   def variants
-    @current_scriptlevel = {levels: [], properties: {}, stage: @stage}
+    @current_scriptlevel = {levels: [], properties: {}}
   end
 
   def endvariants
-    @scriptlevels << @current_scriptlevel
+    @lesson_groups.last[:lessons].last[:script_levels] << @current_scriptlevel
     @current_scriptlevel = nil
   end
 
-  def no_extras
-    @stage_extras_disabled = true
-  end
-
-  def i18n_strings
-    i18n_strings = {}
-    @stages.each do |stage|
-      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
+  # @override
+  def i18n_hash
+    i18n_lesson_strings = {}
+    i18n_lesson_group_strings = {}
+    @lesson_groups.each do |lesson_group|
+      if lesson_group[:key]
+        i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+      end
+      lesson_group[:lessons].each do |lesson|
+        i18n_lesson_strings[lesson[:name]] = {'name' => lesson[:name]}
+      end
     end
 
-    {'name' => {@name => {'stages' => i18n_strings}}}
+    {@name => {
+      'lessons' => i18n_lesson_strings,
+      'lesson_groups' => i18n_lesson_group_strings
+    }}
   end
 
   def self.parse_file(filename, name = nil)
@@ -257,12 +310,11 @@ class ScriptDSL < BaseDSL
 
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
-    s << 'hideable_stages true' if script.hideable_stages
-    s << 'exclude_csf_column_in_legend true' if script.exclude_csf_column_in_legend
+    s << 'hideable_lessons true' if script.hideable_lessons
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
-    s << 'stage_extras_available true' if script.stage_extras_available
+    s << 'lesson_extras_available true' if script.lesson_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
     s << 'has_lesson_plan true' if script.has_lesson_plan
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
@@ -275,48 +327,65 @@ class ScriptDSL < BaseDSL
     s << 'is_stable true' if script.is_stable
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
+    s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
+    s << 'project_sharing true' if script.project_sharing
+    s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
+    s << 'tts true' if script.tts
 
     s << '' unless s.empty?
-    s << serialize_stages(script)
+    s << serialize_lesson_groups(script)
     s.join("\n")
   end
 
-  def self.serialize_stages(script)
+  def self.serialize_lesson_groups(script)
     s = []
-    script.stages.each do |stage|
-      t = "stage '#{stage.name}'"
-      t += ', lockable: true' if stage.lockable
-      t += ", flex_category: '#{stage.flex_category}'" if stage.flex_category
-      s << t
-      stage.script_levels.each do |sl|
-        type = 'level'
-        type = 'assessment' if sl.assessment
-        type = 'named_level' if sl.named_level
-        type = 'bonus' if sl.bonus
-
-        if sl.levels.count > 1
-          s << 'variants'
-          sl.levels.each do |level|
-            s.concat(
-              serialize_level(
-                level,
-                type,
-                sl.active?(level),
-                sl.progression,
-                sl.target,
-                sl.challenge,
-                sl.experiments(level)
-              ).map {|l| l.indent(2)}
-            )
-          end
-          s << 'endvariants'
-        else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge))
-        end
+    script.lesson_groups.each do |lesson_group|
+      if lesson_group&.user_facing && !lesson_group.lessons.empty?
+        t = "lesson_group '#{escape(lesson_group.key)}'"
+        t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
+        s << t
       end
-      s << 'no_extras' if stage.stage_extras_disabled
-      s << ''
+      lesson_group.lessons.each do |lesson|
+        s << serialize_lesson(lesson)
+      end
     end
+    s << ''
+    s.join("\n")
+  end
+
+  def self.serialize_lesson(lesson)
+    s = []
+
+    t = "lesson '#{escape(lesson.name)}'"
+    t += ', lockable: true' if lesson.lockable
+    t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
+    s << t
+    lesson.script_levels.each do |sl|
+      type = 'level'
+      type = 'bonus' if sl.bonus
+
+      if sl.levels.count > 1
+        s << 'variants'
+        sl.levels.each do |level|
+          s.concat(
+            serialize_level(
+              level,
+              type,
+              sl.active?(level),
+              sl.progression,
+              sl.named_level?,
+              sl.challenge,
+              sl.assessment,
+              sl.experiments(level)
+            ).map {|l| l.indent(2)}
+          )
+        end
+        s << 'endvariants'
+      else
+        s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
+      end
+    end
+    s << ''
     s.join("\n")
   end
 
@@ -325,8 +394,9 @@ class ScriptDSL < BaseDSL
     type,
     active = nil,
     progression = nil,
-    target = nil,
+    named = nil,
     challenge = nil,
+    assessment = nil,
     experiments = []
   )
     s = []
@@ -340,14 +410,19 @@ class ScriptDSL < BaseDSL
 
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
-    l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
+    l = "#{type} '#{escape(level.key)}'"
     l += ', active: false' if experiments.empty? && active == false
     l += ', active: true' if experiments.any? && (active == true || active.nil?)
     l += ", experiments: #{experiments.to_json}" if experiments.any?
-    l += ", progression: '#{progression}'" if progression
-    l += ', target: true' if target
+    l += ", progression: '#{escape(progression)}'" if progression
+    l += ', named: true' if named
+    l += ', assessment: true' if assessment
     l += ', challenge: true' if challenge
     s << l
     s
+  end
+
+  def self.escape(str)
+    str.gsub("'") {"\\'"}
   end
 end

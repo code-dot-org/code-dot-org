@@ -10,5 +10,13 @@
   "danceFeedbackNeedDifferentDance": "Вие трябва да използвате различен танц.",
   "danceFeedbackNeedEveryTwoMeasures": "Уверете се, че използвате \"всеки 2 размера\" блок",
   "danceFeedbackNeedMakeANewDancer": "Използвайте \"направи нов\" блок, за да създадете втори танцьор.",
+  "danceFeedbackKeyEvent": "",
+  "danceFeedbackDidntPress": "Уверете се, че натискате стрелките по време на танца",
+  "danceFeedbackPressedKey": "Натисна клавиш, но танцьорът не отговори",
+  "danceFeedbackNeedTwoDancers": "Трябва да направиш двама танцьори.",
+  "danceFeedbackOnlyOneDancerMoved": "Само един от таньцорите се премести.",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": ""
 }

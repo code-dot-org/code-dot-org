@@ -1,46 +1,45 @@
 ---
-title: <%= hoc_s(:title_how_to_companies).inspect %>
-layout: wide
-nav: how_to_nav
+title: Hvordan arrangere en Kodetime - Bedrifter
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Hvordan arrangere Kodetimen på din arbeidsplass
 
-### Find out how you and your employees can inspire students to try computer science!
+### Finn ut hvordan du og dine ansatte kan inspirere studenter til å prøve informatikk!
 
 * * *
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## Kom i kontakt med lokale klasser og bli frivillig for Kodetimen
 
-Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org tilbyr dine ansatte muligheten til å [komme i kontakt]({{ urls/volunteer }}) med lokale læringsinstitusjoner for å delta på Kodetimen, hvor de kan dele sine erfaringer og inspirere elever til å studere informatikk.
 
-[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+[<button>Meld deg som frivillig!</button>]({{ urls/volunteer }}) <br /> <br />
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 ## Additional ways companies can support the Hour of Code
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
+- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
 - Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 # Hvordan arrangere en Kodetime
 
 ## 1. Reklamer for Kodetimen
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
+- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 2. Se en veiledende video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. Velg en aktivitet
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Prøv dem!](%= resolve_url('/learn') %)
+We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 4. Planlegg hva du trenger av utstyr - datamaskin er valgfritt
 
@@ -70,13 +69,13 @@ Kodetimen kan åpnes med med å diskutere hvordan informasjonsteknologi påvirke
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- Se tips for å få jenter interessert i dataprogrammering [her]({{ urls/girls }}).
 
 ## 6. Koding!
 
 **Sett i gang elevene med oppgaven**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
 - For younger students, load the activity page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -91,9 +90,9 @@ Kodetimen kan åpnes med med å diskutere hvordan informasjonsteknologi påvirke
 
 ## 7. Feiring
 
-- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
+- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
 
-<%= view :signup_button %>
+{{ signup_button }}

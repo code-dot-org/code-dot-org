@@ -1,0 +1,40 @@
+// Styles for use with Pagination.jsx
+ul.pagination-container {
+    display: block;
+    margin: 10px;
+    text-align: center;
+
+    .pagination-previous-button, .pagination-next-button {
+        display: none;
+    }
+
+    li {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+
+        a {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #4d575f;
+            font-weight: bold;
+            text-decoration: none;
+
+            &.pagination-active-page {
+                color: white;
+                background-color: #4d575f;
+            }
+
+            &:hover {
+                color: white;
+                background-color: #59b9dc;
+                text-decoration: none;
+            }
+        }
+    }
+}

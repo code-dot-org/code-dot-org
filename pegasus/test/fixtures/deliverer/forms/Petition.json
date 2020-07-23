@@ -1,0 +1,10 @@
+{
+  "data": {
+    "age_i": 18,
+    "name_s": "Fake Name",
+    "role_s": "student",
+    "email_s": "name.fake@fabricated.edu",
+    "country_s": "United States"
+  },
+  "processed_data": { "location_p": null }
+}

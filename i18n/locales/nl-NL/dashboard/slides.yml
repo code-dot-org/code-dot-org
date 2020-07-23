@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 nl:
   slides:
     maze_intro:
@@ -513,6 +518,7 @@ nl:
       3:
         text: "Je gaat je algoritme maken door eerst de afbeeldingen los te snijden. Vervolgens kies je 6 afbeeldingen die de stappen laten zien die nodig zijn om een papieren vliegtuigje te maken, en zet je ze in de juiste volgorde. Nadat je alles op volgorde hebt, zal je je algoritme ruilen met een andere groep leerlingen om te kijken of je algoritme werkt. Een goed ontworpen algoritme is zeer belangrijk voor het maken van het beste papieren vliegtuigje."
       4:
+        text: "Wanneer we chocolade willen maken, zijn er vele grote stappen van dat proces dat bestaan uit vele kleinere stappen. Er bestaan vele recepten/algoritmen en manieren afhankelijk van de chocolade dat we willen maken. Elke stap is belangrijk, zelfs de kleinste! Zonder die ene kleine stap kan de rest van het proces niet uitgevoerd worden. Algoritmen maken zodat anderen ze kunnen verstaan is heel belangrijk. Daarom zorgen we ervoor dat elke kleine stap uitgeschreven is zodat de oplossing van het algoritme, voor iedereen die ze uitvoert, hetzelfde is."
     C2_playlab_createstory:
       1:
         text: "Tot nu toe maakte je een animatie of verhaal dat telkens hetzelfde deed wanneer je het uitvoert. Nu kan je een interactief spel maken dat je daadwerkelijk kan spelen."
@@ -526,6 +532,7 @@ nl:
       4:
     C2_zuck_repeat_loop:
       1:
+        text: "Iets waar computers heel goed in zijn is het herhalen van commando's. Mensen worden het constant herhalen van dezelfde opdracht snel beu. Computers kunnen dezelfde opdracht miljoenen of zelfs miljarden keren nauwkeurig uitvoeren zonder verveeld te raken."
       2:
         text: "Dus het duurt bijvoorbeeld erg lang om alle e-mails te schrijven als ik iedereen op Facebook een fijne verjaardag wil wensen door ze een email te sturen. Echter kan ik met een paar regels code een systeem maken dat naar iedereen op Facebook een e-mail stuurt om ze een fijne verjaardag te wensen. Dit is dus wat loops zijn, en waarom ze waardevol zijn, iets wat computers erg goed kunnen."
       3:
@@ -590,9 +597,43 @@ nl:
       2:
         text: "Blockly is verdeeld in drie grote delen. Is aan de linkerkant is de doolhof, waar je programma wordt uitgevoerd. De instructies voor elk niveau worden onder het doolhof geschreven. Het midden is de gereedschapskist en elk blok is een commando die de vogel kan begrijpen. De witruimte aan de rechterkant wordt de werkruimte genoemd en dit is waar we ons programma gaan bouwen."
       3:
+        text: "Wat gebeurt er als ik het blok naar onze werkplek sleep en op \"uitvoeren\" druk? Dan gaat de vogel een vakje naar voren. Wat moet ik doen als de vogel daarna nog iets moet doen? Dan moet je een nieuw blokje aan het programma vastmaken."
       4:
+        text: "Ik kies de \"draai rechts\"-blok en ik sleep het onder mijn ga-vooruit blok, tot er een gele pijl verschijnt. Dan laat ik het blok los en de blokken maken zich aan elkaar vast. Als ik opnieuw op \"uitvoeren\" druk, voert de vogel alle opdrachten uit van onze werkplek."
       5:
         text: "Als je een blok wilt weghalen, verwijder die dan uit de stapel en sleep het naar de prullenmand. Als je dan op \"uitvoeren\" drukt, kun je op de herstelknop drukken om de vogel opnieuw te laten beginnen. Kom op, pak de varkens!"
+    starwars_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik, een pijltjestoets of een tik op het scherm."
+      5:
+      6:
+      7:
+      8:
+      9:
+    starwars_blocks_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+        text: "Als je een blok weg wilt halen, dan sleep je hem gewoon terug naar de gereedschapskist."
+      10:
+    starwars_blocks_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik, een pijltjestoets of een tik op het scherm."
+      5:
+      6:
+      7:
     mc_intro:
       1:
         text: "Mijn naam is Jens Bergensten, maar ik ben beter bekend als Jeb. Ik ben de hoofdontwikkelaar van Minecraft, hier bij Mojang in Stockholm. Volgens mij was ik elf of misschien twaalf toen ik begon met programmeren omdat ik games wilde maken. Een vriend van mijn vader zei dat ik om games te kunnen maken moest leren programmeren. Zo ben ik begonnen. Ik houd van ontwerpen en onderzoeken hoe games in elkaar zitten. Dat vind ik echt het leukste aan Minecraft."
@@ -665,10 +706,12 @@ nl:
       2:
       3:
       4:
+        text: "Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma uitgevoerd. De instructies voor elk level worden onderaan weergegeven."
       5:
       6:
         text: "De witte ruimte rechts is de werkruimte en daar bouwen we ons programma."
       7:
+        text: "Om te beginnen, moet je blokken koppelen aan het oranje \"when run\" blok. Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele lijn ziet, en dan zullen ze samengekoppelt worden."
       8:
       9:
     iceage_intro:
@@ -676,10 +719,12 @@ nl:
       2:
       3:
       4:
+        text: "Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma uitgevoerd. De instructies voor elk level worden onderaan weergegeven."
       5:
       6:
         text: "De witte ruimte rechts is de werkruimte en daar bouwen we ons programma."
       7:
+        text: "Om te beginnen, moet je blokken koppelen aan het oranje \"when run\" blok. Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele lijn ziet, en dan zullen ze samengekoppelt worden."
       8:
       9:
     mc_2016_intro:
@@ -741,3 +786,13 @@ nl:
       11:
         text: "Als je vergeten bent wat je moet doen dan staan de instructies voor elk niveau boven aan de pagina."
       12:
+    hoc_dance_events_2019:
+      1:
+      2:
+      3:
+      4:
+        text: "Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik, een pijltjestoets of een tik op het scherm."
+      5:
+      6:
+      7:
+      8:

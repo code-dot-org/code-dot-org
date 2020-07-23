@@ -5,6 +5,8 @@ module Api::V1::Pd::Application
     include Pd::Application::ActiveApplicationModels
     include Pd::Application::ApplicationConstants
 
+    self.use_transactional_test_case = true
+
     setup_all do
       @teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
       @test_params = {
@@ -20,7 +22,7 @@ module Api::V1::Pd::Application
 
     setup do
       PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
-        TEACHER_APPLICATION_MAILER_CLASS.stubs(email_type).returns(
+        Pd::Application::TeacherApplicationMailer.stubs(email_type).returns(
           mock {|mail| mail.stubs(:deliver_now)}
         )
       end
@@ -45,12 +47,12 @@ module Api::V1::Pd::Application
       @teacher_application.reload
       expected_principal_fields = {
         principal_approval: 'Yes',
-        principal_schedule_confirmed: 'Yes, I plan to include this course in the 2019-20 master schedule',
+        principal_schedule_confirmed: 'Yes, I plan to include this course in the 2020-2021 master schedule',
         principal_diversity_recruitment: 'Yes',
         principal_free_lunch_percent: '50.00%',
         principal_underrepresented_minority_percent: '52.00%',
         principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
-        principal_pay_fee: 'Yes, my school or teacher will be able to pay the full program fee.'
+        principal_pay_fee: 'Yes, my school will be able to pay the full program fee.'
       }
       actual_principal_fields = @teacher_application.sanitize_form_data_hash.slice(*expected_principal_fields.keys)
       assert_equal expected_principal_fields, actual_principal_fields
@@ -63,7 +65,7 @@ module Api::V1::Pd::Application
         application_guid: teacher_application.application_guid,
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY).merge(
           {
-            replace_course: 'Yes, it will replace an existing computer science course',
+            replace_course: 'Yes',
             replace_which_course_csp: ['CodeHS', 'CS50']
           }.stringify_keys
         )
@@ -75,7 +77,7 @@ module Api::V1::Pd::Application
       end
 
       assert_equal(
-        'Yes, it will replace an existing computer science course: CodeHS, CS50',
+        'Yes: CodeHS, CS50',
         teacher_application.reload.sanitize_form_data_hash[:principal_wont_replace_existing_course]
       )
     end
@@ -126,7 +128,7 @@ module Api::V1::Pd::Application
 
     test 'Does not send emails on unsuccessful create' do
       PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
-        TEACHER_APPLICATION_MAILER_CLASS.expects(email_type).never
+        Pd::Application::TeacherApplicationMailer.expects(email_type).never
       end
 
       put :create, params: {form_data: {first_name: ''}, application_guid: 'invalid'}
@@ -147,7 +149,7 @@ module Api::V1::Pd::Application
 
       @teacher_application.reload
 
-      assert_equal YES, @teacher_application.response_scores_hash[:meets_scholarship_criteria_scores][:principal_approval]
+      assert_equal YES, @teacher_application.response_scores_hash[:meets_minimum_criteria_scores][:principal_approval]
     end
   end
 end

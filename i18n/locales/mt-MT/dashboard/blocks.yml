@@ -26,10 +26,18 @@ mt:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": bl-addoċċ
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": bl-addoċċ
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': bl-addoċċ
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": bl-addoċċ
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -76,27 +84,25 @@ mt:
             '4': very fast
             '0.5': slow
             '0.25': very slow
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': veru/minnu
-            'false': falz
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": bl-addoċċ
       gamelab_randColor:
         text: kulur bl-addoċċ
       gamelab_randomColor:
         text: kulur bl-addoċċ
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': bl-addoċċ
       Mikelab_randomColor:
         text: kulur bl-addoċċ
-      aalab_setCollidable:
+      aalab_goToScene:
         options:
-          VAL:
-            '"true"': veru/minnu
-            '"false"': falz
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
+        options:
+          OPTION:
+            '"random"': bl-addoċċ

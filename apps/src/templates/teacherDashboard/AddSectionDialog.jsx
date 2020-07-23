@@ -58,7 +58,7 @@ class AddSectionDialog extends Component {
               handleCancel={handleCancel}
             />
           )}
-          {loginType && <EditSectionForm title={title} />}
+          {loginType && <EditSectionForm title={title} isNewSection={true} />}
         </PadAndCenter>
       </BaseDialog>
     );

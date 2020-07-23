@@ -8,7 +8,8 @@ class Api::V1::Pd::RegionalPartnerSerializer < ActiveModel::Serializer
   def application_state
     {
       state: object.summer_workshops_application_state,
-      earliest_open_date: object.summer_workshops_earliest_apps_open_date
+      earliest_open_date: object.summer_workshops_earliest_apps_open_date,
+      upcoming_priority_deadline_date: object.upcoming_priority_deadline_date
     }
   end
 end

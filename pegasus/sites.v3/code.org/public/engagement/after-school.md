@@ -58,7 +58,7 @@ To: Employee
 
 Hello [NAME],
 
-[COMPANY] has partnered with Code.org to bring you new program launching this year! This is an opportunity for you and your fellow colleagues to get involved in your community by driving local computer science after school clubs in partnership with local organizations. We are looking for employees eager to be leaders in their community.
+[COMPANY] has partnered with Code.org to bring you a new program launching this year! This is an opportunity for you and your fellow colleagues to get involved in your community by driving local computer science after school clubs in partnership with local organizations. We are looking for employees eager to be leaders in their community.
 
 Commitments include:
 
@@ -75,6 +75,10 @@ You will be provided with many resources, tools, and template messaging to help 
 
 [/letter]
 
+<!--
+
+Note: This section was removed because this is no longer something we support. It was removed by Jake Bell on 11/12/19 per a conversation with Emma and Amy
+
 <a name="facilitator"></a>
 ## Train your employees with an experienced Computer Science facilitator
 
@@ -89,3 +93,5 @@ If your company chooses to hire a facilitator, your employees will receive in-pe
 “I can’t think of anything that would improve this workshop. The workshop facilitator was very professional. This is by far the BEST workshop I’ve ever attended!”
 
 **Find a Code.org Facilitator near you [here](/educate/professional-learning/cs-fundamentals-directory)!**
+
+-->

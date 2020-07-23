@@ -1,4 +1,5 @@
 name 'CSD U3 Entertainment_2018_2019'
+editor_experiment ''
 display_name 'Exploring CS in Entertainment'
 markdown <<MARKDOWN
 # Starting Your Search
@@ -10,6 +11,8 @@ MARKDOWN
 
 teacher_markdown <<MARKDOWN
 Here are a few sites to get students started.  These sites are generally appropriate for school, but the content with them changes frequently, so **we strongly suggest that you check each site for inappropriate content before sharing it with students**.
+
+[key]
 
 ## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
 
@@ -55,4 +58,6 @@ While this podcast doesn't feature much in the way of formal professional progra
 ### Relevant Fields
 
 * All
+
+[/key]
 MARKDOWN

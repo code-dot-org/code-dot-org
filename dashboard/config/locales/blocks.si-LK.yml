@@ -21,6 +21,11 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,12 +59,38 @@ si:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": අහඹු
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': අහඹු
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': පිටසක්වල ජීවියා
+            '"CAT"': බළලා
+            '"DOG"': බල්ලා
+            '"DUCK"': තාරාවා
+            '"ROBOT"': රොබෝ
+            '"UNICORN"': කඟවේනා
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': පිටසක්වල ජීවියා
+            '"CAT"': බළලා
+            '"DOG"': බල්ලා
+            '"DUCK"': තාරාවා
+            '"ROBOT"': රොබෝ
+            '"UNICORN"': කඟවේනා
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
@@ -121,7 +152,17 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
@@ -131,6 +172,15 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -149,15 +199,14 @@ si:
           CONDITION:
             '"when"': විට
             '"while"': while
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': සත්‍ය
-            'false': 'false'
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -170,10 +219,6 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
             '"x"': x
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": අහඹු
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -186,11 +231,14 @@ si:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ගුහාව
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': නගරය
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': අහඹු
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': කාන්තාරය
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': දේදුන්න
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': දිය
+              යට
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ශීත
+              ඍතුව
       gamelab_setProp:
         options:
           PROPERTY:
@@ -205,14 +253,6 @@ si:
           CONDITION:
             '"when"': විට
             '"while"': while
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
       gamelab_turn:
         options:
           DIRECTION:
@@ -226,13 +266,6 @@ si:
             '"left"': වම
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": උඩ
-            "'down'": යට
-            "'left'": වම
-            "'right'": දකුණ
       gamelab_whileKey:
         options:
           KEY:
@@ -273,6 +306,8 @@ si:
             '"scale"': විශාලත්වය
       Mikelab_randomColor:
         text: අහඹු වර්ණයක්
+      Mikelab_repeatUntilComplete:
+        text: සදහටම නැවත කරන්න
       Mikelab_setBG:
         options:
           BG:
@@ -322,49 +357,22 @@ si:
         text: වමට හැරෙන්න
       RyanLab_turnRight:
         text: දකුණට හැරෙන්න
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': විට
-            '"while"': while
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': විට
-            '"while"': while
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': විට
-            '"while"': while
-          KEY:
-            '"up"': උඩ
-            '"down"': යට
-            '"left"': වම
-            '"right"': දකුණ
-            '"space"': අභ්‍යාවකාශය
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': නගරය
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': සත්‍ය
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': පෙන්වන්න
-            '"hide"': හැංගෙන්න
+            '"random"': අහඹු
       binary_move:
         options:
           DIR:

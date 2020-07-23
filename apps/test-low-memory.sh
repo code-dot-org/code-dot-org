@@ -1,43 +1,64 @@
 #!/bin/bash
 set -e
 
-# 'npm test' normally does all three of these things.
-# We break them up here so they each run in isolation.
-GRUNT_CMD="node --max_old_space_size=4096 `npm bin`/grunt"
+MEM_PER_PROCESS=4096
 
-if [ -n "$CIRCLECI" ]; then
-  mkdir -p log
+function linuxNumProcs() {
+  local nprocs=$(nproc)
 
-  curl -s https://codecov.io/bash > /tmp/codecov.sh
-  chmod +x /tmp/codecov.sh
+  # Use MemAvailable when available, otherwise fall back to MemFree
+  if grep -q MemAvailable /proc/meminfo; then
+    local mem_metric=MemAvailable
+  else
+    local mem_metric=MemFree
+  fi
 
-  $GRUNT_CMD preconcat
+  # Don't run more processes than can fit in free memory.
+  local mem_procs=$(awk "/${mem_metric}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
+  local procs=$(( ${mem_procs} < ${nprocs} ? ${mem_procs} : ${nprocs} ))
 
-  echo "###################################################################"
-  echo "#                                                                 #"
-  echo "#   See 'apps-test-log' under the artifacts tab for test output   #"
-  echo "#                                                                 #"
-  echo "###################################################################"
+  if ((procs == 0)); then
+    local free_kb=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
+    procs=1
+  fi 
 
-  SHELL=/bin/bash parallel -j 4 --joblog - ::: "npm run lint" \
-  "(PORT=9876 $GRUNT_CMD unitTest && /tmp/codecov.sh -cF unit) > log/unitTest.log" \
-  "(PORT=9877 $GRUNT_CMD storybookTest && /tmp/codecov.sh -cF storybook) > log/storybookTest.log" \
-  "(PORT=9878 $GRUNT_CMD scratchTest && /tmp/codecov.sh -cF scratch) > log/scratchTest.log" \
-  "(PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && \
-    /tmp/codecov.sh -cF integration) > log/turtleTest.log" \
-  "(PORT=9880 LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' $GRUNT_CMD karma:integration && \
-    /tmp/codecov.sh -cF integration) > log/integrationTest.log" \
-  "(PORT=9881 LEVEL_TYPE='applab|gamelab' $GRUNT_CMD karma:integration && \
-    /tmp/codecov.sh -cF integration) > log/appLabgameLabTest.log" \
-  "(PORT=9882 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && \
-    /tmp/codecov.sh -cF integration) > log/craftTest.log"
+  echo $procs
+}
+
+if [ "$(uname)" = "Darwin" ]; then
+  PROCS=2 # TODO: set this dynamically like in linux
+elif [ "$(uname)" = "Linux" ]; then
+  PROCS=$(linuxNumProcs)
 else
-  npm run lint
-  $GRUNT_CMD unitTest
-  $GRUNT_CMD storybookTest
-  $GRUNT_CMD scratchTest
-  LEVEL_TYPE='turtle' $GRUNT_CMD integrationTest
-  LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' $GRUNT_CMD integrationTest
-  LEVEL_TYPE='applab|gamelab' $GRUNT_CMD integrationTest
-  LEVEL_TYPE='craft' $GRUNT_CMD integrationTest
+  echo "$(uname) not supported"
+  exit 1
 fi
+
+if [ -n "$DRONE" ]; then
+  CODECOV=/tmp/codecov.sh
+  curl -s https://codecov.io/bash > ${CODECOV}
+  chmod +x ${CODECOV}
+  CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
+else
+  # For non-Drone runs, stub-out codecov.
+  CODECOV=: # stub
+fi
+
+GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
+$GRUNT_CMD preconcat
+
+echo "Running with parallelism: ${PROCS}"
+PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
+
+${PARALLEL} <<SCRIPT
+npm run lint
+(PORT=9876 ${GRUNT_CMD} unitTest && ${CODECOV} -cF unit)
+(PORT=9877 $GRUNT_CMD storybookTest && ${CODECOV} -cF storybook)
+(PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9880 LEVEL_TYPE='maze|bounce|calc|eval|flappy' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9881 LEVEL_TYPE='gamelab' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9882 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9883 LEVEL_TYPE='applab1' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9884 LEVEL_TYPE='applab2' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9885 LEVEL_TYPE='studio' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+SCRIPT

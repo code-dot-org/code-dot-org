@@ -1,5 +1,9 @@
 import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
+import {
+  getChannelIdFromUrl,
+  userAlreadyReportedAbuse
+} from '@cdo/apps/reportAbuse';
 
 export const initHamburger = function() {
   $(function() {
@@ -18,6 +22,15 @@ export const initHamburger = function() {
         hamburger.children('#hamburger-contents').slideUp();
         $('#hamburger-icon').removeClass('active');
       }
+
+      var helpbutton = $('#help-button');
+
+      // If we didn't click the help button itself, and also nothing inside it,
+      // then hide it.
+      if (!helpbutton.is(e.target) && helpbutton.has(e.target).length === 0) {
+        helpbutton.children('#help-contents').slideUp();
+        $('#help-icon').removeClass('active');
+      }
     });
 
     $('.hamburger-expandable-item').each(function() {
@@ -33,11 +46,17 @@ export const initHamburger = function() {
       });
     });
 
-    $('#hamburger #report-bug').click(function() {
+    $('#help-icon').click(function(e) {
+      $(this).toggleClass('active');
+      $('#help-button #help-contents').slideToggle();
+      e.preventDefault();
+    });
+
+    $('#help-icon #report-bug').click(function() {
       trackEvent('help_ui', 'report-bug', 'hamburger');
     });
 
-    $('#hamburger #support').click(function() {
+    $('#help-icon #support').click(function() {
       trackEvent('help_ui', 'support', 'hamburger');
     });
 
@@ -53,5 +72,14 @@ export const initHamburger = function() {
         trackEvent('help_ui', 'support', 'studio_footer');
       });
     });
+
+    const channelId = getChannelIdFromUrl(location.href);
+    const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+    if (alreadyReportedAbuse) {
+      let reportAbuseButton = $('#report-abuse');
+      if (reportAbuseButton) {
+        reportAbuseButton.hide();
+      }
+    }
   });
 };

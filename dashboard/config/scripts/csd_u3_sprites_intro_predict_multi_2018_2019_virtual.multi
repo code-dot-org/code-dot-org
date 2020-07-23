@@ -1,0 +1,13 @@
+name 'CSD U3 Sprites intro predict multi_2018_2019_virtual'
+editor_experiment ''
+question 'When run, where will the sprite `mySprite` be located?'
+
+layout 'wrap'
+
+right '![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)'
+wrong '![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)'
+wrong '![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)'
+wrong '![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)'
+markdown <<MARKDOWN
+
+MARKDOWN

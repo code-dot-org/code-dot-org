@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-07-02T05:34:27.000Z",
   "level_num": "custom",
   "user_id": 63,
@@ -8,7 +8,7 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "GameLabJr"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
@@ -46,253 +46,17 @@
     "hide_custom_blocks": "true",
     "display_name": "Sprite Lab Example Project",
     "block_pool": "gamelab",
-    "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-02 05:35:45 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:14:13 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:17:14 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:20:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:21:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:30:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:31:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:32:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:37:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-10-04 15:44:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-04 15:47:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-04 15:58:05 +0000\",\"changed\":[\"start_blocks\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-04 19:03:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-12 14:41:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-12-17 20:50:36 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-02 05:35:45 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:14:13 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:17:14 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:20:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:21:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:30:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:31:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:32:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:37:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-10-04 15:44:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-04 15:47:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-04 15:58:05 +0000\",\"changed\":[\"start_blocks\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-04 19:03:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-12 14:41:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-12-17 20:50:36 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-01 19:43:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="behavior_definition" editable="false" usercreated="true">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-          </mutation>
-          <title name="NAME">flying south and loop</title>
-          <statement name="STACK">
-            <block type="gamelab_moveInDirection">
-              <title name="DIRECTION">"South"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="math_number">
-                  <title name="NUM">10</title>
-                </block>
-              </value>
-              <next>
-                <block type="controls_if">
-                  <value name="IF0">
-                    <block type="logic_compare">
-                      <title name="OP">LT</title>
-                      <value name="A">
-                        <block type="gamelab_getProp">
-                          <title name="PROPERTY">"y"</title>
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="math_number">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <statement name="DO0">
-                    <block type="gamelab_setProp">
-                      <title name="PROPERTY">"y"</title>
-                      <value name="SPRITE">
-                        <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_random_int">
-                          <value name="FROM">
-                            <block type="math_number">
-                              <title name="NUM">800</title>
-                            </block>
-                          </value>
-                          <value name="TO">
-                            <block type="math_number">
-                              <title name="NUM">1400</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_setProp">
-                          <title name="PROPERTY">"x"</title>
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                          <value name="VAL">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <title name="NUM">0</title>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <title name="NUM">400</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" editable="false" usercreated="true">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-          </mutation>
-          <title name="NAME">drive south and loop</title>
-          <statement name="STACK">
-            <block type="gamelab_moveInDirection">
-              <title name="DIRECTION">"South"</title>
-              <value name="SPRITE">
-                <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="variables_get">
-                  <title name="VAR">speed</title>
-                </block>
-              </value>
-              <next>
-                <block type="controls_if">
-                  <value name="IF0">
-                    <block type="logic_compare">
-                      <title name="OP">LT</title>
-                      <value name="A">
-                        <block type="gamelab_getProp">
-                          <title name="PROPERTY">"y"</title>
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="math_number">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <statement name="DO0">
-                    <block type="gamelab_setProp">
-                      <title name="PROPERTY">"y"</title>
-                      <value name="SPRITE">
-                        <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_number">
-                          <title name="NUM">400</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_setProp">
-                          <title name="PROPERTY">"x"</title>
-                          <value name="SPRITE">
-                            <block type="sprite_parameter_get">
-                              <title name="VAR">this sprite</title>
-                            </block>
-                          </value>
-                          <value name="VAL">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <title name="NUM">0</title>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <title name="NUM">400</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_setTint">
-                              <value name="THIS">
-                                <block type="sprite_parameter_get">
-                                  <title name="VAR">this sprite</title>
-                                </block>
-                              </value>
-                              <value name="COLOR">
-                                <block type="colour_rgb">
-                                  <value name="RED">
-                                    <block type="math_random_int">
-                                      <value name="FROM">
-                                        <block type="math_number">
-                                          <title name="NUM">0</title>
-                                        </block>
-                                      </value>
-                                      <value name="TO">
-                                        <block type="math_number">
-                                          <title name="NUM">255</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <value name="GREEN">
-                                    <block type="math_random_int">
-                                      <value name="FROM">
-                                        <block type="math_number">
-                                          <title name="NUM">0</title>
-                                        </block>
-                                      </value>
-                                      <value name="TO">
-                                        <block type="math_number">
-                                          <title name="NUM">255</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <value name="BLUE">
-                                    <block type="math_random_int">
-                                      <value name="FROM">
-                                        <block type="math_number">
-                                          <title name="NUM">0</title>
-                                        </block>
-                                      </value>
-                                      <value name="TO">
-                                        <block type="math_number">
-                                          <title name="NUM">255</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
         <block type="when_run">
           <next>
             <block type="variables_set">
@@ -656,6 +420,305 @@
             </block>
           </next>
         </block>
+        <block type="gamelab_whileTouching">
+          <value name="SPRITE1">
+            <block type="sprite_variables_get">
+              <title name="VAR">otherCar</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="sprite_variables_get">
+              <title name="VAR">player</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_setTint">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">player</title>
+                </block>
+              </value>
+              <value name="COLOR">
+                <block type="gamelab_randColor"/>
+              </value>
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">score</title>
+                  <value name="VALUE">
+                    <block type="math_arithmetic">
+                      <title name="OP">MINUS</title>
+                      <value name="A">
+                        <block type="variables_get">
+                          <title name="VAR">score</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_showTitleScreen">
+                      <value name="TITLE">
+                        <block type="text_join_simple" inputcount="2">
+                          <value name="ADD0">
+                            <block type="text">
+                              <title name="TEXT">Score: </title>
+                            </block>
+                          </value>
+                          <value name="ADD1">
+                            <block type="variables_get">
+                              <title name="VAR">score</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="SUBTITLE">
+                        <block type="text">
+                          <title name="TEXT"/>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="behavior_definition" editable="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+          </mutation>
+          <title name="NAME">flying south and loop</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <title name="OP">LT</title>
+                      <value name="A">
+                        <block type="gamelab_getProp">
+                          <title name="PROPERTY">"y"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_setProp">
+                      <title name="PROPERTY">"y"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_random_int">
+                          <value name="FROM">
+                            <block type="math_number">
+                              <title name="NUM">800</title>
+                            </block>
+                          </value>
+                          <value name="TO">
+                            <block type="math_number">
+                              <title name="NUM">1400</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setProp">
+                          <title name="PROPERTY">"x"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_random_int">
+                              <value name="FROM">
+                                <block type="math_number">
+                                  <title name="NUM">0</title>
+                                </block>
+                              </value>
+                              <value name="TO">
+                                <block type="math_number">
+                                  <title name="NUM">400</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" editable="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+          </mutation>
+          <title name="NAME">drive south and loop</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="variables_get">
+                  <title name="VAR">speed</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <title name="OP">LT</title>
+                      <value name="A">
+                        <block type="gamelab_getProp">
+                          <title name="PROPERTY">"y"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_setProp">
+                      <title name="PROPERTY">"y"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number">
+                          <title name="NUM">400</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setProp">
+                          <title name="PROPERTY">"x"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_random_int">
+                              <value name="FROM">
+                                <block type="math_number">
+                                  <title name="NUM">0</title>
+                                </block>
+                              </value>
+                              <value name="TO">
+                                <block type="math_number">
+                                  <title name="NUM">400</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_setTint">
+                              <value name="THIS">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="COLOR">
+                                <block type="colour_rgb">
+                                  <value name="RED">
+                                    <block type="math_random_int">
+                                      <value name="FROM">
+                                        <block type="math_number">
+                                          <title name="NUM">0</title>
+                                        </block>
+                                      </value>
+                                      <value name="TO">
+                                        <block type="math_number">
+                                          <title name="NUM">255</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="GREEN">
+                                    <block type="math_random_int">
+                                      <value name="FROM">
+                                        <block type="math_number">
+                                          <title name="NUM">0</title>
+                                        </block>
+                                      </value>
+                                      <value name="TO">
+                                        <block type="math_number">
+                                          <title name="NUM">255</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="BLUE">
+                                    <block type="math_random_int">
+                                      <value name="FROM">
+                                        <block type="math_number">
+                                          <title name="NUM">0</title>
+                                        </block>
+                                      </value>
+                                      <value name="TO">
+                                        <block type="math_number">
+                                          <title name="NUM">255</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -796,116 +859,6 @@
               </value>
             </block>
           </statement>
-        </block>
-        <block type="gamelab_whileTouching">
-          <value name="SPRITE1">
-            <block type="sprite_variables_get">
-              <title name="VAR">otherCar</title>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="sprite_variables_get">
-              <title name="VAR">player</title>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_setTint">
-              <value name="THIS">
-                <block type="sprite_variables_get">
-                  <title name="VAR">player</title>
-                </block>
-              </value>
-              <value name="COLOR">
-                <block type="colour_rgb">
-                  <value name="RED">
-                    <block type="math_random_int">
-                      <value name="FROM">
-                        <block type="math_number">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number">
-                          <title name="NUM">255</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="GREEN">
-                    <block type="math_random_int">
-                      <value name="FROM">
-                        <block type="math_number">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number">
-                          <title name="NUM">255</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="BLUE">
-                    <block type="math_random_int">
-                      <value name="FROM">
-                        <block type="math_number">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number">
-                          <title name="NUM">255</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set">
-                  <title name="VAR">score</title>
-                  <value name="VALUE">
-                    <block type="math_arithmetic">
-                      <title name="OP">MINUS</title>
-                      <value name="A">
-                        <block type="variables_get">
-                          <title name="VAR">score</title>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="math_number">
-                          <title name="NUM">1</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_showTitleScreen">
-                      <value name="TITLE">
-                        <block type="text_join_simple" inputcount="2">
-                          <value name="ADD0">
-                            <block type="text">
-                              <title name="TEXT">Score: </title>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="variables_get">
-                              <title name="VAR">score</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="SUBTITLE">
-                        <block type="text">
-                          <title name="TEXT"/>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
           <mutation>

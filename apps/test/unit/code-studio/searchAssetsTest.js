@@ -2,7 +2,7 @@
 
 import assert from 'assert';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
-import animationLibrary from '@cdo/apps/gamelab/animationLibrary.json';
+import testAnimationLibrary from '../p5lab/testAnimationLibrary.json';
 import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
 
 describe('search assets from animation library', function() {
@@ -11,8 +11,8 @@ describe('search assets from animation library', function() {
     const pageCount = 0;
     const searchedData = searchAssets(
       'hip',
-      'category_animals',
-      animationLibrary,
+      'animals',
+      testAnimationLibrary,
       pageCount,
       maxResults
     );
@@ -31,17 +31,18 @@ describe('search assets from animation library', function() {
     const searchedData = searchAssets(
       'hip',
       '',
-      animationLibrary,
+      testAnimationLibrary,
       pageCount,
       maxResults
     );
 
     assert.equal(searchedData.pageCount, 1);
-    assert.equal(searchedData.results.length, 4);
+    assert.equal(searchedData.results.length, 5);
     assert.equal(searchedData.results[0].name, 'hippo');
     assert.equal(searchedData.results[1].name, 'hippo_gray');
     assert.equal(searchedData.results[2].name, 'hippo_square');
     assert.equal(searchedData.results[3].name, 'hippo_token');
+    assert.equal(searchedData.results[4].name, 'hip');
   });
 
   it('searchAssets searches the sound library with a cateogry', function() {
@@ -49,7 +50,7 @@ describe('search assets from animation library', function() {
     const pageCount = 0;
     const searchedData = searchAssets(
       'click',
-      'category_objects',
+      'objects',
       soundLibrary,
       pageCount,
       maxResults
@@ -67,7 +68,7 @@ describe('search assets from animation library', function() {
     const searchedData = searchAssets(
       'square',
       '',
-      animationLibrary,
+      testAnimationLibrary,
       pageCount,
       maxResults
     );
@@ -91,9 +92,12 @@ describe('search assets from animation library', function() {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 2);
+    assert.equal(searchedData.pageCount, 407);
     assert.equal(searchedData.results.length, 1);
-    assert.equal(searchedData.results[0].name, 'click');
+    assert.equal(
+      searchedData.results[0].name,
+      'lighthearted_bonus_objective_1'
+    );
   });
 
   it('searchAssets searches the sound library getting page 2 results', function() {
@@ -107,8 +111,34 @@ describe('search assets from animation library', function() {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 2);
+    assert.equal(searchedData.pageCount, 407);
     assert.equal(searchedData.results.length, 1);
-    assert.equal(searchedData.results[0].name, 'metal_click');
+    assert.equal(
+      searchedData.results[0].name,
+      'lighthearted_bonus_objective_2'
+    );
+  });
+
+  it('can search non-latin characters', function() {
+    const maxResults = 3;
+    const pageCount = 0;
+
+    var searchedData = searchAssets(
+      'медведь',
+      '',
+      testAnimationLibrary,
+      pageCount,
+      maxResults
+    );
+    assert.equal(searchedData.results.length, 2);
+
+    searchedData = searchAssets(
+      'медведь с рыбой',
+      '',
+      testAnimationLibrary,
+      pageCount,
+      maxResults
+    );
+    assert.equal(searchedData.results.length, 1);
   });
 });

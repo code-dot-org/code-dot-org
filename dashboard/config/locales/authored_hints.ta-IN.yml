@@ -1,394 +1,240 @@
 ---
-ta:
+ta-IN:
   data:
     authored_hints:
-      courseA_maze_ramp2_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+      CourseD_Dance_2020_01:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp2_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   ஒரு டான்சர் திரையில் தோன்றுவதை உறுதி செய்து கொள்ளவும்.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp2a_2018_authored_hint:
-        '1': Snap both `East` blocks to the bottom of the `when run` block.
-      courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          _4 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      CourseD_Dance_2020_04:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   4 அளவீடுகளுக்கு பின் ஒரு புதிய அசைவுக்கு டான்சர் மாற வேண்டும்.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          _7 அளவீடுகளுக்குப் பின் நிலை முடிவடைகிறது._
+      CourseD_Dance_2020_05:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   4 அளவீடுகளுக்குப் பின் செய்ததை விட 6 அளவீடுகளுக்குப் பின் உங்கள் டான்சர் வேறு ஒரு நடனத்தை செய்ய வேண்டும்.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp4a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _11 அளவீடுகளுக்குப் பின் நிலை முடிவடையும்._
+      CourseD_Dance_Party_01:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp4a_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   ஒரு டான்சர் திரையில் தோன்றுவதை உறுதி செய்து கொள்ளவும்.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp5a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _4 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+        challenges: |-
+          **தெரிவு செய்யக்கூடிய சவால்கள்**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp5a_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   ப்ளே செய்ய வேறு பாடலை தெரிவு செய்யவும்.
+          -   உங்கள் டான்சருக்கு மறுபெயர் இடவும்.
+      CourseD_Dance_Party_02:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_seq5_2018_authored_hint:
-        '1': Try writing down the steps on paper to find a solution!
-        '2': |-
-          You will need to use this block:
+          -   4 அளவீடுகளுக்கு பின் ஒரு புதிய அசைவுக்கு டான்சர் மாற வேண்டும்.
 
-          <xml><block type="maze_moveSouth"/></xml>
-      courseA_maze_seq5_2019_authored_hint:
-        '1': Try writing down the steps on paper to find a solution!
-        '2': |-
-          You will need to use this block:
+          _7 அளவீடுகளுக்குப் பின் நிலை முடிவடைகிறது._
+      CourseD_Dance_Party_03:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml><block type="maze_moveSouth"/></xml>
-      courseA_maze_seq5a_2018_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
-      courseA_maze_seq5a_2019_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
-      courseB_Scrat_ramp1_2018_authored_hint:
-        '1': If Scrat isn't doing what you want, make sure both of the blocks have
-          been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
-          try something else!
-      courseB_Scrat_ramp1_2019_authored_hint:
-        '1': If Scrat isn't doing what you want, make sure both of the blocks have
-          been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
-          try something else!
-      courseB_Scrat_ramp2_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   4 அளவீடுகளுக்குப் பின் செய்ததை விட 6 அளவீடுகளுக்குப் பின் உங்கள் டான்சர் வேறு ஒரு நடனத்தை செய்ய வேண்டும்.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp2_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _11 அளவீடுகளுக்குப் பின் நிலை முடிவடையும்._
+      CourseD_Dance_Party_04:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   பாடலின் ஏழாவது அளவீடுக்கு முன்னே பின்னணி எஃபெக்டை நீங்கள் உருவாக்க வேண்டும்.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
-          Your code should look like this:
+          _9 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+        challenges: |-
+          **விருப்ப்பத்தேர்வான சவால்**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+           நிகழ்வுகளுக்குக் க்கு கீழே புதிய ப்ளாக்கை இணைப்பதன் மூலம் பாடலின் போது பல்வேறு புள்ளிகளில் பின்னணி எஃபெக்டை <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> மாற்றுங்கள்.
+      CourseD_Dance_Party_06:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   நீங்கள் குறைந்தபட்சம் இரண்டு டான்சர்களை கொண்டிருக்க வேண்டும்.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp4a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _5 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+        challenges: |-
+          **தெரிவு செய்யப்படக்கூடிய சவால்**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp4a_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   ஒரு மூன்றாவது டான்சரை சேர்க்கவும் (அல்லது நீங்கள் விரும்பும் எண்ணிக்கையில்!)
+          -   உங்கள் டான்சர்கள் அனைத்தையும் பாடலின் வேறுவேறு புள்ளிகளில் வேறுவேறு அசைவுகளை செய்ய வைக்கவும்.
+      CourseD_Dance_Party_08:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp5a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   இரண்டு டான்சர்கள் 100 உல்லாத ஒரு அளவை கொண்டிருக்க வேண்டும்.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp5a_2019_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _5 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+        challenges: |-
+          **தெரிவு செய்யப்படக்கூடிய சவால்**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseD_artist_5_2018_authored_hint:
-        '1': If you are switching your shapes, don't forget that you will need to
-          switch their angles, too!
-      courseD_artist_5_2018_2019_authored_hint:
-        '1': If you are switching your shapes, don't forget that you will need to
-          switch their angles, too!
+          -   பிற ப்ராபர்ட்டிகளை (அகலம், உயரம், சுழற்சி முதலானவை) மாற்றுவதன் மூலம் பரிசோதிக்கவும்
+      CourseD_Dance_Party_09:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   குறைந்தபட்சம் ஒரு டான்சரின் டின்ட்டை மாற்றவும்.
+
+          _7 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      CourseD_Dance_Party_10:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   இரண்டு அல்லது மேற்பட்ட டான்சர்களின் பண்புகள் கட்டாயமாக மாற வேண்டும்.
+
+          _7 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      CourseD_Dance_Party_11:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   ஒரு டான்சர் திரையில் தோன்றுவதை உறுதி செய்து கொள்ளவும்.
+
+          _4 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      CourseD_Dance_Party_11_5:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   ஒரு டான்சர் திரையில் தோன்றுவதை உறுதி செய்து கொள்ளவும்.
+
+          _4 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      CourseD_Dance_Party_11b:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   நீங்கள் ரோபோவை அழுத்துகையில் ஒரு நடன அசைவை அதனை செய்ய வைக்க  `இடப்புற அம்பை அழுத்தும் போது` ப்ளாக்கை பயன்படுத்தவும்
+
+          _7 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      Dance_2019_01:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   ஒரு டான்சர் திரையில் தோன்றுவதை உறுதி செய்து கொள்ளவும்.
+
+          _4 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      Dance_2019_04:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   4 அளவீடுகளுக்கு பின் ஒரு புதிய அசைவுக்கு டான்சர் மாற வேண்டும்.
+
+          _7 அளவீடுகளுக்குப் பின் நிலை முடிவடைகிறது._
+      Dance_2019_05:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   4 அளவீடுகளுக்குப் பின் செய்ததை விட 6 அளவீடுகளுக்குப் பின் உங்கள் டான்சர் வேறு ஒரு நடனத்தை செய்ய வேண்டும்.
+
+          _11 அளவீடுகளுக்குப் பின் நிலை முடிவடையும்._
+      Dance_Party_01:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   ஒரு டான்சர் திரையில் தோன்றுவதை உறுதி செய்து கொள்ளவும்.
+
+          _4 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+        challenges: |-
+          **தெரிவு செய்யக்கூடிய சவால்கள்**
+
+          -   ப்ளே செய்ய வேறு பாடலை தெரிவு செய்யவும்.
+          -   உங்கள் டான்சருக்கு மறுபெயர் இடவும்.
+      Dance_Party_02:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   4 அளவீடுகளுக்கு பின் ஒரு புதிய அசைவுக்கு டான்சர் மாற வேண்டும்.
+
+          _7 அளவீடுகளுக்குப் பின் நிலை முடிவடைகிறது._
+      Dance_Party_03:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   4 அளவீடுகளுக்குப் பின் செய்ததை விட 6 அளவீடுகளுக்குப் பின் உங்கள் டான்சர் வேறு ஒரு நடனத்தை செய்ய வேண்டும்.
+
+          _11 அளவீடுகளுக்குப் பின் நிலை முடிவடையும்._
+      Dance_Party_04:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   பாடலின் ஏழாவது அளவீடுக்கு முன்னே பின்னணி எஃபெக்டை நீங்கள் உருவாக்க வேண்டும்.
+
+          _9 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+        challenges: |-
+          **விருப்ப்பத்தேர்வான சவால்**
+
+           நிகழ்வுகளுக்குக் க்கு கீழே புதிய ப்ளாக்கை இணைப்பதன் மூலம் பாடலின் போது பல்வேறு புள்ளிகளில் பின்னணி எஃபெக்டை <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> மாற்றுங்கள்.
+      Dance_Party_05:
+        validation: "**இந்த நிலையை நான் எவ்வாறு கடப்பது?** \n\n-   உங்கள் நடனக் கலைஞர்
+          இந்த நிலை முடிவதற்கு முன்பு குறைந்தது 4 வெவ்வேறு நடன அசைவுகள் மூலம் சுழற்சி
+          செய்ய வேண்டும். \n\n_இந்த நிலை 12 மெஷர்களுக்குப் பிறகு நிறைவடையும்._"
+      Dance_Party_06:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   நீங்கள் குறைந்தபட்சம் இரண்டு டான்சர்களை கொண்டிருக்க வேண்டும்.
+
+          _5 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+        challenges: |-
+          **தெரிவு செய்யப்படக்கூடிய சவால்**
+
+          -   ஒரு மூன்றாவது டான்சரை சேர்க்கவும் (அல்லது நீங்கள் விரும்பும் எண்ணிக்கையில்!)
+          -   உங்கள் டான்சர்கள் அனைத்தையும் பாடலின் வேறுவேறு புள்ளிகளில் வேறுவேறு அசைவுகளை செய்ய வைக்கவும்.
+      Dance_Party_08:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   இரண்டு டான்சர்கள் 100 உல்லாத ஒரு அளவை கொண்டிருக்க வேண்டும்.
+
+          _5 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+        challenges: |-
+          **தெரிவு செய்யப்படக்கூடிய சவால்**
+
+          -   பிற ப்ராபர்ட்டிகளை (அகலம், உயரம், சுழற்சி முதலானவை) மாற்றுவதன் மூலம் பரிசோதிக்கவும்
+      Dance_Party_09:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   குறைந்தபட்சம் ஒரு டான்சரின் டின்ட்டை மாற்றவும்.
+
+          _7 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      Dance_Party_10:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   இரண்டு அல்லது மேற்பட்ட டான்சர்களின் பண்புகள் கட்டாயமாக மாற வேண்டும்.
+
+          _7 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      Dance_Party_11:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   ஒரு டான்சர் திரையில் தோன்றுவதை உறுதி செய்து கொள்ளவும்.
+
+          _4 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      Dance_Party_11_5:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   ஒரு டான்சர் திரையில் தோன்றுவதை உறுதி செய்து கொள்ளவும்.
+
+          _4 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._
+      Dance_Party_11b:
+        validation: |-
+          **இந்த நிலையை நான் எப்படி கடப்பேன்?**
+
+          -   நீங்கள் ரோபோவை அழுத்துகையில் ஒரு நடன அசைவை அதனை செய்ய வைக்க  `இடப்புற அம்பை அழுத்தும் போது` ப்ளாக்கை பயன்படுத்தவும்
+
+          _7 அளவீடுகளுக்குப் பின் இந்த நிலை முடிகிறது._

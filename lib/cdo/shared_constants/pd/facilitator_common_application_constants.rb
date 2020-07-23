@@ -6,16 +6,16 @@ module Pd
     end
 
     BASE_SECTION_HEADERS = {
-      section_1_about_you: 'About You',
-      section_2_choose_your_program: 'Professional Learning Program',
-      section_3_experience_and_commitments: 'Experience and Commitments',
-      section_4_leading_students: 'Leading Students',
-      section_5_your_approach_to_learning_and_leading: 'Your Approach to Learning and Leading',
-      section_6_submission: 'Submission'
+      about_you: 'About You',
+      choose_your_program: 'Professional Learning Program',
+      experience_and_commitments: 'Experience and Commitments',
+      leading_students: 'Leading Students',
+      your_approach_to_learning_and_leading: 'Your Approach to Learning and Leading',
+      submission: 'Submission'
     }.freeze
 
     BASE_PAGE_LABELS = {
-      section_1_about_you: {
+      about_you: {
         title: 'Title',
         first_name: 'First name',
         last_name: 'Last name',
@@ -34,7 +34,7 @@ module Pd
         how_heard: 'How did you hear about this opportunity?',
       },
 
-      section_2_choose_your_program: {
+      choose_your_program: {
         program: 'Please choose the course for which you would like to become a facilitator.',
         csf_good_standing_requirement: 'Can you commit to remaining in good standing with Code.org and your assigned Regional Partner?',
         code_org_facilitator: 'Are you currently (or have you been) a Code.org facilitator?',
@@ -42,7 +42,7 @@ module Pd
         code_org_facilitator_programs: "Please check the Code.org programs you currently facilitate, or have facilitated in the past. Mark all that apply.",
       },
 
-      section_3_experience_and_commitments: {
+      experience_and_commitments: {
         teaching_experience: 'Do you have experience as a K-12 classroom teacher?',
         have_led_adults: 'Have you led learning experiences for adults?',
         csf_summit_requirement: 'Can you commit to attending the 2019 Facilitator Summit (May 17-19, 2019 in Atlanta, GA)?',
@@ -76,7 +76,7 @@ module Pd
         csd_csp_which_summer_workshop: 'Your Regional Partner is hosting summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend.',
       },
 
-      section_4_leading_students: {
+      leading_students: {
         currently_involved_in_cs_education: 'How are you currently involved in CS education? Mark all that apply.',
         grades_taught: 'If you do have classroom teaching experience, what grade levels have you taught? Mark all that apply.',
         experience_teaching_this_course: 'Do you have experience teaching the full {{CS Program}} curriculum to students? Mark all that apply.',
@@ -86,7 +86,7 @@ module Pd
         facilitator_availability: 'When do you anticipate being able to facilitate? Note that depending on the program, workshops may be hosted on Saturdays or Sundays. Mark all that apply.',
       },
 
-      section_5_your_approach_to_learning_and_leading: {
+      your_approach_to_learning_and_leading: {
         why_should_all_have_access: clean_multiline(
           "Code.org's Professional Learning Programs are open to all teachers, regardless of their
           experience with CS education. Why do you think Code.org believes that all teachers should
@@ -119,7 +119,7 @@ module Pd
         ),
       },
 
-      section_6_submission: {
+      submission: {
         agree: "By submitting this application, I agree to share my contact information and application with Code.org's Regional Partners."
       }
     }.freeze

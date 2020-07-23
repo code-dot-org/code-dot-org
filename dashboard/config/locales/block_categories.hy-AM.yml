@@ -3,18 +3,12 @@ hy:
   data:
     block_categories:
       Actions: գործողություններ
-      Loops: loops
-      Functions: գործառույթները
       Color: Գույնը
-      Math: Մաթեմատիկա
-      Logic: տրամաբանություն
-      Variables: փոփոխականների
       Conditionals: conditionals
       Events: Իրադարձություններ
+      Functions: գործառույթները
+      Logic: տրամաբանություն
+      Loops: loops
+      Math: Մաթեմատիկա
       Text: տեքստ
-      Location: Location
-      Start: Սկսել
-      Booleans: Booleans
-      test: փորձ
-      Name: Անուն
-      Function: Ֆունկցիա
+      Variables: փոփոխականների

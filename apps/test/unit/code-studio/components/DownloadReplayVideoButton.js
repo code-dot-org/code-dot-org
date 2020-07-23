@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
 
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 
 import {UnconnectedDownloadReplayVideoButton as DownloadReplayVideoButton} from '@cdo/apps/code-studio/components/DownloadReplayVideoButton';
 

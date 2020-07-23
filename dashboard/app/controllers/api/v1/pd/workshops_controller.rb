@@ -6,7 +6,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   COLLECTION_ACTIONS = [:index, :filter].freeze
 
   load_and_authorize_resource class: 'Pd::Workshop', only:
-    [:show, :update, :create, :destroy, :start, :end, :summary, :unstart, :reopen] + COLLECTION_ACTIONS
+    [:show, :update, :create, :destroy, :start, :end, :summary, :unstart, :reopen, :potential_organizers] + COLLECTION_ACTIONS
 
   before_action :load_workshops, only: COLLECTION_ACTIONS
 
@@ -39,6 +39,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     enrollments = ::Pd::Enrollment.for_user(current_user).all.reject do |enrollment|
       enrollment.workshop&.future_or_current_teachercon_or_fit?
     end
+
     workshops = enrollments.map do |enrollment|
       Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
@@ -58,7 +59,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
           limit: limit,
           total_count: workshops.length,
           filters: filter_params,
-          workshops: limited_workshops.map {|w| Api::V1::Pd::WorkshopSerializer.new(w).attributes}
+          workshops: limited_workshops.map {|w| Api::V1::Pd::WorkshopSerializer.new(w, scope: {current_user: current_user}).attributes}
         }
       end
       format.csv do
@@ -109,11 +110,17 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
-    @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
+    conditions = {
       course: Pd::Workshop::COURSE_CSF,
       on_map: true
-    ).where.not(processed_location: nil)
+    }
 
+    if params['deep_dive_only']
+      conditions[:subject] = Pd::Workshop::SUBJECT_CSF_201
+    end
+
+    @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
+      where(conditions).where.not(processed_location: nil)
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
   end
 
@@ -172,7 +179,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # POST /api/v1/pd/workshops/1/end
   def end
     @workshop.end!
-    Pd::AsyncWorkshopHandler.process_ended_workshop @workshop.id
     head :no_content
   end
 
@@ -185,6 +191,13 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # GET /api/v1/pd/workshops/1/summary
   def summary
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
+  end
+
+  use_database_pool potential_organizers: :persistent
+
+  # Users who could be re-assigned to be the organizer of this workshop
+  def potential_organizers
+    render json: @workshop.potential_organizers.pluck(:name, :id).map {|name, id| {label: name, value: id}}
   end
 
   private
@@ -256,11 +269,17 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :course,
       :subject,
       :notes,
+      :fee,
       :regional_partner_id,
+      :organizer_id,
+      :virtual,
+      :suppress_email,
+      :third_party_provider,
       sessions_attributes: [:id, :start, :end, :_destroy],
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner
+    allowed_params.delete :organizer_id unless current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
     params.require(:pd_workshop).permit(*allowed_params)
   end

@@ -17,10 +17,12 @@
   "catControl": "گرێکان",
   "catLogic": "لۆژيك",
   "catMath": "بیرکاری",
+  "catProcedures": "فرمانەکان",
   "catText": "دەق",
   "catVariables": "گۆڕاوەکان",
   "continue": "بەردەوام بە",
   "dropletBlock_addCharacter_description": "پیتێک بۆ وێنەکە زیاد بکە.",
+  "elseCode": "یان",
   "for": "ژماردن لەگەڵ",
   "playlab_lastLevel_continueText": "تەواو",
   "hoc2015_lastLevel_continueText": "تەواو",
@@ -35,6 +37,7 @@
   "remove": "لابردن",
   "repeatDo": "بكە",
   "set": "دانان",
+  "showTitleScreenText": "دەق",
   "setSprite": "دانان",
   "soundRandom": "هەڕەمەکی"
 }

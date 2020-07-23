@@ -3,6 +3,7 @@ import React from 'react';
 import AssetUploader from './AssetUploader';
 import Button from '../../templates/Button';
 import i18n from '@cdo/locale';
+import {isIE11} from '@cdo/apps/util/browser-detector';
 
 export const assetButtonStyles = {
   button: {
@@ -23,6 +24,7 @@ export const assetButtonStyles = {
 const RecordButton = ({onSelectRecord, disabled}) => (
   <span>
     <Button
+      __useDeprecatedTag
       onClick={onSelectRecord}
       id="record-asset"
       className="share"
@@ -47,7 +49,7 @@ export default class AddAssetButtonRow extends React.Component {
   static propTypes = {
     uploadsEnabled: PropTypes.bool.isRequired,
     allowedExtensions: PropTypes.string,
-    useFilesApi: PropTypes.bool,
+    api: PropTypes.object,
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
@@ -58,17 +60,21 @@ export default class AddAssetButtonRow extends React.Component {
   };
 
   render() {
+    let shouldShowRecordButton = !this.props.hideAudioRecording;
+    if (isIE11()) {
+      shouldShowRecordButton = false;
+    }
     return (
       <div style={assetButtonStyles.buttonRow}>
         <AssetUploader
           uploadsEnabled={this.props.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
-          useFilesApi={this.props.useFilesApi}
+          api={this.props.api}
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
-        {!this.props.hideAudioRecording && (
+        {shouldShowRecordButton && (
           <RecordButton
             onSelectRecord={this.props.onSelectRecord}
             disabled={!this.props.uploadsEnabled || this.props.recordDisabled}

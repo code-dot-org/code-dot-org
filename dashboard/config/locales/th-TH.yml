@@ -15,10 +15,17 @@ th:
     errors:
       messages:
         blank: จำเป็น
+        blank_plural: จำเป็นต้องมี
+        invalid: ไม่ถูกต้อง
+        invalid_plural: ไม่ถูกต้อง
     attributes:
       user:
         name: ชื่อที่ใช้แสดง
+        name_example: ชื่อที่แสดง (เช่น Cool Coder หรือ Jane S.)
         email: อีเมล
+        parent_email: อีเมล์ของผู้ปกครอง/ผู้พิทักษ์
+        personal_email: ที่อยู่อีเมล์ส่วนบุคคล <a href="%{url}">(ลิกที่นี่หากคุณยังไม่มีที่อยู่อีเมล์)</a>
+        personal_email_markdown: ที่อยู่อีเมล์ส่วนบุคคล [(ลิกที่นี่หากคุณยังไม่มีที่อยู่อีเมล์)](%{url})
         username: ชื่อผู้ใช้
         password: รหัสผ่าน
         password_confirmation: ยืนยันรหัสผ่าน
@@ -27,8 +34,10 @@ th:
         age: อายุ
         gender: เพศ
         edit_header: แก้ไขรายละเอียดบัญชี
+        finish_sign_up_header: เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ
         error:
           future: ไม่สามารถทำได้ในอนาคต
+  beta: Beta
   hello: สวัสดีชาวโลก
   welcome_back: ยินดีต้อนรับอีกครั้ง, % {name}
   your_professional_learning_plan: แผนการเรียนของคุณ
@@ -42,13 +51,10 @@ th:
   okay: ตกลง
   or: หรือ
   heading_x_of_y: "%{heading} (หน้า %{x} จาก %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'เพิ่มครู:'
       placeholder: ส่วนรหัส (ABCDEF)
-      instructions: กรุณาใส่รหัสที่คุณครูมอบให้กับคุณ รหัสนี้ประกอบด้วยตัวอักษร 6
-        ตัว เช่น “ABCDEF”
-    submit: เพิ่มครู
+      submit: เข้าร่วม
   add_hint_form:
     placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
     submit: เพิ่มคำแนะนำ
@@ -60,11 +66,11 @@ th:
   courses: คอร์ส
   courses_page:
     title_student: เรียนกับ Code Studio
+    title_teacher: สอนวิทยาการคอมพิวเตอร์
   unplugged_activity: กิจกรรมถอดปลั๊ก
   of: ของ
   more: เพิ่มเติม
   less: น้อย
-  beta: Beta
   try_hoc: ลอง "ชั่วโมงแห่งการโค้ด" คลิกที่นี่ >>
   try_k8intro: ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)
   k8intro: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
@@ -74,10 +80,9 @@ th:
   prize: รางวัล
   more_info: ข้อมูลเพิ่มเติม
   auth:
+    continue_with: ดำเนินการต่อด้วย %{provider}
     sign_in_with: ลงทะเบียนด้วย %{provider}
     signed_in: ลงชื่อเข้าใช้
-    signed_out: คุณได้ลงทะเบียนออกจาก <a href="%{url}">Code.org</a>.
-    sign_out_of: คุณใช้ %{provider} ในการเข้าสู่ระบบ <a href="%{url}">คลิกที่นี่</a>เพื่อลงชื่อออกจาก%{provider}.
     already_signedup: พร้อมที่จะสมัครแล้วหรือยัง.
     notyet_signedup: สมัครใช้งานหรือยัง?
     google_oauth2: บัญชี Google
@@ -85,15 +90,19 @@ th:
     facebook: เฟซบุค
     windowslive: บัญชี Microsoft
     microsoft_v2_auth: บัญชี Microsoft
+    powerschool: Powerschool
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
   signup_form:
+    email_signup: ลงทะเบียนด้วยที่อยู่อีเมลของคุณ
     student_count: "%{count} นักเรียนได้ลงทะเบียนไว้แล้ว"
     teacher_count: ครู %{count} ได้ลงทะเบียนไว้แล้ว
     overview: ลงทะเบียนเพื่อที่จะได้มีบัญชีเพื่อติดตามความคืบหน้า หรือจัดการชั้นเรียนของคุณ
       <a href="/">คุณสามารถเรียกดูขั้นตอนและปริศนาต่าง ๆ</a> โดยที่ไม่ต้องมีบัญชีผู้ใช้
       แต่คุณจะต้องลงทะเบียนหากต้องการบันทึกความคืบหน้าและโครงการของคุณ
+    overview_markdown: ลงทะเบียนเพื่อที่จะได้มีบัญชีเพื่อติดตามความคืบหน้า หรือจัดการชั้นเรียนของคุณ
+      [คุณสามารถเรียกดูขั้นตอนและปริศนาต่าง ๆ](/) โดยที่ไม่ต้องมีบัญชีผู้ใช้ แต่คุณจะต้องลงทะเบียนหากต้องการบันทึกความคืบหน้าและโครงการของคุณ
     hoc_already_signed_up_heading: เริ่มใช้งานโดยไม่ต้องลงชื่อเข้าใช้
     hoc_already_signed_up_content: คุณลงทะเบียนเพื่อสอน Hour of Code! คุณและนักเรียนของคุณไม่จำเป็นต้องลงชื่อเข้าใช้ในส่วนของ
       Code Studio เพื่อเข้าร่วมในปฏิบัติการนี้ คุณสามารถเริ่มต้นโดย <a href="https://code.org/learn">เลือกหลักสูตรการอบรม</a>สำหรับชั้นเรียนของคุณและแบ่งปันลิงค์กับนักเรียนเหล่านี้
@@ -110,6 +119,7 @@ th:
     age: อายุ
     user_type: คุณเป็นนักเรียนหรืออาจารย์
     submit: สมัครสมาชิก
+    go_to_account: ไปที่บัญชีผู้ใช้ของฉัน
     teacher: คุณเป็นครูหรือ
     valid_username: อนุญาต
     invalid_username: ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร
@@ -117,13 +127,8 @@ th:
     valid_password: รหัสผ่านถูกต้อง
     invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
-    student_terms: ข้าพเจ้ายอมรับผูกพันตาม<a href='http://code.org/tos'>เงื่อนไขการให้บริการ</a>ของ
-      Code.org ถ้าหากข้าพเจ้าอายุต่ำกว่า 13 ปี ข้าพเจ้ายืนยัน โดยส่งแบบฟอร์มนี้ว่า
-      มีคุณพ่อคุณแม่หรือผู้ปกครองตามกฎหมายอนุญาตให้ใช้บริการ Code.org. <br/> <br/>
-      ไม่มีการจัดเก็บที่อยู่อีเมล์ในแบบฟอร์มที่ให้เราได้ติดต่อนักเรียน นักเรียนจะไม่รับอีเมล์จาก
-      Code.org ยกเว้นการกู้คืนรหัสผ่าน ดูข้อมูลเพิ่มเติมจาก <a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา
-    teacher_terms: ข้าพเจ้ายอมรับผูกพันตามเงื่อนไขการให้บริการของ Code.org สำหรับข้อมูลเพิ่มเติมเกี่ยวกับความเป็นส่วนตัว
-      ดูได้จาก<a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา
+    student_consent: ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ
+      Code.org ได้
     additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
     user_type_label: ประเภทบัญชี
     user_type_teacher: ครู
@@ -132,11 +137,24 @@ th:
     accept_terms: คุณต้อง ยอมรับ เพื่อสร้างบัญชี
     email_preference_yes: ใช่
     email_preference_no: ไม่ใช่
+    parent_account_checkbox: ฉันเป็นผู้ปกครอง/ผู้พิทักษ์ ลงชื่อในนามของบุตรหลานของฉัน
+    parent_account_email_progress_permission: เราสามารถส่งอีเมลถึงคุณเพื่ออัปเดตเป็นครั้งคราวเกี่ยวกับความคืบหน้าและโครงการของบุตรหลานของคุณ
+      และการอัปเดตเกี่ยวกับหลักสูตรและวิทยาการคอมพิวเตอร์ของพวกเขาได้หรือไม่? [(ดูนโยบายความเป็นส่วนตัวของเรา)]%{privacy_policy_url}
+    parent_account_email_label: อีเมลของผู้ปกครอง/ผู้พิทักษ์
   school_info:
+    title: ข้อมูลโรงเรียน (ไม่บังคับ)
+    school_country: ประเทศของโรงเรียน
+    select_school_type: ประเภทโรงเรียน
+    homeschool: เรียนหนังสืออยู่บ้าน
     other: อาชีพอื่น ๆ
+    school: โรงเรียน
+    school_name: ชื่อโรงเรียน
+    school_zip: รหัสไปรษณีย์ของโรงเรียน
+    school_address: ที่อยู่โรงเรียน
   signin_form:
     title: มีบัญชีผู้ใช้แล้ว? เข้าสู่ระบบ
     login: อีเมล
+    login_username: อีเมล หรือ ชื่อผู้ใช้งาน
     password: รหัสผ่าน
     remember: จำฉัน
     submit: เข้าสู่ระบบ
@@ -173,8 +191,14 @@ th:
       บทเรียนที่สนุก, การเห็นร่วมกัน, และสอนแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ที่ได้ใช้ง่าย, การแนะนำ, ประสบการณ์เหมือนเกม. เรียนรู้การเขียนโปรแกรมจากบิลเกตส์, มาร์ค ซัคเกอร์เบิร์ก, Angry Birds, และ Plants vs. Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: ข้อมูลล็อกอินสำหรับ Code.org
+    parent_email_added_subject: ยินดีต้อนรับสู่ Code.org!
+  teacher_mailer:
+    new_teacher_subject: ยินดีต้อนรับสู่ Code.org!
   section:
     type:
+      picture: รหัสผ่านภาพ
       word: ข้อความล๊อกอิน
       email: อีเมล
   follower:
@@ -213,20 +237,26 @@ th:
     header:
       finished_hoc: ฉันผ่านชั่วโมงแห่งการเขียนโค้ดของฉันแล้ว
       sign_in_to_save: เข้าสู่ระบบเพื่อบันทึกความก้าวหน้า
-      free_play:
-        playlab: สร้างแอพห้องทดลองหรรษา
-        artist: วาดอะไรสักอย่างสิ
-        applab: สร้างแอพ "ห้องทดลองแอพ"
-        gamelab: สร้างโปรเจคเกมแลป
-        weblab: สร้างโปรเจคเว็บแลป (เบต้า)
       my_dashboard: แดชบอร์ดของฉัน
       course_catalog: รายการหลักสูตร
       project_gallery: โปรเจกต์
+      sections: ส่วนต่างๆ ของชั้นเรียน
       help_support: การช่วยเหลือและสนับสนุน
+      teacher_community: ชุมชนครูผู้สอน
       professional_learning: การเรียนรู้อย่างมืออาชีพ
       educate_hoc: ช่วงเวลาของ Code
+      about_us: เกี่ยวกับเรา
+      about_donors: ผู้บริจาค
+      about_jobs: งาน
+      about_contact: ติดต่อเรา
+      about_faqs: ถามตอบ
+      learn: เรียนรู้
       stats: สถิติ
       help_us: ช่วยเรา
+      teach: สอน
+      about: เกี่ยวกับ
+      legal_privacy: นโยบายความเป็นส่วนตัว
+      legal_tos: เงื่อนไขการให้บริการ
     user:
       classroom: หน้าแรกของคุณครู
       label: สวัสดี %{username}
@@ -234,6 +264,7 @@ th:
       settings: บัญชีของฉัน
       logout: ออกจากระบบ
       signin: เข้าสู่ระบบ
+      signup: สร้างบัญชีผู้ใช้
       already_registered: ลงทะเบียนแล้วหรือยัง?
       pair_programming: การจับคู่เพื่อเขียนโปรแกรม
       team: ทีม
@@ -241,9 +272,18 @@ th:
       create: สร้าง
       applab: แอ๊ปแล็บ
       artist: ศิลปิน
+      bounce: กระเด้ง
+      dance: Dance Party
+      frozen: Frozen
       gamelab: เกมแล๊บ (Game Lab)
-      minecraft: ไมน์คราฟท์
-      dance: งานเต้นรำ
+      gumball: โลกมหัศจรรย์ของ Gumball
+      iceage: ยุคน้ำแข็ง (Ice Age)
+      infinity: ไม่จำกัด
+      minecraft_adventurer: การผจญภัยในไมน์คราฟท์
+      minecraft_designer: ไมน์คราฟท์
+      starwars: Star Wars
+      starwarsblocks: สตาร์วอร์ส (บล็อก)
+      starwarsblocks_hour: สตาร์วอร์ส (บล็อก)
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ
@@ -266,13 +306,16 @@ th:
       remove: แน่ใจหรือไม่ว่าต้องการลบคุณครูท่านนี้ออก
     students:
       dashboard: ไปที่แดชบอร์ดครู
+    user_not_found: ไม่พบครูผู้สอน
     student_teacher_disassociated: คุณได้ลบ %{teacher_name} ออกจากการเป็นครูผู้สอนของคุณ
     panel:
       answer_viewer: แผงผังสำหรับครูผู้สอน
       student: นักเรียน
+      viewing_solution: ดูเฉลย
       try_it_yourself: ลองด้วยตัวเอง
       example: ตัวอย่างวิธีการแก้ปัญหา
       submitted_on: 'ส่งให้:'
+      last_updated: 'ปรับปรุงล่าสุด:'
       unsubmit: ไม่ส่ง
       worked_with: ทำงานร่วมกันกับ
   user:
@@ -281,6 +324,16 @@ th:
     email_confirm_wrong_email: "(อีเมล์ไม่ถูกต้องหรือเปล่า?)"
     email_resend_confirm: ส่งคำแนะนำการยืนยันตัวอีกครั้ง
     new_password_hint: "(ปล่อยว่างไว้ถ้าคุณไม่ต้องการเปลี่ยน)"
+    delete: ลบบัญชีผู้ใช้
+    create_personal_login_under_13_username: ชื่อผู้ใช้ (ห้ามใช้ชื่อจริง!)
+    create_personal_login_under_13_parent_email: ที่อยู่อีเมล์ของผู้ปกครอง/ผู้พิทักษ์
+    update_email: อัพเดท
+    for_parents_and_guardians: สำหรับผู้ปกครองและผู้พิทักษ์
+    link_a_parent_email: เชื่อมต่ออีเมลของผู้ปกครอง/ผู้พิทักษ์ ไปยังบัญชีนี้ เพื่อรับข้อมูลความคืบหน้าและโครงการของบุตรหลานของคุณ
+      คุณจะสามารถใช้ที่อยู่อีเมลนี้ในการกู้คืนรหัสผ่านได้
+    parent_guardian_email_label: อีเมล์ของผู้ปกครอง/ผู้พิทักษ์
+    none: ไม่มี
+    only_one_parent_email_supported_warning: 'หมายเหตุ: ในขณะนี้ เราสามารถรองรับที่อยู่อีเมลของผู้ปกครอง/ผู้พิทักษ์ได้เพียงหนึ่งอีเมลต่อหนึ่งบัญชีนักเรียนเท่านั้น'
   user_level:
     completed: เสร็จแล้ว
   home:
@@ -314,13 +367,14 @@ th:
     tryfirst: หรือคุณจะแค่ทดลองก่อนก็ได้ แล้วค่อยสมัครสมาชิกภายหลัง
     trynow: ลองตอนนี้
     add_hint_help: ช่วยเราเพิ่มคำใบ้ในบทเรียนของ Code.org
+    20hour_overview: This 20-hour คอร์ส covers the core computer science and programming
+      concepts in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check
+      out คอร์ส 2-4 for a more complete experience!
+    try_beta_courses: ใหม่! ทดลองหลักสูตรทดลองสำหรับประถมศึกษา (ขั้นทดลอง)
     your_gallery: แกลเลอรี่
     no_primary_course: ทดลองคอร์ส Code Studio
     choose_next_course: ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้
     print_certificate: พิมพ์ใบรับรอง
-    announcement_title: ประกาศ
-    announcement_learn_more_button: สิ่งที่น่าเรียนรู้ยังมีอีก
-    announcement_try_now_button: ลองตอนนี้
   share:
     title: เรียนกับ Code Studio
   gender:
@@ -367,6 +421,8 @@ th:
         <a href='%{supported_browsers_url}', target='_blank'> ซึ่งเป็นหนึ่งในเบาร์เซอร์ที่เราแนะนำ</a>
         คุณอาจจะลองดูหน้าเพจได้ แต่การทำงานบางอย่างจะไม่สมบูรณ์
       link: สิ่งที่น่าเรียนรู้ยังมีอีก
+      applab_unsupported_tablet: เกมแล็ป (Game Lab) จะทำงานได้ดีเมื่อคุณใช้คอมพิวเตอร์แบบตั้งโต๊ะหรือแล๊ปท๊อปที่มีเมาส์และคีย์บอร์ด
+        คุณอาจเจอปัญหาในการใช้เครื่องมือนี้กับอุปกรณ์ปัจจุบันที่คุณใช้อยู่
       gamelab_unsupported_tablet: เกมแล็ป (Game Lab) จะทำงานได้ดีเมื่อคุณใช้คอมพิวเตอร์แบบตั้งโต๊ะหรือแล๊ปท๊อปที่มีเมาส์และคีย์บอร์ด
         คุณอาจเจอปัญหาในการใช้เครื่องมือนี้กับอุปกรณ์ปัจจุบันที่คุณใช้อยู่
   slow_loading: นี่ดูจะใช้เวลานานเกินไป...
@@ -375,6 +431,7 @@ th:
   lesson_plan: แผนการเรียนการสอน
   view_lesson_plan: มาดูแผนการเรียนการสอน
   pdf_download: ดาวน์โหลด PDF
+  video_coming_soon: วีดีโอจะมาในเร็ว ๆ นี้!
   share_code:
     studio_og_title: มาลองแอปเพลย์แลป ของฉัน
   builder:
@@ -384,8 +441,11 @@ th:
   upsell:
     applab:
       title: แอ๊ปแล็บ
+      audience: อายุ 13+
     dance:
-      title: งานเต้นรำ
+      title: Dance Party
+    dance-2019:
+      title: Dance Party
     20-hour:
       body: This 20-hour คอร์ส covers the core computer science and programming concepts
         in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส
@@ -396,6 +456,15 @@ th:
       title: เกมแล๊บ (Game Lab)
       body: เกมแลป(Game Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถสร้างภาพเคลื่อนไหวหรือที่เรียกกันว่าแอนนิเมชั่นแบบง่ายๆ
         หรือเกมที่มีวัตถุและตัวแสดงต่างๆ ที่สามารถโต้ตอบซึ่งกันและกันได้
+      audience: อายุ 13+
+    weblab:
+      body: เว็ปแลป(Web Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรม ที่ซึ่งคุณสามารถสร้างหน้าเว็ปอย่างง่ายๆ
+        โดยการใช้ HTML และ CSS ออกแบบหน้าเว็ปของคุณและแบ่งปันไซท์ของคุณในชั่วเวลาไม่กี่วินาที
+      audience: อายุ 13+
+    frozen:
+      title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: เรื่องราวและเกม
     minecraft:
@@ -409,18 +478,21 @@ th:
     hero:
       title: ไมน์คราฟท์
       body: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ
+    unplugged:
+      audience: อายุ 4+
     unplugged_conditionals:
       title: 'เงื่อนไข '
-  gallery:
-    header: แกลเลอรี่
-    header_playlab: เรื่องราวและเกม
-    header_artist: ศิลปิน
-    report_abuse: รายงานการละเมิด
+    widgets:
+      audience: อายุ 14+
   landing:
     support: ขอความช่วยเหลือ
     help_support: การช่วยเหลือและสนับสนุน
+  free_response:
+    placeholder: กรอกคำตอบของคุณที่นี่
   multi:
+    wrong_title: คำตอบไม่ถูกต้อง
     wrong_body: คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!
+    correct_title: ถูกต้อง
     correct_body: เป็นคำตอบที่ถูกต้อง
   multi-submittable:
     wrong_title: ขอบคุณ
@@ -429,10 +501,14 @@ th:
     correct_body: ขอบคุณที่ส่งคำตอบ
   level_group:
     wrong_title: ขอบคุณ
+    wrong_body: ขอบคุณที่ได้ส่งคำตอบมา
     correct_title: ขอบคุณ
+    correct_body: ขอบคุณที่ได้ส่งคำตอบมา
   level_group-submittable:
     wrong_title: ขอบคุณ
+    wrong_body: ขอบคุณที่ได้ส่งคำตอบมา
     correct_title: ขอบคุณ
+    correct_body: ขอบคุณที่ได้ส่งคำตอบมา
     unsubmit-title: ถอนการส่งการประเมินผล
     unsubmit-body: การถอนการประเมินผลของท่านจะกำหนดวันและเวลาการส่งขึ้นมาใหม่ ท่านต้องการเช่นนั้นหรือไม่?
     submit-incomplete-title: ส่งการประเมินผลของท่าน
@@ -440,8 +516,14 @@ th:
   match:
     wrong_title: คำตอบไม่ถูกต้อง
     wrong_body: โซลูชันที่คุณใส่ไม่ถูกต้อง กรุณาลองอีกครั้ง
+    correct_title: ถูกต้อง
     correct_body: เป็นคำตอบที่ถูกต้อง
+  contract_match:
+    wrong_title: คำตอบไม่ถูกต้อง
   text_match:
+    placeholder: กรอกคำตอบของคุณที่นี่
+    open_response_title: ขอบคุณ
+    correct_title: ถูกต้อง
     correct_body: เป็นคำตอบที่ถูกต้อง
   dialog:
     ok: ตกลง
@@ -451,56 +533,67 @@ th:
   terms_interstitial:
     tos: เงื่อนไขการให้บริการ
     privacy: นโยบายความเป็นส่วนตัว
+    accept_tos: เมื่อลงชื่อเข้าใช้ Code.org แสดงว่าคุณเห็นด้วยกับ [เงื่อนไขการใช้บริการ]
+      (%{tos_url}) และ [นโยบายความเป็นส่วนตัว](%{privacy_url}) ของเรา
+    accept: ยอมรับ
     print: พิมพ์
   school_info_interstitial:
     save: บันทึก
   race_interstitial:
     races:
+      white: ผิวขาว
+      asian: ชาวเอเชีย
       other: อาชีพอื่น ๆ
     submit: ส่งคำตอบ
+    decline: ปิด
   progress:
     not_started: ยังไม่เริ่ม
+    completed_too_many_blocks: เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป
+    completed_perfect: เสร็จ สมบูรณ์
     submitted: ส่งคำตอบแล้ว
   project:
     projects: โปรเจกต์
+    create: สร้างโครงงาน
+    create_a_project: 'เริ่มโครงงานใหม่:'
     new: สร้างใหม่
-    rename: ตั้งชื่อใหม่
-    save: บันทึก
-    delete: ลบ
-    my_projects: โปรเจคของฉัน
     project_gallery: โปรเจกต์
     publish: เผยแพร่
     unpublish: ไม่เผยแพร่
-    share: แบ่งปัน
-    more: เพิ่มเติม
     name: ชื่อ
     project_type: ประเภทโปรเจกต์
-    really_delete: ลบหรือไม่?
-    delete_yes: ใช่
-    delete_no: ไม่ใช่
     saved: จัดเก็บสู่ที่แสดงรูปภาพเรียบร้อยแล้ว!
-    cancel: ยกเลิก
     view_all: ดูโปรเจคของฉัน
-    remix: รีมิกซ์
     abuse:
       report_abuse_form:
         abuse_type:
           other: อาชีพอื่น ๆ
   peer_review:
     review_in_progress: พร้อมพื่อทบทวน
-  flex_category:
-    required: ภาพรวม
   hoc_download:
     minecraft_name: ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
   view_teacher_guide: ดูคำแนะนำสำหรับครู
   pd:
     form_labels:
       email: อีเมล
+      school_name: ชื่อโรงเรียน
+      school_country: ประเทศของโรงเรียน
+      colombian_school_name: ชื่อโรงเรียน
     form_entries:
       gender:
         male: ชาย
         female: หญิง
         none: ไม่ต้องการตอบ
+      school_country:
+        thailand: ประเทศไทย
+      ages:
+        ages_under_6: น้อยกว่า 6 ปี
+        ages_7_8: 7-8 ปี
+        ages_9_10: 9-10 ปี
+        ages_11_12: 11-12 ปี
+        ages_13_14: 13-14 ปี
+        ages_15_16: 15-16 ปี
+        ages_17_18: 17-18 ปี
+        ages_19_over: 19 ขึ้นไป
       subjects:
         cs: วิทยาการคอมพิวเตอร์
         math: คำนวณ
@@ -518,3 +611,12 @@ th:
   gdpr_dialog:
     privacy_policy: นโยบายความเป็นส่วนตัว
     true: ใช่
+  page_not_found_header: '404: ไม่พบหน้าดังกล่าว'
+  page_not_found_description: หน้าที่ท่านกำลังหาอยู่นั้นไม่ปรากฎตามที่อยู่ดังกล่าว
+    เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา
+  page_not_found_button: กลับไปที่หน้าแรก
+  copy: คัดลอก
+  parent_email_banner:
+    text: "**คุณเป็นผู้ปกครองหรือผู้พิทักษ์หรือไม่ ** เชื่อมต่ออีเมลของคุณเข้ากับบัญชีนี้เพื่อรับข้อมูลความคืบหน้าและโครงการของบุตรหลานของคุณ!"
+    link_your_email: เชื่อมต่ออีเมลของคุณ
+    not_now: ไม่ใช่ตอนนี้

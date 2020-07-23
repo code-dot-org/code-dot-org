@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Spinner from '../components/spinner.jsx';
+import ConfirmationDialog from '../components/confirmation_dialog';
 import $ from 'jquery';
 import {Button} from 'react-bootstrap';
 
@@ -22,6 +23,7 @@ export default class PrincipalApprovalButtons extends React.Component {
       PropTypes.number
     ]).isRequired,
     showSendEmailButton: PropTypes.bool,
+    showResendEmailButton: PropTypes.bool,
     showNotRequiredButton: PropTypes.bool,
     onChange: PropTypes.func.isRequired
   };
@@ -32,8 +34,10 @@ export default class PrincipalApprovalButtons extends React.Component {
     this.state = {
       sendEmailRequest: null,
       notRequiredRequest: null,
-      showSendEmailButton: this.props.showSendEmailButton,
-      showNotRequiredButton: this.props.showNotRequiredButton
+      showSendEmailButton:
+        this.props.showSendEmailButton || this.props.showResendEmailButton,
+      showNotRequiredButton: this.props.showNotRequiredButton,
+      showResendEmailConfirmation: false
     };
   }
 
@@ -63,6 +67,22 @@ export default class PrincipalApprovalButtons extends React.Component {
     this.setState({sendEmailRequest});
   };
 
+  handleResendEmailClick = () => {
+    this.setState({
+      showResendEmailConfirmation: true
+    });
+  };
+
+  handleResendEmailConfirmed = () => {
+    this.handleSendEmailClick();
+  };
+
+  handleResendEmailCancel = () => {
+    this.setState({
+      showResendEmailConfirmation: false
+    });
+  };
+
   handleNotRequiredClick = () => {
     const notRequiredRequest = $.ajax({
       method: 'POST',
@@ -86,17 +106,34 @@ export default class PrincipalApprovalButtons extends React.Component {
       return <Spinner size="small" />;
     }
 
+    const buttonOnClick = this.props.showResendEmailButton
+      ? this.handleResendEmailClick
+      : this.handleSendEmailClick;
+    const buttonText = this.props.showResendEmailButton
+      ? 'Resend request'
+      : 'Send email';
+
     return (
-      <Button
-        bsSize="xsmall"
-        target="_blank"
-        onClick={this.handleSendEmailClick}
-        style={styles.button}
-        // This button is disabled if the other action is pending (which will be rendered as a spinner)
-        disabled={!!this.state.notRequiredRequest}
-      >
-        Send email
-      </Button>
+      <div>
+        <Button
+          bsSize="xsmall"
+          target="_blank"
+          onClick={buttonOnClick}
+          style={styles.button}
+          // This button is disabled if the other action is pending (which will be rendered as a spinner)
+          disabled={!!this.state.notRequiredRequest}
+        >
+          {buttonText}
+        </Button>
+        <ConfirmationDialog
+          show={this.state.showResendEmailConfirmation}
+          onOk={this.handleResendEmailConfirmed}
+          onCancel={this.handleResendEmailCancel}
+          headerText="Resend"
+          bodyText="This will resend an email to this applicant’s principal with a link to the recommendation form. Proceed?"
+          okText="Resend"
+        />
+      </div>
     );
   }
 

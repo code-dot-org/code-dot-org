@@ -7,19 +7,8 @@
 set -e
 
 function cp_in() {
-  echo "$1 => $2"
   cp $1 $2
 }
-
-# make sure we're on staging
-branch=$(git branch | sed -n '/\* /s///p')
-if [ "$branch" != "staging" ]; then
-  echo "Must run from staging branch"
-  exit
-fi
-
-# Do a pull to make sure we're up to date
-git pull
 
 ### Dashboard
 
@@ -30,11 +19,13 @@ mkdir -p $loc_dir
 # Special case the un-prefixed Yaml file.
 cp_in $orig_dir/en.yml $loc_dir/base.yml
 
-# Copy in all the other Yaml files.
-for file in $(find $orig_dir -name '*.en.yml'); do
-  relname=${file#$orig_dir}
-  cp_in $file $loc_dir${relname%.en.yml}.yml
-done
+# Copy in needed files from dashboard
+cp_in $orig_dir/blocks.en.yml $loc_dir/blocks.yml
+cp_in $orig_dir/data.en.yml $loc_dir/data.yml
+cp_in $orig_dir/devise.en.yml $loc_dir/devise.yml
+cp_in $orig_dir/scripts.en.yml $loc_dir/scripts.yml
+cp_in $orig_dir/slides.en.yml $loc_dir/slides.yml
+cp_in $orig_dir/unplugged.en.yml $loc_dir/unplugged.yml
 
 ### Apps
 
@@ -61,12 +52,13 @@ for file in $(find $orig_dir -name '*.json'); do
   cp_in $file $loc_dir$relname
 done
 
+### Oceans tutorial
+cp_in apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json i18n/locales/source/blockly-mooc/fish.json
 
 ### Pegasus
 
 orig_dir=pegasus/cache/i18n
 loc_dir=i18n/locales/source/pegasus
 mkdir -p $loc_dir
-
 perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir/en-US.yml
 cp_in $orig_dir/en-US.yml $loc_dir/mobile.yml

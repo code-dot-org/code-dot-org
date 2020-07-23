@@ -14,6 +14,7 @@ en-GB:
         current_password: Current password
         age: Age
         gender: Gender
+  beta: beta
   hello: Hello World
   submit: Submit
   next_page: Next page
@@ -34,16 +35,17 @@ en-GB:
     type:
       email: Email
   crud:
+    edit: editar
     submit: Submit
   nav:
     user:
       create: Create
+      infinity: Infinity
   teacher:
     panel:
       answer_viewer: Teacher Panel
   home:
     trynow: Try now
-    announcement_try_now_button: Try now
   dialog:
     ok: OK
     startover_title: Are you sure you want to start over?
@@ -54,16 +56,8 @@ en-GB:
   race_interstitial:
     submit: Submit
   project:
-    share_link_import_bad_link_header: Share link not recognised
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      that you are using a link from a Minecraft: Agent puzzle, and that you have
-      copied the full link.'
-    share: Share
     name: Name
-    delete_yes: 'Yes'
-    delete_no: 'No'
     saved: Saved
-    cancel: Cancel
   pd:
     form_labels:
       email: Email
@@ -76,3 +70,4 @@ en-GB:
         opt_in_no: 'No'
   gdpr_dialog:
     true: 'Yes'
+  copy: Copy

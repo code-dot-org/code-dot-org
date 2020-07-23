@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 sl:
   errors:
     messages:
@@ -27,6 +39,7 @@ sl:
         finish_sign_up_header: 'Dokončaj registracijo'
         error:
           future: ne more biti v prihodnosti
+  beta: "beta"
   hello: "Pozdravljen svet"
   welcome_back: "Dobrodošel/a nazaj, %{name}"
   your_professional_learning_plan: "Tvoj osebni načrt učenja"
@@ -39,12 +52,9 @@ sl:
   okay: "V redu"
   or: "ali"
   heading_x_of_y: "%{heading} (stran %{x} od %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Dodaj učitelja/ico:'
       placeholder: "Koda razdelka (ABCDEF)"
-      instructions: "Vnesi šifro, ki ti je dal učitelj. To je šest mestna šifra v obliki \"ABCDEF\"."
-    submit: 'Dodaj učitelja/ico'
   add_hint_form:
     placeholder: 'Prosim vnesite vaš namig tukaj'
     submit: 'Dodaj namig'
@@ -55,12 +65,12 @@ sl:
   trophies: "Trofeje"
   courses: 'Predavanja'
   courses_page:
+    title_student: "Spoznaj Računalništvo"
     title_teacher: "Poučuj s studio Code"
   unplugged_activity: 'Dejavnost brez prijave'
   of: "od"
   more: "VEČ"
   less: "MANJ"
-  beta: "beta"
   try_hoc: "Poskusi Ura programiranja, klikni tu >> "
   try_k8intro: "Poizkusi naš K-8 tečaj Uvod v računalništvo (15-25 ur)"
   k8intro: "Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)"
@@ -72,8 +82,6 @@ sl:
   auth:
     sign_in_with: 'Vpiši se z %{provider}'
     signed_in: 'Vpisan si!'
-    signed_out: 'Trenutno nisi prijavljen/a v <a href="%{url}"> Code.org</a>.'
-    sign_out_of: 'Vpisani ste z %{provider}, <a href="%{url}"> Kliknite tukaj</a> za izpis iz %{provider}.'
     already_signedup: 'Si se že vpisal?'
     notyet_signedup: "Se nam še nisi pridružil?"
     google_oauth2: 'Google račun'
@@ -165,6 +173,7 @@ sl:
     type:
       word: 'Skrivna beseda'
       email: 'Elektronska pošta'
+      clever: 'Clever'
   follower:
     invite_sent: 'Povabilo poslano'
     added_teacher: '%{name} dodan/a kot tvoj/a učitelj/ica'
@@ -201,10 +210,6 @@ sl:
     header:
       finished_hoc: "Končal sem mojo uro za programiranje"
       sign_in_to_save: 'Vpiši se, da shraniš napredek'
-      free_play:
-        playlab: 'Ustvari Play Lab app'
-        artist: 'Nariši kaj'
-        applab: 'Ustvari App Lab app'
       my_dashboard: "Moja nadzorna plošča"
       course_catalog: "Katalog tečajev"
       project_gallery: "Projekti"
@@ -232,6 +237,8 @@ sl:
       help_us: "Pomagaj nam"
       teach: "Predavaj"
       about: "O programu"
+      legal_privacy: "Izjava o zasebnosti"
+      legal_tos: "Pogoje storitve"
     user:
       classroom: 'Učiteljeva domača stran'
       district_dashboard: 'Nadzorna plošča za okrožje'
@@ -247,9 +254,19 @@ sl:
       navigator: 'Navigator'
       create: 'Ustvari'
       artist: 'Umetnik'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
+      bounce: 'Skokica'
       flappy: 'Flappy'
+      frozen: 'Zmrznjenka (Frozen)'
+      gumball: 'Gumballov fantastični svet'
+      iceage: 'Ledena doba'
+      infinity: 'Neskončnost'
+      minecraft_adventurer: 'Minecraft Pustolovec'
+      minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_designer: 'Minecraft'
+      playlab: 'Play Lab'
+      starwars: 'Star Wars'
+      starwarsblocks: 'Vojna Zvezd (Kocke)'
+      starwarsblocks_hour: 'Vojna Zvezd (Kocke)'
     popup:
       progress_for_user: "Napredek od %{name}"
       progress: 'Tvoj napredek'
@@ -295,14 +312,13 @@ sl:
     delete_text: "S klikom na gumb boste izbrisali svoj račun."
     delete_text_teacher_note: "Prosimo pomnite: brisanje vašega računa ne bo izbrisalo računov vaših študentov."
     delete_confirm: 'Ali ste prepričani, da želite izbrisati svoj račun?'
+    update_email: "Posodobi"
+    parent_guardian_email_label: "Elektronska pošta staršev/skrbnikov"
   user_level:
     completed: 'Zaključeno'
     tried: 'Poskus'
   home:
     title: "Studio za kodiranje"
-    description: 'Code Studio je dom spletnih tečajev, ki jih je ustvaril Code.org'
-    lines_of_code: "ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE"
-    lines_of_code_linebreak: "%{students_count} MILIJONOV ŠTUDENTOV JE NAPISALO<br/>%{lines_count} VRSTIC KODE"
     all_courses: "Pregled tečajev 1, 2 in 3"
     lesson_plans: "Učni načrti"
     signin_message: "Že registrirani? %{link}"
@@ -332,22 +348,10 @@ sl:
     test_videos_help: 'Preizkusite naš novi video predvajalnik na vaši šoli'
     try_beta_courses: 'Novo! Poskusite naše beta tečaje za učence prvih dveh triad na ameriških šolah'
     use_as_teacher: 'Uporabi to stran kot učitelj'
-    heading_hoc2014: "<h2>Ura kodiranja za</h2><h1>vse starosti</h1>"
-    heading_elementary: "<h2>20 urni tečaji za</h2><h1>začetnike (vseh starosti)</h1>"
-    heading_apps: "<h2>Zabavno učenje za</h2><h1>vsakogar</h1>"
-    heading_tools: "<h2>Pripravljen na naslednji korak?</h2><h1>JavaScript Orodja za Srednjo Šolo</h1>"
-    heading_legacy: "<h2>Naš tečaj za</h2><h1>vse starosti</h1>"
     your_gallery: Galerija
     no_primary_course: "Poskusite Code Studio smer"
     choose_next_course: "Poskusi Code Studio tečaj z izbiro enga spodaj"
     print_certificate: "Natisni certifikat"
-    announcement_title: "Obvestila"
-    announcement_learn_more_button: "Več o tem"
-    announcement_try_now_button: "Poskusite zdaj"
-    announcement_watch_video_button: "Oglej si video"
-    announcement_petition_button: "Dodaj svoje ime"
-    announcement_all: "Bodite na tekočem z novimi funkcijami in posodobitvami na našem blogu za učitelje. <a href='%{teacher_blog_url}' target='_blank'>Poglejte pretekle objave.</a>"
-    announcement_mc_launch: "Edena od naših najbolj priljubljenih vadnic ima sedaj nadaljevanje! Popolnoma nov Minecraft Ura za kodo Oblikovalec omogoča učencem, da dajo pravila svet v Minecrafta. Ustvarijo lahko popolnoma edinstveno doživetje v svetu Minecrafta in nato delijo s prijatelji ali igrajo na svojih telefone. Naredite to svojim razredom v času Ure za kodo."
   move_students:
     new_section_dne: "Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite drugo šifro odseka."
     section_code_cant_be_current_section: "Trenutni odsek ne more biti enak kot nov odsek."
@@ -478,24 +482,12 @@ sl:
       audience: "Starost 4+"
     unplugged_conditionals:
       title: "Pogoji"
-  gallery:
-    students_drew_these_with_code: "Učenci so to narisali s svojimi programi!"
-    students_made_these_with_code: "Učenci so to ustvarili s svojimi programi!"
-    picture_count: "V zadnjih <b>%{days}</b> dneh so učenci narisali veliko (<b>%{count}</b>) slik s programe, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja posameznega programa."
-    activity_count: "V zadnjih <b>%{days}</b> dneh so učenci izdelali veliko (<b>%{count}</b>) aplikacij s programi, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja posameznega programa."
-    want_to_make_your_own: "Bi poskusil/a še sam/a?"
-    more: "Več &rarr;"
-    caption_by_name_age: "po %{name}, %{age} starosti"
-    caption_time_ago: "pred %{time_ago}"
-    header: "Galerija"
-    header_playlab: "Zgodbe in igre"
-    report_abuse: "Prijavi zlorabo"
   landing:
-    prerelease: "Ta tečaj je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."
-    prerelease_hoc2014: "Ta priročnik je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."
     report_bug: "Sporoči napako"
     support: "Pomoč"
     support_url: "//support.code.org"
+  free_response:
+    placeholder: "Vnesite vaš odgovor tukaj"
   multi:
     wrong_title: "Nepravilen odgovor"
     wrong_body: "Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!"
@@ -538,8 +530,6 @@ sl:
   age_interstitial:
     age: Tvoja starost
     header: Posodobitev podatkov o računu
-    message: "Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek o starosti učencev. <br/>Kot vedno, code.org podatkov ne bo nikoli posodil, prodal ali delil s tretjimi osebami."
-    sign_out: 'Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.'
   terms_interstitial:
     tos: "Pogoje storitve"
     privacy: "Izjava o zasebnosti"
@@ -560,6 +550,7 @@ sl:
     submit: "Pošlji"
     decline: "Zapri"
   zendesk_too_young_message: 'Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa brez prijave brskate po <a href="http://support.code.org">support.code.org</a>, ali pa zaprosite starše ali učitelje, da nas kontaktirajo.'
+  zendesk_too_young_message_markdown: 'Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa brez prijave brskate po [support.code.org](http://support.code.org), ali pa zaprosite starše ali učitelje, da nas kontaktirajo.'
   progress:
     not_started: ni začeto
     in_progress: v teku
@@ -576,32 +567,19 @@ sl:
     create: "Ustvari projekt"
     create_a_project: 'Ustvari nov projekt:'
     new: "Ustvari novo"
-    rename: "Preimenuj"
-    save: "Shrani"
-    delete: "Izbriši"
     exit: "Vrni se na tečaj"
-    my_projects: "Moji projekti"
     project_gallery: "Projekti"
-    share: "Deli"
     share_title: Deli svoj projekt
     share_copy_link: "Kopiraj povezavo:"
     advanced_share: "Prikaz dodatnih možnosti"
-    close: "Zapri"
-    more: "Več"
     name: "Ime"
     updated: "Posodobljeno"
     project_type: "Vrsta projekta"
     help_text: "Klikni spodaj na <strong>Ustvari App</strong> ali <strong>Nariši kaj</strong>, da začneš nov projekt!<br/>Kadarkoli lahko prideš nazaj in delaš na svojih projektih."
     need_help: "Potrebujete pomoč za začetek?"
-    really_delete: 'Izbriši?'
-    delete_yes: 'Da'
-    delete_no: 'Ne'
     saved: "Shranjeno"
     not_saved: "Ni shranjeno"
-    cancel: 'Prekliči'
-    delete_confirm_title: Ali ste prepričani, da želite izbrisati ta projekt?
     view_all: 'Poglej si Moji projekti'
-    remix: 'Remiks'
     edit_project: 'Uredi projekt'
     abuse:
       tos: "Ta projekt so prijavili, da je kršil <a href='http://code.org/tos'>Pogoje storitve</a> spletne strani Code.org in zato ga ni mogoče deliti z drugimi."
@@ -621,9 +599,6 @@ sl:
           infringement: 'Kršitev avtorskih pravic'
           other: 'Drugi'
         detail: 'Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.'
-  flex_category:
-    required: 'Pregled'
-    content: 'Vsebina'
   hoc_download:
     minecraft_name: 'Minecraft Ura za kodo'
     download_in_Albanian: 'Prenesi v albanskem jeziku:'
@@ -636,6 +611,7 @@ sl:
     form_labels:
       email: 'Elektronska pošta'
       school_name: 'Ime šole'
+      colombian_school_name: 'Ime šole'
     form_entries:
       gender:
         male: 'Moški'
@@ -657,3 +633,4 @@ sl:
     accept: 'Strinjam se'
   gdpr_dialog:
     yes: 'Da'
+  copy: 'Kopiraj'

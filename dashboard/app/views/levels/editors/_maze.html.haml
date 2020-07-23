@@ -1,9 +1,14 @@
-.field
-  = f.label :start_direction
-  = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
-.field
-  = f.label :step_mode
-  = f.select :step_mode, options_for_select(@level.class.step_modes, @level.step_mode)
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :shape_shift, description: "Shape Shift"}
-  %p Randomly rotate the puzzle to a new orientation each time it is loaded.
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/code_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
+= render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
+= render partial: 'levels/editors/fields/grid', locals: {f: f}
+
+= render partial: 'levels/editors/fields/maze_fields', locals: {f: f}
+= render partial: 'levels/editors/fields/karel_fields', locals: {f: f} if @level.is_a? Karel
+
+= render partial: 'levels/editors/fields/sharing', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}

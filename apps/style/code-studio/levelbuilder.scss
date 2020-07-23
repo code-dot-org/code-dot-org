@@ -154,8 +154,12 @@ table.checkboxes {
 
  [data-toggle="collapse"] {
    cursor: pointer;
-   padding: 2%;
+   padding: 15px;
    padding-left: 0;
+   line-height: 18px;
+   margin-bottom: 10px;
+   font-size: 18px;
+   border-bottom: 1px solid #e5e5e5;
 
   &:after {
     content: "\25B2";

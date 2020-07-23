@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedStageLockDialog as StageLockDialog} from '@cdo/apps/code-studio/components/progress/StageLockDialog';
 import {LockStatus} from '@cdo/apps/code-studio/stageLockRedux';
@@ -120,7 +120,7 @@ describe('StageLockDialog', () => {
 
       wrapper.instance().viewSection();
       expect(window.open).to.have.been.calledOnce.and.calledWith(
-        '/teacher-dashboard#/sections/fakeSectionId/assessments'
+        '/teacher_dashboard/sections/fakeSectionId/assessments'
       );
     });
   });

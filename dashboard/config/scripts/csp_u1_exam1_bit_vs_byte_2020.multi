@@ -1,0 +1,13 @@
+name 'csp-u1-exam1-bit-vs-byte_2020'
+wrong  'Ambiguities in natural language necessitate the creation of programming languages for controlling a computer'
+right 'Compared to the number of words in a natural language, the number of defined words in a programming language is very small.'
+wrong 'The number of defined words in a programming language is about the same as the number of words in a natural language.'
+wrong 'There are typically many possible ways to interpret an instruction written in a programming language.'
+
+markdown <<MARKDOWN
+Programming languages have some similarities and differences to the “natural” language you use in everyday speech.  Select the two true statements about programming languages:
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+“Natural” languages can be interpreted in many ways; however, computers need a specific set of instructions in order to work. To successfully communicate with a computer, programming languages are created with limited defined words and little ambiguity so computers can read and process code a certain way. Unlike natural languages, there is only one way to interpret written code for a computer for a given programming language.
+MARKDOWN

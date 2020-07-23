@@ -53,6 +53,19 @@ const styles = {
   iconAndText: {
     whiteSpace: 'nowrap'
   },
+  iconAndTextDiv: {
+    whiteSpace: 'nowrap',
+    paddingBottom: 16
+  },
+  iconAndTextDivTop: {
+    whiteSpace: 'nowrap',
+    paddingTop: 10,
+    paddingBottom: 16
+  },
+  iconAndTextDivBottom: {
+    whiteSpace: 'nowrap',
+    paddingBottom: 10
+  },
   icon: {
     marginRight: 5,
     size: 20
@@ -85,6 +98,9 @@ export default class ProgressLegend extends Component {
 
   render() {
     const {excludeCsfColumn} = this.props;
+
+    const secondRowRowSpan = 2;
+
     return (
       <table style={styles.table}>
         <thead>
@@ -113,7 +129,7 @@ export default class ProgressLegend extends Component {
                 <div style={styles.secondaryText}>({i18n.perfect()})</div>
               )}
             </TD>
-            <TD>{i18n.submitted()}</TD>
+            <TD>{i18n.assessmentAndSurvey()}</TD>
           </tr>
         </thead>
         <tbody>
@@ -177,26 +193,40 @@ export default class ProgressLegend extends Component {
             <TD>N/A</TD>
           </tr>
           <tr style={styles.subsequentRow}>
-            <TD style={styles.rightBorder}>{i18n.activity()}</TD>
+            <TD style={styles.rightBorder} rowSpan={secondRowRowSpan}>
+              {i18n.activity()}
+            </TD>
             <TD>
-              <div style={styles.iconAndText}>
+              <div style={styles.iconAndTextDivTop}>
                 <FontAwesome icon="scissors" style={styles.icon} />
                 {i18n.unplugged()}
               </div>
+              <div style={styles.iconAndTextDivBottom}>
+                <FontAwesome icon="flag-checkered" style={styles.icon} />
+                {i18n.stageExtras()}
+              </div>
             </TD>
             <TD>
-              <div style={styles.iconAndText}>
+              <div style={styles.iconAndTextDivTop}>
                 <FontAwesome icon="desktop" style={styles.icon} />
                 {i18n.online()}
               </div>
+              <div style={styles.iconAndTextDivBottom}>
+                <FontAwesome icon="check-circle" style={styles.icon} />
+                {i18n.progressLegendAssessment()}
+              </div>
             </TD>
             <TD style={styles.rightBorder}>
-              <div style={styles.iconAndText}>
+              <div style={styles.iconAndTextDivTop}>
                 <FontAwesome icon="list-ul" style={styles.icon} />
                 {i18n.question()}
               </div>
+              <div style={styles.iconAndTextDivBottom}>
+                <FontAwesome icon="sitemap" style={styles.icon} />
+                {i18n.choiceLevel()}
+              </div>
             </TD>
-            <TD>
+            <TD rowSpan={secondRowRowSpan}>
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
@@ -208,7 +238,7 @@ export default class ProgressLegend extends Component {
                 />
               </div>
             </TD>
-            <TD>
+            <TD rowSpan={secondRowRowSpan}>
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
@@ -221,7 +251,7 @@ export default class ProgressLegend extends Component {
               </div>
             </TD>
             {!excludeCsfColumn && (
-              <TD>
+              <TD rowSpan={secondRowRowSpan}>
                 <div style={styles.center}>
                   <ProgressBubble
                     level={{
@@ -234,7 +264,7 @@ export default class ProgressLegend extends Component {
                 </div>
               </TD>
             )}
-            <TD>
+            <TD rowSpan={secondRowRowSpan}>
               <div style={styles.center}>
                 <ProgressBubble
                   level={{
@@ -246,7 +276,7 @@ export default class ProgressLegend extends Component {
                 />
               </div>
             </TD>
-            <TD>
+            <TD rowSpan={secondRowRowSpan}>
               <div style={styles.center}>
                 <ProgressBubble
                   level={{

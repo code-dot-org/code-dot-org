@@ -70,13 +70,23 @@ export function extend(defaults, options) {
   return finalOptions;
 }
 
+/**
+ * Replaces special characters in string by HTML entities.
+ * List of special characters is taken from
+ * https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html.
+ * @param {string} unsafe - The string to escape.
+ * @returns {string} Escaped string. Returns an empty string if input is null or undefined.
+ */
 export function escapeHtml(unsafe) {
   return unsafe
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
+    ? unsafe
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+        .replace(/\//g, '&#47;')
+    : '';
 }
 
 /**
@@ -696,6 +706,13 @@ export function currentLocation() {
 }
 
 /**
+ * Helper that wraps window.open, for stubbing in unit tests.
+ */
+export function windowOpen(...args) {
+  return window.open(...args);
+}
+
+/**
  * Wrapper for window.location.href which we can stub in unit tests.
  * @param {string} href Location to navigate to.
  */
@@ -762,6 +779,7 @@ export function interpolateColors(from, to, value) {
  * open, including if this page is reloaded or if we navigate away and then back to it. The id will
  * be different for other tabs, including tabs in other browsers or on other machines. Unfortunately,
  * duplicating a browser tab will result in two tabs with the same id, but this is not common.
+ *
  * @returns {string} A string representing a float between 0 and 1.
  */
 export function getTabId() {

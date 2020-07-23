@@ -16,6 +16,10 @@
 #  module_assignment_lm_index                          (plc_learning_module_id)
 #
 
+# Maps a unit enrollment to all the modules that a teacher must complete in order to
+# complete the unit.
+#
+# Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
 class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
   belongs_to :plc_enrollment_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment'
   belongs_to :plc_learning_module, class_name: '::Plc::LearningModule'
@@ -32,7 +36,7 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
 
   def status
     Plc::EnrollmentModuleAssignment.stages_based_status(
-      [plc_learning_module.stage],
+      [plc_learning_module.lesson],
       user,
       plc_enrollment_unit_assignment.plc_course_unit.script
     )

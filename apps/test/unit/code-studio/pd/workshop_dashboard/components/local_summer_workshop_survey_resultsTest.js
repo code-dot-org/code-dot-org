@@ -106,6 +106,7 @@ describe('Local Summer Workshop Management', () => {
       );
 
       server.respond();
+      localSummerWorkshopSurveyResults.update();
 
       expect(server.requests.length).to.equal(1);
       expect(localSummerWorkshopSurveyResults.state('loading')).to.be.false;
@@ -137,6 +138,7 @@ describe('Local Summer Workshop Management', () => {
       );
 
       server.respond();
+      localSummerWorkshopSurveyResults.update();
 
       expect(server.requests.length).to.equal(1);
       expect(localSummerWorkshopSurveyResults.state('loading')).to.be.false;

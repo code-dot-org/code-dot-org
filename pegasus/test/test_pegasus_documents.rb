@@ -29,6 +29,7 @@ class PegasusTest < Minitest::Test
   # All documents expected to return 200 status-codes, with the following exceptions:
   STATUS_EXCEPTIONS = {
     302 => %w[
+      code.org/amazon-future-engineer
       code.org/educate
       code.org/teacher-dashboard
       code.org/teacher-dashboard/review-hociyskvuwa
@@ -48,20 +49,6 @@ class PegasusTest < Minitest::Test
     'text/plain' => %w[
       code.org/health_check
       code.org/robots.txt
-    ],
-    'text/ng-template' => %w[
-      code.org/teacher-dashboard/section_projects
-      code.org/teacher-dashboard/section_stats
-      code.org/teacher-dashboard/section
-      code.org/teacher-dashboard/section_progress
-      code.org/teacher-dashboard/sections
-      code.org/teacher-dashboard/section_assessments
-      code.org/teacher-dashboard/nav
-      code.org/teacher-dashboard/landing
-      code.org/teacher-dashboard/student
-      code.org/teacher-dashboard/section_responses
-      code.org/teacher-dashboard/signin_cards
-      code.org/teacher-dashboard/section_manage
     ]
   }
 

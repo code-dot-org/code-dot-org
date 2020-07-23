@@ -12,15 +12,15 @@ it:
         Unplug4: Algoritmi
         Artist2: L'artista 2
         Unplug5: Funzioni
-        Farmer: La Contadina
+        Farmer: La contadina
         Unplug6: Istruzioni condizionali
         Artist3: L'artista 3
         Unplug7: Composizione di canzoni
-        Farmer2: La Contadina 2
+        Farmer2: La contadina 2
         Unplug8: Astrazione
         Artist4: L'artista 4
-        Unplug9: Programmazione a Staffetta
-        Farmer3: La Contadina 3
+        Unplug9: Programmazione a staffetta
+        Farmer3: La contadina 3
         Unplug10: Internet
         Artist5: L'artista 5
         Unplug11: Conclusione
@@ -39,6 +39,7 @@ it:
         Custom: Artista
         CustomStudio: Laboratorio
         Gamelab: Sviluppo Giochi
+        Spritelab: Laboratorio dei Personaggi
     trophy:
       name:
         Bronze: Bronzo
@@ -51,7 +52,7 @@ it:
         if_else: Blocco "se-altrimenti"
         loop_times: Blocco "ripeti ... volte"
         loop_until: Blocco "ripeti fino a che"
-        loop_while: Blocco "Mentre"
+        loop_while: Blocco "mentre"
         loop_for: Blocco "ripeti con contatore"
         function: Funzioni
         parameters: Funzioni con parametri
@@ -565,7 +566,7 @@ it:
       name:
         maze_intro: 'Labirinto - Corso 2: Introduzione'
         artist_intro: Artista - Introduzione
-        farmer_intro: Introduzione a "La Contadina"
+        farmer_intro: Introduzione a "La contadina"
         flappy_intro: Introduzione a "Flappy"
         loop_times: Blocco "ripeti ... volte"
         loop_until: Blocco "ripeti fino a che"
@@ -573,7 +574,7 @@ it:
         if_else: Blocco "se-altrimenti"
         if_else_scrat: Blocco "se-altrimenti"
         function: Funzioni
-        loop_while: Blocco "Mentre"
+        loop_while: Blocco "mentre"
         loop_for: Blocco "ripeti con contatore"
         parameters: Funzioni con parametri
         hoc_wrapup: Conclusione dell'Ora del Codice
@@ -585,26 +586,26 @@ it:
         Unplug6: Istruzioni condizionali
         Unplug7: Composizione di canzoni
         Unplug8: Astrazione
-        Unplug9: Programmazione a Staffetta
+        Unplug9: Programmazione a staffetta
         Unplug10: Internet
         Unplug11: Conclusione
         C1_happy_maps_unplugged: Mappe Felici
         C1_moveitmoveit_unplugged: Muovilo, muovilo
-        C1_bigevent_unplugged: Gli Eventi
-        C1_getting_loopy: Diventare Ripetitivi
-        C1_pair_programming: Programmazione in Coppia
+        C1_bigevent_unplugged: Il grande evento
+        C1_getting_loopy: Diventare ripetitivi
+        C1_pair_programming: Programmazione in coppia
         C1_maze_intro_sequencing: 'Labirinto - Corso 1: Introduzione'
-        C1_maze_debugging: 'Labirinto: Correzione di Errori'
+        C1_maze_debugging: 'Labirinto: correzione di errori'
         C1_bee_level_intro: 'Ape: Introduzione'
         C1_artist_intro: Artista - Introduzione
         C1_spelling_bee_intro: 'Ape Sapiente: Introduzione'
         C1_zuck_repeat_loop: 'Labirinto: Cicli'
         C1_bee_loops: 'Ape: Cicli'
         C1_maze_loops: 'Labirinto: Cicli'
-        C1_playlab_storytelling: 'Laboratorio: Crea una Storia'
+        C1_playlab_storytelling: 'Laboratorio: crea una storia'
         C1_planting_seed: Piantare un seme
-        C1_building_foundation: Costruire le Fondamenta
-        C1_going_places_safely: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        C1_building_foundation: Costruire le fondamenta
+        C1_going_places_safely: Cittadinanza digitale - Il mio quartiere digitale
         C2_maze_intro: 'Labirinto - Corso 2: Introduzione'
         C2_artist_intro: Artista - Introduzione
         C2_zuck_repeat_loop: 'Labirinto: Cicli'
@@ -617,10 +618,10 @@ it:
         C2_graph_paper: Programmazione su carta a quadretti
         C2_conditionals_with_cards: Istruzioni condizionali
         C2_binary_bracelets: Braccialetti Binari
-        C2_relay_programming: Programmazione a Staffetta
-        C2_paper_airplanes: Aeroplani di Carta
-        C2_digital_footprint: La tua Impronta Digitale
-        C2_digital_footprint_v2: La tua Impronta Digitale
+        C2_relay_programming: Programmazione a staffetta
+        C2_paper_airplanes: Aeroplani di carta
+        C2_digital_footprint: La tua impronta digitale
+        C2_digital_footprint_v2: La tua impronta digitale
         C3_maze_level_4: 'Labirinto: Cicli'
         C3_artist_intro: Artista - Introduzione
         C3_artist_functions: 'Artista: Funzioni'
@@ -628,7 +629,7 @@ it:
         C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
         C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
         C3_artist_nested_loops: Cicli annidati
-        C3_farmer_while: Cicli "Mentre"
+        C3_farmer_while: Cicli "mentre"
         C3_bee_nested_loops: Cicli annidati
         C3_bee_debugging: 'Ape: Correzione di Errori'
         C3_bounce: Ping-Pong
@@ -636,45 +637,45 @@ it:
         C3_computational_thinking: Pensiero computazionale
         C3_dice_race: Gara con i Dadi
         C3_internet: Internet
-        C3_crowdsourcing: Intelligenza Collettiva
+        C3_crowdsourcing: Intelligenza collettiva
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
         C4_intro: Introduzione
-        C4_loops_zombie: Ripetizioni
+        C4_loops_zombie: Cicli
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
         C4_variables_artist: 'Artista: Variabili'
         C4_variables_playlab: 'Laboratorio: Variabili'
-        C4_for_loops: Cicli con Contatore
-        C4_for_loops_bee: Cicli con Contatore
-        C4_for_loops_no_bee: Cicli con Contatore
-        C4_math_artist: Programmare l'Artista usando la matematica
+        C4_for_loops: Cicli con contatore
+        C4_for_loops_bee: Cicli con contatore
+        C4_for_loops_no_bee: Cicli con contatore
+        C4_math_artist: Programmare l'artista usando la matematica
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
         C4_function_parameters: Funzioni con parametri
         C4_conditionals: Istruzioni condizionali
         C4_unplugged_algorithms: Algoritmi per il Tangram
         C4_unplugged_madlibs: Mad-Libs
-        C4_unplugged_variables: Variabili e Buste
-        C4_unplugged_forloops: Cicli con Contatore
+        C4_unplugged_variables: Variabili e buste
+        C4_unplugged_forloops: Cicli con contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
-        CSF_a_b_artist_loops: Cicli con l'Artista
+        CSF_a_b_artist_loops: Cicli con l'artista
         CSF_artist_angles: Angoli con l'Artista
-        CSF_collector_k1_blocks: La Collezionista
-        CSF_collector_repeat_loops: 'Collezionista: Cicli di Ripetizione'
-        CSF_collector_text_blocks: La Collezionista
+        CSF_collector_k1_blocks: La collezionista
+        CSF_collector_repeat_loops: 'La collezionista: Cicli (istruzioni di ripetizione)'
+        CSF_collector_text_blocks: La collezionista
         CSF_create_functions: Creazione di funzioni
-        CSF_debugging_k1_blocks: Correzione Errori (Debugging)
-        CSF_debugging_text_blocks: Correzione Errori (Debugging)
+        CSF_debugging_k1_blocks: Correzione errori (debugging)
+        CSF_debugging_text_blocks: Correzione errori (debugging)
         CSF_EF_cs_matters: L'informatica è importante
         CSF_maze_intro_k1_blocks: Introduzione a Code Studio
         CSF_maze_intro_text_blocks: Introduzione a Code Studio
-        CSF_my_robotic_friends: I Miei Amici Robotici
-        CSF_Power_of_Words: Cittadinanza Digitale - Il Potere delle Parole
-        CSF_Super_Digital_Citizen: Cittadinanza Digitale - Super Cittadino Digitale
-        CSF_stevie_big_project: Stevie e il Grande Progetto
-        CSF_unspotted_bugs: Errori Non Riconosciuti
-        CSF_zuck_loops_short: Cicli di Ripetizione
+        CSF_my_robotic_friends: I miei amici robotici
+        CSF_Power_of_Words: Cittadinanza digitale - Il potere delle parole
+        CSF_Super_Digital_Citizen: Cittadinanza digitale - Super cittadino digitale
+        CSF_stevie_big_project: Stefi e il grande progetto
+        CSF_unspotted_bugs: Quei fastidiosi insetti nascosti
+        CSF_zuck_loops_short: Cicli (istruzioni di ripetizione)
         frozen_intro: Introduzione all'Ora del Codice
         frozen_loops: Introduzione ai Cicli
         frozen_functions: Introduzione alle Funzioni
@@ -694,6 +695,8 @@ it:
           CPU, Ingressi e Uscite'
         csd_concept_hardware_software: 'Come Funzionano i Computer: Hardware e Software'
         csd_concept_search: Come Funziona la Ricerca
+        csd_external_amazon_data: Come I Big Data Sono Usati Nel Sistema Di Raccomandazione
+          Di Amazon Per Cambiare Le Nostre Vite
         csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti
           sui film?
         csd_external_waze_data: Perchè cosi tanti utenti sono ossesionati con Waze?
@@ -706,7 +709,7 @@ it:
         csd_weblab_intro_3: Introduzione a Sviluppo Web - Parte 3
         csp_applab_functions: Introduzione alle Funzioni
         csp_applab_functions_parameters: Funzioni con parametri
-        csp_applab_loops: Ripetizioni
+        csp_applab_loops: Cicli
         csp_concept_rgb: Un po ' sui pixel
         csp_cs_is_changing_everything: L'informatica sta cambiando ogni cosa
         csp_pixelation_color_1: Color pixelation widget - parte 1
@@ -797,26 +800,26 @@ it:
         applab_intro_designmode: Sviluppo App - Modalità Interfaccia
         applab_intro_share: Sviluppo App - Condividi la tua app
         csd_applab_arrays: Introduzione agli array
-        CSF_skinOverview_Harvester: La Contadina
+        CSF_skinOverview_Harvester: La contadina
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Cicli con BB-8
-        CSF_harvester_skinOverview_K-1: La Contadina
-        CSF_harvester_loops_K1: Cicli con la Contadina
-        CSF_scrat_loops_K1: Cicli con l'Era Glaciale
-        CSF_scrat_loops_CF: Cicli con l'Era Glaciale
-        CSF_if_allskins: Il Blocco Se
-        CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
-        CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
-        CSF_loops_AB: Ripetizioni
+        CSF_harvester_skinOverview_K-1: La contadina
+        CSF_harvester_loops_K1: Cicli con la contadina
+        CSF_scrat_loops_K1: Cicli con l'Era glaciale
+        CSF_scrat_loops_CF: Cicli con l'Era glaciale
+        CSF_if_allskins: Il blocco "se"
+        CSF_ifelse_allskins: Uso dei blocchi se/altrimenti
+        CSF_ifelseifelse_allskins: Uso dei blocchi se/altrimenti-se/altrimenti
+        CSF_loops_AB: Cicli
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
         csd_gamelab_if_else: Dichiarazioni Se/altrimenti
-        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei Personaggi
-        CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio
-          dei Personaggi
-        CDEF_Video_SpritesInAction: Personaggi in Azione
-        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei personaggi
+        CSF_Spritelab_MakeSprite_CDEF: Come creare un personaggio nel Laboratorio
+          dei personaggi
+        CDEF_Video_SpritesInAction: Personaggi in azione
+        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in azione
         CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
         mc_2018_intro: 'Minecraft: Viaggio Acquatico - Introduzione'
         MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
@@ -826,12 +829,54 @@ it:
         hoc_dance_events: Ballando col codice - Eventi
         hoc_dance_properties: Ballando col codice - Proprietà
         hoc_dance_congrats: Ballando col codice - Parte la festa!
-        c_and_c_great_to_create: È Fantastico Creare e Comportarsi Lealmente
-        c_and_c_digital_sharing: Condivisione Digitale
-        what_is_cs: Cos'é l'informatica?
+        c_and_c_great_to_create: È fantastico creare e comportarsi lealmente
+        c_and_c_digital_sharing: Condivisione digitale
+        teaching_csf_how_it_works: Introduzione ai corsi di fondamenti di informatica
+        elem_pd_2: Informatica per Scuole Elementari - PD video 2/2
+        what_is_cs: Cos'è l'informatica?
         repeat_block: Uso del blocco Ripeti
+        lesson_planning: Pianificazione Lezione
+        opd_closing: 'Fondamenti di Informatica - Corso per insegnanti: Conclusione
+          & Passi successivi'
+        why_unplugged_lessons: Essere "scollegato"
         writing_first_program: Scrivi il tuo primo programma per computer
+        conditionals_with_cards: Lezione Scollegata in Azione - Condizionali con Carte
+        songwriting_with_functions: Lezione Scollegata in Azione - Composizione di
+          Canzoni con le Funzioni
         what_is_an_event: Cos'è un evento?
+        teaching_cs_pair_programming: 'Insegnare i Fondamenti di CS: Programmazione
+          in Pari'
+        teaching_problem_solving: 'Insegnare i Fondamenti di CS: Insegnare la Risoluzione
+          dei Problemi'
+        csd_applab_designmode: 'Scoperte CS: Sviluppo App - Modalità Progettazione'
+        csd_pair_programming: Programmazione in coppia
+        csd_gamelab_functions: Chiamare e Definire Funzioni
+        csd_applab_parameters: Funzioni con parametri
+        csd_applab_loops: Loop in Sviluppo App
+        CSF_Going_Places_Safely: Il mio quartiere digitale
+        CSF_SpriteLab_Intro_v2: Introducendo lo Sviluppo Personaggi
+        CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
+        CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
+        csd_debugging: Correzione errori (debugging)
+        csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
+        CSF-Teaching-Problem-Solving: Fondamenti di informatica - Insegnare a risolvere
+          i problemi (Problem Solving)
+        how-to-k5-workshops: 'Code.org - Fondamenti di informatica: provato dai bambini,
+          approvato dagli insegnanti'
+        why-should-teach-unplugged-activities: FAQ - Perché proporre lezioni tradizionali
+          (unplugged)?
+        oceans_machine_learning: Cos'è l'Apprendimento Automatico (Machine Learning)
+        oceans_training_data: Dati di apprendimento e distorsioni
+        oceans_societal_implications: Ripercussioni sociali
+        hoc_dance_congrats_2019: Dance Party - Via al party!
+        hoc_dance_warmup_2019: Dance Party - Warm up
+        hoc_dance_events_2019: Dance Party - Eventi
+        hoc_dance_measures_2019: Ballando col codice - Battute
+        hoc_dance_properties_2019: Dance Party - Proprietà
+        csf_my_online_neighborhood_2020: Il mio quartiere digitale
+        csf_follow_the_digital_trail: Segui le tue tracce digitali
+        csf_private_and_personal_information: Cittadinanza digitale - Dati personali
+          e altri dati
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

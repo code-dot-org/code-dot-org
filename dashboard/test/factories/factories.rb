@@ -3,10 +3,24 @@ require 'cdo/activity_constants'
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
+  factory :course_version do
+    sequence(:key) {|n| "202#{n - 1}"}
+    sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
+    with_unit_group
+
+    trait :with_unit_group do
+      association(:content_root, factory: :unit_group)
+    end
+
+    trait :with_unit do
+      association(:content_root, factory: :script)
+    end
+  end
+
   factory :course_script do
   end
 
-  factory :course do
+  factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
@@ -29,9 +43,9 @@ FactoryGirl.define do
     end
   end
 
-  factory :section_hidden_stage do
+  factory :section_hidden_lesson do
     section
-    stage
+    lesson
   end
 
   factory :section_hidden_script do
@@ -55,11 +69,21 @@ FactoryGirl.define do
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
 
+    # Used to test specific interactions for older (unmigrated) users. This
+    # trait and associated tests can be removed when the work to migrate all
+    # users has been completed.
+    # TODO elijah
+    trait :demigrated do
+      after(:create, &:demigrate_from_multi_auth)
+    end
+
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
       factory :admin do
-        admin true
+        google_sso_provider
+        password nil
+        after(:create) {|user| user.update(admin: true)}
       end
       trait :with_school_info do
         school_info
@@ -80,6 +104,12 @@ FactoryGirl.define do
         after(:create) do |project_validator|
           project_validator.permission = UserPermission::PROJECT_VALIDATOR
           project_validator.save
+        end
+      end
+      factory :authorized_teacher do
+        after(:create) do |authorized_teacher|
+          authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+          authorized_teacher.save
         end
       end
       factory :facilitator do
@@ -137,51 +167,44 @@ FactoryGirl.define do
         ops_first_name 'District'
         ops_last_name 'Person'
       end
-      # Creates a teacher optionally enrolled in a workshop,
-      # or marked attended on either all (true) or a specified list of workshop sessions.
-      factory :pd_workshop_participant do
-        transient do
-          workshop nil
-          enrolled true
-          attended false
-        end
-        after(:create) do |teacher, evaluator|
-          raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          if evaluator.attended
-            attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
-            attended_sessions.each do |session|
-              create :pd_attendance, session: session, teacher: teacher
-            end
-          end
-        end
-      end
-      trait :with_google_authentication_option do
-        after(:create) do |user|
-          create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: AuthenticationOption::GOOGLE,
-            authentication_id: 'abcd123'
-          )
-        end
-      end
-      trait :with_email_authentication_option do
-        after(:create) do |user|
-          create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: AuthenticationOption::EMAIL,
-            authentication_id: user.hashed_email
-          )
-        end
-      end
+
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
           create :single_user_experiment, min_user_id: teacher.id, name: evaluator.pilot_experiment
+        end
+      end
+      transient {editor_experiment nil}
+      after(:create) do |teacher, evaluator|
+        if evaluator.editor_experiment
+          create :single_user_experiment, min_user_id: teacher.id, name: evaluator.editor_experiment
+        end
+      end
+      factory :platformization_partner do
+        editor_experiment 'platformization-partners'
+      end
+
+      # We have some teacher records in our system that do not pass validation because they have
+      # no email address.  Sometimes we want to test against this case because we still want features
+      # to work for these teachers.
+      trait :without_email do
+        after(:create) do |user|
+          user.update_primary_contact_info new_email: '', new_hashed_email: ''
+          user.save validate: false
+        end
+      end
+
+      # We added validation to user accounts and some time which required
+      # teacher accounts to have emails. However, there were already existing
+      # teacher accounts which didn't have an email. Some of these have not yet
+      # been updated, so we need to make sure our system can handle them
+      # gracefully.
+      # FND-1130: This trait will no longer be required
+      trait :before_email_validation do
+        after(:create) do |user|
+          # Account created one day before the requirements were added.
+          user.created_at = User::DATE_TEACHER_EMAIL_REQUIREMENT_ADDED - 1
+          user.save validate: false
         end
       end
     end
@@ -258,20 +281,10 @@ FactoryGirl.define do
         end
       end
 
-      trait :imported_from_google_classroom do
-        unmigrated_google_sso
-        after(:create) do |user|
-          user.update!(email: '', hashed_email: '')
-          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-          create :follower, student_user: user, section: section
-          user.reload
-        end
-      end
-
       trait :migrated_imported_from_google_classroom do
-        with_migrated_google_authentication_option
+        google_sso_provider
+        without_email
         after(:create) do |user|
-          user.primary_contact_info.update!(email: '', hashed_email: '')
           section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
           create :follower, student_user: user, section: section
           user.reload
@@ -284,20 +297,30 @@ FactoryGirl.define do
       end
     end
 
-    trait :unmigrated_sso do
+    # We have some tests which want to create student accounts which don't have any authentication setup.
+    # Using this will put the user into an invalid state.
+    trait :without_encrypted_password do
+      after(:create) do |user|
+        user.encrypted_password = nil
+        user.password = nil
+        user.save validate: false
+      end
+    end
+
+    trait :sso_provider do
       encrypted_password nil
       provider %w(facebook windowslive clever).sample
       sequence(:uid) {|n| n}
     end
 
-    trait :unmigrated_sso_with_token do
-      unmigrated_sso
+    trait :sso_provider_with_token do
+      sso_provider
       oauth_token 'fake-oauth-token'
       oauth_token_expiration 'fake-oauth-token-expiration'
     end
 
-    trait :unmigrated_untrusted_email_sso do
-      unmigrated_sso_with_token
+    trait :untrusted_email_sso_provider do
+      sso_provider_with_token
       after(:create) do |user|
         if user.student?
           user.hashed_email = nil
@@ -306,44 +329,44 @@ FactoryGirl.define do
       end
     end
 
-    trait :unmigrated_clever_sso do
-      unmigrated_untrusted_email_sso
+    trait :clever_sso_provider do
+      untrusted_email_sso_provider
       provider 'clever'
     end
 
-    trait :unmigrated_facebook_sso do
-      unmigrated_sso_with_token
+    trait :facebook_sso_provider do
+      sso_provider_with_token
       provider 'facebook'
     end
 
-    trait :unmigrated_google_sso do
-      unmigrated_sso_with_token
+    trait :google_sso_provider do
+      sso_provider_with_token
       provider 'google_oauth2'
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
-    trait :unmigrated_powerschool_sso do
-      unmigrated_untrusted_email_sso
+    trait :powerschool_sso_provider do
+      untrusted_email_sso_provider
       provider 'powerschool'
     end
 
-    trait :unmigrated_the_school_project_sso do
-      unmigrated_sso
+    trait :the_school_project_sso_provider do
+      sso_provider
       provider 'the_school_project'
     end
 
-    trait :unmigrated_twitter_sso do
-      unmigrated_sso
+    trait :twitter_sso_provider do
+      sso_provider
       provider 'twitter'
     end
 
-    trait :unmigrated_qwiklabs_sso do
-      unmigrated_sso
+    trait :qwiklabs_sso_provider do
+      sso_provider
       provider 'lti_lti_prod_kids.qwikcamps.com'
     end
 
-    trait :unmigrated_windowslive_sso do
-      unmigrated_sso_with_token
+    trait :windowslive_sso_provider do
+      sso_provider_with_token
       provider 'windowslive'
     end
 
@@ -354,35 +377,12 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123',
+          authentication_id: "abcd#{user.id}",
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
             oauth_token_expiration: '999999'
           }.to_json
-        )
-      end
-    end
-
-    trait :with_migrated_google_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: user.uid,
-          data: {
-            oauth_token: 'some-google-token',
-            oauth_refresh_token: 'some-google-refresh-token',
-            oauth_token_expiration: '999999'
-          }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
         )
       end
     end
@@ -398,86 +398,6 @@ FactoryGirl.define do
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
-        )
-      end
-    end
-
-    trait :with_migrated_clever_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh',
-          data: {
-            oauth_token: 'some-clever-token'
-          }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :with_email_authentication_option do
-      after(:create) do |user|
-        create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::EMAIL,
-          authentication_id: user.hashed_email
-        )
-      end
-    end
-
-    trait :with_migrated_email_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::EMAIL,
-          authentication_id: user.hashed_email
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :with_migrated_windowslive_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::WINDOWS_LIVE,
-          authentication_id: user.hashed_email
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :multi_auth_migrated do
-      after(:create) do |user|
-        user.update_attributes(
-          provider: 'migrated',
-          uid: '',
-          email: '',
-          hashed_email: ''
         )
       end
     end
@@ -598,6 +518,10 @@ FactoryGirl.define do
     trait :script do
       create(:script_level)
     end
+
+    factory :sublevel do
+      sequence(:name) {|n| "sub_level_#{n}"}
+    end
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
@@ -682,6 +606,10 @@ FactoryGirl.define do
   end
 
   factory :external, parent: :level, class: External do
+    after(:create) do |level|
+      level.properties['markdown'] = 'lorem ipsum'
+      level.save!
+    end
   end
 
   factory :external_link, parent: :level, class: ExternalLink do
@@ -737,14 +665,36 @@ FactoryGirl.define do
     level_source
   end
 
-  factory :gallery_activity do
+  factory :assessment_activity do
     user
-    user_level {create(:user_level)}
-    level_source {create(:level_source, :with_image, level: user_level.level)}
+    script
+    level
+    level_source {create :level_source, level: level}
   end
 
   factory :script do
     sequence(:name) {|n| "bogus-script-#{n}"}
+
+    factory :csf_script do
+      after(:create) do |csf_script|
+        csf_script.curriculum_umbrella = 'CSF'
+        csf_script.save
+      end
+    end
+
+    factory :csd_script do
+      after(:create) do |csd_script|
+        csd_script.curriculum_umbrella = 'CSD'
+        csd_script.save
+      end
+    end
+
+    factory :csp_script do
+      after(:create) do |csp_script|
+        csp_script.curriculum_umbrella = 'CSP'
+        csp_script.save
+      end
+    end
   end
 
   factory :featured_project do
@@ -758,8 +708,8 @@ FactoryGirl.define do
       assessment true
     end
 
-    stage do |script_level|
-      create(:stage, script: script_level.script)
+    lesson do |script_level|
+      create(:lesson, script: script_level.script)
     end
 
     trait :with_autoplay_video do
@@ -785,7 +735,7 @@ FactoryGirl.define do
     end
 
     position do |script_level|
-      (script_level.stage.script_levels.maximum(:position) || 0) + 1 if script_level.stage
+      (script_level.lesson.script_levels.maximum(:position) || 0) + 1 if script_level.lesson
     end
 
     properties do |script_level|
@@ -798,20 +748,36 @@ FactoryGirl.define do
       end
       props
     end
+
+    factory :csf_script_level do
+      after(:create) do |csf_script_level|
+        csf_script_level.script.curriculum_umbrella = 'CSF'
+        csf_script_level.save
+      end
+    end
   end
 
-  factory :stage do
-    sequence(:name) {|n| "Bogus Stage #{n}"}
+  factory :lesson_group do
+    sequence(:key) {|n| "Bogus Lesson Group #{n}"}
     script
 
-    absolute_position do |stage|
-      (stage.script.stages.maximum(:absolute_position) || 0) + 1
+    position do |lesson_group|
+      (lesson_group.script.lesson_groups.maximum(:position) || 0) + 1
+    end
+  end
+
+  factory :lesson do
+    sequence(:name) {|n| "Bogus Lesson #{n}"}
+    script
+
+    absolute_position do |lesson|
+      (lesson.script.lessons.maximum(:absolute_position) || 0) + 1
     end
 
     # relative_position is actually the same as absolute_position in our factory
     # (i.e. it doesnt try to count lockable/non-lockable)
-    relative_position do |stage|
-      ((stage.script.stages.maximum(:absolute_position) || 0) + 1).to_s
+    relative_position do |lesson|
+      ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
     end
   end
 
@@ -830,7 +796,11 @@ FactoryGirl.define do
   factory :concept do
     sequence(:name) {|n| "Algorithm #{n}"}
     trait :with_video do
-      video
+      after(:create) do |concept|
+        video = create(:video)
+        concept.video_key = video.key
+        concept.save!
+      end
     end
   end
 
@@ -866,6 +836,13 @@ FactoryGirl.define do
     script
   end
 
+  factory :user_school_info do
+    user {create :teacher}
+    start_date DateTime.now
+    last_confirmation_date DateTime.now
+    association :school_info
+  end
+
   factory :peer_review do
     submitter {create :teacher}
     from_instructor false
@@ -895,6 +872,37 @@ FactoryGirl.define do
         submittable: submittable,
         pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]
       }
+    end
+
+    # create real sublevels, and update pages to match.
+    trait :with_sublevels do
+      after(:create) do |lg|
+        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
+      end
+    end
+  end
+
+  factory :bubble_choice_level, class: BubbleChoice do
+    game {create(:game, app: "bubble_choice")}
+    name 'name'
+    display_name 'display_name'
+    transient do
+      sublevels []
+    end
+    properties do
+      {
+        display_name: display_name,
+        sublevels: sublevels.pluck(:name)
+      }
+    end
+
+    trait :with_sublevels do
+      after(:create) do |bc|
+        sublevels = create_list(:level, 3)
+        bc.properties['sublevels'] = sublevels.pluck(:name)
+        bc.save!
+      end
     end
   end
 
@@ -1067,6 +1075,14 @@ FactoryGirl.define do
       grade_07_offered true
       grade_08_offered true
     end
+
+    # Schools eligible for circuit playground discount codes
+    # are schools where over 50% of students are eligible
+    # for free and reduced meals.
+    trait :is_maker_high_needs_school do
+      frl_eligible_total 51
+      students_total 100
+    end
   end
 
   # Default school to public school. More specific factories below
@@ -1075,6 +1091,8 @@ FactoryGirl.define do
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).next).to_s}
+    address_line1 "123 Sample St"
+    address_line2 "attn: Main Office"
     city "Seattle"
     state "WA"
     zip "98122"
@@ -1092,6 +1110,12 @@ FactoryGirl.define do
     trait :is_k8_school do
       after(:create) do |school|
         build :school_stats_by_year, :is_k8_school, school: school
+      end
+    end
+
+    trait :is_maker_high_needs_school do
+      after(:create) do |school|
+        create :school_stats_by_year, :is_maker_high_needs_school, school: school
       end
     end
   end
@@ -1125,8 +1149,21 @@ FactoryGirl.define do
 
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
-    contact {create :teacher}
     group 1
+  end
+
+  factory :regional_partner_with_mappings, parent: :regional_partner do
+    sequence(:name) {|n| "Partner#{n}"}
+    group 1
+    mappings do
+      [
+        create(
+          :pd_regional_partner_mapping,
+          zip_code: 98143,
+          state: nil
+        )
+      ]
+    end
   end
 
   factory :regional_partner_with_summer_workshops, parent: :regional_partner do
@@ -1134,15 +1171,28 @@ FactoryGirl.define do
     contact_name "Contact Name"
     contact_email "contact@code.org"
     group 1
-    apps_open_date_csp_teacher {Date.today - 1.day}
-    apps_open_date_csd_teacher {Date.today - 2.days}
-    apps_close_date_csp_teacher {Date.today + 3.days}
-    apps_close_date_csd_teacher {Date.today + 4.days}
+    apps_open_date_csp_teacher {(Date.current - 1.day).strftime("%Y-%m-%d")}
+    apps_open_date_csd_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_csp_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
+    apps_close_date_csd_teacher {(Date.current + 4.days).strftime("%Y-%m-%d")}
     csd_cost 10
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."
     additional_program_information "Additional program information will be here."
-    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
+    pd_workshops do
+      [
+        create(
+          :summer_workshop,
+          location_name: "Training building",
+          location_address: "3 Smith Street",
+          sessions_from: (Date.current + 3.months)
+        )
+      ]
+    end
+
+    trait :with_apps_priority_deadline_date do
+      apps_priority_deadline_date {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    end
   end
 
   factory :regional_partner_program_manager do
@@ -1214,5 +1264,51 @@ FactoryGirl.define do
     association :student
     association :teacher
     association :level
+    association :script_level
+  end
+
+  factory :teacher_score do
+    association :user_level
+    association :teacher
+  end
+
+  factory :validated_user_level do
+    time_spent 10
+    user_level_id 1
+  end
+
+  factory :donor_school
+
+  factory :contact_rollups_raw do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:sources) {|n| "dashboard.table_#{n}"}
+    data {{opt_in: true}}
+    data_updated_at {Time.now.utc}
+  end
+
+  factory :contact_rollups_processed do
+    transient do
+      data_updated_at {Time.now.utc}
+    end
+
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'opt_in' => true}}
+
+    after(:build) do |contact, evaluator|
+      contact.data[:updated_at] = evaluator.data_updated_at
+    end
+  end
+
+  factory :contact_rollups_final do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'opt_in' => true}}
+  end
+
+  factory :contact_rollups_pardot_memory do
+    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:pardot_id) {|n| n}
+    pardot_id_updated_at {Time.now.utc - 1.hour}
+    data_synced {{db_Opt_In: 'No'}}
+    data_synced_at {Time.now.utc}
   end
 end

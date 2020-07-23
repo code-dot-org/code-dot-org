@@ -10,12 +10,12 @@
   csedweek_dates: "8-14 de decembro de 2014"
   csedweek_banner_hoc: 'Pronto será <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora do Código</a>. Convocanse a tódolos mestres e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> a planificar a súa Hora do Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Es profesor de informática? Mira outros recursos de CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Es profesor de informática? Mira outros recursos de CSEdWeek"
   n_have_learned_an_hoc: "<h1>Proba unha</h1><h2>Hora do Código</h2><h3># xa o intentaron</h3>"
   anybody_can_learn: "Calquera pode aprender."
   learn_now: "Aprende agora"
   petition_message: "Todos os alumnos, en todas as escolas, deberían ter a oportunidade de aprender a programar"
   petition_sign_message: 'Se estás dacordo, asina co teu nome.  Únete a # outros.'
-  petition_sign_message_support: 'Se nos apoias, asina co teu nome. Únete a # outros.'
   petition_join_others: 'Únete a # outros'
   name: "Nome"
   email: "E-mail"
@@ -69,6 +69,7 @@
   enter_valid_email: "Por favor introduce un correo electrónico válido"
   get_a_certificate_message: "Enviaremosche un certificado e información sobre cómo facer para <a href='/learn/beyond'> Aprender mais aló dunha hora</a>"
   get_a_certificate_message_after: "Fai clic no certificado para descargalo e imprimilo. Agora, continúa cos <a href='http://studio.code.org'>outros cursos</a>, ou mira máis opcións en <a href='/learn/beyond'>Aprender máis aló dunha Hora</a>."
+  get_a_certificate_message_after_markdown: "Fai clic no certificado para descargalo e imprimilo. Agora, continúa cos [outros cursos)(http://studio.code.org), ou mira máis opcións en [Aprender máis aló dunha Hora](/learn/beyond)."
   thanks_for_submitting: "Graciñas por enviar!"
   if_you_enjoyed: "Se che gustou aprender, invita os teus amigos para que o intenten tamén!  Queremos que todo o mundo poida aprender."
   personalize_certificate: "Personaliza o teu certificado"
@@ -207,6 +208,7 @@
   homepage_action_text_learn: "Comeza a aprender"
   homepage_action_text_signpetition: "Asina a petición"
   homepage_signpetition_dropdown: "Concordo &#x25BE;"
+  homepage_signpetition_dropdown_text: "Acepto"
   homepage_diversity_pledge: "Abraza a causa en favor da diversidade"
   homepage_banner_text_prizes: 'A Hora do Código está volvendo, de 7 a 13 decembro. '
   homepage_banner_link_prizes: 'Xúntate ao maior evento de aprendizaxe da historia. '
@@ -632,8 +634,6 @@
   classicmaze_name: "Labirinto clásico"
   iceage_name: "Era do Xeo"
   minecraft_name: "Minecraft"
-  math_category_name: "Matemáticas"
-  hoc_category_name: "Hora de Código"
   applab_name: "Laboratorio de aplicacións"
   codeorg_gradelevel: "De 4 a 104 anos"
   codeintl_gradelevel: "De 4 a 104 anos"
@@ -691,6 +691,7 @@
   coursee_gradelevel: "De 8 a 12 anos"
   coursee-2017_gradelevel: De 8 a 12 anos
   coursee-2018_gradelevel: De 8 a 12 anos
+  coursee-2019_gradelevel: De 8 a 12 anos
   accelerated_gradelevel: "Idades de 10 a 18 anos"
   codeorg_platformtext: "Navegadores Web modernos, smartphones, tablets"
   codeintl_platformtext: "Navegadores Web modernos, smartphones, tablets"
@@ -1033,6 +1034,8 @@
   header_about: "Sobre"
   header_teacher_community: "Comunidade de profesorado"
   header_report_bug: "Comunicar un erro"
+  header_legal_privacy: "Política de Privacidade"
+  header_legal_tos: "Termos de Servizo"
   user_header_label: "Ola, %{username}"
   user_header_team: "Equipo"
   user_header_settings: "A miña conta"
@@ -1044,6 +1047,7 @@
   user_header_view_my_projects: "Ver os meus proxectos"
   view_all_sections: "Ver todos os grupos"
   applab_tile_start_tutorial: "Comezar"
+  account_sign_up_email_opt_in: "Marca esta casilla para recibir correos sobre melloras nos nosos cursos, oportunidades locales, ou outras noticias de informática. (aproximadamente unha ao mes)"
   account_sign_up_child_accept_terms: "Confirmo que teño autorización de meus pais ou titores legais para empregrar os servizos de Code.org."
   hoc_overview_start_tutorial: "Comezar"
   hoc2018_creativity_create: "Crear"

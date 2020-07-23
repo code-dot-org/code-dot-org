@@ -11,13 +11,17 @@ import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const OTHER = 'Other';
 const NOT_TEACHING = "I'm not teaching this year";
 const EXPLAIN = '(Please Explain):';
 
 const CSF = 'CS Fundamentals';
-const DEEP_DIVE = 'Deep Dive';
+const INTRO = SubjectNames.SUBJECT_CSF_101;
+const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
+
+const CSP = 'CS Principles';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -100,18 +104,11 @@ export default class EnrollForm extends React.Component {
   constructor(props) {
     super(props);
 
-    let initialState = {
+    this.state = {
+      first_name: this.props.first_name,
+      email: this.props.email,
       errors: {}
     };
-
-    if (this.props.email) {
-      initialState = {
-        ...initialState,
-        ...{first_name: this.props.first_name, email: this.props.email}
-      };
-    }
-
-    this.state = initialState;
   }
 
   handleChange = change => {
@@ -260,7 +257,13 @@ export default class EnrollForm extends React.Component {
           this.state.csf_has_physical_curriculum_guide
         ],
       previous_courses: this.state.previous_courses,
-      replace_existing: this.state.replace_existing
+      replace_existing: this.state.replace_existing,
+      csf_intro_intent: this.state.csf_intro_intent,
+      csf_intro_other_factors: this.state.csf_intro_other_factors,
+      years_teaching: this.state.years_teaching,
+      years_teaching_cs: this.state.years_teaching_cs,
+      taught_ap_before: this.state.taught_ap_before,
+      planning_to_teach_ap: this.state.planning_to_teach_ap
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -301,7 +304,7 @@ export default class EnrollForm extends React.Component {
       <div>
         What grades are you teaching this year? (Select all that apply)
         <span className="form-required-field"> *</span>
-        <p>This workshop is intended for teachers for Grades K-5.</p>
+        <p>This workshop is intended for teachers of grades K-5.</p>
       </div>
     );
     const coursesPlannedLabel = (
@@ -323,6 +326,40 @@ export default class EnrollForm extends React.Component {
         onInputChange: this.handleTeachingOtherChange
       }
     ]);
+
+    const csfIntroIntentLabel =
+      `Most teachers register for the Intro workshop in order to learn how to ` +
+      `teach a CS Fundamentals course during the current or upcoming academic year. Is this also ` +
+      `true of your interest in registering for this workshop?`;
+    const csfIntroIntentAnswers = ['Yes', 'No', 'Unsure'];
+
+    const csfIntroOtherFactorsLabel = `What other factors might influence your registration? Check all that apply.`;
+    const csfIntroOtherFactorsAnswers = [
+      'I am newly assigned to teach computer science and want help getting started.',
+      'Teaching computer science is one of my teaching duties.',
+      'I am interested in teaching CS Fundamentals.',
+      'I have administrator support to teach CS Fundamentals.',
+      'I have available time on my schedule for teaching computer science.',
+      'I want to learn computer science concepts.',
+      'Computer science is a required subject in my region.',
+      'I am here to bring information back to my school or district.'
+    ];
+
+    const cspReturningTeachersTaughtAPLabel = `Have you taught an Advanced Placement (AP) course before?`;
+    const cspReturningTeachersTaughtAPAnswers = [
+      'Yes, AP CS Principles or AP CS A',
+      'Yes, but in another subject',
+      'No'
+    ];
+
+    const cspReturningTeachersPlanningAPLabel = `Are you planning to teach CS Principles as an AP course?`;
+    const cspReturningTeachersPlanningAPAnswers = [
+      'Yes',
+      'No',
+      'Both AP and non-AP',
+      'Unsure / Still deciding'
+    ];
+
     const csfCourses = Object.keys(CSF_COURSES)
       .filter(key => key !== 'courses14_accelerated')
       .map(key => CSF_COURSES[key])
@@ -460,6 +497,41 @@ export default class EnrollForm extends React.Component {
           </FormGroup>
         )}
         {this.props.workshop_course === CSF &&
+          this.props.workshop_subject === INTRO && (
+            <ButtonList
+              groupName="csf_intro_intent"
+              type="radio"
+              required
+              label={csfIntroIntentLabel}
+              answers={csfIntroIntentAnswers}
+              onChange={this.handleChange}
+              selectedItems={this.state.csf_intro_intent}
+              validationState={
+                this.state.errors.hasOwnProperty('csf_intro_intent')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorText={this.state.errors.csf_intro_intent}
+            />
+          )}
+        {this.props.workshop_course === CSF &&
+          this.props.workshop_subject === INTRO && (
+            <ButtonList
+              groupName="csf_intro_other_factors"
+              type="check"
+              label={csfIntroOtherFactorsLabel}
+              answers={csfIntroOtherFactorsAnswers}
+              onChange={this.handleChange}
+              selectedItems={this.state.csf_intro_other_factors}
+              validationState={
+                this.state.errors.hasOwnProperty('csf_intro_other_factors')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorText={this.state.errors.csf_intro_other_factors}
+            />
+          )}
+        {this.props.workshop_course === CSF &&
           this.props.workshop_subject === DEEP_DIVE && (
             <FormGroup>
               <QuestionsTable
@@ -576,6 +648,71 @@ export default class EnrollForm extends React.Component {
           </div>
         )}
 
+        {this.props.workshop_course === CSP &&
+          this.props.workshop_subject ===
+            SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+            <div>
+              <FieldGroup
+                id="years_teaching"
+                label="Years Teaching (overall)"
+                type="number"
+                required={true}
+                onChange={this.handleChange}
+                validationState={
+                  this.state.errors.hasOwnProperty('years_teaching')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorMessage={this.state.errors.years_teaching}
+              />
+              <FieldGroup
+                id="years_teaching_cs"
+                label="Years Teaching Computer Science"
+                type="number"
+                required={true}
+                onChange={this.handleChange}
+                validationState={
+                  this.state.errors.hasOwnProperty('years_teaching_cs')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorMessage={this.state.errors.years_teaching_cs}
+              />
+              <ButtonList
+                groupName="taught_ap_before"
+                type="radio"
+                required
+                label={cspReturningTeachersTaughtAPLabel}
+                answers={cspReturningTeachersTaughtAPAnswers}
+                onChange={this.handleChange}
+                selectedItems={this.state.taught_ap_before}
+                validationState={
+                  this.state.errors.hasOwnProperty('taught_ap_before')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorText={this.state.errors.taught_ap_before}
+                suppressLineBreak={true}
+              />
+              <ButtonList
+                groupName="planning_to_teach_ap"
+                type="radio"
+                required
+                label={cspReturningTeachersPlanningAPLabel}
+                answers={cspReturningTeachersPlanningAPAnswers}
+                onChange={this.handleChange}
+                selectedItems={this.state.planning_to_teach_ap}
+                validationState={
+                  this.state.errors.hasOwnProperty('planning_to_teach_ap')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorText={this.state.errors.planning_to_teach_ap}
+                suppressLineBreak={true}
+              />
+            </div>
+          )}
+
         <p>
           Code.org works closely with local Regional Partners and Code.org
           facilitators to deliver the Professional Learning Program. By
@@ -611,12 +748,28 @@ export default class EnrollForm extends React.Component {
     }
 
     if (this.props.workshop_course === CSF) {
-      requiredFields.push('role');
-      requiredFields.push('grades_teaching');
-      if (this.props.workshop_subject === DEEP_DIVE) {
-        requiredFields.push('attended_csf_intro_workshop');
-        requiredFields.push('csf_has_physical_curriculum_guide');
+      requiredFields.push('role', 'grades_teaching');
+      if (this.props.workshop_subject === INTRO) {
+        requiredFields.push('csf_intro_intent');
+      } else if (this.props.workshop_subject === DEEP_DIVE) {
+        requiredFields.push(
+          'attended_csf_intro_workshop',
+          'csf_has_physical_curriculum_guide'
+        );
       }
+    }
+
+    if (
+      this.props.workshop_course === CSP &&
+      this.props.workshop_subject ===
+        SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    ) {
+      requiredFields.push(
+        'years_teaching',
+        'years_teaching_cs',
+        'taught_ap_before',
+        'planning_to_teach_ap'
+      );
     }
 
     const missingRequiredFields = requiredFields.filter(f => {

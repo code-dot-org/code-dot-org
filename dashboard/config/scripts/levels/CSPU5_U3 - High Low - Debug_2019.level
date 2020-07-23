@@ -68,7 +68,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "parent_level_id": 13677,
     "name_suffix": "_2019",
     "mini_rubric": "false",

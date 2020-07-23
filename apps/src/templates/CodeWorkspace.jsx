@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import commonStyles from '../commonStyles';
 import color from '../util/color';
 import * as utils from '@cdo/apps/utils';
@@ -15,6 +15,7 @@ import SettingsCog from '../lib/ui/SettingsCog';
 import ShowCodeToggle from './ShowCodeToggle';
 import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
+import {queryParams} from '../code-studio/utils';
 
 const styles = {
   headerIcon: {
@@ -28,11 +29,20 @@ const styles = {
   },
   runningIcon: {
     color: color.dark_charcoal
+  },
+  studentNotStartedWarning: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    height: 20,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative'
   }
 };
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
+    studentHasNotStartedLevel: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -75,7 +85,7 @@ class CodeWorkspace extends React.Component {
     if (textbox.style.bottom) {
       $(textbox).animate(
         {bottom: debuggerHeight},
-        {step: utils.fireResizeEvent}
+        {done: utils.fireResizeEvent}
       );
     } else {
       // if we haven't initialized the height of the code textbox,
@@ -110,6 +120,7 @@ class CodeWorkspace extends React.Component {
     const settingsCog = showSettingsCog && (
       <SettingsCog {...{isRunning, runModeIndicators, showMakerToggle}} />
     );
+
     return [
       <PaneSection id="toolbox-header" key="toolbox-header">
         <i
@@ -118,7 +129,7 @@ class CodeWorkspace extends React.Component {
           className="fa fa-chevron-circle-right"
         />
         <span style={textStyle}>
-          {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
+          {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
         </span>
         {settingsCog}
       </PaneSection>,
@@ -133,7 +144,7 @@ class CodeWorkspace extends React.Component {
             style={chevronStyle}
             className="fa fa-chevron-circle-right"
           />
-          <span>{msg.showToolbox()}</span>
+          <span>{i18n.showToolbox()}</span>
         </span>
         {settingsCog}
       </PaneSection>
@@ -152,6 +163,9 @@ class CodeWorkspace extends React.Component {
     // is enabled, remove focus while running.
     const hasFocus = !(props.runModeIndicators && props.isRunning);
     const isRtl = this.props.isRtl;
+
+    //TODO: When CSF example solutions are no longer rendered with solution=true in url remove this
+    const inCsfExampleSolution = queryParams('solution') === 'true';
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
@@ -174,7 +188,7 @@ class CodeWorkspace extends React.Component {
                 id="clear-puzzle-header"
                 headerHasFocus={hasFocus}
                 iconClass="fa fa-undo"
-                label={msg.clearPuzzle()}
+                label={i18n.clearPuzzle()}
                 isRtl={isRtl}
                 isMinecraft={props.isMinecraft}
               />
@@ -183,7 +197,7 @@ class CodeWorkspace extends React.Component {
               id="versions-header"
               headerHasFocus={hasFocus}
               iconClass="fa fa-clock-o"
-              label={msg.showVersionsHeader()}
+              label={i18n.showVersionsHeader()}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />
@@ -193,17 +207,18 @@ class CodeWorkspace extends React.Component {
               )}
               <span id="workspace-header-span">
                 {props.readonlyWorkspace
-                  ? msg.readonlyWorkspaceHeader()
-                  : msg.workspaceHeaderShort()}
+                  ? i18n.readonlyWorkspaceHeader()
+                  : i18n.workspaceHeaderShort()}
               </span>
               <div id="blockCounter" ref={el => (this.blockCounterEl = el)}>
+                <span>: </span>
                 <ProtectedStatefulDiv
                   id="blockUsed"
                   className="block-counter-default"
                 />
                 <span> / </span>
                 <span id="idealBlockNumber" />
-                <span>{' ' + msg.blocks()}</span>
+                <span>{' ' + i18n.blocks()}</span>
               </div>
             </PaneSection>
           </div>
@@ -214,6 +229,11 @@ class CodeWorkspace extends React.Component {
             id="codeTextbox"
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
           />
+        )}
+        {this.props.studentHasNotStartedLevel && !inCsfExampleSolution && (
+          <div style={styles.studentNotStartedWarning}>
+            {i18n.levelNotStartedWarning()}
+          </div>
         )}
         {props.showDebugger && (
           <JsDebugger
@@ -228,6 +248,7 @@ class CodeWorkspace extends React.Component {
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
 export default connect(state => ({
+  studentHasNotStartedLevel: state.pageConstants.isNotStartedLevel,
   editCode: state.pageConstants.isDroplet,
   isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,

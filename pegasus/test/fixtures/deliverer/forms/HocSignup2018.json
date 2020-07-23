@@ -1,0 +1,34 @@
+{
+  "data": {
+    "name_s": "Fake Name",
+    "email_s": "name.fake@fabricated.edu",
+    "event_type_s": "out_of_school",
+    "hoc_company_s": null,
+    "hoc_country_s": "us",
+    "nces_school_s": null,
+    "school_name_s": "",
+    "event_location_s": "School",
+    "hoc_event_country_s": "US",
+    "organization_name_s": "Imaginary Education Org",
+    "send_posters_flag_b": "",
+    "entire_school_flag_b": "",
+    "special_event_flag_b": "",
+    "match_volunteer_flag_b": "",
+    "send_posters_address_s": "",
+    "special_event_details_s": "",
+    "email_preference_opt_in_s": "no"
+  },
+  "processed_data": {
+    "location_p": "12.3456789,-98.7654321",
+    "location_city_s": "Someplace",
+    "location_route_s": "Fake Dr",
+    "location_state_s": "Washington",
+    "location_country_s": "United States",
+    "nces_school_name_s": "",
+    "location_state_code_s": "WA",
+    "location_postal_code_s": "55555",
+    "location_country_code_s": "US",
+    "location_street_number_s": "12345",
+    "location_street_address_s": "12345 Fake Dr"
+  }
+}

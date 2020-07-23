@@ -1,6 +1,7 @@
 id '7'
+hidden false
 
-stage 'Jigsaw'
+lesson 'Jigsaw'
 skin 'jigsaw'
 level 'blockly:Jigsaw:1'
 skin 'jigsaw'

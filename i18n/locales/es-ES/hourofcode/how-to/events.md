@@ -1,66 +1,65 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
-layout: wide
-nav: how_to_nav
+title: Como organizar un evento de la Hora del código
 ---
-<%= view :signup_button %>
 
-# How to organize an Hour of Code assembly or event
+{{ signup_button }}
 
-### Get your entire school or community involved in an Hour of Code!
+# Cómo organizar una reunión o evento de la Hora del Código
+
+### ¡Involucra a toda tu escuela o comunidad en la Hora del Código!
 
 * * *
 
 ## 1. Prepárate para tu evento
 
-- Elige lugar, fecha y hora.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Consulte nuestro [conjunto de herramientas prácticas](%=localized_file('/files/elected-official.pdf')%) cuando aloje a un funcionario electo durante una Hora de Código para obtener más información.
-- Invita a los medios/prensa como la radio o televisión local, periódicos o blogs de educación o tecnología. Vea nuestro [kit de prensa](%= resolve_url('/promote/press-kit') %) para obtener ayuda.
+- Elige el lugar, la fecha y la hora.
+- Envía [una carta](https://hourofcode.com/promote/resources#sample-emails) para invitar al alcalde, a un congresista, al gobernador o a una persona de negocios influyente a que hablen. Consulta nuestro [kit de herramientas prácticas]({{ localized_files/elected_official }}) para obtener más información en caso de un funcionario electo esté presente durante tu Hora de Código.
+- Invita a los medios y a la prensa, como estaciones de radio o televisión locales, periódicos, o bloggers de educación o tecnología. Consulta nuestro [kit de prensa]({{ promote/press_kit_url }}) para obtener ayuda.
 
 ## 2. Durante tu evento
 
-- Comienza tu evento con uno de nuestros [vídeos motivacionales](%= resolve_url('/promote/resources#videos') %).
-- De una introducción resumiendo la importancia de las Ciencias de la Computación, puedes usar estas [estadísticas e infografías](%= resolve_url('/promote/stats') %).   
+- Comienza tu evento con uno de nuestros [videos inspiradores]({{ promote/videos }}).
+- Prepara una introducción general a la importancia de las ciencias de la computación mediante estas [estadísticas e infografías]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
-    - Invita a un líder de la industria local a discutir su trabajo relacionado con la informática.
+- **Otras ideas para el evento**: 
+    - Invita a un líder de la industria local a hablar sobre su trabajo relacionado con las ciencias de la computación.
     - Invita a un político local y haz que los estudiantes le enseñen a programar.
-    - Haz que un grupo de estudiantes hagan una demostración de una actividad sin conexión.
-    - Haz que un grupo de estudiantes enseñen al director o a un grupo de profesores cómo programar.
-    - Si tu escuela ya enseña informática, haga que los estudiantes muestren proyectos.
+    - Prepara a un grupo de estudiantes para que realice una demostración de una actividad sin conexión.
+    - Haz que un grupo de estudiantes enseñe al director o a un grupo de profesores a programar.
+    - Si tu escuela ya enseña ciencias de la computación, haz que los estudiantes muestren sus proyectos.
 
 ## 3. Comparte tu experiencia
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+Comparte fotos de tu evento en Facebook y Twitter con el hashtag **#HoraDelCódigo**.
 
 * * *
 
 ## Organiza una Noche Familiar de la Hora del Código e invita a los padres a participar
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Considera la posibilidad de organizar un evento para niños de jardín de infantes a quinto grado e invita a los padres a que acompañen a los estudiantes durante una hora de ciencias de la computación. Es una buena manera de involucrar a una comunidad más grande y fomentar el apoyo de los padres para la enseñanza de las ciencias de la computación en la escuela. Nuestros socios en la Noche Familiar de la Hora del Código han creado un kit con una lista de control de la planificación, un guion para el presentador, correos electrónicos de invitación, carteles, powerpoints y más que te ayudarán a organizar tu propio evento. [Haz clic aquí para descargar el kit para eventos](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
-## Example plan for a school assembly or event
+## Ejemplo de un plan para una reunión o evento en la escuela
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Evento:** reunión de toda la escuela que da inicio a la Semana por la Educación en Ciencias de la Computación
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Fecha:** {{ campaign_date/start_short }} (inicio de la Semana por la Educación en Ciencias de la Computación)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Horario:** durante la jornada escolar. Preferentemente a media mañana. 1 hora de duración, aproximadamente.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Ubicación:** salón de reuniones de la escuela (por ejemplo, auditorio, gimnasio, cafetería)
 
 ## Programa del evento
 
-| Hora             | Acción                                                                                                                                                                                  |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                             |
-| 10:05 - 10:15 am | El Director hace una presentación sobre la importancia de la informátca. Usa estas [estadísticas e infografías](%= resolve_url('/promote/stats') %).                                    |
-| 10:15 - 10:30 am | Un invitado especial habla acerca de su historia y cómo la tecnología y las ciencias de computación juegan un papel importante en sus quehaceres diarios.                               |
-| 10:30 - 10:40 am | Los estudiantes hacen una demostración de la Hora de Código para la escuela. Como actividad divertida: ¡Haz que los estudiantes le enseñen al director, político o a otros estudiantes! |
-| 10:40 - 11:00 am | Los estudiantes hacen una demostración de una actividad sin conexión y como las ciencias de la computación pueden enseñarse sin usar ordenadores.                                       |
-| 11:00 - 11:05 am | El profesor que organizó el evento para toda la escuela dará la charla de cierre.                                                                                                       |
+| Hora             | Acción                                                                                                                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Abre con uno de nuestros [videos inspiradores]({{ promote/videos }}).                                                                                                                                   |
+| 10:05 - 10:15 am | El director da una introducción general a la importancia de las ciencias de la computación. Usa estas [estadísticas e infografías]({{ promote/stats_url }}).                                            |
+| 10:15 - 10:30 am | Un invitado especial habla acerca de su historia y cómo la tecnología y las ciencias de computación juegan un papel importante en sus quehaceres diarios.                                               |
+| 10:30 - 10:40 am | Los estudiantes hacen una demostración de la Hora de Código para la escuela. Para hacerlo más divertido, ¡puedes hacer que los estudiantes le enseñen al director, a un político o a otros estudiantes! |
+| 10:40 - 11:00 am | Los estudiantes hacen una demostración de una actividad sin conexión y como las ciencias de la computación pueden enseñarse sin usar ordenadores.                                                       |
+| 11:00 - 11:05 am | El profesor que organizó el evento para toda la escuela dará la charla de cierre.                                                                                                                       |
 
-<%= view :signup_button %>
+{{ signup_button }}

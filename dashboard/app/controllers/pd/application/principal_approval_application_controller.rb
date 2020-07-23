@@ -23,7 +23,9 @@ module Pd::Application
         principal_first_name: application_hash[:principal_first_name],
         principal_last_name: application_hash[:principal_last_name],
         principal_title: application_hash[:principal_title],
-        principal_email: application_hash[:principal_email]
+        principal_email: application_hash[:principal_email],
+        school_id: teacher_application.school_id,
+        school_zip_code: School.find_by_id(teacher_application.school_id)&.zip
       }
 
       # Return submitted if the approval exists and is not a placeholder
@@ -35,12 +37,17 @@ module Pd::Application
         return render :submitted
       end
 
+      @teacher_application_school_stats = Api::V1::Pd::ApplicationSerializer.new(
+        teacher_application
+      ).school_stats.transform_values {|v| v.to_i.to_s}
+
       @script_data = {
         props: {
           options: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options.camelize_keys,
           requiredFields: PRINCIPAL_APPROVAL_APPLICATION_CLASS.camelize_required_fields,
           apiEndpoint: '/api/v1/pd/application/principal_approval',
-          teacherApplication: @teacher_application
+          teacherApplication: @teacher_application,
+          teacherApplicationSchoolStats: @teacher_application_school_stats
         }.to_json
       }
     end

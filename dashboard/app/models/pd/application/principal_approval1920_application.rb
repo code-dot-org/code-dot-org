@@ -38,14 +38,15 @@ module Pd::Application
   class PrincipalApproval1920Application < PrincipalApprovalApplicationBase
     include Pd::PrincipalApproval1920ApplicationConstants
 
+    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1920Application',
+               primary_key: :application_guid, foreign_key: :application_guid
+
+    validates_presence_of :teacher_application
+
     # @override
     def year
       YEAR_19_20
     end
-
-    validates_presence_of :teacher_application
-    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1920Application',
-      primary_key: :application_guid, foreign_key: :application_guid
 
     def self.create_placeholder_and_send_mail(teacher_application)
       teacher_application.queue_email :principal_approval, deliver_now: true
@@ -133,20 +134,10 @@ module Pd::Application
         ],
         committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
-          'Yes, my school or teacher will be able to pay the full program fee.',
-          'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a scholarship.',
+          'Yes, my school will be able to pay the full program fee.',
+          'No, my school will not be able to pay the program fee. We would like to be considered for a scholarship.',
           'Not applicable: there is no fee for the program for teachers in my region.',
           'Not applicable: there is no Regional Partner in my region.'
-        ],
-        how_heard: [
-          'From a teacher',
-          'From an administrator',
-          'Code.org website',
-          'Code.org email',
-          'Regional Partner website',
-          'Regional Partner email',
-          'Regional Partner event or workshop',
-          TEXT_FIELDS[:other_with_text]
         ]
       }
     end
@@ -177,8 +168,7 @@ module Pd::Application
               :replace_course,
               :committed_to_diversity,
               :understand_fee,
-              :pay_fee,
-              :how_heard
+              :pay_fee
             ]
 
             if teacher_application&.course == 'csd'
@@ -214,7 +204,8 @@ module Pd::Application
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
         [:do_you_approve],
         [:plan_to_teach],
-        [:how_heard]
+        [:contact_invoicing],
+        [:contact_invoicing_detail]
       ]
     end
 

@@ -11,10 +11,14 @@
     "skip_sound": true,
     "parent_level_id": 11544,
     "name_suffix": "_2019",
-    "display_name": "Video: Intro to CSS Part 2"
+    "display_name": "Video: Intro to CSS Part 2",
+    "long_instructions": "## Question to Consider\r\n* How does the web page know what stylesheet it should be using?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nMake sure all the students understand how to link to their stylesheet from each web page."
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-01-10 20:32:56 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-01-10 20:32:56 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 04:36:26 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

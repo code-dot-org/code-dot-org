@@ -8,8 +8,8 @@ module Pd::Application
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
-      @fit_workshop = create :pd_workshop, :fit
-      @workshop = create :pd_workshop
+      @fit_workshop = create :fit_workshop
+      @workshop = create :workshop
       @application = create :pd_facilitator1920_application
       @application_with_fit_workshop = create :pd_facilitator1920_application,
         pd_workshop_id: @workshop.id, fit_workshop_id: @fit_workshop.id
@@ -50,11 +50,11 @@ module Pd::Application
       assert_equal @regional_partner, application.regional_partner
     end
 
-    test 'open until April 1, 2019' do
-      Timecop.freeze Time.zone.local(2019, 3, 31, 23, 59) do
+    test 'open until May 1, 2019' do
+      Timecop.freeze Time.zone.local(2019, 4, 30, 23, 59) do
         assert Facilitator1920Application.open?
       end
-      Timecop.freeze Time.zone.local(2019, 4, 1) do
+      Timecop.freeze Time.zone.local(2019, 5, 1) do
         refute Facilitator1920Application.open?
       end
     end
@@ -260,30 +260,25 @@ module Pd::Application
     end
 
     test 'fit_cohort' do
-      included = [
-        create(:pd_facilitator1920_application, :locked, fit_workshop_id: @fit_workshop.id, status: :accepted),
-        create(:pd_facilitator1920_application, :locked, fit_workshop_id: @fit_workshop.id, status: :waitlisted)
-      ]
+      fit_workshop = create :fit_workshop
+      expected_application_ids = []
 
-      excluded = [
-        # not locked
-        create(:pd_facilitator1920_application, fit_workshop_id: @fit_workshop.id, status: :accepted),
+      # create some applications to be included in fit_cohort
+      expected_application_ids << (create :pd_facilitator1920_application, :locked, fit_workshop_id: fit_workshop.id, status: :accepted).id
+      expected_application_ids << (create :pd_facilitator1920_application, :locked, fit_workshop_id: fit_workshop.id, status: :withdrawn).id
+      # no workshop
+      expected_application_ids << (create :pd_facilitator1920_application, :locked, status: :accepted).id
 
-        # not accepted or waitlisted
-        @application_with_fit_workshop,
+      #create some applications that won't be included in fit_cohort
+      # not locked
+      create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id, status: :accepted
 
-        # no workshop
-        @application
-      ]
+      # not accepted or withdrawn
+      create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id, status: :waitlisted
 
-      fit_cohort = Facilitator1920Application.fit_cohort
+      actual_application_ids = Facilitator1920Application.fit_cohort.map(&:id)
 
-      included.each do |application|
-        assert fit_cohort.include? application
-      end
-      excluded.each do |application|
-        refute fit_cohort.include? application
-      end
+      assert_equal expected_application_ids, actual_application_ids
     end
 
     test 'memoized filtered_labels' do
@@ -298,6 +293,66 @@ module Pd::Application
       refute filtered_labels_csf.key? :csd_csp_lead_summer_workshop_requirement
       assert filtered_labels_csf.key? :csf_good_standing_requirement
       assert_equal ['csd', 'csf'], Facilitator1920Application::FILTERED_LABELS.keys
+    end
+
+    test 'locking an application with an auto-email status queues up an email' do
+      assert_empty @application.emails
+      Facilitator1920Application::AUTO_EMAIL_STATUSES.each do |status|
+        @application.unlock!
+        @application.update!(status: status)
+        @application.expects(:queue_email).with(status)
+        @application.lock!
+      end
+    end
+
+    test 'locking an application with accepted status does not queue up an email' do
+      assert_empty @application.emails
+      @application.expects(:queue_email).never
+      @application.update!(status: 'accepted')
+      @application.lock!
+    end
+
+    test 'setting status does not queue up a status email' do
+      assert_empty @application.emails
+      @application.expects(:queue_email).never
+
+      Facilitator1920Application.statuses.each do |status|
+        @application.update!(status: status)
+      end
+    end
+
+    test 'locking an application with an auto-email status deletes unsent emails for the application' do
+      Facilitator1920Application::AUTO_EMAIL_STATUSES.each do |status|
+        @application.unlock!
+        unrelated_email = create :pd_application_email
+        associated_sent_email = create :pd_application_email, application: @application, sent_at: Time.now
+        associated_unsent_email = create :pd_application_email, application: @application
+
+        @application.update!(status: status)
+        @application.lock!
+        assert Email.exists?(unrelated_email.id)
+        assert Email.exists?(associated_sent_email.id)
+        refute Email.exists?(associated_unsent_email.id)
+      end
+    end
+
+    test 'should_send_decision_email?' do
+      application = build :pd_facilitator1920_application, status: :pending
+
+      # no auto-email status: no email
+      refute application.should_send_decision_email?
+
+      # auto-email status with no partner: yes email
+      application.status = :declined
+      assert application.should_send_decision_email?
+    end
+
+    test 'queue_email queues up email' do
+      application = build :pd_facilitator1920_application, status: 'declined'
+
+      assert_creates Email do
+        application.queue_email :declined
+      end
     end
 
     test 'meets_criteria says yes if everything is set to YES, no if anything is NO, and INCOMPLETE if anything is unset' do
@@ -400,8 +455,8 @@ module Pd::Application
     end
 
     test 'associated models cache prefetch' do
-      workshop = create :pd_workshop
-      fit_workshop = create :pd_workshop, :fit
+      workshop = create :workshop
+      fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, pd_workshop_id: workshop.id, fit_workshop_id: fit_workshop.id
       # Workshops, Sessions, Enrollments
       assert_queries 3 do
@@ -414,7 +469,7 @@ module Pd::Application
     end
 
     test 'enroll_user creates enrollment' do
-      fit_workshop = create :pd_workshop, :fit
+      fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id
 
       assert_nil application.auto_assigned_fit_enrollment_id
@@ -426,8 +481,8 @@ module Pd::Application
     end
 
     test 'enroll_user for a different workshop deletes previous enrollment' do
-      original_fit_workshop = create :pd_workshop, :fit
-      new_fit_workshop = create :pd_workshop, :fit
+      original_fit_workshop = create :fit_workshop
+      new_fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, fit_workshop_id: original_fit_workshop.id
 
       application.enroll_user
@@ -443,6 +498,12 @@ module Pd::Application
       end
       new_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
       assert_equal new_fit_workshop.id, new_enrollment.pd_workshop_id
+    end
+
+    private
+
+    def assert_status_log(expected, application)
+      assert_equal JSON.parse(expected.to_json), application.status_log
     end
   end
 end

@@ -1,20 +1,17 @@
 :ruby
-  studio_url = CDO.studio_url('', CDO.default_scheme)
-  code_org_url = CDO.code_org_url('', CDO.default_scheme)
-
-  split_test_data = {}
-  split_test_data[:percentage] = DCDO.get('teacher_dashboard_split_test', 0)
-  split_test_data[:studioUrlPrefix] = studio_url
-  split_test_data[:pegasusUrlPrefix] = code_org_url
-
   teacher_dashboard_data = {}
-  teacher_dashboard_data[:studioUrlPrefix] = studio_url
-  teacher_dashboard_data[:pegasusUrlPrefix] = code_org_url
-  teacher_dashboard_data[:visibleSections] = @visible_sections
-  teacher_dashboard_data[:section] = @section
+  teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
+  teacher_dashboard_data[:sections] = @sections
+  teacher_dashboard_data[:section] = @section_summary
+  teacher_dashboard_data[:validScripts] = Script.valid_scripts(current_user).map(&:assignable_info)
+  teacher_dashboard_data[:validCourses] = UnitGroup.valid_course_infos(user: @current_user)
+  teacher_dashboard_data[:studentScriptIds] = @section.student_script_ids
+  teacher_dashboard_data[:currentUserId] = @current_user.id
+  teacher_dashboard_data[:hasSeenStandardsReportInfo] = @current_user.has_seen_standards_report_info_dialog || false
+  teacher_dashboard_data[:userName] = @current_user.short_name
+  teacher_dashboard_data[:validGrades] = @valid_grades
+  teacher_dashboard_data[:localeCode] = request.locale
 
-%script{src: '/shared/js/teacherDashboardSplitTest.js', data: {splittest: split_test_data.to_json}}
-
-%script{src: minifiable_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
+%script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 
 #teacher-dashboard

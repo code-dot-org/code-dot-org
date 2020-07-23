@@ -3,18 +3,12 @@ et:
   data:
     block_categories:
       Actions: Tegevused
-      Loops: Tsüklid
-      Functions: Funktsioonid
       Color: Värv
-      Math: Matemaatika
-      Logic: Loogika
-      Variables: Muutujad
       Conditionals: Tingimuslaused
       Events: Sündmused
+      Functions: Funktsioonid
+      Logic: Loogika
+      Loops: Tsüklid
+      Math: Matemaatika
       Text: Tekst
-      Location: Asukoht
-      Start: Alusta
-      Booleans: Booleans
-      test: test
-      Name: Nimi
-      Function: Funktsioon
+      Variables: Muutujad

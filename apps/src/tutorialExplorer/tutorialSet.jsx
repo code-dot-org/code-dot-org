@@ -20,7 +20,6 @@ const styles = {
 export default class TutorialSet extends React.Component {
   static propTypes = {
     tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
-    filters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
     grade: PropTypes.string.isRequired
@@ -65,7 +64,6 @@ export default class TutorialSet extends React.Component {
         {this.props.tutorials.map(item => (
           <Tutorial
             item={item}
-            filters={this.props.filters}
             key={item.code}
             tutorialClicked={this.tutorialClicked.bind(this, item)}
           />

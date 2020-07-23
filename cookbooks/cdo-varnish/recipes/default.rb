@@ -3,26 +3,35 @@
 # Recipe:: default
 #
 
-# Varnish 4.0 vmods from PPA.
-apt_repository 'varnish-4.0-vmods' do
-  uri          'ppa:wjordan/varnish-vmods'
-  distribution 'trusty'
-  retries 3
-end
-
+# Currently installing 5.2 since 6.x requires build varnish-modules from source:
+# https://github.com/varnish/varnish-modules/issues/123
+# TODO: upgrade to 6.x
 apt_package 'varnish' do
-  version '4.0.3-1~trusty'
+  version '5.2.1-1'
   options '--force-yes'
   # Overwrite existing config files on upgrade (templates will be reapplied afterwards)
   options '-o Dpkg::Options::="--force-confnew"'
 end
-apt_package 'libvmod-cookie' do
-  version '1.03+4.0.3-5~trusty'
+
+apt_package 'varnish-modules' do
   options '--force-yes'
 end
-apt_package 'libvmod-header' do
-  version '0.3+4.0.3-1~trusty'
-  options '--force-yes'
+
+# Needed to build libvmod-accept from source
+apt_package %w(
+  automake
+  autotools-dev
+  pkg-config
+  libvarnishapi1
+  libvarnishapi-dev
+  libtool
+  python-docutils
+)
+
+ark 'libvmod-accept' do
+  url 'https://github.com/gquintard/libvmod-accept/tarball/5.2'
+  extension 'tar.gz'
+  action :install_with_make
 end
 
 service 'varnish' do
@@ -46,16 +55,10 @@ ruby_block 'update_service' do
   subscribes :run, "service[varnish]", :before
 end
 
-template '/etc/default/varnish' do
-  source 'config.erb'
-  user 'root'
-  group 'root'
-  mode '0644'
-  notifies :restart, 'service[varnish]', :delayed
-end
-
-template '/etc/varnish/accept-language.vcl' do
-  source 'accept-language.vcl.erb'
+systemd_varnish = '/etc/systemd/system/varnish.service.d'
+directory systemd_varnish
+template "#{systemd_varnish}/cdo.conf" do
+  source 'varnish.service.erb'
   user 'root'
   group 'root'
   mode '0644'

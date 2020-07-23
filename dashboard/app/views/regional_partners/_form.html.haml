@@ -14,12 +14,6 @@
   .field
     = f.label :urban
     = f.check_box :urban
-  .field
-    = f.label :cohort_capacity_csd
-    = f.text_field :cohort_capacity_csd
-  .field
-    = f.label :cohort_capacity_csp
-    = f.text_field :cohort_capacity_csp
   - %w(csd csp).each do |course|
     - %w(teacher facilitator).each do |role|
       .field
@@ -29,23 +23,26 @@
         = f.label nil, "Apps Close Date for #{course.upcase} #{role} (YYYY-MM-DD)"
         = f.text_field "apps_close_date_#{course}_#{role}".to_sym
   .field
+    = f.label nil, "Apps Priority Deadline Date (YYYY-MM-DD)"
+    = f.text_field :apps_priority_deadline_date
+  .field
     = f.label nil, "Applications Principal Approval"
     .applications_principal_approval
       %label
         = f.radio_button :applications_principal_approval, RegionalPartner::ALL_REQUIRE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::ALL_REQUIRE_APPROVAL
-        != 'All apps require principal approval'
+        = 'All apps require principal approval'
       %label
         = f.radio_button :applications_principal_approval, RegionalPartner::SELECTIVE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        != 'Selectively require some apps to have principal approval'
+        = 'Selectively require some apps to have principal approval'
   .field
     = f.label nil, "Applications Decision Emails"
     .applications_decision_emails
       %label
         = f.radio_button :applications_decision_emails, RegionalPartner::SENT_BY_PARTNER, checked: @regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
-        != 'Partner sends decision emails'
+        = 'Partner sends decision emails'
       %label
         = f.radio_button :applications_decision_emails, RegionalPartner::SENT_BY_SYSTEM, checked: @regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM
-        != 'System sends decision emails'
+        = 'System sends decision emails'
   .field
     = f.label :link_to_partner_application
     = f.text_field :link_to_partner_application, {style: 'width: 500px'}
@@ -54,7 +51,7 @@
       = f.label nil, "#{course.upcase} Cost"
       = f.text_field "#{course}_cost".to_sym
   .field
-    = f.label nil, "Cost/Scholarship Information"
+    = f.label nil, "Program information"
     = f.text_area :cost_scholarship_information, {style: 'width: 500px'}
   .field
     = f.label :additional_program_information

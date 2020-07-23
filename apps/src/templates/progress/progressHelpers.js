@@ -74,7 +74,15 @@ export function stageLocked(levels) {
  * @returns A friendly name for the icon name (that can be passed to FontAwesome)
  *   for the given level.
  */
-export function getIconForLevel(level) {
+export function getIconForLevel(level, inProgressView = false) {
+  if (inProgressView && isLevelAssessment(level)) {
+    return 'check-circle';
+  }
+
+  if (level.isUnplugged) {
+    return 'scissors';
+  }
+
   if (level.icon) {
     // Eventually I'd like to have dashboard return an icon type. For now, I'm just
     // going to treat the css class it sends as a type, and map it to an icon name.
@@ -85,12 +93,28 @@ export function getIconForLevel(level) {
     return match[1];
   }
 
-  if (level.isUnplugged) {
-    return 'scissors';
+  if (level.bonus) {
+    return 'flag-checkered';
   }
 
   // default to desktop
   return 'desktop';
+}
+
+/**
+ * @returns Whether a level is an assessment level.
+ */
+export function isLevelAssessment(level) {
+  return level.kind === 'assessment';
+}
+
+/**
+ * Checks if a whole stage is assessment levels
+ * @param {[]} levels An array of levels
+ * @returns {bool} If all the levels in a stage are assessment levels
+ */
+export function stageIsAllAssessment(levels) {
+  return levels.every(level => level.kind === LevelKind.assessment);
 }
 
 /**
@@ -101,6 +125,9 @@ export function getIconForLevel(level) {
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
 export function summarizeProgressInStage(levelsWithStatus) {
+  // Filter any bonus levels as they do not count toward progress.
+  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
+
   // Get counts of statuses
   let statusCounts = {
     total: levelsWithStatus.length,
@@ -115,6 +142,8 @@ export function summarizeProgressInStage(levelsWithStatus) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
+      case LevelStatus.completed_assessment:
+      case LevelStatus.readonly:
         statusCounts.completed = statusCounts.completed + 1;
         break;
       case LevelStatus.not_tried:
@@ -146,8 +175,10 @@ export const processedLevel = level => {
     progression: level.progression,
     kind: level.kind,
     icon: level.icon,
-    isUnplugged: level.kind === LevelKind.unplugged,
+    isUnplugged: level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
-    isConceptLevel: level.is_concept_level
+    isConceptLevel: level.is_concept_level,
+    bonus: level.bonus,
+    sublevels: level.sublevels
   };
 };

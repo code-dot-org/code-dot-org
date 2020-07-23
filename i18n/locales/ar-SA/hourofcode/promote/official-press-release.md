@@ -1,47 +1,46 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
-layout: wide
-nav: promote_nav
+title: بيان صحفي عن ساعة البرمجة للمسؤولين المُنتخبين
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # نموذج البيان الصحفي للمسؤولين المنتخبين
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+### استخدم اللغة الواردة في نموذج البيان الصحفي هذا للمساعدة في صياغة رسالتك حول المشاركة في أنشطة "ساعة البرمجة".
 
 * * *
 
-#### For Immediate Release  
+#### للنشر الفوري  
 
 
 #### [DATE]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### اتصل بنا: [معلومات الاتصال]
 
 <br />
 
-**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
+**حاكم / سناتور / عضو جمعية / نائب برلماني/ عمدة ولاية / عضو مجلس [إدراج اسم] شارك في أنشطة "ساعة البرمجة" مع الطلاب المحليين** <br />
 
-Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+يجتمع المجتمع لرفع مستوى الوعي بأهمية تعليم علوم الحاسوب من خلال المشاركة في الأسبوع العالمي للبرمجة وعلوم الحاسوب.<br /> <br />
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
+**DATE** - [**INSERT NAME**] انضم إلى مدير المدرسة وأعضاء هيئة التدريس في مدرسة[**INSERT NAME OF SCHOOL**]، قادة الأعمال، والعائلات المحلية اليوم متواجدة لحضور [**NAME OF EVENT**] وشاركوا في نشاط "ساعة البرمجة" كجزء من الأسبوع العالمي للبرمجة وعلوم الحاسوب. كان [**INSERT NAME**] وأفراد المجتمع من بين عشرات الملايين من الناس حول العالم الذين يشاركون في أكبر حدث تعليمي في التاريخ. <br />
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. على سبيل المثال:**  
+عقدت مدرسة دانيلز ران الابتدائية حدثًا من أحداث "ساعة البرمجة" على مستوى المدرسة لتعريف طلابها بعلوم الحاسوب. قام أكثر من 700 طالب من جميع الصفوف بساعة واحدة على الأقل من أنشطة "ساعة البرمجة". قدَّم عشرات الآباء والمتطوعين من المجتمع المساعدة في ذلك اليوم وجمعوا الأطفال معًا في اجتماع يعرض سبب أهمية علوم الحاسوب في حياة هؤلاء الطلاب." <br />
 
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
+أجهزة الحاسوب في كل مكان، ولكن عدد المدارس التي تدرس علوم الحاسوب أقل مما كانت عليه قبل عشر سنوات. الفتيات والطلاب من أعراق مختلفة ممثلون تمثيلًا ضعيفًا بشدة. الخبر السار هو أننا نغير هذا للأفضل. تعد منصة "ساعة البرمجة" البوابة الرئيسية نحو تزويد جميع الطلاب بإمكانية الوصول إلى تعليم عالي الجودة لعلوم الحاسوب. <br />
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
+لقد جرَّب بالفعل أكثر من 100 مليون طالب في جميع أنحاء العالم أنشطة "ساعة البرمجة". وبفضل "ساعة البرمجة"، كان علم الحاسوب على الصفحات الرئيسية لـ Google و MSN و Yahoo! و Disney. وقد بدأ الرئيس أوباما وشاكيرا وأشتون كوتشر أنشطة "ساعة البرمجة" بمقاطع فيديو مُلهمة. واجتمع أكثر من 100 شريك لدعم هذه المبادرة. <br />
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
+"نحن بحاجة إلى تشجيع اهتمام طلابنا بعلوم الكمبيوتر وتبني هذا الاهتمام،" يقول [**INSERT NAME**]. "كل طالب يستحق الفرصة لتعلم علوم الحاسوب للوصول إلى أفضل الوظائف في القرن الحادي والعشرين." <br />
 
 [**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
 
 [**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+للمزيد من التفاصيل حول [**EVENT/PROGRAM/ETC**]، قم بزيارة [**INSERT WEBSITE**] أو اتصل بـ [**INSERT CONTACT INFORMATION**]
 
-<%= view :signup_button %>
+{{ signup_button }}

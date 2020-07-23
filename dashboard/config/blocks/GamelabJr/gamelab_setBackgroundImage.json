@@ -13,12 +13,24 @@
         "name": "IMG",
         "options": [
           [
+            "cave",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_cave.png\""
+          ],
+          [
             "city",
             "\"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png\""
           ],
           [
             "continuous grass",
             "\"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png\""
+          ],
+          [
+            "court",
+            "\"https://studio.code.org/blockly/media/skins/studio/background.png\""
+          ],
+          [
+            "desert",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_desert.png\""
           ],
           [
             "desert road",
@@ -35,6 +47,14 @@
           [
             "front of house",
             "\"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png\""
+          ],
+          [
+            "galaxy",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_space.png\""
+          ],
+          [
+            "grid",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_grid.png\""
           ],
           [
             "kitchen ",
@@ -57,12 +77,24 @@
             "\"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png\""
           ],
           [
+            "rainbow",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png\""
+          ],
+          [
+            "sci-fi",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_scifi.png\""
+          ],
+          [
             "soccer field",
             "\"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png\""
           ],
           [
             "stage",
             "\"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png\""
+          ],
+          [
+            "stars",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_santa.png\""
           ],
           [
             "subway",
@@ -87,6 +119,14 @@
           [
             "underground",
             "\"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png\""
+          ],
+          [
+            "underwater",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_underwater.png\""
+          ],
+          [
+            "winter",
+            "\"https://studio.code.org/blockly/media/skins/studio/background_winter.png\""
           ],
           [
             "none",

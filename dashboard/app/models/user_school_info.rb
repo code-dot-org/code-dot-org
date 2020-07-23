@@ -11,9 +11,13 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
+# Indexes
+#
+#  index_user_school_infos_on_user_id  (user_id)
+#
 
 class UserSchoolInfo < ApplicationRecord
-  validates_presence_of :user, :school_info, :start_date, :last_confirmation_date
+  validates_presence_of :user, :school_info_id, :start_date, :last_confirmation_date
 
   belongs_to :user
   belongs_to :school_info

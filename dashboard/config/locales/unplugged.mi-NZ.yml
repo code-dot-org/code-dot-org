@@ -523,3 +523,11 @@ mi:
         desc: Ka whakamāramatia e ngā pouako ki ngā ākonga, kei te waihangahia e rātou
           ō rātou ake tapuwae matihiko, "huarahi" rānei mā te hoatu mōhiohio whaiaro
           ki te ipurangi, me ngā rokohanga o taua mahi.
+      timeforcs_demo_crowdsourcing:
+        title: Te Mahi ā-Ohu
+      timeforcs_demo_conditionals:
+        title: Ngā Here
+        desc: Ki te ako e pā ana ki ngā tauākī here, ka tākaro ngā ākonga i tētahi
+          kēmu kāri mā rātou ngā ture e waihanga pēnei i, "Ki te tango ahau i tētahi
+          kāri whero, ka whiwhi ahau i tētahi piro", i tēnei hoki "Ki te tango ahau
+          i tētahi kāri pango, ka whiwhi koe i tētahi piro."

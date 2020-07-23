@@ -3,7 +3,7 @@ sk:
   data:
     game:
       name:
-        Unplug1: Úvod do vedy o počítačoch (informatiky)
+        Unplug1: Úvod do informatiky
         Maze: Bludisko
         Multi: Vyber správnu odpoveď
         Unplug2: Algoritmické myslenie
@@ -39,6 +39,7 @@ sk:
         Custom: Umelec
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronzová
@@ -50,29 +51,30 @@ sk:
         if: Blok - Ak
         if_else: Blok Ak- tak
         loop_times: Blok Opakuj niekoľko krát
-        loop_until: Blok "Opakuj dovtedy kým"
+        loop_until: Blok "opakuj pokiaľ neplatí"
         loop_while: Blok Kým
         loop_for: Blok Počítadlo
         function: Funkcie
         parameters: Funkcie s parametrami
     level:
       instructions:
-        maze_2_2: 'Pomôžeš mi chytiť to neposlušné prasa? Spoj niekoľko blokov "posuň
-          sa dopredu" a stlač "Spustiť", aby som sa k nemu dostal. '
-        maze_2_1: To prasa mi pije krv. Pomôž mi ho nájsť!
-        maze_2_2_5: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT,
-          lebo bude lietať perie!
+        maze_2_2: 'Pomôžeš mi chytiť to neposlušné prasiatko? Spoj niekoľko blokov
+          "posuň sa dopredu" a stlač "Spustiť", aby som sa k nemu dostal. '
+        maze_2_1: To prasiatko mi pije krv. Pomôž mi ho nájsť!
+        maze_2_2_5: Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa
+          TNT, lebo bude lietať perie!
         maze_2_3: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
-        maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Ináč sa rozhnevám!
-        maze_2_5: K zelenému prasaťu sa dá dostať použitím len 2 blokov. Zistíš ktorých?
+        maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Ináč sa rozhnevám!
+        maze_2_5: K zelenému prasiatku sa dá dostať použitím len 2 blokov. Zistíš
+          ktorých?
         maze_2_6: Dostaň ma k zelenému votrelcovi použitím troch blokov.
-        maze_2_7: Pomôž sa mi zbaviť toho zlého prasaťa pomocou čo najmenšieho počtu
+        maze_2_7: Pomôž sa mi zbaviť toho zlého prasiatka pomocou čo najmenšieho počtu
           blokov. Skús použiť niekoľko blokov "opakuj".
         maze_2_8: 'Šedý blok nemôžeš zmazať. Vyrieš túto hádanku použitím bloku "opakuj",
           ktorý akciu zopakuje 3 krát. Vlož do neho 3 bloky: "posuň sa dopredu", "posuň
           sa dopredu", a "otoč sa" a nastav blok "opakuj", aby to zopakoval trikrát.'
-        maze_2_9: V poriadku, skús nový blok "opakuj dovtedy (kým)" - tento blok bude
-          akciu opakovať až dovtedy, kým neprídem k tomu otravnému prasaťu.
+        maze_2_9: V poriadku, vyskúšaj nový blok "opakuj pokiaľ neplatí" - tento blok
+          bude akciu opakovať až dovtedy, kým neprídem k tomu mrzutému prasiatku.
         maze_2_10: Ok, posledný krát - vyriešiš toto použitím iba 4 blokov?
         maze_2_11: Drahá osoba. Ja zombie. Ja hladný. Musieť... dostať... k slnečnica...
           Dostaneš ma tam pomocou 5 blokov?
@@ -201,7 +203,7 @@ sk:
           v zemi. Skús namiesto použitia množstva blokov použiť cyklus. Nápoveda:
           môžeš vložiť opakovanie do vnútra iného opakovania.'
         maze_karel_2_2: Definovali sme si náš vlastný blok nazvaný "vyplň 5", ktorý
-          teraz je v kategórii Funkcie. Použi to, aby si mi pomohol vyplniť tieto
+          teraz nájdeš v kategórii Funkcie. Použi ho, aby si mi pomohol vyplniť tieto
           diery.
         maze_karel_2_3: Použi nový blok funkcie "vyplň 5", aby si mi pomohol vyplniť
           všetky diery. Budeš musieť potiahnuť blok "vyplň 5" z kategórie Funkcie.
@@ -281,12 +283,12 @@ sk:
         turtle_5_6: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa
           stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim
           úplne iným)
-        maze_3_1: Potrebujem sa dostať k tomu prasaťu! Napíš niekoľko volaní pohybu
+        maze_3_1: Potrebujem sa dostať k tomu prasiatku! Napíš niekoľko volaní pohybu
           - move(); - aby som získal svoje vajíčka späť.
-        maze_3_2: Napíš pre mňa program, aby som sa dostal až k tomu prasaťu.
-        maze_3_3: Ako by som sa len dostal k tomu prasaťu? Dávaj pozor aby som neskočil
+        maze_3_2: Napíš pre mňa program, ktorý ma dostane až k tomu prasiatku.
+        maze_3_3: Ako by som sa len dostal k tomu prasiatku? Dávaj pozor aby som neskočil
           na škatuľu s TNT!
-        maze_3_4: Grr! Napíš mi program, ktorý ma dostane okolo TNT k tomu prasaťu.
+        maze_3_4: Grr! Napíš mi program, ktorý ma dostane okolo TNT k tomu prasiatku.
         Custom_builder: Presuňte bloky v panela nástrojov na pracovnú plochu pre nakresleie
           levelu, ktorý chcete vytvoriť. Stlačte "Spustiť", ked budete hotoví.
         jigsaw_1: Klikni na blok
@@ -326,8 +328,8 @@ sk:
           a potom ho presunúť šípkami až kým neskóruje?
         studio_c2_10: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom
           ho presunúť pomocou šípok až kým neskóruje?
-        studio_c2_11: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť,
-          nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c2_11: Teraz si vytvor vlastný príbeh. Po skončení klikni na "Dokončiť"
+          a pošli ho kamarátom na mobil!
         studio_c3_story_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_c3_story_2: Viete nechať psa niečo povedať a potom nechať mačku takisto
           niečo povedať?
@@ -335,8 +337,8 @@ sk:
         studio_c3_story_4: Dokážeš napísať program, ktorý posunie psa k mačke, a nech
           mačka povie "ahoj", keď k nej pes príde?
         studio_c3_story_5: Viete pridať blok a spraviť chobotnicu šťastnou?
-        studio_c3_story_6: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni
-          na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c3_story_6: Teraz si vytvor vlastný príbeh. Po skončení klikni na "Dokončiť"
+          a pošli ho kamarátom na mobil!
         studio_c3_game_1: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj",
           keď na ňu klikneš?
         studio_c3_game_2: Viete napísať program na pohyb tučniaka použitím kláves
@@ -350,7 +352,7 @@ sk:
           do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c3_game_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla
           a potom ho presunúť pomocou šípok až kým neskóruje?
-        studio_c3_game_7: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_c3_game_7: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_playlab_1: Tučniačik chce povedať "ahoj" - môžeš mu s tým pomôcť?
         studio_playlab_2: Jaskynný muž (postava 1) a jaskynná žena (postava 2) by
@@ -373,7 +375,7 @@ sk:
         studio_playlab_9: Nastav pozadie pre túto inváziu mimozemšťanov a pomôž Spacebotovi
           čo najrýchlejšie sa dostať k mimozemštanovi tým, že zmeníš jeho rýchlosť.
           Potom ho presuň pomocou šípiek a upozorni na inváziu aj ostatných
-        studio_playlab_10: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_playlab_10: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_iceage_hello1: Sid chce dať všetkých dokopy pre nové dobrodružstvo.
           Viete mu pomôcť povedať "ahoj" presunutím bloku "povedať" na pracovnú plochu
@@ -408,9 +410,9 @@ sk:
           ju ľúbi. Použite príkaz "postavička hodí", aby Sid (postavička č. 1) hodil
           Babičke (postavička č. 2) srdiečka! Nastavte Babičkinu náladu na šťastnú
           akonáhle dostane srdiečka.
-        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru, alebo príbeh.
-          Keď budeš hotový, klikni na Skončiť, aby si mohli zahrať tvoju hru kamaráti
-          na svojich telefónoch, tabletoch, alebo na počítačoch!
+        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru alebo príbeh.
+          Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj tvoji kamaráti
+          na mobile, tablete, či počítači!
         studio_gumball_hello1: Anais si chce nájsť nových kamarátov. Pomôžeš jej povedať
           "ahoj" tým, že presunieš blok "povedz" na pracovnú plochu a napíšeš do neho
           "ahoj"?
@@ -430,8 +432,8 @@ sk:
           "Pripraviť sa, pozor, štart!"? Nezabudni po tom, ako stlačíš "Spustiť" kliknúť
           na Antona, aby si si svoj program otestoval!
         studio_gumball_move_events: Darwin súťaží v zbieraní vlajok! Pomôž mu v zbieraní
-          pridaním bloku "posuň sa" ku každej z akcií. Keď budeš hotový, stlač "Spustiť"
-          a skús pozbierať všetky vlajky.
+          pridaním bloku "posuň sa" ku každej udalosti "keď šípka...". Keď skončíš,
+          stlač "Spustiť" a skús pozbierať všetky vlajky.
         studio_gumball_sound_and_points: Napísali sme za teba skoro všetok kód, ktorý
           hýbe Antonom (postava 2) doľava a doprava, ako aj kód, ktorý umožní hýbať
           sa Banánovému Joe (postava 1) po obrazovke. Dokonči kód a pridaj k udalosti
@@ -445,10 +447,10 @@ sk:
           "postava hoď predmet vpravo", aby Banánový Joe (postava č. 1) odhodil jedlo
           na Antona (postava č. 2)! Ak Antona zasiahne, nastav Antonovu náladu na
           nahnevanú.
-        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh. Keď budeš
-          hotový klikni na Skončiť, aby si mohli kamaráti zahrať tvoju hru na svojich
-          telefónoch, tabletoch, alebo na počítačoch!
-        studio_full_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh.  Keď
+          skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj tvoji kamaráti
+          na mobile, tablete, či počítači!
+        studio_full_sandbox: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_k1_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_k1_2: Viete nechať psa niečo povedať a potom nechať mačku takisto niečo
@@ -480,7 +482,7 @@ sk:
         turtle_ec_1_10: 'Dokázal si to! Teraz môžeš nakresliť čo len chceš. Pár vtipných
           nápadov: postavička z čiar, snehová vločka alebo špirála. Skús použiť aj
           blok "šírkaPera". Prajeme veľa zábavy!'
-        studio_ec_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_ec_sandbox: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
     video:
       name:
@@ -489,7 +491,7 @@ sk:
         farmer_intro: Úvod k Farmárke
         flappy_intro: Úvod do Flappy
         loop_times: Blok Opakuj
-        loop_until: Blok "opakuj dovtedy kým"
+        loop_until: Blok "opakuj pokiaľ neplatí"
         if: Blok "Ak"
         if_else: Blok "Ak/inak"
         if_else_scrat: Blok "Ak/inak"
@@ -525,7 +527,7 @@ sk:
         C1_playlab_storytelling: Play Lab - Vytvor príbeh
         C1_planting_seed: Zasaď semienko
         C1_building_foundation: Budovanie základov
-        C1_going_places_safely: Bezpečné premiestňovanie
+        C1_going_places_safely: Bezpečný pohyb na internete
         C2_maze_intro: Úvod do bludiska
         C2_artist_intro: Umelec - Úvod
         C2_zuck_repeat_loop: Cykly v Bludisku
@@ -565,9 +567,9 @@ sk:
         C4_bee_conditional: Podmienky s včelou
         C4_variables_artist: Umelec - Premenné
         C4_variables_playlab: Premenné - Play Lab
-        C4_for_loops: Cykly For
-        C4_for_loops_bee: Cykly For
-        C4_for_loops_no_bee: Cykly For
+        C4_for_loops: Cykly "For"
+        C4_for_loops_bee: Cykly "For"
+        C4_for_loops_no_bee: Cykly "For"
         C4_math_artist: Programovanie Umelca s matematikou
         C4_function_edit: Úprava funkcií
         C4_function_create: Tvorba funkcií
@@ -576,7 +578,7 @@ sk:
         C4_unplugged_algorithms: Algoritmy s tangrammi
         C4_unplugged_madlibs: Slovné halušky
         C4_unplugged_variables: Premenné v obálkach
-        C4_unplugged_forloops: Cykly For
+        C4_unplugged_forloops: Cykly "For"
         C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binárny
         CSF_artist_angles: Uhly v Umelcovi
@@ -618,6 +620,7 @@ sk:
         csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
+        csd_gamelab_velocity: Rýchlosť
         csd_weblab_intro_1: Úvod do Web Labu - časť 1
         csd_weblab_intro_2: Úvod do Web Labu - časť 2
         csd_weblab_css_1: Úvod do CSS - časť 1
@@ -653,7 +656,7 @@ sk:
         applab_hoc_welcome: App Lab Hodina Kódu - Vitajte
         applab_hoc_setproperty: App Lab Hodina Kódu - setProperty
         applab_hoc_onevent: App Lab Hodina Kódu - onEvent
-        applab_hoc_designmode: App Lab Hodina Kódu - Dizajnovací mód
+        applab_hoc_designmode: Hodina kódu s App Labom - Dizajnový mód
         applab_hoc_share: App Lab Hodina Kódu - Zdieľanie
         mc_2017_agent_intro: Minecraft Hodina Kódu - Agent
         mc_2017_repeat: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
@@ -680,14 +683,14 @@ sk:
         applab_intro_welcome: App Lab - Začíname
         applab_intro_events: App Lab - Spravme to interaktívne
         applab_intro_sounds: App Lab - Obrázky a zvuky
-        applab_intro_designmode: App Lab - Dizajnovací mód
-        applab_intro_share: App Lab - Zdieľanie Appky
-        CSF_skinOverview_Harvester: Pestovateľka
+        applab_intro_designmode: App Lab - Dizajnový mód
+        applab_intro_share: App Lab - Zdieľaj svoju appku
+        CSF_skinOverview_Harvester: Záhradníčka
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Cykly s BB-8
-        CSF_harvester_skinOverview_K-1: Pestovateľka
-        CSF_harvester_loops_K1: Cykly so Zberateľkou
+        CSF_harvester_skinOverview_K-1: Záhradníčka
+        CSF_harvester_loops_K1: Cykly so Záhradníčkou
         CSF_scrat_loops_K1: Cykly v Dobe ľadovej
         CSF_scrat_loops_CF: Cykly v Dobe ľadovej
         CSF_if_allskins: Blok "Ak"
@@ -696,15 +699,15 @@ sk:
         CSF_loops_AB: Cykly
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmienkové výroky
-        csd_gamelab_if_else: Výroky Ak/Inak
+        csd_gamelab_if_else: Podmienkové výroky (if/else)
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
         CDEF_Video_SpritesInAction: Postavy v akcii
         CSF_SpriteLab_SpritesInAction_CDEF: Postavy v akcii
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
-        MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj dovtedy (kým)"'
-        mc_2018_conditionals: 'Minecraft: Vodné Dobrodružstvo - Podmienky'
+        MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj pokiaľ neplatí"'
+        mc_2018_conditionals: 'Minecraft: Vodné dobrodružstvo - podmienky'
         mc_2018_closing: 'Minecraft: Vodné Dobrodružstvo - Gratulujeme'
         hoc_dance_warmup: Tanečná párty - Zahrej sa
         hoc_dance_events: Tanečná Párty - Udalosti
@@ -712,12 +715,52 @@ sk:
         hoc_dance_congrats: Tanečná párty - Párty pokračuje!
         c_and_c_great_to_create: Je skvelé tvoriť a hrať férovo
         c_and_c_digital_sharing: Digitálne zdieľanie
-        'Teaching CS Fundamentals: How the Course Works': 'Vyučujeme Základy informatiky:
-          Ako funguje tento kurz'
+        teaching_csf_how_it_works: 'Vyučujeme základy informatiky: Ako funguje tento
+          kurz'
+        elem_pd_2: Informatika pre prvý stupeň - PD video 2/2
         what_is_cs: Čo je informatika?
+        repeat_block: Používanie bloku opakuj
+        lesson_planning: Plánovanie hodín
+        opd_closing: 'Učenie základov IT: ukončovanie & ďalšie kroky'
+        why_unplugged_lessons: Práca bez počítača
+        writing_first_program: Napíš svoj prvý počítačový program
         conditionals_with_cards: Bez počítača - Podmienky s kartami
+        songwriting_with_functions: 'Lekcia bez počítača v akcii: Písanie pesničiek
+          s funkciami'
+        what_is_an_event: Čo je to udalosť?
         teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
+        csd_applab_designmode: 'Informatické objavy: App Lab - režim návrhov'
+        csd_pair_programming: Programovanie v páre
+        csd_gamelab_functions: Názvy a definície funkcií
+        csd_applab_parameters: Funkcie s parametrami
+        csd_applab_loops: Cykly v App Labe
+        CSF_Going_Places_Safely: Moja internetová štvrť
+        CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
+        CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
+        CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
+        csd_debugging: Hľadanie a odstraňovanie chýb
+        csd_applab_designmode_short: App Lab Návrh režimu
+        csp-pd-welcome: Vitaj v rodine!
+        CSF-Teaching-Problem-Solving: CSF riešenie problémov pri učení
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilotné video
+          - Dátový blok
+        u7-libraries-explanation: 'App Lab: Vytvor svoje vlastné bloky - Ako používať
+          knižnice'
+        how-to-k5-workshops: 'Základy informatiky s Code.org: Otestované žiakmi, schválené
+          učiteľmi'
+        why-should-teach-unplugged-activities: Prečo mám učiť aktivity bez počítača?
+        cs-principles-intro-to-objects: 'CS Princípy: Úvod do Predmetov'
+        oceans_machine_learning: Strojové učenie
+        oceans_training_data: Tréningové dáta
+        oceans_societal_implications: Spoločenské dôsledky
+        hoc_dance_congrats_2019: Tanečná párty 2019 - Párty pokračuje!
+        hoc_dance_warmup_2019: Tanečná párty 2019 - Zahrej sa
+        hoc_dance_events_2019: Tanečná párty 2019 - Udalosti
+        hoc_dance_measures_2019: Tanečná párty 2019 - Rozmery
+        hoc_dance_properties_2019: Tanečná Párty 2019 - Vlastnosti
+        csf_my_online_neighborhood_2020: Moja internetová štvrť
+        csf_private_and_personal_information: Súkromné a osobné údaje
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok
@@ -751,7 +794,7 @@ sk:
         degrees_per_side: Vydeľte 360 počtom strán pre získanie každého uhla v stupňoch.
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre
           dokončenie tejto úlohy.
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
         which_equation: Aká rovnica zmenší každu stranu viacstranného útvaru?
         get_nectar: Použi nový blok "Získaj nektár".
         actions_category: Panel s nástrojmi má nový vzhľad! Bloky s "akciami" sú odteraz

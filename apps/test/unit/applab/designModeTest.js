@@ -1,5 +1,6 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import designMode from '@cdo/apps/applab/designMode';
+import elementLibrary from '@cdo/apps/applab/designElements/library';
 
 describe('appendPx', () => {
   it('returns a valid css positive integer', function() {
@@ -100,10 +101,56 @@ describe('makeUrlProtocolRelative', () => {
   });
 });
 
+describe('onDuplicate screen', () => {
+  let designModeElement, originalScreen;
+  const colorProperty = 'backgroundColor';
+  const imageProperty = 'screen-image';
+  const color = 'rgb(0, 0, 255)';
+  const image = 'image.png';
+  beforeEach(() => {
+    designModeElement = document.createElement('div');
+    designModeElement.setAttribute('id', 'designModeViz');
+    document.body.appendChild(designModeElement);
+
+    originalScreen = elementLibrary.createElement('SCREEN', 0, 0);
+    designModeElement.appendChild(originalScreen);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(designModeElement);
+  });
+
+  it('duplicates the background color of the screen', () => {
+    designMode.updateProperty(originalScreen, colorProperty, color);
+    var newScreen = designMode.onDuplicate(originalScreen);
+    expect(designMode.readProperty(newScreen, colorProperty)).to.equal(color);
+  });
+
+  it('duplicates the background image of the screen', () => {
+    designMode.updateProperty(originalScreen, imageProperty, image);
+    var newScreen = designMode.onDuplicate(originalScreen);
+    expect(designMode.readProperty(newScreen, imageProperty)).to.equal(image);
+  });
+
+  it('duplicates background color and image of the screen', () => {
+    designMode.updateProperty(originalScreen, imageProperty, image);
+    designMode.updateProperty(originalScreen, colorProperty, color);
+    var newScreen = designMode.onDuplicate(originalScreen);
+    expect(designMode.readProperty(newScreen, colorProperty)).to.equal(color);
+    expect(designMode.readProperty(newScreen, imageProperty)).to.equal(image);
+  });
+
+  it('does not duplicate the background image when none is set', () => {
+    var newScreen = designMode.onDuplicate(originalScreen);
+    expect(designMode.readProperty(newScreen, imageProperty)).to.be.null;
+  });
+});
+
 describe('setProperty and read Property', () => {
-  let text_input, text_area, dropdown;
+  let picture, text_input, text_area, dropdown;
   // Create HTML elements to get/set
   beforeEach(() => {
+    picture = document.createElement('img');
     text_input = document.createElement('input');
     text_area = document.createElement('div');
     dropdown = document.createElement('select');
@@ -133,6 +180,10 @@ describe('setProperty and read Property', () => {
       expect(text_input.value).to.equal('Iota Kappa');
       expect(text_area.innerHTML).to.equal('Lambda Mu');
       expect(dropdown.value).to.equal('Eta Theta');
+    });
+    it('Uses the asset timestamp in the source path for pictures', () => {
+      designMode.updateProperty(picture, 'picture', 'picture.jpg', 123456);
+      expect(picture.src).to.contain('picture.jpg?t=123456');
     });
   });
 

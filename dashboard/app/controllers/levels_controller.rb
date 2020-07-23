@@ -1,5 +1,6 @@
 require "csv"
 require "naturally"
+require 'cdo/firehose'
 
 EMPTY_XML = '<xml></xml>'.freeze
 
@@ -8,19 +9,105 @@ class LevelsController < ApplicationController
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
   before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
-  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level, :get_rubric]
-  check_authorization except: [:get_rubric]
+  load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
-  LEVELS_PER_PAGE = 100
+  LEVELS_PER_PAGE = 30
+
+  # All level types that can be requested via /levels/new
+  LEVEL_CLASSES = [
+    Applab,
+    Artist,
+    Bounce,
+    BubbleChoice,
+    Calc,
+    ContractMatch,
+    Craft,
+    CurriculumReference,
+    Dancelab,
+    Eval,
+    EvaluationMulti,
+    External,
+    ExternalLink,
+    Fish,
+    Flappy,
+    FreeResponse,
+    FrequencyAnalysis,
+    Gamelab,
+    GamelabJr,
+    Karel,
+    LevelGroup,
+    Map,
+    Match,
+    Maze,
+    Multi,
+    NetSim,
+    Odometer,
+    Pixelation,
+    PublicKeyCryptography,
+    StandaloneVideo,
+    StarWarsGrid,
+    Studio,
+    TextCompression,
+    TextMatch,
+    Unplugged,
+    Vigenere,
+    Weblab
+  ]
 
   # GET /levels
   # GET /levels.json
   def index
-    levels = Level.order(updated_at: :desc)
-    levels = levels.where('name LIKE ?', "%#{params[:name]}%") if params[:name]
-    @levels = levels.page(params[:page]).per(LEVELS_PER_PAGE)
+    # Define search filter fields
+    @search_fields = [
+      {
+        name: :name,
+        description: 'Filter by name:',
+        type: 'text'
+      },
+      {
+        name: :level_type,
+        description: 'By type:',
+        type: 'select',
+        options: [
+          ['All types', ''],
+          *LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+        ]
+      },
+      {
+        name: :script_id,
+        description: 'By script:',
+        type: 'select',
+        options: [
+          ['All scripts', ''],
+          *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
+        ]
+      }
+    ]
+
+    # Add an "owner" filter, only if we're on levelbuilder
+    if Rails.application.config.levelbuilder_mode
+      @search_fields << {
+        name: :owner_id,
+        description: 'By owner:',
+        type: 'select',
+        options: [
+          ['Any owner', ''],
+          *Level.joins(:user).uniq.pluck('users.name, users.id').sort_by {|a| a[0]}
+        ]
+      }
+    end
+
+    # Gather filtered search results
+    @levels = @levels.order(updated_at: :desc)
+    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
+    @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
+    if Rails.application.config.levelbuilder_mode
+      @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
+    end
+    @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
   end
 
   # GET /levels/1
@@ -40,27 +127,33 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
+    # Make sure that the encrypted property is a boolean
+    @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
+    scripts = @level.script_levels.map(&:script)
+    @visible = scripts.reject(&:hidden).any?
+    @pilot = scripts.select(&:pilot_experiment).any?
+    @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    fb = FirebaseHelper.new('shared')
+    @dataset_library_manifest = fb.get_library_manifest
   end
 
-  # GET all the information for the mini rubric
+  # GET /levels/:id/get_rubric
+  # Get all the information for the mini rubric
   def get_rubric
-    @level = Level.find_by(id: params[:level_id])
-    if @level.mini_rubric&.to_bool
-      render json: {
-        keyConcept: @level.rubric_key_concept,
-        exceeds: @level.rubric_exceeds,
-        meets: @level.rubric_meets,
-        approaches: @level.rubric_approaches,
-        noEvidence: @level.rubric_no_evidence
-      }
-    end
+    return head :no_content unless @level.mini_rubric&.to_bool
+    render json: {
+      keyConcept: @level.rubric_key_concept,
+      performanceLevel1: @level.rubric_performance_level_1,
+      performanceLevel2: @level.rubric_performance_level_2,
+      performanceLevel3: @level.rubric_performance_level_3,
+      performanceLevel4: @level.rubric_performance_level_4
+    }
   end
 
+  # GET /levels/:id/edit_blocks/:type
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
   def edit_blocks
-    @level = Level.find(params[:level_id])
-    authorize! :edit, @level
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
 
@@ -90,7 +183,7 @@ class LevelsController < ApplicationController
     )
     view_options(full_width: true)
     @game = @level.game
-    @callback = level_update_blocks_path @level, type
+    @callback = update_blocks_level_path @level, type
 
     # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
     if @level.is_a? Studio
@@ -100,13 +193,16 @@ class LevelsController < ApplicationController
       )
     end
 
+    @is_start_mode = type == 'start_blocks'
+
     show
     render :show
   end
 
+  # POST /levels/:id/update_blocks/:type
+  # Change a blockset in the level configuration
   def update_blocks
-    @level = Level.find(params[:level_id])
-    authorize! :update, @level
+    return head :forbidden unless @level.custom?
     blocks_xml = params[:program]
     type = params[:type]
     set_solution_image_url(@level) if type == 'solution_blocks'
@@ -118,9 +214,6 @@ class LevelsController < ApplicationController
   end
 
   def update_properties
-    @level = Level.find(params[:level_id])
-    authorize! :update, @level
-
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
       @level.properties[key] = value
@@ -140,6 +233,7 @@ class LevelsController < ApplicationController
         @level.name.downcase == level_params[:name].downcase
       # do not allow case-only changes in the level name because that confuses git on OSX
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
+      log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
       return
     end
@@ -151,6 +245,7 @@ class LevelsController < ApplicationController
       redirect = params["redirect"] || level_url(@level, show_callouts: 1)
       render json: {redirect: redirect}
     else
+      log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
   end
@@ -179,8 +274,14 @@ class LevelsController < ApplicationController
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params[:user] = current_user
 
+    create_level_params = level_params
+
+    # Give platformization partners permission to edit any levels they create.
+    editor_experiment = Experiment.get_editor_experiment(current_user)
+    create_level_params[:editor_experiment] = editor_experiment if editor_experiment
+
     begin
-      @level = type_class.create_from_level_builder(params, level_params)
+      @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e
       render(status: :not_acceptable, text: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
@@ -200,7 +301,8 @@ class LevelsController < ApplicationController
   def new
     authorize! :create, Level
     if params.key? :type
-      @type_class = params[:type].constantize
+      @type_class = LEVEL_CLASSES.find {|klass| klass.name == params[:type]}
+      raise "Level type '#{params[:type]}' not permitted" unless @type_class
       if @type_class == Artist
         @game = Game.custom_artist
       elsif @type_class <= Studio
@@ -223,6 +325,8 @@ class LevelsController < ApplicationController
         @game = Game.craft
       elsif @type_class == Weblab
         @game = Game.weblab
+      elsif @type_class == Fish
+        @game = Game.fish
       elsif @type_class == CurriculumReference
         @game = Game.curriculum_reference
       end
@@ -234,27 +338,21 @@ class LevelsController < ApplicationController
   end
 
   # POST /levels/1/clone?name=new_name
+  # Clone existing level and open edit page
   def clone
-    if params[:name]
-      # Clone existing level and open edit page
-      old_level = Level.find(params[:level_id])
-
-      begin
-        @level = old_level.clone_with_name(params[:name])
-      rescue ArgumentError => e
-        render(status: :not_acceptable, text: e.message) && return
-      rescue ActiveRecord::RecordInvalid => invalid
-        render(status: :not_acceptable, text: invalid) && return
-      end
-      render json: {redirect: edit_level_url(@level)}
-    else
-      render status: :not_acceptable, text: 'New name required to clone level'
-    end
+    new_name = params.require(:name)
+    editor_experiment = Experiment.get_editor_experiment(current_user)
+    @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
+    render json: {redirect: edit_level_url(@new_level)}
+  rescue ArgumentError => e
+    render(status: :not_acceptable, text: e.message)
+  rescue ActiveRecord::RecordInvalid => invalid
+    render(status: :not_acceptable, text: invalid)
   end
 
+  # GET /levels/:id/embed_level
+  # Show level styles for embedding in another page
   def embed_level
-    authorize! :read, :level
-    @level = Level.find(params[:level_id])
     @game = @level.game
     level_view_options(
       @level.id,
@@ -344,9 +442,31 @@ class LevelsController < ApplicationController
     )
     level_source_image = find_or_create_level_source_image(
       params[:image],
-      level_source.try(:id),
+      level_source,
       true
     )
     @level.properties['solution_image_url'] = level_source_image.s3_url if level_source_image
+  end
+
+  # Gathers data on top pain points for level builders by logging error details
+  # to Firehose / Redshift.
+  def log_save_error(level)
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'level-save-error',
+        # Make it easy to count most frequent field name in which errors occur.
+        event: level.errors.keys.first,
+        # Level ids are different on levelbuilder, so use the level name. The
+        # level name can be joined on, against the levels table, to determine the
+        # level type or other level properties.
+        data_string: level.name,
+        data_json: {
+          errors: level.errors.to_h,
+          # User ids are different on levelbuilder, so use the email.
+          user_email: current_user.email,
+        }.to_json
+      }
+    )
   end
 end

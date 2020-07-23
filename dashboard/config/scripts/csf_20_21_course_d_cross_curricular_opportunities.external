@@ -1,0 +1,42 @@
+name 'csf_20-21_course_d_cross-curricular_opportunities'
+editor_experiment ''
+title 'Course D: Cross-Curricular Opportunities'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course D: Cross-Curricular Opportunities
+
+## Common Core English Language Arts Standards
+
+<details><summary>
+
+**Speaking & Listening**
+
+</summary>
+
+* **3.SL.1** - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others’ ideas and expressing their own clearly.
+
+* **3.SL.1.b** - Follow agreed-upon rules for discussions (e.g., gaining the floor in respectful ways, listening to others with care, speaking one at a time about the topics and texts under discussion).
+
+* **3.SL.6** - Speak in complete sentences when appropriate to task and situation in order to provide requested detail or clarification.
+
+</details>
+
+## Next Generation Science Standards
+
+<details><summary>
+
+**Engineering, Technology, and Applications of Science**
+
+</summary>
+
+* **3-5-ETS1-1** - Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost.
+
+* **3-5-ETS1-2** - Generate and compare multiple possible solutions  to a problem based on how well each is likely to meet the criteria and constraints of the problem.
+
+* **3-5-ETS1-3** - Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.
+
+</details>
+
+
+MARKDOWN

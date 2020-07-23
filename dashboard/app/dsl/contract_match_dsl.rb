@@ -7,13 +7,8 @@ class ContractMatchDSL < ContentDSL
 
   def answer(text) @hash[:answers] << text end
 
-  def i18n_strings
-    strings = super[@name]
-
-    @hash[:answers].each do |answer|
-      strings[answer] = answer
-    end
-
-    {@name => strings}
+  # @override
+  def self.i18n_fields
+    super + %w(answers)
   end
 end

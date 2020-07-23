@@ -1,0 +1,15 @@
+name 'cspu5_assess2_boolean_2018_2019_virtual'
+wrong 'Yes/Maybe/No'
+right 'True/False'
+wrong 'Any Integer'
+wrong 'Integers between 1 and 10'
+wrong 'Any single character'
+markdown <<MARKDOWN
+A Boolean expression is an expression that evaluates to which of the of the following?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8**
+
+**Boolean Definition:** A variable that has two possible values, “true” and “false”
+MARKDOWN

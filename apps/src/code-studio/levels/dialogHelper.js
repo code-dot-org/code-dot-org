@@ -149,9 +149,9 @@ export function processResults(onComplete, beforeHook) {
         } else if (lastServerResponse.endOfStageExperience) {
           const body = document.createElement('div');
           const stageInfo = lastServerResponse.previousStageInfo;
-          const stageName = `${window.dashboard.i18n.t('stage')} ${
-            stageInfo.position
-          }: ${stageInfo.name}`;
+          const stageName = `${i18n.stage()} ${stageInfo.position}: ${
+            stageInfo.name
+          }`;
           ReactDOM.render(
             <PlayZone
               stageName={stageName}

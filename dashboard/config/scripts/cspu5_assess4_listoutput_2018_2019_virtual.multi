@@ -1,0 +1,35 @@
+name 'cspu5_assess4_listOutput_2018_2019_virtual'
+wrong '3'
+wrong '9'
+right '17'
+wrong '42'
+wrong 'Error. Index 1 does not exist.'
+
+markdown <<MARKDOWN
+The following program processes the list data shown below. What is the output of the following program?
+
+![](https://images.code.org/ebd5b61650f4fc2dfee9ab72e32cf516-image-1477859938100.png)
+
+    val = 0
+    i = 1
+    REPEAT 3 TIMES
+    {
+        val = val + data[i]
+        i = i + 1
+    }
+    DISPLAY (val)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Going through the code line by line as it repeats while keeping track of data[]:
+
+* Currently, data = [3,10,4,9,16]
+* val is set to 0, and i is set to 1
+* Every time the loop repeats, val equals the current val plus the data at index i. i is incremented by one.
+* First repetition: val = 0, i = 1, data[i] = 3. val = 0 + 3 = 3
+* Second repetition: val = 3, i = 2, data[i] = 10. val = 3 + 10 = 13
+* Third repetition: val = 13, i = 3, data[i] = 4. val = 13 + 4 = 17
+* val is displayed where val = 17
+
+MARKDOWN

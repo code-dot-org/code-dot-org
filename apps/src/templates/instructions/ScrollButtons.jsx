@@ -147,6 +147,7 @@ class ScrollButtons extends React.Component {
 
     const upButton = this.props.isMinecraft ? (
       <button
+        type="button"
         className="arrow"
         ref={c => {
           this.scrollUp = c;
@@ -170,6 +171,7 @@ class ScrollButtons extends React.Component {
 
     const downButton = this.props.isMinecraft ? (
       <button
+        type="button"
         className="arrow"
         ref={c => {
           this.scrollDown = c;

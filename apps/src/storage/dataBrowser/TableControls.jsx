@@ -4,10 +4,11 @@
  */
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import ConfirmImportButton from './ConfirmImportButton';
+import VisualizerModal from './dataVisualizer/VisualizerModal';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import applabMsg from '@cdo/applab/locale';
+import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
 const styles = {
@@ -53,7 +54,8 @@ class TableControls extends React.Component {
     clearTable: PropTypes.func.isRequired,
     exportCsv: PropTypes.func.isRequired,
     importCsv: PropTypes.func.isRequired,
-    tableName: PropTypes.string.isRequired
+    tableName: PropTypes.string.isRequired,
+    readOnly: PropTypes.bool.isRequired
   };
 
   render() {
@@ -63,21 +65,31 @@ class TableControls extends React.Component {
           <span style={styles.tableName}>{this.props.tableName}</span>
         </div>{' '}
         <div style={styles.buttonWrapper}>
-          <ConfirmDeleteButton
-            body={applabMsg.confirmClearTable()}
-            buttonText="Clear table"
-            containerStyle={{width: 103}}
-            buttonId="clearTableButton"
-            onConfirmDelete={this.props.clearTable}
-            title="Clear table"
-          />
+          <VisualizerModal key={this.props.tableName} />
 
-          <ConfirmImportButton
-            importCsv={this.props.importCsv}
-            containerStyle={{marginLeft: 10}}
-          />
+          {!this.props.readOnly && (
+            <ConfirmDeleteButton
+              body={msg.confirmClearTable()}
+              buttonText="Clear table"
+              containerStyle={{width: 103, marginLeft: 10}}
+              buttonId="clearTableButton"
+              onConfirmDelete={this.props.clearTable}
+              title="Clear table"
+            />
+          )}
 
-          <button onClick={this.props.exportCsv} style={styles.exportButton}>
+          {!this.props.readOnly && (
+            <ConfirmImportButton
+              importCsv={this.props.importCsv}
+              containerStyle={{marginLeft: 10}}
+            />
+          )}
+
+          <button
+            type="button"
+            onClick={this.props.exportCsv}
+            style={styles.exportButton}
+          >
             Export to csv
           </button>
         </div>

@@ -11,6 +11,7 @@ $light_gray: #949ca2;
 $lighter_gray: #c6cacd;
 $lightest_gray: #e7e8ea;
 $background_gray: #f2f2f2;
+$dimgray: #696969;
 $white: #fff;
 $default_blue: #3670b3;
 
@@ -88,6 +89,7 @@ $level_current: $orange;
 $level_review_rejected: $red;
 $level_review_accepted: rgb(11, 142, 11); // TODO: $level_passed;
 $assessment: $cyan;
+$workspace_running_background: #e5e5e5;
 
 // Links (used in apps).
 $link_color: #0596CE;
@@ -117,6 +119,3 @@ $droplet_pink: #f57ac6;
 $droplet_purple: #bb77c7;
 $droplet_green: #68d995;
 $droplet_white: $white;
-
-// Colors needed for applab styles.
-$text_input_default_border_color: rgb(153, 153, 153);

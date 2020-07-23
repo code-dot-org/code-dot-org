@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative './storage_id'
+require_relative './profanity_privacy_helper'
 
 #
 # StorageApps
@@ -68,9 +69,18 @@ class StorageApps
     StorageApps.merged_row_value(row, channel_id: channel_id, is_owner: owner == @storage_id)
   end
 
-  def update(channel_id, value, ip_address, project_type: nil)
+  def update(channel_id, value, ip_address, project_type: nil, locale: 'en')
     owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+
+    new_name = value['name']
+    project = @table.where(id: storage_app_id).first
+    old_name = JSON.parse(project[:value])['name']
+    if new_name != old_name
+      share_failure = title_profanity_privacy_violation(new_name, locale)
+
+      raise ProfanityPrivacyError.new(share_failure.content) if share_failure
+    end
 
     row = {
       value: value.to_json,
@@ -130,15 +140,6 @@ class StorageApps
     }
     update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
-  end
-
-  def get_abuse(channel_id)
-    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
-
-    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
-
-    row[:abuse_score]
   end
 
   # Determine if the current user can view the project
@@ -204,6 +205,15 @@ class StorageApps
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
+  end
+
+  def buffer_abuse_score(channel_id)
+    buffered_abuse_score = -50
+    # Reset to 0 first so projects that are featured,
+    # unfeatured, then re-featured don't have super low
+    # abuse scores.
+    reset_abuse(channel_id)
+    increment_abuse(channel_id, buffered_abuse_score)
   end
 
   def content_moderation_disabled?(channel_id)
@@ -323,6 +333,12 @@ class StorageApps
     end
   rescue
     []
+  end
+
+  def self.get_abuse(channel_id)
+    _, storage_app_id = storage_decrypt_channel_id(channel_id)
+    project_info = PEGASUS_DB[:storage_apps].where(id: storage_app_id).first
+    project_info[:abuse_score]
   end
 
   private

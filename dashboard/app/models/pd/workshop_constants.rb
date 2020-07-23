@@ -61,11 +61,24 @@ module Pd
         SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5}
+        SUBJECT_CSP_WORKSHOP_5 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSP_WORKSHOP_6 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5},
+        SUBJECT_CSP_FOR_RETURNING_TEACHERS => {max_hours: 7}
       },
       COURSE_CSD => {
         SUBJECT_CSD_SUMMER_WORKSHOP => {max_hours: 33.5},
+        SUBJECT_CSD_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSD_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSD_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSD_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSD_WORKSHOP_5 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSD_WORKSHOP_6 => {min_days: 2, max_days: 2, max_hours: 12},
         SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
+      },
+      COURSE_CSF => {
+        SUBJECT_CSF_101 => {min_days: 1, max_days: 1, max_hours: 7},
+        SUBJECT_CSF_201 => {min_days: 1, max_days: 1, max_hours: 6}
       }
     }.freeze
 
@@ -84,8 +97,8 @@ module Pd
     #  - course_name : the name of the Course object associated with that workshop.
     # Only courses with a pre-survey will have an entry here
     PRE_SURVEY_BY_COURSE = {
-      COURSE_CSD => {course_name: 'csd-2018'},
-      COURSE_CSP => {course_name: 'csp-2018'}
+      COURSE_CSD => {course_name: 'csd-2020'},
+      COURSE_CSP => {course_name: 'csp-2020'}
     }.freeze
   end
 end

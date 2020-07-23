@@ -5,6 +5,7 @@ import {makeEnum} from '@cdo/apps/utils';
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  createdAt: PropTypes.string,
   // Though we validate valid login types here, the server actually owns the
   // canonical list, and passes us the list of valid login types.
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
@@ -39,7 +40,7 @@ export const summarizedSectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool,
   script: PropTypes.object,
   sharing_disabled: PropTypes.bool,
-  stage_extras: PropTypes.bool,
+  lesson_extras: PropTypes.bool,
   studentCount: PropTypes.number,
   students: PropTypes.array,
   teacherName: PropTypes.string
@@ -88,8 +89,24 @@ export const assignmentVersionShape = PropTypes.shape({
   isStable: PropTypes.bool.isRequired,
   isRecommended: PropTypes.bool,
   isSelected: PropTypes.bool,
-  locales: PropTypes.arrayOf(PropTypes.string).isRequired
+  locales: PropTypes.arrayOf(PropTypes.string).isRequired,
+  canViewVersion: PropTypes.bool
 });
+
+// Converts the shape of an array of assignment versions that comes from the server for a script
+// to the shape outlined in assignmentVersionShape above.
+export const convertAssignmentVersionShapeFromServer = serverVersions => {
+  return serverVersions.map(v => {
+    return {
+      name: v.name,
+      year: v.version_year,
+      title: v.version_title,
+      isStable: v.is_stable,
+      locales: v.locales || [],
+      canViewVersion: v.can_view_version
+    };
+  });
+};
 
 export const classroomShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
@@ -120,4 +137,10 @@ export const sortableSectionShape = PropTypes.shape({
   hidden: PropTypes.bool.isRequired,
   assignmentName: PropTypes.arrayOf(PropTypes.string),
   assignmentPath: PropTypes.arrayOf(PropTypes.string)
+});
+
+export const sectionForDropdownShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  isAssigned: PropTypes.bool.isRequired
 });

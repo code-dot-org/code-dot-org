@@ -291,3 +291,8 @@ da:
       DigitalFootprint_2019:
         title: Dit digitale fodspor
         desc: Lærere introducerer for eleverne idéen om, at når man lægger oplysninger om sig selv online, opretter man også et digitalt fodaftryk eller "spor", der har konsekvenser.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Betingelser
+        desc: 'For at lære om betingelsessætninger, skal eleverne spiller et kortspil og skabe regler som: "Hvis jeg trækker et rødt kort, får jer et point" og "Hvis jeg trækker et sort kort, du får et point."'

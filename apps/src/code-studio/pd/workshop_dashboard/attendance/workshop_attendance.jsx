@@ -41,7 +41,8 @@ export class WorkshopAttendance extends React.Component {
     sessions: undefined,
     numPendingSaves: 0,
     lastSaveFailed: false,
-    accountRequiredForAttendance: true
+    accountRequiredForAttendance: true,
+    scholarshipWorkshop: undefined
   };
 
   hasWorkshopEnded() {
@@ -70,6 +71,7 @@ export class WorkshopAttendance extends React.Component {
         workshopState: data.state,
         sessions: data.sessions,
         accountRequiredForAttendance: data['account_required_for_attendance?'],
+        scholarshipWorkshop: data['account_required_for_attendance?'],
         course: data.course,
         enrollmentCount: data.enrollment_count
       });
@@ -223,6 +225,7 @@ export class WorkshopAttendance extends React.Component {
           onSaving={this.handleSaving}
           onSaved={this.handleSaved}
           accountRequiredForAttendance={this.state.accountRequiredForAttendance}
+          scholarshipWorkshop={this.state.scholarshipWorkshop}
           enrollmentCount={this.state.enrollmentCount}
         />
         <Row>

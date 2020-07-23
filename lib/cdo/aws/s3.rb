@@ -84,10 +84,48 @@ module AWS
     # @param [String] key
     # @return [Boolean]
     def self.exists_in_bucket(bucket, key)
-      create_client.get_object(bucket: bucket, key: key)
+      create_client.head_object(bucket: bucket, key: key)
       return true
-    rescue Aws::S3::Errors::NoSuchKey
+    rescue Aws::S3::Errors::NotFound, Aws::S3::Errors::Forbidden
       return false
+    end
+
+    # Returns true iff the specified S3 key exists in the bucket
+    #
+    # Will query all objects in the bucket up front and cache that result. Note
+    # this cache will not expire, so this method is not recommended for use in
+    # production. The create and delete operations defined in this module do
+    # attempt to keep this cache up-to-date, but other operations could easily
+    # modify the bucket contents and render this method unreliable.
+    #
+    # Note also that we are not using the Rails cache framework for this. We
+    # rely on this method for the text-to-speech update; specifically the
+    # translation-aware tts update we do as part of the i18n sync, which
+    # happens in a development environment for which the Rails cache is
+    # disabled.
+    #
+    # @param [String] bucket
+    # @param [String] key
+    # @return [Boolean]
+    def self.cached_exists_in_bucket?(bucket, key)
+      @cached_bucket_contents ||= {}
+
+      unless @cached_bucket_contents.key? bucket
+        cache = Set[]
+        # list_objects_v2 returns at most 1,000 items from the bucket, so we
+        # need to repeatedly call it with a continuation token in order to
+        # retrieve all items in the bucket.
+        result = create_client.list_objects_v2({bucket: bucket})
+        while result.is_truncated
+          cache.merge(result.contents.collect(&:key))
+          token = result.next_continuation_token
+          result = create_client.list_objects_v2({bucket: bucket, continuation_token: token})
+        end
+        cache.merge(result.contents.collect(&:key))
+        @cached_bucket_contents[bucket] = cache
+      end
+
+      @cached_bucket_contents[bucket].include? key
     end
 
     # Sets the value of a key in the given S3 bucket.
@@ -103,6 +141,11 @@ module AWS
       no_random = options.delete(:no_random)
       filename = "#{random}-#{filename}" unless no_random
       create_client.put_object(options.merge(bucket: bucket, key: filename, body: data))
+
+      # add key to local cache used by cached_exists_in_bucket?
+      if @cached_bucket_contents && @cached_bucket_contents[bucket]
+        @cached_bucket_contents[bucket].add(filename)
+      end
       filename
     end
 
@@ -112,6 +155,12 @@ module AWS
     # @return [Boolean] If the file was successfully deleted.
     def self.delete_from_bucket(bucket, filename)
       response = create_client.delete_object({bucket: bucket, key: filename})
+
+      # remove key from local cache used by cached_exists_in_bucket?
+      if @cached_bucket_contents && @cached_bucket_contents[bucket]
+        @cached_bucket_contents[bucket].delete(filename)
+      end
+
       response.delete_marker
     rescue Aws::S3::Errors::NoSuchKey
       false
@@ -168,17 +217,20 @@ module AWS
     # The entire execution is wrapped in a transaction.
     # @param bucket [String] The S3 bucket name.
     # @param key [String] The S3 key.
-    def self.seed_from_file(bucket, key)
+    # @param dry_run [Boolean] If true, do not update seeded object tracking.
+    def self.seed_from_file(bucket, key, dry_run = false)
       etag = create_client.head_object({bucket: bucket, key: key}).etag
       unless SeededS3Object.exists?(bucket: bucket, key: key, etag: etag)
         AWS::S3.process_file(bucket, key) do |filename|
           ActiveRecord::Base.transaction do
             yield filename
-            SeededS3Object.create!(
-              bucket: bucket,
-              key: key,
-              etag: etag,
-            )
+            unless dry_run
+              SeededS3Object.create!(
+                bucket: bucket,
+                key: key,
+                etag: etag,
+              )
+            end
           end
         end
       end

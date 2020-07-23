@@ -1,0 +1,163 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-02-25T15:56:28.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "bee",
+    "maze": "[[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,5,0,0,0,0],[0,0,0,6,0,0,0,0],[0,0,0,7,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "short_instructions": "Help the bee collect all of the nectar.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "true",
+    "start_direction": "2",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "nectar_goal": "28",
+    "ideal": "9",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_for4_1\",\r\n  \"callout_text\": \"You will find the `for` loop in here!\",\r\n  \"element_id\": \"[id=':3.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "examples_required": "false",
+    "step_speed": "1",
+    "never_autoplay_video": "true",
+    "fast_get_nectar_animation": "false",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":4,\"range\":4,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":5,\"range\":5,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":7,\"range\":7,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}]]",
+    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `for` loop that goes from 1 to 7 with an increment of 1 to solve this puzzle.\",\"hint_id\":\"courseF_bee_for4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9de343c638d5be58183884a6b27195e0/courseF_bee_for4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Within your `for` loop, you will want to have a `move forward` command, and a loop to collect nectar.\",\"hint_id\":\"courseF_bee_for4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1118a63aa85704d42b3eb10b66cd2e6a/courseF_bee_for4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure to use the `counter` variable inside your nested `repeat` loop to get enough nectar!\",\"hint_id\":\"courseF_bee_for4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/29ea73fb83b281ec9ac189620bd0b691/courseF_bee_for4.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "name_suffix": "_2020",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "parent_level_id": 14850,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:43:09 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 15:35:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-13 04:54:57 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-13 04:55:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-13 04:59:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:30:34 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="maze_move">
+            <title name="DIR">moveForward</title>
+          </block>
+          <block type="maze_nectar"/>
+          <block type="maze_turn">
+            <title name="DIR">turnRight</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnLeft</title>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">???</title>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">MULTIPLY</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_for" inline="true">
+            <title name="VAR">counter</title>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="controls_repeat_ext" inline="true"/>
+        </category>
+        <category name="Variables">
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for" inline="true">
+              <title name="VAR">counter</title>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" id="bee_for_loop_qtip">
+                  <title name="NUM">7</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

@@ -8,26 +8,33 @@ import {Tabs, Tab} from 'react-bootstrap';
 import {enrollmentShape} from '../types';
 import WorkshopEnrollmentSchoolInfo from './workshop_enrollment_school_info';
 import WorkshopEnrollmentPreSurvey from './workshop_enrollment_pre_survey';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
     enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
     workshopId: PropTypes.string.isRequired,
     workshopCourse: PropTypes.string.isRequired,
-    workshopSubject: PropTypes.string,
+    workshopSubject: PropTypes.string.isRequired,
     workshopDate: PropTypes.string.isRequired,
+    numSessions: PropTypes.number.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
+    scholarshipWorkshop: PropTypes.bool.isRequired,
     onDelete: PropTypes.func.isRequired,
+    onClickSelect: PropTypes.func.isRequired,
     location: PropTypes.object,
     activeTab: PropTypes.number,
-    onTabSelect: PropTypes.func
+    onTabSelect: PropTypes.func,
+    selectedEnrollments: PropTypes.array
   };
 
   static defaultProps = {activeTab: 0};
 
   shouldShowPreSurveys() {
-    return ['CS Discoveries', 'CS Principles'].includes(
-      this.props.workshopCourse
+    return (
+      ['CS Discoveries', 'CS Principles'].includes(this.props.workshopCourse) &&
+      this.props.workshopSubject !==
+        SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS
     );
   }
 
@@ -56,9 +63,13 @@ export default class WorkshopEnrollment extends React.Component {
       <WorkshopEnrollmentSchoolInfo
         enrollments={sortedEnrollments}
         accountRequiredForAttendance={this.props.accountRequiredForAttendance}
+        scholarshipWorkshop={this.props.scholarshipWorkshop}
         onDelete={this.props.onDelete}
+        onClickSelect={this.props.onClickSelect}
         workshopCourse={this.props.workshopCourse}
         workshopSubject={this.props.workshopSubject}
+        numSessions={this.props.numSessions}
+        selectedEnrollments={this.props.selectedEnrollments}
       />
     );
 

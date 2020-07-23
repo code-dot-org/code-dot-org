@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ Kami berharap hal itu akan memicu minat siswa untuk terus belajar. Penelitian ju
 
 #### Mengapa ini penting?
 
-Teknologi mengubah setiap industri di planet ini. Pada tahun 2015, 7 juta bukaan di A.S. berada dalam pekerjaan-termasuk seni dan desain-yang menghargai keterampilan pengkodean But 65 percent of schools in the U.S. don't teach computer science. Sudah waktunya kita mengejar sampai abad ke-21. Kami tahu bahwa terlepas dari apa yang dilakukan siswa kami saat mereka dewasa, apakah mereka masuk ke bidang kedokteran, bisnis, politik, atau seni, mengetahui bagaimana membangun teknologi akan memberi mereka kepercayaan diri dan keunggulan kompetitif. <br /> <br />
+Teknologi mengubah setiap industri di planet ini. Pada tahun 2015, 7 juta bukaan di A.S. berada dalam pekerjaan-termasuk seni dan desain-yang menghargai keterampilan pengkodean But 55 percent of schools in the U.S. don't teach computer science. Sudah waktunya kita mengejar sampai abad ke-21. Kami tahu bahwa terlepas dari apa yang dilakukan siswa kami saat mereka dewasa, apakah mereka masuk ke bidang kedokteran, bisnis, politik, atau seni, mengetahui bagaimana membangun teknologi akan memberi mereka kepercayaan diri dan keunggulan kompetitif. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ Teknologi mengubah setiap industri di planet ini. Pada tahun 2015, 7 juta bukaan
 
 #### Tentang Code.org
 
-Code.org adalah organisasi non-profit publik 501c3 yang didedikasikan untuk memperluas partisipasi dalam ilmu komputer dan meningkatkan partisipasi perempuan dan siswa warna yang kurang terwakili. Its vision is that every student in every school has the opportunity to learn computer programming. Setelah diluncurkan pada tahun 2013, Code.org menyelenggarakan kampanye Hour of Code - yang telah mengenalkan lebih dari 100 juta siswa ke sains komputer sampai saat ini - dan bermitra dengan 70 distrik sekolah umum secara nasional untuk memperluas program sains komputer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Untuk informasi lebih lanjut, silakan kunjungi: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org adalah organisasi non-profit publik 501c3 yang didedikasikan untuk memperluas partisipasi dalam ilmu komputer dan meningkatkan partisipasi perempuan dan siswa warna yang kurang terwakili. Its vision is that every student in every school has the opportunity to learn computer programming. Setelah diluncurkan pada tahun 2013, Code.org menyelenggarakan kampanye Hour of Code - yang telah mengenalkan lebih dari 100 juta siswa ke sains komputer sampai saat ini - dan bermitra dengan 70 distrik sekolah umum secara nasional untuk memperluas program sains komputer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![gambar](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![gambar](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![gambar](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

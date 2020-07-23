@@ -292,12 +292,12 @@ export default class CensusTeacherBanner extends Component {
         </div>
         <div style={styles.share}>
           <a href={facebookShareUrl} target="_blank">
-            <button style={styles.shareButton}>
+            <button type="button" style={styles.shareButton}>
               <i className="fa fa-facebook" /> Share on Facebook
             </button>
           </a>
           <a href={twitterShareUrl} target="_blank">
-            <button style={styles.shareButton}>
+            <button type="button" style={styles.shareButton}>
               <i className="fa fa-twitter" /> Share on Twitter
             </button>
           </a>
@@ -342,6 +342,7 @@ export default class CensusTeacherBanner extends Component {
         </div>
         <div style={styles.buttonDiv}>
           <Button
+            __useDeprecatedTag
             onClick={this.dismissSchoolInfoForm}
             style={styles.button}
             color="gray"
@@ -349,6 +350,7 @@ export default class CensusTeacherBanner extends Component {
             text="Dismiss"
           />
           <Button
+            __useDeprecatedTag
             onClick={this.handleSchoolInfoSubmit}
             style={styles.button}
             size="large"
@@ -368,6 +370,7 @@ export default class CensusTeacherBanner extends Component {
       buttons = (
         <div style={styles.buttonDiv}>
           <Button
+            __useDeprecatedTag
             onClick={this.props.onDismiss}
             style={styles.button}
             color="gray"
@@ -375,6 +378,7 @@ export default class CensusTeacherBanner extends Component {
             text="No thanks"
           />
           <Button
+            __useDeprecatedTag
             onClick={this.props.onSubmit}
             style={styles.button}
             size="large"
@@ -404,6 +408,7 @@ export default class CensusTeacherBanner extends Component {
       buttons = (
         <div style={styles.buttonDiv}>
           <Button
+            __useDeprecatedTag
             onClick={this.props.onPostpone}
             style={styles.button}
             color="gray"
@@ -411,6 +416,7 @@ export default class CensusTeacherBanner extends Component {
             text="Not now"
           />
           <Button
+            __useDeprecatedTag
             onClick={this.props.onPostpone}
             href={pegasus(link)}
             target="_blank"

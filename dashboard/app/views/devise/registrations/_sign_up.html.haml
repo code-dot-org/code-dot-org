@@ -2,19 +2,75 @@
 
 #signup
   .row
-    .span9
+    .span8.header
       %h1= t('signup_form.title')
       - if @already_hoc_registered
-        %p= t('signup_form.hoc_already_signed_up_content_post_hoc', studio_url: CDO.studio_url('/')).html_safe
+        = t('signup_form.hoc_already_signed_up_content_post_hoc_markdown', studio_url: CDO.studio_url('/'), markdown: true).html_safe
       - else
-        %p= t('signup_form.overview').html_safe
+        = t('signup_form.overview_markdown', markdown: true).html_safe
         = t('auth.already_signedup')
+        &nbsp;
         = link_to t('nav.user.signin'), new_session_path(resource_name)
+  .row
+    .span7.oauth-links
+      = render "devise/shared/oauth_links"
+  .row
+    .span7
+      %div.horizontal-or
+        %hr
+        = t("or").upcase
+        %hr
+  .row
+    .span7
+      %h4.signup-header= t('signup_form.email_signup')
+  .row
+    .span8
+      = form_for(@user, url: users_begin_sign_up_path, html: {class: "signup"}) do |f|
+        / Email
+        .row
+          .span3.signup-field-label
+            -# Render email label as "Email&nbsp;*", so the asterisk referencing the
+            -# "student terms" footer can't wrap onto a line all by itself
+            = f.label :email do
+              = succeed '&nbsp;*'.html_safe do
+                = User.human_attribute_name(:email)
+            - if @user.errors[:email].present?
+              %p.error= @user.errors[:email]&.first
+          .span4
+            = f.email_field :email, maxlength: 255
 
-  - if SignUpTracking.new_sign_up_experience?(session)
-    = render 'new_sign_up_form'
-  - else
-    = render 'old_sign_up_form'
+        / Password
+        .row
+          .span3.signup-field-label
+            = f.label :password
+            - if @user.errors[:password].present?
+              %p.error= @user.errors[:password]&.first
+          .span4
+            = f.password_field :password, maxlength: 255
+
+        / Password confirmation
+        .row
+          .span3.signup-field-label
+            = f.label :password_confirmation
+            - if @user.errors[:password_confirmation].present?
+              %p.error= @user.errors[:password_confirmation]&.first
+          .span4
+            = f.password_field :password_confirmation, maxlength: 255
+
+        / Submit
+        .row
+          .span8
+            %button.submit= t('signup_form.submit')
+
+  / More information for students about email storage.
+  .row
+    .span8.more-details
+      %div
+        *
+      %div.more-details-text
+        != t('signup_form.student_terms_markdown', markdown: true)
+
+
 
 %div{style: "clear:both"}
 %br/

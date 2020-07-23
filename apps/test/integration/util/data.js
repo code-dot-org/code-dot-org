@@ -96,15 +96,11 @@ module.exports = function(app) {
   } else if (app === 'gamelab') {
     appCache[app] = function() {
       return {
-        skins: require('@cdo/apps/gamelab/skins'),
+        skins: require('@cdo/apps/p5lab/skins'),
         levels: {
-          levels: require('@cdo/apps/gamelab/levels')
+          levels: require('@cdo/apps/p5lab/levels')
         }
       };
-    };
-  } else if (app === 'scratch') {
-    appCache[app] = function() {
-      return {};
     };
   }
   if (appCache[app]) {

@@ -1,4 +1,5 @@
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
+import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
 import {
   pegasus,
   studio,
@@ -118,17 +119,3 @@ describe('metaTagDescription() for invalid url', () => {
     return expect(promise).to.eventually.equal('/this/is/invalid/');
   });
 });
-
-function stubWindowDashboard(value) {
-  let originalDashboard;
-  before(() => (originalDashboard = window.dashboard));
-  after(() => (window.dashboard = originalDashboard));
-  beforeEach(() => (window.dashboard = value));
-}
-
-function stubWindowPegasus(value) {
-  let originalPegasus;
-  before(() => (originalPegasus = window.pegasus));
-  after(() => (window.pegasus = originalPegasus));
-  beforeEach(() => (window.pegasus = value));
-}

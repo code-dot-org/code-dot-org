@@ -291,3 +291,8 @@ sv:
       DigitalFootprint_2019:
         title: Ditt digitala fotavtryck
         desc: Läraren visar eleverna hur de genom att lägga ut information om dem själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Villkor
+        desc: För att lära om villkors-satser får eleverna spela ett kortspel och skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag drar ett svart kort får du en poäng'.

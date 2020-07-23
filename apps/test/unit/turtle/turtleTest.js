@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {parseElement} from '@cdo/apps/xml';
 import {Position} from '@cdo/apps/constants';
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';

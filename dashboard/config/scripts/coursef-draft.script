@@ -1,10 +1,11 @@
 login_required true
 has_lesson_plan true
 
-stage 'Algorithms: Tangrams'
+lesson_group 'content', display_name: 'Content'
+lesson 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
 
-stage 'Introduction'
+lesson 'Introduction'
 level 'courseE_video_ramp1'
 level 'courseF_maze_ramp1'
 level 'courseF_maze_ramp2'
@@ -23,10 +24,10 @@ level 'courseF_maze_ramp13'
 level 'courseF_maze_ramp7'
 level 'courseF_external_ramp14'
 
-stage 'The Power of Words'
+lesson 'The Power of Words'
 level 'coursef_powerofwords'
 
-stage 'Ice Age Play Lab'
+lesson 'Ice Age Play Lab'
 skin 'iceage'
 video_key_for_next_level 'iceage_intro'
 level 'iceage_hello1'
@@ -53,10 +54,10 @@ level 'iceage_throw_hearts'
 skin 'iceage'
 level 'iceage_free_play'
 
-stage 'Envelope Variables'
+lesson 'Envelope Variables'
 level 'EnvelopeVariables'
 
-stage 'Variables in Artist'
+lesson 'Variables in Artist'
 level 'grade5_artist_variables_triangles1'
 level 'courseF_artist_variables2'
 level 'courseF_video_artistVariables'
@@ -73,20 +74,20 @@ level 'courseF_artist_variables9'
 level 'courseF_artist_variables10'
 level 'courseF_artist_variablesFP'
 
-stage 'Variables in Play Lab'
+lesson 'Variables in Play Lab'
 level 'courseF_playlab_variables1a'
 level 'courseF_playlab_variables2b'
 level 'courseF_playlab_variables3b_josh'
-assessment 'courseF_playlab_variables4c_predictive1'
+level 'courseF_playlab_variables4c_predictive1', assessment: true
 level 'courseF_playlab_variables4b'
 level 'courseF_playlab_variables5b'
 level 'courseF_playlab_variables6b'
 level 'courseF_playlab_variables7b'
 
-stage 'For Loop Fun'
+lesson 'For Loop Fun'
 level 'ForLoopFun'
 
-stage 'For Loops in Bee'
+lesson 'For Loops in Bee'
 level 'courseF_bee_for1'
 level 'courseF_bee_for2'
 level 'courseF_video_forBee'
@@ -100,7 +101,7 @@ level 'courseF_bee_for9'
 level 'courseF_bee_for10', challenge: true
 level 'courseF_bee_for11'
 
-stage 'For Loops in Artist'
+lesson 'For Loops in Artist'
 level 'courseF_video_forArtist'
 level 'courseF_artist_for1'
 level 'courseF_artist_for2'
@@ -111,13 +112,13 @@ level 'courseF_artist_for6'
 level 'courseF_artist_for7'
 level 'courseF_artist_for8'
 level 'courseF_artist_for9'
-assessment 'courseF_artist_for10_predict1'
+level 'courseF_artist_for10_predict1', assessment: true
 level 'courseF_artist_for10'
 
-stage 'Songwriting with Parameters'
+lesson 'Songwriting with Parameters'
 level 'SongwritingWithParameters'
 
-stage 'Conditionals and Functions in Bee'
+lesson 'Conditionals and Functions in Bee'
 level 'courseD_bee_conditionalsVid1'
 level 'courseF_bee_conditionals1_predict1'
 level 'courseF_bee_conditionals2'
@@ -139,7 +140,7 @@ level 'courseF_bee_functions6'
 level 'courseF_bee_functions7'
 level 'courseF_bee_functions8a'
 
-stage 'Functions with Parameters in Artist'
+lesson 'Functions with Parameters in Artist'
 level 'courseF_video_artistFunctions'
 level 'courseF_artist_fwp1'
 level 'gradeF_video_artistParameters'
@@ -154,7 +155,7 @@ level 'courseF_artist_fwp7'
 level 'courseF_artist_fwp8'
 level 'courseF_artist_fwp9'
 
-stage 'Functions with Parameters in Bee'
+lesson 'Functions with Parameters in Bee'
 level 'courseF_bee_fwp1'
 level 'courseF_bee_fwp2'
 level 'courseF_bee_fwp3'
@@ -163,25 +164,26 @@ level 'courseF_bee_fwp5'
 level 'courseF_bee_fwp6'
 level 'courseF_bee_fwp7', challenge: true
 level 'courseF_bee_fwp8'
-assessment 'courseF_bee_fwp9_predict1'
+level 'courseF_bee_fwp9_predict1', assessment: true
 
-stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
-named_level 'courseF_video_csMatters'
-named_level 'InspirationalArtwork'
-named_level 'FoodFight'
-named_level 'Guess The Number'
-named_level 'Choose Your Own Adventure'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'Explore Project Ideas'
+level 'courseF_video_csMatters', named: true
+level 'InspirationalArtwork', named: true
+level 'FoodFight', named: true
+level 'Guess The Number', named: true
+level 'Choose Your Own Adventure', named: true
 
-stage 'The Design Process', flex_category: 'end_of_course_project'
-named_level 'Begin planning your project'
+lesson 'The Design Process'
+level 'Begin planning your project', named: true
 
-stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project'
-named_level 'Course F: Play Lab Project'
+lesson 'Build Your Project'
+level 'Course F: Artist Project', named: true
+level 'Course F: Play Lab Project', named: true
 
-stage 'Revise Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project - Revise'
-named_level 'Course F: Play Lab Project - Revise'
+lesson 'Revise Your Project'
+level 'Course F: Artist Project - Revise', named: true
+level 'Course F: Play Lab Project - Revise', named: true
 
-stage 'Presentation Your Project', flex_category: 'end_of_course_project'
-named_level 'Prepare for your presentation'
+lesson 'Presentation Your Project'
+level 'Prepare for your presentation', named: true

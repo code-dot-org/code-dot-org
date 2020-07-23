@@ -397,3 +397,10 @@ ca:
         title: Mou-lo, Mou-lo
       DigitalFootprint_2019:
         title: La vostra empremta digital
+      timeforcs_demo_crowdsourcing:
+        title: Col·laboració oberta
+      timeforcs_demo_conditionals:
+        title: Condicionals
+        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
+          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
+          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."

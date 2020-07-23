@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Lesson Overview",
-    "reference": "/curriculum/csp-18/unit3/7/overview/index.html",
+    "reference": "/curriculum/csp-19/unit3/7/overview/index.html",
     "parent_level_id": 13957,
     "teacher_markdown": "For Teachers Only\r\nA new version of the `moveForward` command is introduced: `moveForward(pixels)`. Students use it to move the turtle to the edge of the screen in one command.\r\n\r\nEncourage students to read the explanation of the term parameter and not just skip it. It's an important term to know.\r\n\r\n**Terminology**: Parameter is introduced. Students are shown parameterized versions of basic turtle move commands and asked to draw a triangle.",
     "name_suffix": "_2019"

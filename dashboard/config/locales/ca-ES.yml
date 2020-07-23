@@ -24,11 +24,13 @@ ca:
     attributes:
       user:
         name: Nom a mostrar
-        name_example: 'Mostra el nom<br/>(ex: Programador fantàstic o Joana S.)'
+        name_example: 'Mostra el nom (ex: Programador fantàstic o Joana S.)'
         email: Correu electrònic
         parent_email: E-mail del pare/tutor
         personal_email: Adreça d'e-mail personal <a href="%{url}">(feu clic aquí si
           teniu una adreça electrònica)</a>
+        personal_email_markdown: Adreça d'e-mail personal [(feu clic aquí si teniu
+          una adreça electrònica)](%{url})
         username: nom d'usuari
         password: Contrasenya
         password_confirmation: Confirma la contrasenya
@@ -40,10 +42,15 @@ ca:
         finish_sign_up_header: Acabar de crear el seu compte
         finish_sign_up_subheader: Empleneu la informació següent per acabar creant
           un compte Code.org per a <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Empleneu la informació següent per acabar
+          creant un compte Code.org per a **%{email}**.
         finish_sign_up_subheader_provider: Empleneu la informació següent per acabar
           creant un compte Code.org amb <strong>%{provider}</strong> per a <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Empleneu la informació següent
+          per acabar creant un compte Code.org amb **%{provider}** per a **%{email}**.
         error:
           future: no pot ser en el futur
+  beta: beta
   hello: Hola món
   welcome_back: Benvingut de nou, %{name}
   your_professional_learning_plan: El seu pla d'aprenentatge professional
@@ -56,14 +63,10 @@ ca:
   okay: D'acord
   or: o
   heading_x_of_y: "%{heading} (pàgina %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Afegeix un mestre:'
       placeholder: Secció Codi (ABCDEF)
-      instructions: Si us plau, introdueixi el codi compartit pel seu professor. És
-        un codi de 6 lletres com "ABCDEF".
       instructions_short: Introdueixi el seu codi de secció de 6 lletres
-    submit: Afegeix un professor
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí
     submit: Afegeix pista
@@ -74,13 +77,12 @@ ca:
   trophies: trofeus
   courses: cursos
   courses_page:
-    title_student: Aprendre sobre Code Studio
-    title_teacher: Ensenyar informàtica
+    title_student: Aprèn informàtica
+    title_teacher: Ensenyeu informàtica
   unplugged_activity: Activitat sense connexió
   of: de
   more: MÉS
   less: MENYS
-  beta: beta
   try_hoc: 'Prova l''Hora de Codi, fes clic aquí >> '
   try_k8intro: O proveu el nostre curs d'introducció a la Informàtica per a ESO (15-25
     hores)
@@ -94,9 +96,6 @@ ca:
     continue_with: Continua amb %{provider}
     sign_in_with: Registra't amb %{provider}
     signed_in: Registrat!
-    signed_out: Heu tancat sessió a <a href="%{url}">Code.org</a>.
-    sign_out_of: Heu entrat amb %{provider}. <a href="%{url}">Feu clic aquí</a> per
-      tancar la sessió a %{provider}.
     already_signedup: Ja t'has registrat?
     notyet_signedup: No t'has unit encara?
     google_oauth2: Compte de Google
@@ -127,6 +126,10 @@ ca:
       el seu grup-classe. <a href="/"> podeu navegar per les diferents etapes i trencaclosques</a>
       sense un compte, però cal tenir compte per guardar les dades del seu progrés
       i projectes.
+    overview_markdown: Inscrigui's en un compte per tal de seguir el seu progrés o
+      gestionar el seu grup-classe. [podeu navegar per les diferents etapes i trencaclosques](/)
+      sense un compte, però cal tenir compte per guardar les dades del seu progrés
+      i projectes.
     hoc_already_signed_up_heading: Comença sense connectar-te
     hoc_already_signed_up_content: Estas inscrit per ensenyar una hora de codi! Vostè
       i els seus estudiants no cal que inicieu la sessió al Code Studio per participar
@@ -141,6 +144,12 @@ ca:
       cursos a estudiants i vure el seu progrés. <a href="%{studio_url}">També pots
       seguir navegant entre els diferents nivells i trencaclosques</a> sense crear
       un compte.
+    hoc_already_signed_up_content_post_hoc_markdown: Gracies por allotjar una Hora
+      de Codi. Per entrar a "Code Studio", has de crear una contrasenya per el teu
+      compte. Això et deixarà grabar el teu progrés i organitzar la teva aula. Podras
+      asignar cursos a estudiants i vure el seu progrés. [També pots seguir navegant
+      entre els diferents nivells i trencaclosques](%{studio_url}) sense crear un
+      compte.
     teacher_educator_guide: Mira la guia de l'educador
     title: Inscrigui's a Code.org
     school_name: Nom de l'escola (opcional)
@@ -159,29 +168,17 @@ ca:
     valid_password: Contrasenya vàlida!
     invalid_password: La contrasenya ha de tenir almenys 6 caràcters
     mismatch_password: Les dues contrasenyes que has introduït no coincideixen
-    agree_tos_privacy: Accepto els <a href='http://code.org/tos'>Términis de Servei</a>
-      i la <a href='http://code.org/privacy'>Política de Privacitat</a>.
-    under_13_consent: Si soc menor de 13 anys, confirmo que tinc l'autorització dels
-      meus pares o tutors legals per utilitzar els serveis de Code.org.
     student_consent: Confirmo que tinc l'autorització dels meus pares o tutors legals
       per utilitzar los serveis de Code.org.
     agree_us_website: Estic d'acord a utilitzar un lloc web basat als Estats Units.
     my_data_to_us: Les dades del meu ús d'aquest lloc poden ser enviades, emmagatzemades
       o processades als Estats Units.
-    student_terms: Les adreces de correu electrònic no s'emmagatzemen en una forma
-      que ens permeti contactar amb els estudiants. Els estudiants mai rebran correus
-      electrònics de Code.org excepte per la recuperació de la contrasenya. Per a
-      més informació, veure la nostra <a href='http://code.org/privacy'>política de
-      privacitat</a>.
-    teacher_terms: Estic d'acord a estar obligat pels termes Code.org de servei. Per
-      a més informació sobre la privacitat, veure la nostra política de privacitat
-      de <a href='http://code.org/privacy'></a>.
     additional_information: Necessitem alguna informació addicional per continuar
       amb la vostra inscripció.
     user_type_button: Actualitzeu el tipus de compte
     user_type_label: Tipus de compte
     user_type_teacher: Mestre
-    user_type_student: estudiant
+    user_type_student: alumne
     field_is_required: és obligatori
     accept_terms: Has d'acceptar crear un compte.
     error: S'ha produït un error.
@@ -277,12 +274,10 @@ ca:
     header:
       finished_hoc: He acabat la meva Hora de Codi
       sign_in_to_save: Inicia la sessió per a desar el progrés
-      free_play:
-        playlab: Fes un App
-        artist: Dibuixa alguna cosa
-        applab: Fes un App
+      course_catalog: Catàleg de cursos
       project_gallery: Projectes
-      educate_hoc: Hora del codi
+      help_support: Ajuda i suport
+      educate_hoc: L'hora del codi
       about_us: Sobre nosaltres
       about_leadership: Lideratge
       about_donors: Donants
@@ -297,6 +292,8 @@ ca:
       help_us: Ajuda'ns
       teach: Ensenya
       about: Quant a
+      legal_privacy: Política de privadesa
+      legal_tos: Condicions d'ús
     user:
       classroom: Pàgina d'inici de mestre
       district_dashboard: Quadre de comandament de districte
@@ -314,10 +311,18 @@ ca:
       create: Crea
       applab: Laboratori d'aplicacions
       artist: Artista
-      playlab: Play Lab
-      minecraft: Minecraft
+      bounce: Rebota
+      dance: Festa de ball
       flappy: Flappy
-      dance: Festa amb ball
+      frozen: Frozen
+      gamelab: Laboratori de jocs
+      infinity: Infinit
+      minecraft_adventurer: Aventurer Minecraft
+      minecraft_designer: Minecraft
+      playlab: Play Lab
+      spritelab: Laboratori de personatges
+      starwars: Star Wars
+      view_all: Mostra tots els projectes...
     popup:
       progress_for_user: Progrés de %{name}
       progress: El teu progrés
@@ -343,7 +348,7 @@ ca:
     user_not_found: No es troba el mestre.
     student_teacher_disassociated: Vostè ha tret %{teacher_name} com el seu mestre.
     panel:
-      student: estudiant
+      student: alumne
       viewing_solution: Mostra la solució
       try_it_yourself: Prova-ho tu
       section: Secció
@@ -365,15 +370,14 @@ ca:
     delete_text_teacher_note: 'Tingueu en compte: Si suprimiu el vostre compte no
       s''esborrarant els comptes dels seus alumnes.'
     delete_confirm: Esteu segur que voleu suprimir el vostre compte?
+    update_email: Actualitza
+    parent_guardian_email_label: E-mail del pare/tutor
+    none: Cap
   user_level:
     completed: Completat
     tried: Provat
   home:
     title: Code Studio
-    description: Code Studio és on hi ha els cursos en xarxa de Code.org
-    lines_of_code: "%{lines_count} LÍNIES DE CODI ESCRITES PELS ALUMNES"
-    lines_of_code_linebreak: "%{lines_count} LÍNIES DE CODI<br/>ESCRITES PER %{students_count}
-      MILIONS D'ESTUDIANTS"
     all_courses: Informació general dels cursos 1, 2 i 3
     lesson_plans: Unitats didàctiques
     signin_message: Ja estàs registrat? %{link}
@@ -412,17 +416,10 @@ ca:
     test_videos_help: Prova el nostre nou reproductor de vídeo a la teva escola
     try_beta_courses: Nou! Prova els nostres cursos beta per alumnes de infantil
     use_as_teacher: Utilitza aquest lloc com a mestre
-    heading_hoc2014: "<h2>L'Hora de Codi per a</h2><h1>Totes les edats</h1>"
-    heading_elementary: "<h2>Cursos de 20 hores per a</h2><h1>Principiants (totes
-      les edats)</h1>"
-    heading_apps: "<h2>Diversió per a</h2><h1>Tothom</h1>"
-    heading_legacy: "<h2>El nostre curs general per a</h2><h1>Totes les edats</h1>"
     your_gallery: Galeria
     no_primary_course: Intenta un curs a Code Studio
     choose_next_course: Intenta un curs Code Studio triant-ne un a continuació
     print_certificate: Imprimeix el certificat
-    announcement_learn_more_button: Aprèn més
-    announcement_try_now_button: Més informació
   share:
     title: Aprendre sobre Code Studio
     description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
@@ -432,7 +429,7 @@ ca:
     female: Dona
     none: Prefereixo no respondre
   user_type:
-    student: estudiant
+    student: alumne
     teacher: Mestre
   footer:
     thank_you: Agraïm als nostres <a href="https://code.org/about/donors"> donants</a>,
@@ -441,8 +438,8 @@ ca:
       assessors d'educació</a> pel seu suport en la creació de Code Studio.
     help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat
       a crear aquesta classe.
-    help_from_html_old: Enginyers de Google, Microsoft, Facebook i Twitter han ajudat
-      a crear aquests materials.
+    help_from_html_old: Enginyers d'Amazon, Google i Microsoft han ajudat a crear
+      aquests materials.
     art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Tots els drets reservats.
       < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Tots els drets
       reservats. < br / > Frozen &#8482; © %{current_year} Disney. Tots els drets
@@ -451,17 +448,18 @@ ca:
       Ltd. Tots els drets reservats. < br / > Plants vs Zombies &#8482; © %{current_year}
       Electronic Arts Inc Tots els drets reservats. < br / > El sorprenent món de
       Gumball és marca registrada i © 2015 Cartoon Network.
-    powered_by_aws: Desenvolupat per Amazon Web Services
+    powered_by_aws: Funciona amb Amazon Web Services
     copyright: Copyright
     more: Més
     feedback: Digues la teva
-    translate: Ajuda'ns a traduir al teu idioma
+    translate: Ajudeu-nos a traduir els continguts
     support: Suport
     support_url: http://support.code.org
-    tos_short: Termes
+    tos_short: Condicions
     tos: Condicions d'ús
-    privacy: Política de Privacitat
+    privacy: Política de privadesa
     secure: Versió segura
+    report_abuse: Denuncieu un abús
     make_my_own_app: Fer la meva aplicació
     how_it_works: Com funciona
     try_hour_of_code: Proveu una hora de codi!
@@ -480,7 +478,7 @@ ca:
     download: Descarregar vídeo
   compatibility:
     upgrade:
-      link: Aprèn més
+      link: Més informació
   slow_loading: Això està trigant més de l'habitual...
   try_reloading: Prova de tornar a carregar la pàgina
   next_stage: Has acabat! Continua amb la següent etapa
@@ -491,7 +489,7 @@ ca:
   download_coming_soon: Activitat descarregable properament.
   video_coming_soon: Vídeo molt aviat!
   share_code:
-    title: Feu clic a "Executa" per veure el meu programa en acció
+    title: Feu clic a «Executa» per veure el meu programa en acció
     bounce_og_title: Comprovi el meu joc de rebot
     flappy_og_title: Comprova el meu joc de Flappy
     studio_og_title: Fes una mirada a la meva aplicació Play Lab
@@ -518,17 +516,22 @@ ca:
   upsell:
     applab:
       title: Laboratori d'aplicacions
+      body: El Laboratori d'aplicacions és un entorn de programació on podeu crear
+        aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript
+        per fer-la funcionar i compartiu-la en pocs segons.
     dance:
-      title: Festa amb ball
+      title: Festa de ball
+    dance-2019:
+      title: Festa de ball
     hoc:
-      body: Provea els conceptes bàsics de la Informàtica. Milions li han donat una
-        oportunitat.
+      title: Laberint clàssic
+      body: Prova els conceptes bàsics de la informàtica. Ja ho han fet milions d'usuaris.
     flappy:
       title: Codi Flappy
       body: Vols 'escriure el teu propi joc en menys de 10 minuts? Prova el nostre
         tutorial Codi Flappy!
     20-hour:
-      title: Curs Accelerat
+      title: Curs accelerat
       body: Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica
         i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO,
         però és divertit d'aprendre a qualsevol edat.
@@ -540,6 +543,15 @@ ca:
       title: Galeria
       body: Mira tota una galeria d'imatges artístiques i aplicacions creades pels
         nostres usuaris
+    gamelab:
+      title: Laboratori de jocs
+      body: El Laboratori de jocs és un entorn de programació on podeu crear animacions
+        simples i jocs amb objectes i caràcters que interaccionen uns amb altres.
+    weblab:
+      title: Laboratori web (beta)
+      body: El Laboratori web és un entorn de programació on podeu crear pàgines web
+        simples utilitzant HTML i CSS. Dissenyeu pàgines i compartiu el vostre lloc
+        web en pocs segons.
     frozen:
       title: Frozen
     starwars:
@@ -553,39 +565,29 @@ ca:
       body: Explora el món de Minecraft a través del codi
     minecraft2016:
       title: Minecraft
+      body: Programa animals i altres criatures de Minecraft en la teva pròpia versió
+        de Minecraft.
     aquatic:
       title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca!
         Viatja a través de Minecraft amb el codi.
+    unplugged:
+      title: Lliçons sense connexió
+      body_short: Si no teniu ordinadors, proveu aquestes lliçons sense connexió a
+        la classe.
     unplugged_conditionals:
       title: Condicionals
-  gallery:
-    students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
-    students_made_these_with_code: Els estudiants van fer això amb codi!
-    picture_count: En els darrers <b>%{days}</b> dies, els alumnes han elaborat <b>%{count}</b>
-      imatges escrivint els seus propis programes informàtics. Fes clic a les fotos
-      per veure el programa en acció.
-    activity_count: En els darrers <b>%{days}</b> dies, els estudiants han fet <b>%{count}</b>
-      aplicacions i imatges escrivint els seus propis programes informàtics. Fes clic
-      a les fotos i captures de pantalla per veure el programa en acció.
-    want_to_make_your_own: Vols fer el teu propi?
-    more: Més &rarr;
-    caption_by_name_age: per %{name}, %{age} anys
-    caption_time_ago: fa %{time_ago}
-    header: Galeria
-    header_playlab: Play Lab
-    header_artist: Artista
+    widgets:
+      title: Ginys
   landing:
-    prerelease: Aquest curs és en <span class='betatext'> beta</span>.  Això significa
-      que no és la versió final del curs i està subjecte a revisió a mida que es reben
-      comentaris i es fan millores.
-    prerelease_hoc2014: Aquest tutorial està en <span class='betatext'> beta</span>.  És
-      subjecte a revisió a mida que es reben comentaris i es fan millores.
     report_bug: Informeu d'errors
     support: Obtenir ajuda
     support_url: support.code.org
+    help_support: Ajuda i suport
+  free_response:
+    placeholder: Introdueix la teva resposta aquí
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: La resposta que he introduït no és correcta.  Si us plau, intenta-ho
@@ -637,14 +639,9 @@ ca:
   age_interstitial:
     age: La teva edat
     header: Actualització d'informació del compte
-    message: Estem en procés d'actualització de la nostra experiència per oferir-vos
-      proteccions de privacitat encara millors. Per això, necessitem que els usuaris
-      existents entrin la seva edat aquí. <br/>Com sempre, code.org mai vendrà o compartirà
-      aquesta informació amb tercers.
-    sign_out: Si no vols donar la teva edat tens que <a href="%{url}"> tancar la sessió</a>.
   terms_interstitial:
     tos: Condicions d'ús
-    privacy: Política de Privacitat
+    privacy: Política de privadesa
     print: Imprimeix
   school_info_interstitial:
     save: Desa
@@ -652,9 +649,13 @@ ca:
     races:
       other: Altres
     submit: Envia
-    decline: Tancar
+    decline: Tanca
   zendesk_too_young_message: Lamentablement, els usuaris més joves no poden registrar-se
     en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a>
+    sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres
+    en representació vostra.
+  zendesk_too_young_message_markdown: Lamentablement, els usuaris més joves no poden
+    registrar-se en el nostre lloc de suport. Podeu navegar[upport.code.org](http://support.code.org)
     sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres
     en representació vostra.
   progress:
@@ -673,17 +674,10 @@ ca:
     create: Crear un projecte
     create_a_project: 'Crear un nou projecte:'
     new: Crea nou
-    rename: Canviar el nom
-    save: Desa
-    delete: Elimina
     exit: Tornar al curs
-    my_projects: Els meus projectes
     project_gallery: Projectes
-    share: Comparteix
     share_title: Compartir el teu projecte
     share_copy_link: 'Copia l''enllaç:'
-    close: Tancar
-    more: Més
     name: Nom
     updated: Actualitzat
     project_type: Tipus de projecte
@@ -691,19 +685,9 @@ ca:
       a sota per a fer un nou projecte de Play Lab o d'Artist!<br/> Pots tornar i
       continuar els projectes en qualsevol moment.
     need_help: Necessita ajuda per començar?
-    really_delete: Vols suprimir?
-    delete_yes: Sí
-    delete_no: 'No'
     saved: Desat
     not_saved: No desat
-    cancel: Cancel·lar
-    delete_confirm_title: Esteu segur que voleu suprimir aquest projecte?
-    delete_confirm_text: Esborrar el teu projecte l'eliminarà permanentment de la
-      llista de Els meus projectes. Aquells amb qui hagis compartit l'enllaç ja no
-      podran veure el teu projecte.
     view_all: Mostra els meus projectes
-    remix: Remescla
-    click_to_remix: Feu clic a "Remix" per iniciar la teva pròpia versió!
     edit_project: Edita el projecte
     abuse:
       go_to_code_studio: Anar al Code Studio
@@ -715,8 +699,8 @@ ca:
           offensive: Contingut ofensiu
           infringement: Infracció de copyright
           other: Altres
-  flex_category:
-    required: Vista general
+  hoc_download:
+    minecraft_name: Hora del Codi de Minecraft
   view_teacher_guide: Veure la guia docent
   pd:
     form_labels:
@@ -740,6 +724,9 @@ ca:
         opt_in_yes: Sí
         opt_in_no: 'No'
   cookie_banner:
-    accept: Accepto
+    accept: D'acord
   gdpr_dialog:
+    message: Les dades del meu ús d'aquest lloc poden ser enviades, emmagatzemades
+      o processades als Estats Units.
     true: Sí
+  copy: Copiar

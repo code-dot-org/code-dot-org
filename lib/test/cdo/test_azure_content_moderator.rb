@@ -6,10 +6,6 @@ require 'open-uri'
 class AzureContentModeratorTest < Minitest::Test
   include SetupTest
 
-  # Comment these out when regenerating VCR file.
-  CDO.azure_content_moderation_endpoint = 'https://region.api.cognitive.microsoft.com/contentmoderator'
-  CDO.azure_content_moderation_key = 'fake_azure_api_key'
-
   # Do additional VCR configuration so as to prevent the api key from being logged to the
   # YML cassette, instead replacing it with a placeholder string.
   VCR.configure do |c|
@@ -18,6 +14,9 @@ class AzureContentModeratorTest < Minitest::Test
   end
 
   def setup
+    # Comment these out when regenerating VCR file.
+    CDO.stubs(azure_content_moderation_endpoint: 'https://region.api.cognitive.microsoft.com/contentmoderator')
+    CDO.stubs(azure_content_moderation_key: 'fake_azure_api_key')
     @acm = AzureContentModerator.new(
       endpoint: CDO.azure_content_moderation_endpoint,
       api_key: CDO.azure_content_moderation_key
@@ -42,9 +41,10 @@ class AzureContentModeratorTest < Minitest::Test
 
   def test_reports_optional_image_url_to_firehose_both_times
     test_image_url = 'test-image-url'
-    FirehoseClient.any_instance.expects(:put_record).twice.with do |data|
+    FirehoseClient.any_instance.expects(:put_record).twice.with do |stream, data|
       json = JSON.parse(data[:data_json])
-      json['ImageUrl'] == test_image_url
+      json['ImageUrl'] == test_image_url &&
+        stream == :analysis
     end
     image_data = open('https://code.org/images/infographics/fit-800/diversity-courses-updated-05-23.png')
     assert_equal :everyone, @acm.rate_image(image_data, 'image/png', test_image_url)
@@ -70,18 +70,19 @@ class AzureContentModeratorTest < Minitest::Test
   private
 
   def expect_firehose_log_request
-    FirehoseClient.any_instance.expects(:put_record).with do |data|
+    FirehoseClient.any_instance.expects(:put_record).with do |stream, data|
       data[:study] == 'azure-content-moderation' &&
         data[:study_group] == 'v1' &&
         data[:event] == 'moderation-request' &&
         JSON.parse(data[:data_json]).keys == %w(
           ImageUrl
-        )
+        ) &&
+        stream == :analysis
     end
   end
 
   def expect_firehose_log_result
-    FirehoseClient.any_instance.expects(:put_record).with do |data|
+    FirehoseClient.any_instance.expects(:put_record).with do |stream, data|
       data[:study] == 'azure-content-moderation' &&
         data[:study_group] == 'v1' &&
         data[:event] == 'moderation-result' &&
@@ -95,7 +96,8 @@ class AzureContentModeratorTest < Minitest::Test
           ImageUrl
           RacyThresholdUsed
           AdultThresholdUsed
-        )
+        ) &&
+        stream == :analysis
     end
   end
 

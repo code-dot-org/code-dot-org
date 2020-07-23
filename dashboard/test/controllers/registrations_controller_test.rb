@@ -5,8 +5,9 @@ require 'test_helper'
 # DEPRECATION NOTICE
 #
 # Please locate new tests for RegistrationsController in files for individual
-# routes under
-#   test/controllers/registrations_controller/*_test.rb
+# routes under one of:
+#   test/integration/registration/*_test.rb
+#   test/integration/omniauth/*_test.rb
 #
 # New tests should inherit from ActionDispatch::IntegrationTest instead of
 # ActionController::TestCase
@@ -61,7 +62,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if user cannot edit password" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -74,7 +75,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if password is incorrect" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     put :update, params: {user: {current_password: 'notmypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -96,7 +97,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: updates user password if password is correct" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     put :update, params: {user: {current_password: 'mypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -106,7 +107,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: teacher without a password can add a password" do
-    teacher = create :teacher, :with_migrated_google_authentication_option, encrypted_password: nil
+    teacher = create :teacher, :with_google_authentication_option, encrypted_password: nil
     teacher.update_attribute(:password, nil)
     sign_in teacher
 
@@ -117,7 +118,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: student without a password can add a password" do
-    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
+    student = create :student, :with_google_authentication_option, encrypted_password: nil
     student.update_attribute(:password, nil)
     sign_in student
 
@@ -147,6 +148,64 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'f', student.gender
     assert_equal 12, student.age
     assert_equal 'My School', student.school
+  end
+
+  test "parent_email: student can add a parent email without opt in" do
+    student = create(:student)
+    sign_in student
+
+    patch :set_parent_email, params: {
+      user: {
+        parent_email: 'parent@example.com',
+        parent_email_preference_opt_in: ''
+      }
+    }
+    student.reload
+    assert_response :no_content
+    assert_equal 'parent@example.com', student.parent_email
+  end
+
+  test "parent_email: student can add a parent email with opt in" do
+    student = create(:student)
+    sign_in student
+
+    patch :set_parent_email, params: {
+      user: {
+        parent_email: 'parent@example.com',
+        parent_email_preference_opt_in: 'yes',
+        parent_email_preference_source: 'PARENT_EMAIL_CHANGE'
+      }
+    }
+    student.reload
+    assert_response :no_content
+    assert_equal 'parent@example.com', student.parent_email
+
+    email_preference = EmailPreference.last
+    assert_equal "parent@example.com", email_preference[:email]
+    assert email_preference[:opt_in]
+    assert_equal EmailPreference::PARENT_EMAIL_CHANGE, email_preference[:source]
+  end
+
+  test "sign up page saves return to url in session" do
+    # Note that we currently have no restrictions on what the domain of the
+    # redirect url can be; we may at some point want to add domain
+    # restrictions, but if we do so we want to make sure that both
+    # studio.code.org and code.org are supported.
+    #
+    # See also the "sign in page saves return to url in session" test in
+    # sessions_controller_test
+    urls = [
+      "/foo",
+      "//studio.code.org/foo",
+      "//code.org/foo",
+      "//some_other_domain.com/foo"
+    ]
+
+    urls.each do |url|
+      session.delete(:user_return_to)
+      get :new, params: {user_return_to: url}
+      assert_equal url, session[:user_return_to]
+    end
   end
 
   test "teachers go to specified return to url after signing up" do
@@ -186,7 +245,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_nil assigns(:user).provider
+      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
@@ -209,7 +268,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_nil assigns(:user).provider
+      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
@@ -428,5 +487,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     get :edit
     assert_response :success
     assert_select '#user_name', 1
+  end
+
+  test "existing account sign in/up links redirect to user edit page" do
+    get :existing_account, params: {email: "test@email.com", provider: "facebook"}
+    assert_response :success
+    assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
+    assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
   end
 end

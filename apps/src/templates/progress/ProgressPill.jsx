@@ -6,6 +6,8 @@ import color from '@cdo/apps/util/color';
 import {levelType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
+import {isLevelAssessment} from './progressHelpers';
+import {SmallAssessmentIcon} from './SmallAssessmentIcon';
 
 const styles = {
   levelPill: {
@@ -26,13 +28,23 @@ const styles = {
     minWidth: 70,
     lineHeight: '18px',
     marginTop: 3,
-    marginBottom: 3
+    marginBottom: 3,
+    position: 'relative'
   },
   text: {
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
     letterSpacing: -0.12
+  },
+  textProgressStyle: {
+    display: 'inline-block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 12,
+    letterSpacing: -0.12,
+    width: 120,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   },
   iconMargin: {
     marginLeft: 10
@@ -49,10 +61,10 @@ class ProgressPill extends React.Component {
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
     text: PropTypes.string,
-    fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    progressStyle: PropTypes.bool
   };
 
   render() {
@@ -60,10 +72,10 @@ class ProgressPill extends React.Component {
       levels,
       icon,
       text,
-      fontSize,
       tooltip,
       disabled,
-      selectedSectionId
+      selectedSectionId,
+      progressStyle
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -87,6 +99,12 @@ class ProgressPill extends React.Component {
       tooltipProps['aria-describedby'] = id;
     }
 
+    // Only put the assessment icon on if its a single assessment level (not set)
+    const levelIsAssessment =
+      isLevelAssessment(levels[0]) && levels.length === 1;
+
+    const textStyle = progressStyle ? styles.textProgressStyle : styles.text;
+
     return (
       <a
         href={url}
@@ -97,9 +115,9 @@ class ProgressPill extends React.Component {
           {icon && <FontAwesome icon={icon} />}
           {text && (
             <div
+              className="ProgressPillTextAndIcon"
               style={{
-                ...styles.text,
-                fontSize,
+                ...textStyle,
                 ...(icon && styles.iconMargin)
               }}
             >
@@ -107,6 +125,7 @@ class ProgressPill extends React.Component {
             </div>
           )}
           {tooltip}
+          {levelIsAssessment && <SmallAssessmentIcon />}
         </div>
       </a>
     );

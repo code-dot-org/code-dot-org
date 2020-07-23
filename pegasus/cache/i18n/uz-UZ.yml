@@ -18,6 +18,8 @@ uz-UZ:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini
     ham ko‘ring.</a>'
+  csedweek_banner_teachers_text: Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini
+    ham ko‘ring.
   n_have_learned_an_hoc: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>o‘tganlar:
     #</h3>"
   anybody_can_learn: Har kim o‘rganishi mumkin.
@@ -26,8 +28,6 @@ uz-UZ:
     imkoniyati bo‘lishi kerak
   petition_sign_message: 'Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga #
     qo‘shiling.'
-  petition_sign_message_support: 'Agar qo‘llab-quvvatlasangiz, ismingizni kiriting.
-    Boshqalarga # qo‘shiling.'
   petition_join_others: 'Boshqalarga # qo‘shiling'
   name: Ismi
   email: Elektron pochta
@@ -94,6 +94,19 @@ uz-UZ:
   view_unit: Mavzuni ko'rish
   make_app: Dastur yaratish
   congrats_guest_speaker_title: Sinfingiz uchun mehmon ma'ruzachi topish
+  third_party_gradelevel_kto8: K-8 sinflar
+  third_party_gradelevel_kto2: K-2 sinflar
+  third_party_gradelevel_2to8: 2-8-sinflar
+  third_party_gradelevel_4to12: 4-12-sinflar
+  third_party_gradelevel_5to12: 5-12-sinflar
+  third_party_gradelevel_6plus: 6+ sinflar
+  third_party_gradelevel_8plus: 8+ sinflar
+  third_party_platform_all: 'Platforma: Veb, iPad va Android'
+  third_party_platform_mobile: 'Platforma: iPad va Android'
+  third_party_platform_web: 'Platforma: Veb'
+  third_party_price_varies: 'Narx: har xil'
+  third_party_price_free: 'Narx: bepul'
+  third_party_price_299: 'Narx: 2,99$/yuklab olish'
   enter_valid_age: Iltimos, yoshingzni to‘g‘ri ko‘rsating
   enter_valid_email: Iltimos, pochtangizni to‘g‘ri ko‘rsating
   get_a_certificate_message: Biz sizga sertifikat bilan birga qanday <a href='/learn/beyond'>ko‘proq
@@ -252,6 +265,7 @@ uz-UZ:
   homepage_action_text_learn: O‘rganishni boshlang
   homepage_action_text_signpetition: Murojaatni imzolang
   homepage_signpetition_dropdown: 'Roziman: &#x25BE;'
+  homepage_signpetition_dropdown_text: Roziman
   homepage_diversity_pledge: Turli qatlamdagi insonlarni jalb qiling
   homepage_banner_text_prizes: Dasturlash soati 7-13 dekabr kunlari yana kelmoqda.
   homepage_banner_link_prizes: 'Tarixdagi eng katta o‘quv tadbiriga qo‘shiling. '
@@ -481,6 +495,7 @@ uz-UZ:
   dashboard_navigation_student: 'O‘quvchi: %{student_name}'
   dashboard_sections_new_section: Yangi bo‘lim
   dashboard_sections_name: Bo‘lim nomi
+  dashboard_sections_close: Yopish
   dashboard_students_name: Ismi
   dashboard_students_completed_levels: O‘tilgan bosqichlar
   dashboard_students_total_lines: Kod satrlari
@@ -502,8 +517,6 @@ uz-UZ:
   next: Keyingi
   blockly_name: Blokli
   iceage_name: Muzlik davri
-  math_category_name: Matematik
-  hoc_category_name: Dasturlash soati
   applab_name: Ilova labaratoriyasi
   lightbot_gradelevel: Barcha yoshdagilar uchun
   thinkersmith_gradelevel: Barcha yoshdagilar uchun
@@ -541,6 +554,7 @@ uz-UZ:
   flappy_shortcode: qanot qoqmoq
   header_courses: Kurslar
   header_educate_hoc: Dasturlash soati
+  header_legal_tos: Xizmat shartlari
   applab_tile_start_tutorial: Boshlash
   hoc_overview_start_tutorial: Boshlash
   hoc2018_creativity_create: Yaratmoq

@@ -1,0 +1,16 @@
+name 'CSD-PL AYWS1 Debugging Intro'
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Introduction to Debugging
+
+ Debugging is the process of finding and fixing problems in code. Practice your debugging skills using the strategies outlined in the Guide to Debugging.
+
+
+## Resources
+
+* [Debugging Guide](https://docs.google.com/document/d/1u07ZPIHNxnfvy4sQgEfvSI_LMgNvlVS3SzlIc_7zEyE/view)
+* [Bug Report Worksheet](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view)
+
+MARKDOWN

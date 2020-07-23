@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 ne:
   errors:
     messages:
@@ -23,6 +35,7 @@ ne:
         edit_header: 'खाता जानकारी सम्पादन गर्नुहोस्'
         error:
           future: can't be in the future
+  beta: "बिटा"
   hello: "के छ विश्व"
   welcome_back: "Welcome back, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
@@ -36,12 +49,9 @@ ne:
   okay: "ओके "
   or: "या"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Add a teacher:'
       placeholder: "Section Code (ABCDEF)"
-      instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
-    submit: 'शिक्षक थप्नुहोस्'
   add_hint_form:
     placeholder: 'Please enter your hint here'
     submit: 'Add hint'
@@ -57,7 +67,6 @@ ne:
   of: "को"
   more: "थप"
   less: "कम"
-  beta: "बिटा"
   try_hoc: "Try the Hour of Code, click here >> "
   try_k8intro: "Try our K-8 Intro to Computer Science Course (15-25 hours)"
   k8intro: "K-8 Intro to Computer Science Course (15-25 hours)"
@@ -69,8 +78,6 @@ ne:
   auth:
     sign_in_with: '%{provider} प्रयोग गरेर साइन इन गर्नुहोस्'
     signed_in: 'साइन इन गरिएको!'
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: 'पहिले नै साइन अप गरिसक्नु भएको छ?'
     notyet_signedup: "अझै सहभागी हुनु भएको छैन?"
     google_oauth2: 'Google Account'
@@ -105,8 +112,6 @@ ne:
     valid_password: "Valid password!"
     invalid_password: "Password must be at least 6 characters"
     mismatch_password: "The two passwords you entered do not match"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "We need some additional information to continue signing you up."
     user_type_label: "Account Type"
     user_type_teacher: "Teacher"
@@ -196,13 +201,11 @@ ne:
     header:
       finished_hoc: "I've finished my Hour of Code"
       sign_in_to_save: 'Sign in to save progress'
-      free_play:
-        playlab: 'Make a Play Lab app'
-        artist: 'Draw something'
-        applab: 'Make an App Lab app'
       project_gallery: "Projects"
       educate_hoc: "Hour of Code"
       stats: "Stats"
+      legal_privacy: "Privacy Policy"
+      legal_tos: "Terms of Service"
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
@@ -219,9 +222,20 @@ ne:
       create: 'बनाउनुहोस्'
       applab: 'App Lab'
       artist: 'Artist'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
+      bounce: 'Bounce'
+      calc: 'Calc'
+      eval: 'Eval'
       flappy: 'Flappy'
+      frozen: 'Frozen'
+      gumball: 'The Amazing World of Gumball'
+      iceage: 'Ice Age'
+      infinity: 'Infinity'
+      minecraft_adventurer: 'Minecraft Adventurer'
+      minecraft_designer: 'Minecraft'
+      playlab: 'Play Lab'
+      starwars: 'Star Wars'
+      starwarsblocks: 'Star Wars (Blocks)'
+      starwarsblocks_hour: 'Star Wars (Blocks)'
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'तपाईँको प्रगति'
@@ -271,14 +285,12 @@ ne:
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
+    update_email: "Update"
   user_level:
     completed: 'Completed'
     tried: 'Tried'
   home:
     title: "Code Studio"
-    description: 'Code Studio is home to online courses created by Code.org'
-    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
-    lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS"
     all_courses: "Overview of Courses 1, 2, and 3"
     lesson_plans: "Lesson plans"
     signin_message: "Already registered? %{link}"
@@ -308,29 +320,10 @@ ne:
     test_videos_help: 'Test our new video player at your school'
     try_beta_courses: 'New! Try our beta courses for K-5 students'
     use_as_teacher: 'Use this site as a teacher'
-    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
-    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: "Try a Code Studio course"
     choose_next_course: "Try a Code Studio course by choosing one below"
     print_certificate: "Print Certificate"
-    announcement_title: "Announcements"
-    announcement_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
-    announcement_learn_more_button: "थप जान्नुहोस्"
-    announcement_try_now_button: "Try now"
-    announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: "Add your name"
-    announcement_go_beyond_button: "Go beyond"
-    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
-    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
-    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
-    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
@@ -399,7 +392,6 @@ ne:
   pdf_download: 'Download PDF'
   download_coming_soon: 'Downloadable activity coming soon.'
   video_coming_soon: 'Video Coming Soon!'
-  not_started: 'The student has not attempted this level.'
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
@@ -477,26 +469,12 @@ ne:
       title: "Conditionals"
     widgets:
       cta: "Learn how"
-  gallery:
-    students_drew_these_with_code: "Students drew these with code!"
-    students_made_these_with_code: "Students made these with code!"
-    picture_count: "In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action."
-    activity_count: "In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action."
-    want_to_make_your_own: "Want to make your own?"
-    how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
-    more: "More &rarr;"
-    caption_by_name_age: "by %{name}, age %{age}"
-    caption_time_ago: "%{time_ago} ago"
-    header: "Gallery"
-    header_playlab: "Stories and games"
-    header_artist: "Code art"
-    report_abuse: "Report Abuse"
   landing:
-    prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Report Bug"
     support: "Get Help"
     help_resources: "Help and Resources"
+  free_response:
+    placeholder: "Enter your answer here"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"
@@ -556,16 +534,16 @@ ne:
   age_interstitial:
     age: Your age
     header: Account Information Update
-    message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
-    sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
     intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_desc_markdown: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016. The biggest change: we will _no longer store email addresses for student accounts on Code Studio._ This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Terms of Service"
     privacy: "Privacy Policy"
     privacy_notice: "Privacy Notice"
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label_markdown: I agree to the updated [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url})
     accept: "Accept"
     print: "Print"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -604,37 +582,22 @@ ne:
     create: "Create Project"
     create_a_project: 'Create a new project:'
     new: "Create New"
-    rename: "Rename"
-    save: "सङ्ग्रह गर्नुहोस्"
-    delete: "हटाउनुहोस्"
     exit: "Return to Course"
-    my_projects: "My Projects"
     project_gallery: "Projects"
-    share: "आदान-प्रदान गर्नुहोस्"
     share_title: Share your project
     share_copy_link: "Copy the link:"
     share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
     share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
     embed: "Embed"
     advanced_share: "Show advanced options"
-    close: "बन्द गर्नुहोस्"
-    more: "थप"
     name: "नाम"
     updated: "Updated"
     project_type: "Project Type"
     help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
     need_help: "Try these courses to help you get started with your new project"
-    really_delete: 'Delete?'
-    delete_yes: 'हो'
-    delete_no: 'होइन'
     saved: "संग्रह गर्ने"
     not_saved: "Not saved"
-    cancel: 'रद्द गर्नुहोस्'
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
     view_all: 'View My Projects'
-    remix: 'Remix'
-    click_to_remix: "Click \"Remix\" to spin-off your own version!"
     edit_project: 'Edit Project'
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
@@ -660,22 +623,15 @@ ne:
   peer_review:
     accepted:
       name: 'Accepted'
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
     rejected:
       name: 'फर्काइयो'
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
     escalated:
       name: 'Escalated'
       description: 'I would like an instructor to review this submission'
     instructor_feedback: 'Instructor Feedback'
     peer_feedback: 'Peer Feedback'
     outdated: 'This feedback was added for a previously submitted version'
-  flex_category:
-    required: 'Overview'
-    content: 'Content'
-    practice: 'Teaching Practices'
     peer_review: 'Peer Review'
-    csp2_1_2018: 'Unit 2: Digital Information'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -736,6 +692,7 @@ ne:
     mac: 'Mac OS X'
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Go to unit overview'
   pd:
     form_labels:
@@ -763,3 +720,4 @@ ne:
     accept: 'I agree'
   gdpr_dialog:
     yes: 'हो'
+  copy: 'प्रतिलिपि गर्नुहोस्'

@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 
 **Lesson Type:** Unplugged | Kinesthetic Learning | Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit5/7/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit5/7/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 A key component of any programming language are conditionals.  Conditionals allow the computer to act as if it is making a choice:  based on the data it has been given, it will proceed in one of two ways.  (With some clever use of code, a programmer can allow a computer to “choose” between many different possible lines of code).  We take a whole lesson to learn about if statements, what they are, the terminology around them, and what they have to do with “selection” in programs. Students trace simple robot programs on paper to develop a sense of how to read and reason about code with if statements in it. Students also try their hand at writing code by hand to handle a robot situation.
 
@@ -24,7 +24,7 @@ In this lesson we just address program flow and tracing execution. We’ll look 
 
 **Lesson Type:** Event Driven Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit5/8/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit5/8/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 In this lesson, students write if and if-else statements in JavaScript for the first time. The concepts of conditional execution should carry over from the previous lesson, leaving this lesson to get into the nitty gritty details of writing working code. Up until this point, students have used event handlers any time they want to influence the behavior of a program.  It is important here to distinguish the difference between “when” and “if”.  This is a nuanced distinction and may not be immediately clear to every student. As students gain more experience with if statements, the difference between events and if statements will likely become more clear. For now, they should at the very least understand there is a difference between the two and begin to get in the habit of asking whether they want to run a block of code based on a user action, a condition, or some combination of the two.
 
@@ -35,7 +35,7 @@ In this lesson, students write if and if-else statements in JavaScript for the f
 
 **Lesson Type:** Programming | Conditionals | App Lab
 
-<a href = “https://curriculum.code.org/csp/unit5/9/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit5/9/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 In this lesson, students will be introduced to the boolean (logic) operators NOT, AND, and OR as tools for creating compound boolean conditions in if statements. Students will learn how to more efficiently express complex logic using AND and OR, rather than deeply nested or chained conditionals. Students will work through a worksheet that covers the basics and a few problems with evaluating logical expressions, then write code in App Lab to practice using && and || in if statements. This lesson introduces both the if-else-if construct and the Boolean operators AND, OR, and NOT. While it may appear that these operators extend the types of boolean conditions we can write, this is not actually the case. Nested and chained conditionals alone can be used to express any possible set of boolean conditions. The addition of these new boolean operators merely helps that expression be more succinct, clear, and elegant. But logic can get tricky, since often the way we say things in English is not the way we need to write them in code.
 
@@ -46,7 +46,7 @@ In this lesson, students will be introduced to the boolean (logic) operators NOT
 
 **Lesson Type:** Programming | Conditionals | App Lab
 
-<a href = “https://curriculum.code.org/csp/unit5/10/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit5/10/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 This lesson attempts to walk students through the iterative development process of building an app (basically) from scratch that involves the use if statements. How they decide to use if statements to end the game will require some creativity. The suggested condition - first to score 10 points - is subtly tricky and can be written many different ways.
 The purpose here is for students to see how “experts” would approach writing an app from scratch when all you have to start out with is a sketch on paper of some idea. Research has shown that what novices often need is an expert walk-through to explain the rationale behind certain decisions and to see the kinds of problems they anticipate and solve. There are a few key things that happen in this lesson that we hope students see and take to heart:

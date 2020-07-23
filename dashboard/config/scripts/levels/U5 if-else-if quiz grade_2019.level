@@ -59,7 +59,7 @@
     "start_blocks": "var score = promptNum(\"What was your quiz score (0-100)?\");\r\n\r\nconsole.log(\"Your quiz grade is an A\");\r\nconsole.log(\"Your quiz grade is a B\");\r\nconsole.log(\"Your quiz grade is a C\");\r\nconsole.log(\"Your quiz grade is a D\");\r\nconsole.log(\"Your quiz grade is an F\");\r\n\r\n\r\n",
     "lock_zero_param_functions": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "palette_category_at_start": "control",

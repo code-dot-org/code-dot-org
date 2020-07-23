@@ -43,11 +43,8 @@ class SchoolDistrict < ActiveRecord::Base
       SchoolDistrict.transaction do
         merge_from_csv(school_districts_tsv)
       end
-      # Temporarily commenting out the case where we run the full seed_from_s3
-      # (i.e., in production) in order to separately run seed_from_s3
-      # manually so as not to slow down the production deploy.
-      # else
-      #   SchoolDistrict.seed_from_s3
+    else
+      SchoolDistrict.seed_from_s3
     end
   end
 

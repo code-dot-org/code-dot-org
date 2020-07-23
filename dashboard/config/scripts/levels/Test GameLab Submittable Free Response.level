@@ -1,0 +1,60 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2019-11-05T00:39:52.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "skin": "gamelab",
+    "edit_code": true,
+    "contained_level_names": [
+      "Test Contained Multi"
+    ],
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "true",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "show_debug_watch": "true",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "teacher_markdown": "Teacher markdown for the original level",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "parent_level_id": 6722,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-24 10:33:13 -0400\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2019-11-04 16:40:53 -0800\",\"changed\":[\"submittable\",\"preload_asset_list\"],\"changed_by_id\":375,\"changed_by_email\":\"brad@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -10,6 +10,41 @@ export const ColumnType = {
   BOOLEAN: 'boolean'
 };
 
+export const ChartType = {
+  NONE: 0,
+  BAR_CHART: 1,
+  HISTOGRAM: 2,
+  SCATTER_PLOT: 3,
+  CROSS_TAB: 4
+};
+
+export function getDatasetInfo(tableName, tables = []) {
+  return tables.find(table => table.name === tableName);
+}
+
+export function isBlank(value) {
+  return value === undefined || value === '' || value === null;
+}
+
+/**
+ * @param {Object[]} records
+ * @param {string[]} columns
+ * @return {Object[]} Returns array containing the records that have a
+ * value for all of the specified columns.
+ */
+export function ignoreMissingValues(records, columns) {
+  records = records || [];
+  columns = columns || [];
+  let filteredRecords = records;
+  columns.forEach(column => {
+    filteredRecords = filteredRecords.filter(
+      record => !isBlank(record[column])
+    );
+  });
+
+  return filteredRecords;
+}
+
 /**
  * @param {*} val
  * @returns {boolean} Whether the value can be cast to number without information loss.
@@ -39,17 +74,34 @@ export function toBoolean(val) {
 
 /**
  * Convert a string to a boolean or number if possible.
- * @param val
+ * @param inputString
  * @returns {string|number|boolean}
  */
-export function castValue(val) {
+export function castValue(inputString, allowUnquotedStrings) {
+  // 1. Remove leading and trailing whitespace
+  inputString = inputString.trim();
+  // 2. Check for '', undefined, and null
+  if (inputString === '') {
+    // This happens when the text area is blank, so interpret as undefined.
+    return undefined;
+  }
+  if (inputString === 'undefined') {
+    return undefined;
+  } else if (inputString === 'null') {
+    return null;
+  }
+  // 3. Attempt to parse as number, string, or boolean
   try {
-    return JSON.parse(val);
-  } catch (e) {
-    if (e instanceof SyntaxError) {
-      return val;
+    const parsed = JSON.parse(inputString);
+    if (typeof parsed === 'object') {
+      throw new Error('Invalid entry type: object');
     }
-    throw new Error(`Unexpected error parsing JSON: ${e}`);
+    return parsed;
+  } catch (e) {
+    if (e instanceof SyntaxError && allowUnquotedStrings) {
+      return inputString;
+    }
+    throw e;
   }
 }
 
@@ -59,20 +111,9 @@ export function castValue(val) {
  * @returns {string}
  */
 export function editableValue(val) {
-  if (val === null || val === undefined) {
-    return '';
+  if (val === undefined) {
+    return 'undefined';
   }
-  if (typeof val === 'string') {
-    try {
-      JSON.parse(val);
-    } catch (e) {
-      // The value is a string which is not parseable as JSON (e.g. 'foo' but not 'true'
-      // or '1'). Therefore, it is safe to return it without stringifying it, and
-      // calling castValue on the result will return the original input.
-      return val;
-    }
-  }
-
   return JSON.stringify(val);
 }
 
@@ -82,8 +123,11 @@ export function editableValue(val) {
  * @returns {string}
  */
 export function displayableValue(val) {
-  if (val === null || val === undefined || val === '') {
-    return '';
+  if (val === null) {
+    return 'null';
+  } else if (val === undefined) {
+    return 'undefined';
+  } else {
+    return JSON.stringify(val);
   }
-  return JSON.stringify(val);
 }

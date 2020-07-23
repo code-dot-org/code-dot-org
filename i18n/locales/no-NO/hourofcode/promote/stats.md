@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ Vi håper å vekke en interesse for å lære mer. Forskning viser at barn forst�
 
 #### Hvorfor er dette viktig?
 
-Informasjonsteknologi griper etterhvert inn i alle bransjer. I 2015 fantes det 7 millioner ledige jobber i USA innenfor yrker der programmeringsferdigheter verdsettes, bl.a. innen kunst og design. But 65 percent of schools in the U.S. don't teach computer science. Det er på tide å innse at vi lever i det 21. århundre. Vi vet at uansett hva disse elevene ender opp med å bli her i livet, det være seg medisin, næringsliv, politikk, eller kunst, vil evnen til å skape og styre teknologien gi dem en selvsikkerhet og et konkurransefortrinn. <br /> <br />
+Informasjonsteknologi griper etterhvert inn i alle bransjer. I 2015 fantes det 7 millioner ledige jobber i USA innenfor yrker der programmeringsferdigheter verdsettes, bl.a. innen kunst og design. But 55 percent of schools in the U.S. don't teach computer science. Det er på tide å innse at vi lever i det 21. århundre. Vi vet at uansett hva disse elevene ender opp med å bli her i livet, det være seg medisin, næringsliv, politikk, eller kunst, vil evnen til å skape og styre teknologien gi dem en selvsikkerhet og et konkurransefortrinn. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ Informasjonsteknologi griper etterhvert inn i alle bransjer. I 2015 fantes det 7
 
 #### Om Code.org
 
-Code.org® er en 501c3 almennyttig non-profit-organisasjon med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Its vision is that every student in every school has the opportunity to learn computer programming. Etter lanseringen i 2013 organiserte Code.org kampanjen Kodetimen, Kodetimen har hittil introdusert over et hundre millioner elever til datavitenskapen og samarbeider med 70 offenlige skolesistrikter over hele Usa for og utvide datavitenskap programmer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For mer informasjon, vennligst besøk: [ < % = resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® er en 501c3 almennyttig non-profit-organisasjon med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Its vision is that every student in every school has the opportunity to learn computer programming. Etter lanseringen i 2013 organiserte Code.org kampanjen Kodetimen, Kodetimen har hittil introdusert over et hundre millioner elever til datavitenskapen og samarbeider med 70 offenlige skolesistrikter over hele Usa for og utvide datavitenskap programmer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

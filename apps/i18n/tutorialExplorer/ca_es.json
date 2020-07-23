@@ -1,5 +1,6 @@
 {
-  "startButton": "Inici",
+  "startButton": "Comença",
+  "filterGradesPre": "Prelectors",
   "filterStudentExperienceBeginner": "Principiant",
   "filterPlatformComputers": "Ordinadors",
   "filterPlatformAndroid": "Android",

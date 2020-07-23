@@ -25,6 +25,13 @@ module Pd
     # Max limit is 1000. See https://api.jotform.com/docs/#form-id-submissions
     JOT_FORM_LIMIT = 1000
 
+    SYNC_SUBMISSION_RESULTS = [
+      IMPORTED = :imported,
+      SKIPPED_DULICATE = :skipped_dulicate,
+      SKIPPED_DIFFERENT_ENVIRONMENT = :skipped_different_environment,
+      ERROR = :error
+    ].freeze
+
     def placeholder?
       answers.nil?
     end
@@ -94,7 +101,7 @@ module Pd
       # Download new responses from JotForm
       # @param [form_id] (optional) specify a form id. Otherwise use all forms
       def sync_from_jotform(form_id = nil)
-        form_ids = form_id ? [form_id] : all_form_ids
+        form_ids = form_id ? [form_id] : all_form_ids.uniq
         _sync_from_jotform form_ids
       end
 
@@ -104,10 +111,21 @@ module Pd
         errors_per_form = Hash.new {|h, k| h[k] = Hash.new}
         imported = 0
         batches = 0
+        all_sync_results = {}
 
         form_ids.each do |form_id|
           questions = get_questions(form_id, force_sync: true)
+          questions_details = use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
+          if questions_details
+            # Make sure that there is a unique, non-nil name for each question.
+            if questions_details.pluck("name").compact.uniq.size != questions_details.size
+              raise "Not all questions for form #{form_id} have unique names."
+            end
+          end
+
           last_known_submission_id = questions.last_submission_id
+          last_processed_submission_id = last_known_submission_id
+          all_sync_results[form_id] = {}
 
           offset = 0
           status = :importing
@@ -126,16 +144,25 @@ module Pd
             response[:submissions].each do |submission|
               submission_id = submission[:submission_id]
               begin
-                success = process_submission(submission)
-                imported += 1 if success
+                res = process_submission(submission, questions_details)
+                all_sync_results[form_id][res] ||= 0
+                all_sync_results[form_id][res] += 1
+
+                last_processed_submission_id = submission_id
+                imported += 1 if res == IMPORTED
               rescue => e
                 # Store message and first line of backtrace for context
                 errors_per_form[form_id][submission_id] = "#{e.message}, #{e.backtrace.first}"
                 batch_error_count += 1
+                all_sync_results[form_id][ERROR] ||= 0
+                all_sync_results[form_id][ERROR] += 1
+
+                # TODO: Save list of submissions we failed to import to a file or table.
+                # Have another job to re-sync these submissions later.
               end
 
-              # As long as we have encountered no errors for this form, increase the last submission id
-              questions.update!(last_submission_id: submission_id) unless errors_per_form.key?(form_id)
+              questions.update!(last_submission_id: last_processed_submission_id) if
+               last_processed_submission_id != questions.last_submission_id
             end
 
             if batch_error_count > 0 && batch_error_count == result_set[:count]
@@ -152,7 +179,9 @@ module Pd
           end
         end
 
-        CDO.log.info("#{imported} JotForm submissions imported in #{batches} #{'batch'.pluralize(batches)}.")
+        CDO.log.info("#{imported} JotForm submissions imported in #{batches} #{'batch'.pluralize(batches)}. "\
+          "All sync results: #{all_sync_results.inspect}"
+        )
 
         if errors_per_form.any?
           # Format error messages nicely and raise
@@ -169,30 +198,41 @@ module Pd
         imported
       end
 
-      def process_submission(submission)
+      # Process a submission and saves the model.
+      # @param [submission] The submission received from JotForm.
+      # @param [questions_details] (optional) Details of the questions.  If provided, we can
+      #   attempt to use the name field from each question rather than its numerical ID when
+      #   storing answers.
+      # @return [symbol] one of the PROCESS_SUBMISSION_RESULT states
+      def process_submission(submission, questions_details=nil)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-          model.answers = submission[:answers].to_json
+          dest_answers = model.process_answers_from_submission(submission[:answers], questions_details)
+
+          model.answers = dest_answers.to_json
           form_id = submission[:form_id]
           submission_id = submission[:submission_id]
 
           # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
           # Include hidden questions for full validation and so skip_submission? can inspect them.
-          if skip_submission?(model.form_data_hash(show_hidden_questions: true))
-            CDO.log.info "Skipping #{submission_id}"
-            return nil
+          processed_answers = model.form_data_hash(show_hidden_questions: true)
+          if skip_submission?(processed_answers)
+            CDO.log.info "Skipping #{processed_answers['environment']} environment submission #{submission_id}"
+            return SKIPPED_DIFFERENT_ENVIRONMENT
           end
 
           # Make sure we have all attributes then see if this is a duplicate
           model.map_answers_to_attributes
           if model.duplicate?
             CDO.log.warn "Skipping duplicate submission #{submission_id}"
-            return nil
+            return SKIPPED_DULICATE
           end
 
           model.save!
           CDO.log.info "Saved submission #{submission_id} for form #{form_id}"
         end
+
+        IMPORTED
       end
 
       # Override in included class to provide custom filtering rules.
@@ -211,6 +251,12 @@ module Pd
         # Only keep this environment. Skip others.
         return true if environment != Rails.env
 
+        false
+      end
+
+      # Override in included class to enable use of name instead of id for question identifier.
+      # @return [Boolean] true if name should be used when possible for question identifier.
+      def use_names_for_question_ids?
         false
       end
 
@@ -310,13 +356,39 @@ module Pd
       new_record? && self.class.exists?(slice(*self.class.unique_attributes_with_form_id))
     end
 
+    # Given answers and questions, returns the correct form of answers.
+    # In the case of a submission where we have the questions, and the survey
+    # model returns true for use_names_for_question_ids?, then the answers have
+    # keys as question names rather than question ID integers where possible.
+    # @param source_answers [Hash] The submitted answers with keys as ID integers.
+    # @param questions [Hash] (optional) The questions for this survey.
+    def process_answers_from_submission(source_answers, questions = nil)
+      dest_answers = {}
+
+      source_answers.each do |key, value|
+        # We have an answer ID, but can we get a name instead of the ID?
+        question_detail = questions&.find {|q| q["id"] == key}
+
+        # If we want to use names instead of IDs, and we got a name, then use it.
+        if self.class.use_names_for_question_ids? && question_detail && question_name = question_detail["name"]
+          dest_answers[question_name] = value
+        else
+          dest_answers[key] = value
+        end
+      end
+
+      dest_answers
+    end
+
     # Update answers for this submission from the JotForm API
     # Useful for filling in placeholder response entries (submission id but no answers)
     def sync_from_jotform
       raise 'Missing submission id' unless submission_id.present?
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
-      update!(answers: submission[:answers].to_json)
+      questions_details = self.class.use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
+      dest_answers = process_answers_from_submission(submission[:answers], questions_details)
+      update!(answers: dest_answers.to_json)
     end
 
     # Supplies values for important model attributes from the JotForm-downloaded form answers.

@@ -14,6 +14,7 @@ The image below shows a fragment of the ASCII table, including the encodings of 
 To encode the word Computer in ASCII, we would first consult the table above and note which number each letter maps to. A capital “C” is encoded by the number 67, a lower case “o” by the number 111, and so on. Noting each number gives us the sequence: `67 111 109 112 117 116 101 114`
 
 <br>
+
 Next we translate each of the numbers in this sequence to its binary representation, this gives us the binary sequence: `01000011 01101111 01101101 01110000 01110101 01110100 01100101 01110010`
 
 <br>

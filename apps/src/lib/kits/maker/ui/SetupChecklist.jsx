@@ -5,6 +5,8 @@ import React, {Component} from 'react';
 import * as utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 import {
   isWindows,
   isChrome,
@@ -13,22 +15,29 @@ import {
   isLinux
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
-import SurveySupportSection from './SurveySupportSection';
+import {BOARD_TYPE} from '../boards/circuitPlayground/CircuitPlaygroundBoard';
+import experiments from '@cdo/apps/util/experiments';
+import _ from 'lodash';
+import yaml from 'js-yaml';
+import Button from '@cdo/apps/templates/Button';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
+const STATUS_BOARD_FIRMWARE = 'statusBoardFirmware';
 
 const initialState = {
   isDetecting: false,
   caughtError: null,
+  boardTypeDetected: BOARD_TYPE.OTHER,
   [STATUS_SUPPORTED_BROWSER]: Status.WAITING,
   [STATUS_APP_INSTALLED]: Status.WAITING,
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
-  [STATUS_BOARD_COMPONENTS]: Status.WAITING
+  [STATUS_BOARD_COMPONENTS]: Status.WAITING,
+  [STATUS_BOARD_FIRMWARE]: Status.ALERT
 };
 
 export default class SetupChecklist extends Component {
@@ -53,19 +62,6 @@ export default class SetupChecklist extends Component {
 
   thumb(selector) {
     this.setState({[selector]: Status.CELEBRATING});
-  }
-
-  getSurveyURL() {
-    const baseFormURL =
-      'https://docs.google.com/forms/d/e/1FAIpQLSe4NB7weq20sydf4kKn3QzIIn1O91hfPNU0U6b2xc1W6w44eQ/viewform';
-    const userAgentFieldFill = `entry.1520933088=${encodeURIComponent(
-      navigator.userAgent
-    )}`;
-    const prettifiedCurrentStates = JSON.stringify(this.state, null, 2);
-    const setupStatesFieldFill = `entry.804069894=${encodeURIComponent(
-      prettifiedCurrentStates
-    )}`;
-    return `${baseFormURL}?${userAgentFieldFill}&${setupStatesFieldFill}`;
   }
 
   detect() {
@@ -103,6 +99,12 @@ export default class SetupChecklist extends Component {
           setupChecker.detectCorrectFirmware()
         )
       )
+
+      // What type of board is this?
+      .then(() => {
+        this.setState({boardTypeDetected: setupChecker.detectBoardType()});
+        Promise.resolve();
+      })
 
       // Can we initialize components successfully?
       .then(() =>
@@ -150,6 +152,23 @@ export default class SetupChecklist extends Component {
         this.fail(stepKey);
         return Promise.reject(error);
       });
+  }
+
+  /**
+   * Update the firmware on the attached board. Currently, only the CPClassic can be flashed.
+   * @return {Promise}
+   */
+  updateBoardFirmware() {
+    this.setState({[STATUS_BOARD_FIRMWARE]: Status.ATTEMPTING});
+    latestFirmware(
+      'https://s3.amazonaws.com/downloads.code.org/maker/latest-firmware.yml'
+    ).then(firmware => {
+      return window.MakerBridge.flashBoardFirmware({
+        boardName: 'circuit-playground-classic',
+        hexPath: firmware.url,
+        checksum: firmware.checksum
+      }).then(() => this.setState({[STATUS_BOARD_FIRMWARE]: Status.SUCCEEDED}));
+    });
   }
 
   /**
@@ -204,7 +223,7 @@ export default class SetupChecklist extends Component {
           <br />
           If a prompt asking for permission for Code Studio to connect to the
           Chrome App pops up, click Accept.
-          {this.surveyLink()}
+          {this.contactSupport()}
         </ValidationStep>
       );
     } else {
@@ -222,15 +241,8 @@ export default class SetupChecklist extends Component {
     }
   }
 
-  surveyLink() {
-    return (
-      <span>
-        <br />
-        Still having trouble? Please{' '}
-        <a href={this.getSurveyURL()}>submit our quick survey</a> about your
-        setup issues.
-      </span>
-    );
+  contactSupport() {
+    return <SafeMarkdown markdown={i18n.contactGeneralSupport()} />;
   }
 
   render() {
@@ -256,7 +268,7 @@ export default class SetupChecklist extends Component {
           {this.renderPlatformSpecificSteps()}
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_PLUG]}
-            stepName="Board plugged in"
+            stepName={i18n.validationStepBoardPluggedIn()}
           >
             {this.state.caughtError && this.state.caughtError.reason && (
               <pre>{this.state.caughtError.reason}</pre>
@@ -278,11 +290,11 @@ export default class SetupChecklist extends Component {
                 to install the drivers and try again.
               </p>
             )}
-            {this.surveyLink()}
+            {this.contactSupport()}
           </ValidationStep>
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
-            stepName="Board connectable"
+            stepName={i18n.validationStepBoardConnectable()}
           >
             We found a board but it didn't respond properly when we tried to
             connect to it.
@@ -316,29 +328,79 @@ export default class SetupChecklist extends Component {
                 .
               </div>
             )}
-            {this.surveyLink()}
+            {this.contactSupport()}
           </ValidationStep>
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
-            stepName="Board components usable"
+            stepName={i18n.validationStepBoardComponentsUsable()}
           >
             Oh no! Something unexpected went wrong while verifying the board
             components.
             <br />
             You should make sure your board has the right firmware sketch
             installed. You can{' '}
-            <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">
+            <a
+              href={
+                this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                  ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
+                  : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+              }
+            >
               install the Circuit Playground Firmata sketch with these
               instructions
             </a>
-            .{this.surveyLink()}
+            .{this.contactSupport()}
           </ValidationStep>
+          {experiments.isEnabled('flash-classic') &&
+            this.state.boardTypeDetected !== BOARD_TYPE.OTHER && (
+              <ValidationStep
+                stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
+                stepName={i18n.validationStepBoardFirmware()}
+              >
+                <div>
+                  <p>{i18n.updateFirmwareExplanation()}</p>
+                  <p>
+                    {this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                      ? i18n.updateFirmwareExplanationClassic()
+                      : i18n.updateFirmwareExplanationExpress()}
+                  </p>
+                  <Button
+                    __useDeprecatedTag
+                    text={i18n.updateFirmware()}
+                    onClick={
+                      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                        ? () => this.updateBoardFirmware()
+                        : null
+                    }
+                    href={
+                      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+                        ? null
+                        : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
+                    }
+                  />
+                </div>
+              </ValidationStep>
+            )}
         </div>
-        <SurveySupportSection surveyUrl={this.getSurveyURL()} />
+        <div>
+          <h2>{i18n.support()}</h2>
+          <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
+          {this.contactSupport()}
+        </div>
       </div>
     );
   }
 }
+
+const latestFirmware = _.memoize(latestYamlUrl => {
+  return fetch(latestYamlUrl, {mode: 'cors'})
+    .then(response => response.text())
+    .then(text => yaml.safeLoad(text))
+    .then(data => ({
+      url: data.url,
+      checksum: data.checksum
+    }));
+});
 
 function promiseWaitFor(ms) {
   return new Promise(resolve => {

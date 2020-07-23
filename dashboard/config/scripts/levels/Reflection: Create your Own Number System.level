@@ -5,16 +5,19 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "long_instructions": "# Create a Number System\r\n\r\n## Do the Activity\r\n\r\nOne of the best ways to prepare to teach a lesson is by actually doing the activity yourself.  As you complete the activity, consider the misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.  \r\nNotes:\r\n<ol>\r\n<li>There are many 'correct' answers to this activity. The important part is that rules are applied consistently. </li>\r\n<li> The difficult part of this task is not to find all of the shapes, but to create an ordering that does not ever repeat a pattern and articulating that ordering as a set of rules or a protocol. </li></ol>\r\n\r\n<a href= \"http://docs.google.com/document/d/1vFg7GG-kFJGw9MgxQ5g3yW7R5rE6f3udVK3C9Hj9P6E/edit\" target=_blank> Click here to Access Number Systems Activity</a>\r\n\r\n<hr>\r\n\r\n### <a href= \"http://forum.code.org/c/csp1/lesson04\" target=_blank> Head to the Forum >></a>\r\n<hr>\r\n\r\n\r\n## Share Your Protocol and Ideas\r\nHead to the forum and share your ideas about this activity. Specifically, share: \r\n\r\n- The pattern and rules for your number system\r\n- Misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.  \r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nOnce you’ve posted in the forum, share a link here. In order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Create a Number System\r\n\r\n## Do the Activity\r\n\r\nOne of the best ways to prepare to teach a lesson is by actually doing the activity yourself.  As you complete the activity, consider the misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.  \r\nNotes:\r\n\r\n1. There are many 'correct' answers to this activity. The important part is that rules are applied consistently.\r\n2. The difficult part of this task is not to find all of the shapes, but to create an ordering that does not ever repeat a pattern and articulating that ordering as a set of rules or a protocol.\r\n\r\n<a href= \"http://docs.google.com/document/d/1vFg7GG-kFJGw9MgxQ5g3yW7R5rE6f3udVK3C9Hj9P6E/edit\" target=_blank> Click here to Access Number Systems Activity</a>\r\n\r\n<hr>\r\n\r\n### <a href= \"http://forum.code.org/c/csp1/lesson04\" target=_blank> Head to the Forum >></a>\r\n<hr>\r\n\r\n\r\n## Share Your Protocol and Ideas\r\nHead to the forum and share your ideas about this activity. Specifically, share: \r\n\r\n- The pattern and rules for your number system\r\n- Misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.  \r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nOnce you’ve posted in the forum, share a link here. In order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)\r\n\r\n\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "encrypted": "false",
+    "optional": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-06 17:17:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

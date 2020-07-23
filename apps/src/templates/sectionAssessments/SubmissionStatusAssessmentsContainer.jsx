@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import SubmissionStatusAssessmentsTable, {
-  studentOverviewDataPropType
-} from './SubmissionStatusAssessmentsTable';
+import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable';
+import {studentOverviewDataPropType} from './assessmentDataShapes';
 import {
-  getStudentsMCSummaryForCurrentAssessment,
+  getStudentsMCandMatchSummaryForCurrentAssessment,
   getExportableSubmissionStatusData
 } from './sectionAssessmentsRedux';
 import {connect} from 'react-redux';
@@ -22,16 +21,20 @@ const styles = {
 };
 
 export const studentExportableDataPropType = PropTypes.shape({
-  name: PropTypes.string.isRequired,
+  studentName: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number,
   numMultipleChoice: PropTypes.number,
-  submissionTimeStamp: PropTypes.string.isRequired
+  numMatchCorrect: PropTypes.number,
+  numMatch: PropTypes.number,
+  submissionTimestamp: PropTypes.instanceOf(Date).isRequired
 });
 
 const CSV_SUBMISSION_STATUS_HEADERS = [
   {label: i18n.studentNameHeader(), key: 'studentName'},
   {label: i18n.numMultipleChoiceCorrect(), key: 'numMultipleChoiceCorrect'},
   {label: i18n.numMultipleChoice(), key: 'numMultipleChoice'},
+  {label: i18n.numMatchCorrect(), key: 'numMatchCorrect'},
+  {label: i18n.numMatch(), key: 'numMatch'},
   {label: i18n.submissionTimestamp(), key: 'submissionTimestamp'}
 ];
 
@@ -53,6 +56,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
             headers={CSV_SUBMISSION_STATUS_HEADERS}
           >
             <Button
+              __useDeprecatedTag
               text={i18n.downloadCSV()}
               onClick={() => {}}
               color={Button.ButtonColor.gray}
@@ -70,6 +74,6 @@ class SubmissionStatusAssessmentsContainer extends Component {
 export const UnconnectedSubmissionStatusAssessmentsContainer = SubmissionStatusAssessmentsContainer;
 
 export default connect(state => ({
-  studentOverviewData: getStudentsMCSummaryForCurrentAssessment(state),
+  studentOverviewData: getStudentsMCandMatchSummaryForCurrentAssessment(state),
   studentExportableData: getExportableSubmissionStatusData(state)
 }))(SubmissionStatusAssessmentsContainer);

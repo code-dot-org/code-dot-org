@@ -1,5 +1,6 @@
 class Ability
   include CanCan::Ability
+  include Pd::Application::ActiveApplicationModels
 
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
@@ -9,6 +10,7 @@ class Ability
     # Abilities for all users, signed in or not signed in.
     can :read, :all
     cannot :read, [
+      TeacherFeedback,
       Script, # see override below
       ScriptLevel, # see override below
       :reports,
@@ -20,7 +22,6 @@ class Ability
       # PLC Stuff
       Plc::Course,
       Plc::LearningModule,
-      Plc::Task,
       Plc::UserCourseEnrollment,
       Plc::CourseUnit,
       # PD models
@@ -31,9 +32,7 @@ class Ability
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
-      Pd::TeacherApplication,
       :workshop_organizer_survey_report,
-      Pd::WorkshopMaterialOrder,
       :pd_workshop_user_management,
       :pd_workshop_admins,
       :peer_review_submissions,
@@ -45,30 +44,44 @@ class Ability
       Pd::Application::Facilitator1920Application,
       Pd::Application::Teacher1819Application,
       Pd::Application::Teacher1920Application,
+      Pd::Application::Teacher2021Application,
       Pd::InternationalOptIn,
-      :maker_discount
+      :maker_discount,
+      :edit_manifest,
+      :update_manifest
     ]
+    cannot :index, Level
+
+    # If you can see a level, you can also do these things:
+    can [:embed_level, :get_rubric], Level do |level|
+      can? :read, level
+    end
+
+    # If you can update a level, you can also do these things:
+    can [:edit_blocks, :update_blocks, :update_properties], Level do |level|
+      can? :update, level
+    end
 
     if user.persisted?
       can :manage, user
 
       can :create, Activity, user_id: user.id
-      can :save_to_gallery, UserLevel, user_id: user.id
-      can :create, GalleryActivity, user_id: user.id
-      can :destroy, GalleryActivity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :create, Pd::TeacherApplication, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
-      can :get_feedbacks, TeacherFeedback, student_id: user.id
+      can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
+
+      can :list_projects, Section do |section|
+        can?(:manage, section) || user.sections_as_student.include?(section)
+      end
 
       if user.teacher?
         can :manage, Section, user_id: user.id
@@ -86,13 +99,12 @@ class Ability
           !script.professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
-        can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
-        can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
-        can [:new, :create, :read], Pd::Application::Facilitator1920Application, user_id: user.id
-        can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
-        can [:new, :create, :read], Pd::Application::Teacher1920Application, user_id: user.id
+        can [:new, :create, :read], FACILITATOR_APPLICATION_CLASS, user_id: user.id
+        can [:new, :create, :read], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
+        can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
+        can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
       end
 
       if user.facilitator?
@@ -103,8 +115,9 @@ class Ability
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
-          can :create, Pd::Workshop
+          can :create, Pd::Workshop, course: Pd::Workshop::COURSE_CSF
           can :update, Pd::Workshop, facilitators: {id: user.id}
+          can :destroy, Pd::Workshop, organizer_id: user.id
         end
       end
 
@@ -117,6 +130,9 @@ class Ability
         if user.regional_partners.any?
           can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
           can :manage_attendance, Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id), ended_at: nil
+          can :update_scholarship_info, Pd::Enrollment do |enrollment|
+            !!user.regional_partners.pluck(enrollment.workshop.regional_partner_id)
+          end
         end
 
         can :read, Pd::CourseFacilitator
@@ -134,26 +150,26 @@ class Ability
             can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
             cannot :delete, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
           end
-          can [:send_principal_approval, :principal_approval_not_required], Pd::Application::Teacher1920Application, regional_partner_id: user.regional_partners.pluck(:id)
+          can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
 
       if user.workshop_admin?
         can :manage, Pd::Workshop
-        can :manage, Pd::WorkshopMaterialOrder
         can :manage, Pd::CourseFacilitator
         can :manage, :workshop_organizer_survey_report
         can :manage, :pd_workshop_summary_report
         can :manage, :pd_teacher_attendance_report
-        can :manage, Pd::TeacherApplication
         can :manage, :pd_workshop_user_management
         can :manage, :pd_workshop_admins
         can :manage, RegionalPartner
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
-        can :manage, Pd::Application::Facilitator1920Application
-        can :manage, Pd::Application::Teacher1920Application
+        can :manage, FACILITATOR_APPLICATION_CLASS
+        can :manage, TEACHER_APPLICATION_CLASS
+        can :move, :workshop_enrollments
+        can :update_scholarship_info, Pd::Enrollment
       end
 
       if user.permission?(UserPermission::PROJECT_VALIDATOR)
@@ -209,15 +225,31 @@ class Ability
         Library,
         Game,
         Level,
-        Course,
+        UnitGroup,
         Script,
         ScriptLevel,
         Video,
       ]
 
       # Only custom levels are editable.
-      cannot [:update, :destroy], Level do |level|
+      cannot [:clone, :update, :destroy], Level do |level|
         !level.custom?
+      end
+
+      # Ability for LevelStarterAssetsController. Since the controller does not have
+      # a corresponding model, use lower/snake-case symbol instead of class name.
+      can [:upload, :destroy], :level_starter_asset
+
+      can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
+    end
+
+    if user.persisted?
+      editor_experiment = Experiment.get_editor_experiment(user)
+      if editor_experiment
+        can :index, Level
+        can :clone, Level, &:custom?
+        can :manage, Level, editor_experiment: editor_experiment
+        can [:edit, :update], Script, editor_experiment: editor_experiment
       end
     end
 
@@ -237,7 +269,7 @@ class Ability
         Activity,
         Game,
         Level,
-        Course,
+        UnitGroup,
         Script,
         ScriptLevel,
         UserLevel,

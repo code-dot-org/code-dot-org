@@ -7,16 +7,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export const SingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
     <div className="modal-content no-modal-icon">
       <p className="dialog-title">{title}</p>
       <p className="dialog-body">{body}</p>
-      <button id="cancel-button" style={{float: 'left'}}>
+      <button type="button" id="cancel-button" style={{float: 'left'}}>
         {i18n.cancel()}
       </button>
-      <button id="ok-button" style={{float: 'right'}}>
+      <button type="button" id="ok-button" style={{float: 'right'}}>
         {i18n.okay()}
       </button>
     </div>
@@ -45,7 +46,9 @@ export const MatchAngiGifDialog = () => (
         <img src="/script_assets/images/matching_ani.gif" />
       </div>
       <div className="farSide">
-        <button id="ok-button">{i18n.ok()}</button>
+        <button type="button" id="ok-button">
+          {i18n.ok()}
+        </button>
       </div>
     </div>
   </ProtectedStatefulDiv>
@@ -57,7 +60,9 @@ export const TooFewDialog = () => (
       <p className="dialog-title">{i18n.tooFewTitle()}</p>
       <p>{i18n.tooFewBody()}</p>
       <div className="farSide">
-        <button id="ok-button">{i18n.ok()}</button>
+        <button type="button" id="ok-button">
+          {i18n.ok()}
+        </button>
       </div>
     </div>
   </ProtectedStatefulDiv>
@@ -69,7 +74,9 @@ export const ContractMatchErrorDialog = ({text}) => (
       <p className="dialog-title">{i18n.incorrectAnswer()}</p>
       <p>{text}</p>
       <div className="farSide">
-        <button id="ok-button">{i18n.ok()}</button>
+        <button type="button" id="ok-button">
+          {i18n.ok()}
+        </button>
       </div>
     </div>
   </ProtectedStatefulDiv>
@@ -84,7 +91,9 @@ export const MatchErrorDialog = () => (
       <p className="dialog-title">{i18n.incorrectSolution()}</p>
       <p>{i18n.incorrectSolutionBody()}</p>
       <div className="farSide">
-        <button id="ok-button">{i18n.ok()}</button>
+        <button type="button" id="ok-button">
+          {i18n.ok()}
+        </button>
       </div>
     </div>
   </ProtectedStatefulDiv>
@@ -96,7 +105,9 @@ export const ErrorDialog = () => (
       <p className="dialog-title">{i18n.incorrectAnswer()}</p>
       <p>{i18n.incorrectAnswerBody()}</p>
       <div className="farSide">
-        <button id="ok-button">{i18n.ok()}</button>
+        <button type="button" id="ok-button">
+          {i18n.ok()}
+        </button>
       </div>
     </div>
   </ProtectedStatefulDiv>
@@ -108,8 +119,15 @@ export const StartOverDialog = () => (
       <p className="dialog-title">{i18n.startOverTitle()}</p>
       <p>{i18n.startOverBody()}</p>
       <div id="buttons">
-        <button id="cancel-button">{i18n.cancel()}</button>
-        <button id="ok-button" className="btn-danger" style={{float: 'right'}}>
+        <button type="button" id="cancel-button">
+          {i18n.cancel()}
+        </button>
+        <button
+          type="button"
+          id="ok-button"
+          className="btn-danger"
+          style={{float: 'right'}}
+        >
           {i18n.startOver()}
         </button>
       </div>
@@ -117,18 +135,16 @@ export const StartOverDialog = () => (
   </ProtectedStatefulDiv>
 );
 
-/* eslint-disable react/no-danger */
-export const InstructionsDialog = ({title, markdownContent}) => (
+export const InstructionsDialog = ({title, markdown}) => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon markdown-instructions-container">
       <p className="dialog-title">{title}</p>
       <p />
-      <div
-        className="instructions-markdown scrollable-element"
-        dangerouslySetInnerHTML={{__html: markdownContent}}
-      />
+      <div className="instructions-markdown scrollable-element">
+        <SafeMarkdown markdown={markdown} />
+      </div>
       <div id="buttons">
-        <button id="ok-button" style={{float: 'right'}}>
+        <button type="button" id="ok-button" style={{float: 'right'}}>
           {i18n.ok()}
         </button>
       </div>
@@ -137,7 +153,7 @@ export const InstructionsDialog = ({title, markdownContent}) => (
 );
 InstructionsDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  markdownContent: PropTypes.string.isRequired
+  markdown: PropTypes.string.isRequired
 };
 
 export const SuccessDialog = ({title, body}) => (
@@ -146,7 +162,9 @@ export const SuccessDialog = ({title, body}) => (
       <p className="dialog-title">{title}</p>
       <p>{body}</p>
       <div className="farSide">
-        <button id="ok-button">{i18n.ok()}</button>
+        <button type="button" id="ok-button">
+          {i18n.ok()}
+        </button>
       </div>
     </div>
   </ProtectedStatefulDiv>

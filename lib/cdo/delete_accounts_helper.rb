@@ -47,15 +47,15 @@ class DeleteAccountsHelper
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
     # Clear S3 contents for user's channels
+    @log.puts "Deleting S3 contents for #{channel_count} channels"
     buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
     buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
       bucket.hard_delete_channel_content encrypted_channel_id
     end
 
     # Clear Firebase contents for user's channels
-    encrypted_channel_ids.each do |encrypted_channel_id|
-      FirebaseHelper.delete_channel encrypted_channel_id
-    end
+    @log.puts "Deleting Firebase contents for #{channel_count} channels"
+    FirebaseHelper.delete_channels encrypted_channel_ids
 
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
@@ -78,9 +78,9 @@ class DeleteAccountsHelper
       @log.puts "Cleaned #{updated_rows} OverflowActivity" if updated_rows > 0
     end
 
-    @log.puts "Cleaning GalleryActivity"
-    updated_rows = GalleryActivity.where(user_id: user_id).update_all(level_source_id: nil)
-    @log.puts "Cleaned #{updated_rows} GalleryActivity" if updated_rows > 0
+    @log.puts "Cleaning AssessmentActivity"
+    updated_rows = AssessmentActivity.where(user_id: user_id).update_all(level_source_id: nil)
+    @log.puts "Cleaned #{updated_rows} AssessmentActivity" if updated_rows > 0
 
     @log.puts "Cleaning AuthoredHintViewRequest"
     updated_rows = AuthoredHintViewRequest.where(user_id: user_id).update_all(
@@ -98,7 +98,6 @@ class DeleteAccountsHelper
     @log.puts "Cleaning PD content"
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
-    workshop_material_order_ids = Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
 
     # Two different paths to anonymizing attendance records
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
@@ -107,9 +106,19 @@ class DeleteAccountsHelper
     Pd::FacilitatorProgramRegistration.where(user_id: user_id).update_all(form_data: '{}')
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
-    Pd::TeacherApplication.where(user_id: user_id).update_all(primary_email: '', secondary_email: '', application: '')
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
+    Pd::RegionalPartnerMiniContact.where(user_id: user_id).update_all(form_data: '{}')
 
+    # SQL query to anonymize Pd::TeacherApplication (2017-18 application) because the model no longer exists
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        UPDATE `pd_teacher_applications`
+        SET `pd_teacher_applications`.`primary_email` = '',
+          `pd_teacher_applications`.`secondary_email` = '',
+          `pd_teacher_applications`.`application` = ''
+        WHERE `pd_teacher_applications`.`user_id` = #{user_id}
+      SQL
+    )
     # Peer reviews might be associated with a purged submitter or viewer
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
     PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
@@ -124,23 +133,10 @@ class DeleteAccountsHelper
     end
 
     unless pd_enrollment_ids.empty?
-      workshop_material_order_ids += Pd::WorkshopMaterialOrder.where(pd_enrollment_id: pd_enrollment_ids).pluck(:id)
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
-    end
-
-    unless workshop_material_order_ids.empty?
-      Pd::WorkshopMaterialOrder.where(id: workshop_material_order_ids).update_all(
-        school_or_company: nil,
-        street: '',
-        apartment_or_suite: nil,
-        city: '',
-        state: '',
-        zip_code: '',
-        phone_number: ''
-      )
     end
   end
 
@@ -203,6 +199,13 @@ class DeleteAccountsHelper
 
   def remove_from_pardot_by_email(email)
     remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(email: email)
+  end
+
+  # Marks emails for deletion from Pardot via contact rollups process.
+  # Will eventually replace current steps in account deletion process
+  # that directly delete prospects via Pardot API.
+  def set_pardot_deletion_via_contact_rollups(email)
+    ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
   end
 
   # Removes the StudioPerson record associated with the user IF it is not
@@ -273,8 +276,6 @@ class DeleteAccountsHelper
       'Automated purging of accounts with WORKSHOP_ORGANIZER permission is not supported at this time.'
     assert_constraint !user.program_manager?,
       'Automated purging of accounts with PROGRAM_MANAGER permission is not supported at this time.'
-    assert_constraint RegionalPartner.with_deleted.where(contact_id: user.id).empty?,
-      'Automated purging of an account listed as the contact for a regional partner is not supported at this time.'
     assert_constraint RegionalPartnerProgramManager.where(program_manager_id: user.id).empty?,
       'Automated purging of an account listed as a program manager for a regional partner is not supported at this time.'
   end
@@ -331,6 +332,7 @@ class DeleteAccountsHelper
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
     remove_from_pardot_by_user_id(user.id)
+    set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
     purge_unshared_studio_person(user)
     anonymize_user(user)
 
@@ -354,7 +356,9 @@ class DeleteAccountsHelper
 
     migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
+    remove_poste_data(email)
     remove_from_pardot_by_email(email)
+    set_pardot_deletion_via_contact_rollups(email)
     clean_pegasus_forms_for_email(email)
   end
 

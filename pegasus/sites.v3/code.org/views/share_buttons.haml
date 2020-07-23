@@ -3,7 +3,7 @@
 = view 'popup_window.js'
 
 :ruby
-  cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+  cookie_key = environment_specific_cookie_name '_user_type'
   user_type = request.cookies[cookie_key]
 
 - unless user_type == "student_y"

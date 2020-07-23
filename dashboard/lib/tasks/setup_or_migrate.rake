@@ -3,8 +3,8 @@ require 'active_record/errors'
 namespace :db do
   def database_exists?
     Rake::Task['environment'].invoke
-    ActiveRecord::Base.connection
-  rescue ActiveRecord::NoDatabaseError
+    ActiveRecord::Base.connection.execute('SHOW TABLES')
+  rescue ActiveRecord::NoDatabaseError, ActiveRecord::StatementInvalid
     false
   else
     true

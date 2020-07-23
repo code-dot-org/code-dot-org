@@ -1,0 +1,15 @@
+name 'CodeBreak E04 Challenges'
+editor_experiment ''
+display_name 'Challenges'
+description "Pick the challenge you want to complete. When you are finished click 'Continue' and don't forget to share your project using the hashtag #CodeBreak!"
+
+sublevels
+level 'CodeBreak E04 - Challenge 1'
+level 'CodeBreak E04 - Challenge 2'
+level 'CodeBreak E04 - Challenge 3'
+level 'CodeBreak E04 Int AppLab Challenge'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

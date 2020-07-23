@@ -3,7 +3,7 @@ sk:
   data:
     unplugged:
       Unplug1:
-        title: Úvod do vedy o počítačoch (informatiky)
+        title: Úvod do informatiky
         desc: Táto hodina predstaví koncept informatiky a vysvetlí, čo informatik
           robí. Študentom tiež umožní vžiť sa do role informatika. Na konci hodiny
           bude mať každý študentu pripomienku toho, čo sa naučil. Možno budete mať
@@ -119,7 +119,7 @@ sk:
           diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo
           je práve stlačené.
       GoingPlacesSafely:
-        title: Bezpečné premiestňovanie
+        title: Bezpečný pohyb na internete
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
           ako bezpečne surfovať po internete.
       GraphPaperProgramming:
@@ -165,20 +165,21 @@ sk:
           za pomoci kúskov papiera.
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Študenti využijú crowdsourcing, čo je bežne používaná technika riešenia
-          problémov v informatike, vďaka ktorému vyriešia úlohu oveľa efektívnejšie
-          spolu ako trieda, než keby sa o to pokúšal každý sám.
+        desc: Crowdsourcing je metóda bežne používaná na riešenie problémov v informatike,
+          pri ktorej aktivitu spoločne vykoná veľká skupina ľudí. V tejto lekcii študenti
+          využijú crowdsourcing na to, aby vyriešili oveľa efektívnejšie spolu ako
+          trieda, než keby sa o to pokúšal každý sám.
       DigitalCitizenship:
         title: Digitálne občianstvo
-        desc: Študenti preskúmajú rozdiely medzi súkromnou a osobnou informáciou a
-          naučia sa rozlíšovať, čo je bezpečné a čo nebezpečné zdieľať online.
+        desc: Študenti preskúmajú rozdiely medzi súkromnými a osobnými údajmi a naučia
+          sa rozlišovať, čo je bezpečné a čo nebezpečné zdieľať online.
       TangramAlgorithms:
         title: Tangram algoritmy
         desc: V tejto lekcii si ukážeme niečo dôležité o algoritmoch. Ak budete mať
           algoritmus jednoduchý, môžete ho použiť mnohými spôsobmi. Ak chete dosiahnuť,
           aby každý mal rovnaký výsledok, musíte do algoritmu doplniť detaily.
       EnvelopeVariables:
-        title: Obálkové premenné
+        title: Premenné v obálkach
         desc: Premenné v informatike umožňujú voľnosť. V tejto lekcii sa dozviete,
           čo sú premenné a akými rozličnými spôsobmi ich môžeme používať. Použite
           aktivitu pred (alebo spolu s) lekciou o abstrakcii pre úplne pochopenie
@@ -190,14 +191,14 @@ sk:
           aby ich mohli odabstrahovať. Tieto abstrahované príbehy sa stanú základom
           pre ďalšie vtipné a veselé príbehy.
       ForLoopFun:
-        title: Zábavné opakovanie
+        title: Zábava s cyklami "for"
         desc: Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme,
           ako používať cykly so zabudovanou extra štruktúrou.
       SongwritingWithParameters:
         title: Písanie pesničiek s parametrami
         desc: 'Jedným z najkrajších elementov vo svete informatiky je funkcia. Funkcie
-          (niekedy ich voláme procedúry) sú malé programy, ktore môžete dookola používať
-          vo Vašom väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť,
+          (niekedy ich voláme procedúry) sú malé programy, ktoré môžeme opakovane
+          používať vo väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť,
           prečo je kombinovanie kúskov kódu do funkcií tak užitočné.  '
       BinaryImages:
         title: Binárne obrázky
@@ -236,7 +237,7 @@ sk:
           ale parametre s ostatnými hodnotami používali iné vzory. Preto potrebujeme
           podmieňovacie príkazy...
       CollisionDetection:
-        title: Kolízna detekcia a Pytagorova veta
+        title: Zisťovanie kolízií a Pytagorova veta
         desc: Určenie toho, kedy sa objekty na obrazovke dotýkajú je dôležitou súčasťou
           väčšiny hier. V tejto lekcii sa pozrieme na to, ako sa Pytagorová veta a
           vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma
@@ -258,8 +259,8 @@ sk:
         title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo to znamená byť občanom v digitálnom svete.
       courseE_unplugged_privateInformation:
-        title: 'Výchova do života: Súkromné a osobné údaje '
-        desc: Dnes sa naučíte, aký je rozdiel medzi súkromnými a osobnými informáciami!
+        title: 'Common Sense Education: Súkromné a osobné údaje '
+        desc: Dnes sa naučíte, aký je rozdiel medzi súkromnými a osobnými údajmi!
       courseF_unplugged_powerOfWords:
         title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo robiť, ak sa niekto v online svete správa nepríjemne.
@@ -275,7 +276,7 @@ sk:
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
           postavu cez bludisko pomocou jediného príkazu.
       courseA_unplugged_goingPlacesSafely:
-        title: Bezpečné premiestňovanie
+        title: Bezpečný pohyb na internete
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
           ako bezpečne surfovať po internete.
       courseABC_unplugged_bigEvent:
@@ -346,9 +347,10 @@ sk:
           za pomoci kúskov papiera.
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
-        desc: Študenti využijú crowdsourcing, čo je bežne používaná technika riešenia
-          problémov v informatike, vďaka ktorému vyriešia úlohu oveľa efektívnejšie
-          spolu ako trieda, než keby sa o to pokúšal každý sám.
+        desc: Crowdsourcing je metóda bežne používaná na riešenie problémov v informatike,
+          pri ktorej aktivitu spoločne vykoná veľká skupina ľudí. V tejto lekcii študenti
+          využijú crowdsourcing na to, aby vyriešili oveľa efektívnejšie spolu ako
+          trieda, než keby sa o to pokúšal každý sám.
       courseE_unplugged_songwriting:
         title: Písanie pesničiek
         desc: Študenti sa na príklade refrénu v piesni naučia o definovaní a volaní
@@ -359,20 +361,20 @@ sk:
           algoritmus jednoduchý, môžete ho použiť mnohými spôsobmi. Ak chete dosiahnuť,
           aby každý mal rovnaký výsledok, musíte do algoritmu doplniť detaily.
       courseF_unplugged_envelopeVariables:
-        title: Obálkové premenné
+        title: Premenné v obálkach
         desc: Premenné v informatike umožňujú voľnosť. V tejto lekcii sa dozviete,
           čo sú premenné a akými rozličnými spôsobmi ich môžeme používať. Použite
           aktivitu pred (alebo spolu s) lekciou o abstrakcii pre úplne pochopenie
           tohto konceptu.
       courseF_unplugged_forLoopFun:
-        title: Zábavné opakovanie
+        title: Zábava s cyklami "for"
         desc: Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme,
           ako používať cykly so zabudovanou extra štruktúrou.
       courseF_unplugged_songwritingParameters:
         title: Písanie pesničiek s parametrami
         desc: 'Jedným z najkrajších elementov vo svete informatiky je funkcia. Funkcie
-          (niekedy ich voláme procedúry) sú malé programy, ktore môžete dookola používať
-          vo Vašom väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť,
+          (niekedy ich voláme procedúry) sú malé programy, ktoré môžeme opakovane
+          používať vo väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť,
           prečo je kombinovanie kúskov kódu do funkcií tak užitočné.  '
       swipeRightPassThrough:
         title: Lekcia pracovných pohovorov
@@ -415,7 +417,7 @@ sk:
           menom. označil som políčko pre jeho zašifrovanie. stlačil som uložiť a publikovať"
       courseB_unplugged_MRF_2018:
         title: Moji robotickí kamaráti
-        desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
+        desc: Naučte sa programovať napísaním kódu pre vašich priateľov!
       PlantASeed_2018:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
         desc: Táto lekcia na príklade sadenia semienka objasňuje spôsoby, akými používame
@@ -426,7 +428,7 @@ sk:
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
           postavu cez bludisko pomocou jediného príkazu.
       GoingPlacesSafely_2018:
-        title: Bezpečné premiestňovanie
+        title: Bezpečný pohyb na internete
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
           ako bezpečne surfovať po internete.
       courseA_unplugged_loops_2018:
@@ -502,12 +504,12 @@ sk:
           s časom, postupne po jednotlivých príkazoch vytvoria program.
       courseB_unplugged_MRF_2019:
         title: Moji robotickí kamaráti
-        desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
+        desc: Naučte sa programovať napísaním kódu pre vašich priateľov!
       BuildingAFoundation_2019:
         title: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
-        title: 'chýba preklad: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
+        title: Moji zacyklení robotickí kamaráti
         desc: 'chýba preklad: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
         title: Podmienky
@@ -543,7 +545,7 @@ sk:
           ukazovaním toho, ako môže počítač ukladať ešte komplexnejšie informácie
           (ako obrázky či farby) binárnym spôsobom.
       courseE_unplugged_privateInformation_2019:
-        title: 'chýba preklad: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        title: Súkromné a osobné údaje
         desc: 'chýba preklad: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
       SongwritingParameters_2019:
         title: 'chýba preklad: en-US.data.unplugged.SongwritingParameters_2018.title'
@@ -585,6 +587,23 @@ sk:
           živote, konkrétne vytvorením papierového lietadielka. Zameriava sa tiež
           na širšie súvislosti informatiky a podstatnú úlohu, ktorú v našom živote
           hrajú algoritmy.
+      test-uid-passthrough:
+        desc: "# Lekcia Náborových scenárov\r\n\r\n## Potiahni vpravo pre CS\r\nPre
+          tútu lekciu budeme používať nástroj \"Potiahni vpravo pre CS\", ktorý vyvinuli
+          naši partneri z MIT. V tomto nástroji si môžete prečítať profily študentov
+          a zvážiť ich špecifické programovacie prístupy, ktoré využijete na ich presvedčenie
+          zapísať sa do vášho kurzu CS Princípy Informatiky. \r\n\r\n## Ako to funguje\r\nPri
+          prehrávaní Potiahni vpravo pre CS uvidíte rad citátov, ktoré môžete študentom
+          povedať. Citáty, ktoré sa vám pre daného študenta budú zdať najefektívnejšie
+          môžete potiahnuť vpravo, tie, ktoré sa vám nebudú zdať vhodné, potiahnite
+          vľavo. Počas lekcie budeme diskutovať v skupine o vašich názoroch na typy
+          programovacích prístupov, ktoré sú podľa vás najefektívnejšie na pritiahnutie
+          študenta ku kurzu a budete mať možnosť vidieť ako ostatní vo vašej skupine
+          vyberali v jednotlivých debatách.\r\n<br><br><br><br>\r\n\r<span style=\"display:none\">submitButton
+          next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
+          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/><a
+          class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>
+          kliknúť sem pre spustenie Potiahni vpravo pre CS!</a>\r\n\r\n"
       PlantASeed_2019:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
         desc: Táto lekcia na príklade sadenia semienka objasňuje spôsoby, akými používame
@@ -595,7 +614,7 @@ sk:
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
           postavu cez bludisko pomocou jediného príkazu.
       GoingPlacesSafely_2019:
-        title: Bezpečné premiestňovanie
+        title: Bezpečný pohyb na internete
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
           ako bezpečne surfovať po internete.
       courseA_unplugged_loops_2019:
@@ -615,6 +634,33 @@ sk:
           inšpirácie. Okrem toho sa budeme venovať aj témam kreatívneho vyjadrovania
           a potrebe férovosti pri kreatívnej tvorbe.
       GraphingData_2019:
-        title: Dáta ku grafom
+        title: Zobrazenie dát v grafoch
         desc: " V tejto lekcii študenti zozbierajú dáta z Play Lab projektu alebo
-          reálneho života a použijú ich na vyrátanie pravdepodobnosti."
+          z reálneho života a použijú ich na formulovanie predpovedí."
+      courseE_unplugged_accessAbility_2019:
+        title: Uľahčenie prístupu
+        desc: Naučte sa o dostupnosti a význame empatie prostredíctvom brainstormingu
+          a dizajnovania dostupných riešení pre hypotetické aplikácie.
+      courseE_simon_says_2019:
+        title: Simon vraví
+        desc: "Zahraj si hru a porozmýšlaj, ktoré príkazy sú potrebné na dosiahnutie
+          správnych výsledkov.\r\n\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Silné heslá
+        desc: Preskúmajte prečo používamé heslá, spoznajte benefity používania hesiel
+          a objavte stretégie pre vytvorenie a zachovanie silného, bezbečného hesla.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+        desc: '_Joshova poznámka: na rozdiel od prvej lekcie, túto som naformátoval
+          ako typickú lekciu bez počítača._'
+      timeforcs_demo_conditionals:
+        title: Podmienky
+        desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria
+          pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si
+          potiahnem čiernu kartu, ty dostaneš bod."
+      TheRightApp_2019:
+        title: Správna aplikácia
+        desc: "* Všetci dnes používame počítače, obzvlášť smartfóny. \r\n* Smartfónové
+          aplikácie alebo \"appky\" pomáhajú ľuďom napríklad hovoriť s priateľmi,
+          počúvať hudbu, nakupovať alebo len prechádzať internet.\r\n* Pre programátorov
+          je dôležité poznať potreby druhých a zohľadniť ich pri návrhu aplikácií!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

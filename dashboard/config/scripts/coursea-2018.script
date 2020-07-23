@@ -1,26 +1,28 @@
+tts true
 hidden false
-hideable_stages true
+hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursea/standards/"]]
-stage_extras_available true
+lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursea/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 family_name 'coursea'
 version_year '2018'
 is_stable true
+supported_locales ["it-IT", "sk-SK"]
+curriculum_umbrella 'CSF'
 
-stage 'Debugging: Unspotted Bugs'
+lesson 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted_2018'
 
-stage 'Persistence & Frustration: Stevie and the Big Project'
+lesson 'Persistence & Frustration: Stevie and the Big Project'
 level 'courseA_video_Stevie_2018'
 
-stage 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-life Algorithms: Plant a Seed'
 level 'PlantASeed_2018'
 
-stage 'Sequencing in Maze'
+lesson 'Sequencing in Maze'
 level 'courseAB_video_NewIntro_2018'
 level 'coursea_maze_ramp1_2018'
 level 'courseA_maze_ramp2_2018'
@@ -29,10 +31,10 @@ level 'courseA_maze_ramp3b_2018'
 level 'courseA_maze_ramp4a_2018'
 level 'courseA_maze_ramp5a_2018'
 
-stage 'Programming: Happy Maps'
+lesson 'Programming: Happy Maps'
 level 'UnplugHappyMaps_2018'
 
-stage 'Programming in Maze'
+lesson 'Programming in Maze'
 level 'elementary_video_pairProgramming_2018'
 level 'courseA_maze_seq1_2018'
 level 'courseA_maze_seq5_2018'
@@ -46,7 +48,7 @@ level 'courseA_maze_seq13_2018'
 bonus 'courseA_maze_seq_challenge1_2018'
 bonus 'courseA_maze_seq_challenge2_2018'
 
-stage 'Programming in Harvester'
+lesson 'Programming in Harvester'
 level 'courseA_harvester_intro'
 level 'courseA_harvester_seq1'
 level 'courseA_harvester_seq2'
@@ -63,13 +65,13 @@ level 'courseA_harvester_seq12'
 level 'courseA_harvester_seq11'
 level 'courseA_harvester_seq13'
 
-stage 'Going Places Safely'
+lesson 'Going Places Safely'
 level 'GoingPlacesSafely_2018'
 
-stage 'Loops: Happy Loops'
+lesson 'Loops: Happy Loops'
 level 'courseA_unplugged_loops_2018'
 
-stage 'Loops in Harvester'
+lesson 'Loops in Harvester'
 level 'courseA_harvester_loops1'
 level 'courseA_harvester_loops2'
 level 'courseA_harvester_loops_video'
@@ -84,7 +86,7 @@ level 'courseA_harvester_loops9', challenge: true
 level 'courseA_harvester_loops10'
 level 'courseA_harvester_loops11'
 
-stage 'Loops in Collector'
+lesson 'Loops in Collector'
 level 'courseAB_video_collector_2018'
 level 'courseA_collector_loops1_2018'
 level 'courseA_collector_loops2_2018'
@@ -102,7 +104,7 @@ level 'courseA_collector_loops12_2018'
 bonus 'courseA_collector_loops_challenge2kp_2018'
 bonus 'courseA_collector_loops_challenge1_2018'
 
-stage 'Loops in Artist'
+lesson 'Loops in Artist'
 level 'courseB_video_ArtistIntro_2018'
 level 'courseA_artist_loops1_2018'
 level 'courseA_artist_loops2_2018'
@@ -120,10 +122,10 @@ level 'courseA_artist_loops12_2018'
 bonus 'courseA_artist_loops_challenge2a_2018'
 bonus 'courseA_artist_loops_challenge1_2018'
 
-stage 'Events: The Big Event'
+lesson 'Events: The Big Event'
 level 'BigEvent_2018'
 
-stage 'Events in Play Lab'
+lesson 'Events in Play Lab'
 level 'courseA_video_events_2018'
 level 'courseA_playLab_events1_2018'
 level 'courseA_playLab_events2_2018'

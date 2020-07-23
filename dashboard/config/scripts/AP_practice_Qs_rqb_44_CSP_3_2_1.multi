@@ -1,7 +1,6 @@
 name 'AP_practice_Qs_rqb_44_CSP_3_2_1'
 wrong 'Storage, processing, or curation often present significant challenge when processing large datasets.'
-wrong 'Data scientists typically combine multiple data sources as more can be learned when each data source is analyzed independently.
-'
+wrong 'Data scientists typically combine multiple data sources as more can be learned when each data source is analyzed independently.'
 wrong 'Information cleansing and classification are often employed in the processing of data by which patterns can emerge.'
 right 'Metadata is only useful for datasets that are small enough to be analyzed by hand, so it is often not considered in modern data analysis.'
 markdown <<MARKDOWN

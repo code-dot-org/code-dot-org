@@ -1,8 +1,8 @@
 name 'cspu5_assess1_drawingoutcome_2018'
-wrong '<img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">'
-wrong '<img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">'
-right '<img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">'
-wrong '<img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">'
+wrong 'https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png'
+wrong 'https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png'
+right 'https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png'
+wrong 'https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png'
 
 
 

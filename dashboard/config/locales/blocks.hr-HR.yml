@@ -21,6 +21,11 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,12 +59,39 @@ hr:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": slučajno odabran
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': vanzemaljac
+            '"CAT"': mačka
+            '"DOG"': pas
+            '"DUCK"': patka
+            '"ROBOT"': robot
+            '"UNICORN"': jednorog
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': vanzemaljac
+            '"CAT"': mačka
+            '"DOG"': pas
+            '"DUCK"': patka
+            '"ROBOT"': robot
+            '"UNICORN"': jednorog
           LOCATION:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
@@ -87,6 +119,7 @@ hr:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja
@@ -121,7 +154,17 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': veličina
@@ -131,6 +174,16 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': dijamant
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -151,17 +204,16 @@ hr:
           CONDITION:
             '"when"': kada
             '"while"': dok
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': točno
-            'false': netočno
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -174,10 +226,6 @@ hr:
             '"right"': desno
             '"space"': svemir
             '"x"': x
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": slučajno odabran
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -190,11 +238,13 @@ hr:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': špilja
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': slučajno odabran
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': pustinja
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': duga
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod
+              vodom
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
       gamelab_setProp:
         options:
           PROPERTY:
@@ -211,18 +261,6 @@ hr:
           CONDITION:
             '"when"': kada
             '"while"': dok
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"x"': x pozicija
-            '"y"': y pozicija
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"x"': x pozicija
-            '"y"': y pozicija
       gamelab_turn:
         options:
           DIRECTION:
@@ -236,13 +274,6 @@ hr:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": gore
-            "'down'": dolje
-            "'left'": lijevo
-            "'right'": desno
       gamelab_whileKey:
         options:
           KEY:
@@ -293,6 +324,8 @@ hr:
             '"y"': y pozicija
       Mikelab_randomColor:
         text: nasumično odabrana boja
+      Mikelab_repeatUntilComplete:
+        text: ponavljaj zauvijek
       Mikelab_setBG:
         options:
           BG:
@@ -348,57 +381,22 @@ hr:
         text: okreni ulijevo
       RyanLab_turnRight:
         text: okreni udesno
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': veličina
-            '"x"': x pozicija
-            '"y"': y pozicija
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-          KEY:
-            '"up"': gore
-            '"down"': dolje
-            '"left"': lijevo
-            '"right"': desno
-            '"space"': svemir
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': točno
-            '"false"': netočno
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"x"': x pozicija
-            '"y"': y pozicija
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': zauvijek
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': prikaži
-            '"hide"': sakrij
+            '"random"': slučajno odabran
       binary_move:
         options:
           DIR:

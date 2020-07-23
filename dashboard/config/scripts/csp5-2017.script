@@ -1,7 +1,7 @@
+tts true
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
 has_verified_resources true
@@ -10,8 +10,11 @@ new_name 'csp5-2017'
 family_name 'csp5'
 version_year '2017'
 is_stable true
+project_sharing true
+curriculum_umbrella 'CSP'
 
-stage 'Buttons and Events', flex_category: 'csp5_1'
+lesson_group 'csp5_1', display_name: 'Chapter 1: Event-Driven Programming'
+lesson 'Buttons and Events'
 level 'Unit 5 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Introduction to Design Mode', progression: 'Intro to Design Mode in App Lab'
 level 'CSPU5_FirstTimeDesignMode', progression: 'Introduction to Design Mode'
@@ -34,9 +37,9 @@ level 'CSPU5_U3L16 - setPosition to move button', progression: 'How setPosition 
 level 'CSPU5_AddLabelToChaserGame', progression: 'Using Labels'
 level 'How Images Work', progression: 'How Images Work'
 level 'Finalize Your Chaser Game v.1', progression: 'Chaser Game v.1'
-assessment 'csp-pulse-check-survey-6-levelgroup-U5Ch1', progression: 'Quick Check-In'
+level 'csp-pulse-check-survey-6-levelgroup-U5Ch1', progression: 'Quick Check-In', assessment: true
 
-stage 'Multi-screen Apps', flex_category: 'csp5_1'
+lesson 'Multi-screen Apps'
 level 'Unit 5 Lesson 2 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'CSPU5 Layering and Deleting in Design Mode', progression: 'Using Design Mode'
 level 'CSPU5 Add onEvent from Design Mode', progression: 'Using Design Mode'
@@ -53,14 +56,14 @@ level 'CSPU5 Add welcome screen to chaser game', progression: 'Making a Multi-Sc
 level 'CSPU5 Add full screen image to bg of chaser game', progression: 'Making a Multi-Screen Chaser Game v.2'
 level 'CSPU5 Add game over screen', progression: 'Project: Multi-Screen Chaser Game'
 
-stage 'Building an App: Multi-Screen App', flex_category: 'csp5_1'
+lesson 'Building an App: Multi-Screen App'
 level 'Unit 5 Lesson 3 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Event Driven Programming Recap', progression: 'Event Driven Programming Recap'
 level 'Tips For Working on Your Own', progression: 'Tips For Working on Your Own'
 level 'Project - Your Own Multi Screen App', progression: 'Project - Your Own Multi-Screen App'
-assessment 'U5 AP Practice Create Process', progression: '(new) AP Practice Response - Describe Your Process'
+level 'U5 AP Practice Create Process', progression: '(new) AP Practice Response - Describe Your Process', assessment: true
 
-stage 'Controlling Memory with Variables', flex_category: 'csp5_1'
+lesson 'Controlling Memory with Variables'
 level 'Unit 5 Lesson 4 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Basic mechanics of variables', progression: 'Basic Mechanics of Variables'
 level 'Introduction to Variables - Part 1', progression: 'Introduction to Variables - Part 1'
@@ -87,9 +90,9 @@ level 'CSPU5_U3L14 - moving memory challenge4', progression: 'The Mental Model f
 level 'CSPU5_U3L14 - moving memory challenge5', progression: 'The Mental Model for Variables'
 level 'CSPU5_U3L14 - moving memory challenge6', progression: 'The Mental Model for Variables'
 level 'CSPU5_U3L19 - variable reassignment challenge pt2', progression: 'The Mental Model for Variables'
-assessment 'CSPU5_U3L14 - MC variable reassignment', progression: 'Check Your Understanding'
+level 'CSPU5_U3L14 - MC variable reassignment', progression: 'Check Your Understanding', assessment: true
 
-stage 'Building an App: Clicker Game', flex_category: 'csp5_1'
+lesson 'Building an App: Clicker Game'
 level 'Unit 5 Lesson 5 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'CSPU5_U3 full clicker demo', progression: 'Clicker Game Demonstration'
 level 'CSPU5_U3L15 - practice with setText', progression: 'AppLab Practice'
@@ -111,16 +114,16 @@ level 'CSPU5_U3L15 - Debugging Simple If-statements =v==', progression: 'Simple 
 level 'CSPU5_U3L15 - Debug forget to update var on reset in UpDown app', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 - Debug if never triggers in UpDown app', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 full clicker app', progression: 'Project: Clicker App'
-assessment 'U5 AP Create Practice onEvent Doesnt Count', progression: '(new) AP Practice Response - Choosing an Abstraction'
+level 'U5 AP Create Practice onEvent Doesnt Count', progression: '(new) AP Practice Response - Choosing an Abstraction', assessment: true
 
-stage 'Unit 5 Assessment 1', lockable: true, flex_category: 'csp5_1'
+lesson 'Unit 5 Assessment 1', lockable: true
 variants
   level 'csp_affirmation_control_5', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_5', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
-assessment 'CSP Unit 5 Cumulative Assessment 1 MC'
+level 'CSP Unit 5 Cumulative Assessment 1 MC', assessment: true
 
-stage 'User Input and Strings', flex_category: 'csp5_1'
+lesson 'User Input and Strings'
 level 'Unit 5 Lesson 6 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'CSPU5_U3L16 Mad Lib Demo', progression: 'Mad Lib Demonstration'
 level 'CSPU5_U3L16 - introStrings', progression: 'Strings in Apps'
@@ -137,13 +140,13 @@ level 'CSPU5_U3L16 Mad Lib toUpper', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib Clear Input', progression: 'Mad Lib Game'
 level 'CSPU5_U3L25 Free Response 3', progression: 'String and Substring Free Response'
 
-stage '"If" Statements Unplugged', flex_category: 'csp5_1'
+lesson '"If" Statements Unplugged'
 level 'Unit 5 Lesson 7 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Big Picture: If-statements', progression: 'Big Picture: if-statements'
 level 'Worked Example: If-statements and Robot', progression: 'Worked Example: if-statements and Robot'
 level 'CSP Algorithms Map', progression: '(new) Algorithms in Programming'
 
-stage 'Boolean Expressions and "If" Statements', flex_category: 'csp5_1'
+lesson 'Boolean Expressions and "If" Statements'
 level 'Unit 5 Lesson 8 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Introduction to Conditionals: Boolean Expressions', progression: 'Introduction to Conditionals: Boolean Expressions'
 level 'Boolean Expressions and Comparison Operators', progression: 'Boolean Expressions and Comparison Operators'
@@ -163,7 +166,7 @@ level 'U5 if-else dropdown movie checker', progression: 'Dropdown Menus'
 level 'U5 if-else dropdown guess dice', progression: 'Dropdown Menus'
 level 'U5 if-else weeekend challenge', progression: 'Dropdown Menus'
 
-stage '"if-else-if" and Conditional Logic', flex_category: 'csp5_1'
+lesson '"if-else-if" and Conditional Logic'
 level 'Unit 5 Lesson 9 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Introduction to Conditionals: if-else-if Statements', progression: 'Introduction to Conditionals: if-else-if Statements'
 level 'How "if-else-if" Works', progression: 'How "if-else-if" Works'
@@ -179,45 +182,46 @@ level 'How Compound Boolean Expressions Work', progression: 'How Compound Boolea
 level 'CSPU5_U3 - Conditionals - Combine AND OR Simple', progression: 'How Compound Boolean Expressions Work'
 level 'U5 compound boolean museum example', progression: 'How Compound Boolean Expressions Work'
 level 'CSPU5_U3 - Conditionals - Combine AND OR and NOT', progression: 'How Compound Boolean Expressions Work'
-assessment 'U5-AP-Algorithm-Does-It-Count', progression: '(new) AP Practice Response - Score the Response'
+level 'U5-AP-Algorithm-Does-It-Count', progression: '(new) AP Practice Response - Score the Response', assessment: true
 
-stage 'Building an App: Color Sleuth', flex_category: 'csp5_1'
-named_level 'Unit 5 Lesson 10 Introduction', progression: 'Lesson Vocabulary & Resources'
-named_level 'Color Sleuth - Planning the App', progression: 'Color Sleuth - Planning the App'
-named_level 'How Set Property Works', progression: 'How Set Property Works'
+lesson 'Building an App: Color Sleuth'
+level 'Unit 5 Lesson 10 Introduction', progression: 'Lesson Vocabulary & Resources', named: true
+level 'Color Sleuth - Planning the App', progression: 'Color Sleuth - Planning the App', named: true
+level 'How Set Property Works', progression: 'How Set Property Works', named: true
 level 'U5 ColorSleuth part 1', progression: 'Using setProperty'
 level 'U5 ColorSleuth part 2 small color change', progression: 'Using setProperty'
-named_level 'How to pick a random button', progression: 'How to Pick a Random Button'
+level 'How to pick a random button', progression: 'How to Pick a Random Button', named: true
 level 'U5 ColorSleuth part 3 pick random button', progression: 'How to Pick a Random Button'
-named_level 'How to make a random color', progression: 'How to Make a Random Color'
+level 'How to make a random color', progression: 'How to Make a Random Color', named: true
 level 'U5 ColorSleuth part 4 make random RGB string', progression: 'How to Make a Random Color'
 level 'U5 ColorSleuth part 5 make setBoard function', progression: 'Functions in Your Color Sleuth App'
 level 'U5 ColorSleuth add global var correct plus console.log', progression: 'Functions in Your Color Sleuth App'
-named_level 'U5 color sleuth check correct', progression: 'Activating Buttons'
+level 'U5 color sleuth check correct', progression: 'Activating Buttons', named: true
 level 'U5 ColorSleuth checkCorrect make global var', progression: 'Activating Buttons'
 level 'U5 ColorSleuth checkCorrect part1 link to event handlers', progression: 'Activating Buttons'
 level 'U5 ColorSleuth checkCorrect part2 add if statement to check correct', progression: 'Activating Buttons'
-named_level 'Color Sleuth - How to switch player turns', progression: 'How to Switch Player Turns'
+level 'Color Sleuth - How to switch player turns', progression: 'How to Switch Player Turns', named: true
 level 'U5 ColorSleuth nextTurn pt1 add var and function and console.log', progression: 'How to Switch Player Turns'
 level 'U5 ColorSleuth nextTurn pt2 update UI to indicate turn', progression: 'How to Switch Player Turns'
-named_level 'Color Sleuth - Keeping score', progression: 'Updating the Score'
+level 'Color Sleuth - Keeping score', progression: 'Updating the Score', named: true
 level 'U5 ColorSleuth scoring pt1 vars function stub console', progression: 'Updating the Score'
 level 'U5 ColorSleuth scoring pt3 update UI for scoring', progression: 'Updating the Score'
-named_level 'Color Sleuth - How does it end?', progression: 'Color Sleuth - How Does It End?'
-named_level 'Project: Finish Color Sleuth', progression: 'Project: Color Sleuth'
-named_level 'Color Sleuth - Epilogue', progression: 'Color Sleuth - Epilogue'
-assessment 'U5 AP Practice Create Abstraction Color Sleuth', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
-assessment 'CSP U5 AP Practice Choose the Algorithm', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
-assessment 'U5 AP Practice Create Algorithm Color Sleuth', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
+level 'Color Sleuth - How does it end?', progression: 'Color Sleuth - How Does It End?', named: true
+level 'Project: Finish Color Sleuth', progression: 'Project: Color Sleuth', named: true
+level 'Color Sleuth - Epilogue', progression: 'Color Sleuth - Epilogue', named: true
+level 'U5 AP Practice Create Abstraction Color Sleuth', progression: '(new) AP Practice Responses - Algorithms and Abstraction', assessment: true
+level 'CSP U5 AP Practice Choose the Algorithm', progression: '(new) AP Practice Responses - Algorithms and Abstraction', assessment: true
+level 'U5 AP Practice Create Algorithm Color Sleuth', progression: '(new) AP Practice Responses - Algorithms and Abstraction', assessment: true
 
-stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
+lesson 'Unit 5 Assessment 2', lockable: true
 variants
   level 'csp_affirmation_control_5', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_5', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
-assessment 'CSP Unit 5 Cumulative Assessment 2 MC'
+level 'CSP Unit 5 Cumulative Assessment 2 MC', assessment: true
 
-stage 'While Loops', flex_category: 'csp5_2'
+lesson_group 'csp5_2', display_name: 'Chapter 2: Programming with Data Structures'
+lesson 'While Loops'
 level 'Unit 5 Lesson 11 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'CSPU5_U3 - Loops - 1', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 2', progression: 'Loops'
@@ -239,9 +243,9 @@ level 'CSPU5_U3 - Loops - plus and minus = operator', progression: 'Loops Contin
 level 'CSPU5_U3 - Loops - minus = operator', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 14', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 15', progression: 'Loops Continued'
-assessment 'csp-pulse-check-survey-7-levelgroup-U5Ch2', progression: 'Quick Check-In'
+level 'csp-pulse-check-survey-7-levelgroup-U5Ch2', progression: 'Quick Check-In', assessment: true
 
-stage 'Loops and Simulations', flex_category: 'csp5_2'
+lesson 'Loops and Simulations'
 level 'Unit 5 Lesson 12 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Make a Hypothesis', progression: 'Make a Hypothesis'
 level 'CSPU5_U3 - Simulation - 1', progression: 'Introduction to Simulations'
@@ -255,7 +259,7 @@ level 'CSPU5_U3 - Simulation - 5', progression: 'Simulation Practice'
 level 'Update your Hypothesis - Part 2', progression: 'Update your Hypothesis - Part 2'
 level 'CSPU5_U3 - Simulation - 6', progression: 'Experiment With Simulation'
 
-stage 'Introduction to Arrays', flex_category: 'csp5_2'
+lesson 'Introduction to Arrays'
 level 'Unit 5 Lesson 13 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Introduction to Lists - Part 1', progression: 'Introduction to Lists - Part 1'
 level 'CSPU5_U3 - Arrays - createFirstArray', progression: 'List Basics'
@@ -288,7 +292,7 @@ level 'CSPU5_U3 - Arrays - favThings keepPlaying', progression: 'Using Lists'
 level 'CSPU5_U3 - Arrays - Wrap Up 1', progression: 'Array Reflection Questions'
 level 'CSPU5_U3 - Arrays - Wrap Up 2', progression: 'Array Reflection Questions'
 
-stage 'Building an App: Image Scroller', flex_category: 'csp5_2'
+lesson 'Building an App: Image Scroller'
 level 'Unit 5 Lesson 14 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'CSPU5_U3 - Keys - Demo App', progression: 'My Favorite Things Demonstration'
 level 'CSPU5_U3L25 - drag out key event', progression: 'Key Event'
@@ -301,10 +305,10 @@ level 'CSPU5_U3 - Keys - Add Image URLs', progression: 'Adding Images Using URLs
 level 'Project - Final Image Scroller', progression: 'Project: Image Scroller'
 level 'CSPU5_U3- Keys - Code Refactoring Exit Ticket', progression: 'My Favorite Things Reflection Question'
 
-stage 'Unit 5 Assessment 3', lockable: true, flex_category: 'csp5_2'
-assessment 'CSP Unit 5 Cumulative Assessment 3 MC'
+lesson 'Unit 5 Assessment 3', lockable: true
+level 'CSP Unit 5 Cumulative Assessment 3 MC', assessment: true
 
-stage 'Processing Arrays', flex_category: 'csp5_2'
+lesson 'Processing Arrays'
 level 'Unit 5 Lesson 15 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Processing Lists with Loops', progression: 'Processing Lists with Loops'
 level 'CSPU5_U3 - Loops And Arrays - Intro For Loop', progression: 'Introduction to for Loops'
@@ -321,7 +325,7 @@ level 'CSPU5_U3 - Loops And Arrays - Make it a Function - add list parameter', p
 level 'CSPU5_U3 - Loops And Arrays - General Search Param', progression: 'Arrays and Functions'
 level 'CSPU5_U3 - Loops And Arrays - Find Min', progression: 'Arrays and Functions'
 
-stage 'Functions with Return Values', flex_category: 'csp5_2'
+lesson 'Functions with Return Values'
 level 'Unit 5 Lesson 16 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Using Output from Functions: The return Command', progression: 'The Return Command'
 level 'CSPU5_U3 - Return Values - useMinVal', progression: 'Using minVal'
@@ -331,8 +335,8 @@ level 'CSPU5_U3 - Return Values - debuggingConstrain', progression: 'Writing and
 level 'CSPU5_U3 - Return Values - constrainTurtle', progression: 'Return Values in Apps'
 level 'CSPU5_U3 - Return Values - wrapTurtle', progression: 'Return Values in Apps'
 
-stage 'Building an App: Canvas Painter', flex_category: 'csp5_2'
-named_level 'Unit 5 Lesson 17 Introduction', progression: 'Lesson Vocabulary & Resources'
+lesson 'Building an App: Canvas Painter'
+level 'Unit 5 Lesson 17 Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'CSPU5_U3 - Canvas - introCanvas', progression: 'Canvas Painter Introduction'
 level 'CSPU5_U3 - Canvas - 200dots', progression: 'Canvas Painter Introduction'
 level 'CSPU5_U3 - Canvas - transparentDots', progression: 'Canvas Painter Introduction'
@@ -351,18 +355,19 @@ level 'CSPU5_U3 - Canvas - movementFunction fix Orig', progression: 'Adding More
 level 'CSPU5_U3 - Canvas - One Dot sprayPaint', progression: 'Adding More Features to Your App'
 level 'CSPU5_U3 - Canvas - sprayPaint', progression: 'Adding More Features to Your App'
 level 'CSPU5_U3 - Canvas - sketch', progression: 'Using Stored Information'
-named_level 'CSPU5_U3 - Canvas - freePlay', progression: 'Project: Canvas Painter'
+level 'CSPU5_U3 - Canvas - freePlay', progression: 'Project: Canvas Painter', named: true
 
-stage 'Unit 5 Assessment 4', lockable: true, flex_category: 'csp5_2'
-assessment 'CSP Unit 5 Cumulative Assessment 4 MC'
+lesson 'Unit 5 Assessment 4', lockable: true
+level 'CSP Unit 5 Cumulative Assessment 4 MC', assessment: true
 
-stage 'Practice PT: Create', flex_category: 'csp5_2'
+lesson 'Practice PT: Create'
 level 'Unit 5 Lesson 18 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Practice Create Performance Task', progression: 'Practice Performance Task: Create'
 
-stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true, flex_category: 'csp5_2'
-assessment 'CSP Cumulative Assess A'
+lesson 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true
+level 'CSP Cumulative Assess A', assessment: true
 
-stage 'Post-Course Survey', flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'Post-Course Survey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles post-course survey'
 level 'Click Here!', progression: 'Participate in a longitudinal study!'

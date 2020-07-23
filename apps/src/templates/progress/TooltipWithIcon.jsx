@@ -11,6 +11,9 @@ const styles = {
   tooltipIcon: {
     paddingRight: 5,
     paddingLeft: 5
+  },
+  tooltipAssessmentIcon: {
+    paddingLeft: 5
   }
 };
 
@@ -23,13 +26,20 @@ export default class TooltipWithIcon extends Component {
   static propTypes = {
     tooltipId: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    includeAssessmentIcon: PropTypes.bool
   };
   render() {
-    const {tooltipId, icon, text} = this.props;
+    const {tooltipId, icon, text, includeAssessmentIcon} = this.props;
     return (
       <ReactTooltip id={tooltipId} role="tooltip" wrapper="span" effect="solid">
         <div style={styles.tooltip}>
+          {includeAssessmentIcon && (
+            <FontAwesome
+              icon="check-circle"
+              style={styles.tooltipAssessmentIcon}
+            />
+          )}
           <FontAwesome icon={icon} style={styles.tooltipIcon} />
           {text}
         </div>

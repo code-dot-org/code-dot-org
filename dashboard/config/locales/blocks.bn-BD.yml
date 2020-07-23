@@ -21,6 +21,11 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,12 +59,28 @@ bn:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": এলোমেলো
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': এলোমেলো
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"DUCK"': হাঁস
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': হাঁস
           LOCATION:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
@@ -121,7 +142,17 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': আকার
@@ -131,6 +162,15 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': এক্স
       Dancelab_whenKey:
         options:
           KEY:
@@ -149,15 +189,14 @@ bn:
           CONDITION:
             '"when"': যখন
             '"while"': যখন
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': সত্যি
-            'false': মিথ্যা
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': আকার
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -170,10 +209,6 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
             '"x"': এক্স
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": এলোমেলো
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -186,11 +221,13 @@ bn:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': গুহা
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': এলোমেলো
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': মরুভূমি
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': রামধনু
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': পানির
+              নিচে
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': শীতকাল
       gamelab_setProp:
         options:
           PROPERTY:
@@ -205,14 +242,6 @@ bn:
           CONDITION:
             '"when"': যখন
             '"while"': যখন
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': আকার
       gamelab_turn:
         options:
           DIRECTION:
@@ -226,13 +255,6 @@ bn:
             '"left"': বামে
             '"right"': ডানে
             '"space"': স্থান
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": উপরে
-            "'down'": নিচে
-            "'left'": বামে
-            "'right'": ডানে
       gamelab_whileKey:
         options:
           KEY:
@@ -273,6 +295,8 @@ bn:
             '"scale"': আকার
       Mikelab_randomColor:
         text: যেকোনো রঙ
+      Mikelab_repeatUntilComplete:
+        text: সবসময় পুনরাবৃত্তি করুন
       Mikelab_setBG:
         options:
           BG:
@@ -322,49 +346,22 @@ bn:
         text: বামে যান
       RyanLab_turnRight:
         text: ডানে যান
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': আকার
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': সত্যি
-            '"false"': মিথ্যা
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': প্রদর্শন করুন
-            '"hide"': লুকিয়ে রাখুন
+            '"random"': এলোমেলো
       binary_move:
         options:
           DIR:

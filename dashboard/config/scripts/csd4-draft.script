@@ -1,63 +1,64 @@
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 
-stage 'Analysis of Design', flex_category: 'csd4_1'
-named_level 'CSD U4L01 SFLP'
+lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
+lesson 'Analysis of Design'
+level 'CSD U4L01 SFLP', named: true
 
-stage 'Understanding Your User', flex_category: 'csd4_1'
-named_level 'CSD U4L02 SFLP'
+lesson 'Understanding Your User'
+level 'CSD U4L02 SFLP', named: true
 
-stage 'User-Centered Design Micro Activity', flex_category: 'csd4_1'
-named_level 'CSD U4L03 SFLP'
+lesson 'User-Centered Design Micro Activity'
+level 'CSD U4L03 SFLP', named: true
 
-stage 'User Interface and Prototype Testing', flex_category: 'csd4_1'
-named_level 'CSD U4L04 SFLP'
+lesson 'User Interface and Prototype Testing'
+level 'CSD U4L04 SFLP', named: true
 
-stage 'Feedback and Prototypes', flex_category: 'csd4_1'
-named_level 'CSD U4L05 SFLP'
+lesson 'Feedback and Prototypes'
+level 'CSD U4L05 SFLP', named: true
 
-stage 'Identifying User Needs', flex_category: 'csd4_1'
-named_level 'CSD U4L06 SFLP'
+lesson 'Identifying User Needs'
+level 'CSD U4L06 SFLP', named: true
 
-stage 'Project - Paper Prototype', flex_category: 'csd4_1'
-named_level 'CSD U4L07 SFLP'
-assessment 'csd-pulse-check-survey-1-levelgroup U4Ch1', progression: 'Reflection'
+lesson 'Project - Paper Prototype'
+level 'CSD U4L07 SFLP', named: true
+level 'csd-pulse-check-survey-1-levelgroup U4Ch1', progression: 'Reflection', assessment: true
 
-stage 'Designing Apps for Good', flex_category: 'csd4_2'
-named_level 'CSD U4L08 SFLP'
+lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
+lesson 'Designing Apps for Good'
+level 'CSD U4L08 SFLP', named: true
 
-stage 'Market Research', flex_category: 'csd4_2'
-named_level 'CSD U4L09 SFLP'
+lesson 'Market Research'
+level 'CSD U4L09 SFLP', named: true
 
-stage 'Paper Prototypes', flex_category: 'csd4_2'
-named_level 'CSD U4L10 SFLP'
-named_level 'Example App Types'
+lesson 'Paper Prototypes'
+level 'CSD U4L10 SFLP', named: true
+level 'Example App Types', named: true
 level 'CSDU4 Quiz App Demo', progression: 'Demo Apps'
 level 'CSDU4 Decision App Demo', progression: 'Demo Apps'
 level 'CSDU4 List App Demo', progression: 'Demo Apps'
 level 'CSDU4 Crowdsource App Demo', progression: 'Demo Apps'
 
-stage 'Prototype Testing', flex_category: 'csd4_2'
-named_level 'CSD U4L11 SFLP'
+lesson 'Prototype Testing'
+level 'CSD U4L11 SFLP', named: true
 
-stage 'Digital Design', flex_category: 'csd4_2'
-named_level 'CSD U4L12 SFLP'
-named_level 'CSD U4 Design Mode Map'
-named_level 'CSDU4 Design Mode Video'
+lesson 'Digital Design'
+level 'CSD U4L12 SFLP', named: true
+level 'CSD U4 Design Mode Map', named: true
+level 'CSDU4 Design Mode Video', named: true
 level 'U4 Model Design 1', progression: 'Build a Screen'
 level 'U4 Model Design 2', progression: 'Build a Screen'
 level 'U4 Model Design 3', progression: 'Build a Screen'
 level 'U4 Model Design 4', progression: 'Build a Screen'
-named_level 'CSD U4 Design Elements Map'
+level 'CSD U4 Design Elements Map', named: true
 level 'U4 Model Design 5', progression: 'Finish a Screen'
 level 'U4 Model Design 6', progression: 'Finish a Screen'
 level 'U4 Model Design 7', progression: 'Finish a Screen'
-named_level 'Design a Screen for your App'
-assessment 'CSD U4 - Design Mode Project', progression: 'App Project: Screen Design'
+level 'Design a Screen for your App', named: true
+level 'CSD U4 - Design Mode Project', progression: 'App Project: Screen Design', assessment: true
 
-stage 'Linking Screens', flex_category: 'csd4_2'
-named_level 'CSD U4L13 SFLP'
+lesson 'Linking Screens'
+level 'CSD U4L13 SFLP', named: true
 level 'CSD U4 Mult Screen Map', progression: 'Adding Screens'
 level 'U4 Model Program 1', progression: 'Adding Screens'
 level 'U4 Model Program 1.5', progression: 'Adding Screens'
@@ -69,16 +70,16 @@ level 'U4 Model Program 3', progression: 'Events'
 level 'CSD U4 Change Screen Map', progression: 'Linking Screens'
 level 'U4 Model Program 4', progression: 'Linking Screens'
 level 'U4 Model Program 5', progression: 'Linking Screens'
-named_level 'CSDU4 Project Import'
-named_level 'CSDU4 Project Events'
+level 'CSDU4 Project Import', named: true
+level 'CSDU4 Project Events', named: true
 
-stage 'Testing the App', flex_category: 'csd4_2'
-named_level 'CSD U4L15 SFLP'
+lesson 'Testing the App'
+level 'CSD U4L15 SFLP', named: true
 
-stage 'Improving and Iterating', flex_category: 'csd4_2'
-named_level 'CSD U4L16 SFLP'
-named_level 'CSDU4 Project Bug Feature'
+lesson 'Improving and Iterating'
+level 'CSD U4L16 SFLP', named: true
+level 'CSDU4 Project Bug Feature', named: true
 
-stage 'App Presentation', flex_category: 'csd4_2'
-named_level 'CSD U4L17 SFLP'
-assessment 'csd-pulse-check-survey-1-levelgroup U4Ch2', progression: 'Reflection'
+lesson 'App Presentation'
+level 'CSD U4L17 SFLP', named: true
+level 'csd-pulse-check-survey-1-levelgroup U4Ch2', progression: 'Reflection', assessment: true

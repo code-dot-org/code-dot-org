@@ -152,21 +152,30 @@ ms:
           untuk membantu saya membuang semua timbunan.
         maze_karel_debug_while: Bagaimanakah anda mengubah program ini untuk membantu
           saya mengisi lubang?
+        turtle_ec_1_10: 'Anda berjaya! Sekarang, lukis apa sahaja yang anda mahu.
+          Antara idea yang menyeronokkan: rajah kayu, snowman atau lingkaran. Juga,
+          cuba blok baru "set lebar". selamat bergembira!'
     video:
       name:
         maze_intro: Maze Intro
         artist_intro: Intro artis
         farmer_intro: Intro petani
+        loop_times: Mengulangi masa blok
+        loop_until: Ulangi sehingga blok
         if: Jika blok
         if_else: Jika/lain blok
         if_else_scrat: Jika/lain blok
         function: Fungsi
+        loop_while: Sementara blok
+        loop_for: Kaunter blok
+        parameters: Fungsi-fungsi dengan parameter
         Unplug2: Pengiraan pemikiran
         Unplug3: Pengaturcaraan kertas graf
         Unplug4: Algoritma
         Unplug5: Fungsi
         Unplug6: Bersyarat
         Unplug8: Abstraksi
+        Unplug9: Pengaturcaraan penyampai
         Unplug10: Internet
         Unplug11: Wrap-up
         C1_happy_maps_unplugged: Peta-peta Gembira
@@ -188,6 +197,16 @@ ms:
         C3_internet: Internet
         C4_loops_zombie: Gelung
         C4_bee_conditional: Lebah Bersyarat
+        C4_function_parameters: Fungsi-fungsi dengan parameter
         C4_conditionals: Bersyarat
+        csp_applab_functions_parameters: Fungsi-fungsi dengan parameter
         csp_applab_loops: Gelung
         CSF_loops_AB: Gelung
+        hoc_dance_warmup: Majlis Tari-Menari - Masa Mula Memanas
+        hoc_dance_congrats: Majlis Tari-Menari - Majlis Bermula!
+        csd_applab_parameters: Fungsi-fungsi dengan parameter
+        hoc_dance_congrats_2019: Majlis Tari-Menari 2019 - Majlis Bermula!
+        hoc_dance_warmup_2019: Majlis Tari-Menari 2019 - Masa Mula Memanas
+        hoc_dance_events_2019: Majlis Tari-Menari 2019 - Acara
+        hoc_dance_measures_2019: Majlis Tari-Menari 2019 - Corak Berirama
+        hoc_dance_properties_2019: Majlis Tari-Menari 2019 - Sifat

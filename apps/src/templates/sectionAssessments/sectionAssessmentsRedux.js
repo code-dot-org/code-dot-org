@@ -1,6 +1,8 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
-import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
-import i18n from '@cdo/locale';
+import {
+  SET_SCRIPT,
+  getSelectedScriptName
+} from '@cdo/apps/redux/scriptSelectionRedux';
 
 export const ALL_STUDENT_FILTER = 0;
 
@@ -24,6 +26,7 @@ export const ALL_STUDENT_FILTER = 0;
 const initialState = {
   assessmentResponsesByScript: {},
   assessmentQuestionsByScript: {},
+  feedbackByScript: {},
   surveysByScript: {},
   isLoading: false,
   assessmentId: 0,
@@ -32,8 +35,9 @@ const initialState = {
 };
 
 // Question types for assessments.
-const QuestionType = {
+export const QuestionType = {
   MULTI: 'Multi',
+  MATCH: 'Match',
   FREE_RESPONSE: 'FreeResponse'
 };
 
@@ -48,12 +52,23 @@ const MultiAnswerStatus = {
   INCORRECT: 'incorrect'
 };
 
-const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
+
+export const ASSESSMENT_FEEDBACK_OPTION_ID = 0;
+
+/* In order for the sorting of the submission timestamp column to work correctly in the SubmissionStatusAssessmentsTable, the submissionTimeStamp field must be a Date. So, we pass in arbitrary Dates in the past to handle when the assessment is in progress or not yet started. */
+export const inProgressFakeTimestamp = new Date(
+  '1990-01-01T20:52:05.000+00:00'
+);
+export const notStartedFakeTimestamp = new Date(
+  '1980-01-01T20:52:05.000+00:00'
+);
 
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_QUESTIONS =
   'sectionAssessments/SET_ASSESSMENTS_QUESTIONS';
+const SET_FEEDBACK = 'sectionAssessments/SET_FEEDBACK';
 const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS =
   'sectionAssessments/START_LOADING_ASSESSMENTS';
@@ -75,6 +90,11 @@ export const setAssessmentQuestions = (scriptId, assessments) => ({
   type: SET_ASSESSMENTS_QUESTIONS,
   scriptId,
   assessments
+});
+export const setFeedback = (scriptId, feedback) => ({
+  type: SET_FEEDBACK,
+  scriptId,
+  feedback
 });
 export const startLoadingAssessments = () => ({
   type: START_LOADING_ASSESSMENTS
@@ -125,10 +145,13 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     );
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
-    Promise.all([loadResponses, loadQuestions, loadSurveys])
+    const loadFeedback = loadFeedbackFromServer(sectionId, scriptId);
+
+    Promise.all([loadResponses, loadQuestions, loadSurveys, loadFeedback])
       .then(arrayOfValues => {
         dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
         dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
+        dispatch(setFeedback(scriptId, arrayOfValues[3]));
         dispatch(setSurveys(scriptId, arrayOfValues[2]));
         dispatch(setInitialAssessmentId(scriptId));
         dispatch(finishLoadingAssessments());
@@ -194,6 +217,15 @@ export default function sectionAssessments(state = initialState, action) {
       }
     };
   }
+  if (action.type === SET_FEEDBACK) {
+    return {
+      ...state,
+      feedbackByScript: {
+        ...state.feedbackByScript,
+        [action.scriptId]: action.feedback
+      }
+    };
+  }
   if (action.type === SET_SURVEYS) {
     return {
       ...state,
@@ -234,11 +266,20 @@ export default function sectionAssessments(state = initialState, action) {
 
 // Returns an array of objects, each indicating an assessment name and it's id
 // for the assessments and surveys in the current script.
-export const getCurrentScriptAssessmentList = state =>
-  computeScriptAssessmentList(
+export const getCurrentScriptAssessmentList = state => {
+  let tempAssessmentList = computeScriptAssessmentList(
     state.sectionAssessments,
     state.scriptSelection.scriptId
   );
+  /* Only add the feedback option to the dropdown for CSD and CSP */
+  if (doesCurrentCourseUseFeedback(state)) {
+    tempAssessmentList = tempAssessmentList.concat({
+      id: ASSESSMENT_FEEDBACK_OPTION_ID,
+      name: 'All teacher feedback in this unit'
+    });
+  }
+  return tempAssessmentList;
+};
 
 // Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentScript = state => {
@@ -295,16 +336,38 @@ export const getCurrentQuestion = state => {
       ? assessmentQuestions[state.sectionAssessments.questionIndex]
       : null;
     if (question) {
-      const answers =
-        question.type === QuestionType.MULTI &&
-        (question.answers || []).map((answer, index) => {
-          return {...answer, letter: ANSWER_LETTERS[index]};
-        });
+      if (question.type === QuestionType.MULTI) {
+        const answers =
+          question.type === QuestionType.MULTI &&
+          (question.answers || []).map((answer, index) => {
+            return {...answer, letter: ANSWER_LETTERS[index]};
+          });
 
-      return {
-        question: question.question_text,
-        answers: answers
-      };
+        return {
+          question: question.question_text,
+          answers: answers,
+          questionType: QuestionType.MULTI
+        };
+      } else if (question.type === QuestionType.FREE_RESPONSE) {
+        return {
+          question: question.question_text,
+          answers: null,
+          questionType: QuestionType.FREE_RESPONSE
+        };
+      } else if (question.type === QuestionType.MATCH) {
+        const answers = question.answers.map(answer => {
+          return answer.text;
+        });
+        const options = question.options.map(option => {
+          return option.text;
+        });
+        return {
+          question: question.question,
+          answers: answers,
+          options: options,
+          questionType: QuestionType.MATCH
+        };
+      }
     } else {
       return emptyQuestion;
     }
@@ -379,6 +442,70 @@ export const getStudentMCResponsesForCurrentAssessment = state => {
   };
 };
 
+/*
+ * Get the match questions in the current assessment
+ */
+export const getMatchStructureForCurrentAssessment = state => {
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+
+  const questionData = assessmentsStructure.questions;
+
+  // Transform that data into what we need for this particular table, in this case
+  // questionStructurePropType structure.
+  return questionData
+    .filter(question => question.type === QuestionType.MATCH)
+    .map(question => {
+      return {
+        id: question.level_id,
+        question: question.question,
+        questionNumber: question.question_index + 1,
+        answers: question.answers,
+        options: question.options
+      };
+    });
+};
+
+/*
+ * Get the match questions responses in the current assessment
+ */
+export const getStudentMatchResponsesForCurrentAssessment = state => {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
+    return {};
+  }
+  const studentId = state.sectionAssessments.studentId;
+  const studentObject = studentResponses[studentId];
+  if (!studentObject) {
+    return {};
+  }
+
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentAssessment =
+    studentObject.responses_by_assessment[currentAssessmentId];
+
+  // If the student has not submitted this assessment, don't display results.
+  if (!studentAssessment) {
+    return {};
+  }
+
+  // Transform that data into what we need for this particular table, in this case
+  // is the structure studentAnswerDataPropType
+  return {
+    id: studentId,
+    name: studentObject.student_name,
+    studentResponses: studentAssessment.level_results
+      .filter(answer => answer.type === QuestionType.MATCH)
+      .map(answer => {
+        return {
+          responses: answer.student_result
+        };
+      })
+  };
+};
+
 // Get an array of objects indicating what each student answered for the current
 // question in view.
 export const getStudentAnswersForCurrentQuestion = state => {
@@ -401,14 +528,16 @@ export const getStudentAnswersForCurrentQuestion = state => {
     const responsesArray = studentAssessment.level_results || [];
     const question = responsesArray[questionIndex];
     if (question) {
-      studentAnswers.push({
-        id: studentId,
-        name: studentObject.student_name,
-        answer: question.student_result
-          ? indexesToAnswerString(question.student_result)
-          : '-',
-        correct: question.status === 'correct'
-      });
+      if (question.type === QuestionType.MULTI) {
+        studentAnswers.push({
+          id: studentId,
+          name: studentObject.student_name,
+          answer: question.student_result
+            ? indexesToAnswerString(question.student_result)
+            : '-',
+          correct: question.status === 'correct'
+        });
+      }
     }
   });
   return studentAnswers;
@@ -459,11 +588,13 @@ export const getAssessmentsFreeResponseResults = state => {
     responsesArray
       .filter(result => result.type === QuestionType.FREE_RESPONSE)
       .forEach((response, index) => {
-        questionsAndResults[index].responses.push({
-          id: studentId,
-          name: studentObject.student_name,
-          response: response.student_result
-        });
+        if (questionsAndResults[index]) {
+          questionsAndResults[index].responses.push({
+            id: studentId,
+            name: studentObject.student_name,
+            response: response.student_result
+          });
+        }
       });
   });
   return questionsAndResults;
@@ -576,7 +707,7 @@ export const isCurrentAssessmentSurvey = state => {
  * assessment and a timestamp that indicates when a student submitted
  * the assessment.
  */
-export const getStudentsMCSummaryForCurrentAssessment = state => {
+export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return [];
@@ -610,25 +741,34 @@ export const getStudentsMCSummaryForCurrentAssessment = state => {
     const studentsAssessment =
       studentsObject.responses_by_assessment[currentAssessmentId];
 
-    // If the student has not submitted this assessment, display empty results.
+    // If the student has not submitted this assessment
     if (!studentsAssessment) {
       return {
         id: studentId,
         name: studentsObject.student_name,
         isSubmitted: false,
-        submissionTimeStamp: i18n.notStarted()
+        inProgress: false,
+        submissionTimeStamp: notStartedFakeTimestamp
       };
     }
     // Transform that data into what we need for this particular table, in this case
     // it is the structure studentOverviewDataPropType
-    const submissionTimeStamp = studentsAssessment.submitted
-      ? new Date(studentsAssessment.timestamp).toLocaleString()
-      : i18n.inProgress();
+
+    /* In progress assessments have a timestamp from the server indicating when the student last worked on the assessment. We don't display that timestamp in the SubmissionStatusAssessmentsTable, but we use it here to check if the assessment has been started. */
+    const inProgress =
+      studentsAssessment.timestamp && !studentsAssessment.submitted;
+    const submissionTimeStamp = inProgress
+      ? inProgressFakeTimestamp
+      : new Date(studentsAssessment.timestamp);
+
     return {
       id: studentId,
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
+      numMatchCorrect: studentsAssessment.match_correct,
+      numMatch: studentsAssessment.match_count,
+      inProgress: inProgress,
       isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: submissionTimeStamp,
       url: studentsAssessment.url
@@ -644,13 +784,15 @@ export const getStudentsMCSummaryForCurrentAssessment = state => {
  */
 export const getExportableSubmissionStatusData = state => {
   let summaryStudentStatus = [];
-  const studentStatus = getStudentsMCSummaryForCurrentAssessment(state);
+  const studentStatus = getStudentsMCandMatchSummaryForCurrentAssessment(state);
 
   studentStatus.forEach(student => {
     summaryStudentStatus.push({
       studentName: student.name,
       numMultipleChoiceCorrect: student.numMultipleChoiceCorrect,
       numMultipleChoice: student.numMultipleChoice,
+      numMatchCorrect: student.numMatchCorrect,
+      numMatch: student.numMatch,
       submissionTimestamp: student.submissionTimeStamp
     });
   });
@@ -716,6 +858,75 @@ export const getMultipleChoiceSectionSummary = state => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
+    });
+  });
+
+  return results;
+};
+
+// Returns an array of objects corresponding to each match question and the
+// number of students who answered each answer.
+export const getMatchSectionSummary = state => {
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+  const questionData = assessmentsStructure.questions;
+  const matchQuestions = questionData.filter(
+    question => question.type === QuestionType.MATCH
+  );
+
+  const results = matchQuestions.map(question => {
+    return {
+      id: question.level_id,
+      question: question.question,
+      questionNumber: question.question_index + 1,
+      options: question.options.map((option, indexO) => {
+        return {
+          option: question.options[indexO].text,
+          id: indexO,
+          totalAnswered: 0,
+          notAnswered: 0,
+          answers: question.answers.map((answer, indexA) => {
+            return {
+              answer: question.answers[indexA].text,
+              isCorrect: indexA === indexO,
+              numAnswered: 0
+            };
+          })
+        };
+      })
+    };
+  });
+
+  // Calculate the number of students who answered each option and fill
+  // in the initialized results structure above.
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
+    return [];
+  }
+
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = parseInt(studentId, 10);
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    const studentAssessment =
+      studentObject.responses_by_assessment[currentAssessmentId] || {};
+
+    const studentResults = studentAssessment.level_results || [];
+    const matchResults = studentResults.filter(
+      result => result.type === QuestionType.MATCH
+    );
+
+    matchResults.forEach((response, questionIndex) => {
+      (response.student_result || []).forEach((answer, index) => {
+        results[questionIndex].options[index].totalAnswered++;
+        if (response.status[index] === 'unsubmitted') {
+          results[questionIndex].options[index].notAnswered++;
+        } else {
+          results[questionIndex].options[index].answers[answer].numAnswered++;
+        }
+      });
     });
   });
 
@@ -861,6 +1072,37 @@ export const getExportableAssessmentData = state => {
 };
 
 /**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are studentName, stage, level, key concept, rubric, comment, timestamp, .
+ */
+export const getExportableFeedbackData = state => {
+  let feedback = [];
+  let feedbackForCurrentScript =
+    state.sectionAssessments.feedbackByScript[state.scriptSelection.scriptId] ||
+    {};
+
+  Object.keys(feedbackForCurrentScript).forEach(feedbackId => {
+    feedbackId = parseInt(feedbackId, 10);
+    feedback.push(feedbackForCurrentScript[feedbackId]);
+  });
+
+  return feedback;
+};
+
+/*
+ * Only show feedback option if its CSD and CSP
+ * */
+export const doesCurrentCourseUseFeedback = state => {
+  const scriptName = getSelectedScriptName(state) || '';
+  return scriptName.includes('csp') || scriptName.includes('csd');
+};
+
+export const isCurrentScriptCSD = state => {
+  const scriptName = getSelectedScriptName(state) || '';
+  return scriptName.includes('csd');
+};
+
+/**
  *  @returns {boolean} true if current studentId has submitted responses for current script.
  */
 export const currentStudentHasResponses = state => {
@@ -964,6 +1206,17 @@ const loadSurveysFromServer = (sectionId, scriptId) => {
   const payload = {script_id: scriptId, section_id: sectionId};
   return $.ajax({
     url: `/dashboardapi/assessments/section_surveys`,
+    method: 'GET',
+    contentType: 'application/json;charset=UTF-8',
+    data: payload
+  });
+};
+
+// Loads comment and rubric feedback.
+const loadFeedbackFromServer = (sectionId, scriptId) => {
+  const payload = {script_id: scriptId, section_id: sectionId};
+  return $.ajax({
+    url: `/dashboardapi/assessments/section_feedback`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload

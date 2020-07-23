@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import VariableFormGroup from '@cdo/apps/code-studio/pd/workshop_survey/VariableFormGroup';
+import 'selectize';
 
 $(document).ready(function() {
   $('#pd-workshop-survey-form')
@@ -106,7 +107,7 @@ function processError(data) {
     )
     .show();
 
-  $('body').scrollTop(0);
+  window.scrollTo(0, 0);
   $('#btn-submit').removeAttr('disabled');
   $('#btn-submit')
     .removeClass('button_disabled')

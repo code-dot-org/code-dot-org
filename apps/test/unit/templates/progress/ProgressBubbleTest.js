@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
@@ -45,12 +45,43 @@ describe('ProgressBubble', () => {
     assert(wrapper.is('div'));
   });
 
-  it('has a green background when we have perfect status', () => {
+  it('shows letter in bubble when level has a letter', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          letter: 'a'
+        }}
+      />
+    );
+
+    expect(wrapper.find('#test-bubble-letter')).to.have.lengthOf(1);
+  });
+
+  it('has a green background when we have perfect status and not assessment', () => {
     const wrapper = shallow(<ProgressBubble {...defaultProps} />);
 
     const tooltipDiv = wrapper.find('div').at(1);
     const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
+  });
+
+  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment,
+          status: LevelStatus.completed_assessment
+        }}
+      />
+    );
+
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
+    assert.equal(div.props().style.backgroundColor, color.level_submitted);
   });
 
   it('has a white background when we are disabled', () => {
@@ -219,6 +250,50 @@ describe('ProgressBubble', () => {
     );
   });
 
+  it('shows assessment icon on assessment level', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+      />
+    );
+
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
+  });
+
+  it('does not show assessment icon on bubble on assessment level, if smallBubble is true', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        smallBubble={true}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+      />
+    );
+
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+  });
+
+  it('does not show assessment icon on bubble on assessment level if hideAssessmentIcon is true', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        hideAssessmentIcon={true}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+      />
+    );
+
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+  });
+
   it('renders a progress pill for unplugged lessons', () => {
     const unpluggedLevel = {
       status: LevelStatus.perfect,
@@ -262,7 +337,7 @@ describe('ProgressBubble', () => {
     });
 
     it('links to the level url', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -277,7 +352,7 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -289,7 +364,7 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the user_id in the queryparams if selectedStudentId is present', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -303,7 +378,7 @@ describe('ProgressBubble', () => {
 
     it('preserves the queryparams of the current location', () => {
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
       );
@@ -314,7 +389,7 @@ describe('ProgressBubble', () => {
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -344,7 +419,7 @@ describe('ProgressBubble', () => {
     it('can be explicitly set to an anchor object', () => {
       const fakeLocation = document.createElement('a');
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
       );

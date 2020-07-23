@@ -1,0 +1,43 @@
+name 'dlp19_overview3'
+title 'Deeper Learning Description'
+description 'description here'
+markdown <<MARKDOWN
+# Deeper Learning Program
+
+## How do I prepare for constructing my response?
+For each module, there are a few ways you can prepare for the reflection prompts. In general, it's important to have a sense of what each lesson in the unit is about and how the lessons fit together. Use the guiding questions in the prework materials to gauge your readiness to answer the reflection prompts.  Space is provided for you to take notes and record your preliminary thoughts before constructing on your response to the prompt.  Any work completed on the prework pages are only visible to you and they are not evaluated by any reviewers.  While it’s important that the final response you submit is your own, we highly encourage you to collaborate in the process of becoming comfortable and familiar with the lesson material.  Feel free to work through and talk about these lessons with another facilitator or teacher. 
+ 
+### **Step 1: Understanding the Curriculum**
+Here are a few tips for getting up to speed on the lessons in the curriculum:
+
+- Review the 2019-20 Curriculum Guide for details on the philosophy of the unit and lessons.
+- Read and do the actual lessons! This means you should work through the core activities in the lessons after you've read the lesson plan. If it exists, watch the teaching tips videos for the lesson.
+- Review the embedded resources that
+- Provide an overview of key elements of the unit as a whole
+
+  * Provide guidance on the connections between lessons
+  * Give insight into underlying CS content in the lessons
+  * Provide space to think about key teaching practices in each unit
+
+### **Step 2: Demonstrate Understanding**
+When you are ready to construct your response,  keep the following in mind:
+
+- **Be conversational**:  Write your response using the exact words you would say as a direct, face-to-face answer to the teacher.  Avoid sentence starters like “I would say…” or  “If I was in this situation,...”.
+- **Be concise**:  The scenario is designed to replicate a brief interaction with a teacher.  Plan a response that would take less than two minutes.
+- **Be concrete**:  The teacher should walk away with actionable guidance that will need little additional work.  Based on your own experience or your work with other teachers, share a best practice, a strategy or a technique that could be implemented in their classroom the next day.
+- **Be connected**:The teacher should also walk away feeling heard, respected and supported.   Personalize your guidance to match the teacher’s need and context while making intentional connections to curriculum, lesson resources and support materials including the teacher forum.
+  
+
+### **Step 3: Grow Community of Knowledge**
+Below are some general guidelines as you leave peer feedback:
+
+- **Approach this process with empathy and assume positive intent.** We are all come to this work with different experiences and knowledge; we hold many diverse perspectives. If we share these with a sense of empathy, we can stand to learn a lot from one another and, in doing so, become stronger collectively.
+- **Leave specific, actionable feedback.** 
+  * If you think that a response misses some key information, ask questions and give suggestions to help the person think beyond what they have already thought about. 
+  * If you think the response was well thought out, take some time to describe why it is strong, rather than simply pointing out that it is a good answer.
+- **When leaving critical feedback, it's helpful to phrase your suggestions in "I" statements.**
+   * *'I think you should also consider this portion of the question…’* 
+   * *'I think this response is on the right track but I wonder about...’*
+
+
+MARKDOWN

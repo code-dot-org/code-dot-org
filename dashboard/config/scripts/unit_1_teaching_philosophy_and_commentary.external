@@ -8,7 +8,8 @@ markdown <<MARKDOWN
 ### Content and Teaching Strategies
 
 <img src="https://images.code.org/190076e990942f564a5af581540252ce-image-1474651955809.31.15 PM.png" style=" width:300px; float:right; margin-left:30px">
-The purpose of the lessons in this chapter is to acquaint students with a fundamental truth about computers: all information on computers is represented and stored in binary.  Even though a lot of people can regurgitate that fact, very few actually get a hands-on experience that exposes why that is true and how it works. 
+
+The purpose of the lessons in this chapter is to acquaint students with a fundamental truth about computers: all information on computers is represented and stored in binary.  Even though a lot of people can regurgitate that fact, very few actually get a hands-on experience that exposes why that is true and how it works.
 
 **Teaching Binary and the Internet**
 Our approach to teaching binary is a bit unconventional.  We aim to simultaneously tackle teaching binary and the fundamentals of how the Internet works. Specifically, we teach the need to represent information in binary as an engineering constraint imposed by the need for two computers connected by a single wire to send and receive data.  If the wire can only hold one of two states (on/off, light/dark, etc.) then how can we send information from one machine to another such as numbers, text, images and sounds?
@@ -22,8 +23,9 @@ In computer science it’s common to move between different representations of n
 
 ### Content and Teaching Strategies
 
-**Teaching Internet Protocols**
 <img src="https://images.code.org/dce30f4406256be09bcd6ae068bce6c0-image-1462406387384.gif" style=" width:300px; float:right; margin-left:30px">
+
+**Teaching Internet Protocols**
 Again we lean on the strategy of concept invention by asking students to invent a solution to an Internet problem (usually with a protocol).  Students will invent versions of protocols that parallel some of the most important protocols on the Internet such as: IP, TCP, DNS and HTTP/HTTPS. The general pattern again is: ABC - Activity Before Concept, CBV - Concept Before Vocabulary.  We want students to solve a problem to get the concept, and then reveal what that idea is actually called in the real world.
 
 For example, in lesson 9 - Internet Addressing, students use a version of the Internet Simulator where every message is broadcast to everyone else. To know where messages are coming from and going to we need to invent an addressing protocol.  Through this, students will figure out the basic requirements of an typical IP packet and when the real IP packet structure is revealed they will have an intuitive grasp of why it is that way.  The same should be true for the concepts of Routing, TCP, DNS and HTTP.

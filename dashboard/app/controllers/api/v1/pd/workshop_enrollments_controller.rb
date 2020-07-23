@@ -1,7 +1,13 @@
 class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include Api::CsvDownload
   include ::Pd::WorkshopConstants
-  load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel']
+  load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel', 'move']
+
+  before_action :authorize_update_scholarship_info!, only: 'update_scholarship_info'
+  def authorize_update_scholarship_info!
+    @enrollment = Pd::Enrollment.find(params[:enrollment_id])
+    authorize! :update_scholarship_info, @enrollment
+  end
 
   RESPONSE_MESSAGES = {
     SUCCESS: "success".freeze,
@@ -72,6 +78,13 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
   end
 
+  # POST /api/v1/pd/enrollment/:enrollment_id/scholarship_info
+  def update_scholarship_info
+    @enrollment.update_scholarship_status(params[:scholarship_status])
+    serialized_enrollment = Api::V1::Pd::WorkshopEnrollmentSerializer.new(@enrollment).attributes
+    render json: serialized_enrollment
+  end
+
   # DELETE /api/v1/pd/workshops/1/enrollments/1
   def destroy
     enrollment = @workshop.enrollments.find_by(id: params[:id])
@@ -89,6 +102,23 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
   end
 
+  # POST /api/v1/pd/enrollments/move
+  def move
+    return head :forbidden unless current_user.workshop_admin?
+    Pd::Enrollment.transaction do
+      enrollments = Pd::Enrollment.where(id: params[:enrollment_ids])
+      Pd::Attendance.where(pd_enrollment_id: enrollments).delete_all
+      enrollments.each {|e| e.update!(pd_workshop_id: params[:destination_workshop_id])}
+    end
+  end
+
+  # POST /api/v1/pd/enrollments/edit
+  def edit
+    return head :forbidden unless current_user.workshop_admin?
+    enrollment = Pd::Enrollment.find_by(id: params[:id])
+    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name])
+  end
+
   private
 
   def enrollment_params
@@ -103,7 +133,14 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       csf_courses_planned: params[:csf_courses_planned],
       csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide],
       previous_courses: params[:previous_courses],
-      replace_existing: params[:replace_existing]
+      replace_existing: params[:replace_existing],
+      csf_intro_intent: params[:csf_intro_intent],
+      csf_intro_other_factors: params[:csf_intro_other_factors],
+      # params only collected in CSP returning teachers workshop
+      years_teaching: params[:years_teaching],
+      years_teaching_cs: params[:years_teaching_cs],
+      taught_ap_before: params[:taught_ap_before],
+      planning_to_teach_ap: params[:planning_to_teach_ap]
     }
   end
 

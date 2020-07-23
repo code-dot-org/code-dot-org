@@ -26,10 +26,18 @@ uz:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": tasodifiy
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': tasodifiy
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -80,19 +88,10 @@ uz:
         options:
           KEY:
             '"space"': koinot
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': rost
-            'false': yolgʻon
       gamelab_keyPressed:
         options:
           KEY:
             '"space"': koinot
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": tasodifiy
       gamelab_randColor:
         text: tasodifiy rang
       gamelab_randomColor:
@@ -100,11 +99,12 @@ uz:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': g‘or
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': tasodifiy
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sahro
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kamalak
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': suvosti
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': qish
       gamelab_whenKey:
         options:
           KEY:
@@ -119,19 +119,22 @@ uz:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
-      aalab_keyPressed:
+      aalab_goToScene:
         options:
-          KEY:
-            '"space"': koinot
-      aalab_setBG:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
-      aalab_setCollidable:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
         options:
-          VAL:
-            '"true"': rost
-            '"false"': yolgʻon
+          OPTION:
+            '"random"': tasodifiy
       binary_whenKey:
         options:
           KEY:

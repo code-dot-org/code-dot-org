@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-export default class scriptsInCourseEditor extends Component {
+export default class CourseScriptsEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,

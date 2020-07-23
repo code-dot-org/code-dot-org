@@ -4,12 +4,112 @@ id:
     course:
       name:
         csp-2017:
+          assignment_family_title: Prinsip Ilmu Komputer
+          title: Prinsip Ilmu Komputer ('17-'18)
+          version_title: "'17-'18"
+          description_student: Pada musim gugur 2016, College Board meluncurkan kelas
+            terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan
+            kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang
+            mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia.
+            Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan
+            para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat
+            yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan
+            komputasi serta peluang-peluang multidisipliner lainnya.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kelas
+            terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan
+            kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang
+            mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia.
+            Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan
+            para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat
+            yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan
+            komputasi serta peluang-peluang multidisipliner lainnya.
           description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
+        csd-2017:
+          assignment_family_title: Penemuan Ilmu Komputer
+          title: Penemuan Ilmu Komputer ('17-'18)
+          version_title: "'17-'18"
+          description_student: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas
+            ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik
+            dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi,
+            pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas
+            ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik
+            dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi,
+            pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_short: Pengantar kelas ilmu komputer yang akan memacu siswa
+            Anda untuk menciptakan artefak yang otentik.
         allthethingscourse:
+          title: kelasegalaahal
           description_short: Ini adalah kursus untuk semua bidang
           description_student: Ini adalah kursus untuk semua bidang dan memiliki penjelasan
             yang mudah bagi siswa
           description_teacher: Ini adalah kursus untuk semua bidang dan memiliki penjelasan
             yang mudah bagi guru
+        csd-2018:
+          assignment_family_title: Penemuan Ilmu Komputer
+          title: Penemuan Ilmu Komputer ('18-'19)
+          version_title: "'18-'19"
+          description_short: Pengantar kelas ilmu komputer yang akan memacu siswa
+            Anda untuk menciptakan artefak yang otentik.
+          description_student: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas
+            ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik
+            dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi,
+            pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas
+            ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik
+            dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi,
+            pemecahan masalah, dan aktivitas yang menyenangkan.
         csp-2018:
+          assignment_family_title: Prinsip Ilmu Komputer
+          title: Prinsip Ilmu Komputer ('18-'19)
+          version_title: "'18-'19"
           description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
+          description_student: Pada musim gugur 2016, College Board meluncurkan kelas
+            terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan
+            kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang
+            mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia.
+            Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan
+            para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat
+            yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan
+            komputasi serta peluang-peluang multidisipliner lainnya.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kelas
+            terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan
+            kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang
+            mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia.
+            Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan
+            para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat
+            yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan
+            komputasi serta peluang-peluang multidisipliner lainnya.
+        csp-2019:
+          title: Prinsip Ilmu Komputer ('19-'20)
+          version_title: "'19-'20"
+          description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
+          description_student: Pada musim gugur 2016, College Board meluncurkan kelas
+            terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan
+            kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang
+            mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia.
+            Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan
+            para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat
+            yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan
+            komputasi serta peluang-peluang multidisipliner lainnya.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kelas
+            terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan
+            kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang
+            mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia.
+            Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan
+            para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat
+            yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan
+            komputasi serta peluang-peluang multidisipliner lainnya.
+        csd-2019:
+          title: Penemuan Ilmu Komputer ('19-'20)
+          version_title: "'19-'20"
+          description_short: Pengantar kelas ilmu komputer yang akan memacu siswa
+            Anda untuk menciptakan artefak yang otentik.
+          description_student: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas
+            ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik
+            dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi,
+            pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas
+            ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik
+            dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi,
+            pemecahan masalah, dan aktivitas yang menyenangkan.

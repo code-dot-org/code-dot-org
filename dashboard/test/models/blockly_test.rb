@@ -478,7 +478,7 @@ XML
     custom_i18n = {
       'data' => {
         'authored_hints' => {
-          "#{level_name}_authored_hint" => {
+          level_name => {
             "first": "first test markdown",
             "second": "second test markdown",
           }

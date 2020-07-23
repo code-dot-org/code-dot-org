@@ -59,22 +59,28 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "encrypted_examples": "zYD0J5k11KP2a4tlydOrmCxiLKWNqhGRno/9dric58Jbk5APpSADQTSnWaJu\nLRKK\n",
+    "encrypted_examples": "B4+Qg4155ktfUYjYH73GGYd65t4++x4tn7F+kxwfkaprE3S8BwlfghkzH7pC\nlCM0VxlUXprrvQPIq7XHmlmhcw==\n",
     "parent_level_id": 11333,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/javascript/if-statements/",
       "/docs/concepts/game-lab/sprites/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
-    "mini_rubric": "false",
+    "mini_rubric": "true",
     "hide_share_and_remix": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "encrypted": "false",
+    "rubric_key_concept": "Create and modify objects (sprites) to manage the complexity of on-screen elements. ",
+    "rubric_performance_level_1": "The horse turns into a unicorn when the rainbow touches it.  There are no extra blocks in the program.",
+    "rubric_performance_level_2": "The program reacts in some way when the rainbow touches the horse.",
+    "rubric_performance_level_3": "The program uses a conditional and detects when the rainbow touches the horse, but there are enough errors that it does not react in any way.",
+    "rubric_performance_level_4": "The program does not detect when the rainbow touches the horse, or there is no conditional in the program.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 17:12:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 17:12:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 08:00:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 22:48:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

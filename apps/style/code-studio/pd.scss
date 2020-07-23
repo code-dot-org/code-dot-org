@@ -32,6 +32,21 @@
   @include buttons();
   @include user-selects(auto);
 
+  // Markdown rendered with SafeMarkdown in LabeledFormComponent is wrapped in
+  // a <div> and uses <p> tags for each paragraph, but the forms system
+  // expects this content to be entirely inline, and so we provide this styling.
+  .inline_markdown {
+    display: inline;
+
+    div {
+      display: inline;
+    }
+
+    p {
+      display: inline;
+    }
+  }
+
   a:not(.btn) {
     color: $purple;
     font-family: "Gotham 7r";
@@ -145,5 +160,36 @@ form .form-required-field {
     font-weight: normal;
     color: #0094ca;
     cursor: pointer;
+  }
+}
+
+.workshop-attendance-recorded {
+  font-size: 14px;
+  width: 70%;
+  line-height: 1.5;
+
+  .left {
+    float: left;
+    width: 28%;
+  }
+
+  .right {
+    float: left;
+    width: 72%;
+    padding-top: 20px;
+  }
+
+  .checkmark {
+    font-size: 160px;
+    color: $purple;
+  }
+
+  .paragraph {
+    margin-bottom: 15px;
+  }
+
+  button {
+    margin-left: 0px;
+    padding: 10px 20px 10px 20px;
   }
 }

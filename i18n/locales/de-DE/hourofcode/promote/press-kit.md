@@ -1,9 +1,8 @@
 ---
-title: <%= hoc_s(:title_press_kit).inspect %>
-layout: wide
-nav: promote_nav
+title: Pressemappe
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to attract media to your Hour of Code event
 
@@ -18,17 +17,17 @@ nav: promote_nav
 - Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
 - Ask a school staff member or volunteer to take photos to share online or send to press.
 - Schreibe über die Hour of Code auf Deiner Website oder Schulzeitung. Veröffentliche die Details der Veranstaltung , lade Fotos hoch und berichte von den Aktivitäten der Schüler.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ## Step-by-step guide
 
 ### 1. Plan your event
 
 - Plan an assembly to kick off the Hour of Code.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents and ask them to spread the word.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
+- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these videos](%= resolve_url('/promote/resources#videos') %) to inspire students. <br />
+- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
 
 ### 2. Identify specific reporters that cover education or local events
 
@@ -36,7 +35,7 @@ Like local newspapers, TV station or radio stations, or blogs. <br />
 
 ### 3. Contact local media
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](%= resolve_url('/promote/press-kit#sample-emails') %)**.
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
 Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
@@ -62,7 +61,7 @@ Computers are everywhere, changing every industry on the planet, but fewer than 
 
 Mit der "Hour of Code" findet sich die Informatik auf Homepages von Google, MSN, Yahoo!, und Disney. Über 100 Partner unterstützen zusammen diese Bewegung. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Deshalb macht jeder einzelne der Schüler [SCHOOL NAME] bei der grössten Bildungsveranstaltung der Geschichte mit: Stunde des Codes, während der Computer Science Education Week (3. -9. Dezember).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
@@ -76,11 +75,11 @@ I look forward to being in touch. <br />
 
 "The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
 
-#### About Code.org
+#### Über Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote/resources#sample-emails') %).
+Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-<%= view :signup_button %>
+{{ signup_button }}

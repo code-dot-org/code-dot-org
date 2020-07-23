@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {combineReducers, createStore} from 'redux';
 import responsive, {

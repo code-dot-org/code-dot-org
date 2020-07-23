@@ -1,18 +1,27 @@
----
 fa:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          MOVE1:
+            MOVES.Rest: هیچکدام
+          MOVE2:
+            MOVES.Rest: هیچکدام
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': ثانیه
       Dancelab_changeMoveEachLR:
         options:
+          MOVE:
+            MOVES.Rest: هیچکدام
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: هیچکدام
           DIR:
             '1': "→"
             "-1": "←"
@@ -21,13 +30,22 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
       Dancelab_doMoveEachLR:
         options:
+          MOVE:
+            MOVES.Rest: هیچکدام
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: هیچکدام
           DIR:
             '1': "→"
             "-1": "←"
@@ -44,6 +62,10 @@ fa:
         options:
           UNIT:
             '"seconds"': ثانیه
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: هیچکدام
       Dancelab_ifTime:
         options:
           UNIT:
@@ -54,12 +76,33 @@ fa:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": در هم
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': الماس
             '"random"': در هم
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"CAT"': گربه
+            '"DOG"': سگ
+            '"DUCK"': اردک
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"CAT"': گربه
+            '"DOG"': سگ
+            '"DUCK"': اردک
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
@@ -87,9 +130,18 @@ fa:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': الماس
             '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -106,6 +158,14 @@ fa:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -121,7 +181,17 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -131,6 +201,16 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': الماس
+            '"x"': طول (x)
       Dancelab_whenKey:
         options:
           KEY:
@@ -149,15 +229,14 @@ fa:
           CONDITION:
             '"when"': وقتی
             '"while"': '"while"'
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': صحیح
-            'false': غلط
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': اندازه
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -170,10 +249,6 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": در هم
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -186,11 +261,12 @@ fa:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': غار
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شهر
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': در هم
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': بیابان
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': رنگین کمان
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': زیر آب
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': زمستان
       gamelab_setProp:
         options:
           PROPERTY:
@@ -205,14 +281,6 @@ fa:
           CONDITION:
             '"when"': وقتی
             '"while"': '"while"'
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
       gamelab_turn:
         options:
           DIRECTION:
@@ -226,13 +294,6 @@ fa:
             '"left"': سمت چپ
             '"right"': سمت راست
             '"space"': فضا
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": بالا
-            "'down'": پایین
-            "'left'": سمت چپ
-            "'right'": سمت راست
       gamelab_whileKey:
         options:
           KEY:
@@ -271,8 +332,14 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: هیچکدام
       Mikelab_randomColor:
         text: رنگ تصادفی
+      Mikelab_repeatUntilComplete:
+        text: تکرار بی‌پایان
       Mikelab_setBG:
         options:
           BG:
@@ -326,49 +393,22 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
-      aalab_changePropByFlexible:
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': اندازه
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': وقتی
-            '"while"': '"while"'
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': وقتی
-            '"while"': '"while"'
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': وقتی
-            '"while"': '"while"'
-          KEY:
-            '"up"': بالا
-            '"down"': پایین
-            '"left"': سمت چپ
-            '"right"': سمت راست
-            '"space"': فضا
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شهر
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': صحیح
-            '"false"': غلط
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': نشان می دهد
-            '"hide"': پنهان کردن
+            '"random"': در هم
       binary_move:
         options:
           DIR:

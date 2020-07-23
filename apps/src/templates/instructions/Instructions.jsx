@@ -34,37 +34,46 @@ class Instructions extends React.Component {
     onResize: PropTypes.func
   };
 
+  /**
+   * Body logic is as follows:
+   *
+   * If we have been given long instructions, render a div containing
+   * that, optionally with inline-styled margins. We don't need to
+   * worry about the title in this case, as it is rendered by the
+   * Dialog header
+   *
+   * Otherwise, render the title and up to two sets of instructions.
+   * These instructions may contain spans and images as determined by
+   * substituteInstructionImages
+   */
+  renderMainBody() {
+    if (this.props.longInstructions) {
+      return (
+        <MarkdownInstructions
+          markdown={this.props.longInstructions}
+          onResize={this.props.onResize}
+          inTopPane={this.props.inTopPane}
+        />
+      );
+    } else {
+      // Note: In this case props.shortInstructions might be undefined, but we
+      // still want to render NonMarkdownInstructions to get the puzzle title
+      return (
+        <NonMarkdownInstructions
+          puzzleTitle={this.props.puzzleTitle}
+          shortInstructions={this.props.shortInstructions}
+          instructions2={this.props.instructions2}
+        />
+      );
+    }
+  }
+
   render() {
-    // Body logic is as follows:
-    //
-    // If we have been given long instructions, render a div containing
-    // that, optionally with inline-styled margins. We don't need to
-    // worry about the title in this case, as it is rendered by the
-    // Dialog header
-    //
-    // Otherwise, render the title and up to two sets of instructions.
-    // These instructions may contain spans and images as determined by
-    // substituteInstructionImages
     return (
       <div
         style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
       >
-        {this.props.longInstructions && (
-          <MarkdownInstructions
-            markdown={this.props.longInstructions}
-            onResize={this.props.onResize}
-            inTopPane={this.props.inTopPane}
-          />
-        )}
-        {/* Note: In this case props.shortInstructions might be undefined, but we
-          still want to render NonMarkdownInstructions to get the puzzle title */
-        !this.props.longInstructions && (
-          <NonMarkdownInstructions
-            puzzleTitle={this.props.puzzleTitle}
-            shortInstructions={this.props.shortInstructions}
-            instructions2={this.props.instructions2}
-          />
-        )}
+        {this.renderMainBody()}
 
         {this.props.inputOutputTable && (
           <InputOutputTable data={this.props.inputOutputTable} />

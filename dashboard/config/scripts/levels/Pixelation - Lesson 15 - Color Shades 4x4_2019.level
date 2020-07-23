@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "short_instructions": "We start you out with the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray.",
-    "long_instructions": "# Pixelation: Task 3\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\r\n\r\n**Directions:**\r\nWe start you out with the 4x4 image Maddie created in the video.\r\n\r\nYour task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  \r\n\r\nHere are the requirements:\r\n\r\n  * Row 1 - fill with shades of red. \r\n  * Row 2 - shades of green. \r\n  * Row 3 - shades of blue. \r\n  * Row 4 - shades of gray.\r\n",
+    "long_instructions": "# Pixelation: Task 3\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\r\n\r\n**Directions:**\r\nWe start you out with the 4x4 image Maddie created in the video.\r\n\r\nYour task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  \r\n\r\nHere are the requirements:\r\n\r\n  * Row 1 - fill with shades of red. \r\n  * Row 2 - shades of green. \r\n  * Row 3 - shades of blue. \r\n  * Row 4 - shades of gray.\r\n",
     "version": "3",
     "hex": "true",
     "data": "04\r\n04\r\n0C\r\nF00 0AA",

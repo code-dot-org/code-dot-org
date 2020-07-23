@@ -1,0 +1,14 @@
+name 'OPD-K5 using lesson plans_2020'
+title 'Using Lesson Plans'
+description 'description here'
+markdown <<MARKDOWN
+# Teaching practice: Using lesson plans
+
+<img src="https://images.code.org/b807a1f8c3f52d6c20a656b7a042635c-image-1592841876713.png" class="level-image">
+
+## What is the benefit of following a lesson plan (even for plugged lessons)?
+
+Plugged lesson plans typically have many of the same features as their unplugged counterparts. Lessons will begin and end with discussions or activities that help motivate and synthesize learning. Key moments for you to check in with your students are noted in lesson plans. Students will use a computer, but the ways students interact with each other and your role as the teacher are still important considerations.
+
+Lesson plans provide opportunities to introduce concepts, have students reflect on what they've learned, and collaborate
+MARKDOWN

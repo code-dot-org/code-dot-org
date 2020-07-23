@@ -62,7 +62,7 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
 
   test 'facilitator required fields' do
     facilitator = create :user, name: "Facili"
-    workshop = create :pd_workshop, facilitators: [facilitator]
+    workshop = create :workshop, facilitators: [facilitator]
 
     survey = Pd::TeacherconSurvey.new
     survey.pd_enrollment = create :pd_enrollment,
@@ -103,7 +103,7 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
   test 'to summary for faciliator takes specific facilitator fields' do
     facilitator_1 = create :facilitator, name: 'Facilitator Kirk'
     facilitator_2 = create :facilitator, name: 'Facilitator Picard'
-    workshop = create :pd_workshop, facilitators: [facilitator_1, facilitator_2]
+    workshop = create :workshop, facilitators: [facilitator_1, facilitator_2]
 
     hash = build :pd_teachercon_survey_hash
     hash[:whoFacilitated] = [facilitator_1.name, facilitator_2.name]

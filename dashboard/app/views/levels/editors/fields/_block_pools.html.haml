@@ -1,0 +1,13 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#blockPools"}}
+  Block Pools
+
+#blockPools.in.collapse
+
+  = f.label :block_pools
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple).
+  = f.select :block_pools, (Block.all_pool_names + (@level.block_pools || [])).uniq.sort, {}, {multiple: true}

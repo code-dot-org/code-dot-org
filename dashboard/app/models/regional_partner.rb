@@ -5,7 +5,6 @@
 #  id                 :integer          not null, primary key
 #  name               :string(255)      not null
 #  group              :integer
-#  contact_id         :integer
 #  urban              :boolean
 #  attention          :string(255)
 #  street             :string(255)
@@ -19,10 +18,6 @@
 #  updated_at         :datetime         not null
 #  deleted_at         :datetime
 #  properties         :text(65535)
-#
-# Indexes
-#
-#  index_regional_partners_on_name_and_contact_id  (name,contact_id) UNIQUE
 #
 
 require 'state_abbr'
@@ -55,6 +50,7 @@ class RegionalPartner < ActiveRecord::Base
     apps_close_date_csd_facilitator
     apps_close_date_csp_teacher
     apps_close_date_csp_facilitator
+    apps_priority_deadline_date
     applications_principal_approval
     applications_decision_emails
     link_to_partner_application
@@ -98,6 +94,15 @@ class RegionalPartner < ActiveRecord::Base
     end
   end
 
+  # If there is a priority deadline date and it is still upcoming, then return it.  Otherwise return nil.
+  def upcoming_priority_deadline_date
+    if apps_priority_deadline_date && apps_priority_deadline_date > Time.zone.now
+      Date.parse(apps_priority_deadline_date).strftime('%B %e, %Y')
+    else
+      nil
+    end
+  end
+
   def summer_workshops_earliest_apps_open_date
     if apps_open_date_csd_teacher || apps_open_date_csp_teacher
       Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].compact.min).strftime('%B %e, %Y')
@@ -114,6 +119,7 @@ class RegionalPartner < ActiveRecord::Base
     pd_workshops.
       future.
       where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).
+      order_by_scheduled_start.
       map {|w| w.slice(:location_name, :location_address, :workshop_date_range_string, :course)}
   end
 
@@ -142,17 +148,9 @@ class RegionalPartner < ActiveRecord::Base
   # Since contact_email is defined dynamically by SerializedProperties, that will take precedence,
   # and we can't 'override' it in this class.
   # In order to fallback to another value when contact_email is missing, we need a wrapper method:
-  # @return contact_email, or the first program manager's email, or the contact user's email
+  # @return contact_email, or the first program manager's email
   def contact_email_with_backup
-    contact_email || program_managers&.first&.email || contact&.email
-  end
-
-  def contact
-    User.find_by(id: contact_id) || program_managers.first
-  end
-
-  def contact=(user)
-    self.contact_id = user.try(:id)
+    contact_email || program_managers&.first&.email
   end
 
   # find a Regional Partner that services a particular region
@@ -183,9 +181,13 @@ class RegionalPartner < ActiveRecord::Base
   # and we don't find a partner with that ZIP, we geocode that ZIP to get a state and try with that
   # state.
   # @param [String] zip_code
-  def self.find_by_zip(zip_code)
+  def self.find_by_zip(zip_code_raw)
     partner = nil
     state = nil
+
+    # Force to be a string, ignore "-" and anything after it,
+    # and only allow digits 0-9.
+    zip_code = zip_code_raw.to_s.split("-")[0]&.tr('^0-9', '')
 
     if RegexpUtils.us_zip_code?(zip_code)
       # Try to find the matching partner using the ZIP code.
@@ -198,7 +200,7 @@ class RegionalPartner < ActiveRecord::Base
             # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
             # See https://github.com/alexreisner/geocoder#error-handling
             Retryable.retryable(on: StandardError) do
-              state = Geocoder.search({zip: zip_code})&.first&.state_code
+              state = Geocoder.search(zip_code)&.first&.state_code
             end
           end
         rescue StandardError => e

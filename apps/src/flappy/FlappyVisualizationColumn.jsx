@@ -15,7 +15,7 @@ const FlappyVisualizationColumn = ({showFinishButton}) => {
       <GameButtons>
         {showFinishButton && (
           <div id="right-button-cell">
-            <button id="rightButton" className="share">
+            <button type="button" id="rightButton" className="share">
               <img src="/blockly/media/1x1.gif" />
               {msg.finish()}
             </button>

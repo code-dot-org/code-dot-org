@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 fil:
   errors:
     messages:
@@ -14,10 +26,11 @@ fil:
     attributes:
       user:
         name: 'Ipapakita na Pangalan'
-        name_example: 'Naka-display na Pangalan<br/>(e.g. Cool Coder o Jane S.)'
+        name_example: 'Naka-display na Pangalan (e.g. Cool Coder o Jane S.)'
         email: 'Email'
         parent_email: 'Email Magulang/Tagapangalaga'
         personal_email: "Personal na email address <a href=\"%{url}\">(mag-click dito kung wala ka pang email address)</a>"
+        personal_email_markdown: "Personal na email address [(mag-click dito kung wala ka pang email address)](%{url})"
         username: 'Username'
         password: 'Password'
         password_confirmation: 'Kumpirmahin ang password'
@@ -28,6 +41,7 @@ fil:
         edit_header: 'Palitan ang Account Details'
         error:
           future: hindi maaari sa hinaharap
+  beta: "beta"
   hello: "Mabuhay!"
   welcome_back: "Maligayang pagbabalik, %{name}"
   your_professional_learning_plan: "Iyong Propersyonal na Plano sa Pag-aaral"
@@ -41,13 +55,10 @@ fil:
   okay: "Okey"
   or: "o"
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Magdagdag ng guro:'
       placeholder: "Section Code (ABCDEF)"
-      instructions: "Pakipasok ang code na ibinahagi sa iyo ng iyong guro. Ito ay 6 na letrang code tulad ng \"ABCDEF\"."
       instructions_short: "Ilagay ang iyong 6 na letra na section code"
-    submit: 'Magdagdag ng guro'
   add_hint_form:
     placeholder: 'Maaaring ilagay ang iyong hint dito'
     submit: 'Magdagdag ng hint'
@@ -64,7 +75,6 @@ fil:
   of: "ng"
   more: "MARAMI"
   less: "KAUNTI"
-  beta: "beta"
   try_hoc: "Subukan ang Hour of Code, i-click dito >> "
   try_k8intro: "Subukan ang pang K-8 na Kursong Introduksyon sa Computer Science (15-25 oras)"
   k8intro: "K-8 Intro to Computer Science Course (15-25 oras)"
@@ -76,8 +86,6 @@ fil:
   auth:
     sign_in_with: 'Mag sign in gamit ang %{provider}'
     signed_in: 'Signed in!'
-    signed_out: 'Nag-sign out ka sa <a href="%{url}"> Code.org </a>.'
-    sign_out_of: 'Gumamit ka ng %{provider} para mag sign-in ka. <a href="%{url}">Pindutin ito</a> para ma sign out ka kay %{provider}.'
     already_signedup: 'Naka signed up na?'
     notyet_signedup: "Hindi pa nakakasali?"
     google_oauth2: 'Account sa Google'
@@ -95,9 +103,11 @@ fil:
     student_count: '%{count} na istudyante na sumali dito.'
     teacher_count: '%{count} na guro na sumali dito.'
     overview: 'Mag-sign up para sa isang account upang masundan ang iyong progreso o i-manage ang iyong silid-aralan. <a href="/">Pwede kang mag-browse ng iba''t ibang stages at palaisipan</a> nang walang account, pero kailangan mong mag-sign up para i-save ang iyong progreso at mga proyekto.'
+    overview_markdown: 'Mag-sign up para sa isang account upang masundan ang iyong progreso o i-manage ang iyong silid-aralan. [Pwede kang mag-browse ng iba''t ibang stages at palaisipan](/) nang walang account, pero kailangan mong mag-sign up para i-save ang iyong progreso at mga proyekto.'
     hoc_already_signed_up_heading: 'Magsimula nang hindi nagla-login'
     hoc_already_signed_up_content: 'Ikaw ay naka-sign up para magturo ng Hour of Code! Ikaw at ang iyong mga mag-aaral ay hindi kailangang mag-sign in sa Code Studio para lumahok sa event na ito. Para magsimula <a href="%{learn_url}">pumili ng tutorial</a> para sa iyong silid-aralan at ibahagi ang link sa kanila.<br/><br/>Kung na-enjoy mo ang Hour of Code at gusto pang dagdagan, pwede kang mag-set up ng password at gumawa ng Code studio account sa ibaba para i-enroll ang iyong mga mag-aaral sa anumang <a href="%{educate_url}">mahahabang kurso</a> namin.'
     hoc_already_signed_up_content_post_hoc: 'Salamat sa pag-host ng Hour of Code. Para mag-sign in sa Code Studio, kailangan mong mag-set up ng password para sa iyong account. Magagawa nitong i-save ang iyong progreso at i-manage ang iyong silid-aralan. Makapagtatalaga ka ng mga kurso para sa mga mag-aaral at masusundan ang kanilang progreso. <a href="%{studio_url}">Pwede ka ring magpatuloy sa pag-browse ng iba''t ibang stages at palaisipan</a> nang hindi gumagawa ng account.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Salamat sa pag-host ng Hour of Code. Para mag-sign in sa Code Studio, kailangan mong mag-set up ng password para sa iyong account. Magagawa nitong i-save ang iyong progreso at i-manage ang iyong silid-aralan. Makapagtatalaga ka ng mga kurso para sa mga mag-aaral at masusundan ang kanilang progreso. [Pwede ka ring magpatuloy sa pag-browse ng iba''t ibang stages at palaisipan](%{studio_url}) nang hindi gumagawa ng account.'
     teacher_educator_guide: 'Bisitahin ang gabay para sa mga guro'
     title: "Mag-sign up para sa Code.org"
     school_name: 'Pangalan ng Paaralan (optional)'
@@ -115,8 +125,6 @@ fil:
     valid_password: "Mali ang na-type na password!"
     invalid_password: "Ang Password ay dapat may at least 6 characters"
     mismatch_password: "Ang passwords na iyong inenter ay hindi tugma sa isa't isa"
-    student_terms: "Ako ay sumang-ayon na mapailalim sa Code.org na <a href='http://code.org/tos'>mga palatuntunin</a>. Kung ako ay mas bata pa 13 taong gulang, kinokompirma ko ito sa pamamagitan ng pagpasa ng form na ito na nagpapakita na mayroon akong pahintulot mula sa aking mga magulang o legal na tagapangalaga na gumamit sa mga serbisyo ng Code.org.<br/><br/>Ang mga email address ay hindi naka-store sa isang form na magbibigay paraan sa amin na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hindi makakatanggap ng mga email mula sa Code.org maliban sa password na recovery. Tingnan ang aming <a href='http://code.org/privacy'>patakaran sa privacy</a> para sa karagdagang impormasyon."
-    teacher_terms: "Ako ay sumang-ayon na mapailalim sa Code.org na mga palatuntunin. Para sa karagdagang impormasyon tungkol sa privacy, tingnan ang aming <a href='http://code.org/privacy'>patakaran sa privacy</a>."
     additional_information: "Kailangan namin ng karagdagang impormasyon para maituloy ang pag-sign up sa iyo."
     user_type_label: "Uri ng Account"
     user_type_teacher: "Teacher"
@@ -126,6 +134,9 @@ fil:
     error: "May problemang naganap."
     email_preference_yes: "Oo"
     email_preference_no: "Hindi"
+    parent_account_checkbox: "Ako ay magulang/tagapag-alagang lumalagda sa ngalan ng anak ko"
+    parent_account_email_progress_permission: "Maaari ba kaming mag-email sa iyo para sa paminsan-minsang update sa progreso ng anak mo at mga proyekto, at mga update tungkol sa kurso nila at computer science? [(Tingnan ang aming patakaran sa pagkapribado)](%{privacy_policy_url})"
+    parent_account_email_label: "Email ng Magulang/Tagapangalaga"
   school_info:
     title: 'Impormasyon ng Paaralan (opsyonal)'
     school_country: 'Bansa ng Paaralan'
@@ -166,7 +177,6 @@ fil:
     login: 'Sign in'
     invalid_login: 'Imbalidong login, pakisubukang muli'
     pair_programming: 'May partner ako sa aking kompyuter'
-    student_privacy: "Alamin pa kung bakit hindi mo nakikita ang buo mong pangalan <a href='%{student_privacy_blog}' target='_blank'>dito</a>."
   password:
     reset_form:
       title: 'Hindi matandaan ang password?'
@@ -193,6 +203,7 @@ fil:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login na impormasyon para sa Code.org'
+    parent_email_added_subject: 'Maligayang pagdating sa Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Maligayang pagdating sa Code.org!'
   section:
@@ -250,20 +261,14 @@ fil:
         personal_login_created_username: 'Matagumpay na nalikha mo ang personal na login. Maari ka nang magsign-in sa iyong account gamit ang bansag mo na (%{username}) at password'
   nav:
     header:
-      finished_hoc: "Natapos ko ang aking Hour of Code"
+      finished_hoc: "Tapos na ako!"
       sign_in_to_save: 'Mag-sign in para i-save ang progreso'
-      free_play:
-        playlab: 'Lumikha ng App'
-        artist: 'Gumuhit ng isang bagay'
-        applab: 'Lumikha ng App'
-        gamelab: 'Gumawa ng Game Lab na proyekto'
-        weblab: 'Gumawa ng Web Lab (beta) na proyekto'
       my_dashboard: "Aking Dashboard"
-      course_catalog: "Katalogo ng Kurso"
+      course_catalog: "Catalog ng Kurso"
       project_gallery: "Mga Proyekto"
       sections: "Mga Seksyon"
       help_support: "Tulong at Suporta"
-      report_bug: "I-report ang bug"
+      report_bug: "I-report ang problema"
       teacher_community: "Komunidad ng mga Guro"
       professional_learning: "Propesyonal na Pag-aaral"
       documentation: "Dokumentasyon"
@@ -292,7 +297,9 @@ fil:
       stats: "Mga Stats"
       help_us: "Tulungan Kami"
       teach: "Magturo"
-      about: "Tungkol"
+      about: "Tungkol sa"
+      legal_privacy: "Patakaran sa Pagkapribado"
+      legal_tos: "Mga Alituntunin ng Serbisyo"
     user:
       classroom: 'Home Page ng Teacher'
       district_dashboard: 'Dashboard ng Distrito'
@@ -300,19 +307,39 @@ fil:
       stats: 'Code Studio'
       settings: 'Account Ko'
       logout: 'Mag-sign out'
-      signin: 'Sign in'
+      signin: 'Mag-sign in'
       signup: 'Gumawa ng account'
       already_registered: 'Nakarehistro na?'
       team: 'Koponan'
       driver: 'Maglog-in'
       navigator: 'Kasama'
       create: 'I-create'
+      algebra_game: 'Algebra'
       applab: 'App na Lab'
       artist: 'Artista'
-      gamelab: 'Game Lab'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
+      artist_k1: 'Artista (Pre-reader)'
+      basketball: 'Basketbol'
+      bounce: 'Bounce'
+      calc: 'Cacl'
+      dance: 'Dance Party'
+      eval: 'Eval'
       flappy: 'Flappy'
+      frozen: 'Frozen'
+      gamelab: 'Game Lab'
+      gamelab_jr: 'Game Lab (beta)'
+      gumball: 'Ang Kamangha-manghang Mundo ng Gumball'
+      iceage: 'Ice Age'
+      infinity: 'Walang katapusan'
+      minecraft_adventurer: 'Tagapaglakbay sa Minecraft'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft Hero'
+      playlab: 'Play Lab'
+      playlab_k1: 'Play Lab (Pre-reader)'
+      sports: 'Mga Palakasan'
+      starwars: 'Star Wars'
+      starwarsblocks: 'Star Wars (Mga bloke)'
+      starwarsblocks_hour: 'Star Wars (Mga bloke)'
+      weblab: 'Web Lab'
     popup:
       progress_for_user: "Progreso ni %{name}"
       progress: 'Progreso mo'
@@ -370,18 +397,23 @@ fil:
     create_personal_login_under_13_parent_email: 'Magulang/Tagapangala na email address'
     create_personal_login_info: 'Kung gusto mo pa ring gamitin ang iyong Code.org na account kahit pagkatapos ng school year, maaring kang maglikha ng iyong sariling login sa baba.'
     create_personal_login_terms: "Sa paglikha ng personal na login, ako ay sumasang-ayon na masailalaim sa mga <a href='%{terms_of_service_url}', target='_blank'>alituntunin</a> ng Code.org. Kung ako ay nasa baba ng 13 taong gulang, kinukompirma ko na ako ay maayrong pahintulot mula sa aking mga magulang o legal na taga-pangalaga na gumamit sa mga serbisyo ng Code.org kahit na walang guro."
+    create_personal_login_terms_markdown: "Sa paglikha ng personal na login, ako ay sumasang-ayon na masailalaim sa mga [alituntunin](%{terms_of_service_url}) ng Code.org. Kung ako ay nasa baba ng 13 taong gulang, kinukompirma ko na ako ay maayrong pahintulot mula sa aking mga magulang o legal na taga-pangalaga na gumamit sa mga serbisyo ng Code.org kahit na walang guro."
     create_personal_login_email_note: "Tandaan: Ang mga email address ay hindi nakastore sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hinding-hindi makatanggap ng mga emails mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming <a href='%{privacy_policy_url}', target='_blank'>patakaran sa privacy</a> para sa karagdagan impormasyon."
+    create_personal_login_email_note_markdown: 'Tandaan: Ang mga email address ay hindi nakastore sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hinding-hindi makatanggap ng mga emails mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming [patakaran sa privacy](%{privacy_policy_url}) para sa karagdagan impormasyon.'
     enter_new_login_info: 'Ipasok ang iyong bagong login na impormasyon'
     confirm_secret_words: 'Ikompirma na ikaw talaga ito sa pamamagitan ng paglagay ng iyong kasalukuyang mga secret na mga pulong'
     enter_parent_email: "Ilagay ang iyong mga magulang, o tagapangalaga na email address (para sa password recovery)"
+    update_email: "I-update"
+    for_parents_and_guardians: "Para sa mga Magulang at mga Tagapag-alaga"
+    link_a_parent_email: "Iugnay ang email address ng magulang/tagapag-alaga sa account na ito para manatiling updated sa progreso at mga proyekto ng anak mo. Magagamit mo rin ang email address na ito para mabawi ang password."
+    parent_guardian_email_label: "Email Magulang/Tagapangalaga"
+    none: "Wala"
+    only_one_parent_email_supported_warning: "Tandaan: masusuportahan lang namin ang isang email address ng magulang/tagapag-alaga sa bawat estudyante sa ngayon. "
   user_level:
     completed: 'Nakompleto'
     tried: 'Sinubukan'
   home:
     title: "Code Studio"
-    description: 'Ang Code Studio ay ang tahanan para makahapap ka ng mga kurso na nalikha ni Code.org'
-    lines_of_code: "%{lines_count} MGA LINYA NG CODE NA SINULAT NG MGA ESTUDYANTE"
-    lines_of_code_linebreak: "%{lines_count} NA MGA LINYA NG CODE<br/>SINULAT NG %{students_count} MILYON NA MGA ESTUDYANTE"
     all_courses: "Buod ng mga Kursong 1, 2, at 3"
     lesson_plans: "Banghay-aralin"
     signin_message: "Nakarehistro na? %{link}"
@@ -411,42 +443,10 @@ fil:
     test_videos_help: 'Subukan ang aming bagong video player sa iyong paaralan'
     try_beta_courses: 'Bago! Subukan ang aming mga beta na mga kurso para sa mga K-5 na mga estudyante'
     use_as_teacher: 'Gamitin ang site na ''to biliang isang guro'
-    heading_hoc2014: "<h2>Ang Hour of Code para sa</h2><h1>Lahat ng Edad</h1>"
-    heading_elementary: "<h2>20 oras na mga kurso para sa</h2><h1>Pangunahing Kaalaman sa Computer Science (lahat ng edad)</h1>"
-    heading_apps: "<h2>Masaya para sa</h2><h1>Lahat</h1>"
-    heading_tools: "<h2>Handa na ba para sa susunod na hakbang?</h2><h1>JavaScript Tools para sa mga High School</h1>"
-    heading_legacy: "<h2>Ang aming pinabilis na kurso para sa</h2><h1>Lahat ng Edad</h1>"
     your_gallery: Galeriya
     no_primary_course: "Subukan ang Code Studio na kurso"
     choose_next_course: "Subukan ang isang Code Studio na kurso sa pagpili ng isa sa ibaba"
     print_certificate: "Mag-print ng Certificate"
-    announcement_title: "Mga Anunsiyo"
-    announcement_message_fall2016_features: "Ginugol namin ang panahon ng tag-init para gawing bagong mga feature ang iyong mga feedback na binigay. Ngayon, maari mo nang <a href=\"%{pp_url}\" target=\"_blank\">subaybayan ang pag-unlad ng napakaraming estudyante</a> kahit naka pair programming pa sila sa isang device. Maari mong gamitin ang <a href=\"%{csp_widgets_url}\" target=\"_blank\">pinakamahusay na mga interactive na mga tools</a> mula sa ating CS na mga Prinsipyo na kurso sa <1>kahit saang</1> silid-aralan. At ang iyong mga estudyante ay maaring <a href=\"%{unused_code_url}\" target=\"_blank\">magtago ng hindi nagagamit na mga code</a> sa kanilang workspace para hikayatin silang mag-eskperimento! Tingnan ang lahat ng aming mga bagong features at sabihin mo kami kung ano ang palagay mo dito."
-    announcement_csp_widgets_message: "Naghahanap ba ng mga masasayang paraan para ituro sa iyong klase kung paano gumagana ang internet, paano nagagawang i-secure ng cryptography ang data mo, at iba pang mga konsepto? Kinuha namin ang mga pinakamagandang interactive tools mula sa aming curriculum na Prinsipiyo ng Computer Science at nag-release ng mga standalone widgets na pwede mong gamitin anumang oras!"
-    announcement_learn_more_button: "Matuto nang higit pa"
-    announcement_try_now_button: "Subukan ngayon"
-    announcement_host_an_hour_button: "Mag-host ng Isang Oras"
-    announcement_watch_video_button: "Manood ng video"
-    announcement_petition: "Bilang guro, ikaw ay nangunguna sa laban para bigyan ang bawat mag-aaral sa lahat ng paaralan ng oportunidad na matuto ng computer science. Ngayon, oras na para makarinig mula sa iyo ang iyong mga kinatawan. Ngayong linggong ito, ang mga lider ng edukasyon, 28 gobernador, at mga CEO ng mga pinakamalalaking kompanya sa Amerika ay nagsama-sama sa isang open letter na hinihingi sa Kongreso ng U.S. na pondohan ang K-12 computer science na edukasyon."
-    announcement_petition_button: "Idagdag ang pangalan mo"
-    announcement_go_beyond_button: "Higitan pa"
-    announcement_apply_now: "Mag-apply ngayon"
-    announcement_all: "Subaybayan ang mga bagong features at update sa ating guro na blog. <a href='%{teacher_blog_url}' target='_blank'>Tingnan ang mga nakaraang anunsiyo</a>"
-    announcement_hoc_launch: "Libo-libong mga guro sa mahigit na 180 na mga bansa ay magsisimulang magturo ng computer science sa Hour of Code ngayong Disyembre 5-11. Kami ay umaasa na tutulungan niyo kami na makabahagi ng mas maraming pang mga estudyante. <a href='%{signup_url}' target='_blank'>Magrehistro sa iyong Hour of Code na pangyayari</a> at ipag-paalam sa iba pang mga guro na maaari silang magsimulang magturo ng computer science."
-    announcement_mc_launch: "Isa sa aming pinakasikat na tutorial ngayon ay may kasunod na! Ang lahat-bagong Minecraft Hour of Code Designer ay nagbibigay ng paraan sa mga estudyante na makagawa ng mga patakaran sa mundo ng Minecraft. Maari silang lumikha ng nakakaibang karanasan sa Minecraft, at pagkatapos ay magbahagi nito sa mga kaibigan nila o maglaro sa kanilang mga phone. Gawin ito sa iyong klase sa Hour of Code."
-    announcement_how_code_studio: "Hindi mo kailangang magkaroon ng karanasan para makasimulang magturo ng computer science sa iyong silid-aralan. Ang Code.org ay nag-aalok ng kurikulum, mga lesson plan, mataas na kalidad na mga propesyonal na learning programs, at tolenadang mga muhusay na mga kagamitan para sa lahat ng grado&mdash;lahat ng kailangan mo, lahat ay libre. Nagtataka kung saan ka magsimula? Magdownload ng <a href='%{video_download_url}'>video na ito</a>!"
-    announcement_go_beyond: "Lumampas pa sa Hour of Code at tuklasin ang mga konsepto ng computer science kasama ang iyong mga estudyante sa bawat linggo. Ang Code.org ay nag-aalok ng kurikulum, mga banghay-aralin, mga matataas na kalidad na mga propesyonal na learning programs, at toneladang mahusay na mga kagamitan para sa lahat ng grado&mdash;at ang lahat ng ito ay libre. :) Hindi mo kailangan ng karanasan para makapagsimulang magturo ng computer science sa iyong silid-aralan. <b>Hanapin ang sunod na hakbang na tama para sa iyong silid-aralan.</b>"
-    announcement_teacher_recruitment: "Ang mga guro gaya mo ay nangungulo sa kilusan para sa computer science na edukasyon. Maaring kang sumali sa de-kalidad na K-12th na grado ng mga propesyonal na learning programs <strong>nang walang gasto sa iyo o sa iyong paaralan</strong>. Manguna sa computer science sa iyong paaralan, at mag-apply para sa propesyonal na pag-aaral."
-    announcement_teacher_recruitment2: "Ang mga guro gaya mo ay nangungulo sa kilusan para sa computer science na edukasyon. Maaring kang sumali sa de-kalidad na K-12th na grado ng mga propesyonal na learning programs <strong>nang walang gasto sa iyo o sa iyong paaralan</strong>. Manguna sa computer science sa iyong paaralan, at mag-apply para sa propesyonal na pag-aaral. Middle at high school na mga guro, mag-apply sa ika-17 ng Marso."
-    announcement_csf_pilot: "<strong>Mga guro sa elementarya:</strong> Maging bahagi sa pag-update ng aming CS Fundamentals na mga kurso! Naghahanap kami ng guro para maging piloto ng bagong CS Fundamentals na kurikulum sa panahon ng tag-lamig at tagsibol ngayong 2017. Kami ay sabik na makarinig ng iyong feedback bago namin gawing live ang mga updates ngayong Agosto 2017."
-    announcement_student_privacy: "Sa Code.org, seryoso kami sa privacy ng mga estudyante. Para maprotektahan ang privacy ng mga estudyante, gumawa kami ng mga pagbabago sa iyong seksyon na login page para maiwasan ang magpakita ng buong pangalan. Kahit na ang update na ito ay magbabawas ng mga alalahanin tungkol sa privacy, hinihikayat namin ang mga users na <i>huwag gumamit ng buong pangalan para sa mga estudyante</i>."
-    announcement_apcsp_recruitment: "<strong>Mga Guro ng Computer Science Principles:</strong> Ang iyong mga estudyante ay maaaring ma-feature sa susunod na viral video ng Code.org na naghihikayat sa mga estudyante na kumuha ng AP CS Principles na pasulit ngayong taon. Inimbitahan namin ang lahat ng estudyante ng CS Principles na mag sumite ng 10-20 segundo na video clip sa Twitter, Instagram, o Facebook na nagsasabing \"Kukuha ako ng #APCSP na exam dahil...\" Ang pinakamagandang submission ay maaring maipakita sa ating video at ang manalong estudyante ay makatanggap ng Code.org na swag!"
-    announcement_apcsp_recruitment2: "Ang AP CS Principles na pagsusulit ngayong taon ay inaasahang makasira nang mga rekord. Ang partisipasyon ng mga estudyante sa pagsusulit ay maaring magdudulot ng malaking pagbabago sa AP Computer Science, pero kailangan namin ang iyong tulong. Hikayatin ang bawat estudyante ng CS Principles na dumalo sa AP CSP na pagsusulit at kami ay <a href='%{gift_url}' target='_blank'>magpapadala sa iyo ng regalo</a>. Ang mga estudyante ay maari ding maghimok sa mga kilala nila sa buong mundo sa ating <a href='%{challenge_url}' target='_blank'>#APCSP na video challenge</a>."
-    announcement_apcsp_recruitment3: "Ang AP CS Principles na pagsusulit ngayong taon ay inaasahang makasira nang mga rekord. Ang partisipasyon ng mga estudyante sa pagsusulit ay maaring magdudulot ng malaking pagbabago sa AP Computer Science, pero kailangan namin ang iyong tulong. Hikayatin ang bawat estudyante ng CS Principles na dumalo sa AP CSP na pagsusulit at maari kang manalo ng <a href='%{gift_url}' target='_blank'>gift card, laptop, o iba pang magagandang premyo</a>! Ibahagi ang <a href='%{video_url}' target='_blank'>video na ito</a> para madinig ng mga estudyante mula sa mga kasamahan nila sa buong mundo na kumukuha sa pagsusulit."
-    announcement_csp_deadline: "Huling panawagan para sa mga guro sa high school! Manguna sa computer science sa iyong paaralan at mag-apply para sa ating de-kalidad na mga propesyonal na learning programs <strong>na walang gastos sa iyo o sa iyong paaralan</strong>. Hindi na kami tatanggap ng mga aplikasyon sa ika-14 ng Abril."
-    announcement_applab_export: "Ang App Lab, ang ating web-based na programming environment, ngayon ay sumusuporta na sa pag-export ng iyong code! Maari ka nang magsimulang gumawa ng mga apps gamit ang drag-and-drop na mga blocks ng Javascript, at pagkatapos mag-export ng code para makapagpatuloy sa pag-edit kahit saan mang propesyonal na development environment na napili mo."
-    announcement_csp_survey: "<b>Maligayang bati sa mga guro ng CS Principles!</b><br/>Ang iyong mga estudyante sa CS Principles na kumuha ng AP CS na Pagsusulit ay sasama sa humigit 50,000 na mga estudyante sa pinakamalaking AP Exam launch sa buong kasaysayan. Ngayon, hayaang madinig ang mga boses ng iyong mga estudyante - paalalahan mo sila na taposin ang end-of-course na surbey! Maari mong repasuhin ang mga sagot ng iyong mga estudyante at kami ay magbabahagi din ng pambansang kabuoang ulat sa iyo."
-    announcement_navigation_redesign: "<b>Parating na mga Pagbabago sa Site Navigation</b><br/>Malapit ng dumating ngayong tag-init, hinusayan namin ang nabigasyon sa buong Code.org na site para magkaroon ka ng parating access sa mga nangungunang resources kahit saan sa site. Paglog-in mo pang lang ng iyong account na guro, bawat pahina ay magkakaron ng bagong nabigasyon na bar na may mga link sa iyong Homepage, Mga Kurso, Galeriya ng mga Proyekto, Mga Seksyon, at Propesyonal na Pag-aaral."
   move_students:
     new_section_dne: "Ipagpaumanhin ninyo, ngunit ang seksiyon na %{new_section_code} ay hindi umiiral. Pakilagay ng ibang code ng seksiyon."
     section_code_cant_be_current_section: "Ang kasalukuyang seksiyon ay hindi maaring kapareho ng bagong seksiyon."
@@ -475,24 +475,24 @@ fil:
     code_from_html: 'Ang Code.org ay gumagamit ng p5.play, na lisensiyado sa ilalim ng <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Pinagana sa pamamagitan ng Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, ang CODE logo at ang Hour of Code&reg; ay pagkakakilanlan ng Code.org.'
-    copyright: 'Karapatang-sipi'
-    more: 'More'
+    copyright: 'Karapatang-ari'
+    more: 'Mas Marami'
     feedback: 'Magbigay ng feedback'
-    translate: 'Magboluntaryo na magsali ng ating nilalaman'
+    translate: 'Magboluntaryo para isalin ang aming content'
     support: 'Tulong at Komunidad'
     support_url: 'http://support.code.org/'
     tos_short: 'Mga Alituntunin'
-    tos: 'Mga Palatuntunan'
-    privacy: 'Privacy Policy'
+    tos: 'Mga Alituntunin ng Serbisyo'
+    privacy: 'Patakaran sa Pagkapribado'
     secure: 'Tiyak na Bersyon'
-    report_abuse: 'I-report ang pag-abuso'
+    report_abuse: 'I-report ang Abuso'
     built_on_code_studio: 'Ginawa sa Code Studio'
     make_my_own_app: 'Gumawa ng sarili kong app'
     how_it_works: 'Paano ito Gumana (Tingnan ang Code)'
     try_hour_of_code: 'Subukan ang Hour of Code!'
   reference_area:
-    title: 'Kailangan mo ba ng tulong?'
-    subtitle: 'Tingnan ang mga video at mga pahiwatig'
+    title: 'Nangangailangan ng tulong?'
+    subtitle: 'Tingnan ang mga video na ito at ang mga hint'
     teacher: 'Tingnan ang solusyon'
     teacher_no_solution: 'Ihinto ang pagtingin sa solusyon'
     auth_error: 'Wala kang awtoridad para tingnan ang solusyon.'
@@ -506,6 +506,7 @@ fil:
     download: 'I-download ang video'
     show_notes: 'Ipakita ang mga Notes'
     show_video: 'Ipakita ang Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Ang iyong browser ay hindi suportado. Paki-upgrade ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan mo na may mga sira na mga functionality."
@@ -523,7 +524,6 @@ fil:
   pdf_download: 'Mag-download ng PDF'
   download_coming_soon: 'Ang pagdownload na mga aktibidad ay paparating na.'
   video_coming_soon: 'Paparating na ang Video!'
-  not_started: 'Ang estudyante ay hindi sumubok sa antas na ito.'
   share_code:
     title: "I-click ang 'Run' para makita ang aking programa in action"
     bounce_og_title: "Tingnan mo ang aking Bounce Game"
@@ -553,6 +553,10 @@ fil:
       body_short: "Mag-design ng app, mag-code gamit ang blocks o Javascript para mapagana ito, at pagkatapos ibahagi ang iyong app sa ilang segundo lang."
       audience: 'Edad 13+'
       cta: 'Pag-aralang kung paano'
+    dance:
+      title: 'Dance Party'
+    dance-2019:
+      title: 'Dance Party'
     hoc:
       title: 'Klasiko na Maze'
       body: 'Subukan ang mga pangunahing konsepto ng computer science. Milyon-milyon ang sumubok nito.'
@@ -618,29 +622,15 @@ fil:
       body: "Ang mga estudyante ay maaring magsiyasat sa mga konsepto mula sa ating mga Prinsipyo ng Computer Science na hands-on na kurso gamit ang mga digital na mga kagamitan. Gamitin ang mga widgets nang sila lang, o gumawa ng solong-konsepto na leskyon para sa iyong klase."
       audience: "Edad 14+"
       cta: "Pag-aralang kung paano"
-  gallery:
-    students_drew_these_with_code: "Iginuhit ito ng mga estudyante gamit ang code!"
-    students_made_these_with_code: "Ginawa ito ng mga estudyante gamit ang code!"
-    picture_count: "Sa nakaraang mga <b>%{days}</b> na mga araw, ang mga estudyante ay nagguhit ng <b>%{count}</b> na mga larawan sa pamamagitan ng pagsulat ng sarili nilang mga computer programs. I-click ang mga larawan para tingnan ang bawat programa."
-    activity_count: "Sa nakaraang mga <b>%{days}</b> na mga araw, ang mga estudyante ay gumawa ng mga <b>%{count}</b> na mga apps at larawan sa pamamagitan ng pagsulat ng sarili nilang mga computer programs. I-click ang mga larawan at mga screenshot para tingnan ang bawat programa."
-    want_to_make_your_own: "Gusto mong gumawa para sa sarli mo?"
-    how_to_save: "Sa pinakahuling antas ng tutorial na ito, i-click ang \"Finish\" at \"Save\" para i-save ang iyong ginawa sa galeriya."
-    more: "Higit pa &rarr;"
-    caption_by_name_age: "sa pamamagitan ni %{name}, edad na %{age}"
-    caption_time_ago: "%{time_ago} ang nakaraan"
-    header: "Galeriya"
-    header_playlab: "Mga Istorya at mga laro"
-    header_artist: "Code ng sining"
-    report_abuse: "I-report ang pag-abuso"
   landing:
-    prerelease: "Ang kursong ito ay nasa <span class='betatext'>beta</span>. Ibig sabihin nito na hindi ito ang huling bersyon ng kurso, at ito ay nakatakdang babaguhin habang makakatanggap pa ng mga feedback at ang pagpapabuti ay ginagawa pa."
-    prerelease_hoc2014: "Ang tutorial na ito ay nasa <span class='betatext'>beta</span>. Ito ay nakasakop sa mga rebisyon habang nakakatanggap ng feedback at ang pagpapabuti ay ginagawa pa."
     report_bug: "I-report ang Bug"
     support: "Humingi ng Tulong"
     help_resources: "Mga Tulong at mga Pag-aaring Yaman"
     help_support: "Tulong at Suporta"
     documentation: "Dokumentasyon"
     tutorials: "Mga Tutorial"
+  free_response:
+    placeholder: "Ilagay ang iyong sagot dito"
   multi:
     wrong_title: "Maling sagot"
     wrong_body: "Ang sagot na iyong ipinasok ay hindi tama. Pakisubukang uli!"
@@ -701,19 +691,21 @@ fil:
   age_interstitial:
     age: Ang iyong edad
     header: Update sa Impormasyon ng Account
-    message: "Kami ay kasalukuyang nag-update sa aming \"experience\" para mabigyan kayo ng mas pinalakas pa na proteksyon sa iyong privacy. Para magawa ito, kailangan namin ang mga umiiral na users na maglagay sa kanilang edad dito.<br/>Gaya ng dati, ang code.org ay hinding-hindi parentahan, magbenta o magbahagi ng mga impormasyong ito sa kahit na anong mga third party."
-    sign_out: 'Kung hindi mo nais magbigay ng edad mo maari kang <a href="%{url}">mag-sign out</a>.'
   terms_interstitial:
     title: "Binago ang mga Palatuntunan at ang Privacy Policy"
     intro_desc: "Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay <i>hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio.</i> Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email."
+    intro_desc_markdown: "Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay _hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio._ Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email."
     intro_instructions: "Kailangan mong tanggapin ang mga bagong pamatayan para sa mga estudyante na wala pang 13 taong gulang sa iyong silid-aralan para magkaroon ng buong access sa lahat ng mga bagong katangian ng Code Studio. Kung magrehistro ng account para sa estudyante na wala pang 13 taong gulang, pagsasabihan ka na ikompirma kung ang iyong paaralan ay may pahintulot ng mga magulang para sa koleksyon ng mga personal na impormasyon ng mga estudyante para sa paggamit at pakinabang ng paaralan, kalakip na dito ang mga educational na mga programa gaya ng Code Studio."
-    tos: "Mga Palatuntunan"
-    privacy: "Privacy Policy"
+    tos: "Mga Alituntunin ng Serbisyo"
+    privacy: "Patakaran sa Pagkapribado"
     privacy_notice: "Pahayag sa Privacy"
     accept_label: 'Ako ay sumang-ayon sa updated na <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at sa <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label_markdown: Ako ay sumang-ayon sa updated na [mga Palatuntunan](%{tos_url}) at sa [Privacy Policy](%{privacy_url})
+    accept_tos: Sa pag-sign up sa Code.org, pumapayag ka sa aming [Mga Alituntunin sa Serbisyo](%{tos_url}) at [Patakaran sa Pagkapribado](%{privacy_url}).
     accept: "Tanggapin"
     print: "I-print"
     reminder_desc: 'Nag-update kami sa aming <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Pakibasa ng mabuti ang mga ito bago mo tanggapin. Tandaan na ang aming mga kagamitan na nagtuturo ng Javascript ay maaaring hindi magagamit ng iyong mga estudyante bago mo hayagang tanggapin ang mga binagong pamantayan.'
+    reminder_desc_markdown: Nag-update kami sa aming [mga Palatuntunan](%{tos_url}) at [Privacy Policy](%{privacy_url}). Pakibasa ng mabuti ang mga ito bago mo tanggapin. Tandaan na ang aming mga kagamitan na nagtuturo ng Javascript ay maaaring hindi magagamit ng iyong mga estudyante bago mo hayagang tanggapin ang mga binagong pamantayan.
     review_terms: "Repasuhin ang mga binagong tuntunin"
   school_info_interstitial:
     title: "Gusto naming dalhin ang Computer Sciece sa bawat estudyante - tulungan niyo kaming subaybayan ang ating pag-unlad!"
@@ -735,6 +727,7 @@ fil:
     submit: "Ipasa"
     decline: "Isara"
   zendesk_too_young_message: 'Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi maaring mag-sign in sa aming support na site. Maari kang mag-browse sa <a href="http://support.code.org">support.code.org</a> kahit hindi naka-sign in o magpatulong sa iyong magulang o guro para makipag-ugnayan sa amin para sa iyo.'
+  zendesk_too_young_message_markdown: 'Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi maaring mag-sign in sa aming support na site. Maari kang mag-browse sa [support.code.org](http://support.code.org) kahit hindi naka-sign in o magpatulong sa iyong magulang o guro para makipag-ugnayan sa amin para sa iyo.'
   progress:
     not_started: hindi pa nasimulan
     in_progress: nasimulan na
@@ -752,20 +745,10 @@ fil:
     create: "Gumawa ng Proyekto"
     create_a_project: 'Gumawa ng bagong proyekto:'
     new: "Gumawa ng Bago"
-    rename: "Baguhin ang Pangalan"
-    save: "I-save"
-    delete: "I-delete"
-    import: "Mag-Import"
-    share_link_import_bad_link_header: "Ang Share na Link ay hindi kinikilala"
-    share_link_import_bad_link_body: "Hindi namin ma-import ang share na link na iyan. Siguraduhing ikaw ay gumagamit ng link mula sa Minecraft: Agent puzzle, at nakopya mo ang buong link."
-    share_link_import_error_header: "May nangyaring mali."
-    share_link_import_error_body: "May problema sa pag-import ng share na link na iyan. Pakisubukan ulit."
     exit: "Bumalik sa Kurso"
-    my_projects: "Aking mga Proyekto"
     project_gallery: "Mga Proyekto"
     publish: "Ilathala"
     unpublish: "Di-nailathala"
-    share: "Ibahagi"
     share_title: Ibahagi ang iyong proyekto
     share_copy_link: "Kopyahin ang link:"
     share_embed_description: "Maaring mong idikit ang embed na code sa iyong HTML na pahina para maipakita ang iyong proyekto sa webpage."
@@ -773,25 +756,15 @@ fil:
     embed: "Embed"
     advanced_share: "Ipakita ang pinahusay na mga opsyon"
     no_projects: "Ikaw kasalukuyang walang proyekto. Mag-click sa isa sa mga buttons sa taas para simulan ang proyekto."
-    close: "Isara"
-    more: "More"
     name: "Pangalan"
     updated: "I-update"
     project_type: "Tipo ng Proyekto"
     help_text: "I-click ang <strong>Gumawa ng App</strong> o <strong>Magguhit ng Anuman</strong> sa baba para makasimula ng bagong proyekto!<br/>Maari kang bumalik at magtrabaho ulit sa iyong mga proyekto kahit na anumang oras."
     need_help: "Subukan ang mga kursong ito para makakatulong sa iyo na masimulan ang iyong bagong proyekto"
     thumbnail_help: "Hindi nakita ang tamang thumbnail para sa iyong proyekto? Patakbuhin ang iyong app para makalikha ng bagong thumbnail. Tandaan na maaring tatagal ito ng ilang oras bago maupdate ang mga thumbnail sa lahat ng dako."
-    really_delete: 'I-delete?'
-    delete_yes: 'Oo'
-    delete_no: 'Hindi'
     saved: "Na-save sa gallery!"
     not_saved: "Hindi na-save"
-    cancel: 'Kanselahin'
-    delete_confirm_title: Sigurado ka bang gusto mong burahin ang proyektong ito?
-    delete_confirm_text: "Ang pagbura ng iyong proyekto ay tuluyang magtanggal nito sa iyong listahan na \"Aking Mga Proyekto\". Kahit na sino na mayroong share link ay hindi na makakakita sa iyong proyekto."
     view_all: 'Tingnan ang Aking mga Proyekto'
-    remix: 'Remix'
-    click_to_remix: "I-click ang \"Remix\" para makalikha ng iyong sariling bersyon!"
     edit_project: 'I-edit ang Proyekto'
     sharing_disabled: "Paumanhin, ang proyektong ito ay hindi magagamit para sa pagbabahagi. Kung ito ay iyong proyekto o proyekto ng isa sa iyong mga estudyante, <a href='https://studio.code.org/users/sign_in'>mag-sign in</a> sa iyong account para matingnan ang proyekto."
     abuse:
@@ -818,52 +791,14 @@ fil:
   peer_review:
     accepted:
       name: 'Tinanggap'
-      description: '<strong>Oo</strong>, ang submission na ito ay <strong>umabot</strong> sa mga kinakailangan'
     rejected:
       name: 'Tinanggihan'
-      description: '<strong>Hindi</strong>, ang submission na ito ay <strong>hindi umabot</strong> sa mga kinakailangan'
     escalated:
       name: 'Pinaalam'
       description: 'Gusto ko na guro ang magrepasu sa aking isinumite'
     instructor_feedback: 'Feedback ng Guro'
     peer_feedback: 'Feedback ng Kasamahan'
     outdated: 'Ang feedback ay nadadag sa mga dating isinumite na bersyon'
-  flex_category:
-    required: 'Buod'
-    ramp_up: 'Pabilisin'
-    main_course: 'Pangunahing Kurso'
-    extra_course_content: 'Ekstra na Nilalaman ng Kurso'
-    csf_e_1: 'Mag-ramp up sa Course E (Opsyonal)'
-    csf_e_2: 'Nilalaman ng Kurso na E'
-    csf_f_1: 'Mag-ramp up sa Kursong F (Opsyonal)'
-    csf_f_2: 'Nilalaman ng Kursong F'
-    csd1_1: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
-    csd1_2: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
-    csd2_1: 'Kabanata 1: Web Content at HTML'
-    csd2_2: 'Kabanata 2: Pag-iistilo at CSS'
-    csd3_1: 'Kabanata 1: Mga Larawan at Animation'
-    csd3_2: 'Kabanata 2: Paggawa ng mga Laro'
-    csd4_1: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
-    csd4_2: 'Kabanata 2: Pag-Prototype ng App'
-    csd5_1: 'Kabanata 1: Pagrepresenta ng Impormasyon'
-    csd5_2: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
-    csd6_1: 'Kabanata 1: Output ng Hardware'
-    csd6_2: 'Kabanata 2: Input ng Hardware'
-    csp1_1: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
-    csp1_2: 'Kabanata 2: Pag-imbento ng Internet'
-    csp2_1: 'Kabanata 1: Pag-encode at Pag-compress ng Komplikadong Impormasyon'
-    csp2_2: 'Kabanata 2: Pagmanipula at Pagpapakita ng Datos'
-    csp3_1: 'Kabanata 1: Mga Programming na Wika at mga Algoritmo'
-    csp4_1: 'Kabanata 1: Ang Mundo ng Malalaking Datos at Pag-Encrypt'
-    csp5_1: 'Kabanata 1: Event-Driven na Programming'
-    csp5_2: 'Kabanata 2: Programming gamit ang mga Data Structures'
-    cspSurvey: 'Pagsisiyasat'
-    cspAssessment: 'Pagsusuri sa Kabanata'
-    csp_ap_1: 'Kabanata 1: AP Tech na Setup'
-    csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
-    csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
-    csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
-    dlp: 'Pagmunimuni na mga Prompt'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Ikaw ay paalis mula sa domain na ito, papunta sa isang site na hindi pinamamahalaan ng Code.org.
@@ -934,6 +869,8 @@ fil:
       school_name: 'Pangalan ng Paaralan'
       school_city: 'Lungsod ng Paaralan'
       school_country: 'Bansa ng Paaralan'
+      colombian_school_city: 'Lungsod ng Paaralan'
+      colombian_school_name: 'Pangalan ng Paaralan'
     form_entries:
       gender:
         male: 'Lalaki'
@@ -958,3 +895,8 @@ fil:
     accept: 'Ako ay sumasang-ayon'
   gdpr_dialog:
     yes: 'Oo'
+  copy: 'Kopyahin'
+  parent_email_banner:
+    text: "**Ikaw ba ay magulang o tagapag-alaga?** I-link ang email mo sa account na ito para manatiling updated sa progreso at mga proyekto ng anak mo!"
+    link_your_email: "I-link ang email mo"
+    not_now: "Hindi ngayon"

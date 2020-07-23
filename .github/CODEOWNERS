@@ -1,0 +1,14 @@
+# See
+# https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
+# for usage
+
+# Files containing internationalization strings
+/i18n/ @code-dot-org/i18n
+/apps/i18n/ @code-dot-org/i18n
+/dashboard/config/locales/ @code-dot-org/i18n
+/pegasus/cache/i18n/ @code-dot-org/i18n
+/pegasus/sites.v3/*/i18n/ @code-dot-org/i18n
+
+# Scripts controlling the internationalization sync
+/bin/i18n/ @code-dot-org/i18n
+/bin/i18n-codeorg/ @code-dot-org/i18n

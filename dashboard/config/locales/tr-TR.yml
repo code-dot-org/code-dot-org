@@ -15,19 +15,28 @@ tr:
         deneyin.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: geçersiz. Her link şifre yenilemek için yalnızca bir kez kullanılabilir
+                ve en son gönderilen link geçerlidir.
       messages:
         blank: gerekli
         blank_plural: gereklidir
+        invalid: geçersizdir
         invalid_plural: geçersiz
     attributes:
       user:
         name: Görünen İsim
-        name_example: Görüntü adı <br/> (Süpe Kodcu veya Irmak K.)
+        name_example: Görüntü adı (Süpe Kodcu veya Irmak K.)
         email: e-posta
         parent_email: Veli e-posta
         personal_email: |
           Kişisel e-posta adresi<a href="%{url}">(eğer kişisel e-posta adresiniz yoksa buraya tıklayın)</a>
            
+        personal_email_markdown: Kişisel e-posta adresi[(eğer kişisel e-posta adresiniz
+          yoksa buraya tıklayın)](%{url})
         username: kullanıcı adı
         password: Parola
         password_confirmation: Şifre doğrulama
@@ -36,8 +45,19 @@ tr:
         age: Yaş
         gender: Cinsiyet
         edit_header: Hesap Bilgilerini Düzenle
+        finish_sign_up_header: Hesabınızı oluşturmayı bitirin
+        finish_sign_up_subheader: Code.org hesabı oluşturmayı bitirmek için sıradaki
+          bilgileri doldurun <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: "**%{email}** İçin hesap oluşturmayı tamamlamak
+          için sıradaki bilgileri doldurunuz."
+        finish_sign_up_subheader_provider: "<strong>%{email}</strong> <strong>%{provider}</strong>
+          hesabı ile Code.org hesabı oluşturmayı tamamlamak için bilgileri doldurun."
+        finish_sign_up_subheader_provider_markdown: "**%{provider}** ile **%{email}**
+          için Code.org hesabı oluşturmayı tamamlamak için bilgileri doldurun."
+        reset_password_token: Takip ettiğiniz şifre sıfırlama bağlantısı
         error:
           future: gelecekte olması mümkün değil
+  beta: beta
   hello: Merhaba dünya
   welcome_back: Hoş geldiniz %{name}
   your_professional_learning_plan: Profesyonel Eğitim Planın
@@ -51,14 +71,14 @@ tr:
   okay: Tamam
   or: veya
   heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Öğretmen ekleyin:'
+      title: Code.org'daki bir gruba katılın
       placeholder: Bölüm kodu (ABCDEF)
-      instructions: Lütfen öğretmeninizin sizinle paylaştığı kodu girin. Bu kod, "ABCDEF"
-        örneğindeki gibi 6 harf içerir.
+      instructions: 'Lütfen öğretmeninizin grubuna katılmak için size verdiği 6 harfli
+        kodu (örnek: "ABCDEF") girin.'
       instructions_short: 6 harfli bölüm kodunuzu girin
-    submit: Öğretmeni ekle
+      submit: Katıl
   add_hint_form:
     placeholder: Lütfen ipucunu buraya girin
     submit: İpucu ekle
@@ -75,7 +95,6 @@ tr:
   of: "/"
   more: DAHA FAZLA
   less: DAHA AZ
-  beta: beta
   try_hoc: 'Kod Saati''ni denemek için buraya tıklayın >> '
   try_k8intro: İlk ve Orta Okula yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin
     (15-25 saat)
@@ -86,11 +105,12 @@ tr:
   prize: ödül
   more_info: Daha fazla bilgi
   auth:
+    continue_with: "%{provider} ile devam et"
     sign_in_with: "%{provider} ile giriş yapın"
     signed_in: Giriş yapıldı!
-    signed_out: <a href="%{url}">Code.org</a> dan çıkış yaptınız.
-    sign_out_of: '%{provider} aracılığıyla giriş yaptınız. %{provider} sağlayıcısından
-      çıkış yapmak için lütfen <a href="%{url}">buraya tıklayın</a>.'
+    signed_out_markdown: "### Code.org dan çıkış yaptınız%{url}."
+    sign_out_of_markdown: "#### Giriş yapmak için %{provider} kullandınız. %{provider}'dan
+      çıkmak için [Buraya tıklayın](%{url})."
     already_signedup: Zaten kayıtlı mısınız?
     notyet_signedup: Henüz kaydolmadınız mı?
     google_oauth2: Google Hesabı
@@ -99,19 +119,34 @@ tr:
     windowslive: Microsoft Hesabı
     microsoft_v2_auth: Microsoft Hesabı
     clever: Akıllı Hesap
+    powerschool: Güç okulu
     forgot_password: Şifrenizi mi unuttunuz?
+    migration_success: Başarılı! Yeni hesap deneyimimizi güncellediniz.
+    demigration_success: Yeni hesap deneyimi artık hesabınızda devre dışı.
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
     not_linked: Üzgünüz, Code.org hesabın senin %{provider}a bağlı değildir. Parolanızı
       yazarak oturum açmanız gerekecek.
     use_clever: Üzgünüz, Code.org %{provider} ile bağlı değildir. Lütfen akıllı portalınız
       üzerinden oturum açın.
+    unable_to_connect_provider: Code.org hesabınız %{provider} hesabınıza bağlanamadı.
+      Lütfen tekrar deneyin.
+    already_in_use: "%{provider} hesabınız başka bir Code.org hesabına bağlı."
+    already_linked: "%{provider} hesabınız Code.org hesabınıza zaten bağlı."
+    existing_account:
+      account_exists: Haberler iyi! %{email} mail adresiyle bir Code.org hesabınız
+        zaten var.
+      sign_in: "%{provider} hesabınızla oturum açtığınızda hesaplarınız bağlanacak."
   signup_form:
+    email_signup: E-posta adresiniz ile kayıt olun
     student_count: "%{count}öğrenci çoktan kaydoldu."
     teacher_count: "%{count}öğretmen çoktan kaydoldu."
     overview: İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın.
       <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi
       ve projelerinizi saklamak için giriş yapmak gerekecektir.
+    overview_markdown: İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap
+      açın. [Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi
+      ve projelerinizi saklamak için giriş yapmak gerekecektir.](/)
     hoc_already_signed_up_heading: Giriş yapmadan başla
     hoc_already_signed_up_content: Kod Saatinde öğretmek için kaydoldunuz! Siz ve
       öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak
@@ -125,6 +160,12 @@ tr:
       kurslar atama ve ilerlemelerini izleme olanağı bulacaksınız. <a href="%{studio_url}">
       Ayrıca çeşitli aşamalara ve bulmacalara gözatmak için hesap oluşturmadan </a>
       devam edebilirsiniz.
+    hoc_already_signed_up_content_post_hoc_markdown: Kodlama saati düzenlediğiniz
+      için teşekkür ederiz. Kod stüdyoya kayıt hesabınız için bir parola ayarlamak
+      gerekir. Bu sizin ilerlemenizi kaydetmenizi ve sınıfınızı yönetmenizi sağlar.
+      Öğrenciler için kurslar atama ve ilerlemelerini izleme olanağı bulacaksınız.
+      [Ayrıca çeşitli aşamalara ve bulmacalara gözatmak için hesap oluşturmadan](%{studio_url})
+      devam edebilirsiniz.
     teacher_educator_guide: Eğitim rehberine bakın
     title: Code.org için kayıt ol
     school_name: Okul Adı (isteğe bağlı)
@@ -135,6 +176,7 @@ tr:
     age: Yaş
     user_type: Bir öğrenci ya da bir öğretmen misiniz?
     submit: Kaydol
+    go_to_account: Hesabıma Git
     teacher: Öğretmen misiniz?
     valid_username: Mevcut!
     invalid_username: Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır
@@ -142,24 +184,19 @@ tr:
     valid_password: Geçerli parola!
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
-    under_13_consent: Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için
-      ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum.
+    student_consent: Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal
+      vasimin izni olduğunu onaylıyorum.
     agree_us_website: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
       kabul ediyorum.
     my_data_to_us: Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne
       gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
-    student_terms: Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı
-      olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal
-      velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum.
-      <br/> <br/> E-posta adresleri öğrencilerle bağlantı kurmamız için herhangi bir
-      formda depolanmaz. Öğrenciler şifre kurtarma dışında Code.org'dan herhangi bir
-      e-posta almaz. Daha fazla bilgi için <a href='http://code.org/privacy'> Gizlilik
-      Politikamıza</a> bakınız.
-    teacher_terms: Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum.
-      Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik
-      politikamıza göz atın</a>.
+    student_terms_markdown: Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza
+      izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında
+      asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik
+      politikamıza](http://code.org/privacy) bakınız.
     additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç
       duymaktayız.
+    user_type_button: Hesap türünü güncelle
     user_type_label: Hesap Türü
     user_type_teacher: Öğretmen
     user_type_student: öğrenci
@@ -171,6 +208,11 @@ tr:
     email_preference_privacy: "(Bkz: Gizlilik İlkelerimiz)"
     email_preference_yes: Evet
     email_preference_no: Hayır
+    parent_account_checkbox: Çocuğum adına kayıt olan bir ebeveyn/veliyim
+    parent_account_email_progress_permission: Size ara sıra çocuğunuzun gelişimi ve
+      projeleriyle ilgili güncellemeler ve kursu ve bilgisayar bilimi hakkında güncellemeler
+      gönderebilir miyiz? [(Gizlilik politikamıza bakın)](%{privacy_policy_url})
+    parent_account_email_label: Ebeveyn/Veli E-postası
   school_info:
     title: Okul bilgileri (isteğe bağlı)
     school_country: Okulun bulunduğu ülke
@@ -211,8 +253,6 @@ tr:
     login: Giriş Yap
     invalid_login: Geçersiz oturum açma adı, lütfen yeniden deneyin
     pair_programming: Bilgisayarı başka biriyle kullanıyorum.
-    student_privacy: Adınızı neden görmediğiniz ile ilgili bilgi <a href='%{student_privacy_blog}'
-      target='_blank'> burada</a>.
   password:
     reset_form:
       title: Şifrenizi mi unuttunuz?
@@ -238,8 +278,10 @@ tr:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org için oturum açma bilgileri
+    parent_email_added_subject: Code.org'a Hoşgeldiniz!
   teacher_mailer:
     new_teacher_subject: Code.org'a Hoşgeldiniz!
+    delete_teacher_subject: Code.org hesabınız silindi
   section:
     your_section:
       one: 'Bölüm:'
@@ -247,6 +289,7 @@ tr:
     code_with_teacher: "%{teacher_name} ile %{section_code}"
     confirm:
       remove: Bu bölümü bırakmak istediğinden emin misin?
+    default_name: Başlıksız Bölüm
     remove: "(bölümü kaldır)"
     type:
       picture: Görsel Şifre
@@ -303,13 +346,6 @@ tr:
     header:
       finished_hoc: Kod Saati'ni tamamladım
       sign_in_to_save: İlerleme kaydetmek için oturum açın
-      free_play:
-        playlab: Oyun Laboratuvarında Uygulama oluşturun
-        artist: Bir şeyler çizin
-        calculate: Bir şey hesaplamak
-        applab: Uygulama oluşturun
-        gamelab: Bir Oyun Laboratuvarı projesi yap
-        weblab: Bir Web Lab (beta) projesi yap
       my_dashboard: Kontrol panelim
       course_catalog: Kurs Kataloğu
       project_gallery: Projeler
@@ -320,6 +356,10 @@ tr:
       professional_learning: Profesyonel öğrenme
       documentation: Belgeler
       tutorials: Eğitmler
+      game_lab_documentation: Oyun Laboratuvar Belgelendirmesi
+      game_lab_tutorials: Oyun Laboratuvar Eğitimi
+      sprite_lab_documentation: Peri Laboratuvar Belgelendirmesi
+      sprite_lab_tutorials: Peri Laboratuvar Eğitimi
       educate_overview: Eğitimci genel bakış
       educate_elementary: İlköğretim Okulu
       educate_middle: Ortaokul
@@ -345,27 +385,53 @@ tr:
       help_us: Bize yardım edin
       teach: Öğret
       about: Hakkında
+      legal_privacy: Gizlilik Politikası
+      legal_tos: Şartlar
     user:
       classroom: Öğretmen ana sayfa
       district_dashboard: Kontrol Paneli Bölgesi
       label: Merhaba %{username}
       stats: Kod Stüdyosu
+      my_projects: Projelerim
       settings: Hesap Ayarları
       logout: Çıkış Yap
       signin: Giriş Yap
       signup: Hesap oluştur
       already_registered: Zaten hesabınız var mı?
+      pair_programming: Eşli Programlama
       team: Takım
       driver: Giriş yapılmış
       navigator: Takım Arkadaşı
       create: Oluştur
+      algebra_game: Cebir
       applab: App Laboratuvarı
       artist: Sanatçı
-      gamelab: Oyun Laboratuvarı
-      playlab: Oyun Laboratuvarı
-      minecraft: Minecraft
-      flappy: Flappy
+      artist_k1: Sanatçı (Okuma-yazma bilmeyenler için)
+      basketball: Basketbol
+      bounce: Sıçrama
+      calc: Hesaplama
       dance: Dans Partisi
+      eval: Değerlendir
+      flappy: Flappy
+      frozen: Karlar Ülkesi
+      gamelab: Oyun Laboratuvarı
+      gamelab_jr: Oyun Laboratuvarı (beta)
+      gumball: Gumball
+      iceage: Buz Devri
+      infinity: Sonsuz
+      minecraft_adventurer: Minecraft Maceracısı
+      minecraft_aquatic: Minecraft Suda yaşayan
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Kahraman
+      playlab: Oyun Laboratuvarı
+      playlab_k1: Oyun Lab (Okul Öncesi)
+      scratch: Scratch
+      sports: Spor
+      spritelab: Kukla Laboratuvarı
+      starwars: Yıldız Savaşları
+      starwarsblocks: Yıldız savaşları (blok)
+      starwarsblocks_hour: Yıldız savaşları (blok)
+      weblab: Web Laboratuvarı
       view_all: Tüm projeleri görüntüle...
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
@@ -401,6 +467,7 @@ tr:
       example: Örnek Çözüm
       example_with_number: Örnek Çözüm %{solution_number}
       submitted_on: "%{date} tarihinde gönderildi"
+      last_updated: 'Son güncelleme:'
       unsubmit: Gönderini gerial
       worked_with: İle çalıştı
       update_lock_settings: Kilit ayarlarını burada değiştirin.
@@ -410,10 +477,14 @@ tr:
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
     email_confirm_wrong_email: "(Yanlış e-posta adresi?)"
     email_resend_confirm: Onay yönergelerini yeniden gönder
+    new_email_hint: "(Bu e-posta adresinden, e-posta alabildiğinizden emin olunuz.)"
     new_password_hint: "(Eğer değiştirmek istemiyorsanız boş bırakın)"
     current_password_hint: "(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)"
     delete: Hesabını Sil
     delete_text: Aşağıdaki düğmeye tıklamak hesabınızı siler.
+    delete_text_teacher_managed_note: Bu hesabı silmeye yetkiniz yok çünkü öğretmeniniz
+      tarafından yönetiliyor. Öğretmen(ler)iniz hesabınızı silmeniz için sizi gruptan
+      kaldırmalı.
     delete_text_teacher_note: 'Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin
       hesaplarını silmez.'
     delete_confirm: Hesabınızı silmek istediğinize emin misiniz?
@@ -434,24 +505,40 @@ tr:
       target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13
       yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin
       izni ile Code.org hizmetlerini kullandığımı onaylıyorum.
+    create_personal_login_terms_markdown: Kişisel hesap oluşturmakla ben, Code.org'un
+      [hizmet şartlarına bağlı olmayı kabul ediyorum](%{terms_of_service_url}). Eğer
+      13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin
+      izni ile Code.org hizmetlerini kullandığımı onaylıyorum.
     create_personal_login_email_note: Öğrenci elektronik postaları öğrencilerle iletişim
       kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar
       almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi
       için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a>
       bakınız.
+    create_personal_login_email_note_markdown: Öğrenci elektronik postaları öğrencilerle
+      iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini
+      tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla
+      bilgi için [Güvenlik politikamıza](%{privacy_policy_url}) bakınız.
     enter_new_login_info: Oturum açma bilgilerini gir
     confirm_secret_words: Gizli kelimenizi girerek siz olduğunuzu doğrulayın
     enter_parent_email: Ebeveyn ya da velinizin elektronik posta adresini girin (şifre
       kurtarmak için)
+    update: Hesabı güncelle
+    account_successfully_updated: Hesap başarıyla güncellendi.
+    update_email: Güncelle
+    for_parents_and_guardians: Ebeveynler ve Veliler İçin
+    link_a_parent_email: Çocuğunuzun gelişimi ve projeleri hakkında bilgi almak için
+      bu hesaba bir ebeveyn/veli e-posta adresi bağlayın. Bu e-posta adresini şifre
+      kurtarma için de kullanabilirsiniz.
+    parent_guardian_email_label: Veli e-posta
+    none: Hiçbiri
+    only_one_parent_email_supported_warning: 'Not: Şu anda öğrenci hesabı başına yalnızca
+      bir ebeveyn/veli e-posta adresini destekleyebiliyoruz.'
+    encrypted: sifrelenmis
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
   home:
     title: Code Studio
-    description: Code.org tarafından Code Studio evinizde online kurslar oluşturur
-    lines_of_code: "%{lines_count}öğrenci tarafından yazılan kod satırları"
-    lines_of_code_linebreak: KOD SATIRLARI %{lines_count}<br/> %{students_count} milyon
-      öğrenci tarafından yazıldı
     all_courses: 1, 2 ve 3 nolu derslere Genel Bakış
     lesson_plans: Ders planları
     signin_message: Zaten üye misiniz? % {link}
@@ -489,118 +576,10 @@ tr:
     test_videos_help: Okulunuzda yeni video oynatıcımızı deneyin
     try_beta_courses: Yeni! K-5 öğrencileri için beta kurslarımızı deneyin
     use_as_teacher: Siteyi öğretmen profiliyle kullan
-    heading_hoc2014: "<h2>Kod Saati </h2><h1> her yaş için</h1>"
-    heading_elementary: "<h2>20 saat ders</h2><h1> Bilgisayar Bilimleri Temeli (bütün
-      yaşlar için) </h1>"
-    heading_apps: "<h1>Herkes</h1> için <h2>eğlence</h2>"
-    heading_tools: "<h2>Bir sonraki adım için hazır mısın?</h2> <h1>Ortaokul ve Lise
-      için araçlar</h1>"
-    heading_legacy: "<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>"
     your_gallery: Galeri
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
     choose_next_course: Aşağıdaki Code Studio derslerinden birini seçerek deneyin
     print_certificate: Sertifikayı Yazdır
-    announcement_title: Bildirimler
-    announcement_message_fall2016_features: Görüşlerinize göre yeni özellikleri geliştirerek
-      yazı geçirdik. Şimdi, bir aygıtta programlama yapan birden fazla kişinin ilerlemesini
-      izleyebilirsiniz. <a href="%{pp_url}" target="_blank"> <i>Herhangi bir</i> sınıfta
-      <a href="%{csp_widgets_url}" target="_blank"> en iyi interaktif araçları</a>
-      bizim CS ilkeleri kursundan kullanabilirsiniz. Ve öğrencileri denemeye teşvik
-      etmek için kendi çalışma alanındaki <a href="%{unused_code_url}" target="_blank">
-      kullanılmayan kodları tutmalarını sağladık</a>! bizim yeni özellikleri kontrol
-      edinve bize ne düşündüğünüzü bildirin.
-    announcement_csp_widgets_message: İnternetin nasıl çalıştığını öğretmek ve   Şifrelemenin
-      veriyi nasıl güvenli tuttuğunu gibi kavramları öğretmek için eğlenceli bir yöntem
-      mi bakıyorsun? Bilgisayar bilimi prensiplerinden en eğlenceli olanlarını laldık
-      ve kendibaşına kullanılabilen bileşenler oluşturduk!
-    announcement_learn_more_button: Daha fazlasını öğren
-    announcement_try_now_button: Şimdi dene
-    announcement_host_an_hour_button: Kodlama Saatine ev sahipliği yap
-    announcement_watch_video_button: Videoyu izle
-    announcement_petition: Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
-      bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
-      izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
-      gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
-      için bir açık mektup verdi.
-    announcement_petition_button: Adınızı Ekleyin
-    announcement_go_beyond_button: Ötesine geçin
-    announcement_apply_now: Şimdi uygula
-    announcement_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
-      takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
-    announcement_hoc_launch: 180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde,
-      ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki
-      organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a
-      href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine
-      başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini
-      öğretmeye başlayabileceğini söyleyin.
-    announcement_mc_launch: En popüler eğitimlerimizden birinin şimdi devamı var!
-      Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar
-      oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla
-      paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde
-      sınıfınla birlikte yap.
-    announcement_how_code_studio: 'Bilgisayar Bilimlerini, sınıf içinde öğretmeye
-      başlamak için herhangi bir deneyime ihtiyacın yok. Code.org sunar: müfredat,
-      ders planları, yüksek kaliteli profesyonel eğitim programları ve büyük araçlar.Tüm
-      sınıf düzeyleri için &mdash; Nereden başlıyacağını merak ediyorsan<a href=''%{video_download_url}''>
-      Bu video</a> indir!'
-    announcement_go_beyond: 'Kodlama saatinin ötesine gidip bilgisayar bilimi kavramlarını
-      öğrenciler ile her hafta keşfedin. Code.org sunar: müfredat, ders planları,
-      yüksek kaliteli profesyonel eğitim programları ve büyük araçlar. Tüm düzeyler
-      için &mdash; ve hepsi ücretsiz. :) Bilgisayar Bilimleri, sınıf içinde öğretim
-      başlamak için herhangi bir deneyime ihtiyacın yok. <b>Sınıf için uygun olan
-      adım.</b>'
-    announcement_teacher_recruitment: Sizin öğretmenler bilişim hareketinin liderisiniz.
-      Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden
-      katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak
-      ve profesyonel öğretme için uygulayabilirsiniz.
-    announcement_teacher_recruitment2: Sizin öğretmenler bilişim hareketinin liderisiniz.
-      Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden
-      katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak
-      ve profesyonel öğretme için uygulayabilirsiniz.
-    announcement_csf_pilot: "<strong>İlköğretim Okulu öğretmenleri:</strong> CS Temelleri
-      kurslarımız güncelleştirme bir parçası olun! Güncellenme Zamanı bir CS Temelleri
-      müfredat kış ve 2017 yılının baharında sırasında pilot için öğretmen arıyoruz.
-      Biz bu güncelleştirmeleri Ağustos 2017 yılında canlı gitmeden önce görüşlerinizi
-      duymak arzu ediyoruz."
-    announcement_student_privacy: Code.org biz öğrencinin gizliliğini çok ciddiye
-      alıyoruz. Senin öğrencilerin gizliliğini korumak için biz tam adlarınnı görüntülemesini
-      önlemek için bölümün giriş sayfasına bir değişiklik yaptık. Bu güncelleştirme
-      gizlilik seviyesini arttırsa bile <i>öğrencilerin tam adlarını kullanmamasını
-      teşvik ediyoruz.
-    announcement_apcsp_recruitment: '<strong>Bilgisayar bilim ilkeleri.öğretmenler:</strong>
-      Öğrencilerin Bilgisayar Bilimleri İlkeleri sınavına bu yıl öğrencilerinizi teşvik
-      edin. Code.org''ın sonraki viral özellikli video. 10-20 saniye arası video göndermeleri
-      için öğrencileri davet ediyoruz. Instagram veya Facebook üzerinde video klip
-      vr "Ben #APCSP çünkü sınava gireceğim..." diye paylaşm yapın. Code.org dan swag
-      kazanın!'
-    announcement_apcsp_recruitment2: 'Bu yılki AP CS ilkeleri sınavı kayıtları kırmaya
-      hazırlanıyor. Sınavı Öğrenci katılımı önemli ölçüde çeşitlilik AP Bilgisayar
-      Biliminde kayması olabilir ama yardımına ihtiyacımız var. AP CSP sınava girmek
-      her CS ilkeleri öğrenci teşvik ve <a href=''%{gift_url}'' target=''_blank''>
-      bir hediye göndermek</a> olacak. Öğrenciler ayrıca bizim <a href=''%{challenge_url}''
-      target=''_blank''> #APCSP video challenge</a> ülke genelinde eş teşvik edebilir.'
-    announcement_apcsp_recruitment3: Bu yılki AP CS ilkeleri sınavı kayıtları kırmaya
-      hazırlanıyor. Sınavı Öğrenci katılımı önemli ölçüde çeşitlilik AP Bilgisayar
-      Biliminde kayması olabilir ama yardımına ihtiyacımız var. AP CSP sınava girmek
-      her CS ilkeleri öğrenci teşvik ve n <a href='%{gift_url}' target='_blank'>a  bir
-      hediye göndermek</a> olacak. Öğrenciler ayrıca bizim <a href='%{video_url}'
-      target='_blank'> P video challenge</a> ülke genelinde eş teşvik edebilir.
-    announcement_csp_deadline: Lise öğretmenleri için son çağrı! Bilgisayar bilimi
-      ile okulunuzda öncülük et ve eğrenme programlarımıza katıl. Hiçbir ücret ödemeden
-      yüksek kaliteli profesyonel eğitim al. 14 Nisan da başvurular kapanıyor.
-    announcement_applab_export: Uygulama laboratuvarı, bizim web tabanlı programlama
-      ortamı, şimdi senin programını indirmeni destekliyor! JavaScript bloklarını
-      Sürükle ve bırak ile uygulamalar oluşturmaya başlayın sonra seçtiğiniz herhangi
-      bir geliştirme ortamında düzenlemeye devam edin.
-    announcement_csp_survey: "<b>Tebrikler Bilgisayar Bilimleri ilkeleri öğretmenleri!</b>
-      <br/> Bilgisayar ilkeleri sınavına 50.000'i aşkın öğrenci tarihinin en büyük
-      sınavına katılacak. Öğrencilerin seslerini duyalım-ders son anketi tamamlamak
-      için onlara hatırlat! Senin öğrencilerin yanıtları gözden geçirmen mümkün olacak
-      ve biz de seninle toplu Ulusal sonuç raporu paylaşacağız."
-    announcement_navigation_redesign: "<b>Sitedeki Gezinti değişiklikleri</b> <biz
-      Code.org site genelinde kaynaklara erişimi kolaylaştırmak için değişiklik yapıyoruz.
-      Öğretmen hesabınıza giriş yapın, ana sayfanızda kurslar, Proje Galerisi, bölümler
-      ve profesyonel öğrenme linkleri ile yeni bir gezinti çubuğu olacak."
   move_students:
     new_section_dne: Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin.
@@ -688,6 +667,7 @@ tr:
     download: Videoyu indir
     show_notes: Notları göster
     show_video: Videoyu görüntüle
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}',
@@ -715,7 +695,6 @@ tr:
   pdf_download: PDF İndir
   download_coming_soon: İndirilebilir aktivite yakında geliyor.
   video_coming_soon: Video Yakında Geliyor!
-  not_started: Öğrenciler bu bölüm için henüz giriş yapmadılar.
   share_code:
     title: Benim programımın çalışmasını görmek için, 'Çalıştır' seçeneğini tıklayın
     bounce_og_title: Benim Bounce oyunuma göz atın
@@ -749,6 +728,8 @@ tr:
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
     dance:
+      title: Dans Partisi
+    dance-2019:
       title: Dans Partisi
     hoc:
       title: Klasik Labirent
@@ -832,31 +813,7 @@ tr:
         sınıf için bir ortak tek bir ders oluşturabilirsiniz.
       audience: 14 yaş üzeri
       cta: Nasıl olduğunu öğren
-  gallery:
-    students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
-    students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
-    picture_count: Geçtiğimiz <b>%{days}</b> günlerde, öğrenciler <b>%{count}</b>
-      tane resmi kendi yazdıkları programlarla çizdiler. Her programın çalışışını
-      görmek için resimlerin üzerine tıklayın.
-    activity_count: geçmiş <b>%{days}</b> günde, öğrenciler kendi bilgisayar programlarını
-      yazarak <b>%{count}</b> kadar uygulama ve resimler oluşturdu. Ekran görüntülerine
-      tıklayıp her bir programın nasıl çalıştığını görün.
-    want_to_make_your_own: Kendininkini yapmak ister misin?
-    how_to_save: Eğitici bölümlerin son kısmında, çalışmanızı kaydetmek için "Bitir"
-      butonunu ve "Kaydet" butonunu tıklayın.
-    more: Daha fazla &rarr;
-    caption_by_name_age: "%{name} tarafından, %{age} yaşında"
-    caption_time_ago: "%{time_ago} zaman önce"
-    header: Galeri
-    header_playlab: Oyun Laboratuvarı
-    header_artist: Aktör
-    report_abuse: Hata Rapor Et
   landing:
-    prerelease: Bu ders, <span class='betatext'> beta</span> versiyonundadır.  Bu
-      demek oluyor ki bu dersin son hali değildir, geribildirimler alındıkça içeriğinde
-      düzeltme ve değişiklikler olabilir.
-    prerelease_hoc2014: Bu öğretici <span class='betatext'>beta</span>dır. Geri dönüşler
-      aldıkça ve geliştirildikçe düzenlenmeye açıktır.
     report_bug: Hata bildir
     support: Yardım Al
     support_url: "//support.code.org"
@@ -864,6 +821,8 @@ tr:
     help_support: Yardım ve Destek
     documentation: Belgeler
     tutorials: Eğitmler
+  free_response:
+    placeholder: Cevabınızı buraya girin
   multi:
     wrong_title: Yanlış cevap
     wrong_body: Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!
@@ -938,17 +897,17 @@ tr:
   age_interstitial:
     age: Yaşın
     header: Hesap Bilgileri Güncelleme
-    message: Size daha güçlü gizlilik koruması sağlamak konusunda güncellemelerimizi
-      sürdürmekteyiz. Bunu yapabilmek için mevcut kullanıcıların buraya yaşlarını
-      girmesi gerekmektedir.<br/>Herzaman olduğu gibi code.org özel bilgilerinizi
-      asla kiralamaz, satmaz veya üçüncü partilerle paylaşmaz.
-    sign_out: Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a>
-      çıkış yapabilirsiniz.
   terms_interstitial:
     title: Güncellenen Hizmet ve Gizlilik Politikası şartları
     intro_desc: 'Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler
       24 Ağustos 2016''dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code
       Studio''daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim
+      için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine
+      yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak
+      gönderdik.'
+    intro_desc_markdown: 'Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler
+      24 Ağustos 2016''dan itibaren uygulanıyor. En büyük değişiklik: _Artık Code
+      Studio''daki öğrencilerin email adreslerini artık arşivlemiyoruz._ Bu bizim
       için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine
       yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak
       gönderdik.'
@@ -963,12 +922,19 @@ tr:
     accept_label: Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet
       şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik politikasını</a>
       kabul ediyorum
+    accept_label_markdown: Güncellenme Zamanı [Hizmet şartları](%{tos_url}) ve [Gizlilik
+      politikasını](%{privacy_url}) kabul ediyorum
+    accept_tos: Code.org'a kaydolarak [Hizmet Şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url})
+      şartlarını kabul etmiş olursunuz.
     accept: Kabul et
     print: Yazdır
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve
       <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi.
       Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği
       güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
+    reminder_desc_markdown: "[Hizmet şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url})
+      güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz. JavaScript
+      öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir."
     review_terms: Güncellenen Hizmet ve Gizlilik politikasını göster
   school_info_interstitial:
     title: Her öğrenciye bilgisayar bilim ini getirmek için bize yardım etmeni istiyoruz!
@@ -994,6 +960,9 @@ tr:
   zendesk_too_young_message: Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar.
     <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan
     kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.
+  zendesk_too_young_message_markdown: Üzgünüz, genç kullanıcılarımız destek sitemize
+    üye olamazlar. [support.code.org](http://support.code.org) adresini giriş yapmadan
+    kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.
   progress:
     not_started: Başlatılmadı
     in_progress: İşlem devam ediyor
@@ -1011,23 +980,10 @@ tr:
     create: Proje Oluştur
     create_a_project: 'Yeni bir proje oluşturun:'
     new: Yeni oluştur
-    rename: Yeniden adlandır
-    save: Kaydet
-    delete: Sil
-    import: İçeri Aktar
-    share_link_import_bad_link_header: Paylaşım bağlantısı tanınmıyor
-    share_link_import_bad_link_body: 'Bu paylaşım bağlantısını içeri aktaramadık.
-      Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı
-      kopyaladığından emin ol.'
-    share_link_import_error_header: Bir sorun oluştu.
-    share_link_import_error_body: Paylaşım bağlantısını içeri aktarırken bir sorun
-      oluştu. Lütfen tekrar dene.
     exit: Kursa dön
-    my_projects: Projelerim
     project_gallery: Projeler
     publish: Yayımla
     unpublish: Yayımdan Kaldır
-    share: Paylaş
     share_title: Projenizi paylaşın
     share_copy_link: 'Bağlantıyı kopyala:'
     share_embed_description: Projeyi bir web sayfasında görüntülemek için yerleştirme
@@ -1038,8 +994,6 @@ tr:
     advanced_share: Gelişmiş seçenekleri göster
     no_projects: Şu anda hiç proje var. Bir proje başlatmak için yukarıdaki düğmelerden
       birini tıklatın.
-    close: Kapat
-    more: Daha Fazla
     name: İsim
     updated: Güncellendi
     project_type: Proje türü
@@ -1049,20 +1003,9 @@ tr:
     thumbnail_help: Projeniz için doğru küçük resim göremiyorum? Yeni küçük resim
       oluşturmak için uygulamanızı çalıştırın. Resmi her yerde yenilemek birkaç saat
       sürebilir.
-    really_delete: Silinsin mi?
-    delete_yes: Evet
-    delete_no: Hayır
     saved: Kaydedildi
     not_saved: Kaydedilmedi
-    cancel: İptal
-    delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
-    delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır.
-      Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler.
     view_all: Projelerimi görüntüle
-    remix: 'karıştır.
-
-'
-    click_to_remix: Kendi sürümünüzü yaratmak için 'Remix'e basın!
     edit_project: Projeyi Düzenle
     sharing_disabled: Üzgünüz, bu proje paylaşım için kullanılabilir değil. Bu sizin
       projeniz ya da proje öğrencilerinden birinin ise, projeyi görüntülemek için
@@ -1100,10 +1043,8 @@ tr:
   peer_review:
     accepted:
       name: Kabul edildi
-      description: "<strong>Evet</strong>, bu öneri gereksinimleri karşılıyor"
     rejected:
       name: Reddedildi
-      description: "<strong>Hayır</strong>, bu öneri gereksinimleri karşılamıyor"
     escalated:
       name: Yükseltilmiş
       description: Bu gönderiyi gözden geçirmek için bir eğitmen istiyorum
@@ -1111,45 +1052,7 @@ tr:
     peer_feedback: Geribildirim Gönder
     outdated: Bu geribildirim daha önce yollanan gönderiye eklendi
     review_in_progress: Gözden geçirmeye hazır
-  flex_category:
-    required: Genel Bakış
-    content: İçerik
-    practice: Öğretmen Uygulamaları
     peer_review: Eş gözden geçirme
-    optional_stages: İsteğe bağlı aşamalar
-    main_course: Ana ders
-    extra_course_content: İlave kurs içeriği
-    csf_e_1: Kurs E ye hazırlık (isteğe bağlı)
-    csf_e_2: E Kursu İçeriği
-    csf_f_1: Kurs F'ye hazırlık (isteğe bağlı)
-    csf_f_2: F Kursu İçeriği
-    csd1_1: 'Bölüm 1: Problem çözme süreci'
-    csd1_2: 'Bölüm 2: Bilgisayar ve Problem çözme'
-    csd2_1: 'Bölüm 1: Web içerik ve HTML'
-    csd2_2: 'Bölüm 2: Stil oluşturma ve CSS'
-    csd3_1: 'Bölüm 1: Resim ve animasyon'
-    csd3_2: 'Bölüm 2: Oyun geliştirme'
-    csd4_1: 'Bölüm 1: Kullanıcı merkezli tasarım'
-    csd4_2: 'Bölüm 2: Uygulama prototipleme'
-    csd5_1: 'Bölüm 1: Bilgileri gösterme'
-    csd5_2: 'Bölüm 2: Veri problemlerini çözme'
-    csd6_1: 'Bölüm 1: Donanım çıktısı'
-    csd6_2: 'Bölüm 1: Donanım girdisi'
-    csp1_1: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
-    csp1_2: Interneti icat etme
-    csp2_1: Karmaşık bilgileri kodlama ve sıkıştırma
-    csp2_2: 'Bölüm 2: Veriyi İşleme ve Görselleştirme'
-    csp3_1: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
-    csp4_1: 'Bölüm 1: Büyük Verilerin Dünyası ve Şifreleme'
-    csp5_1: 'Bölüm 1: Olay Temelli Programlama'
-    csp5_2: 'Bölüm 2: Programlama ve Veri Yapıları'
-    cspSurvey: Anket
-    cspAssessment: Bölüm Değerlendirme
-    csp_ap_1: 'Bölüm 1: AP teknik kurulum'
-    csp_ap_2: 'Bölüm 2: AP performans görevini keşfet'
-    csp_ap_3: 'Bölüm 2: AP performans görevini yarat'
-    csp2_1_2018: 'Ünite 2: Sayısal bilgi'
-    dlp: Yansıma İstemleri
   external_links:
     disclaimer: Yasal uyarı
     leaving_domain: Code.org tarafından işletilen site değil.
@@ -1234,6 +1137,8 @@ tr:
       school_name: Okulun Adı
       school_city: Okulun bulunduğu şehir
       school_country: Okulun bulunduğu ülke
+      colombian_school_city: Okulun bulunduğu şehir
+      colombian_school_name: Okulun Adı
     form_entries:
       gender:
         male: Erkek
@@ -1245,8 +1150,11 @@ tr:
         science: Fen Bilimleri
         la: Dil Sanatları
       resources:
+        khan: Khan Akademi
         kodable: Kodlanabilir
+        scratch: Scratch
       robotics:
+        grok: Grok
         kodable: Kodlanabilir
       workshop_course:
         csp: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
@@ -1257,6 +1165,19 @@ tr:
   cookie_banner:
     accept: Kabul ediyorum
   gdpr_dialog:
+    heading: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul
+      ediyor musunuz?
     message: Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne
       gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
     true: Evet
+  page_not_found_title: Sayfa Bulunamadı
+  page_not_found_header: '404: Sayfa Bulunamadı'
+  page_not_found_description: Aradığınız sayfa bu adreste bulunmuyor. Web adresini
+    kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün.
+  page_not_found_button: Anasayfaya Dön
+  copy: Kopyala
+  parent_email_banner:
+    text: "** Ebeveyn veya veli misiniz? ** Çocuğunuzun gelişimi ve projeleri hakkında
+      bilgi almak için e-postanızı bu hesaba bağlayın!"
+    link_your_email: E-postanızı bağlayın
+    not_now: Şimdi değil

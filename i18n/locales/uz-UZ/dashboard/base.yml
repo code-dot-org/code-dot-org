@@ -1,7 +1,20 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 uz:
   errors:
     messages:
       not_saved: 'Iltimos, quyidagi xatolarni to‘g‘rilang:'
+      too_young: 'Bu dars uchun yoshga cheklov bo‘lib, yoshi to‘lmaganlar uchun kirish imkoni yo‘q.'
   activerecord:
     errors:
       messages:
@@ -20,16 +33,15 @@ uz:
         edit_header: 'Foydalanuvchi ma''lumotlarini tahrir qilish'
         error:
           future: yaqin orada bo`la olmaydi
+  beta: "beta"
   hello: "Salom Dunyo"
   welcome_back: "Qayta tashrifingiz bilan, %{name}"
   submit: Taqdim qilmoq
   cancel: "Bekor qilish"
   or: "yoki"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'O`qituvchi qo`shing:'
       placeholder: "Bo`lim kodi"
-    submit: 'O`qituchi qo`shish'
   add_hint_form:
     placeholder: 'Iltimos, ko`makchi so`zni shu yerga kiriting'
     submit: 'Ko`makchi so`z qo`shing'
@@ -42,7 +54,6 @@ uz:
   of: "ni"
   more: "Ko`p"
   less: "Oz"
-  beta: "beta"
   already_started: "Allaqachon boshlaganmisiz? Bu yerda davom eting >> "
   demos: "Admin: Barcha demonstratsiyalar"
   continue: 'Davom etish'
@@ -51,8 +62,6 @@ uz:
   auth:
     sign_in_with: '%{provider} orqali kirish'
     signed_in: 'Kirgansiz!'
-    signed_out: 'Siz <a href="%{url}">saytidan</a> chiqdingiz.'
-    sign_out_of: 'Siz saytga kirish uchun %{provider} dan foydalandingiz. %{provider} dan chiqish uchun <a href="%{url}">bu yerni</a> bosing.'
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft akkaunti'
@@ -78,22 +87,29 @@ uz:
       word: 'Sirli so''z'
       email: 'Elektron pochta'
   crud:
+    edit: 'tahrirlash'
     submit: 'Taqdim qilmoq'
     confirm: 'Aminmisiz?'
   nav:
     header:
       educate_hoc: "Dasturlash soati"
+      legal_tos: "Xizmat shartlari"
     user:
       classroom: 'O‘qituvchining bosh sahifasi'
       create: 'Yaratmoq'
       applab: 'Ilova labaratoriyasi'
+      bounce: 'Sakrash'
+      iceage: 'Muzlik davri'
+    popup:
+      prizes_link: 'Batafsil'
   teacher:
     panel:
       student: 'O‘quvchi'
   home:
+    student_reg_link: 'O‘quvchi'
+    online: Onlayn
     trynow: 'Hoziroq sinang'
-    announcement_learn_more_button: "Ko‘proq bilish"
-    announcement_try_now_button: "Hoziroq sinang"
+    try_beta_courses: 'Yangilik! Boshlang‘ich sinfdagilar uchun beta-mashg‘ulotlarimizni sinab ko‘ring.'
   gender:
     none: 'Javob bermaslikni ma’qul ko‘raman'
   user_type:
@@ -120,8 +136,8 @@ uz:
       title: 'Ilova labaratoriyasi'
     unplugged_conditionals:
       title: "Shart buyruqlari"
-  gallery:
-    report_abuse: "Nosozlik haqida xabar berish"
+  free_response:
+    placeholder: "Javobingizni bu yerga yozing"
   multi:
     wrong_title: "Noto‘g‘ri javob"
     wrong_body: "Siz bergan javob noto‘g‘ri. Qaytadan urinib ko‘ring!"
@@ -155,17 +171,15 @@ uz:
     races:
       other: "Boshqa"
     submit: "Taqdim qilmoq"
+    decline: "Yopish"
   project:
-    save: "Saqlash"
-    delete: "O'chirish"
-    more: "Yana"
     name: "Ismi"
-    really_delete: 'O''chirasizmi?'
-    cancel: 'Bekor qilish'
     abuse:
       report_abuse_form:
         abuse_type:
           other: 'Boshqa'
+  hoc_download:
+    minecraft_name: 'Maynkraft Dasturlash soati'
   pd:
     form_labels:
       email: 'Elektron pochta'
@@ -175,5 +189,7 @@ uz:
       subjects:
         cs: 'Informatika'
         math: 'Matematik'
+      resources:
+        khan: 'Xon Akademiyasi'
   cookie_banner:
     accept: 'Roziman'

@@ -3,18 +3,27 @@ fa:
   data:
     block_categories:
       Actions: اقدامات
-      Loops: حلقه‌ها
-      Functions: توابع
+      Advanced: پیشرفته
+      Behaviors: عملکردها
+      Brushes: قلم‌ها
       Color: رنگ
-      Math: ریاضی
-      Logic: منطق
-      Variables: متغیرها
+      Comment: دیدگاه
+      Comments: نظرات
       Conditionals: شرطی ها
+      Dancers: رقاص‌ها
+      Default: پیش‎فرض
       Events: رویدادها
+      Functions: توابع
+      'Functions ': 'توابع '
+      Game/Score: بازی‌/امتیاز
+      Games/Score: بازی‌ها/امتیاز
+      Groups: گروه ها
+      Locations: موقعیت‌های مکانی
+      Logic: منطق
+      Loops: حلقه‌ها
+      Math: ریاضی
+      Numbers: اعداد
       Text: متن
-      Location: مکان
-      Start: شروع
-      Booleans: بولی ها
-      test: آزمایش
-      Name: نام
-      Function: تابع
+      Variables: متغیرها
+      'Variables ': 'متغیرها '
+      World: دنیا

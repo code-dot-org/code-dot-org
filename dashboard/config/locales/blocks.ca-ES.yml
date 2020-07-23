@@ -2,6 +2,43 @@
 ca:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': tots els extraterrestres
+            '"BEAR"': tots els óssos
+            '"CAT"': tots els gats
+            '"DOG"': tots els gossos
+            '"DUCK"': tots els ànecs
+            '"FROG"': totes les granotes
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': totes les pinyes
+            '"ROBOT"': tots els robots
+            '"SHARK"': tots els taurons
+          MOVE1:
+            MOVES.Roll: Rodar per terra
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Caiguda
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Clown: Pallasso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
+          MOVE2:
+            MOVES.Roll: Rodar per terra
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Caiguda
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Clown: Pallasso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
       Dancelab_atTimestamp:
         text: després de {TIMESTAMP} {UNIT}
         options:
@@ -79,6 +116,26 @@ ca:
             '"rotation"': rotació
             '"x"': posició horitzontal
             '"y"': posició vertical
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            '"ALIEN"': tots els extraterrestres
+            '"BEAR"': tots els óssos
+            '"CAT"': tots els gats
+            '"DOG"': tots els gossos
+            '"DUCK"': tots els ànecs
+            '"FROG"': totes les granotes
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': totes les pinyes
+            '"ROBOT"': tots els robots
+            '"SHARK"': tots els taurons
+          PROPERTY:
+            '"scale"': mida
+            '"width"': amplada
+            '"height"': alçcada
+            '"rotation"': rotació
+            '"x"': posició horitzontal
+            '"y"': posició vertical
       Dancelab_doMoveEachLR:
         text: "{GROUP} fer {MOVE} {DIR} un cop"
         options:
@@ -93,7 +150,6 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
-            '"UNICORN"': tots els unicorns
           MOVE:
             '"rand"': "(Aleatori)"
             MOVES.Roll: Rodar per terra
@@ -205,6 +261,30 @@ ca:
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            '"ALIEN"': tots els extraterrestres
+            '"BEAR"': tots els óssos
+            '"CAT"': tots els gats
+            '"DOG"': tots els gossos
+            '"DUCK"': tots els ànecs
+            '"FROG"': totes les granotes
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': totes les pinyes
+            '"ROBOT"': tots els robots
+            '"SHARK"': tots els taurons
+          LOCATION:
+            "{x: 200, y: 100}": part superior
+            "{x: 200, y: 300}": part inferior
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
+            "{x: 200, y: 200}": centre
+            "{x: 100, y: 100}": part superior esquerra
+            "{x: 300, y: 100}": part superior dreta
+            "{x: 100, y: 300}": part inferior esquerra
+            "{x: 300, y: 300}": part inferior dreta
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": atzar
       Dancelab_layoutSprites:
         text: disposició {GROUP} com a {FORMAT}
         options:
@@ -219,7 +299,6 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
-            '"UNICORN"': tots els unicorns
           FORMAT:
             '"border"': frontera
             '"inner"': plaça interior
@@ -230,6 +309,27 @@ ca:
             '"x"': cruïlla
             '"plus"': més
             '"random"': atzar
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"BEAR"': Ós
+            '"DOG"': gos
+            '"DUCK"': ànec
+            '"FROG"': Granota
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': Pinya
+            '"SHARK"': Tauró
+          LOCATION:
+            "{x: 200, y: 100}": part superior
+            "{x: 200, y: 300}": part inferior
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
+            "{x: 200, y: 200}": centre
+            "{x: 100, y: 100}": part superior esquerra
+            "{x: 300, y: 100}": part superior dreta
+            "{x: 100, y: 300}": part inferior esquerra
+            "{x: 300, y: 300}": part inferior dreta
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
       Dancelab_makeNewDanceSprite:
         text: |-
           fer un nou {COSTUME}
@@ -290,6 +390,7 @@ ca:
             '"FROG"': Granotes
             '"MOOSE"': Ant
             '"PINEAPPLE"': Pinyes
+            '"ROBOT"': tots els robots
             '"SHARK"': Taurons
           LAYOUT:
             '"border"': frontera
@@ -342,7 +443,7 @@ ca:
             '"neon"': Neó
             '"warm"': Vermells
       Dancelab_setBackgroundEffectWithPalette:
-        text: definir l'efecte de fons {EFFECT} {PALETTE}
+        text: definir l'efecte de fons {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Cap
@@ -390,7 +491,6 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
-            '"UNICORN"': tots els unicorns
           SPEED:
             '1': normal
             '2': ràpid
@@ -452,7 +552,6 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
-            '"UNICORN"': tots els unicorns
           PROPERTY:
             '"scale"': mida
             '"width"': amplada
@@ -470,9 +569,42 @@ ca:
             '"rotation"': rotació
             '"x"': posició horitzontal
             '"y"': posició vertical
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            '"ALIEN"': tots els extraterrestres
+            '"BEAR"': tots els óssos
+            '"CAT"': tots els gats
+            '"DOG"': tots els gossos
+            '"DUCK"': tots els ànecs
+            '"FROG"': totes les granotes
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': totes les pinyes
+            '"ROBOT"': tots els robots
+            '"SHARK"': tots els taurons
+          PROPERTY:
+            '"scale"': mida
+            '"width"': amplada
+            '"height"': alçcada
+            '"rotation"': rotació
+            '"x"': posició horitzontal
+            '"y"': posició vertical
       Dancelab_setTint:
         text: configurar {SPRITE} tint a {VAL}
       Dancelab_setTintEach:
+        options:
+          THIS:
+            '"ALIEN"': tots els extraterrestres
+            '"BEAR"': tots els óssos
+            '"CAT"': tots els gats
+            '"DOG"': tots els gossos
+            '"DUCK"': tots els ànecs
+            '"FROG"': totes les granotes
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': totes les pinyes
+            '"ROBOT"': tots els robots
+            '"SHARK"': tots els taurons
+      Dancelab_setTintEachInline:
         options:
           THIS:
             '"ALIEN"': tots els extraterrestres
@@ -503,10 +635,33 @@ ca:
             '"PINEAPPLE"': totes les pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': tots els taurons
-            '"UNICORN"': tots els unicorns
       Dancelab_startMapping:
         text: "{SPRITE} comença a {PROPERTY} seguit de {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': mida
+            '"width"': amplada
+            '"height"': alçcada
+            '"rotation"': rotació
+            '"x"': posició horitzontal
+            '"y"': posició vertical
+          RANGE:
+            '"bass"': baix
+            '"mid"': mig
+            '"treble"': agut
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': tots els extraterrestres
+            '"BEAR"': tots els óssos
+            '"CAT"': tots els gats
+            '"DOG"': tots els gossos
+            '"DUCK"': tots els ànecs
+            '"FROG"': totes les granotes
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': totes les pinyes
+            '"ROBOT"': tots els robots
+            '"SHARK"': tots els taurons
           PROPERTY:
             '"scale"': mida
             '"width"': amplada
@@ -533,6 +688,36 @@ ca:
             '"bass"': baix
             '"mid"': mig
             '"treble"': agut
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': tots els extraterrestres
+            '"BEAR"': tots els óssos
+            '"CAT"': tots els gats
+            '"DOG"': tots els gossos
+            '"DUCK"': tots els ànecs
+            '"FROG"': totes les granotes
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': totes les pinyes
+            '"ROBOT"': tots els robots
+            '"SHARK"': tots els taurons
+          PROPERTY:
+            '"scale"': mida
+            '"width"': amplada
+            '"height"': alçcada
+            '"rotation"': rotació
+            '"x"': posició horitzontal
+            '"y"': posició vertical
+            '"direction"': direcció del moviment
+          RANGE:
+            '"bass"': baix
+            '"mid"': mig
+            '"treble"': agut
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Cors
+            '"x"': x
       Dancelab_whenKey:
         text: quan la {KEY} és premuda
         options:
@@ -552,15 +737,8 @@ ca:
             '2': agut
       Dancelab_whenSetup:
         text: configuració
-      gamelab_changeColor:
-        text: canvi {COLOR} {METHOD} per {AMOUNT}
-      gamelab_changeColorBy:
-        text: canvi {COLOR} {METHOD} per {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': matís
-            '"saturation"': saturació
-            '"brightness"': lluïssor
+      Dancelab_whenSetup2:
+        text: configuració
       gamelab_changePropBy:
         text: canvi {SPRITE} {PROPERTY} per {VAL}
         options:
@@ -573,17 +751,16 @@ ca:
           CONDITION:
             '"when"': quan
             '"while"': mentres
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': cert
-            'false': fals
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segons
       gamelab_jumpTo:
         text: "{SPRITE} salta a {LOCATION}"
       gamelab_keyPressed:
@@ -598,17 +775,11 @@ ca:
             '"right"': dret
             '"space"': espai
             '"x"': x
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": atzar
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': dret
             '"left"': esquerra
-      gamelab_mixColors:
-        text: barrejar {COLOR1} i {COLOR2}
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
@@ -618,21 +789,15 @@ ca:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cova
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciutat
-      gamelab_setPosition:
-        text: moure {THIS} a la posició {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": part superior esquerra
-            "{x: 200, y: 50}": centre superior
-            "{x: 350, y: 50}": part superior dreta
-            "{x: 50, y: 200}": centre esquerra
-            "{x: 200, y: 200}": centre
-            "{x: 350, y: 200}": centre dreta
-            "{x: 50, y: 350}": part inferior esquerra
-            "{x: 200, y: 350}": part inferior central
-            "{x: 350, y: 350}": part inferior dreta
-            '"random"': atzar
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': quadrícula
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Arc
+              de Sant Martí
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sota
+              l'aigua
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': l'hivern
       gamelab_setProp:
         options:
           PROPERTY:
@@ -646,23 +811,11 @@ ca:
             '"scale"': mida
             '"width"': amplada
             '"height"': alçcada
-      gamelab_setup:
-        text: configuració
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': quan
             '"while"': mentres
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': mida
-            '"direction"': direcció del moviment
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': mida
-            '"direction"': direcció del moviment
       gamelab_turn:
         options:
           DIRECTION:
@@ -677,13 +830,6 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": cap amunt
-            "'down'": avall
-            "'left'": esquerra
-            "'right'": dret
       gamelab_whileKey:
         options:
           KEY:
@@ -765,6 +911,8 @@ ca:
             MOVES.Rest: Cap
       Mikelab_randomColor:
         text: color aleatori
+      Mikelab_repeatUntilComplete:
+        text: repetir per sempre
       Mikelab_setBG:
         options:
           BG:
@@ -826,56 +974,22 @@ ca:
         text: gira a la dreta
       Vector_positionCenter:
         text: centre
-      aalab_changePropByFlexible:
-        text: canvi {SPRITE} {PROPERTY} per {VAL}
+      aalab_goToScene:
         options:
-          PROPERTY:
-            '"scale"': mida
-            '"rotation"': rotació
-            '"direction"': direcció del moviment
-      aalab_checkTouching:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': quan
-            '"while"': mentres
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': quan
-            '"while"': mentres
-      aalab_jumpTo:
-        text: "{SPRITE} salta a {LOCATION}"
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': quan
-            '"while"': mentres
-          KEY:
-            '"up"': cap amunt
-            '"down"': avall
-            '"left"': esquerra
-            '"right"': dret
-            '"space"': espai
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciutat
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': cert
-            '"false"': fals
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': mida
-            '"rotation"': rotació
-            '"direction"': direcció del moviment
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': Mostra
-            '"hide"': amaga
+            '"random"': atzar
       binary_move:
         options:
           DIR:

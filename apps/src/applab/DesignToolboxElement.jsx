@@ -22,7 +22,8 @@ export default class DesignToolboxElement extends React.Component {
         paddingBottom: 15
       },
       innerContainer: {
-        textAlign: 'center'
+        textAlign: 'center',
+        cursor: 'grab'
       },
       image: {
         marginBottom: 5

@@ -1,0 +1,196 @@
+---
+# Database parameter group template
+# Reference documentation:
+# https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html
+# https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html
+# https://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html
+# https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html
+
+# System variables used by primary RDS instance.
+Primary: &primary
+  # Enable Performance Schema.
+  performance_schema: 1
+
+  # Server System Variables:
+  # https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html
+
+  # Number of equality ranges in an equality comparison condition when the optimizer should switch from using index dives
+  # to index statistics in estimating the number of qualifying rows.
+  # Preserve 5.6 default of 10 (in 5.7 the default increased to 200).
+  eq_range_index_dive_limit: 10
+  # Store query logs in files to avoid database overhead.
+  log_output: FILE
+  # Set global execution timeout for SELECT statements, in milliseconds.
+  max_execution_time: 30000
+  # Skip resolving DNS on hostnames for improved performance.
+  skip_name_resolve: 1 # not dynamic
+  # Enable slow query log.
+  slow_query_log: 1
+  # Fully cache all table definitions.
+  table_definition_cache: 20000
+  # Set table_open_cache equal to max_connections.
+  # Ref: https://dev.mysql.com/doc/refman/5.7/en/table-cache.html
+  table_open_cache: '{DBInstanceClassMemory/12582880}'
+  # Relax transaction isolation for improved concurrency under load.
+  tx_isolation: READ-COMMITTED
+
+  # InnoDB System Variables:
+  # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html
+
+  # Improve insert/update concurrency for autoincrement tables.
+  innodb_autoinc_lock_mode: 2 # not dynamic
+  # With a setting of 0, logs are written and flushed to disk once per second.
+  # Transactions for which logs have not been flushed can be lost in a crash.
+  # Reduces durability for better performance.
+  innodb_flush_log_at_trx_commit: 0
+  # Neighbor flushing reduces performance without any benefit on SSD. (Default changes to 0 in >= 8.0.3)
+  innodb_flush_neighbors: 0
+  # IO capacity controls background flushing rate (IO/sec).
+  innodb_io_capacity: 4000
+  # IO capacity max controls maximum background flushing rate when certain thresholds are reached.
+  innodb_io_capacity_max: 9000
+  # Larger log buffer size allows larger transactions without writing to disk.
+  innodb_log_buffer_size: <%=16.megabytes%> # not dynamic
+  # Larger redo log file size allows write combining for better write I/O efficiency.
+  innodb_log_file_size: <%=2.gigabytes%> # not dynamic
+  # Controls max page-cleaner LRU-flush rate per second, per buffer pool instance.
+  # IO/sec = innodb_lru_scan_depth * innodb_buffer_pool_instances (8).
+  innodb_lru_scan_depth: 2048
+  # Enable all InnoDB performance schema monitors for better debugging.
+  innodb_monitor_enable: all
+  # Increase number of page cleaner threads for flushing dirty pages from the buffer pool.
+  # Recommended one thread per buffer pool instance (8).
+  innodb_page_cleaners: 8 # not dynamic
+  # Random read ahead can improve overall read-query performance.
+  innodb_random_read_ahead: 1
+  # Increase number of threads for background reads (read-ahead).
+  # Each background thread can handle up to 256 pending I/O requests.
+  innodb_read_io_threads: 8 # not dynamic
+  # Increase sample pages for more accurate statistics for query plans.
+  innodb_stats_persistent_sample_pages: 60
+  # Size of the mutex/lock wait array which splits the internal data structure used to coordinate threads.
+  # Increasing the value is recommended for higher concurrency with large numbers of waiting threads (> 768).
+  # AWS recommended increasing to max (1024).
+  innodb_sync_array_size: 1024 # not dynamic
+  # Tries to keep the number of OS threads concurrently inside InnoDB less than or equal to this value.
+  # AWS recommended increasing to max (1000).
+  innodb_thread_concurrency: 1000
+  # Increase number of threads for background writes.
+  # Each background thread can handle up to 256 pending I/O requests.
+  innodb_write_io_threads: 8 # not dynamic
+
+  # Binary Logging Variables
+  # https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html
+
+  # When using row-based logging, the master writes events to the binary log that indicate how individual table rows are changed.
+  # Replication of the master to the slave works by copying the events representing the changes to the table rows to the slave.
+  # ROW required for DMS Change Data Capture:
+  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
+  binlog_format: ROW
+  # When enabled (default), transactions are externalized in the same order as they are written to the binary log.
+  # If disabled, transactions may be committed in parallel.
+  # In some cases, disabling this variable might produce a performance increment.
+  binlog_order_commits: 0
+  # Typically set to MINIMAL on MySQL to log only changed columns and columns needed to identify rows to reduce I/O.
+  # Set to FULL in advance of migration from MySQL to Aurora because the future Aurora production server replicating
+  # from the production MySQL server has a defect that causes it to occasionally crash if it is replicating from
+  # a binlog that uses MINIMAL (and there is an index on a JSON generated column).
+  binlog_row_image: FULL
+  # Disable synchronization of the binary log to disk.
+  # Reduces durability for better performance.
+  sync_binlog: 0
+
+  # Replication Slave Variables
+  # https://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html
+
+  # Use compression on the replication protocol.
+  slave_compressed_protocol: 1
+
+# System variables used by read-replica RDS instance.
+Reporting:
+  # Merge all primary variables into replica.
+  <<: *primary
+
+  # Performance Schema not needed on reporting DB.
+  performance_schema: null
+  # No max execution time on reporting DB.
+  max_execution_time: null
+  # Reporting DB currently needs write access for contact rollup staging table.
+  read_only: 0
+
+  # Binary Logging Variables
+  # https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html
+
+  # When enabled, this variable causes the master to write a checksum for each event in the binary log.
+  # When disabled (value NONE), write and check the event length (rather than a checksum) for each event.
+  # NONE required for DMS Change Data Capture:
+  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
+  binlog_checksum: NONE
+  # Log all columns.
+  # FULL required for DMS Change Data Capture:
+  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.CustomerManaged
+  binlog_row_image: FULL
+
+  # Replication Slave Variables
+  # https://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html
+
+  # Apply transactions that are part of the same binary-log group-commit in parallel.
+  slave_parallel_type: LOGICAL_CLOCK
+  # Set to 1 (single-thread) as long as binlog_order_commits is disabled (0), to ensure commit-order consistency.
+  slave_parallel_workers: 1
+  # Ensure transactions are externalized in the same order as they appear in the replica's relay log.
+  slave_preserve_commit_order: 1
+
+# System variables for the Aurora DB cluster.
+AuroraCluster: &aurora
+  # Disable binary logging to improve write performance.
+  binlog_format: 'OFF'
+
+  # Enable GTIDs: https://aws.amazon.com/blogs/database/amazon-aurora-for-mysql-compatibility-now-supports-global-transaction-identifiers-gtids-replication/
+  gtid-mode: ON_PERMISSIVE
+
+  # Enable slow query log.
+  slow_query_log: 1
+
+  # Enable InnoDB monitoring counters: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Monitoring.html
+  innodb_monitor_enable: all
+
+  # Improve insert/update concurrency for autoincrement tables.
+  innodb_autoinc_lock_mode: 2 # not dynamic
+  
+  # With a setting of 0, logs are written and flushed to disk once per second.
+  # Transactions for which logs have not been flushed can be lost in a crash.
+  # Reduces durability for better performance.
+  innodb_flush_log_at_trx_commit: 0
+
+  # IAM role ARN used to select data into AWS S3.
+  aurora_select_into_s3_role: {'Fn::GetAtt': [AuroraS3Role, Arn]}
+
+# Aurora Reporting cluster parameters.
+AuroraReportingCluster:
+  <<: *aurora
+
+  # Apply transactions that are part of the same binary-log group-commit in parallel.
+  slave_parallel_type: LOGICAL_CLOCK
+
+# System variables for the Aurora DB writer.
+AuroraWriter:
+  # Enable Performance Schema.
+  performance_schema: 1
+
+  # Relax transaction isolation for improved concurrency under load.
+  tx_isolation: READ-COMMITTED
+
+# System variables for the Aurora DB reporting replica.
+AuroraReportingReplica:
+  # No max execution time on reporting DB.
+  max_execution_time: null
+  # Use 8 parallel worker threads for replication.
+  slave_parallel_workers: 8
+  # Relax transaction isolation for improved concurrency under load:
+  # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.html#AuroraMySQL.Reference.IsolationLevels.relaxed
+  # The `aurora_read_replica_read_committed` parameter is only present in Aurora engine 2.07 or greater,
+  # and due to this constraint it is not available in the `aurora-mysql5.7` Parameter Group.
+  # As a workaround, apply to all client sessions using `init_connect`.
+  init_connect: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED";'
+  tx_isolation: READ-COMMITTED

@@ -38,18 +38,31 @@ module.exports = {
     "no-trailing-spaces": "error",
     "no-undef": "error",
     "no-unused-vars": ["error", { args: "none" }],
+    "no-useless-escape": "off",
     "no-with": "error",
     "object-curly-spacing": "off",
+    "react/button-has-type": "error",
     "react/display-name": "off",
     "react/jsx-closing-bracket-location": "error", // autofixable
     "react/jsx-curly-spacing": "error", // autofixable
     "react/jsx-first-prop-new-line": ["error", "multiline"],
     "react/jsx-indent-props": ["error", 2], // autofixable
-    "react/no-render-return-value": "off", // TODO: turn this on
+    "react/jsx-key": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/jsx-wrap-multilines": "error", // autofixable
+    "react/no-find-dom-node": "off",
+    "react/no-render-return-value": "off",
+    "react/no-string-refs": "off",
+    "react/no-unescaped-entities": "off",
     "react/self-closing-comp": "error",
-    "react/wrap-multilines": "error", // autofixable
+    "react/no-danger" : "error",
     semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
     strict: "error"
+  },
+  settings: {
+    react: {
+      version: "detect"
+    }
   }
 };

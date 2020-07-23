@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import Notification from '@cdo/apps/templates/Notification';
 import Button from '@cdo/apps/templates//Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -89,6 +89,7 @@ describe('Notification', () => {
             </div>
             <div>
               <Button
+                __useDeprecatedTag
                 href={announcement.link}
                 text={announcement.buttonText}
                 target="_blank"
@@ -267,6 +268,7 @@ describe('Notification', () => {
             </div>
             <div>
               <Button
+                __useDeprecatedTag
                 href={findCourse.link}
                 text={findCourse.buttonText}
                 target="_blank"

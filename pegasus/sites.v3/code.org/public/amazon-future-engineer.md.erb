@@ -1,0 +1,85 @@
+---
+title: Amazon Future Engineer
+theme: responsive
+---
+
+<% authentication_required! %>
+
+<style>
+  .show-if-eligible, .show-if-not-eligible {
+    display: none;
+  }
+</style>
+
+<%= view :amazon_future_engineer %>
+
+[show-if-eligible]
+
+<center><img src="/images/marketing/afe-hs.jpg" width="70%"/></center>
+
+# Amazon Future Engineer proudly supports your classroom
+
+As a Code.org classroom supported by Amazon Future Engineer, **you’re invited to sign-up to receive free additional benefits** such as posters, a free CSTA+ membership, internship and scholarship opportunities, and access to in-depth computer science teaching and student resources.
+
+[Amazon Future Engineer](https://www.amazonfutureengineer.com/) is a four-part, childhood-to-career program aimed at inspiring and educating students from underrepresented and underserved communities to try computer science and coding. This program provides robust resources tailored to students in grades K-12, and teachers as well.
+
+AFE has partnered with Code.org to offer these resources and benefits to you and your students at no cost and without having to join a waitlist!
+
+<%=view :solid_block_header, :title=>"Benefits for your classroom include:"%>
+
+## Extended Learning on Cloud Computing with AWS Educate
+
+<div style="clear: both;">
+
+<div class="col-66" style="padding-right: 40px;">
+
+Most of the 1.4 million open jobs in computing the Bureau of Labor forecasts by 2022 will involve cloud computing. Help your student prepare by giving them access to Amazon Web Services (AWS) Educate provides students with comprehensive resources for building skills in cloud technology. This is a free, no cost program where students can earn badges reflecting real word skills in the cloud. 
+
+Students 14 or older can join AWS Educate at no cost to get started and receive up to $75 in AWS Promotional Credits to support their AWS Educate learning.
+
+</div>
+
+<div class="col-33">
+
+<img src="/images/fit-200/marketing/aws_cloud_badge.png">
+
+</div>
+
+</div>
+
+<br>
+
+##  Scholarship and Internship Opportunities
+In partnership with Scholarship America, Amazon Future Engineer provides 100 students from underrepresented and underserved communities with $10,000/year scholarships. After their freshman year, scholars go on to become interns at Amazon. This opportunity supports college students early in their career path while also giving them the chance to apply their CS skills in a practical setting. 
+
+Meet Leo, one of our Amazon Future Engineer Scholars who will intern at Amazon during summer 2020. <br><br>
+
+<center>
+
+<div style="width: 50%;">
+<%= view :display_video_thumbnail, id: 'karlie_kloss_superpower', video_code: '0AsIm-ubUxc', play_button: 'caption', caption: 'Meet Leo, an Amazon Future Engineer Scholar.', letterbox: 'false' %></div>
+
+</center>
+
+## Preparation Classes and Resources for High School Students
+Amazon Future Engineer will also provide more than 2,000 schools that serve students from underrepresented and underserved communities across the country with Intro to Computer Science and AP Computer Science classes through curriculum providers. Amazon’s funding provides preparatory lessons, tutorials, professional development for teachers, fully sequenced and paced digital curriculum for students, and live online support every day of the week for both teachers and students. 
+
+## Free CSTA+ Membership
+Take your teaching to the next level with a CSTA+ membership sponsored by Amazon Future Engineer. You’ll receive monthly educational resources like members-only webinars and newsletters, priority access and discounts to CSTA+ conferences and events, and free or discounted teaching aids and online courses.
+
+***
+
+[#sign-up-today]
+# Sign-up today to get started!
+
+<%= view :amazon_future_engineer_eligibility %>
+
+[/#sign-up-today]
+
+[/show-if-eligible]
+
+[show-if-not-eligible]
+
+Sorry, this program is only available to select schools. If you have any questions, please contact us [here](https://support.code.org/hc/en-us/requests/new).
+
+[/show-if-not-eligible]

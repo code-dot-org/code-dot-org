@@ -27,7 +27,7 @@ export default class ToggleAllTutorialsButton extends React.Component {
     return (
       <div style={styles.toggleAllTutorialsBlock}>
         {!this.props.showingAllTutorials && (
-          <button onClick={this.props.showAllTutorials}>
+          <button type="button" onClick={this.props.showAllTutorials}>
             {i18n.showAllTutorialsButton()}
             &nbsp;
             <i className="fa fa-caret-down" aria-hidden={true} />
@@ -35,7 +35,7 @@ export default class ToggleAllTutorialsButton extends React.Component {
         )}
 
         {this.props.showingAllTutorials && (
-          <button onClick={this.props.hideAllTutorials}>
+          <button type="button" onClick={this.props.hideAllTutorials}>
             {i18n.hideAllTutorialsButton()}
             &nbsp;
             <i className="fa fa-caret-up" aria-hidden={true} />

@@ -47,7 +47,11 @@ class AddTableListRow extends React.Component {
           />
         </td>
         <td style={dataStyles.cell}>
-          <button style={dataStyles.blueButton} onClick={this.handleAdd}>
+          <button
+            type="button"
+            style={dataStyles.blueButton}
+            onClick={this.handleAdd}
+          >
             Add
           </button>
         </td>

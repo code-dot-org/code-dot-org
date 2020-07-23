@@ -2,14 +2,17 @@
   .modal-dialog
     .modal-content.no-modal-icon
       %h1{style: 'margin: 10px 0;font-size: 32px'}= t('age_interstitial.header')
-      %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.message').html_safe
+      %p{style: 'font-size: 13px; line-height: 18px; color: #333'}
+        = t('age_interstitial.warning')
+        %br
+        = t('age_interstitial.disclaimer')
       = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
         .form-group
           = f.label :age, t('age_interstitial.age')
           = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true
         .form-group
           = f.submit t('continue'), class: 'btn btn-primary', disabled: true
-      %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.sign_out', url: destroy_user_session_url)
+      %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.sign_out_markdown', url: destroy_user_session_url, markdown: true)
 :javascript
   $().ready(function() {
     $("#age-modal").modal('show');

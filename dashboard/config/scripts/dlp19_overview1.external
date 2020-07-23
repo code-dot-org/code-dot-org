@@ -1,0 +1,19 @@
+name 'dlp19_overview1'
+title 'Deeper Learning Description'
+description 'description here'
+markdown <<MARKDOWN
+# Deeper Learning Program
+
+## Background
+
+It’s important for facilitators from all backgrounds to be able to develop proficiency with the Code.org curriculum and practice sharing that knowledge with teachers. To aid that goal, we’ve developed the Deeper Learning Program, which is a framework to help you become comfortable addressing the types of questions we commonly get from teachers during workshops.   It consists of a series of reflection prompts designed to new facilitators become more familiar with the philosophy, design, tools, and resources for our curricula.  The Deeper Learning Program is required for all facilitators who have joined the 2019-2020 Facilitator Development Program.
+
+
+## Why Deeper Learning?
+
+As one part of the Facilitator Development Program,  Deeper Learning reflections allow you to develop a sense of the types of curriculum-focused questions you will need to answer as a Code.org facilitator. It also helps Code.org better understand aspects of the curriculum that facilitators might need more support with. Code.org will use your Deeper Learning reflections as one indicator of your preparation throughout the year and your readiness to co-lead your five-day summer workshops the following summer.
+
+Visual Overview:
+
+![](https://images.code.org/56a35cb8992348201f51c6ff9b044a66-image-1564444509801.PNG)
+MARKDOWN

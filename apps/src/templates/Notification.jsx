@@ -13,7 +13,8 @@ export const NotificationType = {
   failure: 'failure',
   warning: 'warning',
   course: 'course',
-  bullhorn: 'bullhorn'
+  bullhorn: 'bullhorn',
+  feedback: 'feedback'
 };
 
 const styles = {
@@ -119,6 +120,11 @@ const styles = {
       borderColor: color.teal,
       color: color.teal,
       backgroundColor: color.teal
+    },
+    [NotificationType.feedback]: {
+      borderColor: color.purple,
+      color: color.purple,
+      backgroundColor: color.purple
     }
   },
   clear: {
@@ -157,6 +163,9 @@ class Notification extends Component {
         className: PropTypes.string
       })
     ),
+
+    // Optionally can provide children, such as one or more buttons.
+    children: PropTypes.node,
 
     // Can be specified to override default width
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
@@ -216,7 +225,8 @@ class Notification extends Component {
       success: 'check-circle',
       failure: 'exclamation-triangle',
       warning: 'exclamation-triangle',
-      bullhorn: 'bullhorn'
+      bullhorn: 'bullhorn',
+      feedback: 'envelope'
     };
 
     const mainStyle = {
@@ -258,6 +268,7 @@ class Notification extends Component {
             <div style={desktop ? null : styles.buttonsMobile}>
               {buttonText && buttonLink && (
                 <Button
+                  __useDeprecatedTag
                   href={buttonLink}
                   color={Button.ButtonColor.gray}
                   text={buttonText}
@@ -270,6 +281,7 @@ class Notification extends Component {
               {buttons &&
                 buttons.map((button, index) => (
                   <Button
+                    __useDeprecatedTag
                     key={index}
                     href={button.link}
                     color={Button.ButtonColor.gray}
@@ -280,6 +292,7 @@ class Notification extends Component {
                     className={button.className}
                   />
                 ))}
+              {this.props.children}
             </div>
           </div>
           {dismissible && (

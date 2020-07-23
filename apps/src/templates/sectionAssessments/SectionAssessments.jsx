@@ -11,7 +11,8 @@ import {
   isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
   getExportableData,
-  setStudentId
+  setStudentId,
+  ASSESSMENT_FEEDBACK_OPTION_ID
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
@@ -26,10 +27,14 @@ import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
 import FreeResponseDetailsDialog from './FreeResponseDetailsDialog';
 import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
 import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
+import MatchAssessmentsOverviewContainer from './MatchAssessmentsOverviewContainer';
+import MatchDetailsDialog from './MatchDetailsDialog';
+import MatchByStudentContainer from './MatchByStudentContainer';
 import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
+import FeedbackDownload from './FeedbackDownload';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -80,6 +85,7 @@ const styles = {
 
 class SectionAssessments extends Component {
   static propTypes = {
+    sectionName: PropTypes.string.isRequired,
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
@@ -101,8 +107,14 @@ class SectionAssessments extends Component {
 
   state = {
     freeResponseDetailDialogOpen: false,
-    multipleChoiceDetailDialogOpen: false
+    multipleChoiceDetailDialogOpen: false,
+    matchDetailDialogOpen: false
   };
+
+  componentWillMount() {
+    const {scriptId, asyncLoadAssessments, sectionId} = this.props;
+    asyncLoadAssessments(sectionId, scriptId);
+  }
 
   onChangeScript = scriptId => {
     const {setScriptId, asyncLoadAssessments, sectionId} = this.props;
@@ -134,8 +146,21 @@ class SectionAssessments extends Component {
     });
   };
 
+  showMatchDetailDialog = () => {
+    this.setState({
+      matchDetailDialogOpen: true
+    });
+  };
+
+  hideMatchDetailDialog = () => {
+    this.setState({
+      matchDetailDialogOpen: false
+    });
+  };
+
   render() {
     const {
+      sectionName,
       validScripts,
       scriptId,
       assessmentList,
@@ -147,6 +172,9 @@ class SectionAssessments extends Component {
       studentId,
       studentList
     } = this.props;
+
+    const isCurrentAssessmentFeedbackOption =
+      this.props.assessmentId === ASSESSMENT_FEEDBACK_OPTION_ID;
 
     return (
       <div>
@@ -177,7 +205,7 @@ class SectionAssessments extends Component {
         {!isLoading && assessmentList.length > 0 && (
           <div style={styles.tableContent}>
             {/* Assessments */}
-            {!isCurrentAssessmentSurvey && (
+            {!isCurrentAssessmentSurvey && !isCurrentAssessmentFeedbackOption && (
               <div>
                 <div style={{...h3Style, ...styles.header}}>
                   {i18n.selectStudent()}
@@ -208,12 +236,22 @@ class SectionAssessments extends Component {
                       openDialog={this.showMulitpleChoiceDetailDialog}
                     />
                     <MultipleChoiceByStudentContainer />
+                    <MatchAssessmentsOverviewContainer
+                      openDialog={this.showMatchDetailDialog}
+                    />
+                    <MatchByStudentContainer
+                      openDialog={this.showMatchDetailDialog}
+                    />
                     <FreeResponsesAssessmentsContainer
                       openDialog={this.showFreeResponseDetailDialog}
                     />
                   </div>
                 )}
               </div>
+            )}
+            {/* Feedback Download */}
+            {isCurrentAssessmentFeedbackOption && (
+              <FeedbackDownload sectionName={sectionName} />
             )}
             {/* Surveys */}
             {isCurrentAssessmentSurvey && (
@@ -247,6 +285,10 @@ class SectionAssessments extends Component {
             <MultipleChoiceDetailsDialog
               isDialogOpen={this.state.multipleChoiceDetailDialogOpen}
               closeDialog={this.hideMultipleChoiceDetailDialog}
+            />
+            <MatchDetailsDialog
+              isDialogOpen={this.state.matchDetailDialogOpen}
+              closeDialog={this.hideMatchDetailDialog}
             />
           </div>
         )}

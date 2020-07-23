@@ -332,7 +332,9 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if fit workshop is changed' do
-      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :fit_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -354,7 +356,9 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if summer workshop is changed' do
-      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      summer_workshop = create :summer_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -376,8 +380,12 @@ module Api::V1::Pd
     end
 
     test 'update does not append to the timestamp log if fit and summer workshop are not changed' do
-      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
-      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      summer_workshop = create :summer_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :fit_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -467,6 +475,30 @@ module Api::V1::Pd
       @csp_facilitator_application.reload
 
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
+    end
+
+    test 'do not re-lock locked applications on update' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status: 'declined', locked_at: Time.zone.now)
+      @csp_facilitator_application.reload
+      assert @csp_facilitator_application.locked?
+
+      Pd::Application::Facilitator1920Application.any_instance.expects(:lock!).never
+
+      # edit locked application
+      post :update, params: {id: @csp_facilitator_application.id, application: {locked: true}}
+    end
+
+    test 'do not re-unlock unlocked applications on update' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status: 'declined')
+      @csp_facilitator_application.reload
+      refute @csp_facilitator_application.locked?
+
+      Pd::Application::Facilitator1920Application.any_instance.expects(:unlock!).never
+
+      # edit locked application
+      post :update, params: {id: @csp_facilitator_application.id, application: {locked: false}}
     end
 
     test 'workshop admins can lock and unlock applications' do
@@ -577,12 +609,13 @@ module Api::V1::Pd
       refute response_csv.first.include?(column)
     end
 
-    test 'cohort view returns applications that are accepted and withdrawn' do
+    test 'cohort view returns teacher applications of correct statuses' do
       expected_applications = []
-      (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
+      teacher_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_VIEW_STATUSES & TEACHER_APPLICATION_CLASS.statuses
+      TEACHER_APPLICATION_CLASS.statuses.each do |status|
         application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)
-        if ['accepted', 'withdrawn'].include? status
+        if teacher_cohort_view_statuses.include? status
           expected_applications << application
         end
       end
@@ -592,17 +625,40 @@ module Api::V1::Pd
       assert_response :success
 
       assert_equal(
-        expected_applications.map {|application| application[:id]}.sort,
-        JSON.parse(@response.body).map {|application| application['id']}.sort
+        expected_applications.map {|application| application[:status]}.sort,
+        JSON.parse(@response.body).map {|application| application['status']}.sort
+      )
+    end
+
+    test 'cohort view returns facilitator applications of correct statuses' do
+      expected_applications = []
+      facilitator_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_VIEW_STATUSES & FACILITATOR_APPLICATION_CLASS.statuses
+      FACILITATOR_APPLICATION_CLASS.statuses.each do |status|
+        application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
+        application.update_column(:status, status)
+        if facilitator_cohort_view_statuses.include? status
+          expected_applications << application
+        end
+      end
+
+      sign_in @workshop_admin
+      get :cohort_view, params: {role: 'csp_facilitators', regional_partner_value: 'none'}
+      assert_response :success
+
+      assert_equal(
+        expected_applications.map {|application| application[:status]}.sort,
+        JSON.parse(@response.body).map {|application| application['status']}.sort
       )
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :summer_workshop,
+          sessions_from: Date.new(2020, 1, 1),
+          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -624,13 +680,14 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
+            registered_workshop_id: workshop.id,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -645,7 +702,7 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher without a workshop' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -666,13 +723,14 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
+            registered_workshop_id: nil,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -687,7 +745,7 @@ module Api::V1::Pd
 
     # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a facilitator' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -709,7 +767,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
@@ -731,10 +789,12 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a teacher' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :summer_workshop,
+          sessions_from: Date.new(2020, 1, 1),
+          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -758,27 +818,29 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
+            registered_workshop_id: workshop.id,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
             notes_4: nil,
             notes_5: nil,
-            friendly_scholarship_status: 'No'
+            friendly_scholarship_status:
+              Pd::ScholarshipInfo.get_scholarship_label(Pd::ScholarshipInfoConstants::NO, 'csp')
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
     end
 
     test 'cohort view returns expected columns for a teacher without a workshop' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -799,13 +861,14 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
+            registered_workshop_id: nil,
             status: 'accepted_not_notified',
             notes: nil,
             notes_2: nil,
@@ -819,7 +882,7 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a facilitator' do
-      time = Date.new(2017, 3, 15)
+      time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
@@ -841,7 +904,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: '2017-03-15',
+            date_accepted: '2020-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
@@ -864,7 +927,7 @@ module Api::V1::Pd
 
     test 'cohort csv download returns expected columns for teachers' do
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
-      create :pd_principal_approval1920_application, teacher_application: application
+      create PRINCIPAL_APPROVAL_FACTORY, teacher_application: application
       application.update(status: 'accepted_not_notified')
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csp_teachers'}
@@ -878,7 +941,6 @@ module Api::V1::Pd
         "Meets minimum requirements?",
         "Meets scholarship requirements?",
         "Scholarship teacher?",
-        "Bonus Points",
         "General Notes",
         "Notes 2",
         "Notes 3",
@@ -910,25 +972,22 @@ module Api::V1::Pd
         "Current role",
         "Are you completing this application on behalf of someone else?",
         "If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.",
-        "Which professional learning program would you like to join for the 2018-19 school year?",
-        "To which grades does your school plan to offer CS Principles in the 2019-20 school year?",
+        "Which professional learning program would you like to join for the 2020-21 school year?",
+        "To which grades does your school plan to offer CS Principles in the 2020-21 school year?",
         "How will you offer CS Principles?",
         "How many minutes will your CS Program class last?",
         "How many days per week will your CS program class be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
-        "How will you be offering this CS program course to students?",
-        "Do you plan to personally teach this course in the 2019-20 school year?",
+        "Do you plan to personally teach this course in the 2020-21 school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "If yes, please describe the course it will be replacing and why:",
-        "What subjects are you teaching this year (2018-19)?",
-        "Have you taught computer science courses or activities in the past?",
+        "Which existing course or curriculum will it replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
         "If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?",
         "How far would you be willing to travel to academic year workshops?",
-        "Are you interested in this online program for school year workshops?",
+        "Do you want to be considered for the virtual academic year workshop track?",
         "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
@@ -941,8 +1000,7 @@ module Api::V1::Pd
         "Principal's email address (provided by principal)",
         "School name (provided by principal)",
         "School district (provided by principal)",
-        "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
-        "Is this teacher planning to teach this course in the 2019-20 school year?",
+        "Do you approve of this teacher participating in Code.org's 2020-21 Professional Learning Program?",
         "Total student enrollment",
         "Percentage of students who are eligible to receive free or reduced lunch (Principal's response)",
         "Percentage of underrepresented minority students (Principal's response)",
@@ -953,15 +1011,17 @@ module Api::V1::Pd
         "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander",
         "Percentage of student enrollment by race - American Indian or Native Alaskan",
         "Percentage of student enrollment by race - Other",
-        "Are you committed to including this course on the master schedule in 2019-20 if this teacher is accepted into the program?",
+        "Are you committed to including this course on the master schedule in 2020-21 if this teacher is accepted into the program?",
         "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         "Which existing course or curriculum will CS Principles replace?",
         "How will you implement CS Principles at your school?",
         "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        "How did you hear about this program? (Principal's response)",
         "Principal authorizes college board to send AP Scores",
+        "Contact name for invoicing",
+        "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
+        "Rural Status",
         "Total student enrollment (NCES data)",
         "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
         "Percentage of underrepresented minority students (NCES data)",
@@ -1072,21 +1132,20 @@ module Api::V1::Pd
     end
 
     test 'fit_cohort' do
-      fit_workshop = create :pd_workshop, :fit
+      fit_workshop = create :fit_workshop
 
       # create some applications to be included in fit_cohort
       create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :accepted
-      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :waitlisted
+      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :withdrawn
+      # no workshop
+      create FACILITATOR_APPLICATION_FACTORY, :locked, status: :accepted
 
-      #create some applications that won't be included in fit_cohort
+      # create some applications that won't be included in fit_cohort
       # not locked
       create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :accepted
 
-      # not accepted or waitlisted
-      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id
-
-      # no workshop
-      create FACILITATOR_APPLICATION_FACTORY
+      # not accepted or withdrawn
+      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :waitlisted
 
       sign_in @workshop_admin
 

@@ -48,9 +48,6 @@ class AbilityTest < ActiveSupport::TestCase
 
     refute ability.can?(:read, Section)
 
-    assert ability.can?(:create, GalleryActivity)
-    assert ability.can?(:destroy, GalleryActivity)
-
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
@@ -73,9 +70,6 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
 
     assert ability.can?(:read, Section)
-
-    assert ability.can?(:create, GalleryActivity)
-    assert ability.can?(:destroy, GalleryActivity)
 
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
@@ -217,5 +211,12 @@ class AbilityTest < ActiveSupport::TestCase
     feedback = create :teacher_feedback, student: student
 
     refute Ability.new(teacher).can? :get_feedbacks, feedback
+  end
+
+  test 'workshop admin can update scholarship info' do
+    workshop_admin = create :workshop_admin
+    pd_enrollment = create :pd_enrollment
+
+    assert Ability.new(workshop_admin).can? :update_scholarship_info, pd_enrollment
   end
 end

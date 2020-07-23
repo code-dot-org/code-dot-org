@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -26,7 +26,7 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
-  before_save :fix_examples
+  before_save :fix_examples, :update_goal_override
 
   serialized_attrs %w(
     level_url
@@ -74,11 +74,11 @@ class Blockly < Level
     encrypted_examples
     disable_if_else_editing
     show_type_hints
-    thumbnail_url
     include_shared_functions
     preload_asset_list
     skip_autosave
     skip_run_save
+    goal_override
   )
 
   before_save :update_ideal_level_source
@@ -260,7 +260,6 @@ class Blockly < Level
           baseUrl: Blockly.base_url,
           app: game.try(:app),
           droplet: uses_droplet?,
-          pretty: Rails.configuration.pretty_apps ? '' : '.min',
         }
       )
     end
@@ -297,7 +296,7 @@ class Blockly < Level
         # Droplet, so we need to confirm the editor style before assuming that
         # these fields contain Blockly xml.
         unless uses_droplet?
-          set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
+          set_unless_nil(level_options, 'toolbox', localized_toolbox_blocks(level_options['toolbox']))
 
           %w(
             initializationBlocks
@@ -308,7 +307,7 @@ class Blockly < Level
             solutionBlocks
           ).each do |xml_block_prop|
             next unless level_options.key? xml_block_prop
-            set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -361,10 +360,14 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['dataTables'] = try(:project_template_level).try(:data_tables) || data_tables
+        level_prop['dataProperties'] = try(:project_template_level).try(:data_properties) || data_properties
+        level_prop['name'] = name
       end
 
       if is_a? Gamelab
         level_prop['startAnimations'] = try(:project_template_level).try(:start_animations) || start_animations
+        level_prop['name'] = name
       end
 
       if is_a?(Maze) && step_mode
@@ -408,18 +411,11 @@ class Blockly < Level
     options.freeze
   end
 
-  # @param extra_identifier [Boolean] we for some reason use the property name
-  #   twice in the internationalization key: once pluralized as a category name,
-  #   and once again singularized as an addition to the level name itself. This
-  #   is unnecessary, so we are gradually removing the extra key. If this is
-  #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
-  #   instances of this extra key and then this property.
-  def get_localized_property(property_name, extra_identifier: true)
+  # FND-985 Create shared API to get localized level properties.
+  def get_localized_property(property_name)
     if should_localize? && try(property_name)
-      key = name
-      key += "_#{property_name.singularize}" if extra_identifier
       I18n.t(
-        key,
+        name,
         scope: [:data, property_name.pluralize],
         default: nil,
         smart: true
@@ -432,14 +428,14 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    get_localized_property("long_instructions", extra_identifier: false)
+    get_localized_property("long_instructions")
   end
 
   def localized_authored_hints
     return unless authored_hints
 
     if should_localize?
-      scope = [:data, :authored_hints, "#{name}_authored_hint"]
+      scope = [:data, :authored_hints, name]
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
         # Skip empty hints, or hints with videos (these aren't translated).
@@ -470,7 +466,7 @@ class Blockly < Level
 
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("short_instructions", extra_identifier: false)
+      loc_val = get_localized_property("short_instructions")
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
@@ -482,32 +478,90 @@ class Blockly < Level
     end
   end
 
-  def self.localize_toolbox_blocks(blocks)
+  def localized_toolbox_blocks(blocks)
     return nil if blocks.nil?
 
-    block_xml = Nokogiri::XML(localize_function_blocks(blocks), &:noblanks)
+    block_xml = Nokogiri::XML(localized_function_blocks(blocks), &:noblanks)
     block_xml.xpath('//../category').each do |category|
       name = category.attr('name')
       localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+
       category.set_attribute('name', localized_name) if localized_name
     end
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  def self.localize_function_blocks(blocks)
+  def localized_function_blocks(blocks)
     return nil if blocks.nil?
 
     block_xml = Nokogiri::XML(blocks, &:noblanks)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
-      name = function.at_xpath('./title[@name="NAME"]')
-      next unless name
-      localized_name = I18n.t("data.function_names.#{name.content}", default: nil)
-      name.content = localized_name if localized_name
+      function_name = function.at_xpath('./title[@name="NAME"]')
+      next unless function_name
+      localized_name = I18n.t(
+        "name",
+        scope: [:data, :function_definitions, name, function_name.content],
+        default: nil,
+        smart: true
+      )
+      original_function_name = function_name.content
+      function_name.content = localized_name if localized_name
+      # The description and parameter declarations are in a mutation.
+      # If this function doesn't have a mutation, it won't have a
+      # description or parameters, so we can move on.
+      function_mutation = function.at_xpath('./mutation')
+      next unless function_mutation
+      function_description = function_mutation.at_xpath('./description')
+      localized_description = I18n.t(
+        "description",
+        scope: [:data, :function_definitions, name, original_function_name],
+        default: nil,
+        smart: true
+      )
+      # Some levels add a description to the function in the solution
+      # but not in the starter/toolbox blocks. These functions have the same key if they have the same name
+      function_description.content = localized_description if function_description && localized_description
+      # Translate the "declared" parameter names
+      function_mutation.xpath("./arg").each do |parameter|
+        localized_parameter = I18n.t(
+          parameter["name"],
+          scope: [:data, :function_definitions, name, original_function_name, "parameters"],
+          default: nil,
+          smart: true
+        )
+        parameter["name"] = localized_parameter if localized_parameter
+      end
+      # Replace usages of parameters with their translated name
+      function.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+        parameter_name = parameter.content
+        localized_parameter = I18n.t(
+          parameter_name,
+          scope: [:data, :function_definitions, name, original_function_name, "parameters"],
+          default: nil,
+          smart: true
+        )
+        parameter.content = localized_parameter if localized_parameter
+      end
     end
     block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
       mutation = function.at_xpath('./mutation')
       next unless mutation
-      localized_name = I18n.t("data.function_names.#{mutation.attr('name')}", default: nil)
+      mutation_name = mutation.attr('name')
+      localized_name = I18n.t(
+        "name",
+        scope: [:data, :function_definitions, name, mutation.attr('name')],
+        default: nil,
+        smart: true
+      )
+      mutation.xpath('./arg').each do |arg|
+        localized_parameter = I18n.t(
+          arg["name"],
+          scope: [:data, :function_definitions, name, mutation_name, :parameters],
+          default: nil,
+          smart: true
+        )
+        arg["name"] = localized_parameter if localized_parameter
+      end
       mutation.set_attribute('name', localized_name) if localized_name
     end
     return block_xml.serialize(save_with: XML_OPTIONS).strip
@@ -547,8 +601,8 @@ class Blockly < Level
   end
 
   # Clear 'is_project_level' from cloned levels
-  def clone_with_name(name)
-    level = super(name)
+  def clone_with_name(name, editor_experiment: nil)
+    level = super(name, editor_experiment: editor_experiment)
     level.update!(is_project_level: false)
     level
   end
@@ -604,5 +658,11 @@ class Blockly < Level
       level_object[:config]["args"] = arguments
     end
     level_objects_copy
+  end
+
+  def update_goal_override
+    if goal_override&.is_a?(String)
+      self.goal_override = JSON.parse(goal_override)
+    end
   end
 end

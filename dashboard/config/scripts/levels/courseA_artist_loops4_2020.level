@@ -1,0 +1,95 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:42:59.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Now, use a `repeat` loop to draw this line five times!",
+    "x": "75",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you want the loop to repeat more than 4 times, you can change the number at the top of the block.\",\"hint_id\":\"courseA_artist_loops4_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2758b06d24f257ece55bedc80e9a4a7d/courseA_artist_loops4_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Since you can only use one <xml><block type=\\\"simple_move_right\\\"/></xml>\\n\\nblock, try putting it inside of the <xml><block type=\\\"controls_repeat_simplified_dropdown\\\"><title name=\\\"TIMES\\\" config=\\\"2-6\\\">5</title></block></xml> loop.\",\"hint_id\":\"courseA_artist_loops4_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6e02fb549037601882a2a711b190e2b9/courseA_artist_loops4_2018.mp3\"}]",
+    "long_instructions": "Now, use a <xml><block type=\"controls_repeat_simplified_dropdown\" block-text=\"repeat\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> loop to draw this line five times!\r\n\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_artist_loops4_1\",\r\n  \"callout_text\": \"This number tells you how many of these blocks you can use in this puzzle.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "ideal": "3",
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 15665,
+    "name_suffix": "_2020",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "encrypted": "false",
+    "tts_short_instructions_override": "Now, use a repeat loop to draw this line five times!",
+    "tts_long_instructions_override": "Now, use a repeat loop to draw this line five times!",
+    "mini_rubric": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 17:29:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 21:59:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 16:55:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-04 19:43:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-25 22:39:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2019-03-27 19:22:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_right" limit="1" id="callMe"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-6">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="simple_move_right"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-6">5</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              <statement name="DO">
+                <block type="simple_move_right"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

@@ -97,10 +97,48 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
+  test "reject bad chars in custom level name" do
+    assert_does_not_create(Level) do
+      level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
+      assert_not level.valid?
+      assert level.errors.include?(:name)
+    end
+  end
+
+  test "allow whitelisted chars in custom level name" do
+    assert_creates(Level) do
+      name = '+-=_(&"\''
+      level = Level.create(@custom_maze_data.merge(name: name))
+      assert level.valid?
+      assert_equal name, level.name
+    end
+  end
+
   test "get custom levels" do
     custom_levels = Level.custom_levels
     assert custom_levels.include?(@custom_level)
     assert_not custom_levels.include?(@level)
+  end
+
+  test "should not allow pairing with levelgroup type levels" do
+    level = Level.create({type: "LevelGroup"})
+    assert_equal level.should_allow_pairing?(0), false
+  end
+
+  test "should allow pairing with non levelgroup type levels" do
+    level = Level.create
+    assert_equal level.should_allow_pairing?(0), true
+  end
+
+  test "should not allow pairing when the parent is a levelgroup" do
+    parent = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    child = create :level
+    parent.child_levels << child
+    script = create :script
+    create :script_level, script: script, levels: [parent]
+    assert_equal [parent], child.parent_levels
+
+    assert_equal child.should_allow_pairing?(script.id), false
   end
 
   test "summarize returns object with expected fields" do
@@ -198,11 +236,30 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes(level.related_videos, video)
   end
 
+  test 'returns locale-specific video with related videos' do
+    level = create(:level)
+    en_video = create(:video)
+    es_video = create(:video)
+    es_video.locale = 'es-MX'
+    es_video.key = en_video.key
+    es_video.save!
+    level.update(properties: {video_key: en_video.key})
+
+    with_locale('es-MX') do
+      assert_includes(level.related_videos, es_video)
+      refute_includes(level.related_videos, en_video)
+    end
+    with_locale('en-US') do
+      assert_includes(level.related_videos, en_video)
+      refute_includes(level.related_videos, es_video)
+    end
+  end
+
   test 'returns concept videos with related videos' do
     level = create(:level)
     level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
-    assert_includes(level.related_videos, level.concepts.first.video)
-    assert_includes(level.related_videos, level.concepts.second.video)
+    assert_includes(level.related_videos, level.concepts.first.related_video)
+    assert_includes(level.related_videos, level.concepts.second.related_video)
   end
 
   test 'update custom level from file' do
@@ -238,12 +295,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal time, level.updated_at.to_i
   end
 
-  test 'update_ideal_level_source does nothing for maze levels' do
-    level = Maze.first
-    level.update_ideal_level_source
-    assert_nil level.ideal_level_source
-  end
-
   test 'artist levels are seeded with solutions' do
     level = Artist.where(level_num: 'custom').first # custom levels have solutions
     assert level.solution_blocks
@@ -254,13 +305,13 @@ class LevelTest < ActiveSupport::TestCase
 
   def update_contract_match
     name = 'contract match test'
-    dsl_text = <<EOS
-name 'Eval Contracts 1 B'
-title 'Eval Contracts 1 B'
-content1 'Write a contract for the star function'
-content2 'Eval Contracts 1 A.solution_blocks, 300'
-answer 'star|image|color:string|radius:Number|style:string'
-EOS
+    dsl_text = <<~DSL
+      name 'Eval Contracts 1 B'
+      title 'Eval Contracts 1 B'
+      content1 'Write a contract for the star function'
+      content2 'Eval Contracts 1 A.solution_blocks, 300'
+      answer 'star|image|color:string|radius:Number|style:string'
+    DSL
     cm = ContractMatch.create_from_level_builder({}, {name: name, type: 'ContractMatch', dsl_text: dsl_text})
 
     # update the same level with different dsl text
@@ -275,7 +326,8 @@ EOS
 
   test 'updating ContractMatch level updates it in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
+    # mock file so we don't actually write a file
+    File.expects(:write).twice # once for create and once for save
 
     update_contract_match
   end
@@ -345,6 +397,33 @@ EOS
     LevelLoader.load_custom_level_xml level_xml, level
 
     assert_nil level.embed
+  end
+
+  test 'encrypted level properties are preserved after export and import' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true, notes: 'original notes')
+    assert level.disable_sharing
+    assert level.encrypted
+
+    level_xml = level.to_xml
+    n = Nokogiri::XML(level_xml, &:noblanks)
+    level_config = n.xpath('//../config').first.child
+    encrypted_hash = JSON.parse(level_config.text)
+    assert encrypted_hash['encrypted_properties']&.is_a? String
+    refute encrypted_hash['properties']
+    assert encrypted_hash['encrypted_notes']&.is_a? String
+    refute encrypted_hash['notes']
+
+    level.disable_sharing = false
+    level.notes = nil
+    decrypted_hash = level.load_level_xml(n)
+    refute decrypted_hash['encrypted_properties']
+    assert decrypted_hash['properties']
+    assert decrypted_hash['properties']['disable_sharing']
+    assert decrypted_hash['properties']['encrypted']
+    refute decrypted_hash['encrypted_notes']
+    assert_equal decrypted_hash['notes'], 'original notes'
   end
 
   test 'project template level' do
@@ -536,7 +615,7 @@ EOS
     custom_i18n = {
       'data' => {
         'callouts' => {
-          "#{level_name}_callout" => {
+          level_name => {
             "first": "first test markdown",
             "second": "second test markdown",
           }
@@ -714,14 +793,14 @@ EOS
   end
 
   test 'can clone multi level and preserve encrypted flag' do
-    dsl_text = <<EOS
-name 'old multi level'
-title 'Multiple Choice'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+    dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
     old_level = create :multi, name: 'old multi level'
     old_level.stubs(:dsl_text).returns(dsl_text)
@@ -731,7 +810,7 @@ EOS
     assert_equal 1, new_level.properties['questions'].length
     assert_equal 3, new_level.properties['answers'].length
     assert_equal 'Blue', new_level.properties['answers'].last['text']
-    assert_equal false, new_level.encrypted
+    refute new_level.encrypted
 
     old_level.encrypted = true
     new_level = old_level.clone_with_name('encrypted level')
@@ -739,16 +818,12 @@ EOS
     assert_equal 1, new_level.properties['questions'].length
     assert_equal 3, new_level.properties['answers'].length
     assert_equal 'Blue', new_level.properties['answers'].last['text']
-    assert_equal(true, new_level.encrypted,
-      'clone_with_name preserves encrypted flag'
-    )
+    assert new_level.encrypted, 'clone_with_name preserves encrypted flag'
 
     new_level = old_level.clone_with_suffix(' copy')
     assert_equal 'old multi level copy', new_level.name
     assert_equal 3, new_level.properties['answers'].length
-    assert_equal(true, new_level.encrypted,
-      'clone_with_suffix preserves encrypted flag'
-    )
+    assert new_level.encrypted, 'clone_with_suffix preserves encrypted flag'
   end
 
   test 'can clone with suffix' do
@@ -779,13 +854,27 @@ EOS
   test 'clone with suffix properly escapes suffixes' do
     level_1 = create :level, name: 'your_level_1'
 
-    tricky_suffix = '[(.\\'
+    tricky_suffix = '!(."'
 
     level_2 = level_1.clone_with_suffix(tricky_suffix)
     assert_equal "your_level_1#{tricky_suffix}", level_2.name
 
     level_3 = level_2.clone_with_suffix('_3')
     assert_equal 'your_level_1_3', level_3.name
+  end
+
+  test 'clone with suffix truncates long names' do
+    # make old name long enough that we'll exceed the 70 character limit on
+    # level names if we don't truncate it before adding the suffix
+    old_name = 'x' * 67
+    suffix = '_long_suffix'
+    new_name = 'x' * 58 + suffix
+    assert_equal(70, new_name.length)
+
+    old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_suffix(suffix)
+    assert_equal new_name, new_level.name
+    assert_equal suffix, new_level.name_suffix
   end
 
   test 'clone with same suffix copies and shares project template level' do
@@ -845,11 +934,125 @@ EOS
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
 
+  test 'clone with suffix sets editor experiment' do
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
+    assert_equal 'old level copy', new_level.name
+    assert_equal 'level-editors', new_level.editor_experiment, 'clone_with_suffix adds editor experiment'
+  end
+
+  test 'cloning multi level sets editor experiment' do
+    old_dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
+
+    expected_new_dsl_text = <<~DSL
+      name 'old multi level copy'
+      editor_experiment 'level-editors'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once.with do |_pathname, new_dsl_text|
+      new_dsl_text == expected_new_dsl_text
+    end
+
+    old_level = create :multi, name: 'old multi level'
+    old_level.stubs(:dsl_text).returns(old_dsl_text)
+
+    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
+    assert_equal 'old multi level copy', new_level.name
+    assert_equal 'level-editors', new_level.editor_experiment
+  end
+
+  test 'cloning multi level overwrites existing editor experiment' do
+    old_dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      editor_experiment 'old-level-editors'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
+
+    expected_new_dsl_text = <<~DSL
+      name 'old multi level copy'
+      editor_experiment 'new-level-editors'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once.with do |_pathname, new_dsl_text|
+      new_dsl_text == expected_new_dsl_text
+    end
+
+    old_level = create :multi, name: 'old multi level'
+    old_level.stubs(:dsl_text).returns(old_dsl_text)
+
+    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'new-level-editors')
+    assert_equal 'old multi level copy', new_level.name
+    assert_equal 'new-level-editors', new_level.editor_experiment
+  end
+
   test 'contained_level_names filters blank names before validation' do
     level = build :level
     level.contained_level_names = ['', 'real_name']
     assert_equal level.contained_level_names, ['', 'real_name']
     level.valid?
     assert_equal level.contained_level_names, ['real_name']
+  end
+
+  test 'parent levels and child levels' do
+    parent = create :level
+    child = create :level
+    parent.child_levels << child
+    assert_equal [parent], child.parent_levels
+
+    # cannot add the same child a second time
+    assert_raises ActiveRecord::RecordInvalid do
+      parent.child_levels << child
+    end
+
+    # cannot add the same parent a second time
+    assert_raises ActiveRecord::RecordInvalid do
+      child.parent_levels << parent
+    end
+  end
+
+  test 'child levels are in order of position' do
+    parent = create :level
+    child3 = create :level
+    child2 = create :level
+    child1 = create :level
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child3,
+      position: 3
+    )
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child1,
+      position: 1
+    )
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child2,
+      position: 2
+    )
+    assert_equal [child1, child2, child3], parent.child_levels
   end
 end

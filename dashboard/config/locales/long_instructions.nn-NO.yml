@@ -1,148 +1,18 @@
 ---
-nn:
+nn-NO:
   data:
     long_instructions:
-      "'pre-assessment survey q25A'": 'Hvis ja, hvilke datakurs har du tatt før dette
-        datakurset du er med på nå?
-
-'
-      2-3 Artist 1 new: "Hei, eg er kunstnar. Du kan skrive kode for å få meg til
-        å teikne nesten kva som helst. \nBruk nokre blokker for å få meg til å teikne
-        over dei grå linjene i bildet. (Kvar linje er 100 pikslar lang)\r \r\n"
-      2-3 Artist 11: 'Gje stoppskiltet ein kant ved å lage ein åttekant med 100 piksel
-        lange sider. '
+      2-3 Artist 1 new: Hei, jeg er en kunstner. Du kan skrive kode som får meg til
+        å tegne nesten hva som helst. Få meg til å tegne over de grå linjene i bilde
+        ved å bruke noen få blokker. (Hver linje er 100 piksler lang)
       2-3 Artist 12: "Lag ein sirkel for å fullføre auget.\n\nDersom kunstnaren snur
         seg éin grad i kvar løkkje, kor mange gongar må du gjenta for å fullføre sirkelen? "
-      2-3 Artist 2 new: Dette huset har ein halv-ferdig vegg. Kvar side er 100, men
-        den halv-ferdige veggen er berre 50. Fullfør veggen.
       2-3 Artist 3.4: Hoppeblokka flyttar kunstnaren utan å teikne. Teikn den stipla
         lina med hjelp av både hoppe- og teikneblokker. Kvar line er 50 pikslar lang.
-      2-3 Artist 3new: "Den raude hatten er 100 pikslar høg. Fullfør teikninga ved
-        å teikne ein svart hatt som er 70 pikslar kortare. \r\n\r\n*(Ps: Vidda på
-        kvar hatt er 50 pikslar.)*"
       2-3 Artist 4: Hjelp meg å gjere huset til denne katten ferdig.
-      2-3 Artist 6: "Dette huset treng eit tak! Teikn triangelet. \r\n\r\nHint: Alle
-        dei tre sidene har same lengde.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
-      2-3 Artist 7: "Teikn ferdig dei siste vindauga på skulen slik at alle i klasserommet
-        kan sjå ut. \r \n\r\nSidene på kvar vindaugsrute er 25 pikslar lang. "
-      2-3 Artist 8: "La oss byggje ein låve!\r\n\r\nLag rom til kvart dyr ved å dele
-        opp låven i 2 like store kvadrat. \r\n\r\nHint:\nRektangelet er 200 pikslar
-        breitt og 100 piksler høgt.\r\n\r\nDet er mange måtar å løyse denne oppgåva
-        på."
       2-3 Artist 9 NEW: Gjer ferdig denne dragen
-      2-3 Artist 9 REPLACEMENT: Gjer ferdig teikninga av desse trappene!
-      2-3 Artist 9: Gjer ferdig denne dragen
-      2-3 Artist Assessment 1: 'Oppgåve: Teikn ferdig den siste tanna, 25 pikslar
-        brei og 25 pikslar høg.'
-      2-3 Artist Debugging 1: "Denne hatten burde berre vere 50 pikslar brei. \r\nKan
-        du fikse det?\r\n\r\n<br/>\r\n"
-      2-3 Artist Debugging 10: "Retningskontrollaren på spelkontrollen er for smal.
-        \r\n\r\nKan du lage den 10 pikslar breiare?\r\n\r\nPrøv å køyre koden først
-        for å sjå kva som er gale."
-      2-3 Artist Debugging 11: "Snøfnugget mitt dett frå kvarandre!\r\n\r\nKan du
-        skjønne kva som går gale?"
-      2-3 Artist Debugging 2: "Koden for katten sine vêrhår er feil. \r\n\r\nFiks
-        koden slik at den teiknar alle vêrhåra like lange."
-      2-3 Artist Debugging 3: "Båten min har eit hol!\r\n\r\nKva treng du for å fikse
-        den?"
-      2-3 Artist Debugging 5: "Koden for beinet og foten du ser er feil. \r\n\r\nKan
-        du fikse han?"
-      2-3 Artist Debugging 6: "Det ser ut til at stolen eg sit på manglar eit bein.
-        \r\n\r\nRydd i blokkene for å teikne beinet."
-      2-3 Artist Debugging 7: "Det ser ut som C i koden er teikna feil veg.\r\n\r\nKan
-        du få han til å sjå ut som ein C?"
-      2-3 Artist Debugging 8: "Læraren seier eg må gjere meg ferdig!\r\n\r\nHjulet
-        mitt er ikkje ferdig. Kva er gale?"
-      2-3 Artist Debugging 9: "Noko er gale!\r\n\r\nKoden for denne stamma er feil.
-        Korleis kan kunstnaren teikne stamma riktig veg?"
-      2-3 Artist Debugging Assessment 1: "**Oppgåve:**\r\nKvifor ender denne forma
-        med sider som er 75 pikslar for korte på kvar side? \r\n\r\nKvar er koden
-        feil?"
-      2-3 Artist Free Play: Frileik! Teikn kva du vil.
-      2-3 Artist Functions 1 a: |+
-        "Meg zombiekunstnar. Meg elske teikning!"
-
-        Hjelp zombien med å teikne kvadratiske briller.
-
-        Kvadrata er 100 pikslar breie, og brua i mellom er 25 pikslar lang.
-
-      2-3 Artist Functions 1: |+
-        "Meg zombiekunstnar. Meg elske teikning!"
-
-        Hjelp zombien med å teikne kvadratiske briller.
-
-        Kvadrata er 100 pikslar breie, og brua i mellom er 25 pikslar lang.
-
-      2-3 Artist Functions 10: "**Frileik:** Her er to funksjonar, ein som teiknar
-        eit stort tannhjul og ein som teiknar eit lite tannhjul. \r\n\r\nBruk dei
-        til å teikne innsida av ei maskin!"
-      2-3 Artist Functions 11 a: "Vi har gitt funksjonen \"teikn eit kvadrat\" nytt
-        namn, no heiter den \"teikn ein seksskant\", men den teiknar framleis berre
-        kvadrat! \r\n\r\nKan du endre \"teikn ein sekskant\"-funksjonen slik at den
-        teiknar ein sekskant med 50 pikslar lange sider?\n\r\n\r\nTeikn biletet ferdig
-        med den nye funksjonen!"
-      2-3 Artist Functions 11.5 a: "Her er den samme `tegn en sekskant`-funksjonen.
-        \r\n\r\nHva skjer hvis du gjentar hovedprogrammet 6 ganger, snur 60 grader
-        hver gang du gjentar?"
-      2-3 Artist Functions 11.5: "Her er den same \"Teikn ein sekskant\"-funksjonen.\r\n\r\nKva
-        skjer om du repeterer 6 gonger og berre snur 60 grader kvar gong?"
-      2-3 Artist Functions 11: "Vi har gitt funksjonen \"teikn eit kvadrat\" nytt
-        namn, no heiter den \"teikn ein seksskant\", men den teiknar framleis berre
-        kvadrat! \r\n\r\nKan du endre \"teikn ein sekskant\"-funksjonen slik at den
-        teiknar ein sekskant med 50 pikslar lange sider?\n\r\n\r\nTeikn biletet ferdig
-        med den nye funksjonen!"
-      2-3 Artist Functions 12 Mike: "Funksjonar er verkeleg gode for å teikne komplekse
-        ting fleire gonger. \r\n\r\nKan du bruka ein «teikn ein blom» til å fylla
-        resten av planteboksen?\r\nPlantene er planta med 100 pikslars avstand."
-      2-3 Artist Functions 12 a: "Funksjonar er verkeleg gode for å teikne komplekse
-        ting fleire gonger. \r\n\r\nKan du bruka ein «teikn ein blom» til å fylla
-        resten av planteboksen?\r\nPlantene er planta med 100 pikslars avstand."
-      2-3 Artist Functions 12: "Funksjonar er verkeleg gode for å teikne komplekse
-        ting fleire gonger. \r\n\r\nKan du bruka ein «teikn ein blom» til å fylla
-        resten av planteboksen?\r\nPlantene er planta med 100 pikslars avstand."
-      2-3 Artist Functions 2 a: "Funksjoner lar deg lage nye blokker!\r\n\r\nVi har
-        flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon
-        som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \r\n\r\nFirkantene
-        er 75 piksler fra hverandre."
-      2-3 Artist Functions 2: "Funksjonar lar deg definere nye blokker!\r\n\r\nVi
-        har flytta blokker som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn
-        eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa?
-        \n\r\n\r\nKvadrata er 75 pikslar frå kvarandre."
-      2-3 Artist Functions 3 a: "Endre funksjonen \"tegne en firkant\" til å tegne
-        briller med rammer som er 115px på hver side. \n\nRutene er nå 45 piksler
-        fra hverandre."
-      2-3 Artist Functions 3: "Rediger funksjonen slik at den teiknar sider på 115
-        pikslar. \r\n\r\nKvadrata er no 45 pikslar frå kvarandre."
-      2-3 Artist Functions 4 a: Plasser funksjonen inni en løkke for og legg til en
-        ekstra gang for å tegne disse kvadratene.
-      2-3 Artist Functions 4: Sett funksjonen inni ein løkke for å teikne desse tre
-        kvadrata.
-      2-3 Artist Functions 9: "**Frileik:** Her er ein snøfnugg-funksjon. Prøv deg
-        fram og lag ei vinterscene. Dette er ei frileik-oppgåve, så det er ingen oppgåver
-        å løyse. Ha det gøy!"
-      2-3 Artist Loops 1: Kan du lage ein sekskant med sider som er 100 pikslar lange
-        slik at du fullfører cella? Husk, det tyder at du berre treng å snu 60 grader!
-      2-3 Artist Loops 2: Bruk ei gjenta-blokk for å lage eit skall til cella.
-      2-3 Artist Loops New 1: "La oss teikne hovudet til denne roboten! Kan du lage
-        eit kvadrat der sidene er 100 pikslar lange?\r\n\r\n<br/>\r\n"
-      2-3 Artist Loops New 10: Nå skal me kople saman ein haug med V'ar ved å teikne
-        dei med ei løkke.
-      2-3 Artist Loops New 11: "No skal me gjere noko artig!\n\r\n\r\nBruk om att
-        koden frå førre oppgåve, men legg til ein 30 graders venstresving inne i løkka.
-        Gjenta 24 gongar i staden for 8."
-      2-3 Artist Loops New 12: 'Teikn ein diamant med sider på 100 pikslar. '
-      2-3 Artist Loops New 13: "Vi skal starte med litt kode (i grått) som lagar ein
-        diamant!\r\n\r\nKjør koden i ei løkke for å lage eit artig mønster!"
-      2-3 Artist Loops New 14: Leik litt med diamantkoden og sjå kva for andre mønster
-        du kan lage. Prøv å endre kor mange grader du snur og kor mange gongar du
-        gjentek løkka.
-      2-3 Artist Loops New 15: "Teikn kva du vil!\r\n<br/><br/>\r\n\r\n\n"
-      2-3 Artist Loops New 2: "Her er den same oppgåva som vi akkurat løyste, men
-        denne gongen kan me berre bruke ei \"flytt framover\"-blokk og ei \"snu\"-blokk.\r\n\r\nKan
-        du bruke ei \"gjenta\"-blokk for å løyse oppgåva?"
-      2-3 Artist Loops New 9: Teikn ein enkel V der begge sider er 50 pikslar for
-        å fullføre pila.
-      2-3 Artist Nested Loops 1: |
+      2-3 Artist Free Play: Åpent brett! Teikn kva du vil.
+      2-3 Artist Nested Loops 1: |-
         Du har brukt løkker til å teikne figurar tidlegare, men no skal vi putte løkker inni andre løkker!
 
         Putt ei "gjenta"-blokk rundt denne koden for å teikne mønsteret.
@@ -150,56 +20,22 @@ nn:
         <br/>
       2-3 Artist Nested Loops 10: Gjenta denne koden 12 gongar for å gjere ferdig
         mønsteret.
-      2-3 Artist Nested Loops 11: Gjenta denne koden 4 gongar for å fullføre mønsteret.
-        Snu 90 grader etter kvar sirkel.
       2-3 Artist Nested Loops 12: Gjenta denne koden 12 gongar for å fullføre krøllane.
-      2-3 Artist Nested Loops 2: "No skal vi køyre trekantblokka gjennom løkka 6 gongar.\r\n\r\nEtter
-        kvar trekant må du snu 60 grader før du teiknar det neste."
       2-3 Artist Nested Loops 3: |-
         For å teikna dette mønsteret må du gjenta trekanten 12 gongar.
 
         Del talet på grader i ein sirkel (360) med talet på figurar du teiknar (12), for å rekna ut kor mykje du må snu etter kvar figur.
-      2-3 Artist Nested Loops 4: "Gjenta denne diamanten 12 gongar for å teikna ein
-        blom.\r\n\r\nTips: 12 diamanter er akkurat likt dei 12 trekantane du laga
-        sist.\r\nKor mykje må du snu etter kvar figur?"
-      2-3 Artist Nested Loops 5: "Teikn inn vindauga i denne bygninga med løkke i
-        løkke.\r\n\r\nVindauga er 20 pikslar breie og har 20 pikslar mellom kvart
-        vindauge."
       2-3 Artist Nested Loops 6: |-
         Dinosauren har 8 taggar langs halen sin.
 
         Kvar tagg er 30 pikslar lang.
 
         Gjenta trekanten 8 gongar, men pass på å flytte deg framover etter kvar!
-      2-3 Artist Nested Loops 7: "Gjenta denne trekanten 10 gongar for å teikne sola.\r\n\r\nDu
-        må flytte deg og snu deg etter kvar trekant.\r\n\r\nDu finn ut kor mykje du
-        må snu deg ved å dele talet på grader i ein sirkel med talet på figurar sirkelen
-        skal lagast av."
-      2-3 Artist Nested Loops 8: "No skal me legge til gras på biletet.\n\r\r \nDet
-        er 50 pikslar mellom kvar grastust."
-      2-3 Artist Nested Loops 9: "Me skal avslutte biletet med å legge til ein blome.\r\n\r\nTeikn
-        diamanten 12 gongar for å teikne blomen."
       2-3 Artist Nested Loops Free Play: 'Frileik: teikn noko kult med løkker i løkker.'
-      2-3 Bee Conditionals 11: "Eg lurer på kva som er der ute?\r\n\r\nHjelp meg å
-        fly rundt gården og samle nektar frå dei blomane som har nektar. "
       2-3 Bee Conditionals 13: |-
         Her skjer det mykje!
 
         Bruk det du har lært til å samle all nektaren og lage honning.
-      2-3 Bee Conditionals 14: |-
-        Lat oss sette alt saman!
-
-        Bruk alt du har lært til å hjelpe meg med å samle inn all nektaren frå blomar som har nektar. Bruk så få blokker som mogleg.
-
-        Ikkje gløym å lage honning på slutten.
-      2-3 Bee Conditionals 15: "Trappemønsteret bør sjå kjend ut.\r\n\r\nKan du samle
-        nektar frå dei blomane som har, med så få blokker som mogleg?"
-      2-3 Bee Conditionals 2: |-
-        Hei, eg er ei svolten bie!
-
-        Hjelp meg å samle all nektaren frå blomane. Bruk så få blokker som mogleg.
-      2-3 Bee Conditionals 3: "Sjå all den nektaren!\r\n\r\nHjelp meg å samle nektar
-        og lage honning med så få blokker som mogleg.  "
       2-3 Bee Conditionals 5: "Desse magiske lilla blomane endrar seg!\n\nKvar gong
         du køyrer koden kan blomane enten ha 1 nektar eller ingen... Men du veit ikkje
         talet på nektar før du køyrer koden! \n\nPass på så du ikkje samlar nektar
@@ -219,156 +55,60 @@ nn:
         Kan du finne problemet her?
 
         Fiks feila for å samle all nektaren.
-      2-3 Bee Debugging 3: Desse blokkane plagar meg. Reparer feila og samle inn all
-        nektaren for å lage all honningen.
       2-3 Bee Debugging 5: "Den blomen ser god ut! \n\nFiks feila og samle inn nektaren.
         No kan du bruke \"køyr\" og \"steg\"."
-      2-3 Bee Debugging 6: Desse blokkane er verkeleg irriterande. Fiks det som er
-        feil for å samle all nektaren.
-      2-3 Bee Debugging 9: "Ha tolamot med denne!\r\n\r\nDu må reparere noko i programmet
-        for å samle inn all nektaren og lage all honningen."
       2-3 Bee Debugging Assessment 1: |-
-        **Oppgave:** No er det på tide å vise kva du kan!\
+        **Oppgave:** No er det på tide å vise kva du kan!\\
 
         Fiks feila for å samle all nektaren og lage all honningen.
       2-3 Bee Functions 1: "Funksjonar er blokker med kode som gjer ei oppgåve. \n\nBruk
         funksjonen \"hent 2 nektar\" for å samle inn nektar frå kvar blome."
-      2-3 Bee Functions 10: Lilla blomar har enten ein eller null nektar. Lag ein
-        funksjon som berre samlar nektar frå dei blomane som har nektar i seg.
-      2-3 Bee Functions 2: "Funksjoner er kodeblokker som gjer ei bestemd oppgåve.
-        \r\n\r\nBruk blokka \"hent 5\" for å samle inn fem nektar av gongen."
-      2-3 Bee Functions 4: "Funksjonen \"flytt og hent nektar\" snur bia, samlar inn
-        nektar og returnerer til der den starta. \r\n\r\nBruk denne funksjonen til
-        å samle inn all nektaren."
       2-3 Bee Functions Assessment 1: "**Oppgåve:** Bruk funksjonen for å samle nektar
         fra kvar blom."
       2-3 Bee Functions Assessment 2: "**Oppgåve:** Lag ein funksjon for å snu, flytte
         fram og lage 3 honning, flytt deretter bia tilbake til der den starta og snu
         tilbake til startposisjon."
-      2-3 Bee Loops 1: 'Kvar blome inneheld ein porsjon nektar. Hent nektar frå alle
-        blomane. '
       2-3 Bee Loops 13: "**Oppgåve:** Samle all nektaren med å bruke så få blokker
         som mogleg."
       2-3 Bee Loops 3A: Kan du bruke ei løkke for å samle inn all nektaren?
-      2-3 Bee Loops 3B: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar
-        og lage honning.
       2-3 Bee Loops 4: |-
         For ei travel bie!
 
         Hjelp ho å samle all honningen med så få blokker som mogleg.
-      2-3 Bee Loops 4A: "Kor mange gonger kan du bruke løkker i denne oppgåva?\r\n\r\nBruk
-        løkker til å løyse oppgåva med så få blokker som mogleg."
       2-3 Bee Loops 5: "Denne stien er ulik dei andre. \n\nKan du samle all nektaren
         med så få blokker som mogleg?"
       2-3 Bee Loops 7: "For ei nydeleg blomstereng! \n\nHjelp bia med å komme innom
         alle blomane.\n\nKan du få det til ved å bruke færre enn 7 blokker?"
-      2-3 Bee Loops 8: "Desse lilla blomane har ei ukjend mengde nektar. \r\n\r\n
-        Bruk løkka \"medan nektar\" til å samle inn all nektaren.\r\n\r \nDenne løkka
-        vil køyre så lenge som føresetnaden er til stades. I dette tilfellet er det
-        dersom Nektar > 0."
       2-3 Bee Loops Assessment 1: "**Oppgave:** Bruk ei medan-løkke for å samle all
         nektaren fra desse blomane."
       2-3 Maze 1: "Kan du hjelpe meg å fange den slemme grisen? \n\nSett saman eit
         par \"flytt fram\"-blokker under \"når køyrer\"-blokka og trykk \"Køyr\". "
-      2-3 Maze 12 - One Move Block: |-
-        Ta den slemme grisen! Men denne gongen kan du berre bruke ei 'flytt fram'-blokk...
-
-        Sjå nøye etter – ser du nokre andre blokker som kan hjelpe deg med å flytte deg bort til grisen?
       2-3 Maze 12: |-
         Plutseleg dukka det opp ei magisk blokk! Med `gjenta`-blokka kan du gjenta koden om og om igjen.
 
         Kan du komme deg bort til grisen ved å lage ei løkke som bruker kun ei `gå fram`-blokk inni ei `gjenta`-blokk?
       2-3 Maze 13: Få meg til grisen! Du kan berre bruke ei 'gå framover'-blokk denne
         gong
-      2-3 Maze 15: Bruk to løkker for å komme til grisen ved å bruke færre blokkar.
-      2-3 Maze Loops 18: "Få meg til solsikka ved å bruke så få blokker som mogleg\r\n\r\nPrøv
-        å bruke ei 'gjenta'-løkke innan ei anna for å minimere bruk av kode."
       2-3 Maze Loops 19: |-
-        La oss ta dette til eit nytt nivå!\n
+        La oss ta dette til eit nytt nivå!\\
+
         Bruk løkker for å ta meg til solsikka med færrast mogleg løkker.
       2-3 Maze Loops Assessment 1: "**Oppgåve:** Få meg til solsikka med berre 5 blokker! "
-      4-5 Artist 1: "Hjelp meg å teikne ferdig boksen. (Kvar linje er 300 pikslar
-        lang)\n\n"
-      4-5 Artist 10: Trykk på "Køyr" for å teste koden. Deretter, gjenta det mange
-        nok gongar til å fullføre teikninga. Fargane vil vere ulike kvar gong.
-      4-5 Artist 11: "Fullfør de grønne linjene. \r\n\r\nLinjene er 300 piksler lange
-        og 15 piksler unna hverandre."
-      4-5 Artist 2: Gjenta denne koden ved å bruke 'gjenta'-blokka for å fullføre
-        kvadratet.
       4-5 Artist 3.5: "Prøv å finne ut hva som skjer hvis du kjører denne koden (og
-        så trykk \"Kjør\" for å prøve den). \r\n\r\nEtter det, gjenta koden mange
+        så trykk \"Kjør\" for å prøve den). \\\r\n\\\r\nEtter det, gjenta koden mange
         nok ganger til å fullføre tegningen!"
-      4-5 Artist 3: "Dette rektangulære blomsterbedet har en omkrets 600 piksler.
-        \r\nDen lange siden er 200 piksler lang. \r\n\r\nTegn rektangelet ved å bruke
-        så få blokker som mulig."
-      4-5 Artist 4: "Hvor mange grader er det i en sirkel? \r\n\r\nGjenta blokkene
+      4-5 Artist 4: "Hvor mange grader er det i en sirkel? \\\r\n\\\r\nGjenta blokkene
         for å lage en sirkel av farger."
-      4-5 Artist 5: Hva må vi erstatte "???" med for å få zombien til å fullføre denne
-        teikninga ved bruk av løkka?
-      4-5 Artist 6: I ein likesida trekant er alle vinklane 60 grader. Kvar side er
-        200 pikslar. Fullfør teikninga.
-      4-5 Artist 7: "Denne rettvinklede trekanten har vinkler 30, 60 og 90 grader.
-        Lengden på den skrå linjen (lengden på hypotenusen) er 200 piksler. \r\n\r\nFullfør
-        tegningen."
-      4-5 Artist 8: "Midtlinjen på en fotballbane er *vinkelrett* på sidelinjene.
-        \r\nBanen har en omkrets på 800 piksler, og den er 240 piksler lang. Hvor
-        bred er den? \r\n\r\nTegn omrisset og midtlinjen."
-      4-5 Artist 9: "Tegn den andre halvparten av dette bildet så designet blir symmetrisk.
-        \r\nTrianglene er likesidede, og sidene er 50 piksler lange."
-      4-5 Artist Assessment 1: "**Oppgave:** Bruk en løkke for å tegne den likesidede
-        trekanten på bildet. Hver side er 300 piksler lang."
       4-5 Artist Free Draw 1: Friteikning. Teikn det du vil.
-      4-5 Artist Patterns 1: "Klarer du å teikne dette kvadratet ved bruk av ei løkke?
-        \r\n\r\nKvar side er 20 pikslar lang."
-      4-5 Artist Patterns 10: "Denne koden tegner to rader med sekskanter - repeter
-        hele kodeblokken 4 ganger for å tegne hele bikubemønsteret. \r\n\r\nDu må
-        hoppe tilbake 120 piksler i den ytterste løkken for å hindre at kunstneren
-        tegner utenfor skjermen."
-      4-5 Artist Patterns 11: Hvor mange ganger må du repetere denne løkken for å
-        tegne en halvsirkel?
-      4-5 Artist Patterns 12: "Kva skjer om du kopierer løkka og snur mot venstre
-        i staden for mot høgre? \r\n\r\nKan du du bruke ei gjenta-blokk til å teikne
-        denne bølgja?"
-      4-5 Artist Patterns 13: "La oss no gjere det heile opp att fire gonger for å
-        lage biletramme. Sjå opp for hjørna – du kan ikkje berre snu deg 90 gradar!\r\n\r
-        \nEin halvsirkel kan du lage ved å repetere 3 gradar 60 gonger. Så kva for
-        nokre kodeblokkar må du bruke for å lage ein kvart-sirkel til hjørna?"
-      4-5 Artist Patterns 2: "Dersom du putter firkant-løkka di inni en annen løkke
-        kaller vi det en nøstet løkke. \r\n\r\nHva må du legge til i den ytre løkken
-        for å få alle 15 firkantene til å komme på linje ved siden av hver andre?"
       4-5 Artist Patterns 3: No skal vi eitt hakk djupare! Vi har nøsta heile kodeblokka
         inn ei anna løkke, men du må få kunstnaren på rett plass for å teikne den
         neste linja. Kva for nokre av desse kodeblokkene kan du plassere i slutten
         av den ytste løkka for å teikne heile mønsteret?
-      4-5 Artist Patterns 4: "Denne diamanten har sider som er 50 piksler lange og
-        vinkler på 120 og 60 grader. \r\n\r\nTegn den ved hjelp av en løkke."
-      4-5 Artist Patterns 5: "Nå skal vi repetere den for å tegne en rekke med 6 diaamanter.
-        \r\n\r\n Legg merke til at vi har endret på diamantkoden slik at den repeteres
-        3 ganger istedenfor 2 – Hvorfor tror du vi har gjort det?"
-      4-5 Artist Patterns 6: "Hvor mange ganger må vi repetere denne blokken for å
-        tegne hele rutenettet med diamanter?\r\n\r\n"
-      4-5 Artist Patterns 7: "Nå skal vi endre koden fra forrige oppgave for å gjøre
-        mønsteret litt mer komplisert. Legg merke til hvordan diamantene nå overlapper
-        hverandre. Forsøk å endre den første \"hopp tilbake\" fra 100 til 50 (halvparten
-        så langt) – Hvor langt skal artisten nå gå i det andre \"hopp tilbake\"?\r\n\r\n"
-      4-5 Artist Patterns 8: Bruk ei løkke til å teikne ein sekskant der kvar side
-        er 40 pikslar og vinklane er på 60 grader.
-      4-5 Artist Patterns 9.5: "Nå skal vi repetere denne koden for å tegne to rader
-        med sekskanter. \r\n\r\nLegg merke til hvordan den andre raden er forskjøvet
-        mot høyre."
-      4-5 Artist Patterns 9: "La oss gjenta koden 3 gongar for å teikne heile rekka.
-        \r\n\r\nKvar sekskant er 80 pikslar på det breiaste."
-      4-5 Artist Patterns Free Play: Frileik - prøv å lage ditt eige mønster!
-      4-5 Bee Conditionals 1: "Denne skyen blokkerer synet mitt!\n\r\n\r\nSe om det
-        er en blomst under skyen, og hent nektar kun hvis det er en blomst der.   \r\nVær
-        forsiktig, det kan endre seg!"
-      4-5 Bee Conditionals 2: "Fleire skyer! \r\n\r\nSjekk under kvar sky for å sjå
-        om den skjular ein blom før du får tak i nektaren. \r\n\r\nHugs, alle skyene
-        skjular ikkje same ting!"
-      4-5 Bee Conditionals 4: "Noen ganger skjuler denne skyen en blomst og noen ganger
-        skjuler den en bikube! \r\n\r\nBruk blokken `hvis/ellers` til å samle nektar
-        kun hvis det er en blomst der. \r\nHvis ikke det er det, lag honning (fordi
-        det er en bikube)."
+      4-5 Artist Patterns 7: No skal vi gjere litt om på koden frå førre oppgåve for
+        å gjere mønsteret litt meir komplisert. Legg merkje til korleis diamantane
+        no overlappar kvarandre. Prøv å endre den første "hopp tilbake" frå 100 til
+        50 (halvparten så langt) – kor langt skal kunstnaren då gå i det andre "hopp
+        tilbake"?
       4-5 Bee Conditionals 5: "Det kan vere ein blome eller ein bikube under skyene.
         \n\nBruk \"dersom/elles\"-blokka til å samle inn nektar om det er ein blome.
         \nOm ikkje lagar du honning (for da er det ein bikube)."
@@ -378,46 +118,6 @@ nn:
         Kombinér dei betinga blokkene ('dersom' og/eller 'dersom/elles') for å berre få så mykje nektar som blomen har.
 
         Hugs: talet på nektar kan endre seg for kvar gong du køyrer oppgåva!
-      4-5 Bee Conditionals 7: "Hugs at lilla blomar kan ha 3, 2 og 1 nektar. \n\r\n\r\nFullfør
-        \"kontroller lilla blomar\"-funksjonen og bruk den til å samle inn nektar
-        frå alle blomane."
-      4-5 Bee Conditionals 8: "Skriv ein funksjon som heiter \"Sjekk blom og lag honning\".
-        \r\n\r\nFunksjonen din skal sjekke om den lilla blomen har 3, 2 eller 1 nektar
-        og hente all nektaren. \r\nDeretter skal den bevege seg framover og så lage
-        honning."
-      4-5 Bee Conditionals Assessment 1: "**Oppgåve** Denne skya gjømmer ein blomst
-        med ein nektar eller ei honningkake som treng ein honning.\n\r\n\r\nGjer ferdig
-        \"hent nektar eller lag honning\"-funksjonen og kall den for å sanke nektar
-        eller honning.\r\n"
-      4-5 Bee Debugging 1: "Desse blokkene plager meg. \r\n\r\nFår du til å fikse
-        dei?"
-      4-5 Bee Debugging 6: "Dei lilla blomane får ulik mengde nektar kvar gong du
-        køyrer oppgåva. \r\n\r \nFiks blokkene for å hente ut all nektar frå blomane
-        kvar gong."
-      4-5 Bee Debugging Assessment 1: "**Oppgave:** Fiks koden."
-      4-5 Bee Nested Loops 2: "Samle all nektaren fra hver blomst.\r\n\r\nBruk en
-        løkke i løkke. "
-      4-5 Bee Nested Loops 4: "Samle inn all nektar frå kvar blom og lag honning i
-        alle bikubane. \r\n\r\nBruk ei løkke i løkke. "
-      4-5 Bee Nested Loops Assessment 1: "**Oppgåve** Samle inn all nektaren og lag
-        all honningen ved bruk av løkker."
-      4-5 Maze 7: "Få zombien raskt bort til solsikka! \r\n\r\nKan du løse denne oppgaven
-        på færre enn 11 blokker?"
-      4-5 Maze 9: "Nå har vi ei ny blokk som heiter 'Gjenta til'.  \r \nDette lar
-        oss bruke løkke-kommandoer heilt til zombien går tak i solsikka. \r \n\r \nBruk
-        den nye 'Gjenta til'-blokka for å løyse denne oppgåva i så få kommandoer som
-        mogleg."
-      4-5 Maze Assessment 1: "**Oppgave:** Kom deg bort til solsikken ved å bruke
-        så få blokker som mulig."
-      4-5 Maze Conditionals 1: Bruk "Gjenta-til"-blokka for å få zombien til solsikka.
-      4-5 Maze Conditionals 10: "Kan du leggje til kun 3 blokker for hjelpe zombien
-        å løyse ein meir kompleks labyrint? \r\n\r\nOm du gjer det riktig, kan han
-        gå kva for ein svingete veg uansett lengde!"
-      4-5 Maze Conditionals 2: Bruk "Gjenta-til"-blokka for å få zombien til solsikka.
-      4-5 Maze Conditionals 3: 'Bruk "dersom"-blokka for å la meg bestemme når eg
-        skal snu.
-
-'
       4-5 Maze Conditionals 4: Ok, denne er heilt lik den førre oppgåva, men du må
         hugse på korleis du brukte "dersom"-blokka og deretter "Gjenta"-blokka saman.
       4-5 Maze Conditionals 5: |-
@@ -428,83 +128,135 @@ nn:
         "Et solsikke!"
 
         Bruk ei "dersom"-blokk for å få meg dit med så få blokker som mogleg.
-      4-5 Maze Conditionals 7: Denne løysinga er ikkje så ulik, men pass deg for dei
-        kjøttetande plantane!
       4-5 Maze Conditionals 8: "\"Dersom/elles\"-blokka sjekkar ein føresetnad og
         gjer det eine ELLER det andre. \n\nBruk denne nye blokka for å få meg til
         solsikka."
       4-5 Maze Conditionals 9: |-
-        Ei siste øving med "dersom/elles"-blokka!\
+        Ei siste øving med "dersom/elles"-blokka!\\
 
         Følg det med fingeren din for å sjå om du finn ut av det på første forsøk.
       4-5 Maze Conditionals Assessment 1: '**Oppgåve:** Bruk ein "Gjenta til" og ei
         "dersom/elles"-blokk for å få meg til solsikka med så få blokker som mogleg.'
-      4-5 Nested Loops 1: "Fullfør koden for å teikne desse trekantane. Den første
-        er gjort ferdig for deg. Tips: 3 trekantar rotert er til saman 360 grader.\n\n"
       4-5 Nested Loops 11: |-
         Klarar du å teikne dei 10 kvadratene på fortauet ved å bruke ei løkke i ei løkke?
 
         Kvart kvadrat er 30 pikslar.
-      4-5 Nested Loops 12: Klarar du å teikne desse 36 trekantane ved hjelp av ei
-        løkke i ei løkke?
       4-5 Nested Loops 2: "No skal du sette denne løkka inn i ei anna løkke for å
         teikne 10 trekantar. \nDette blir kalla ei løkke i løkke.  "
-      4-5 Nested Loops 3: "Teikn ei sol ved å sette koden frå startkoden inn i ei
-        anna løkke.\r\n\r\nFor å få dette kule designet med eit hult senter, må du
-        hoppe fram med lengda på triangelet før du snur."
       4-5 Nested Loops 5: Gjenta koden som er gitt til å lage ei vindmølle.
       4-5 Nested Loops 6: Klarar du å teikne ein sekskant ved å få trekantkoden i
         løkke?
-      4-5 Nested Loops 7: "Gjenta designet 10 gongar. \r\n\r\nKor mykje må du rotere
-        i kvar repetisjon?"
-      4-5 Nested Loops 8: "Gjenta designet 6 gongar. \r\n\r\nKor mykje må du rotere
-        i kvar repetisjon? "
       4-5 Nested Loops 9: Teikn tennene i munnen til alligatoren!
       4-5 Nested Loops Assessment 1: "**Oppgåve:** Bruk ei løkke i løkke for å fullføre
         mønsteret."
-      4-5 While Loops 1: Flytt meg til holet og bruk ein "fyll" blokk til å fylle
-        det med to spadar med jord.
-      4-5 While Loops 2: Flytt meg til haugen med jord og bruk "Fjern" blokken til
-        å fjerne den på fem spadetak.
-      4-5 While Loops 3: "Bruk så få blokker som mogleg for å fullføre denne oppgåva!
-        \r\n\r\nFlytt meg til jordhaugen og fjern alt skiten. Etterpå flytter du meg
-        til holet og fyllar det heilt opp."
       4-5 While Loops 4: "Wow! Sjå på det! \n\nEg veit ikkje kor mange spadetak med
         jord det tar å fylle det.\nKan du skrive eit program som nyttar fyll-blokka
         ti å fylle holet til det er heilt jamnt?  "
-      AWS applab: |-
-        # Gjøre dette nå
-
-        * trinn
-        * trinn to
-      AWS link: "# Bruk dette verktøyet for ulike ting"
-      AlgPD DR Free Play: Bruk et ord problem fra eksisterende læreplanen eller annet
-        sted, fullfør designoppskriften og programmer en funksjon. Bruk et Design-oppskrift-skjema
-        fra arbeidsboken eller last ned en kopi [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
       Alien Defender: "**Prosjektidé**: Lag eit forsvarsspel i Spel-lab!"
-      Alien Defender_2018: "**Prosjektidé**: Lag eit forsvarsspel i Spel-lab!"
-      AppLab Intro 1 - Add Sound: "# Kom i gang - legg til lyd\r\n\r\nApp\nlabben
-        kan spele lyd óg. Du må bruke spelLyd()-blokka til å gjere det.\r\n\r\n1.
-        Dra ei 'spelLyd()'-blokk til din 'påHending'. Dette vil gjere at lyden blir
-        spelt når du klikkar på knappen. Klikk deretter på \"Vel...\" fra menyen.\r\n\r\n\\t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41\nAM.png)\r\n\r\n2.
-        Gå til \"Lydbiblioteket\" og finn lyden du ønsker. Det finst ein drøss!\r\n\r\n\\t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52\nAM.png)\r\n\r\n3.
-        Køyr appen for å sjekk korleis lydane dine fungerer."
-      AppLab Intro 2 - add sound: "<img src=\"https://images.code.org/3c1d6506a6a3c350380b921e08588a2b-image-1505429594117.52.37\nPM.png\"
-        style=\"float:right;height:100px\">\r\n\r\nDu kan legge til lyd i appen også!
-        Legg dei utafor ei 'påHending()' for å spele fra starten av eventyret (bra
-        for bakgrunnsmusikk) eller innanfor ei 'påHending()' for å spele når knappen
-        blir klikka på (bra for \"Vinning\"/\"Tapar\"-lydar).\r\n\r\n1. Dra ei 'spelLyd()'-blokk
-        inn i programmet ditt\r\n2. Klikk på nedtrekksmenyen, deretter på 'Vel...',
-        og så 'Lydbiblioteket for å finne arkivet med lydar som er bygd inn i Spellab\r\n3.
-        Prøv kategorien Bakgrunn for lengre songar som vil bli spelt i løpet av heile
-        eventyret ditt\r\n4. Trykk på \"Vel\" for å velge lyden du ynskjer.\r\n5.
-        Du kan også dra ein kode innanfor ei 'påHending'-blokk for å spele lyd berre
-        når ei hending skjer. Kortare lydar passer betre her.\r\n\r\nKøyr appen din.
-        No skal den spele lyd!"
-      Artist Autorun Test: Sett funksjonen inni ein løkke for å teikne desse tre kvadrata.
-      Bergeron Robot Maze1: "Kan du hjelpe meg å fange den slemme grisen? \n\nSett
-        saman eit par \"flytt fram\"-blokker under \"når køyrer\"-blokka og trykk
-        \"Køyr\". "
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
+        AM.png\" style=\"height:150px\"> \n</div>\n\n**Mål:** Endre til grøn skjerm.
+        \n\n**Korleis:** Dra inn ei `setProperty()`-blokk. Bruk nedtrekksmenyen for
+        å sette skjermens \"bakgrunnsfarge\" til \"grøn\". Trykk så \"Køyr\".\n\n**Står
+        du fast? Trykk her:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
+      AppLab Intro 7 - Change Text 2: |-
+        <div style="float:right">
+        <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
+        </div>
+
+        **Mål:** Gjer teksten større og blå.
+
+        **Korleis:**  Du treng to linjer med kode. Gi `"label1"` ein tekststorleik på  `80` og tekstfargen `blå`.
+
+        **Står du fast? Trykk her:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
+        AM.png\" style=\"height:200px\">\n</div>\n\n**Mål:** Gjer knappane rød og
+        blå. Endre så teksten for den store oransje etiketten.\n\n**korleis:** \n\n-
+        \  Husk at du kan halde over elementa for å sjå \"id\"-en deira.\n-   Sett
+        bakgrunnsfarge på knappane til `\"råd\"` og `\"blå\"`.\n-   Sett `\"tekst\"`-eigenskapen
+        på etiketten til det du ønsker, f.eks `\"Velkommen til appen min!\"`.\n\n**Står
+        du fast? Trykk her:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Mål:** Skjermen startar som blå. Legg til kode slik at den blir grøm når du klikkar på "Gjer grøn"-knappen.
+
+        **Korleis:** Legg til kode inni påHending() som setter bakgrunnsfargen på skjermen til grøn.
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Mål:** Hjelp til med å gjere denne lommelykt-appen ferdig. På-knappen gjer allereie skjermen kvit. Køyr appen og prøv det. Skriv deretter kode slik at Av-knappen gjer skjermen svart att.
+
+        **Korleis:** Legg til kode inni den tomme `påHending()` som setter bakgrunnsfargen på skjermen til svart og tekstfargen på etiketten til kvit.
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+      AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png\" style=\"float:right;height:200px\">\n\n**Mål:** Dette lydkortet er
+        nesten ferdig! Køyr det for å sjå korleis det fungerer. Legg deretter til
+        bilete, tekst og lyd på den siste knappen.\n\n**Korleis:** \n\n-   Legg til
+        `påHending()` til programmet og sett \"id\" to `\"knapp4\"`. Dra ein `spelLyd()`
+        til  `påHending()` og velg ein lyd frå biblioteket.  \n-   Add a `settEigenskap()`
+        (utanfor di  `påHending()`) for å endre eigenskapen til biletet på knappen.
+        Velg eit bilete ved å bruke tredje nedtrekksmeny.\n-   Legg til ein til `settEigneskap()`
+        for å endre teksten på knappen.\n\n**Står du fast? Klikk her:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+      AppLab Intro 7 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Mål:** Legg til ein annan knapp til skjermen som seier "Høgre!" med `"id"` til `"høgreKnapp"`.
+
+        **Korleis:** I designmodus, dra inn ein ny knapp. Flytt den og endre storleik på den. Sett deretter id, tekst, bakgrunnsfarge og tekststorleik.
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Mål:** Lag ein ny skjerm som heiter `"høgreSkjerm"`. Legg til ein tekst som seier "Du gjekk til høgre!".
+
+        **Mål:** I desigmodus, dra inn eit nytt skjermelement. Endre id til `"høgreSkjerm"`. Dra deretter ein etikett til skjermen og endre teksten til "Du gjekk til høgre".
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
+      AppLab Intro 7 - thisOrThatPersonalize: "<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\"><img src=\"https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\"><img src=\"https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\"><img src=\"https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40
+        PM.png\" style=\"float:right;height:200px\"></a>\n\n**Mål:** Bygg eigen app
+        ved å utvide dette prosjektet. Etterpå kan du dele det med nokon!\n\n**Korleis:**
+        Bestem deg for kva type app du vil lage. Legg til fleire skjermar, knappar,
+        tekst, lydar og brukarinteraksjonar i appen din. Det finst også nokre fleire
+        blokker i verktøykassa du kan eksperimentere med. Når du er ferdig, trykkar
+        du \"Del\" for å sende den til deg sjølv eller ein ven! \n\n<details>\n\n<summary><b>Velg
+        dine eigne eventyridéar</b></summary>\n\nPrøv <a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\">Døme på å velge eige eventyr-app</a> slik at du kan sjå
+        korleis det fungerar. Her er nokre idear som kan hjelpe deg med å finne på
+        ei eigen fortelling.\n\n<li>Lag eit eventyr om din favorittkarakter. Den kan
+        vere ekte eller dikta opp.</li>\n<li>Lag eit eventyr som fortel historia til
+        favorittboka, favorittfilmen eller lag di eiga historie.</li>\n<li>Lag eit
+        eventyr som har mange overraskande vendingar eller har eit vanskeleg moralsk
+        valg.</li>\n<br>\n</details>\n\n<details><summary><b>Idear til korthelsingar</b></summary>\n\nPrøv
+        <a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\">Døme på korthelsingsapp</a> slik at du kan sjå korleis det
+        fungerer. Her er nokre idear slik at du kan komme på eit eige kort.\n\n<li>Tenl
+        på ein bursdag, ferie eller ein annan spesiell dag som kjem snart. Lag eit
+        kort som passar det!</li>\n<li>Lag eit takkekort til nokon du liker godt.</li>\n<li>Lag
+        ein invitasjon til noko som skal skje.</li>\n<br>\n</details>\n\n<details><summary><b>Idear
+        til personlighetskviss</b></summary>\n\nPrøv <a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\">Døme på ein personlighetskviss-app</a> slik at du kan sjå
+        korleis det fungerer. Her er nokre idear som kan hjelpe deg med å komme på
+        ein eigen kviss. \n\n<li>Lag ein kviss som foreslår noko ein person kan like,
+        til dømes eit måltid, eit lag, ei bok eller ein stad.</li>\n<li>Lag ein kviss
+        som spår framtida basert på svara dei gir.</li>\n<li>Lag ein kviss som hjelper
+        andre til å bestemme seg for noko vanskeleg.</li>\n\n</details>"
+      AppLab Intro 7 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Mål:** Skjermen byttar til `"høgreSkjerm"` når brukaren klikkar på `"høgreKnapp"`.
+
+        **Korleis:** I kodemodus legger du til ei ny `påHending()` til programmet ditt for "Høgre!"-button. Legg til ein `settSkjerm()`-blokk inni den som bytter skjermen til `"høgreSkjerm"`.
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       CSD U2 HTML Debug Paragraphs: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -528,8 +280,8 @@ nn:
 
         # Gjer dette
 
-        * Fiks den øydelagde koden slik at nettsida viser riktig
-        * Samanlikn problema du fiksa med den du sit saman med
+        -   Fiks den øydelagde koden slik at nettsida viser riktig
+        -   Samanlikn problema du fiksa med den du sit saman med
       CSD U2 HTML Debug Paragraphs_2018: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -552,8 +304,8 @@ nn:
 
         # Gjer dette
 
-        * Fiks den øydelagde koden slik at nettsida viser riktig
-        * Samanlikn problema du fiksa med den du sit saman med
+        -   Fiks den øydelagde koden slik at nettsida viser riktig
+        -   Samanlikn problema du fiksa med den du sit saman med
       CSD U2 HTML Debug Paragraphs_2019: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -576,8 +328,8 @@ nn:
 
         # Gjer dette
 
-        * Fiks den øydelagde koden slik at nettsida viser riktig
-        * Samanlikn problema du fiksa med den du sit saman med
+        -   Fiks den øydelagde koden slik at nettsida viser riktig
+        -   Samanlikn problema du fiksa med den du sit saman med
       CSD U2 Info Page Final Touches: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
@@ -599,7 +351,6 @@ nn:
 
         </div>
 
-
         # Legg til bilete på nettsida di
 
         Du har allereie laga nokre sider med bra innhald på nettsida di. No kan du legge til bilete!
@@ -607,7 +358,7 @@ nn:
         # Gjer dette
 
         Bruk enten eigne bilete eller dei du har funne gjennom eit søk på Commons, legg til nokre bilete til nettsida du allereie har laga. Vêr kreativ! Bruk sjekklista til høgre for å halde styr på trinna du treng å følge når du legg til bilete.
-      CSD U2 Info Page Final Touches_2018: |
+      CSD U2 Info Page Final Touches_2018: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 
@@ -628,7 +379,6 @@ nn:
 
         </div>
 
-
         # Legg til bilete på nettsida di
 
         Du har allereie laga nokre sider med bra innhald på nettsida di. No kan du legge til bilete!
@@ -636,7 +386,7 @@ nn:
         # Gjer dette
 
         Bruk enten eigne bilete eller dei du har funne gjennom eit søk på Commons, legg til nokre bilete til nettsida du allereie har laga. Vêr kreativ! Bruk sjekklista til høgre for å halde styr på trinna du treng å følge når du legg til bilete.
-      CSD U2 Info Page Final Touches_2019: |
+      CSD U2 Info Page Final Touches_2019: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 
@@ -657,7 +407,6 @@ nn:
 
         </div>
 
-
         # Legg til bilete på nettsida di
 
         Du har allereie laga nokre sider med bra innhald på nettsida di. No kan du legge til bilete!
@@ -665,102 +414,113 @@ nn:
         # Gjer dette
 
         Bruk enten eigne bilete eller dei du har funne gjennom eit søk på Commons, legg til nokre bilete til nettsida du allereie har laga. Vêr kreativ! Bruk sjekklista til høgre for å halde styr på trinna du treng å følge når du legg til bilete.
-      Course 4 Artist 13: Spelar du framleis? Her er eit blankt lerret der du kan
-        designe det du vil!
-      Course 4 Artist 6: Fullfør koden for å teikne desse likesida trekantane.
-      Course 4 Artist 8: Teikn sola ved å gjenta denne kodeblokka fleire gongar.
-      Course 4 Artist 8a: Hugsar du denne figuren? Når skal du byggje den utan at
-        vi gjer deg nokre blokkar å starte med!
-      Course 4 Artist Binary 1a: |-
-        Her er ein funksjon som tek ein binær-streng av 1-are og 0-are og instruerer kunstnaren til å følgje dei frå venstre til høgre, frå topp til botn. Kunstnaren vil fylle inn rutene om den ser ein 1 og ignorere ruta om den ser ein 0.
-
-        Køyr denne koden for å sjå korleis kunstnaren nyttar binær-strengen til å teikne dette mønsteret.
-      Course 4 Artist For Loops 13: Hmm, desse figurane blir større for kvar gong.
-        Løyste vi ikkje allereie dette problemet med variablar? Korleis kan vi bruke
-        teljar-variabel til å gjere sidene mindre når det er fleire av dem? I staden
-        for å flytte framover med eit gitt tal, prøv å flytte framover med (100/teljar)
-        pikslar.
-      Course 4 Artist For Loops 4: 'Korleis vil du endre det du har lært for å teikne
-        desse kvadratane? Dei startar med lengde på 15 pikslar, den største har lengde
-        på 300 pikslar, og kvart kvadrat er 15 pikslar større enn det forrige. '
-      Course 4 Artist For Loops 6: Frileik! Prøv å bruke ei for-løkke til å teikne
-        eit vaksande figurmønster som du designar sjølv.
+      CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      Course 4 Artist For Loops 1: Bruk en gjenta-blokk til å tegne denne trekanten
+        som er 50 piksler bred i størrelse.
       Course 4 Artist For Loops 6a: Gjer tre små endringar i koden frå førre nivå
         for å få dette til!
-      Course 4 Artist For Loops 8a: Berre ei lita endring i koden frå førre bilete
-        kan skape denne teikninga. Kan du finne ut kva endring du må gjere?
-      Course 4 Artist For Loops Challenge_a: "**Utfordring** Kan du finne ut korleis
-        du kan bruke alt du har lært til å lage dette bildet av mangekantar, alle
-        med 40 pixel lange sider?"
-      Course 4 Artist Vars 3: 'Her er en løkke som tegner et kvadrat, men noe mangler.
-        Får du til å fikse det slik at den bruker variabelen lengde til å avgjøre
-        hvor lange de ulike sidene skal være? '
-      Course 4 Bee 7: Bruk alt du har lært så langt for å samle all nektaren. Den
-        lilla blomsten har enten 3, 2 eller 1 nektar.
-      Course 4 Bee For Loops 11: Hva er galt med denne løkka? Se om du kan fikse den
-        og gjøre slik at bia samler alle nektarene.
-      Course 4 Bee Params 1: Skriv ein sekvens for å samle all nektar ved å bruke
-        "hent 3 nektar" som snur, flytter seg for å samle nektaren, og deretter kjem
-        tilbake til start.
-      Course 4 Play Lab Params 4: "Her er ein funksjon kalla \"patruljer\". \n\r\n\r\nEndre
-        den slik at Katt flyttar seg opp 400 pikslar og så ned 400 pikslar."
-      Course 4 Play Lab Params 8: Bruk ei "når røre ved"-blokk til å sende hunden
-        tilbake til øvre, venstre hjørne BERRE om hunden rører ved nokon av dei andre
-        spelarane.
-      Course 4 Play Lab Vars 2: Løpet i førre oppgåve var ikkje veldig rettferdig.
-        Endre variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn
-        Katt. Den fyrste til å samle 10 flagg vinn!
-      Course 4 Play Labs For Loops 1: Hunden skal seie alle tala frå 1 til 100. Bruk
-        ei 'for'-løkke og telje-brikke til å seie teljevariabelen kvar gong løkka
-        køyrer.
-      Course 4 Playlab For Loops 5b: Tilpass intervallet i desse "for"-løkkene, slik
-        at dei to figurane ender på same stad.
-      Course 4 SCFP 1: Opprett en funksjon med parametere som tillater kunstneren
-        å hoppe framover og bakover med x antall piksler, og opp og ned med y antall
-        piksler. Bruk positive og negative tall.
-      Course 4 SCVP 1: Opprett en funksjon med parametere som tillater kunstneren
-        å hoppe framover og bakover med x antall piksler, og opp og ned med y antall
-        piksler. Bruk positive og negative tall.
+      CourseD_Dance_2020_01: |-
+        Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokka inn i arbeidsområdet og koble den inn i <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>-blokka.
+
+        Velg 'katt' eller 'dovendyr' for å laga den første dansaren.
+
+        -   _Du kan også trykke på lyspæra til venstre dersom du ønsker meir informasjon eller ekstrautfordringar._
+      CourseD_Dance_2020_02: |-
+        <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml>-blokka har deg køyre kode når du trykker på piltastane. Bruk <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml>-blokka til å få katten til å klappe!
+
+        _Sørg for at du presser "piltast opp" eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) etter du har klikka Køyr-knappen!_
+      CourseD_Dance_2020_03: Det er tid for dansevisning! Programmer kvar dansar til
+        å danse når du trykker på ulike tastar. Velg ditt favoritt dansetrinn for
+        kvar dansar eller sett det til "(Tilfeldig)" for noko totalt uforutsigbart!
+      CourseD_Dance_2020_04: |-
+        La oss få dansarane til å danse i takt med musikken!
+
+        Koble saman <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka med ei <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>-blokk frå verktøykassa.
+
+        Dansaren din bør starte på eit nytt dansetrinn etter fjerde takt.
+
+        **Taktar** blir brukt til å telje tid i musikk. I denne øvinga er ei takt på fire slag.
+      CourseD_Dance_2020_05: |-
+        _Groovy greier!_
+
+        Legg til ei <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>-blokk i arbeidsområdet. Få dansaren til å begynne på ein ny dans etter 6 taktar.
+      CourseD_Dance_2020_06: "Bruk denne nye blokka til å sette opp ei gruppe mindre
+        bakgrunnsdansarar rundt hoveddansaren i midten. \n\n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\n\nNo kan du lage mange bakgrunnsdansarar på ein gong!"
+      CourseD_Dance_2020_07: |-
+        Kvar dansar har eit sett med _eigenskapar_ som kontrollerer korleis dansaren ser ut.
+
+        Bruk <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> under ei gronn hending-blokk for å få dansarar til å sjå ut som dei står nærare eller lengre borte.
+      CourseD_Dance_2020_08: Dansarar har ein "farge"-eigenskap som kan legge til
+        eit lag med farge. Prøv å endre fargen på ein av dansarane dine (eller heile
+        gruppa)!
+      CourseD_Dance_2020_09: "Denne **nye blokka** er ein spesiell type hending som
+        blir trigga igjen og igjen. \n\n<xml><block type=\"Dancelab_everySeconds\"><title
+        name=\"N\">2</title><title name=\"UNIT\">\"measures\"</title></block></xml>\n\nVed
+        å plassere andre nye blokker frå verktøykassa di innanfor ei gjenta-blokk
+        gjer at du kan gjenta å endre eigenskapane til dansarane over tid. Ver kreativ
+        og ha det gøy!\n\n_Når du er ferdig trykker du på Ferdig-knappen._"
+      CourseD_Dance_2020_10: Groove i veg! Lag ein dans du kan dele med venene dine.
+      CourseD_Dance_2020_bonus1: "# Fram og tilbake!\n\nAv og til vil du kanskje ønske
+        å lage eit mønster med dansetrinn du velger. Denne nye blokka lar deg gjere
+        akkurat det. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>\n\nDansetrinna
+        du vel over vil gjenta seg i ein evig sekvens.\n\n-   Lag ein alternativ dans
+        for hoveddansaren foran!\n-   Bruk ulike tal til å endre korleis dansetrinna
+        skiftar. Prøv 1 eller 0,5 for å skifte fortare!"
+      CourseD_Dance_2020_bonus3: "# La oss komme i formasjon!\n\nSjekk ut denne dansen
+        som bruker <xml><block type=\"Dancelab_layoutSprites\" block-text=\"layout\"><title
+        name=\"GROUP\">\"MOOSE\"</title><title name=\"FORMAT\">???</title></block></xml>-blokk
+        for å endre formasjonen til bakgrunnsdansarane gjennom dansen. Prøv ein av
+        desse ideane for å utvide den: \n\n-   Lag ei ny gruppe dansarar i eit anna
+        oppsett \n-   Endre oppsett når du trykker på ein tast \n-   Endre ein eigenskap
+        når dansarane endrar formasjon"
       CourseD_Dance_Party_01: |-
-        *La oss ha ein dansefest!*
+        _La oss ha ein dansefest!_
 
         Dra ‘lag en ny’-blokka inn i arbeidsområdet, og koble den til inni ‘oppsett’-blokka for å lage den første dansaren.
 
-        * *Du kan også klikke på lyspæra til venstre, om du vil ha meir informasjon eller fleire utfordringar.*
+        -   _Du kan også klikke på lyspæra til venstre, om du vil ha meir informasjon eller fleire utfordringar._
       CourseD_Dance_Party_02: |-
         Nå må vi få elgen til å danse!
 
-        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">ny&#95;dansar</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">1</title></block></xml>-blokka til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"taktar"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
-
+        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">ny\_dansar</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">1</title></block></xml>-blokka til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"taktar"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
 
         **Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.
       CourseD_Dance_Party_03: |-
-        *Groovy greier!*
+        _Groovy greier!_
 
         Legg til ei <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takter"</title></block></xml>-blokk i arbeidsområdet. Få dansaren til å begynne på ein ny dans etter 6 taktar.
       CourseD_Dance_Party_04: |-
-        *Denne dansen treng litt hjelp!*
+        _Denne dansen treng litt hjelp!_
 
         Under finn du ei ny blokk som legg til en bakgrunnseffekt bak dansaren din. Sjå endringane som skjer i takt med musikken!
       CourseD_Dance_Party_05: |-
         Bruk nok ei ny blokk for å få danseren til å skifte rørsler **kvar andre takt**!
 
-        * Om du vel ‘(Neste)’, ‘(Førre)’ eller ‘(Tilfeldig)’, byttar dansaren til ein annan dans kvar gong du køyrer koden.
+        -   Om du vel ‘(Neste)’, ‘(Førre)’ eller ‘(Tilfeldig)’, byttar dansaren til ein annan dans kvar gong du køyrer koden.
       CourseD_Dance_Party_06: |-
-        *Vi treng fleire dansarar!*
+        _Vi treng fleire dansarar!_
 
-        Lag ein ny dansar som heiter “backup_dancer1”, som kan danse med katten.
+        Lag ein ny dansar som heiter “backup\_dancer1”, som kan danse med katten.
       CourseD_Dance_Party_08: |-
         Alle dansarar har eit sett med _eigenskapar_ som kontrollerer korleis dei ser ut.
 
         Du kan få det til å se ut som om dansaren er i bakgrunnen ved å redusere _storleiken_. Kan du gjere begge bakgrunnsdansarane like store?
       CourseD_Dance_Party_09: |-
         Dansarar har ein fargeeigenskap som kan brukast til å leggje til eit fargelag. Prøv å skifte farge på ein av dansarane dine.
-        * Du blander fargen du vel med fargane på dansaren.
+
+        -   Du blander fargen du vel med fargane på dansaren.
       CourseD_Dance_Party_10: |-
         No veit vi korleis vi endrar eigenskapane til dansarane. Vi kan óg få dei same eigenskapane til å reagere på musikken med denne blokka:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">høgre_ananas</title>
         <title name="PROPERTY">"storleik"</title>
         <title name="RANGE">"bass"</title>
@@ -789,166 +549,318 @@ nn:
         på høgrepila. \n\n**Bruk tastane til å få roboten til å gjere dropp-klapp-dropp-klapp
         så fort som du kan!**"
       CourseD_Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
-      CourseE_HOC 2018 Level_10: "Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
-        gøymd ein stad i dette havmonumentet. Greier du å finne den?\n\n"
+      CourseE_HOC 2018 Level_1: Du treng forsyningar til reisa vidare. Hent ein **båt**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        i **kista** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      CourseE_HOC 2018 Level_10: Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        gøymd ein stad i dette havmonumentet. Greier du å finne den?
+      CourseE_HOC 2018 Level_10_2020: Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        gøymd ein stad i dette havmonumentet. Greier du å finne den?
       CourseE_HOC 2018 Level_11: Bygg ein vegg av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         rundt den svarte betongen. Dette aktiverer **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         og fullfører utfordringa!
-      CourseE_HOC 2018 Level_7a: "Du fant undervassruinane. Leit i sandsteinen etter
+      CourseE_HOC 2018 Level_11_2020: Bygg ein vegg av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        rundt den svarte betongen. Dette aktiverer **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        og fullfører utfordringa!
+      CourseE_HOC 2018 Level_1_2020: Du treng forsyningar til reisa vidare. Hent ein
+        **båt** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        i **kista** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      CourseE_HOC 2018 Level_2: Det er mykje enklare å bruke båt enn å svømme i ope
+        vatn! Gå til enden av bryggja for å hoppe om bord.
+      CourseE_HOC 2018 Level_2_2020: Det er mykje enklare å bruke båt enn å svømme
+        i ope vatn! Gå til enden av bryggja for å hoppe om bord.
+      CourseE_HOC 2018 Level_3: Ta tak i årene og styr båten over ope hav for å fange
+        **torsken** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_3_2020: Ta tak i årene og styr båten over ope hav for
+        å fange **torsken** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: No må vi mate **delfinen** med ein torsk. ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Bruk ei gjentakingblokk for å komme raskare over havet.
+      CourseE_HOC 2018 Level_4_2020: No må vi mate **delfinen** med ein torsk. ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Bruk ei gjentakingblokk for å komme raskare over havet.
+      CourseE_HOC 2018 Level_5: Eit **nautilusskjell** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        er gøymd ein stad! Utforsk skipsvraket for å finne **kista** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_5_2020: Eit **nautilusskjell** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        er gøymd ein stad! Utforsk skipsvraket for å finne **kista** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Det ser ut som om det er iskaldt der ute! Fang ein
+        **laks** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        på veg til undervassruinane.
+      CourseE_HOC 2018 Level_6_2020: Det ser ut som om det er iskaldt der ute! Fang
+        ein **laks** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        på veg til undervassruinane.
+      CourseE_HOC 2018 Level_7a: Du fant undervassruinane. Leit i sandsteinen etter
         ei **kiste** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        som inneheld **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      CourseE_HOC 2018 Level_8: "Først isfjell og no lava? Kom deg gjennom denne vulkanøya
+        som inneheld **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      CourseE_HOC 2018 Level_7a_2020: Du fant undervassruinane. Leit i sandsteinen
+        etter ei **kiste** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        som inneheld **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      CourseE_HOC 2018 Level_8: Først isfjell og no lava? Kom deg gjennom denne vulkanøya
         og finn den **tropiske fisken** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        i korallrevet.\n\n"
-      CourseE_HOC 2018 Level_9b: "Du kom deg til revet. No må du leite etter **hjarta
+        i korallrevet.
+      CourseE_HOC 2018 Level_8_2020: Først isfjell og no lava? Kom deg gjennom denne
+        vulkanøya og finn den **tropiske fisken** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        i korallrevet.
+      CourseE_HOC 2018 Level_9b: Du kom deg til revet. No må du leite etter **hjarta
         til havet** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
-        Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
-      CourseF_PlayLab_vars2: Løpet i førre oppgåve var ikkje veldig rettferdig. Endre
-        variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn Katt.
-        Den fyrste til å samle 10 flagg vinn!
+        Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      CourseE_HOC 2018 Level_9b_2020: Du kom deg til revet. No må du leite etter **hjarta
+        til havet** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Crack Random Substitution: |-
+        # Knekk ein tilfeldig erstatningskode!
+
+        Denne versjonen av verktøyet gir deg meir omformasjon om den krypterte teksten og fleire alternativ for korleis du kan prøve ulike løysingar.
+
+        ### Ulike måtar å analysere tekst
+
+        -   Leik deg med nokre av sorteringsalternative som er tilgjengelege i fana Tilfeldig erstatningskode for å få ulike syn på bokstavfrekvensen i teksten og i alfabetet.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### Ulike måtar å erstatte
+
+        -   For å erstatte ein bokstav, kan du dra ein blå bokstav i alfabetet rett under den oransje du ønsker å endre i den opprinnelege kodeteksten.
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### Leik. Du må alltid leike.
+
+        -   Det finst andre måtar å analysere og erstatte bokstavar som du kan finne ved å klikke på knappane og prøve det du vil.
+        -   Husk: du kan ikkje knekke den :)
+
+        Sjå kor lang tid det tar deg å knekke koden! Er dette ein god metode for å kryptere hemmelege data?
+
+        <img src="http://code.org/api/hour/finish_encryption.png">
+      Crack a Caesar Cipher: |-
+        # Knekk ein Cæsar-kode!
+
+        Dette verktøyet lar deg leike med tekst og lage Cæsarkode. Du kan bruke det til å kryptere eller dekryptere en melding.
+
+        # Gjer dette
+
+        -   Opne ei **Dømemelding** frå nedtrekksmenyen. Det vil opne ei melding som er kryptert med ein Cæsarkode.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Bruk knappane i Cæsar-erstatningsfana. Du kan prøve deg fram med å dra alfabetet fram eller tilbake for å dekryptere meldinga.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Sjå kor lang tid det tar deg å dekryptere meldinga! Er dette ein god metode for dekryptere hemmelege data?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance_2019_01: |-
+        Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokka inn i arbeidsområdet og koble den inn i <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>-blokka.
+
+        Velg 'katt' eller 'dovendyr' for å laga den første dansaren.
+
+        -   _Du kan også trykke på lyspæra til venstre dersom du ønsker meir informasjon eller ekstrautfordringar._
+      Dance_2019_02: |-
+        <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml>-blokka har deg køyre kode når du trykker på piltastane. Bruk <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml>-blokka til å få katten til å klappe!
+
+        _Sørg for at du presser "piltast opp" eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) etter du har klikka Køyr-knappen!_
+      Dance_2019_03: Det er tid for dansevisning! Programmer kvar dansar til å danse
+        når du trykker på ulike tastar. Velg ditt favoritt dansetrinn for kvar dansar
+        eller sett det til "(Tilfeldig)" for noko totalt uforutsigbart!
+      Dance_2019_04: |-
+        La oss få dansarane til å danse i takt med musikken!
+
+        Koble saman <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka med ei <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>-blokk frå verktøykassa.
+
+        Dansaren din bør starte på eit nytt dansetrinn etter fjerde takt.
+
+        **Taktar** blir brukt til å telje tid i musikk. I denne øvinga er ei takt på fire slag.
+      Dance_2019_05: |-
+        _Groovy greier!_
+
+        Legg til ei <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>-blokk i arbeidsområdet. Få dansaren til å begynne på ein ny dans etter 6 taktar.
+      Dance_2019_06: "Bruk denne nye blokka til å sette opp ei gruppe mindre bakgrunnsdansarar
+        rundt hoveddansaren i midten. \n\n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\n\nNo kan du lage mange bakgrunnsdansarar på ein gong!"
+      Dance_2019_07: |-
+        Kvar dansar har eit sett med _eigenskapar_ som kontrollerer korleis dansaren ser ut.
+
+        Bruk <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> under ei gronn hending-blokk for å få dansarar til å sjå ut som dei står nærare eller lengre borte.
+      Dance_2019_08: Dansarar har ein "farge"-eigenskap som kan legge til eit lag
+        med farge. Prøv å endre fargen på ein av dansarane dine (eller heile gruppa)!
+      Dance_2019_09: "Denne **nye blokka** er ein spesiell type hending som blir trigga
+        igjen og igjen. \n\n<xml><block type=\"Dancelab_everySeconds\"><title name=\"N\">2</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml>\n\nVed å plassere andre nye
+        blokker frå verktøykassa di innanfor ei gjenta-blokk gjer at du kan gjenta
+        å endre eigenskapane til dansarane over tid. Ver kreativ og ha det gøy!\n\n_Når
+        du er ferdig trykker du på Ferdig-knappen._"
+      Dance_2019_10: Groove i veg! Lag ein dans du kan dele med venene dine.
       Dance_Party_01: |-
-        *La oss ha ein dansefest!*
+        _La oss ha ein dansefest!_
 
-        Dra ‘lag en ny’-blokka inn i arbeidsområdet, og koble den til inni ‘oppsett’-blokka for å lage den første dansaren.
+        Dra 'lag ei ny’-blokka inn i arbeidsområdet, og koble den til inni 'oppsett'-blokka for å lage den første dansaren.
 
-        * *Du kan også klikke på lyspæra til venstre, om du vil ha meir informasjon eller fleire utfordringar.*
-      Dance_Party_01_low: |-
-        *La oss ha ein dansefest!*
-
-        Dra ‘lag en ny’-blokka inn i arbeidsområdet, og koble den til inni ‘oppsett’-blokka for å lage den første dansaren.
-
-        * *Du kan også klikke på lyspæra til venstre, om du vil ha meir informasjon eller fleire utfordringar.*
+        -   _Du kan også klikke på lyspæra til venstre, om du vil ha meir informasjon eller fleire utfordringar._
       Dance_Party_02: |-
-        Nå må vi få elgen til å danse!
+        No må vi få elgen til å danse!
 
-        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">ny&#95;dansar</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">1</title></block></xml>-blokka til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"taktar"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
-
+        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
 
         **Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.
       Dance_Party_03: |-
-        *Groovy greier!*
+        _Groovy greier!_
 
-        Legg til ei <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takter"</title></block></xml>-blokk i arbeidsområdet. Få dansaren til å begynne på ein ny dans etter 6 taktar.
+        Legg til ei <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>-blokk i arbeidsområdet. Få dansaren til å begynne på ein ny dans etter 6 taktar.
       Dance_Party_04: |-
-        *Denne dansen treng litt hjelp!*
+        _Denne dansen treng litt hjelp!_
 
-        Under finn du ei ny blokk som legg til en bakgrunnseffekt bak dansaren din. Sjå endringane som skjer i takt med musikken!
+        Sjå etter ei ny blokk i verktøykassa di som gir bakgrunnseffekt bak dansaren din. Sjå endringane som skjer i takt med musikken!
       Dance_Party_05: |-
         Bruk nok ei ny blokk for å få danseren til å skifte rørsler **kvar andre takt**!
 
-        * Om du vel ‘(Neste)’, ‘(Førre)’ eller ‘(Tilfeldig)’, byttar dansaren til ein annan dans kvar gong du køyrer koden.
+        -   Om du vel ‘(Neste)’, ‘(Førre)’ eller ‘(Tilfeldig)’, byttar dansaren til ein annan dans kvar gong du køyrer koden.
       Dance_Party_06: |-
-        *Vi treng fleire dansarar!*
+        _Vi treng fleire dansarar!_
 
-        Lag ein ny dansar som heiter “backup_dancer1”, som kan danse med katten.
+        Lag ein ny dansar som heiter “backup\_dancer1”, som kan danse med katten.
       Dance_Party_08: |-
         Alle dansarar har eit sett med _eigenskapar_ som kontrollerer korleis dei ser ut.
 
-        Du kan få det til å se ut som om dansaren er i bakgrunnen ved å redusere _storleiken_. Kan du gjere begge bakgrunnsdansarane like store?
+        Du kan få det til å se ut som om dansaren er i bakgrunnen ved å gjere _storleiken_ mindre. Kan du gjere begge bakgrunnsdansarane like store?
       Dance_Party_09: |-
         Dansarar har ein fargeeigenskap som kan brukast til å leggje til eit fargelag. Prøv å skifte farge på ein av dansarane dine.
-        * Du blander fargen du vel med fargane på dansaren.
+
+        -   Du blander fargen du vel med fargane på dansaren.
       Dance_Party_10: |-
         No veit vi korleis vi endrar eigenskapane til dansarane. Vi kan óg få dei same eigenskapane til å reagere på musikken med denne blokka:
         <xml>
-        <block type="Dancelab_startMapping">
-        <title name="SPRITE">høgre_ananas</title>
-        <title name="PROPERTY">"storleik"</title>
-        <title name="RANGE">"bass"</title>
-        </block></xml>
+          <block type="Dancelab_startMapping">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
 
-        Dette programmet brukar bassvolumet til musikkens (dei djupe lydane) til å kontrollere høgden på ein dansar. Greier du å få de andre dansarane til å reagere på musikken også?
-      Dance_Party_11.5_test: |-
-        Sjekk ut denne blokka:
-
-        <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"AND"</title>
-        <title name="LAYOUT">"sirkel"</title>
-        </block></xml>
-
-        No kan du lage mange dansarar samtidig!
-
-        Prøv å bruke nokre av andeblokkene til å skrive kode som får alle endene til å danse saman.
+        Dette programmet brukar bassvolumet (dei djupe lydane) til musikken til å kontrollere høgden på ein dansar. Greier du å få dei andre dansarane til å reagere på musikken også?
       Dance_Party_11: |-
-        <xml><block type="Dancelab_whenKey"></block></xml>-blokka gjer det mogleg å køyre kode når du trykker på oppoverpila.
+        <xml><block type="Dancelab_whenKey"></block></xml>>-blokka gjer det mogleg å køyre kode når du trykker på oppoverpila.
 
-        Du kan skifte dans, endra på eigenskapane til ein dansar eller gjere eit dansetrinn berre ein gong. Vær kreativ, og sjå etter nye blokker!
+        Du kan skifte dans, endra på eigenskapane til ein dansar eller gjere eitt dansetrinn berre ein gong. Vær kreativ, og sjå etter nye blokker!
       Dance_Party_11_5: |-
         Sjekk ut denne blokka:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"AND"</title>
-        <title name="LAYOUT">"sirkel"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         No kan du lage mange dansarar samtidig!
 
         Prøv å bruke nokre av andeblokkene til å skrive kode som får alle endene til å danse saman.
-      Dance_Party_11b: "På tide med dansekonkurranse. Katten dabber når du trykker
-        på venstre piltast. Du får roboten til å \"droppe\" når du trykker på høgrepila.
-        \n\n**Bruk tastane til å få roboten til å gjere dropp-klapp-dropp-klapp så
-        fort som du kan!**"
+      Dance_Party_11b: "På tide med dansekonkurrans! Katten dabber når du trykker
+        på venstre piltast. Du får roboten til å \"droppe\" når du trykker på høgrepila,
+        og \"klappe\" når du trykker på oppoverpila. \n\n**Bruk tastane til å få roboten
+        til å gjere dropp-klapp-dropp-klapp så fort som du kan!**"
       Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
-      Dance_Party_3: "*Nå svinger det!* \n\nLegg til enda en <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
-        blokk i arbeidsområdet ditt. Få danseren til å starte en ny bevegelse etter
-        6 taker."
+      Dance_Party_extras_alternate_2019: "# Fram og tilbake!\n\nAv og til vil du kanskje
+        ønske å lage eit mønster med dansetrinn du velger. Denne nye blokka lar deg
+        gjere akkurat det. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>\n\nDansetrinna du vel
+        over vil gjenta seg i ein evig sekvens.\n\n-   Lag ein alternativ dans for
+        hoveddansaren foran!\n-   Bruk ulike tal til å endre korleis dansetrinna skiftar.
+        Prøv 1 eller 0,5 for å skifte fortare!"
       Dance_Party_extras_battle: |-
         # Dansegrupper
 
-        Her er det en dansekonkurranse mellom to grupper. Piltastene kontrollerer én av danserne, og wasd-tastene kontrollere den andre. Arranger en dansekonkurranse med en venn, og prøv å forbedre denne dansekonkurransen.
+        Her er ei dansevisning med to dansegrupper. Piltastane kontrollerer ei gruppe dansarar og "w.a.s.d" kontrollerer den andre. Ha ei dansevisning med ein venn og prøv deretter å forbedre dansevisninga.
 
-        * Legg til flere taster for å kontrollere dansene
-        * Få også bakgrunnsdanserne til å reagere når tastene trykkes ned
-        * Bytt danser hver fjerde takt ved å justere synligheten
+        -   Legg til fleire tastar for å kontrollere dansar
+        -   Få til at bakgrunnsdansarane også responderer når tastane blir trykka på
+        -   Endre kvar dansar etter kvar fjerde takt bed å bestemme synlighet
+      Dance_Party_extras_battle_2019: |-
+        # Dansegrupper
+
+        Her er ei dansevisning med to dansegrupper. Piltastane kontrollerer ei gruppe dansarar og "w.a.s.d" kontrollerer den andre. Ha ei dansevisning med ein venn og prøv deretter å forbedre dansevisninga.
+
+        -   Legg til fleire tastar for å kontrollere dansar
+        -   Få til at bakgrunnsdansarane også responderer når tastane blir trykka på
+        -   Endre kvar dansar etter kvar fjerde takt bed å bestemme synlighet
       Dance_Party_extras_every_beat: |-
-        # Firedelsnoter
+        # Fjerdedelsnotar
 
-        De fleste av dansene våre har brukt hele takter, men hver takt består av 4 firedelsnoter. Denne dansen bruker 'hver 0,25. takt' for å få danseren til å klappe på hver firedelsnote.
+        Dei fleste av dansarane vore har brukt heile taktar, men kvar takt er 4 fjeredelsnotar. Denne dansen brukar 'kvar 0,25-takt' til å få dansaren til å klappe på kvar fjerdedelsnote.
 
-        Denne dansen bruker også en _betingelsesblokk_ til å kontrollere når ‘hver 0,25. takt’-blokken kan endre dansen. Prøv å endre tallene i betingelsesblokken for å se hvordan dette endrer dansen.
+        Denne dansen nyttar også ei _betingelsesblokk_ for å kontrollere når 'kvar 0,25-takt"-blokka kan endre dansen. Prøv å endre talet i betingelsesblokka for å sjå korleis den endrer dansen.
 
-        * Eksperimenter med andre notevarigheter (som 0,5 for halvnote og 0,125 for åttedelsnote).
-        * Legg til noen ‘etter takten'-hendelser.
-        * Bytt "takter" med "sekunder", og prøv å justere timingen på dansen på denne måten isteden.
-      Dance_Party_extras_layout: |-
-        # Kom i formasjon
-
-        Sjekk ut denne dansen som bruker ‘oppsett’-blokken til å endre bakgrunnsdansernes formasjon gjennom dansen. Prøv en av disse ideene for å utvide den:
-
-        * Lag en ny gruppe med dansere i et annet oppsett
-        * Endre oppsett når en tast trykkes ned
-        * Endre en egenskap når danserne endrer formasjon
+        -   Eksperimenter med andre notelengder (som 0,5 for ein halvnote eller 0,125 for ein åttenedelsnote).
+        -   Legg til noko "etter takt"-hendingar
+        -   Bytt takt med sekunder og prøv å få dansen til å sitte på den måten.
+      Dance_Party_extras_every_beat_2019: "# Fjerdedelsnotar\n\nDei fleste av dansarane
+        vore har brukt heile taktar, men kvar takt er 4 fjeredelsnotar. Denne dansen
+        brukar <xml><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_compare\"><title
+        name=\"OP\">LT</title><value name=\"A\"><block type=\"Dancelab_getTime\"><title
+        name=\"UNIT\">\"measures\"</title></block></value><value name=\"B\"><block
+        type=\"math_number\"><title name=\"NUM\">5</title></block></value></block></value><statement
+        name=\"DO0\"></statement></block></xml> til å få dansaren til å klappe på
+        kvar fjerdedelsnote, men berrre for dei første 4 taktane. \n\nPrøv å endre
+        talet i betingelsesblokka for å sjå korleis den endrer dansen. \n\n-   Eksperimenter
+        med andre notelengder (som 0,5 for ein halvnote eller 0,125 for ein åttenedelsnote).
+        \n-   Legg til andre hendingar."
+      Dance_Party_extras_layout: "# La oss komme i formasjon!\n\nSjekk ut denne dansen
+        som bruker oppsett-blokk for å endre formasjonen til bakgrunnsdansarane gjennom
+        dansen. Prøv ein av desse ideane for å utvide den: \n\n-   Lag ei ny gruppe
+        dansarar i eit anna oppsett\n-   Endre oppsett når du trykker på ein tast\n-
+        \  Endre ein eigenskap når dansarane endrar formasjon"
+      Dance_Party_extras_layout_2019: "# La oss komme i formasjon!\n\nSjekk ut denne
+        dansen som bruker <xml><block type=\"Dancelab_layoutSprites\" block-text=\"layout\"><title
+        name=\"GROUP\">\"MOOSE\"</title><title name=\"FORMAT\">???</title></block></xml>-blokk
+        for å endre formasjonen til bakgrunnsdansarane gjennom dansen. Prøv ein av
+        desse ideane for å utvide den: \n\n-   Lag ei ny gruppe dansarar i eit anna
+        oppsett \n-   Endre oppsett når du trykker på ein tast \n-   Endre ein eigenskap
+        når dansarane endrar formasjon"
+      Dance_Party_extras_mixed_2019: "# Fleire knappar\n\nDenne dansen lar deg kontrollerer
+        eigenskapane til dansarane i sanntid medan dei dansar automatisk. Prøv å få
+        andre eigenskapar til å endre seg når du trykker på knappane. Til dømes: \n\n-
+        \  Tilfeldig farge dansarane når du trykker \"ned\".\n-   Legg til ei gruppe
+        dansarar med tilfeldig utforming når du trykker på \"mellomrom\"."
       Dance_Party_extras_on_beat: |-
         # Bass, mellomtone og diskant
 
-        Denne dansen bruker "topphendelser" til å aktivere kode når forskjellige deler av musikken blir høy. Prøv å leke deg litt med forskjellige sanger for å se hvordan de endrer dansen.
+        Denne dansen bruker "topphendingar" til å aktivere kode når ulike delar av musikken blir høg. Prøv å leike deg litt med ulike songar for å sjå korleis dei endrar dansen.
+      Dance_Party_extras_on_beat_2019: |-
+        # Bass, mellomtone og diskant
+
+        Denne dansen bruker "topphendingar" til å aktivere kode når ulike delar av musikken blir høg. Prøv å leike deg litt med ulike songar for å sjå korleis dei endrar dansen.
       Dance_Party_extras_speed: |-
-        # Fortere, saktere
+        # Fortare, saktare
 
-        Den siste dansen bruker ‘sett fart’-blokken til å styre hvor raskt hver danser beveger seg. Prøv å eksperimentere med forskjellige hastigheter på forskjellige punkter i sangen. Du kan fortsette å flikke på denne dansen, eller gå tilbake til noen av de tidligere dansene og gjøre dem enda kulere.
-      Dance_Party_extras_visible: |-
-        # Hvor ble det av dem?
+        Den siste dansen bruker ‘sett fart’-blokka til å styre kor raskt kvar dansar rører på seg. Prøv å eksperimentere med ulike hastigheiter på ulike punkt i songen. Du kan halde fram med å flikke på denne dansen eller gå tilbake til nokre av dei tidligere dansane og gjere dei enda kulare.
+      Dance_Party_extras_speed_2019: |-
+        # Fortare, saktare
 
-        Denne dansen viser og skjuler to forskjellige grupper med dansere. Sjekk den ut, og prøv å gi den din egen stil.
-
-        * Legg til en ny gruppe dansere
-        * Vis og skjul danserne med piltastene
-        * Skjul alle danserne og bytt til en spennende bakgrunnseffekt
+        Den siste dansen bruker <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml>-blokka til å styre kor raskt kvar dansar rører på seg. Prøv å eksperimentere med ulike hastigheiter på ulike punkt i songen. Du kan halde fram med å flikke på denne dansen eller gå tilbake til nokre av dei tidligere dansane og gjere dei enda kulare.
+      Dance_Party_extras_visible: "# Kor forsvann dei?\n\nDenne dansen visar og skjular
+        to ulike gruppe dansarar. Sjekk det ut, og prøv å legg til din eigen vri.
+        \n\n-   Legg til ei anna gruppe dansarar\n-   Vis og skjul dansarar ved å
+        bruke piltastar\n-   Skjul alle dansarane og bytt til ein spennande bakgrunnseffekt"
+      Dance_Party_extras_visible_2019: "# Kor forsvann dei?\n\nDenne dansen visar
+        og skjular to ulike gruppe dansarar. Sjekk det ut, og prøv å legg til din
+        eigen vri. \n\n-   Legg til ei anna gruppe dansarar\n-   Vis og skjul dansarar
+        ved å bruke piltastar\n-   Skjul alle dansarane og bytt til ein spennande
+        bakgrunnseffekt"
       Function intro Ryan: |-
-        Ein **funksjon** som heiter 'bygg bru' er no tilgjengeleg. All koden du treng for å bygge ei bru er tatt med!\n
+        Ein **funksjon** som heiter 'bygg bru' er no tilgjengeleg. All koden du treng for å bygge ei bru er tatt med!\\
+
         Fest den lille grøne <xml><block type="procedures_callnoreturn" id="callMe"><mutation name="build bridge"/></block></xml>-blokka to gonger i arbeidsområdet ditt for å fikse stien og få {currentPlayerName} til redstonefakkelen [redstone_torch].
       Function intro Ryan_2019: |-
-        Ein **funksjon** som heiter 'bygg bru' er no tilgjengeleg. All koden du treng for å bygge ei bru er tatt med!\n
+        Ein **funksjon** som heiter 'bygg bru' er no tilgjengeleg. All koden du treng for å bygge ei bru er tatt med!\\
+
         Fest den lille grøne <xml><block type="procedures_callnoreturn" id="callMe"><mutation name="build bridge"/></block></xml>-blokka to gonger i arbeidsområdet ditt for å fikse stien og få {currentPlayerName} til redstonefakkelen [redstone_torch].
-      HOC 2018 Level_1: "Du treng forsyningar til reisa vidare. Hent ein **båt** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        i **kista** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      HOC 2018 Level_10: "Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
-        gøymd ein stad i dette havmonumentet. Greier du å finne den?\n\n"
+      Function intro Ryan_2020: |-
+        Ein **funksjon** som heiter 'bygg bru' er no tilgjengeleg. All koden du treng for å bygge ei bru er tatt med!\\
+
+        Fest den lille grøne <xml><block type="procedures_callnoreturn" id="callMe"><mutation name="build bridge"/></block></xml>-blokka to gonger i arbeidsområdet ditt for å fikse stien og få {currentPlayerName} til redstonefakkelen [redstone_torch].
+      HOC 2018 Level_1: Du treng forsyningar til reisa vidare. Hent ein **båt** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        i **kista** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        gøymd ein stad i dette havmonumentet. Greier du å finne den?
       HOC 2018 Level_11: Bygg ein vegg av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         rundt den svarte betongen. Dette aktiverer **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         og fullfører utfordringa!
@@ -965,287 +877,192 @@ nn:
       HOC 2018 Level_6: Det ser ut som om det er iskaldt der ute! Fang ein **laks**
         ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         på veg til undervassruinane.
-      HOC 2018 Level_7a: "Du fant undervassruinane. Leit i sandsteinen etter ei **kiste**
+      HOC 2018 Level_7a: Du fant undervassruinane. Leit i sandsteinen etter ei **kiste**
         ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        som inneheld **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      HOC 2018 Level_8: "Først isfjell og no lava? Kom deg gjennom denne vulkanøya
+        som inneheld **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      HOC 2018 Level_8: Først isfjell og no lava? Kom deg gjennom denne vulkanøya
         og finn den **tropiske fisken** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        i korallrevet.\n\n"
-      HOC 2018 Level_9b: "Du kom deg til revet. No må du leite etter **hjarta til
-        havet** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
-        Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
-      HOC Dance 4_draft: |-
-        Bruk nok ei ny blokk for å få danseren til å skifte rørsler **kvar andre takt**!
-
-        * Om du vel ‘(Neste)’, ‘(Førre)’ eller ‘(Tilfeldig)’, byttar dansaren til ein annan dans kvar gong du køyrer koden.
-      HOC Dance 5_draft: |-
-        *Vi treng fleire dansarar!*
-
-        Lag ein ny dansar som heiter “backup_dancer1”, som kan danse med katten.
-      HOC Dance 9_draft: |-
-        <xml><block type="Dancelab_whenKey"></block></xml>-blokka gjer det mogleg å køyre kode når du trykker på oppoverpila.
-
-        Du kan skifte dans, endra på eigenskapane til ein dansar eller gjere eit dansetrinn berre ein gong. Vær kreativ, og sjå etter nye blokker!
-      HOC Dance Freeplay: Groove i veg! Lag ein dans du kan dele med venene dine.
-      HOC Dance Freeplay_draft: Groove i veg! Lag ein dans du kan dele med venene
-        dine.
-      HOC Dance Predraw: Groove i veg! Lag ein dans du kan dele med venene dine.
-      K-1 Bee Loops 2: Bruk ei gjenta-løkke til å bevege deg og så hente nektaren
-        og lage honning!
-      K-1 Bee Loops 3: Bruk tre gjenta-løkker til å hente nektar og lage honning!
-      K-1 Bee Loops 4: Bruk gjenta-løkker til å hente nektar, lage honning og til
-        å bevege deg!
+        i korallrevet.
+      HOC 2018 Level_9b: Du kom deg til revet. No må du leite etter **hjarta til havet**
+        ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       K-1 Bee Loops 5: Bruk gjenta-løkker til å hente nektar og honning!
-      K-1 Bee Loops 6: Bruk lgjenta-økker for å hente nektar, honning og til å bevege
-        deg!
-      K-1 Maze Loops 11: Få meg bort til grisen! Bruk gjenta-blokka.
-      K-1 Maze Loops 12: Få meg bort til grisen! Bruk gjenta-blokka.
       K-1 Maze Loops 2: Bruk Gjenta-blokka for å få meg bort til grisen!
       K-1 Maze Loops 8: Få meg bort til grisen! Bruk gjenta-blokka.
-      LaurelDebugging4Video1: "Dette er Laurel, eventyreren!\r \n\r \nFlytt på henne
-        og få tak i så mykje gull som mogleg."
-      MC Agent Freeplay: "**Frileik:** No er det opp til deg! Bruk agenten sin kode
-        for å hjelpe deg med å utforske denne verda."
-      MC_2017_Ryan_02: "Kode som dette kan gjerast enda kortare om vi brukar løkker.
-        \r\n\r \nNo skal du få agenten til å gå til trykkplatea ved å bruke ei løkke
-        til å få han til å bevege seg framover."
-      MC_HOC_2017 Agent Test: "Klikk \"Køyr\" for å flytte spelaren ved å bruke **piltastane**.
-        \n\nFor å komme til neste nivå, må du komme til døra og opne den (ved å bruke
-        **mellomromstasten**) slik du kan komme inn til det oransje kvadrata."
-      MC_HOC_2017_01: "Klikk \"Køyr\" for å flytte spelaren ved å bruke **piltastane**.
-        \n\nFor å komme til neste nivå, må du komme til døra og opne den (ved å bruke
-        **mellomromstasten**) slik du kan komme inn til det oransje kvadrata."
-      MC_HOC_2017_01_Cole: Klikk "Køyr" for å flytte spelaren til den oransje ruta
-        inne i huset.
-      MC_HOC_2017_01_Kiki: 'Du kjem i gong ved å klikke på den oransje "Køyr"-knappen
-        nedanfor spelområdet. Deretter kan du flytte spelaren rundt med **piltastane**.  '
+      MC HOC 2016 SCORE LEVEL: "I nokre spel har du ein poengsum. Spel \"sisten\"
+        med desse jerngolemene og bruk <xml>  <block type=\"craft_addScore\">\n    <title
+        name=\"SCORE\">1</title>\n  </block></xml>-blokka for å gi deg sjølv eit poeng
+        når du tar dei. \n\n Nå fem poeng for å vinne!"
       MC_HOC_2017_01_RETRY: "Døra er låst, men heldigvis er agenten klar til å hjelpe!
-        \r\n \r\nSett ei \"gå framover\"-blokk ved \"når køyrast\"-blokka i arbeidsområdet
+        \\\r\n \\\r\nSett ei \"gå framover\"-blokk ved \"når køyrast\"-blokka i arbeidsområdet
         for å få agenten til å gå til trykkplata [PressurePlate_Up]. Trykk deretter
         på \"Køyr\", og bruk piltastane til å flytte {currentPlayerName} ut av huset
         og bort til **kista** [chest]."
       MC_HOC_2017_01_RETRY_2019: "Døra er låst, men heldigvis er agenten klar til
-        å hjelpe! \r\n \r\nSett ei \"gå framover\"-blokk ved \"når køyrast\"-blokka
+        å hjelpe! \\\r\n \\\r\nSett ei \"gå framover\"-blokk ved \"når køyrast\"-blokka
         i arbeidsområdet for å få agenten til å gå til trykkplata [PressurePlate_Up].
         Trykk deretter på \"Køyr\", og bruk piltastane til å flytte {currentPlayerName}
         ut av huset og bort til **kista** [chest]."
-      MC_HOC_2017_02: Spelaren skal inn i den hemmelege skogen. Hjelp agenten ved
-        å opne porten ved å skrive koden som hjelper den til trykkplata.
+      MC_HOC_2017_01_RETRY_2020: "Døra er låst, men heldigvis er agenten klar til
+        å hjelpe! \\\r\n \\\r\nSett ei \"gå framover\"-blokk ved \"når køyrast\"-blokka
+        i arbeidsområdet for å få agenten til å gå til trykkplata [PressurePlate_Up].
+        Trykk deretter på \"Køyr\", og bruk piltastane til å flytte {currentPlayerName}
+        ut av huset og bort til **kista** [chest]."
       MC_HOC_2017_02_Cole: "{currentPlayerName} er på veg på eventyr! **Kartet** [map_empty]
-        er bak den låste døra til høgre, og vil vere til stor hjelp. \r\n \r\nSkriv
+        er bak den låste døra til høgre, og vil vere til stor hjelp. \\\r\n \\\r\nSkriv
         inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata [PressurePlate_Up]
         og opner opp for {currentPlayerName}. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} er på veg på eventyr! **Kartet**
-        [map_empty] er bak den låste døra til høgre, og vil vere til stor hjelp. \r\n
-        \r\nSkriv inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata
+        [map_empty] er bak den låste døra til høgre, og vil vere til stor hjelp. \\\r\n
+        \\\r\nSkriv inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata
         [PressurePlate_Up] og opner opp for {currentPlayerName}. "
-      MC_HOC_2017_02_Kiki: "Spelaren er på veg på eventyr, men først må dei ha fakkelen
-        som er gøymd bak den låste døra. \r\n\r\nProgrammer agenten til å gå framover
-        to gongar og følgje den kvite stien fram til trykkplata, slik at den opnar
-        døra for spelaren."
-      MC_HOC_2017_02_Will: "For å fullføre må spelaren komme til det oransje feltet
-        inni den hemmelege skogen, som er bak den låste døra. \r\n\r\nKoden i arbeidsområdet
-        får agenten til å gå framover to gongar, så den kjem til trykkplata og opnar
-        døra for Alex og Steve."
+      MC_HOC_2017_02_Cole_2020: "{currentPlayerName} er på veg på eventyr! **Kartet**
+        [map_empty] er bak den låste døra til høgre, og vil vere til stor hjelp. \\\r\n
+        \\\r\nSkriv inn koden i arbeidsområdet, slik at agenten beveger seg til trykkplata
+        [PressurePlate_Up] og opner opp for {currentPlayerName}. "
       MC_HOC_2017_03_Cole: "{currentPlayerName} held fram med eventyret sitt og har
-        bruk for **kompasset**[compass] til turen. \r\n\r\nKod agenten til å opne
+        bruk for **kompasset**[compass] til turen. \\\r\n\\\r\nKod agenten til å opne
         porten. "
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} held fram med eventyret sitt
-        og har bruk for **kompasset**[compass] til turen. \r\n\r\nKod agenten til
-        å opne porten. "
-      MC_HOC_2017_03_Kiki: "Spelaren sitt eventyr begynner bak den låste døra, i den
-        hemmelege skogen! \r\n\r\n\r\nHjelp agenten til å opne døra ved å skrive kode
-        for å få ha til trykkplata."
-      MC_HOC_2017_04: Forandre løkka frå den siste gåta for å hjelpe agenten til å
-        lage ein bane over den breiaste delen av elva.
-      MC_HOC_2017_04POINT5_Cole: "Du kom deg ut av sumpen! Nå skal du få spelaren
-        trygt til det oransje kvadratet, \n\nHjelp agenten til å fjerne stien ved
-        å finne eit enkelt mønster og bruke løkkar for å krysse dei to første trykkplatene."
-      MC_HOC_2017_04POINT5_RYAN: "Du kom deg overover! \r \n\r \nNå skal du få {currentPlayerName}
-        trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
-      MC_HOC_2017_04POINT5_RYAN_2019: "Du kom deg overover! \r \n\r \nNå skal du få
+        og har bruk for **kompasset**[compass] til turen. \\\r\n\\\r\nKod agenten
+        til å opne porten. "
+      MC_HOC_2017_03_Cole_2020: "{currentPlayerName} held fram med eventyret sitt
+        og har bruk for **kompasset**[compass] til turen. \\\r\n\\\r\nKod agenten
+        til å opne porten. "
+      MC_HOC_2017_04POINT5_RYAN: "Du kom deg overover! \\\r \n\\\r \nNå skal du få
         {currentPlayerName} trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
-      MC_HOC_2017_04_Cole: "Agenten kan bevege seg over vatn! \r\n\n\r\nBruk ei løkke
-        til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty]
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du kom deg overover! \\\r \n\\\r \nNå skal
+        du få {currentPlayerName} trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2020: "Du kom deg overover! \\\r \n\\\r \nNå skal
+        du få {currentPlayerName} trygt gjennom labyrinten for å hente **øksa** [diamond_axe]"
+      MC_HOC_2017_04_Cole: "Agenten kan bevege seg over vatn! \\\r\n\n\\\r\nBruk ei
+        løkke til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty]
         bak døra. "
-      MC_HOC_2017_04_Cole_2019: "Agenten kan bevege seg over vatn! \r\n\n\r\nBruk
+      MC_HOC_2017_04_Cole_2019: "Agenten kan bevege seg over vatn! \\\r\n\n\\\r\nBruk
         ei løkke til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty]
         bak døra. "
-      MC_HOC_2017_04_Kiki: |-
-        Inngangen til den hemmelege skogen førte til denne vakre oasen! For å komme vidare, må spelaren komme til den oransje kvadratet i hytta.
-
-        Bruk ein gjenta-løkke for å hjelpe agenten til å komme heilt fram til trykkplata, som åpner hyttedøra.
-      MC_HOC_2017_05: "Løkker ikkje alltid nyttig.\r\n\r\nDesse kaktusane veks ikkje
-        i eit klart mønster, så ei løkke ville ikkje ha fjerna dei riktig. I staden
-        for har vi gitt deg ein funksjon kalla \"øydelegge og flytte\" som vil gjere
-        jobben for deg kvar gong agenten får ei hindring."
+      MC_HOC_2017_04_Cole_2020: "Agenten kan bevege seg over vatn! \\\r\n\n\\\r\nBruk
+        ei løkke til å løyse denne gåta og slik at {currentPlayerName} kan få **bøtta**[bucket_empty]
+        bak døra. "
       MC_HOC_2017_05_Cole: "Å nei, brua er borte! \n\nKod agenten til å bygge opp
         at brua ved å bruke <xml><block type=\"craft_placeBlock\"><title name=\"TYPE\"></title></block></xml>-blokka
         slik at slik at {currentPlayerName} kan nå fram til **spaden**[diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Å nei, brua er borte! \n\nKod agenten til å bygge
         opp at brua ved å bruke <xml><block type=\"craft_placeBlock\"><title name=\"TYPE\"></title></block></xml>-blokka
         slik at slik at {currentPlayerName} kan nå fram til **spaden**[diamond_shovel]."
-      MC_HOC_2017_05_Josh: "Å nei, brua er borte! \r\n\r\nHjelp agenten til å byggje
-        brua opp at, slik at spelaren kan komme til **spaden**."
-      MC_HOC_2017_05_Kiki: "Det er tid for at spelaren forlet den hemmelege skogen
-        og held fram med eventyret. Men brua er borte! \n\nHjelp agenten med å byggje
-        opp at brua, deretter flytte planken slik at spelaren kan komme til det oransje
-        kvadratet."
-      MC_HOC_2017_06_Cole: "Ei anna elv, men dette er ei mykje større ei! \r \n\r
+      MC_HOC_2017_05_Cole_2020: "Å nei, brua er borte! \n\nKod agenten til å bygge
+        opp at brua ved å bruke <xml><block type=\"craft_placeBlock\"><title name=\"TYPE\"></title></block></xml>-blokka
+        slik at slik at {currentPlayerName} kan nå fram til **spaden**[diamond_shovel]."
+      MC_HOC_2017_06_Cole: "Ei anna elv, men dette er ei mykje større ei! \\\r \n\\\r
         \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName}
         kan komme til den **hakka** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Cole_2019: "Ei anna elv, men dette er ei mykje større ei! \r
-        \n\r \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName}
+      MC_HOC_2017_06_Cole_2019: "Ei anna elv, men dette er ei mykje større ei! \\\r
+        \n\\\r \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName}
         kan komme til den **hakka** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Josh: "Enda ei elv, men denne her er mykje større! \r\n\r\nFiks
-        denne koden slik at agenten kan byggje ei bru over elva."
-      MC_HOC_2017_06_Kiki: "Enda ei elv, men denne her er mykje større! \r\n\r\nFiks
-        denne koden slik at agenten kan byggje ei bru over vatnet."
-      MC_HOC_2017_07_Cole: "Det er is i vegen! \r\n \r\nFunksjonen \"klar bane\" kan
-        hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Cole_2019: "Det er is i vegen! \r\n \r\nFunksjonen \"klar bane\"
+      MC_HOC_2017_06_Cole_2020: "Ei anna elv, men dette er ei mykje større ei! \\\r
+        \n\\\r \nFiks koden til få hjelpe agenten med å bygge ei bru slik at {currentPlayerName}
+        kan komme til den **hakka** [diamond_pickaxe]. "
+      MC_HOC_2017_07_Cole: "Det er is i vegen! \\\r\n \\\r\nFunksjonen \"klar bane\"
         kan hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart
         [minecart_normal]! "
-      MC_HOC_2017_07_Kiki: "Løkker er ikkje den einaste måten å gjenta koden! \n\nHer
-        har vi gitt deg ein funksjon som blir kalla \"fjern kaktusar\", som fjernar
-        tre kaktusar kvar gong du brukar den. Bruk to \"fjern kaktusar\" blokker til
-        å rydde vegen til det oransje kvadratet. "
-      MC_HOC_2017_07a_Kiki: Redigér denne løkka, slik at agenten rydder vegen til
-        det oransje kvadratet.
-      MC_HOC_2017_08_Cole: "I stadenfor for å øydeleggje, skal du plassere ei blokk
-        før du går. \r\n\r\nEndre funksjonen slik at den verkar i ørkenen."
-      MC_HOC_2017_08_Kiki: "I staden for å øydeleggje kaktusar, skal du nå leggje
-        stein over lavaen og deretter øydeleggje sandsteinen. \r\n\r\nEndre funksjonen
-        slik at den verkar på denne oppgåva."
-      MC_HOC_2017_08_RY: "No har du **TO** funksjonar å velje mellom! \r\n\r\nBruk
-        desse funksjonane for å raskt byggje ei bru over lavaen for {currentPlayerName}."
-      MC_HOC_2017_08_Will: "No har du **TO** funksjonar å velje mellom! \r\n\r\nBruk
-        desse funksjonane for å raskt byggje ei bru over lavaen for spelaren."
-      MC_HOC_2017_09_Cole: Bruk funksjonane for å hjelpe agenten å øydeleggje dei
-        enorme jordblokkane som blokkerer vegen til trykkplata for spelaren.
-      MC_HOC_2017_09_Kiki: "Startkoden kan ikkje fjernast.\r\n\r\nLegg til kommandoar
-        til \"legg spor\"-funksjonen, slik at programmet i arbeidsområdet får agenten
-        fram til trykkplata. "
-      MC_HOC_2017_09_RS_CLONE: Fiks funksjonen slik at hulla blir fylt. Gå deretter
-        på trykkplata for å rydde veg fram til fakkelen.
-      MC_HOC_2017_10_Cole: Bruk funksjonane til å rydde vegen for minevogna. Gå deretter
-        inn i Nether-portalen.
-      MC_HOC_2017_10_Cole_old: Prøv å byggje ein funksjon fra starten av, som gjer
-        det lettare for agenten til å gjere ferdig minevogna og få spelaren til det
-        oransje kvadratet.
-      MC_HOC_2017_10_Kiki: Prøv å byggje ein funksjon fra starten av, som gjer det
-        lettare for agenten til å gjere ferdig minevogna og få spelaren til det oransje
-        kvadratet.
+      MC_HOC_2017_07_Cole_2019: "Det er is i vegen! \\\r\n \\\r\nFunksjonen \"klar
+        bane\" kan hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart
+        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2020: "Det er is i vegen! \\\r\n \\\r\nFunksjonen \"klar
+        bane\" kan hjelpe deg med å ødelegge isen og få {currentPlayerName} til Minecart
+        [minecart_normal]! "
       MC_HOC_2017_10_RETRY: "Kan du sjå skilnaden mellom dei to funksjonane i arbeidsområdet
-        ditt? \r\n\r\nBruk desse funksjonane saman med anna kode frå verktøyskassa,
+        ditt? \\\r\n\\\r\nBruk desse funksjonane saman med anna kode frå verktøyskassa,
         slik at du kan rydde vegen for minevogna og få tak i **Flint og stål**[flint_and_steel].
-        \r "
+        \\\r "
       MC_HOC_2017_10_RETRY_2019: "Kan du sjå skilnaden mellom dei to funksjonane i
-        arbeidsområdet ditt? \r\n\r\nBruk desse funksjonane saman med anna kode frå
-        verktøyskassa, slik at du kan rydde vegen for minevogna og få tak i **Flint
-        og stål**[flint_and_steel]. \r "
-      MC_HOC_2017_10_RYAN: Prøv å byggje funksjonar frå starten av, som gjer det lettare
-        for agenten å gjere ferdig minevogna og få spelaren til det oransje kvadratet.
-      MC_HOC_2017_10_RYAN2: Prøv å byggje funksjonar frå starten av, som gjer det
-        lettare for agenten å gjere ferdig minevogna og få spelaren til det oransje
-        kvadratet.
-      MC_HOC_2017_11_Kiki: No er det opp til deg! Sjå kva du kan lage rundt denne
-        frosne innsjøen.
-      MC_HOC_2017_13_Cole: "**Frileik:** No er det opp til deg! Bruk agenten sin kode
-        for å hjelpe deg med å utforske denne verda."
-      MC_HOC_2017_4.5v2: "Du kom deg ut av sumpen! Nå skal du få spelaren trygt til
-        det oransje kvadratet, \n\nHjelp agenten til å fjerne stien ved å finne eit
-        enkelt mønster og bruke løkkar for å krysse dei to første trykkplatene."
+        arbeidsområdet ditt? \\\r\n\\\r\nBruk desse funksjonane saman med anna kode
+        frå verktøyskassa, slik at du kan rydde vegen for minevogna og få tak i **Flint
+        og stål**[flint_and_steel]. \\\r "
+      MC_HOC_2017_10_RETRY_2020: "Kan du sjå skilnaden mellom dei to funksjonane i
+        arbeidsområdet ditt? \\\r\n\\\r\nBruk desse funksjonane saman med anna kode
+        frå verktøyskassa, slik at du kan rydde vegen for minevogna og få tak i **Flint
+        og stål**[flint_and_steel]. \\\r "
       MC_HOC_2017_Ali: 'Sjå på funksjonane nedanfor. Korleis kan du bruke dei til
         å komme unna Ghast og hjelpe {currentPlayerName} fram til **Den fortryllande
         boka** [book_enchanted]?  '
       MC_HOC_2017_Ali_2019: 'Sjå på funksjonane nedanfor. Korleis kan du bruke dei
         til å komme unna Ghast og hjelpe {currentPlayerName} fram til **Den fortryllande
         boka** [book_enchanted]?  '
-      MC_HOC_2017_FP10x10: "**Frileik** No er det opp til deg! Kan du utfordre deg
-        sjølv til å samle alle diamantane på dette nivået?\n"
-      MC_HOC_2017_FP10x10_RE: "**Frileik** No er det opp til deg! Kan du utfordre
-        deg sjølv til å samle alle diamantane på dette nivået?\n"
+      MC_HOC_2017_Ali_2020: 'Sjå på funksjonane nedanfor. Korleis kan du bruke dei
+        til å komme unna Ghast og hjelpe {currentPlayerName} fram til **Den fortryllande
+        boka** [book_enchanted]?  '
       MC_HOC_2017_FP20x20: "**Frileik:** No er det opp til deg! Bruk agenten sin kode
         for å hjelpe deg med å utforske denne verda."
       MC_HOC_2017_FP20x20_2019: "**Frileik:** No er det opp til deg! Bruk agenten
         sin kode for å hjelpe deg med å utforske denne verda."
-      MC_HOC_2017_Ryan_03: "Visste du at du kan sette meir enn eitt stykke kode inn
-        i ei løkke? \n\nBruk ei løkke for å hjelpe agenten med å byggje ei bru over
-        elva ved å plassere blokkene i vatnet."
-      MC_HOC_2017_Ryan_05: "Nokre gongar må du slå ned ting som kjem i vegen for spelaren.
-        \ \r Bruk blokka \"øydelegg\" for å fjerne alle kaktusane mellom agenten og
-        trykkplata."
-      Mike Test Bee Conditionals 1: "Denne skyen blokkerer synet mitt!\n\r\n\r\nSe
-        om det er en blomst under skyen, og hent nektar kun hvis det er en blomst
-        der.   \r\nVær forsiktig, det kan endre seg!"
-      Mike Test Bee Conditionals 2: "Oppgåve: Samle all nektaren. \nVer forsiktig
-        så du ikkje samlar nektar frå ein lilla blom om den ikkje har nektar."
-      NEW Course 4 Artist Functions 10.1: Bruk funksjonane frå forrige oppgåve til
-        å teikne dette mønsteret.
-      NEW Course 4 Artist Functions 12: Bruk funksjonen "teikn ei linje av kvadrat"
-        frå forrige oppgåve til å teikne dette mønsteret.
+      MC_HOC_2017_FP20x20_2020: "**Frileik:** No er det opp til deg! Bruk agenten
+        sin kode for å hjelpe deg med å utforske denne verda."
       NEW Course 4 Artist Functions 3: |-
         Her er ei ny type blokk. Den er ein "funksjon"-blokk. Trykk på "endre" og fyll inn koden for å teikne eit kvadrat med 100 pikslar lange sider.
 
         Når du er ferdig med funksjonen, trykk "lukk" for å gå tilbake til programmet ditt.
-      NEW Course 4 Artist Functions 9: Kan du løyse dette med å legge til berre ei
-        brikke?
-      NEW Course 4 Artist Params 4: Ser du noko annleis med desse funksjonsblokkene?
-        Trykk på «Kjør» så ser du kva som skjer.
-      NEW Course 4 Artist Vars 12: Tak opp att framgangsmåten frå førre nivå og lag
-        ein mangekant der alle sidene er 150 pikslar lange.
-      NEW Course 4 Artist Vars 4: "Lat oss prøve igjen!\r\n\r\nKan du setje «lengde»-variabelen
-        til 60 for å lage dette kule designet med sekskantar?"
-      NEW Course 4 Artist Vars 6: "Dette mønsteret med femkantar med sider på 100
-        pikslar teiknar du ved å setje dei rette verdiane for «lengde» og så setje
-        variabelen «lengde» inn på alle dei rette stadane.\r\n\r\nSer du at du berre
-        treng å setje verdien for «lenge» ein gong, og så blir den rette verdien brukt
-        alle stader?"
+      NEW Course 4 Artist Params 1: La oss lage ein funksjon som tegnar eit kvadrat
+        med sider som er 50 pikslar lange. Trykk "rediger" for å starte.
       New Minecraft Hero Project: "**Frileik:** No er det opp til deg! Bruk agenten
         sin kode for å hjelpe deg med å utforske denne verda."
       Overworld Move to Sheep: Legg til endå ei "gå framover"-blokk for å nå fram
         til sauen.
-      Overworld Move to Sheep_2018: Legg til endå ei "gå framover"-blokk for å nå
-        fram til sauen.
       Overworld Move to Sheep_2019: Legg til endå ei "gå framover"-blokk for å nå
         fram til sauen.
-      PS copy 2-3 Bee Conditionals 5: "Desse magiske lilla blomane endrar seg!\n\nKvar
-        gong du køyrer koden kan blomane enten ha 1 nektar eller ingen... Men du veit
-        ikkje talet på nektar før du køyrer koden! \n\nPass på så du ikkje samlar
-        nektar fra blomar som ikkje har noko. \nDu må først sjekke om nektaren er
-        lik 1 ved å bruke \"dersom nektar\"-blokka."
-      Ryan_Demo: |-
-        Nå må vi få elgen til å danse!
-
-        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">ny&#95;dansar</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">1</title></block></xml>-blokka til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"taktar"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
-
-
-        **Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.
-      Testing Quantum Farmer: "Wow! Sjå på det! \n\nEg veit ikkje kor mange spadetak
-        med jord det tar å fylle det.\nKan du skrive eit program som nyttar fyll-blokka
-        ti å fylle holet til det er heilt jamnt?  "
+      Overworld Move to Sheep_2020: Legg til endå ei "gå framover"-blokk for å nå
+        fram til sauen.
+      Standalone_Artist_2: Teikn denne diamanten med vinklar på 120 og 60 gradar og
+        langsider på 150 pikslar.
+      Standalone_Artist_3: Kan du tegne denne sekskanten med lange sider på 100 pikslar
+        og vinklar på 60 grader?
+      Standalone_Artist_4: No har du fått ei ny blokk du kan bruke; gjenta-løkka.
+        Den vil repetere eit sett med kommandoer. Kva skjer hvis du gjentar ddsse
+        kommandoane 6 gonger?
+      Standalone_Artist_5: Kor monge gongar må du å repetere denne diamanten for å
+        teikne blomen?
+      Standalone_Artist_5.5: 'Legg merke til korleis vi har forenkla diamantkoden
+        ved å gjere han om til ei løkke. Du kan gjenta heile sekvensen 12 gonger for
+        å tegne ein blomst. Hint: du må snu 30 grader etter kvar diamantløkke slik
+        at du ikkje tegner den same diamanten om igjen og om igjen.'
+      Standalone_Artist_6: 'Gjenta denne heksagonkoden 6 gonger for å lage bildet.
+        Kor mange grader må du snu kvar gong? Hint: del antall grader i ein sirkel
+        på antall gonger du skal gjenta.'
+      Standalone_Artist_7: 'Ein funksjon er eit programmeringsverktøy som du kan bruke
+        for å slippe å gjenta deg sjølv. Denne funksjonen teiknar ein blome og du
+        kan bruke den kvar gong du vil teikne ein blome. Bruk denne og den nye hopp-blokken
+        for å teikne desse blomane. Tips: Blomane er 150 pikslar frå kvarandre'
+      Standalone_Artist_8: Her er ein funksjon kalla "Teikn ein figur" som vi har
+        programmert til å teikne sekskantar. Køyr koden for å sjå kva den gjer og
+        så kan du eksperimentere med den og sjå kva som skjer om du endrer på den.
+        Kan du få den til å teikne eit mønster av kvadrat, trekantar og åttekantar?
+      Standalone_Artist_9: Gå vidare og lag kva for bilde du vil! Du har og ein tom
+        funksjon du kan få til å gjere kva du vil!
       Underground Avoiding Lava: Lava er gøymt under nokre av desse blokkene. Dei
         er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil
         vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave
         ut desse blokkene.
-      Underground Avoiding Lava_2018: Lava er gøymt under nokre av desse blokkene.
+      Underground Avoiding Lava_2019: Lava er gøymt under nokre av desse blokkene.
         Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando
         vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave
         ut desse blokkene.
-      Underground Avoiding Lava_2019: Lava er gøymt under nokre av desse blokkene.
+      Underground Avoiding Lava_2020: Lava er gøymt under nokre av desse blokkene.
         Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando
         vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave
         ut desse blokkene.
       Underground If Statements: No begynnar ting å bli vanskeleg. Grav ut 3 redstone,
         men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere brustein
         over all lavaen du grev fram.
-      Underground If Statements_2018: No begynnar ting å bli vanskeleg. Grav ut 3
-        redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere
-        brustein over all lavaen du grev fram.
       Underground If Statements_2019: No begynnar ting å bli vanskeleg. Grav ut 3
         redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere
         brustein over all lavaen du grev fram.
+      Underground If Statements_2020: No begynnar ting å bli vanskeleg. Grav ut 3
+        redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere
+        brustein over all lavaen du grev fram.
+      'Widget: Text Compression': Sjå etter mønster (repeterande ord eller fraser)
+        i teksten. Legg inn mønstra du finn i ordlista til høgre. Når du legg inn
+        eit mønster i ordlista, vil symbolet for mønsteret bli lagt inn i teksten
+        istadenfor mønsteret.
       course1_artist_loops_challenge2: La oss spele eit spel! Tegn så mange X'ar som
         du kan! Klarar du tre på rad?
       course1_maze_debugging_challenge2: |-
@@ -1253,28 +1070,19 @@ nn:
         blokkene, men dei ligg i feil rekkefølgje!
       course1_maze_seq_challenge2: "Du kan bare flytte opp til fire gonger \ni kvar
         retning. Finn du ein bane før du går tom for blokker?"
-      course2_artist_prog_challenge2: "*Hjelp meg å måle dei gule linjene på denne
-        vegen! *"
       course2_collector_prog_challenge1: Sjå nøye etter! Kan du samle saman alle dei
-        *10* bitane av skatten?
+        _10_ bitane av skatten?
       course2_harvester_loops_challenge1: Samle saman alt kornet.
       course2_harvester_loops_challenge2: "Samle all salaten. \nUnngå tre og åkrar!"
-      course2_maze_programming_challenge1: '*"Grisen gøymer seg! Kan du hjelpe med
-        til å finne ein veg rundt?"*'
       course2_maze_programming_challenge2: Nokre gongar er det meir enn ein måte å
         løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn
         å gå framover!
-      course2_maze_seq_challenge2: "Du kan bare flytte opp til fire gonger \ni kvar
-        retning. Finn du ein bane før du går tom for blokker?"
-      course3_bee_debugging_challenge1: Sjå korleis biene får nektar. Kan du bruke
-        det samme mønsteret til å hjelpe biene å lage all honningen?
       course3_bee_functions_challenge2: No må du klare deg sjølv!
       course3_collector_debugging_challenge2: Er du ein ekspert på løkker? Bruk det
         du har lært så langt for å samle all skatten!
       course3_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete
         banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne
         haugene.
-      course3_maze_debugging_challenge1: '*"Går eg berre rundt i sirklar?"*'
       course3_maze_until_challenge1: Ingen hint, berre utfordringar. Få zombien til
         solsikka.
       course4_artist_binary_challenge1: Du kan berre bruke kvar binærverdi (0 eller
@@ -1282,67 +1090,165 @@ nn:
       course4_artist_fwp_challenge1: Prøv å køyre dette programmet, og gjere endringer
         for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne
         det og erstatte det med noko heilt anna?)
-      courseA_collector_loops1: "**Frileik: ** Dette er Laurel, eventyreren! Flytt
-        på henne og få så mykje skattar du kan.\r \n\r\nDra blokker inn i arbeidsområdet
-        og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element
-        for å bli ferdig med dette nivået."
-      courseA_collector_loops1_2018: "**Frileik: ** Dette er Laurel, eventyreren!
-        Flytt på henne og få så mykje skattar du kan.\r \n\r\nDra blokker inn i arbeidsområdet
-        og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element
-        for å bli ferdig med dette nivået."
-      courseA_collector_loops1_2019: "**Frileik: ** Dette er Laurel, eventyreren!
-        Flytt på henne og få så mykje skattar du kan.\r \n\r\nDra blokker inn i arbeidsområdet
-        og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element
-        for å bli ferdig med dette nivået."
-      courseA_collector_preLoops1: "Dette er eventyraren Laurel! \r\n\r\nTrykk \"Køyr\"
-        for å sjå ho gå opp til skatten og ta den."
+      courseA_collector_loops1: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
+      courseA_collector_loops1_2018: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
+      courseA_collector_loops1_2019: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
+      courseA_collector_loops1_2020: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
+      courseA_maze_seq1: _"Prøv deg fram med disse blokkene og prøv å få meg bort
+        den slemme grisen!"_
+      courseA_maze_seq13_2019: Få tak i grisen!
+      courseA_maze_seq13_2020: Få tak i grisen!
+      courseA_maze_seq1_2018: _"Prøv deg fram med disse blokkene og prøv å få meg
+        bort den slemme grisen!"_
+      courseA_maze_seq1_2019: _"Prøv deg fram med disse blokkene og prøv å få meg
+        bort den slemme grisen!"_
+      courseA_maze_seq1_2020: _"Prøv deg fram med disse blokkene og prøv å få meg
+        bort den slemme grisen!"_
       courseA_maze_seq6_2018: Flytt meg først ein veg og så ein anna veg for å få
         meg bort til grisen!
       courseA_maze_seq6_2019: Flytt meg først ein veg og så ein anna veg for å få
         meg bort til grisen!
+      courseA_maze_seq6_2020: Flytt meg først ein veg og så ein anna veg for å få
+        meg bort til grisen!
       courseA_maze_seq8_2018: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq8_2019: Løys dette nivået og få fuglen bort til grisen!
+      courseA_maze_seq8_2020: Løys dette nivået og få fuglen bort til grisen!
+      courseA_maze_seq_challenge2_2019: Følg stien og led meg til grisen. Unngå dynamitten
+        om du ikkje vil at eg skal forsvinne i ei sky av fjør!
+      courseA_maze_seq_challenge2_2020: Følg stien og led meg til grisen. Unngå dynamitten
+        om du ikkje vil at eg skal forsvinne i ei sky av fjør!
+      courseB_artist_loops2_2019: Kunstnaren prøver å teikne ei linje **6** gongar,
+        men kan ikkje få det riktig. Kan du hjelpe?
+      courseB_artist_loops2_2020: Kunstnaren prøver å teikne ei linje **6** gongar,
+        men kan ikkje få det riktig. Kan du hjelpe?
+      courseB_artist_loops3_2019: Hjelp kunstnaren med å teike ei linje 7 gongar slik
+        at han kan lage ein vegg i hagen.
+      courseB_artist_loops3_2020: Hjelp kunstnaren med å teike ei linje 7 gongar slik
+        at han kan lage ein vegg i hagen.
+      courseB_artist_loops5_2019: På tide å fikse trappa! Gjenta dette mønsteret **5**
+        gongar slik at kunstnaren kan nå toppen av buskane.
+      courseB_artist_loops5_2020: På tide å fikse trappa! Gjenta dette mønsteret **5**
+        gongar slik at kunstnaren kan nå toppen av buskane.
       courseB_artist_loops7: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       courseB_artist_loops7_2018: "**Utfordring:** Det er en skjult hage! La oss går
         rundt."
       courseB_artist_loops7_2019: "**Utfordring:** Det er en skjult hage! La oss går
         rundt."
+      courseB_artist_loops7_2020: "**Utfordring:** Det er en skjult hage! La oss går
+        rundt."
+      courseB_artist_loops8_2019: På tide å dra heim. Kan du fikse denne stigen med
+        berre ei blokk for å hjelpe kunstnaren ned?
+      courseB_artist_loops8_2020: På tide å dra heim. Kan du fikse denne stigen med
+        berre ei blokk for å hjelpe kunstnaren ned?
       courseB_artist_loops_challenge2: La oss spele eit spel! Teikn så mange X'ar
         som du kan! Klarar du tre på rad?
       courseB_artist_loops_challenge2_2018: La oss spele eit spel! Teikn så mange
         X'ar som du kan! Klarar du tre på rad?
       courseB_artist_loops_challenge2_2019: La oss spele eit spel! Teikn så mange
         X'ar som du kan! Klarar du tre på rad?
-      courseB_collector_loops1: "**Frileik: ** Dette er Laurel, eventyreren! Flytt
-        på henne og få så mykje skattar du kan.\r \n\r\nDra blokker inn i arbeidsområdet
-        og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element
-        for å bli ferdig med dette nivået."
-      courseB_collector_loops1_2018: "**Frileik: ** Dette er Laurel, eventyreren!
-        Flytt på henne og få så mykje skattar du kan.\r \n\r\nDra blokker inn i arbeidsområdet
-        og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element
-        for å bli ferdig med dette nivået."
-      courseB_collector_loops1_2019: "**Frileik: ** Dette er Laurel, eventyreren!
-        Flytt på henne og få så mykje skattar du kan.\r \n\r\nDra blokker inn i arbeidsområdet
-        og prøv å finne ut korleis du får tak i skatten.  Få tak i minst eitt element
-        for å bli ferdig med dette nivået."
-      courseB_maze_seq9_challenge1: "*Kor har den grisen gøymd seg no?*"
+      courseB_artist_loops_challenge2_2020: La oss spele eit spel! Teikn så mange
+        X'ar som du kan! Klarar du tre på rad?
+      courseB_collector_loops1: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
+      courseB_collector_loops10_2019: Hjelp Laurel til å få tak i alle skattane i
+        grotta.
+      courseB_collector_loops10_2020: Hjelp Laurel til å få tak i alle skattane i
+        grotta.
+      courseB_collector_loops11_2019: Eureka!  Få tak i så mange skattar du berre
+        kan!
+      courseB_collector_loops11_2020: Eureka!  Få tak i så mange skattar du berre
+        kan!
+      courseB_collector_loops1_2018: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
+      courseB_collector_loops1_2019: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
+      courseB_collector_loops1_2020: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
+        Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
+        i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
+        i minst eitt element for å bli ferdig med dette nivået."
+      courseB_collector_loops4_2019: Fiks Laurel si bane for å få tak i all skatten!
+      courseB_collector_loops4_2020: Fiks Laurel si bane for å få tak i all skatten!
+      courseB_collector_loops5_2019: 'Legg til meir i koden frå forrige oppgåve for
+        å få all skatten. '
+      courseB_collector_loops5_2020: 'Legg til meir i koden frå forrige oppgåve for
+        å få all skatten. '
+      courseB_collector_loops6_2019: |-
+        Finn koden som hjelper Laurel
+        til å få tak i heile skatten!
+      courseB_collector_loops6_2020: |-
+        Finn koden som hjelper Laurel
+        til å få tak i heile skatten!
+      courseB_collector_loops7_2019: Skriv koden for å få tak i heile skatten.
+      courseB_collector_loops7_2020: Skriv koden for å få tak i heile skatten.
+      courseB_collector_loops8_2019: "**Utfordring:** Skatten går heile vegen opp
+        trappa! \nSkriv koden slik at Laurel får tak i alt."
+      courseB_collector_loops8_2020: "**Utfordring:** Skatten går heile vegen opp
+        trappa! \nSkriv koden slik at Laurel får tak i alt."
+      courseB_collector_loops9_2019: _"Hjelp meg med å få skatten frå denne djupe
+        dalen."_
+      courseB_collector_loops9_2020: _"Hjelp meg med å få skatten frå denne djupe
+        dalen."_
+      courseB_collector_loops_challenge1_2019: "Denne gangen har du avgrensa tal \npå
+        blokker. Få tak i heile skatten! "
+      courseB_collector_loops_challenge1_2020: "Denne gangen har du avgrensa tal \npå
+        blokker. Få tak i heile skatten! "
+      courseB_maze_seq12_2019: Få tak i grisen!
+      courseB_maze_seq12_2020: Få tak i grisen!
+      courseB_maze_seq_challenge2_2019: |-
+        Feilsøk dette nivået. Dette er dei rette
+        blokkene, men dei ligg i feil rekkefølgje!
+      courseB_maze_seq_challenge2_2020: |-
+        Feilsøk dette nivået. Dette er dei rette
+        blokkene, men dei ligg i feil rekkefølgje!
       courseC_artist_loops2a: No kan du bruke ei løkke for å spinne fuglen din rundt
         tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din
         rundt tolv gongar med ein 30 graders sving.
-      courseC_artist_loops2a_2019: No kan du bruke ei løkke for å spinne fuglen din
-        rundt tolv gongar med ein 30 graders sving.
-      courseC_artist_prog_challenge1-doghouse: La oss byggje eit hundehus til Jorge!
-      courseC_artist_prog_challenge2: "*Hjelp meg å måle dei gule linjene på denne
-        vegen! *"
-      courseC_collector_prog9: '*"La oss få heile skatten!"*'
-      courseC_collector_prog9_2018: '*"La oss få heile skatten!"*'
-      courseC_collector_prog9_2019: '*"La oss få heile skatten!"*'
+      courseC_artist_loops2a_2019: "No kan du bruke ei løkke for å lage fleire kopiar.
+        Prøv å endre talet på \"snu\"- og \"gjenta\"-blokkene for å lage andre mønster.
+        \n\n* * *\n\nTrykk på \"Ferdig\" når du er nøgd med det du har laga. \n\n![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\n![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)\n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)"
+      courseC_artist_loops2a_2020: "No kan du bruke ei løkke for å lage fleire kopiar.
+        Prøv å endre talet på \"snu\"- og \"gjenta\"-blokkene for å lage andre mønster.
+        \n\n* * *\n\nTrykk på \"Ferdig\" når du er nøgd med det du har laga. \n\n![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\n![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)\n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)"
+      courseC_artist_loopsPrePre1a_2019: |-
+        Kunstneren er på feil sted!
+
+        Bruk <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>-blokken for å få kunstneren til midten av området.
+        Deretter tegn en 50 piksler lang linje med <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>-blokken.
+      courseC_artist_loopsPrePre1a_2020: |-
+        Kunstneren er på feil sted!
+
+        Bruk <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>-blokken for å få kunstneren til midten av området.
+        Deretter tegn en 50 piksler lang linje med <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>-blokken.
+      courseC_collector_prog9: _"La oss få heile skatten!"_
+      courseC_collector_prog9_2018: _"La oss få heile skatten!"_
+      courseC_collector_prog9_2019: _"La oss få heile skatten!"_
+      courseC_collector_prog9_2020: _"La oss få heile skatten!"_
       courseC_flappy_events7: Prøv å endre scena ved å leggje ei anna blokk til "når
         køyrt"-hendinga.
       courseC_flappy_events7_2018: Prøv å endre scena ved å leggje ei anna blokk til
         "når køyrt"-hendinga.
       courseC_flappy_events7_2019: Prøv å endre scena ved å leggje ei anna blokk til
+        "når køyrt"-hendinga.
+      courseC_flappy_events7_2020: Prøv å endre scena ved å leggje ei anna blokk til
         "når køyrt"-hendinga.
       courseC_flappy_events9: For å gjere ting anleis, kan du sette skårsummen tilbake
         til 0 når Flakse treff ei hindring.
@@ -1350,14 +1256,17 @@ nn:
         tilbake til 0 når Flakse treff ei hindring.
       courseC_flappy_events9_2019: For å gjere ting anleis, kan du sette skårsummen
         tilbake til 0 når Flakse treff ei hindring.
-      courseC_harvester_loops_challenge1: Samle saman alt kornet.
+      courseC_flappy_events9_2020: For å gjere ting anleis, kan du sette skårsummen
+        tilbake til 0 når Flakse treff ei hindring.
       courseC_harvester_loops_challenge2: "Samle all salaten. \nUnngå tre og åkrar!"
       courseC_harvester_loops_challenge2_2018: "Samle all salaten. \nUnngå tre og
         åkrar!"
       courseC_harvester_loops_challenge2_2019: "Samle all salaten. \nUnngå tre og
         åkrar!"
-      courseC_maze_loops_challenge2: La oss jakte på skattar - ved å bruke løkker!
-        Hjelp samlaren ved å feilsøke koden. Få tak i heile skatten!
+      courseC_harvester_loops_challenge2_2020: "Samle all salaten. \nUnngå tre og
+        åkrar!"
+      courseC_maze_debugging9_2020: Bruk blokkene i verktøykassen til å bygge et program.
+        Få ekornet til nøtta.
       courseC_maze_programming_challenge2: Nokre gongar er det meir enn ein måte å
         løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn
         å gå framover!
@@ -1367,107 +1276,97 @@ nn:
       courseC_maze_programming_challenge2_2019: Nokre gongar er det meir enn ein måte
         å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn
         å gå framover!
-      courseD_artist_binary_challenge1: Du kan berre bruke kvar binærverdi (0 eller
-        1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne teikninga.
+      courseC_maze_programming_challenge2_2020: Nokre gongar er det meir enn ein måte
+        å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn
+        å gå framover!
+      courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \\_\"Prøv å endre formen eller lengden på linjene for å lage den din egen!\"\n\n<br/>
+        \ \n\n**Inspirasjon:** Du kan ende tegningen din sånn du vil, men her er et
+        forslag:\n\n-   Prøv å endre typen former i midten av snøflaket med den på
+        enden av hver linje!"
+      courseD_artist_5_2018_2020: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \\_\"Prøv å endre formen eller lengden på linjene for å lage den din egen!\"\n\n<br/>
+        \ \n\n**Inspirasjon:** Du kan ende tegningen din sånn du vil, men her er et
+        forslag:\n\n-   Prøv å endre typen former i midten av snøflaket med den på
+        enden av hver linje!"
       courseD_artist_binary_challenge1_2018: Du kan berre bruke kvar binærverdi (0
         eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne
         teikninga.
       courseD_artist_binary_challenge1_2019: Du kan berre bruke kvar binærverdi (0
         eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne
         teikninga.
-      courseD_artist_project_embedded: Dette er det du snart skal gjere!
+      courseD_artist_binary_challenge1_2020: Du kan berre bruke kvar binærverdi (0
+        eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne
+        teikninga.
       courseD_bee_debugging_challenge1: Sjå korleis biene får nektar. Kan du bruke
         det same mønsteret til å hjelpe biene å lage honning?
-      courseD_bee_debugging_challenge1_2018: Sjå korleis biene får nektar. Kan du
-        bruke det same mønsteret til å hjelpe biene å lage honning?
-      courseD_bee_debugging_challenge2: Sjå korleis biene får nektar. Kan du bruke
-        det same mønsteret til å hjelpe biene å lage honning?
-      courseD_bee_nestedLoops5: 'Saml inn all nektar frå kvar blomst og lag honning
-        i alle bikubene. '
       courseD_bee_nestedLoops8: 'Saml inn all nektar frå kvar blomst og lag honning
         i alle bikubene. '
       courseD_bee_nestedLoops8_2018: 'Saml inn all nektar frå kvar blomst og lag honning
         i alle bikubene. '
       courseD_bee_nestedLoops8_2019: 'Saml inn all nektar frå kvar blomst og lag honning
         i alle bikubene. '
-      courseD_bounce_events1: Kom deg til flagget! Kople ei blokk til "når venstre
-        pil"-blokka og trykk "Køyr" for å flytte spelfiguren til flagget.
-      courseD_collector_debugging6a: 'Utfordring: Bruk koden i arbeidsområdet til
-        å få tak i minst **6** delar av skatten!'
+      courseD_bee_nestedLoops8_2020: 'Saml inn all nektar frå kvar blomst og lag honning
+        i alle bikubene. '
       courseD_collector_debugging6a_2018: 'Utfordring: Bruk koden i arbeidsområdet
         til å få tak i minst **6** delar av skatten!'
       courseD_collector_debugging6a_2019: 'Utfordring: Bruk koden i arbeidsområdet
         til å få tak i minst **6** delar av skatten!'
+      courseD_collector_debugging6a_2020: 'Utfordring: Bruk koden i arbeidsområdet
+        til å få tak i minst **6** delar av skatten!'
       courseD_collector_ramp8: "Denne oppgåva er mykje lik som det siste, men no er
-        det Laurel, eventyraren, som er stjerna!\r\n ___\r \n\r \nTa samme veg som
-        før, men denne gangen brukar du ei repeterande løkke for å samle skattar når
-        du kjem til den.\r\n"
-      courseD_collector_until_challenge1: Sjå korleis biene får nektar. Kan du bruke
-        det same mønsteret til å hjelpe biene å lage honning?
+        det Laurel, eventyraren, som er stjerna!\\\r\n \\_\\_\\_\\\r \n\\\r \nTa samme
+        veg som før, men denne gangen brukar du ei repeterande løkke for å samle skattar
+        når du kjem til den.\\\r"
       courseD_farmer_until_challenge2: Bruk blokken hvis/ellers for å følge den svingete
         veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne
         haugene.
-      courseD_farmer_until_challenge2_2018: Bruk blokken hvis/ellers for å følge den
-        svingete veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for
-        å fjerne haugene.
       courseD_farmer_while_challenge1: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge1_2018: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge1_2019: Fyll i alle hulla og fjern alle haugane.
+      courseD_farmer_while_challenge1_2020: Fyll i alle hulla og fjern alle haugane.
       courseD_farmer_while_challenge2: Fyll i alle hulla og fjern alle haugane.
-      courseD_farmer_while_challenge2_2018: Fyll i alle hulla og fjern alle haugane.
       courseD_maze_nestedLoops4: 'Få zombien til solsikka ved å bruke så få blokker
         som mogleg!  '
       courseD_maze_nestedLoops4_2018: 'Få zombien til solsikka ved å bruke så få blokker
         som mogleg!  '
       courseD_maze_nestedLoops4_2019: 'Få zombien til solsikka ved å bruke så få blokker
         som mogleg!  '
+      courseD_maze_nestedLoops4_2020: 'Få zombien til solsikka ved å bruke så få blokker
+        som mogleg!  '
       courseD_maze_until_challenge1: Ingen hint, berre utfordringar. Få zombien til
         solsikka.
-      courseD_maze_until_challenge1_2018: Ingen hint, berre utfordringar. Få zombien
-        til solsikka.
-      courseD_scrat_ramp4: Unngå sprekken i isen for å holde Scrat trygg!
-      courseD_scrat_ramp4_2018: Unngå sprekken i isen for å holde Scrat trygg!
       courseE_bee_functions2: "Funksjonar er blokker med kode som gjer ei oppgåve.
         \n\nBruk funksjonen \"hent 2 nektar\" for å samle inn nektar frå kvar blome."
-      courseE_bee_functions2_2018: "Funksjonar er blokker med kode som gjer ei oppgåve.
-        \n\nBruk funksjonen \"hent 2 nektar\" for å samle inn nektar frå kvar blome."
       courseE_bee_functions3: Bruk "hent 5"-funksjonen for å løyse denne oppgåva.
-      courseE_bee_functions3_2018: Bruk "hent 5"-funksjonen for å løyse denne oppgåva.
-      courseE_collector_ramp8: "Denne oppgåva er mykje lik som den siste, men no er
-        det Laurel, eventyraren, som er stjerna!\r\n<hr/>\r \n\r \nTa samme veg som
-        før, men denne gangen brukar du ei repeterande løkke for å samle skattar når
-        du kjem til den.\r\n"
-      courseE_farmer_concept4: No skal vi eitt hakk djupare! Vi har nøsta heile kodeblokka
-        inn ei anna løkke, men du må få kunstnaren på rett plass for å teikne den
-        neste linja. Kva for nokre av desse kodeblokkene kan du plassere i slutten
-        av den ytste løkka for å teikne heile mønsteret?
       courseF_bee_for_challenge2: Løys denne oppgåva med færrast mogleg blokker.
       courseF_bee_for_challenge2_2018: Løys denne oppgåva med færrast mogleg blokker.
       courseF_bee_for_challenge2_2019: Løys denne oppgåva med færrast mogleg blokker.
+      courseF_bee_for_challenge2_2020: Løys denne oppgåva med færrast mogleg blokker.
+      frozen circle: Ein sirkel er ei spesiell form. Klarar du å finne ut kva tal
+        som skal erstatte spørsmålteikna for å teikne ein sirkel?
+      frozen circle function: Bruk den nye "Lag sirkel"-blokka for å lage 10 overlappande
+        sirklar. Hugs å gå framover mellom sirklane.
       frozen circle function in circle: Nå skal vi lage 20 overlappande sirklar medan
         vi dreier 18 grader mellom kvar sirkel.
       frozen circle function with parameter: Her er ei "Lag sirkel"-blokk som kan
         lage sirklar av ulik storleik. Kan du bruke den til å lage ein liten sirkel
         med storleik 5 og ein stor sirkel med storleik 10?
-      frozen circle function: Bruk den nye "Lag sirkel"-blokka for å lage 10 overlappande
-        sirklar. Hugs å gå framover mellom sirklane.
-      frozen circle: Ein sirkel er ei spesiell form. Klarar du å finne ut kva tal
-        som skal erstatte spørsmålteikna for å teikne ein sirkel?
-      frozen cross rotate dense: 'La oss gjenta det 90 gongar! Kor mange gongar går
-        90 opp i 360? Tips: Det er eit ganske lite tal.'
-      frozen cross rotate: Prøv å gjenta det 10 gongar. Kor mange grader skal du snu
-        mellom kvar linje?
       frozen cross: Sett ei "Gjenta"-blokk rundt desse kommandoane for å lage eit
         plussteikn. La du merke til at Elsa kan bevege seg både framover og bakover?
+      frozen cross rotate: Prøv å gjenta det 10 gongar. Kor mange grader skal du snu
+        mellom kvar linje?
+      frozen cross rotate dense: 'La oss gjenta det 90 gongar! Kor mange gongar går
+        90 opp i 360? Tips: Det er eit ganske lite tal.'
+      frozen diamond: Bruk ei "Gjenta"-blokk rundt desse blokkene for å lage eit parallellogram.
+        Det er eit rektangel der hjørna har ulik vinkel. Denne har vinklar på 60 grader
+        og 120 grader i staden for at alle har 90 graders vinklar.
       frozen diamond mini snowflake: Visste du at alle snøfnugg har forskjellige former?
         La oss lage eit nytt snøfnugg ved å bruke enda ei "Gjenta"-blokk for å gjenta
         mønsteret 4 gongar. Snu 90 grader mellom kvart mønster.
       frozen diamond snowflake: Nå skal vi lage eit snøfnugg ved å bruke "Gjenta"-blokka
         til å lage eit parallellogram 10 gongar og snu 36 grader mot høgre mellom
         kvar.
-      frozen diamond: Bruk ei "Gjenta"-blokk rundt desse blokkene for å lage eit parallellogram.
-        Det er eit rektangel der hjørna har ulik vinkel. Denne har vinklar på 60 grader
-        og 120 grader i staden for at alle har 90 graders vinklar.
       frozen freeplay: "Du er nå offisielt blitt ein meisterkunstnar! \nLag eit vinterparadis."
       frozen perpendicular: Nå skal vi prøve å lage to linjer som står 90 grader i
         forhold til kvarandre. Du må bruke "Snu"-blokka og "Flytt"-blokka.
@@ -1479,293 +1378,19 @@ nn:
         5 og 5 sirklar med storleik 10?
       frozen square iterative: Det ser ut til at vi er halvvegs til å lage eit kvadrat.
         La oss sette saman fire linjer for å lage eit kvadrat.
-      frozen square loop 3x: La oss lage tre kvadrat med spissen mot kvarandre. Hugs
-        å snu 120 grader før kvart nye kvadrat.
       frozen square loop: Hei, eg heiter Anna av Arendelle! La oss lage eit kvadrat
         ved hjelp av "Gjenta"-blokka som brukar færre blokkar. Kor mange gongar (???)
         treng "Gjenta"-blokka til gå gjennom blokkene inni for å lage eit kvadrat?
+      frozen square loop 3x: La oss lage tre kvadrat med spissen mot kvarandre. Hugs
+        å snu 120 grader før kvart nye kvadrat.
       frozen square snowflake: Får du til å lage et snøfnugg ved å bruke "repeter"-blokka
         til å lage 10 kvadrat og "Snu"-blokka for å snu deg 36 grader mellom kvart
         kvadrat?
-      grade1_artist_loops6: "**Utfordring:** Det er en skjult hage! La oss går rundt."
-      grade2_MakeDogTag_8: Nå skal me kople saman ein haug med V'ar ved å teikne dei
-        med ei løkke.
-      grade2_MakeDogTag_9: "No skal me gjere noko artig!\n\r\n\r\nBruk om att koden
-        frå førre oppgåve, men legg til ein 30 graders venstresving inne i løkka.
-        Gjenta 24 gongar i staden for 8."
-      grade2_PuppyLoops_10: "Læraren seier eg må gjere meg ferdig!\r\n\r\nHjulet mitt
-        er ikkje ferdig. Kva er gale?"
-      grade2_PuppyLoops_2: |-
-        Plutseleg dukka det opp ei magisk blokk! Med `gjenta`-blokka kan du gjenta koden om og om igjen.
-
-        Kan du komme deg bort til grisen ved å lage ei løkke som bruker kun ei `gå fram`-blokk inni ei `gjenta`-blokk?
-      grade2_PuppyLoops_4: Bruk to løkker for å komme til grisen ved å bruke færre
-        blokkar.
-      grade2_PuppyLoops_8: "Koden for katten sine vêrhår er feil. \r\n\r\nFiks koden
-        slik at den teiknar alle vêrhåra like lange."
-      grade2_PuppyLoops_9: "Det ser ut som C i koden er teikna feil veg.\r\n\r\nKan
-        du få han til å sjå ut som ein C?"
-      grade2_puppy_loops2: |-
-        Plutseleg dukka det opp ei magisk blokk! Med `gjenta`-blokka kan du gjenta koden om og om igjen.
-
-        Kan du komme deg bort til grisen ved å lage ei løkke som bruker kun ei `gå fram`-blokk inni ei `gjenta`-blokk?
-      grade2_puppy_loops4: Bruk to løkker for å komme til grisen ved å bruke færre
-        blokkar.
-      grade3_ConditionalsElse_1: "Denne skyen blokkerer synet mitt!\n\r\n\r\nSe om
-        det er en blomst under skyen, og hent nektar kun hvis det er en blomst der.
-        \  \r\nVær forsiktig, det kan endre seg!"
-      grade3_ConditionalsElse_2: "Fleire skyer! \r\n\r\nSjekk under kvar sky for å
-        sjå om den skjular ein blom før du får tak i nektaren. \r\n\r\nHugs, alle
-        skyene skjular ikkje same ting!"
-      grade3_ConditionalsElse_4: "Noen ganger skjuler denne skyen en blomst og noen
-        ganger skjuler den en bikube! \r\n\r\nBruk blokken `hvis/ellers` til å samle
-        nektar kun hvis det er en blomst der. \r\nHvis ikke det er det, lag honning
-        (fordi det er en bikube)."
-      grade3_ConditionalsElse_5: "Det kan vere ein blome eller ein bikube under skyene.
-        \n\nBruk \"dersom/elles\"-blokka til å samle inn nektar om det er ein blome.
-        \nOm ikkje lagar du honning (for da er det ein bikube)."
-      grade3_ConditionalsElse_6: |-
-        Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.
-
-        Kombinér dei betinga blokkene ('dersom' og/eller 'dersom/elles') for å berre få så mykje nektar som blomen har.
-
-        Hugs: talet på nektar kan endre seg for kvar gong du køyrer oppgåva!
-      grade3_ConditionalsElse_7: "Hugs at lilla blomar kan ha 3, 2 og 1 nektar. \n\r\n\r\nFullfør
-        \"kontroller lilla blomar\"-funksjonen og bruk den til å samle inn nektar
-        frå alle blomane."
-      grade3_ConditionalsElse_8: "Skriv ein funksjon som heiter \"Sjekk blom og lag
-        honning\". \r\n\r\nFunksjonen din skal sjekke om den lilla blomen har 3, 2
-        eller 1 nektar og hente all nektaren. \r\nDeretter skal den bevege seg framover
-        og så lage honning."
-      grade3_ConditionalsElse_9: "**Oppgåve** Denne skya gjømmer ein blomst med ein
-        nektar eller ei honningkake som treng ein honning.\n\r\n\r\nGjer ferdig \"hent
-        nektar eller lag honning\"-funksjonen og kall den for å sanke nektar eller
-        honning.\r\n"
-      grade3_ConditionalsElse_TeacherIDo: "Det kan vere ein blome eller ein bikube
-        under skyene. \n\nBruk \"dersom/elles\"-blokka til å samle inn nektar om det
-        er ein blome. \nOm ikkje lagar du honning (for da er det ein bikube)."
-      grade3_Conditionals_1: |-
-        Hei, eg er ei svolten bie!
-
-        Hjelp meg å samle all nektaren frå blomane. Bruk så få blokker som mogleg.
-      grade3_Conditionals_10: |-
-        Her skjer det mykje!
-
-        Bruk det du har lært til å samle all nektaren og lage honning.
-      grade3_Conditionals_11 BAD: "**Oppgave:** Bruk ei medan-løkke for å samle all
-        nektaren fra desse blomane."
-      grade3_Conditionals_11: |-
-        Lat oss sette alt saman!
-
-        Bruk alt du har lært til å hjelpe meg med å samle inn all nektaren frå blomar som har nektar. Bruk så få blokker som mogleg.
-
-        Ikkje gløym å lage honning på slutten.
-      grade3_Conditionals_12: "Trappemønsteret bør sjå kjend ut.\r\n\r\nKan du samle
-        nektar frå dei blomane som har, med så få blokker som mogleg?"
-      grade3_Conditionals_13: "Oppgåve: Samle all nektaren. \nVer forsiktig så du
-        ikkje samlar nektar frå ein lilla blom om den ikkje har nektar."
-      grade3_Conditionals_2: "Sjå all den nektaren!\r\n\r\nHjelp meg å samle nektar
-        og lage honning med så få blokker som mogleg.  "
-      grade3_Conditionals_3: "Desse magiske lilla blomane endrar seg!\n\nKvar gong
-        du køyrer koden kan blomane enten ha 1 nektar eller ingen... Men du veit ikkje
-        talet på nektar før du køyrer koden! \n\nPass på så du ikkje samlar nektar
-        fra blomar som ikkje har noko. \nDu må først sjekke om nektaren er lik 1 ved
-        å bruke \"dersom nektar\"-blokka."
-      grade3_Conditionals_8: "Eg lurer på kva som er der ute?\r\n\r\nHjelp meg å fly
-        rundt gården og samle nektar frå dei blomane som har nektar. "
-      grade3_Debugging_1: |-
-        Desse blokkene plagar meg!
-
-        Reparér feila og samle inn all nektaren.
-      grade3_Debugging_5: "Den blomen ser god ut! \n\nFiks feila og samle inn nektaren.
-        No kan du bruke \"køyr\" og \"steg\"."
-      grade3_Debugging_6: Desse blokkane er verkeleg irriterande. Fiks det som er
-        feil for å samle all nektaren.
-      grade3_Debugging_9: "Ha tolamot med denne!\r\n\r\nDu må reparere noko i programmet
-        for å samle inn all nektaren og lage all honningen."
-      grade3_Loops_10: |-
-        For ei travel bie!
-
-        Hjelp ho å samle all honningen med så få blokker som mogleg.
-      grade3_Loops_11: "Denne stien er ulik dei andre. \n\nKan du samle all nektaren
-        med så få blokker som mogleg?"
-      grade3_Loops_3: Kan du bruke ei løkke for å samle inn all nektaren?
-      grade3_Loops_4: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar
-        og lage honning.
-      grade3_Loops_6: "Kor mange gonger kan du bruke løkker i denne oppgåva?\r\n\r\nBruk
-        løkker til å løyse oppgåva med så få blokker som mogleg."
-      grade3_Loops_7: 'Kvar blome inneheld ein porsjon nektar. Hent nektar frå alle
-        blomane. '
-      grade3_Loops_TeacherIDo: 'Kvar blome inneheld ein porsjon nektar. Hent nektar
-        frå alle blomane. '
-      grade3_bee_conditionals_quantum2: "Fleire skyer! \r\n\r\nSjekk under kvar sky
-        for å sjå om den skjular ein blom før du får tak i nektaren. \r\n\r\nHugs,
-        alle skyene skjular ikkje same ting!"
-      grade3_maze_Loop1: "**Oppgåve:** Få meg til solsikka med berre 5 blokker! "
-      grade3_maze_loops2: 'Få zombien til solsikka ved å bruke så få blokker som mogleg!  '
-      grade3_maze_nestedLoops2: |-
-        Plutseleg dukka det opp ei magisk blokk! Med `gjenta`-blokka kan du gjenta koden om og om igjen.
-
-        Kan du komme deg bort til grisen ved å lage ei løkke som bruker kun ei `gå fram`-blokk inni ei `gjenta`-blokk?
-      grade3_maze_nestedLoops3: Få meg til grisen! Du kan berre bruke ei 'gå framover'-blokk
-        denne gong
-      grade3_maze_nestedLoops4: Bruk to løkker for å komme til grisen ved å bruke
-        færre blokkar.
-      grade4_arist_nested_loop_circles1: "**Oppgåve:** Bruk ei løkke i løkke for å
-        fullføre mønsteret."
-      grade4_arist_nested_loop_flags1: Gjenta koden som er gitt til å lage ei vindmølle.
-      grade4_arist_nested_loop_polygons1: "Gjenta designet 10 gongar. \r\n\r\nKor
-        mykje må du rotere i kvar repetisjon?"
-      grade4_arist_nested_loop_polygons2: "Gjenta designet 6 gongar. \r\n\r\nKor mykje
-        må du rotere i kvar repetisjon? "
-      grade4_arist_nested_loop_squares1: |-
-        Klarar du å teikne dei 10 kvadratene på fortauet ved å bruke ei løkke i ei løkke?
-
-        Kvart kvadrat er 30 pikslar.
-      grade4_arist_nested_loop_triangles2: "No skal du sette denne løkka inn i ei
-        anna løkke for å teikne 10 trekantar. \nDette blir kalla ei løkke i løkke.
-        \ "
-      grade4_arist_nested_loop_triangles3: Klarar du å teikne ein sekskant ved å få
-        trekantkoden i løkke?
-      grade4_arist_nested_loop_triangles4: Teikn tennene i munnen til alligatoren!
-      grade4_arist_nested_loop_triangles5: "Teikn ei sol ved å sette koden frå startkoden
-        inn i ei anna løkke.\r\n\r\nFor å få dette kule designet med eit hult senter,
-        må du hoppe fram med lengda på triangelet før du snur."
-      grade4_arist_nested_loop_triangles6: Klarar du å teikne desse 36 trekantane
-        ved hjelp av ei løkke i ei løkke?
-      grade4_artist_functions2: "Funksjonar lar deg definere nye blokker!\r\n\r\nVi
-        har flytta blokker som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn
-        eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa?
-        \n\r\n\r\nKvadrata er 75 pikslar frå kvarandre."
-      grade4_artist_nested_loop_circles1: "**Oppgåve:** Bruk ei løkke i løkke for
-        å fullføre mønsteret."
-      grade4_artist_nested_loop_flags1: Gjenta koden som er gitt til å lage ei vindmølle.
-      grade4_artist_nested_loop_polygons1: "Gjenta designet 10 gongar. \r\n\r\nKor
-        mykje må du rotere i kvar repetisjon?"
-      grade4_artist_nested_loop_squares1: |-
-        Klarar du å teikne dei 10 kvadratene på fortauet ved å bruke ei løkke i ei løkke?
-
-        Kvart kvadrat er 30 pikslar.
-      grade4_artist_nested_loop_triangles1: "Fullfør koden for å teikne desse trekantane.
-        Den første er gjort ferdig for deg. Tips: 3 trekantar rotert er til saman
-        360 grader.\n\n"
-      grade4_artist_nested_loop_triangles5: "Teikn ei sol ved å sette koden frå startkoden
-        inn i ei anna løkke.\r\n\r\nFor å få dette kule designet med eit hult senter,
-        må du hoppe fram med lengda på triangelet før du snur."
-      grade4_artist_nested_loop_triangles6: Klarar du å teikne desse 36 trekantane
-        ved hjelp av ei løkke i ei løkke?
-      grade4_artist_parameters_triangles2: Ser du noko annleis med desse funksjonsblokkene?
-        Trykk på «Kjør» så ser du kva som skjer.
-      grade4_bee_conditionals_nested_loops: "Oppgåve: Samle all nektaren. \nVer forsiktig
-        så du ikkje samlar nektar frå ein lilla blom om den ikkje har nektar."
-      grade4_bee_conditionals_new1: "Oppgåve: Samle all nektaren. \nVer forsiktig
-        så du ikkje samlar nektar frå ein lilla blom om den ikkje har nektar."
-      grade4_bee_conditionals_quantum1: "Denne skyen blokkerer synet mitt!\n\r\n\r\nSe
-        om det er en blomst under skyen, og hent nektar kun hvis det er en blomst
-        der.   \r\nVær forsiktig, det kan endre seg!"
-      grade4_bee_conditionals_quantum2: "Fleire skyer! \r\n\r\nSjekk under kvar sky
-        for å sjå om den skjular ein blom før du får tak i nektaren. \r\n\r\nHugs,
-        alle skyene skjular ikkje same ting!"
-      grade4_bee_conditionals_quantum4: "Noen ganger skjuler denne skyen en blomst
-        og noen ganger skjuler den en bikube! \r\n\r\nBruk blokken `hvis/ellers` til
-        å samle nektar kun hvis det er en blomst der. \r\nHvis ikke det er det, lag
-        honning (fordi det er en bikube)."
-      grade4_bee_conditionals_quantum5: "Det kan vere ein blome eller ein bikube under
-        skyene. \n\nBruk \"dersom/elles\"-blokka til å samle inn nektar om det er
-        ein blome. \nOm ikkje lagar du honning (for da er det ein bikube)."
-      grade4_bee_functions2: "Funksjonar er blokker med kode som gjer ei oppgåve.
-        \n\nBruk funksjonen \"hent 2 nektar\" for å samle inn nektar frå kvar blome."
-      grade4_bee_functions3: Bruk "hent 5"-funksjonen for å løyse denne oppgåva.
-      grade4_bee_nestedLoops4: 'Saml inn all nektar frå kvar blomst og lag honning
-        i alle bikubene. '
-      grade4_frozen_freeplay: "Du er nå offisielt blitt ein meisterkunstnar! \nLag
-        eit vinterparadis."
-      grade4_frozen_functions0: Ein sirkel er ei spesiell form. Klarar du å finne
-        ut kva tal som skal erstatte spørsmålteikna for å teikne ein sirkel?
-      grade4_frozen_functions1a: Bruk den nye "Lag sirkel"-blokka for å lage 10 overlappande
-        sirklar. Hugs å gå framover mellom sirklane.
-      grade4_frozen_functions2: Nå skal vi lage 20 overlappande sirklar medan vi dreier
-        18 grader mellom kvar sirkel.
-      grade4_frozen_functions3: Her er ei "Lag sirkel"-blokk som kan lage sirklar
-        av ulik storleik. Kan du bruke den til å lage ein liten sirkel med storleik
-        5 og ein stor sirkel med storleik 10?
-      grade4_frozen_functions4: Det er mogleg å lage innvikla snømønstre ved å sette
-        saman enkle former. Kan du lage eit mønster ved å gjenta 5 sirklar med storleik
-        5 og 5 sirklar med storleik 10?
-      grade4_frozen_nested_loop_diamonds2: Visste du at alle snøfnugg har forskjellige
-        former? La oss lage eit nytt snøfnugg ved å bruke enda ei "Gjenta"-blokk for
-        å gjenta mønsteret 4 gongar. Snu 90 grader mellom kvart mønster.
-      grade4_frozen_nested_loop_diamonds3: Nå skal vi lage eit snøfnugg ved å bruke
-        "Gjenta"-blokka til å lage eit parallellogram 10 gongar og snu 36 grader mot
-        høgre mellom kvar.
-      grade4_frozen_square: Hei, eg heiter Anna av Arendelle! La oss lage eit kvadrat
-        ved hjelp av "Gjenta"-blokka som brukar færre blokkar. Kor mange gongar (???)
-        treng "Gjenta"-blokka til gå gjennom blokkene inni for å lage eit kvadrat?
-      grade4_frozen_square_loop1: Hei, eg heiter Anna av Arendelle! La oss lage eit
-        kvadrat ved hjelp av "Gjenta"-blokka som brukar færre blokkar. Kor mange gongar
-        (???) treng "Gjenta"-blokka til gå gjennom blokkene inni for å lage eit kvadrat?
-      grade4_frozen_square_loop2: La oss lage tre kvadrat med spissen mot kvarandre.
-        Hugs å snu 120 grader før kvart nye kvadrat.
-      grade4_frozen_square_loop3: Får du til å lage et snøfnugg ved å bruke "repeter"-blokka
-        til å lage 10 kvadrat og "Snu"-blokka for å snu deg 36 grader mellom kvart
-        kvadrat?
-      grade4_review_artist2: "Dette huset treng eit tak! Teikn triangelet. \r\n\r\nHint:
-        Alle dei tre sidene har same lengde.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
-      grade4_review_artist3: Hoppeblokka flyttar kunstnaren utan å teikne. Teikn den
-        stipla lina med hjelp av både hoppe- og teikneblokker. Kvar line er 50 pikslar
-        lang.
-      grade4_review_bee1: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar
-        og lage honning.
-      grade4_review_bee3: |-
-        For ei travel bie!
-
-        Hjelp ho å samle all honningen med så få blokker som mogleg.
-      grade5_artist_for_loops1: Bruk ei "for"-løkke til å teikne denne trekanten som
-        50 piksler breid. Dersom du tel frå 1 til 3 av 1s, kan du bruke dette som
-        en "gjenta"-løkke.
-      grade5_artist_for_loops10: "**Utfordring** Kan du finne ut korleis du kan bruke
-        alt du har lært til å lage dette bildet av mangekantar, alle med 40 pixel
-        lange sider?"
-      grade5_artist_for_loops5: "Berre ei lita endring i koden frå førre bilete, kan
-        skape denne teikninga. Kan du finne ut kva endring du må gjere?\r\n\r\nTips:
-        Du må fjerne noko!"
-      grade5_artist_parameters_triangles2a: Ser du noko annleis med desse funksjonsblokkene?
-        Trykk på «Kjør» så ser du kva som skjer.
-      grade5_artist_variables_hexagons1: "Lat oss prøve igjen!\r\n\r\nKan du setje
-        «lengde»-variabelen til 60 for å lage dette kule designet med sekskantar?"
-      grade5_artist_variables_pentagon9: Tak opp att framgangsmåten frå førre nivå
-        og lag ein mangekant der alle sidene er 150 pikslar lange.
-      grade5_artist_variables_pentagons1: "Dette mønsteret med femkantar med sider
-        på 100 pikslar teiknar du ved å setje dei rette verdiane for «lengde» og så
-        setje variabelen «lengde» inn på alle dei rette stadane.\r\n\r\nSer du at
-        du berre treng å setje verdien for «lenge» ein gong, og så blir den rette
-        verdien brukt alle stader?"
-      grade5_playlab_variables13: Bruk ei "når røre ved"-blokk til å sende hunden
-        tilbake til øvre, venstre hjørne BERRE om hunden rører ved nokon av dei andre
-        spelarane.
-      grade5_playlab_variables2: Løpet i førre oppgåve var ikkje veldig rettferdig.
-        Endre variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn
-        Katt. Den fyrste til å samle 10 flagg vinn!
-      grade5_playlab_variables9: "Her er ein funksjon kalla \"patruljer\". \n\r\n\r\nEndre
-        den slik at Katt flyttar seg opp 400 pikslar og så ned 400 pikslar."
-      level 'grade3_Loops_10: |-
-        For ei travel bie!
-
-        Hjelp ho å samle all honningen med så få blokker som mogleg.
-      level 'grade3_Loops_11: "Denne stien er ulik dei andre. \n\nKan du samle all
-        nektaren med så få blokker som mogleg?"
-      level 'grade3_Loops_3: Kan du bruke ei løkke for å samle inn all nektaren?
-      level 'grade3_Loops_4: Nå kan du bruke den nye gjenta-blokken for å samle inn
-        nektar og lage honning.
-      level 'grade3_Loops_5: "For ei nydeleg blomstereng! \n\nHjelp bia med å komme
-        innom alle blomane.\n\nKan du få det til ved å bruke færre enn 7 blokker?"
-      level 'grade3_Loops_6: "Kor mange gonger kan du bruke løkker i denne oppgåva?\r\n\r\nBruk
-        løkker til å løyse oppgåva med så få blokker som mogleg."
-      level 'grade3_Loops_7: 'Kvar blome inneheld ein porsjon nektar. Hent nektar
-        frå alle blomane. '
       ramp_artist_loops7: Sjå etter eit mønster, og gjer denne koden kortare ved å
         bruke løkker!
       ramp_artist_loops7_2018: Sjå etter eit mønster, og gjer denne koden kortare
         ved å bruke løkker!
       ramp_artist_loops7_2019: Sjå etter eit mønster, og gjer denne koden kortare
+        ved å bruke løkker!
+      ramp_artist_loops7_2020: Sjå etter eit mønster, og gjer denne koden kortare
         ved å bruke løkker!

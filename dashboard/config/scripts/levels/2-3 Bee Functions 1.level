@@ -34,10 +34,11 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
     "hint_prompt_attempts_threshold": 3,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-23 15:12:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-09-23 15:15:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2,
@@ -63,13 +64,13 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" editable="false" uservisible="false">
+        <block type="procedures_defnoreturn" editable="false">
           <mutation/>
           <title name="NAME">get 2 nectar</title>
           <statement name="STACK">
-            <block type="maze_nectar" editable="false">
+            <block type="maze_nectar" deletable="false" can_disconnect_from_parent="false">
               <next>
-                <block type="maze_nectar" editable="false"/>
+                <block type="maze_nectar" deletable="false" next_connection_disabled="true" can_disconnect_from_parent="false"/>
               </next>
             </block>
           </statement>

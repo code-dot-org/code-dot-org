@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ Shpresojmë që kjo do të nxisë interesin tek studentët që të vazhdojnë t�
 
 #### Pse është kjo e rëndësishme?
 
-Teknologjia po transformon çdo industri në planet. Në 2015, 7 milion vende pune ne Shtetet e Bashkuara ishin në profesione -që përfshijnë artin dhe dizenjimin- të cilat vlerësojnë aftësitë në kodim. But 65 percent of schools in the U.S. don't teach computer science. Është koha që të kapim hapin e shekullit 21. E dimë se pavarësisht se çka do bëjnë studentët tanë kur të rriten, a shkojnë në mjekësi, biznes, politikë, apo arte, të dish si të ndërtosh teknologji do t'iu japë vetëbesim dhe avantazhe konkuruese. <br /> <br />
+Teknologjia po transformon çdo industri në planet. Në 2015, 7 milion vende pune ne Shtetet e Bashkuara ishin në profesione -që përfshijnë artin dhe dizenjimin- të cilat vlerësojnë aftësitë në kodim. But 55 percent of schools in the U.S. don't teach computer science. Është koha që të kapim hapin e shekullit 21. E dimë se pavarësisht se çka do bëjnë studentët tanë kur të rriten, a shkojnë në mjekësi, biznes, politikë, apo arte, të dish si të ndërtosh teknologji do t'iu japë vetëbesim dhe avantazhe konkuruese. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ Teknologjia po transformon çdo industri në planet. Në 2015, 7 milion vende pu
 
 #### Rreth Code.org
 
-Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike dhe të rrisë pjesëmarrjen e femrave dhe nxënësit me ngjyrë më pak të përfaqësuar. Its vision is that every student in every school has the opportunity to learn computer programming. Pas nisjes në 2013, Code.org organizoj fushatën Ora e Kodimit – e cila ka prezantuar më shumë se 100 milion studentë me shkencën kompjuterike – dhe ka partneritet me 70 shkolla publike të ndodhura në të gjithë vendin për të zgjeruar programet e shkencës kompjuterike. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike dhe të rrisë pjesëmarrjen e femrave dhe nxënësit me ngjyrë më pak të përfaqësuar. Its vision is that every student in every school has the opportunity to learn computer programming. Pas nisjes në 2013, Code.org organizoj fushatën Ora e Kodimit – e cila ka prezantuar më shumë se 100 milion studentë me shkencën kompjuterike – dhe ka partneritet me 70 shkolla publike të ndodhura në të gjithë vendin për të zgjeruar programet e shkencës kompjuterike. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

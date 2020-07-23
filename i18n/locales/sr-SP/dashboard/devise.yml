@@ -1,3 +1,4 @@
+#Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 sr:
   devise:
     confirmations:
@@ -55,13 +56,18 @@ sr:
         one: "1 грешка забрањује овом %{resource} да буде снимљен:"
         other: "%{count} грешака забрањује овом %{resource} да буде снимљен:"
     invitations:
-      send_instructions: 'Позивна порука је послата на %{email}.'
+      send_instructions: 'Позивница је послата преко електронске поште на %{email}.'
+      no_invitations_remaining: "Нема више позивница"
+      invitation_removed: 'Твоја позивница је уклоњена.'
       new:
         header: "Пошаљите позивницу"
         submit_button: "Пошаљите позивницу"
       edit:
+        header: "Постави своју шифру"
         submit_button: "Постави моју лозинку"
     mailer:
       invitation_instructions:
         subject: 'Упутство за позивнице'
         hello: 'Здраво %{email}'
+        someone_invited_you: 'Неко вас је позвао на %{url}, можете прихватити позив преко везе испод.'
+        accept: 'Прихвати позивницу'

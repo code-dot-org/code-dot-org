@@ -16,6 +16,10 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"height"': height
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -34,12 +38,24 @@ en-GB:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": random
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': random
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSpriteGroup:
@@ -96,7 +112,15 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"height"': height
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"height"': height
@@ -104,6 +128,14 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -114,11 +146,6 @@ en-GB:
           CONDITION:
             '"when"': when
             '"while"': while
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 'true'
-            'false': 'false'
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -127,10 +154,6 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": random
       gamelab_randColor:
         text: random colour
       gamelab_randomColor:
@@ -138,11 +161,12 @@ en-GB:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cave
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': random
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': rainbow
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -170,44 +194,38 @@ en-GB:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_checkTouching:
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_keyPressed:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_starwars_playSound:
         options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-          KEY:
-            '"space"': space
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
+          OPTION:
+            '"random"': random
       binary_whenKey:
         options:
           KEY:

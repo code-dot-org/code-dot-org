@@ -1,0 +1,82 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:23.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U5 ColorSleuth Template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "setProperty"
+        ],
+        "matchType": "exact",
+        "minTimes": 5,
+        "message": "There should be at least 5 calls to setProperty - one for each of the 4 buttons to set the background color initially, then a final call that sets the background-color of one of the buttons to something else."
+      },
+      {
+        "entries": [
+          "randomNumber"
+        ],
+        "matchType": "exact",
+        "minTimes": 4,
+        "message": "We're expecting at least 4 calls to randomNumber(min,max): Three calls to generate the values for R, G, B of the color, and one call to generate a random button ID."
+      }
+    ],
+    "long_instructions": "# Make a random color\r\n<img src=\"https://images.code.org/b4910df16847c1b74034f884dc21a528-image-1481043331643.gif\" style=\"float: right\">\r\n\r\nLet's use a similar technique to make a random color. You can use the `rgb` command with 3 random numbers. \r\n\r\n## Do This:\r\n1.  Make the base `color` be a string with random values in it rather than hard-coded. Insert this code just before you create the `color` variable.\r\n<pre style=\"width: 400px\"><code>var R = randomNumber(0,235);\r\nvar G = randomNumber(0,235);\r\nvar B = randomNumber(0,235);\r\nvar color = rgb(R, G, B);\r\n</code></pre>\r\n<details><summary>Why use 235?</summary>\r\nIn the next step we're going to add 20 to each value to set `diffColor`. Doing this prevents `diffColor` from using any values greater than 255.</details>\r\n\r\n* Add 20 to each of the R, G, B values to make `diffColor`. Insert this code just before you create the `diffColor` variable.\r\n<pre style=\"width: 400px\"><code>R = R+20;  //add 20 to current value of R\r\nG = G+20;\r\nB = B+20;\r\nvar diffColor = rgb(R, G, B);\r\n</code></pre>\r\n\r\n* Run multiple times to test!\r\n    * Each time you run the program you should see randomly chosen colors with a randomly chosen button that's slightly different.\r\n",
+    "teacher_markdown": "Students may have trouble figuring out where to insert this code since we're now not just adding to the end of the program.  You can look at the exemplar, but here is the suggested solution.\r\n\r\n\t\r\n\r\n    // make an RGB string with random values -- only up to 235 so we can safely add 20 later\r\n    var R = randomNumber(0,235); \r\n    var G = randomNumber(0,235); \r\n    var B = randomNumber(0,235);\r\n    var color = rgb(R, G, B);\r\n\r\n    // use the random RGB string as the bgcolor for all 4 buttons\r\n    setProperty(\"button1\", \"background-color\", color);\r\n    setProperty(\"button2\", \"background-color\", color);\r\n    setProperty(\"button3\", \"background-color\", color);\r\n    setProperty(\"button4\", \"background-color\", color);\r\n\r\n    // make an RGB string where each value is +20 from the color created above\r\n    R = R+20;\r\n    G = G+20;\r\n    B = B+20;\r\n    var diffColor = rgb(R, G, B);\r\n\r\n    // generate a random button ID\r\n    var randButtonID = \"button\"+randomNumber(1,4);\r\n\r\n    // make a randomly chosen button have the color that's +20\r\n    setProperty(randButtonID, \"background-color\", diffColor);\r\n\r\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 17252,
+    "name_suffix": "_virtual",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "Add log conditions for setBoard",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:49:32 +0000\",\"changed\":[\"log_conditions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 04:17:26 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-20 14:56:23 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

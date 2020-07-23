@@ -1,3 +1,4 @@
+#Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 zh-TW:
   devise:
     confirmations:
@@ -7,10 +8,10 @@ zh-TW:
     failure:
       already_authenticated: "您已經登入。"
       inactive: "您的帳戶尚未啟動。"
-      invalid: "無效的電子郵件或密碼。"
+      invalid: "無效的電子信箱或密碼。"
       invalid_token: "無效的身份驗證碼。"
       locked: "您的帳戶已被鎖住。"
-      not_found_in_database: "無效的電子郵件或密碼。"
+      not_found_in_database: "無效的電子信箱或密碼。"
       timeout: "你已離開太久，請重新登入。"
       unauthenticated: "你必須登入或註冊才可以繼續。"
       unconfirmed: "你必須先驗證你的帳戶才能繼續。"

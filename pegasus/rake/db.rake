@@ -7,25 +7,18 @@ end
 # Creates the MySQL database with the given database if it doesn't exist already.
 def create_database(uri)
   db = URI.parse(uri)
-  execute_db_statement(db, "CREATE DATABASE IF NOT EXISTS #{db.path[1..-1]}")
+  execute_db_statement(db, "CREATE DATABASE IF NOT EXISTS #{db.path.slice!(1..-1)}")
 end
 
 # Drops the MySQL database
 def drop_database(uri)
   db = URI.parse(uri)
-  execute_db_statement(db, "DROP DATABASE #{db.path[1..-1]}")
+  execute_db_statement(db, "DROP DATABASE #{db.path.slice!(1..-1)}")
 end
 
 def execute_db_statement(db, statement)
-  command = [
-    'mysql',
-    "--user=#{db.user}",
-    "--host=#{db.host}",
-  ]
-  command << "--execute=\"#{statement}\""
-  command << "--password=#{db.password}" unless db.password.nil?
-
-  system command.join(' ')
+  require_relative '../../lib/cdo/mysql_console_helper'
+  MysqlConsoleHelper.run(db, statement, warn: false)
 end
 
 namespace :db do

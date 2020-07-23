@@ -37,6 +37,7 @@ zh-TW:
       MC HOC 2016 SCORE LEVEL_failure_message_override: 如果要捉到 5 個鐵魔像對你來說有些困難，試著把分數改成抓到一個加
         2 分。
       MC HOC 2016 Village Test_failure_message_override: 你必須要讓鐵魔像追到殭屍並攻擊牠們才能贏得勝利。
+      Valentine_playlab_01_failure_message_override: 快成功囉！再加油。
       WhileAdventure_failure_message_override: 恭喜！你收集了 X 枚硬幣！
       courseC19_playLab_EOC3_failure_message_override: 你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。
       courseE_playLab_scaffold3_failure_message_override: 你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。

@@ -30,10 +30,8 @@ files: [
   # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
   #
   # hourofcode content is handled by the hourofcode-specific sync
-  # dsls content is temporarily disabled until it can be refactored
   "ignore" : [
     "/source/hourofcode/**",
-    "/source/dashboard/dsls.yml",
   ],
 
   #

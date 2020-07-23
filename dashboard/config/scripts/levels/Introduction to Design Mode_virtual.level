@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-17T21:24:50.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "video_key": "csp_applab_design",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17073,
+    "name_suffix": "_virtual",
+    "teacher_markdown": "* The video provides a general overview of the purpose of Design Mode and a little behind-the-scenes detail of what it's doing. \r\n* You may want to watch or show this video AFTER the lesson to tie things together.",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-18 02:06:52 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

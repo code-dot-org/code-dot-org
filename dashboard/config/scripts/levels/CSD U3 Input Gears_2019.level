@@ -91,7 +91,7 @@
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
     "show_debug_watch": "true",
-    "encrypted_examples": "RGw/zx1snIRr0CgGlXj29iiDvbUHBrhBFwibH+Ior1dHcG6miA6vnHNeWDFb\nL4XH1h9f2ZSmdCm2kZmdTwcznA==\n",
+    "encrypted_examples": "7o9ptFoKIuZth37ax0B+IUwjwFRnyunFV1ceTMD83aYgIglBobS5nHlAO2nZ\n6YSm+i2iUDNa6lHuzLmcOYVhpQ==\n",
     "start_blocks": "var blueGear = createSprite(100, 220);\r\nblueGear.setAnimation(\"blue_gear\");\r\n\r\nvar greenGear = createSprite(183, 298);\r\ngreenGear.setAnimation(\"green_gear\");\r\n\r\nvar redGear = createSprite(185, 145);\r\nredGear.setAnimation(\"red_gear\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  blueGear.rotation = blueGear.rotation - 1;\r\n  greenGear.rotation = greenGear.rotation + 1;\r\n  redGear.rotation = redGear.rotation + 1;\r\n  drawSprites();\r\n}\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -110,11 +110,15 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-22 18:55:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 21:24:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-22 18:55:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 21:24:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 15:50:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

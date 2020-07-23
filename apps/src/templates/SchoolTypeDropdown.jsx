@@ -42,6 +42,7 @@ export default class SchoolTypeDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     value: PropTypes.string,
+    country: PropTypes.string,
     fieldName: PropTypes.string,
     showRequiredIndicator: PropTypes.bool,
     showErrorMsg: PropTypes.bool
@@ -58,12 +59,17 @@ export default class SchoolTypeDropdown extends Component {
       <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
     );
 
+    let countryIsUS = false;
+    if (this.props.country && this.props.country === 'United States') {
+      countryIsUS = true;
+    }
+
     return (
       <div>
         <div style={styles.singleLineContainerStyles}>
           <div style={styles.singleLineLayoutStyles}>
             {i18n.signupFormSchoolType()}
-            {this.props.showRequiredIndicator && (
+            {this.props.showRequiredIndicator && countryIsUS && (
               <span style={styles.asterisk}> *</span>
             )}
           </div>

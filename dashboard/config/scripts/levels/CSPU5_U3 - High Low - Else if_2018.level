@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:02:35.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -64,7 +60,7 @@
     "lock_zero_param_functions": "false",
     "encrypted_examples": "qy2DDLzhPxsNWmyU2naEiyLTLDch7bSY05THOQRrPOtlejdRJJ+QQb1ZOu/S\n9y73\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
@@ -72,9 +68,13 @@
     "expand_debugger": "false",
     "parent_level_id": 6826,
     "name_suffix": "_2018",
-    "preload_asset_list": null,
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:02:35.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-02-15 04:18:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

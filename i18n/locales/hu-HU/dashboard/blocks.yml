@@ -2,6 +2,47 @@
 hu:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        text: "{GROUP} váltakozik {N} ütemenként \n{MOVE1} és {MOVE2} között"
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
+          MOVE1:
+            MOVES.Roll: Csípőkörzés
+            MOVES.ClapHigh: Taps fent
+            MOVES.Dab: Legyintés
+            MOVES.DoubleJam: Duplázás
+            MOVES.Drop: Spárga
+            MOVES.Floss: Lenget
+            MOVES.Fresh: Friss
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Csillag
+            MOVES.ThisOrThat: Ez vagy az
+            MOVES.Rest: Egyik sem
+          MOVE2:
+            MOVES.Roll: Csípőkörzés
+            MOVES.ClapHigh: Taps fent
+            MOVES.Dab: Legyintés
+            MOVES.DoubleJam: Duplázás
+            MOVES.Drop: Spárga
+            MOVES.Floss: Lenget
+            MOVES.Fresh: Friss
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Csillag
+            MOVES.ThisOrThat: Ez vagy az
+            MOVES.Rest: Egyik sem
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} után"
         options:
@@ -30,19 +71,20 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': összes egyszarvú
           MOVE:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
@@ -56,14 +98,14 @@ hu:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
@@ -73,6 +115,30 @@ hu:
       Dancelab_changePropBy:
         text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
+          PROPERTY:
+            '"scale"': méret
+            '"width"': szélesség
+            '"height"': magasság
+            '"rotation"': forgás
+            '"x"': vízszintes helyzet
+            '"y"': függőleges helyzet
+      Dancelab_changePropEachBy:
+        text: change {GROUP} {PROPERTY} módosítása {VAL} értékkel
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -95,11 +161,12 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
           MOVE:
             '"rand"': "(Véletlen)"
             MOVES.XBend: Hajlít
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.XClapSide: Tapsol
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
@@ -108,7 +175,7 @@ hu:
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Fej + csípő
             MOVES.XHop: Hopp
             MOVES.XHighKick: Rúg
@@ -130,7 +197,7 @@ hu:
           MOVE:
             '"rand"': "(Véletlen)"
             MOVES.XBend: Hajlít
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.XClapSide: Tapsol
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
@@ -139,7 +206,7 @@ hu:
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Fej + csípő
             MOVES.XHop: Hopp
             MOVES.XHighKick: Rúg
@@ -155,8 +222,10 @@ hu:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'ismételd meg {N} ütemenként {START} után '
       Dancelab_everySeconds:
-        text: 'minden {N} {UNIT} '
+        text: 'ismételd meg minden {N} {UNIT} után '
         options:
           UNIT:
             '"measures"': ütem
@@ -204,13 +273,13 @@ hu:
         options:
           DANCE:
             MOVES.ClapHigh: Taps fent
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
@@ -240,6 +309,34 @@ hu:
             "{x: 100, y: 300}": balra lent
             "{x: 300, y: 300}": jobbra lent
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
+      Dancelab_jumpToEach:
+        text: "{GROUP} ugorjon ide: {LOCATION}"
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
+          LOCATION:
+            "{x: 200, y: 100}": fent
+            "{x: 200, y: 300}": lent
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: 200, y: 200}": közép
+            "{x: 100, y: 100}": balra fent
+            "{x: 300, y: 100}": jobbra fent
+            "{x: 100, y: 300}": balra lent
+            "{x: 300, y: 300}": jobbra lent
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": véletlen
       Dancelab_layoutSprites:
         text: "{GROUP} elrendezése így: {FORMAT}"
         options:
@@ -255,17 +352,50 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
           FORMAT:
             '"border"': határ
             '"inner"': belső négyzet
+            '"diamond"': gyémánt
             '"circle"': kör
             '"grid"': rács
+            '"top"': felső sor
             '"row"': sor
+            '"bottom"': alsó sor
+            '"left"': bal oszlop
             '"column"': oszlop
+            '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
             '"random"': véletlen
+      Dancelab_makeAnonymousDanceSprite:
+        text: 'készíts új {COSTUME} itt: {LOCATION}'
+        options:
+          COSTUME:
+            '"ALIEN"': idegen
+            '"BEAR"': Medve
+            '"CAT"': macska
+            '"DOG"': kutya
+            '"DUCK"': kacsa
+            '"FROG"': Béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': Ananász
+            '"ROBOT"': robot
+            '"SHARK"': Cápa
+            '"SLOTH"': lajhár
+            '"UNICORN"': unikornis
+          LOCATION:
+            "{x: 200, y: 100}": fent
+            "{x: 200, y: 300}": lent
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: 200, y: 200}": közép
+            "{x: 100, y: 100}": balra fent
+            "{x: 300, y: 100}": jobbra fent
+            "{x: 100, y: 300}": balra lent
+            "{x: 300, y: 300}": jobbra lent
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
       Dancelab_makeNewDanceSprite:
         text: |-
           új {COSTUME} készítése
@@ -282,6 +412,7 @@ hu:
             '"PINEAPPLE"': Ananász
             '"ROBOT"': Robot
             '"SHARK"': Cápa
+            '"SLOTH"': lajhár
             '"UNICORN"': Egyszarvú
           LOCATION:
             "{x: 200, y: 100}": fent
@@ -330,14 +461,20 @@ hu:
             '"PINEAPPLE"': Ananászok
             '"ROBOT"': Robotok
             '"SHARK"': Cápák
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           LAYOUT:
             '"border"': határ
             '"inner"': belső négyzet
+            '"diamond"': gyémánt
             '"circle"': kör
             '"grid"': rács
+            '"top"': felső sor
             '"row"': sor
+            '"bottom"': alsó sor
+            '"left"': bal oszlop
             '"column"': oszlop
+            '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
             '"random"': véletlen
@@ -352,7 +489,7 @@ hu:
       Dancelab_onPointerUp:
         text: mutató felfelé mozgatásakor
       Dancelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       Dancelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Dancelab_setBackgroundEffect:
@@ -365,13 +502,13 @@ hu:
             '"diamonds"': Gyémántok
             '"disco_ball"': Diszkógömb
             '"fireworks"': Tűzijáték
-            '"swirl"': Hipnó
+            '"swirl"': Hipno
             '"kaleidoscope"': Kaleidoszkóp
             '"lasers"': Lézer táncparkett
             '"splatter"': Festékfröccsenés
             '"rainbow"': Szivárvány
             '"snowflakes"': Hó
-            '"text"': Dalcím
+            '"text"': Dalcímek
             '"galaxy"': Világűr
             '"sparkles"': Ragyogás
             '"spiral"': Spirál
@@ -379,46 +516,55 @@ hu:
             '"stars"': Csillagok
           PALETTE:
             '"rave"': Fekete-fehér
-            '"cool"': Kékek
+            '"cool"': Laza
             '"electronic"': Elektronikus
             '"iceCream"': Fagyi
             '"default"': Világos
             '"neon"': Neon
             '"tropical"': Trópusi
-            '"vintage"': Régi
+            '"vintage"': Régies
             '"warm"': Vörösek
       Dancelab_setBackgroundEffectWithPalette:
-        text: háttéreffekt beállítása {EFFECT} {PALETTE}
+        text: |-
+          "Háttéreffektus beállítása
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': Egyik sem
             '"rand"': "(Véletlen)"
             '"circles"': Alagút
+            '"quads"': Sokszögek
             '"color_cycle"': Színek
             '"diamonds"': Gyémántok
             '"disco_ball"': Diszkógömb
             '"fireworks"': Tűzijáték
-            '"swirl"': Hipnó
+            '"flowers"': Virágok
+            '"growing_stars"': Növekvő csillagok
+            '"swirl"': Hipno
             '"kaleidoscope"': Kaleidoszkóp
             '"lasers"': Lézer táncparkett
             '"splatter"': Festékfröccsenés
             '"rainbow"': Szivárvány
+            '"ripples_random"': Véletlenszerű lüktetés
+            '"ripples"': Lüktetés
             '"snowflakes"': Hó
-            '"text"': Dalcím
+            '"text"': Dalcímek
+            '"squiggles"': Kígyóvonalak
             '"galaxy"': Világűr
             '"sparkles"': Ragyogás
             '"spiral"': Spirál
             '"disco"': Négyzetek
             '"stars"': Csillagok
+            '"music_wave"': Hullámok
           PALETTE:
             '"rave"': Fekete-fehér
-            '"cool"': Kékek
+            '"cool"': Laza
             '"electronic"': Elektronikus
             '"iceCream"': Fagyi
             '"default"': Világos
             '"neon"': Neon
             '"tropical"': Trópusi
-            '"vintage"': Régi
+            '"vintage"': Régies
             '"warm"': Vörösek
       Dancelab_setDanceSpeed:
         text: "{SPRITE} táncolási sebességének módosítása: {SPEED}"
@@ -444,7 +590,8 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
           SPEED:
             '1': normál
             '2': gyors
@@ -476,9 +623,12 @@ hu:
             '"none"': Egyik sem
             '"rand"': "(Véletlen)"
             '"bubbles"': Buborékok
+            '"hearts_colorful"': Színes szívek
             '"confetti"': Konfetti
+            '"emojis"': Emojik
             '"hearts_red"': Szívek
             '"music_notes"': Hangjegyek
+            '"paint_drip"': Festékcseppek
             '"pineapples"': Ananászok
             '"pizzas"': Pizzák
             '"smiling_poop"': Kaki
@@ -487,6 +637,7 @@ hu:
             '"smile_face"': Mosolyok
             '"spotlight"': Reflektorfény
             '"color_lights"': Színpadi fények
+            '"exploding_stars"': Csillagrobbanás
             '"raining_tacos"': Taco
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL} "
@@ -498,7 +649,6 @@ hu:
             '"rotation"': forgás
             '"x"': vízszintes helyzet
             '"y"': függőleges helyzet
-            '"tint"': árnyalat
       Dancelab_setPropEach:
         text: "{GROUP} {PROPERTY} tulajdonságának beállítása: {VAL}"
         options:
@@ -514,7 +664,8 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -526,6 +677,31 @@ hu:
       Dancelab_setPropRandom:
         text: "{SPRITE} {PROPERTY} legyen véletlenszerű"
         options:
+          PROPERTY:
+            '"scale"': méret
+            '"width"': szélesség
+            '"height"': magasság
+            '"rotation"': forgás
+            '"x"': vízszintes helyzet
+            '"y"': függőleges helyzet
+            '"tint"': árnyalat
+      Dancelab_setPropRandomEach:
+        text: "{GROUP} {PROPERTY} véletlenszerűsítése"
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -551,6 +727,25 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
+      Dancelab_setTintEachInline:
+        text: 'állítsd {THIS} árnyalat: {VAL}'
+        options:
+          THIS:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
       Dancelab_setTintInline:
         text: "{SPRITE} árnyalatának beállítása: {VAL}"
       Dancelab_setVisible:
@@ -574,13 +769,43 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
-            '"UNICORN"': összes egyszarvú
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
           VISIBILITY:
             'true': látható
             'false': láthatatlan
       Dancelab_startMapping:
         text: "{SPRITE} {PROPERTY} tulajdonságot kezdi {RANGE} után"
         options:
+          PROPERTY:
+            '"scale"': méret
+            '"width"': szélesség
+            '"height"': magasság
+            '"rotation"': forgás
+            '"x"': vízszintes helyzet
+            '"y"': függőleges helyzet
+            '"tint"': árnyalat
+          RANGE:
+            '"bass"': basszus
+            '"mid"': közepes
+            '"treble"': magas
+      Dancelab_startMappingEach:
+        text: "{GROUP} elkezdi ezt: {PROPERTY} a {RANGE} alapján"
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -609,6 +834,82 @@ hu:
             '"bass"': basszus
             '"mid"': közepes
             '"treble"': magas
+      Dancelab_stopMappingEach:
+        text: "{GROUP} leállítja ezt: {PROPERTY} {RANGE} alapján"
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
+            '"UNICORN"': Egyszarvúak
+          PROPERTY:
+            '"scale"': méret
+            '"width"': szélesség
+            '"height"': magasság
+            '"rotation"': forgás
+            '"x"': vízszintes helyzet
+            '"y"': függőleges helyzet
+            '"direction"': mozgás iránya
+            '"tint"': árnyalat
+          RANGE:
+            '"bass"': basszus
+            '"mid"': közepes
+            '"treble"': magas
+      Dancelab_translateStrings:
+        text: "{STRING} fordítása"
+        options:
+          STRING:
+            '"music_wave"': Hullámok
+            '"ripples"': Lüktetés
+            '"ripples_random"': Véletlenszerű lüktetés
+            '"quads"': Sokszögek
+            '"flowers"': Virágok
+            '"popsicles"': Nyalókák
+            '"squiggles"': Kígyóvonalak
+            '"growing_stars"': Növekvő csillagok
+            '"emojis"': Emojik
+            '"hearts_colorful"': Szívek
+            '"paint_drio"': Festékcseppek
+            '"exploding_stars"': Csillagrobbanás
+            '"row_top"': felső sor
+            '"row_bottom"': alsó sor
+            '"column_left"': bal oszlop
+            '"column_right"': jobb oszlop
+            '"diamond"': gyémánt
+            '"mural"': Falfestmény
+            '"safari"': Szafari
+            '"network"': Hálózat
+            '"highway"': Autópálya
+            '"stream"': Áramlás
+            '"tile"': Csempe
+            '"shadow"': Árnyék
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: "{KEY} lenyomásakor"
         options:
@@ -617,10 +918,15 @@ hu:
             '"left"': balra
             '"down"': le
             '"right"': jobbra
-            '"space"': szóköz
+            '"space"': űr
             '"enter"': enter
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -630,6 +936,7 @@ hu:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -639,6 +946,16 @@ hu:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: "{RANGE} csúcsértékekor"
         options:
@@ -648,30 +965,12 @@ hu:
             '2': magas
       Dancelab_whenSetup:
         text: beállítás
-      gamelab_add:
-        text: add {SPRITE}-t csoporthoz {THIS}
+      Dancelab_whenSetup2:
+        text: beállítás
       gamelab_addBehaviorSimple:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}
-      gamelab_addBehaviorUntil:
-        text: szereplő {SPRITE} elkezd {BEHAVIOR} amíg {CONDITION}
-      gamelab_beginBehavior:
-        text: elkezd {BEHAVIOR}
-      gamelab_bounceOff:
-        text: "{SPRITE} lepattan itt: {TARGET}"
-      gamelab_bounceOffEdges:
-        text: "{SPRITE} lepattan széleknél"
-      gamelab_changeColor:
-        text: 'módosítás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
-        options:
-          METHOD:
-            '"tint"': árnyalat
-      gamelab_changeColorBy:
-        text: 'módosítás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
-        options:
-          METHOD:
-            '"hue"': színárnyalat
-            '"saturation"': telítettség
-            '"brightness"': fényerő
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_changePropBy:
         text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
@@ -682,49 +981,25 @@ hu:
             '"y"': y-pozíció
             '"direction"': mozgás iránya
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} Érinti {SPRITE2}"
         options:
           CONDITION:
             '"when"': amikor
             '"while"': amíg
       gamelab_clickedOn:
         text: amikor {SPRITE} -ra klikkel
+      gamelab_clickedSpritePointer:
+        text: kattintott {SPRITE}
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
       gamelab_createNewSprite:
         text: "készíts új sprite-ot\n neve {NAME} \n viselete {COSTUME} \n helye {LOCATION}"
-      gamelab_debugSprite:
-        text: keress hibát {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': igaz
-            'false': hamis
       gamelab_destroy:
         text: távolítsd el {THIS}
-      gamelab_displace:
-        text: "{THIS} megakadályozza {SPRITE} mozgását"
-      gamelab_distance:
-        text: 'távolság innen: {LOCATION1} ide: {LOCATION2}'
       gamelab_draggable:
         text: vonszolható
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
-      gamelab_enableDebug:
-        text: engedélyezd hibakeresést
-      gamelab_firstTouched:
-        text: először érintett sprite
-      gamelab_forEachSpriteWithCostume:
-        text: |-
-          minden {VALUE} sprite-nál
-          csináld {STATEMENT}
-      gamelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
-        options:
-          COSTUME:
-            '"costume"': jelmez
-      gamelab_getDirection:
-        text: "{SPRITE} mozgás iránya"
-      gamelab_getFrameDelay:
-        text: "{THIS} keret késleltetés"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -740,26 +1015,16 @@ hu:
         options:
           CHOICE:
             '"this"': ez
-      gamelab_groupLength:
-        text: 'sprite-ok száma itt: {THIS}'
-      gamelab_hasBehavior:
-        text: "{SPRITE} jelenleg {BEHAVIOR}"
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': másodperc
       gamelab_hideTitleScreen:
         text: címoldal elrejtése
-      gamelab_hsbColor:
-        text: |-
-          HSB szín
-          H{HUE}S{SATURATION}B{BRIGHTNESS}
-      gamelab_isTouching:
-        text: "{THIS} megérinti {TARGET}"
       gamelab_isTouchingEdges:
         text: "{SPRITE} megérinti a szélét"
-      gamelab_joystickDirection:
-        text: joystick irány
       gamelab_jumpTo:
         text: "{SPRITE} ugrás: {LOCATION}"
-      gamelab_keyDown:
-        text: gomb nyomva {KEY}
       gamelab_keyPressed:
         text: "{CONDITION} {KEY} nyomva"
         options:
@@ -773,7 +1038,12 @@ hu:
             '"right"': jobbra
             '"space"': világűr
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -783,6 +1053,7 @@ hu:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -792,65 +1063,24 @@ hu:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_locationAdd:
-        text: "{LOC1}{OPERATOR}{LOC2}"
-        options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
       gamelab_locationAt:
         text: 'hely x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": észak
-            "'south'": dél
-            "'east'": kelet
-            "'west'": nyugat
-      gamelab_locationDelta:
-        text: "{DISTANCE} képpont {DIR} innen {LOCATION}"
-        options:
-          DIR:
-            "'north'": észak
-            "'south'": dél
-            "'east'": kelet
-            "'west'": nyugat
-            "'random'": véletlen
-      gamelab_locationEast:
-        text: kelet
       gamelab_locationMouse:
         text: egér helye
-      gamelab_locationNorth:
-        text: észak
       gamelab_locationOf:
         text: "{SPRITE} helye"
-      gamelab_locationSouth:
-        text: dél
-      gamelab_locationWest:
-        text: nyugat
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: "{VAR} helye"
-      gamelab_location_variable_set:
-        text: állítsd a helyet {VAR} erre {VAL}
-      gamelab_makeNewGroup:
-        text: új csoport létrehozása
+      gamelab_makeNewSpriteAnon:
+        text: új {ANIMATION_NAME} Kobold {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} fordul {DIRECTION}"
         options:
           DIRECTION:
             '"right"': jobbra
             '"left"': balra
-      gamelab_mixColors:
-        text: "{COLOR1} és {COLOR2} keverése"
-      gamelab_mouseDown:
-        text: egér nyomva
       gamelab_mouseLocation:
         text: egér helye
-      gamelab_moveDown:
-        text: "{THIS} mozog le"
       gamelab_moveForward:
         text: "{SPRITE} lépj {DISTANCE} képpontot előre"
       gamelab_moveInDirection:
@@ -861,16 +1091,10 @@ hu:
             '"East"': Kelet
             '"South"': Dél
             '"West"': Nyugat
-      gamelab_moveInDirection2:
-        text: "{SPRITE} menj {DISTANCE} képpontot erre: {DIRECTION}"
-      gamelab_moveLeft:
-        text: "{THIS} mozogj balra"
-      gamelab_moveRight:
-        text: "{THIS} mozogj jobbra"
       gamelab_moveToward:
         text: "{SPRITE} menj {DISTANCE} távolságot {TARGET} felé"
-      gamelab_moveUp:
-        text: "{THIS} mozogj fel"
+      gamelab_objectSpritePointer:
+        text: kattintott {SPRITE}
       gamelab_playSound:
         text: adjHangot {SOUND}
       gamelab_pointInDirection:
@@ -881,12 +1105,12 @@ hu:
             '"East"': Kelet
             '"South"': Dél
             '"West"': Nyugat
-      gamelab_pointToward:
-        text: 'fordulj {SPRITE} felé: {LOCATION}'
+      gamelab_printText:
+        text: nyomtatás {TEXT}
       gamelab_randColor:
-        text: Véletlen szín
+        text: véletlen szín
       gamelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       gamelab_randomLocation:
         text: véletlen hely
       gamelab_removeAllBehaviors:
@@ -895,32 +1119,26 @@ hu:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
       gamelab_removeTint:
         text: "{THIS} színének eltávolítása"
-      gamelab_secondTouched:
-        text: másodszor érintett sprite
       gamelab_setAnimation:
         text: 'cseréld {THIS} jelmezét erre: {ANIMATION}'
       gamelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       gamelab_setBackgroundImage:
+        text: háttér beállítása {IMG}
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': barlang
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
-      gamelab_setDirection:
-        text: állítsd be {SPRITE} mozgás irányát {DIRECTION}
-      gamelab_setPosition:
-        text: "{THIS} mozgatása {POSITION} pozícióba"
-        options:
-          POSITION:
-            "{x: 50, y: 50}": balra fent
-            "{x: 200, y: 50}": középen fent
-            "{x: 350, y: 50}": jobbra fent
-            "{x: 50, y: 200}": balra középen
-            "{x: 200, y: 200}": közép
-            "{x: 350, y: 200}": jobbra középen
-            "{x: 50, y: 350}": balra lent
-            "{x: 200, y: 350}": középen lent
-            "{x: 350, y: 350}": jobbra lent
-            '"random"': véletlen
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': bíróság
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sivatag
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxis
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rács
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': szivárvány
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': csillagokat
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vízalatti
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': téli
+            undefined: Semennyit
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL}"
         options:
@@ -930,7 +1148,6 @@ hu:
             '"x"': x pozíció
             '"y"': y-pozíció
             '"direction"': mozgás iránya
-            '"tint"': árnyalat
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} beállítása erre: {N}%"
         options:
@@ -940,8 +1157,13 @@ hu:
             '"height"': magasság
       gamelab_setTint:
         text: "{THIS} színének megváltoztatása erre: {COLOR}"
-      gamelab_setup:
-        text: beállítás
+      gamelab_setupSim:
+        text: |-
+          telepítő-szimuláció
+          {SPRITE1N}{SPRITE1COSTUME}Sebesség{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Sebesség{SPRITE2SPEED}
+          Gyűjtése
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: mutasd címoldalt {BREAK} cím {TITLE} leírás {SUBTITLE}
       gamelab_spriteClicked:
@@ -950,53 +1172,8 @@ hu:
           CONDITION:
             '"when"': amikor
             '"while"': amíg
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        text: "{DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': Észak
-            '"East"': Kelet
-            '"South"': Dél
-            '"West"': Nyugat
-      gamelab_spritesWhere:
-        text: sprite-ok, ahol {PROPERTY} értéke {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-            '"costume"': jelmez
-            '"direction"': mozgás iránya
-            '"rotation"': fordulás vagy irány
-            '"tint"': árnyalat
-      gamelab_spritesWhereFirst:
-        text: első {VALUE}
-      gamelab_spritesWhereGenerator:
-        text: sprite-ok, ha {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-            '"costume"': jelmez
-            '"direction"': mozgás iránya
-            '"rotation"': fordulás vagy irány
-            '"tint"': árnyalat
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
-      gamelab_spritesWhereLast:
-        text: utolsó {VALUE}
-      gamelab_spritesWhereRandom:
-        text: véletlen a csoportban {VALUE}
-      gamelab_thisBeginsBehaviorSimple:
-        text: szereplő {SPRITE} elkezd {BEHAVIOR}
-        options:
-          SPRITE:
-            abc: ez a sprite
+      gamelab_subjectSpritePointer:
+        text: kattintott {SPRITE}
       gamelab_turn:
         text: "{SPRITE} fordul {DIRECTION} {N} fokot"
         options:
@@ -1005,8 +1182,6 @@ hu:
             '"left"': balra
       gamelab_whenDownArrow:
         text: le nyíl megnyomásakor
-      gamelab_whenJoystick:
-        text: ha joystick
       gamelab_whenKey:
         text: "{KEY} lenyomásakor"
         options:
@@ -1022,37 +1197,14 @@ hu:
             '"d"': d
       gamelab_whenLeftArrow:
         text: bal nyíl megnyomásakor
-      gamelab_whenMouseClicked:
-        text: egérgomb megnyomásakor
-      gamelab_whenPressedAndReleased:
-        text: |-
-          ha {DIR} nyomva
-          {STATEMENT1} felengedve
-          {STATEMENT2}
-        options:
-          DIR:
-            "'up'": fel
-            "'down'": le
-            "'left'": balra
-            "'right'": jobbra
       gamelab_whenRightArrow:
         text: jobb nyíl megnyomásakor
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          amikor {SPRITE1} elkezd hozzáérni {SPRITE2} {STATEMENT1} ha elválnak
-          {STATEMENT2}
       gamelab_whenTouching:
         text: amikor {SPRITE1} érinti {SPRITE2}
-      gamelab_whenTouchingAny:
-        text: amikor {SPRITE} érinti bármely {GROUP}
-      gamelab_whenTrue:
-        text: ha {CONDITION} igaz
       gamelab_whenUpArrow:
         text: fel nyíl megnyomásakor
       gamelab_whileDownArrow:
         text: le nyíl nyomásakor
-      gamelab_whileJoystick:
-        text: míg joystick
       gamelab_whileKey:
         text: míg {KEY} megnyomva
         options:
@@ -1080,6 +1232,17 @@ hu:
         text: "{SPRITE} y koordinátája"
       Mikelab_addBehaviorSimple:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'képzési adatok hozzáadása: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": objektumot
+            "{x: 200, y: 100}": hal
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": hal
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": nem hal
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-címke
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": nem a címkeimet
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1100,6 +1263,8 @@ hu:
             "{x: 300, y: 100}": jobbra fent
             "{x: 100, y: 300}": balra lent
             "{x: 300, y: 300}": jobbra lent
+      Mikelab_getNext:
+        text: következő objektum megjelenítése
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1209,6 +1374,12 @@ hu:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} jelenleg {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: "{TRASH} eltávolítása"
+        options:
+          TRASH:
+            object: objektumot
+            fish: hal
       Mikelab_ifDanceIs:
         text: |-
           ha {SPRITE} csinálja {DANCE}
@@ -1216,24 +1387,54 @@ hu:
         options:
           DANCE:
             MOVES.ClapHigh: Taps fent
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
+      Mikelab_ifLabel:
+        text: |-
+          Ha {DANCE}
+          nem {DO1} Más {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: hal
+            MOVES.Clown: my-címke
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          Ha felismeri az objektumot, {DANCE}
+          nem {DO1} Más {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: hal
+            MOVES.Clown: my-címke
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          Ha felismeri az objektumot, {DANCE}
+          nem {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: hal
+            MOVES.Clown: nem a címkeimet
       Mikelab_locationAt:
         text: 'hely x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ismételd végtelenszer
+      Mikelab_sendBad:
+        text: objektum mozgatása balra
+      Mikelab_sendGood:
+        text: objektumot jobbra mozgatni
       Mikelab_setBG:
         options:
           BG:
@@ -1291,6 +1492,12 @@ hu:
             '"d"': D
       Mikelab_whenMouseClicked:
         text: egérgomb megnyomásakor
+      Mikelab_whenYesNoClicked:
+        text: amikor {KEY} kattintott
+        options:
+          KEY:
+            '"yes"': "- Igen"
+            '"no"': "- Nem"
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1314,6 +1521,8 @@ hu:
         text: |-
           hozz létre sprite-ot
           csináld {STATEMENT}
+      Vector_log:
+        text: naplóüzenet {MESSAGE}
       Vector_positionCenter:
         text: közép
       Vector_push:
@@ -1324,6 +1533,8 @@ hu:
         text: állítsd be a színt {COLOR}
       Vector_setSize:
         text: állítsd be a szélességet {WIDTH} magasságot {HEIGHT}
+      Vector_teleportTo:
+        text: pozíció beállítása {POSITION}
       Vector_vectorNorth:
         text: észak
       Vector_where:
@@ -1331,105 +1542,57 @@ hu:
         options:
           PROPERTY:
             "'shapeColor'": szín
+      aalab_addBehaviorForDuration:
+        text: a sprite {SPRITE} Kezdődik {BEHAVIOR} a {SECONDS} Másodperc
       aalab_addBehaviorUntilBoolean:
         text: szereplő {SPRITE} elkezd {BEHAVIOR} amíg {CONDITION}
-      aalab_addToSpriteGroup:
-        text: "{SPRITE} add hozzá {GROUP} csoporthoz"
-      aalab_changePropByFlexible:
-        text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
+      aalab_createNewSpriteAnonReturn2:
+        text: új kobold nevű{SPRITE_NAME} jelmezes{ANIMATION_NAME} a helynél{LOCATION}
+      aalab_goToScene:
+        text: menjen a {SCENE} jelenethez
         options:
-          PROPERTY:
-            '"scale"': méret
-            '"rotation"': forgás
-            '"x"': x pozíció
-            '"y"': y-pozíció
-            '"direction"': mozgás iránya
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': amikor
-            '"while"': amíg
-      aalab_clickedOn:
-        text: "{CONDITION} {SPRITE} kattintás"
-        options:
-          CONDITION:
-            '"when"': amikor
-            '"while"': amíg
-      aalab_createNewSpriteAdvanced:
-        text: "készíts új sprite-ot neve {NAME} \n jelmeze {COSTUME} \n helye {LOCATION}"
-      aalab_createPropertyGroup:
-        text: |-
-          készíts új sprite csoportot neve {VAR}
-          minden {COSTUME} sprite-ból
-      aalab_getSpritesByName:
-        text: 'bármely sprite, neve: {NAME}'
-      aalab_getThisSprite:
-        text: "{CHOICE} sprite"
-        options:
-          CHOICE:
-            '"this"': ez
-      aalab_jumpTo:
-        text: "{SPRITE} ugrás: {LOCATION}"
-      aalab_keyPressed:
-        text: "{CONDITION} {KEY} nyomva"
-        options:
-          CONDITION:
-            '"when"': amikor
-            '"while"': amíg
-          KEY:
-            '"up"': fel
-            '"down"': le
-            '"left"': balra
-            '"right"': jobbra
-            '"space"': világűr
-      aalab_location_picker:
-        text: "{LOCATION}"
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       aalab_moveInDirection:
+        text: "{SPRITE} lépj {DISTANCE} képpontot {DIRECTION}"
         options:
           DIRECTION:
             '"North"': Észak
             '"East"': Kelet
             '"South"': Dél
             '"West"': Nyugat
-      aalab_nameStringSay:
-        text: "{NAMESTRING} mondja {MESSAGE}"
       aalab_prompt:
         text: kérdezd {MESSAGE}
-      aalab_randomLocation:
-        text: véletlen hely
-      aalab_removeOneAndAll:
-        text: távolítsd el {THIS}
-      aalab_setBG:
+      aalab_scene:
+        text: "[SCENE]jelenet[0]"
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': igaz
-            '"false"': hamis
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"rotation"': forgás
-            '"x"': x pozíció
-            '"y"': y-pozíció
-            '"direction"': mozgás iránya
-            '"tint"': árnyalat
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': mindig
-      aalab_speakerSaysConsole:
-        text: "{SPRITE} mondja {MESSAGE}"
-      aalab_spriteSay:
-        text: sprite {SPRITE} mondja {TEXT} {SECONDS} másodpercig
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_setupStory:
+        text: beállítási történet
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': mutasd
-            '"hide"': elrejt
+            '"random"': véletlen
+      binary_drawBin:
+        text: bináris {BIN} rajzolása
+      binary_drawBinScreen:
+        text: |-
+          húz képernyő
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: decimális {DEC} rajzolása
       binary_drawPixelHere:
         text: állítsd képpontot {VAL}
         options:
@@ -1437,10 +1600,14 @@ hu:
             '0': ki
             '1': be
             '"toggle"': váltás
+      binary_drawString:
+        text: felhívni a karakterlánc {STR}
       binary_goTo:
         text: 'ugorj ide: {LOC}'
       binary_goToHome:
         text: ugorj bal fentre
+      binary_gridSize:
+        text: rácsméret beállítása {SIZE}
       binary_move:
         text: menj {DIR}
         options:
@@ -1492,6 +1659,8 @@ hu:
             "'sand'": homok
             "'darkPrismarine'": sötét prizmarin
             "'seaLantern'": vízi lámpa
+      craft_log:
+        text: naplóüzenet {MESSAGE}
       craft_moveForward:
         text: előrelépni
       craft_placeBlock:

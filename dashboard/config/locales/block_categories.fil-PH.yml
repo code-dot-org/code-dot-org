@@ -3,21 +3,30 @@ fil:
   data:
     block_categories:
       Actions: Mga aksyon
-      Loops: Mga loop
-      Functions: Mga function
+      Advanced: Advanced
+      Behaviors: Pag-uugali
+      Brushes: Brushes
       Color: Kulay
-      Math: Math
-      Logic: Lohika
-      Variables: Mga variable
+      Comment: Komento
+      Comments: Komento
       Conditionals: Mga conditional
+      Dancers: Mananayaw
+      Default: Default
       Events: Mga event
-      Text: Text
-      Sprites: Mga Sprites
-      Location: Lokasyon
+      Functions: Mga function
+      'Functions ': 'Function '
+      Game/Score: Laro/score
+      Games/Score: Laro/score
+      Groups: Grupo
       Input: Input
-      Start: Panimula
-      Booleans: Mga Boolean
-      test: subukan
-      Foo: Foo
-      Name: Pangalan
-      Function: Function
+      Locations: Lugar
+      Logic: Lohika
+      Loops: Mga loop
+      Math: Math
+      Numbers: Mga numero
+      Properties: Mga katangian
+      Sprites: Mga Sprites
+      Text: Text
+      Variables: Mga variable
+      'Variables ': 'Pagkakaiba '
+      World: Mundo

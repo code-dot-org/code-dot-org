@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 Functions give us several benefits when programming. First, they allow us to reuse certain blocks of code. Rather than writing the same code over and over again throughout our program, we can write it once within a function, and then call that function multiple times. This simplifies the readability and logical structure of code. Second, functions can be treated as black box instructions that do complex things. Once a function has been written, future programmers don't need to understand how it was implemented in order to use it. This lets code be reused between programmers via libraries or APIs.
 
 
-Want more info about functions?  Check out <a href=”https://www.cs.utah.edu/~germain/PPS/Topics/functions.html”  target=_blank>this resource from the University of Utah <i class="fa fa-external-link-square"/></a>
+Want more info about functions?  Check out <a href=”https://www.cs.utah.edu/~germain/PPS/Topics/functions.html”  target=_blank>this resource from the University of Utah <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/6003202c010f82eda217414edde5f2ae-image-1446478209533.26.38 AM.png" width=“150” style="float:right; margin-left:10px">
 
@@ -16,7 +16,9 @@ Functions are blocks of code that is chunked together and given a name so it can
 
 
 ## Calling a Function
+
 <img src="https://images.code.org/4550aa5b8266da4fb51582e80f9b4819-image-1479789227708.33.27 PM.png" width=“75” style="float:left; margin-right:10px">
+
 When you call a function you are telling the computer to run (or execute) that set of actions. The function described above would be called like this: square(); 
 
 ## Placement of Function Definitions and Calls

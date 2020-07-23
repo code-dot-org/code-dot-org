@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
 import SoundPicker from '@cdo/apps/code-studio/components/SoundPicker';

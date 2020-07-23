@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Modal, FormGroup, Button} from 'react-bootstrap';
+import {Modal, FormGroup, Button, ControlLabel} from 'react-bootstrap';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
+import {SelectStyleProps} from '../constants';
 import FieldGroup from '../form_components/FieldGroup';
+import ButtonList from '../form_components/ButtonList';
 import color from '@cdo/apps/util/color';
 
 const styles = {
@@ -26,8 +30,26 @@ const styles = {
   },
   intro: {
     paddingBottom: 10
+  },
+  select: {
+    maxWidth: 500
   }
 };
+
+const ROLES = [
+  'Teacher',
+  'Librarian',
+  'Media Specialist',
+  'School Administrator',
+  'District Administrator',
+  'Other'
+];
+
+const ROLE_MAP = ROLES.map(v => ({value: v, label: v}));
+// add friendly empty value option
+ROLE_MAP.unshift({value: '', label: '-'});
+
+const GRADE_LEVEL = ['K-5', '6-8', '9-12'];
 
 export class RegionalPartnerMiniContact extends React.Component {
   static propTypes = {
@@ -35,7 +57,9 @@ export class RegionalPartnerMiniContact extends React.Component {
       user_name: PropTypes.string,
       email: PropTypes.string,
       zip: PropTypes.string,
-      notes: PropTypes.string
+      notes: PropTypes.string,
+      grade_levels: PropTypes.array,
+      role: PropTypes.string
     }),
     apiEndpoint: PropTypes.string.isRequired,
     sourcePageId: PropTypes.string.isRequired
@@ -51,16 +75,22 @@ export class RegionalPartnerMiniContact extends React.Component {
       name: this.props.options.user_name,
       email: this.props.options.email,
       zip: this.props.options.zip,
-      notes: this.props.options.notes
+      notes: this.props.options.notes,
+      role: this.props.options.role,
+      grade_levels: this.props.options.grade_levels
     };
   }
 
   submit = () => {
     const params = {
-      name: this.state.name,
+      // set null or empty values to undefined so they are ignored
+      name: this.state.name || undefined,
       email: this.state.email,
       zip: this.state.zip,
-      notes: this.state.notes
+      notes: this.state.notes || undefined,
+      source: this.props.sourcePageId,
+      role: this.state.role || undefined,
+      grade_levels: this.state.grade_levels || undefined
     };
 
     this.setState({submitting: true});
@@ -78,6 +108,10 @@ export class RegionalPartnerMiniContact extends React.Component {
 
   handleChange = change => {
     this.setState(change);
+  };
+
+  onRoleChange = change => {
+    this.setState({role: change.value});
   };
 
   onSubmitComplete = results => {
@@ -126,11 +160,17 @@ export class RegionalPartnerMiniContact extends React.Component {
             id="name"
             label="Name"
             type="text"
+            required={false}
             onChange={this.handleChange}
             defaultValue={this.state.name}
           />
           {this.state.errors.includes('email') && (
-            <div style={styles.error}>Please enter an email.</div>
+            <div
+              style={styles.error}
+              id="regional-partner-mini-contact-error-email"
+            >
+              Please enter an email.
+            </div>
           )}
           <FieldGroup
             id="email"
@@ -141,7 +181,12 @@ export class RegionalPartnerMiniContact extends React.Component {
             defaultValue={this.state.email}
           />
           {this.state.errors.includes('zip') && (
-            <div style={styles.error}>Please enter your school ZIP Code.</div>
+            <div
+              id="regional-partner-mini-contact-error-zip"
+              style={styles.error}
+            >
+              Please enter your school ZIP Code.
+            </div>
           )}
           <FieldGroup
             id="zip"
@@ -151,10 +196,33 @@ export class RegionalPartnerMiniContact extends React.Component {
             onChange={this.handleChange}
             defaultValue={this.state.zip}
           />
+          <ButtonList
+            groupName="grade_levels"
+            label="Grade Level(s)"
+            type="check"
+            onChange={this.handleChange}
+            answers={GRADE_LEVEL}
+            required={false}
+            selectedItems={this.state.grade_levels}
+            style={styles.button}
+            suppressLineBreak
+          />
+          <FormGroup style={styles.select}>
+            <ControlLabel>Your role</ControlLabel>
+            <Select
+              id="role"
+              value={this.state.role}
+              onChange={this.onRoleChange}
+              placeholder="-"
+              options={ROLE_MAP}
+              {...SelectStyleProps}
+            />
+          </FormGroup>
           <FieldGroup
             id="notes"
             label="Questions or notes for your local Regional Partner"
             type="text"
+            required={false}
             componentClass="textarea"
             onChange={this.handleChange}
             defaultValue={this.state.notes}

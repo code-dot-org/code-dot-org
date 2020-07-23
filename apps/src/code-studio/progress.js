@@ -5,35 +5,31 @@ import {Provider} from 'react-redux';
 import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
-import StageProgress from './components/progress/StageProgress.jsx';
+import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
-import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
-import {authorizeLockable} from './stageLockRedux';
 import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
   mergeProgress,
-  mergePeerReviewProgress,
-  updateFocusArea,
-  showTeacherInfo,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
-  setIsSummaryView,
-  setCurrentStageId,
-  setScriptCompleted,
   setStageExtrasEnabled,
-  getLevelResult
+  queryUserProgress as reduxQueryUserProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {renderTeacherPanel} from './teacher';
-import experiments from '../util/experiments';
+import {
+  setSections,
+  setPageType,
+  pageTypes
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 
 var progress = module.exports;
 
@@ -50,9 +46,7 @@ function showDisabledBubblesModal() {
 progress.showDisabledBubblesAlert = function() {
   const store = getStore();
   const {postMilestoneDisabled} = store.getState().progress;
-  const showAlert =
-    postMilestoneDisabled || experiments.isEnabled('postMilestoneDisabledUI');
-  if (!showAlert) {
+  if (!postMilestoneDisabled) {
     return;
   }
 
@@ -80,7 +74,7 @@ progress.showDisabledBubblesAlert = function() {
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
  */
-progress.renderStageProgress = function(
+progress.generateStageProgress = function(
   scriptData,
   stageData,
   progressData,
@@ -99,7 +93,7 @@ progress.renderStageProgress = function(
     store,
     {
       name,
-      stages: [stageData],
+      lessons: [stageData],
       disablePostMilestone,
       age_13_required,
       id: stageData.script_id
@@ -127,13 +121,6 @@ progress.renderStageProgress = function(
   if (progressData.isVerifiedTeacher) {
     store.dispatch(setVerified());
   }
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <StageProgress />
-    </Provider>,
-    document.querySelector('.progress_container')
-  );
 };
 
 /**
@@ -142,7 +129,7 @@ progress.renderStageProgress = function(
  * @param {boolean} scriptData.plc
  * @param {object[]} scriptData.stages
  * @param {string} scriptData.name
- * @param {boolean} scriptData.hideable_stages
+ * @param {boolean} scriptData.hideable_lessons
  * @param {boolean} scriptData.isHocScript
  * @param {boolean} scriptData.age_13_required
  * Render our progress on the course overview page.
@@ -150,6 +137,11 @@ progress.renderStageProgress = function(
 progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
+
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
+  }
+  initViewAs(store, scriptData);
   queryUserProgress(store, scriptData, null);
 
   const teacherResources = (scriptData.teacher_resources || []).map(
@@ -157,14 +149,21 @@ progress.renderCourseProgress = function(scriptData) {
   );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
+  if (scriptData.sections) {
+    store.dispatch(setSections(scriptData.sections));
+  }
+
+  store.dispatch(setPageType(pageTypes.scriptOverview));
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
       <ScriptOverview
+        id={scriptData.id}
+        courseId={scriptData.course_id}
         onOverviewPage={true}
-        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+        excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={teacherResources}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning
@@ -172,58 +171,26 @@ progress.renderCourseProgress = function(scriptData) {
         showScriptVersionWarning={scriptData.show_script_version_warning}
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectScriptUrl={scriptData.redirect_script_url}
-        versions={scriptData.versions}
+        versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
         courseName={scriptData.course_name}
+        showAssignButton={scriptData.show_assign_button}
+        userId={scriptData.user_id}
+        assignedSectionId={scriptData.assigned_section_id}
       />
     </Provider>,
     mountPoint
   );
 };
 
-/**
- * @param {HTMLElement} element - DOM element we want to render into
- * @param {string} scriptName - name of current script
- * @param {string} currentLevelId - Level that we're current on.
- * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
- * @param {bool} student_detail_progress_view - Should we default to progress view
- *   user has
- */
-progress.renderMiniView = function(
-  element,
-  scriptName,
-  currentLevelId,
-  linesOfCodeText,
-  student_detail_progress_view
-) {
+progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  if (student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <MiniView linesOfCodeText={linesOfCodeText} />
-    </Provider>,
-    element
-  );
-
   $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
     queryUserProgress(store, scriptData, currentLevelId);
   });
 };
 
-/**
- * Query the server for user_progress data for this script, and update the store
- * as appropriate
- */
-function queryUserProgress(store, scriptData, currentLevelId) {
-  const onOverviewPage = !currentLevelId;
-
-  if (scriptData.student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
+function initViewAs(store, scriptData) {
   // Set our initial view type from current user's user_type or our query string.
   let initialViewAs = ViewType.Student;
   if (scriptData.user_type === 'teacher') {
@@ -231,82 +198,44 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     initialViewAs = query.viewAs || ViewType.Teacher;
   }
   store.dispatch(setViewType(initialViewAs));
+}
 
-  $.ajax('/api/user_progress/' + scriptData.name, {
-    data: {
-      user_id: clientState.queryParams('user_id')
+/**
+ * Query the server for user_progress data for this script, and update the store
+ * as appropriate
+ */
+function queryUserProgress(store, scriptData, currentLevelId) {
+  const userId = clientState.queryParams('user_id');
+  store.dispatch(reduxQueryUserProgress(userId)).then(data => {
+    const onOverviewPage = !currentLevelId;
+    if (!onOverviewPage) {
+      return;
     }
-  }).done(data => {
-    data = data || {};
 
-    const postMilestoneDisabled =
-      store.getState().progress.postMilestoneDisabled ||
-      experiments.isEnabled('postMilestoneDisabledUI');
     // Depend on the fact that even if we have no levelProgress, our progress
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
-    if (data.isVerifiedTeacher) {
-      store.dispatch(setVerified());
-    }
-    if (
-      onOverviewPage &&
-      signedInUser &&
-      postMilestoneDisabled &&
-      !scriptData.isHocScript
-    ) {
+    const postMilestoneDisabled = store.getState().progress
+      .postMilestoneDisabled;
+    if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }
 
-    // Show lesson plan links and other teacher info if teacher and on unit
-    // overview page
     if (
       (data.isTeacher || data.teacherViewingStudent) &&
-      !data.professionalLearningCourse &&
-      onOverviewPage
+      !data.professionalLearningCourse
     ) {
-      // Default to progress summary view if teacher is viewing their student's progress.
-      if (data.teacherViewingStudent) {
-        store.dispatch(setIsSummaryView(true));
-      }
-
-      store.dispatch(showTeacherInfo());
-
-      const viewAs =
-        queryString.parse(location.search).viewAs || ViewType.Teacher;
-      if (viewAs !== initialViewAs) {
-        // We don't want to redispatch if our viewAs is the same as the initial
-        // one, since the user might have manually changed the view while making
-        // our async call
-        store.dispatch(setViewType(viewAs));
-      }
-
-      renderTeacherPanel(store, scriptData.id, scriptData.section);
-    }
-
-    if (data.focusAreaStageIds) {
-      store.dispatch(
-        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
+      const pageType = currentLevelId ? 'level' : 'script_overview';
+      queryLockStatus(store, scriptData.id, pageType);
+      renderTeacherPanel(
+        store,
+        scriptData.id,
+        scriptData.section,
+        scriptData.name,
+        null,
+        pageType,
+        onOverviewPage
       );
-    }
-
-    if (data.lockableAuthorized) {
-      store.dispatch(authorizeLockable());
-    }
-
-    if (data.completed) {
-      store.dispatch(setScriptCompleted());
-    }
-
-    // Merge progress from server (loaded via AJAX)
-    if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelResult);
-      store.dispatch(mergeProgress(levelProgress));
-      if (data.peerReviewsPerformed) {
-        store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
-      }
-      if (data.current_stage) {
-        store.dispatch(setCurrentStageId(data.current_stage));
-      }
     }
   });
 }
@@ -337,8 +266,8 @@ function initializeStoreWithProgress(
       currentLevelId: currentLevelId,
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-      stages: scriptData.stages,
-      peerReviewStage: scriptData.peerReviewStage,
+      stages: scriptData.lessons,
+      peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
       scriptTitle: scriptData.title,
@@ -349,10 +278,7 @@ function initializeStoreWithProgress(
     })
   );
 
-  const postMilestoneDisabled =
-    scriptData.disablePostMilestone ||
-    experiments.isEnabled('postMilestoneDisabledUI');
-  if (postMilestoneDisabled) {
+  if (scriptData.disablePostMilestone) {
     store.dispatch(disablePostMilestone());
   }
 
@@ -366,7 +292,7 @@ function initializeStoreWithProgress(
     );
   }
 
-  if (scriptData.hideable_stages) {
+  if (scriptData.hideable_lessons) {
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
   }

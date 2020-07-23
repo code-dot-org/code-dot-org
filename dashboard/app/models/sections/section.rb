@@ -19,6 +19,7 @@
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
 #  hidden            :boolean          default(FALSE), not null
+#  autoplay_enabled  :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -59,10 +60,14 @@ class Section < ActiveRecord::Base
   validates :name, presence: true, unless: -> {deleted?}
 
   belongs_to :script
-  belongs_to :course
+  belongs_to :unit_group, foreign_key: 'course_id'
 
-  has_many :section_hidden_stages
+  has_many :section_hidden_lessons
   has_many :section_hidden_scripts
+
+  # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
+  # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
+  alias_attribute :lesson_extras, :stage_extras
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
@@ -71,6 +76,11 @@ class Section < ActiveRecord::Base
     LOGIN_TYPE_WORD = 'word'.freeze,
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
     LOGIN_TYPE_CLEVER = 'clever'.freeze
+  ]
+
+  LOGIN_TYPES_OAUTH = [
+    LOGIN_TYPE_GOOGLE_CLASSROOM,
+    LOGIN_TYPE_CLEVER
   ]
 
   TYPES = [
@@ -91,8 +101,8 @@ class Section < ActiveRecord::Base
     Script.get_from_cache(script_id) if script_id
   end
 
-  def course
-    Course.get_from_cache(course_id) if course_id
+  def unit_group
+    UnitGroup.get_from_cache(course_id) if course_id
   end
 
   def workshop_section?
@@ -118,10 +128,6 @@ class Section < ActiveRecord::Base
     students.each do |student|
       student.update!(sharing_disabled: sharing_disabled)
     end
-  end
-
-  def teacher_dashboard_url
-    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
   end
 
   # return a version of self.students in which all students' names are
@@ -172,19 +178,6 @@ class Section < ActiveRecord::Base
     return ADD_STUDENT_SUCCESS
   end
 
-  # Enrolls student in this section (possibly restoring an existing deleted follower) and removes
-  # student from old section.
-  # @param student [User] The student to enroll in this section.
-  # @param old_section [Section] The section from which to remove the student.
-  # @return [boolean] Whether a new student was added.
-  def add_and_remove_student(student, old_section)
-    old_follower = old_section.followers.where(student_user: student).first
-    return false unless old_follower
-
-    old_follower.destroy
-    add_student student
-  end
-
   # Remove a student from the section.
   # Follower is determined by the controller so that it can authorize first.
   # Optionally email the teacher.
@@ -212,12 +205,16 @@ class Section < ActiveRecord::Base
   # @return [Script, nil]
   def default_script
     return script if script
-    return course.try(:default_course_scripts).try(:first).try(:script)
+    return unit_group.try(:default_course_scripts).try(:first).try(:script)
+  end
+
+  def summarize_without_students
+    summarize(include_students: false)
   end
 
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
-  def summarize
+  def summarize(include_students: true)
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
     title = ''
@@ -225,9 +222,9 @@ class Section < ActiveRecord::Base
     title_of_current_unit = ''
     link_to_current_unit = ''
 
-    if course
-      title = course.localized_title
-      link_to_assigned = course_path(course)
+    if unit_group
+      title = unit_group.localized_title
+      link_to_assigned = course_path(unit_group)
       if script_id
         title_of_current_unit = script.localized_title
         link_to_current_unit = script_path(script)
@@ -237,45 +234,42 @@ class Section < ActiveRecord::Base
       link_to_assigned = script_path(script)
     end
 
-    # Some scripts are associated with a course (e.g. csp1-2018 is the script for "CSP Unit 1 - The Internet ('18-'19)",
-    # which is part of the csp18-19 # course. Courses have different versions based on year; similar courses
-    # across years have a family_name (either CSD or CSP). We want to pass the family_name associated with a script, if there is one,
-    # so that we can determine whether to show the sharing column on the Manage Students Table of Teacher Dashboard.
-    course_family_name =
-      if course
-        course.family_name
-      elsif script
-        script.course&.family_name
-      end
+    # Remove ordering from scope when not including full
+    # list of students, in order to improve query performance.
+    unique_students = include_students ?
+      students.distinct(&:id) :
+      students.unscope(:order).distinct(&:id)
+    num_students = unique_students.size
 
-    unique_students = students.uniq(&:id)
     {
       id: id,
       name: name,
+      createdAt: created_at,
       teacherName: teacher.name,
       linkToProgress: "#{base_url}#{id}/progress",
       assignedTitle: title,
       linkToAssigned: link_to_assigned,
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
-      numberOfStudents: unique_students.length,
+      numberOfStudents: num_students,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
-      stage_extras: stage_extras,
+      lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,
+      autoplay_enabled: autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
       course_id: course_id,
       script: {
         id: script_id,
         name: script.try(:name),
-        course_family_name: course_family_name
+        project_sharing: script.try(:project_sharing)
       },
-      studentCount: unique_students.size,
+      studentCount: num_students,
       grade: grade,
       providerManaged: provider_managed?,
       hidden: hidden,
-      students: unique_students.map(&:summarize),
+      students: include_students ? unique_students.map(&:summarize) : nil,
     }
   end
 
@@ -293,11 +287,11 @@ class Section < ActiveRecord::Base
 
   # Hide or unhide a stage for this section
   def toggle_hidden_stage(stage, should_hide)
-    hidden_stage = SectionHiddenStage.find_by(stage_id: stage.id, section_id: id)
+    hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
     if hidden_stage && !should_hide
       hidden_stage.delete
     elsif hidden_stage.nil? && should_hide
-      SectionHiddenStage.create(stage_id: stage.id, section_id: id)
+      SectionHiddenLesson.create(stage_id: stage.id, section_id: id)
     end
   end
 
@@ -318,8 +312,8 @@ class Section < ActiveRecord::Base
   # once such a thing exists
   def has_sufficient_discount_code_progress?
     return false if students.length < 10
-    csd2 = Script.get_from_cache('csd2-2018')
-    csd3 = Script.get_from_cache('csd3-2018')
+    csd2 = Script.get_from_cache('csd2-2019')
+    csd3 = Script.get_from_cache('csd3-2019')
     raise 'Missing scripts' unless csd2 && csd3
 
     csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)
@@ -354,4 +348,20 @@ class Section < ActiveRecord::Base
   def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
   end
+
+  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
+  # from the section name.
+  # We make a best-effort to make the name usable without the removed characters.
+  # We can remove this once our database has utf8mb4 support everywhere.
+  def strip_emoji_from_name
+    # We don't want to fill in a default name if the caller intentionally tried to clear it.
+    return unless name.present?
+
+    # Drop emoji and other unsupported characters
+    self.name = name&.strip_utf8mb4&.strip
+
+    # If dropping emoji resulted in a blank name, use a default
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') unless name.present?
+  end
+  before_validation :strip_emoji_from_name
 end

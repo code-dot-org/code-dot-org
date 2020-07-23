@@ -1,0 +1,5 @@
+{
+  "body": "<h1>Testing</h1>\n\n<p>This email should be able to render HTML</p>",
+  "subject": "Testing out our emails",
+  "from": "Code.org Testing <test@code.org>"
+}

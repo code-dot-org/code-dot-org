@@ -33,6 +33,15 @@ module Pd
     belongs_to :pd_session, class_name: 'Pd::Session'
     belongs_to :pd_workshop, class_name: 'Pd::Workshop'
 
+    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
+                            message: 'already has a submission for this workshop, day, and form'
+    validates_presence_of(
+      :user_id,
+      :pd_workshop_id,
+      :day
+    )
+    validate :day_for_subject
+
     # @override
     def self.attribute_mapping
       {
@@ -55,28 +64,6 @@ module Pd
       self.day = self.class.get_day_for_subject_and_form_id(pd_workshop.subject, form_id)
     end
 
-    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
-      message: 'already has a submission for this workshop, day, and form'
-
-    validates_presence_of(
-      :user_id,
-      :pd_workshop_id,
-      :day
-    )
-
-    # Different categories have different valid days
-    VALID_DAYS = {
-      LOCAL_CATEGORY => (0..5).to_a.freeze,
-      ACADEMIC_YEAR_1_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_2_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_3_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
-      ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
-    }
-
-    validate :day_for_subject
-
     def self.get_form_id_for_subjects_and_day(subjects, day)
       subjects.map do |subject|
         get_form_id_for_subject_and_day subject, day
@@ -97,9 +84,10 @@ module Pd
     def self.all_form_ids
       FORM_CATEGORIES.map do |category|
         VALID_DAYS[category].map do |day|
-          get_form_id category, "day_#{day}"
+          form_name = category == CSF_CATEGORY ? CSF_SURVEY_NAMES[day] : "day_#{day}"
+          get_form_id category, form_name
         end
-      end.flatten.compact
+      end.flatten.compact.uniq
     end
 
     def self.unique_attributes

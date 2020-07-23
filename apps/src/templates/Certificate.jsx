@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
+import BackToFrontConfetti from './BackToFrontConfetti';
 import i18n from '@cdo/locale';
 import color from '../util/color';
 import PropTypes from 'prop-types';
@@ -37,15 +38,20 @@ const styles = {
   submit: {
     background: color.orange,
     color: color.white
+  },
+  confetti: {
+    top: 100
   }
 };
 
 const blankCertificates = {
   hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
+  oceans: require('@cdo/static/oceans_hoc_certificate.png'),
   mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
-  aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png')
+  aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png'),
+  mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png')
 };
 
 class Certificate extends Component {
@@ -62,9 +68,11 @@ class Certificate extends Component {
     randomDonorTwitter: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     under13: PropTypes.bool,
-    isMinecraft: PropTypes.bool.isRequired,
     children: PropTypes.node
   };
+
+  isMinecraft = () => /mc|minecraft|hero|aquatic|mee/.test(this.props.tutorial);
+  isAIOceans = () => /oceans/.test(this.props.tutorial);
 
   personalizeCertificate(session) {
     $.ajax({
@@ -89,7 +97,6 @@ class Certificate extends Component {
       certificateId,
       randomDonorTwitter,
       under13,
-      isMinecraft,
       children
     } = this.props;
     const certificate = certificateId || 'blank';
@@ -123,7 +130,11 @@ class Certificate extends Component {
     });
 
     let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
-    if (isMinecraft && !this.state.personalized) {
+    if (this.isMinecraft() && !this.state.personalized) {
+      // Correct the minecraft print url for non-personalized certificates.
+      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
+    }
+    if (this.isAIOceans() && !this.state.personalized) {
       // Correct the minecraft print url for non-personalized certificates.
       print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
     }
@@ -138,6 +149,10 @@ class Certificate extends Component {
           />
         )}
         <div id="uitest-certificate" style={certificateStyle}>
+          <BackToFrontConfetti
+            active={this.state.personalized}
+            style={styles.confetti}
+          />
           <a href={certificateLink}>
             <img src={imgSrc} />
           </a>
@@ -154,6 +169,7 @@ class Certificate extends Component {
                 ref={input => (this.nameInput = input)}
               />
               <button
+                type="button"
                 style={styles.submit}
                 onClick={this.personalizeCertificate.bind(this, certificate)}
               >

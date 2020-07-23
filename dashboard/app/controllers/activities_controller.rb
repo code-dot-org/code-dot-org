@@ -1,5 +1,6 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
+require 'cdo/firehose'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -14,6 +15,8 @@ class ActivitiesController < ApplicationController
 
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
+
+  use_database_pool milestone: :persistent
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
@@ -50,9 +53,9 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_filtering_error
           # If WebPurify or Geocoder fail, the program will be allowed, and we
-          # retain the share_checking_error to log it alongside the level_source
+          # retain the share_filtering_error to log it alongside the level_source
           # ID below.
         end
       end
@@ -62,17 +65,24 @@ class ActivitiesController < ApplicationController
           @level,
           params[:program].strip_utf8mb4
         )
-        if share_checking_error
-          slog(
-            tag: 'share_checking_error',
-            error: "#{share_checking_error.class.name}: #{share_checking_error}",
-            level_source_id: @level_source.id
+        if share_filtering_error
+          FirehoseClient.instance.put_record(
+            :analysis,
+            {
+              study: 'share_filtering',
+              study_group: 'v0',
+              event: 'share_filtering_error',
+              data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
+              data_json: {
+                level_source_id: @level_source.id
+              }.to_json
+            }
           )
         end
       end
     end
 
-    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable?
+    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.lesson.lockable?
       user_level = UserLevel.find_by(
         user_id: current_user.id,
         level_id: @script_level.level.id,
@@ -83,7 +93,7 @@ class ActivitiesController < ApplicationController
       # so having no user_level is equivalent to bein glocked
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_stage?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.stage) || user_level.try(:readonly_answers?)
+      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
         return head 403
       end
     end
@@ -94,7 +104,7 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    @level_source_image = find_or_create_level_source_image(params[:image], @level_source.try(:id))
+    @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
     @new_level_completed = false
     if current_user
@@ -109,11 +119,6 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
-    milestone_response_user_level = nil
-    if @new_level_completed.is_a? UserLevel
-      milestone_response_user_level = @new_level_completed
-    end
-
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
@@ -124,7 +129,7 @@ class ActivitiesController < ApplicationController
       activity: @activity,
       new_level_completed: @new_level_completed,
       share_failure: share_failure,
-      user_level: milestone_response_user_level
+      user_level: @user_level
     )
 
     if solved
@@ -168,45 +173,52 @@ class ActivitiesController < ApplicationController
       level_source_id: @level_source.try(:id)
     }
 
-    # Save the activity and user_level synchronously if the level might be saved
-    # to the gallery (for which the activity.id and user_level.id is required).
-    # This is true for levels auto-saved to the gallery, free play levels, and
-    # "impressive" levels.
-    synchronous_save = solved &&
-        (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
-            @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
-
     allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
     if allow_activity_writes
-      @activity =
-        if synchronous_save
-          Activity.new(attributes).tap(&:atomic_save!)
-        else
-          Activity.create_async!(attributes)
-        end
+      @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
     if @script_level
-      @new_level_completed =
-        if synchronous_save
-          User.track_level_progress_sync(
-            user_id: current_user.id,
-            level_id: @level.id,
-            script_id: @script_level.script_id,
-            new_result: test_result,
-            submitted: params[:submitted] == 'true',
-            level_source_id: @level_source.try(:id),
-            pairing_user_ids: pairing_user_ids,
+      @user_level, @new_level_completed = User.track_level_progress(
+        user_id: current_user.id,
+        level_id: @level.id,
+        script_id: @script_level.script_id,
+        new_result: test_result,
+        submitted: params[:submitted] == 'true',
+        level_source_id: @level_source.try(:id),
+        pairing_user_ids: pairing_user_ids,
+      )
+
+      is_sublevel = !@script_level.levels.include?(@level)
+
+      # The level might belong to more than one bubble choice parent level.
+      # Find the one that's in this script.
+      bubble_choice_parent_level = is_sublevel && @script_level.levels.find do |level|
+        level.is_a?(BubbleChoice) && level.sublevels.include?(@level)
+      end
+      if bubble_choice_parent_level
+        User.track_level_progress(
+          user_id: current_user.id,
+          level_id: bubble_choice_parent_level.id,
+          script_id: @script_level.script_id,
+          new_result: test_result,
+          submitted: false,
+          level_source_id: nil,
+          pairing_user_ids: pairing_user_ids,
           )
-        else
-          current_user.track_level_progress_async(
-            script_level: @script_level,
-            new_result: test_result,
-            submitted: params[:submitted] == "true",
-            level_source_id: @level_source.try(:id),
-            level: @level,
-            pairing_user_ids: pairing_user_ids
-          )
-        end
+      end
+
+      # Make sure we don't log when @script_level is a multi-page assessment
+      # and @level is a multi level.
+      if @script_level.assessment && @level.is_a?(Multi) && !is_sublevel
+        AssessmentActivity.create(
+          user_id: current_user.id,
+          level_id: @level.id,
+          script_id: @script_level.script.id,
+          level_source_id: @level_source&.id,
+          test_result: test_result,
+          attempt: params[:attempt]
+        )
+      end
     end
 
     passed = ActivityConstants.passing?(test_result)
@@ -214,17 +226,6 @@ class ActivitiesController < ApplicationController
       current_user.total_lines += lines
       # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
-    end
-
-    # Blockly sends us 'undefined', 'false', or 'true' so we have to check as a
-    # string value.
-    if params[:save_to_gallery] == 'true' && @level_source_image && solved
-      @gallery_activity = GalleryActivity.create!(
-        user: current_user,
-        user_level_id: @new_level_completed.try(:id),
-        level_source_id: @level_source_image.level_source_id,
-        autosaved: true
-      )
     end
   end
 

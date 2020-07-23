@@ -26,7 +26,7 @@ if Dashboard::Application.config.eager_load
     SecretPicture,
     SecretWord,
     Section,
-    Stage,
+    Lesson,
     Studio,
     TextMatch,
     Unplugged,

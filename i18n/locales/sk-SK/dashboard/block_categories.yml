@@ -2,58 +2,29 @@ sk:
   data:
     block_categories:
       Actions: Akcie
-      Loops: Cykly
-      Functions: Funkcie
-      Color: Farba
-      Brushes: Štetce
-      Math: Matematické
-      Logic: Logické
-      Variables: Premenné
-      Number: Číslo
-      String: Reťazec
-      Image: Obrázok
-      Boolean: Logická hodnota
-      Conditionals: Podmienky
-      Events: Udalosti
-      Games/Score: Hry/skóre
-      Comments: Komentáre
-      Category: Kategória
-      Prebuilt: Vopred vytvorené
-      Text: Text
-      Picker: Nástroj výberu
-      Comment: Komentár
-      'Variables ': 'Premenné '
-      everythingelse: všetko ostatné
-      World: Prostredie
-      Sprites: Postavy
-      Location: Miesto
-      Behaviors: Správanie
-      numbers: čisla
-      Numbers: Čísla
-      Input: Vstup
-      Default: Predvolené
-      Dancers: Tanečníci
-      Groups: Skupiny
       Advanced: Pokročilé
-      Start: Spustiť
-      Locations: Miesta
-      Music: Hudba
-      Dancing: Tancovanie
-      Sprite: Postavy
-      Brush: Štetec
-      Make Sprite: Vytvoriť postavu
-      Movement: Pohyb
-      Booleans: Logické hodnoty
-      Functional: Funkcie
-      While Events: Udalosti "pokiaľ"
-      Sprite Properties: Vlastnosti postáv
-      Predefined: Preddefinované
-      test: test
-      test2: test2
-      Use These Blocks: Použi tieto bloky
-      Do Not Use: Nepoužívaj
-      Name: Meno
-      NEW BLOCKS: NOVÉ BLOKY
+      Behaviors: Správanie
+      Brushes: Štetce
+      Color: Farba
+      Comment: Komentár
+      Comments: Komentáre
+      Conditionals: Podmienky
+      Dancers: Tanečníci
+      Default: Predvolené
+      Events: Udalosti
+      Functions: Funkcie
       'Functions ': 'Funkcie '
       Game/Score: Hra/skóre
-      Function: Funkcia
+      Games/Score: Hry/skóre
+      Groups: Skupiny
+      Locations: Miesta
+      Logic: Logické
+      Loops: Cykly
+      Math: Matematické
+      Numbers: Čísla
+      Properties: Vlastnosti
+      Sprites: Objekt "sprite"
+      Text: Text
+      Variables: Premenné
+      'Variables ': 'Premenné '
+      World: Prostredie

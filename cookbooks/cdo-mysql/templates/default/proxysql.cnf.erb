@@ -1,0 +1,202 @@
+<%
+# If this is an Aurora cluster, resolve instance-endpoint hostnames
+# to help with instance auto-discovery.
+servers = @mysql_servers.map {|s| s.keys.first}
+if @is_aurora
+  servers.each do |server|
+    server.host = get_cname(server.host)
+  end
+end
+writer, reader, reporting = servers
+-%>
+
+# libconfig file format:
+# http://www.hyperrealm.com/libconfig/libconfig_manual.html#Configuration-Files
+
+# Variable definitions:
+# https://github.com/sysown/proxysql/wiki/Global-variables
+
+datadir="<%=@data_dir%>"
+errorlog="<%=@data_dir%>/proxysql.log"
+
+# https://github.com/sysown/proxysql/wiki/Global-variables#admin-variables
+admin_variables=
+{
+  admin_credentials="<%=@admin.user%>:<%=@admin.password%>"
+  mysql_ifaces="<%=@admin.host%>:<%=@admin.port%>"
+}
+
+# https://github.com/sysown/proxysql/wiki/Global-variables#mysql-variables
+mysql_variables=
+{
+  # The number of background threads that ProxySQL uses in order to process MySQL traffic.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-threads
+  threads=<%=node[:cpu][:total]%>
+
+  # Semicolon-separated list of hostname:port entries for interfaces for incoming MySQL traffic.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-interfaces
+  interfaces="127.0.0.1:<%=@port%>;127.0.0.1:<%=@reporting_port%>"
+
+  # The server version with which the proxy will respond to the clients.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-server_version
+  server_version="5.7.12-proxysql"
+
+  # The user needs only USAGE privileges to connect, ping and check read_only.
+  # The user needs also REPLICATION CLIENT if it needs to monitor replication lag.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_username
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_password
+  monitor_username="<%= reader.user %>"
+  monitor_password="<%= reader.password %>"
+
+  # If this variable is set, after an OK packet with `last_insert_id` is received,
+  # multiplexing is temporary disabled for the number of queries specified (default 5).
+  # This prevents inconsistent results if a query containing `LAST_INSERT_ID()` uses a
+  # different connection from the one where auto-increment was used.
+  # We can disable (set to 0) since our application doesn't use `LAST_INSERT_ID()` in any queries.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-auto_increment_delay_multiplex
+  auto_increment_delay_multiplex=0
+
+  # The timeout for a single attempt at checking the Read Only status on a backend server from the proxy.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_read_only_timeout
+  # [Milliseconds, default 800]
+  monitor_read_only_timeout=2000
+
+  # When the monitor thread performs a read_only check, AND the check exceeds mysql-monitor_read_only_timeout,
+  # repeat the read_only check up to this many times before setting OFFLINE HARD.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_read_only_max_timeout_count
+  # [Default 3]
+  monitor_read_only_max_timeout_count=5
+
+  # The timeout for a single attempt at connecting to a backend server from the proxy.
+  # If this fails, according to the other parameters, the attempt will be retried until too many errors
+  # per second are generated (and the server is automatically shunned) or until the final cut-off is reached
+  # and an error is returned to the client (see mysql-connect_timeout_server_max).
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-connect_timeout_server
+  # [Milliseconds, default 1000]
+  connect_timeout_server=2000
+
+  # The proxy internally pings the connections it has opened in order to keep them alive.
+  # This eliminates the cost of opening a new connection towards a hostgroup when a query needs to be routed,
+  # at the cost of additional memory footprint inside the proxy and some extra traffic.
+  # This is the timeout allowed for those pings to succeed.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-ping_timeout_server
+  # [Milliseconds, default 200]
+  ping_timeout_server=1000
+}
+
+# https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
+mysql_servers =
+(
+<%
+  # Expand {server => [hg, ..]} to individual [server, hg] table rows.
+  @mysql_servers.map {|s| s.to_a.first}.
+    flat_map {|s, hgs| [s].product(hgs)}.
+    uniq.each do |server, hostgroup|
+-%>
+  {
+    address =        "<%= server.host %>"
+    port =            <%= server.port || 3306 %>
+    hostgroup =       <%= hostgroup %>
+    max_connections = <%= node[:cpu][:total] * 2 %>
+  },
+<% end -%>
+)
+
+<% if @is_aurora -%>
+# https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_replication_hostgroups
+mysql_replication_hostgroups:
+(
+  {
+    writer_hostgroup=0
+    reader_hostgroup=1
+    check_type="innodb_read_only"
+  }
+)
+
+mysql_aws_aurora_hostgroups:
+(
+  {
+    writer_hostgroup=0
+    reader_hostgroup=1
+    new_reader_weight=10000000
+    writer_is_also_reader=1
+    domain_name="<%=writer.host.sub(/[^.]*/, '')%>"
+  }
+)
+<% end -%>
+
+# https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_users
+mysql_users:
+(
+<% if writer.user != reader.user -%>
+  {
+    username = "<%= reader.user %>"
+    password = "<%= reader.password %>"
+    # Send all reader-user queries to reader hostgroup (1) by default.
+    default_hostgroup = 1
+  },
+<% end -%>
+  {
+    username = "<%= writer.user %>"
+    password = "<%= writer.password %>"
+    default_hostgroup = 0
+  }
+)
+
+# https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_query_rules
+mysql_query_rules:
+(
+  {
+    # Workaround for query-cache DEPRECATE_EOF bug:
+    # Rewrite all SELECT queries to include a unique comment.
+    # This will make proxysql queries distinct from any other clients' queries,
+    # so the query cache will store them separately.
+    rule_id=1
+    active=1
+    match_digest="^SELECT "
+    match_pattern="^(\S+) "
+    replace_pattern="SELECT /*proxysql*/ "
+  },
+  {
+    # SELECT .* FOR UPDATE is an exception to read-write splitting on SELECT,
+    # it needs to be sent to writer.
+    rule_id=2
+    active=1
+    match_pattern="^SELECT .* FOR UPDATE$"
+    destination_hostgroup=0
+    apply=1
+  },
+  {
+    # Send writer-user SELECTs to the primary-reader (HG2).
+    rule_id=3
+    username="<%= writer.user %>"
+    active=1
+    match_pattern="^SELECT"
+    destination_hostgroup=2
+    apply=1
+  },
+  {
+    # ar_internal_metadata performs read-after-write from ActiveRecord DB-setup logic.
+    # Send all queries on this table to writer.
+    rule_id=4
+    active=1
+    match_pattern="FROM `ar_internal_metadata`"
+    destination_hostgroup=0
+    apply=1
+  },
+  {
+    # Handle SET command used by application.
+    rule_id=5
+    active=1
+    match_digest="SET @@wait_timeout"
+    multiplex=2
+  },
+  {
+    # Send reporting-port queries to the reporting hostgroup (HG3).
+    rule_id=6
+    proxy_port=<%=@reporting_port%>
+    active=1
+    destination_hostgroup=3
+    apply=1
+  }
+)

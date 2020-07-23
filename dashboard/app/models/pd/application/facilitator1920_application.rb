@@ -38,19 +38,19 @@ module Pd::Application
   class Facilitator1920Application < FacilitatorApplicationBase
     include Pd::Facilitator1920ApplicationConstants
 
-    validates_uniqueness_of :user_id
-
     has_one :pd_fit_weekend1920_registration,
       class_name: 'Pd::FitWeekend1920Registration',
       foreign_key: 'pd_application_id'
 
-    serialized_attrs %w(
-      status_log
-    )
+    validates_uniqueness_of :user_id
 
     before_save :log_status, if: -> {status_changed?}
 
     after_create :clear_extraneous_answers
+
+    serialized_attrs %w(
+      status_log
+    )
 
     #override
     def year
@@ -58,7 +58,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2019, 4, 1)
+    APPLICATION_CLOSE_DATE = Date.new(2019, 5, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
@@ -76,7 +76,21 @@ module Pd::Application
       )
     end
 
-    # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
+    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
+    # In these decision emails, status and email_type are the same.
+    AUTO_EMAIL_STATUSES = %w(
+      declined
+      waitlisted
+    )
+
+    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
+
+    def on_successful_create
+      queue_email :confirmation, deliver_now: true
+    end
+
+    # Queries for locked and (accepted or withdrawn) CSD/CSP facilitator applications
+    # that have filled out the FiT Weekend Registration form.
     # @param [ActiveRecord::Relation<Pd::Application::Facilitator1920Application>] applications_query
     #   (optional) defaults to all
     # @note this is not chainable since it inspects fit_workshop_id from serialized attributes,
@@ -85,10 +99,10 @@ module Pd::Application
     def self.fit_cohort(applications_query = all)
       applications_query.
         where(type: name).
+        where(course: [:csd, :csp]).
         where(status: [:accepted, :withdrawn]).
         where.not(locked_at: nil).
-        includes(:pd_fit_weekend1920_registration).
-        select(&:fit_workshop_id?)
+        includes(:pd_fit_weekend1920_registration)
     end
 
     # @override
@@ -109,12 +123,24 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      Facilitator1920ApplicationMailer.send(email.email_type, self).deliver_now
+      FacilitatorApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     def log_status
       self.status_log ||= []
       status_log.push({status: status, at: Time.zone.now})
+    end
+
+    def lock!
+      super
+
+      # delete any unsent emails, and queue a new status email if appropriate
+      emails.unsent.destroy_all
+      queue_email(status) if should_send_decision_email?
+    end
+
+    def should_send_decision_email?
+      AUTO_EMAIL_STATUSES.include?(status)
     end
 
     # memoize in a hash, per course

@@ -1,1 +1,1 @@
-<%= view '404' %>
+Simple Markdown View

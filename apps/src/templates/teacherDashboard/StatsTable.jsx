@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
@@ -27,7 +28,6 @@ class StatsTable extends Component {
     studentsCompletedLevelCount: PropTypes.object,
 
     // Provided by redux.
-    scriptId: PropTypes.number,
     scriptName: PropTypes.string
   };
 
@@ -42,24 +42,23 @@ class StatsTable extends Component {
   };
 
   nameFormatter = (name, {rowData}) => {
-    const {section, scriptId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(
-      section.id,
-      scriptId,
-      scriptName,
-      rowData.id
-    );
+    const {section, scriptName} = this.props;
+    const studentUrl = scriptUrlForStudent(section.id, scriptName, rowData.id);
 
-    return (
-      <a
-        className="uitest-name-cell"
-        style={tableLayoutStyles.link}
-        href={studentUrl}
-        target="_blank"
-      >
-        {name}
-      </a>
-    );
+    if (studentUrl) {
+      return (
+        <a
+          className="uitest-name-cell"
+          style={tableLayoutStyles.link}
+          href={studentUrl}
+          target="_blank"
+        >
+          {name}
+        </a>
+      );
+    } else {
+      return <span className="uitest-name-cell">{name}</span>;
+    }
   };
 
   getSortingColumns = () => {
@@ -81,7 +80,7 @@ class StatsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.nameFormatter,
+          formatters: [this.nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell
@@ -181,6 +180,5 @@ class StatsTable extends Component {
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
-  scriptId: state.scriptSelection.scriptId,
   scriptName: getSelectedScriptName(state)
 }))(StatsTable);

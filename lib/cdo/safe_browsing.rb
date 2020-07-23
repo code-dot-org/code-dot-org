@@ -31,27 +31,43 @@ module SafeBrowsing
     http.use_ssl = true
 
     response = nil
+    response_message = "Determined safe"
+    site_approved = true
 
     response_time = Benchmark.realtime do
       response = http.start {http.request(req)}
     end
 
-    response_value = response.nil? ? nil : JSON.parse(response.body).empty?
+    # Safe Browsing API returns empty JSON object if no threat matches found.
+    # If threat matches found, log the threat type.
+    # If the api returns an error for a bad request or rate-limiting, default to
+    # informed-redirect model and record the error value
+    if response.nil?
+      response_message = 'No response from API'
+    elsif response.code == '400' || response.code == '429'
+      # Note: with a 400 response, the body has no 'matches' field
+      response_message = "Error code: #{response.code}"
+    elsif !JSON.parse(response.body).empty?
+      response_message = JSON.parse(response.body)['matches'][0]['threatType']
+      site_approved = false
+    end
 
-    # Record to Firehose the response time of request rounded to thousandths of a second
+    # Record to Firehose the response time of request rounded to thousandths of a second,
+    # url, and human-readable response message
     FirehoseClient.instance.put_record(
-      study: "safe-browsing-request",
-      study_group: "v1",
-      event: "api-response",
-      data_json: {
-        response_time: response_time.round(3),
-        request_url: url_to_check,
-        response_value: response_value
-      }.to_json
+      :analysis,
+      {
+        study: "safe-browsing-request",
+        study_group: "v1",
+        event: "api-response",
+        data_json: {
+          response_time: response_time.round(3),
+          request_url: url_to_check,
+          response_value: response_message
+        }.to_json
+      }
     )
 
-    # Safe Browsing API returns empty JSON object is no threat matches found
-    # Do not determine safe if response is nil
-    response.nil? ? false : response_value
+    site_approved
   end
 end

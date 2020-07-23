@@ -1,2 +1,3 @@
 // locale for maze
-module.exports = window.blockly.maze_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('maze_locale');

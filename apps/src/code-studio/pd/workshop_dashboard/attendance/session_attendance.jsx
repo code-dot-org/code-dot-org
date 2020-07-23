@@ -12,7 +12,7 @@ import Spinner from '../../components/spinner';
 import {Table} from 'react-bootstrap';
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
-import {PermissionPropType, WorkshopAdmin, Partner} from '../permission';
+import {PermissionPropType, WorkshopAdmin, ProgramManager} from '../permission';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -39,6 +39,7 @@ export class SessionAttendance extends React.Component {
     onSaving: PropTypes.func.isRequired,
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
+    scholarshipWorkshop: PropTypes.bool.isRequired,
     enrollmentCount: PropTypes.number.isRequired
   };
 
@@ -52,7 +53,6 @@ export class SessionAttendance extends React.Component {
     this.load();
     this.startRefreshInterval();
     this.isCSF = this.props.course === COURSE_CSF;
-    this.showPuzzlesCompleted = this.isCSF;
   }
 
   componentWillUnmount() {
@@ -156,9 +156,9 @@ export class SessionAttendance extends React.Component {
           onSaving={this.handleAttendanceChangeSaving}
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
-          showPuzzlesCompleted={this.showPuzzlesCompleted}
+          scholarshipWorkshop={this.props.scholarshipWorkshop}
           displayYesNoAttendance={
-            !this.props.permission.hasAny(WorkshopAdmin, Partner)
+            !this.props.permission.hasAny(WorkshopAdmin, ProgramManager)
           }
         />
       );
@@ -189,11 +189,13 @@ export class SessionAttendance extends React.Component {
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Email</th>
-                  {this.props.accountRequiredForAttendance && (
-                    <th>Code Studio Account</th>
-                  )}
                   <th>Verified Teacher Account</th>
-                  {this.showPuzzlesCompleted && <th>Puzzles Completed</th>}
+                  {this.props.scholarshipWorkshop && (
+                    <th>Code.org Scholarship?</th>
+                  )}
+                  {this.props.scholarshipWorkshop && (
+                    <th>Other Scholarship?</th>
+                  )}
                   {this.isCSF ? <th>Attended</th> : <th>Present</th>}
                 </tr>
               </thead>

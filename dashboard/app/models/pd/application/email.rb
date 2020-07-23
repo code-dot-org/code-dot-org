@@ -34,7 +34,20 @@ module Pd::Application
     end
 
     def self.send_all_queued_emails
-      unsent.find_each(&:send!)
+      errors = {}
+      unsent.find_each do |email|
+        email.send!
+      rescue => e
+        errors[email.id] = "#{e.message}, #{e.backtrace.first}"
+      end
+
+      if errors.any?
+        msg = "Error sending emails for applications. Errors:\n"
+        errors.each do |application_id, error|
+          msg << "    Application #{application_id}: #{error}\n"
+        end
+        raise msg
+      end
     end
   end
 end

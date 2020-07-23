@@ -38,7 +38,8 @@ ko:
         NetSim: 인터넷 시뮬레이터
         Custom: 화가
         CustomStudio: Play Lab
-        Gamelab: Game Lab
+        Gamelab: 게임 연구소
+        Spritelab: 스프라이트 연구소
     trophy:
       name:
         Bronze: 동
@@ -529,6 +530,15 @@ ko:
         mc_2016_congrats: 마인크래프트 Hour of Code - 축하합니다
         mc_2017_congratulations: 마인크래프트 Hour of Code - 축하합니다
         CSF_loops_AB: 반복
+        hoc_dance_warmup: 댄스 파티 - 준비운동
+        hoc_dance_congrats: 댄스 파티 - 파티 시작!
+        csd_pair_programming: 페어 프로그래밍
+        csd_applab_parameters: 함수(값 전달)
+        hoc_dance_congrats_2019: 댄스 파티 2019 - 파티 시작!
+        hoc_dance_warmup_2019: 댄스 파티 2019 - 준비운동!
+        hoc_dance_events_2019: 댄스 파티 2019 - 이벤트
+        hoc_dance_measures_2019: 댄스 파티 2019 - 마디
+        hoc_dance_properties_2019: 댄스 파티 2019 - 속성
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

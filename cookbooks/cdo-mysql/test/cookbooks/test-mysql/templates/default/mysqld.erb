@@ -1,0 +1,12 @@
+[mysqld]
+innodb_flush_log_at_trx_commit = 1
+log_bin = /var/log/mysql-<%= @mysql_instance %>/mysql-bin.log
+log_error = /var/log/mysql-<%= @mysql_instance %>/error.log
+relay-log = /var/log/mysql-<%= @mysql_instance %>/mysql-relay-bin.log
+log_output=TABLE,FILE
+general_log = 1
+general_log_file = /var/log/mysql-<%= @mysql_instance %>/general.log
+server-id = <%= @server_id %>
+<% if @read_only -%>
+innodb_read_only = 1 
+<% end -%>

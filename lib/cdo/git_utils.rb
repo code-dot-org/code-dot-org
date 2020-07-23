@@ -59,6 +59,7 @@ module GitUtils
   end
 
   def self.git_revision_short(project_directory=Dir.pwd)
+    return nil if project_directory.nil?
     # Cron jobs execute as root and may not be in the current project directory, preventing git commands from working.
     # Eventually other (or all) GitUtils methods may need to explicitly change to the project root, but currently
     # only this call to a GitUtils method is executed when a cron job runs:
@@ -92,11 +93,7 @@ module GitUtils
   end
 
   def self.circle_pr_branch_base_no_origin
-    pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
-    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
-    pr_json['base']['ref']
-  rescue => _
-    nil
+    ENV['DRONE_TARGET_BRANCH']
   end
 
   # Given a branch name, returns its likely base branch / merge destination
@@ -107,7 +104,8 @@ module GitUtils
       when 'test'
         'origin/production'
       else # levelbuilder, feature branches, etc.
-        'origin/staging'
+        # In Continuous Integration (Drone) builds, use the base branch of the Pull Request, which might be staging-next.
+        CDO.ci ? "origin/#{circle_pr_branch_base_no_origin}" : 'origin/staging'
     end
   end
 
@@ -118,26 +116,5 @@ module GitUtils
 
   def self.merge_branch
     "origin/#{pr_base_branch_or_default_no_origin}"
-  end
-
-  CIRCLE_CONFIG_FILE = '.circleci/config.yml'.freeze
-
-  def self.circle_yml_changed
-    system("git fetch origin #{pr_base_branch_or_default_no_origin}")
-    !`git diff ...#{merge_branch} -- #{CIRCLE_CONFIG_FILE}`.empty?
-  end
-
-  # Most changes can be merged from the base branch (usually staging) into the
-  # feature branch under test here and the build can proceed as usual.
-  # Changes to the CircleCI configuration file are a special case though, because
-  # it can control how the Circle container is created, and by the time we run
-  # this merge step we're already _in_ the container itself - so the only way
-  # to guarantee we're accurately testing the merge result is to have the config
-  # change in our feature branch from the moment the build starts.  Therefore we
-  # must stop and ask the user to manually merge the base branch into their own.
-  def self.ensure_latest_circle_yml
-    if circle_yml_changed
-      raise "#{CIRCLE_CONFIG_FILE} has changed.\nPlease merge the #{merge_branch} branch into your branch and try again."
-    end
   end
 end

@@ -313,8 +313,11 @@ module RakeUtils
     (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
   end
 
-  def self.wait_for_url(url)
-    system_ "until $(curl --output /dev/null --silent --head --fail #{url}); do sleep 5; done"
+  # Wait for 3 minutes by default
+  def self.wait_for_url(url, tries: 36, sleep_secs: 5)
+    Retryable.retryable(tries: tries, sleep: sleep_secs) do
+      Net::HTTP.get(URI(url))
+    end
   end
 
   def self.format_duration(total_seconds)

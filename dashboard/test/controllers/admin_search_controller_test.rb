@@ -116,4 +116,53 @@ class AdminSearchControllerTest < ActionController::TestCase
     post :lookup_section, params: {section_code: @teacher_section.code}
     assert_redirected_to_sign_in
   end
+
+  #
+  # pilot experiment tests
+  #
+
+  test 'non-admin cannot view list of piloters' do
+    sign_in @not_admin
+    get :show_pilot, params: {pilot_name: 'csd-piloters'}
+    assert_response :forbidden
+  end
+
+  test 'piloter shows up in list of piloters' do
+    create :teacher, pilot_experiment: 'csd-piloters', email: 'csd@example.com'
+    create :teacher, pilot_experiment: 'csp-piloters', email: 'csp@example.com'
+    get :show_pilot, params: {pilot_name: 'csd-piloters'}
+    assert_response :success
+    assert_select 'table tr td', 1
+    assert_select 'table tr td', 'csd@example.com'
+  end
+
+  #
+  # add_to_pilot tests
+  #
+
+  test 'can add teacher to pilot' do
+    teacher = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: teacher.email, pilot_name: pilot_name}
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+  end
+
+  test 'cannot add student to pilot' do
+    student = create :student
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: student.email, pilot_name: pilot_name}
+
+    refute SingleUserExperiment.find_by(min_user_id: student.id, name: pilot_name).present?
+  end
+
+  test 'non-admin cannot add teacher to pilot' do
+    teacher = create :teacher
+    pilot_name = 'csd-piloters'
+
+    sign_in @not_admin
+    post :add_to_pilot, params: {email: teacher.email, pilot_name: pilot_name}
+
+    refute SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+  end
 end

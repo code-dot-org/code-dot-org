@@ -1,16 +1,28 @@
-class LevelGroupDSL < BaseDSL
+class LevelGroupDSL < LevelDSL
   def initialize
     super
     @id = nil
     @title = nil
     @description_short = nil
     @description = nil
-    @hash[:pages] = []
-    @hash[:texts] = []
     @hash[:options] = {skip_dialog: true, skip_sound: true}
-    @current_page_level_names = []
-    @level_names = []
-    @i18n_strings = Hash.new({})
+    @current_page_level_and_text_names = []
+    @level_and_text_names = []
+    @pages = []
+  end
+
+  # @override
+  def parse_output
+    super.merge(pages: @pages)
+  end
+
+  # @override
+  def self.i18n_fields
+    super + %w(
+      description
+      description_short
+      title
+    )
   end
 
   integer :id
@@ -18,18 +30,20 @@ class LevelGroupDSL < BaseDSL
   string :description_short
   string :description
 
-  def parse_output
-    {name: @name, properties: @hash}
-  end
-
   def title(text) @hash[:title] = text end
 
   def page
-    @current_page_level_names = []
-    @hash[:pages] << {levels: @current_page_level_names}
+    @current_page_level_and_text_names = []
+    @pages << {levels: @current_page_level_and_text_names}
   end
 
   def text(name)
+    # Ensure level name hasn't already been used.
+    if @level_and_text_names.include? name
+      raise "Don't use the same level twice in a LevelGroup (#{name})."
+    end
+    @level_and_text_names << name
+
     # Ensure level is appropriate type.
     level = Script.cache_find_level(name)
     if level.nil?
@@ -40,17 +54,15 @@ class LevelGroupDSL < BaseDSL
       raise "LevelGroup text must be a level of type external. (#{name})"
     end
 
-    # Record the name of the external level, as well as the index of the actual level
-    # it appears immediately before.
-    @hash[:texts] << {level_name: name, index: @level_names.length}
+    @current_page_level_and_text_names << name
   end
 
   def level(name)
     # Ensure level name hasn't already been used.
-    if @level_names.include? name
+    if @level_and_text_names.include? name
       raise "Don't use the same level twice in a LevelGroup (#{name})."
     end
-    @level_names << name
+    @level_and_text_names << name
 
     # Ensure level is appropriate type.
     level = Level.where(name: name).first # For some reason find_by_name doesn't always work here!
@@ -65,7 +77,7 @@ class LevelGroupDSL < BaseDSL
       raise "LevelGroup cannot contain level type #{level_class}"
     end
 
-    @current_page_level_names << name
+    @current_page_level_and_text_names << name
   end
 
   def submittable(text)
@@ -79,13 +91,6 @@ class LevelGroupDSL < BaseDSL
     @hash[:anonymous] = text
   end
 
-  def i18n_strings
-    @i18n_strings['title'] = @title if @title
-    @i18n_strings['description_short'] = @description_short if @description_short
-    @i18n_strings['description'] = @description if @description
-    {'name' => {@name => @i18n_strings}}
-  end
-
   def self.serialize(level)
     properties = level.properties
     new_dsl = "name '#{level.name}'"
@@ -93,14 +98,11 @@ class LevelGroupDSL < BaseDSL
     new_dsl << "\nsubmittable '#{properties['submittable']}'" if properties['submittable']
     new_dsl << "\nanonymous '#{properties['anonymous']}'" if properties['anonymous']
 
-    texts = properties['texts'] || []
     level.pages.each do |page|
       new_dsl << "\n\npage"
-      page.levels.each_with_index do |sublevel, index|
-        texts.select {|text| text['index'] == page.offset + index}.each do |text|
-          new_dsl << "\ntext '#{text['level_name']}'"
-        end
-        new_dsl << "\nlevel '#{sublevel.name}'"
+      page.levels_and_texts.each do |sublevel|
+        command = sublevel.is_a?(External) ? 'text' : 'level'
+        new_dsl << "\n#{command} '#{sublevel.name}'"
       end
     end
     new_dsl

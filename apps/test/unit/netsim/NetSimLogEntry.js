@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -75,7 +75,7 @@ describe('NetSimLogEntry', function() {
   it('gracefully converts a malformed base64Payload to empty string', function() {
     var logEntry = new NetSimLogEntry(testShard, {
       base64Binary: {
-        string: 'totally not a base64 string',
+        string: 'not a base64 string because of the question mark?',
         len: 7
       }
     });

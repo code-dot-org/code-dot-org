@@ -75,7 +75,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
     # Role not specified so create Student user, 8 years old
     user = User.last
     assert_equal 'Cat Hat', user.name
-    assert_equal "12345", user.uid
+    assert_equal "12345", user.primary_contact_info.authentication_id
     assert_equal User::TYPE_STUDENT, user.user_type
     assert_equal 11, user.age
 
@@ -99,7 +99,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
     # Teachers are defined to be 21 years old, emails are stored
     user = User.last
     assert_equal 'Cat Hat', user.name
-    assert_equal "12345", user.uid
+    assert_equal "12345", user.primary_contact_info.authentication_id
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age
   end
@@ -119,7 +119,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
 
     user = User.last
     assert_equal "Cat Hat", user.name
-    assert_equal "12345", user.uid
+    assert_equal "12345", user.primary_contact_info.authentication_id
     assert_equal User::TYPE_TEACHER, user.user_type
   end
 
@@ -139,7 +139,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
 
     user = User.last
     assert_equal 'Cat Hat', user.name
-    assert_equal "12345", user.uid
+    assert_equal "12345", user.primary_contact_info.authentication_id
     assert_equal User::TYPE_STUDENT, user.user_type
     assert_equal 9, user.age
   end
@@ -159,8 +159,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
     end
 
     user = User.last
-    assert_equal "lti_#{TEST_CONSUMER_KEY}", user.provider
-    assert_equal "12345", user.uid
+    assert_equal "lti_#{TEST_CONSUMER_KEY}", user.primary_contact_info.credential_type
+    assert_equal "12345", user.primary_contact_info.authentication_id
     assert_nil user.password
   end
 

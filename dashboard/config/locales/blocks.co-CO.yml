@@ -66,6 +66,18 @@ co:
         text: girà à manca
       RyanLab_turnRight:
         text: girà à diritta
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       craft_ifStandingOn:
         options:
           TYPE:

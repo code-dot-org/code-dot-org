@@ -62,7 +62,7 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "DfGS34dE6KEVWQx/Qf6UOylIyaHiVzgY84ojBYXLCWOSAyvWyMgGlmgA1N0c\nhA7C\n",
+    "encrypted_examples": "t5luqDAaC7DiP5Az8FpdG5bWiH8D+zMC3Uu0l4yaEcWO/kuZl8XeV+uB/BbO\nna8Yp2fsANi3UQKrU8iL/yVgXQ==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -71,17 +71,18 @@
     "parent_level_id": 11315,
     "name_suffix": "_2019",
     "long_instructions": "# velocityX\r\n\r\nOne way to move sprites in Game Lab is with the counter pattern. For example `sprite1.x = sprite1.x + 1` moves a sprite by 1 pixel each frame of the draw loop. This pattern is so common that sprites have a `velocityX` property that does this for you.\r\n\r\n# Do This\r\n\r\n* Drag a `sprite.velocityX` block directly below where your sprite is created. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( [Show me where](#triggercallout=code_triggered) )\r\n* Write the name of your sprite in the block.\r\n* Assign the `velocityX` property a value of 1.\r\n* Run the code. What happens?\r\n* Re-run the code giving the `velocityX` property a different value. What's changing?",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/the-counter-pattern/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 23:40:57 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-30 22:05:42 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-10-27 18:13:44 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-03-05 07:15:16 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:40:57 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-30 22:05:42 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-10-27 18:13:44 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-03-05 07:15:16 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 21:00:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

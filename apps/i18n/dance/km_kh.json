@@ -1,2 +1,14 @@
 {
+  "danceFeedbackNeedNewDancer": "អ្នកត្រូវបង្កើតអ្នករាំម្នាក់",
+  "danceFeedbackNoDancers": "អ្នកមិនទាន់មានអ្នករាំទេ",
+  "danceFeedbackNoBackground": "អ្នកត្រូវបញ្ចូលផ្ទាំងរូបខាងក្រោយ",
+  "danceFeedbackTooManyDancers": "ប្រុងប្រយ័ត្ន! បើអ្នកដាក់ 'make a new' block ក្នុង 'គ្រប់ ២ វិមាត្រ', អ្នកនឹង បង្កើតអ្នករាំជាច្រើននាក់",
+  "danceFeedbackUseSetSize": "ប្រើ 'set backup_dancer2 size' block ដើម្បីធ្វើអោយអ្នករាំតូចជាងមុន",
+  "danceFeedbackUseSetTint": "ប្រើ 'set tint' block ដើម្បីផ្លាស់ប្តូរពណ៌អ្នករាំ",
+  "danceFeedbackUseStartMapping": "សាកបញ្ចូលកូដទាំងនេះ <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ចូលទៅក្នុងកម្មវិធីរបស់អ្នក",
+  "danceFeedbackStartNewMove": "អ្នករាំរបស់អ្នកមិនបានធ្វើកាយវិការផ្សេងឡើយបន្ទាប់ពីយើងបានដាក់៤វិមាត្រ",
+  "danceFeedbackNeedDifferentDance": "អ្នកត្រូវតែផ្លាស់ប្តូរក្បាច់រាំអោយមានលក្ខណៈផ្សេងៗគ្នា",
+  "danceFeedbackNeedEveryTwoMeasures": "ត្រូវប្រាកដថាអ្នកប្រើប្រាស់ 'every 2 measures' block",
+  "danceFeedbackNeedMakeANewDancer": "ប្រើ 'make a new' block ដើម្បីបង្កើតអ្នករាំម្នាក់ទៀត",
+  "danceFeedbackKeyEvent": "ត្រូវប្រាកដថាអ្នកភ្ជាប់កូដខ្លះទៅនឹង 'when key' block និងធ្វើការចុច key នៅពេលដែលអ្នករាំរបស់អ្នកកំពុងតែរាំ"
 }

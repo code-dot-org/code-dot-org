@@ -10,6 +10,9 @@ ur:
           stages:
             Conditionals:
               name: شرائط
+          lessons:
+            Conditionals:
+              name: شرائط
         frozen:
           title: اینا اور ایلسا کے ساتھ کوڈ
           description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ
@@ -22,20 +25,43 @@ ur:
           stages:
             Variables:
               name: متغیرات
+          lessons:
+            Variables:
+              name: متغیرات
         algebra:
           stages:
+            'Eval: Conditionals':
+              name: شرائط
+          lessons:
             'Eval: Conditionals':
               name: شرائط
         infinity:
           stages:
             Infinity:
               name: Infinity
+          lessons:
+            Infinity:
+              name: Infinity
         K5PD:
           stages:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+          lessons:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
         20-hour:
           stages:
+            Conditionals:
+              name: شرائط
+            Introduction to Computer Science:
+              name: کمپیوٹر سائنس کا تعارف
+            The Artist:
+              name: مصور
+            The Farmer:
+              name: کسان
+            The Maze:
+              name: بھول بھلیا
+          lessons:
             Conditionals:
               name: شرائط
             Introduction to Computer Science:
@@ -52,36 +78,70 @@ ur:
               name: مصور
             The Maze:
               name: بھول بھلیا
+          lessons:
+            The Artist:
+              name: مصور
+            The Maze:
+              name: بھول بھلیا
         events:
-          title: موقعے
-          description: موقعے
-          description_short: موقعے
+          title: ایونٹس/واقعات
+          description: ایونٹس/واقعات
+          description_short: ایونٹس/واقعات
+        step:
+          title: اسٹیپ
+          stages:
+            Step:
+              name: اسٹیپ
+          lessons:
+            Step:
+              name: اسٹیپ
         algebraPD:
           stages:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
+          lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         algebraPD3:
           stages:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+          lessons:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
         algebraPD-NexTech:
           stages:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
+          lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         algebraPD-iZone:
           stages:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+          lessons:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
         allthethings:
           stages:
+            Web Lab:
+              name: ویب لیب
+          lessons:
             Web Lab:
               name: ویب لیب
         algebraPD2b:
           stages:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+          lessons:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
         algebraPD2:
           stages:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
+          lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         mc:
@@ -90,24 +150,45 @@ ur:
           stages:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+          lessons:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
         algebraFacilitator:
           stages:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
+          lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         gradeKinder:
           stages:
             Events:
-              name: موقعے
+              name: ایونٹس/واقعات
+            Loops:
+              name: لوپس
+          lessons:
+            Events:
+              name: ایونٹس/واقعات
             Loops:
               name: لوپس
         grade1:
           stages:
             Events:
-              name: موقعے
+              name: ایونٹس/واقعات
+            Loops:
+              name: لوپس
+          lessons:
+            Events:
+              name: ایونٹس/واقعات
             Loops:
               name: لوپس
         csd3-2017:
           stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+          lessons:
             Variables:
               name: متغیرات
             Conditionals:
@@ -117,7 +198,16 @@ ur:
             Conditionals:
               name: شرائط
             Events:
-              name: موقعے
+              name: ایونٹس/واقعات
+            Loops:
+              name: لوپس
+            Variables:
+              name: متغیرات
+          lessons:
+            Conditionals:
+              name: شرائط
+            Events:
+              name: ایونٹس/واقعات
             Loops:
               name: لوپس
             Variables:
@@ -126,32 +216,56 @@ ur:
           stages:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+          lessons:
+            Teacher Dashboard:
+              name: ٹیچر کا ڈیش بورڈ
         fesbinary:
           stages:
+            Binary Images:
+              name: ثنائی تصاویر
+          lessons:
             Binary Images:
               name: ثنائی تصاویر
         csd2-2017:
           stages:
             Lists:
               name: فہرستیں
+          lessons:
+            Lists:
+              name: فہرستیں
         coursee-draft:
           stages:
+            Conditionals:
+              name: شرائط
+          lessons:
             Conditionals:
               name: شرائط
         coursef-draft:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
+          lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
         csd6-draft:
           stages:
+            Lists:
+              name: فہرستیں
+          lessons:
             Lists:
               name: فہرستیں
         coursee-ramp:
           stages:
             Conditionals:
               name: شرائط
+          lessons:
+            Conditionals:
+              name: شرائط
         csd6-2017:
           stages:
+            Lists:
+              name: فہرستیں
+          lessons:
             Lists:
               name: فہرستیں
         csd3-draft:
@@ -160,8 +274,16 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+          lessons:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
         csd2-draft:
           stages:
+            Lists:
+              name: فہرستیں
+          lessons:
             Lists:
               name: فہرستیں
         csd3-chapters:
@@ -172,44 +294,83 @@ ur:
               name: شرائط
             'null':
               name: نَل
+          lessons:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+            'null':
+              name: نَل
         coursee-2017:
           stages:
+            Envelope Variables:
+              name: لفافہ متغیرات
+          lessons:
             Envelope Variables:
               name: لفافہ متغیرات
         express-2017:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
+          lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
         e-f-ramp:
           stages:
+            Conditionals:
+              name: شرائط
+          lessons:
             Conditionals:
               name: شرائط
         new-e:
           stages:
             Conditionals:
               name: شرائط
+          lessons:
+            Conditionals:
+              name: شرائط
         new-f:
           stages:
+            Envelope Variables:
+              name: لفافہ متغیرات
+          lessons:
             Envelope Variables:
               name: لفافہ متغیرات
         hero:
           stages:
             Minecraft Hour of Code:
               name: Minecraft کوڈ کی گھڑی
+          lessons:
+            Minecraft Hour of Code:
+              name: Minecraft کوڈ کی گھڑی
         course-e-2018:
           stages:
+            Conditionals:
+              name: شرائط
+          lessons:
             Conditionals:
               name: شرائط
         course-f-2018:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
+          lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
         csd6-old:
           stages:
             Lists:
               name: فہرستیں
+          lessons:
+            Lists:
+              name: فہرستیں
         csd3-1819draft:
           stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+          lessons:
             Variables:
               name: متغیرات
             Conditionals:
@@ -220,8 +381,16 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+          lessons:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
         csd2-2018:
           stages:
+            Lists:
+              name: فہرستیں
+          lessons:
             Lists:
               name: فہرستیں
         express-2018:
@@ -230,38 +399,155 @@ ur:
               name: لفافہ متغیرات
             'Unplugged: Binary':
               name: ثنائی تصاویر
+          lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
         coursed-2018:
           stages:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
+          lessons:
             'Unplugged: Binary':
               name: ثنائی تصاویر
         coursee-2018:
           stages:
             Minecraft Hour of Code:
               name: Minecraft کوڈ کی گھڑی
+          lessons:
+            Minecraft Hour of Code:
+              name: Minecraft کوڈ کی گھڑی
         coursef-2018:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
+          lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
+        dance:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+          title: ڈانس پارٹی
+          description_short: کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور
+            مزید 25 کی خاصیت بنانا!
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+        dance--draft:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+        dance-draft:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
         coursef-2019:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
             The Artist:
               name: مصور
-        coursee-2019:
+          lesson_groups:
+            csf_variables:
+              display_name: متغیرات
+          lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
+            The Artist:
+              name: مصور
+        dance-low:
           stages:
-            Conditionals:
-              name: شرائط
+            Dance Party:
+              name: ڈانس پارٹی
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+        coursed-2019:
+          stages:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
+            Dance Party:
+              name: ڈانس پارٹی
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+          lessons:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
+            Dance Party:
+              name: ڈانس پارٹی
         express-2019:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
+            Dance Party:
+              name: ڈانس پارٹی
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
+          lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
+            Dance Party:
+              name: ڈانس پارٹی
         andrea-test:
           stages:
             'null':
               name: نَل
+          lessons:
+            'null':
+              name: نَل
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
         csd2-2019:
           stages:
+            Lists:
+              name: فہرستیں
+          lessons:
             Lists:
               name: فہرستیں
         csd3-2019:
@@ -270,3 +556,332 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+          lessons:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csd2-pilot:
+          stages:
+            Lists:
+              name: فہرستیں
+          lessons:
+            Lists:
+              name: فہرستیں
+        csd3-pilot:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+          lessons:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        dance-2019:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: لوپس
+            Conditionals:
+              name: شرائط
+            Events:
+              name: ایونٹس/واقعات
+            Variables:
+              name: متغیرات
+          lessons:
+            Loops:
+              name: لوپس
+            Conditionals:
+              name: شرائط
+            Events:
+              name: ایونٹس/واقعات
+            Variables:
+              name: متغیرات
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: شرائط
+          lessons:
+            Conditionals:
+              name: شرائط
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: شرائط
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_events:
+              display_name: ایونٹس/واقعات
+          lessons:
+            Conditionals:
+              name: شرائط
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: شرائط
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_events:
+              display_name: ایونٹس/واقعات
+          lessons:
+            Conditionals:
+              name: شرائط
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csd3-2020:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+            Text:
+              name: متن
+          lessons:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+            Text:
+              name: متن
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursed-2020:
+          stages:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
+            Dance Party:
+              name: ڈانس پارٹی
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+          lessons:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
+            Dance Party:
+              name: ڈانس پارٹی
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: لفافہ متغیرات
+          lesson_groups:
+            csf_variables:
+              display_name: متغیرات
+          lessons:
+            Envelope Variables:
+              name: لفافہ متغیرات
+        express-2020:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        csp5-virtual:
+          stages:
+            Variables:
+              name: متغیرات
+          lessons:
+            Variables:
+              name: متغیرات
+        code-break:
+          stages:
+            Events:
+              name: ایونٹس/واقعات
+          lessons:
+            Events:
+              name: ایونٹس/واقعات
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: لوپس
+            Events:
+              name: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+            Variables:
+              name: متغیرات
+          lessons:
+            Loops:
+              name: لوپس
+            Events:
+              name: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+            Variables:
+              name: متغیرات
+        csd3-virtual:
+          stages:
+            Variables:
+              name: متغیرات
+            Text:
+              name: متن
+            Conditionals:
+              name: شرائط
+          lessons:
+            Variables:
+              name: متغیرات
+            Text:
+              name: متن
+            Conditionals:
+              name: شرائط
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: سبق
+          lessons:
+            Lesson:
+              name: سبق
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: سبق
+          lessons:
+            Lesson:
+              name: سبق
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: سبق
+          lessons:
+            Lesson:
+              name: سبق
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: سبق
+          lessons:
+            Lesson:
+              name: سبق

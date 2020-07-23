@@ -36,7 +36,7 @@
     "palette_category_at_start": "functions",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "encrypted_examples": "pysinFMmkeIf2WB+RTLy2Y8X7PTX/I3OTtdk5WasH82mXcNKQaKcdtizx49m\nqBR8\n",
+    "encrypted_examples": "nyznkwbWyIK+hRa+8N0GJ0OZ436nUw1aosELMF5dspb5gE0qeI+4s0N8S6f4\nEYfZtaOKQIu5h4dqHY6bvX+IJg==\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "show_debug_watch": "true",
@@ -44,7 +44,6 @@
     "expand_debugger": "false",
     "parent_level_id": 11421,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
       "/docs/concepts/game-lab/sprites/sprite-properties/",
@@ -58,11 +57,13 @@
       "/docs/concepts/game-lab/shapes-and-parameters/",
       "/docs/concepts/javascript/functions/"
     ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 20:45:22 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:59:29 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 20:45:22 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 23:59:29 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-28 18:29:37 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

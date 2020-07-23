@@ -1,0 +1,7413 @@
+lesson_21:
+  id: 21
+  name: Hour of Code 2013
+  absolute_position: 1
+  script_id: 2
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-02-21 16:28:46.000000000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-05-21 19:48:29.000000000 Z
+    zone: *2
+    time: *3
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2037
+lesson_27:
+  id: 27
+  name: Bounce
+  absolute_position: 1
+  script_id: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2020-02-21 16:28:48.000000000 Z
+    zone: *2
+    time: *4
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2020-05-21 19:48:31.000000000 Z
+    zone: *2
+    time: *5
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2039
+lesson_28:
+  id: 28
+  name: Studio
+  absolute_position: 2
+  script_id: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2020-02-21 16:28:48.000000000 Z
+    zone: *2
+    time: *6
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2020-05-21 19:48:31.000000000 Z
+    zone: *2
+    time: *7
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2039
+lesson_29:
+  id: 29
+  name: Calc
+  absolute_position: 3
+  script_id: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2020-02-21 16:28:48.000000000 Z
+    zone: *2
+    time: *8
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2020-05-21 19:48:31.000000000 Z
+    zone: *2
+    time: *9
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2039
+lesson_30:
+  id: 30
+  name: Eval
+  absolute_position: 4
+  script_id: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &10 2020-02-21 16:28:48.000000000 Z
+    zone: *2
+    time: *10
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &11 2020-05-21 19:48:31.000000000 Z
+    zone: *2
+    time: *11
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2039
+lesson_32:
+  id: 32
+  name: Jigsaw
+  absolute_position: 1
+  script_id: 7
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &12 2020-02-21 16:28:48.000000000 Z
+    zone: *2
+    time: *12
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &13 2020-05-21 19:48:31.000000000 Z
+    zone: *2
+    time: *13
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2041
+lesson_3071:
+  id: 3071
+  name: Maze
+  absolute_position: 1
+  script_id: 341
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &14 2020-02-21 16:56:57.000000000 Z
+    zone: *2
+    time: *14
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &15 2020-05-21 19:51:23.000000000 Z
+    zone: *2
+    time: *15
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2218
+lesson_3421:
+  id: 3421
+  name: Hour of Code 2015
+  absolute_position: 1
+  script_id: 393
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &16 2020-02-21 17:04:44.000000000 Z
+    zone: *2
+    time: *16
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &17 2020-05-21 19:51:46.000000000 Z
+    zone: *2
+    time: *17
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2265
+lesson_3058:
+  id: 3058
+  name: Artist
+  absolute_position: 1
+  script_id: 330
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &18 2020-02-21 16:56:39.000000000 Z
+    zone: *2
+    time: *18
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &19 2020-05-21 19:51:21.000000000 Z
+    zone: *2
+    time: *19
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2208
+lesson_3253:
+  id: 3253
+  name: Play Lab
+  absolute_position: 1
+  script_id: 365
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &20 2020-02-21 17:01:22.000000000 Z
+    zone: *2
+    time: *20
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &21 2020-05-21 19:51:35.000000000 Z
+    zone: *2
+    time: *21
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2238
+lesson_488:
+  id: 488
+  name: Artist
+  absolute_position: 1
+  script_id: 77
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &22 2020-02-21 16:30:15.000000000 Z
+    zone: *2
+    time: *22
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &23 2020-05-21 19:48:49.000000000 Z
+    zone: *2
+    time: *23
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2108
+lesson_273:
+  id: 273
+  name: 'Unplugged: Video Games and Coordinate Planes'
+  absolute_position: 1
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &24 2020-02-21 16:29:31.000000000 Z
+    zone: *2
+    time: *24
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &25 2020-05-21 19:48:40.000000000 Z
+    zone: *2
+    time: *25
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_274:
+  id: 274
+  name: 'Calc: Evaluation Blocks'
+  absolute_position: 2
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &26 2020-02-21 16:29:31.000000000 Z
+    zone: *2
+    time: *26
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &27 2020-05-21 19:48:40.000000000 Z
+    zone: *2
+    time: *27
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_275:
+  id: 275
+  name: 'Eval: Strings and Images'
+  absolute_position: 3
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &28 2020-02-21 16:29:32.000000000 Z
+    zone: *2
+    time: *28
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &29 2020-05-21 19:48:40.000000000 Z
+    zone: *2
+    time: *29
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_276:
+  id: 276
+  name: 'Unplugged: Contracts'
+  absolute_position: 4
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &30 2020-02-21 16:29:32.000000000 Z
+    zone: *2
+    time: *30
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &31 2020-05-21 19:48:40.000000000 Z
+    zone: *2
+    time: *31
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_277:
+  id: 277
+  name: 'Eval: Writing Contracts'
+  absolute_position: 5
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &32 2020-02-21 16:29:32.000000000 Z
+    zone: *2
+    time: *32
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &33 2020-05-21 19:48:40.000000000 Z
+    zone: *2
+    time: *33
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_278:
+  id: 278
+  name: 'Calc: Defining Variables'
+  absolute_position: 6
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &34 2020-02-21 16:29:32.000000000 Z
+    zone: *2
+    time: *34
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &35 2020-05-21 19:48:40.000000000 Z
+    zone: *2
+    time: *35
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_279:
+  id: 279
+  name: 'Play Lab: Defining Variables (Big Game)'
+  absolute_position: 7
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &36 2020-02-21 16:29:32.000000000 Z
+    zone: *2
+    time: *36
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &37 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *37
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_280:
+  id: 280
+  name: 'Eval: Defining Functions'
+  absolute_position: 8
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &38 2020-02-21 16:29:33.000000000 Z
+    zone: *2
+    time: *38
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &39 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *39
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_281:
+  id: 281
+  name: 'Unplugged: The Design Recipe'
+  absolute_position: 9
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &40 2020-02-21 16:29:33.000000000 Z
+    zone: *2
+    time: *40
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &41 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *41
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_282:
+  id: 282
+  name: 'Play Lab: Defining Functions'
+  absolute_position: 10
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &42 2020-02-21 16:29:33.000000000 Z
+    zone: *2
+    time: *42
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &43 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *43
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_283:
+  id: 283
+  name: 'Eval: Functions'
+  absolute_position: 11
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &44 2020-02-21 16:29:33.000000000 Z
+    zone: *2
+    time: *44
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &45 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *45
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_284:
+  id: 284
+  name: 'Play Lab: Animation (Big Game)'
+  absolute_position: 12
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &46 2020-02-21 16:29:33.000000000 Z
+    zone: *2
+    time: *46
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &47 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *47
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_285:
+  id: 285
+  name: 'Unplugged: Booleans'
+  absolute_position: 13
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &48 2020-02-21 16:29:34.000000000 Z
+    zone: *2
+    time: *48
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &49 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *49
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_286:
+  id: 286
+  name: 'Eval: Boolean Operators'
+  absolute_position: 14
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &50 2020-02-21 16:29:34.000000000 Z
+    zone: *2
+    time: *50
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &51 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *51
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_287:
+  id: 287
+  name: 'Play Lab: Booleans'
+  absolute_position: 15
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &52 2020-02-21 16:29:34.000000000 Z
+    zone: *2
+    time: *52
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &53 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *53
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_288:
+  id: 288
+  name: 'Play Lab: Boolean (Big Game)'
+  absolute_position: 16
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &54 2020-02-21 16:29:34.000000000 Z
+    zone: *2
+    time: *54
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &55 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *55
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_289:
+  id: 289
+  name: 'Unplugged: Conditionals and Piecewise Functions'
+  absolute_position: 17
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &56 2020-02-21 16:29:34.000000000 Z
+    zone: *2
+    time: *56
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &57 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *57
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_290:
+  id: 290
+  name: 'Eval: Conditionals'
+  absolute_position: 18
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &58 2020-02-21 16:29:34.000000000 Z
+    zone: *2
+    time: *58
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &59 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *59
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_291:
+  id: 291
+  name: 'Unplugged: Collision Detection and the Distance Formula'
+  absolute_position: 19
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &60 2020-02-21 16:29:34.000000000 Z
+    zone: *2
+    time: *60
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &61 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *61
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_292:
+  id: 292
+  name: 'Play Lab: Collision Detection (Big Game)'
+  absolute_position: 20
+  script_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &62 2020-02-21 16:29:34.000000000 Z
+    zone: *2
+    time: *62
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &63 2020-05-21 19:48:41.000000000 Z
+    zone: *2
+    time: *63
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 2083
+lesson_31:
+  id: 31
+  name: Flappy Code
+  absolute_position: 1
+  script_id: 6
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &64 2020-02-21 16:28:48.000000000 Z
+    zone: *2
+    time: *64
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &65 2020-05-22 01:53:13.000000000 Z
+    zone: *2
+    time: *65
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2279
+lesson_1:
+  id: 1
+  name: Introduction to Computer Science
+  absolute_position: 1
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &66 2020-02-21 16:28:40.000000000 Z
+    zone: *2
+    time: *66
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &67 2020-05-21 19:48:27.000000000 Z
+    zone: *2
+    time: *67
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_2:
+  id: 2
+  name: The Maze
+  absolute_position: 2
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &68 2020-02-21 16:28:40.000000000 Z
+    zone: *2
+    time: *68
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &69 2020-05-21 19:48:27.000000000 Z
+    zone: *2
+    time: *69
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_3:
+  id: 3
+  name: Computational Thinking
+  absolute_position: 3
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &70 2020-02-21 16:28:41.000000000 Z
+    zone: *2
+    time: *70
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &71 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *71
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_4:
+  id: 4
+  name: Graph Paper Programming
+  absolute_position: 4
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &72 2020-02-21 16:28:41.000000000 Z
+    zone: *2
+    time: *72
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &73 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *73
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_5:
+  id: 5
+  name: The Artist
+  absolute_position: 5
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &74 2020-02-21 16:28:41.000000000 Z
+    zone: *2
+    time: *74
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &75 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *75
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_6:
+  id: 6
+  name: Algorithms
+  absolute_position: 6
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &76 2020-02-21 16:28:42.000000000 Z
+    zone: *2
+    time: *76
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &77 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *77
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_7:
+  id: 7
+  name: The Artist 2
+  absolute_position: 7
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &78 2020-02-21 16:28:42.000000000 Z
+    zone: *2
+    time: *78
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &79 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *79
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_8:
+  id: 8
+  name: Functions
+  absolute_position: 8
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &80 2020-02-21 16:28:42.000000000 Z
+    zone: *2
+    time: *80
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &81 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *81
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_9:
+  id: 9
+  name: The Farmer
+  absolute_position: 9
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &82 2020-02-21 16:28:42.000000000 Z
+    zone: *2
+    time: *82
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &83 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *83
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_10:
+  id: 10
+  name: Conditionals
+  absolute_position: 10
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &84 2020-02-21 16:28:43.000000000 Z
+    zone: *2
+    time: *84
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &85 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *85
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_11:
+  id: 11
+  name: The Artist 3
+  absolute_position: 11
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &86 2020-02-21 16:28:43.000000000 Z
+    zone: *2
+    time: *86
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &87 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *87
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_12:
+  id: 12
+  name: Song Writing
+  absolute_position: 12
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &88 2020-02-21 16:28:43.000000000 Z
+    zone: *2
+    time: *88
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &89 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *89
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_13:
+  id: 13
+  name: The Farmer 2
+  absolute_position: 13
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &90 2020-02-21 16:28:43.000000000 Z
+    zone: *2
+    time: *90
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &91 2020-05-21 19:48:28.000000000 Z
+    zone: *2
+    time: *91
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_14:
+  id: 14
+  name: Abstraction
+  absolute_position: 14
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &92 2020-02-21 16:28:44.000000000 Z
+    zone: *2
+    time: *92
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &93 2020-05-21 19:48:29.000000000 Z
+    zone: *2
+    time: *93
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_15:
+  id: 15
+  name: The Artist 4
+  absolute_position: 15
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &94 2020-02-21 16:28:44.000000000 Z
+    zone: *2
+    time: *94
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &95 2020-05-21 19:48:29.000000000 Z
+    zone: *2
+    time: *95
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_16:
+  id: 16
+  name: Relay Programming
+  absolute_position: 16
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &96 2020-02-21 16:28:44.000000000 Z
+    zone: *2
+    time: *96
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &97 2020-05-21 19:48:29.000000000 Z
+    zone: *2
+    time: *97
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_17:
+  id: 17
+  name: The Farmer 3
+  absolute_position: 17
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &98 2020-02-21 16:28:44.000000000 Z
+    zone: *2
+    time: *98
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &99 2020-05-21 19:48:29.000000000 Z
+    zone: *2
+    time: *99
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_18:
+  id: 18
+  name: The Internet
+  absolute_position: 18
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &100 2020-02-21 16:28:45.000000000 Z
+    zone: *2
+    time: *100
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &101 2020-05-21 19:48:29.000000000 Z
+    zone: *2
+    time: *101
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_19:
+  id: 19
+  name: The Artist 5
+  absolute_position: 19
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &102 2020-02-21 16:28:45.000000000 Z
+    zone: *2
+    time: *102
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &103 2020-05-21 19:48:29.000000000 Z
+    zone: *2
+    time: *103
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_20:
+  id: 20
+  name: Wrap-up
+  absolute_position: 20
+  script_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &104 2020-02-21 16:28:45.000000000 Z
+    zone: *2
+    time: *104
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &105 2020-05-21 19:48:29.000000000 Z
+    zone: *2
+    time: *105
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 2036
+lesson_557:
+  id: 557
+  name: Happy Maps
+  absolute_position: 1
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &106 2020-02-21 16:30:31.000000000 Z
+    zone: *2
+    time: *106
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &107 2020-05-21 19:48:57.000000000 Z
+    zone: *2
+    time: *107
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_558:
+  id: 558
+  name: Move it, Move it
+  absolute_position: 2
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &108 2020-02-21 16:30:31.000000000 Z
+    zone: *2
+    time: *108
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &109 2020-05-21 19:48:57.000000000 Z
+    zone: *2
+    time: *109
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_559:
+  id: 559
+  name: 'Jigsaw: Learn to drag and drop'
+  absolute_position: 3
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &110 2020-02-21 16:30:31.000000000 Z
+    zone: *2
+    time: *110
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &111 2020-05-21 19:48:57.000000000 Z
+    zone: *2
+    time: *111
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_560:
+  id: 560
+  name: 'Maze: Sequence'
+  absolute_position: 4
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &112 2020-02-21 16:30:31.000000000 Z
+    zone: *2
+    time: *112
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &113 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *113
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_561:
+  id: 561
+  name: 'Maze: Debugging'
+  absolute_position: 5
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &114 2020-02-21 16:30:32.000000000 Z
+    zone: *2
+    time: *114
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &115 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *115
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_562:
+  id: 562
+  name: 'Real-life Algorithms: Plant a Seed'
+  absolute_position: 6
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &116 2020-02-21 16:30:32.000000000 Z
+    zone: *2
+    time: *116
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &117 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *117
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_563:
+  id: 563
+  name: 'Bee: Sequence'
+  absolute_position: 7
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &118 2020-02-21 16:30:32.000000000 Z
+    zone: *2
+    time: *118
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &119 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *119
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_564:
+  id: 564
+  name: 'Artist: Sequence'
+  absolute_position: 8
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &120 2020-02-21 16:30:32.000000000 Z
+    zone: *2
+    time: *120
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &121 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *121
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_565:
+  id: 565
+  name: Building a Foundation
+  absolute_position: 9
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &122 2020-02-21 16:30:33.000000000 Z
+    zone: *2
+    time: *122
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &123 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *123
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_566:
+  id: 566
+  name: 'Artist: Shapes'
+  absolute_position: 10
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &124 2020-02-21 16:30:33.000000000 Z
+    zone: *2
+    time: *124
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &125 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *125
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_567:
+  id: 567
+  name: Spelling Bee
+  absolute_position: 11
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &126 2020-02-21 16:30:33.000000000 Z
+    zone: *2
+    time: *126
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &127 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *127
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_568:
+  id: 568
+  name: Getting Loopy
+  absolute_position: 12
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &128 2020-02-21 16:30:34.000000000 Z
+    zone: *2
+    time: *128
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &129 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *129
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_569:
+  id: 569
+  name: 'Maze: Loops'
+  absolute_position: 13
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &130 2020-02-21 16:30:34.000000000 Z
+    zone: *2
+    time: *130
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &131 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *131
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_570:
+  id: 570
+  name: 'Bee: Loops'
+  absolute_position: 14
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &132 2020-02-21 16:30:34.000000000 Z
+    zone: *2
+    time: *132
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &133 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *133
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_571:
+  id: 571
+  name: The Big Event
+  absolute_position: 15
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &134 2020-02-21 16:30:35.000000000 Z
+    zone: *2
+    time: *134
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &135 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *135
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_572:
+  id: 572
+  name: 'Studio: Create a Story'
+  absolute_position: 16
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &136 2020-02-21 16:30:35.000000000 Z
+    zone: *2
+    time: *136
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &137 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *137
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_573:
+  id: 573
+  name: Going Places Safely
+  absolute_position: 17
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &138 2020-02-21 16:30:35.000000000 Z
+    zone: *2
+    time: *138
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &139 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *139
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_574:
+  id: 574
+  name: 'Artist: Loops'
+  absolute_position: 18
+  script_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &140 2020-02-21 16:30:35.000000000 Z
+    zone: *2
+    time: *140
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &141 2020-05-21 19:48:58.000000000 Z
+    zone: *2
+    time: *141
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2118
+lesson_575:
+  id: 575
+  name: Graph Paper Programming
+  absolute_position: 1
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &142 2020-02-21 16:30:36.000000000 Z
+    zone: *2
+    time: *142
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &143 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *143
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_576:
+  id: 576
+  name: 'Real-life Algorithms: Paper Planes'
+  absolute_position: 2
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &144 2020-02-21 16:30:37.000000000 Z
+    zone: *2
+    time: *144
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &145 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *145
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_577:
+  id: 577
+  name: 'Maze: Sequence'
+  absolute_position: 3
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &146 2020-02-21 16:30:37.000000000 Z
+    zone: *2
+    time: *146
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &147 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *147
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_578:
+  id: 578
+  name: 'Artist: Sequence'
+  absolute_position: 4
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &148 2020-02-21 16:30:37.000000000 Z
+    zone: *2
+    time: *148
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &149 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *149
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_579:
+  id: 579
+  name: Getting Loopy
+  absolute_position: 5
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &150 2020-02-21 16:30:37.000000000 Z
+    zone: *2
+    time: *150
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &151 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *151
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_580:
+  id: 580
+  name: 'Maze: Loops'
+  absolute_position: 6
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &152 2020-02-21 16:30:37.000000000 Z
+    zone: *2
+    time: *152
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &153 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *153
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_581:
+  id: 581
+  name: 'Artist: Loops'
+  absolute_position: 7
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &154 2020-02-21 16:30:39.000000000 Z
+    zone: *2
+    time: *154
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &155 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *155
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_582:
+  id: 582
+  name: 'Bee: Loops'
+  absolute_position: 8
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &156 2020-02-21 16:30:39.000000000 Z
+    zone: *2
+    time: *156
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &157 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *157
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_583:
+  id: 583
+  name: Relay programming
+  absolute_position: 9
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &158 2020-02-21 16:30:40.000000000 Z
+    zone: *2
+    time: *158
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &159 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *159
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_584:
+  id: 584
+  name: 'Bee: Debugging'
+  absolute_position: 10
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &160 2020-02-21 16:30:40.000000000 Z
+    zone: *2
+    time: *160
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &161 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *161
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_585:
+  id: 585
+  name: 'Artist: Debugging'
+  absolute_position: 11
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &162 2020-02-21 16:30:40.000000000 Z
+    zone: *2
+    time: *162
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &163 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *163
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_586:
+  id: 586
+  name: Conditionals
+  absolute_position: 12
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &164 2020-02-21 16:30:40.000000000 Z
+    zone: *2
+    time: *164
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &165 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *165
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_587:
+  id: 587
+  name: 'Bee: Conditionals'
+  absolute_position: 13
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &166 2020-02-21 16:30:40.000000000 Z
+    zone: *2
+    time: *166
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &167 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *167
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_588:
+  id: 588
+  name: Binary Bracelets
+  absolute_position: 14
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &168 2020-02-21 16:30:41.000000000 Z
+    zone: *2
+    time: *168
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &169 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *169
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_589:
+  id: 589
+  name: The Big Event
+  absolute_position: 15
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &170 2020-02-21 16:30:41.000000000 Z
+    zone: *2
+    time: *170
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &171 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *171
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_590:
+  id: 590
+  name: Flappy
+  absolute_position: 16
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &172 2020-02-21 16:30:41.000000000 Z
+    zone: *2
+    time: *172
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &173 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *173
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_591:
+  id: 591
+  name: 'Studio: Create a Story'
+  absolute_position: 17
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &174 2020-02-21 16:30:41.000000000 Z
+    zone: *2
+    time: *174
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &175 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *175
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_592:
+  id: 592
+  name: Your Digital Footprint
+  absolute_position: 18
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &176 2020-02-21 16:30:42.000000000 Z
+    zone: *2
+    time: *176
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &177 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *177
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_593:
+  id: 593
+  name: 'Artist: Nested Loops'
+  absolute_position: 19
+  script_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &178 2020-02-21 16:30:42.000000000 Z
+    zone: *2
+    time: *178
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &179 2020-05-21 19:48:59.000000000 Z
+    zone: *2
+    time: *179
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 2119
+lesson_594:
+  id: 594
+  name: Computational Thinking
+  absolute_position: 1
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &180 2020-02-21 16:30:43.000000000 Z
+    zone: *2
+    time: *180
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &181 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *181
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_595:
+  id: 595
+  name: Maze
+  absolute_position: 2
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &182 2020-02-21 16:30:44.000000000 Z
+    zone: *2
+    time: *182
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &183 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *183
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_596:
+  id: 596
+  name: Artist
+  absolute_position: 3
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &184 2020-02-21 16:30:44.000000000 Z
+    zone: *2
+    time: *184
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &185 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *185
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_597:
+  id: 597
+  name: Functional Suncatchers
+  absolute_position: 4
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &186 2020-02-21 16:30:44.000000000 Z
+    zone: *2
+    time: *186
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &187 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *187
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_598:
+  id: 598
+  name: 'Artist: Functions'
+  absolute_position: 5
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &188 2020-02-21 16:30:44.000000000 Z
+    zone: *2
+    time: *188
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &189 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *189
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_599:
+  id: 599
+  name: 'Bee: Functions'
+  absolute_position: 6
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &190 2020-02-21 16:30:45.000000000 Z
+    zone: *2
+    time: *190
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &191 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *191
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_600:
+  id: 600
+  name: 'Bee: Conditionals'
+  absolute_position: 7
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &192 2020-02-21 16:30:45.000000000 Z
+    zone: *2
+    time: *192
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &193 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *193
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_601:
+  id: 601
+  name: 'Maze: Conditionals'
+  absolute_position: 8
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &194 2020-02-21 16:30:45.000000000 Z
+    zone: *2
+    time: *194
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &195 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *195
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_602:
+  id: 602
+  name: Songwriting
+  absolute_position: 9
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &196 2020-02-21 16:30:46.000000000 Z
+    zone: *2
+    time: *196
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &197 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *197
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_603:
+  id: 603
+  name: Dice Race
+  absolute_position: 10
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &198 2020-02-21 16:30:46.000000000 Z
+    zone: *2
+    time: *198
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &199 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *199
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_604:
+  id: 604
+  name: 'Artist: Nested Loops'
+  absolute_position: 11
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &200 2020-02-21 16:30:46.000000000 Z
+    zone: *2
+    time: *200
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &201 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *201
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_605:
+  id: 605
+  name: 'Farmer: While Loops'
+  absolute_position: 12
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &202 2020-02-21 16:30:46.000000000 Z
+    zone: *2
+    time: *202
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &203 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *203
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_606:
+  id: 606
+  name: 'Bee: Nested Loops'
+  absolute_position: 13
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &204 2020-02-21 16:30:47.000000000 Z
+    zone: *2
+    time: *204
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &205 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *205
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_607:
+  id: 607
+  name: 'Bee: Debugging'
+  absolute_position: 14
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &206 2020-02-21 16:30:47.000000000 Z
+    zone: *2
+    time: *206
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &207 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *207
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_608:
+  id: 608
+  name: Bounce
+  absolute_position: 15
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &208 2020-02-21 16:30:48.000000000 Z
+    zone: *2
+    time: *208
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &209 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *209
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_609:
+  id: 609
+  name: 'Studio: Create a Story'
+  absolute_position: 16
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &210 2020-02-21 16:30:48.000000000 Z
+    zone: *2
+    time: *210
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &211 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *211
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_610:
+  id: 610
+  name: 'Studio: Create a Game'
+  absolute_position: 17
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &212 2020-02-21 16:30:48.000000000 Z
+    zone: *2
+    time: *212
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &213 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *213
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_611:
+  id: 611
+  name: Internet
+  absolute_position: 18
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &214 2020-02-21 16:30:49.000000000 Z
+    zone: *2
+    time: *214
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &215 2020-05-21 19:49:00.000000000 Z
+    zone: *2
+    time: *215
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_612:
+  id: 612
+  name: Crowdsourcing
+  absolute_position: 19
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &216 2020-02-21 16:30:49.000000000 Z
+    zone: *2
+    time: *216
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &217 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *217
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_613:
+  id: 613
+  name: Digital Citizenship
+  absolute_position: 20
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &218 2020-02-21 16:30:49.000000000 Z
+    zone: *2
+    time: *218
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &219 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *219
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_614:
+  id: 614
+  name: 'Artist: Patterns'
+  absolute_position: 21
+  script_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &220 2020-02-21 16:30:49.000000000 Z
+    zone: *2
+    time: *220
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &221 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *221
+  lockable: false
+  relative_position: 21
+  properties: "{}"
+  lesson_group_id: 2120
+lesson_615:
+  id: 615
+  name: 'Unplugged: Tangrams'
+  absolute_position: 1
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &222 2020-02-21 16:30:50.000000000 Z
+    zone: *2
+    time: *222
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &223 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *223
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_616:
+  id: 616
+  name: Maze and Bee
+  absolute_position: 2
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &224 2020-02-21 16:30:50.000000000 Z
+    zone: *2
+    time: *224
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &225 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *225
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_617:
+  id: 617
+  name: Artist
+  absolute_position: 3
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &226 2020-02-21 16:30:51.000000000 Z
+    zone: *2
+    time: *226
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &227 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *227
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_618:
+  id: 618
+  name: 'Unplugged: Envelope Variables'
+  absolute_position: 4
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &228 2020-02-21 16:30:51.000000000 Z
+    zone: *2
+    time: *228
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &229 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *229
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_619:
+  id: 619
+  name: 'Unplugged: Madlibs'
+  absolute_position: 5
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &230 2020-02-21 16:30:51.000000000 Z
+    zone: *2
+    time: *230
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &231 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *231
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_620:
+  id: 620
+  name: 'Artist: Variables'
+  absolute_position: 6
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &232 2020-02-21 16:30:51.000000000 Z
+    zone: *2
+    time: *232
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &233 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *233
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_621:
+  id: 621
+  name: 'Play Lab: Variables'
+  absolute_position: 7
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &234 2020-02-21 16:30:52.000000000 Z
+    zone: *2
+    time: *234
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &235 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *235
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_622:
+  id: 622
+  name: 'Unplugged: For Loop Fun'
+  absolute_position: 8
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &236 2020-02-21 16:30:52.000000000 Z
+    zone: *2
+    time: *236
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &237 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *237
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_623:
+  id: 623
+  name: 'Bee: For Loops'
+  absolute_position: 9
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &238 2020-02-21 16:30:52.000000000 Z
+    zone: *2
+    time: *238
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &239 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *239
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_624:
+  id: 624
+  name: 'Artist: For Loops'
+  absolute_position: 10
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &240 2020-02-21 16:30:52.000000000 Z
+    zone: *2
+    time: *240
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &241 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *241
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_625:
+  id: 625
+  name: 'Play Lab: For Loops'
+  absolute_position: 11
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &242 2020-02-21 16:30:53.000000000 Z
+    zone: *2
+    time: *242
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &243 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *243
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_626:
+  id: 626
+  name: 'Artist: Functions'
+  absolute_position: 12
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &244 2020-02-21 16:30:53.000000000 Z
+    zone: *2
+    time: *244
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &245 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *245
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_627:
+  id: 627
+  name: 'Unplugged: Songwriting with Parameters'
+  absolute_position: 13
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &246 2020-02-21 16:30:53.000000000 Z
+    zone: *2
+    time: *246
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &247 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *247
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_628:
+  id: 628
+  name: 'Artist: Functions with Parameters'
+  absolute_position: 14
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &248 2020-02-21 16:30:53.000000000 Z
+    zone: *2
+    time: *248
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &249 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *249
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_629:
+  id: 629
+  name: 'Play Lab: Functions with Parameters'
+  absolute_position: 15
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &250 2020-02-21 16:30:54.000000000 Z
+    zone: *2
+    time: *250
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &251 2020-05-21 19:49:01.000000000 Z
+    zone: *2
+    time: *251
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_630:
+  id: 630
+  name: 'Bee: Functions with Parameters'
+  absolute_position: 16
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &252 2020-02-21 16:30:54.000000000 Z
+    zone: *2
+    time: *252
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &253 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *253
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_631:
+  id: 631
+  name: 'Unplugged: Binary'
+  absolute_position: 17
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &254 2020-02-21 16:30:55.000000000 Z
+    zone: *2
+    time: *254
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &255 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *255
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_632:
+  id: 632
+  name: Artist Binary
+  absolute_position: 18
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &256 2020-02-21 16:30:55.000000000 Z
+    zone: *2
+    time: *256
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &257 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *257
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_633:
+  id: 633
+  name: Super Challenge - Variables
+  absolute_position: 19
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &258 2020-02-21 16:30:55.000000000 Z
+    zone: *2
+    time: *258
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &259 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *259
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_634:
+  id: 634
+  name: Super Challenge - For Loops
+  absolute_position: 20
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &260 2020-02-21 16:30:55.000000000 Z
+    zone: *2
+    time: *260
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &261 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *261
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_635:
+  id: 635
+  name: Super Challenge - Functions and Parameters
+  absolute_position: 21
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &262 2020-02-21 16:30:56.000000000 Z
+    zone: *2
+    time: *262
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &263 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *263
+  lockable: false
+  relative_position: 21
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_636:
+  id: 636
+  name: Extreme Challenge - Comprehensive
+  absolute_position: 22
+  script_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &264 2020-02-21 16:30:56.000000000 Z
+    zone: *2
+    time: *264
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &265 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *265
+  lockable: false
+  relative_position: 22
+  properties: "{}"
+  lesson_group_id: 2121
+lesson_2665:
+  id: 2665
+  name: Personal Innovations
+  absolute_position: 1
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &266 2020-02-21 16:48:39.000000000 Z
+    zone: *2
+    time: *266
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &267 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *267
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2666:
+  id: 2666
+  name: Sending Binary Messages
+  absolute_position: 2
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &268 2020-02-21 16:48:40.000000000 Z
+    zone: *2
+    time: *268
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &269 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *269
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2667:
+  id: 2667
+  name: Sending Complex Messages
+  absolute_position: 3
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &270 2020-02-21 16:48:40.000000000 Z
+    zone: *2
+    time: *270
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &271 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *271
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2668:
+  id: 2668
+  name: Sending Binary Messages with the Internet Simulator
+  absolute_position: 4
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &272 2020-02-21 16:48:41.000000000 Z
+    zone: *2
+    time: *272
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &273 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *273
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2669:
+  id: 2669
+  name: Sending Bits in the Real World
+  absolute_position: 5
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &274 2020-02-21 16:48:41.000000000 Z
+    zone: *2
+    time: *274
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &275 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *275
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2670:
+  id: 2670
+  name: Number Systems
+  absolute_position: 6
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &276 2020-02-21 16:48:41.000000000 Z
+    zone: *2
+    time: *276
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &277 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *277
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2671:
+  id: 2671
+  name: Binary Numbers
+  absolute_position: 7
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &278 2020-02-21 16:48:42.000000000 Z
+    zone: *2
+    time: *278
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &279 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *279
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2672:
+  id: 2672
+  name: Sending Numbers
+  absolute_position: 8
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &280 2020-02-21 16:48:42.000000000 Z
+    zone: *2
+    time: *280
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &281 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *281
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2673:
+  id: 2673
+  name: Encoding Numbers in the Real World
+  absolute_position: 9
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &282 2020-02-21 16:48:43.000000000 Z
+    zone: *2
+    time: *282
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &283 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *283
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2674:
+  id: 2674
+  name: Encoding and Sending Text
+  absolute_position: 10
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &284 2020-02-21 16:48:43.000000000 Z
+    zone: *2
+    time: *284
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &285 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *285
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2675:
+  id: 2675
+  name: Sending Formatted Text
+  absolute_position: 11
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &286 2020-02-21 16:48:44.000000000 Z
+    zone: *2
+    time: *286
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &287 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *287
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2676:
+  id: 2676
+  name: Bytes and File Sizes
+  absolute_position: 12
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &288 2020-02-21 16:48:44.000000000 Z
+    zone: *2
+    time: *288
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &289 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *289
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2677:
+  id: 2677
+  name: Text Compression
+  absolute_position: 13
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &290 2020-02-21 16:48:45.000000000 Z
+    zone: *2
+    time: *290
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &291 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *291
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2678:
+  id: 2678
+  name: Encoding B&W Images
+  absolute_position: 14
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &292 2020-02-21 16:48:45.000000000 Z
+    zone: *2
+    time: *292
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &293 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *293
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2679:
+  id: 2679
+  name: Encoding Color Images
+  absolute_position: 15
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &294 2020-02-21 16:48:46.000000000 Z
+    zone: *2
+    time: *294
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &295 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *295
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2680:
+  id: 2680
+  name: Lossy Compression and File Formats
+  absolute_position: 16
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &296 2020-02-21 16:48:47.000000000 Z
+    zone: *2
+    time: *296
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &297 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *297
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2681:
+  id: 2681
+  name: Encode a Complex Thing
+  absolute_position: 17
+  script_id: 277
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &298 2020-02-21 16:48:47.000000000 Z
+    zone: *2
+    time: *298
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &299 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *299
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2174
+lesson_2682:
+  id: 2682
+  name: The Internet
+  absolute_position: 1
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &300 2020-02-21 16:48:50.000000000 Z
+    zone: *2
+    time: *300
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &301 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *301
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2683:
+  id: 2683
+  name: The Need for Addressing
+  absolute_position: 2
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &302 2020-02-21 16:48:51.000000000 Z
+    zone: *2
+    time: *302
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &303 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *303
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2684:
+  id: 2684
+  name: Invent an Addressing Protocol
+  absolute_position: 3
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &304 2020-02-21 16:48:51.000000000 Z
+    zone: *2
+    time: *304
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &305 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *305
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2685:
+  id: 2685
+  name: Routers and Redundancy
+  absolute_position: 4
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &306 2020-02-21 16:48:52.000000000 Z
+    zone: *2
+    time: *306
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &307 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *307
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2686:
+  id: 2686
+  name: Packets and Making a Reliable Internet
+  absolute_position: 5
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &308 2020-02-21 16:48:53.000000000 Z
+    zone: *2
+    time: *308
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &309 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *309
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2687:
+  id: 2687
+  name: Algorithms Detour - Minimum Spanning Tree
+  absolute_position: 6
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &310 2020-02-21 16:48:53.000000000 Z
+    zone: *2
+    time: *310
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &311 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *311
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2688:
+  id: 2688
+  name: Algorithms Detour - Shortest Path
+  absolute_position: 7
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &312 2020-02-21 16:48:54.000000000 Z
+    zone: *2
+    time: *312
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &313 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *313
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2689:
+  id: 2689
+  name: Algorithms Detour - How Routers Learn
+  absolute_position: 8
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &314 2020-02-21 16:48:55.000000000 Z
+    zone: *2
+    time: *314
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &315 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *315
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2690:
+  id: 2690
+  name: The Need for DNS
+  absolute_position: 9
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &316 2020-02-21 16:48:55.000000000 Z
+    zone: *2
+    time: *316
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &317 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *317
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2691:
+  id: 2691
+  name: DNS in the Real World
+  absolute_position: 10
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &318 2020-02-21 16:48:56.000000000 Z
+    zone: *2
+    time: *318
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &319 2020-05-21 19:50:56.000000000 Z
+    zone: *2
+    time: *319
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2692:
+  id: 2692
+  name: HTTP and Abstraction
+  absolute_position: 11
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &320 2020-02-21 16:48:57.000000000 Z
+    zone: *2
+    time: *320
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &321 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *321
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2693:
+  id: 2693
+  name: Practice PT - The Internet and Society
+  absolute_position: 12
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &322 2020-02-21 16:48:57.000000000 Z
+    zone: *2
+    time: *322
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &323 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *323
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2694:
+  id: 2694
+  name: Tell Me a Secret - Encrypting Text
+  absolute_position: 13
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &324 2020-02-21 16:48:57.000000000 Z
+    zone: *2
+    time: *324
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &325 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *325
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2695:
+  id: 2695
+  name: Cracking the Code
+  absolute_position: 14
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &326 2020-02-21 16:48:58.000000000 Z
+    zone: *2
+    time: *326
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &327 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *327
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2696:
+  id: 2696
+  name: Encryption Algorithms
+  absolute_position: 15
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &328 2020-02-21 16:48:59.000000000 Z
+    zone: *2
+    time: *328
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &329 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *329
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2697:
+  id: 2697
+  name: Algorithms Detour - Hard Problems TSP
+  absolute_position: 16
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &330 2020-02-21 16:49:00.000000000 Z
+    zone: *2
+    time: *330
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &331 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *331
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2698:
+  id: 2698
+  name: One Way Functions - Ice Cream Vans
+  absolute_position: 17
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &332 2020-02-21 16:49:00.000000000 Z
+    zone: *2
+    time: *332
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &333 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *333
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2699:
+  id: 2699
+  name: Alice and Bob and Asymmetric Keys
+  absolute_position: 18
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &334 2020-02-21 16:49:01.000000000 Z
+    zone: *2
+    time: *334
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &335 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *335
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2700:
+  id: 2700
+  name: Public Key Crypto
+  absolute_position: 19
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &336 2020-02-21 16:49:02.000000000 Z
+    zone: *2
+    time: *336
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &337 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *337
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2701:
+  id: 2701
+  name: Practice PT - Cybersecurity Innovations
+  absolute_position: 20
+  script_id: 278
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &338 2020-02-21 16:49:02.000000000 Z
+    zone: *2
+    time: *338
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &339 2020-05-21 19:50:57.000000000 Z
+    zone: *2
+    time: *339
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 2175
+lesson_2702:
+  id: 2702
+  name: The Need For Programming Languages
+  absolute_position: 1
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &340 2020-02-21 16:49:08.000000000 Z
+    zone: *2
+    time: *340
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &341 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *341
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2703:
+  id: 2703
+  name: Using Simple Commands
+  absolute_position: 2
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &342 2020-02-21 16:49:08.000000000 Z
+    zone: *2
+    time: *342
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &343 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *343
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2704:
+  id: 2704
+  name: Creating Functions
+  absolute_position: 3
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &344 2020-02-21 16:49:09.000000000 Z
+    zone: *2
+    time: *344
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &345 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *345
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2705:
+  id: 2705
+  name: Functions and Top-Down Design
+  absolute_position: 4
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &346 2020-02-21 16:49:10.000000000 Z
+    zone: *2
+    time: *346
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &347 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *347
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2706:
+  id: 2706
+  name: APIs and Function Parameters
+  absolute_position: 5
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &348 2020-02-21 16:49:11.000000000 Z
+    zone: *2
+    time: *348
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &349 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *349
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2707:
+  id: 2707
+  name: Creating functions with Parameters
+  absolute_position: 6
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &350 2020-02-21 16:49:12.000000000 Z
+    zone: *2
+    time: *350
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &351 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *351
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2708:
+  id: 2708
+  name: Looping and Random Numbers
+  absolute_position: 7
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &352 2020-02-21 16:49:14.000000000 Z
+    zone: *2
+    time: *352
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &353 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *353
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2709:
+  id: 2709
+  name: Practice PT - Design a Digital Scene
+  absolute_position: 8
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &354 2020-02-21 16:49:16.000000000 Z
+    zone: *2
+    time: *354
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &355 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *355
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2710:
+  id: 2710
+  name: Events Unplugged
+  absolute_position: 9
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &356 2020-02-21 16:49:16.000000000 Z
+    zone: *2
+    time: *356
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &357 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *357
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2711:
+  id: 2711
+  name: Event-Driven Programming and Debugging
+  absolute_position: 10
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &358 2020-02-21 16:49:16.000000000 Z
+    zone: *2
+    time: *358
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &359 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *359
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2712:
+  id: 2712
+  name: Beyond Buttons Toward Apps
+  absolute_position: 11
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &360 2020-02-21 16:49:19.000000000 Z
+    zone: *2
+    time: *360
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &361 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *361
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2713:
+  id: 2713
+  name: Introducing Design Mode
+  absolute_position: 12
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &362 2020-02-21 16:49:20.000000000 Z
+    zone: *2
+    time: *362
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &363 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *363
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2714:
+  id: 2714
+  name: Multi-screen Apps
+  absolute_position: 13
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &364 2020-02-21 16:49:21.000000000 Z
+    zone: *2
+    time: *364
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &365 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *365
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2715:
+  id: 2715
+  name: Controlling Memory with Variables
+  absolute_position: 14
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &366 2020-02-21 16:49:21.000000000 Z
+    zone: *2
+    time: *366
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &367 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *367
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2716:
+  id: 2716
+  name: Using Variables in Apps
+  absolute_position: 15
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &368 2020-02-21 16:49:24.000000000 Z
+    zone: *2
+    time: *368
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &369 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *369
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2717:
+  id: 2717
+  name: User Input and Strings
+  absolute_position: 16
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &370 2020-02-21 16:49:26.000000000 Z
+    zone: *2
+    time: *370
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &371 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *371
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2718:
+  id: 2718
+  name: Introduction to Digital Assistants
+  absolute_position: 17
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &372 2020-02-21 16:49:28.000000000 Z
+    zone: *2
+    time: *372
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &373 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *373
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2719:
+  id: 2719
+  name: Understanding Program Flow and Logic
+  absolute_position: 18
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &374 2020-02-21 16:49:28.000000000 Z
+    zone: *2
+    time: *374
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &375 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *375
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2720:
+  id: 2720
+  name: Introduction to Conditional Logic
+  absolute_position: 19
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &376 2020-02-21 16:49:30.000000000 Z
+    zone: *2
+    time: *376
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &377 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *377
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2721:
+  id: 2721
+  name: Compound Conditional Logic
+  absolute_position: 20
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &378 2020-02-21 16:49:31.000000000 Z
+    zone: *2
+    time: *378
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &379 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *379
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2722:
+  id: 2722
+  name: Digital Assistant Project
+  absolute_position: 21
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &380 2020-02-21 16:49:32.000000000 Z
+    zone: *2
+    time: *380
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &381 2020-05-21 19:50:58.000000000 Z
+    zone: *2
+    time: *381
+  lockable: false
+  relative_position: 21
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2723:
+  id: 2723
+  name: While Loops
+  absolute_position: 22
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &382 2020-02-21 16:49:32.000000000 Z
+    zone: *2
+    time: *382
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &383 2020-05-21 19:50:59.000000000 Z
+    zone: *2
+    time: *383
+  lockable: false
+  relative_position: 22
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2724:
+  id: 2724
+  name: Loops and Simulations
+  absolute_position: 23
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &384 2020-02-21 16:49:35.000000000 Z
+    zone: *2
+    time: *384
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &385 2020-05-21 19:50:59.000000000 Z
+    zone: *2
+    time: *385
+  lockable: false
+  relative_position: 23
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2725:
+  id: 2725
+  name: Introduction to Arrays
+  absolute_position: 24
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &386 2020-02-21 16:49:36.000000000 Z
+    zone: *2
+    time: *386
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &387 2020-05-21 19:50:59.000000000 Z
+    zone: *2
+    time: *387
+  lockable: false
+  relative_position: 24
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2726:
+  id: 2726
+  name: Image Scroller with Key Events
+  absolute_position: 25
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &388 2020-02-21 16:49:39.000000000 Z
+    zone: *2
+    time: *388
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &389 2020-05-21 19:50:59.000000000 Z
+    zone: *2
+    time: *389
+  lockable: false
+  relative_position: 25
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2727:
+  id: 2727
+  name: Processing Arrays
+  absolute_position: 26
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &390 2020-02-21 16:49:40.000000000 Z
+    zone: *2
+    time: *390
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &391 2020-05-21 19:50:59.000000000 Z
+    zone: *2
+    time: *391
+  lockable: false
+  relative_position: 26
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2728:
+  id: 2728
+  name: Functions with Return Values
+  absolute_position: 27
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &392 2020-02-21 16:49:42.000000000 Z
+    zone: *2
+    time: *392
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &393 2020-05-21 19:50:59.000000000 Z
+    zone: *2
+    time: *393
+  lockable: false
+  relative_position: 27
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2729:
+  id: 2729
+  name: Canvas and Arrays in Apps
+  absolute_position: 28
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &394 2020-02-21 16:49:43.000000000 Z
+    zone: *2
+    time: *394
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &395 2020-05-21 19:50:59.000000000 Z
+    zone: *2
+    time: *395
+  lockable: false
+  relative_position: 28
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2730:
+  id: 2730
+  name: 'Practice PT: Create'
+  absolute_position: 29
+  script_id: 279
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &396 2020-02-21 16:49:45.000000000 Z
+    zone: *2
+    time: *396
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &397 2020-05-21 19:50:59.000000000 Z
+    zone: *2
+    time: *397
+  lockable: false
+  relative_position: 29
+  properties: "{}"
+  lesson_group_id: 2176
+lesson_2739:
+  id: 2739
+  name: Intro to Data
+  absolute_position: 1
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &398 2020-02-21 16:50:18.000000000 Z
+    zone: *2
+    time: *398
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &399 2020-05-21 19:51:00.000000000 Z
+    zone: *2
+    time: *399
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2740:
+  id: 2740
+  name: Finding Trends with Visualizations
+  absolute_position: 2
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &400 2020-02-21 16:50:18.000000000 Z
+    zone: *2
+    time: *400
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &401 2020-05-21 19:51:00.000000000 Z
+    zone: *2
+    time: *401
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2741:
+  id: 2741
+  name: Check Your Assumptions
+  absolute_position: 3
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &402 2020-02-21 16:50:18.000000000 Z
+    zone: *2
+    time: *402
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &403 2020-05-21 19:51:00.000000000 Z
+    zone: *2
+    time: *403
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2742:
+  id: 2742
+  name: Good and Bad Data Visualizations
+  absolute_position: 4
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &404 2020-02-21 16:50:18.000000000 Z
+    zone: *2
+    time: *404
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &405 2020-05-21 19:51:00.000000000 Z
+    zone: *2
+    time: *405
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2743:
+  id: 2743
+  name: Making Data Visualizations
+  absolute_position: 5
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &406 2020-02-21 16:50:18.000000000 Z
+    zone: *2
+    time: *406
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &407 2020-05-21 19:51:00.000000000 Z
+    zone: *2
+    time: *407
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2744:
+  id: 2744
+  name: Discover a Data Story
+  absolute_position: 6
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &408 2020-02-21 16:50:19.000000000 Z
+    zone: *2
+    time: *408
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &409 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *409
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2745:
+  id: 2745
+  name: Cleaning Data
+  absolute_position: 7
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &410 2020-02-21 16:50:19.000000000 Z
+    zone: *2
+    time: *410
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &411 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *411
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2746:
+  id: 2746
+  name: Creating Summary Tables
+  absolute_position: 8
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &412 2020-02-21 16:50:20.000000000 Z
+    zone: *2
+    time: *412
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &413 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *413
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2747:
+  id: 2747
+  name: Practice PT - Tell a Data Story
+  absolute_position: 9
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &414 2020-02-21 16:50:20.000000000 Z
+    zone: *2
+    time: *414
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &415 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *415
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2748:
+  id: 2748
+  name: What is Big Data?
+  absolute_position: 10
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &416 2020-02-21 16:50:20.000000000 Z
+    zone: *2
+    time: *416
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &417 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *417
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2749:
+  id: 2749
+  name: Rapid Research - Data Innovations
+  absolute_position: 11
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &418 2020-02-21 16:50:20.000000000 Z
+    zone: *2
+    time: *418
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &419 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *419
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2750:
+  id: 2750
+  name: Identifying People with Data
+  absolute_position: 12
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &420 2020-02-21 16:50:20.000000000 Z
+    zone: *2
+    time: *420
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &421 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *421
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2751:
+  id: 2751
+  name: The Cost of Free
+  absolute_position: 13
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &422 2020-02-21 16:50:21.000000000 Z
+    zone: *2
+    time: *422
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &423 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *423
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2752:
+  id: 2752
+  name: Practice PT - Propose an Innovation
+  absolute_position: 14
+  script_id: 281
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &424 2020-02-21 16:50:21.000000000 Z
+    zone: *2
+    time: *424
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &425 2020-05-21 19:51:01.000000000 Z
+    zone: *2
+    time: *425
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2178
+lesson_2781:
+  id: 2781
+  name: Explore PT Prep
+  absolute_position: 1
+  script_id: 283
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &426 2020-02-21 16:50:47.000000000 Z
+    zone: *2
+    time: *426
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &427 2020-05-21 19:51:02.000000000 Z
+    zone: *2
+    time: *427
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2180
+lesson_2782:
+  id: 2782
+  name: Explore PT
+  absolute_position: 2
+  script_id: 283
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &428 2020-02-21 16:50:47.000000000 Z
+    zone: *2
+    time: *428
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &429 2020-05-21 19:51:02.000000000 Z
+    zone: *2
+    time: *429
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2180
+lesson_2783:
+  id: 2783
+  name: Create PT Prep
+  absolute_position: 3
+  script_id: 283
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &430 2020-02-21 16:50:47.000000000 Z
+    zone: *2
+    time: *430
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &431 2020-05-21 19:51:02.000000000 Z
+    zone: *2
+    time: *431
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2180
+lesson_2784:
+  id: 2784
+  name: Create PT
+  absolute_position: 4
+  script_id: 283
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &432 2020-02-21 16:50:47.000000000 Z
+    zone: *2
+    time: *432
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &433 2020-05-21 19:51:02.000000000 Z
+    zone: *2
+    time: *433
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2180
+lesson_2785:
+  id: 2785
+  name: Creating Javascript Objects
+  absolute_position: 1
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &434 2020-02-21 16:50:48.000000000 Z
+    zone: *2
+    time: *434
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &435 2020-05-21 19:51:02.000000000 Z
+    zone: *2
+    time: *435
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_2786:
+  id: 2786
+  name: Permanent Data Storage
+  absolute_position: 2
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &436 2020-02-21 16:50:50.000000000 Z
+    zone: *2
+    time: *436
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &437 2020-05-21 19:51:02.000000000 Z
+    zone: *2
+    time: *437
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_2787:
+  id: 2787
+  name: Reading Records
+  absolute_position: 3
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &438 2020-02-21 16:50:51.000000000 Z
+    zone: *2
+    time: *438
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &439 2020-05-21 19:51:02.000000000 Z
+    zone: *2
+    time: *439
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_2788:
+  id: 2788
+  name: Deleting Records
+  absolute_position: 4
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &440 2020-02-21 16:50:53.000000000 Z
+    zone: *2
+    time: *440
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &441 2020-05-21 19:51:03.000000000 Z
+    zone: *2
+    time: *441
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_2789:
+  id: 2789
+  name: Updating Records
+  absolute_position: 5
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &442 2020-02-21 16:50:53.000000000 Z
+    zone: *2
+    time: *442
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &443 2020-05-21 19:51:03.000000000 Z
+    zone: *2
+    time: *443
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_2790:
+  id: 2790
+  name: Importing and Exporting Data
+  absolute_position: 6
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &444 2020-02-21 16:50:54.000000000 Z
+    zone: *2
+    time: *444
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &445 2020-05-21 19:51:03.000000000 Z
+    zone: *2
+    time: *445
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_2791:
+  id: 2791
+  name: Visualizing Data
+  absolute_position: 7
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &446 2020-02-21 16:50:55.000000000 Z
+    zone: *2
+    time: *446
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &447 2020-05-21 19:51:03.000000000 Z
+    zone: *2
+    time: *447
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_2792:
+  id: 2792
+  name: Sample Apps
+  absolute_position: 8
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &448 2020-02-21 16:50:56.000000000 Z
+    zone: *2
+    time: *448
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &449 2020-05-21 19:51:03.000000000 Z
+    zone: *2
+    time: *449
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_2793:
+  id: 2793
+  name: Final Project
+  absolute_position: 9
+  script_id: 284
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &450 2020-02-21 16:50:56.000000000 Z
+    zone: *2
+    time: *450
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &451 2020-05-21 19:51:03.000000000 Z
+    zone: *2
+    time: *451
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2181
+lesson_163:
+  id: 163
+  name: Introduction to PD
+  absolute_position: 1
+  script_id: 29
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &452 2020-02-21 16:29:09.000000000 Z
+    zone: *2
+    time: *452
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &453 2020-05-21 19:48:36.000000000 Z
+    zone: *2
+    time: *453
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2063
+lesson_164:
+  id: 164
+  name: What is ECS?
+  absolute_position: 2
+  script_id: 29
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &454 2020-02-21 16:29:09.000000000 Z
+    zone: *2
+    time: *454
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &455 2020-05-21 19:48:36.000000000 Z
+    zone: *2
+    time: *455
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2063
+lesson_165:
+  id: 165
+  name: Impact of Computer Science
+  absolute_position: 3
+  script_id: 29
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &456 2020-02-21 16:29:09.000000000 Z
+    zone: *2
+    time: *456
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &457 2020-05-21 19:48:36.000000000 Z
+    zone: *2
+    time: *457
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2063
+lesson_166:
+  id: 166
+  name: Growth Mindset
+  absolute_position: 4
+  script_id: 29
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &458 2020-02-21 16:29:09.000000000 Z
+    zone: *2
+    time: *458
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &459 2020-05-21 19:48:36.000000000 Z
+    zone: *2
+    time: *459
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2063
+lesson_167:
+  id: 167
+  name: Teaching Strategies
+  absolute_position: 5
+  script_id: 29
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &460 2020-02-21 16:29:09.000000000 Z
+    zone: *2
+    time: *460
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &461 2020-05-21 19:48:36.000000000 Z
+    zone: *2
+    time: *461
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2063
+lesson_168:
+  id: 168
+  name: Preparing for in-person PD
+  absolute_position: 6
+  script_id: 29
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &462 2020-02-21 16:29:09.000000000 Z
+    zone: *2
+    time: *462
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &463 2020-05-21 19:48:36.000000000 Z
+    zone: *2
+    time: *463
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2063
+lesson_412:
+  id: 412
+  name: Jigsaw
+  absolute_position: 1
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &464 2020-02-21 16:29:58.000000000 Z
+    zone: *2
+    time: *464
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &465 2020-05-21 19:48:46.000000000 Z
+    zone: *2
+    time: *465
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_413:
+  id: 413
+  name: Maze
+  absolute_position: 2
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &466 2020-02-21 16:29:58.000000000 Z
+    zone: *2
+    time: *466
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &467 2020-05-21 19:48:46.000000000 Z
+    zone: *2
+    time: *467
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_414:
+  id: 414
+  name: Artist
+  absolute_position: 3
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &468 2020-02-21 16:29:58.000000000 Z
+    zone: *2
+    time: *468
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &469 2020-05-21 19:48:46.000000000 Z
+    zone: *2
+    time: *469
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_415:
+  id: 415
+  name: Bee
+  absolute_position: 4
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &470 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *470
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &471 2020-05-21 19:48:46.000000000 Z
+    zone: *2
+    time: *471
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_416:
+  id: 416
+  name: PlayLab
+  absolute_position: 5
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &472 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *472
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &473 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *473
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_417:
+  id: 417
+  name: Farmer
+  absolute_position: 6
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &474 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *474
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &475 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *475
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_418:
+  id: 418
+  name: Flappy
+  absolute_position: 7
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &476 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *476
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &477 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *477
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_419:
+  id: 419
+  name: Bounce
+  absolute_position: 8
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &478 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *478
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &479 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *479
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_420:
+  id: 420
+  name: Multi
+  absolute_position: 9
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &480 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *480
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &481 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *481
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_421:
+  id: 421
+  name: Multi2
+  absolute_position: 10
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &482 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *482
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &483 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *483
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_422:
+  id: 422
+  name: Match
+  absolute_position: 11
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &484 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *484
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &485 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *485
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_423:
+  id: 423
+  name: TextMatch
+  absolute_position: 12
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &486 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *486
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &487 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *487
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_424:
+  id: 424
+  name: CSinA
+  absolute_position: 13
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &488 2020-02-21 16:29:59.000000000 Z
+    zone: *2
+    time: *488
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &489 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *489
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_425:
+  id: 425
+  name: Netsim
+  absolute_position: 14
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &490 2020-02-21 16:30:00.000000000 Z
+    zone: *2
+    time: *490
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &491 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *491
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_426:
+  id: 426
+  name: Odometer
+  absolute_position: 15
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &492 2020-02-21 16:30:00.000000000 Z
+    zone: *2
+    time: *492
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &493 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *493
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_427:
+  id: 427
+  name: Text Compression
+  absolute_position: 16
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &494 2020-02-21 16:30:00.000000000 Z
+    zone: *2
+    time: *494
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &495 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *495
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_428:
+  id: 428
+  name: Pixelation
+  absolute_position: 17
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &496 2020-02-21 16:30:00.000000000 Z
+    zone: *2
+    time: *496
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &497 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *497
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_429:
+  id: 429
+  name: AppLab
+  absolute_position: 18
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &498 2020-02-21 16:30:00.000000000 Z
+    zone: *2
+    time: *498
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &499 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *499
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_430:
+  id: 430
+  name: Gamelab
+  absolute_position: 19
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &500 2020-02-21 16:30:00.000000000 Z
+    zone: *2
+    time: *500
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &501 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *501
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_431:
+  id: 431
+  name: Online PD
+  absolute_position: 20
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &502 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *502
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &503 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *503
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_432:
+  id: 432
+  name: Markdown Details
+  absolute_position: 21
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &504 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *504
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &505 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *505
+  lockable: false
+  relative_position: 21
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_433:
+  id: 433
+  name: Studio
+  absolute_position: 22
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &506 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *506
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &507 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *507
+  lockable: false
+  relative_position: 22
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_434:
+  id: 434
+  name: Multi page assessment
+  absolute_position: 23
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &508 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *508
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &509 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *509
+  lockable: false
+  relative_position: 23
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_435:
+  id: 435
+  name: Star wars
+  absolute_position: 24
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &510 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *510
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &511 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *511
+  lockable: false
+  relative_position: 24
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_436:
+  id: 436
+  name: Minecraft
+  absolute_position: 25
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &512 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *512
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &513 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *513
+  lockable: false
+  relative_position: 25
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_437:
+  id: 437
+  name: Rich long assessment
+  absolute_position: 26
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &514 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *514
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &515 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *515
+  lockable: false
+  relative_position: 26
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_438:
+  id: 438
+  name: Free Response
+  absolute_position: 27
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &516 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *516
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &517 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *517
+  lockable: false
+  relative_position: 27
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_439:
+  id: 439
+  name: Sample PLC Assessment
+  absolute_position: 28
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &518 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *518
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &519 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *519
+  lockable: false
+  relative_position: 28
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_440:
+  id: 440
+  name: Swapped Levels
+  absolute_position: 29
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &520 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *520
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &521 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *521
+  lockable: false
+  relative_position: 29
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_441:
+  id: 441
+  name: Anonymous student survey
+  absolute_position: 30
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &522 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *522
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &523 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *523
+  lockable: false
+  relative_position: 30
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_442:
+  id: 442
+  name: Anonymous student survey 2
+  absolute_position: 31
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &524 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *524
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &525 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *525
+  lockable: true
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_443:
+  id: 443
+  name: Public Key Cryptography
+  absolute_position: 32
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &526 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *526
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &527 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *527
+  lockable: false
+  relative_position: 31
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_444:
+  id: 444
+  name: Web Lab
+  absolute_position: 33
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &528 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *528
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &529 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *529
+  lockable: false
+  relative_position: 32
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_445:
+  id: 445
+  name: Single page assessment
+  absolute_position: 34
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &530 2020-02-21 16:30:01.000000000 Z
+    zone: *2
+    time: *530
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &531 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *531
+  lockable: false
+  relative_position: 33
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_446:
+  id: 446
+  name: Standalone video
+  absolute_position: 35
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &532 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *532
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &533 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *533
+  lockable: false
+  relative_position: 34
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_447:
+  id: 447
+  name: Curriculum Reference
+  absolute_position: 36
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &534 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *534
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &535 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *535
+  lockable: false
+  relative_position: 35
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_448:
+  id: 448
+  name: Sprite Lab
+  absolute_position: 37
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &536 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *536
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &537 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *537
+  lockable: false
+  relative_position: 36
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_449:
+  id: 449
+  name: Dance Lab
+  absolute_position: 38
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &538 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *538
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &539 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *539
+  lockable: false
+  relative_position: 37
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_450:
+  id: 450
+  name: Mini Rubric
+  absolute_position: 39
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &540 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *540
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &541 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *541
+  lockable: false
+  relative_position: 38
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_451:
+  id: 451
+  name: Pluralsight Test
+  absolute_position: 40
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &542 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *542
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &543 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *543
+  lockable: true
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_452:
+  id: 452
+  name: Externals Optionally Displayed as Unplugged
+  absolute_position: 41
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &544 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *544
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &545 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *545
+  lockable: false
+  relative_position: 39
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_453:
+  id: 453
+  name: Bubble Choice
+  absolute_position: 42
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &546 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *546
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &547 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *547
+  lockable: false
+  relative_position: 40
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_454:
+  id: 454
+  name: Contained Levels
+  absolute_position: 43
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &548 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *548
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &549 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *549
+  lockable: false
+  relative_position: 41
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_455:
+  id: 455
+  name: ML Fish
+  absolute_position: 44
+  script_id: 68
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &550 2020-02-21 16:30:02.000000000 Z
+    zone: *2
+    time: *550
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &551 2020-05-21 19:48:47.000000000 Z
+    zone: *2
+    time: *551
+  lockable: false
+  relative_position: 42
+  properties: "{}"
+  lesson_group_id: 2100
+lesson_637:
+  id: 637
+  name: 'Debugging: Unspotted Bugs'
+  absolute_position: 1
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &552 2020-02-21 16:30:57.000000000 Z
+    zone: *2
+    time: *552
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &553 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *553
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_638:
+  id: 638
+  name: 'Persistence & Frustration: Stevie and the Marbles'
+  absolute_position: 2
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &554 2020-02-21 16:30:57.000000000 Z
+    zone: *2
+    time: *554
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &555 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *555
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_639:
+  id: 639
+  name: 'Real-life Algorithms: Plant a Seed'
+  absolute_position: 3
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &556 2020-02-21 16:30:57.000000000 Z
+    zone: *2
+    time: *556
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &557 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *557
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_640:
+  id: 640
+  name: Learn to Drag and Drop
+  absolute_position: 4
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &558 2020-02-21 16:30:57.000000000 Z
+    zone: *2
+    time: *558
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &559 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *559
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_641:
+  id: 641
+  name: 'Programming: Happy Maps'
+  absolute_position: 5
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &560 2020-02-21 16:30:58.000000000 Z
+    zone: *2
+    time: *560
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &561 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *561
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_642:
+  id: 642
+  name: Programming in Maze
+  absolute_position: 6
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &562 2020-02-21 16:30:58.000000000 Z
+    zone: *2
+    time: *562
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &563 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *563
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_643:
+  id: 643
+  name: Going Places Safely
+  absolute_position: 7
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &564 2020-02-21 16:30:58.000000000 Z
+    zone: *2
+    time: *564
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &565 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *565
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_644:
+  id: 644
+  name: 'Loops: Happy Loops'
+  absolute_position: 8
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &566 2020-02-21 16:30:58.000000000 Z
+    zone: *2
+    time: *566
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &567 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *567
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_645:
+  id: 645
+  name: Loops in Collector
+  absolute_position: 9
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &568 2020-02-21 16:30:58.000000000 Z
+    zone: *2
+    time: *568
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &569 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *569
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_646:
+  id: 646
+  name: Loops in Artist
+  absolute_position: 10
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &570 2020-02-21 16:30:59.000000000 Z
+    zone: *2
+    time: *570
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &571 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *571
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_647:
+  id: 647
+  name: 'Events: The Big Event'
+  absolute_position: 11
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &572 2020-02-21 16:30:59.000000000 Z
+    zone: *2
+    time: *572
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &573 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *573
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_648:
+  id: 648
+  name: Events in Play Lab
+  absolute_position: 12
+  script_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &574 2020-02-21 16:30:59.000000000 Z
+    zone: *2
+    time: *574
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &575 2020-05-21 19:49:02.000000000 Z
+    zone: *2
+    time: *575
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2122
+lesson_687:
+  id: 687
+  name: 'Debugging: Unspotted Bugs'
+  absolute_position: 1
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &576 2020-02-21 16:31:12.000000000 Z
+    zone: *2
+    time: *576
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &577 2020-05-21 19:49:05.000000000 Z
+    zone: *2
+    time: *577
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_688:
+  id: 688
+  name: 'Persistence & Frustration: Stevie and the Marbles'
+  absolute_position: 2
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &578 2020-02-21 16:31:12.000000000 Z
+    zone: *2
+    time: *578
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &579 2020-05-21 19:49:05.000000000 Z
+    zone: *2
+    time: *579
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_689:
+  id: 689
+  name: 'Real-life Algorithms: Plant a Seed'
+  absolute_position: 3
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &580 2020-02-21 16:31:12.000000000 Z
+    zone: *2
+    time: *580
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &581 2020-05-21 19:49:05.000000000 Z
+    zone: *2
+    time: *581
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_690:
+  id: 690
+  name: Learn to Drag and Drop
+  absolute_position: 4
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &582 2020-02-21 16:31:12.000000000 Z
+    zone: *2
+    time: *582
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &583 2020-05-21 19:49:05.000000000 Z
+    zone: *2
+    time: *583
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_691:
+  id: 691
+  name: Your Digital Footprint
+  absolute_position: 5
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &584 2020-02-21 16:31:12.000000000 Z
+    zone: *2
+    time: *584
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &585 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *585
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_692:
+  id: 692
+  name: 'Programming: My Robotic Friends'
+  absolute_position: 6
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &586 2020-02-21 16:31:12.000000000 Z
+    zone: *2
+    time: *586
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &587 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *587
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_693:
+  id: 693
+  name: Programming in Maze
+  absolute_position: 7
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &588 2020-02-21 16:31:12.000000000 Z
+    zone: *2
+    time: *588
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &589 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *589
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_694:
+  id: 694
+  name: Programming with Rey and BB-8
+  absolute_position: 8
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &590 2020-02-21 16:31:13.000000000 Z
+    zone: *2
+    time: *590
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &591 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *591
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_695:
+  id: 695
+  name: 'Loops: My Loopy Robotic Friends'
+  absolute_position: 9
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &592 2020-02-21 16:31:13.000000000 Z
+    zone: *2
+    time: *592
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &593 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *593
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_696:
+  id: 696
+  name: Loops in Collector
+  absolute_position: 10
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &594 2020-02-21 16:31:13.000000000 Z
+    zone: *2
+    time: *594
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &595 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *595
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_697:
+  id: 697
+  name: Loops in Artist
+  absolute_position: 11
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &596 2020-02-21 16:31:14.000000000 Z
+    zone: *2
+    time: *596
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &597 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *597
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_698:
+  id: 698
+  name: 'Events: The Big Event'
+  absolute_position: 12
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &598 2020-02-21 16:31:14.000000000 Z
+    zone: *2
+    time: *598
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &599 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *599
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_699:
+  id: 699
+  name: Events in Play Lab
+  absolute_position: 13
+  script_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &600 2020-02-21 16:31:14.000000000 Z
+    zone: *2
+    time: *600
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &601 2020-05-21 19:49:06.000000000 Z
+    zone: *2
+    time: *601
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2125
+lesson_737:
+  id: 737
+  name: Building a Foundation
+  absolute_position: 1
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &602 2020-02-21 16:31:27.000000000 Z
+    zone: *2
+    time: *602
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &603 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *603
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_738:
+  id: 738
+  name: Programming in Maze
+  absolute_position: 2
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &604 2020-02-21 16:31:27.000000000 Z
+    zone: *2
+    time: *604
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &605 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *605
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_739:
+  id: 739
+  name: Debugging in Maze
+  absolute_position: 3
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &606 2020-02-21 16:31:28.000000000 Z
+    zone: *2
+    time: *606
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &607 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *607
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_740:
+  id: 740
+  name: 'Real-life Algorithms: Paper Planes'
+  absolute_position: 4
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &608 2020-02-21 16:31:28.000000000 Z
+    zone: *2
+    time: *608
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &609 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *609
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_741:
+  id: 741
+  name: Programming in Collector
+  absolute_position: 5
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &610 2020-02-21 16:31:28.000000000 Z
+    zone: *2
+    time: *610
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &611 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *611
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_742:
+  id: 742
+  name: Programming in Artist
+  absolute_position: 6
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &612 2020-02-21 16:31:29.000000000 Z
+    zone: *2
+    time: *612
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &613 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *613
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_743:
+  id: 743
+  name: 'Loops: Getting Loopy'
+  absolute_position: 7
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &614 2020-02-21 16:31:29.000000000 Z
+    zone: *2
+    time: *614
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &615 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *615
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_744:
+  id: 744
+  name: Loops with Rey and BB-8
+  absolute_position: 8
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &616 2020-02-21 16:31:29.000000000 Z
+    zone: *2
+    time: *616
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &617 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *617
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_745:
+  id: 745
+  name: Loops in Artist
+  absolute_position: 9
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &618 2020-02-21 16:31:30.000000000 Z
+    zone: *2
+    time: *618
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &619 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *619
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_746:
+  id: 746
+  name: Loops in Harvester
+  absolute_position: 10
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &620 2020-02-21 16:31:30.000000000 Z
+    zone: *2
+    time: *620
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &621 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *621
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_747:
+  id: 747
+  name: 'Events: The Big Event'
+  absolute_position: 11
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &622 2020-02-21 16:31:31.000000000 Z
+    zone: *2
+    time: *622
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &623 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *623
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_748:
+  id: 748
+  name: Build a Flappy Game
+  absolute_position: 12
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &624 2020-02-21 16:31:31.000000000 Z
+    zone: *2
+    time: *624
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &625 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *625
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_749:
+  id: 749
+  name: Events in Play Lab
+  absolute_position: 13
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &626 2020-02-21 16:31:31.000000000 Z
+    zone: *2
+    time: *626
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &627 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *627
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_750:
+  id: 750
+  name: Screen Out the Mean
+  absolute_position: 14
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &628 2020-02-21 16:31:31.000000000 Z
+    zone: *2
+    time: *628
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &629 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *629
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_751:
+  id: 751
+  name: Binary Bracelets
+  absolute_position: 15
+  script_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &630 2020-02-21 16:31:31.000000000 Z
+    zone: *2
+    time: *630
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &631 2020-05-21 19:49:09.000000000 Z
+    zone: *2
+    time: *631
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2128
+lesson_800:
+  id: 800
+  name: 'Algorithms: Graph Paper Programming'
+  absolute_position: 1
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &632 2020-02-21 16:31:48.000000000 Z
+    zone: *2
+    time: *632
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &633 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *633
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_801:
+  id: 801
+  name: Introduction
+  absolute_position: 2
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &634 2020-02-21 16:31:48.000000000 Z
+    zone: *2
+    time: *634
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &635 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *635
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_802:
+  id: 802
+  name: Events in Bounce
+  absolute_position: 3
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &636 2020-02-21 16:31:48.000000000 Z
+    zone: *2
+    time: *636
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &637 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *637
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_803:
+  id: 803
+  name: Nested Loops
+  absolute_position: 4
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &638 2020-02-21 16:31:48.000000000 Z
+    zone: *2
+    time: *638
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &639 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *639
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_804:
+  id: 804
+  name: Nested Loops in Artist
+  absolute_position: 5
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &640 2020-02-21 16:31:49.000000000 Z
+    zone: *2
+    time: *640
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &641 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *641
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_805:
+  id: 805
+  name: Nested Loops Project in Artist
+  absolute_position: 6
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &642 2020-02-21 16:31:49.000000000 Z
+    zone: *2
+    time: *642
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &643 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *643
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_806:
+  id: 806
+  name: 'Algorithms: Relay Programming'
+  absolute_position: 7
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &644 2020-02-21 16:31:50.000000000 Z
+    zone: *2
+    time: *644
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &645 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *645
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_807:
+  id: 807
+  name: Debugging in Collector
+  absolute_position: 8
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &646 2020-02-21 16:31:50.000000000 Z
+    zone: *2
+    time: *646
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &647 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *647
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_808:
+  id: 808
+  name: While Loops in Farmer
+  absolute_position: 9
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &648 2020-02-21 16:31:50.000000000 Z
+    zone: *2
+    time: *648
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &649 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *649
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_809:
+  id: 809
+  name: Conditionals with Cards
+  absolute_position: 10
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &650 2020-02-21 16:31:51.000000000 Z
+    zone: *2
+    time: *650
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &651 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *651
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_810:
+  id: 810
+  name: Conditionals in Bee
+  absolute_position: 11
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &652 2020-02-21 16:31:51.000000000 Z
+    zone: *2
+    time: *652
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &653 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *653
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_811:
+  id: 811
+  name: Conditionals & Loops in Maze
+  absolute_position: 12
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &654 2020-02-21 16:31:51.000000000 Z
+    zone: *2
+    time: *654
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &655 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *655
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_812:
+  id: 812
+  name: Conditionals & Loops in Farmer
+  absolute_position: 13
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &656 2020-02-21 16:31:52.000000000 Z
+    zone: *2
+    time: *656
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &657 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *657
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_813:
+  id: 813
+  name: Digital Citizenship
+  absolute_position: 14
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &658 2020-02-21 16:31:52.000000000 Z
+    zone: *2
+    time: *658
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &659 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *659
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_814:
+  id: 814
+  name: Build a Play Lab Game
+  absolute_position: 15
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &660 2020-02-21 16:31:52.000000000 Z
+    zone: *2
+    time: *660
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &661 2020-05-21 19:49:13.000000000 Z
+    zone: *2
+    time: *661
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_815:
+  id: 815
+  name: 'Unplugged: Binary'
+  absolute_position: 16
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &662 2020-02-21 16:31:52.000000000 Z
+    zone: *2
+    time: *662
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &663 2020-05-21 19:49:14.000000000 Z
+    zone: *2
+    time: *663
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_816:
+  id: 816
+  name: Artist Binary
+  absolute_position: 17
+  script_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &664 2020-02-21 16:31:52.000000000 Z
+    zone: *2
+    time: *664
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &665 2020-05-21 19:49:14.000000000 Z
+    zone: *2
+    time: *665
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 2131
+lesson_871:
+  id: 871
+  name: 'Programming: My Robotic Friends'
+  absolute_position: 1
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &666 2020-02-21 16:32:15.000000000 Z
+    zone: *2
+    time: *666
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &667 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *667
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_872:
+  id: 872
+  name: Sequence in Maze
+  absolute_position: 2
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &668 2020-02-21 16:32:15.000000000 Z
+    zone: *2
+    time: *668
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &669 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *669
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_873:
+  id: 873
+  name: Building a Foundation
+  absolute_position: 3
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &670 2020-02-21 16:32:15.000000000 Z
+    zone: *2
+    time: *670
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &671 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *671
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_874:
+  id: 874
+  name: Debugging with Scrat
+  absolute_position: 4
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &672 2020-02-21 16:32:15.000000000 Z
+    zone: *2
+    time: *672
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &673 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *673
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_875:
+  id: 875
+  name: Programming in Artist
+  absolute_position: 5
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &674 2020-02-21 16:32:15.000000000 Z
+    zone: *2
+    time: *674
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &675 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *675
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_876:
+  id: 876
+  name: 'Loops: My Loopy Robotic Friends'
+  absolute_position: 6
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &676 2020-02-21 16:32:16.000000000 Z
+    zone: *2
+    time: *676
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &677 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *677
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_877:
+  id: 877
+  name: Loops in Artist
+  absolute_position: 7
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &678 2020-02-21 16:32:16.000000000 Z
+    zone: *2
+    time: *678
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &679 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *679
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_878:
+  id: 878
+  name: Nested Loops
+  absolute_position: 8
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &680 2020-02-21 16:32:16.000000000 Z
+    zone: *2
+    time: *680
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &681 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *681
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_879:
+  id: 879
+  name: Nested Loops with Frozen
+  absolute_position: 9
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &682 2020-02-21 16:32:17.000000000 Z
+    zone: *2
+    time: *682
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &683 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *683
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 1378
+lesson_880:
+  id: 880
+  name: 'Algorithms: Dice Race'
+  absolute_position: 10
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &684 2020-02-21 16:32:17.000000000 Z
+    zone: *2
+    time: *684
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &685 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *685
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_881:
+  id: 881
+  name: Introduction
+  absolute_position: 11
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &686 2020-02-21 16:32:17.000000000 Z
+    zone: *2
+    time: *686
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &687 2020-04-22 17:50:10.000000000 Z
+    zone: *2
+    time: *687
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_882:
+  id: 882
+  name: Conditionals
+  absolute_position: 12
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &688 2020-02-21 16:32:18.000000000 Z
+    zone: *2
+    time: *688
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &689 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *689
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_883:
+  id: 883
+  name: Private and Personal Information
+  absolute_position: 13
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &690 2020-02-21 16:32:18.000000000 Z
+    zone: *2
+    time: *690
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &691 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *691
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_884:
+  id: 884
+  name: Build a Star Wars Game
+  absolute_position: 14
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &692 2020-02-21 16:32:18.000000000 Z
+    zone: *2
+    time: *692
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &693 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *693
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_885:
+  id: 885
+  name: 'Functions: Songwriting'
+  absolute_position: 15
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &694 2020-02-21 16:32:19.000000000 Z
+    zone: *2
+    time: *694
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &695 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *695
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_886:
+  id: 886
+  name: Functions in Artist
+  absolute_position: 16
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &696 2020-02-21 16:32:19.000000000 Z
+    zone: *2
+    time: *696
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &697 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *697
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_887:
+  id: 887
+  name: Functions in Bee
+  absolute_position: 17
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &698 2020-02-21 16:32:20.000000000 Z
+    zone: *2
+    time: *698
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &699 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *699
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_888:
+  id: 888
+  name: Functions in Harvester
+  absolute_position: 18
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &700 2020-02-21 16:32:20.000000000 Z
+    zone: *2
+    time: *700
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &701 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *701
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_889:
+  id: 889
+  name: Determine the Concept
+  absolute_position: 19
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &702 2020-02-21 16:32:21.000000000 Z
+    zone: *2
+    time: *702
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &703 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *703
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_890:
+  id: 890
+  name: Build a Play Lab Game
+  absolute_position: 20
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &704 2020-02-21 16:32:22.000000000 Z
+    zone: *2
+    time: *704
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &705 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *705
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 1379
+lesson_891:
+  id: 891
+  name: Explore Project Ideas
+  absolute_position: 21
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &706 2020-02-21 16:32:22.000000000 Z
+    zone: *2
+    time: *706
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &707 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *707
+  lockable: false
+  relative_position: 21
+  properties: "{}"
+  lesson_group_id: 1380
+lesson_892:
+  id: 892
+  name: The Design Process
+  absolute_position: 22
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &708 2020-02-21 16:32:22.000000000 Z
+    zone: *2
+    time: *708
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &709 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *709
+  lockable: false
+  relative_position: 22
+  properties: "{}"
+  lesson_group_id: 1380
+lesson_893:
+  id: 893
+  name: Build Your Project
+  absolute_position: 23
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &710 2020-02-21 16:32:22.000000000 Z
+    zone: *2
+    time: *710
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &711 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *711
+  lockable: false
+  relative_position: 23
+  properties: "{}"
+  lesson_group_id: 1380
+lesson_894:
+  id: 894
+  name: Present Your Project
+  absolute_position: 24
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &712 2020-02-21 16:32:22.000000000 Z
+    zone: *2
+    time: *712
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &713 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *713
+  lockable: false
+  relative_position: 24
+  properties: "{}"
+  lesson_group_id: 1380
+lesson_895:
+  id: 895
+  name: Internet
+  absolute_position: 25
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &714 2020-02-21 16:32:23.000000000 Z
+    zone: *2
+    time: *714
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &715 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *715
+  lockable: false
+  relative_position: 25
+  properties: "{}"
+  lesson_group_id: 1381
+lesson_896:
+  id: 896
+  name: Crowdsourcing
+  absolute_position: 26
+  script_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &716 2020-02-21 16:32:23.000000000 Z
+    zone: *2
+    time: *716
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &717 2020-04-22 17:50:11.000000000 Z
+    zone: *2
+    time: *717
+  lockable: false
+  relative_position: 26
+  properties: "{}"
+  lesson_group_id: 1381
+lesson_963:
+  id: 963
+  name: 'Programming: My Robotic Friends'
+  absolute_position: 1
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &718 2020-02-21 16:32:51.000000000 Z
+    zone: *2
+    time: *718
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &719 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *719
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_964:
+  id: 964
+  name: Sequence in Maze
+  absolute_position: 2
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &720 2020-02-21 16:32:51.000000000 Z
+    zone: *2
+    time: *720
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &721 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *721
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_965:
+  id: 965
+  name: Building a Foundation
+  absolute_position: 3
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &722 2020-02-21 16:32:51.000000000 Z
+    zone: *2
+    time: *722
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &723 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *723
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_966:
+  id: 966
+  name: Debugging with Scrat
+  absolute_position: 4
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &724 2020-02-21 16:32:52.000000000 Z
+    zone: *2
+    time: *724
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &725 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *725
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_967:
+  id: 967
+  name: Programming in Artist
+  absolute_position: 5
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &726 2020-02-21 16:32:52.000000000 Z
+    zone: *2
+    time: *726
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &727 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *727
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_968:
+  id: 968
+  name: 'Loops: My Loopy Robotic Friends'
+  absolute_position: 6
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &728 2020-02-21 16:32:52.000000000 Z
+    zone: *2
+    time: *728
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &729 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *729
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_969:
+  id: 969
+  name: Loops in Artist
+  absolute_position: 7
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &730 2020-02-21 16:32:52.000000000 Z
+    zone: *2
+    time: *730
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &731 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *731
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_970:
+  id: 970
+  name: Nested Loops in Bee/Zombie
+  absolute_position: 8
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &732 2020-02-21 16:32:53.000000000 Z
+    zone: *2
+    time: *732
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &733 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *733
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_971:
+  id: 971
+  name: Nested Loops with Frozen
+  absolute_position: 9
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &734 2020-02-21 16:32:53.000000000 Z
+    zone: *2
+    time: *734
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &735 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *735
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 1404
+lesson_972:
+  id: 972
+  name: 'Algorithms: Tangrams'
+  absolute_position: 10
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &736 2020-02-21 16:32:54.000000000 Z
+    zone: *2
+    time: *736
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &737 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *737
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_973:
+  id: 973
+  name: Introduction
+  absolute_position: 11
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &738 2020-02-21 16:32:54.000000000 Z
+    zone: *2
+    time: *738
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &739 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *739
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_974:
+  id: 974
+  name: The Power of Words
+  absolute_position: 12
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &740 2020-02-21 16:32:54.000000000 Z
+    zone: *2
+    time: *740
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &741 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *741
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_975:
+  id: 975
+  name: Ice Age Play Lab
+  absolute_position: 13
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &742 2020-02-21 16:32:54.000000000 Z
+    zone: *2
+    time: *742
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &743 2020-04-22 17:50:17.000000000 Z
+    zone: *2
+    time: *743
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_976:
+  id: 976
+  name: Conditionals in Minecraft
+  absolute_position: 14
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &744 2020-02-21 16:32:55.000000000 Z
+    zone: *2
+    time: *744
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &745 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *745
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_977:
+  id: 977
+  name: Envelope Variables
+  absolute_position: 15
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &746 2020-02-21 16:32:56.000000000 Z
+    zone: *2
+    time: *746
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &747 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *747
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_978:
+  id: 978
+  name: Variables in Artist
+  absolute_position: 16
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &748 2020-02-21 16:32:56.000000000 Z
+    zone: *2
+    time: *748
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &749 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *749
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_979:
+  id: 979
+  name: Variables in Play Lab
+  absolute_position: 17
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &750 2020-02-21 16:32:56.000000000 Z
+    zone: *2
+    time: *750
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &751 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *751
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_980:
+  id: 980
+  name: For Loop Fun
+  absolute_position: 18
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &752 2020-02-21 16:32:57.000000000 Z
+    zone: *2
+    time: *752
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &753 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *753
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_981:
+  id: 981
+  name: For Loops in Bee
+  absolute_position: 19
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &754 2020-02-21 16:32:57.000000000 Z
+    zone: *2
+    time: *754
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &755 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *755
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_982:
+  id: 982
+  name: For Loops in Artist
+  absolute_position: 20
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &756 2020-02-21 16:32:58.000000000 Z
+    zone: *2
+    time: *756
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &757 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *757
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_983:
+  id: 983
+  name: Songwriting with Parameters
+  absolute_position: 21
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &758 2020-02-21 16:32:58.000000000 Z
+    zone: *2
+    time: *758
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &759 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *759
+  lockable: false
+  relative_position: 21
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_984:
+  id: 984
+  name: Functions in Bee
+  absolute_position: 22
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &760 2020-02-21 16:32:58.000000000 Z
+    zone: *2
+    time: *760
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &761 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *761
+  lockable: false
+  relative_position: 22
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_985:
+  id: 985
+  name: Functions with Parameters in Artist
+  absolute_position: 23
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &762 2020-02-21 16:32:59.000000000 Z
+    zone: *2
+    time: *762
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &763 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *763
+  lockable: false
+  relative_position: 23
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_986:
+  id: 986
+  name: Functions with Parameters in Bee
+  absolute_position: 24
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &764 2020-02-21 16:33:00.000000000 Z
+    zone: *2
+    time: *764
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &765 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *765
+  lockable: false
+  relative_position: 24
+  properties: "{}"
+  lesson_group_id: 1405
+lesson_987:
+  id: 987
+  name: Explore Project Ideas
+  absolute_position: 25
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &766 2020-02-21 16:33:00.000000000 Z
+    zone: *2
+    time: *766
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &767 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *767
+  lockable: false
+  relative_position: 25
+  properties: "{}"
+  lesson_group_id: 1406
+lesson_988:
+  id: 988
+  name: The Design Process
+  absolute_position: 26
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &768 2020-02-21 16:33:01.000000000 Z
+    zone: *2
+    time: *768
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &769 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *769
+  lockable: false
+  relative_position: 26
+  properties: "{}"
+  lesson_group_id: 1406
+lesson_989:
+  id: 989
+  name: Build Your Project
+  absolute_position: 27
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &770 2020-02-21 16:33:01.000000000 Z
+    zone: *2
+    time: *770
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &771 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *771
+  lockable: false
+  relative_position: 27
+  properties: "{}"
+  lesson_group_id: 1406
+lesson_990:
+  id: 990
+  name: Revise Your Project
+  absolute_position: 28
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &772 2020-02-21 16:33:01.000000000 Z
+    zone: *2
+    time: *772
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &773 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *773
+  lockable: false
+  relative_position: 28
+  properties: "{}"
+  lesson_group_id: 1406
+lesson_991:
+  id: 991
+  name: Present Your Project
+  absolute_position: 29
+  script_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &774 2020-02-21 16:33:01.000000000 Z
+    zone: *2
+    time: *774
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &775 2020-04-22 17:50:18.000000000 Z
+    zone: *2
+    time: *775
+  lockable: false
+  relative_position: 29
+  properties: "{}"
+  lesson_group_id: 1406
+lesson_2919:
+  id: 2919
+  name: 'Algorithms: Graph Paper Programming'
+  absolute_position: 1
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &776 2020-02-21 16:53:07.000000000 Z
+    zone: *2
+    time: *776
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &777 2020-04-22 17:52:16.000000000 Z
+    zone: *2
+    time: *777
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2920:
+  id: 2920
+  name: Introduction
+  absolute_position: 2
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &778 2020-02-21 16:53:08.000000000 Z
+    zone: *2
+    time: *778
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &779 2020-04-22 17:52:16.000000000 Z
+    zone: *2
+    time: *779
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2921:
+  id: 2921
+  name: Building a Foundation
+  absolute_position: 3
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &780 2020-02-21 16:53:10.000000000 Z
+    zone: *2
+    time: *780
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &781 2020-04-22 17:52:16.000000000 Z
+    zone: *2
+    time: *781
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2922:
+  id: 2922
+  name: Debugging in Collector
+  absolute_position: 4
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &782 2020-02-21 16:53:10.000000000 Z
+    zone: *2
+    time: *782
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &783 2020-04-22 17:52:16.000000000 Z
+    zone: *2
+    time: *783
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2923:
+  id: 2923
+  name: 'Loops: My Loopy Robotic Friends'
+  absolute_position: 5
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &784 2020-02-21 16:53:11.000000000 Z
+    zone: *2
+    time: *784
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &785 2020-04-22 17:52:16.000000000 Z
+    zone: *2
+    time: *785
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2924:
+  id: 2924
+  name: Loops in Artist
+  absolute_position: 6
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &786 2020-02-21 16:53:12.000000000 Z
+    zone: *2
+    time: *786
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &787 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *787
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2925:
+  id: 2925
+  name: Nested Loops
+  absolute_position: 7
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &788 2020-02-21 16:53:13.000000000 Z
+    zone: *2
+    time: *788
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &789 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *789
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2926:
+  id: 2926
+  name: Nested Loops Project in Frozen
+  absolute_position: 8
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &790 2020-02-21 16:53:15.000000000 Z
+    zone: *2
+    time: *790
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &791 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *791
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2927:
+  id: 2927
+  name: 'How it Works: The Internet'
+  absolute_position: 9
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &792 2020-02-21 16:53:16.000000000 Z
+    zone: *2
+    time: *792
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &793 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *793
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2928:
+  id: 2928
+  name: 'Common Sense Education: Digital Citizenship'
+  absolute_position: 10
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &794 2020-02-21 16:53:17.000000000 Z
+    zone: *2
+    time: *794
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &795 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *795
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2929:
+  id: 2929
+  name: 'Common Sense Education: Screen Out the Mean'
+  absolute_position: 11
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &796 2020-02-21 16:53:17.000000000 Z
+    zone: *2
+    time: *796
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &797 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *797
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2930:
+  id: 2930
+  name: 'Events: The Big Event'
+  absolute_position: 12
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &798 2020-02-21 16:53:17.000000000 Z
+    zone: *2
+    time: *798
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &799 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *799
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2931:
+  id: 2931
+  name: Events in Star Wars
+  absolute_position: 13
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &800 2020-02-21 16:53:17.000000000 Z
+    zone: *2
+    time: *800
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &801 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *801
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2932:
+  id: 2932
+  name: Events with Flappy
+  absolute_position: 14
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &802 2020-02-21 16:53:18.000000000 Z
+    zone: *2
+    time: *802
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &803 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *803
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2933:
+  id: 2933
+  name: Events in Bounce
+  absolute_position: 15
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &804 2020-02-21 16:53:20.000000000 Z
+    zone: *2
+    time: *804
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &805 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *805
+  lockable: false
+  relative_position: 15
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2934:
+  id: 2934
+  name: 'Conditionals: Conditionals with Cards'
+  absolute_position: 16
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &806 2020-02-21 16:53:21.000000000 Z
+    zone: *2
+    time: *806
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &807 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *807
+  lockable: false
+  relative_position: 16
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2935:
+  id: 2935
+  name: While Loops in Farmer
+  absolute_position: 17
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &808 2020-02-21 16:53:21.000000000 Z
+    zone: *2
+    time: *808
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &809 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *809
+  lockable: false
+  relative_position: 17
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2936:
+  id: 2936
+  name: Until Loops in Maze
+  absolute_position: 18
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &810 2020-02-21 16:53:23.000000000 Z
+    zone: *2
+    time: *810
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &811 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *811
+  lockable: false
+  relative_position: 18
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2937:
+  id: 2937
+  name: Conditionals in Minecraft
+  absolute_position: 19
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &812 2020-02-21 16:53:24.000000000 Z
+    zone: *2
+    time: *812
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &813 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *813
+  lockable: false
+  relative_position: 19
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2938:
+  id: 2938
+  name: Conditionals & Loops in Harvester
+  absolute_position: 20
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &814 2020-02-21 16:53:26.000000000 Z
+    zone: *2
+    time: *814
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &815 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *815
+  lockable: false
+  relative_position: 20
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2939:
+  id: 2939
+  name: 'Variables: Envelope Variables'
+  absolute_position: 21
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &816 2020-02-21 16:53:28.000000000 Z
+    zone: *2
+    time: *816
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &817 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *817
+  lockable: false
+  relative_position: 21
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2940:
+  id: 2940
+  name: Variables in Artist
+  absolute_position: 22
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &818 2020-02-21 16:53:28.000000000 Z
+    zone: *2
+    time: *818
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &819 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *819
+  lockable: false
+  relative_position: 22
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2941:
+  id: 2941
+  name: Variables in Play Lab
+  absolute_position: 23
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &820 2020-02-21 16:53:30.000000000 Z
+    zone: *2
+    time: *820
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &821 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *821
+  lockable: false
+  relative_position: 23
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2942:
+  id: 2942
+  name: 'For Loops: For Loop Fun'
+  absolute_position: 24
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &822 2020-02-21 16:53:31.000000000 Z
+    zone: *2
+    time: *822
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &823 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *823
+  lockable: false
+  relative_position: 24
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2943:
+  id: 2943
+  name: For Loops in Bee
+  absolute_position: 25
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &824 2020-02-21 16:53:32.000000000 Z
+    zone: *2
+    time: *824
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &825 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *825
+  lockable: false
+  relative_position: 25
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2944:
+  id: 2944
+  name: For Loops in Artist
+  absolute_position: 26
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &826 2020-02-21 16:53:33.000000000 Z
+    zone: *2
+    time: *826
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &827 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *827
+  lockable: false
+  relative_position: 26
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2945:
+  id: 2945
+  name: 'Functions: Songwriting with Parameters'
+  absolute_position: 27
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &828 2020-02-21 16:53:35.000000000 Z
+    zone: *2
+    time: *828
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &829 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *829
+  lockable: false
+  relative_position: 27
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2946:
+  id: 2946
+  name: Functions in Bee
+  absolute_position: 28
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &830 2020-02-21 16:53:35.000000000 Z
+    zone: *2
+    time: *830
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &831 2020-04-22 17:52:17.000000000 Z
+    zone: *2
+    time: *831
+  lockable: false
+  relative_position: 28
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2947:
+  id: 2947
+  name: Functions with Parameters in Artist
+  absolute_position: 29
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &832 2020-02-21 16:53:38.000000000 Z
+    zone: *2
+    time: *832
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &833 2020-04-22 17:52:18.000000000 Z
+    zone: *2
+    time: *833
+  lockable: false
+  relative_position: 29
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2948:
+  id: 2948
+  name: Functions with Parameters in Bee
+  absolute_position: 30
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &834 2020-02-21 16:53:40.000000000 Z
+    zone: *2
+    time: *834
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &835 2020-04-22 17:52:18.000000000 Z
+    zone: *2
+    time: *835
+  lockable: false
+  relative_position: 30
+  properties: "{}"
+  lesson_group_id: 1866
+lesson_2949:
+  id: 2949
+  name: Explore Project Ideas
+  absolute_position: 31
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &836 2020-02-21 16:53:41.000000000 Z
+    zone: *2
+    time: *836
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &837 2020-04-22 17:52:18.000000000 Z
+    zone: *2
+    time: *837
+  lockable: false
+  relative_position: 31
+  properties: "{}"
+  lesson_group_id: 1867
+lesson_2950:
+  id: 2950
+  name: The Design Process
+  absolute_position: 32
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &838 2020-02-21 16:53:42.000000000 Z
+    zone: *2
+    time: *838
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &839 2020-04-22 17:52:18.000000000 Z
+    zone: *2
+    time: *839
+  lockable: false
+  relative_position: 32
+  properties: "{}"
+  lesson_group_id: 1867
+lesson_2951:
+  id: 2951
+  name: Build Your Project
+  absolute_position: 33
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &840 2020-02-21 16:53:42.000000000 Z
+    zone: *2
+    time: *840
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &841 2020-04-22 17:52:18.000000000 Z
+    zone: *2
+    time: *841
+  lockable: false
+  relative_position: 33
+  properties: "{}"
+  lesson_group_id: 1867
+lesson_2952:
+  id: 2952
+  name: Revise Your Project
+  absolute_position: 34
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &842 2020-02-21 16:53:43.000000000 Z
+    zone: *2
+    time: *842
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &843 2020-04-22 17:52:18.000000000 Z
+    zone: *2
+    time: *843
+  lockable: false
+  relative_position: 34
+  properties: "{}"
+  lesson_group_id: 1867
+lesson_2953:
+  id: 2953
+  name: Present Your Project
+  absolute_position: 35
+  script_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &844 2020-02-21 16:53:43.000000000 Z
+    zone: *2
+    time: *844
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &845 2020-04-22 17:52:18.000000000 Z
+    zone: *2
+    time: *845
+  lockable: false
+  relative_position: 35
+  properties: "{}"
+  lesson_group_id: 1867
+lesson_3255:
+  id: 3255
+  name: 'Debugging: Unspotted Bugs'
+  absolute_position: 1
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &846 2020-02-21 17:01:25.000000000 Z
+    zone: *2
+    time: *846
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &847 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *847
+  lockable: false
+  relative_position: 1
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3256:
+  id: 3256
+  name: 'Persistence & Frustration: Stevie and the Marbles'
+  absolute_position: 2
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &848 2020-02-21 17:01:25.000000000 Z
+    zone: *2
+    time: *848
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &849 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *849
+  lockable: false
+  relative_position: 2
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3257:
+  id: 3257
+  name: 'Real-life Algorithms: Plant a Seed'
+  absolute_position: 3
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &850 2020-02-21 17:01:25.000000000 Z
+    zone: *2
+    time: *850
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &851 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *851
+  lockable: false
+  relative_position: 3
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3258:
+  id: 3258
+  name: Learn to Drag and Drop
+  absolute_position: 4
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &852 2020-02-21 17:01:25.000000000 Z
+    zone: *2
+    time: *852
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &853 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *853
+  lockable: false
+  relative_position: 4
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3259:
+  id: 3259
+  name: 'Online Safety: Your Digital Footprint'
+  absolute_position: 5
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &854 2020-02-21 17:01:27.000000000 Z
+    zone: *2
+    time: *854
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &855 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *855
+  lockable: false
+  relative_position: 5
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3260:
+  id: 3260
+  name: 'Programming: My Robotic Friends'
+  absolute_position: 6
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &856 2020-02-21 17:01:27.000000000 Z
+    zone: *2
+    time: *856
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &857 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *857
+  lockable: false
+  relative_position: 6
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3261:
+  id: 3261
+  name: Programming in Maze
+  absolute_position: 7
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &858 2020-02-21 17:01:28.000000000 Z
+    zone: *2
+    time: *858
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &859 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *859
+  lockable: false
+  relative_position: 7
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3262:
+  id: 3262
+  name: 'Programming: Star Wars'
+  absolute_position: 8
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &860 2020-02-21 17:01:30.000000000 Z
+    zone: *2
+    time: *860
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &861 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *861
+  lockable: false
+  relative_position: 8
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3263:
+  id: 3263
+  name: 'Loops: My Loopy Robotic Friends'
+  absolute_position: 9
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &862 2020-02-21 17:01:31.000000000 Z
+    zone: *2
+    time: *862
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &863 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *863
+  lockable: false
+  relative_position: 9
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3264:
+  id: 3264
+  name: Loops in Collector
+  absolute_position: 10
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &864 2020-02-21 17:01:32.000000000 Z
+    zone: *2
+    time: *864
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &865 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *865
+  lockable: false
+  relative_position: 10
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3265:
+  id: 3265
+  name: Loops in Artist
+  absolute_position: 11
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &866 2020-02-21 17:01:34.000000000 Z
+    zone: *2
+    time: *866
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &867 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *867
+  lockable: false
+  relative_position: 11
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3266:
+  id: 3266
+  name: 'Events: The Big Event'
+  absolute_position: 12
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &868 2020-02-21 17:01:36.000000000 Z
+    zone: *2
+    time: *868
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &869 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *869
+  lockable: false
+  relative_position: 12
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3267:
+  id: 3267
+  name: Events in Play Lab
+  absolute_position: 13
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &870 2020-02-21 17:01:36.000000000 Z
+    zone: *2
+    time: *870
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &871 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *871
+  lockable: false
+  relative_position: 13
+  properties: "{}"
+  lesson_group_id: 2240
+lesson_3268:
+  id: 3268
+  name: Spelling Bee
+  absolute_position: 14
+  script_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &872 2020-02-21 17:01:37.000000000 Z
+    zone: *2
+    time: *872
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &873 2020-05-21 19:51:36.000000000 Z
+    zone: *2
+    time: *873
+  lockable: false
+  relative_position: 14
+  properties: "{}"
+  lesson_group_id: 2240

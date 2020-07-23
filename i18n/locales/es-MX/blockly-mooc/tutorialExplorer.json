@@ -1,5 +1,5 @@
 {
-  "startButton": "Inicio",
+  "startButton": "Comenzar",
   "filterOrgNames": "Creado por",
   "filterOrgNamesAll": "Todos",
   "filterSortBy": "Ordenar por",
@@ -38,7 +38,7 @@
   "filterProgrammingLanguage": "Idioma",
   "filterProgrammingLanguageBlocks": "Bloques",
   "filterProgrammingLanguageTyping": "Escribiendo",
-  "filterProgrammingLanguageOther": "Otros",
+  "filterProgrammingLanguageOther": "Otro",
   "filterActivityTypeRobotics": "Robótica",
   "backButtonBack": "Volver a todas las actividades",
   "filterHeaderShowFilters": "Filtros",
@@ -48,6 +48,7 @@
   "roboticsButtonText": "Robótica y circuitos",
   "roboticsText": "¿Tienes robots? Utiliza estas actividades y realiza una Hora del Código para tus estudiantes de cualquier edad!",
   "tutorialSetNoTutorials": "Tu búsqueda no arrojó resultados. Por favor intenta cambiar algunos filtros para ver más actividades.",
+  "tutorialDetailsMoreResources": "Más recursos",
   "tutorialDetailsTeacherNotes": "Notas del Profesor",
   "tutorialDetailsShortLink": "Enlace corto",
   "tutorialDetailInternationalLanguages": "Idiomas",

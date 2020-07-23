@@ -1,4 +1,5 @@
 name 'AP_practice_Qs_rqb_79_CSP_4_1_1'
+editor_experiment ''
 right '12'
 wrong '9'
 wrong '19'
@@ -6,29 +7,28 @@ wrong '2'
 markdown <<MARKDOWN
 What is the output of the following psuedocode?
 
-<pre>
-let x have value  -1
-REPEAT twice:
-     IF x > 0
-          increment x by 1
-          IF x > 0:
-               increment x by 2
-     ELSE:
-          increment x by 10
-</pre>
+	let x have value  -1
+	REPEAT twice:
+	     IF x > 0
+	          increment x by 1
+	          IF x > 0:
+	               increment x by 2
+	     ELSE:
+	          increment x by 10
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1B**
-<hr>
- (A) This answer is correct. The variable `x` is initially -1.  It does not satisfy the `IF` condition, so the `ELSE` statement is executed, increasing its value to 9. The second iteration of the `REPEAT`, the initial `IF` statement is true, and so the variable now has the value 10. The next `IF` is also true, and so the variable now has the value 12.
 
-<hr>
- (B) <strong>This answer is incorrect.</strong> See the explanation for answer A.
+---
+(A) This answer is correct. The variable `x` is initially -1.  It does not satisfy the `IF` condition, so the `ELSE` statement is executed, increasing its value to 9. The second iteration of the `REPEAT`, the initial `IF` statement is true, and so the variable now has the value 10. The next `IF` is also true, and so the variable now has the value 12.
 
-<hr>
- (C) <strong>This answer is incorrect.</strong> See the explanation for answer A.
+---
+(B) **This answer is incorrect.** See the explanation for answer A.
 
-<hr>
- (D) <strong>This answer is incorrect.</strong> See the explanation for answer A.
+---
+(C) **This answer is incorrect.** See the explanation for answer A.
 
+---
+(D) **This answer is incorrect.** See the explanation for answer A.
 MARKDOWN

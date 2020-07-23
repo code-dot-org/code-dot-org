@@ -180,7 +180,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 15,
-        "message": "drawAllFish: App lab is expecting that you write a loop runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
+        "message": "drawAllFish: App lab is expecting that you write a loop that runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
       },
       {
         "entries": [
@@ -209,10 +209,17 @@
     "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* Added a loop to the `drawAllFish` function\r\n* That `drawFish(size, r, g, b)` is called inside a loop that runs at least 15 times.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
     "parent_level_id": 3222,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-04-01 15:48:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

@@ -24,6 +24,15 @@ path /v3/config {
 // Don't allow reading /v3/channels, since that would expose the list of channels.
 path /v3/channels/{channelId} {
   read() { canAccessChannel(channelId) }
+  write() { canAccessChannel(channelId) && deleteOnly(this) }
+}
+
+path /v3/channels/shared {
+  read() { isLoggedIn() }
+}
+
+path /v3/channels/{channelId}/current_tables/{tableName} is Boolean {
+  write() { canAccessChannel(channelId) }
 }
 
 path /v3/channels/{channelId}/serverTime is Number {
@@ -155,3 +164,4 @@ valueOr(value, defaultValue) { value == null ? defaultValue : value }
 isUnchanged(value) { orZero(value) == orZero(prior(value)) }
 isIncreased(value) { orZero(value) > orZero(prior(value)) }
 isIncreasedBy(value, increment) { orZero(value) >= orZero(prior(value)) + increment}
+deleteOnly(value) { prior(value) != null && value == null }

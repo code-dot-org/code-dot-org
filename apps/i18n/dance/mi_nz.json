@@ -1,2 +1,22 @@
 {
+  "danceFeedbackNeedNewDancer": "Me hanga koe i tetahi kaikanikani.",
+  "danceFeedbackNoDancers": "Kāore ō kaikanikani.",
+  "danceFeedbackNoBackground": "Me tāpiri atu he papamuri.",
+  "danceFeedbackTooManyDancers": "Kia tūpato! In tuku ai koe i te paraka `he mea hou` kei roto i te `ia wāhanga e rua`, ka waihanga koe i te tokomaha o ngā kaikanikani.",
+  "danceFeedbackUseSetSize": "Whakamahia i te paraka `set backup_dancer2 size` kia whakaiti i te rahi o to kaikanikani.",
+  "danceFeedbackUseSetTint": "Whakamahia i te paraka `kowhiri te tae` ki te tini i te tae o te kaikanikani.",
+  "danceFeedbackUseStartMapping": "Tapirihia te paraka<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">mairetahi_matau</title><title name=\"PROPERTY\">\"āwhata\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ki o mahi.",
+  "danceFeedbackStartNewMove": "E kore mahi to kaikanikani i teteahi nekehanga hou i muri i ngā wāhanga tuawha.",
+  "danceFeedbackNeedDifferentDance": "Me whakamahi koe i tētahi kanikani kē.",
+  "danceFeedbackNeedEveryTwoMeasures": "Me whakamahi koe i te paraka `ia wāhanga e rua`,",
+  "danceFeedbackNeedMakeANewDancer": "Whakamahia te paraka `he mea hou` ki te waihanga i te kaikanikani tuarua.",
+  "danceFeedbackKeyEvent": "Me hono e koe he waehere ki te paraka <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"ki runga\"</title></block></xml> ā, pana i te pātene i a te kanikani i te haere.",
+  "danceFeedbackDidntPress": "Me pēhi i ngā pātuhi pere i te wā e haere ana tō kanikani.",
+  "danceFeedbackPressedKey": "I pēhi koe i tētahi pātuhi, engari kāore i uruparetia e tō kaikanikani.",
+  "danceFeedbackNeedTwoDancers": "Me hanga koe kia rua ngā kaikanikani.",
+  "danceFeedbackOnlyOneDancerMoved": "Kotahi anake o ō kaikanikani i neke.",
+  "danceFeedbackNeedLead": "Me hanga e koe kia kotahi te kaitātaki kaikanikani mā te paraka <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
+  "danceFeedbackNeedBackup": "Me hanga e koe tētahi rōpū kaitautoko kanikani mā te paraka <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
+  "danceFeedbackSetSize": "Me panoni koe i te nui o tētahi, ētahi rānei o ngā kaikanikani, a muri i te tīmatanga o te waiata.",
+  "measure": "Wāhanga:"
 }

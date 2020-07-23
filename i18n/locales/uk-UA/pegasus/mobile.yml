@@ -12,12 +12,12 @@
   csedweek_dates: "3-9 грудня 2018 року"
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
+  csedweek_banner_teachers_text: "Ви вчитель інформатики? Перегляньте інші ресурси з предмету"
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
   anybody_can_learn: "Кожен може вчитися."
   learn_now: "Почати навчання"
   petition_message: "Кожен учень у кожній школі повинен мати можливість вивчати інформатику"
   petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до # інших.'
-  petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я. Приєднайтесь до # інших.'
   petition_join_others: 'Приєднатися до # інших'
   name: "Ім’я"
   email: "Електронна пошта"
@@ -148,6 +148,7 @@
   thanks_for_submitting: "Дякуємо за участь!"
   if_you_enjoyed: "Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати увесь світ."
   personalize_certificate: "Персоналізувати ваш сертифікат"
+  print_certificates: "Друкувати сертифікати"
   share_achievement: "Поділитись досягненнями"
   beyond_hour_message: "Продовжуйте навчання на <a href='http://studio.code.org'>інших курсах</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза Годиною коду </a>."
   leaderboards_for_hoc: "Лідери „Години Коду“."
@@ -229,6 +230,7 @@
   studiobar_elementary_title: "Базові курси"
   studiobar_elementary_body: "Три нові курси для K&#8209;5"
   studiobar_dance_title: "Танцювальна вечірка"
+  studiobar_dance_body: "Створіть та продемонструйте власну танцювальну вечірку"
   studiobar_hoc_title: "Година Коду"
   studiobar_hoc_body: "Вчимося програмувати зі Злими Птахами"
   studiobar_flappy_title: "Код Пурха"
@@ -316,6 +318,7 @@
   homepage_action_text_signpetition: "Підписати петицію"
   homepage_action_text_wincelebritychat: "Виграй чат зі знаменітостю"
   homepage_signpetition_dropdown: "Підписати нашу петицію &#x25BE;"
+  homepage_signpetition_dropdown_text: "Погоджуюся"
   homepage_diversity_pledge: "Приєднатись до петиції про різноманіття"
   homepage_banner_text_prizes: 'Година коду наближається знову, 7-13 грудня. '
   homepage_banner_link_prizes: 'Приєднуйтесь до найбільшої освітньої події в історії. '
@@ -483,6 +486,7 @@
   video_title_my_name_is_aracely: "Мене звати Араклі"
   video_1min: "1 хв"
   video_2min: "2 хв"
+  video_3min: "3 хв"
   video_5min: "5 хв"
   speak_another_language: "Інша мова?"
   help_translate: "Допоможіть нам з перекладом."
@@ -823,6 +827,7 @@
   carousel_heading_webpages: "Навчіться створювати веб-сторінки"
   carousel_heading_robots: "Навчіться програмувати роботів"
   carousel_heading_ide: "Платформи, популярні серед вчителів"
+  carousel_heading_mobtabelem: "Для телефонів і планшетів"
   educator_notes: "Інформація для вчителя"
   teach_led_lesson_plans: "Плани уроків для вчителів"
   learn_footer_all_tutorials: "Перегляньте<a href=\"https://code.org/educate/allhourofcode\">вичерпний перелік підручників Години коду</a>. Щоб ознайомитись з нашими критеріями та інструкціями з подання підручників Години коду, <a href=\"https://hourofcode.com/tutorial-guidelines\">клацніть тут.</a>"
@@ -902,32 +907,16 @@
   coursee_name: "Курс Ґ"
   coursef-draft_name: Курс Д
   coursef_name: "Курс Д"
+  coursea-2017_name: Курс А (2017)
+  courseb-2017_name: Курс B (2017)
+  coursec-2017_name: Курс C (2017)
+  coursed-2017_name: Курс D (2017)
+  coursee-2017_name: Курс E (2017)
+  coursef-2017_name: Курс F (2017)
+  express-2018_name: Експрес курс (2018)
+  csd2_name: 'Блок 2: Веб-розробка'
+  csd3_name: 'Блок 3: Анімація та ігри'
   accelerated_name: "Прискорений курс"
-  cspunit1_name: "Розділ 1: Цифрова інформація"
-  cspunit2_name: "Розділ 2: Інтернет"
-  cspunit3_name: "Розділ 3: Програмування"
-  cspunit4_name: "Розділ 4: Дані"
-  cspunit5_name: "Розділ 5: Дослідження та створення PT"
-  cspunit6_name: 'Після-АР: Бази даних у програмах'
-  csd5_name: 'Розділ 5: Дані та суспільство'
-  csd6_name: 'Розділ 6: Фізичні обчислення'
-  csd5-2017_name: 'Розділ 5: Дані та суспільство'
-  csd6-2017_name: 'Розділ 6: Фізичні обчислення'
-  csd5-2018_name: 'Розділ 5: Дані та суспільство'
-  csd6-2018_name: 'Розділ 6: Фізичні обчислення'
-  csp1-2017_name: 'Розділ 1: Інтернет'
-  csp2-2017_name: 'Розділ 2: Цифрова інформація'
-  csppostap-2017_name: 'Після довишівської підготовки: Бази даних у програмах'
-  csp1-2018_name: 'Розділ 1: Інтернет'
-  csp2-2018_name: 'Розділ 2: Цифрова інформація'
-  csppostap-2018_name: 'Після довишівської підготовки: Бази даних у програмах'
-  csp1_name: 'Розділ 1: Інтернет'
-  csp2_name: 'Розділ 2: Цифрова інформація'
-  csppostap_name: 'Після довишівської підготовки: Бази даних у програмах'
-  cspassessment_name: "Повний тест - 50 запитань"
-  cspexam1-mWU7ilDYM9_name: Тест, частина 1 - 25 запитань
-  cspexam2-AKwgAh1ac5_name: Тест, частина 2 - 25 запитань
-  cspunit3_gradelevel: "9-12 класи"
   20-hour_name: Прискорений курс
   algebra_name: "Інформатика в алгебрі"
   AlgebraA_name: "Інформатика в алгебрі - Курс А"
@@ -938,13 +927,6 @@
   minecraft_name: "Майнкрафт"
   starwarsblocks_name: "Зоряні війни (блоки)"
   hoc-encryption_name: Просте шифрування
-  math_category_name: "Математика"
-  hoc_category_name: "Година коду"
-  csf_category_name: "Основи інформатики"
-  csf2_draft_category_name: 'В розробці: курси А—Д'
-  csp_category_name: "'15-'16 принципи інформатики"
-  csp17_category_name: "'16-'17 принципи інформатики"
-  cspexams_category_name: "Практичний тест з принципів інформатики"
   applab_name: "App Lab"
   gamelab_name: "Ігрова лабораторія"
   basketball_name: "Зроби гру в баскетбол"
@@ -1005,12 +987,30 @@
   course2_gradelevel: "Вік 6-18"
   course3_gradelevel: "Вік 8-18"
   course4_gradelevel: "Вік 10-18"
+  coursea_gradelevel: "Вік 4-7"
+  courseb_gradelevel: "Вік 5-8"
+  coursec_gradelevel: "Вік 6-10"
   coursed_gradelevel: "8+ класи"
   coursee_gradelevel: "Вік 8-12"
+  coursef_gradelevel: "Вік 9-13"
+  coursea-2017_gradelevel: Вік 4-7
+  courseb-2017_gradelevel: Вік 5-8
+  coursec-2017_gradelevel: Вік 6-10
   coursed-2017_gradelevel: 8+ класи
   coursee-2017_gradelevel: Вік 8-12
+  coursef-2017_gradelevel: Вік 9-13
+  coursea-2018_gradelevel: Вік 4-7
+  courseb-2018_gradelevel: Вік 5-8
+  coursec-2018_gradelevel: Вік 6-10
   coursed-2018_gradelevel: 8+ класи
   coursee-2018_gradelevel: Вік 8-12
+  coursef-2018_gradelevel: Вік 9-13
+  coursea-2019_gradelevel: Вік 4-7
+  courseb-2019_gradelevel: Вік 5-8
+  coursec-2019_gradelevel: Вік 6-10
+  coursed-2019_gradelevel: 8+ класи
+  coursee-2019_gradelevel: Вік 8-12
+  coursef-2019_gradelevel: Вік 9-13
   accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"
@@ -1330,11 +1330,13 @@
   sphero_beyond_longdescription: "Чи ви є педагогом чи батьком, уроки SPRK пропонують цікавий прискорений курс програмування роботів, водночас розвиваючи математичні та природничі знання та навики."
   compatibility_hide_this_warning: "Сховати попередження"
   compatibility_unsupported_browser: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
+  compatibility_unsupported_browser_markdown: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
   flappy_shortcode: "махати"
   header_home: "Головна"
   header_courses: "курси"
   header_course_catalog: "Каталог курсів"
   header_project_gallery: "Проекти"
+  header_sections: "Секції"
   header_educate_overview: "Огляд для педагога"
   header_educate_elementary: "Початкова школа"
   header_educate_middle: "Середня школа"
@@ -1360,21 +1362,33 @@
   header_stats: "Статистика"
   header_help_us: "Допомога нам"
   header_about: "Про"
-  csp_name: "'16-'17 принципи інформатики"
+  header_teacher_community: "Спільнота вчителів"
+  header_help_support: 'Допомога та підтримка '
+  header_report_bug: "Сповістити про проблему"
+  header_legal_privacy: "Політика конфіденційності"
+  header_legal_tos: "Умови надання послуг"
+  header_tutorials: "Навчальні матеріали"
+  header_documentation: "Документація"
   user_header_label: "Привіт %{username}"
   user_header_team: "Команда"
+  user_header_my_projects: "Мої проекти"
   user_header_settings: "Мій профіль"
   user_header_logout: "Вийти"
-  user_header_signin: "Вхід"
+  user_header_signin: "Увійти"
   user_header_create: 'Творіть '
   user_header_gamelab: "Ігрова лабораторія"
   user_header_playlab: "Ігрова студія"
   user_header_dance: "Танцювальна вечірка"
   user_header_minecraft: "Майнкрафт"
   user_header_flappy: "Пурх"
+  sign_in_instruct_secret: "Виберіть їх секрет %{secret}."
   applab_tile_start_tutorial: "Початок"
   aquatic_name: 'Minecraft: Водна подорож'
+  account_sign_up_email_opt_in: "Чи можемо ми сповіщати вас про оновлення курсів, локальних можливості та інші новини з області інформатики за допомогою електронної пошти?"
+  account_sign_up_child_accept_terms: "Я підтверджую що у мене є згода моїх батьків і законних опікунів на дозвіл використання Code.org."
   hoc_overview_dance_title: "Танцювальна вечірка"
+  hoc_overview_dance_subtitle: "Закодуйте танцювальну вечірку та покажіть її друзям. Під пісні Кеті Пері, Мадонни, Джея Бальвіна, Сіа, Кіта Урбана, Сіари та ще 25 виконавців!"
+  hoc_overview_dance_2019_subtitle: "Закодуйте танцювальну вечірку та покажіть її друзям. Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers, Нікі Мінаж та 34 інших виконавців та груп!"
   hoc_overview_start_tutorial: "Початок"
   hoc2018_creativity: "творчість"
   hoc2018_creativity_create: "Створити"
@@ -1402,6 +1416,7 @@
   hoc2018_mc_careers_more: "Більше <a href='%{careers_url}' target='_blank'>надихаючих відео</a> з фахівцями зі сфери технологій"
   hoc2018_mc_video_1min: "1 хв"
   hoc2018_mc_video_2min: "2 хв"
+  hoc2018_mc_video_3min: "3 хв"
   hoc2018_mc_video_5min: "5 хв"
   hoc2018_mc_video_title_steph_curry: "Година коду зі Стефом Каррі"
   hoc2018_mc_video_title_sports: "Постарайся! Навчитись може кожен."
@@ -1417,6 +1432,8 @@
   hoc2018_mc_homepage_join_us: "Приєднуйтесь"
   hoc2018_mc_homepage_try_it: "Спробувати"
   hoc2018_dance_party_main_heading: "Танцювальна вечірка"
+  hoc2018_dance_party_subheading: "Допоможіть перекласти Dance Party"
+  hoc2018_dance_create_your_own_dance_title: "Створіть власну Dance Party"
   hoc2018_dance_party_box_title: "Танцювальна вечірка"
   hoc2018_dance_party_box_description: "Закодуй танцювальну вечірку і поділися з друзями!"
   hoc2018_dance_party_button: "Початок"
@@ -1435,5 +1452,10 @@
   hoc2018_dance_video_title_what_is_creativity: "Що таке креативність?"
   hoc2018_dance_view_creativity_video_playlist: "Що таке креативність? Перегляньте всі серії (5 хв)"
   hoc2018_dance_amazon_about_future_engineer_button: "Дізнайтеся більше"
+  hoc2018_dance_amazon_try_coding_this_summer_button: "Приєднатися до табору"
   hoc2018_dance_measure: "Крок"
   hoc2018_dance_measure_colon: 'Крок:'
+  page_not_found_title: "Сторінка не знайдена"
+  page_not_found_header: '404: Сторінка не знайдена'
+  hoc2019_mc_more_coding_resources: "Більше Coding ресурсів"
+  hoc2019_dance_previous_versions: "Шукаєте попередню версію Dance Party?\nНатисніть тут, щоб почати [Частина 1](%{dance_2018_link}) та [Частина 2](%{dance_extras_2018_link}) з останнього року."

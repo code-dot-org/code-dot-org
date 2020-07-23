@@ -41,7 +41,10 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-11 22:03:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-13 16:23:07 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-09-11 22:03:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-13 16:23:07 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

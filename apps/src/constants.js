@@ -179,3 +179,11 @@ export const CIPHER =
 
 export const EXPO_SESSION_SECRET =
   '{"id":"fakefake-67ec-4314-a438-60589b9c0fa2","version":1,"expires_at":2000000000000}';
+
+export const BASE_DIALOG_WIDTH = 700;
+
+export const TOOLBOX_EDIT_MODE = 'toolbox_blocks';
+
+export const PROFANITY_FOUND = 'profanity_found';
+
+export const NOTIFICATION_ALERT_TYPE = 'notification';

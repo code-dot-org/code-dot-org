@@ -6,12 +6,14 @@ var GameButtons = require('../../templates/GameButtons').default;
 import ArrowButtons from '../../templates/ArrowButtons';
 var BelowVisualization = require('../../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
+import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
 var CraftVisualizationColumn = function(props) {
   return (
     <span>
       <ProtectedVisualizationDiv>
         <div id="minecraft-frame">
+          <SwipePrompt useMinecraftStyling />
           <div id="phaser-game" />
         </div>
       </ProtectedVisualizationDiv>
@@ -20,7 +22,11 @@ var CraftVisualizationColumn = function(props) {
 
         {props.showFinishButton && (
           <div id="right-button-cell">
-            <button id="finishButton" className="share mc-share-button">
+            <button
+              type="button"
+              id="finishButton"
+              className="share mc-share-button"
+            >
               <div>{msg.finish()}</div>
             </button>
           </div>

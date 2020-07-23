@@ -32,6 +32,7 @@ mi:
         edit_header: Whakatika Taipitopito Pūkete
         error:
           future: tē āhei haere ake nei
+  beta: beta
   hello: Tēnā koe e te ao
   welcome_back: Hoki mai rā, %{name}
   your_professional_learning_plan: Tō Mahere Ako Ngaio
@@ -45,13 +46,9 @@ mi:
   okay: Āe
   or: rānei
   heading_x_of_y: "%{heading} (whārangi %{x} o %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tāpiritia he pouako:'
       placeholder: Wāhanga Waehere (ABCDEF)
-      instructions: Tēnā tāurutia te waehere nā tō pouako i tiri ki a koe. He waehere
-        e 6 ōna pū pēnei i "AEIOUU".
-    submit: Tāpiri pouako
   add_hint_form:
     placeholder: Tēnā tāurutia tō tīwhiri i konei
     submit: Tāpiri tīwhiri
@@ -67,7 +64,6 @@ mi:
   of: o
   more: NUI AKE
   less: ITI IHO
-  beta: beta
   try_hoc: 'Tēnā whakamātauria te Hour of Code, pāwhiritia i konei >> '
   try_k8intro: Whakamātauria tā mātou Akoranga Whakataki K-8 ki te Pūtaiao Rorohiko
     (15-25 haora)
@@ -80,9 +76,6 @@ mi:
   auth:
     sign_in_with: Takiuru me %{provider}
     signed_in: Kua takiuru atu!
-    signed_out: Kua puta koe i <a <a href="%{url}">Code.org</a>.
-    sign_out_of: I uru atu koe mā %{provider}.<a href="%{url}">Pāwhiritia i konei</a>ki
-      te puta i %{provider}.
     already_signedup: Kua waitohuniga kētia?
     notyet_signedup: Kāore anō kia hono?
     google_oauth2: Pūkete Google
@@ -100,6 +93,10 @@ mi:
       ki te whakahaere rānei i tō akomanga. <a href="/"> E āhei ana koe ki te tirotiro
       ki ngā taumata rerekē me ngā panga </a>, heoi anō, me mātua waitohu kia āhei
       hoki koe tō kauneketanga me o tūmahi te tiaki.
+    overview_markdown: Waitohungia kia whiwhi pūkete kia āhei koe te whai i tō kauneketanga,
+      ki te whakahaere rānei i tō akomanga. [E āhei ana koe ki te tirotiro ki ngā
+      taumata rerekē me ngā panga](/), heoi anō, me mātua waitohu kia āhei hoki koe
+      tō kauneketanga me o tūmahi te tiaki.
     hoc_already_signed_up_heading: Tīmataria me te kore takitaki
     hoc_already_signed_up_content: Kua uru koe ki te whakaako i tētahi Hour of Code!
       Me takiuru koutou ko ō ākonga ki Code Studio ka whai wāhi ai. Kia tīmata<a href="https://code.org/learn">
@@ -125,17 +122,6 @@ mi:
     valid_password: Kupuhipa whai mana!
     invalid_password: Me kaua tō kupuhipa e iti ake i te 6 pūāhua
     mismatch_password: He rerekē ngā kupuhipa e rua kua whakaurua e koe
-    student_terms: E whakaae ana ahau ki ngā here o Code.org <a href='http://code.org/tos'>
-      ngā ture ratonga</a>. Mehemea he tamariki ake ahau i te 13 tau, e whakaū ana
-      ahau mā te tāpae i tēnei puka kua whakaaetia taku whakamahi i ngā ratonga o
-      Code.org e tētahi o ōku mātua, tōku kaitiaki ā-ture rānei.<br/><br/>Kāore ngā
-      wāhitau īmēra e tiakina ana i tētahi hanga nā reira ka āhei ana mātou ki te
-      whakapā atu ki ngā ākonga. E kore rawa ngā ākonga e whiwhi īmēra i Code.org
-      hāunga atu i ērā mō te whakaora kupuhipa. Tēnā tirohia tā mātou <a href='http://code.org/privacy'>kaupapahere
-      tūmataitinga</a>mō ētahi mōhiohio anō.
-    teacher_terms: E whakaae ana ahau ki ngā here o ngā ture ratonga o Code.org. Tirohia
-      tā mātou <a href='http://code.org/privacy'> kaupapahere tūmataitinga</a> mō
-      ētahi mōhiohio anō mō te tūmataititanga.
     additional_information: Me whiwhi mātou ki ētahi mōhiohio anō kia āhei tonu tō
       waitohu mai.
     user_type_label: Momo Pūkete
@@ -225,13 +211,15 @@ mi:
     access_denied: Kāore i a koe te mana uru ki tēnei %{model}.
   nav:
     header:
-      finished_hoc: Kua oti i au taku Hour of Code
+      finished_hoc: Kua oti i ahau!
       sign_in_to_save: Takiuru atu ki te tiaki i aku mahi
-      free_play:
-        playlab: Hangaia tētahi taupānga Taiwhanga Tākaro
-        artist: Tāngia tētahi mea
-        applab: Hangaia tētahi taupānga Taiwhanga Taupānga
+      course_catalog: Whārangi Akoranga
       project_gallery: Ngā Tūmahi
+      help_support: Māngai tautoko
+      report_bug: Pūrongo mai to raru
+      about: Whakamārama
+      legal_privacy: Kaupapahere Tūmataitinga
+      legal_tos: Ngā Ture Ratonga
     user:
       district_dashboard: Paemana ā-Rohe
       label: Tēnā koe %{username}
@@ -247,9 +235,18 @@ mi:
       create: Waihanga
       applab: Taiwhanga Taupānga
       artist: Rehetoi
-      playlab: Taiwhanga Tākaro
-      minecraft: Mahimaina
+      bounce: Tupana
+      calc: Calc
+      dance: Te Pāti Kanikani
+      eval: Eval
       flappy: Flappy
+      frozen: Frozen
+      infinity: Mutunga Kore
+      minecraft_adventurer: Kiri Māia Mahimaina
+      minecraft_designer: Mahimaina
+      playlab: Taiwhanga Tākaro
+      sports: Ngā Hākinakina
+      starwars: Star Wars
     popup:
       progress_for_user: Te kauneketanga o %{name}
       progress: Tō kauneketanga
@@ -299,15 +296,13 @@ mi:
     delete_text_teacher_note: 'Kia mōhio ai koe: e kore ngā pūkete o ngā ākonga e
       mukua ina mukua tō ake pūkete.'
     delete_confirm: Āe rānei e hiahia ana koe ki te muku i tō pūkete?
+    update_email: Whakahou
+    none: Kore
   user_level:
     completed: Kua oti
     tried: Kua ngana
   home:
     title: Taiwhanga Waehere
-    description: Ko Code Studio te kāinga mō ngā akoranga tuihono nā Code.org i waihanga
-    lines_of_code: "%{lines_count} RĀRANGI WAEHERE I TUHIA E NGĀ ĀKONGA"
-    lines_of_code_linebreak: "%{lines_count} RĀRANGI WAEHERE <br/>I TUHIA E NGĀ ĀKONGA
-      %{students_count} MIRIONA"
     all_courses: Tirohanga Whānui o ngā Akoranga 1, 2, me te 3
     lesson_plans: Mahere akoranga
     signin_message: Kua rēhita kē? %{link}
@@ -348,49 +343,11 @@ mi:
     test_videos_help: Whakamātauria tā mātou pūrere ataata hou ki tō kura
     try_beta_courses: Hou! Whakamātauria ā mātou whakaaronga peta mā ngā ākonga K-5
     use_as_teacher: Whakamahia tēnei pae hei pouako
-    heading_hoc2014: "<h2>Te Hour of Code mō</h2><h1>Ngā Pakeke Katoa</h1>"
-    heading_elementary: "<h2>Whakaakoranga 20 haora te roa mō</h2><h1>Ngā Āhuatanga
-      Taketake o te Pūtaiao Rorohiko (ngā pakeke katoa)</h1>"
-    heading_apps: "<h2>Ngāhau mō</h2><h1>te Katoa</h1>"
-    heading_tools: "<h2>Kua rite ki te koke tonu?</h2><h1>Ngā Utauta JavaScript mō
-      te Kura Tuarua</h1>"
-    heading_legacy: "<h2>Tā mātou whakaakoranga mō </h2><h1>Pakeke Katoa</h1>"
     your_gallery: Taiwhainga
     no_primary_course: Whakamātauria tētahi o ngā whakaakoranga Code Studio
     choose_next_course: Whakamātauria tētahi o ngā whakaakoranga Code Studio mā te
       whiriwhiri i tētahi kei raro iho nei
     print_certificate: Tāngia te Tiwhikete
-    announcement_learn_more_button: Me ako tonu
-    announcement_try_now_button: Ngana ināianei
-    announcement_host_an_hour_button: Taurimatia tētahi Hour
-    announcement_watch_video_button: Mātakina te ataata
-    announcement_petition: Ko tāu mahi hei pouako, he para i te huarahi kia whai wāhi
-      ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua
-      eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi
-      o ngā kaiurungi mātauranga, ngā kaikāwana 28, rātou ko ngā Kaihautū o ngā umanga
-      mana nui o Amerika tā rātou tono, i tētahi reta ki te Kāwanatanga o U.S. ki
-      te tautoko ā-pūtea taua kāwanatanga i te marau pūtaiao rorohiko.
-    announcement_petition_button: Tāpiritia tō ingoa
-    announcement_all: Tirohia tā mātou rangitaki pouako kia mōhio ai koe ki ngā āhuahira
-      me ngā whakahoutanga.<a href='%{teacher_blog_url}' target='_blank'>Tirohia ngā
-      whakapāohotanga o mua.</a>
-    announcement_hoc_launch: Hei te 5-11 o tēnei Hakihea i te wiki Hour of Code, ka
-      tīmataria te whakaako pūtaiao rorohiko e te manomano pouako nō ngā whenua 180
-      neke atu. Ko koutou hei pou whirinaki mō mātou kia whānui ake te toro atu ki
-      ngā tini ākonga. <a href='%{signup_url}' target='_blank'> Rēhitatia mai tō takunetanga
-      Hour of Code</a>, kātahi ka whakamōhiotia tētahi atu pouako, ka taea te whakaako
-      mātauranga rorohiko te tangata ahakoa ko wai.
-    announcement_mc_launch: Kua whai tānga tuarua tētahi o ā mātou whakaakoranga i
-      tino pīrangitia! E wātea ana ngā ākonga i te tānga hou nei, i Hour of Code Hoahoa
-      Mahimaina, ki te whakatakoto i ngā ture o te ao Mahimaina. E āhei ana rātou
-      ki te waihanga i tētahi wheako Mahimaina motuhake ka tiritiria ai ki ō rātou
-      hoa, ka tākaro rānei ki ō rātou waea. Mahia atu me tō akomanga mō Hour of Code.
-    announcement_how_code_studio: Ehara i te mea me tangata mōhio koe ki te pūtaiao
-      rorohiko e āhei ai koe ki te whakaako i tō akomanga. He marau, he mahere ako,
-      he akoranga ngaio kounga, me ētahi tini rauemi ka whakaratoa e Code.org mō ngā
-      taumata ako katoa &mdash; ngā mea katoa kei te hiahiatia, ā, he utu kore. E
-      whakaaro ana koe ki hea tīmata ai? Tikina ake <a href='%{video_download_url}'>tēnei
-      ataata</a>!
   move_students:
     new_section_dne: Kia manawanui mai, kāore tēnei wāhanga %{new_section_code}. Tēnā
       whakaurua he waehere wāhanga rerekē.
@@ -448,8 +405,9 @@ mi:
     trademark: He moko te &copy; Code. org, %{current_year}. Code. org&reg; te tohu
       CODE me Hour of Code&reg; o Code.org.
     copyright: Manatārua
+    more: Nui ake
     feedback: Tuku urupare
-    translate: Āwhinatia mātou ki te whakamāori ki tō reo
+    translate: Āwhinatia mātou ki te whakamāori to mātou rauemi
     support: Tautoko
     tos_short: Ngā Ture
     tos: Ngā Ture Ratonga
@@ -489,7 +447,6 @@ mi:
   pdf_download: Tikiake i te PDF
   download_coming_soon: Ākuanei ka puta mai te ngohe tikiake.
   video_coming_soon: Ākuanei ka Puta te Ataata!
-  not_started: Kāore anō te ākonga kia whakamātau i tēnei taumata.
   share_code:
     title: Pāwhiri 'Whakahaere' kia kitea taku papatono e rere ana
     bounce_og_title: Tirohia taku Kēmu Bounce
@@ -526,6 +483,10 @@ mi:
         kia mahi ai, ā, tiria tō taupānga i te wā poto noa iho.
       audience: Pakeke 13+
       cta: Ako me pēhea
+    dance:
+      title: Te Pāti Kanikani
+    dance-2019:
+      title: Te Pāti Kanikani
     hoc:
       title: Rīrapa Tauhira
       body: Whakamātauria ngā mahi waiwai o te pūtaiao rorohiko. He miriona tāngata
@@ -589,37 +550,13 @@ mi:
       title: Ngā Here
     widgets:
       cta: Ako me pēhea
-  gallery:
-    students_drew_these_with_code: Nā ngā ākonga ēnei i tā me te waehere!
-    students_made_these_with_code: Nā ngā ākonga ēnei i hanga me te waehere!
-    picture_count: I ngā rangi <b>%{days}</b> kua hipa, kua tuhia e ngā ākonga ngā
-      pikitia <b>%{count}</b> mā te tuhi i o rātou ake papatono rorohiko. Pāwhiritia
-      ngā pikitia kia kitea ai te rere o ia papatono.
-    activity_count: I ngā rangi <b>%{days}</b> kua hipa, kua hangaia e ngā ākonga
-      ngā taupānga me ngā pikitia <b>%{count}</b> mā te tuhi i o rātou ake papatono
-      rorohiko. Pāwhiritia ngā pikitia me ngā topenga mata kia kitea ai te rere o
-      ia papatono.
-    want_to_make_your_own: E hiahia ana koe ki te hanga i tō ake?
-    how_to_save: I te taumata whakamutunga o ēnei whakaakoranga, pāwhiritia the "Whakamutu"
-      me te "Tiaki" kia tiaki āu mahi ki te taiwhanga.
-    more: Mea Atu Anō &rarr;
-    caption_by_name_age: nā %{name}, %{age} tau te pakeke
-    caption_time_ago: "%{time_ago} i mua"
-    header: Taiwhainga
-    header_playlab: Ngā pūrākau me ngā kēmu
-    header_artist: Toi waehere
-    report_abuse: Pūrongohia te Tūkino
   landing:
-    prerelease: Kei <span class='betatext'>peta</span>tēnei akoranga. Nā reira e meatia
-      ana, ehara tēnei i te putanga whakamutunga rawa o tēnei whakaakoranga, ā, e
-      wātea ana kia arotakengia i te taenga atu o ngā kupu whakapai, i te whakawhanake
-      hoki.
-    prerelease_hoc2014: Kei <span class='betatext'>peta</span>tēnei whakaakoranga.
-      E wātea ana kia arotakengia i te taenga atu o ngā kupu whakapai, i te whakawhanake
-      hoki.
     report_bug: Pūrongotia tētahi Iro
     support: Tono Āwhina
     help_resources: Te Āwhina me ngā Rauemi
+    help_support: Māngai tautoko
+  free_response:
+    placeholder: Whakaurua tō whakautu i konei
   multi:
     wrong_title: Whakautu hē
     wrong_body: E hē ana te whakautu nāu i whakauru. Tēnā whakamātau anō!
@@ -688,12 +625,6 @@ mi:
   age_interstitial:
     age: Tō pakeke
     header: Whakahoutanga Mōhiohio Pūkete
-    message: E whakahoungia ana tō mātou āheinga kia kaha ake ai ngā parenga tūmataitinga
-      mōu. E āhei ai mātou te pēnei, me whakauru ngā kaiwhakamahi onāianei ō rātou
-      pakeke i konei.<br/>He rite tonu tā code.org kore rēti, hoko atu, tiri rānei
-      i ngā mōhiohio nei ki tētahi hunga-tuatoru.
-    sign_out: Mēnā kāore koe i te hiahia ki te whakarato i tō pakeke, e whakaae ana
-      <a href="%{url}">kia takiputa</a>.
   terms_interstitial:
     title: Te Whakahoutanga o Ngā Ture Ratonga me te Kaupapahere Tūmataitinga
     intro_desc: 'I whakahoungia Ngā Ture Ratonga me te Kaupapahere Tūmataitinga, e
@@ -701,6 +632,12 @@ mi:
       Here-turi-kōkā, 2016. Ko te panonitanga nui: e kore mātou <i>e pupuri ki ngā
       wāhitau īmēra o ngā pūkete o ngā ākonga ki Code Studio.</i>He mea nui tēnei
       ki a mātou, ā, e manako ana, mā tēnei whakatau ka eke te tūmataitinga o te ākonga
+      i roto i te marau hangarau ki tētahi taumata anō.'
+    intro_desc_markdown: 'I whakahoungia Ngā Ture Ratonga me te Kaupapahere Tūmataitinga,
+      e whakaaturia ana ki raro iho nei. Ka whai mana ngā panonitanga mai i te 24
+      o Here-turi-kōkā, 2016. Ko te panonitanga nui: e kore mātou _e pupuri ki ngā
+      wāhitau īmēra o ngā pūkete o ngā ākonga ki Code Studio._He mea nui tēnei ki
+      a mātou, ā, e manako ana, mā tēnei whakatau ka eke te tūmataitinga o te ākonga
       i roto i te marau hangarau ki tētahi taumata anō.'
     intro_instructions: Me whakaae koe ki ēnei ture hou e āhei ai ngā ākonga kei raro
       i te 13 te pakeke i tō akomanga te whai wāhi ki ngā āhuahira hou kei Code Studio.
@@ -714,6 +651,8 @@ mi:
     accept_label: E whakaae ana ahau ki ngā whakahoutanga o <a href="%{tos_url}" target="_blank">
       Ngā Ture Whakaratonga</a> me <a href="%{privacy_url}" target="_blank"> te Kaupapahere
       Tūmataitinga</a>
+    accept_label_markdown: E whakaae ana ahau ki ngā whakahoutanga o [Ngā Ture Whakaratonga](%{tos_url})
+      me [te Kaupapahere Tūmataitinga](%{privacy_url})
     accept: Whakaae
     print: Tāngia
     reminder_desc: Kua whakahoungia e mātou ā mātou <a href="%{tos_url}" target="_blank">Ture
@@ -721,6 +660,10 @@ mi:
       Tēnā āta pānuihia i mua i tō whakaae atu. Kia mōhio ai koe, tērā pea kāore tā
       mātou utauta whakaako JavaScript e wātea ki ō ākonga i mua i tō whakaae mārika
       ki ngā ture hou.
+    reminder_desc_markdown: Kua whakahoungia e mātou ā mātou [Ture Ratonga](%{tos_url})
+      me [te Kaupapahere Tūmataitinga](%{privacy_url}). Tēnā āta pānuihia i mua i
+      tō whakaae atu. Kia mōhio ai koe, tērā pea kāore tā mātou utauta whakaako JavaScript
+      e wātea ki ō ākonga i mua i tō whakaae mārika ki ngā ture hou.
     review_terms: Arotakehia ngā ture hou
   race_interstitial:
     title: 'He kōwhiringa: Tēnā āwhinatia mātou ki te aroturuki i tō mātou whanaketanga
@@ -740,6 +683,10 @@ mi:
     nohinohi tā mātou pae e tautoko. E whakaae ana kia tirohia te <a href="http://support.code.org">support.code.org</a>
     me te kore takiuru atu, ki te tono rānei ki tō matua/whaea tō pouako rānei ki
     te whakapā mai mōu.
+  zendesk_too_young_message_markdown: Kia manawanui mai, kāore e whakaae ana mā te
+    tamaiti nohinohi tā mātou pae e tautoko. E whakaae ana kia tirohia te [support.code.org](http://support.code.org)
+    me te kore takiuru atu, ki te tono rānei ki tō matua/whaea tō pouako rānei ki
+    te whakapā mai mōu.
   progress:
     not_started: kāore anō kia tīmata
     in_progress: e kauneke ana
@@ -757,11 +704,8 @@ mi:
     create: Waihanga Tūmahi
     create_a_project: 'Waihanga i tētahi tūmahi hou:'
     new: Waihanga mea Hou
-    rename: Whakaingoa anō
     exit: Hoki atu ki te Akoranga
-    my_projects: Aku Tūmahi
     project_gallery: Ngā Tūmahi
-    share: Tiri
     share_title: Tiria tō tūmahi
     share_copy_link: 'Tāruatia te honongaitua:'
     share_embed_description: E āhei ana koe te waehere tāmau te whakapiri ki tētahi
@@ -770,7 +714,6 @@ mi:
       iho ki ērā atu kei tō kura ake.
     embed: Tāmau
     advanced_share: Whakaaturia ngā kōwhiringa atu anō
-    close: Kati
     name: Ingoa
     updated: Kua Whakahoutia
     project_type: Momo Tūmahi
@@ -779,18 +722,9 @@ mi:
       wātea ana kia hoki atu koe ki te whanake i tō tūmahi i ngā wā katoa.
     need_help: Whakamātauria ēnei whakaakoranga hei hāpai i a koe ki te tīmata i tō
       tūmahi hou
-    delete_yes: Āe
-    delete_no: Kāore
     saved: Kua Tiakina
     not_saved: Kāore anō kia tiakina
-    cancel: Whakakore
-    delete_confirm_title: Āe rānei e hiahia ana koe ki te muku i tēnei tūmahi?
-    delete_confirm_text: Mā te muku i tō tūmahi ka poroa rawatia i tō rārangi Aku
-      Tūmahi. Ko te katoa o ngā tāngata nāu te honongaitua o tēnei tūmahi i tiri ki
-      a rātou, ka kore e kite tonu i tō tūmahi.
     view_all: Tirohia Aku Tūmahi
-    remix: Ranu Anō
-    click_to_remix: Pāwhiritia te "Ranu Anō" ki te waihanga i tāu ake putanga!
     edit_project: Whakatika Tūmahi
     abuse:
       tos: Kua pūrongotia tēnei tūmahi, nā te mea, kua takahia <a href='http://code.org/tos'>Ngā
@@ -830,21 +764,14 @@ mi:
   peer_review:
     accepted:
       name: Kua Whakaaetia
-      description: "<strong>Āe</strong>, ka tutuki</strong>i tēnei tāpaetanga<strong>ngā
-        ritenga e tika ana"
     rejected:
       name: Kua Ākiria
-      description: "<strong>Kāore</strong>, e kore tutuki</strong>i tēnei tāpaetanga<strong>ngā
-        ritenga e tika ana"
     escalated:
       name: Kua Whakaterea
       description: E hiahia ana ahau kia tirohia tēnei tāpaetanga e tētahi kaitohutohu
     instructor_feedback: Urupare Kaitohutohu
     peer_feedback: Urupare Hoa
     outdated: I tāpiritia tēnei urupare mō tētahi putanga tāpaetanga o mua
-  flex_category:
-    content: Ihirangi
-    practice: Huarahi Whakaako
     peer_review: Arotake ā-Hoa
   external_links:
     disclaimer: Karo
@@ -923,6 +850,7 @@ mi:
     ki te tirohia anō rānei o whakautu.
   hidden_stage: Kāore tō pouako i whakaaro ka eke koe ki konei. Tēnā uia tō pouako
     kia mōhio ai koe ko tēhea te akoranga e tika ana mōu i tēnei wā.
+  return_unit_overview: Haere ki te tirohanga whānui o te kōwae ako
   return_course_overview: Haere ki te tirohanga whānui o te kōwae ako
   view_teacher_guide: Tirohia te aratohu kaiako
   pd:
@@ -943,3 +871,4 @@ mi:
         opt_in_no: Kāore
   gdpr_dialog:
     true: Āe
+  copy: Tārua

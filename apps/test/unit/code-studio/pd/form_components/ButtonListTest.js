@@ -1,6 +1,6 @@
 import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
 import React from 'react';
-import {expect} from 'chai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {
@@ -31,20 +31,22 @@ describe('ButtonList', () => {
     });
 
     it('Renders radio buttons', () => {
-      expect(radioList).to.containMatchingElement(
-        <FormGroup id="favoritePet" controlId="favoritePet">
-          <ControlLabel>What is your favorite pet?</ControlLabel>
-          <FormGroup>
-            <Radio value="Cat" label="Cat" name="favoritePet">
-              Cat
-            </Radio>
-            <Radio value="Dog" label="Dog" name="favoritePet">
-              Dog
-            </Radio>
+      expect(
+        radioList.containsMatchingElement(
+          <FormGroup id="favoritePet" controlId="favoritePet">
+            <ControlLabel>What is your favorite pet?</ControlLabel>
+            <FormGroup>
+              <Radio value="Cat" label="Cat" name="favoritePet">
+                Cat
+              </Radio>
+              <Radio value="Dog" label="Dog" name="favoritePet">
+                Dog
+              </Radio>
+            </FormGroup>
+            <br />
           </FormGroup>
-          <br />
-        </FormGroup>
-      );
+        )
+      ).to.be.ok;
     });
 
     it('Calls the onChange callback with a single result when one is selected', () => {
@@ -75,20 +77,22 @@ describe('ButtonList', () => {
     });
 
     it('Renders checkboxes', () => {
-      expect(checkboxList).to.containMatchingElement(
-        <FormGroup id="favoritePet" controlId="favoritePet">
-          <ControlLabel>What is your favorite pet?</ControlLabel>
-          <FormGroup>
-            <Checkbox value="Cat" label="Cat" name="favoritePet">
-              Cat
-            </Checkbox>
-            <Checkbox value="Dog" label="Dog" name="favoritePet">
-              Dog
-            </Checkbox>
+      expect(
+        checkboxList.containsMatchingElement(
+          <FormGroup id="favoritePet" controlId="favoritePet">
+            <ControlLabel>What is your favorite pet?</ControlLabel>
+            <FormGroup>
+              <Checkbox value="Cat" label="Cat" name="favoritePet">
+                Cat
+              </Checkbox>
+              <Checkbox value="Dog" label="Dog" name="favoritePet">
+                Dog
+              </Checkbox>
+            </FormGroup>
+            <br />
           </FormGroup>
-          <br />
-        </FormGroup>
-      );
+        )
+      ).to.be.ok;
     });
 
     it('Calls the onChange callback with a list of all checked when one is checked', () => {
@@ -134,7 +138,7 @@ describe('ButtonList', () => {
 
     const helpBlock = buttonList.find(HelpBlock);
     expect(helpBlock).to.have.length(1);
-    expect(helpBlock.childAt(0)).to.have.text('You must choose!');
+    expect(helpBlock.childAt(0).text()).to.equal('You must choose!');
   });
 
   it('Adds an other option when includeOther is set', () => {
@@ -151,15 +155,17 @@ describe('ButtonList', () => {
     const checkboxes = buttonList.find(Checkbox);
     expect(checkboxes).to.have.length(3);
     const otherCheckbox = checkboxes.at(2);
-    expect(otherCheckbox).to.containMatchingElement(
-      <Checkbox>
-        <div>
-          <span>Other:</span>
-          &nbsp;
-          <input type="text" id="favoritePet_other" maxLength="200" />
-        </div>
-      </Checkbox>
-    );
+    expect(
+      otherCheckbox.containsMatchingElement(
+        <Checkbox>
+          <div>
+            <span>Other:</span>
+            &nbsp;
+            <input type="text" id="favoritePet_other" maxLength="200" />
+          </div>
+        </Checkbox>
+      )
+    ).to.be.ok;
   });
 
   describe('With input fields', () => {
@@ -191,28 +197,30 @@ describe('ButtonList', () => {
     });
 
     it('Renders correctly', () => {
-      expect(buttonList).to.containMatchingElement(
-        <FormGroup>
-          <Checkbox value="Cat" label="Cat" name="favoritePet">
-            Cat
-          </Checkbox>
-          <Checkbox
-            value="Specific dog breed"
-            label="Specific dog breed"
-            name="favoritePet"
-          >
-            <div>
-              <span>Specific dog breed</span>
-              &nbsp;
-              <input type="text" id="dog-breed-input" maxLength="200" />
-            </div>
-          </Checkbox>
-        </FormGroup>
-      );
+      expect(
+        buttonList.containsMatchingElement(
+          <FormGroup>
+            <Checkbox value="Cat" label="Cat" name="favoritePet">
+              Cat
+            </Checkbox>
+            <Checkbox
+              value="Specific dog breed"
+              label="Specific dog breed"
+              name="favoritePet"
+            >
+              <div>
+                <span>Specific dog breed</span>
+                &nbsp;
+                <input type="text" id="dog-breed-input" maxLength="200" />
+              </div>
+            </Checkbox>
+          </FormGroup>
+        )
+      ).to.be.ok;
     });
 
     it('Displays supplied input value', () => {
-      expect(dogBreedInput).to.have.prop('value', '--enter dog breed--');
+      expect(dogBreedInput.prop('value')).to.equal('--enter dog breed--');
     });
 
     it('Calls the onInputChange callback when text is entered', () => {

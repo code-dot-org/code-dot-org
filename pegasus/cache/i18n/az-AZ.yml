@@ -20,6 +20,8 @@ az-AZ:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">İnformatika müəllimisiniz? İnformatika Təhsil Həftəsi
     üçün digər materiallarımızı nəzərdən keçirin</a>'
+  csedweek_banner_teachers_text: İnformatika müəllimisiniz? İnformatika Təhsil Həftəsi
+    üçün digər materiallarımızı nəzərdən keçirin
   n_have_learned_an_hoc: "<h1>Kod Saatında</h1><h2>özünüzü sınayın</h2><h3># nəfər
     faydalanıb</h3>"
   anybody_can_learn: Hər kəs öyrənə bilər.
@@ -27,8 +29,6 @@ az-AZ:
   petition_message: Hər bir məktəbdə hər bir şagirdin informatikanı öyrənmək imkanı
     olmalıdır
   petition_sign_message: 'Razısınızsa, adınızı yazın. Daha # nəfərə qoşulun.'
-  petition_sign_message_support: Əgər bizi dəstəkləyirsinizsə, adınızı daxil edin.
-    Bizə qatılın.
   petition_join_others: 'Digər # nəfərə qoşulun'
   name: Ad
   email: E-poçt
@@ -219,6 +219,7 @@ az-AZ:
   homepage_action_text_learn: Öyrənməyə başlayın
   homepage_action_text_signpetition: Petisiyaya qol çəkin
   homepage_signpetition_dropdown: Mən razıyam &#x25BE;
+  homepage_signpetition_dropdown_text: Razıyam
   homepage_diversity_pledge: Fərqlilik barədə öhdəlik götür
   homepage_banner_text_prizes: 'Kod Saatı yenə gəlir, 7-13 dekabrda. '
   homepage_banner_link_prizes: 'Tarixin ən böyük təhsil hadisəsinə qoşulun. '
@@ -432,8 +433,6 @@ az-AZ:
   classicmaze_name: Ənənəvi labirint
   iceage_name: Buz dövrü
   minecraft_name: Minecraft
-  math_category_name: Riyaziyyat
-  hoc_category_name: Kod Saatı
   applab_name: Proqram Labı
   applab_gradelevel: 13+ yaş
   codeorg_gradelevel: 4-104 yaş
@@ -476,6 +475,8 @@ az-AZ:
   coursee-2017_gradelevel: 8-12 yaş
   coursed-2018_gradelevel: 8+ siniflər
   coursee-2018_gradelevel: 8-12 yaş
+  coursed-2019_gradelevel: 8+ siniflər
+  coursee-2019_gradelevel: 8-12 yaş
   accelerated_gradelevel: 10+ yaş (Kurs 3-dən sonra)
   thinkersmithspanish_platformtext: Sərbəst
   khan_platformtext: Müasir veb səyyahlar
@@ -613,6 +614,8 @@ az-AZ:
   header_about: Haqqımızda
   header_teacher_community: Müəllim icması
   header_help_support: 'Kömək və texniki dəstək '
+  header_legal_privacy: Məxfilik siyasəti
+  header_legal_tos: Xidmət şərtləri
   header_tutorials: Dərsliklər
   header_documentation: Təlimat və sənədlər
   user_header_label: Salam %{username}
@@ -655,3 +658,4 @@ az-AZ:
   hoc2018_dance_video2: Rəqs Şənliyi - Hadisələr
   hoc2018_dance_video3: Rəqs Şənliyi - Xüsusiyyətlər
   hoc2018_dance_video4: Rəqs Şənliyi - Təbriklər
+  hoc2018_mc_with_microsoft: 'Tərəfdaşlarımız: '

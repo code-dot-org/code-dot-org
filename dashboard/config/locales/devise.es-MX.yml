@@ -3,8 +3,8 @@ es-MX:
   devise:
     confirmations:
       confirmed: Tu dirección de correo electrónico se ha confirmado correctamente.
-      send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
-        tu cuenta en unos minutos.
+      send_instructions: En unos minutos, recibirás un correo electrónico con instrucciones
+        para confirmar tu cuenta.
       send_paranoid_instructions: Si tu dirección de correo electrónico existe en
         nuestra base de datos, recibirás un correo electrónico con instrucciones para
         confirmar tu cuenta en pocos minutos.
@@ -12,7 +12,7 @@ es-MX:
       already_authenticated: Ya has iniciado sesión.
       inactive: Tu cuenta todavía no fue activada.
       invalid: Correo electrónico o contraseña no válidos.
-      invalid_token: Token de autenticación no válido.
+      invalid_token: El token de autenticación no es válido.
       locked: Tu cuenta está bloqueada.
       not_found_in_database: Correo electrónico o contraseña no válidos.
       timeout: Tu sesión ha expirado, inicia sesión nuevamente para continuar.
@@ -22,7 +22,7 @@ es-MX:
       confirmation_instructions:
         subject: Instrucciones de confirmación de Code.org
       reset_password_instructions:
-        subject: Reiniciar las instrucciones de la contraseña de Code.org
+        subject: Instrucciones para restablecer la contraseña de Code.org
       unlock_instructions:
         subject: Instrucciones de desbloqueo
     omniauth_callbacks:
@@ -33,8 +33,8 @@ es-MX:
         que recibiste por correo electrónico para restablecer la contraseña. Si vienes
         de un enlace que recibiste por correo electrónico para restablecer la contraseña,
         asegúrate de haber usado la URL completa que se te ha proporcionado.
-      send_instructions: Recibirás un correo electrónico con instrucciones sobre cómo
-        restablecer la contraseña en unos minutos.
+      send_instructions: En unos minutos, recibirás un correo electrónico con instrucciones
+        sobre cómo restablecer tu contraseña.
       send_paranoid_instructions: Si tu dirección de correo electrónico existe en
         nuestra base de datos, recibirás un enlace de recuperación de contraseña en
         tu dirección de correo electrónico en unos pocos minutos.
@@ -71,7 +71,7 @@ es-MX:
       not_found: no encontrado
       not_locked: No estaba bloqueada
       not_saved:
-        one: '1 error impidió que este %{resource} se guardara:'
+        one: '1 error impidió guardar este %{resource}:'
         other: "%{count} errores impiden que este %{resource} se guardara:"
     invitations:
       send_instructions: Se ha enviado un correo electrónico de invitación a %{email}.
@@ -83,12 +83,12 @@ es-MX:
         header: Enviar invitación
         submit_button: Enviar una invitación
       edit:
-        header: Establece tu contraseña
+        header: Establecer tu contraseña
         submit_button: Establecer mi contraseña
     mailer:
       invitation_instructions:
         subject: Instrucciones de la invitación
-        hello: Hola %{email}
+        hello: Hola, %{email}
         someone_invited_you: Te han invitado a %{url}, lo puedes aceptar mediante
           el enlace que se encuentra a continuación.
         accept: Aceptar invitación

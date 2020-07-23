@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';
-import color from '../../util/color';
+import themeValues from '../themeValues';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {
@@ -96,9 +96,9 @@ export function removeIdPrefix(element) {
   element.setAttribute('id', getId(element));
 }
 
-// TODO(dave): remove blacklist once element ids inside divApplab
+// TODO(dave): remove denylist once element ids inside divApplab
 // are namespaced: https://www.pivotaltracker.com/story/show/113011395
-var ELEMENT_ID_BLACKLIST = [
+var ELEMENT_ID_DENYLIST = [
   'finishButton',
   'submitButton',
   'unsubmitButton',
@@ -110,7 +110,7 @@ var TURTLE_CANVAS_ID = 'turtleCanvas';
 
 /**
  * Returns true if newId is available and won't collide with other elements.
- * Always reject element ids which are blacklisted or already exist outside divApplab.
+ * Always reject element ids which are denylisted or already exist outside divApplab.
  * Allow or reject other element types based on the options specified.
  * @param {string} newId The id to evaluate.
  * @param {Object.<string, boolean>} options Optional map of options
@@ -131,8 +131,8 @@ export function isIdAvailable(newId, options) {
     return false;
   }
 
-  // Don't allow blacklisted elements.
-  if (ELEMENT_ID_BLACKLIST.indexOf(newId) !== -1) {
+  // Don't allow denylisted elements.
+  if (ELEMENT_ID_DENYLIST.indexOf(newId) !== -1) {
     return false;
   }
 
@@ -219,11 +219,73 @@ export function setDefaultBorderStyles(element, options = {}) {
     element.style.borderWidth = textInput ? '1px' : '0px';
   }
   if (forceDefaults || element.style.borderColor === '') {
+    // Backfill borderColor property to match "classic" values:
+    // rgb(153, 153, 153) for textInput, #000000 for everything else
     element.style.borderColor = textInput
-      ? color.text_input_default_border_color
-      : color.black;
+      ? themeValues.textInput.borderColor.classic
+      : themeValues.dropdown.borderColor.classic;
   }
   if (forceDefaults || element.style.borderRadius === '') {
     element.style.borderRadius = '0px';
   }
+}
+
+/**
+ * Parse a padding string and return the total horizontal padding and
+ * total vertical padding.
+ * @param {string} cssPaddingString value from element.style.padding
+ */
+export function calculatePadding(cssPaddingString) {
+  // Extract up to 4 numbers, ignoring the 'px' that may be included
+
+  // NOTE: if other measurement values (e.g. 'em') make it into the padding string,
+  // we will treat them as 'px' values
+
+  // Ideally, we could use getComputedStyle(), but we need to work with
+  // detached DOM nodes, which doesn't work on Chrome and Safari
+
+  const paddingValues = (cssPaddingString || '')
+    .split(/\s+/)
+    .map(part => parseInt(part, 10));
+  for (
+    var validPaddingValues = 0;
+    validPaddingValues < paddingValues.length;
+    validPaddingValues++
+  ) {
+    if (isNaN(paddingValues[validPaddingValues])) {
+      break;
+    }
+  }
+
+  // The meaning of the numeric values depends on the number that are supplied.
+  // 1 value: Apply to all four sides
+  // 2 values: vertical | horizontal
+  // 3 values: top | horizontal | bottom
+  // 4 values: top | right | bottom | left
+  // See https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax
+  let horizontalPadding, verticalPadding;
+  switch (validPaddingValues) {
+    case 1:
+      horizontalPadding = verticalPadding = 2 * paddingValues[0];
+      break;
+    case 2:
+      verticalPadding = 2 * paddingValues[0];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 3:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 4:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = paddingValues[1] + paddingValues[3];
+      break;
+    default:
+      horizontalPadding = verticalPadding = 0;
+      break;
+  }
+  return {
+    horizontalPadding,
+    verticalPadding
+  };
 }

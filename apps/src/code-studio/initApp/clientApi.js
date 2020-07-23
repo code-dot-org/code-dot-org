@@ -95,6 +95,26 @@ var base = {
   },
 
   /**
+   * Remove an object.
+   * @param {string} childPath The path underneath api_base_url
+   * @param {NodeStyleCallback} callback - Expected result is TRUE.
+   */
+  deleteObject: function(childPath, callback) {
+    $.ajax({
+      url: this.api_base_url + '/' + childPath,
+      type: 'delete',
+      dataType: 'json'
+    })
+      .done(function(data, text) {
+        callback(null, true);
+      })
+      .fail(function(request, status, error) {
+        var err = new Error('status: ' + status + '; error: ' + error);
+        callback(err, false);
+      });
+  },
+
+  /**
    * Retrieve a collection.
    * @param {string} childPath The path underneath api_base_url
    * @param {AjaxNodeStyleCallback} callback - Expected result is the requested
@@ -111,7 +131,7 @@ var base = {
       })
       .fail(function(request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
-        callback(err, undefined);
+        callback(err, undefined /*data*/, undefined /*jqXHR*/, request);
       });
   },
 
@@ -134,6 +154,7 @@ var base = {
       })
       .fail(function(request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
+        err.responseText = request.responseText;
         callback(err, false);
       });
   },

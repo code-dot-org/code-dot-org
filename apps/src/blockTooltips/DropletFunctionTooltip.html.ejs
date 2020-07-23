@@ -15,7 +15,19 @@
     <%= getPrefixedName() %>(<% for (var i = 0; i < locals.parameters.length; i++) { -%><%- locals.parameters[i].name -%><% if (i < locals.parameters.length - 1) { -%>, <% } -%><% } -%>)
   <% } %>
 </div>
-<% if (locals.functionShortDescription) { %><div><%= locals.functionShortDescription %></div><% } %>
+<% if (locals.functionShortDescription) { %>
+  <% locals.functionShortDescription.split('\n').map(function(descriptionLine) { %>
+    <div>
+      <%= descriptionLine %>
+    </div>
+  <% }) %>
+<% } %>
+<% var linkText = "" %>
+<% if (locals.showCodeLink) { %>
+  <div class="tooltip-code-link">
+    <a href="javascript:void(0);">Show code</a>
+  </div>
+<% } %>
 <% if (locals.showExamplesLink) { %>
   <div class="tooltip-example-link">
     <a href="javascript:void(0);">See examples</a>

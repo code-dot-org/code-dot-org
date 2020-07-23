@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 bs:
   slides:
     maze_intro:
@@ -279,6 +284,26 @@ bs:
       4:
       5:
         text: "Razmisli o svojo najdražoj video igri. Dobivaš li više poena za jedne akcije nego za druge? Ovo se događa zato što računar koristi uslove. To je način na koji računar donosi odluku. Recimo, ako pogodiš metu, dobivaš deset poena. Ako ne, gubiš tri poena. Kada znaš kako funkcionišu uslovi, možeš kreirati sve vrste uzbudljivi igrica."
+    starwars_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana."
+      5:
+      6:
+      7:
+      8:
+      9:
+    starwars_blocks_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana."
+      5:
+      6:
+      7:
     mc_if_statements:
       1:
       2:
@@ -308,9 +333,11 @@ bs:
       2:
       3:
       4:
+        text: "Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah ispod njega."
       5:
       6:
       7:
+        text: "Za početak trebaš prikačiti svoje blokove za narandžast \"pri pokretanju\" blok. Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže žuta linija, a tada će se oni zakačiti."
       8:
       9:
     iceage_intro:
@@ -319,9 +346,11 @@ bs:
       2:
       3:
       4:
+        text: "Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah ispod njega."
       5:
       6:
       7:
+        text: "Za početak trebaš prikačiti svoje blokove za narandžast \"pri pokretanju\" blok. Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže žuta linija, a tada će se oni zakačiti."
       8:
       9:
     mc_2016_intro:
@@ -356,6 +385,16 @@ bs:
       3:
         text: "Stampi: Čestitam, uspio si!"
       4:
+      5:
+      6:
+      7:
+      8:
+    hoc_dance_events_2019:
+      1:
+      2:
+      3:
+      4:
+        text: "Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana."
       5:
       6:
       7:

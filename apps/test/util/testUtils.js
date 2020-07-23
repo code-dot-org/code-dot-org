@@ -1,20 +1,23 @@
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
-import {format} from 'util';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
-import i18n from '@cdo/apps/code-studio/i18n';
+export {
+  throwOnConsoleErrorsEverywhere,
+  throwOnConsoleWarningsEverywhere,
+  allowConsoleErrors,
+  allowConsoleWarnings
+} from './throwOnConsole';
+export {clearTimeoutsBetweenTests} from './clearTimeoutsBetweenTests';
 
 export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
-  window.dashboard = {...window.dashboard, i18n, assets, project};
+  window.dashboard = {...window.dashboard, assets, project};
 
   beforeFunc(() => {
-    sinon.stub(i18n, 't').callsFake(selector => selector);
-
     sinon.stub(project, 'clearHtml');
     sinon.stub(project, 'exceedsAbuseThreshold').returns(false);
     sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
@@ -28,8 +31,6 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
     sinon.stub(assets.listStore, 'list').returns([]);
   });
   afterFunc(() => {
-    i18n.t.restore();
-
     project.clearHtml.restore();
     project.exceedsAbuseThreshold.restore();
     project.hasPrivacyProfanityViolation.restore();
@@ -43,9 +44,6 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
     assets.listStore.list.restore();
   });
 
-  window.marked = function(str) {
-    return str;
-  };
   window.trackEvent = () => {};
 }
 
@@ -103,6 +101,29 @@ export function dragToVisualization(type, left, top) {
     pageY: $('#visualization').offset().top + top
   });
   $(document).trigger(drag);
+
+  //
+  // Apply border-box styling that would normally come from applab css files
+  // on the element types: input, div.textArea, button, select, img, label
+  //
+  switch (type) {
+    case 'BUTTON':
+    case 'TEXT_INPUT':
+    case 'TEXT_AREA':
+    case 'RADIO_BUTTON':
+    case 'LABEL':
+    case 'SLIDER':
+    case 'CHECKBOX':
+    case 'DROPDOWN':
+      $('.draggingParent')
+        .first()
+        .children()
+        .first()
+        .css('box-sizing', 'border-box');
+      break;
+    default:
+      break;
+  }
 
   // when we start our drag, it positions the dragged element to be centered
   // on our cursor. adjust the target drop location accordingly
@@ -244,95 +265,6 @@ function zeroPadLeft(string, desiredWidth) {
   return ('0'.repeat(desiredWidth) + string).slice(-desiredWidth);
 }
 
-/**
- * Gets a stack trace for the current location. Phantomjs doesn't add the stack
- * property unless the exception is thrown, thus we need to throw/catch a generic error.
- */
-function getStack() {
-  let stack;
-  try {
-    throw new Error();
-  } catch (e) {
-    stack = e.stack;
-  }
-  return stack;
-}
-
-/**
- * We want to be able to have test throw by default on console error/warning, but
- * also be able to allow these calls in specific tests. This method creates two
- * functions associated with the given console method (i.e. console.warn and
- * console.error). The first method - throwEverywhere - causes us to throw any
- * time the console method in question is called in this test scope. The second
- * method - allow - overrides that behavior, allowing calls to the console method.
- */
-function throwOnConsoleEverywhere(methodName) {
-  let throwing = true;
-  let firstInstance = null;
-
-  return {
-    // Method that will stub console[methodName] during each test and throw after
-    // the test completes if it was called.
-    throwEverywhere() {
-      beforeEach(function() {
-        // Stash test title so that we can include it in any errors
-        let testTitle;
-        if (this.currentTest) {
-          testTitle = this.currentTest.title;
-        }
-
-        sinon.stub(console, methodName).callsFake(msg => {
-          const prefix = throwing ? '' : '[ignoring]';
-          console[methodName].wrappedMethod(prefix, msg);
-
-          // Store error so we can throw in after. This will ensure we hit a failure
-          // even if message was originally thrown in async code
-          if (throwing && !firstInstance) {
-            // It seems that format(msg) might be causing calls to console.error itself
-            // Unstub so that those dont go through our stubbed console.error
-            console[methodName].restore();
-
-            firstInstance = new Error(
-              `Call to console.${methodName} from "${testTitle}": ${format(
-                msg
-              )}\n${getStack()}`
-            );
-          }
-        });
-      });
-
-      // After the test, throw an error if we called the console method.
-      afterEach(function() {
-        if (console[methodName].restore) {
-          console[methodName].restore();
-        }
-        if (firstInstance) {
-          throw new Error(firstInstance);
-        }
-        firstInstance = null;
-      });
-    },
-
-    // Method to be called in tests that want console[methodName] to be called without
-    // failure
-    allow() {
-      beforeEach(() => (throwing = false));
-      afterEach(() => (throwing = true));
-    }
-  };
-}
-
-// Create/export methods for both console.error and console.warn
-const consoleErrorFunctions = throwOnConsoleEverywhere('error');
-export const throwOnConsoleErrorsEverywhere =
-  consoleErrorFunctions.throwEverywhere;
-export const allowConsoleErrors = consoleErrorFunctions.allow;
-
-const consoleWarningFunctions = throwOnConsoleEverywhere('warn');
-export const throwOnConsoleWarningsEverywhere =
-  consoleWarningFunctions.throwEverywhere;
-export const allowConsoleWarnings = consoleWarningFunctions.allow;
-
 const originalWindowValues = {};
 export function replaceOnWindow(key, newValue) {
   if (originalWindowValues.hasOwnProperty(key)) {
@@ -371,86 +303,6 @@ export function sandboxDocumentBody() {
   let originalDocumentBody;
   beforeEach(() => (originalDocumentBody = document.body.innerHTML));
   afterEach(() => (document.body.innerHTML = originalDocumentBody));
-}
-
-/**
- * Track whenever we create a timeout/interval, and then clear all timeouts/intervals
- * upon completion of each test.
- */
-export function clearTimeoutsBetweenTests() {
-  let timeoutList = [];
-  let intervalList = [];
-  const leftover = [];
-
-  const setTimeoutNative = window.setTimeout;
-  const setIntervalNative = window.setInterval;
-  const clearTimeoutNative = window.clearTimeout;
-  const clearIntervalNative = window.clearInterval;
-
-  window.setTimeout = (...args) => {
-    const result = setTimeoutNative(...args);
-    timeoutList.push(result);
-    return result;
-  };
-
-  window.setInterval = (...args) => {
-    const result = setIntervalNative(...args);
-    intervalList.push(result);
-    return result;
-  };
-
-  window.clearTimeout = id => {
-    const index = timeoutList.indexOf(id);
-    if (index !== -1) {
-      timeoutList.splice(index, 1);
-    }
-    return clearTimeoutNative(id);
-  };
-
-  window.clearInterval = id => {
-    const index = intervalList.indexOf(id);
-    if (index !== -1) {
-      intervalList.splice(index, 1);
-    }
-    return clearIntervalNative(id);
-  };
-
-  afterEach(function() {
-    // Guard carefully here, because arrow functions can steal our test context
-    // and prevent us from grabbing the test name.
-    const testName = this && this.currentTest && this.currentTest.fullTitle();
-
-    timeoutList.forEach(id => {
-      if (testName) {
-        leftover.push('(timeout)  ' + testName);
-      } else {
-        // When we don't know the test name, also print a note inline to help
-        // with debugging.
-        leftover.push('(timeout)  Unknown test');
-        console.log('clearing leftover timeout');
-      }
-      clearTimeoutNative(id);
-    });
-    intervalList.forEach(id => {
-      if (testName) {
-        leftover.push('(interval) ' + testName);
-      } else {
-        // When we don't know the test name, also print a note inline to help
-        // with debugging.
-        leftover.push('(interval) Unknown test');
-        console.log('clearing leftover interval');
-      }
-      clearIntervalNative(id);
-    });
-    timeoutList = [];
-    intervalList = [];
-  });
-
-  after(() => {
-    console.log('Leftover timeouts/intervals: ' + leftover.length);
-    // Uncomment if you want to see the whole list of leftover timeouts
-    // console.log(leftover.map(s => '    ' + s).join('\n'));
-  });
 }
 
 /**
@@ -524,4 +376,46 @@ export function enforceDocumentBodyCleanup(
 
     describe('', runTestCases);
   });
+}
+
+/**
+ * Call in the `describe` block for a group of tests to stub the value of window.dashboard safely.
+ * @param {object} value - The temporary value for window.dashboard
+ * @example
+ *   describe('example', () => {
+ *     stubWindowDashboard({
+ *       CODE_ORG_URL: '//test.code.org'
+ *     });
+ *
+ *     it('stubs the value', () => {
+ *       assert.equal('//test.code.org', window.dashboard.CODE_ORG_URL);
+ *     });
+ *   });
+ */
+export function stubWindowDashboard(value) {
+  let originalDashboard;
+  before(() => (originalDashboard = window.dashboard));
+  after(() => (window.dashboard = originalDashboard));
+  beforeEach(() => (window.dashboard = value));
+}
+
+/**
+ * Call in the `describe` block for a group of tests to stub the value of window.pegasus safely.
+ * @param {object} value - The temporary value for window.pegasus
+ * @example
+ *   describe('example', () => {
+ *     stubWindowPegasus({
+ *       STUDIO_URL: '//test-studio.code.org'
+ *     });
+ *
+ *     it('stubs the value', () => {
+ *       assert.equal('//test-studio.code.org', window.dashboard.STUDIO_URL);
+ *     });
+ *   });
+ */
+export function stubWindowPegasus(value) {
+  let originalPegasus;
+  before(() => (originalPegasus = window.pegasus));
+  after(() => (window.pegasus = originalPegasus));
+  beforeEach(() => (window.pegasus = value));
 }

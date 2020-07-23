@@ -1,23 +1,24 @@
 /**
  * Reducer and actions for progress
  */
+import $ from 'jquery';
 import _ from 'lodash';
-import {makeEnum} from '../utils';
 import {mergeActivityResult, activityCssClass} from './activityUtils';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {authorizeLockable} from './stageLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+const CLEAR_PROGRESS = 'progress/CLEAR_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
-const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
-const SET_USER_TYPE = 'progress/SET_USER_TYPE';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
@@ -27,7 +28,6 @@ const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
 
-export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 const PEER_REVIEW_ID = -1;
 
 const initialState = {
@@ -47,11 +47,9 @@ const initialState = {
   // a mapping of level id to result
   levelProgress: {},
   focusAreaStageIds: [],
-  peerReviewStage: null,
+  peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
-  signInState: SignInState.Unknown,
-  userType: 'unknown',
   postMilestoneDisabled: false,
   isHocScript: null,
   isAge13Required: false,
@@ -78,7 +76,7 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: processedStages(stages, action.professionalLearningCourse),
-      peerReviewStage: action.peerReviewStage,
+      peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
@@ -87,6 +85,13 @@ export default function reducer(state = initialState, action) {
       courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress
+    };
+  }
+
+  if (action.type === CLEAR_PROGRESS) {
+    return {
+      ...state,
+      levelProgress: initialState.levelProgress
     };
   }
 
@@ -112,9 +117,9 @@ export default function reducer(state = initialState, action) {
   if (action.type === MERGE_PEER_REVIEW_PROGRESS) {
     return {
       ...state,
-      peerReviewStage: {
-        ...state.peerReviewStage,
-        levels: state.peerReviewStage.levels.map((level, index) => ({
+      peerReviewLessonInfo: {
+        ...state.peerReviewLessonInfo,
+        levels: state.peerReviewLessonInfo.levels.map((level, index) => ({
           ...level,
           ...action.peerReviewsPerformed[index]
         }))
@@ -141,22 +146,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       postMilestoneDisabled: true
-    };
-  }
-
-  if (action.type === SET_USER_SIGNED_IN) {
-    return {
-      ...state,
-      signInState: action.isSignedIn
-        ? SignInState.SignedIn
-        : SignInState.SignedOut
-    };
-  }
-
-  if (action.type === SET_USER_TYPE) {
-    return {
-      ...state,
-      userType: action.userType
     };
   }
 
@@ -300,13 +289,83 @@ export function processedStages(stages, isPlc) {
   });
 }
 
+/**
+ * Requests user progress from the server and dispatches other redux actions
+ * based on the server's response data.
+ */
+const userProgressFromServer = (state, dispatch, userId = null) => {
+  if (!state.scriptName) {
+    const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
+    throw new Error(message);
+  }
+
+  // If we have a userId, we can clear any progress in redux and request all progress
+  // from the server.
+  if (userId) {
+    dispatch({type: CLEAR_PROGRESS});
+  }
+
+  return $.ajax({
+    url: `/api/user_progress/${state.scriptName}`,
+    method: 'GET',
+    data: {user_id: userId}
+  }).done(data => {
+    data = data || {};
+
+    if (data.isVerifiedTeacher) {
+      dispatch(setVerified());
+    }
+
+    // We are on an overview page if currentLevelId is undefined.
+    const onOverviewPage = !state.currentLevelId;
+    // Show lesson plan links and other teacher info if teacher and on unit overview page.
+    if (
+      (data.isTeacher || data.teacherViewingStudent) &&
+      !data.professionalLearningCourse &&
+      onOverviewPage
+    ) {
+      // Default to summary view if teacher is viewing their student, otherwise default to detail view.
+      dispatch(setIsSummaryView(data.teacherViewingStudent));
+      dispatch(showTeacherInfo());
+    }
+
+    if (data.focusAreaStageIds) {
+      dispatch(
+        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
+      );
+    }
+
+    if (data.lockableAuthorized) {
+      dispatch(authorizeLockable());
+    }
+
+    if (data.completed) {
+      dispatch(setScriptCompleted());
+    }
+
+    // Merge progress from server
+    if (data.levels) {
+      const levelProgress = _.mapValues(data.levels, getLevelResult);
+      dispatch(mergeProgress(levelProgress));
+
+      if (data.peerReviewsPerformed) {
+        dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+
+      if (data.current_stage) {
+        dispatch(setCurrentStageId(data.current_stage));
+      }
+    }
+  });
+};
+
 // Action creators
 export const initProgress = ({
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviewStage,
+  peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
@@ -320,7 +379,7 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviewStage,
+  peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
@@ -349,11 +408,6 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaStageIds) => ({
 export const showTeacherInfo = () => ({type: SHOW_TEACHER_INFO});
 
 export const disablePostMilestone = () => ({type: DISABLE_POST_MILESTONE});
-export const setUserSignedIn = isSignedIn => ({
-  type: SET_USER_SIGNED_IN,
-  isSignedIn
-});
-export const setUserType = userType => ({type: SET_USER_TYPE, userType});
 export const setIsHocScript = isHocScript => ({
   type: SET_IS_HOC_SCRIPT,
   isHocScript
@@ -380,14 +434,18 @@ export const setStageExtrasEnabled = stageExtrasEnabled => ({
   stageExtrasEnabled
 });
 
+export const queryUserProgress = userId => (dispatch, getState) => {
+  const state = getState().progress;
+  return userProgressFromServer(state, dispatch, userId);
+};
+
 // Selectors
 
 // Do we have one or more lockable stages
 export const hasLockableStages = state =>
   state.stages.some(stage => stage.lockable);
 
-export const hasGroups = state =>
-  Object.keys(categorizedLessons(state)).length > 1;
+export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
 /**
  * Extract the relevant portions of a particular lesson/stage from the store.
@@ -414,11 +472,11 @@ export const lessons = state =>
   state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
 /**
- * Extract lesson from our peerReviewStage if we have one. We want this to end up
+ * Extract lesson from our peerReviewLessonInfo if we have one. We want this to end up
  * having the same fields as our non-peer review stages.
  */
 const peerReviewLesson = state => ({
-  ...lessonFromStage(state.peerReviewStage),
+  ...lessonFromStage(state.peerReviewLessonInfo),
   // add some fields that are missing for this stage but required for lessonType
   id: PEER_REVIEW_ID,
   lockable: false,
@@ -426,11 +484,11 @@ const peerReviewLesson = state => ({
 });
 
 /**
- * Extract levels from our peerReviewStage, making sure the levels have the same
+ * Extract levels from our peerReviewLessonInfo, making sure the levels have the same
  * set of fields as our non-peer review levels.
  */
 const peerReviewLevels = state =>
-  state.peerReviewStage.levels.map((level, index) => ({
+  state.peerReviewLessonInfo.levels.map((level, index) => ({
     // These aren't true levels (i.e. we won't have an entry in levelProgress),
     // so always use a specific id that won't collide with real levels
     id: PEER_REVIEW_ID,
@@ -462,13 +520,13 @@ const isCurrentLevel = (currentLevelId, level) => {
  * state.levelProgress
  */
 const levelWithStatus = (
-  {levelProgress, levelPairing = {}, currentLevelId},
+  {levelProgress, levelPairing = {}, currentLevelId, isSublevel = false},
   level
 ) => {
-  if (level.kind !== LevelKind.unplugged) {
+  if (level.kind !== LevelKind.unplugged && !isSublevel) {
     if (!level.title || typeof level.title !== 'number') {
       throw new Error(
-        'Expect all non-unplugged levels to have a numerical title'
+        'Expect all non-unplugged, non-bubble choice sublevel, levels to have a numerical title'
       );
     }
   }
@@ -491,9 +549,21 @@ export const levelsByLesson = ({
   currentLevelId
 }) =>
   stages.map(stage =>
-    stage.levels.map(level =>
-      levelWithStatus({levelProgress, levelPairing, currentLevelId}, level)
-    )
+    stage.levels.map(level => {
+      let statusLevel = levelWithStatus(
+        {levelProgress, levelPairing, currentLevelId},
+        level
+      );
+      if (statusLevel.sublevels) {
+        statusLevel.sublevels = level.sublevels.map(sublevel =>
+          levelWithStatus(
+            {levelProgress, levelPairing, currentLevelId, isSublevel: true},
+            sublevel
+          )
+        );
+      }
+      return statusLevel;
+    })
   );
 
 /**
@@ -504,9 +574,9 @@ export const levelsForLessonId = (state, lessonId) =>
     .find(stage => stage.id === lessonId)
     .levels.map(level => levelWithStatus(state, level));
 
-export const stageExtrasUrl = (state, stageId) =>
+export const lessonExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled
-    ? state.stages.find(stage => stage.id === stageId).stage_extras_level_url
+    ? state.stages.find(stage => stage.id === stageId).lesson_extras_level_url
     : '';
 
 export const isPerfect = (state, levelId) =>
@@ -545,13 +615,16 @@ export function statusForLevel(level, levelProgress) {
     return level.status;
   }
 
-  // Assessment levels will have a uid for each page (and a test-result
+  // LevelGroup assessments (multi-page assessments)
+  // will have a uid for each page (and a test-result
   // for each uid). When locked, they will end up not having a per-uid
   // test result, but will have a LOCKED_RESULT for the LevelGroup (which
   // is tracked by ids)
+  // BubbleChoice sublevels will have a level_id
   // Worth noting that in the majority of cases, ids will be a single
   // id here
-  const id = level.uid || bestResultLevelId(level.ids, levelProgress);
+  const id =
+    level.uid || level.level_id || bestResultLevelId(level.ids, levelProgress);
   let status = activityCssClass(levelProgress[id]);
   if (
     level.uid &&
@@ -559,49 +632,65 @@ export function statusForLevel(level, levelProgress) {
   ) {
     status = LevelStatus.locked;
   }
+
+  // If complete a level that is marked as assessment
+  // then mark as completed assessment
+  if (
+    level.kind === LevelKind.assessment &&
+    [
+      LevelStatus.free_play_complete,
+      LevelStatus.perfect,
+      LevelStatus.passed
+    ].includes(status)
+  ) {
+    return LevelStatus.completed_assessment;
+  }
   return status;
 }
 
 /**
- * Groups lessons (aka stages) according to category.
+ * Groups lessons according to LessonGroup.
  * @returns {Object[]}
  * {string} Object.name
  * {string[]} Object.lessonNames
  * {Object[]} Object.stageLevels
  */
-export const categorizedLessons = state => {
-  let byCategory = {};
+export const groupedLessons = (state, includeBonusLevels = false) => {
+  let byGroup = {};
 
   const allLevels = levelsByLesson(state);
 
-  state.stages.forEach((stage, index) => {
-    const category = stage.flex_category;
-    const lesson = lessonFromStageAtIndex(state, index);
-    const stageLevels = allLevels[index];
+  state.stages.forEach((lesson, index) => {
+    const group = lesson.lesson_group_display_name;
+    const lessonAtIndex = lessonFromStageAtIndex(state, index);
+    let lessonLevels = allLevels[index];
+    if (!includeBonusLevels) {
+      lessonLevels = lessonLevels.filter(level => !level.bonus);
+    }
 
-    byCategory[category] = byCategory[category] || {
-      category,
+    byGroup[group] = byGroup[group] || {
+      group,
       lessons: [],
       levels: []
     };
 
-    byCategory[category].lessons.push(lesson);
-    byCategory[category].levels.push(stageLevels);
+    byGroup[group].lessons.push(lessonAtIndex);
+    byGroup[group].levels.push(lessonLevels);
   });
 
-  // Peer reviews get their own category, but these levels/lessson are stored
+  // Peer reviews get their own group, but these levels/lesson are stored
   // separately from our other levels/lessons in redux (since they're slightly
   // different)
-  if (state.peerReviewStage) {
-    byCategory['Peer Review'] = {
-      category: 'Peer Review',
+  if (state.peerReviewLessonInfo) {
+    byGroup[state.peerReviewLessonInfo.lesson_group_display_name] = {
+      group: state.peerReviewLessonInfo.lesson_group_display_name,
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
   }
 
   // We want to return an array of categories
-  return _.values(byCategory);
+  return _.values(byGroup);
 };
 
 /**
@@ -646,6 +735,7 @@ export const __testonly__ = IN_UNIT_TEST
       bestResultLevelId,
       peerReviewLesson,
       peerReviewLevels,
-      PEER_REVIEW_ID
+      PEER_REVIEW_ID,
+      userProgressFromServer
     }
   : {};

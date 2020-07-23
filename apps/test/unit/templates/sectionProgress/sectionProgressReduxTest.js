@@ -1,10 +1,11 @@
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import sectionProgress, {
   setCurrentView,
   ViewType,
   addScriptData,
   addStudentLevelProgress,
   addStudentLevelPairing,
+  addStudentTimestamps,
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
@@ -15,6 +16,7 @@ import sectionProgress, {
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import _ from 'lodash';
 
 const fakeSectionData = {
   id: 123,
@@ -36,23 +38,35 @@ const fakeSectionData = {
 
 const fakeScriptData789 = {
   id: 789,
-  excludeCsfColumnInLegend: false,
+  csf: true,
+  hasStandards: false,
   title: 'Title 789',
   path: '/',
-  stages: [{id: 1, levels: []}, {id: 2, levels: []}]
+  lessons: [{id: 1, levels: []}, {id: 2, levels: []}],
+  family_name: 'fakeScript789',
+  version_year: 2020
 };
 
 const fakeScriptData456 = {
   id: 456,
-  excludeCsfColumnInLegend: false,
+  csf: true,
+  hasStandards: false,
   title: 'Title 456',
   path: '/',
-  stages: [{id: 3, levels: []}, {id: 4, levels: []}]
+  lessons: [{id: 3, levels: []}, {id: 4, levels: []}],
+  family_name: 'fakeScript456',
+  version_year: 2020
 };
 
 const fakeStudentProgress = {
   1: {242: 1001, 243: 1000},
   2: {242: 1000, 243: 1000}
+};
+
+const timeInSeconds = Date.now() / 1000;
+const fakeStudentTimestamps = {
+  1: timeInSeconds,
+  2: timeInSeconds + 1
 };
 
 const lessonOfInterest = 16;
@@ -79,6 +93,7 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState.scriptDataByScript, {});
       assert.deepEqual(nextState.studentLevelProgressByScript, {});
       assert.deepEqual(nextState.levelsByLessonByScript, {});
+      assert.deepEqual(nextState.studentTimestampsByScript, {});
     });
   });
 
@@ -115,12 +130,22 @@ describe('sectionProgressRedux', () => {
     it('adds multiple scriptData info', () => {
       const action = addScriptData(456, fakeScriptData456);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.scriptDataByScript[456], fakeScriptData456);
+      const expected456 = {
+        ...fakeScriptData456,
+        stages: fakeScriptData456.lessons
+      };
+      delete expected456.lessons;
+      assert.deepEqual(nextState.scriptDataByScript[456], expected456);
 
       const action2 = addScriptData(789, fakeScriptData789);
       const nextState2 = sectionProgress(nextState, action2);
-      assert.deepEqual(nextState2.scriptDataByScript[456], fakeScriptData456);
-      assert.deepEqual(nextState2.scriptDataByScript[789], fakeScriptData789);
+      const expected789 = {
+        ...fakeScriptData789,
+        stages: fakeScriptData789.lessons
+      };
+      delete expected789.lessons;
+      assert.deepEqual(nextState2.scriptDataByScript[456], expected456);
+      assert.deepEqual(nextState2.scriptDataByScript[789], expected789);
     });
   });
 
@@ -233,6 +258,17 @@ describe('sectionProgressRedux', () => {
     });
   });
 
+  describe('addStudentTimestamps', () => {
+    it('converts timestamps from seconds to milliseconds', () => {
+      const action = addStudentTimestamps(130, fakeStudentTimestamps);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(
+        _.mapValues(fakeStudentTimestamps, sec => sec * 1000),
+        nextState.studentTimestampsByScript[130]
+      );
+    });
+  });
+
   describe('getStudentPairing', () => {
     it('plucks paired value from object', () => {
       expect(
@@ -293,7 +329,10 @@ describe('sectionProgressRedux', () => {
                       kind: 'assessment',
                       icon: 'fa-computer',
                       is_concept_level: false,
-                      title: 'hello world'
+                      title: 'hello world',
+                      bonus: false,
+                      display_as_unplugged: false,
+                      sublevels: []
                     }
                   ]
                 }
@@ -314,7 +353,9 @@ describe('sectionProgressRedux', () => {
                 levelNumber: 'hello world',
                 name: 'name',
                 progression: 'progression',
-                url: 'url'
+                url: 'url',
+                bonus: false,
+                sublevels: []
               }
             ]
           }

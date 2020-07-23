@@ -1,0 +1,15 @@
+name 'CSPU5_video_debugging_virtual'
+editor_experiment ''
+video_key 'csd_debugging'
+display_as_unplugged 'false'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Common Types of Errors
+In the next few levels we'll practice debugging a few common types of errors.
+
+ * Things you misspelled or wrote in such a way the computer doesn't understand what you're trying to say
+ * The program runs but doesn't do what you think it should.
+ 
+ #How to Debug
+MARKDOWN

@@ -1,31 +1,18 @@
 :ruby
-- @page_title = t('project.project_gallery')
-- is_public = local_assigns[:is_public]
-- limited_gallery = local_assigns[:limited_gallery]
-- projects_data = {}
-- projects_data[:limitedGallery] = limited_gallery
-- projects_data[:projectCount] = fetch_project_count['rounded_down_millions']
+  @page_title = t('project.project_gallery')
+  projects_data = {}
+  projects_data[:limitedGallery] = @limited_gallery
+  projects_data[:currentTab] = @current_tab
+  projects_data[:projectCount] = fetch_project_count['total_projects']
 
-- if current_user
-  - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
-  - projects_data[:canShare] = !current_user.sharing_disabled?
+  if current_user
+    projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
+    projects_data[:canShare] = !current_user.sharing_disabled?
+  end
 
-= render partial: 'shared/angular'
+  projects_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/projects")
 
--# keep data attributes used by react and angularjs separate
-%script{src: asset_path('angularProjects.js'), data: {under13: current_user.under_13?.to_json, sharingDisabled: current_user.sharing_disabled?.to_json} }
-%script{src: asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
-%script{src: minifiable_asset_path('js/projects/index.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/projects/index.js'), data: {projects: projects_data.to_json}}
 
-.projects-page
-  #projects-header
-
-  #gallery-navigation
-
-  #personal-projects-wrapper{'style' => ('display: none;' if is_public)}
-    #react-personal-projects
-
-  #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
-    #public-gallery
-  #publish-confirm
-  #delete-confirm
+#projects-page

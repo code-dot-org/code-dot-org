@@ -22,10 +22,11 @@ class PendingButton extends React.Component {
       : this.props.style;
     return (
       <button
+        type="button"
         id={this.props.id}
         style={style}
         className={this.props.className}
-        onClick={!this.props.isPending && this.props.onClick}
+        onClick={this.props.isPending ? () => {} : this.props.onClick}
       >
         {this.props.isPending ? (
           <span>

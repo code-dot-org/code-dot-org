@@ -1,23 +1,22 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
-layout: wide
-nav: promote_nav
+title: Έντυπη ανακοίνωση της Ώρας Κώδικα για εκλεγμένες αρχές
 ---
-<%= view :signup_button %>
 
-# Eνα δείγμα έντυπης παρουσίασης για τους αιρετούς άρχοντες
+{{ signup_button }}
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+# Δείγμα ενημερωτικών δελτίων τύπου για επιλεγμένους παραλήπτες
+
+### Χρησιμοποιήστε αυτό το δείγμα δελτίου τύπου για να δημουργήσετε το δικό σας μήνυμα σχετικά με τη συμμετοχή στην Ώρα του Κώδικα.
 
 * * *
 
-#### For Immediate Release  
+#### Για άμεση διάθεση  
 
 
 #### [DATE]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### Επαφή: [CONTACT INFORMATION]
 
 <br />
 
@@ -44,4 +43,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-<%= view :signup_button %>
+{{ signup_button }}

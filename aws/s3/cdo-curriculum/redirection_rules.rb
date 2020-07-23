@@ -20,7 +20,8 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csp-18/"
+      replace_key_prefix_with: "csp-20/",
+      http_redirect_code: "302"
     }
   },
   {
@@ -38,7 +39,8 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csd-18/"
+      replace_key_prefix_with: "csd-20/",
+      http_redirect_code: "302"
     }
   },
   {
@@ -56,7 +58,8 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csf-18/"
+      replace_key_prefix_with: "csf-20/",
+      http_redirect_code: "302"
     }
   },
   {
@@ -65,16 +68,37 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-18/"
+      replace_key_prefix_with: "plcsf-20/",
+      http_redirect_code: "302"
     }
   },
   {
     condition: {
-      key_prefix_equals: "docs/"
+      key_prefix_equals: "plcsd/"
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "documentation"
+      replace_key_prefix_with: "plcsd-20/",
+      http_redirect_code: "302"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "plcsp/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "plcsp-20/",
+      http_redirect_code: "302"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "documentation/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "docs/"
     }
   },
 ]
@@ -89,7 +113,7 @@ website_configuration = {
   routing_rules: routing_rules
 }
 
-CDO.class::CURRICULUM_LANGUAGES.each do |lang|
+CDO.curriculum_languages.each do |lang|
   routing_rules << {
     condition: {
       http_error_code_returned_equals: "404",
