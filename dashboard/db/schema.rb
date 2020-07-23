@@ -343,7 +343,7 @@ ActiveRecord::Schema.define(version: 20200722182927) do
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
 
-  create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+  create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "key",                             null: false
     t.string   "display_name",                    null: false
     t.text     "properties",        limit: 65535
@@ -1798,14 +1798,12 @@ ActiveRecord::Schema.define(version: 20200722182927) do
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
-  add_foreign_key "plc_courses", "courses"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
-  add_foreign_key "sections", "courses"
   add_foreign_key "state_cs_offerings", "schools", column: "state_school_id", primary_key: "state_school_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
