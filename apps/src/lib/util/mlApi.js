@@ -39,7 +39,8 @@ export const commands = {
     if (predictions.length > 0) {
       opts.callback({
         confidence: predictions[0].handInViewConfidence,
-        thumbX: predictions[0].annotations.thumb[0][0]
+        thumbX: predictions[0].annotations.thumb[0][0],
+        boxX: predictions[0].boundingBox.topLeft[0]
       });
 
       /*
