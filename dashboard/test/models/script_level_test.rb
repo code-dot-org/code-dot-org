@@ -93,6 +93,30 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 'Test Display Name Override', summary[:name]
   end
 
+  test 'level with progression summarize' do
+    sl = create(:script_level)
+    sl.update(progression: 'progression 1')
+
+    summary = sl.summarize
+    assert_equal sl.progression, summary[:progression]
+    assert_equal sl.progression, summary[:progression_display_name]
+
+    with_locale('es-MX') do
+      custom_i18n = {
+        "data" => {
+          "progressions" => {
+            sl.progression => 'progresión 1'
+          }
+        }
+      }
+      I18n.backend.store_translations 'es-MX', custom_i18n
+
+      summary = sl.summarize
+      assert_equal sl.progression, summary[:progression]
+      assert_equal 'progresión 1', summary[:progression_display_name]
+    end
+  end
+
   test 'teacher panel summarize' do
     sl = create(:script_level)
     student = create :student
