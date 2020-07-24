@@ -405,7 +405,7 @@ pl-PL:
         courseF_bee_functions_challenge1_2: Funkcja "sprawdź nektar lub miód" może
           zostać tu wykorzystana, jeśli ją zmienisz tak, by robiła miód wiele razy.
       course3_playLab_challenge1:
-        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do
+        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać postacie do
           innych części przestrzeni gry.
       course4_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Przedłuż działanie programu
@@ -416,7 +416,7 @@ pl-PL:
         courseF_bee_fwp_challenge2_callout1: Ta funkcja dobrze sobie poradzi z kukurydzą,
           ale co z innymi warzywami?
       courseA_artist_loops4:
-        courseA_artist_loops4_1: Ta liczba mówi ci, ile takich bloków możesz użyć
+        courseA_artist_loops4_1: Ta liczba mówi ci, ilu takich bloków możesz użyć
           w tej łamigłówce.
       courseA_artist_loops4_2018:
         courseA_artist_loops4_1: Ta liczba mówi ci, ile takich bloków możesz użyć
@@ -439,6 +439,18 @@ pl-PL:
       courseA_artist_loops7_2020:
         courseA_artist_loops7_1: Ta liczba znaczy, że tylko jeden spośród bloków tego
           typu może być użyty w ostatecznej odpowiedzi.
+      courseA_artist_loops8:
+        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem po linii,
+          jeśli tego potrzebujesz?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem po linii,
+          jeśli tego potrzebujesz?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem po linii,
+          jeśli tego potrzebujesz?
+      courseA_artist_loops8_2020:
+        courseA_artist_loops8_1: Czy wiedziałeś, że można rysować z powrotem po linii,
+          jeśli tego potrzebujesz?
       courseA_collector_loops1:
         courseA_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie
           martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
@@ -505,6 +517,18 @@ pl-PL:
         courseA_playLab_events5_1: Kliknij tutaj, aby zmienić kierunek strzałki zdarzenia.
       courseA_playLab_events5_2020:
         courseA_playLab_events5_1: Kliknij tutaj, aby zmienić kierunek strzałki zdarzenia.
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: To pozwala Ci wybrać "losowo wybrany" dźwięk, co
+          oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: To pozwala Ci wybrać "losowo wybrany" dźwięk, co
+          oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: To pozwala Ci wybrać "losowo wybrany" dźwięk, co
+          oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!
+      courseA_playLab_events6_2020:
+        courseA_playLab_events6_1: To pozwala Ci wybrać "losowo wybrany" dźwięk, co
+          oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!
       courseB_artist_loops5:
         courseB_artist_loops5_1: Ta liczba znaczy, że w przyborniku nie ma więcej
           bloków tego typu.
@@ -547,17 +571,29 @@ pl-PL:
       courseC19_playLab_EOC3_2020:
         courseE_playLab_scaffold3_1: Przesuń aktora do tej flagi, aby przejść do następnego
           poziomu.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: Użyj tego bloku, gdy Waddles i Chomp się
+          dotkną!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: Użyj tego bloku, gdy Waddles i Chomp się
+          dotkną!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: Użyj tego bloku, gdy Waddles i Chomp się
+          dotkną!
+      courseC_PlayLab_events8_2020:
+        courseC_PlayLab_events8_callout1: Użyj tego bloku, gdy Waddles i Chomp się
+          dotkną!
       courseC_PlayLab_events_challenge1:
-        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do
+        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać postacie do
           innych części przestrzeni gry.
       courseC_PlayLab_events_challenge1_2018:
-        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do
+        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać postacie do
           innych części przestrzeni gry.
       courseC_PlayLab_events_challenge1_2019:
-        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do
+        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać postacie do
           innych części przestrzeni gry.
       courseC_PlayLab_events_challenge1_2020:
-        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do
+        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać postacie do
           innych części przestrzeni gry.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: Zacznij używając tego bloku do przesunięcia
@@ -615,6 +651,9 @@ pl-PL:
         courseC_maze_debugging5_1: Te bloki są zablokowane i nie mogą być usunięte!
       courseC_maze_debugging5_2020:
         courseC_maze_debugging5_1: Te bloki są zablokowane i nie mogą być usunięte!
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: Po połączeniu wszystkich bloków wciśnij "Uruchom",
+          aby uruchomić program.
       courseC_maze_programming3:
         courseC_maze_programming3_3: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming3_2018:
@@ -727,6 +766,12 @@ pl-PL:
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
+      courseD_playLab_condFP:
+        courseD_playLab_condFP_1: Uporządkowaliśmy bloki w kategorie, aby udostępnić
+          Ci kod do grania! Kliknij tutaj, aby zobaczyć, dokąd to wszystko doprowadziło.
+      courseD_playLab_condFP_2018:
+        courseD_playLab_condFP_1: Uporządkowaliśmy bloki w kategorie, aby udostępnić
+          Ci kod do grania! Kliknij tutaj, aby zobaczyć, dokąd to wszystko doprowadziło.
       courseD_scrat_ramp6:
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
@@ -738,6 +783,44 @@ pl-PL:
           trudne i wymagać kilku prób.
 
 '
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: Zacznij używając tego bloku, aby pomóc utworzyć
+          pierwszy kwadrat.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Zacznij używając tego bloku, aby pomóc utworzyć
+          pierwszy kwadrat.
+      courseE_artist_functions2:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions2_2020:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_1: Gdy ten zielony blok jest uruchomiony, cały kod
+          w funkcji będzie uruchomiony. Co powinien zrobić grafik po narysowaniu pierwszego
+          kwadratu?
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: Twoje bloki służące do tworzenia funkcji zostały
+          przeniesione w ramach tej etykiety do przybornika.
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: Twoje bloki służące do tworzenia funkcji zostały
+          przeniesione w ramach tej etykiety do przybornika.
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: Twoje bloki służące do tworzenia funkcji zostały
+          przeniesione w ramach tej etykiety do przybornika.
+      courseE_artist_functions8a_2020:
+        courseD_artist_functions8_1: Twoje bloki służące do tworzenia funkcji zostały
+          przeniesione w ramach tej etykiety do przybornika.
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Przedłuż działanie programu
           dodając więcej kodu na dole.
@@ -784,8 +867,53 @@ pl-PL:
       courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Możesz zmienić ten numer.
         courseE_artist_ramp8_2: Kliknij tutaj, aby wpisać liczby powtórzeń kodu.
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions13_2020:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+      courseE_farmer_functions1_2020:
+        courseE_farmer_functions1_2: Tym razem Twój przybornik jest zorganizowany
+          nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki.
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions1a_2020:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
+      courseE_farmer_functions2b_2020:
+        courseE_farmer_functions1a_1: To warzywko jest nieznane. Zmienia się przy
+          każdym włączeniu programu.
       courseE_playLab_challenge1:
-        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do
+        courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać postacie do
           innych części przestrzeni gry.
       courseE_playLab_scaffold3:
         courseE_playLab_scaffold3_1: Przesuń aktora do tej flagi, aby przejść do następnego

@@ -280,6 +280,10 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_keyPressed:
         options:
           CONDITION:

@@ -691,6 +691,10 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
             '"tint"': оттенък
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_hideTitleScreen:
         text: скрива заглавния екран
       gamelab_keyPressed:

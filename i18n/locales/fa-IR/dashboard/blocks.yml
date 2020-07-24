@@ -1,4 +1,3 @@
----
 fa:
   data:
     blocks:
@@ -234,6 +233,10 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
       gamelab_keyPressed:
         options:
           CONDITION:

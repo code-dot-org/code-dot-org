@@ -206,6 +206,10 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       gamelab_keyPressed:
         options:
           CONDITION:

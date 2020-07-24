@@ -3,18 +3,30 @@ vi:
   data:
     script:
       category:
+        csd_category_name: Khám phá KHMT ('17-'18)
+        csd_2018_category_name: Khám phá KHMT ('18-'19)
+        csd_2019_category_name: Khám phá KHMT ('19-'20)
+        csf_2018_category_name: KHMT Cơ bản (2018)
+        csf_2019_category_name: KHMT Cơ bản (2019)
+        csf_international_category_name: KHMT Cơ bản Quốc tế
+        csp_category_name: Các Quy tắc KHMT '15-'16
+        csp_2018_category_name: Các Quy tắc KHMT ('18-'19)
+        csp_2019_category_name: Các Quy tắc KHMT ('19-'20)
+        cspexams_category_name: Kiểm tra các Quy tắc KHMT
+        csp17_category_name: Các Quy tắc KHMT ('17-'18)
         hoc_category_name: Giờ của mã
         math_category_name: thuật toán
+        research_studies_category_name: Các nghiên cứu
       name:
         course1:
           title: Khóa học 1
-          description: Khóa học 1 được thiết kế để cho phép học viên tạo ra các chương
-            trình máy tính giúp họ  hợp tác với những người khác, phát triển kỹ năng
-            giải quyết vấn đề thông qua các nhiệm vụ khó khăn. Cuối khóa học này,
-            học viên tạo ra trò chơi hoặc cốt truyện mà họ muốn chia sẻ. Khuyến khích
-            cho các lớp K-1.
+          description: Bắt đầu với Khoá học 1 cho trẻ mới biết đọc. Học viên sẽ được
+            thiết kế các chương trình máy tính có thể giúp họ học cách hợp tác với
+            người khác, phát triển các kỹ năng giải quyết vấn đề, và nỗ lực vượt qua
+            các việc khó. Học viên sẽ có thể tạo ra một trò chơi hoặc câu chuyện riêng
+            mà họ có thể chia sẻ. Phù hợp cho lớp K-1 (6 tuổi).
           description_short: Khóa học 1 được thiết kế cho trẻ mới biết đọc.
-          description_audience: Lứa tuổi 4 + (trước khi biết đọc)
+          description_audience: 4-6 tuổi
           stages:
             'Artist: Loops':
               name: 'Nghệ sĩ: vòng'
@@ -964,6 +976,8 @@ vi:
               name: Gửi định dạng văn bản
             Sending Numbers:
               name: Gửi các con số
+            Text Compression:
+              name: Nén văn bản
           lessons:
             Binary Numbers:
               name: Số nhị phân
@@ -997,6 +1011,8 @@ vi:
               name: Gửi định dạng văn bản
             Sending Numbers:
               name: Gửi các con số
+            Text Compression:
+              name: Nén văn bản
         algebraPD:
           stages:
             Course Overview:
@@ -1067,6 +1083,14 @@ vi:
               name: Trò chơi của bạn - Phát hiện va chạm
             Your Game - Player Movement:
               name: Trò chơi của bạn - Di chuyển người chơi
+        text-compression:
+          title: Nén văn bản
+          stages:
+            Text Compression:
+              name: Nén văn bản
+          lessons:
+            Text Compression:
+              name: Nén văn bản
         CSPPD:
           stages:
             Exploring CSP Instructional Materials:
@@ -1811,6 +1835,8 @@ vi:
               name: Studio
             Swapped Levels:
               name: Các cấp độ đổi chỗ
+            Text Compression:
+              name: Nén văn bản
             TextMatch:
               name: TextMatch
             Web Lab:
@@ -1884,6 +1910,8 @@ vi:
               name: Studio
             Swapped Levels:
               name: Các cấp độ đổi chỗ
+            Text Compression:
+              name: Nén văn bản
             TextMatch:
               name: TextMatch
             Web Lab:
@@ -2999,6 +3027,10 @@ vi:
               name: Giờ lập trình 2015
         oceans:
           title: Trí Tuệ Nhân Tạo cho Đại Dương
+          description: Tìm hiểu cách AI và học máy có thể được sử dụng để giải quyết
+            các vấn đề của thế giới.
+          description_short: Tìm hiểu cách AI và học máy có thể được sử dụng để giải
+            quyết các vấn đề của thế giới.
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
@@ -3305,6 +3337,7 @@ vi:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Các bước thiết kế'
         AlgebraB:
+          title: 'Khoa học máy tính trong Đại số: Khoá học B'
           description: Tìm hiểu lập trình chức năng thông qua đại số
           description_short: Tìm hiểu lập trình chức năng thông qua đại số
           stages:
@@ -3399,6 +3432,7 @@ vi:
             Sharing Student Work:
               name: Chia sẻ công việc học sinh
         csp1-2017:
+          title: Các Quy tắc KHMT Phần 1 - Mạng Internet ('17-'18)
           stages:
             Binary Numbers:
               name: Số nhị phân
@@ -3440,6 +3474,15 @@ vi:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+            csp1_1:
+              display_name: 'Chương 1: Thể hiện và Truyền tải Thông tin'
+            csp1_2:
+              display_name: 'Chương 2: Phát minh mạng Internet'
           lessons:
             Binary Numbers:
               name: Số nhị phân
@@ -3481,7 +3524,10 @@ vi:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
         csp2-2017:
+          title: 'Các Quy tắc KHMT Phần 2: Thông tin Kỹ thuật số'
           stages:
             Bytes and File Sizes:
               name: Byte và kích thước tập tin
@@ -3493,6 +3539,8 @@ vi:
               name: Tạo bảng tóm tắt
             Discover a Data Story:
               name: Khám phá một câu chuyện dữ liệu
+            Encode a Complex Thing:
+              name: Mã hóa một điều phức tạp
             Encoding B&W Images:
               name: Mã hóa B&W hình ảnh
             Encoding Color Images:
@@ -3509,6 +3557,8 @@ vi:
               name: Tạo hình ảnh dự liệu hoá
             Practice PT - Tell a Data Story:
               name: Thực hành PT - kể một câu chuyện dữ liệu
+            Text Compression:
+              name: Nén văn bản
             Unit 2 Chapter 1 Assessment:
               name: Phần 2 Chương 1 Đánh giá
             Unit 2 Chapter 2 Assessment:
@@ -3521,6 +3571,15 @@ vi:
               name: Khảo sát sau khóa học của học sinh CSP
             Practice PT - Encode an Experience:
               name: Thực hành PT - mã hóa một kinh nghiệm
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
+          lesson_groups:
+            csp2_1:
+              display_name: 'Chương 1: Mã hoá và Nén Thông tin phức tạp'
+            csp2_2:
+              display_name: 'Chương 2: Xử lí và Thể hiện trực quan Dữ liệu'
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Bytes and File Sizes:
               name: Byte và kích thước tập tin
@@ -3532,6 +3591,8 @@ vi:
               name: Tạo bảng tóm tắt
             Discover a Data Story:
               name: Khám phá một câu chuyện dữ liệu
+            Encode a Complex Thing:
+              name: Mã hóa một điều phức tạp
             Encoding B&W Images:
               name: Mã hóa B&W hình ảnh
             Encoding Color Images:
@@ -3548,6 +3609,8 @@ vi:
               name: Tạo hình ảnh dự liệu hoá
             Practice PT - Tell a Data Story:
               name: Thực hành PT - kể một câu chuyện dữ liệu
+            Text Compression:
+              name: Nén văn bản
             Unit 2 Chapter 1 Assessment:
               name: Phần 2 Chương 1 Đánh giá
             Unit 2 Chapter 2 Assessment:
@@ -3560,6 +3623,8 @@ vi:
               name: Khảo sát sau khóa học của học sinh CSP
             Practice PT - Encode an Experience:
               name: Thực hành PT - mã hóa một kinh nghiệm
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
         csp3-2017:
           description_short: Lập trình
           stages:
@@ -3595,6 +3660,11 @@ vi:
               name: Khảo sát sau khóa học của học sinh CSP
             Creating Functions with Parameters:
               name: Tạo ra Chức năng với các tham số
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             APIs and Function Parameters:
               name: API và các thông số chức năng
@@ -3628,6 +3698,8 @@ vi:
               name: Khảo sát sau khóa học của học sinh CSP
             Creating Functions with Parameters:
               name: Tạo ra Chức năng với các tham số
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
         csp4-2017:
           stages:
             Cracking the Code:
@@ -3660,6 +3732,11 @@ vi:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Cracking the Code:
               name: Phá mã hoá
@@ -3691,6 +3768,8 @@ vi:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -3743,8 +3822,20 @@ vi:
               name: Phần 5 Đánh giá 2
             '"If" Statements Unplugged':
               name: Câu lệnh "If"
+            Unit 3 Chapter 1 Assessment 3:
+              name: Phần 3 Chương 1 Đánh giá 3
+            If statements:
+              name: Câu lệnh If
+            Unit 3 Assessment 3:
+              name: Phần 3 Đánh giá 3
+            Unit 3 Assessment 4:
+              name: Phần 3 Đánh giá 4
+            If-else-if and Conditional Logic:
+              name: If-else-if và logic của câu lệnh điều kiện
             'Building an App: Color Sleuth':
               name: 'Xây dựng một ứng dụng: màu Sleuth'
+            Possibly use later:
+              name: Có thể sử dụng sau này
             Unit 5 Assessment 3:
               name: Phần 5 Đánh giá 3
             Unit 5 Assessment 4:
@@ -3769,6 +3860,11 @@ vi:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Beyond Buttons Toward Apps:
               name: Những nút bên ngoài dùng trong ứng dụng
@@ -3820,8 +3916,20 @@ vi:
               name: Phần 5 Đánh giá 2
             '"If" Statements Unplugged':
               name: Câu lệnh "If"
+            Unit 3 Chapter 1 Assessment 3:
+              name: Phần 3 Chương 1 Đánh giá 3
+            If statements:
+              name: Câu lệnh If
+            Unit 3 Assessment 3:
+              name: Phần 3 Đánh giá 3
+            Unit 3 Assessment 4:
+              name: Phần 3 Đánh giá 4
+            If-else-if and Conditional Logic:
+              name: If-else-if và logic của câu lệnh điều kiện
             'Building an App: Color Sleuth':
               name: 'Xây dựng một ứng dụng: màu Sleuth'
+            Possibly use later:
+              name: Có thể sử dụng sau này
             Unit 5 Assessment 3:
               name: Phần 5 Đánh giá 3
             Unit 5 Assessment 4:
@@ -3846,6 +3954,8 @@ vi:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
         csp6:
           stages:
             Create PT:
@@ -5111,6 +5221,11 @@ vi:
               name: Dự án - thiết kế một trò chơi
             Shapes and Randomization:
               name: Hình dạng và tạo sự ngẫu nhiên
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+            csd_survey:
+              display_name: Khảo sát sau khoá học
           lessons:
             Booleans and Conditionals:
               name: Boolean và các điều kiện
@@ -5382,6 +5497,9 @@ vi:
               name: Xử lý con người vs máy tính
             CS Discoveries Pre-survey:
               name: Tiền khảo sát CS Discoveries
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Intro to Problem Solving:
               name: Giới thiệu phần giải quyết vấn đề
@@ -5680,6 +5798,9 @@ vi:
                 áp dụng kiến thức mới này cho các trang web cá nhân của họ.
             Lists:
               name: Danh sách
+          lesson_groups:
+            csd_survey:
+              display_name: Khảo sát sau khoá học
           lessons:
             new stage:
               name: giai đoạn mới
@@ -5803,6 +5924,9 @@ vi:
               name: Cải thiện và Lặp lại
             App Presentation:
               name: Trình bày ứng dụng
+          lesson_groups:
+            csd_survey:
+              display_name: Khảo sát sau khoá học
           lessons:
             Analysis of Design:
               name: Phân tích thiết kế
@@ -6292,9 +6416,13 @@ vi:
               name: Ứng dụng mẫu
             Final Project:
               name: Dự án cuối cùng
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
           lesson_groups:
             content:
               display_name: Nội dung
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Creating Javascript Objects:
               name: Tạo đối tượng Javascript
@@ -6314,6 +6442,8 @@ vi:
               name: Ứng dụng mẫu
             Final Project:
               name: Dự án cuối cùng
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
         csd6-draft:
           stages:
             Lists:
@@ -6417,6 +6547,9 @@ vi:
               name: Tạo âm nhạc
             Functions with Parameters_:
               name: Hàm và tham số
+          lesson_groups:
+            csd_survey:
+              display_name: Khảo sát sau khoá học
           lessons:
             Lists:
               name: Danh sách
@@ -6481,6 +6614,10 @@ vi:
               name: Quá trình thiết kế trò chơi
             Using the Game Design Process:
               name: Sử dụng quy trình thiết kế trò chơi
+        csd5-2017:
+          lesson_groups:
+            csd_survey:
+              display_name: Khảo sát sau khoá học
         csd3-old:
           stages:
             Drawing in Game Lab:
@@ -6740,6 +6877,9 @@ vi:
             Participate in a longitudinal study!:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
           title: Khảo sát sau khóa học của học sinh CSP
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
@@ -7395,6 +7535,9 @@ vi:
             Unit 3 Chapter 1 Assessment:
               name: Phần 3 Chương 1 Đánh giá
           description_short: Lập trình
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             new stage:
               name: giai đoạn mới
@@ -7932,6 +8075,11 @@ vi:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Thiết lập công nghệ - danh mục đầu tư kỹ thuật số AP và các công
                 cụ khác
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             new stage:
               name: giai đoạn mới
@@ -7944,6 +8092,8 @@ vi:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Thiết lập công nghệ - danh mục đầu tư kỹ thuật số AP và các công
                 cụ khác
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -7955,6 +8105,11 @@ vi:
               name: Tạo phần chuẩn bị PT - lập kế hoạch
             Create PT - Complete the Task:
               name: Tạo PT - hoàn thành nhiệm vụ
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Thiết lập công nghệ - danh mục đầu tư kỹ thuật số AP và các công
@@ -7965,6 +8120,8 @@ vi:
               name: Tạo phần chuẩn bị PT - lập kế hoạch
             Create PT - Complete the Task:
               name: Tạo PT - hoàn thành nhiệm vụ
+            Post-Course Survey:
+              name: Khảo sát sau khoá học
         aws-demo:
           stages:
             new stage:
@@ -8093,6 +8250,9 @@ vi:
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
           description_short: Lập trình
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
@@ -8226,6 +8386,9 @@ vi:
               name: Sử dụng quy trình thiết kế trò chơi
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
@@ -8355,6 +8518,9 @@ vi:
                 văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách
                 CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người
                 áp dụng kiến thức mới này cho các trang web cá nhân của họ.
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Digital Footprint:
               name: Dấu vết số
@@ -8598,6 +8764,9 @@ vi:
               name: Tạo âm nhạc
             Functions with Parameters:
               name: Hàm và tham số
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Making Music:
               name: Tạo âm nhạc
@@ -8717,6 +8886,13 @@ vi:
               name: Thực hành PT - Internet và xã hội
             Unit 1 Chapter 2 Assessment:
               name: Phần 1 Chương 2 Đánh giá
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+            csp1_1:
+              display_name: 'Chương 1: Thể hiện và Truyền tải Thông tin'
+            csp1_2:
+              display_name: 'Chương 2: Phát minh mạng Internet'
           lessons:
             CS Principles Pre-survey:
               name: Nguyên lý KHMT trước khi khảo sát
@@ -8764,6 +8940,9 @@ vi:
               name: Khám phá Giải quyết vấn đề
             What is a Computer?:
               name: Máy tính là gì?
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             CS Discoveries Pre-survey:
               name: Tiền khảo sát CS Discoveries
@@ -8793,6 +8972,9 @@ vi:
               name: Thử Ứng dụng
             Improving and Iterating:
               name: Cải thiện và Lặp lại
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Analysis of Design:
               name: Phân tích thiết kế
@@ -8810,10 +8992,16 @@ vi:
               name: Thử Ứng dụng
             Improving and Iterating:
               name: Cải thiện và Lặp lại
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
         csp2-2018:
           stages:
             Bytes and File Sizes:
               name: Byte và kích thước tập tin
+            Text Compression:
+              name: Nén văn bản
             Encoding B&W Images:
               name: Mã hóa B&W hình ảnh
             Encoding Color Images:
@@ -8847,6 +9035,8 @@ vi:
           lessons:
             Bytes and File Sizes:
               name: Byte và kích thước tập tin
+            Text Compression:
+              name: Nén văn bản
             Encoding B&W Images:
               name: Mã hóa B&W hình ảnh
             Encoding Color Images:
@@ -8904,6 +9094,9 @@ vi:
               name: Phần 3 Chương 1 Đánh giá
             Creating Functions with Parameters:
               name: Tạo ra Chức năng với các tham số
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             The Need For Programming Languages:
               name: Sự cần thiết cho ngôn ngữ lập trình
@@ -8937,6 +9130,9 @@ vi:
               name: Khám phá các PT - lập một kế hoạch
             Explore PT - Complete the Task:
               name: Khám phá các PT - hoàn thành nhiệm vụ
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Explore PT Prep - Reviewing the Task:
               name: Khám phá các PT Prep - xem xét các tác vụ
@@ -8952,6 +9148,9 @@ vi:
               name: Tạo phần chuẩn bị PT - lập kế hoạch
             Create PT - Complete the Task:
               name: Tạo PT - hoàn thành nhiệm vụ
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Create PT Prep - Reviewing the Task:
               name: Tạo phần chuẩn bị PT - xem xét các tác vụ
@@ -8985,6 +9184,9 @@ vi:
               name: Việc tìm kiếm các xu hướng với kiểu trực quan
             Check Your Assumptions:
               name: Kiểm tra các giả định của bạn
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             What is Big Data?:
               name: Dữ liệu lớn là gì?
@@ -9060,6 +9262,9 @@ vi:
               name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
             Participate in a longitudinal study!:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Buttons and Events:
               name: Các nút và các sự kiện
@@ -9149,6 +9354,9 @@ vi:
               name: Tạo bảng tóm tắt
             Unit 2 Chapter 2 Assessment:
               name: Phần 2 Chương 2 Đánh giá
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Creating Javascript Objects:
               name: Tạo đối tượng Javascript
@@ -9422,6 +9630,10 @@ vi:
           lessons:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Khảo sát sau khoá học
         csd-novice-18:
           stages:
             Welcome:
@@ -9866,6 +10078,9 @@ vi:
               name: Khám phá Giải quyết vấn đề
             What is a Computer?:
               name: Máy tính là gì?
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             CS Discoveries Pre-survey:
               name: Tiền khảo sát CS Discoveries
@@ -9931,6 +10146,10 @@ vi:
               name: Nhìn về phía trước
             Binary Bracelets:
               name: Vòng đeo tay nhị phân
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
         gamelab:
           title: Kho Trò chơi
         coursea-2019:
@@ -10103,6 +10322,9 @@ vi:
                 văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách
                 CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người
                 áp dụng kiến thức mới này cho các trang web cá nhân của họ.
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Digital Footprint:
               name: Dấu vết số
@@ -10231,6 +10453,9 @@ vi:
               name: Sử dụng quy trình thiết kế trò chơi
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
@@ -10346,6 +10571,9 @@ vi:
               name: Thử Ứng dụng
             Improving and Iterating:
               name: Cải thiện và Lặp lại
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Analysis of Design:
               name: Phân tích thiết kế
@@ -10363,12 +10591,19 @@ vi:
               name: Thử Ứng dụng
             Improving and Iterating:
               name: Cải thiện và Lặp lại
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
         csd6-2019:
           stages:
             Making Music:
               name: Tạo âm nhạc
             Functions with Parameters:
               name: Hàm và tham số
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Making Music:
               name: Tạo âm nhạc
@@ -10418,6 +10653,13 @@ vi:
               name: Thực hành PT - Internet và xã hội
             Unit 1 Chapter 2 Assessment:
               name: Phần 1 Chương 2 Đánh giá
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+            csp1_1:
+              display_name: 'Chương 1: Thể hiện và Truyền tải Thông tin'
+            csp1_2:
+              display_name: 'Chương 2: Phát minh mạng Internet'
           lessons:
             CS Principles Pre-survey:
               name: Nguyên lý KHMT trước khi khảo sát
@@ -10455,13 +10697,20 @@ vi:
           stages:
             Bytes and File Sizes:
               name: Byte và kích thước tập tin
+            Text Compression:
+              name: Nén văn bản
             Encoding B&W Images:
               name: Mã hóa B&W hình ảnh
             Encoding Color Images:
               name: Mã hóa hình ảnh màu sắc
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Bytes and File Sizes:
               name: Byte và kích thước tập tin
+            Text Compression:
+              name: Nén văn bản
             Encoding B&W Images:
               name: Mã hóa B&W hình ảnh
             Encoding Color Images:
@@ -10491,6 +10740,9 @@ vi:
               name: Thực hành PT - thiết kế một cảnh kỹ thuật số
             Unit 3 Chapter 1 Assessment:
               name: Phần 3 Chương 1 Đánh giá
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             The Need For Programming Languages:
               name: Sự cần thiết cho ngôn ngữ lập trình
@@ -10534,6 +10786,9 @@ vi:
               name: Mật mã khóa chìa khoá chung
             Rapid Research - Cybercrime:
               name: Nghiên cứu nhanh - tội phạm mạng
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             What is Big Data?:
               name: Dữ liệu lớn là gì?
@@ -10599,6 +10854,9 @@ vi:
               name: Phần 5 Đánh giá 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Buttons and Events:
               name: Các nút và các sự kiện
@@ -10652,6 +10910,9 @@ vi:
               name: Khám phá các PT - lập một kế hoạch
             Explore PT - Complete the Task:
               name: Khám phá các PT - hoàn thành nhiệm vụ
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Explore PT Prep - Reviewing the Task:
               name: Khám phá các PT Prep - xem xét các tác vụ
@@ -10667,6 +10928,9 @@ vi:
               name: Tạo phần chuẩn bị PT - lập kế hoạch
             Create PT - Complete the Task:
               name: Tạo PT - hoàn thành nhiệm vụ
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Create PT Prep - Reviewing the Task:
               name: Tạo phần chuẩn bị PT - xem xét các tác vụ
@@ -10708,6 +10972,9 @@ vi:
               name: Ứng dụng mẫu
             Final Project:
               name: Dự án cuối cùng
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Intro to Data:
               name: Giới thiệu về dữ liệu
@@ -10758,6 +11025,8 @@ vi:
             Representing Information:
               name: Miêu tả thông tin
           lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
             required:
               display_name: Tổng quan
           lessons:
@@ -10887,6 +11156,14 @@ vi:
               name: lập trình đồ thị trên giấy
             Programming in Maze:
               name: Lập trình trong mê cung
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
         csp5-pilot:
           stages:
             new stage:
@@ -10944,6 +11221,9 @@ vi:
               name: Khám phá Giải quyết vấn đề
             What is a Computer?:
               name: Máy tính là gì?
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             CS Discoveries Pre-survey:
               name: Tiền khảo sát CS Discoveries
@@ -10989,6 +11269,9 @@ vi:
                 áp dụng kiến thức mới này cho các trang web cá nhân của họ.
             Intellectual Property:
               name: Sở hữu trí tuệ
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Digital Footprint:
               name: Dấu vết số
@@ -11119,6 +11402,9 @@ vi:
               name: Sử dụng quy trình thiết kế trò chơi
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
@@ -11696,6 +11982,9 @@ vi:
                 văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách
                 CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người
                 áp dụng kiến thức mới này cho các trang web cá nhân của họ.
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Digital Footprint:
               name: Dấu vết số
@@ -11735,6 +12024,9 @@ vi:
               name: Khám phá Giải quyết vấn đề
             What is a Computer?:
               name: Máy tính là gì?
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             CS Discoveries Pre-survey:
               name: Tiền khảo sát CS Discoveries
@@ -11764,6 +12056,9 @@ vi:
               name: Thử Ứng dụng
             Improving and Iterating:
               name: Cải thiện và Lặp lại
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Analysis of Design:
               name: Phân tích thiết kế
@@ -11781,12 +12076,19 @@ vi:
               name: Thử Ứng dụng
             Improving and Iterating:
               name: Cải thiện và Lặp lại
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
         csd6-2020:
           stages:
             Making Music:
               name: Tạo âm nhạc
             Functions with Parameters:
               name: Hàm và tham số
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Making Music:
               name: Tạo âm nhạc
@@ -11891,6 +12193,9 @@ vi:
               name: Dự án - thiết kế một trò chơi
             Text:
               name: Văn bản
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
@@ -12178,6 +12483,8 @@ vi:
               name: Bữa Tiệc Khiêu Vũ
             Programming in Maze:
               name: Lập trình trong mê cung
+            Debugging with Scrat:
+              name: Gỡ lỗi với Scrat
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -12196,6 +12503,8 @@ vi:
               name: Bữa Tiệc Khiêu Vũ
             Programming in Maze:
               name: Lập trình trong mê cung
+            Debugging with Scrat:
+              name: Gỡ lỗi với Scrat
         pre-express-2020:
           stages:
             Sequencing with Scrat:
@@ -12246,6 +12555,9 @@ vi:
               name: Sở hữu trí tuệ
             CS Principles Pre-survey:
               name: Nguyên lý KHMT trước khi khảo sát
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
           lessons:
             new stage:
               name: giai đoạn mới
@@ -12677,6 +12989,9 @@ vi:
               name: Nguyên lý KHMT trước khi khảo sát
             Buttons and Events:
               name: Các nút và các sự kiện
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
         csd3-virtual:
           description_short: Lập trình
           stages:
@@ -12875,4 +13190,20 @@ vi:
             csd3_2:
               display_name: Nội dung
             cspSurvey:
+              display_name: Nội dung
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Nội dung
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Nội dung
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Nội dung
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
               display_name: Nội dung

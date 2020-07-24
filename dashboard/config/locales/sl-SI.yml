@@ -644,6 +644,7 @@ sl:
     form_labels:
       email: Elektronska pošta
       school_name: Ime šole
+      colombian_school_name: Ime šole
     form_entries:
       gender:
         male: Moški

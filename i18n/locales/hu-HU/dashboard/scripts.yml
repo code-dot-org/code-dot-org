@@ -4940,6 +4940,7 @@ hu:
           stages:
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
+              description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
             Spelling Bee:
               name: Betüző méh
           lesson_groups:
@@ -4950,6 +4951,7 @@ hu:
           lessons:
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
+              description_teacher: Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.
             Spelling Bee:
               name: Betüző méh
         csp1-2020:
@@ -5117,4 +5119,44 @@ hu:
             csd3_2:
               display_name: Tartalom
             cspSurvey:
+              display_name: Tartalom
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lecke
+          lessons:
+            Lesson:
+              name: Lecke
+          lesson_groups:
+            lg_1:
+              display_name: Tartalom
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lecke
+          lessons:
+            Lesson:
+              name: Lecke
+          lesson_groups:
+            lg_1:
+              display_name: Tartalom
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lecke
+          lessons:
+            Lesson:
+              name: Lecke
+          lesson_groups:
+            lg_1:
+              display_name: Tartalom
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lecke
+          lessons:
+            Lesson:
+              name: Lecke
+          lesson_groups:
+            lg_1:
               display_name: Tartalom

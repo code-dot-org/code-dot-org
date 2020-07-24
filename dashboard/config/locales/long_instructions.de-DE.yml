@@ -6590,24 +6590,22 @@ de-DE:
       courseC_maze_debugging_challenge2_2020: Wenn Scrat zu oft abbiegt, könnte ihm
         schwindlig werden! Hilf ihm dabei, die Eichel mit nur vier `Abbiege`-Befehlen
         zu erreichen.
-      courseC_maze_programming1: Für diese Aufgabe musst du alle Bausteine zusammensetzen,
-        auf 'Ausführen' klicken und zusehen, wie der Code abläuft!
-      courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Bausteine zusammensetzen,
-        auf 'Ausführen' klicken und zusehen, wie der Code abläuft!
-      courseC_maze_programming1_2019: Für diese Aufgabe musst du alle Bausteine zusammensetzen,
-        auf 'Ausführen' klicken und zusehen, wie der Code abläuft!
-      courseC_maze_programming1_2020: Für diese Aufgabe musst du alle Bausteine zusammensetzen,
-        auf 'Ausführen' klicken und zusehen, wie der Code abläuft!
-      courseC_maze_programming2: Ziehe einen weiteren <xml><block type="maze_moveForward"/></xml>
-        Baustein aus der Werkzeugkiste, um deinen Code fertigzustellen.
-      courseC_maze_programming2_2018: Ziehe einen weiteren <xml><block type="maze_moveForward"/></xml>
-        Baustein aus der Werkzeugkiste, um deinen Code fertigzustellen.
-      courseC_maze_programming2_2019: Ziehe einen weiteren <xml><block type="maze_moveForward"
-        block-text="move forward"/></xml> Baustein aus der Werkzeugkiste, um deinen
-        Code fertigzustellen.
-      courseC_maze_programming2_2020: Ziehe einen weiteren <xml><block type="maze_moveForward"
-        block-text="move forward"/></xml> Baustein aus der Werkzeugkiste, um deinen
-        Code fertigzustellen.
+      courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2019: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming1_2020: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
+        auf 'Ausführen' klicken und zusehen, wie es läuft!
+      courseC_maze_programming2: Ziehe einen weiteren 'vorwärts bewegen' Block aus
+        der Werkzeugkiste, um deinen Code fertigzustellen!
+      courseC_maze_programming2_2018: Ziehe einen weiteren 'vorwärts bewegen' Block
+        aus der Werkzeugkiste, um deinen Code fertigzustellen!
+      courseC_maze_programming2_2019: Ziehe einen weiteren 'vorwärts bewegen' Block
+        aus der Werkzeugkiste, um deinen Code fertigzustellen!
+      courseC_maze_programming2_2020: Ziehe einen weiteren 'vorwärts bewegen' Block
+        aus der Werkzeugkiste, um deinen Code fertigzustellen!
       courseC_maze_programming3: |-
         _"Dieses Schwein ärgert mich."_
 
@@ -6655,58 +6653,58 @@ de-DE:
       courseC_maze_programming6: |-
         _"Bleib ruhig und hilf mir, das böse Schwein zu finden. Sonst könnte ich wirklich wütend werden!"_
 
-        Bring den Vogel zum Schwein und vermeide den Sprengstoff.
+        Bring den Vogel zum Schwein und vermeide das TNT!
       courseC_maze_programming6_2018: |-
         _"Bleib ruhig und hilf mir, das böse Schwein zu finden. Sonst könnte ich wirklich wütend werden!"_
 
-        Bring den Vogel zum Schwein und vermeide den Sprengstoff.
+        Bring den Vogel zum Schwein und vermeide das TNT!
       courseC_maze_programming6_2019: |-
         _"Bleib ruhig und hilf mir, das böse Schwein zu finden. Sonst könnte ich wirklich wütend werden!"_
 
-        Bring den Vogel zum Schwein und vermeide den Sprengstoff.
+        Bring den Vogel zum Schwein und vermeide das TNT!
       courseC_maze_programming6_2020: |-
         _"Bleib ruhig und hilf mir, das böse Schwein zu finden. Sonst könnte ich wirklich wütend werden!"_
 
-        Bring den Vogel zum Schwein und vermeide den Sprengstoff.
+        Bring den Vogel zum Schwein und vermeide das TNT!
       courseC_maze_programming7: |-
-        _"Jetzt werde ich wirklich böse!"_
+        _"Es ist Zeit wütend zu werden!"_
 
-        **Aufgabe:** In diesem Code stecken viele Fehler. Du musst einige Bausteine entfernen und andere hinzufügen.
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
       courseC_maze_programming7_2018: |-
-        _"Jetzt werde ich wirklich böse!"_
+        _"Es ist Zeit wütend zu werden!"_
 
-        **Aufgabe:** In diesem Code stecken viele Fehler. Du musst einige Bausteine entfernen und andere hinzufügen.
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
       courseC_maze_programming7_2019: |-
-        _"Jetzt werde ich wirklich böse!"_
+        _"Es ist Zeit wütend zu werden!"_
 
-        **Aufgabe:** In diesem Code stecken viele Fehler. Du musst einige Bausteine entfernen und andere hinzufügen.
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
       courseC_maze_programming7_2020: |-
-        _"Jetzt werde ich wirklich böse!"_
+        _"Es ist Zeit wütend zu werden!"_
 
-        **Aufgabe:** In diesem Code stecken viele Fehler. Du musst einige Bausteine entfernen und andere hinzufügen.
-      courseC_maze_programming8: _"Bleib ruhig und hilf mir, das böse Schwein zu finden."_
+        **Herausforderung:** In diesem Code stecken viele Fehler. Du musst einige Blöcke entfernen und andere hinzufügen.
+      courseC_maze_programming8: _"Bleib ruhig und hilf mir, das böse Schwein zu finden!"_
       courseC_maze_programming8_2018: _"Bleib ruhig und hilf mir, das böse Schwein
-        zu finden."_
+        zu finden!"_
       courseC_maze_programming8_2019: _"Bleib ruhig und hilf mir, das böse Schwein
-        zu finden."_
+        zu finden!"_
       courseC_maze_programming8_2020: _"Bleib ruhig und hilf mir, das böse Schwein
-        zu finden."_
+        zu finden!"_
       courseC_maze_programming8_predict1: _"Bleib ruhig und hilf mir, das böse Schwein
-        zu finden."_
+        zu finden!"_
       courseC_maze_programming8_predict1_2018: _"Bleib ruhig und hilf mir, das böse
-        Schwein zu finden."_
+        Schwein zu finden!"_
       courseC_maze_programming8_predict1_2019: _"Bleib ruhig und hilf mir, das böse
-        Schwein zu finden."_
+        Schwein zu finden!"_
       courseC_maze_programming8_predict1_2020: _"Bleib ruhig und hilf mir, das böse
-        Schwein zu finden."_
-      courseC_maze_programming9: _"Und jetzt hilf mir, mich beim Schwein anzuschleichen,
-        egal auf welchem Weg!"_
-      courseC_maze_programming9_2018: _"Und jetzt hilf mir, mich beim Schwein anzuschleichen,
-        egal auf welchem Weg!"_
-      courseC_maze_programming9_2019: _"Und jetzt hilf mir, mich beim Schwein anzuschleichen,
-        egal auf welchem Weg!"_
-      courseC_maze_programming9_2020: _"Und jetzt hilf mir, mich beim Schwein anzuschleichen,
-        egal auf welchem Weg!"_
+        Schwein zu finden!"_
+      courseC_maze_programming9: _"Und jetzt hilf mir, mich irgendwie an das Schwein
+        heranzuschleichen!"_
+      courseC_maze_programming9_2018: _"Und jetzt hilf mir, mich irgendwie an das
+        Schwein heranzuschleichen!"_
+      courseC_maze_programming9_2019: _"Und jetzt hilf mir, mich irgendwie an das
+        Schwein heranzuschleichen!"_
+      courseC_maze_programming9_2020: _"Und jetzt hilf mir, mich irgendwie an das
+        Schwein heranzuschleichen!"_
       courseC_maze_programming_challenge1: 'Der Vogel braucht deine Hilfe! Das Schwein
         versteckt sich und das Ziel ist es, das Schwein zu finden. '
       courseC_maze_programming_challenge1_2018: 'Der Vogel braucht deine Hilfe! Das

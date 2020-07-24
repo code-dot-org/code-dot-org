@@ -1,4 +1,10 @@
 {
+  "clicked": "kliknuté",
+  "clickedSprite": "stlačený sprite",
+  "subject": "Predmet",
+  "subjectSprite": "predmet sprite",
+  "object": "predmet ",
+  "objectSprite": "predmet sprite",
   "errorLoadingAnimation": "Vyzerá to, že sa tvoja anmácia \"{animationName}\" nechce načítať. Uisti sa, že máš dobré internetové pripojenie a vyskúšaj stránku znova načítať. Ak tento problém pokračuje, je možné, že táto animácia nefunguje. V takom prípade ju budeš musieť pred pokračovaním odstrániť.",
   "reinfFeedbackMsg": "Hotovo! Stlač \"Pokračovať\" aby si sa dostal/a do ďalšieho levelu.",
   "shareGame": "Zdieľaj svoju hru:",

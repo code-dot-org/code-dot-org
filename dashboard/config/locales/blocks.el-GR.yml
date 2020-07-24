@@ -1014,6 +1014,10 @@ el:
         options:
           CHOICE:
             '"this"': αυτό
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
       gamelab_hideTitleScreen:
         text: κρύψε την οθόνη τίτλων
       gamelab_isTouchingEdges:

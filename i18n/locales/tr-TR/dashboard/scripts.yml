@@ -2984,7 +2984,7 @@ tr:
             Gumball Play Lab:
               name: Gumball oyun Labaratuarı
         starwars:
-          title: 'Star Wars: Kod İle Galaksini İnşa Et'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           stages:
@@ -2994,7 +2994,7 @@ tr:
             Hour of Code 2015:
               name: Kodlama saati 2015
         starwarsblocks:
-          title: 'Star Wars: Kod İle Galaksini İnşa Et'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           stages:
@@ -19198,6 +19198,28 @@ tr:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
               name: Sanatçı-Şununla say Döngüleri
+            Programming with Angry Birds:
+              name: Labirentte Programlama
+            Collecting Treasure with Laurel:
+              name: Koleksiyoncu programlama
+            Creating Art with Code:
+              name: Sanatçı Programlama
+            Sticker Art with Loops:
+              name: Sanatçıların Döngüleri
+            Nested Loops in Maze:
+              name: Labirentte İçiçe Döngüler
+            Snowflakes with Anna and Elsa:
+              name: Frozen'da İç İçe Döngüler
+            If/Else with Bee:
+              name: Koşullar-Arı
+            While Loops with the Farmer:
+              name: Çiftçi Döngüleri
+            Functions with Artist:
+              name: Sanatçı- Fonksiyonlar
+            For Loops with Bee:
+              name: Arı - şununla say döngüleri
+            For Loops with Artist:
+              name: Sanatçı-Şununla say Döngüleri
           lesson_groups:
             csf_warmup:
               display_name: Isınma
@@ -19242,12 +19264,37 @@ tr:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
               name: Sanatçı-Şununla say Döngüleri
+            Programming with Angry Birds:
+              name: Labirentte Programlama
+            Collecting Treasure with Laurel:
+              name: Koleksiyoncu programlama
+            Creating Art with Code:
+              name: Sanatçı Programlama
+            Sticker Art with Loops:
+              name: Sanatçıların Döngüleri
+            Nested Loops in Maze:
+              name: Labirentte İçiçe Döngüler
+            Snowflakes with Anna and Elsa:
+              name: Frozen'da İç İçe Döngüler
+            If/Else with Bee:
+              name: Koşullar-Arı
+            While Loops with the Farmer:
+              name: Çiftçi Döngüleri
+            Functions with Artist:
+              name: Sanatçı- Fonksiyonlar
+            For Loops with Bee:
+              name: Arı - şununla say döngüleri
+            For Loops with Artist:
+              name: Sanatçı-Şununla say Döngüleri
         pre-express-2020:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: 'Ön okurlar için bilgisayar bilimlerine giriş: anaokulu ve birinci sınıf derslerimizin en iyisini birleştirir.'
           stages:
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
+            Sequencing with Scrat:
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
             Programming in Maze:
               name: Labirentte Programlama
             Programming with Rey and BB-8:
@@ -19258,8 +19305,22 @@ tr:
               name: Toplayıcıda Döngüler
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
             Loops in Artist:
               name: Sanatçı- Döngüler
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
+            Tell a Story in Play Lab:
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!
+            Make a Game in Play Lab:
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
+            Loops with Laurel:
+              name: Toplayıcıda Döngüler
+            Drawing Gardens with Loops:
+              name: Sanatçıların Döngüleri
+            On the Move with Events:
+              name: Play Lab' da Olaylar
+            A Royal Battle with Events:
+              name: Play Lab' da Olaylar
           lesson_groups:
             csf_loops:
               display_name: Döngüler
@@ -19268,6 +19329,9 @@ tr:
           lessons:
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
+            Sequencing with Scrat:
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
             Programming in Maze:
               name: Labirentte Programlama
             Programming with Rey and BB-8:
@@ -19278,8 +19342,22 @@ tr:
               name: Toplayıcıda Döngüler
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
             Loops in Artist:
               name: Sanatçı- Döngüler
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
+            Tell a Story in Play Lab:
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!
+            Make a Game in Play Lab:
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
+            Loops with Laurel:
+              name: Toplayıcıda Döngüler
+            Drawing Gardens with Loops:
+              name: Sanatçıların Döngüleri
+            On the Move with Events:
+              name: Play Lab' da Olaylar
+            A Royal Battle with Events:
+              name: Play Lab' da Olaylar
         csp1-2020:
           stages:
             new stage:
@@ -19941,4 +20019,44 @@ tr:
             csd3_2:
               display_name: İçerik
             cspSurvey:
+              display_name: İçerik
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Ders
+          lessons:
+            Lesson:
+              name: Ders
+          lesson_groups:
+            lg_1:
+              display_name: İçerik
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Ders
+          lessons:
+            Lesson:
+              name: Ders
+          lesson_groups:
+            lg_1:
+              display_name: İçerik
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Ders
+          lessons:
+            Lesson:
+              name: Ders
+          lesson_groups:
+            lg_1:
+              display_name: İçerik
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Ders
+          lessons:
+            Lesson:
+              name: Ders
+          lesson_groups:
+            lg_1:
               display_name: İçerik

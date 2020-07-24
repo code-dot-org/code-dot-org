@@ -1002,6 +1002,10 @@ da:
             '"tint"': toning
       gamelab_getThisSprite:
         text: "{CHOICE} figur"
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       gamelab_hideTitleScreen:
         text: skjul titelskærm
       gamelab_isTouchingEdges:

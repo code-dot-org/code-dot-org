@@ -1012,6 +1012,10 @@ tr:
           CHOICE:
             '"this"': bu
             '"other"': diğer
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': saniye
       gamelab_hideTitleScreen:
         text: başlık ekranını gizle
       gamelab_isTouchingEdges:

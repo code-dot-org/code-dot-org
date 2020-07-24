@@ -12703,6 +12703,30 @@ ka:
               name: For ციკლები ფუტკარში
             For Loops in Artist:
               name: For ციკლები მხატვარში
+            Programming with Angry Birds:
+              name: პროგრამირება ლაბირინთში
+            Debugging with Scrat:
+              name: გამართვა სკრეტთან ერთად
+            Collecting Treasure with Laurel:
+              name: განძის შეგროვება ლორელთან ერთად
+            Creating Art with Code:
+              name: კოდის მეშვეობით ხელოვნების შექმნა
+            Sticker Art with Loops:
+              name: ციკლები მხატვარში
+            Nested Loops in Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
+            If/Else with Bee:
+              name: პირობითი ბრძანებები ფუტკარში
+            While Loops with the Farmer:
+              name: While ციკლები ფერმერში
+            Harvesting with Conditionals:
+              name: მოსავლის აღება პირობითი წინადადებებით
+            Functions with Artist:
+              name: ფუნქციები მხატვარში
+            For Loops with Bee:
+              name: For ციკლები ფუტკარში
+            For Loops with Artist:
+              name: For ციკლები მხატვარში
           lesson_groups:
             csf_loops:
               display_name: ციკლები
@@ -12745,10 +12769,38 @@ ka:
               name: For ციკლები ფუტკარში
             For Loops in Artist:
               name: For ციკლები მხატვარში
+            Programming with Angry Birds:
+              name: პროგრამირება ლაბირინთში
+            Debugging with Scrat:
+              name: გამართვა სკრეტთან ერთად
+            Collecting Treasure with Laurel:
+              name: განძის შეგროვება ლორელთან ერთად
+            Creating Art with Code:
+              name: კოდის მეშვეობით ხელოვნების შექმნა
+            Sticker Art with Loops:
+              name: ციკლები მხატვარში
+            Nested Loops in Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
+            If/Else with Bee:
+              name: პირობითი ბრძანებები ფუტკარში
+            While Loops with the Farmer:
+              name: While ციკლები ფერმერში
+            Harvesting with Conditionals:
+              name: მოსავლის აღება პირობითი წინადადებებით
+            Functions with Artist:
+              name: ფუნქციები მხატვარში
+            For Loops with Bee:
+              name: For ციკლები ფუტკარში
+            For Loops with Artist:
+              name: For ციკლები მხატვარში
         pre-express-2020:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
           description_audience: 'ასაკი: 4-8'
           stages:
+            Learn to Drag and Drop:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+            Sequencing with Scrat:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Programming with Rey and BB-8:
@@ -12763,12 +12815,26 @@ ka:
               name: ციკლები მხატვარში
             Loops in Artist:
               name: ციკლები მხატვარში
+            Tell a Story in Play Lab:
+              description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება, შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
+            Loops with Laurel:
+              name: ციკლები შემგროვებელში
+            Drawing Gardens with Loops:
+              name: ეზოების ხატვა ციკლებით
+            On the Move with Events:
+              name: მოვლენები სათამაშო ლაბორატორიაში
+            A Royal Battle with Events:
+              name: მოვლენები სათამაშო ლაბორატორიაში
           lesson_groups:
             csf_loops:
               display_name: ციკლები
             csf_events:
               display_name: მოვლენები
           lessons:
+            Learn to Drag and Drop:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+            Sequencing with Scrat:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Programming with Rey and BB-8:
@@ -12783,6 +12849,16 @@ ka:
               name: ციკლები მხატვარში
             Loops in Artist:
               name: ციკლები მხატვარში
+            Tell a Story in Play Lab:
+              description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება, შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
+            Loops with Laurel:
+              name: ციკლები შემგროვებელში
+            Drawing Gardens with Loops:
+              name: ეზოების ხატვა ციკლებით
+            On the Move with Events:
+              name: მოვლენები სათამაშო ლაბორატორიაში
+            A Royal Battle with Events:
+              name: მოვლენები სათამაშო ლაბორატორიაში
         csp1-2020:
           stages:
             new stage:
@@ -13265,4 +13341,44 @@ ka:
             csd3_2:
               display_name: შიგთავსი
             cspSurvey:
+              display_name: შიგთავსი
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: გაკვეთილი
+          lessons:
+            Lesson:
+              name: გაკვეთილი
+          lesson_groups:
+            lg_1:
+              display_name: შიგთავსი
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: გაკვეთილი
+          lessons:
+            Lesson:
+              name: გაკვეთილი
+          lesson_groups:
+            lg_1:
+              display_name: შიგთავსი
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: გაკვეთილი
+          lessons:
+            Lesson:
+              name: გაკვეთილი
+          lesson_groups:
+            lg_1:
+              display_name: შიგთავსი
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: გაკვეთილი
+          lessons:
+            Lesson:
+              name: გაკვეთილი
+          lesson_groups:
+            lg_1:
               display_name: შიგთავსი
