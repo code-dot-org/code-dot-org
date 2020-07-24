@@ -105,12 +105,6 @@ class LessonGroup < ApplicationRecord
     end
   end
 
-  def self.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
-    if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-      raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
-    end
-  end
-
   # All lesson groups should have lessons in them
   def self.prevent_lesson_group_with_no_lessons(lesson_group, num_lessons)
     raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if num_lessons < 1
