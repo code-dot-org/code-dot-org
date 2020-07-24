@@ -37,7 +37,10 @@ import {
   ProgramManager,
   CsfFacilitator
 } from '../permission';
-import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  Subjects,
+  VirtualOnlySubjects
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
@@ -744,8 +747,7 @@ export class WorkshopForm extends React.Component {
   handleSubjectChange = event => {
     const subject = this.handleFieldChange(event);
 
-    // Coerce workshops with this subject to be regional virtual workshops
-    if (subject === 'Virtual Workshop Kickoff') {
+    if (VirtualOnlySubjects.includes(subject)) {
       this.setState({
         virtual: true,
         suppress_email: true
@@ -979,7 +981,10 @@ export class WorkshopForm extends React.Component {
                 <SelectIsVirtual
                   value={this.currentVirtualStatus()}
                   onChange={this.handleVirtualChange}
-                  readOnly={this.props.readOnly}
+                  readOnly={
+                    this.props.readOnly ||
+                    VirtualOnlySubjects.includes(this.state.subject)
+                  }
                 />
                 <HelpBlock>{validation.help.virtual}</HelpBlock>
               </FormGroup>
