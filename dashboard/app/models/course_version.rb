@@ -37,6 +37,7 @@ class CourseVersion < ApplicationRecord
       content_root: content_root,
     )
 
+    # Delete old CourseVersion if the key has been changed to something else
     content_root.course_version.destroy if course_version != content_root.course_version
     content_root.course_version = course_version
 
