@@ -1139,7 +1139,7 @@ class Script < ActiveRecord::Base
     end
 
     lessons_i18n = {'en' => {'data' => {'script' => {'name' => lessons_i18n}}}}
-    existing_i18n.deep_merge(lessons_i18n) {|_, old, _| old}.deep_merge!(metadata_i18n)
+    existing_i18n.deep_merge(lessons_i18n).deep_merge!(metadata_i18n)
   end
 
   def hoc_finish_url
