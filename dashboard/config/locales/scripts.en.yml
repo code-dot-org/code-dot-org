@@ -18175,6 +18175,8 @@ en:
           lessons:
             Module 1:
               name: Module 1
+            Module 2:
+              name: Module 2
           lesson_groups: {}
           title: CS Discoveries Virtual Professional Learning 2020 - 21
           description_audience: ''
