@@ -101,6 +101,10 @@ module Pd
       ]
     }.freeze
 
+    VIRTUAL_ONLY_SUBJECTS = [
+      SUBJECT_VIRTUAL_KICKOFF
+    ].freeze
+
     LEGACY_SUBJECTS = {
       COURSE_CSP => [
         LEGACY_SUBJECT_CSP_WORKSHOP_1 = '1-day Academic Year, Units 1 and 2'.freeze,
