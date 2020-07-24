@@ -260,13 +260,17 @@ def distribute_translations(upload_manifests)
     next unless File.directory?(locale_dir)
 
     ### Dashboard
-    Dir.glob("i18n/locales/#{locale}/dashboard/*.yml") do |loc_file|
-      relname = File.basename(loc_file, '.yml')
+    Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
+      ext = File.extname(loc_file)
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      basename = File.basename(loc_file, ext)
 
       # Special case the un-prefixed Yaml file.
-      destination = (relname == "base") ?
-        "dashboard/config/locales/#{locale}.yml" :
-        "dashboard/config/locales/#{relname}.#{locale}.yml"
+      destination = (basename == "base") ?
+        "dashboard/config/locales/#{locale}#{ext}" :
+        "dashboard/config/locales/#{basename}.#{locale}#{ext}"
 
       sanitize_file_and_write(loc_file, destination)
     end
