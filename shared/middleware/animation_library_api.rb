@@ -20,7 +20,7 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/animation-library/levelbuilder/<version-id>/<filename>
+  # GET /api/v1/animation-library/level_animations/<version-id>/<filename>
   # Retrieve an animation that was uploaded by a levelbuilder (for use in level start_animations)
   #
   get %r{/api/v1/animation-library/level_animations/([^/]+)/(.+)} do |version_id, animation_name|
