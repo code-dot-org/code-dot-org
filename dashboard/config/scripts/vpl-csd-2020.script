@@ -1,0 +1,25 @@
+hideable_lessons true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/"], ["teacherForum", "https://forum.code.org/"], ["curriculumGuide", "https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview"], ["professionalLearning", "/link/to/professional/learning"]]
+
+lesson 'Module 1'
+level 'OPL - CSD-PL AYWS1 Debugging Intro', progression: 'Module 1 Overview'
+level 'VPL - CSD - Module 1 Summer Review Overview', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
+level 'VPL-CSD 2020 Summer Review', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
+level 'VPL - CSD - Variables Overview', progression: 'New Content (~ 35 mins)'
+level 'VPL - CSD Module Variable Video with Reflection', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD U3 Variables Predict Where XY_2020', progression: 'New Content (~ 35 mins)'
+level 'VPL - CSD - Variable Resources', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD U3 Variables naming rules v2_2018_2020', progression: 'New Content (~ 35 mins)'
+level 'VPL - CSD - Random Numbers Overview', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD U3 Random random ellipse2_2018_2020', progression: 'New Content (~ 35 mins)'
+level 'VPL - CSD Module 1 New Content Reflection', progression: 'New Content (~ 35 mins)'
+level 'VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy', progression: 'Debugging (~ 25 mins)'
+level 'VPL - CSD Module 1 Debugging Reflection 1', progression: 'Debugging (~ 25 mins)'
+level 'VPL-CSD Games variables practice_2020', progression: 'Debugging (~ 25 mins)'
+level 'VPL - CSD Module 1 Debugging Reflection 2', progression: 'Debugging (~ 25 mins)'
+level 'VPL - CSD - Module 1 Wrap Up', progression: 'Module 1 Asynchronous Wrap Up (~ 10 mins)'
+
+lesson 'Module 2'
+level 'VPL - CSD Module 2 Overview', progression: 'Module 2 Overview'
+

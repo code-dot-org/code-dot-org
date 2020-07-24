@@ -87,6 +87,57 @@ class Level < ActiveRecord::Base
     thumbnail_url
   )
 
+  def self.add_levels(raw_levels, script, new_suffix, editor_experiment)
+    levels_by_key = script.levels.index_by(&:key)
+
+    raw_levels.map do |raw_level|
+      raw_level.symbolize_keys!
+
+      # Concepts are comma-separated, indexed by name
+      raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
+        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
+      end
+
+      raw_level_data = raw_level.dup
+
+      key = raw_level.delete(:name)
+
+      if raw_level[:level_num] && !key.starts_with?('blockly')
+        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
+        key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
+      end
+
+      level =
+        if new_suffix && !key.starts_with?('blockly')
+          Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
+        else
+          levels_by_key[key] || Level.find_by_key(key)
+        end
+
+      if key.starts_with?('blockly')
+        # this level is defined in levels.js. find/create the reference to this level
+        level = Level.
+          create_with(name: 'blockly').
+          find_or_create_by!(Level.key_to_params(key))
+        level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
+        if level.video_key && !raw_level[:video_key]
+          raw_level[:video_key] = nil
+        end
+
+        level.update(raw_level)
+      elsif raw_level[:video_key]
+        level.update(video_key: raw_level[:video_key])
+      end
+
+      unless level
+        raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
+      end
+
+      level.save! if level.changed?
+      level
+    end
+  end
+
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
     self < Level ? Level.model_name : super
@@ -273,6 +324,21 @@ class Level < ActiveRecord::Base
       File.write(file_path, to_xml)
       file_path
     end
+  end
+
+  def should_allow_pairing?(current_script_id)
+    if type == "LevelGroup"
+      return false
+    end
+
+    # A level could have multiple parents. Find the one associated with the current script.
+    current_parent = parent_levels.find do |parent|
+      parent.script_levels.find do |script|
+        script&.script_id == current_script_id
+      end
+    end
+
+    !(current_parent && current_parent.type == "LevelGroup")
   end
 
   def self.level_file_path(level_name)

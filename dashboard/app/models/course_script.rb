@@ -17,7 +17,7 @@
 #
 
 class CourseScript < ApplicationRecord
-  belongs_to :course
+  belongs_to :unit_group, foreign_key: 'course_id'
   belongs_to :script
 
   # The script will replace the default_script when the user has
