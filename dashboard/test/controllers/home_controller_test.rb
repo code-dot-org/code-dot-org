@@ -323,7 +323,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    query_count = 14
+    query_count = 15
     assert_queries query_count do
       get :home
     end
