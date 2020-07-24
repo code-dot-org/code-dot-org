@@ -1418,6 +1418,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
+  test 'virtual specific subjects must be virtual' do
+    workshop = build :pd_workshop,
+      course: COURSE_CSP,
+      subject: SUBJECT_CSP_WORKSHOP_1,
+      virtual: false,
+      suppress_email: true
+
+    assert workshop.valid?
+
+    workshop.subject = VIRTUAL_ONLY_SUBJECTS.first
+    refute workshop.valid?
+
+    workshop.virtual = true
+    assert workshop.valid?
+  end
+
   test 'friday_institute workshops must be virtual' do
     workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
     refute workshop.valid?
