@@ -23,13 +23,13 @@ class AnimationLibraryApi < Sinatra::Base
   # GET /api/v1/animation-library/levelbuilder/<version-id>/<filename>
   # Retrieve an animation that was uploaded by a levelbuilder (for use in level start_animations)
   #
-  get %r{/api/v1/animation-library/levelbuilder/([^/]+)/(.+)} do |version_id, animation_name|
+  get %r{/api/v1/animation-library/level_animations/([^/]+)/(.+)} do |version_id, animation_name|
     not_found if version_id.empty? || animation_name.empty?
 
     begin
       result = Aws::S3::Bucket.
         new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
-        object("levelbuilder/#{animation_name}").
+        object("level_animations/#{animation_name}").
         get(version_id: version_id)
       content_type result.content_type
       cache_for 3600
