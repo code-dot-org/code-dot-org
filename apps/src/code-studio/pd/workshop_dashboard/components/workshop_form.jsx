@@ -746,9 +746,9 @@ export class WorkshopForm extends React.Component {
 
     // Coerce workshops with this subject to be regional virtual workshops
     if (subject === 'Virtual Workshop Kickoff') {
-      this.handleVirtualChange(true);
       this.setState({
-        virtual: true
+        virtual: true,
+        suppress_email: true
       });
     }
   };
