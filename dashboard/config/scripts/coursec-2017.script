@@ -13,7 +13,7 @@ is_stable true
 supported_locales ["es-ES", "es-MX", "hi-IN", "it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
-lesson 'Building a Foundation'
+lesson 'Persistence: Building a Foundation'
 level 'BuildingAFoundation'
 
 lesson 'Programming in Maze'
@@ -158,8 +158,8 @@ level 'courseC_PlayLab_eventsA'
 level 'courseC_PlayLab_eventsFP'
 bonus 'courseC_PlayLab_events_challenge1'
 
-lesson 'Screen Out the Mean'
+lesson 'Digital Citizenship: Screen Out the Mean'
 level 'courseC_Unplugged_ScreenOutTheMean'
 
-lesson 'Binary Bracelets'
+lesson 'Beyond Programming: Binary Bracelets'
 level 'BinaryBracelets'

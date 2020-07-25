@@ -16,13 +16,13 @@ curriculum_umbrella 'CSF'
 lesson 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
 
-lesson 'Persistence & Frustration: Stevie and the Marbles'
+lesson 'Persistence: Stevie and the Big Project'
 level 'courseA_video_Stevie'
 
 lesson 'Real-life Algorithms: Plant a Seed'
 level 'PlantASeed'
 
-lesson 'Learn to Drag and Drop'
+lesson 'Sequencing with Drag and Drop'
 level 'elementary_video_pairProgramming'
 level 'gradek1_activity_beNice'
 skin 'jigsaw'
@@ -62,7 +62,7 @@ skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:13'
 
-lesson 'Online Safety: Your Digital Footprint'
+lesson 'Digital Citizenship: My Digital Footprint'
 level 'DigitalFootprint'
 
 lesson 'Programming: My Robotic Friends'

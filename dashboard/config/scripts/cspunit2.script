@@ -1,7 +1,7 @@
 login_required true
 has_lesson_plan true
 
-lesson 'The Internet'
+lesson 'The Internet Is for Everyone'
 level 'U2L1 Student Lesson Introduction'
 level 'U2L01 Assessment 1', assessment: true
 level 'U2L01 Assessment 2', assessment: true
@@ -56,7 +56,7 @@ level 'U2L07 Assessment3', assessment: true
 level 'U2L07 Assessment4', assessment: true
 level 'U2L07 Assessment5', assessment: true
 
-lesson 'Algorithms Detour - How Routers Learn'
+lesson 'How Routers Learn'
 level 'U2L8 Student Lesson Introduction'
 level 'U2L08 Free Response 3', assessment: true
 level 'U2L08 Free Response 1', assessment: true
@@ -79,7 +79,7 @@ level 'U2L10 Assessment2', assessment: true
 level 'U2L10 Assessment3', assessment: true
 level 'U2L10 Free Response Wrap Up', assessment: true
 
-lesson 'HTTP and Abstraction'
+lesson 'HTTP and Abstraction on the Internet'
 level 'U2L11 Student Lesson Introduction'
 level 'U2 HTTP and HTML - Video'
 level 'U2L11 Assessment 1', assessment: true
@@ -89,7 +89,7 @@ level 'U2L11 Free Response', assessment: true
 lesson 'Practice PT - The Internet and Society'
 level 'U2L12 Student Lesson Introduction'
 
-lesson 'Tell Me a Secret - Encrypting Text'
+lesson 'The Need for Encryption'
 level 'U2L13 Student Lesson Introduction'
 level 'U2 frequency caesar'
 level 'U2L13 Free Response Getting Started', assessment: true
@@ -109,21 +109,21 @@ level 'U2L14 Assessment2', assessment: true
 level 'U2L14 Assessment3', assessment: true
 level 'U2L14 Assessment4', assessment: true
 
-lesson 'Encryption Algorithms'
+lesson 'Keys and Passwords'
 level 'U2L15 Student Lesson Introduction'
 level 'U2L15 Assessment1', assessment: true
 level 'U2L15 Assessment2', assessment: true
 level 'U2L15 Assessment3', assessment: true
 level 'U2L15 Assessment4', assessment: true
 
-lesson 'Algorithms Detour - Hard Problems TSP'
+lesson 'Hard Problems - The Traveling Salesperson Problem'
 level 'U2L17 Student Lesson Introduction'
 level 'U2L17 Assessment 1', assessment: true
 level 'U2L17 Assessment 2', assessment: true
 level 'U2L16 Free Response Assessment 3', assessment: true
 level 'U2L17 Free Response Wrap Up', assessment: true
 
-lesson 'One Way Functions - Ice Cream Vans'
+lesson 'One-Way Functions - The WiFi Hotspot Problem'
 level 'U2L18 Student Lesson Introduction'
 level 'U2L17 Free Response Getting Started', assessment: true
 level 'U2L17 Free Responses Assessment 1', assessment: true
@@ -132,14 +132,14 @@ level 'U2L18 Free Response Getting Started', assessment: true
 level 'U2L18 Assessment', assessment: true
 level 'U2L18 Free Response Wrap Up', assessment: true
 
-lesson 'Alice and Bob and Asymmetric Keys'
+lesson 'Asymmetric Keys - Cups and Beans'
 level 'U2L16 Student Lesson Introduction'
 level 'U2 Encryption and Public Keys - Video'
 level 'U2L18 Free Response Assessment 1', assessment: true
 level 'U2L18 Match terms to cups and beans analogy', assessment: true
 level 'U2L18 Free Response Assessment 3', assessment: true
 
-lesson 'Public Key Crypto'
+lesson 'Public Key Cryptography'
 level 'U2L19 Student Lesson Introduction'
 level 'U2L19 Free Response Getting Started', assessment: true
 level 'U2L19 mutlichoice 20 mod 15', assessment: true

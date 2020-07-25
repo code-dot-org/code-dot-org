@@ -148,7 +148,7 @@ level 'courseD_maze_until9', challenge: true
 level 'courseD_maze_until10'
 level 'courseD_maze_until10_predict2', assessment: true
 
-lesson 'Conditionals & Loops in Farmer'
+lesson 'Conditionals & Loops in Harvester'
 level 'courseD_farmer_condLoops1'
 level 'courseD_farmer_condLoops2'
 level 'courseD_farmer_condLoops3'

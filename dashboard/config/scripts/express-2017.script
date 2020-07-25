@@ -14,7 +14,7 @@ supported_locales ["es-ES", "es-MX", "hi-IN", "it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Algorithms: Graph Paper Programming'
+lesson 'Programming: Graph Paper Programming'
 level 'GraphPaperProgramming'
 
 lesson 'Introduction'
@@ -79,7 +79,7 @@ endvariants
 lesson 'Building a Foundation'
 level 'BuildingAFoundation'
 
-lesson 'Debugging in Collector'
+lesson 'Introduction to Debugging'
 variants
   level 'courseC_video_debugging'
   level 'courseD_video_debugging', active: false
@@ -164,7 +164,7 @@ level 'courseD_bee_nestedLoops9_predict2'
 bonus 'courseD_harvester_nested_loops_challenge1'
 bonus 'courseD_collector_nested_loops_challenge2'
 
-lesson 'Nested Loops Project in Frozen'
+lesson 'Nested Loops in Frozen'
 level 'courseD_artist_project1'
 level 'courseD_artist_project2'
 level 'courseD_artist_project3'
@@ -175,13 +175,13 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
-lesson 'How it Works: The Internet'
+lesson 'Beyond Programming: The Internet'
 level 'Internet'
 
-lesson 'Common Sense Education: Digital Citizenship'
+lesson 'Digital Citizenship: Practicing Digital Citizenship'
 level 'courseD_unplugged_digitalCitizenship'
 
-lesson 'Common Sense Education: Screen Out the Mean'
+lesson 'Digital Citizenship: Screen Out the Mean'
 level 'courseC_Unplugged_ScreenOutTheMean'
 
 lesson 'Events: The Big Event'

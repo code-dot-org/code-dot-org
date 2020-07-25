@@ -104,7 +104,7 @@ lesson_group 'csf_f_2', display_name: 'Course F Content'
 lesson 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
 
-lesson 'Introduction'
+lesson 'Introduction to Online Puzzles'
 level 'courseE_video_ramp1'
 variants
   level 'courseD_scrat_ramp1'
@@ -163,10 +163,10 @@ variants
   level 'courseF_farmer_ramp11', active: false
 endvariants
 
-lesson 'The Power of Words'
+lesson 'Digital Citizenship: The Power of Words'
 level 'courseF_unplugged_powerOfWords'
 
-lesson 'Ice Age Play Lab'
+lesson 'Events in Ice Age'
 level 'iceage_hello1'
 level 'iceage_hello2'
 level 'iceage_move_to_flag'
@@ -195,7 +195,7 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-lesson 'Envelope Variables'
+lesson 'Variables: Envelope Variables'
 level 'EnvelopeVariables'
 
 lesson 'Variables in Artist'
@@ -231,7 +231,7 @@ level 'courseF_playlab_variables7b'
 bonus 'courseF_playlab_variables_challenge1'
 bonus 'courseF_playlab_variables_challenge2'
 
-lesson 'For Loop Fun'
+lesson 'For Loops: For Loop Fun'
 level 'ForLoopFun'
 
 lesson 'For Loops in Bee'
@@ -266,7 +266,7 @@ level 'courseF_artist_for10'
 bonus 'courseF_artist_for_challenge1'
 bonus 'courseF_artist_for_challenge2'
 
-lesson 'Songwriting with Parameters'
+lesson 'Functions: Songwriting with Parameters'
 level 'SongwritingWithParameters'
 
 lesson 'Functions in Bee'

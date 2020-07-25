@@ -104,7 +104,7 @@ lesson_group 'csf_e_2', display_name: 'Course E Content'
 lesson 'Algorithms: Dice Race'
 level 'DiceRace'
 
-lesson 'Introduction'
+lesson 'Introduction to Online Puzzles'
 level 'courseE_video_ramp1'
 variants
   level 'courseD_scrat_ramp1'
@@ -148,7 +148,7 @@ level 'courseE_artist_ramp8'
 level 'courseC_video_angles'
 level 'courseE_artist_ramp9'
 
-lesson 'Conditionals'
+lesson 'Conditionals in Farmer'
 level 'courseD_video_whileIntro'
 level 'courseE_farmer_ramp11a'
 variants
@@ -186,7 +186,7 @@ variants
 endvariants
 level 'courseE_farmer_ramp12g'
 
-lesson 'Private and Personal Information'
+lesson 'Digital Citizenship: Private and Personal Information'
 level 'courseE_unplugged_privateInformation'
 
 lesson 'Build a Star Wars Game'
@@ -305,8 +305,8 @@ lesson 'Present Your Project'
 level 'Prepare for your presentation', named: true
 
 lesson_group 'extra_course_content', display_name: 'Extra Course Content'
-lesson 'Internet'
+lesson 'Beyond Programming: The Internet'
 level 'Internet'
 
-lesson 'Crowdsourcing'
+lesson 'Beyond Programming: Crowdsourcing'
 level 'Crowdsourcing'

@@ -7,28 +7,28 @@ level 'TeacherCon Agenda', named: true
 level 'TeacherCon Self-Assessment', named: true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Lesson 1,4'
+lesson 'Lesson 1.4: Number Systems (Circle Triangle Square)'
 level 'U1L4 Lesson Overview', named: true
 
-lesson 'Lesson 1,6'
+lesson 'Lesson 1.6: Sending Numbers'
 level 'U1L6 Lesson Overview', named: true
 
-lesson 'Lesson 1,9'
+lesson 'Lesson 1.9: Internet Addressing (Battleship)'
 level 'U1L9 Lesson Overview', named: true
 
-lesson 'Lesson 1,10'
+lesson 'Lesson 1.10: Routers and Redundancy'
 level 'U1L10 Lesson Overview', named: true
 
-lesson 'Lesson 1,11'
+lesson 'Lesson 1.11: Packets and Making a Reliable Internet'
 level 'U1L11 Lesson Overview', named: true
 
-lesson 'Lesson 2,2'
+lesson 'Lesson 2.2: Text Compression'
 level 'U2L2 Lesson Overview', named: true
 
-lesson 'Lesson 2,3'
+lesson 'Lesson 2.3: Black and White Pixelation'
 level 'U2L3 Lesson Overview', named: true
 
-lesson 'Lesson 2,10'
+lesson 'Lesson 2.10: Good and Bad Data Visualizations'
 level 'U2L10 Lesson Overview', named: true
 
 lesson_group 'practice', display_name: 'Teaching Practices'

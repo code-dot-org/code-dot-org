@@ -1,7 +1,7 @@
 login_required true
 has_lesson_plan true
 
-lesson 'Intro to Data'
+lesson 'Introduction to Data'
 level 'U4L01 Student Lesson Introduction'
 
 lesson 'Finding Trends with Visualizations'

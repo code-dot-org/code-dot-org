@@ -187,7 +187,7 @@ level 'flappy_8'
 level 'flappy_9'
 level 'flappy_11'
 
-lesson 'Studio: Create a Story'
+lesson 'Play Lab: Create a Story'
 skin 'studio'
 video_key_for_next_level 'C2_playlab_createstory'
 level_concept_difficulty '{"sequencing":1}'
