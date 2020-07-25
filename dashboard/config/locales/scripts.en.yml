@@ -65,6 +65,8 @@ en:
               name: 'Studio: Create a Story'
             The Big Event:
               name: The Big Event
+            'Play Lab: Create a Story':
+              name: 'Play Lab: Create a Story'
         course2:
           title: Course 2
           description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
@@ -110,6 +112,8 @@ en:
               name: The Big Event
             Your Digital Footprint:
               name: Your Digital Footprint
+            'Play Lab: Create a Story':
+              name: 'Play Lab: Create a Story'
         course3:
           title: Course 3
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
@@ -159,6 +163,10 @@ en:
               name: 'Studio: Create a Game'
             'Studio: Create a Story':
               name: 'Studio: Create a Story'
+            'Play Lab: Create a Story':
+              name: 'Play Lab: Create a Story'
+            'Play Lab: Create a Game':
+              name: 'Play Lab: Create a Game'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -332,6 +340,40 @@ en:
               name: 'Unplugged: The Design Recipe'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games and Coordinate Planes'
+            Evaluation Blocks and Arithmetic Expressions:
+              name: Evaluation Blocks and Arithmetic Expressions
+            Strings and Images:
+              name: Strings and Images
+            'Unplugged: Contracts, Domain, and Range':
+              name: 'Unplugged: Contracts, Domain, and Range'
+            Writing Contracts:
+              name: Writing Contracts
+            Defining Variables and Substitution:
+              name: Defining Variables and Substitution
+            The Big Game - Variables:
+              name: The Big Game - Variables
+            Composite Functions:
+              name: Composite Functions
+            Rocket Height:
+              name: Rocket Height
+            Solving Word Problems with the Design Recipe:
+              name: Solving Word Problems with the Design Recipe
+            The Big Game - Animation:
+              name: The Big Game - Animation
+            'Unplugged: Booleans and Logic':
+              name: 'Unplugged: Booleans and Logic'
+            Boolean Operators:
+              name: Boolean Operators
+            Sam the Bat:
+              name: Sam the Bat
+            The Big Game - Booleans:
+              name: The Big Game - Booleans
+            Conditionals:
+              name: Conditionals
+            'Unplugged: Collision Detection and the Pythagorean Theorem':
+              name: 'Unplugged: Collision Detection and the Pythagorean Theorem'
+            The Big Game - Collision Detection:
+              name: The Big Game - Collision Detection
         infinity:
           title: Disney Infinity Play Lab
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
@@ -607,6 +649,8 @@ en:
               name: Sending Numbers
             Text Compression:
               name: Text Compression
+            Encode an Experience:
+              name: Encode an Experience
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -827,6 +871,8 @@ en:
               name: Using Variables in Apps
             While Loops:
               name: While Loops
+            Creating Functions with Parameters:
+              name: Creating Functions with Parameters
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1080,6 +1126,24 @@ en:
               name: The Need for Addressing
             The Need for DNS:
               name: The Need for DNS
+            The Internet Is for Everyone:
+              name: The Internet Is for Everyone
+            How Routers Learn:
+              name: How Routers Learn
+            HTTP and Abstraction on the Internet:
+              name: HTTP and Abstraction on the Internet
+            The Need for Encryption:
+              name: The Need for Encryption
+            Keys and Passwords:
+              name: Keys and Passwords
+            Hard Problems - The Traveling Salesperson Problem:
+              name: Hard Problems - The Traveling Salesperson Problem
+            One-Way Functions - The WiFi Hotspot Problem:
+              name: One-Way Functions - The WiFi Hotspot Problem
+            Asymmetric Keys - Cups and Beans:
+              name: Asymmetric Keys - Cups and Beans
+            Public Key Cryptography:
+              name: Public Key Cryptography
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -2059,6 +2123,8 @@ en:
               name: The Cost of Free
             What is Big Data?:
               name: What is Big Data?
+            Introduction to Data:
+              name: Introduction to Data
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description: Online Support for CSP Unit 4
@@ -3152,6 +3218,22 @@ en:
               name: Lesson 2,3
             Measuring Student Learning:
               name: Measuring Student Learning
+            'Lesson 1.4: Number Systems (Circle Triangle Square)':
+              name: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+            'Lesson 1.6: Sending Numbers':
+              name: 'Lesson 1.6: Sending Numbers'
+            'Lesson 1.9: Internet Addressing (Battleship)':
+              name: 'Lesson 1.9: Internet Addressing (Battleship)'
+            'Lesson 1.10: Routers and Redundancy':
+              name: 'Lesson 1.10: Routers and Redundancy'
+            'Lesson 1.11: Packets and Making a Reliable Internet':
+              name: 'Lesson 1.11: Packets and Making a Reliable Internet'
+            'Lesson 2.2: Text Compression':
+              name: 'Lesson 2.2: Text Compression'
+            'Lesson 2.3: Black and White Pixelation':
+              name: 'Lesson 2.3: Black and White Pixelation'
+            'Lesson 2.10: Good and Bad Data Visualizations':
+              name: 'Lesson 2.10: Good and Bad Data Visualizations'
         kinderTest:
           title: ''
           description_audience: ''
@@ -4463,6 +4545,8 @@ en:
               name: Nested Loops Project in Artist
             Debugging in Collector:
               name: Debugging in Collector
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
         coursee-draft:
           title: 'CS Fundamentals: Course E'
           description_audience: ''
@@ -4571,6 +4655,8 @@ en:
               name: Conditionals and Functions in Bee
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
+            Present Your Project:
+              name: Present Your Project
         classic-hoc-impact-study:
           title: Hour of Code with Survey
           description_audience: ''
@@ -5880,6 +5966,12 @@ en:
               name: Events in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+            'Persistence: Stevie and the Big Project':
+              name: 'Persistence: Stevie and the Big Project'
+            Sequencing with Drag and Drop:
+              name: Sequencing with Drag and Drop
+            'Digital Citizenship: Going Places Safely':
+              name: 'Digital Citizenship: Going Places Safely'
         courseb-2017:
           title: Course B
           assignment_family_title: Course B
@@ -5916,6 +6008,12 @@ en:
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
+            'Persistence: Stevie and the Big Project':
+              name: 'Persistence: Stevie and the Big Project'
+            Sequencing with Drag and Drop:
+              name: Sequencing with Drag and Drop
+            'Digital Citizenship: My Digital Footprint':
+              name: 'Digital Citizenship: My Digital Footprint'
         coursec-2017:
           title: Course C
           assignment_family_title: Course C
@@ -5956,6 +6054,12 @@ en:
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
+            'Persistence: Building a Foundation':
+              name: 'Persistence: Building a Foundation'
+            'Digital Citizenship: Screen Out the Mean':
+              name: 'Digital Citizenship: Screen Out the Mean'
+            'Beyond Programming: Binary Bracelets':
+              name: 'Beyond Programming: Binary Bracelets'
         coursed-2017:
           title: Course D
           assignment_family_title: Course D
@@ -6037,6 +6141,24 @@ en:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
+            'Programming: Graph Paper Programming':
+              name: 'Programming: Graph Paper Programming'
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            'Debugging: Relay Programming':
+              name: 'Debugging: Relay Programming'
+            'If/Else: Conditionals with Cards':
+              name: 'If/Else: Conditionals with Cards'
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+            'Digital Citizenship: Practicing Digital Citizenship':
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
+            'Beyond Programming: Binary Images':
+              name: 'Beyond Programming: Binary Images'
+            Binary in Artist:
+              name: Binary in Artist
         coursee-2017:
           title: Course E
           assignment_family_title: Course E
@@ -6176,6 +6298,16 @@ en:
               name: Nested Loops
             Functions in Harvester:
               name: Functions in Harvester
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+            Conditionals in Farmer:
+              name: Conditionals in Farmer
+            'Digital Citizenship: Private and Personal Information':
+              name: 'Digital Citizenship: Private and Personal Information'
+            'Beyond Programming: The Internet':
+              name: 'Beyond Programming: The Internet'
+            'Beyond Programming: Crowdsourcing':
+              name: 'Beyond Programming: Crowdsourcing'
         coursef-2017:
           title: Course F
           assignment_family_title: Course F
@@ -6292,6 +6424,18 @@ en:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+            'Digital Citizenship: The Power of Words':
+              name: 'Digital Citizenship: The Power of Words'
+            Events in Ice Age:
+              name: Events in Ice Age
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
         csdnovice:
           title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
@@ -6698,6 +6842,18 @@ en:
               name: Conditionals & Loops in Harvester
             Until Loops in Maze:
               name: Until Loops in Maze
+            'Programming: Graph Paper Programming':
+              name: 'Programming: Graph Paper Programming'
+            Introduction to Debugging:
+              name: Introduction to Debugging
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            'Beyond Programming: The Internet':
+              name: 'Beyond Programming: The Internet'
+            'Digital Citizenship: Practicing Digital Citizenship':
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
+            'Digital Citizenship: Screen Out the Mean':
+              name: 'Digital Citizenship: Screen Out the Mean'
         pre-express-2017:
           title: Pre-reader Express
           assignment_family_title: Pre-reader Express
@@ -6734,6 +6890,12 @@ en:
               name: Events in Play Lab
             Spelling Bee:
               name: Spelling Bee
+            'Persistence: Stevie and the Big Project':
+              name: 'Persistence: Stevie and the Big Project'
+            Sequencing with Drag and Drop:
+              name: Sequencing with Drag and Drop
+            'Digital Citizenship: My Digital Footprint':
+              name: 'Digital Citizenship: My Digital Footprint'
         subgoal-labels-opt-in:
           title: Subgoal Labels Study Opt-in
           description_audience: ''
@@ -8209,6 +8371,32 @@ en:
               name: Sequencing in Maze
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+            Unspotted Bugs:
+              name: Unspotted Bugs
+            Stevie and the Big Project:
+              name: Stevie and the Big Project
+            Plant a Seed:
+              name: Plant a Seed
+            Sequencing with Angry Birds:
+              name: Sequencing with Angry Birds
+            Happy Maps:
+              name: Happy Maps
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Programming with Harvester:
+              name: Programming with Harvester
+            Happy Loops:
+              name: Happy Loops
+            Loops with Harvester:
+              name: Loops with Harvester
+            Loops with Laurel:
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
         express-2018:
           title: Express Course
           assignment_family_title: Express Course
@@ -8431,6 +8619,60 @@ en:
               name: Relay Programming
             Graph Paper Programming:
               name: Graph Paper Programming
+            Coding with Angry Birds:
+              name: Coding with Angry Birds
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Collecting Treasure with Laurel:
+              name: Collecting Treasure with Laurel
+            Creating Art with Code:
+              name: Creating Art with Code
+            Getting Loopy:
+              name: Getting Loopy
+            Sticker Art with Loops:
+              name: Sticker Art with Loops
+            It is Great to Create and Play Fair:
+              name: It is Great to Create and Play Fair
+            Looking Ahead with Minecraft:
+              name: Looking Ahead with Minecraft
+            Nested Loops with Anna and Elsa:
+              name: Nested Loops with Anna and Elsa
+            While Loops with the Farmer:
+              name: While Loops with the Farmer
+            If/Else with Bee:
+              name: If/Else with Bee
+            Harvesting with Conditionals:
+              name: Harvesting with Conditionals
+            Songwriting:
+              name: Songwriting
+            Functions with Minecraft:
+              name: Functions with Minecraft
+            Functions with the Harvester:
+              name: Functions with the Harvester
+            The Big Event:
+              name: The Big Event
+            Variables with Artist:
+              name: Variables with Artist
+            Changing Variables with Bee:
+              name: Changing Variables with Bee
+            Changing Variables with Artist:
+              name: Changing Variables with Artist
+            For Loops with Bee:
+              name: For Loops with Bee
+            For Loops with Artist:
+              name: For Loops with Artist
+            Learning Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Alien Dance Party
+            Pet Giraffe:
+              name: Pet Giraffe
+            Binary Images:
+              name: Binary Images
+            Binary Images with Artist:
+              name: Binary Images with Artist
+            The Internet:
+              name: The Internet
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Course B
@@ -8599,6 +8841,24 @@ en:
               name: Nested Loops in Bees
             Nested Loops in Maze:
               name: Nested Loops in Maze
+            Debugging with Laurel:
+              name: Debugging with Laurel
+            Drawing Shapes with Loops:
+              name: Drawing Shapes with Loops
+            Fancy Shapes using Nested Loops:
+              name: Fancy Shapes using Nested Loops
+            Snowflakes with Anna and Elsa:
+              name: Snowflakes with Anna and Elsa
+            If/Else with Bee:
+              name: If/Else with Bee
+            Harvesting with Conditionals:
+              name: Harvesting with Conditionals
+            Ninjas vs. Pirates Game:
+              name: Ninjas vs. Pirates Game
+            Binary Images:
+              name: Binary Images
+            Binary Images with Artist:
+              name: Binary Images with Artist
         jr-test:
           title: ''
           description_audience: ''
@@ -9170,6 +9430,38 @@ en:
               name: Functions in Minecraft
             Conditionals in Farmer:
               name: Conditionals in Farmer
+            My Robotic Friends:
+              name: My Robotic Friends
+            Coding with Comments:
+              name: Coding with Comments
+            Creating Art with Code:
+              name: Creating Art with Code
+            My Loopy Robotic Friends:
+              name: My Loopy Robotic Friends
+            Drawing Shapes with Loops:
+              name: Drawing Shapes with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
+            Functions with Minecraft:
+              name: Functions with Minecraft
+            Variables with Artist:
+              name: Variables with Artist
+            Changing Variables with Bee:
+              name: Changing Variables with Bee
+            hanging Variables with Artist:
+              name: hanging Variables with Artist
+            For Loops with Bee:
+              name: For Loops with Bee
+            For Loops with Artist:
+              name: For Loops with Artist
+            Learning Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Alien Dance Party
+            Pet Giraffe:
+              name: Pet Giraffe
         csp1-2018:
           title: CSP Unit 1 - The Internet ('18-'19)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -11826,6 +12118,20 @@ en:
               name: Make a Game in Play Lab
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Programming with Harvester:
+              name: Programming with Harvester
+            Loops with Scrat:
+              name: Loops with Scrat
+            Loops with Laurel:
+              name: Loops with Laurel
+            Drawing Gardens with Loops:
+              name: Drawing Gardens with Loops
+            On the Move with Events:
+              name: On the Move with Events
+            A Royal Battle with Events:
+              name: A Royal Battle with Events
         removed19:
           title: Removed from CSF for 2019
           description_audience: ''
