@@ -15,7 +15,7 @@ import teacherSections, {
   setValidAssignments,
   setValidGrades,
   setTextToSpeechScriptIds,
-  setPreReaderScriptIds,
+  setPreReaderScriptIds
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
