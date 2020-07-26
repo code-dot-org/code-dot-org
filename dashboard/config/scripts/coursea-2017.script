@@ -19,10 +19,10 @@ level 'courseB_video_Unspotted'
 lesson 'Persistence: Stevie and the Big Project'
 level 'courseA_video_Stevie'
 
-lesson 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-Life Algorithms: Plant a Seed'
 level 'PlantASeed'
 
-lesson 'Sequencing with Drag and Drop'
+lesson 'Learn to Drag and Drop'
 level 'elementary_video_pairProgramming'
 skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
@@ -58,7 +58,7 @@ skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12'
 
-lesson 'Programming: Happy Maps'
+lesson 'Programming Unplugged: Happy Maps'
 level 'UnplugHappyMaps'
 
 lesson 'Programming in Maze'
@@ -80,10 +80,10 @@ level 'courseA_maze_seq13'
 bonus 'courseA_maze_seq_challenge1'
 bonus 'courseA_maze_seq_challenge2'
 
-lesson 'Digital Citizenship: Going Places Safely'
+lesson 'Common Sense Education: Going Places Safely'
 level 'GoingPlacesSafely'
 
-lesson 'Loops: Happy Loops'
+lesson 'Loops Unplugged: Happy Loops'
 level 'courseA_unplugged_loops'
 
 lesson 'Loops in Collector'
@@ -122,7 +122,7 @@ level 'courseA_artist_loops12'
 bonus 'courseA_artist_loops_challenge2a'
 bonus 'courseA_artist_loops_challenge1'
 
-lesson 'Events: The Big Event'
+lesson 'Events Unplugged: The Big Event'
 level 'BigEvent'
 
 lesson 'Events in Play Lab'

@@ -13,7 +13,7 @@ is_stable true
 supported_locales ["es-ES", "es-MX", "hi-IN", "it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
-lesson 'Persistence: Building a Foundation'
+lesson 'Building a Foundation'
 level 'BuildingAFoundation'
 
 lesson 'Programming in Maze'
@@ -45,7 +45,7 @@ level 'courseC_maze_debugging9'
 bonus 'courseC_maze_debugging_challenge1'
 bonus 'courseC_maze_debugging_challenge2'
 
-lesson 'Real-life Algorithms: Paper Planes'
+lesson 'Real-Life Algorithms: Paper Planes'
 level 'PaperPlanes'
 
 lesson 'Programming in Collector'
@@ -79,7 +79,7 @@ level 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2a'
 
-lesson 'Loops: Getting Loopy'
+lesson 'Getting Loopy'
 level 'GettingLoopy'
 
 lesson 'Loops with Rey and BB-8'
@@ -128,7 +128,7 @@ level 'courseC_harvester_loops11_predict1'
 bonus 'courseC_harvester_loops_challenge1a'
 bonus 'courseC_harvester_loops_challenge2'
 
-lesson 'Events: The Big Event'
+lesson 'Events Unplugged: The Big Event'
 level 'BigEvent'
 
 lesson 'Build a Flappy Game'
@@ -158,8 +158,8 @@ level 'courseC_PlayLab_eventsA'
 level 'courseC_PlayLab_eventsFP'
 bonus 'courseC_PlayLab_events_challenge1'
 
-lesson 'Digital Citizenship: Screen Out the Mean'
+lesson 'Common Sense Education: Screen Out the Mean'
 level 'courseC_Unplugged_ScreenOutTheMean'
 
-lesson 'Beyond Programming: Binary Bracelets'
+lesson 'Binary Bracelets'
 level 'BinaryBracelets'

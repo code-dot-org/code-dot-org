@@ -77,7 +77,7 @@ level 'K-1 Maze Debugging Multi 1'
 bonus 'course1_maze_debugging_challenge1'
 bonus 'course1_maze_debugging_challenge2'
 
-lesson 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-Life Algorithms: Plant a Seed'
 level 'PlantASeed'
 level 'K-1 Plant a Seed Multi 1'
 level 'K-1 Plant a Seed Multi 2'
@@ -232,7 +232,7 @@ level 'blockly:Studio:k1_6'
 bonus 'course1_playlab_events_challenge1'
 bonus 'course1_playlab_events_challenge2'
 
-lesson 'Going Places Safely'
+lesson 'Going Places Online'
 level 'GoingPlacesSafely'
 level 'K-1 Keep it Private Multi 1'
 

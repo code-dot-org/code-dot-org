@@ -240,7 +240,7 @@ skin 'studio'
 level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":1}'
 level 'blockly:Studio:c3_game_7'
 
-lesson 'Internet'
+lesson 'The Internet'
 level 'Internet'
 level '4-5 Internet Multi 1'
 level '4-5 Internet Multi 2'

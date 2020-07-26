@@ -17,7 +17,7 @@ lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
 lesson 'Programming: My Robotic Friends'
 level 'courseB_unplugged_MRF'
 
-lesson 'Sequence in Maze'
+lesson 'Sequences in Maze'
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -58,7 +58,7 @@ level 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2a'
 
-lesson 'Loops: My Loopy Robotic Friends'
+lesson 'My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF'
 
 lesson 'Loops in Artist'
@@ -101,7 +101,7 @@ level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
 lesson_group 'csf_e_2', display_name: 'Course E Content'
-lesson 'Algorithms: Dice Race'
+lesson 'Algorithms: Dice Race Unplugged'
 level 'DiceRace'
 
 lesson 'Introduction to Online Puzzles'
@@ -186,7 +186,7 @@ variants
 endvariants
 level 'courseE_farmer_ramp12g'
 
-lesson 'Digital Citizenship: Private and Personal Information'
+lesson 'Digital Citizenship'
 level 'courseE_unplugged_privateInformation'
 
 lesson 'Build a Star Wars Game'
@@ -210,7 +210,7 @@ skin 'hoc2015'
 video_key_for_next_level 'starwars_blocks_congrats'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-lesson 'Functions: Songwriting'
+lesson 'Functions: Songwriting Unplugged'
 level 'SongwritingParameters'
 
 lesson 'Functions in Artist'

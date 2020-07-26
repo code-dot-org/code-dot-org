@@ -13,7 +13,7 @@ is_stable true
 supported_locales ["es-ES", "es-MX", "hi-IN", "it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
-lesson 'Programming: Graph Paper Programming'
+lesson 'Graph Paper Programming'
 level 'GraphPaperProgramming'
 
 lesson 'Introduction to Online Puzzles'
@@ -79,7 +79,7 @@ level 'courseD_artist_nestedLoopsFP'
 bonus 'courseD_artist_nestedLoops_challenge1'
 bonus 'courseD_artist_nestedLoops_challenge2'
 
-lesson 'Nested Loops in Frozen'
+lesson 'Nested Loops with Frozen'
 level 'courseD_artist_project1'
 level 'courseD_artist_project2'
 level 'courseD_artist_project3'
@@ -90,7 +90,7 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
-lesson 'Debugging: Relay Programming'
+lesson 'Relay Programming'
 level 'RelayProgramming'
 
 lesson 'Debugging in Collector'
@@ -175,7 +175,7 @@ level 'courseD_farmer_condLoops9_predict1'
 bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
-lesson 'Digital Citizenship: Practicing Digital Citizenship'
+lesson 'Digital Citizenship'
 level 'courseD_unplugged_digitalCitizenship'
 
 lesson 'Build a Play Lab Game'
@@ -189,10 +189,10 @@ level 'courseD_playLab_cond6'
 level 'courseD_playLab_cond6a'
 level 'courseD_playLab_condFP'
 
-lesson 'Beyond Programming: Binary Images'
+lesson 'Beyond Programming: Binary'
 level 'BinaryImages'
 
-lesson 'Binary in Artist'
+lesson 'Binary Artist'
 level 'courseD_external_binary1'
 level 'courseD_artist_binary1'
 level 'courseD_artist_binary2'

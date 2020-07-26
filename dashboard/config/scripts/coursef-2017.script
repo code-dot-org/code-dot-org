@@ -17,7 +17,7 @@ lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
 lesson 'Programming: My Robotic Friends'
 level 'courseB_unplugged_MRF'
 
-lesson 'Sequence in Maze'
+lesson 'Sequences in Maze'
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -58,7 +58,7 @@ level 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2a'
 
-lesson 'Loops: My Loopy Robotic Friends'
+lesson 'My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF'
 
 lesson 'Loops in Artist'
@@ -74,7 +74,7 @@ level 'ramp_artist_loops7'
 level 'ramp_artist_loops8', challenge: true
 level 'ramp_artist_loops9'
 
-lesson 'Nested Loops in Bee/Zombie'
+lesson 'Nested Loops'
 level 'courseD_bee_nestedLoops1a'
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
@@ -163,7 +163,7 @@ variants
   level 'courseF_farmer_ramp11', active: false
 endvariants
 
-lesson 'Digital Citizenship: The Power of Words'
+lesson 'Digital Citizenship'
 level 'courseF_unplugged_powerOfWords'
 
 lesson 'Events in Ice Age'

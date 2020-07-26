@@ -13,10 +13,10 @@ is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
-lesson 'Debugging: Unspotted Bugs'
+lesson 'Unspotted Bugs'
 level 'courseB_video_Unspotted_2018'
 
-lesson 'Persistence & Frustration: Stevie and the Big Project'
+lesson 'Stevie and the Big Project'
 level 'courseA_video_Stevie_2018'
 
 lesson 'Move It, Move It'
@@ -34,10 +34,10 @@ level 'courseB_Scrat_ramp5a_2018'
 lesson 'Your Digital Footprint'
 level 'DigitalFootprint_2018'
 
-lesson 'Programming: My Robotic Friends'
+lesson 'My Robotic Friends Jr.'
 level 'courseB_unplugged_MRF_2018'
 
-lesson 'Programming in Ice Age'
+lesson 'Programming with Scrat'
 level 'elementary_video_pairProgramming_2018'
 level 'courseB_maze_seq1_2018'
 level 'courseB_maze_seq4_2018'
@@ -53,7 +53,7 @@ level 'courseB_maze_seq12_2018'
 bonus 'courseB_maze_seq_challenge1_2018'
 bonus 'courseB_maze_seq_challenge2_2018'
 
-lesson 'Copyright and Creativity'
+lesson "It's Great to Create and Play Fair"
 level 'courseB_unplugged_CnC_2018'
 
 lesson 'Programming with Rey and BB-8'
@@ -70,10 +70,10 @@ level 'courseB_starWars_prog9_2018'
 level 'courseB_starWars_prog10_2018'
 level 'courseB_starWars_prog11_2018'
 
-lesson 'Loops: My Loopy Robotic Friends'
+lesson 'My Loopy Robotic Friends Jr.'
 level 'courseB_unplugged_loopyMRF_2018'
 
-lesson 'Loops in Ice Age'
+lesson 'Loops with Scrat'
 level 'courseB_iceage_loops1'
 level 'courseB_iceage_loops2'
 level 'courseB_iceage_loops_video'
@@ -87,7 +87,7 @@ level 'courseB_iceage_loops10', challenge: true
 level 'courseB_iceage_loops11'
 level 'courseB_iceage_loops12'
 
-lesson 'Loops in Collector'
+lesson 'Loops with Laurel'
 level 'courseAB_video_collector_2018'
 level 'courseB_collector_loops1_2018'
 level 'courseB_collector_loops2_2018'
@@ -104,7 +104,7 @@ level 'courseB_collector_loops11_2018'
 bonus 'courseB_collector_loops_challenge1_2018'
 bonus 'courseB_collector_loops_challenge2a_2018'
 
-lesson 'Loops in Artist'
+lesson 'Drawing Gardens with Loops'
 level 'courseB_video_ArtistIntro_2018'
 level 'courseB_artist_loops1_2018'
 level 'courseB_video_artistLoops_2018'
@@ -120,10 +120,10 @@ level 'courseB_artist_loops10_2018'
 bonus 'courseB_artist_loops_challenge1_2018'
 bonus 'courseB_artist_loops_challenge2_2018'
 
-lesson 'Events: The Big Event'
+lesson 'The Big Event Jr'
 level 'BigEvent_2018'
 
-lesson 'Events in Play Lab'
+lesson 'A Royal Battle with Events'
 level 'courseA_video_events_2018'
 level 'courseB_playLab_events1_2018'
 level 'courseB_playlab_events2_2018'

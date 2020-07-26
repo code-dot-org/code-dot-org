@@ -243,7 +243,7 @@ bonus 'courseD_farmer_condLoops_challenge1_2020'
 bonus 'courseD_farmer_condLoops_challenge2_2020'
 
 lesson_group 'csf_functions', display_name: 'Functions'
-lesson 'Functions in Minecraft'
+lesson 'Functions with Minecraft'
 level 'MC_HOC_2017_01_RETRY_2020'
 level 'MC_HOC_2017_02_Cole_2020'
 level 'MC_HOC_2017_03_Cole_2020'

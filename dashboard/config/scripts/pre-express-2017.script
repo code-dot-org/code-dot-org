@@ -16,13 +16,13 @@ curriculum_umbrella 'CSF'
 lesson 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
 
-lesson 'Persistence: Stevie and the Big Project'
+lesson 'Persistence & Frustration: Stevie and the Big Project'
 level 'courseA_video_Stevie'
 
-lesson 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-Life Algorithms: Plant a Seed'
 level 'PlantASeed'
 
-lesson 'Sequencing with Drag and Drop'
+lesson 'Learn to Drag and Drop'
 level 'elementary_video_pairProgramming'
 level 'gradek1_activity_beNice'
 skin 'jigsaw'
@@ -62,10 +62,10 @@ skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:13'
 
-lesson 'Digital Citizenship: My Digital Footprint'
+lesson 'Common Sense Education: Your Digital Footprint'
 level 'DigitalFootprint'
 
-lesson 'Programming: My Robotic Friends'
+lesson 'Programming Unplugged: My Robotic Friends'
 level 'courseB_unplugged_MRF'
 
 lesson 'Programming in Maze'
@@ -86,7 +86,7 @@ level 'courseB_maze_seq12'
 bonus 'courseB_maze_seq_challenge1'
 bonus 'courseB_maze_seq_challenge2'
 
-lesson 'Programming: Star Wars'
+lesson 'Programming in Star Wars'
 level 'courseB_starWars_prog1'
 level 'courseB_starWars_prog2'
 level 'courseB_starWars_prog3'
@@ -99,7 +99,7 @@ level 'courseB_starWars_prog9'
 level 'courseB_starWars_prog10'
 level 'courseB_starWars_prog11'
 
-lesson 'Loops: My Loopy Robotic Friends'
+lesson 'My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF'
 
 lesson 'Loops in Collector'
@@ -135,7 +135,7 @@ level 'courseB_artist_loops10'
 bonus 'courseB_artist_loops_challenge1'
 bonus 'courseB_artist_loops_challenge2'
 
-lesson 'Events: The Big Event'
+lesson 'Events Unplugged: The Big Event'
 level 'BigEvent'
 
 lesson 'Events in Play Lab'

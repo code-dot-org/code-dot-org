@@ -172,7 +172,7 @@ level 'courseF_bee_variables_6_2018', challenge: true
 level 'courseF_bee_variables_7_2018'
 level 'courseF_bee_variables_8_2018'
 
-lesson 'hanging Variables with Artist'
+lesson 'Changing Variables with Artist'
 level 'courseF_artist_variables7_2018'
 level 'courseF_artist_variables8_2018'
 level 'courseF_artist_variables9_2018'

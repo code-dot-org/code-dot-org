@@ -5,7 +5,7 @@ has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course4/{LESSON}/Teacher'
 curriculum_umbrella 'CSF'
 
-lesson 'Unplugged: Tangrams'
+lesson 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
 
 lesson 'Maze and Bee'
@@ -21,7 +21,7 @@ level 'Course 4 Bee 2'
 bonus 'course4_harvester_nested_loops_challenge1'
 bonus 'course4_collector_nested_loops_challenge2'
 
-lesson 'Artist'
+lesson 'Artist: Loops Review'
 level 'Course 4 Artist 1'
 level 'Course 4 Artist 2'
 level 'Course 4 Artist 3'
@@ -37,10 +37,10 @@ level 'Course 4 Artist 11'
 level 'Course 4 Artist 12'
 level 'Course 4 Artist 13'
 
-lesson 'Unplugged: Envelope Variables'
+lesson 'Variables in Envelopes'
 level 'EnvelopeVariables'
 
-lesson 'Unplugged: Madlibs'
+lesson 'Abstraction with Madlibs'
 level 'MadGlibs'
 
 lesson 'Artist: Variables'
@@ -73,7 +73,7 @@ level 'Course 4 Play Lab Vars 7'
 level 'Course 4 Play Lab Vars 9'
 bonus 'course4_playlab_variables_challenge1'
 
-lesson 'Unplugged: For Loop Fun'
+lesson 'For Loop Fun'
 level 'ForLoopFun'
 
 lesson 'Bee: For Loops'
@@ -130,7 +130,7 @@ level 'NEW Course 4 Artist Functions 14'
 bonus 'course4_artist_concept_challenge2'
 bonus 'course4_artist_functions_challenge2'
 
-lesson 'Unplugged: Songwriting with Parameters'
+lesson 'Songwriting with Parameters'
 level 'SongwritingWithParameters'
 
 lesson 'Artist: Functions with Parameters'
@@ -178,10 +178,10 @@ level 'Course 4 Bee Params 8'
 bonus 'course4_bee_fwp_challenge1'
 bonus 'course4_bee_fwp_challenge2'
 
-lesson 'Unplugged: Binary'
+lesson 'Binary Images'
 level 'BinaryImages'
 
-lesson 'Artist Binary'
+lesson 'Artist: Binary'
 level 'Course 4 Artist Binary pre1'
 level 'Course 4 Artist Binary 1'
 level 'Course 4 Artist Binary 2'

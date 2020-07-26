@@ -67,6 +67,16 @@ en:
               name: The Big Event
             'Play Lab: Create a Story':
               name: 'Play Lab: Create a Story'
+            Plant a Seed:
+              name: Plant a Seed
+            'Persistence: Building a Foundation':
+              name: 'Persistence: Building a Foundation'
+            'Digital Citizenship: Going Places Safely':
+              name: 'Digital Citizenship: Going Places Safely'
+            'Real-Life Algorithms: Plant a Seed':
+              name: 'Real-Life Algorithms: Plant a Seed'
+            Going Places Online:
+              name: Going Places Online
         course2:
           title: Course 2
           description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
@@ -114,6 +124,20 @@ en:
               name: Your Digital Footprint
             'Play Lab: Create a Story':
               name: 'Play Lab: Create a Story'
+            Paper Planes:
+              name: Paper Planes
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
+            'Beyond Programming: Binary Bracelets':
+              name: 'Beyond Programming: Binary Bracelets'
+            'Digital Citizenship: My Digital Footprint':
+              name: 'Digital Citizenship: My Digital Footprint'
+            'Real-Life Algorithms: Paper Airplanes':
+              name: 'Real-Life Algorithms: Paper Airplanes'
+            Relay Programming:
+              name: Relay Programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
         course3:
           title: Course 3
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
@@ -167,6 +191,12 @@ en:
               name: 'Play Lab: Create a Story'
             'Play Lab: Create a Game':
               name: 'Play Lab: Create a Game'
+            The Internet:
+              name: The Internet
+            'Beyond Programming: Crowdsourcing':
+              name: 'Beyond Programming: Crowdsourcing'
+            'Digital Citizenship: Practicing Digital Citizenship':
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -251,6 +281,26 @@ en:
               name: 'Unplugged: Songwriting with Parameters'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
+            'Beyond Programming: Binary Images':
+              name: 'Beyond Programming: Binary Images'
+            Binary in Artist:
+              name: Binary in Artist
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            'Artist: Loops Review':
+              name: 'Artist: Loops Review'
+            Variables in Envelopes:
+              name: Variables in Envelopes
+            Abstraction with Madlibs:
+              name: Abstraction with Madlibs
+            For Loop Fun:
+              name: For Loop Fun
+            Songwriting with Parameters:
+              name: Songwriting with Parameters
+            Binary Images:
+              name: Binary Images
+            'Artist: Binary':
+              name: 'Artist: Binary'
         Course4pre:
           title: Course 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -5200,6 +5250,8 @@ en:
           lessons:
             Introduction:
               name: Introduction
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
         workshop-maker:
           title: Maker Toolkit Workshop
           description_audience: Teachers attending an in-person Maker Toolkit Workshop
@@ -5228,6 +5280,10 @@ en:
               name: Conditionals
             'Real Life Algorithms: Dice Race':
               name: 'Real Life Algorithms: Dice Race'
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
         csd6-2017:
           title: CSD Unit 6 - Physical Computing ('17-'18)
           description_audience: ''
@@ -5773,6 +5829,10 @@ en:
               name: Functions in Farmer
             Conditionals and Functions in Bee:
               name: Conditionals and Functions in Bee
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+            Events in Ice Age:
+              name: Events in Ice Age
         csppostsurvey-staging:
           title: "[Deprecated] CSP post survey staging area"
           description_audience: ''
@@ -5972,6 +6032,34 @@ en:
               name: Sequencing with Drag and Drop
             'Digital Citizenship: Going Places Safely':
               name: 'Digital Citizenship: Going Places Safely'
+            Unspotted Bugs:
+              name: Unspotted Bugs
+            Plant a Seed:
+              name: Plant a Seed
+            Happy Maps:
+              name: Happy Maps
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Happy Loops:
+              name: Happy Loops
+            Loops with Laurel:
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            'Real-Life Algorithms: Plant a Seed':
+              name: 'Real-Life Algorithms: Plant a Seed'
+            'Programming Unplugged: Happy Maps':
+              name: 'Programming Unplugged: Happy Maps'
+            'Common Sense Education: Going Places Safely':
+              name: 'Common Sense Education: Going Places Safely'
+            'Loops Unplugged: Happy Loops':
+              name: 'Loops Unplugged: Happy Loops'
+            'Events Unplugged: The Big Event':
+              name: 'Events Unplugged: The Big Event'
         courseb-2017:
           title: Course B
           assignment_family_title: Course B
@@ -6014,6 +6102,36 @@ en:
               name: Sequencing with Drag and Drop
             'Digital Citizenship: My Digital Footprint':
               name: 'Digital Citizenship: My Digital Footprint'
+            Unspotted Bugs:
+              name: Unspotted Bugs
+            Plant a Seed:
+              name: Plant a Seed
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Loops with Laurel:
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            'Real-Life Algorithms: Plant a Seed':
+              name: 'Real-Life Algorithms: Plant a Seed'
+            'Common Sense Education: Your Digital Footprint':
+              name: 'Common Sense Education: Your Digital Footprint'
+            'Programming Unplugged: My Robotic Friends':
+              name: 'Programming Unplugged: My Robotic Friends'
+            Programming in Star Wars:
+              name: Programming in Star Wars
+            My Loopy Robotic Friends:
+              name: My Loopy Robotic Friends
+            'Events Unplugged: The Big Event':
+              name: 'Events Unplugged: The Big Event'
         coursec-2017:
           title: Course C
           assignment_family_title: Course C
@@ -6060,6 +6178,32 @@ en:
               name: 'Digital Citizenship: Screen Out the Mean'
             'Beyond Programming: Binary Bracelets':
               name: 'Beyond Programming: Binary Bracelets'
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Paper Planes:
+              name: Paper Planes
+            Collecting Treasure with Laurel:
+              name: Collecting Treasure with Laurel
+            Creating Art with Code:
+              name: Creating Art with Code
+            Getting Loopy:
+              name: Getting Loopy
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Loops with Harvester:
+              name: Loops with Harvester
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            'Real-Life Algorithms: Paper Planes':
+              name: 'Real-Life Algorithms: Paper Planes'
+            'Events Unplugged: The Big Event':
+              name: 'Events Unplugged: The Big Event'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
         coursed-2017:
           title: Course D
           assignment_family_title: Course D
@@ -6159,6 +6303,32 @@ en:
               name: 'Beyond Programming: Binary Images'
             Binary in Artist:
               name: Binary in Artist
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            Fancy Shapes using Nested Loops:
+              name: Fancy Shapes using Nested Loops
+            Nested Loops with Anna and Elsa:
+              name: Nested Loops with Anna and Elsa
+            Introduction to Debugging:
+              name: Introduction to Debugging
+            While Loops with the Farmer:
+              name: While Loops with the Farmer
+            If/Else with Bee:
+              name: If/Else with Bee
+            Harvesting with Conditionals:
+              name: Harvesting with Conditionals
+            Ninjas vs. Pirates Game:
+              name: Ninjas vs. Pirates Game
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Relay Programming:
+              name: Relay Programming
+            'Beyond Programming: Binary':
+              name: 'Beyond Programming: Binary'
+            Binary Artist:
+              name: Binary Artist
         coursee-2017:
           title: Course E
           assignment_family_title: Course E
@@ -6308,6 +6478,40 @@ en:
               name: 'Beyond Programming: The Internet'
             'Beyond Programming: Crowdsourcing':
               name: 'Beyond Programming: Crowdsourcing'
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Coding with Comments:
+              name: Coding with Comments
+            'Persistence: Building a Foundation':
+              name: 'Persistence: Building a Foundation'
+            Creating Art with Code:
+              name: Creating Art with Code
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
+            Songwriting:
+              name: Songwriting
+            Functions with Artist:
+              name: Functions with Artist
+            Functions with the Harvester:
+              name: Functions with the Harvester
+            Ninjas vs. Pirates Game:
+              name: Ninjas vs. Pirates Game
+            Sequences in Maze:
+              name: Sequences in Maze
+            My Loopy Robotic Friends:
+              name: My Loopy Robotic Friends
+            'Algorithms: Dice Race Unplugged':
+              name: 'Algorithms: Dice Race Unplugged'
+            Digital Citizenship:
+              name: Digital Citizenship
+            'Functions: Songwriting Unplugged':
+              name: 'Functions: Songwriting Unplugged'
         coursef-2017:
           title: Course F
           assignment_family_title: Course F
@@ -6436,6 +6640,32 @@ en:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Coding with Comments:
+              name: Coding with Comments
+            'Persistence: Building a Foundation':
+              name: 'Persistence: Building a Foundation'
+            Creating Art with Code:
+              name: Creating Art with Code
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            For Loops with Bee:
+              name: For Loops with Bee
+            For Loops with Artist:
+              name: For Loops with Artist
+            Sequences in Maze:
+              name: Sequences in Maze
+            My Loopy Robotic Friends:
+              name: My Loopy Robotic Friends
+            Nested Loops:
+              name: Nested Loops
+            Digital Citizenship:
+              name: Digital Citizenship
         csdnovice:
           title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
@@ -6854,6 +7084,32 @@ en:
               name: 'Digital Citizenship: Practicing Digital Citizenship'
             'Digital Citizenship: Screen Out the Mean':
               name: 'Digital Citizenship: Screen Out the Mean'
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
+            'Persistence: Building a Foundation':
+              name: 'Persistence: Building a Foundation'
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            Nested Loops with Anna and Elsa:
+              name: Nested Loops with Anna and Elsa
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            While Loops with the Farmer:
+              name: While Loops with the Farmer
+            Harvesting with Conditionals:
+              name: Harvesting with Conditionals
+            For Loops with Bee:
+              name: For Loops with Bee
+            For Loops with Artist:
+              name: For Loops with Artist
+            Debugging in Scrat (Updated):
+              name: Debugging in Scrat (Updated)
+            'Loops: My Robotic Friends':
+              name: 'Loops: My Robotic Friends'
         pre-express-2017:
           title: Pre-reader Express
           assignment_family_title: Pre-reader Express
@@ -6896,6 +7152,38 @@ en:
               name: Sequencing with Drag and Drop
             'Digital Citizenship: My Digital Footprint':
               name: 'Digital Citizenship: My Digital Footprint'
+            Unspotted Bugs:
+              name: Unspotted Bugs
+            Plant a Seed:
+              name: Plant a Seed
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Loops with Laurel:
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
+            'Real-Life Algorithms: Plant a Seed':
+              name: 'Real-Life Algorithms: Plant a Seed'
+            'Common Sense Education: Your Digital Footprint':
+              name: 'Common Sense Education: Your Digital Footprint'
+            'Programming Unplugged: My Robotic Friends':
+              name: 'Programming Unplugged: My Robotic Friends'
+            Programming in Star Wars:
+              name: Programming in Star Wars
+            My Loopy Robotic Friends:
+              name: My Loopy Robotic Friends
+            'Events Unplugged: The Big Event':
+              name: 'Events Unplugged: The Big Event'
         subgoal-labels-opt-in:
           title: Subgoal Labels Study Opt-in
           description_audience: ''
@@ -8397,6 +8685,10 @@ en:
               name: The Big Event Jr.
             On the Move with Events:
               name: On the Move with Events
+            'Digital Citizenship: Going Places Safely':
+              name: 'Digital Citizenship: Going Places Safely'
+            The Big Event Jr:
+              name: The Big Event Jr
         express-2018:
           title: Express Course
           assignment_family_title: Express Course
@@ -8673,6 +8965,30 @@ en:
               name: Binary Images with Artist
             The Internet:
               name: The Internet
+            It's Great to Create and Play Fair:
+              name: It's Great to Create and Play Fair
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            'If/Else: Conditionals with Cards':
+              name: 'If/Else: Conditionals with Cards'
+            Functions with Artist:
+              name: Functions with Artist
+            'Digital Citizenship: Screen Out the Mean':
+              name: 'Digital Citizenship: Screen Out the Mean'
+            'Digital Citizenship: The Power of Words':
+              name: 'Digital Citizenship: The Power of Words'
+            'Beyond Programming: Binary Bracelets':
+              name: 'Beyond Programming: Binary Bracelets'
+            'Beyond Programming: Crowdsourcing':
+              name: 'Beyond Programming: Crowdsourcing'
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Digital Sharing:
+              name: Digital Sharing
+            Snowflakes with Anna and Elsa:
+              name: Snowflakes with Anna and Elsa
+            Functions with Harvester:
+              name: Functions with Harvester
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Course B
@@ -8743,6 +9059,34 @@ en:
               name: Move It, Move It
             Copyright and Creativity:
               name: Copyright and Creativity
+            'Digital Citizenship: My Digital Footprint':
+              name: 'Digital Citizenship: My Digital Footprint'
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Programming with Scrat:
+              name: Programming with Scrat
+            It's Great to Create and Play Fair:
+              name: It's Great to Create and Play Fair
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Loops with Scrat:
+              name: Loops with Scrat
+            Loops with Laurel:
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            My Robotic Friends Jr:
+              name: My Robotic Friends Jr
+            Drawing Gardens with Loops:
+              name: Drawing Gardens with Loops
+            The Big Event Jr:
+              name: The Big Event Jr
+            A Royal Battle with Events:
+              name: A Royal Battle with Events
         coursed-2018:
           title: Course D (2018)
           assignment_family_title: Course D
@@ -8859,6 +9203,14 @@ en:
               name: Binary Images
             Binary Images with Artist:
               name: Binary Images with Artist
+            Loops with Scrat:
+              name: Loops with Scrat
+            While Loops with the Farmer:
+              name: While Loops with the Farmer
+            'If/Else: Conditionals with Cards':
+              name: 'If/Else: Conditionals with Cards'
+            'Digital Citizenship: Practicing Digital Citizenship':
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
         jr-test:
           title: ''
           description_audience: ''
@@ -9032,6 +9384,42 @@ en:
               description_teacher: ''
             Looking Ahead:
               name: Looking Ahead
+            'Persistence: Building a Foundation':
+              name: 'Persistence: Building a Foundation'
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Paper Planes:
+              name: Paper Planes
+            Collecting Treasure with Laurel:
+              name: Collecting Treasure with Laurel
+            Creating Art with Code:
+              name: Creating Art with Code
+            Getting Loopy:
+              name: Getting Loopy
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Loops with Harvester:
+              name: Loops with Harvester
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            'Digital Citizenship: Screen Out the Mean':
+              name: 'Digital Citizenship: Screen Out the Mean'
+            On the Move with Events:
+              name: On the Move with Events
+            Looking Ahead with Minecraft:
+              name: Looking Ahead with Minecraft
+            'Beyond Programming: Binary Bracelets':
+              name: 'Beyond Programming: Binary Bracelets'
+            Sticker Art with Loops:
+              name: Sticker Art with Loops
+            Harvesting Crops with Loops:
+              name: Harvesting Crops with Loops
+            The Big Event:
+              name: The Big Event
+            Chase Game with Events:
+              name: Chase Game with Events
         csd6-2018:
           title: CSD Unit 6 - Physical Computing ('18-'19)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -9280,6 +9668,56 @@ en:
               name: Pet Giraffe with Sprite Lab
             Copyright and Creativity:
               name: Copyright and Creativity
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Coding with Comments:
+              name: Coding with Comments
+            'Persistence: Building a Foundation':
+              name: 'Persistence: Building a Foundation'
+            Creating Art with Code:
+              name: Creating Art with Code
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            'If/Else: Conditionals with Cards':
+              name: 'If/Else: Conditionals with Cards'
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
+            'Digital Citizenship: Private and Personal Information':
+              name: 'Digital Citizenship: Private and Personal Information'
+            Songwriting:
+              name: Songwriting
+            Functions with Minecraft:
+              name: Functions with Minecraft
+            Functions with the Harvester:
+              name: Functions with the Harvester
+            It's Great to Create and Play Fair:
+              name: It's Great to Create and Play Fair
+            Functions with Artist:
+              name: Functions with Artist
+            Learning Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Alien Dance Party
+            Pet Giraffe:
+              name: Pet Giraffe
+            The Internet:
+              name: The Internet
+            'Beyond Programming: Crowdsourcing':
+              name: 'Beyond Programming: Crowdsourcing'
+            My Robotic Friends:
+              name: My Robotic Friends
+            My Loopy Robotic Friends:
+              name: My Loopy Robotic Friends
+            Drawing Shapes with Loops:
+              name: Drawing Shapes with Loops
+            Functions with Harvester:
+              name: Functions with Harvester
+            Digital Sharing:
+              name: Digital Sharing
         coursef-2018:
           title: Course F (2018)
           assignment_family_title: Course F
@@ -9462,6 +9900,18 @@ en:
               name: Alien Dance Party
             Pet Giraffe:
               name: Pet Giraffe
+            'Persistence: Building a Foundation':
+              name: 'Persistence: Building a Foundation'
+            'If/Else: Conditionals with Cards':
+              name: 'If/Else: Conditionals with Cards'
+            'Digital Citizenship: The Power of Words':
+              name: 'Digital Citizenship: The Power of Words'
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            Changing Variables with Artist:
+              name: Changing Variables with Artist
         csp1-2018:
           title: CSP Unit 1 - The Internet ('18-'19)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -10660,6 +11110,36 @@ en:
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+            Unspotted Bugs:
+              name: Unspotted Bugs
+            Stevie and the Big Project:
+              name: Stevie and the Big Project
+            'Digital Citizenship: My Digital Footprint':
+              name: 'Digital Citizenship: My Digital Footprint'
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Programming with Scrat:
+              name: Programming with Scrat
+            It's Great to Create and Play Fair:
+              name: It's Great to Create and Play Fair
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Loops with Scrat:
+              name: Loops with Scrat
+            Loops with Laurel:
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            Drawing Gardens with Loops:
+              name: Drawing Gardens with Loops
+            The Big Event Jr:
+              name: The Big Event Jr
+            A Royal Battle with Events:
+              name: A Royal Battle with Events
         spritelab-validated:
           title: ''
           description_audience: ''
@@ -11099,6 +11579,42 @@ en:
               name: Simulating Experiments
               description_student: Run simulations on the computer and experiment by changing variables.
               description_teacher: By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.
+            Functions with Minecraft:
+              name: Functions with Minecraft
+            Learning Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Alien Dance Party
+            Drawing with Loops:
+              name: Drawing with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            Variables with Artist:
+              name: Variables with Artist
+            Changing Variables with Bee:
+              name: Changing Variables with Bee
+            Changing Variables with Artist:
+              name: Changing Variables with Artist
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            For Loops with Bee:
+              name: For Loops with Bee
+            For Loops with Artist:
+              name: For Loops with Artist
+            The Internet:
+              name: The Internet
+            Behaviors in Sprite Lab:
+              name: Behaviors in Sprite Lab
+            Virtual Pet with Sprite Lab:
+              name: Virtual Pet with Sprite Lab
+            'Digital Citizenship: The Power of Words':
+              name: 'Digital Citizenship: The Power of Words'
+            'Beyond Programming: Crowdsourcing':
+              name: 'Beyond Programming: Crowdsourcing'
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
         dance-low:
           title: Dance Party (Low Bandwidth)
           description_audience: ''
@@ -11213,6 +11729,40 @@ en:
               name: Dance Party
               description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
               description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
+            'Programming: Graph Paper Programming':
+              name: 'Programming: Graph Paper Programming'
+            Introduction to Debugging:
+              name: Introduction to Debugging
+            Loops with Scrat:
+              name: Loops with Scrat
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            'If/Else: Conditionals with Cards':
+              name: 'If/Else: Conditionals with Cards'
+            If/Else with Bee:
+              name: If/Else with Bee
+            While Loops with the Farmer:
+              name: While Loops with the Farmer
+            Harvesting with Conditionals:
+              name: Harvesting with Conditionals
+            'Beyond Programming: Binary Images':
+              name: 'Beyond Programming: Binary Images'
+            Binary in Artist:
+              name: Binary in Artist
+            'Digital Citizenship: Practicing Digital Citizenship':
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Debugging with Laurel:
+              name: Debugging with Laurel
+            Drawing Shapes with Loops:
+              name: Drawing Shapes with Loops
+            Binary Images:
+              name: Binary Images
+            Binary Images with Artist:
+              name: Binary Images with Artist
         coursee-2019:
           title: Course E (2019)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -11398,6 +11948,32 @@ en:
               name: Designing for Accessibility
             Songwriting:
               name: Songwriting
+            Drawing with Loops:
+              name: Drawing with Loops
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
+            Learning Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Alien Dance Party
+            'Digital Citizenship: Private and Personal Information':
+              name: 'Digital Citizenship: Private and Personal Information'
+            About Me with Sprite Lab:
+              name: About Me with Sprite Lab
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            Fancy Shapes using Nested Loops:
+              name: Fancy Shapes using Nested Loops
+            Nested Loops with Anna and Elsa:
+              name: Nested Loops with Anna and Elsa
+            Functions with Minecraft:
+              name: Functions with Minecraft
+            Functions with the Harvester:
+              name: Functions with the Harvester
+            Functions with Artist:
+              name: Functions with Artist
+            Functions with Harvester:
+              name: Functions with Harvester
         express-2019:
           title: Express Course (2019)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -11619,6 +12195,60 @@ en:
               name: 'Conditionals in Minecraft: Voyage Aquatic'
             Concept Practice with Minecraft:
               name: Concept Practice with Minecraft
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Collecting Treasure with Laurel:
+              name: Collecting Treasure with Laurel
+            Creating Art with Code:
+              name: Creating Art with Code
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            Nested Loops with Anna and Elsa:
+              name: Nested Loops with Anna and Elsa
+            Looking Ahead with Minecraft:
+              name: Looking Ahead with Minecraft
+            If/Else with Bee:
+              name: If/Else with Bee
+            While Loops with the Farmer:
+              name: While Loops with the Farmer
+            Harvesting with Conditionals:
+              name: Harvesting with Conditionals
+            Functions with Minecraft:
+              name: Functions with Minecraft
+            Functions with the Harvester:
+              name: Functions with the Harvester
+            Functions with Artist:
+              name: Functions with Artist
+            Variables with Artist:
+              name: Variables with Artist
+            Changing Variables with Bee:
+              name: Changing Variables with Bee
+            Changing Variables with Artist:
+              name: Changing Variables with Artist
+            For Loops with Bee:
+              name: For Loops with Bee
+            For Loops with Artist:
+              name: For Loops with Artist
+            Learning Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Alien Dance Party
+            Behaviors in Sprite Lab:
+              name: Behaviors in Sprite Lab
+            End of Course Project:
+              name: End of Course Project
+            Sticker Art with Loops:
+              name: Sticker Art with Loops
+            Snowflakes with Anna and Elsa:
+              name: Snowflakes with Anna and Elsa
+            Functions with Harvester:
+              name: Functions with Harvester
+            Swimming Fish in Sprite Lab:
+              name: Swimming Fish in Sprite Lab
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -11835,6 +12465,38 @@ en:
               name: Picturing Data
               description_student: Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.
               description_teacher: Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.
+            'Digital Citizenship: Screen Out the Mean':
+              name: 'Digital Citizenship: Screen Out the Mean'
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Collecting Treasure with Laurel:
+              name: Collecting Treasure with Laurel
+            Creating Art with Code:
+              name: Creating Art with Code
+            'Beyond Programming: Binary Bracelets':
+              name: 'Beyond Programming: Binary Bracelets'
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Loops with Harvester:
+              name: Loops with Harvester
+            Looking Ahead with Minecraft:
+              name: Looking Ahead with Minecraft
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            End of Course Project:
+              name: End of Course Project
+            Harvesting Crops with Loops:
+              name: Harvesting Crops with Loops
+            The Big Event:
+              name: The Big Event
+            Chase Game with Events:
+              name: Chase Game with Events
         csp-mid-survey:
           title: CSP Student Mid-year Survey
           description_audience: CSP Students
@@ -11936,6 +12598,26 @@ en:
               name: Sequencing with Scrat
               description_student: Program Scrat to reach the acorn.
               description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
+            'Digital Citizenship: Going Places Safely':
+              name: 'Digital Citizenship: Going Places Safely'
+            Sequencing with Drag and Drop:
+              name: Sequencing with Drag and Drop
+            Happy Maps:
+              name: Happy Maps
+            Programming with Scrat:
+              name: Programming with Scrat
+            Happy Loops:
+              name: Happy Loops
+            Loops with Scrat:
+              name: Loops with Scrat
+            Loops with Laurel:
+              name: Loops with Laurel
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            The Big Event Jr:
+              name: The Big Event Jr
         courseb-2019:
           title: Course B (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -12029,6 +12711,32 @@ en:
               name: Sequencing in Maze
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
               description_teacher: Using characters from Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+            'Digital Citizenship: My Digital Footprint':
+              name: 'Digital Citizenship: My Digital Footprint'
+            Sequencing with Angry Birds:
+              name: Sequencing with Angry Birds
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Programming with Harvester:
+              name: Programming with Harvester
+            Getting Loopy:
+              name: Getting Loopy
+            Loops with Harvester:
+              name: Loops with Harvester
+            Loops with Laurel:
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            Drawing Gardens with Loops:
+              name: Drawing Gardens with Loops
+            The Big Event Jr:
+              name: The Big Event Jr
+            A Royal Battle with Events:
+              name: A Royal Battle with Events
         pre-express-2019:
           title: Pre-reader Express (2019)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -12132,6 +12840,8 @@ en:
               name: On the Move with Events
             A Royal Battle with Events:
               name: A Royal Battle with Events
+            Sequencing with Drag and Drop:
+              name: Sequencing with Drag and Drop
         removed19:
           title: Removed from CSF for 2019
           description_audience: ''
@@ -16592,6 +17302,24 @@ en:
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 The power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.
+            Sequencing with Drag and Drop:
+              name: Sequencing with Drag and Drop
+            Happy Maps:
+              name: Happy Maps
+            Programming with Scrat:
+              name: Programming with Scrat
+            Happy Loops:
+              name: Happy Loops
+            Loops with Scrat:
+              name: Loops with Scrat
+            Loops with Laurel:
+              name: Loops with Laurel
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            The Big Event Jr:
+              name: The Big Event Jr
         courseb-2020:
           title: Course B (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -16666,6 +17394,30 @@ en:
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 Does what you do online always stay online? Students learn that the information they share online leaves a digital footprint or "trail." Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.
+            Sequencing with Angry Birds:
+              name: Sequencing with Angry Birds
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Programming with Harvester:
+              name: Programming with Harvester
+            Getting Loopy:
+              name: Getting Loopy
+            Loops with Harvester:
+              name: Loops with Harvester
+            Loops with Laurel:
+              name: Loops with Laurel
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            Drawing Gardens with Loops:
+              name: Drawing Gardens with Loops
+            The Big Event Jr:
+              name: The Big Event Jr
+            A Royal Battle with Events:
+              name: A Royal Battle with Events
         coursec-2020:
           title: Course C (2020)
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -16777,6 +17529,36 @@ en:
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 Stronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.
+            My Robotic Friends Jr.:
+              name: My Robotic Friends Jr.
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Collecting Treasure with Laurel:
+              name: Collecting Treasure with Laurel
+            Creating Art with Code:
+              name: Creating Art with Code
+            'Beyond Programming: Binary Bracelets':
+              name: 'Beyond Programming: Binary Bracelets'
+            My Loopy Robotic Friends Jr.:
+              name: My Loopy Robotic Friends Jr.
+            Loops with Harvester:
+              name: Loops with Harvester
+            Looking Ahead with Minecraft:
+              name: Looking Ahead with Minecraft
+            The Big Event Jr.:
+              name: The Big Event Jr.
+            On the Move with Events:
+              name: On the Move with Events
+            End of Course Project:
+              name: End of Course Project
+            Harvesting Crops with Loops:
+              name: Harvesting Crops with Loops
+            The Big Event:
+              name: The Big Event
+            Chase Game with Events:
+              name: Chase Game with Events
         coursed-2020:
           title: Course D (2020)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
@@ -16885,6 +17667,38 @@ en:
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
+            'Programming: Graph Paper Programming':
+              name: 'Programming: Graph Paper Programming'
+            Introduction to Debugging:
+              name: Introduction to Debugging
+            Loops with Scrat:
+              name: Loops with Scrat
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            'If/Else: Conditionals with Cards':
+              name: 'If/Else: Conditionals with Cards'
+            If/Else with Bee:
+              name: If/Else with Bee
+            While Loops with the Farmer:
+              name: While Loops with the Farmer
+            Harvesting with Conditionals:
+              name: Harvesting with Conditionals
+            'Beyond Programming: Binary Images':
+              name: 'Beyond Programming: Binary Images'
+            Binary in Artist:
+              name: Binary in Artist
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Debugging with Laurel:
+              name: Debugging with Laurel
+            Drawing Shapes with Loops:
+              name: Drawing Shapes with Loops
+            Binary Images:
+              name: Binary Images
+            Binary Images with Artist:
+              name: Binary Images with Artist
         coursee-2020:
           title: Course E (2020)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -16991,6 +17805,38 @@ en:
               name: Designing for Accessibility
               description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
               description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+            Drawing with Loops:
+              name: Drawing with Loops
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
+            Learning Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Alien Dance Party
+            'Digital Citizenship: Private and Personal Information':
+              name: 'Digital Citizenship: Private and Personal Information'
+            About Me with Sprite Lab:
+              name: About Me with Sprite Lab
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            Fancy Shapes using Nested Loops:
+              name: Fancy Shapes using Nested Loops
+            Nested Loops with Anna and Elsa:
+              name: Nested Loops with Anna and Elsa
+            Songwriting:
+              name: Songwriting
+            Functions with Minecraft:
+              name: Functions with Minecraft
+            Functions with the Harvester:
+              name: Functions with the Harvester
+            Functions with Artist:
+              name: Functions with Artist
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Functions with Harvester:
+              name: Functions with Harvester
         coursef-2020:
           title: Course F (2020)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -17101,6 +17947,42 @@ en:
               name: AI for Oceans
               description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
               description_teacher: "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n"
+            Functions with Minecraft:
+              name: Functions with Minecraft
+            Learning Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Alien Dance Party
+            Drawing with Loops:
+              name: Drawing with Loops
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            'Digital Citizenship: The Power of Words':
+              name: 'Digital Citizenship: The Power of Words'
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            Variables with Artist:
+              name: Variables with Artist
+            Changing Variables with Bee:
+              name: Changing Variables with Bee
+            Changing Variables with Artist:
+              name: Changing Variables with Artist
+            The Internet:
+              name: The Internet
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            For Loops with Bee:
+              name: For Loops with Bee
+            For Loops with Artist:
+              name: For Loops with Artist
+            Behaviors in Sprite Lab:
+              name: Behaviors in Sprite Lab
+            Virtual Pet with Sprite Lab:
+              name: Virtual Pet with Sprite Lab
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
         express-2020:
           title: Express Course (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -17286,6 +18168,8 @@ en:
               name: Alien Dance Party
             Behaviors in Sprite Lab:
               name: Behaviors in Sprite Lab
+            Functions with Minecraft:
+              name: Functions with Minecraft
         pre-express-2020:
           title: Pre-reader Express (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -17359,6 +18243,12 @@ en:
               name: On the Move with Events
             A Royal Battle with Events:
               name: A Royal Battle with Events
+            Sequencing with Drag and Drop:
+              name: Sequencing with Drag and Drop
+            Programming with Harvester:
+              name: Programming with Harvester
+            Programming with Angry Birds:
+              name: Programming with Angry Birds
         csp1-2020:
           title: CSP Unit 1 - Digital Information ('20-'21)
           description_audience: ''
