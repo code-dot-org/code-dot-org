@@ -29,6 +29,7 @@ export const sectionDataPropType = PropTypes.shape({
  * Action type constants
  */
 export const SET_SECTION = 'sectionData/SET_SECTION';
+export const SET_AUTOPLAY_ENABLED = 'sectionData/SET_AUTOPLAY_ENABLED';
 
 /**
  * Action creators
@@ -50,6 +51,11 @@ export const setSection = section => {
   return {type: SET_SECTION, section: filteredSectionData};
 };
 
+export const setAutoplayEnabled = autoplayEnabled => ({
+  type: SET_AUTOPLAY_ENABLED,
+  autoplayEnabled
+});
+
 /**
  * Initial state of sectionDataRedux
  */
@@ -68,6 +74,15 @@ export default function sectionData(state = initialState, action) {
     return {
       ...initialState,
       section: action.section
+    };
+  }
+  if (action.type === SET_AUTOPLAY_ENABLED) {
+    return {
+      ...initialState,
+      section: {
+        ...initialState.section,
+        autoplayEnabled: action.autoplayEnabled
+      }
     };
   }
 

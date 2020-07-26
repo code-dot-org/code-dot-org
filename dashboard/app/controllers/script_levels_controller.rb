@@ -80,6 +80,9 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
     @section_summary = current_user&.sections&.find_by(id: params[:section_id])&.summarize
+    @autoplay_enabled= current_user&.sections_as_student&.find_by(script_id: @script.id)&.autoplay_enabled
+
+
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
