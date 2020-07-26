@@ -79,8 +79,6 @@ $(document).ready(function() {
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
   store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
-  console.log(textToSpeechScriptIds);
-  console.log(preReaderScriptIds);
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));
