@@ -343,7 +343,7 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
 
-  create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+  create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "key",                             null: false
     t.string   "display_name",                    null: false
     t.text     "properties",        limit: 65535
