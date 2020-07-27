@@ -810,7 +810,7 @@ export var blocks = [
   {
     func: 'console.log',
     parent: consoleApi,
-    category: 'Functions',
+    category: 'Variables',
     paletteParams: ['message'],
     params: ['"message"']
   },

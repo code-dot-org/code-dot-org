@@ -50,8 +50,8 @@ use_my_apps: true
 
 
 # Encryption key required for decoding certain protected level sources.
-# Code.org engineers should obtain this from cdo-secrets at:
-# https://manage.chef.io/organizations/code-dot-org/environments/development/attributes
+# Code.org engineers should obtain this from AWS Secrets Manager at:
+# https://console.aws.amazon.com/secretsmanager/home?region=us-east-1#/secret?name=development%2Fcdo%2Fproperties_encryption_key
 # Contributors should ask a Code.org engineer for this if needed.
 #properties_encryption_key: ''
 
