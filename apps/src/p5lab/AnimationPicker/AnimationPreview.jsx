@@ -18,7 +18,8 @@ export default class AnimationPreview extends React.Component {
     playBehavior: PropTypes.oneOf([
       PlayBehavior.ALWAYS_PLAY,
       PlayBehavior.NEVER_PLAY
-    ])
+    ]),
+    onPreviewLoad: PropTypes.func
   };
 
   state = {
@@ -157,7 +158,11 @@ export default class AnimationPreview extends React.Component {
         }
       >
         <div style={cropStyle}>
-          <img src={this.props.sourceUrl || EMPTY_IMAGE} style={imageStyle} />
+          <img
+            onLoad={this.props.onPreviewLoad}
+            src={this.props.sourceUrl || EMPTY_IMAGE}
+            style={imageStyle}
+          />
         </div>
       </div>
     );
