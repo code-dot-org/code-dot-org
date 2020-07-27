@@ -58,16 +58,14 @@ class Experiment < ApplicationRecord
       label: 'CSP Pilot',
       allow_joining_via_url: false
     },
-    # For facilitators in virtual academic year workshops for CSD
     {
       name: '20-21-virtual-AYW-CSD',
-      label: 'CSD Pilot',
+      label: 'For facilitators in virtual academic year workshops for CSD',
       allow_joining_via_url: true
     },
-    # For facilitators in virtual academic year workshops for CSP
     {
       name: '20-21-virtual-AYW-CSP',
-      label: 'CSD Pilot',
+      label: 'For facilitators in virtual academic year workshops for CSP',
       allow_joining_via_url: true
     },
     {
