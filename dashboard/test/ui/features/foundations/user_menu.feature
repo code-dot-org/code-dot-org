@@ -52,32 +52,6 @@ Scenario: Student Signed In - shows display name with correct links
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
-Scenario: Pair Programming
-  Given I create a teacher named "Dr_Seuss"
-  And I create a new section
-  Given I create a student named "Thing_One"
-  And I join the section
-  Given I create a student named "Thing_Two"
-  And I join the section
-  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
-  And I wait for the page to fully load
-  And I wait until element ".display_name" is visible
-  And element ".display_name" contains text "Thing_Two"
-  And I click selector ".display_name"
-  And I wait until element "#pairing_link" is visible
-  And I press "pairing_link"
-  And I wait until element ".student" is visible
-  And I click selector ".student"
-  And I wait until element ".addPartners" is visible
-  And I click selector ".addPartners"
-  And I wait for 5 seconds
-  And I wait until element ".user_menu" is visible
-  And I wait until element ".pairing_name" is visible
-  And element ".pairing_name" contains text "Team"
-  And I wait until element ".fa-users" is visible
-  And I click selector ".pairing_name"
-  And I wait until element ".pairing_summary" is visible
-
 Scenario: Unicode in display name
   Given I create a student named "Caoimhín" and go home
   And I wait until element ".display_name" is visible
