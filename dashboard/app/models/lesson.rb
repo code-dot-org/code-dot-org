@@ -61,6 +61,7 @@ class Lesson < ActiveRecord::Base
           name: raw_lesson[:name],
           script: script
         ) do |s|
+          s.key = "" # will be updated below, but cant be null
           s.relative_position = 0 # will be updated below, but cant be null
         end
 
