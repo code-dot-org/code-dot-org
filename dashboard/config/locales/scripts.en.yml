@@ -3991,29 +3991,6 @@ en:
           lessons:
             Simple Encryption:
               name: Simple Encryption
-        fesbinary:
-          title: Binary
-          description_audience: Mike
-          description_short: ''
-          description: ''
-          lesson_groups: {}
-          lessons:
-            Binary Bracelets:
-              name: Binary Bracelets
-            Binary Images:
-              name: Binary Images
-            Binary Artist Puzzles:
-              name: Binary Artist Puzzles
-            RGB Color:
-              name: RGB Color
-            Processing with Bits:
-              name: Processing with Bits
-            Auto-Run Binary Artist Puzzles:
-              name: Auto-Run Binary Artist Puzzles
-            Course C EOC 2019:
-              name: Course C EOC 2019
-            Play Lab:
-              name: Play Lab
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
           description_audience: ''
