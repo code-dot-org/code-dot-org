@@ -1,45 +1,55 @@
-school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
-Appoquinimink High,DE-29-24,100008000225,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Middletown High,DE-29-18,100008000024,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Brandywine High,DE-31-190,100124000242,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Caesar Rodney High,DE-10-626,100018000040,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Cape Henlopen High,DE-17-726,100017000029,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Newark High,DE-33-394,100020000238,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Penn High,DE-34-490,100023000209,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Indian River High,DE-36-746,100068000085,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Milford High,DE-18-678,100108000111,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MOT Charter,DE-88-587,100001900123,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Newark Charter,DE-89-588,100001500112,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Conrad Schools of Science,DE-32-284,100130000270,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Dickinson,DE-32-290,100130000275,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Smyrna High,DE-24-688,100162000299,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Woodbridge High,DE-35-780,100185000194,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Appoquinimink High,DE-29-24,100008000225,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Middletown High,DE-29-18,100008000024,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Caesar Rodney High,DE-10-626,100018000040,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Cape Henlopen High,DE-17-726,100017000029,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Newark High,DE-33-394,100020000238,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Penn High,DE-34-490,100023000209,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-First State Military,DE-9607-4055,100005700368,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Indian River High,DE-36-746,100068000085,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Milford High,DE-18-678,100108000111,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MOT Charter,DE-88-587,100001900123,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Newark Charter,DE-89-588,100001500112,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Conrad Schools of Science,DE-32-284,100130000270,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Dickinson,DE-32-290,100130000275,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Smyrna High,DE-24-688,100162000299,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Sussex Academy,DE-77-576,100001100091,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Woodbridge High,DE-35-780,100185000194,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Appoquinimink High,DE-29-24,100008000225,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Middletown High,DE-29-18,100008000024,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Brandywine High,DE-31-190,100124000242,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Caesar Rodney High,DE-10-626,100018000040,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Cape Henlopen High,DE-17-726,100017000029,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Newark High,DE-33-394,100020000238,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Penn High,DE-34-490,100023000209,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Milford High,DE-18-678,100108000111,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-MOT Charter,DE-88-587,100001900123,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Newark Charter,DE-89-588,100001500112,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Conrad Schools of Science,DE-32-284,100130000270,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Dickinson,DE-32-290,100130000275,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
-Smyrna High,DE-24-688,100162000299,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Appoquinimink High,DE-29-24,100008000225,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middletown High,DE-29-18,100008000024,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brandywine High,DE-31-190,100124000242,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Caesar Rodney High,DE-10-626,100018000040,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cape Henlopen High,DE-17-726,100017000029,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newark High,DE-33-394,100020000238,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn High,DE-34-490,100023000209,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Indian River High,DE-36-746,100068000085,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milford High,DE-18-678,100108000111,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOT Charter,DE-88-587,100001900123,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newark Charter,DE-89-588,100001500112,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conrad Schools of Science,DE-32-284,100130000270,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dickinson,DE-32-290,100130000275,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Smyrna High,DE-24-688,100162000299,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodbridge High,DE-35-780,100185000194,11.04601011,Exploring Computer Science,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Appoquinimink High,DE-29-24,100008000225,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middletown High,DE-29-18,100008000024,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Caesar Rodney High,DE-10-626,100018000040,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cape Henlopen High,DE-17-726,100017000029,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newark High,DE-33-394,100020000238,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn High,DE-34-490,100023000209,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+First State Military,DE-9607-4055,100005700368,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Indian River High,DE-36-746,100068000085,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milford High,DE-18-678,100108000111,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOT Charter,DE-88-587,100001900123,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newark Charter,DE-89-588,100001500112,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conrad Schools of Science,DE-32-284,100130000270,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dickinson,DE-32-290,100130000275,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Smyrna High,DE-24-688,100162000299,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sussex Academy,DE-77-576,100001100091,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodbridge High,DE-35-780,100185000194,11.04601022,Computer Science Principles (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Appoquinimink High,DE-29-24,100008000225,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Middletown High,DE-29-18,100008000024,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Brandywine High,DE-31-190,100124000242,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Caesar Rodney High,DE-10-626,100018000040,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cape Henlopen High,DE-17-726,100017000029,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newark High,DE-33-394,100020000238,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Penn High,DE-34-490,100023000209,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Milford High,DE-18-678,100108000111,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOT Charter,DE-88-587,100001900123,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newark Charter,DE-89-588,100001500112,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Conrad Schools of Science,DE-32-284,100130000270,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dickinson,DE-32-290,100130000275,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Smyrna High,DE-24-688,100162000299,11.04601033,Computer Science A (AP),unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHRISTIANA HIGH SCHOOL,DE-33-390,100020000240,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DELAWARE MILITARY ACADEMY,DE-79-578,100001600143,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DELCASTLE TECHNICAL HIGH SCHOOL,DE-38-80,100128000154,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EARLY COLLEGE HIGH SCHOOL AT DELAWARE STATE UNIVERSITY,DE-9604-4040,100005500363,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNT PLEASANT HIGH SCHOOL,DE-31-196,100124000246,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST. GEORGES TECHNICAL HIGH SCHOOL,DE-38-44,100128000181,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOWARD HIGH SCHOOL OF TECHNOLOGY,DE-38-26,100128000297,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUSSEX TECHNICAL HIGH SCHOOL,DE-40-770,100168000170,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HODGSON (PAUL M.) VOCATIONAL TECHNICAL HIGH SCHOOL,DE-38-66,100128000296,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POLYTECH HIGH SCHOOL,DE-39-652,100075000092,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
