@@ -49,6 +49,7 @@ class Lesson < ActiveRecord::Base
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :name, scope: :script_id
+  validates_uniqueness_of :key, scope: :script_id
 
   include CodespanOnlyMarkdownHelper
 
@@ -61,7 +62,7 @@ class Lesson < ActiveRecord::Base
           key: raw_lesson[:key],
           script: script
         ) do |l|
-          l.name = raw_lesson[:name]
+          l.name = "" # will be updated below, but cant be null
           l.relative_position = 0 # will be updated below, but cant be null
         end
 
