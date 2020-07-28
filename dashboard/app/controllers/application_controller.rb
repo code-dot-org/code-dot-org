@@ -148,10 +148,7 @@ class ApplicationController < ActionController::Base
     school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
   ]
 
-  if rack_env?(:test) || rack_env?(:development)
-    (PERMITTED_USER_FIELDS << UI_TEST_ATTRIBUTES).flatten!
-  end
-
+  PERMITTED_USER_FIELDS.push(*UI_TEST_ATTRIBUTES) if %i(test development).include? rack_env
   PERMITTED_USER_FIELDS.freeze
 
   def configure_permitted_parameters
