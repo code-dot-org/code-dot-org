@@ -1443,7 +1443,7 @@ ActiveRecord::Schema.define(version: 20200728012027) do
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
     t.integer  "lesson_group_id"
-    t.string   "key",                                             null: false
+    t.string   "key"
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 
