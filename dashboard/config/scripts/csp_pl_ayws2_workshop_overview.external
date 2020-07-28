@@ -1,0 +1,28 @@
+name 'CSP-PL AYWS2 Workshop Overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 2: CS Principles Virtual Professional Learning 
+
+## Module 2 Overview
+
+Welcome to the asynchronous work of Module 2 for CS Principles!  The focus of this module will be on more deeply understanding the Practice and Make lessons in an EIPM sequence.  Combined, these tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+
+**In the asynchronous work you will:**
+
+* Complete levels from the Variables Practice lesson in Unit 4, Lesson 3. 
+* Review the resources and student task from the Variables Make lesson in Unit 4, Lesson 4. 
+* Reflect on the role of collaboration and independent work in programming lessons. 
+
+**Leaving the asynchronous work you will:**
+
+* Understand the role of the teacher and the student in a Practice and Make lesson types. 
+* Gain familiarity with the resources available to you as a teacher in the Practice and Make lessons. 
+* Have developed framework for considering when, where, and how you want to encourage collaboration in your classroom during programming lessons. 
+
+Let's get started!
+
+MARKDOWN

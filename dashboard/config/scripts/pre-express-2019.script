@@ -8,7 +8,7 @@ project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'pre-express'
 version_year '2019'
 is_stable true
-supported_locales ["cs-CZ", "es-MX", "fr-FR", "sk-SK", "zh-CN"]
+supported_locales ["cs-CZ", "es-ES", "es-MX", "fr-FR", "id-ID", "it-IT", "pt-BR", "sk-SK", "zh-CN"]
 curriculum_umbrella 'CSF'
 tts true
 

@@ -226,7 +226,7 @@
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
       dependentStudents: current_user.dependent_students,
-      studentCount: current_user.students.count,
+      studentCount: current_user.students.count
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/delete_accounts_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
   include Pd::WorkshopConstants
@@ -801,6 +802,42 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_reminder_for_upcoming_in_days(1)
   end
 
+  test '10 day reminder for academic year workshop sends pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :academic_year_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).times(2)
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test '10 day reminder for csf workshop does not send pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csf_deep_dive_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test '3 day reminder for summer workshop does not send pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csp_summer_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::Workshop.send_reminder_for_upcoming_in_days(3)
+  end
+
   test 'workshop starting date picks the day of the first session' do
     workshop = create :workshop, sessions: [
       session1 = create(:pd_session, start: Date.today + 15.days),
@@ -855,7 +892,39 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     assert_equal 4, workshop.teachers_attending_all_sessions.count
+
+    # Test that scholarship filter works.
+    # Set argument to filter to only scholarship teachers to true.
     assert_equal 2, workshop.teachers_attending_all_sessions(true).count
+  end
+
+  test 'teachers_attending_all_sessions with a teacher who deleted their account' do
+    workshop = create :workshop,
+      course: Pd::Workshop::COURSE_CSF
+
+    workshop_participant = create :pd_workshop_participant,
+      enrolled: true,
+      attended: true,
+      cdo_scholarship_recipient: true,
+      workshop: workshop
+
+    # Should return 1 before we've done anything.
+    assert_equal 1, workshop.teachers_attending_all_sessions(true).count
+
+    # Delete the user.
+    workshop_participant.destroy!
+    workshop.reload
+
+    # With no user account, the user doesn't show up in array of attending teachers.
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
+
+    # Fully purge the user account's PD records,
+    # which removes their user ID from attendances.
+    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id
+    workshop.reload
+
+    # Should still return 0 once we've fully purged the teacher user ID from the attendance
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -986,13 +1055,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pre_survey_units_and_lessons' do
-    course = create :course, name: 'pd-workshop-pre-survey-test'
+    course = create :unit_group, name: 'pd-workshop-pre-survey-test'
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
       create(:script).tap do |script|
-        create :course_script, course: course, script: script, position: (next_position += 1)
+        create :course_script, unit_group: course, script: script, position: (next_position += 1)
+        create :lesson_group, script: script
         I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
-        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name}
+        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 
@@ -1024,11 +1094,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # With valid course name
     workshop.stubs(:pre_survey?).returns(true)
     workshop.stubs(:pre_survey_course_name).returns(course_name)
-    Course.expects(:find_by_name!).with(course_name).returns(mock_course)
+    UnitGroup.expects(:find_by_name!).with(course_name).returns(mock_course)
     assert_equal mock_course, workshop.pre_survey_course
 
     # With invalid course name
-    Course.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    UnitGroup.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
     e = assert_raises RuntimeError do
       workshop.pre_survey_course
     end

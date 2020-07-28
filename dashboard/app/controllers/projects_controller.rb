@@ -320,7 +320,8 @@ class ProjectsController < ApplicationController
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
       azure_speech_service_token: azure_speech_service[:azureSpeechServiceToken],
-      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion]
+      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion],
+      azure_speech_service_languages: azure_speech_service[:azureSpeechServiceLanguages]
     )
 
     if params[:key] == 'artist'
@@ -339,18 +340,21 @@ class ProjectsController < ApplicationController
     end
 
     FirehoseClient.instance.put_record(
-      study: 'project-views',
-      event: project_view_event_type(iframe_embed, sharing),
-      # allow cross-referencing with the storage_apps table.
-      project_id: storage_app_id,
-      # make it easier to group by project_type.
-      data_string: params[:key],
-      data_json: {
-        # not currently used, but may prove useful to have in the data later.
-        encrypted_channel_id: params[:channel_id],
-        # record type again to make it clear what data_string represents.
-        project_type: params[:key],
-      }.to_json
+      :analysis,
+      {
+        study: 'project-views',
+        event: project_view_event_type(iframe_embed, sharing),
+        # allow cross-referencing with the storage_apps table.
+        project_id: storage_app_id,
+        # make it easier to group by project_type.
+        data_string: params[:key],
+        data_json: {
+          # not currently used, but may prove useful to have in the data later.
+          encrypted_channel_id: params[:channel_id],
+          # record type again to make it clear what data_string represents.
+          project_type: params[:key],
+        }.to_json
+      }
     )
     render 'levels/show'
   end
