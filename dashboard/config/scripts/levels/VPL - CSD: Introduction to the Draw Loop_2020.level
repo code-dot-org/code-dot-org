@@ -12,12 +12,11 @@
     "display_name": "Video: Introduction to the Draw Loop",
     "parent_level_id": 20709,
     "name_suffix": "_2020",
-    "long_instructions": "## Question to Consider\r\n\r\n* What does the draw function do?",
-    "encrypted": "false",
-    "teacher_markdown": "## Discussion Goal\r\n\r\nThe draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\".   This creates an animation effect by changing what is a drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\r\n\r\n### Misconception Alert!\r\nWhen the draw loop runs, it does not \"clear\" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop.  If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously."
+    "long_instructions": "## Instructions\r\n\r\nStudents will watch this video as a part of Unit 3 Lesson 11 The Draw Loop. Watch this video to get an overview of how draw loops function. \r\n\r\n## Important Takeaways\r\n\r\n* The draw function runs the same code over and over in a loop. \r\n* The draw loop creates an animation effect by changing what is a drawn by a small amount each time the draw function runs. \r\n\r\n### Misconception Alert!\r\nWhen the draw loop runs, it does not \"clear\" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop.  If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously.\r\n\r\n\r\n",
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-15 17:48:35 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 23:56:57 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-07-16 15:47:29 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-03-15 17:48:35 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 23:56:57 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-07-16 15:47:29 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-27 16:43:21 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>
 </StandaloneVideo>
