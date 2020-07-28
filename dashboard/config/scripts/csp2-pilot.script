@@ -5,51 +5,52 @@ curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit2/{LESSON}'
 pilot_experiment 'csp-piloters'
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Welcome to the Internet'
+lesson 'Welcome to the Internet', display_name: 'Welcome to the Internet'
 level 'CSP U2L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U2L1 Internet Simulator: Sending Text', progression: 'Widget: Internet Simulator'
 level 'U2L1 CFU how use internet', progression: 'Check For Understanding', assessment: true
 
-lesson 'Building a Network'
+lesson 'Building a Network', display_name: 'Building a Network'
 level 'CSP U2L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U2L1 CFU paths', progression: 'Check For Understanding', assessment: true
 
-lesson 'The Need for Addressing'
+lesson 'The Need for Addressing', display_name: 'The Need for Addressing'
 level 'CSP U2L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U2L2 CSP Internet Simulator Broadcast', progression: 'Internet Simulator: Broadcast Mode'
 level 'U2L2 CSP CFU IP Addresses', progression: 'Check For Understanding', assessment: true
 level 'U2L2 CSP CFU IP works', progression: 'Check For Understanding', assessment: true
 
-lesson 'Routers and Redundancy'
+lesson 'Routers and Redundancy', display_name: 'Routers and Redundancy'
 level 'CSP U2L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L3 CSP Internet Simulator Routers', progression: 'Internet Simulator: Routers'
 level 'U2L3 CSP CFU Routers', progression: 'Check For Understanding', assessment: true
 level 'U2L3 CSP CFU Redundancy', progression: 'Check For Understanding', assessment: true
 
-lesson 'Packets'
+lesson 'Packets', display_name: 'Packets'
 level 'CSP U2L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L4 CSP Internet Simulator Packets 2', progression: 'Internet Simulator: Packets'
 level 'U2L4 Multiple Choice packets', progression: 'Check For Understanding', assessment: true
 level 'U2L4 CSP CFU terms', progression: 'Check For Understanding', assessment: true
 
-lesson 'DNS and HTTP'
+lesson 'DNS and HTTP', display_name: 'DNS and HTTP'
 level 'CSP U2L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L5 CSP Internet Simulator DNS', progression: 'Internet Simulator: DNS'
 level 'U2L4 CSP CFU scale', progression: 'Check For Understanding', assessment: true
 level 'U2L5 CSP CFU subgroups', progression: 'Check For Understanding', assessment: true
 
-lesson 'Project - Internet Dilemmas Part 1'
+lesson 'Project - Internet Dilemmas Part 1', display_name: 'Project - Internet Dilemmas Part 1'
 level 'CSP U2L7 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Project - Internet Dilemmas Part 2'
+lesson 'Project - Internet Dilemmas Part 2', display_name: 'Project - Internet Dilemmas Part 2'
 level 'CSP U2L9 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Lesson 9: Assessment Day', lockable: true
+lesson 'Lesson 9: Assessment Day', display_name: 'Lesson 9: Assessment Day', lockable: true
 level 'CSP Unit 2 MC Assessment _2020', progression: 'Unit 2 Exam', assessment: true
 
 lesson_group 'required', display_name: 'Overview'
-lesson 'Unit 2 STUDENT Survey', lockable: true
+lesson 'Unit 2 STUDENT Survey', display_name: 'Unit 2 STUDENT Survey', lockable: true
 level 'CSP U2 20-21 Student Pilot Survey', progression: 'Unit 2 STUDENT Survey', assessment: true
 
-lesson 'Unit 2 TEACHER Survey', lockable: true
+lesson 'Unit 2 TEACHER Survey', display_name: 'Unit 2 TEACHER Survey', lockable: true
 level 'CSP U2 20-21 Teacher Pilot Survey', progression: 'Unit 2 TEACHER Survey', assessment: true
+
