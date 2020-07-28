@@ -284,7 +284,7 @@ gem 'unf_ext', '0.0.7.2'
 gem 'acmesmith', '~> 2.3.1'
 
 gem 'addressable'
-gem 'bcrypt'
+gem 'bcrypt', '3.1.13'
 gem 'firebase'
 gem 'firebase_token_generator'
 gem 'sshkit'
