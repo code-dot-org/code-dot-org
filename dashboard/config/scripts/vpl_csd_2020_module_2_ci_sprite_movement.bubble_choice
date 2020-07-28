@@ -1,6 +1,10 @@
 name 'VPL-CSD 2020 - Module 2 CI - Sprite Movement'
 display_name 'Curriculum Investigation: Sprite Movement'
-description 'The levels included below are levels that students will complete as a part of Unit 3 Lesson 12: Sprite Movement. Complete as many levels as you need to complete in order to feel comfortable with your ability to **use a counter pattern to animate sprites in Game Lab.** For this activity, it is best to complete the levels in order. Remember to check the *Help and Tips* tab if you get stuck.'
+description 'The levels included below are levels that students will complete as a part of Unit 3 Lesson 12: Sprite Movement. Complete as many levels as you need to complete in order to feel comfortable with your ability to **use a counter pattern to animate sprites in Game Lab.** For this activity, it is best to complete the levels in order. Remember to check the *Help and Tips* tab if you get stuck.
+
+The activities below are only a sample of the activities from Unit 3 Lesson 12: Sprite Movement. If you would like to see how these activities fit into the lesson, check out the full lesson plan. 
+
+><a href="https://curriculum.code.org/csd-20/unit3/12/" target="blank">Unit 3 Lesson 12: Sprite Movement - Lesson Plan</a>'
 
 sublevels
 level 'VPL - CSD U3 Sprite Movement Right_2020'
