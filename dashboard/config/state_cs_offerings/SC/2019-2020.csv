@@ -1,0 +1,348 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Silver Bluff High,SC-0201-001,450072001323,4775,AP Computer Sci Principles,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Silver Bluff High,SC-0201-001,450072001323,5050,Computer Prog 1,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Aiken High,SC-0201-002,450072000046,4771,AP Comp Sci A,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Aiken High,SC-0201-003,450072001202,4771,AP Comp Sci A,unspecified,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Aiken High,SC-0201-003,450072001202,4775,AP Computer Sci Principles,unspecified,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Augusta High,SC-0201-012,450072000055,4771,AP Comp Sci A,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Augusta High,SC-0201-012,450072000055,4775,AP Computer Sci Principles,unspecified,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridge Spring Monetta Middle,SC-0201-062,450072001713,2785,Computer Science for Innovators & Makers,unspecified,73,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palmetto High,SC-0401-001,450078000076,4775,AP Computer Sci Principles,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palmetto High,SC-0401-001,450078000076,5050,Computer Prog 1,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palmetto High,SC-0401-001,450078000076,5051,Computer Prog 2,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powdersville High,SC-0401-002,450078001567,5050,Computer Prog 1,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powdersville High,SC-0401-002,450078001567,5051,Computer Prog 2,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Powdersville High,SC-0401-002,450078001567,5327,SASPgrm1,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wren High,SC-0401-003,450078000077,5050,Computer Prog 1,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wren High,SC-0401-003,450078000077,5051,Computer Prog 2,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belton Honea Path High,SC-0402-012,450081000084,5050,Computer Prog 1,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Belton Honea Path High,SC-0402-012,450081000084,5051,Computer Prog 2,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crescent High,SC-0403-022,450084000089,5061,DiscCompSci,unspecified,55,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pendleton High,SC-0404-027,450087000094,4775,AP Computer Sci Principles,unspecified,72,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pendleton High,SC-0404-027,450087000094,5050,Computer Prog 1,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pendleton High,SC-0404-027,450087000094,5061,DiscCompSci,unspecified,106,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverside Middle,SC-2301-111,450231000459,5062,DiscCompSci8,unspecified,101,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Denmark Olar High,SC-0502-007,450096000122,4775,AP Computer Sci Principles,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blackville-Hilda High,SC-0619-001,450102000126,5061,DiscCompSci,unspecified,37,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C E Williams Middle Creative A,SC-1001-092,450144000249,5062,DiscCompSci8,unspecified,127,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beaufort High,SC-0701-002,450111000147,5310,Networking Fundamentals,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Beaufort High,SC-0701-002,450111000147,5311,Advanced Networking,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C E Williams Middle Creative A,SC-1001-092,450144000249,5063,DiscCompSci7,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C.E. Murray Middle,SC-4501-027,450378001624,5062,DiscCompSci8,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+C.E. Murray Middle,SC-4501-027,450378001624,5063,DiscCompSci7,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Battery Creek High,SC-0701-004,450111000149,5050,Computer Prog 1,unspecified,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bluffton High,SC-0701-030,450111001165,4775,AP Computer Sci Principles,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Ridge Academy,SC-0701-038,450111001662,2785,Computer Science for Innovators & Makers,unspecified,77,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+May River High,SC-0701-039,450111001666,5372,Advanced Cyber Security,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stratford High,SC-0801-001,450117001351,5052,Computer Prog 3,unspecified,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stratford High,SC-0801-001,450117001351,5053,Computer Prog 4,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanahan High,SC-0801-008,450117000178,4775,AP Computer Sci Principles,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanahan High,SC-0801-008,450117000178,5050,Computer Prog 1,unspecified,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berkeley Middle,SC-0801-012,450117001207,5061,DiscCompSci,unspecified,100,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanahan Middle,SC-0801-021,450117000169,5062,DiscCompSci8,unspecified,123,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanahan Middle,SC-0801-021,450117000169,5063,DiscCompSci7,unspecified,109,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westview Middle,SC-0801-022,450117001210,5061,DiscCompSci,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westview Middle,SC-0801-022,450117001210,5062,DiscCompSci8,unspecified,80,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westview Middle,SC-0801-022,450117001210,5063,DiscCompSci7,unspecified,53,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sedgefield Middle,SC-0801-027,450117000171,5062,DiscCompSci8,unspecified,118,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sedgefield Middle,SC-0801-027,450117000171,5063,DiscCompSci7,unspecified,112,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Starr Iva Middle,SC-0403-025,450084000088,5062,DiscCompSci8,unspecified,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+College Park Middle,SC-0801-032,450117000173,5062,DiscCompSci8,unspecified,96,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+College Park Middle,SC-0801-032,450117000173,5063,DiscCompSci7,unspecified,90,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Starr Iva Middle,SC-0403-025,450084000088,5063,DiscCompSci7,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hilton Head Is. High,SC-0701-003,450111001350,5050,Computer Prog 1,unspecified,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Macedonia Middle,SC-0801-037,450117001208,5062,DiscCompSci8,unspecified,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Macedonia Middle,SC-0801-037,450117001208,5063,DiscCompSci7,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sangaree Middle,SC-0801-047,450117001166,5062,DiscCompSci8,unspecified,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sangaree Middle,SC-0801-047,450117001166,5063,DiscCompSci7,unspecified,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Daniel Island School,SC-0801-048,450117001472,5062,DiscCompSci8,unspecified,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Daniel Island School,SC-0801-048,450117001472,5063,DiscCompSci7,unspecified,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cane Bay High,SC-0801-049,450117001523,4775,AP Computer Sci Principles,unspecified,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cane Bay Middle,SC-0801-052,450117001608,5062,DiscCompSci8,unspecified,139,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cane Bay Middle,SC-0801-052,450117001608,5063,DiscCompSci7,unspecified,166,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Calhoun County High,SC-0901-001,450125000187,5050,Computer Prog 1,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Calhoun County High,SC-0901-001,450125000187,5051,Computer Prog 2,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baptist Hill High,SC-1001-001,450144000250,5061,DiscCompSci,unspecified,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Baptist Hill High,SC-1001-001,450144000250,5062,DiscCompSci8,unspecified,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester Sr High,#N/A,#N/A,5310,Networking Fundamentals,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester Sr High,#N/A,#N/A,5322,Computer Operating Systems,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chester Sr High,#N/A,#N/A,5323,Adv Computer Operating Systems,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hilton Head Is. High,SC-0701-003,450111001350,5051,Computer Prog 2,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wando High,SC-1001-014,450144000261,4771,AP Comp Sci A,unspecified,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wando High,SC-1001-014,450144000261,4775,AP Computer Sci Principles,unspecified,93,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wando High,SC-1001-014,450144000261,5061,DiscCompSci,unspecified,508,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marrington Middle School Arts,SC-0801-034,450117001158,5062,DiscCompSci8,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwoods Middle,SC-1001-030,450144001211,2785,Computer Science for Innovators & Makers,unspecified,113,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwoods Middle,SC-1001-030,450144001211,5062,DiscCompSci8,unspecified,61,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwoods Middle,SC-1001-030,450144001211,5063,DiscCompSci7,unspecified,54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Laing Middle,SC-1001-051,450144001217,5062,DiscCompSci8,unspecified,206,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morningside Middle,SC-1001-062,450144000215,2785,Computer Science for Innovators & Makers,unspecified,185,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morningside Middle,SC-1001-062,450144000215,5062,DiscCompSci8,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morningside Middle,SC-1001-062,450144000215,5063,DiscCompSci7,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Moultrie Middle,SC-1001-065,450144001218,2785,Computer Science for Innovators & Makers,unspecified,92,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marrington Middle School Arts,SC-0801-034,450117001158,5063,DiscCompSci7,unspecified,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Buist Academy,SC-1001-094,450144001382,5062,DiscCompSci8,unspecified,111,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charleston School Of The Arts,SC-1001-098,450144000083,4775,AP Computer Sci Principles,unspecified,82,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charleston School Of The Arts,SC-1001-098,450144000083,5061,DiscCompSci,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academic Magnet High,SC-1001-099,450144000168,4771,AP Comp Sci A,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academic Magnet High,SC-1001-099,450144000168,4775,AP Computer Sci Principles,unspecified,118,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Academic Magnet High,SC-1001-099,450144000168,5050,Computer Prog 1,unspecified,84,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas C. Cario Middle,SC-1001-103,450144000430,2785,Computer Science for Innovators & Makers,unspecified,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas C. Cario Middle,SC-1001-103,450144000430,5062,DiscCompSci8,unspecified,121,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Ashley High,SC-1001-104,450144000548,5050,Computer Prog 1,unspecified,91,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Ashley High,SC-1001-104,450144000548,5051,Computer Prog 2,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Ashley Middle,SC-1001-106,450144000707,5062,DiscCompSci8,unspecified,97,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Ashley Middle,SC-1001-106,450144000707,5063,DiscCompSci7,unspecified,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Phillip Simmons Middle,SC-0801-055,450117001670,5062,DiscCompSci8,unspecified,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Phillip Simmons Middle,SC-0801-055,450117001670,5063,DiscCompSci7,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Deer Park Middle,SC-1001-116,450144001667,5062,DiscCompSci8,unspecified,87,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Deer Park Middle,SC-1001-116,450144001667,5063,DiscCompSci7,unspecified,85,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St Stephen Middle,SC-0801-029,450117000172,5062,DiscCompSci8,unspecified,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Cooper Montessori Charter,SC-1001-614,450144000856,5062,DiscCompSci8,unspecified,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Cooper Montessori Charter,SC-1001-614,450144000856,5063,DiscCompSci7,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greg Mathis Charter High,SC-1001-615,450144000857,5050,Computer Prog 1,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James Island Charter High,SC-1001-616,450144001168,4775,AP Computer Sci Principles,unspecified,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James Island Charter High,SC-1001-616,450144001168,5052,Computer Prog 3,unspecified,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James Island Charter High,SC-1001-616,450144001168,5053,Computer Prog 4,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James Island Charter High,SC-1001-616,450144001168,5310,Networking Fundamentals,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James Island Charter High,SC-1001-616,450144001168,5311,Advanced Networking,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St Stephen Middle,SC-0801-029,450117000172,5063,DiscCompSci7,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carolina Voyager Charter,SC-1001-629,450144001628,5062,DiscCompSci8,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gaffney High,SC-1101-003,450150000285,5050,Computer Prog 1,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gaffney High,SC-1101-003,450150000285,5051,Computer Prog 2,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charleston Charter Math/Scienc,SC-1001-620,450144001505,4775,AP Computer Sci Principles,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charleston Charter Math/Scienc,SC-1001-620,450144001505,5050,Computer Prog 1,unspecified,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Charleston Charter Math/Scienc,SC-1001-620,450144001505,5051,Computer Prog 2,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Great Falls High,SC-1201-005,450153000300,5310,Networking Fundamentals,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lewisville High,SC-1201-006,450153000301,5322,Computer Operating Systems,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lewisville High,SC-1201-006,450153000301,5323,Adv Computer Operating Systems,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cheraw High,SC-1301-001,450156000314,5052,Computer Prog 3,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cheraw High,SC-1301-001,450156000314,5053,Computer Prog 4,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Clarendon Middle-High,SC-1403-016,450180000331,471B,Computer Sci HL-1,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Clarendon Middle-High,SC-1403-016,450180000331,4775,AP Computer Sci Principles,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colleton County High,SC-1501-005,450183000347,5061,DiscCompSci,unspecified,79,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colleton County Middle,SC-1501-022,450183001586,5062,DiscCompSci8,unspecified,304,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Latta High,SC-1703-019,450195000391,5050,Computer Prog 1,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jerry Zucker Middle School Sci,SC-1001-111,450144001533,5061,DiscCompSci,unspecified,71,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jerry Zucker Middle School Sci,SC-1001-111,450144001533,5062,DiscCompSci8,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fort Dorchester High,SC-1802-020,450201000007,4771,AP Comp Sci A,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fort Dorchester High,SC-1802-020,450201000007,4775,AP Computer Sci Principles,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland High,SC-1804-019,450000200445,4775,AP Computer Sci Principles,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland High,SC-1804-019,450000200445,5052,Computer Prog 3,unspecified,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland High,SC-1804-019,450000200445,5053,Computer Prog 4,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairfield Middle,SC-2001-001,450210000421,5062,DiscCompSci8,unspecified,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Florence High,SC-2101-004,450213000440,4775,AP Computer Sci Principles,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Florence High,SC-2101-004,450213000440,5050,Computer Prog 1,unspecified,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Florence High,SC-2101-004,450213000440,5051,Computer Prog 2,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Florence High,SC-2101-004,450213000440,5310,Networking Fundamentals,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson High,SC-2101-006,450213000442,4775,AP Computer Sci Principles,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson High,SC-2101-006,450213000442,5050,Computer Prog 1,unspecified,72,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson High,SC-2101-006,450213000442,5051,Computer Prog 2,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson High,SC-2101-006,450213000442,5310,Networking Fundamentals,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson High,SC-2101-006,450213000442,5311,Advanced Networking,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Florence High,SC-2101-014,450213000443,4775,AP Computer Sci Principles,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Florence High,SC-2101-014,450213000443,5050,Computer Prog 1,unspecified,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Florence High,SC-2101-014,450213000443,5051,Computer Prog 2,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Florence High,SC-2101-014,450213000443,5310,Networking Fundamentals,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Florence High,SC-2101-014,450213000443,5311,Advanced Networking,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry L. Sneed Middle,SC-2101-050,450213000048,2785,Computer Science for Innovators & Makers,unspecified,231,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timmonsville High,SC-2104-041,450222000723,5050,Computer Prog 1,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timmonsville High,SC-2104-041,450222000723,5310,Networking Fundamentals,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Georgetown High,SC-2201-004,450228000485,4775,AP Computer Sci Principles,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carvers Bay High,SC-2201-026,450228000554,5052,Computer Prog 3,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Berea High,SC-2301-002,450231000560,4775,AP Computer Sci Principles,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blue Ridge High,SC-2301-003,450231000561,4771,AP Comp Sci A,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blue Ridge High,SC-2301-003,450231000561,4775,AP Computer Sci Principles,unspecified,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carolina Academy (High),SC-2301-005,450231000562,5050,Computer Prog 1,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastside High,SC-2301-006,450231000563,4775,AP Computer Sci Principles,unspecified,87,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jerry Zucker Middle School Sci,SC-1001-111,450144001533,5063,DiscCompSci7,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+R B Stall High,SC-1001-022,450144000265,5050,Computer Prog 1,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greer High,SC-2301-009,450231000565,4775,AP Computer Sci Principles,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wade Hampton High,SC-2301-010,450231000566,4771,AP Comp Sci A,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hillcrest High,SC-2301-012,450231000567,5050,Computer Prog 1,unspecified,63,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+R B Stall High,SC-1001-022,450144000265,5051,Computer Prog 2,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Simmons Pinckney Middle School,SC-1001-115,450144001660,5062,DiscCompSci8,unspecified,37,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Simmons Pinckney Middle School,SC-1001-115,450144001660,5063,DiscCompSci7,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mauldin High,SC-2301-014,450231000569,4771,AP Comp Sci A,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverside High,SC-2301-017,450231000571,4775,AP Computer Sci Principles,unspecified,97,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St James-Santee Elem,SC-1001-056,450144001352,5062,DiscCompSci8,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emerald High,SC-2450-001,450234000593,4771,AP Comp Sci A,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emerald High,SC-2450-001,450234000593,4775,AP Computer Sci Principles,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emerald High,SC-2450-001,450234000593,5054,Computer Programming with Visual Basic 1,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emerald High,SC-2450-001,450234000593,5055,Computer Programming with Visual Basic 2,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenwood High,SC-2450-002,450234000596,4771,AP Comp Sci A,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenwood High,SC-2450-002,450234000596,4775,AP Computer Sci Principles,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenwood High,SC-2450-002,450234000596,5054,Computer Programming with Visual Basic 1,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenwood High,SC-2450-002,450234000596,5055,Computer Programming with Visual Basic 2,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westview Middle,SC-0801-022,450117001210,2785,Computer Science for Innovators & Makers,unspecified,111,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ninety Six High,SC-2452-025,450240000604,5054,Computer Programming with Visual Basic 1,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ninety Six High,SC-2452-025,450240000604,5055,Computer Programming with Visual Basic 2,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wade Hampton High,SC-2301-010,450231000566,5052,Computer Prog 3,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jerry Zucker Middle School Sci,#N/A,#N/A,2785,Computer Science for Innovators & Makers,unspecified,63,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St James-Santee Elem,SC-1001-056,450144001352,5063,DiscCompSci7,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Socastee High,SC-2601-011,450249000639,5050,Computer Prog 1,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dillon High School,SC-1704-005,450192000385,5050,Computer Prog 1,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenville Sr High Academy,SC-2301-008,450231000564,4775,AP Computer Sci Principles,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carolina Forest High,SC-2601-052,450249000244,5050,Computer Prog 1,unspecified,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carolina Forest High,SC-2601-052,450249000244,5052,Computer Prog 3,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St. James High,SC-2601-058,450249000900,4775,AP Computer Sci Principles,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St. James High,SC-2601-058,450249000900,5050,Computer Prog 1,unspecified,109,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+St. James High,SC-2601-058,450249000900,5051,Computer Prog 2,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J L Mann High Academy,SC-2301-013,450231000568,4771,AP Comp Sci A,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J L Mann High Academy,SC-2301-013,450231000568,4775,AP Computer Sci Principles,unspecified,74,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J L Mann High Academy,SC-2301-013,450231000568,5050,Computer Prog 1,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J. Harley Bonds Career Ctr,SC-2301-996,450231000579,5050,Computer Prog 1,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+J. Harley Bonds Career Ctr,SC-2301-996,450231000579,5051,Computer Prog 2,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardeeville-Ridgeland Middle,SC-2701-012,450252001449,5062,DiscCompSci8,unspecified,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hardeeville-Ridgeland Middle,SC-2701-012,450252001449,5063,DiscCompSci7,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Central High,SC-2801-003,450255001259,4775,AP Computer Sci Principles,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Laurens Dist 55 High,#N/A,#N/A,5310,Networking Fundamentals,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lugoff Elgin High,SC-2801-007,450255000665,4775,AP Computer Sci Principles,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Indian Land High,SC-2901-006,450258000689,5052,Computer Prog 3,unspecified,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Indian Land High,SC-2901-006,450258000689,5053,Computer Prog 4,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lancaster County School District Career Center,SC-2901-996,450258001704,5050,Computer Prog 1,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lancaster County School District Career Center,SC-2901-996,450258001704,5051,Computer Prog 2,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Laurens Dist 55 High,SC-3055-004,450261000701,5052,Computer Prog 3,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Laurens Dist 55 High,SC-3055-004,450261000701,5053,Computer Prog 4,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinton Middle School,SC-3056-017,450264001264,5062,DiscCompSci8,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington Tech Ctr,#N/A,#N/A,5310,Networking Fundamentals,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington Tech Ctr,SC-3201-995,450270000727,4771,AP Comp Sci A,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clinton High,SC-3056-016,450264000708,5061,DiscCompSci,unspecified,169,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gilbert High,SC-3201-001,450270000726,4775,AP Computer Sci Principles,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pelion High,SC-3201-004,450270000725,4775,AP Computer Sci Principles,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+White Knoll High,SC-3201-057,450270000582,4775,AP Computer Sci Principles,unspecified,63,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pelion Middle,SC-3201-058,450270000583,5063,DiscCompSci7,unspecified,59,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Bluff High,SC-3201-069,450270001626,4775,AP Computer Sci Principles,unspecified,70,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington Tech Ctr,SC-3201-995,450270000727,4775,AP Computer Sci Principles,unspecified,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington Tech Ctr,SC-3201-995,450270000727,5052,Computer Prog 3,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington Two Innovation Center,SC-3202-996,450273001705,4775,AP Computer Sci Principles,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington Two Innovation Center,SC-3202-996,450273001705,5050,Computer Prog 1,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington Two Innovation Center,SC-3202-996,450273001705,5051,Computer Prog 2,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Batesburg-Leesville High,SC-3203-026,450276000748,5052,Computer Prog 3,unspecified,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Batesburg-Leesville High,SC-3203-026,450276000748,5053,Computer Prog 4,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Swansea High,SC-3204-034,450279000752,5310,Networking Fundamentals,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Swansea High,SC-3204-034,450279000752,5311,Advanced Networking,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chapin High,SC-3205-038,450282001170,5050,Computer Prog 1,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chapin High,SC-3205-038,450282001170,5051,Computer Prog 2,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Irmo High,SC-3205-039,450282000759,5050,Computer Prog 1,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Irmo High,SC-3205-039,450282000759,5051,Computer Prog 2,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dutch Fork High,SC-3205-051,450282000017,4771,AP Comp Sci A,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dutch Fork High,SC-3205-051,450282000017,4775,AP Computer Sci Principles,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dutch Fork High,SC-3205-051,450282000017,5050,Computer Prog 1,unspecified,73,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dutch Fork High,SC-3205-051,450282000017,5051,Computer Prog 2,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Hill High,SC-3205-057,450282001621,4775,AP Computer Sci Principles,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Hill High,SC-3205-057,450282001621,5050,Computer Prog 1,unspecified,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Hill High,SC-3205-057,450282001621,5051,Computer Prog 2,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Center for Advanced Technical Studies,SC-3205-995,450282001599,5310,Networking Fundamentals,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Center for Advanced Technical Studies,SC-3205-995,450282001599,5311,Advanced Networking,unspecified,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Center for Advanced Technical Studies,SC-3205-995,450282001599,5372,Advanced Cyber Security,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCormick Middle,SC-3301-002,450300000803,5062,DiscCompSci8,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCormick Middle,SC-3301-002,450300000803,5063,DiscCompSci7,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lexington Tech Ctr,SC-3201-995,450270000727,5053,Computer Prog 4,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hunter-Kinard-Tyler High School,SC-3809-054,450391000196,5062,DiscCompSci8,unspecified,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seneca Middle,SC-3701-026,450306001436,5062,DiscCompSci8,unspecified,290,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seneca Middle,SC-3701-026,450306001436,5063,DiscCompSci7,unspecified,74,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Oak Middle,SC-3701-030,450306001477,5062,DiscCompSci8,unspecified,116,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Oak Middle,SC-3701-030,450306001477,5063,DiscCompSci7,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orangeburg Consolidated School District Five Technology Center,SC-3809-996,450391000912,5050,Computer Prog 1,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orangeburg Consolidated School District Five Technology Center,SC-3809-996,450391000912,5051,Computer Prog 2,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+D W Daniel High,SC-3901-003,450333000899,4775,AP Computer Sci Principles,unspecified,39,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Keenan High,SC-4001-012,450336000954,5061,DiscCompSci,unspecified,143,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OCSD5 High School for Health Professions,SC-3809-601,450391001604,5061,DiscCompSci,unspecified,102,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Easley High,SC-3901-005,450333000902,4775,AP Computer Sci Principles,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty High,SC-3901-006,450333000903,4775,AP Computer Sci Principles,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pickens High,SC-3901-008,450333000904,5050,Computer Prog 1,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia High,SC-4001-002,450336000949,5061,DiscCompSci,unspecified,105,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dreher High,SC-4001-004,450336000950,4771,AP Comp Sci A,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dreher High,SC-4001-004,450336000950,5061,DiscCompSci,unspecified,108,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eau Claire High,SC-4001-005,450336000951,4775,AP Computer Sci Principles,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eau Claire High,SC-4001-005,450336000951,5061,DiscCompSci,unspecified,73,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+A. C. Flora High,SC-4001-007,450336000952,5061,DiscCompSci,unspecified,272,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+T E Mabry Middle,SC-4201-004,450348000990,5061,DiscCompSci,unspecified,184,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lower Richland High,SC-4001-013,450336000955,5061,DiscCompSci,unspecified,156,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crayton Middle,SC-4001-031,450336001298,5062,DiscCompSci8,unspecified,110,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hand Middle,SC-4001-039,450336001300,5061,DiscCompSci,unspecified,53,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hand Middle,SC-4001-039,450336001300,5062,DiscCompSci8,unspecified,81,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southeast Middle,SC-4001-091,450336000507,5062,DiscCompSci8,unspecified,94,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spring Valley High,SC-4002-069,450339000975,4771,AP Comp Sci A,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richland Northeast High,SC-4002-079,450339001312,5052,Computer Prog 3,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Richland Northeast High,SC-4002-079,450339001312,5053,Computer Prog 4,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridge View High,SC-4002-084,450339000118,4775,AP Computer Sci Principles,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridge View High,SC-4002-084,450339000118,5052,Computer Prog 3,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridge View High,SC-4002-084,450339000118,5053,Computer Prog 4,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blythewood High,SC-4002-092,450339000928,4771,AP Comp Sci A,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blythewood High,SC-4002-092,450339000928,4775,AP Computer Sci Principles,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Longleaf Middle,SC-4002-095,450339001081,5062,DiscCompSci8,unspecified,99,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Muller Road Middle,SC-4002-098,450339001566,5062,DiscCompSci8,unspecified,105,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Muller Road Middle,SC-4002-098,450339001566,5063,DiscCompSci7,unspecified,84,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westwood High,SC-4002-100,450339001606,4775,AP Computer Sci Principles,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westwood High,SC-4002-100,450339001606,5054,Computer Programming with Visual Basic 1,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Westwood High,SC-4002-100,450339001606,5055,Computer Programming with Visual Basic 2,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saluda High,SC-4101-003,450346000982,4771,AP Comp Sci A,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saluda High,SC-4101-003,450346000982,4775,AP Computer Sci Principles,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saluda Middle,SC-4101-005,450346000981,5062,DiscCompSci8,unspecified,92,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Saluda Middle,SC-4101-005,450346000981,5063,DiscCompSci7,unspecified,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chapman High,SC-4201-002,450348000988,4775,AP Computer Sci Principles,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chapman High,SC-4201-002,450348000988,5310,Networking Fundamentals,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chapman High,SC-4201-002,450348000988,5311,Advanced Networking,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Landrum High,SC-4201-003,450348000989,5310,Networking Fundamentals,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+E P Todd School,SC-4207-075,450366001041,5062,DiscCompSci8,unspecified,134,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Campobello-Gramling School,SC-4201-006,450348000983,5061,DiscCompSci,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Landrum Middle,SC-4201-087,450348000060,5061,DiscCompSci,unspecified,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boiling Springs High,SC-4202-012,450351001000,4775,AP Computer Sci Principles,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boiling Springs High,SC-4202-012,450351001000,5310,Networking Fundamentals,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Boiling Springs High,SC-4202-012,450351001000,5311,Advanced Networking,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chesnee High,SC-4202-013,450351001001,5310,Networking Fundamentals,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chesnee High,SC-4202-013,450351001001,5311,Advanced Networking,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Broome High,SC-4203-026,450354001010,5052,Computer Prog 3,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Broome High,SC-4203-026,450354001010,5053,Computer Prog 4,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodruff High,SC-4204-036,450357001015,4771,AP Comp Sci A,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodruff High,SC-4204-036,450357001015,5052,Computer Prog 3,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kingstree Middle Magnet School,SC-4501-007,450378001107,5062,DiscCompSci8,unspecified,96,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kingstree Middle Magnet School,SC-4501-007,450378001107,5063,DiscCompSci7,unspecified,102,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dorman High,SC-4206-053,450363001038,4775,AP Computer Sci Principles,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Carver Middle,SC-4207-068,450366001049,5062,DiscCompSci8,unspecified,176,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCracken Middle,SC-4207-071,450366001051,5062,DiscCompSci8,unspecified,152,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+McCracken Middle,SC-4207-071,450366001051,5063,DiscCompSci7,unspecified,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spartanburg High,SC-4207-073,450366001052,5052,Computer Prog 3,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spartanburg High,SC-4207-073,450366001052,5053,Computer Prog 4,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alice Drive Middle,SC-4301-021,450390201063,2785,Computer Science for Innovators & Makers,unspecified,329,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sumter High,SC-4301-024,450390201065,5052,Computer Prog 3,unspecified,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sumter High,SC-4301-024,450390201065,5053,Computer Prog 4,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crestwood High,SC-4301-042,450390200217,5052,Computer Prog 3,unspecified,141,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crestwood High,SC-4301-042,450390200217,5053,Computer Prog 4,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ft Mill High,SC-4604-036,450390001156,4775,AP Computer Sci Principles,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ft Mill High,SC-4604-036,450390001156,5051,Computer Prog 2,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ft Mill High,SC-4604-036,450390001156,5054,Computer Programming with Visual Basic 1,unspecified,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenville Tech Charter Hi,SC-4701-043,450390100460,5050,Computer Prog 1,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Greenville Tech Charter Hi,SC-4701-043,450390100460,5051,Computer Prog 2,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York Comprehensive High,SC-4601-003,450381001122,5050,Computer Prog 1,unspecified,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+York Comprehensive High,SC-4601-003,450381001122,5051,Computer Prog 2,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover High,SC-4602-010,450384001129,4771,AP Comp Sci A,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover High,SC-4602-010,450384001129,4775,AP Computer Sci Principles,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover High,SC-4602-010,450384001129,5052,Computer Prog 3,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover High,SC-4602-010,450384001129,5053,Computer Prog 4,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover High,SC-4602-010,450384001129,5056,Computer Programming with C++ 1,unspecified,73,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwestern High,SC-4603-016,450387001149,5050,Computer Prog 1,unspecified,55,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rock Hill High,SC-4603-017,450387001150,5050,Computer Prog 1,unspecified,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rock Hill High,SC-4603-017,450387001150,5051,Computer Prog 2,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Pointe High,SC-4603-041,450387001004,5050,Computer Prog 1,unspecified,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Pointe High,SC-4603-041,450387001004,5051,Computer Prog 2,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nation Ford High,SC-4604-054,450390001103,5051,Computer Prog 2,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nation Ford High,SC-4604-054,450390001103,5054,Computer Programming with Visual Basic 1,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Catawba Ridge High School,SC-4604-061,450390001718,5051,Computer Prog 2,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Catawba Ridge High School,SC-4604-061,450390001718,5054,Computer Programming with Visual Basic 1,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SC Connections Academy,SC-4701-003,450390101520,4771,AP Comp Sci A,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palmetto Scholars Academy,SC-4701-010,450390101542,4771,AP Comp Sci A,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lowcountry Leadership Charter School,SC-4701-023,450390101613,5051,Computer Prog 2,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverwalk Academy,SC-4701-033,450390101645,5061,DiscCompSci,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverwalk Academy,SC-4701-033,450390101645,5062,DiscCompSci8,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverwalk Academy,SC-4701-033,450390101645,5063,DiscCompSci7,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+High Point Academy,SC-4701-034,450390101639,5050,Computer Prog 1,unspecified,90,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LowCountry Montessori School,SC-4701-037,450390101646,5061,DiscCompSci,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEXT High,SC-4701-039,450390101656,5056,Computer Programming with C++ 1,unspecified,65,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEXT High,SC-4701-039,450390101656,5323,Adv Computer Operating Systems,unspecified,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Odyssey Online Learning,SC-4801-010,450390901527,5050,Computer Prog 1,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cyber Academy of South Carolina,SC-4801-012,450390901616,5050,Computer Prog 1,unspecified,37,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cyber Academy of South Carolina,SC-4801-012,450390901616,5051,Computer Prog 2,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Legion Collegiate Academy,SC-4801-016,450390901715,5050,Computer Prog 1,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
