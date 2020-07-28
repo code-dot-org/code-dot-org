@@ -1,5 +1,5 @@
 @no_mobile
-@no_firefox # these tests fail on Firefox 79. Learning Platform is tracking the issue
+@no_firefox
 Feature: Prevent Report Abuse Spam
 
 # If someone has already reported abuse on a specific project, we hide the
