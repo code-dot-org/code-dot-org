@@ -243,7 +243,14 @@ def distribute_course_content(locale)
     type_data[locale] = Hash.new
     type_data[locale]["data"] = Hash.new
     type_data[locale]["data"][type] = translations.sort.to_h
-    sanitize_data_and_write(type_data, "dashboard/config/locales/#{type}.#{locale}.yml")
+
+    # We'd like in the long term for all of our generated course content locale
+    # files to be in JSON rather than YAML. As a first step on that journey,
+    # here we serialize all of the locale types except DSLs to JSON. The DSL
+    # locale file is unfortunately touched by a few other processes, so
+    # converting that one over will have to be done as part of a larger effort.
+    extension = type == "dsls" ? "yml" : "json"
+    sanitize_data_and_write(type_data, "dashboard/config/locales/#{type}.#{locale}.#{extension}")
   end
 end
 
