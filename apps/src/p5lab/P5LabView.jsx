@@ -42,6 +42,10 @@ class P5LabView extends React.Component {
     spriteLab: PropTypes.bool.isRequired
   };
 
+  state = {
+    libraryManifest: {}
+  };
+
   getChannelId() {
     if (dashboard && dashboard.project) {
       return dashboard.project.getCurrentId();
