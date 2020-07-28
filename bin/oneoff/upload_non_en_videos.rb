@@ -16,13 +16,13 @@ require_relative '../../dashboard/config/environment'
 
 # The directory where the files are in. There can be multiple folders in this folder,
 # but those must be noted in the map file below
-VIDEO_FILE_DIRECTORY = ''
+VIDEO_FILE_DIRECTORY = '../test-videos/'
 # CSV that maps video keys to their title and filename
 # Must have columns titled 'Folder', 'Partner filename', 'Key', and 'Video Title'
 MAP_FILE = 'test.csv'
 # Switch this to false when ready to run
 DRY_RUN = true
-LOCALE = 'es-MX'
+LOCALE = 'fr-FR'
 
 APPLICATION_NAME = 'Dubbed Video Batch Upload'
 
@@ -111,7 +111,7 @@ uploaded_videos = 0
 videos.each do |video|
   if validate_key(video[:key], LOCALE)
     puts "uploading " + video[:key]
-    download = upload_to_s3(File.open(video.file_path))
+    download = upload_to_s3(File.open(video[:file_path]))
     youtube_code = upload_to_youtube(service, video[:file_path], video[:title])
     Video.merge_and_write_attributes(video[:key], youtube_code, download, LOCALE, 'dashboard/config/videos.csv')
     uploaded_videos += 1
@@ -119,4 +119,4 @@ videos.each do |video|
     puts "Failed to validate " + video[:key]
   end
 end
-put "uploaded " + uploaded_videos.to_s + " videos"
+puts "uploaded #{uploaded_videos} videos"
