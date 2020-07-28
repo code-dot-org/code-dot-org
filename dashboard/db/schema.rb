@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200622222750) do
+ActiveRecord::Schema.define(version: 20200722061339) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -343,6 +343,17 @@ ActiveRecord::Schema.define(version: 20200622222750) do
     t.index ["script_id"], name: "index_course_scripts_on_script_id", using: :btree
   end
 
+  create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "key",                             null: false
+    t.string   "display_name",                    null: false
+    t.text     "properties",        limit: 65535
+    t.string   "content_root_type",               null: false
+    t.integer  "content_root_id",                 null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id", using: :btree
+  end
+
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name"
     t.text     "properties", limit: 65535
@@ -497,12 +508,13 @@ ActiveRecord::Schema.define(version: 20200622222750) do
   end
 
   create_table "lesson_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "key",                        null: false
-    t.integer  "script_id",                  null: false
-    t.boolean  "user_facing", default: true, null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "key",                                      null: false
+    t.integer  "script_id",                                null: false
+    t.boolean  "user_facing",               default: true, null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.integer  "position"
+    t.text     "properties",  limit: 65535
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true, using: :btree
   end
 

@@ -6,11 +6,12 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit2/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
 
-lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
+lesson_group 'csd2_1v2', display_name: 'Chapter 1: Creating Webpages'
 lesson 'Exploring Web Pages'
 level 'CSD U2L01 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD Web Sample Pages_2020', progression: 'Sample Personal Web Pages'
@@ -114,7 +115,7 @@ level 'CSD U2 publish video_2020', progression: 'Video: Publishing Your Website'
 level 'CSD U2 project share_2020', progression: 'Publishing Your Website'
 level 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2020', progression: 'Reflection', assessment: true
 
-lesson_group 'csd2_2', display_name: 'Chapter 2: Styling and CSS'
+lesson_group 'csd2_2v2', display_name: 'Chapter 2: Multi-page Websites'
 lesson 'Websites for a Purpose'
 level 'CSD U2L12 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U2 Top Websites_2018_2019_pilot_2020', progression: 'Top Websites'

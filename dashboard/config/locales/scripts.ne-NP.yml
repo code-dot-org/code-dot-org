@@ -3487,21 +3487,6 @@ ne:
           lessons:
             Creating Functions:
               name: Creating Functions
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
-          lessons:
-            Variables:
-              name: Variables
-            Conditionals:
-              name: Conditionals
-            Functions:
-              name: Functions
         csp5-virtual:
           stages:
             While Loops:
@@ -3541,3 +3526,72 @@ ne:
           lessons:
             While Loops:
               name: While Loops
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Loops
+            Events:
+              name: कार्य
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+            Variables:
+              name: Variables
+            For Loops:
+              name: For Loops
+          lessons:
+            Loops:
+              name: Loops
+            Events:
+              name: कार्य
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+            Variables:
+              name: Variables
+            For Loops:
+              name: For Loops
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Text:
+              name: Text
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: Text
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+          lesson_groups:
+            csd3_1:
+              display_name: Content
+            csd3_2:
+              display_name: Content
+            cspSurvey:
+              display_name: Content
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Content
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Content

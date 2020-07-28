@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   data:
     blocks:
       Dancelab_alternateMoves:
@@ -1019,6 +1019,10 @@ pt-BR:
           CHOICE:
             '"this"': este
             '"other"': outro
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_hideTitleScreen:
         text: esconder a tela do título
       gamelab_isTouchingEdges:

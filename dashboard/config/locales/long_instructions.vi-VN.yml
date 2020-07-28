@@ -10,6 +10,76 @@ vi-VN:
       2-3 Artist Nested Loops Free Play: chơi tự do, hãy vẽ cai gì đó thật dễ thương
         với các vòng lặp lồng vào nhau.
       2-3 Bee Loops 3A: Dùng một vòng lặp `repeat`để thu thập tất cả phấn hoa.
+      CourseD_Dance_2020_01: |-
+        Kéo khối <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> vào không gian làm việc và kết nối nó vào bên trong khối <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.
+
+        Chọn `cat` hoặc `sloth` để tạo vũ công đầu tiên của bạn.
+
+        -   _Bạn cũng có thể nhấp vào biểu tượng bóng đèn bên trái nếu bạn muốn biết thêm thông tin hoặc muốn thêm thử thách._
+      CourseD_Dance_2020_02: |-
+        Khối <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> cho phép bạn chạy mã khi nhấn các nút mũi tên.
+        Sử dụng khối <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> để làm cho chú mèo vỗ tay!
+
+        _Đừng quên nhấn phím "up arrow" hoặc ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) sau khi nhấp vào nút Run (Chạy)!_
+      CourseD_Dance_2020_03: Đã đến lúc so tài khiêu vũ! Lập trình để từng vũ công
+        di chuyển khi bạn nhấn các phím khác nhau. Chọn động tác yêu thích của bạn
+        cho mỗi vũ công hoặc thiết lập chế độ `(Random)` để cho ra một màn trình diễn
+        không thể đoán trước!
+      CourseD_Dance_2020_04: |-
+        Làm cho các vũ công di chuyển đúng nhạc!
+
+        Kết nối khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> với một khối <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> từ hộp công cụ.
+
+        Vũ công của bạn phải bắt đầu một động tác mới sau nhịp thứ tư.
+
+        **Nhịp** được sử dụng để đếm thời gian trong âm nhạc. Trong hướng dẫn này, một nhịp dài bốn phách.
+      CourseD_Dance_2020_05: |-
+        \*Bây giờ chúng ta đang quẩy theo nhạc! \*
+
+        Thêm khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> vào không gian làm việc. Hãy cho vũ công bắt đầu động tác mới sau 6 nhịp.
+      CourseD_Dance_2020_06: |-
+        Sử dụng khối mới này để thiết lập một nhóm các vũ công phụ họa nhỏ hơn đứng xung quanh một vũ công chính ở giữa.
+
+          <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        Giờ đây, bạn có thể tạo ra một loạt các vũ công phụ họa cùng một lúc!
+      CourseD_Dance_2020_07: |-
+        Mỗi vũ công có một bộ _thuộc tính_ kiểm soát diện mạo của mình.
+
+        Sử dụng <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> dưới một khối sự kiện màu xanh lá cây để làm cho các vũ công xuất hiện gần hơn hoặc xa hơn sau khi âm nhạc bắt đầu.
+      CourseD_Dance_2020_08: Các vũ công có thuộc tính "tint" để thêm một lớp màu
+        lên trên. Hãy thử thay đổi màu sắc của một trong các vũ công của bạn (hoặc
+        toàn bộ nhóm nhảy)!
+      CourseD_Dance_2020_09: |-
+        Đây là một loại sự kiện đặc biệt được kích hoạt đi, kích hoạt lại.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Các khối mới khác trong hộp công cụ của bạn cho phép bạn thay đổi ngẫu nhiên các thuộc tính của vũ công theo thời gian.
+
+        _Hãy sáng tạo và vui chơi!_
+      CourseD_Dance_2020_10: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để
+        chia sẻ với bạn bè.
+      CourseD_Dance_2020_bonus1: "# Lặp đi lặp lại!\n\nĐôi khi bạn có thể muốn tạo
+        một tổ hợp động tác lặp đi lặp lại. Khối mới này cho phép bạn làm được điều
+        đó. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>
+        \n\nCác động tác bạn đã chọn ở trên sẽ được lặp lại theo trình tự mãi mãi.
+        \n\n-   Tạo một tổ hợp lặp đi lặp lại luân phiên cho vũ công chính ở phía
+        trước! \n-   Sử dụng các số khác nhau để thay đổi tốc độ luân phiên động tác.
+        Hãy thử ‘1’ hoặc ‘0.5’ để luân phiên động tác nhanh hơn!"
+      CourseD_Dance_2020_bonus3: |-
+        # Hãy hình thành!
+
+        Kiểm tra điệu nhảy này sử dụng khối <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> để thay đổi đội hình của các vũ công dự phòng trong suốt điệu nhảy. Hãy thử một trong những ý tưởng sau để mở rộng nó:
+
+        -   Tạo nhóm vũ công thứ hai theo bố cục khác
+        -   Thay đổi bố cục khi nhấn phím
+        -   Thay đổi thuộc tính khi vũ công thay đổi đội hình
       CourseD_Dance_Party_01: |-
         \_Hãy mở tiệc khiêu vũ nào!\*
 
@@ -84,28 +154,56 @@ vi-VN:
         từ trong **rương** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_10: Có một con **mực** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         lẩn trốn ở đâu đó trong Tượng đài Đại Dương này, bạn có tìm được nó không?
+      CourseE_HOC 2018 Level_10_2020: Có một con **mực** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        lẩn trốn ở đâu đó trong Tượng đài Đại Dương này, bạn có tìm được nó không?
       CourseE_HOC 2018 Level_11: Hãy xây một bức tường bằng **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         xung quanh phần bê tông đen. Việc này sẽ kích hoạt các **đường dẫn** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         và hoàn thành thử thách của bạn!
+      CourseE_HOC 2018 Level_11_2020: Hãy xây một bức tường bằng **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        xung quanh phần bê tông đen. Việc này sẽ kích hoạt các **đường dẫn** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        và hoàn thành thử thách của bạn!
+      CourseE_HOC 2018 Level_1_2020: Bạn cần trang bị cho chuyến hải hành phía trước.
+        Hãy lấy một chiếc **thuyền** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        từ trong **rương** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_2: Sử dụng thuyền để di chuyển sẽ dễ hơn bơi trên biển!
         Hãy đi đến cuối bến thuyền và nhảy lên chiếc thuyền.
+      CourseE_HOC 2018 Level_2_2020: Sử dụng thuyền để di chuyển sẽ dễ hơn bơi trên
+        biển! Hãy đi đến cuối bến thuyền và nhảy lên chiếc thuyền.
       CourseE_HOC 2018 Level_3: Cầm lấy mái chèo và lái thuyền của bạn băng qua biển
         khơi để bắt **cá tuyết** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_3_2020: Cầm lấy mái chèo và lái thuyền của bạn băng qua
+        biển khơi để bắt **cá tuyết** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
       CourseE_HOC 2018 Level_4: Hãy đem cá tuyết làm thức ăn cho **cá heo** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Sử dụng một khối lặp lại để có thể băng qua đại dương nhanh hơn.
+      CourseE_HOC 2018 Level_4_2020: Hãy đem cá tuyết làm thức ăn cho **cá heo** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Sử dụng một khối lặp lại để có thể băng qua đại dương nhanh hơn.
       CourseE_HOC 2018 Level_5: Có một **vỏ ốc anh vũ** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        ẩn giấu ở đâu đó! Hãy thám hiểm xác tàu đắm để đến được chiếc **rương** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_5_2020: Có một **vỏ ốc anh vũ** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         ẩn giấu ở đâu đó! Hãy thám hiểm xác tàu đắm để đến được chiếc **rương** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       CourseE_HOC 2018 Level_6: Ngoài kia có vẻ lạnh cóng! Hãy bắt một con **cá hồi**
         ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         trên đường đến các di tích dưới nước.
+      CourseE_HOC 2018 Level_6_2020: Ngoài kia có vẻ lạnh cóng! Hãy bắt một con **cá
+        hồi** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        trên đường đến các di tích dưới nước.
       CourseE_HOC 2018 Level_7a: Bạn đã tìm thấy những di tích dưới nước. Hãy tìm
         kiếm trên tảng đá sa thạch một chiếc **rương** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        chứa **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      CourseE_HOC 2018 Level_7a_2020: Bạn đã tìm thấy những di tích dưới nước. Hãy
+        tìm kiếm trên tảng đá sa thạch một chiếc **rương** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
         chứa **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
       CourseE_HOC 2018 Level_8: Đầu tiên là núi băng, giờ đến dung nham? Hãy vượt
         qua hòn đảo núi lửa này và tìm thấy con **cá nhiệt đới** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
         trong rạn san hô.
+      CourseE_HOC 2018 Level_8_2020: Đầu tiên là núi băng, giờ đến dung nham? Hãy
+        vượt qua hòn đảo núi lửa này và tìm thấy con **cá nhiệt đới** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        trong rạn san hô.
       CourseE_HOC 2018 Level_9b: Bạn đã đến được rạn san hô, bây giờ hãy tìm **Trái
         tim Biển cả** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Sử dụng san hô xanh và đỏ để tiếp cận kho báu trong chiếc **rương** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      CourseE_HOC 2018 Level_9b_2020: Bạn đã đến được rạn san hô, bây giờ hãy tìm
+        **Trái tim Biển cả** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Sử dụng san hô xanh và đỏ để tiếp cận kho báu trong chiếc **rương** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Dance_2019_01: |-
         Kéo khối <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> vào không gian làm việc và kết nối nó vào bên trong khối <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.
@@ -356,11 +454,20 @@ vi-VN:
         trong khu vực làm việc để đưa Đặc vụ đến tấm áp lực [PressurePlate_Up], sau
         đó nhấn \"Chạy\" và sử dụng các phím mũi tên để di chuyển người chơi ra khỏi
         nhà và thu thập các \\*\\* thùng kho báu \\*\\* [chest]."
+      MC_HOC_2017_01_RETRY_2020: "Cửa bị khóa, nhưng Đặc vụ đang ở đây để giúp đỡ!
+        \nDi chuyển một khối 'di chuyển về phía trước' xuống phía dưới khối 'khi chạy'
+        trong khu vực làm việc để đưa Đặc vụ đến tấm áp lực [PressurePlate_Up], sau
+        đó nhấn \"Chạy\" và sử dụng các phím mũi tên để di chuyển người chơi ra khỏi
+        nhà và thu thập các \\*\\* thùng kho báu \\*\\* [chest]."
       MC_HOC_2017_02_Cole: "{currentPlayerName} đang dẫn đầu cuộc phiêu lưu! Để giúp
         đỡ, lấy \\*\\* bản đồ \\*\\* [map_empty] đằng sau cánh cửa đã bị khóa ở bên
         phải. \\\r \\\r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến tấm áp
         lực [PressurePlate_Up], từ đó {currentPlayerName} có thể đi qua. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} đang dẫn đầu cuộc phiêu lưu!
+        Để giúp đỡ, lấy \\*\\* bản đồ \\*\\* [map_empty] đằng sau cánh cửa đã bị khóa
+        ở bên phải. \\\r \\\r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến
+        tấm áp lực [PressurePlate_Up], từ đó {currentPlayerName} có thể đi qua. "
+      MC_HOC_2017_02_Cole_2020: "{currentPlayerName} đang dẫn đầu cuộc phiêu lưu!
         Để giúp đỡ, lấy \\*\\* bản đồ \\*\\* [map_empty] đằng sau cánh cửa đã bị khóa
         ở bên phải. \\\r \\\r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến
         tấm áp lực [PressurePlate_Up], từ đó {currentPlayerName} có thể đi qua. "
@@ -370,9 +477,15 @@ vi-VN:
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} tiếp tục cuộc phiêu lưu và cần
         \\*\\* la bàn \\*\\* [compass] để chuẩn bị cho chuyến đi.  \\\r \\\r \nLập
         trình cho Đặc vụ để mở cổng. "
+      MC_HOC_2017_03_Cole_2020: "{currentPlayerName} tiếp tục cuộc phiêu lưu và cần
+        \\*\\* la bàn \\*\\* [compass] để chuẩn bị cho chuyến đi.  \\\r \\\r \nLập
+        trình cho Đặc vụ để mở cổng. "
       MC_HOC_2017_04POINT5_RYAN: "Bạn đã vượt qua nó! \\\r \\\r \nBây giờ, đưa {currentPlayerName}
         đến mê cung một cách an toàn để thu thập \\*\\* cái rìu \\*\\* [diamond_axe]"
       MC_HOC_2017_04POINT5_RYAN_2019: "Bạn đã vượt qua nó! \\\r \\\r \nBây giờ, đưa
+        {currentPlayerName} đến mê cung một cách an toàn để thu thập \\*\\* cái rìu
+        \\*\\* [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2020: "Bạn đã vượt qua nó! \\\r \\\r \nBây giờ, đưa
         {currentPlayerName} đến mê cung một cách an toàn để thu thập \\*\\* cái rìu
         \\*\\* [diamond_axe]"
       MC_HOC_2017_04_Cole: "Đặc vụ có thể vượt qua dòng nước!  \\\r \\\r \nSử dụng
@@ -381,10 +494,16 @@ vi-VN:
       MC_HOC_2017_04_Cole_2019: "Đặc vụ có thể vượt qua dòng nước!  \\\r \\\r \nSử
         dụng một vòng lặp 'lặp lại' để giải quyết các câu đố và giúp {currentPlayerName}
         đi đến \\*\\* cái xô \\*\\* [bucket_empty] đằng sau cánh cửa. "
+      MC_HOC_2017_04_Cole_2020: "Đặc vụ có thể vượt qua dòng nước!  \\\r \\\r \nSử
+        dụng một vòng lặp 'lặp lại' để giải quyết các câu đố và giúp {currentPlayerName}
+        đi đến \\*\\* cái xô \\*\\* [bucket_empty] đằng sau cánh cửa. "
       MC_HOC_2017_05_Cole: "Ôi không, cây cầu đã biến mất! \\\r \\\r \nLập trình cho
         Đặc vụ xây lại cây cầu bằng cách sử dụng các khối 'vị trí' để {currentPlayerName}
         có thể lấy được \\*\\* cái xẻng \\*\\* [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Ôi không, cây cầu đã biến mất! \\\r \\\r \nLập trình
+        cho Đặc vụ xây lại cây cầu bằng cách sử dụng các khối 'vị trí' để {currentPlayerName}
+        có thể lấy được \\*\\* cái xẻng \\*\\* [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2020: "Ôi không, cây cầu đã biến mất! \\\r \\\r \nLập trình
         cho Đặc vụ xây lại cây cầu bằng cách sử dụng các khối 'vị trí' để {currentPlayerName}
         có thể lấy được \\*\\* cái xẻng \\*\\* [diamond_shovel]."
       MC_HOC_2017_06_Cole: "Một con sông nữa, nhưng con sông này còn rộng lớn hơn
@@ -393,9 +512,14 @@ vi-VN:
       MC_HOC_2017_06_Cole_2019: "Một con sông nữa, nhưng con sông này còn rộng lớn
         hơn nhiều! \\\r \\\r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây
         cầu để {currentPlayerName} có thể lấy được \\*\\* cái cúp \\*\\* [diamond_pickaxe]. "
+      MC_HOC_2017_06_Cole_2020: "Một con sông nữa, nhưng con sông này còn rộng lớn
+        hơn nhiều! \\\r \\\r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây
+        cầu để {currentPlayerName} có thể lấy được \\*\\* cái cúp \\*\\* [diamond_pickaxe]. "
       MC_HOC_2017_07_Cole: "Có băng trong nước!  \\\r \\\r \nSử dụng chức năng 'dọn
         đường' để tiêu diệt băng và đưa {currentPlayerName} đến Minecart [minecart_normal]! "
       MC_HOC_2017_07_Cole_2019: "Có băng trong nước!  \\\r \\\r \nSử dụng chức năng
+        'dọn đường' để tiêu diệt băng và đưa {currentPlayerName} đến Minecart [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2020: "Có băng trong nước!  \\\r \\\r \nSử dụng chức năng
         'dọn đường' để tiêu diệt băng và đưa {currentPlayerName} đến Minecart [minecart_normal]! "
       MC_HOC_2017_10_RETRY: "Bạn có thể tìm ra điểm khác biệt giữa hai nhóm lệnh chức
         năng (hàm) dưới đây không? \\\r\n \\\r Sử dụng những nhóm lệnh chức năng này
@@ -405,21 +529,32 @@ vi-VN:
         chức năng (hàm) dưới đây không? \\\r\n \\\r Sử dụng những nhóm lệnh chức năng
         này kết hợp với những lệnh khác trong khung lệnh bên trái để xóa đường dẫn
         tới xe đẩy quặng, sau đó thu thập **đá lửa và thép** [flint_and_steel]. \\\r "
+      MC_HOC_2017_10_RETRY_2020: "Bạn có thể tìm ra điểm khác biệt giữa hai nhóm lệnh
+        chức năng (hàm) dưới đây không? \\\r\n \\\r Sử dụng những nhóm lệnh chức năng
+        này kết hợp với những lệnh khác trong khung lệnh bên trái để xóa đường dẫn
+        tới xe đẩy quặng, sau đó thu thập **đá lửa và thép** [flint_and_steel]. \\\r "
       MC_HOC_2017_Ali: 'Xem xét các nhóm lệnh chức năng dưới đây.  Làm thế nào bạn
         có thể sử dụng chúng để tránh các Ghasts và giúp {currentPlayerName}  **lấy
         được quyển sách** [book_enchanted] một cách an toàn?  '
       MC_HOC_2017_Ali_2019: 'Xem xét các nhóm lệnh chức năng dưới đây.  Làm thế nào
         bạn có thể sử dụng chúng để tránh các Ghasts và giúp {currentPlayerName}  **lấy
         được quyển sách** [book_enchanted] một cách an toàn?  '
+      MC_HOC_2017_Ali_2020: 'Xem xét các nhóm lệnh chức năng dưới đây.  Làm thế nào
+        bạn có thể sử dụng chúng để tránh các Ghasts và giúp {currentPlayerName}  **lấy
+        được quyển sách** [book_enchanted] một cách an toàn?  '
       MC_HOC_2017_FP20x20: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng tạo!
         Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_FP20x20_2019: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
+        tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
+      MC_HOC_2017_FP20x20_2020: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
         tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       New Minecraft Hero Project: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
         tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       Overworld Move to Sheep: Hãy thêm một lệnh "move forward" thứ hai để đi đến
         con cừu.
       Overworld Move to Sheep_2019: Hãy thêm một lệnh "move forward" thứ hai để đi
+        đến con cừu.
+      Overworld Move to Sheep_2020: Hãy thêm một lệnh "move forward" thứ hai để đi
         đến con cừu.
       course4_artist_fwp_challenge1: Thử chạy chương trình này, và tạo vài thay đổi
         để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa
@@ -436,6 +571,10 @@ vi-VN:
         ## Đã đến lúc quay lại đất liền rồi, hãy giúp tôi đặt những tảng đá xuống để tôi không ngã nhé!
 
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2020: |-
+        ## Đã đến lúc quay lại đất liền rồi, hãy giúp tôi đặt những tảng đá xuống để tôi không ngã nhé!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11: |-
         ## Hãy giúp tôi xây bậc cầu thang để tôi ngắm con tàu ra khơi.
 
@@ -445,6 +584,10 @@ vi-VN:
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops11_2019: |-
+        ## Hãy giúp tôi xây bậc cầu thang để tôi ngắm con tàu ra khơi.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2020: |-
         ## Hãy giúp tôi xây bậc cầu thang để tôi ngắm con tàu ra khơi.
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
@@ -481,6 +624,17 @@ vi-VN:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2020: |-
+        Bạn hoạ sĩ này đã thấy cái gì đó thú vị ở xa, hãy thử vẽ những gì bạn nghĩ anh ấy nhìn thấy.
+
+        * * *
+
+        ### Ideas
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2: |-
         Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước
 
@@ -490,6 +644,10 @@ vi-VN:
 
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops2_2019: |-
+        Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2020: |-
         Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước
 
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
@@ -505,6 +663,10 @@ vi-VN:
         Hoạ sĩ của chúng ta đang muốn vẽ thêm 5 đoạn thẳng nữa. Bạn có thể giúp anh ấy không?
 
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2020: |-
+        Hoạ sĩ của chúng ta đang muốn vẽ thêm 5 đoạn thẳng nữa. Bạn có thể giúp anh ấy không?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4: |-
         Hãy dùng vòng lặp <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> để vẽ đoạn thằng này năm lần nữa!
 
@@ -517,6 +679,10 @@ vi-VN:
         Hãy dùng vòng lặp <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> để vẽ đoạn thằng này năm lần nữa!
 
         <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml>
+      courseA_artist_loops4_2020: |-
+        Hãy dùng vòng lặp <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> để vẽ đoạn thằng này năm lần nữa!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5: |-
         ## Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường chân trời của chúng ta.
 
@@ -526,6 +692,10 @@ vi-VN:
 
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2019: |-
+        ## Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường chân trời của chúng ta.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2020: |-
         ## Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường chân trời của chúng ta.
 
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
@@ -541,6 +711,10 @@ vi-VN:
         ## Hãy vẽ một ngọn đồi nhỏ ở phía sau.
 
         ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2020: |-
+        ## Hãy vẽ một ngọn đồi nhỏ ở phía sau.
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
         ## Hãy dùng vòng lặp <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> để tạo sóng trên mặt nước.
 
@@ -553,6 +727,10 @@ vi-VN:
         Hãy dùng vòng lặp <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> để tạo sóng.
 
         <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseA_artist_loops7_2020: |-
+        Hãy dùng vòng lặp <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> để tạo sóng.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8: |-
         ## Chúng ta cần vẽ một cái thang lên tàu.
 
@@ -562,6 +740,10 @@ vi-VN:
 
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops8_2019: |-
+        ## Chúng ta cần vẽ một cái thang lên tàu.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2020: |-
         ## Chúng ta cần vẽ một cái thang lên tàu.
 
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
@@ -577,14 +759,17 @@ vi-VN:
         ## **Thử thách:** Cầu thang dẫn xuống cảng đã bị hỏng. Hãy giúp sửa chữa lại nó nhé.
 
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2020: |-
+        ## **Thử thách:** Cầu thang dẫn xuống cảng đã bị hỏng. Hãy giúp sửa chữa lại nó nhé.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_maze_ramp3a_2019: Đưa khối <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> từ hộp công cụ và thêm nó vào dưới các khối khác để hoàn thành
         chương trình, sau đó ấn "▶ Run".
+      courseA_maze_ramp3a_2020: Đưa khối <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> từ hộp công cụ và thêm nó vào dưới các khối khác để hoàn thành
+        chương trình, sau đó ấn "▶ Chạy".
       courseA_maze_ramp3b_2018: |-
-        Có một khối thừa ở cuối chương trình này!
-
-        Hãy kéo nó trở lại hộp công cụ để bỏ đi.
-      courseA_maze_ramp3b_2019: |-
         Có một khối thừa ở cuối chương trình này!
 
         Hãy kéo nó trở lại hộp công cụ để bỏ đi.
@@ -592,9 +777,13 @@ vi-VN:
         của các khối khác để hoàn thành chương trình này không?
       courseA_maze_ramp4a_2019: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới cùng
         của các khối khác để hoàn thành chương trình này không?
+      courseA_maze_ramp4a_2020: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới cùng
+        của các khối khác để hoàn thành chương trình này không?
       courseA_maze_ramp5a_2018: Hãy thử tạo một chương trình hoàn toàn theo ý của
         bạn!
       courseA_maze_ramp5a_2019: Hãy thử tạo một chương trình hoàn toàn theo ý của
+        bạn!
+      courseA_maze_ramp5a_2020: Hãy thử tạo một chương trình hoàn toàn theo ý của
         bạn!
       courseA_maze_seq1: _"Chơi với những khối lệnh và giúp tôi di chuyển đến chỗ
         chú lợn xấu xa"_
@@ -602,24 +791,37 @@ vi-VN:
         đến chỗ chú lợn!"
       courseA_maze_seq10_2019: "**Thử thách:** Tránh những thùng TNT và đưa chú chim
         đến chỗ chú lợn!"
+      courseA_maze_seq10_2020: "**Thử thách:** Tránh những thùng TNT và đưa chú chim
+        đến chỗ chú lợn!"
       courseA_maze_seq11_2018: Giờ là một câu đố ngắn! Đi về một hướng, rồi một hướng
         khác để đưa chú chim đến chỗ chú lợn.
       courseA_maze_seq11_2019: Giờ là một câu đố ngắn! Đi về một hướng, rồi một hướng
         khác để đưa chú chim đến chỗ chú lợn.
+      courseA_maze_seq11_2020: Giờ là một câu đố ngắn! Đi về một hướng, rồi một hướng
+        khác để đưa chú chim đến chỗ chú lợn.
       courseA_maze_seq12_2018: Đến chỗ chú lợn đó!
       courseA_maze_seq12_2019: Đến chỗ chú lợn đó!
+      courseA_maze_seq12_2020: Đến chỗ chú lợn đó!
       courseA_maze_seq13_2019: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
+      courseA_maze_seq13_2020: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
       courseA_maze_seq1_2018: _"Chơi với những khối lệnh và giúp tôi di chuyển đến
         chỗ chú lợn xấu xa"_
       courseA_maze_seq1_2019: _"Chơi với những khối lệnh và giúp tôi di chuyển đến
         chỗ chú lợn xấu xa"_
+      courseA_maze_seq1_2020: _"Chơi với những khối lệnh và giúp tôi di chuyển đến
+        chỗ chú lợn xấu xa"_
       courseA_maze_seq5_2018: Hãy thử giải câu đố này.
       courseA_maze_seq5_2019: Hãy thử giải câu đố này.
+      courseA_maze_seq5_2020: Hãy thử giải câu đố này.
       courseA_maze_seq5a_2018: |-
         _"Lợn đây rồi!"_
 
         Bạn cần thêm khối lệnh nào vào chương trình này để chú chim đến được chỗ chú lợn?
       courseA_maze_seq5a_2019: |-
+        _"Lợn đây rồi!"_
+
+        Bạn cần thêm khối lệnh nào vào chương trình này để chú chim đến được chỗ chú lợn?
+      courseA_maze_seq5a_2020: |-
         _"Lợn đây rồi!"_
 
         Bạn cần thêm khối lệnh nào vào chương trình này để chú chim đến được chỗ chú lợn?
@@ -630,6 +832,8 @@ vi-VN:
       courseA_maze_seq6_2018: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
       courseA_maze_seq6_2019: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
+        đến được chỗ chú lợn!
+      courseA_maze_seq6_2020: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
       courseA_maze_seq6_copy: |-
         Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến được chỗ chú lợn!
@@ -643,11 +847,15 @@ vi-VN:
         lợn!
       courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
+      courseA_maze_seq8_2020: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
+        lợn!
       courseA_maze_seq8_copy: |-
         Giải quyết câu đố này và đưa chú chim đến chỗ chú lợn!
 
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_playLab_events1_2019: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
+        các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
+      courseA_playLab_events1_2020: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
         các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
       courseA_playLab_events3_2019: |-
         Giúp chú chó Jorge di chuyển bằng cách nối khối <xml><block type="studio_move" block-text="move dog west">
@@ -670,21 +878,33 @@ vi-VN:
       courseA_playLab_events7_2019: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
         trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
         nó không?
+      courseA_playLab_events7_2020: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
+        trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
+        nó không?
       courseB_Scrat_ramp1_2018: Để sóc Scrat đến được chỗ hạt sồi, gắn khối <xml><block
         type="maze_moveEast"/></xml> vào dưới khối <xml><block type="when_run"/></xml>,
         rồi ấn "▶ Chạy"!
       courseB_Scrat_ramp1_2019: Để giúp Scrat tìm đến hạt sồi, gắn khối <xml><block
         type="maze_moveEast" block-text="move East"/></xml> vào dưới khối <xml><block
         type="when_run" block-text="when run"/></xml> rồi ấn "▶ Chạy"!
+      courseB_Scrat_ramp1_2020: Để sóc Scrat đến được chỗ hạt sồi, gắn khối <xml><block
+        type="maze_moveEast" block-text="move East"/></xml> vào dưới khối <xml><block
+        type="when_run" block-text="when run"/></xml>, rồi ấn "▶ Chạy"!
       courseB_Scrat_ramp2_2018: Gắn khối <xml><block type="maze_moveEast"/></xml>
         vào dưới khối <xml><block type="when_run"/></xml> để hoàn thành chương trình,
         rồi ấn "▶ Chạy".
       courseB_Scrat_ramp2_2019: Gắn cả hai khối <xml><block type="maze_moveEast" block-text="move
         east"/></xml> vào dưới khối <xml><block type="when_run" block-text="when run"/></xml>
         để hoàn thành chương trình, rồi ấn "▶ Chạy".
+      courseB_Scrat_ramp2_2020: Gắn khối <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> vào dưới khối <xml><block type="when_run" block-text="when run"/></xml>
+        để hoàn thành chương trình, rồi ấn "▶ Chạy".
       courseB_Scrat_ramp3a_2019: Đưa khối <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> từ hộp công cụ và thêm nó vào dưới các khối khác để hoàn thành
         chương trình, sau đó ấn "▶ Run".
+      courseB_Scrat_ramp3a_2020: Đưa khối <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> từ hộp công cụ và thêm nó vào dưới các khối khác để hoàn thành
+        chương trình, sau đó ấn "▶ Chạy".
       courseB_Scrat_ramp3b_2018: |-
         Có một khối thừa ở cuối chương trình này!
 
@@ -693,26 +913,41 @@ vi-VN:
         Có một khối thừa ở cuối chương trình này!
 
         Hãy kéo nó trở lại hộp công cụ để bỏ đi.
+      courseB_Scrat_ramp3b_2020: |-
+        Có một khối thừa ở cuối chương trình này!
+
+        Hãy kéo nó trở lại hộp công cụ để bỏ đi.
       courseB_Scrat_ramp4a_2018: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
         cùng của các khối khác để hoàn thành chương trình này không?
       courseB_Scrat_ramp4a_2019: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
         cùng của các khối khác để hoàn thành chương trình này không?
+      courseB_Scrat_ramp4a_2020: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
+        cùng của các khối khác để hoàn thành chương trình này không?
       courseB_Scrat_ramp5a_2018: Hãy thử tạo một chương trình hoàn toàn theo ý của
         bạn!
       courseB_Scrat_ramp5a_2019: Hãy thử tạo một chương trình hoàn toàn theo ý của
+        bạn!
+      courseB_Scrat_ramp5a_2020: Hãy thử tạo một chương trình hoàn toàn theo ý của
         bạn!
       courseB_iceage_loops1: Hãy giúp Scrat băng qua tảng băng trơn trượt để có thể
         lấy được hạt sồi nhé!
       courseB_iceage_loops10: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi nhé!
       courseB_iceage_loops10_2019: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
         nhé!
+      courseB_iceage_loops10_2020: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
+        nhé!
       courseB_iceage_loops11: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseB_iceage_loops11_2019: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
+      courseB_iceage_loops11_2020: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseB_iceage_loops12: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà bạn có
         thể!
       courseB_iceage_loops12_2019: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
         bạn có thể!
+      courseB_iceage_loops12_2020: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
+        bạn có thể!
       courseB_iceage_loops1_2019: Hãy giúp Scrat băng qua tảng băng trơn trượt để
+        có thể lấy được hạt sồi nhé!
+      courseB_iceage_loops1_2020: Hãy giúp Scrat băng qua tảng băng trơn trượt để
         có thể lấy được hạt sồi nhé!
       courseB_iceage_loops2_2019: Dùng cả hai khối <xml><block type="maze_moveWest"
         block_text="Đi về phía Tây"/></xml> và <xml><block type="maze_moveSouth" block_text="Đi
@@ -722,21 +957,32 @@ vi-VN:
       courseB_iceage_loops3_2019: Bạn có thể đến được chỗ hạt Sồi chỉ với một khối
         <xml><block type="maze_moveWest" block-text="Đi về phía Tây"/></xml> không?
         Hãy thử dùng một vòng lặp!
+      courseB_iceage_loops3_2020: Bạn có thể đến được chỗ hạt Sồi chỉ với một khối
+        <xml><block type="maze_moveWest" block-text="move west"/></xml> không? Hãy
+        thử dùng một vòng lặp!
       courseB_iceage_loops4: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận chỗ
         hạt Sồi!
       courseB_iceage_loops4_2019: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
+        chỗ hạt Sồi!
+      courseB_iceage_loops4_2020: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
         chỗ hạt Sồi!
       courseB_iceage_loops6: Bạn có thể thêm một vòng lặp để đến được chỗ hạt Sồi
         không?
       courseB_iceage_loops6_2019: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
         Sồi không?
+      courseB_iceage_loops6_2020: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
+        Sồi không?
       courseB_iceage_loops7: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseB_iceage_loops7_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
+      courseB_iceage_loops7_2020: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseB_iceage_loops8: 'Bạn có thể sửa phần code này không? '
       courseB_iceage_loops8_2019: 'Bạn có thể sửa phần code này không? '
+      courseB_iceage_loops8_2020: 'Bạn có thể sửa phần code này không? '
       courseB_iceage_loops9: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng lặp để
         giúp Scrat đến đó không?
       courseB_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
+        lặp để giúp Scrat đến đó không?
+      courseB_iceage_loops9_2020: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
         lặp để giúp Scrat đến đó không?
       courseB_playLab_events1: |-
         Trò chơi này gọi là "Play Lab".
@@ -750,11 +996,19 @@ vi-VN:
         Trò chơi này gọi là "Play Lab".
 
         Bạn hãy thử khám phá xem mỗi khối có chức năng gì.
+      courseB_playLab_events1_2020: |-
+        Trò chơi này gọi là "Play Lab".
+
+        Bạn hãy thử khám phá xem mỗi khối có chức năng gì.
       courseB_playlab_events5_2018: |-
         Thêm khối sự kiện để chàng kỵ sĩ di chuyển khi ấn phím mũi tên.
 
         Di chuyển chàng kỵ sĩ về bên phải để hoàn thành câu đố này.
       courseB_playlab_events5_2019: |-
+        Thêm khối sự kiện để chàng kỵ sĩ di chuyển khi ấn phím mũi tên.
+
+        Di chuyển chàng kỵ sĩ về bên phải để hoàn thành câu đố này.
+      courseB_playlab_events5_2020: |-
         Thêm khối sự kiện để chàng kỵ sĩ di chuyển khi ấn phím mũi tên.
 
         Di chuyển chàng kỵ sĩ về bên phải để hoàn thành câu đố này.
@@ -765,6 +1019,9 @@ vi-VN:
         Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
         Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
       courseB_playlab_events6_2019: |-
+        Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
+        Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
+      courseB_playlab_events6_2020: |-
         Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
         Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
       courseB_playlab_events7_2018: |-
@@ -785,7 +1042,18 @@ vi-VN:
         * * *
 
         Đi qua tất cả các mục tiêu, rồi chạm vào con rồng để vượt qua thử thách.
+      courseB_playlab_events7_2020: |-
+        Làm cho trò chơi vui hơn bằng cách thêm vào nhiều khối lệnh!
+
+        1.  Cài đặt để hiệp sĩ biến mất khi anh ấy đâm vào con rồng.
+        2.  Tạo ra tiếng động khi họ chạm vào nhau để trò chơi thêm chân thực.
+
+        * * *
+
+        Đi qua tất cả các mục tiêu, rồi chạm vào con rồng để vượt qua thử thách.
       courseB_playlab_eventsFP_2019: "**Chơi tự do:**Sử dụng trí tưởng tượng của bạn.
+        Bạn có thể làm gì để trò chơi này thú vị hơn?"
+      courseB_playlab_eventsFP_2020: "**Chơi tự do:**Sử dụng trí tưởng tượng của bạn.
         Bạn có thể làm gì để trò chơi này thú vị hơn?"
       courseB_starWars_prog1: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Hãy đi lấy mảnh kim loại nào, BB-8!"_
@@ -797,11 +1065,15 @@ vi-VN:
         \_"Bạn có thể lấy tất cả chúng không?"'
       courseB_starWars_prog10_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         \_"Bạn có thể lấy tất cả chúng không?"'
+      courseB_starWars_prog10_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        \_"Bạn có thể lấy tất cả chúng không?"'
       courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Tiếp tục nào!"_'
       courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Tiếp tục nào!"_'
       courseB_starWars_prog11_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Tiếp tục nào!"_'
+      courseB_starWars_prog11_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Tiếp tục nào!"_'
       courseB_starWars_prog1_2018: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Hãy đi lấy mảnh kim loại nào, BB-8!"_
@@ -811,11 +1083,17 @@ vi-VN:
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Hãy đi lấy mảnh kim loại nào, BB-8!"_
 
         Tránh các bức tường và những cái thùng nhé. Mảnh kim loại trông như thế này: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseB_starWars_prog1_2020: |-
+        ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Hãy đi lấy mảnh kim loại nào, BB-8!"_
+
+        Tránh các bức tường và những cái thùng nhé. Mảnh kim loại trông như thế này: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog2: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Lấy tất cả mảnh kim loại nào."_'
       courseB_starWars_prog2_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Lấy tất cả mảnh kim loại nào."_'
       courseB_starWars_prog2_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Lấy tất cả mảnh kim loại nào."_'
+      courseB_starWars_prog2_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Lấy tất cả mảnh kim loại nào."_'
       courseB_starWars_prog3: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Tiếp tục nào, BB-8!"_'
@@ -823,11 +1101,15 @@ vi-VN:
         _"Tiếp tục nào, BB-8!"_'
       courseB_starWars_prog3_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Tiếp tục nào, BB-8!"_'
+      courseB_starWars_prog3_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Tiếp tục nào, BB-8!"_'
       courseB_starWars_prog4: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         \_"Hãy lấy nó nào, BB-8!"'
       courseB_starWars_prog4_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         \_"Hãy lấy nó nào, BB-8!"'
       courseB_starWars_prog4_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        \_"Hãy lấy nó nào, BB-8!"'
+      courseB_starWars_prog4_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         \_"Hãy lấy nó nào, BB-8!"'
       courseB_starWars_prog5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         \_"Bạn có thể lấy tất cả chúng không?"'
@@ -835,17 +1117,23 @@ vi-VN:
         \_"Bạn có thể lấy tất cả chúng không?"'
       courseB_starWars_prog5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         \_"Bạn có thể lấy tất cả chúng không?"'
+      courseB_starWars_prog5_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        \_"Bạn có thể lấy tất cả chúng không?"'
       courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bạn có thể làm được mà!"_'
       courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bạn có thể làm được mà!"_'
       courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bạn có thể làm được mà!"_'
+      courseB_starWars_prog6_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Bạn có thể làm được mà!"_'
       courseB_starWars_prog7: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Hãy đi lấy nó nào!"_'
       courseB_starWars_prog7_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Hãy đi lấy nó nào!"_'
       courseB_starWars_prog7_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Hãy đi lấy nó nào!"_'
+      courseB_starWars_prog7_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Hãy đi lấy nó nào!"_'
       courseB_starWars_prog8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Tiếp tục nào, BB-8."_
@@ -859,45 +1147,69 @@ vi-VN:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Tiếp tục nào, BB-8."_
 
         **Thử thách**: Thu thập tất cả mảnh kim loại.
+      courseB_starWars_prog8_2020: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Tiếp tục nào, BB-8."_
+
+        **Thử thách**: Thu thập tất cả mảnh kim loại.
       courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bạn có thể làm được mà!"_'
       courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bạn có thể làm được mà!"_'
       courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bạn có thể làm được mà!"_'
+      courseB_starWars_prog9_2020: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Bạn có thể làm được mà!"_'
       courseD_iceage_loops1: Hãy giúp Scrat băng qua tảng băng trơn trượt để có thể
         lấy được hạt sồi nhé!
       courseD_iceage_loops10: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi nhé!
       courseD_iceage_loops10_2019: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
         nhé!
+      courseD_iceage_loops10_2020: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
+        nhé!
       courseD_iceage_loops11: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseD_iceage_loops11_2019: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
+      courseD_iceage_loops11_2020: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseD_iceage_loops12: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà bạn có
         thể!
       courseD_iceage_loops12_2019: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
         bạn có thể!
+      courseD_iceage_loops12_2020: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
+        bạn có thể!
       courseD_iceage_loops1_2019: Hãy giúp Scrat băng qua tảng băng trơn trượt để
+        có thể lấy được hạt sồi nhé!
+      courseD_iceage_loops1_2020: Hãy giúp Scrat băng qua tảng băng trơn trượt để
         có thể lấy được hạt sồi nhé!
       courseD_iceage_loops3: Bạn có thể đến được chỗ hạt Sồi chỉ với một khối <xml><block
         type="maze_moveForward"/></xml> không? Hãy thử dùng một vòng lặp!
       courseD_iceage_loops3_2019: Bạn có thể đến được chỗ hạt Sồi chỉ với một khối
         <xml><block type="maze_moveForward" block-text="move forward"/></xml> không?
         Hãy thử dùng một vòng lặp!
+      courseD_iceage_loops3_2020: Bạn có thể đến được chỗ hạt Sồi chỉ với một khối
+        <xml><block type="maze_moveForward" block-text="move forward"/></xml> không?
+        Hãy thử dùng một vòng lặp!
       courseD_iceage_loops4: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận chỗ
         hạt Sồi!
       courseD_iceage_loops4_2019: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
+        chỗ hạt Sồi!
+      courseD_iceage_loops4_2020: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
         chỗ hạt Sồi!
       courseD_iceage_loops6: Bạn có thể thêm một vòng lặp để đến được chỗ hạt Sồi
         không?
       courseD_iceage_loops6_2019: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
         Sồi không?
+      courseD_iceage_loops6_2020: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
+        Sồi không?
       courseD_iceage_loops7: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseD_iceage_loops7_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
+      courseD_iceage_loops7_2020: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseD_iceage_loops8: 'Bạn có thể sửa phần code này không? '
       courseD_iceage_loops8_2019: 'Bạn có thể sửa phần code này không? '
+      courseD_iceage_loops8_2020: 'Bạn có thể sửa phần code này không? '
       courseD_iceage_loops9: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng lặp để
         giúp Scrat đến đó không?
       courseD_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
+        lặp để giúp Scrat đến đó không?
+      courseD_iceage_loops9_2020: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
         lặp để giúp Scrat đến đó không?
       courseD_scrat_ramp7: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseE_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r

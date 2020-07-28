@@ -4463,6 +4463,24 @@ th:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Programming with Angry Birds:
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+            Creating Art with Code:
+              name: การสร้างศิลปะด้วยโค้ด
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Snowflakes with Anna and Elsa:
+              name: ลูปซ้อนลูป ในเกม Frozen
+            If/Else with Bee:
+              name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+            While Loops with the Farmer:
+              name: ลูปขณะที่ (while loops) กับเกมเกษตรกร
+            Harvesting with Conditionals:
+              name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+            Functions with Harvester:
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            For Loops with Bee:
+              name: ลูป For ในเรื่องผึ้ง
           lesson_groups:
             csf_warmup:
               display_name: อุ่นเครื่อง
@@ -4499,9 +4517,31 @@ th:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Programming with Angry Birds:
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
+            Creating Art with Code:
+              name: การสร้างศิลปะด้วยโค้ด
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Snowflakes with Anna and Elsa:
+              name: ลูปซ้อนลูป ในเกม Frozen
+            If/Else with Bee:
+              name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+            While Loops with the Farmer:
+              name: ลูปขณะที่ (while loops) กับเกมเกษตรกร
+            Harvesting with Conditionals:
+              name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+            Functions with Harvester:
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            For Loops with Bee:
+              name: ลูป For ในเรื่องผึ้ง
         pre-express-2020:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           stages:
+            Learn to Drag and Drop:
+              description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์ แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
+            Sequencing with Scrat:
+              description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์ แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Spelling Bee:
@@ -4512,14 +4552,23 @@ th:
               name: ใช้ลูปกับนักสะสม
             Ocean Scene with Loops:
               name: ฉากมหาสมุทรกับลูป
+              description_teacher: กลับมาในเรื่องที่เกี่ยวกับลูป ผู้เรียนจะได้เรียนรู้ที่จะวาดภาพโดยการทำลูปกับลำดับขั้นตอนของคำสั่งอย่างง่ายๆ โดยที่บทเรียนต่อปลั๊กบทก่อนหน้านี้ ลูปถูกนำมาใช้ในการเดินย้อนเขาวงกตและเก็บรวบรวมสมบัติ ในตอนนี้ลูปกำลังถูกนำมาใช้ในการสร้างรูปแบบ ในตอนท้ายของด่่านนี้ ผู้เรียนจะได้รับโอกาสในการสร้างผลงานที่เป็นรุปภาพของเขาเองโดยการใช้ลูป
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Tell a Story in Play Lab:
+              description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
+            Loops with Laurel:
+              name: ลูปไปกับลอเรล
           lesson_groups:
             csf_loops:
               display_name: ลูป
             csf_events:
               display_name: เหตุการณ์
           lessons:
+            Learn to Drag and Drop:
+              description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์ แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
+            Sequencing with Scrat:
+              description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์ แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Spelling Bee:
@@ -4530,8 +4579,17 @@ th:
               name: ใช้ลูปกับนักสะสม
             Ocean Scene with Loops:
               name: ฉากมหาสมุทรกับลูป
+              description_teacher: กลับมาในเรื่องที่เกี่ยวกับลูป ผู้เรียนจะได้เรียนรู้ที่จะวาดภาพโดยการทำลูปกับลำดับขั้นตอนของคำสั่งอย่างง่ายๆ โดยที่บทเรียนต่อปลั๊กบทก่อนหน้านี้ ลูปถูกนำมาใช้ในการเดินย้อนเขาวงกตและเก็บรวบรวมสมบัติ ในตอนนี้ลูปกำลังถูกนำมาใช้ในการสร้างรูปแบบ ในตอนท้ายของด่่านนี้ ผู้เรียนจะได้รับโอกาสในการสร้างผลงานที่เป็นรุปภาพของเขาเองโดยการใช้ลูป
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Tell a Story in Play Lab:
+              description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
+            Loops with Laurel:
+              name: ลูปไปกับลอเรล
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
         csp3-2020:
           stages:
             Debugging:
@@ -4539,24 +4597,6 @@ th:
           lessons:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
-        csd3-virtual:
-          stages:
-            Variables:
-              name: ตัวแปร
-            Conditionals:
-              name: เงื่อนไข 
-            Functions:
-              name: ฟังก์ชัน
-          lesson_groups:
-            csd3_1:
-              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
-          lessons:
-            Variables:
-              name: ตัวแปร
-            Conditionals:
-              name: เงื่อนไข 
-            Functions:
-              name: ฟังก์ชัน
         jess-test-script:
           stages:
             Debugging:
@@ -4592,3 +4632,81 @@ th:
               name: อัลกอริทึม
             Events:
               name: เหตุการณ์
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: ลูป
+            Events:
+              name: เหตุการณ์
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน
+            Variables:
+              name: ตัวแปร
+            For Loops:
+              name: การวนรอบ
+          lessons:
+            Loops:
+              name: ลูป
+            Events:
+              name: เหตุการณ์
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน
+            Variables:
+              name: ตัวแปร
+            For Loops:
+              name: การวนรอบ
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: แบบสำรวจ
+        csd3-virtual:
+          stages:
+            Variables:
+              name: ตัวแปร
+            Text:
+              name: ข้อความ
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน
+          lessons:
+            Variables:
+              name: ตัวแปร
+            Text:
+              name: ข้อความ
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: บทเรียน
+          lessons:
+            Lesson:
+              name: บทเรียน
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: บทเรียน
+          lessons:
+            Lesson:
+              name: บทเรียน
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: บทเรียน
+          lessons:
+            Lesson:
+              name: บทเรียน
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: บทเรียน
+          lessons:
+            Lesson:
+              name: บทเรียน

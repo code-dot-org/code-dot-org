@@ -5470,6 +5470,8 @@ bg:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Урок 1: Цифрова информация'
+            cspSurvey:
+              display_name: Проучване
           lessons:
             Binary Numbers:
               name: Бинарни числа
@@ -5502,30 +5504,6 @@ bg:
               name: API и параметри на функцията
             Looping and Random Numbers:
               name: Цикли и случайни числа
-        csd3-virtual:
-          description_short: Програмиране
-          stages:
-            Variables:
-              name: Променливи
-            Conditionals:
-              name: Условия
-            Velocity:
-              name: Скорост
-            Functions:
-              name: Функции
-            Sprite Properties:
-              name: Свойства на Спрайта
-          lessons:
-            Variables:
-              name: Променливи
-            Conditionals:
-              name: Условия
-            Velocity:
-              name: Скорост
-            Functions:
-              name: Функции
-            Sprite Properties:
-              name: Свойства на Спрайта
         csp5-virtual:
           stages:
             While Loops:
@@ -5572,3 +5550,88 @@ bg:
           lessons:
             While Loops:
               name: Докато цикли
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Повторения
+            Events:
+              name: Събития
+            Conditionals:
+              name: Условия
+            Functions:
+              name: Функции
+            Variables:
+              name: Променливи
+            For Loops:
+              name: За циклите
+          lessons:
+            Loops:
+              name: Повторения
+            Events:
+              name: Събития
+            Conditionals:
+              name: Условия
+            Functions:
+              name: Функции
+            Variables:
+              name: Променливи
+            For Loops:
+              name: За циклите
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Следващи стъпки
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd3-virtual:
+          description_short: Програмиране
+          stages:
+            Variables:
+              name: Променливи
+            Sprite Properties:
+              name: Свойства на Спрайта
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условия
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции
+          lessons:
+            Variables:
+              name: Променливи
+            Sprite Properties:
+              name: Свойства на Спрайта
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условия
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции
+          lesson_groups:
+            csd3_1:
+              display_name: Съдържание
+            csd3_2:
+              display_name: Съдържание
+            cspSurvey:
+              display_name: Съдържание
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание

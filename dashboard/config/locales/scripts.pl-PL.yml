@@ -10425,6 +10425,12 @@ pl:
               name: Twoja strona internetowa - Zdefiniuj
             Your Web Page - Prepare:
               name: Twoja strona internetowa - Przygotuj
+            Project - Personal Web Page:
+              name: Projekt - osobista strona internetowa
+            Websites for a Purpose:
+              name: Strony internetowe dla określonego celu
+            Using Images:
+              name: Korzystając z obrazów
           lesson_groups:
             csd2_1:
               display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
@@ -10455,6 +10461,12 @@ pl:
               name: Twoja strona internetowa - Zdefiniuj
             Your Web Page - Prepare:
               name: Twoja strona internetowa - Przygotuj
+            Project - Personal Web Page:
+              name: Projekt - osobista strona internetowa
+            Websites for a Purpose:
+              name: Strony internetowe dla określonego celu
+            Using Images:
+              name: Korzystając z obrazów
         csd1-2020:
           stages:
             Intro to Problem Solving:
@@ -10701,6 +10713,8 @@ pl:
           stages:
             Representing Numbers:
               name: Reprezentacja liczb
+            Project - Make a Recommendation:
+              name: Projekt - zarekomenduj
           lesson_groups:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
@@ -10711,6 +10725,8 @@ pl:
           lessons:
             Representing Numbers:
               name: Reprezentacja liczb
+            Project - Make a Recommendation:
+              name: Projekt - zarekomenduj
         csd6-2020:
           stages:
             Getting Properties:
@@ -11108,6 +11124,18 @@ pl:
               name: Pętle for w pszczole
             For Loops in Artist:
               name: Pętle for w artyście
+            Behaviors with Sprite Lab:
+              name: Zachowania w Sprite Lab
+            Programming with Angry Birds:
+              name: Programowanie w labiryncie
+            Nested Loops in Maze:
+              name: Zagnieżdżone pętle w labiryncie
+            If/Else with Bee:
+              name: Wyrażenie warunkowe w pszczole
+            For Loops with Bee:
+              name: Pętle for w pszczole
+            For Loops with Artist:
+              name: Pętle for w artyście
           lesson_groups:
             csf_loops:
               display_name: Pętle
@@ -11135,6 +11163,18 @@ pl:
             For Loops in Bee:
               name: Pętle for w pszczole
             For Loops in Artist:
+              name: Pętle for w artyście
+            Behaviors with Sprite Lab:
+              name: Zachowania w Sprite Lab
+            Programming with Angry Birds:
+              name: Programowanie w labiryncie
+            Nested Loops in Maze:
+              name: Zagnieżdżone pętle w labiryncie
+            If/Else with Bee:
+              name: Wyrażenie warunkowe w pszczole
+            For Loops with Bee:
+              name: Pętle for w pszczole
+            For Loops with Artist:
               name: Pętle for w artyście
         pre-express-2020:
           description_audience: W wieku 4-8
@@ -11172,6 +11212,8 @@ pl:
           lesson_groups:
             csp_unit1_2020:
               display_name: "(stary) Unit 1: Informacje cyfrowe"
+            cspSurvey:
+              display_name: Ankieta
           lessons:
             new stage:
               name: nowy etap
@@ -11280,96 +11322,49 @@ pl:
               name: Zapętlanie i losowe liczby
             Unit 3 Chapter 1 Assessment:
               name: Oszacowanie Jednostki 3 rozdziału 1
-        csd3-virtual:
-          description_short: Programowanie
-          stages:
-            Plotting Shapes:
-              name: Rysowanie kształtów
-            Drawing in Game Lab:
-              name: Rysowanie w laboratorium gier
-            Shapes and Randomization:
-              name: Kształty oraz losowość
-            Variables:
-              name: Zmienne
-            Booleans Unplugged:
-              name: Wyrażenia boolowskie bez komputera
-            Conditionals:
-              name: Zdania z warunkami
-            Keyboard Input:
-              name: Wejście klawiatury
-            Other Forms of Input:
-              name: Inne formy wejścia
-            Project - Interactive Card:
-              name: Projekt - Interaktywna karta
-            Velocity:
-              name: Prędkość
-            Collision Detection:
-              name: Wykrywanie kolizji
-            Collisions:
-              name: Kolizje
-            Functions:
-              name: Funkcje
-            The Game Design Process:
-              name: Proces projektowania gier
-            Using the Game Design Process:
-              name: Używanie procesu projektowania gier
-            Project - Design a Game:
-              name: Projekt - Zaprojektuj grę
-            Random Numbers:
-              name: Losowe liczby
-            Sprite Properties:
-              name: Właściwości duszka
-          lesson_groups:
-            csd3_1:
-              display_name: 'Rozdział 1: Obrazy i Animacje'
-          lessons:
-            Plotting Shapes:
-              name: Rysowanie kształtów
-            Drawing in Game Lab:
-              name: Rysowanie w laboratorium gier
-            Shapes and Randomization:
-              name: Kształty oraz losowość
-            Variables:
-              name: Zmienne
-            Booleans Unplugged:
-              name: Wyrażenia boolowskie bez komputera
-            Conditionals:
-              name: Zdania z warunkami
-            Keyboard Input:
-              name: Wejście klawiatury
-            Other Forms of Input:
-              name: Inne formy wejścia
-            Project - Interactive Card:
-              name: Projekt - Interaktywna karta
-            Velocity:
-              name: Prędkość
-            Collision Detection:
-              name: Wykrywanie kolizji
-            Collisions:
-              name: Kolizje
-            Functions:
-              name: Funkcje
-            The Game Design Process:
-              name: Proces projektowania gier
-            Using the Game Design Process:
-              name: Używanie procesu projektowania gier
-            Project - Design a Game:
-              name: Projekt - Zaprojektuj grę
-            Random Numbers:
-              name: Losowe liczby
-            Sprite Properties:
-              name: Właściwości duszka
         jess-test-script:
           stages:
             new stage:
               name: nowy etap
             Debugging:
               name: Debugowanie
+            Virtual Professional Learning Overview:
+              name: Omówienie wirtualnego profesjonalnego uczenia się
+            Module 2:
+              name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 8:
+              name: Moduł 8
+            Module 7:
+              name: Moduł 7
           lessons:
             new stage:
               name: nowy etap
             Debugging:
               name: Debugowanie
+            Virtual Professional Learning Overview:
+              name: Omówienie wirtualnego profesjonalnego uczenia się
+            Module 2:
+              name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 8:
+              name: Moduł 8
+            Module 7:
+              name: Moduł 7
         csd2-virtual:
           stages:
             Intro to HTML:
@@ -11771,3 +11766,240 @@ pl:
               name: Przetwarzanie tablic
             Functions with Return Values:
               name: Funkcje zwracające wartości
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Pętle
+            Events:
+              name: Zdarzenia
+            Conditionals:
+              name: Zdania z warunkami
+            Functions:
+              name: Funkcje
+            Variables:
+              name: Zmienne
+            For Loops:
+              name: Pętle dla (for)
+            Sprite Lab:
+              name: Sprite Lab
+          lessons:
+            Loops:
+              name: Pętle
+            Events:
+              name: Zdarzenia
+            Conditionals:
+              name: Zdania z warunkami
+            Functions:
+              name: Funkcje
+            Variables:
+              name: Zmienne
+            For Loops:
+              name: Pętle dla (for)
+            Sprite Lab:
+              name: Sprite Lab
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Pierwsze kroki
+            k5_next_steps_1:
+              display_name: Następne Kroki
+        dani-test-2020:
+          stages:
+            new lesson:
+              name: nowa lekcja
+          lessons:
+            new lesson:
+              name: nowa lekcja
+          lesson_groups:
+            lesson group:
+              display_name: wyświetl nazwisko
+        dani-june-2020-test:
+          stages:
+            new lesson:
+              name: nowa lekcja
+            lesson 2:
+              name: lekcja 2
+            Buttons and Events:
+              name: Przyciski i wydarzenia
+          lessons:
+            new lesson:
+              name: nowa lekcja
+            lesson 2:
+              name: lekcja 2
+            Buttons and Events:
+              name: Przyciski i wydarzenia
+          lesson_groups:
+            lesson group:
+              display_name: wyświetl nazwisko
+            lg_1:
+              display_name: DISPLAYNAME
+            cspSurvey:
+              display_name: Ankieta
+            csp5_1:
+              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+            cs_lg:
+              display_name: LG GOOD
+        csd3-virtual:
+          description_short: Programowanie
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Variables:
+              name: Zmienne
+            Random Numbers:
+              name: Losowe liczby
+            Sprite Properties:
+              name: Właściwości duszka
+            Text:
+              name: Tekst
+            'Mini-Project: Captioned Scenes':
+              name: 'Mini-Projekt: Sceny z napisami'
+            'Mini-Project: Animation':
+              name: 'Mini-Projekt: Animacja'
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Mouse Input:
+              name: Użycie myszy
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+          lessons:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Variables:
+              name: Zmienne
+            Random Numbers:
+              name: Losowe liczby
+            Sprite Properties:
+              name: Właściwości duszka
+            Text:
+              name: Tekst
+            'Mini-Project: Captioned Scenes':
+              name: 'Mini-Projekt: Sceny z napisami'
+            'Mini-Project: Animation':
+              name: 'Mini-Projekt: Animacja'
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Mouse Input:
+              name: Użycie myszy
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+          lesson_groups:
+            csd3_1:
+              display_name: Treści
+            csd3_2:
+              display_name: Treści
+            cspSurvey:
+              display_name: Treści
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lekcja
+          lessons:
+            Lesson:
+              name: Lekcja
+          lesson_groups:
+            lg_1:
+              display_name: Treści
+        kaitie-test-script:
+          stages:
+            new lesson:
+              name: nowa lekcja
+            Module 2:
+              name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 7:
+              name: Moduł 7
+            Module 8:
+              name: Moduł 8
+          lessons:
+            new lesson:
+              name: nowa lekcja
+            Module 2:
+              name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 7:
+              name: Moduł 7
+            Module 8:
+              name: Moduł 8
+          lesson_groups:
+            lesson group:
+              display_name: wyświetl nazwisko

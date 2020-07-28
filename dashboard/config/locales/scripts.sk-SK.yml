@@ -9312,6 +9312,8 @@ sk:
                 lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
                 Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
                 pre portfólio, či ako ukážku pre rodičov.
+            Virtual Pet:
+              name: Virtuálne zvieratko so Sprite Labom
             End of Course Project:
               name: Záverečný projekt
             Copyright and Creativity:
@@ -9487,6 +9489,8 @@ sk:
                 lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
                 Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
                 pre portfólio, či ako ukážku pre rodičov.
+            Virtual Pet:
+              name: Virtuálne zvieratko so Sprite Labom
             End of Course Project:
               name: Záverečný projekt
             Copyright and Creativity:
@@ -10259,6 +10263,8 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Virtual Pet with Sprite Lab:
+              name: Virtuálne zvieratko so Sprite Labom
             Build A Project:
               name: Záverečný projekt
             Dance Party:
@@ -10379,6 +10385,8 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Virtual Pet with Sprite Lab:
+              name: Virtuálne zvieratko so Sprite Labom
             Build A Project:
               name: Záverečný projekt
             Dance Party:
@@ -10813,10 +10821,21 @@ sk:
           stages:
             Move It, Move It:
               name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie
+                cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú
+                v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich
+                spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé,
+                až kým nedosiahnu cieľ.
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+              description_teacher: V spolupráci s [r common-sense-media], táto lekcia
+                pomôže naučiť študentov o podobnostiach medzi bezpečnosťou v reálnom
+                svete a bezpečnosťou, keď navštevujú webové stránky. Študenti sa tiež
+                naučia, že informácia, ktorú dajú online, zanecháva digitálnu stopu
+                alebo "cestičku". Táto stopa môže byť veľká alebo malá, užitočná alebo
+                škodlivá v závislosti od toho, ako ju vedia ovládať.
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Ice Age:
@@ -10843,10 +10862,17 @@ sk:
               name: Kráľovská bitka s udalosťami
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy,
+                tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia
+                ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce
+                inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
             The Right App:
               name: Správna aplikácia
             Loops in Harvester:
               name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej
+                lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie
+                zbieranie kukurice.
             Programming in Maze:
               name: Programovanie s Angry Birds
               description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
@@ -10881,10 +10907,21 @@ sk:
           lessons:
             Move It, Move It:
               name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie
+                cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú
+                v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich
+                spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé,
+                až kým nedosiahnu cieľ.
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+              description_teacher: V spolupráci s [r common-sense-media], táto lekcia
+                pomôže naučiť študentov o podobnostiach medzi bezpečnosťou v reálnom
+                svete a bezpečnosťou, keď navštevujú webové stránky. Študenti sa tiež
+                naučia, že informácia, ktorú dajú online, zanecháva digitálnu stopu
+                alebo "cestičku". Táto stopa môže byť veľká alebo malá, užitočná alebo
+                škodlivá v závislosti od toho, ako ju vedia ovládať.
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Ice Age:
@@ -10911,10 +10948,17 @@ sk:
               name: Kráľovská bitka s udalosťami
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy,
+                tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia
+                ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce
+                inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
             The Right App:
               name: Správna aplikácia
             Loops in Harvester:
               name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej
+                lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie
+                zbieranie kukurice.
             Programming in Maze:
               name: Programovanie s Angry Birds
               description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
@@ -13443,8 +13487,19 @@ sk:
           stages:
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+              description_teacher: V spolupráci s [r common-sense-media], táto lekcia
+                pomôže naučiť študentov o podobnostiach medzi bezpečnosťou v reálnom
+                svete a bezpečnosťou, keď navštevujú webové stránky. Študenti sa tiež
+                naučia, že informácia, ktorú dajú online, zanecháva digitálnu stopu
+                alebo "cestičku". Táto stopa môže byť veľká alebo malá, užitočná alebo
+                škodlivá v závislosti od toho, ako ju vedia ovládať.
             Move It, Move It:
               name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie
+                cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú
+                v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich
+                spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé,
+                až kým nedosiahnu cieľ.
             Sequencing in Maze:
               name: Postupnosť krokov s Angry Birds
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
@@ -13467,8 +13522,15 @@ sk:
                 algoritmov a začnú používať debugovací proces.
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy,
+                tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia
+                ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce
+                inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
             Loops in Harvester:
               name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej
+                lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie
+                zbieranie kukurice.
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
@@ -13497,8 +13559,19 @@ sk:
           lessons:
             Your Digital Footprint:
               name: Tvoja digitálna stopa
+              description_teacher: V spolupráci s [r common-sense-media], táto lekcia
+                pomôže naučiť študentov o podobnostiach medzi bezpečnosťou v reálnom
+                svete a bezpečnosťou, keď navštevujú webové stránky. Študenti sa tiež
+                naučia, že informácia, ktorú dajú online, zanecháva digitálnu stopu
+                alebo "cestičku". Táto stopa môže byť veľká alebo malá, užitočná alebo
+                škodlivá v závislosti od toho, ako ju vedia ovládať.
             Move It, Move It:
               name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie
+                cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú
+                v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich
+                spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé,
+                až kým nedosiahnu cieľ.
             Sequencing in Maze:
               name: Postupnosť krokov s Angry Birds
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
@@ -13521,8 +13594,15 @@ sk:
                 algoritmov a začnú používať debugovací proces.
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy,
+                tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia
+                ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce
+                inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
             Loops in Harvester:
               name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej
+                lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie
+                zbieranie kukurice.
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
@@ -13749,6 +13829,8 @@ sk:
               name: Tanečná Párty
             End of Course Project:
               name: Záverečný projekt
+              description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
+                tvoj projekt.
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -13832,6 +13914,8 @@ sk:
               name: Tanečná Párty
             End of Course Project:
               name: Záverečný projekt
+              description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
+                tvoj projekt.
         coursee-2020:
           title: Kurz E (2019)
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
@@ -13959,6 +14043,12 @@ sk:
               name: Záverečný projekt
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských
+                práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám
+                rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne
+                prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
+                práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
+                občana.
           lesson_groups:
             ramp_up:
               display_name: Príprava
@@ -14093,6 +14183,12 @@ sk:
               name: Záverečný projekt
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských
+                práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám
+                rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne
+                prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
+                práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
+                občana.
         coursef-2020:
           title: Kurz F (2019)
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
@@ -14158,6 +14254,8 @@ sk:
                 nich nevie, ako funguje. V tejto lekcii budú študenti predstierať,
                 že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach,
                 URL aj IP adresách a DNS.
+            Virtual Pet:
+              name: Virtuálne zvieratko so Sprite Labom
             The Power of Words:
               name: Objav silu slov
             Crowdsourcing:
@@ -14254,6 +14352,8 @@ sk:
                 nich nevie, ako funguje. V tejto lekcii budú študenti predstierať,
                 že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach,
                 URL aj IP adresách a DNS.
+            Virtual Pet:
+              name: Virtuálne zvieratko so Sprite Labom
             The Power of Words:
               name: Objav silu slov
             Crowdsourcing:
@@ -14322,6 +14422,50 @@ sk:
               name: Cykly "for" s Umelcom
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+            Virtual Pet with Sprite Lab:
+              name: Virtuálne zvieratko so Sprite Labom
+            Swimming Fish with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+            End of Course Project:
+              name: Záverečný projekt
+            Programming with Angry Birds:
+              name: Programovanie s Angry Birds
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
+            Collecting Treasure with Laurel:
+              name: Zbieranie pokladov s Laurel
+            Creating Art with Code:
+              name: Umenie s pomocou kódu
+            Sticker Art with Loops:
+              name: Pečiatkovanie v cykloch
+            Nested Loops in Maze:
+              name: Vnorené cykly v bludisku
+            Snowflakes with Anna and Elsa:
+              name: Snehové vločky s Annou a Elsou
+            If/Else with Bee:
+              name: Podmienky "ak/inak" s včelou
+            While Loops with the Farmer:
+              name: Cykly "pokiaľ" s Farmárkou
+            Harvesting with Conditionals:
+              name: Zber úrody s podmienkami
+            Functions with Harvester:
+              name: Funkcie so Záhradníčkou
+            Functions with Artist:
+              name: Funkcie s Umelcom
+            Variables with Artist:
+              name: Premenné s Umelcom
+            Changing Variables with Bee:
+              name: Meniace sa premenné s včelou
+            Changing Variables with Artist:
+              name: Meniace sa premenné s Umelcom
+            For Loops with Bee:
+              name: Cykly "for" s včelou
+            For Loops with Artist:
+              name: Cykly "for" s Umelcom
+            Swimming Fish in Sprite Lab:
+              name: Spoznaj Sprite Lab
+            Alien Dance Party:
+              name: Mimozemská tanečná párty
           lesson_groups:
             csf_warmup:
               display_name: Úvodná aktivita
@@ -14339,6 +14483,8 @@ sk:
               display_name: Cykly "For"
             csf_sprites:
               display_name: Objekt "sprite"
+            end_of_course_project:
+              display_name: Záverečný projekt
           lessons:
             Dance Party:
               name: Tanečná Párty
@@ -14378,6 +14524,50 @@ sk:
               name: Cykly "for" s Umelcom
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
+            Virtual Pet with Sprite Lab:
+              name: Virtuálne zvieratko so Sprite Labom
+            Swimming Fish with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+            End of Course Project:
+              name: Záverečný projekt
+            Programming with Angry Birds:
+              name: Programovanie s Angry Birds
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
+            Collecting Treasure with Laurel:
+              name: Zbieranie pokladov s Laurel
+            Creating Art with Code:
+              name: Umenie s pomocou kódu
+            Sticker Art with Loops:
+              name: Pečiatkovanie v cykloch
+            Nested Loops in Maze:
+              name: Vnorené cykly v bludisku
+            Snowflakes with Anna and Elsa:
+              name: Snehové vločky s Annou a Elsou
+            If/Else with Bee:
+              name: Podmienky "ak/inak" s včelou
+            While Loops with the Farmer:
+              name: Cykly "pokiaľ" s Farmárkou
+            Harvesting with Conditionals:
+              name: Zber úrody s podmienkami
+            Functions with Harvester:
+              name: Funkcie so Záhradníčkou
+            Functions with Artist:
+              name: Funkcie s Umelcom
+            Variables with Artist:
+              name: Premenné s Umelcom
+            Changing Variables with Bee:
+              name: Meniace sa premenné s včelou
+            Changing Variables with Artist:
+              name: Meniace sa premenné s Umelcom
+            For Loops with Bee:
+              name: Cykly "for" s včelou
+            For Loops with Artist:
+              name: Cykly "for" s Umelcom
+            Swimming Fish in Sprite Lab:
+              name: Spoznaj Sprite Lab
+            Alien Dance Party:
+              name: Mimozemská tanečná párty
         pre-express-2020:
           title: Zrýchlený kurz pre predškolákov (2020)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -14387,18 +14577,59 @@ sk:
             to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
           description_audience: 'Vek: 4-8'
           stages:
+            Learn to Drag and Drop:
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
+                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
+                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
+                a potom pokročia k používaniu počítača na dokončenie online úloh.
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
+                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
+                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
+                a potom pokročia k používaniu počítača na dokončenie online úloh.
             Programming in Maze:
               name: Programovanie v bludisku
+              description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
+                sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu
+                na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti
+                spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť
+                doľava alebo otočiť doprava.
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
+            Programming in Harvester:
+              description_teacher: Študenti aplikujú naučené koncepty programovania
+                v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali
+                charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového
+                bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných
+                algoritmov a začnú používať debugovací proces.
             Spelling Bee:
               name: Včela Hláskovanie
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Ocean Scene with Loops:
               name: Na mori s cyklami
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
+                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
+                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
+                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
+                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
+                obrazy.
+            Tell a Story in Play Lab:
+              description_teacher: V tejto online aktivite sa študenti naučia, ako
+                v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
+                všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
+                na kreativitu! Vytvorme v Play Labe celý príbeh!
+            Loops with Scrat:
+              name: Cykly so Scratom
+            Loops with Laurel:
+              name: Cykly s Laurel
+            Drawing Gardens with Loops:
+              name: Kreslenie v záhrade pomocou cyklov
+            On the Move with Events:
+              name: Udalosti v pohybe
+            A Royal Battle with Events:
+              name: Kráľovská bitka s udalosťami
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -14407,18 +14638,59 @@ sk:
             csf_events:
               display_name: Udalosti
           lessons:
+            Learn to Drag and Drop:
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
+                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
+                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
+                a potom pokročia k používaniu počítača na dokončenie online úloh.
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
+                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
+                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
+                a potom pokročia k používaniu počítača na dokončenie online úloh.
             Programming in Maze:
               name: Programovanie v bludisku
+              description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
+                sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu
+                na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti
+                spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť
+                doľava alebo otočiť doprava.
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
+            Programming in Harvester:
+              description_teacher: Študenti aplikujú naučené koncepty programovania
+                v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali
+                charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového
+                bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných
+                algoritmov a začnú používať debugovací proces.
             Spelling Bee:
               name: Včela Hláskovanie
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Ocean Scene with Loops:
               name: Na mori s cyklami
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
+                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
+                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
+                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
+                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
+                obrazy.
+            Tell a Story in Play Lab:
+              description_teacher: V tejto online aktivite sa študenti naučia, ako
+                v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
+                všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
+                na kreativitu! Vytvorme v Play Labe celý príbeh!
+            Loops with Scrat:
+              name: Cykly so Scratom
+            Loops with Laurel:
+              name: Cykly s Laurel
+            Drawing Gardens with Loops:
+              name: Kreslenie v záhrade pomocou cyklov
+            On the Move with Events:
+              name: Udalosti v pohybe
+            A Royal Battle with Events:
+              name: Kráľovská bitka s udalosťami
         csp1-2020:
           stages:
             Binary Numbers:
@@ -14426,6 +14698,8 @@ sk:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Lekcia 1: Digitálne informácie'
+            cspSurvey:
+              display_name: Dotazník
           lessons:
             Binary Numbers:
               name: Binárne čísla
@@ -14446,344 +14720,6 @@ sk:
           lessons:
             Creating Functions:
               name: Tvorba funkcií
-        csd3-virtual:
-          stages:
-            Programming for Entertainment:
-              name: Programovanie pre zábavu
-            Plotting Shapes:
-              name: Tvorba tvarov
-            Drawing in Game Lab:
-              name: Kreslenie v Game Labe
-            Shapes and Randomization:
-              name: Tvary a náhodné čísla
-            Variables:
-              name: Premenné
-            Sprites:
-              name: Objekt "sprite"
-            The Draw Loop:
-              name: Cyklus kreslenia
-            The Counter Pattern Unplugged:
-              name: Kód pre počítanie (bez počítača)
-            Sprite Movement:
-              name: Pohyb "sprite" objektu
-            Booleans Unplugged:
-              name: Logické výrazy – lekcia bez počítača
-              description_student: V tejto lekcii si vysvetlíme logické výrazy a taktiež
-                podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie
-                logických (pravda/nepravda) výrokov s použitím osobných vlastností
-                (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
-                pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
-                ako sa dajú spolu s podmienkami použiť pri programovaní.
-            Conditionals:
-              name: Podmienky
-              description_student: V tejto lekcii budeš používať logické výrazy na
-                porovnanie aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou
-                hodnotou. Toto porovnanie použijeme na určenie toho, či „sprite“ dosiahol
-                určený bod na obrazovke, narástol do definovanej veľkosti alebo dosiahol
-                inú hodnotu pri použití kódu na počítanie. Po tejto aktvite začneme
-                používať podmienkové výroky, ktoré využívajú logické výrazy.
-            Keyboard Input:
-              name: Stlačenie kláves ako vstup
-              description_student: Po úvode do logických výrazov a podmieňovacích
-                („if“) výrazoch si predstavíme nový blok nazvaný keyDown(). Tento
-                blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch,
-                pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie
-                si študenti napíšu program, ktorý bude na základe stlačenia klávesy
-                ovládať objekty na obrazovke.
-              description_teacher: Po úvode do logických výrazov a podmieňovacích
-                (_if_) výrazoch si predstavíme nový blok nazvaný `keyDown()`. Tento
-                blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch,
-                pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie
-                si študenti napíšu program, ktorý bude na základe stlačenia klávesy
-                ovládať objekty na obrazovke.
-            Other Forms of Input:
-              name: Ďalšie formy vstupov
-              description_student: Dnes pokračujeme s podmieňovacími výrazmi pre zaznamenávanie
-                vstupov od užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý
-                sme sa naučili naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu,
-                ako aj príkazy zadávané myšou.
-              description_teacher: V tejto lekcii pokračujeme v objavovaní rôznych
-                spôsobov využitia podmieňovacích výrazov na zaznamenanie vstupov od
-                užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý sme sa naučili
-                naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu, ako
-                aj príkazy zadávané myšou.
-            Project - Interactive Card:
-              name: Projekt - Interaktívna pohľadnica
-              description_student: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
-                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
-                programovacích techník, ktoré sa doposiaľ naučili.
-              description_teacher: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
-                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
-                programovacích techník, ktoré sa doposiaľ naučili.
-            Velocity:
-              name: Rýchlosť
-              description_student: Po krátkom zopakovaní toho, ako sa kód pre počítanie
-                používa na nastavenie pohybu „sprite“ objektu, spoznáš  vlastnosti,
-                ktoré priamo určujú rýchlosť jeho pohybu a otáčania sa. Používaním
-                týchto vlastností sa naučíš všetko potrebné na vytvorenie jednoduchej
-                plošinovky.
-            Collision Detection:
-              name: Detekcia kolízie
-              description_student: V tejto lekcii sa dozvieš o tom, ako počítač zistí,
-                či sa dva „sprite“ objekty dotýkajú. Vo dvojici preskúmate, ako sa
-                použitím matematiky, polohy a veľkosti „sprite“ objektu dá určiť,
-                či sa dva „sprite“ objekty stretli. Potom použijete blok isTouching
-                () na vytvorenie rôznych efektov, keď sa „sprite“ objekty stretnú,
-                vrátane prehrávania zvukov. Nakoniec využijete svoje nové zručnosti
-                na vylepšenie skákacej hry, ktorú ste začali tvoriť v predchádzajúcej
-                lekcii.
-              description_teacher: V tejto lekcii sa dozvieš o tom, ako počítač zistí,
-                či sa dva „sprite“ objekty dotýkajú. Vo dvojici preskúmate, ako sa
-                použitím matematiky, polohy a veľkosti „sprite“ objektu dá určiť,
-                či sa dva „sprite“ objekty stretli. Potom použijete blok `isTouching
-                ()` na vytvorenie rôznych efektov, keď sa „sprite“ objekty stretnú,
-                vrátane prehrávania zvukov. Nakoniec využijete svoje nové zručnosti
-                na vylepšenie skákacej hry, ktorú ste začali tvoriť v predchádzajúcej
-                lekcii.
-            Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
-              description_student: V tejto lekcii sa naučíte kombinovať pohybové vlastnosti
-                „sprite” objektu s kódom pre počítanie tak, aby ste vytvorili zložitejší
-                pohyb –  napríklad simuláciu gravitácie, skákania či lietania doľava
-                a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
-                a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
-                ktorej postava lieta a zbiera mince.
-              description_teacher: V tejto lekcii sa naučíte kombinovať pohybové vlastnosti
-                „sprite” objektu s kódom pre počítanie tak, aby ste vytvorili zložitejší
-                pohyb –  napríklad simuláciu gravitácie, skákania či lietania doľava
-                a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
-                a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
-                ktorej postava lieta a zbiera mince. Posledná úloha ponechá priestor
-                na vlastnú kreativitu.
-            Collisions:
-              name: Kolízie "sprite" objektov
-              description_student: 'V tejto lekcii sa naučíme nové spôsoby, akými
-                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
-                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
-                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
-                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
-                (collide, displace, bounce, and bounceOff).
-
-'
-              description_teacher: 'V tejto lekcii sa naučíme nové spôsoby, akými
-                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
-                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
-                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
-                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
-                (collide, displace, bounce, and bounceOff).
-
-'
-            Functions:
-              name: Funkcie
-              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
-                organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
-                sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
-                jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
-                začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
-                a pridanie funkcionality do finálnej verzie hry.
-
-'
-            The Game Design Process:
-              name: Proces tvorby hry
-              description_student: Táto lekcia ti predstaví proces, ktorý použiješ
-                pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach.
-                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
-                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
-            Using the Game Design Process:
-              name: Využitie procesu na tvorbu hry
-              description_student: V tejto viacdennej lekcii budeme aplikovať proces
-                riešenia problémov na to, aby sme  vytvorili plošinovú skákaciu hru.
-                Najskôr si pozrieme ukážku hry. Následne definujeme, ako by mala naša
-                hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na
-                konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny
-                aj zapracujeme.
-              description_teacher: V tejto viacdennej lekcii budeme aplikovať proces
-                riešenia problémov na to, aby sme  vytvorili plošinovú skákaciu hru.
-                Najskôr si pozrieme ukážku hry a potom definujeme, ako by mala naša
-                hra vyzerať. Pomocou štruktúrovaného procesu naplánujeme pozadie,
-                premenné, jednotlivé "sprite" objekty a funkcie potrebné pre vytvorenie
-                hry. Po napísaní prvotného kódu prediskutujeme, ako by sme naše hry
-                mohli vylepšiť a tieto zmeny aj zapracujeme.
-            Project - Design a Game:
-              name: Projekt - Vytvor vlastnú hru
-              description_student: V tejto lekcii si pomocou Sprievodcu projektom
-                a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú
-                hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme
-                a nakoniec hotovú hru odprezentujeme pred triedou.
-            CS Discoveries Post Course survey:
-              name: 'Objavujeme informatiku: Záverečný dotazník'
-            Sprite Properties:
-              name: Vlastnosti postáv
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapitola 1: Obrázky a animácie'
-          lessons:
-            Programming for Entertainment:
-              name: Programovanie pre zábavu
-            Plotting Shapes:
-              name: Tvorba tvarov
-            Drawing in Game Lab:
-              name: Kreslenie v Game Labe
-            Shapes and Randomization:
-              name: Tvary a náhodné čísla
-            Variables:
-              name: Premenné
-            Sprites:
-              name: Objekt "sprite"
-            The Draw Loop:
-              name: Cyklus kreslenia
-            The Counter Pattern Unplugged:
-              name: Kód pre počítanie (bez počítača)
-            Sprite Movement:
-              name: Pohyb "sprite" objektu
-            Booleans Unplugged:
-              name: Logické výrazy – lekcia bez počítača
-              description_student: V tejto lekcii si vysvetlíme logické výrazy a taktiež
-                podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie
-                logických (pravda/nepravda) výrokov s použitím osobných vlastností
-                (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
-                pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
-                ako sa dajú spolu s podmienkami použiť pri programovaní.
-            Conditionals:
-              name: Podmienky
-              description_student: V tejto lekcii budeš používať logické výrazy na
-                porovnanie aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou
-                hodnotou. Toto porovnanie použijeme na určenie toho, či „sprite“ dosiahol
-                určený bod na obrazovke, narástol do definovanej veľkosti alebo dosiahol
-                inú hodnotu pri použití kódu na počítanie. Po tejto aktvite začneme
-                používať podmienkové výroky, ktoré využívajú logické výrazy.
-            Keyboard Input:
-              name: Stlačenie kláves ako vstup
-              description_student: Po úvode do logických výrazov a podmieňovacích
-                („if“) výrazoch si predstavíme nový blok nazvaný keyDown(). Tento
-                blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch,
-                pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie
-                si študenti napíšu program, ktorý bude na základe stlačenia klávesy
-                ovládať objekty na obrazovke.
-              description_teacher: Po úvode do logických výrazov a podmieňovacích
-                (_if_) výrazoch si predstavíme nový blok nazvaný `keyDown()`. Tento
-                blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch,
-                pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie
-                si študenti napíšu program, ktorý bude na základe stlačenia klávesy
-                ovládať objekty na obrazovke.
-            Other Forms of Input:
-              name: Ďalšie formy vstupov
-              description_student: Dnes pokračujeme s podmieňovacími výrazmi pre zaznamenávanie
-                vstupov od užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý
-                sme sa naučili naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu,
-                ako aj príkazy zadávané myšou.
-              description_teacher: V tejto lekcii pokračujeme v objavovaní rôznych
-                spôsobov využitia podmieňovacích výrazov na zaznamenanie vstupov od
-                užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý sme sa naučili
-                naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu, ako
-                aj príkazy zadávané myšou.
-            Project - Interactive Card:
-              name: Projekt - Interaktívna pohľadnica
-              description_student: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
-                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
-                programovacích techník, ktoré sa doposiaľ naučili.
-              description_teacher: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
-                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
-                programovacích techník, ktoré sa doposiaľ naučili.
-            Velocity:
-              name: Rýchlosť
-              description_student: Po krátkom zopakovaní toho, ako sa kód pre počítanie
-                používa na nastavenie pohybu „sprite“ objektu, spoznáš  vlastnosti,
-                ktoré priamo určujú rýchlosť jeho pohybu a otáčania sa. Používaním
-                týchto vlastností sa naučíš všetko potrebné na vytvorenie jednoduchej
-                plošinovky.
-            Collision Detection:
-              name: Detekcia kolízie
-              description_student: V tejto lekcii sa dozvieš o tom, ako počítač zistí,
-                či sa dva „sprite“ objekty dotýkajú. Vo dvojici preskúmate, ako sa
-                použitím matematiky, polohy a veľkosti „sprite“ objektu dá určiť,
-                či sa dva „sprite“ objekty stretli. Potom použijete blok isTouching
-                () na vytvorenie rôznych efektov, keď sa „sprite“ objekty stretnú,
-                vrátane prehrávania zvukov. Nakoniec využijete svoje nové zručnosti
-                na vylepšenie skákacej hry, ktorú ste začali tvoriť v predchádzajúcej
-                lekcii.
-              description_teacher: V tejto lekcii sa dozvieš o tom, ako počítač zistí,
-                či sa dva „sprite“ objekty dotýkajú. Vo dvojici preskúmate, ako sa
-                použitím matematiky, polohy a veľkosti „sprite“ objektu dá určiť,
-                či sa dva „sprite“ objekty stretli. Potom použijete blok `isTouching
-                ()` na vytvorenie rôznych efektov, keď sa „sprite“ objekty stretnú,
-                vrátane prehrávania zvukov. Nakoniec využijete svoje nové zručnosti
-                na vylepšenie skákacej hry, ktorú ste začali tvoriť v predchádzajúcej
-                lekcii.
-            Complex Sprite Movement:
-              name: Komplexný pohyb „sprite“ objektov
-              description_student: V tejto lekcii sa naučíte kombinovať pohybové vlastnosti
-                „sprite” objektu s kódom pre počítanie tak, aby ste vytvorili zložitejší
-                pohyb –  napríklad simuláciu gravitácie, skákania či lietania doľava
-                a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
-                a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
-                ktorej postava lieta a zbiera mince.
-              description_teacher: V tejto lekcii sa naučíte kombinovať pohybové vlastnosti
-                „sprite” objektu s kódom pre počítanie tak, aby ste vytvorili zložitejší
-                pohyb –  napríklad simuláciu gravitácie, skákania či lietania doľava
-                a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
-                a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
-                ktorej postava lieta a zbiera mince. Posledná úloha ponechá priestor
-                na vlastnú kreativitu.
-            Collisions:
-              name: Kolízie "sprite" objektov
-              description_student: 'V tejto lekcii sa naučíme nové spôsoby, akými
-                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
-                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
-                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
-                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
-                (collide, displace, bounce, and bounceOff).
-
-'
-              description_teacher: 'V tejto lekcii sa naučíme nové spôsoby, akými
-                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
-                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
-                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
-                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
-                (collide, displace, bounce, and bounceOff).
-
-'
-            Functions:
-              name: Funkcie
-              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
-                organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
-                sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
-                jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
-                začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
-                a pridanie funkcionality do finálnej verzie hry.
-
-'
-            The Game Design Process:
-              name: Proces tvorby hry
-              description_student: Táto lekcia ti predstaví proces, ktorý použiješ
-                pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach.
-                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
-                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
-            Using the Game Design Process:
-              name: Využitie procesu na tvorbu hry
-              description_student: V tejto viacdennej lekcii budeme aplikovať proces
-                riešenia problémov na to, aby sme  vytvorili plošinovú skákaciu hru.
-                Najskôr si pozrieme ukážku hry. Následne definujeme, ako by mala naša
-                hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na
-                konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny
-                aj zapracujeme.
-              description_teacher: V tejto viacdennej lekcii budeme aplikovať proces
-                riešenia problémov na to, aby sme  vytvorili plošinovú skákaciu hru.
-                Najskôr si pozrieme ukážku hry a potom definujeme, ako by mala naša
-                hra vyzerať. Pomocou štruktúrovaného procesu naplánujeme pozadie,
-                premenné, jednotlivé "sprite" objekty a funkcie potrebné pre vytvorenie
-                hry. Po napísaní prvotného kódu prediskutujeme, ako by sme naše hry
-                mohli vylepšiť a tieto zmeny aj zapracujeme.
-            Project - Design a Game:
-              name: Projekt - Vytvor vlastnú hru
-              description_student: V tejto lekcii si pomocou Sprievodcu projektom
-                a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú
-                hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme
-                a nakoniec hotovú hru odprezentujeme pred triedou.
-            CS Discoveries Post Course survey:
-              name: 'Objavujeme informatiku: Záverečný dotazník'
-            Sprite Properties:
-              name: Vlastnosti postáv
         jess-test-script:
           stages:
             Tools:
@@ -14913,3 +14849,429 @@ sk:
           lessons:
             While Loops:
               name: Cykly "pokiaľ"
+        k5-onlinepd-2020:
+          stages:
+            Sequencing:
+              name: Postupnosť
+            Loops:
+              name: Cykly
+            Events:
+              name: Udalosti
+            Conditionals:
+              name: Podmienky
+            Functions:
+              name: Funkcie
+            Variables:
+              name: Premenné
+            For Loops:
+              name: Cykly "For"
+            Sprite Lab:
+              name: Sprite Lab
+          lessons:
+            Sequencing:
+              name: Postupnosť
+            Loops:
+              name: Cykly
+            Events:
+              name: Udalosti
+            Conditionals:
+              name: Podmienky
+            Functions:
+              name: Funkcie
+            Variables:
+              name: Premenné
+            For Loops:
+              name: Cykly "For"
+            Sprite Lab:
+              name: Sprite Lab
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Začíname
+            k5_basic_concepts_1:
+              display_name: Základné programovacie koncepty a učiteľské taktiky
+            k5_diving_deeper_1:
+              display_name: 'Ponárame sa hlbšie: Kurzy E a F'
+            k5_next_steps_1:
+              display_name: Ďalšie kroky
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+            csp5_1:
+              display_name: 'Kapitola 1: Udalosťami riadené programovanie'
+        csd3-virtual:
+          stages:
+            Programming for Entertainment:
+              name: Programovanie pre zábavu
+            Plotting Shapes:
+              name: Tvorba tvarov
+            Drawing in Game Lab:
+              name: Kreslenie v Game Labe
+            Variables:
+              name: Premenné
+            Sprites:
+              name: Objekt "sprite"
+            Sprite Properties:
+              name: Vlastnosti postáv
+            Text:
+              name: Text
+            The Draw Loop:
+              name: Cyklus kreslenia
+            Sprite Movement:
+              name: Pohyb "sprite" objektu
+            Conditionals:
+              name: Podmienky
+            Keyboard Input:
+              name: Stlačenie kláves ako vstup
+              description_student: "**Otázka dňa: Ako môže náš program reagovať na
+                vstup od užívateľa?**\r\n\r\nPo úvode do logických výrazov a podmieňovacích
+                (_if_) výrazoch si predstavíme nový blok nazvaný `keyDown()`. Tento
+                blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch,
+                pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie
+                si študenti napíšu program, ktorý bude na základe stlačenia klávesy
+                ovládať objekty na obrazovke."
+              description_teacher: "**Otázka dňa: Ako môže náš program reagovať na
+                vstup od užívateľa?**\r\n\r\nPo úvode do logických výrazov a podmieňovacích
+                (_if_) výrazoch si predstavíme nový blok nazvaný `keyDown()`. Tento
+                blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch,
+                pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie
+                si študenti napíšu program, ktorý bude na základe stlačenia klávesy
+                ovládať objekty na obrazovke."
+            Mouse Input:
+              description_student: "**Otázka dňa: Aké sú ďalšie spôsoby, ktorými môže
+                počítač reagovať na vstupy od užívateľa?**\r\n\r\nDnes pokračujeme
+                s podmieňovacími výrazmi pre zaznamenávanie vstupov od užívateľov.
+                Ku využitiu kláves na klávesnici, ktoré sme sa naučili naposledy,
+                pridáme vstupy pomocou myši. Okrem toho si rozšírime pochopenie podmienok
+                pridaním možnosti `else`, ktorá počítaču umožní spustiť určitú časť
+                kódu v prípade, keď podmienka platí a inú časť kódu v prípade, keď
+                neplatí. "
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              description_student: "**Otázka dňa:  Aké zručnosti a techniky sú dôležité
+                pri vytváraní interaktívneho programu?**\r\n\r\nV tomto súhrnnom projekte
+                Kapitoly 1 nášho kurzu študenti navrhnú a vytvoria interaktívnu pohľadnicu
+                s využitím všetkých programovacích techník, ktoré sa doposiaľ naučili. "
+              description_teacher: "**Otázka dňa:  Aké zručnosti a techniky sú dôležité
+                pri vytváraní interaktívneho programu?**\r\n\r\nV tomto súhrnnom projekte
+                Kapitoly 1 nášho kurzu študenti navrhnú a vytvoria interaktívnu pohľadnicu
+                s využitím všetkých programovacích techník, ktoré sa doposiaľ naučili. "
+            Velocity:
+              name: Rýchlosť
+              description_student: "**Otázka dňa:  Ako vieme v programovacích jazykoch
+                \"schovať\" komplikované vzory do jednoduchších príkazov a zjednodušiť
+                tak náš program?**\r\n\r\nPo krátkom zopakovaní toho, ako sa kód pre
+                počítanie používa na nastavenie pohybu „sprite“ objektu sa naučíme,
+                ako tieto vzory schovať do jednoduchších blokov, vďaka ktorým bude
+                náš program menej komplexný. V Code studiou si vyskúšame bloky, ktoré
+                priamo nastavia rýchlosť pohybu a preskúmame viacero spôsobov, ako
+                nakódovať komplexnejšie správanie."
+            Collision Detection:
+              name: Detekcia kolízie
+              description_student: "**Otázka dňa: Ako nám môže programovanie pomôcť
+                zjednodušiť komplikované problémy?**\r\n\r\nV tejto lekcii sa dozvieš
+                o tom, ako počítač zistí, či sa dva „sprite“ objekty dotýkajú. Vo
+                dvojici preskúmate, ako sa použitím matematiky, polohy a veľkosti
+                „sprite“ objektu dá určiť, či sa dva „sprite“ objekty stretli. Potom
+                použijete blok isTouching () na vytvorenie rôznych efektov, keď sa
+                „sprite“ objekty dotknú a precvičíte si jeho použitie v rôznych situáciách."
+              description_teacher: "**Otázka dňa: Ako nám môže programovanie pomôcť
+                zjednodušiť komplikované problémy?**\r\n\r\nV tejto lekcii sa dozvieš
+                o tom, ako počítač zistí, či sa dva „sprite“ objekty dotýkajú. Vo
+                dvojici preskúmate, ako sa použitím matematiky, polohy a veľkosti
+                „sprite“ objektu dá určiť, či sa dva „sprite“ objekty stretli. Potom
+                použijete blok isTouching () na vytvorenie rôznych efektov, keď sa
+                „sprite“ objekty dotknú a precvičíte si jeho použitie v rôznych situáciách."
+            Complex Sprite Movement:
+              name: Komplexný pohyb „sprite“ objektov
+              description_student: "**Otázka dňa: Ako môžeme skombinovať bloky, ktoré
+                už poznáme tak, aby vytvorili zaujímavý pohyb?**\r\n\r\nV tejto lekcii
+                sa naučíte kombinovať pohybové vlastnosti „sprite” objektu s kódom
+                pre počítanie tak, aby ste vytvorili zložitejší pohyb. Po zrevidovaní
+                oboch konceptov preskúmate viacero scenárov, v ktorých sa rýchlosť
+                využíva spolu s kódom pre počítanie, vďaka čomu objavíte viacero typov
+                výsledných pohybov.\nNaučíte sa simulovať gravitáciu a vyskúšate tvoriť
+                nové pohyby len pomocou kombinácie blokov, ktoré už poznáte."
+              description_teacher: "**Otázka dňa: Ako môžeme skombinovať bloky, ktoré
+                už poznáme tak, aby vytvorili zaujímavý pohyb?**\r\n\r\nV tejto lekcii
+                sa naučíte kombinovať pohybové vlastnosti „sprite” objektu s kódom
+                pre počítanie tak, aby ste vytvorili zložitejší pohyb. Po zrevidovaní
+                oboch konceptov preskúmate viacero scenárov, v ktorých sa rýchlosť
+                využíva spolu s kódom pre počítanie, vďaka čomu objavíte viacero typov
+                výsledných pohybov.\nNaučíte sa simulovať gravitáciu a vyskúšate tvoriť
+                nové pohyby len pomocou kombinácie blokov, ktoré už poznáte."
+            Collisions:
+              name: Kolízie "sprite" objektov
+              description_student: "**Otázka dňa: Ako môžu programátori pracovať s
+                abstrakciou tak, aby vytvorili ďalšie abstrakcie?**\r\n\r\nV tejto
+                lekcii sa naučíme nové spôsoby, akými „sprite“ objekty vedia na seba
+                pôsobiť. Po stručnom zopakovaní používania bloku `isTouching` prediskutujeme
+                nové spôsoby interakcie medzi dvoma „sprite“ objektami. Potom použijeme
+                `isTouching` na posunutie jedného „sprite” objektu druhým a následne
+                si precvičíme štyri bloky kolízie (`collide`, `displace`, `bounce`,
+                and `bounceOff`)."
+              description_teacher: "**Otázka dňa: Ako môžu programátori pracovať s
+                abstrakciou tak, aby vytvorili ďalšie abstrakcie?**\r\n\r\nV tejto
+                lekcii sa naučíme nové spôsoby, akými „sprite“ objekty vedia na seba
+                pôsobiť. Po stručnom zopakovaní používania bloku `isTouching` prediskutujeme
+                nové spôsoby interakcie medzi dvoma „sprite“ objektami. Potom použijeme
+                `isTouching` na posunutie jedného „sprite” objektu druhým a následne
+                si precvičíme štyri bloky kolízie (`collide`, `displace`, `bounce`,
+                and `bounceOff`)."
+            Functions:
+              name: Funkcie
+              description_student: "**Otázka dňa: Ako môžu programátori využiť funkcie
+                na vytvorenie vlastných abstrakcií?**\r\n\r\nV tejto lekcii si povieme
+                o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia
+                jeho opakujúcich sa častí. Ukážeme si, že na vyššej, abstraktnejšej
+                úrovni sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.
+                \ Potom začneme funkcie tvoriť. "
+            The Game Design Process:
+              name: Proces tvorby hry
+              description_student: "**Otázka dňa:  Ako nám môže plán pomôcť pri vytváraní
+                veľkého projektu?**\r\n\r\n\r\nTáto lekcia ti predstaví proces, ktorý
+                použiješ pri navrhovaní hier. Projektový sprievodca nám pomôže  zadefinovať
+                \"Spritov\", premenné a funkcie ešte predtým, než začneme so samotným
+                programovaním. Celým procesom si prejdeme vo viacerých cvičeniach.
+                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
+                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba."
+            Using the Game Design Process:
+              name: Využitie procesu na tvorbu hry
+              description_student: "**Otázka dňa:  Ako môže štruktúrovaný proces riešenia
+                problémov pomôcť programátorom pri manažovaní veľkých projektov?**\r\n\r\n\r\nV
+                tejto viacdennej lekcii budeme aplikovať proces riešenia problémov
+                na to, aby sme  vytvorili plošinovú skákaciu hru. Najskôr si pozrieme
+                ukážku hry. Následne definujeme, ako by mala naša hra vyzerať a na
+                jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme,
+                ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme."
+              description_teacher: "**Otázka dňa:  Ako môže štruktúrovaný proces riešenia
+                problémov pomôcť programátorom pri manažovaní veľkých projektov?**\r\n\r\nV
+                tejto viacdennej lekcii budeme aplikovať proces riešenia problémov
+                na to, aby sme  vytvorili plošinovú skákaciu hru. Najskôr si pozrieme
+                ukážku hry a potom definujeme, ako by mala naša hra vyzerať. Pomocou
+                štruktúrovaného procesu naplánujeme pozadie, premenné, jednotlivé
+                \"sprite\" objekty a funkcie potrebné pre vytvorenie hry. Po napísaní
+                prvotného kódu prediskutujeme, ako by sme naše hry mohli vylepšiť
+                a tieto zmeny aj zapracujeme."
+            Project - Design a Game:
+              name: Projekt - Vytvor vlastnú hru
+              description_student: "**Otázka dňa: Ako môže týchto 5 informatických
+                zručností: štruktúrované riešenie problémov, vytrvalosť, komunikácia,
+                spolupráca a kreativita) pomôcť programátorom úspešne dokončiť veľké
+                projekty?**\r\n\r\nV tejto lekcii si pomocou Sprievodcu projektom
+                a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú
+                hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme
+                a nakoniec hotovú hru odprezentujeme pred triedou. "
+            CS Discoveries Post Course survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lessons:
+            Programming for Entertainment:
+              name: Programovanie pre zábavu
+            Plotting Shapes:
+              name: Tvorba tvarov
+            Drawing in Game Lab:
+              name: Kreslenie v Game Labe
+            Variables:
+              name: Premenné
+            Sprites:
+              name: Objekt "sprite"
+            Sprite Properties:
+              name: Vlastnosti postáv
+            Text:
+              name: Text
+            The Draw Loop:
+              name: Cyklus kreslenia
+            Sprite Movement:
+              name: Pohyb "sprite" objektu
+            Conditionals:
+              name: Podmienky
+            Keyboard Input:
+              name: Stlačenie kláves ako vstup
+              description_student: "**Otázka dňa: Ako môže náš program reagovať na
+                vstup od užívateľa?**\r\n\r\nPo úvode do logických výrazov a podmieňovacích
+                (_if_) výrazoch si predstavíme nový blok nazvaný `keyDown()`. Tento
+                blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch,
+                pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie
+                si študenti napíšu program, ktorý bude na základe stlačenia klávesy
+                ovládať objekty na obrazovke."
+              description_teacher: "**Otázka dňa: Ako môže náš program reagovať na
+                vstup od užívateľa?**\r\n\r\nPo úvode do logických výrazov a podmieňovacích
+                (_if_) výrazoch si predstavíme nový blok nazvaný `keyDown()`. Tento
+                blok vráti logickú hodnotu a môže byť použitý v podmieňovacích príkazoch,
+                pomocou ktorých sa objekty pohybujú po obrazovke. Na konci tejto lekcie
+                si študenti napíšu program, ktorý bude na základe stlačenia klávesy
+                ovládať objekty na obrazovke."
+            Mouse Input:
+              description_student: "**Otázka dňa: Aké sú ďalšie spôsoby, ktorými môže
+                počítač reagovať na vstupy od užívateľa?**\r\n\r\nDnes pokračujeme
+                s podmieňovacími výrazmi pre zaznamenávanie vstupov od užívateľov.
+                Ku využitiu kláves na klávesnici, ktoré sme sa naučili naposledy,
+                pridáme vstupy pomocou myši. Okrem toho si rozšírime pochopenie podmienok
+                pridaním možnosti `else`, ktorá počítaču umožní spustiť určitú časť
+                kódu v prípade, keď podmienka platí a inú časť kódu v prípade, keď
+                neplatí. "
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              description_student: "**Otázka dňa:  Aké zručnosti a techniky sú dôležité
+                pri vytváraní interaktívneho programu?**\r\n\r\nV tomto súhrnnom projekte
+                Kapitoly 1 nášho kurzu študenti navrhnú a vytvoria interaktívnu pohľadnicu
+                s využitím všetkých programovacích techník, ktoré sa doposiaľ naučili. "
+              description_teacher: "**Otázka dňa:  Aké zručnosti a techniky sú dôležité
+                pri vytváraní interaktívneho programu?**\r\n\r\nV tomto súhrnnom projekte
+                Kapitoly 1 nášho kurzu študenti navrhnú a vytvoria interaktívnu pohľadnicu
+                s využitím všetkých programovacích techník, ktoré sa doposiaľ naučili. "
+            Velocity:
+              name: Rýchlosť
+              description_student: "**Otázka dňa:  Ako vieme v programovacích jazykoch
+                \"schovať\" komplikované vzory do jednoduchších príkazov a zjednodušiť
+                tak náš program?**\r\n\r\nPo krátkom zopakovaní toho, ako sa kód pre
+                počítanie používa na nastavenie pohybu „sprite“ objektu sa naučíme,
+                ako tieto vzory schovať do jednoduchších blokov, vďaka ktorým bude
+                náš program menej komplexný. V Code studiou si vyskúšame bloky, ktoré
+                priamo nastavia rýchlosť pohybu a preskúmame viacero spôsobov, ako
+                nakódovať komplexnejšie správanie."
+            Collision Detection:
+              name: Detekcia kolízie
+              description_student: "**Otázka dňa: Ako nám môže programovanie pomôcť
+                zjednodušiť komplikované problémy?**\r\n\r\nV tejto lekcii sa dozvieš
+                o tom, ako počítač zistí, či sa dva „sprite“ objekty dotýkajú. Vo
+                dvojici preskúmate, ako sa použitím matematiky, polohy a veľkosti
+                „sprite“ objektu dá určiť, či sa dva „sprite“ objekty stretli. Potom
+                použijete blok isTouching () na vytvorenie rôznych efektov, keď sa
+                „sprite“ objekty dotknú a precvičíte si jeho použitie v rôznych situáciách."
+              description_teacher: "**Otázka dňa: Ako nám môže programovanie pomôcť
+                zjednodušiť komplikované problémy?**\r\n\r\nV tejto lekcii sa dozvieš
+                o tom, ako počítač zistí, či sa dva „sprite“ objekty dotýkajú. Vo
+                dvojici preskúmate, ako sa použitím matematiky, polohy a veľkosti
+                „sprite“ objektu dá určiť, či sa dva „sprite“ objekty stretli. Potom
+                použijete blok isTouching () na vytvorenie rôznych efektov, keď sa
+                „sprite“ objekty dotknú a precvičíte si jeho použitie v rôznych situáciách."
+            Complex Sprite Movement:
+              name: Komplexný pohyb „sprite“ objektov
+              description_student: "**Otázka dňa: Ako môžeme skombinovať bloky, ktoré
+                už poznáme tak, aby vytvorili zaujímavý pohyb?**\r\n\r\nV tejto lekcii
+                sa naučíte kombinovať pohybové vlastnosti „sprite” objektu s kódom
+                pre počítanie tak, aby ste vytvorili zložitejší pohyb. Po zrevidovaní
+                oboch konceptov preskúmate viacero scenárov, v ktorých sa rýchlosť
+                využíva spolu s kódom pre počítanie, vďaka čomu objavíte viacero typov
+                výsledných pohybov.\nNaučíte sa simulovať gravitáciu a vyskúšate tvoriť
+                nové pohyby len pomocou kombinácie blokov, ktoré už poznáte."
+              description_teacher: "**Otázka dňa: Ako môžeme skombinovať bloky, ktoré
+                už poznáme tak, aby vytvorili zaujímavý pohyb?**\r\n\r\nV tejto lekcii
+                sa naučíte kombinovať pohybové vlastnosti „sprite” objektu s kódom
+                pre počítanie tak, aby ste vytvorili zložitejší pohyb. Po zrevidovaní
+                oboch konceptov preskúmate viacero scenárov, v ktorých sa rýchlosť
+                využíva spolu s kódom pre počítanie, vďaka čomu objavíte viacero typov
+                výsledných pohybov.\nNaučíte sa simulovať gravitáciu a vyskúšate tvoriť
+                nové pohyby len pomocou kombinácie blokov, ktoré už poznáte."
+            Collisions:
+              name: Kolízie "sprite" objektov
+              description_student: "**Otázka dňa: Ako môžu programátori pracovať s
+                abstrakciou tak, aby vytvorili ďalšie abstrakcie?**\r\n\r\nV tejto
+                lekcii sa naučíme nové spôsoby, akými „sprite“ objekty vedia na seba
+                pôsobiť. Po stručnom zopakovaní používania bloku `isTouching` prediskutujeme
+                nové spôsoby interakcie medzi dvoma „sprite“ objektami. Potom použijeme
+                `isTouching` na posunutie jedného „sprite” objektu druhým a následne
+                si precvičíme štyri bloky kolízie (`collide`, `displace`, `bounce`,
+                and `bounceOff`)."
+              description_teacher: "**Otázka dňa: Ako môžu programátori pracovať s
+                abstrakciou tak, aby vytvorili ďalšie abstrakcie?**\r\n\r\nV tejto
+                lekcii sa naučíme nové spôsoby, akými „sprite“ objekty vedia na seba
+                pôsobiť. Po stručnom zopakovaní používania bloku `isTouching` prediskutujeme
+                nové spôsoby interakcie medzi dvoma „sprite“ objektami. Potom použijeme
+                `isTouching` na posunutie jedného „sprite” objektu druhým a následne
+                si precvičíme štyri bloky kolízie (`collide`, `displace`, `bounce`,
+                and `bounceOff`)."
+            Functions:
+              name: Funkcie
+              description_student: "**Otázka dňa: Ako môžu programátori využiť funkcie
+                na vytvorenie vlastných abstrakcií?**\r\n\r\nV tejto lekcii si povieme
+                o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia
+                jeho opakujúcich sa častí. Ukážeme si, že na vyššej, abstraktnejšej
+                úrovni sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.
+                \ Potom začneme funkcie tvoriť. "
+            The Game Design Process:
+              name: Proces tvorby hry
+              description_student: "**Otázka dňa:  Ako nám môže plán pomôcť pri vytváraní
+                veľkého projektu?**\r\n\r\n\r\nTáto lekcia ti predstaví proces, ktorý
+                použiješ pri navrhovaní hier. Projektový sprievodca nám pomôže  zadefinovať
+                \"Spritov\", premenné a funkcie ešte predtým, než začneme so samotným
+                programovaním. Celým procesom si prejdeme vo viacerých cvičeniach.
+                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
+                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba."
+            Using the Game Design Process:
+              name: Využitie procesu na tvorbu hry
+              description_student: "**Otázka dňa:  Ako môže štruktúrovaný proces riešenia
+                problémov pomôcť programátorom pri manažovaní veľkých projektov?**\r\n\r\n\r\nV
+                tejto viacdennej lekcii budeme aplikovať proces riešenia problémov
+                na to, aby sme  vytvorili plošinovú skákaciu hru. Najskôr si pozrieme
+                ukážku hry. Následne definujeme, ako by mala naša hra vyzerať a na
+                jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme,
+                ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme."
+              description_teacher: "**Otázka dňa:  Ako môže štruktúrovaný proces riešenia
+                problémov pomôcť programátorom pri manažovaní veľkých projektov?**\r\n\r\nV
+                tejto viacdennej lekcii budeme aplikovať proces riešenia problémov
+                na to, aby sme  vytvorili plošinovú skákaciu hru. Najskôr si pozrieme
+                ukážku hry a potom definujeme, ako by mala naša hra vyzerať. Pomocou
+                štruktúrovaného procesu naplánujeme pozadie, premenné, jednotlivé
+                \"sprite\" objekty a funkcie potrebné pre vytvorenie hry. Po napísaní
+                prvotného kódu prediskutujeme, ako by sme naše hry mohli vylepšiť
+                a tieto zmeny aj zapracujeme."
+            Project - Design a Game:
+              name: Projekt - Vytvor vlastnú hru
+              description_student: "**Otázka dňa: Ako môže týchto 5 informatických
+                zručností: štruktúrované riešenie problémov, vytrvalosť, komunikácia,
+                spolupráca a kreativita) pomôcť programátorom úspešne dokončiť veľké
+                projekty?**\r\n\r\nV tejto lekcii si pomocou Sprievodcu projektom
+                a postupu z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú
+                hru. Následne, na základe vzájomnej spätnej  väzby, hry vylepšíme
+                a nakoniec hotovú hru odprezentujeme pred triedou. "
+            CS Discoveries Post Course survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+          lesson_groups:
+            csd3_1:
+              display_name: Obsah
+            csd3_2:
+              display_name: Obsah
+            cspSurvey:
+              display_name: Obsah
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Lekcia
+          lessons:
+            Lesson:
+              name: Lekcia
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Lekcia
+          lessons:
+            Lesson:
+              name: Lekcia
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Lekcia
+          lessons:
+            Lesson:
+              name: Lekcia
+          lesson_groups:
+            lg_1:
+              display_name: Obsah
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Lekcia
+          lessons:
+            Lesson:
+              name: Lekcia
+          lesson_groups:
+            lg_1:
+              display_name: Obsah

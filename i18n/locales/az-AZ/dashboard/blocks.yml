@@ -276,6 +276,10 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
       gamelab_keyPressed:
         options:
           CONDITION:

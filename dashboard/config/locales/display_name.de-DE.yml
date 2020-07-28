@@ -21,6 +21,7 @@ de-DE:
       AppLab Intro 7 - thisOrThatSetScreen: Dies oder das
       CDEF_video_SpritesInAction: Wie man einen Sprite erstellt
       CDEF_video_SpritesInAction_2019: Wie man einen Sprite erstellt
+      CDEF_video_SpritesInAction_2020: Wie man einen Sprite erstellt
       CSD Board Buttons Map: Schaltflächen und Schalter
       CSD Board Buttons Map_2018: Schaltflächen und Schalter
       CSD Board Buttons Map_2019: Schaltflächen und Schalter
@@ -486,13 +487,20 @@ de-DE:
       'Course F: Artist Project - Revise_2018': Künstlerprojekt abändern
       'Course F: Artist Project_2018': Kurs F Künstlerprojekt
       'Course F: Artist Project_2019': Kurs F Künstlerprojekt
+      CourseD_Dance_2020_bonus1: Hin und her
+      CourseD_Dance_2020_bonus3: Formation einnehmen
       CourseEF_video_IntroSpriteLab: Hier ist das Sprite Lab
       CourseEF_video_IntroSpriteLab_2019: Hier ist das Sprite Lab
+      CourseEF_video_IntroSpriteLab_2020: Hier ist das Sprite Lab
       CourseEF_video_MakeSprite: Wie man einen Sprite erstellt
       CourseEF_video_MakeSprite_2019: Wie man einen Sprite erstellt
+      CourseEF_video_MakeSprite_2020: Wie man einen Sprite erstellt
       CourseE_Project_SpriteLab: Lektion E Fee Lab-Projekt
       CourseE_Project_SpriteLab_2019: Lektion E Fee Lab-Projekt
       CourseE_hoops: 'Kaninchen '
+      CourseF_Oceans_Video_Machine_Learning: 'Video: Maschinelles Lernen'
+      CourseF_Oceans_Video_Societal_Implications: 'Video: Gesellschaftliche Auswirkungen'
+      CourseF_Oceans_Video_Training_Data: 'Video: Trainingsdaten'
       CourseF_Project_Revise_SpriteLab: Sprite-Labor-Projekt überarbeiten
       CourseF_Project_SpriteLab: Kurs F Sprite-Lab Projekt
       CourseF_Project_SpriteLab_2019: Kurs F Sprite-Lab Projekt
@@ -525,26 +533,37 @@ de-DE:
       Introduction to Variables - Part 1_2019: Einführung in Variablen
       MC_HOC_2017_01_RETRY: Eigenheim
       MC_HOC_2017_01_RETRY_2019: Eigenheim
+      MC_HOC_2017_01_RETRY_2020: Eigenheim
       MC_HOC_2017_02_Cole: Der Bauernhof
       MC_HOC_2017_02_Cole_2019: Der Bauernhof
+      MC_HOC_2017_02_Cole_2020: Der Bauernhof
       MC_HOC_2017_03_Cole: Der Wald
       MC_HOC_2017_03_Cole_2019: Der Wald
+      MC_HOC_2017_03_Cole_2020: Der Wald
       MC_HOC_2017_04POINT5_RYAN: Die Wüste
       MC_HOC_2017_04POINT5_RYAN_2019: Die Wüste
+      MC_HOC_2017_04POINT5_RYAN_2020: Die Wüste
       MC_HOC_2017_04_Cole: Der Sumpf
       MC_HOC_2017_04_Cole_2019: Der Sumpf
+      MC_HOC_2017_04_Cole_2020: Der Sumpf
       MC_HOC_2017_05_Cole: Der Fluss
       MC_HOC_2017_05_Cole_2019: Der Fluss
+      MC_HOC_2017_05_Cole_2020: Der Fluss
       MC_HOC_2017_06_Cole: Die Flut
       MC_HOC_2017_06_Cole_2019: Die Flut
+      MC_HOC_2017_06_Cole_2020: Die Flut
       MC_HOC_2017_07_Cole: Verschneiter Pass
       MC_HOC_2017_07_Cole_2019: Verschneiter Pass
+      MC_HOC_2017_07_Cole_2020: Verschneiter Pass
       MC_HOC_2017_10_RETRY: Die Höhle
       MC_HOC_2017_10_RETRY_2019: Die Höhle
+      MC_HOC_2017_10_RETRY_2020: Die Höhle
       MC_HOC_2017_Ali: Die Nether-Festung
       MC_HOC_2017_Ali_2019: Die Nether-Festung
+      MC_HOC_2017_Ali_2020: Die Nether-Festung
       MC_HOC_2017_FP20x20: Freispiel
       MC_HOC_2017_FP20x20_2019: Freispiel
+      MC_HOC_2017_FP20x20_2020: Freispiel
       Making Music_2018: Musik machen
       Making Music_2019: Musik machen
       New Dance Lab Project: Neues Tanzparty Projekt
@@ -564,12 +583,13 @@ de-DE:
       'Video: Intro to CSS_2019': 'Video: Einführung in CSS'
       courseA_video_Stevie: Stevie und das große Projekt
       courseA_video_Stevie_2018: Stevie und das große Projekt
-      courseB_video_Unspotted: Unentdeckte Bugs
+      courseB_video_Unspotted: Unentdeckte Fehler
       courseB_video_Unspotted_2018: Unentdeckte Bugs
       courseE_Dogger_2: Dogger Beispiel
       courseF_artist_for1: Freie Gestaltung Für-Schleifen (Beginn)
       courseF_artist_for1_2018: Freie Gestaltung Für-Schleifen (Beginn)
       courseF_artist_for1_2019: Freie Gestaltung Für-Schleifen (Beginn)
+      courseF_artist_for1_2020: Freie Gestaltung Für-Schleifen (Beginn)
       courseF_project_1: Sprite Lab Beispielprojekt
       courseF_video_csMatters: Projekte am Ende des Kurses
       courseF_video_csMatters_2018: 'Video: Informatik-Angelegenheiten'
@@ -581,3 +601,4 @@ de-DE:
       csd-pre-survey-levelgroup_2019: Unterrichtsübersicht
       scrat_loops_C-F_video: Schleifen im Ice Age Video
       scrat_loops_C-F_video_2019: Schleifen im Ice Age Video
+      scrat_loops_C-F_video_2020: Schleifen im Ice Age Video

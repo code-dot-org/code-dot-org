@@ -65,7 +65,7 @@
     - script = Script.latest_stable_version(family_name, locale: locale)
     - next unless script
     %div{id: family_name}
-      = render partial: 'shared/course_wide_block', locals: { id: script.name, view: "small" }
+      = render partial: 'shared/course_wide_block', locals: { id: script.name, view: "small", family_name: family_name }
 
 .csf-courses-header
   .row

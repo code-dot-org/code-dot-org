@@ -1,8 +1,49 @@
 ---
 se-NO:
+  hello: Bures máilbmi
+  email: Epoasta
+  cded_sign_up: Ráhkat konto
+  gender: Sohkabealli
+  homepage_slot_text_course4: Kursa 4
+  homepage_action_text_sign_up: Ráhkat konto
   starwars_subtitle: Hukse galákssa kodemiin
   starwars_javascript_title: JavaScript
-  starwars_shortdescription: Oahpahala kodet droidaid ja hukse gáiddus galáksii iežat
-    Násttiid soahti -spealu.
-  starwars_longdescription: Oahpahala kodet droidaid ja hukse gáiddus galáksii iežat
-    Násttiid soahti -spealu.
+  are_you_teacher: Leat go oahpaheaddji?
+  petition_age: Ahki
+  dashboard_login_none: Epoasta
+  dashboard_stage: Dássi
+  dashboard_puzzle: Bargobihttá
+  learn_sign_up_button: Ráhkat konto
+  frozen_name: Kode Annain ja Elsain
+  playlab_name: Speallan-lab
+  artist_name: Dáiddár
+  course1_name: Kursa 1
+  course2_name: Kursa 2
+  course3_name: Kursa 3
+  course4_name: Kursa 4
+  text-compression_name: TeakstaKomprimeren
+  course1_gradelevel: Agit 4-6
+  course3_gradelevel: Ahki 8-18
+  course4_gradelevel: Ahki 10-18
+  accelerated_gradelevel: Ahki 10-18
+  starwars_shortdescription: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+    spealu galaksii mii lea guhkkin, guhkkin eret.
+  playlab_shortdescription: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
+  infinity_shortdescription: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas
+    Disney Infinitiija figurat leat mielde.
+  artist_shortdescription: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
+  frozen_longdescription: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja
+    čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid luistiiguin
+    ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
+  starwars_longdescription: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+    spealu galaksii mii lea guhkkin, guhkkin eret.
+  header_courses: Kurssat
+  user_header_playlab: Speallan-lab
+  user_header_spritelab: Sprite-lab
+  user_header_flappy: Flappy
+  account_sign_up_email_opt_in: Sáhttit go epoastta sáddet dutnje mas leat ođasmahttimat
+    min kurssaide, báikkálaš vejolašvuođat, dahje eará dihtordiehtaga ođđasat? (sullii
+    ovtta geardde mánus)
+  account_sign_up_child_accept_terms: Mun duođaštan ahte mun lean ožžon lobi váhnemis
+    dahje oapmehasas geavahit Code.org bálvalusaid.
+  hoc2018_dance_teacher_resources_tile2_button: Neahtahaga Doaibma

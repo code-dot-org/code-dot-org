@@ -814,6 +814,10 @@ et:
             '"y"': y asukoht
             '"direction"': liikumise suund
             '"tint"': toon
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundit
       gamelab_jumpTo:
         text: "{SPRITE} hüppavad {LOCATION}"
       gamelab_keyPressed:

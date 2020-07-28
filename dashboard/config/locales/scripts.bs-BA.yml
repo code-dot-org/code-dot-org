@@ -4813,6 +4813,16 @@ bs:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
             Spelling Bee:
               name: Spelovanje
           lesson_groups:
@@ -4821,6 +4831,16 @@ bs:
             csf_events:
               display_name: Događaji
           lessons:
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
             Spelling Bee:
               name: Spelovanje
         csp1-2020:
@@ -4845,25 +4865,6 @@ bs:
               name: Kreativnost u algoritmima
             Creating Functions:
               name: Kreiranje Funkcija
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Varijable
-            Conditionals:
-              name: Uvjeti
-            Velocity:
-              name: Brzina
-            Functions:
-              name: Funkcije
-          lessons:
-            Variables:
-              name: Varijable
-            Conditionals:
-              name: Uvjeti
-            Velocity:
-              name: Brzina
-            Functions:
-              name: Funkcije
         csd2-virtual:
           stages:
             Images:
@@ -4911,3 +4912,56 @@ bs:
           lessons:
             While Loops:
               name: Dok petlje
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+          lessons:
+            Loops:
+              name: Petlje
+            Events:
+              name: Događaji
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Slijedeći Koraci
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+          lessons:
+            Variables:
+              name: Varijable
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije

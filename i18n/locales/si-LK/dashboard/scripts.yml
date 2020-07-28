@@ -3774,22 +3774,6 @@ si:
           lessons:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
-        csd3-virtual:
-          description_short: "ක්‍රමලේඛනය"
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
-          lessons:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
         csp5-virtual:
           stages:
             While Loops:
@@ -3829,3 +3813,76 @@ si:
           lessons:
             While Loops:
               name: නැවත සිදුවන ලුප
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: ලූපයන්
+            Events:
+              name: වැඩසටහන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+            Variables:
+              name: විචල්‍යන්
+            For Loops:
+              name: ලූපයන් සඳහා
+          lessons:
+            Loops:
+              name: ලූපයන්
+            Events:
+              name: වැඩසටහන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+            Variables:
+              name: විචල්‍යන්
+            For Loops:
+              name: ලූපයන් සඳහා
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: ඉදිරි පියවර
+        csd3-virtual:
+          description_short: "ක්‍රමලේඛනය"
+          stages:
+            Variables:
+              name: විචල්‍යන්
+            Text:
+              name: පෙළ
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+          lessons:
+            Variables:
+              name: විචල්‍යන්
+            Text:
+              name: පෙළ
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+          lesson_groups:
+            csd3_1:
+              display_name: අන්තර්ගතය
+            csd3_2:
+              display_name: අන්තර්ගතය
+            cspSurvey:
+              display_name: අන්තර්ගතය
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: අන්තර්ගතය
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: අන්තර්ගතය
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: අන්තර්ගතය
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: අන්තර්ගතය

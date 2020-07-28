@@ -39916,6 +39916,9 @@ fr:
                 et d'appliquer toutes les compétences de codage qu'ils ont apprises
                 pour créer un jeu animé. Il est temps de faire preuve de créativité
                 et de créer une histoire dans le Labo du Jeu !
+            Digital Trails:
+              description_student: 'Découvre ton empreinte numérique et comment rester
+                en sécurité lorsque tu visites des sites Web. '
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -40040,6 +40043,9 @@ fr:
                 et d'appliquer toutes les compétences de codage qu'ils ont apprises
                 pour créer un jeu animé. Il est temps de faire preuve de créativité
                 et de créer une histoire dans le Labo du Jeu !
+            Digital Trails:
+              description_student: 'Découvre ton empreinte numérique et comment rester
+                en sécurité lorsque tu visites des sites Web. '
         coursec-2020:
           description: Crée des programmes avec séquençage, boucles et événements.
             Traduis tes initiales en binaire, étudie différentes techniques de résolution
@@ -40228,6 +40234,10 @@ fr:
                 par étape, à suivre, de la planification sur papier au codage sur
                 notre site web. De plus, nous offrons des idées pour aider les enseignants
                 à animer un show de clôture ! '
+            Password Power-Up:
+              description_student: Dans cette leçon, tu apprendras comment les mots
+                de passe protègent vos informations et comment créer un bon mot de
+                passe.
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -40419,6 +40429,10 @@ fr:
                 par étape, à suivre, de la planification sur papier au codage sur
                 notre site web. De plus, nous offrons des idées pour aider les enseignants
                 à animer un show de clôture ! '
+            Password Power-Up:
+              description_student: Dans cette leçon, tu apprendras comment les mots
+                de passe protègent vos informations et comment créer un bon mot de
+                passe.
         coursed-2020:
           description: Les élèves développent leur compréhension des boucles, des
             conditions et des événements. Au-delà du codage, les élèves apprennent
@@ -40617,6 +40631,9 @@ fr:
               description_teacher: Dans cette leçon, les élèves programmeront leur
                 propre soirée dansante interactive. Cette activité nécessite du son
                 car l'outil a été conçu pour répondre à la musique.
+            End of Course Project:
+              description_student: Préparez ces mains pour beaucoup de codage ! Il
+                est temps de commencer à construire ton projet.
           lesson_groups:
             csf_sequencing:
               display_name: Séquençage
@@ -40821,6 +40838,9 @@ fr:
               description_teacher: Dans cette leçon, les élèves programmeront leur
                 propre soirée dansante interactive. Cette activité nécessite du son
                 car l'outil a été conçu pour répondre à la musique.
+            End of Course Project:
+              description_student: Préparez ces mains pour beaucoup de codage ! Il
+                est temps de commencer à construire ton projet.
         coursee-2020:
           description: Commence à coder avec des algorithmes, des boucles, des conditions
             et des événements, puis tu passeras aux fonctions. Dans la deuxième partie
@@ -41035,8 +41055,25 @@ fr:
                 achevé à leurs pairs.
             Digital Sharing:
               name: Partage Numérique
+              description_student: 'Dans cette leçon, tu découvriras les défis et
+                les avantages de la propriété et du droit d''auteur. '
+              description_teacher: Prêtée aux Notions Fondamentales de l’Informatique
+                par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider
+                les élèves à comprendre les défis et les avantages du respect de la
+                propriété et du droit d'auteur, en particulier dans les environnements
+                numériques. Les étudiants devraient être encouragés à respecter les
+                droits des artistes, qui constituent un élément important de leur
+                citoyenneté numérique.
             Designing for Accessibility:
               name: Concevoir pour l'Accessibilité
+              description_student: 'Dans cette leçon, les élèves en apprendront davantage
+                sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges
+                et à la conception de solutions accessibles pour des applications
+                hypothétiques. '
+              description_teacher: 'Dans cette leçon, les élèves en apprendront davantage
+                sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges
+                et à la conception de solutions accessibles pour des applications
+                hypothétiques. '
           lesson_groups:
             ramp_up:
               display_name: Progression
@@ -41256,8 +41293,25 @@ fr:
                 achevé à leurs pairs.
             Digital Sharing:
               name: Partage Numérique
+              description_student: 'Dans cette leçon, tu découvriras les défis et
+                les avantages de la propriété et du droit d''auteur. '
+              description_teacher: Prêtée aux Notions Fondamentales de l’Informatique
+                par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider
+                les élèves à comprendre les défis et les avantages du respect de la
+                propriété et du droit d'auteur, en particulier dans les environnements
+                numériques. Les étudiants devraient être encouragés à respecter les
+                droits des artistes, qui constituent un élément important de leur
+                citoyenneté numérique.
             Designing for Accessibility:
               name: Concevoir pour l'Accessibilité
+              description_student: 'Dans cette leçon, les élèves en apprendront davantage
+                sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges
+                et à la conception de solutions accessibles pour des applications
+                hypothétiques. '
+              description_teacher: 'Dans cette leçon, les élèves en apprendront davantage
+                sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges
+                et à la conception de solutions accessibles pour des applications
+                hypothétiques. '
         coursef-2020:
           description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
@@ -41770,6 +41824,48 @@ fr:
               name: Soirée Dansante Extraterrestre avec le Labo des Lutins
             Virtual Pet with Sprite Lab:
               name: Animal de compagnie virtuel avec le Labo des Lutins
+            Swimming Fish with Sprite Lab:
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
+            Programming with Angry Birds:
+              name: Programmation avec Angry Birds
+            Debugging with Scrat:
+              name: Déboguer avec Scrat
+            Collecting Treasure with Laurel:
+              name: Collecter le Trésor avec Laurel
+            Creating Art with Code:
+              name: Créer de l'Art avec du Code
+            Sticker Art with Loops:
+              name: L'Art de l'Autocollant avec les Boucles
+            Nested Loops in Maze:
+              name: Les Boucles Imbriquées dans le Labyrinthe
+            Snowflakes with Anna and Elsa:
+              name: Les Flocons de Neige avec Anna et Elsa
+            If/Else with Bee:
+              name: Si/Sinon avec l'Abeille
+            While Loops with the Farmer:
+              name: Les Boucles Tant Que avec la Fermière
+            Harvesting with Conditionals:
+              name: Récolter avec les Conditions
+            Functions with Harvester:
+              name: Les Fonctions avec la Moissonneuse
+            Functions with Artist:
+              name: Les Fonctions avec L'Artiste
+            Variables with Artist:
+              name: Les Variables avec L'Artiste
+            Changing Variables with Bee:
+              name: Modifier des Variables avec l'Abeille
+            Changing Variables with Artist:
+              name: Modifier des Variables avec l'Artiste
+            For Loops with Bee:
+              name: Les Boucles For avec l'Abeille
+            For Loops with Artist:
+              name: Les Boucles For avec l'Artiste
+            Swimming Fish in Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Soirée Dansante des Extraterrestres
+            Behaviors in Sprite Lab:
+              name: Les Comportements dans le Labo des Lutins
           lesson_groups:
             csf_warmup:
               display_name: Échauffement
@@ -41832,6 +41928,48 @@ fr:
               name: Soirée Dansante Extraterrestre avec le Labo des Lutins
             Virtual Pet with Sprite Lab:
               name: Animal de compagnie virtuel avec le Labo des Lutins
+            Swimming Fish with Sprite Lab:
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
+            Programming with Angry Birds:
+              name: Programmation avec Angry Birds
+            Debugging with Scrat:
+              name: Déboguer avec Scrat
+            Collecting Treasure with Laurel:
+              name: Collecter le Trésor avec Laurel
+            Creating Art with Code:
+              name: Créer de l'Art avec du Code
+            Sticker Art with Loops:
+              name: L'Art de l'Autocollant avec les Boucles
+            Nested Loops in Maze:
+              name: Les Boucles Imbriquées dans le Labyrinthe
+            Snowflakes with Anna and Elsa:
+              name: Les Flocons de Neige avec Anna et Elsa
+            If/Else with Bee:
+              name: Si/Sinon avec l'Abeille
+            While Loops with the Farmer:
+              name: Les Boucles Tant Que avec la Fermière
+            Harvesting with Conditionals:
+              name: Récolter avec les Conditions
+            Functions with Harvester:
+              name: Les Fonctions avec la Moissonneuse
+            Functions with Artist:
+              name: Les Fonctions avec L'Artiste
+            Variables with Artist:
+              name: Les Variables avec L'Artiste
+            Changing Variables with Bee:
+              name: Modifier des Variables avec l'Abeille
+            Changing Variables with Artist:
+              name: Modifier des Variables avec l'Artiste
+            For Loops with Bee:
+              name: Les Boucles For avec l'Abeille
+            For Loops with Artist:
+              name: Les Boucles For avec l'Artiste
+            Swimming Fish in Sprite Lab:
+              name: Learning Sprite Lab
+            Alien Dance Party:
+              name: Soirée Dansante des Extraterrestres
+            Behaviors in Sprite Lab:
+              name: Les Comportements dans le Labo des Lutins
         pre-express-2020:
           description: Apprends les bases de l'informatique et de la sécurité sur
             internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
@@ -41842,26 +41980,90 @@ fr:
           stages:
             Learn to Drag and Drop:
               name: Apprends à Faire Glisser et Déposer
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
             Sequencing with Scrat:
               name: Séquencer avec Scrat
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
             Programming in Maze:
               name: La Programmation dans le Labyrinthe
+              description_teacher: En utilisant des personnages du jeu Angry Birds,
+                les élèves développeront des algorithmes séquentiels pour déplacer
+                un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour
+                ce faire, ils empileront des blocs de code ensemble, dans une séquence
+                linéaire, les faisant se déplacer tout droit, tourner à gauche ou
+                tourner à droite.
             Programming with Rey and BB-8:
               name: Programmer avec Rey et BB-8
+              description_teacher: Dans cette leçon, les élèves utiliseront leurs
+                nouvelles compétences en programmation de manière plus compliquée
+                pour naviguer dans un cours délicat avec BB-8.
             Programming in Harvester:
               name: La Programmation dans la Moissonneuse
+              description_teacher: 'Les élèves appliqueront les concepts de programmation
+                qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant,
+                au lieu de simplement amener le personnage à un but, les étudiants
+                doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants
+                continueront à développer des compétences d''algorithme séquentiel
+                et commenceront à utiliser le processus de débogage. '
             Spelling Bee:
               name: Concours d'orthographe
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
             Loops in Collector:
               name: Les Boucles dans Collecteur
+              description_teacher: Dans cette leçon, les élèves continuent d'apprendre
+                le concept de boucles. Ici, Laurel L'Aventurière utilise des boucles
+                pour collecter des trésors dans les espaces ouverts des grottes. Un
+                nouveau  bloc `collecte le trésor` est introduit pour l'aider dans
+                son voyage.
             Ocean Scene with Loops:
               name: Scène de l'Océan avec des Boucles
+              description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
+                des images en bouclant de simples séquences d'instructions. Dans la
+                leçon branchée précédente, des boucles étaient utilisées pour traverser
+                un labyrinthe et collecter des trésors. Ici, les boucles créent des
+                motifs. À la fin de cette phase, les étudiants auront la possibilité
+                de créer leurs propres images à l'aide de boucles.
             Loops in Artist:
               name: Les Boucles dans Artiste
+              description_teacher: De retour aux boucles, les élèves apprennent à
+                dessiner des images en bouclant de simples séquences d'instructions.
+                Dans la leçon en ligne précédente, des boucles ont été utilisées pour
+                traverser un labyrinthe et collecter des trésors. Ici, les élèves
+                utilisent des boucles pour créer des motifs. À la fin de cette phase,
+                les étudiants auront la possibilité de créer leurs propres images
+                en utilisant des boucles.
             Tell a Story in Play Lab:
               name: Raconter une Histoire dans le Labo du Jeu
+              description_teacher: Dans cette activité en ligne, les élèves auront
+                l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
+                et d'appliquer toutes les compétences de codage qu'ils ont apprises
+                pour créer un jeu animé. Il est temps de faire preuve de créativité
+                et de créer une histoire dans le Labo du Jeu !
+            Make a Game in Play Lab:
+              description_teacher: Dans cette activité en ligne, les élèves auront
+                l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
+                et d'appliquer toutes les compétences de codage qu'ils ont apprises
+                pour créer un jeu animé. Il est temps de faire preuve de créativité
+                et de créer une histoire dans le Labo du Jeu !
+            Loops with Scrat:
+              name: Les Boucles avec Scrat
+            Loops with Laurel:
+              name: Les Boucles avec Laurel
+            Drawing Gardens with Loops:
+              name: Dessiner des Jardins avec des Boucles
+            On the Move with Events:
+              name: En Déplacement avec les Événements
+            A Royal Battle with Events:
+              name: Une Bataille Royale avec des Événements
           lesson_groups:
             csf_sequencing:
               display_name: Séquençage
@@ -41872,26 +42074,90 @@ fr:
           lessons:
             Learn to Drag and Drop:
               name: Apprends à Faire Glisser et Déposer
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
             Sequencing with Scrat:
               name: Séquencer avec Scrat
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
             Programming in Maze:
               name: La Programmation dans le Labyrinthe
+              description_teacher: En utilisant des personnages du jeu Angry Birds,
+                les élèves développeront des algorithmes séquentiels pour déplacer
+                un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour
+                ce faire, ils empileront des blocs de code ensemble, dans une séquence
+                linéaire, les faisant se déplacer tout droit, tourner à gauche ou
+                tourner à droite.
             Programming with Rey and BB-8:
               name: Programmer avec Rey et BB-8
+              description_teacher: Dans cette leçon, les élèves utiliseront leurs
+                nouvelles compétences en programmation de manière plus compliquée
+                pour naviguer dans un cours délicat avec BB-8.
             Programming in Harvester:
               name: La Programmation dans la Moissonneuse
+              description_teacher: 'Les élèves appliqueront les concepts de programmation
+                qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant,
+                au lieu de simplement amener le personnage à un but, les étudiants
+                doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants
+                continueront à développer des compétences d''algorithme séquentiel
+                et commenceront à utiliser le processus de débogage. '
             Spelling Bee:
               name: Concours d'orthographe
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
             Loops in Collector:
               name: Les Boucles dans Collecteur
+              description_teacher: Dans cette leçon, les élèves continuent d'apprendre
+                le concept de boucles. Ici, Laurel L'Aventurière utilise des boucles
+                pour collecter des trésors dans les espaces ouverts des grottes. Un
+                nouveau  bloc `collecte le trésor` est introduit pour l'aider dans
+                son voyage.
             Ocean Scene with Loops:
               name: Scène de l'Océan avec des Boucles
+              description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
+                des images en bouclant de simples séquences d'instructions. Dans la
+                leçon branchée précédente, des boucles étaient utilisées pour traverser
+                un labyrinthe et collecter des trésors. Ici, les boucles créent des
+                motifs. À la fin de cette phase, les étudiants auront la possibilité
+                de créer leurs propres images à l'aide de boucles.
             Loops in Artist:
               name: Les Boucles dans Artiste
+              description_teacher: De retour aux boucles, les élèves apprennent à
+                dessiner des images en bouclant de simples séquences d'instructions.
+                Dans la leçon en ligne précédente, des boucles ont été utilisées pour
+                traverser un labyrinthe et collecter des trésors. Ici, les élèves
+                utilisent des boucles pour créer des motifs. À la fin de cette phase,
+                les étudiants auront la possibilité de créer leurs propres images
+                en utilisant des boucles.
             Tell a Story in Play Lab:
               name: Raconter une Histoire dans le Labo du Jeu
+              description_teacher: Dans cette activité en ligne, les élèves auront
+                l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
+                et d'appliquer toutes les compétences de codage qu'ils ont apprises
+                pour créer un jeu animé. Il est temps de faire preuve de créativité
+                et de créer une histoire dans le Labo du Jeu !
+            Make a Game in Play Lab:
+              description_teacher: Dans cette activité en ligne, les élèves auront
+                l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
+                et d'appliquer toutes les compétences de codage qu'ils ont apprises
+                pour créer un jeu animé. Il est temps de faire preuve de créativité
+                et de créer une histoire dans le Labo du Jeu !
+            Loops with Scrat:
+              name: Les Boucles avec Scrat
+            Loops with Laurel:
+              name: Les Boucles avec Laurel
+            Drawing Gardens with Loops:
+              name: Dessiner des Jardins avec des Boucles
+            On the Move with Events:
+              name: En Déplacement avec les Événements
+            A Royal Battle with Events:
+              name: Une Bataille Royale avec des Événements
         csp1-2020:
           stages:
             new stage:
@@ -41924,9 +42190,13 @@ fr:
               name: Projet - Les Dilemmes de l'Information Numérique, Partie 2
             'Lesson 14: Assessment Day':
               name: 'Leçon 14 : Journée d''Évaluation'
+            CS Principles Pre-survey:
+              name: CSP Pré-enquête
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Unité 1: L’Information numérique'
+            cspSurvey:
+              display_name: Enquête
           lessons:
             new stage:
               name: nouvelle phase
@@ -41958,6 +42228,8 @@ fr:
               name: Projet - Les Dilemmes de l'Information Numérique, Partie 2
             'Lesson 14: Assessment Day':
               name: 'Leçon 14 : Journée d''Évaluation'
+            CS Principles Pre-survey:
+              name: CSP Pré-enquête
         csp2-2020:
           stages:
             new stage:
@@ -42265,780 +42537,21 @@ fr:
               name: Unité 3 Chapitre 1 Évaluation
             CS Principles Post Course survey:
               name: CS Principles Enquête Post Cours
-        csd3-virtual:
-          description_short: Programmation
-          stages:
-            Programming for Entertainment:
-              name: Programmer pour le Divertissement
-              description_student: La classe est invitée à considérer les « problèmes
-                » d'ennui et d'expression de soi, et à réfléchir à la façon dont elle
-                aborde ces problèmes dans sa propre vie. À partir de là, elle explorera
-                comment l'informatique, en général, et la programmation, en particulier,
-                jouent un rôle dans une forme spécifique de divertissement ou comme
-                véhicule d'expression de soi.
-              description_teacher: Les élèves sont invités à considérer les « problèmes
-                » de d'ennui et d'expression de soi, et à réfléchir à la façon dont
-                ils abordent ces problèmes dans leur propre vie. À partir de là, les
-                élèves exploreront comment l'informatique, en général, et la programmation,
-                en particulier, jouent un rôle dans une forme spécifique de divertissement
-                ou comme véhicule d'expression de soi.
-            Plotting Shapes:
-              name: Tracer Des Formes
-              description_student: Les élèves explorent les défis de communiquer la
-                manière de dessiner avec des formes et utilisent un outil qui présente
-                comment ce problème est abordé dans le Labo des Jeux. L'activité d'échauffement
-                démontre rapidement les défis de la communication de la position sans
-                un point de référence commun. Dans l'activité principale, les élèves
-                explorent un outil du Labo des Jeux qui permet aux élèves de placer
-                de manière interactive des formes sur la grille 400 par 400 du Labo
-                des Jeux. Ils se relaient ensuite pour enseigner à un partenaire comment
-                dessiner une image cachée à l'aide de cet outil, ce qui représente
-                de nombreux défis que les étudiants rencontreront lors de la programmation
-                dans le Labo des Jeux. Les élèves créent, éventuellement, leur propre
-                image pour communiquer avant une discussion de débriefing.
-              description_teacher: Les élèves explorent les défis de communiquer la
-                manière de dessiner avec des formes et utilisent un outil qui présente
-                comment ce problème est abordé dans le Labo des Jeux. L'activité d'échauffement
-                démontre rapidement les défis de la communication de la position sans
-                un point de référence commun. Dans l'activité principale, les élèves
-                explorent un outil du Labo des Jeux qui permet aux élèves de placer
-                de manière interactive des formes sur la grille 400 par 400 du Labo
-                des Jeux. Ils se relaient ensuite pour enseigner à un partenaire comment
-                dessiner une image cachée à l'aide de cet outil, ce qui représente
-                de nombreux défis que les étudiants rencontreront lors de la programmation
-                dans le Labo des Jeux. Les élèves créent, éventuellement, leur propre
-                image pour communiquer avant une discussion de débriefing.
-            Drawing in Game Lab:
-              name: Dessiner dans le Labo des Jeux
-              description_student: La classe est initiée au Labo des Jeux, l'environnement
-                de programmation de cette unité, et commence à l'utiliser pour positionner
-                des formes à l'écran. La leçon couvre les bases du séquencement et
-                du débogage, ainsi que quelques commandes simples. À la fin de la
-                leçon, la classe crée une version en ligne de l'image qu'ils ont conçue
-                dans la leçon précédente.
-              description_teacher: Les élèves sont initiés au Labo des Jeux, l'environnement
-                de programmation de cette unité, et commencent à l'utiliser pour positionner
-                des formes à l'écran. Ils apprennent les bases du séquencement et
-                du débogage, ainsi que quelques commandes simples. À la fin de la
-                leçon, les élèves seront en mesure de programmer des images comme
-                celles qu'ils ont faites avec l'outil de dessin dans la leçon précédente.
-            Shapes and Randomization:
-              name: Les Formes et La Notion de Hasard
-            Variables:
-              name: variables
-              description_student: Cette leçon présente les variables comme un moyen
-                d'étiqueter un nombre dans un programme ou d'enregistrer une valeur
-                générée aléatoirement. La classe commence la leçon avec une description
-                très basique du but d'une variable et des pratiques, en utilisant
-                les nouveaux blocs. Ensuite, la classe utilise des variables pour
-                enregistrer un nombre aléatoire, permettant aux programmes d'utiliser
-                le même nombre aléatoire plusieurs fois.
-              description_teacher: Dans cette leçon, les élèves apprennent à utiliser
-                des variables pour étiqueter un nombre dans leur programme ou enregistrer
-                une valeur générée aléatoirement. Les élèves commencent la leçon avec
-                une description très basique du but d'une variable. Les élèves effectuent
-                ensuite une progression de niveau qui renforce le modèle d'une variable
-                comme un moyen d'étiqueter ou de nommer un nombre. Les élèves utilisent
-                des variables pour enregistrer un nombre aléatoire pour voir que les
-                variables stockent ou enregistrent réellement leurs valeurs, ce qui
-                leur permet d'utiliser le même nombre aléatoire plusieurs fois dans
-                leurs programmes.
-            Sprites:
-              name: Les Lutins
-              description_student: Afin de créer des images plus intéressantes et
-                détaillées, la classe est initiée à l'objet lutin. Chaque lutin peut
-                se voir attribuer une image à montrer, et les lutins gardent également
-                une trace de plusieurs valeurs les concernant, ce qui s'avérera utile,
-                ultérieurement, lors de la réalisation d'animations. À la fin de la
-                leçon, tout le monde crée une scène à l'aide des lutins.
-              description_teacher: Afin de créer des images plus intéressantes et
-                détaillées, les étudiants sont initiés à l'objet sprite. Chaque sprite
-                peut se voir attribuer une image à montrer, et les sprites gardent
-                également une trace de plusieurs valeurs les concernant, ce qui s'avérera
-                utile sur la route lors de la réalisation d'animations.
-            The Draw Loop:
-              name: La Boucle Dessiner
-              description_student: Cette leçon présente la boucle draw, l’un des principaux
-                paradigmes de programmation du labo des jeux. La classe combine la
-                boucle draw avec des nombres aléatoires pour manipuler des animations
-                simples avec des points, puis des sprites. Ensuite, tout le monde
-                utilise ce qu'il a appris pour mettre à jour la scène du sprite de
-                la leçon précédente.
-              description_teacher: Dans cette leçon, les élèves se familiarisent avec
-                la boucle d’étirage, l’un des principaux paradigmes de programmation
-                du labo des jeux. Pour commencer la leçon, les élèves examinent des
-                folioscopes afin de constater que le fait de montrer plusieurs images
-                à la suite crée l’impression de mouvement. Les élèves regardent ensuite
-                une vidéo expliquant comment la boucle draw du labo des jeux contribue
-                à créer cette même impression dans leurs programmes. Les élèves combinent
-                la boucle draw avec des nombres aléatoires pour manipuler des animations
-                simples avec des points, puis des sprites. À la fin de la leçon, les
-                élèves utilisent ce qu'ils ont appris pour mettre à jour la scène
-                de sprites de la leçon précédente.
-            The Counter Pattern Unplugged:
-              name: Le Contre Modèle Débranché
-              description_student: Cette leçon débranchée explore le comportement
-                sous-jacent des variables. À l'aide de fiches et de chaînes, pour
-                simuler des variables dans un programme, la classe réalise quelques
-                programmes courts. Une fois à l'aise avec cette syntaxe, la classe
-                utilise le même processus avec les propriétés du lutin, en suivant
-                la progression d'un sprite à sur l'écran.
-              description_teacher: Les élèves explorent le comportement sous-jacent
-                des variables à travers une activité débranchée. À l'aide de fiches
-                et de chaînes, pour simuler des variables dans un programme, les étudiants
-                réalisent quelques programmes courts. Une fois à l'aise avec cette
-                syntaxe, les étudiants utilisent le même processus avec les propriétés
-                u lutin, en suivant la progression d'un lutin sur l'écran.
-            Sprite Movement:
-              name: Le Déplacement du Lutin
-              description_student: En combinant la Boucle Dessiner et le Modèle de
-                Compteur, la classe écrit des programmes qui déplacent des lutins
-                sur l'écran, et animent également d'autres propriétés de lutin.
-              description_teacher: En combinant la Boucle Dessiner et le compteur
-                modèle, les étudiants écrivent des programmes qui déplacent des lutins
-                sur l'écran, et animent également d'autres propriétés de lutin.
-            Booleans Unplugged:
-              name: Les Booléens Débranché
-              description_student: Cette leçon introduit des valeurs booléennes et
-                la logique, ainsi que des déclarations conditionnelles. La classe
-                commence par un simple jeu de Debout, Assis, dans lequel les déclarations
-                booléennes (vrai/faux) décrivent les propriétés personnelles (couleur
-                des cheveux ou des yeux, type de vêtement, âge, etc.). La classe regroupe
-                ensuite des objets basés sur des déclarations booléennes de plus en
-                plus complexes, puis examine comment les conditions peuvent avoir
-                un impact sur le flux d'un programme.
-              description_teacher: Dans cette leçon, les élèves sont initiés aux valeurs
-                et à la logique booléennes, ainsi qu'aux déclarations conditionnelles.
-                La classe commence par un simple jeu de Debout, Assis, dans lequel
-                les déclarations booléennes (vrai/faux) décrivent les propriétés personnelles
-                (couleur des cheveux ou des yeux, type de vêtement, âge, etc.). Cela
-                amène les étudiants à réfléchir à la façon dont ils peuvent encadrer
-                une propriété avec plusieurs valeurs potentielles (telles que l'âge)
-                avec une question binaire.De là, les étudiants reçoivent un groupe
-                d'objets ayant des propriétés physiques similaires, mais variables.
-                Avec un partenaire, ils regroupent ces objets en fonction de déclarations
-                booléennes de plus en plus complexes, y compris les booléens composés
-                avec ET et OU. Enfin, nous révélons les Conditions comme un outil
-                pour prendre des décisions ou avoir un impact sur le flux d'un programme
-                en utilisant des déclarations booléennes en entrée.
-            Conditionals:
-              name: Instructions conditionnelles
-              description_student: La classe commence par utiliser des booléens pour
-                comparer la valeur actuelle d'une propriété de lutin avec une valeur
-                cible, en utilisant cette comparaison pour déterminer quand un sprite
-                a atteint un point sur l'écran, atteint une taille donnée ou encore
-                atteint une valeur à l'aide du compteur modèle. Après avoir utilisé
-                des booléens directement pour étudier les valeurs ou les propriétés
-                du lutin, la classe ajoute des déclarations conditionnelles si pour
-                écrire du code qui répond à ces comparaisons booléennes.
-              description_teacher: Les étudiants commencent par utiliser des booléens
-                pour comparer la valeur actuelle d'une propriété de lutin avec une
-                valeur cible, en utilisant cette comparaison pour déterminer quand
-                un sprite a atteint un point sur l'écran, atteint une taille donnée
-                ou encore atteint une valeur à l'aide du compteur modèle. Après avoir
-                utilisé des booléens directement pour étudier les valeurs ou les propriétés
-                du lutin, les étudiants ajoutent des déclarations conditionnelles
-                _si_ pour écrire du code qui répond à ces comparaisons booléennes.
-            Keyboard Input:
-              name: Entrée Au Clavier
-              description_student: Après l'introduction aux booléens et aux déclarations
-                si, dans la leçon précédente, les élèves sont initiés à un nouveau
-                bloc appelé keyDown() qui renvoie un booléen et peut être utilisé
-                dans les déclarations conditionnelles pour déplacer les lutins autour
-                de l'écran. À la fin de cette leçon, les étudiants auront des programmes
-                écrits qui s'approprient la saisie au clavier de l'utilisateur pour
-                contrôler les lutins à l'écran.
-              description_teacher: Après l'introduction aux booléens et aux déclarations
-                _si_, dans la leçon précédente, les élèves sont initiés à un nouveau
-                bloc appelé `keyDown()` qui renvoie un booléen et peut être utilisé
-                dans les déclarations conditionnelles pour déplacer les lutins autour
-                de l'écran. À la fin de cette leçon, les étudiants auront des programmes
-                écrits qui s'approprient la saisie au clavier de l'utilisateur pour
-                contrôler les lutins à l'écran.
-            Other Forms of Input:
-              name: Autres Formes d'Entrée
-              description_student: La classe continue d'explorer les moyens d'utiliser
-                des déclarations conditionnelles pour s'approprier la saisie de l'utilisateur.
-                En plus de la simple commande keyDown(), apprise hier, la classe apprend
-                plusieurs autres commandes d'entrée au clavier ainsi que des façons
-                de s'approprier la saisie de la souris.
-              description_teacher: Dans cette lecon, les étudiants continuent d'explorer
-                les moyens d'utiliser des déclarations conditionnelles pour s'approprier
-                la saisie de l'utilisateur. En plus de la simple commande keyDown(),
-                apprise hier, les étudiants apprennent plusieurs autres commandes
-                d'entrée au clavier ainsi que des façons de s'approprier la saisie
-                de la souris.
-            Project - Interactive Card:
-              name: Projet - Carte Interactive
-              description_student: Dans ce projet cumulatif pour le Chapitre 1, la
-                classe planifie et développe une carte de voeux interactive en utilisant
-                toutes les techniques de programmation qu'elle a apprises jusqu'à
-                présent.
-              description_teacher: Dans ce projet cumulatif pour le Chapitre 1, les
-                étudiants planifient et développent une carte de vœux interactive
-                en utilisant toutes les techniques de programmation qu'ils ont apprises
-                jusqu'à présent.
-            Velocity:
-              name: Vitesse
-              description_student: Après une bref examen de la façon dont le compteur
-                modèle est utilisé pour déplacer les lutins, la classe est initiée
-                aux propriétés qui définissent, directement, la vitesse et la vitesse
-                de rotation. En utilisant ces nouvelles propriétés de différentes
-                manières, elle acquiert les compétences dont elle a besoin pour créer
-                un jeu à défilement latéral de base.
-              description_teacher: Après une brève révision de la façon dont ils ont
-                utilisé le compteur modèle pour déplacer les lutins, dans la leçon
-                précédente, les étudiants sont initiés aux propriétés qui définissent,
-                directement, la vitesse et la vitesse de rotation. En utilisant ces
-                nouvelles propriétés de différentes manières, ils acquièrent les compétences
-                dont ils ont besoin pour créer un jeu à défilement latéral de base.
-            Collision Detection:
-              name: Détection de collision
-              description_student: La classe apprend ce qu'est la détection de collision
-                sur l'ordinateur. Travaillant en paires, elle explore comment un ordinateur
-                pourrait utiliser les propriétés de localisation et de taille des
-                lutins, ainsi que les mathématiques pour détecter si deux lutins se
-                touchent. La classe utilise ensuite le bloc isTouching() pour créer
-                différents effets lorsque les lutins entrent en collision, y compris
-                la lecture de sons.  Enfin, elle utilise ses nouvelles compétences
-                pour améliorer le jeu à défilement latéral qu'elle a commencé dans
-                la dernière leçon.
-              description_teacher: Les étudiants apprennent ce qu'est la détection
-                de collision sur l'ordinateur. Travaillant en paires, ils explorent
-                comment un ordinateur pourrait utiliser les propriétés de localisation
-                et de taille des lutins, ainsi que les mathématiques pour détecter
-                si deux lutins se touchent.  Ils utilisent ensuite le bloc isTouching()
-                pour créer différents effets lorsque les lutins entrent en collision,
-                y compris la lecture de sons.  Enfin, ils utilisent leurs nouvelles
-                compétences pour améliorer le jeu à défilement latéral qu'ils ont
-                commencé dans la dernière leçon.
-            Complex Sprite Movement:
-              name: Déplacement Complexe du Lutin
-              description_student: La classe apprend à combiner les propriétés de
-                vitesse des lutins avec le compteur modèle pour créer un mouvement
-                de lutins plus complexe, tels que simuler la gravité, faire sauter
-                un lutin et permettre à un lutin de flotter à gauche ou à droite.
-                Dans les derniers niveaux la classe combine ces mouvements pour animer
-                et contrôler un seul lutin et construire un jeu simple dans lequel
-                un personnage vole et recueille des pièces de monnaie.
-              description_teacher: Les étudiants apprennent à combiner les propriétés
-                de vitesse des lutins avec le compteur modèle pour créer un mouvement
-                de lutins plus complexe. En particulier, les élèves apprendront à
-                simuler la gravité, à faire sauter un lutin et à permettre à un lutin
-                de flotter à gauche ou à droite. Dans les derniers niveaux de la progression
-                de Code Studio, les étudiants combinent ces mouvements pour animer
-                et contrôler un seul lutin et construire un jeu simple dans lequel
-                un personnage vole et recueille une pièce de monnaie. Les étudiants
-                sont encouragés à faire leurs propres ajouts au jeu dans le dernier
-                niveau.
-            Collisions:
-              name: Collisions
-              description_student: La classe programme ses lutins pour interagir de
-                nouvelles façons. Après une brève révision de la façon dont elle a
-                utilisé le bloc Touche, la classe réfléchit, en groupes, à d'autres
-                façons dont deux lutins pourraient interagir. Elle utilise ensuite
-                isTouching pour faire en sorte qu'un lutin en pousse un autre, sur
-                l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter,
-                déloger, bondir et rebondir).
-              description_teacher: Les étudiants programment leurs lutins pour interagir
-                de nouvelles façons. Après une brève révision de la façon dont ils
-                ont utilisé le bloc Touche, les étudiants réfléchissent, en groupes,
-                à d'autres façons dont deux lutins pourraient interagir. Ils utilisent
-                ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre,
-                sur l'écran, avant de s'entraîner avec les quatre blocs de collision
-                (heurter, déloger, bondir et rebondir).
-            Functions:
-              name: fonctions
-              description_student: Cette leçon couvre les fonctions comme un moyen
-                d'organiser leur code, de le rendre plus lisible et de supprimer les
-                blocs de code répétés. La classe apprend qu'un niveau supérieur ou
-                des étapes plus abstraites facilitent la compréhension et le raisonnement
-                quant aux étapes, puis commence à créer des fonctions dans le Labo
-                des Jeux. À la fin de la leçon, la classe utilise ces compétences
-                pour organiser et ajouter des fonctionnalités à la version finale
-                de leur jeu à défilement latéral.
-              description_teacher: Les élèves apprennent à créer des fonctions pour
-                organiser leur code, le rendre plus lisible et supprimer des blocs
-                de code répétés. Un échauffement débranché explore comment les directions
-                à différents niveaux de détail peuvent être utiles en fonction du
-                contexte. Les élèves apprennent que des étapes de niveau supérieur
-                ou plus abstraites facilitent la compréhension et le raisonnement
-                quant aux étapes. Ensuite, les élèves apprennent à créer des fonctions
-                dans le Labo des Jeux. Ils utiliseront des fonctions pour supprimer
-                de longs blocs de code de leur boucle Dessiner et pour remplacer des
-                morceaux de code répétés par une seule fonction. À la fin de la leçon,
-                les élèves utilisent ces compétences pour organiser et ajouter des
-                fonctionnalités à la version finale de leur jeu à défilement latéral.
-            The Game Design Process:
-              name: Le Processus de Conception d'un Jeu
-              description_student: Cette leçon présente le processus que la classe
-                utilisera pour concevoir des jeux pour le reste de l'unité. La classe
-                parcourt ce processus dans une série de niveaux. Dans le cadre de
-                cette leçon, la classe apprend également brièvement à utiliser des
-                animations multi-images dans le Labo des Jeux. À la fin de la leçon,
-                ils ont la possibilité d'apporter des améliorations au jeu pour se
-                l'approprier.
-              description_teacher: Cette leçon présente aux élèves le processus qu'ils
-                utiliseront pour concevoir des jeux pour le reste de l'unité. Ce processus
-                est centré autour d'un guide de projet qui demande aux élèves de définir
-                leurs lutins, variables et fonctions avant de commencer à programmer
-                leur jeu. Dans cette leçon, les élèves commencent par jouer à un jeu
-                sur le Labo des Jeux où le code est caché. Ils discutent de ce qu'ils
-                pensent que les lutins, les variables et les fonctions devraient être
-                pour créer le jeu. Ils reçoivent ensuite un guide de projet complet
-                qui montre une façon de mettre en œuvre le jeu. Les élèves suivent
-                ensuite ce processus à travers une série de niveaux. Dans le cadre
-                de cette leçon, les élèves apprennent également brièvement à utiliser
-                des animations multi-images dans le Labo des Jeux. À la fin de la
-                leçon, les élèves ont la possibilité d'apporter des améliorations
-                au jeu pour se l'approprier.
-            Using the Game Design Process:
-              name: Utiliser le Processus de Conception d'un Jeu
-              description_student: Dans cette leçon de plusieurs jours, la classe
-                utilise le processus de résolution de problèmes de l'Unité 1 pour
-                créer un jeu de saut plate-forme.  Après avoir regardé un exemple
-                de jeu, la classe définit à quoi ressembleront leurs jeux et utilise
-                un processus structuré pour les construire.  Enfin, la classe réfléchit
-                à la façon dont les jeux pourraient être améliorés et met en œuvre
-                ces changements.
-              description_teacher: Dans cette leçon de plusieurs jours, les élèves
-                utilisent le processus de résolution de problèmes de l'Unité 1 pour
-                créer un jeu de saut plate-forme.  Ils commencent par regarder un
-                exemple de saut plate-forme, puis définissent à quoi ressembleront
-                leurs jeux.  Ensuite, ils utilisent un processus structuré pour planifier
-                les arrière-plans, les variables, les lutins et les fonctions dont
-                ils auront besoin pour mettre en œuvre leur jeu leur jeu. Après avoir
-                écrit le code du jeu, les élèves réfléchiront à la façon dont le jeu
-                pourrait être amélioré et mettront en œuvre ces changements.
-            Project - Design a Game:
-              name: Projet - Concevoir un Jeu
-              description_student: La classe planifie et construit des jeux originaux
-                en utilisant le guide de projet des deux leçons précédentes. Travaillant
-                individuellement ou par paires, la classe planifie, développe et donne
-                des commentaires sur les jeux. Après avoir intégré les commentaires
-                des pairs, la classe partage les jeux terminés.
-              description_teacher: Les élèves planifieront et construiront leur propre
-                jeu en utilisant le guide de projet des deux leçons précédentes pour
-                guider leur projet. Travaillant individuellement ou en paires, les
-                élèves décideront d'abord du type de jeu qu'ils aimeraient construire,
-                en s'inspirant d'un ensemble d'exemples de jeux. Ils compléteront
-                ensuite un guide de projet vierge dans lequel ils décriront le comportement
-                du jeu et définiront les variables, les lutins et les fonctions dont
-                ils auront besoin pour construire. Dans Code Studio, une série de
-                niveaux les invite sur une séquence générale qu'ils peuvent utiliser
-                pour mettre en œuvre ce plan. À mi-parcours du processus, les élèves
-                partageront leurs projets pour examen par les pairs et intégreront
-                les commentaires en finissant leur partie. À la fin de la leçon, les
-                élèves pourront partager leurs jeux avec leurs camarades de classe.
-                Ce projet couvrira plusieurs classes et peut facilement prendre de
-                3 à 5 périodes de classe.
-            Post-Project Test:
-              name: Test Post-Projet
-            CS Discoveries Post Course survey:
-              name: CS Discoveries Enquête Post Cours
-            Shapes and Parameters:
-              name: Formes et paramètres
-            Random Numbers:
-              name: Nombres aléatoires
-            Sprites and Animations:
-              name: Les Lutins et les Animations
-            Sprite Properties:
-              name: Propriétés du sprite
-            Text and Captioned Scenes:
-              name: Le Texte et les Scènes Sous-Titrées
-          lesson_groups:
-            csd3_1:
-              display_name: 'Chapitre 1 : Images et Animations'
-          lessons:
-            Programming for Entertainment:
-              name: Programmer pour le Divertissement
-              description_student: La classe est invitée à considérer les « problèmes
-                » d'ennui et d'expression de soi, et à réfléchir à la façon dont elle
-                aborde ces problèmes dans sa propre vie. À partir de là, elle explorera
-                comment l'informatique, en général, et la programmation, en particulier,
-                jouent un rôle dans une forme spécifique de divertissement ou comme
-                véhicule d'expression de soi.
-              description_teacher: Les élèves sont invités à considérer les « problèmes
-                » de d'ennui et d'expression de soi, et à réfléchir à la façon dont
-                ils abordent ces problèmes dans leur propre vie. À partir de là, les
-                élèves exploreront comment l'informatique, en général, et la programmation,
-                en particulier, jouent un rôle dans une forme spécifique de divertissement
-                ou comme véhicule d'expression de soi.
-            Plotting Shapes:
-              name: Tracer Des Formes
-              description_student: Les élèves explorent les défis de communiquer la
-                manière de dessiner avec des formes et utilisent un outil qui présente
-                comment ce problème est abordé dans le Labo des Jeux. L'activité d'échauffement
-                démontre rapidement les défis de la communication de la position sans
-                un point de référence commun. Dans l'activité principale, les élèves
-                explorent un outil du Labo des Jeux qui permet aux élèves de placer
-                de manière interactive des formes sur la grille 400 par 400 du Labo
-                des Jeux. Ils se relaient ensuite pour enseigner à un partenaire comment
-                dessiner une image cachée à l'aide de cet outil, ce qui représente
-                de nombreux défis que les étudiants rencontreront lors de la programmation
-                dans le Labo des Jeux. Les élèves créent, éventuellement, leur propre
-                image pour communiquer avant une discussion de débriefing.
-              description_teacher: Les élèves explorent les défis de communiquer la
-                manière de dessiner avec des formes et utilisent un outil qui présente
-                comment ce problème est abordé dans le Labo des Jeux. L'activité d'échauffement
-                démontre rapidement les défis de la communication de la position sans
-                un point de référence commun. Dans l'activité principale, les élèves
-                explorent un outil du Labo des Jeux qui permet aux élèves de placer
-                de manière interactive des formes sur la grille 400 par 400 du Labo
-                des Jeux. Ils se relaient ensuite pour enseigner à un partenaire comment
-                dessiner une image cachée à l'aide de cet outil, ce qui représente
-                de nombreux défis que les étudiants rencontreront lors de la programmation
-                dans le Labo des Jeux. Les élèves créent, éventuellement, leur propre
-                image pour communiquer avant une discussion de débriefing.
-            Drawing in Game Lab:
-              name: Dessiner dans le Labo des Jeux
-              description_student: La classe est initiée au Labo des Jeux, l'environnement
-                de programmation de cette unité, et commence à l'utiliser pour positionner
-                des formes à l'écran. La leçon couvre les bases du séquencement et
-                du débogage, ainsi que quelques commandes simples. À la fin de la
-                leçon, la classe crée une version en ligne de l'image qu'ils ont conçue
-                dans la leçon précédente.
-              description_teacher: Les élèves sont initiés au Labo des Jeux, l'environnement
-                de programmation de cette unité, et commencent à l'utiliser pour positionner
-                des formes à l'écran. Ils apprennent les bases du séquencement et
-                du débogage, ainsi que quelques commandes simples. À la fin de la
-                leçon, les élèves seront en mesure de programmer des images comme
-                celles qu'ils ont faites avec l'outil de dessin dans la leçon précédente.
-            Shapes and Randomization:
-              name: Les Formes et La Notion de Hasard
-            Variables:
-              name: variables
-              description_student: Cette leçon présente les variables comme un moyen
-                d'étiqueter un nombre dans un programme ou d'enregistrer une valeur
-                générée aléatoirement. La classe commence la leçon avec une description
-                très basique du but d'une variable et des pratiques, en utilisant
-                les nouveaux blocs. Ensuite, la classe utilise des variables pour
-                enregistrer un nombre aléatoire, permettant aux programmes d'utiliser
-                le même nombre aléatoire plusieurs fois.
-              description_teacher: Dans cette leçon, les élèves apprennent à utiliser
-                des variables pour étiqueter un nombre dans leur programme ou enregistrer
-                une valeur générée aléatoirement. Les élèves commencent la leçon avec
-                une description très basique du but d'une variable. Les élèves effectuent
-                ensuite une progression de niveau qui renforce le modèle d'une variable
-                comme un moyen d'étiqueter ou de nommer un nombre. Les élèves utilisent
-                des variables pour enregistrer un nombre aléatoire pour voir que les
-                variables stockent ou enregistrent réellement leurs valeurs, ce qui
-                leur permet d'utiliser le même nombre aléatoire plusieurs fois dans
-                leurs programmes.
-            Sprites:
-              name: Les Lutins
-              description_student: Afin de créer des images plus intéressantes et
-                détaillées, la classe est initiée à l'objet lutin. Chaque lutin peut
-                se voir attribuer une image à montrer, et les lutins gardent également
-                une trace de plusieurs valeurs les concernant, ce qui s'avérera utile,
-                ultérieurement, lors de la réalisation d'animations. À la fin de la
-                leçon, tout le monde crée une scène à l'aide des lutins.
-              description_teacher: Afin de créer des images plus intéressantes et
-                détaillées, les étudiants sont initiés à l'objet sprite. Chaque sprite
-                peut se voir attribuer une image à montrer, et les sprites gardent
-                également une trace de plusieurs valeurs les concernant, ce qui s'avérera
-                utile sur la route lors de la réalisation d'animations.
-            The Draw Loop:
-              name: La Boucle Dessiner
-              description_student: Cette leçon présente la boucle draw, l’un des principaux
-                paradigmes de programmation du labo des jeux. La classe combine la
-                boucle draw avec des nombres aléatoires pour manipuler des animations
-                simples avec des points, puis des sprites. Ensuite, tout le monde
-                utilise ce qu'il a appris pour mettre à jour la scène du sprite de
-                la leçon précédente.
-              description_teacher: Dans cette leçon, les élèves se familiarisent avec
-                la boucle d’étirage, l’un des principaux paradigmes de programmation
-                du labo des jeux. Pour commencer la leçon, les élèves examinent des
-                folioscopes afin de constater que le fait de montrer plusieurs images
-                à la suite crée l’impression de mouvement. Les élèves regardent ensuite
-                une vidéo expliquant comment la boucle draw du labo des jeux contribue
-                à créer cette même impression dans leurs programmes. Les élèves combinent
-                la boucle draw avec des nombres aléatoires pour manipuler des animations
-                simples avec des points, puis des sprites. À la fin de la leçon, les
-                élèves utilisent ce qu'ils ont appris pour mettre à jour la scène
-                de sprites de la leçon précédente.
-            The Counter Pattern Unplugged:
-              name: Le Contre Modèle Débranché
-              description_student: Cette leçon débranchée explore le comportement
-                sous-jacent des variables. À l'aide de fiches et de chaînes, pour
-                simuler des variables dans un programme, la classe réalise quelques
-                programmes courts. Une fois à l'aise avec cette syntaxe, la classe
-                utilise le même processus avec les propriétés du lutin, en suivant
-                la progression d'un sprite à sur l'écran.
-              description_teacher: Les élèves explorent le comportement sous-jacent
-                des variables à travers une activité débranchée. À l'aide de fiches
-                et de chaînes, pour simuler des variables dans un programme, les étudiants
-                réalisent quelques programmes courts. Une fois à l'aise avec cette
-                syntaxe, les étudiants utilisent le même processus avec les propriétés
-                u lutin, en suivant la progression d'un lutin sur l'écran.
-            Sprite Movement:
-              name: Le Déplacement du Lutin
-              description_student: En combinant la Boucle Dessiner et le Modèle de
-                Compteur, la classe écrit des programmes qui déplacent des lutins
-                sur l'écran, et animent également d'autres propriétés de lutin.
-              description_teacher: En combinant la Boucle Dessiner et le compteur
-                modèle, les étudiants écrivent des programmes qui déplacent des lutins
-                sur l'écran, et animent également d'autres propriétés de lutin.
-            Booleans Unplugged:
-              name: Les Booléens Débranché
-              description_student: Cette leçon introduit des valeurs booléennes et
-                la logique, ainsi que des déclarations conditionnelles. La classe
-                commence par un simple jeu de Debout, Assis, dans lequel les déclarations
-                booléennes (vrai/faux) décrivent les propriétés personnelles (couleur
-                des cheveux ou des yeux, type de vêtement, âge, etc.). La classe regroupe
-                ensuite des objets basés sur des déclarations booléennes de plus en
-                plus complexes, puis examine comment les conditions peuvent avoir
-                un impact sur le flux d'un programme.
-              description_teacher: Dans cette leçon, les élèves sont initiés aux valeurs
-                et à la logique booléennes, ainsi qu'aux déclarations conditionnelles.
-                La classe commence par un simple jeu de Debout, Assis, dans lequel
-                les déclarations booléennes (vrai/faux) décrivent les propriétés personnelles
-                (couleur des cheveux ou des yeux, type de vêtement, âge, etc.). Cela
-                amène les étudiants à réfléchir à la façon dont ils peuvent encadrer
-                une propriété avec plusieurs valeurs potentielles (telles que l'âge)
-                avec une question binaire.De là, les étudiants reçoivent un groupe
-                d'objets ayant des propriétés physiques similaires, mais variables.
-                Avec un partenaire, ils regroupent ces objets en fonction de déclarations
-                booléennes de plus en plus complexes, y compris les booléens composés
-                avec ET et OU. Enfin, nous révélons les Conditions comme un outil
-                pour prendre des décisions ou avoir un impact sur le flux d'un programme
-                en utilisant des déclarations booléennes en entrée.
-            Conditionals:
-              name: Instructions conditionnelles
-              description_student: La classe commence par utiliser des booléens pour
-                comparer la valeur actuelle d'une propriété de lutin avec une valeur
-                cible, en utilisant cette comparaison pour déterminer quand un sprite
-                a atteint un point sur l'écran, atteint une taille donnée ou encore
-                atteint une valeur à l'aide du compteur modèle. Après avoir utilisé
-                des booléens directement pour étudier les valeurs ou les propriétés
-                du lutin, la classe ajoute des déclarations conditionnelles si pour
-                écrire du code qui répond à ces comparaisons booléennes.
-              description_teacher: Les étudiants commencent par utiliser des booléens
-                pour comparer la valeur actuelle d'une propriété de lutin avec une
-                valeur cible, en utilisant cette comparaison pour déterminer quand
-                un sprite a atteint un point sur l'écran, atteint une taille donnée
-                ou encore atteint une valeur à l'aide du compteur modèle. Après avoir
-                utilisé des booléens directement pour étudier les valeurs ou les propriétés
-                du lutin, les étudiants ajoutent des déclarations conditionnelles
-                _si_ pour écrire du code qui répond à ces comparaisons booléennes.
-            Keyboard Input:
-              name: Entrée Au Clavier
-              description_student: Après l'introduction aux booléens et aux déclarations
-                si, dans la leçon précédente, les élèves sont initiés à un nouveau
-                bloc appelé keyDown() qui renvoie un booléen et peut être utilisé
-                dans les déclarations conditionnelles pour déplacer les lutins autour
-                de l'écran. À la fin de cette leçon, les étudiants auront des programmes
-                écrits qui s'approprient la saisie au clavier de l'utilisateur pour
-                contrôler les lutins à l'écran.
-              description_teacher: Après l'introduction aux booléens et aux déclarations
-                _si_, dans la leçon précédente, les élèves sont initiés à un nouveau
-                bloc appelé `keyDown()` qui renvoie un booléen et peut être utilisé
-                dans les déclarations conditionnelles pour déplacer les lutins autour
-                de l'écran. À la fin de cette leçon, les étudiants auront des programmes
-                écrits qui s'approprient la saisie au clavier de l'utilisateur pour
-                contrôler les lutins à l'écran.
-            Other Forms of Input:
-              name: Autres Formes d'Entrée
-              description_student: La classe continue d'explorer les moyens d'utiliser
-                des déclarations conditionnelles pour s'approprier la saisie de l'utilisateur.
-                En plus de la simple commande keyDown(), apprise hier, la classe apprend
-                plusieurs autres commandes d'entrée au clavier ainsi que des façons
-                de s'approprier la saisie de la souris.
-              description_teacher: Dans cette lecon, les étudiants continuent d'explorer
-                les moyens d'utiliser des déclarations conditionnelles pour s'approprier
-                la saisie de l'utilisateur. En plus de la simple commande keyDown(),
-                apprise hier, les étudiants apprennent plusieurs autres commandes
-                d'entrée au clavier ainsi que des façons de s'approprier la saisie
-                de la souris.
-            Project - Interactive Card:
-              name: Projet - Carte Interactive
-              description_student: Dans ce projet cumulatif pour le Chapitre 1, la
-                classe planifie et développe une carte de voeux interactive en utilisant
-                toutes les techniques de programmation qu'elle a apprises jusqu'à
-                présent.
-              description_teacher: Dans ce projet cumulatif pour le Chapitre 1, les
-                étudiants planifient et développent une carte de vœux interactive
-                en utilisant toutes les techniques de programmation qu'ils ont apprises
-                jusqu'à présent.
-            Velocity:
-              name: Vitesse
-              description_student: Après une bref examen de la façon dont le compteur
-                modèle est utilisé pour déplacer les lutins, la classe est initiée
-                aux propriétés qui définissent, directement, la vitesse et la vitesse
-                de rotation. En utilisant ces nouvelles propriétés de différentes
-                manières, elle acquiert les compétences dont elle a besoin pour créer
-                un jeu à défilement latéral de base.
-              description_teacher: Après une brève révision de la façon dont ils ont
-                utilisé le compteur modèle pour déplacer les lutins, dans la leçon
-                précédente, les étudiants sont initiés aux propriétés qui définissent,
-                directement, la vitesse et la vitesse de rotation. En utilisant ces
-                nouvelles propriétés de différentes manières, ils acquièrent les compétences
-                dont ils ont besoin pour créer un jeu à défilement latéral de base.
-            Collision Detection:
-              name: Détection de collision
-              description_student: La classe apprend ce qu'est la détection de collision
-                sur l'ordinateur. Travaillant en paires, elle explore comment un ordinateur
-                pourrait utiliser les propriétés de localisation et de taille des
-                lutins, ainsi que les mathématiques pour détecter si deux lutins se
-                touchent. La classe utilise ensuite le bloc isTouching() pour créer
-                différents effets lorsque les lutins entrent en collision, y compris
-                la lecture de sons.  Enfin, elle utilise ses nouvelles compétences
-                pour améliorer le jeu à défilement latéral qu'elle a commencé dans
-                la dernière leçon.
-              description_teacher: Les étudiants apprennent ce qu'est la détection
-                de collision sur l'ordinateur. Travaillant en paires, ils explorent
-                comment un ordinateur pourrait utiliser les propriétés de localisation
-                et de taille des lutins, ainsi que les mathématiques pour détecter
-                si deux lutins se touchent.  Ils utilisent ensuite le bloc isTouching()
-                pour créer différents effets lorsque les lutins entrent en collision,
-                y compris la lecture de sons.  Enfin, ils utilisent leurs nouvelles
-                compétences pour améliorer le jeu à défilement latéral qu'ils ont
-                commencé dans la dernière leçon.
-            Complex Sprite Movement:
-              name: Déplacement Complexe du Lutin
-              description_student: La classe apprend à combiner les propriétés de
-                vitesse des lutins avec le compteur modèle pour créer un mouvement
-                de lutins plus complexe, tels que simuler la gravité, faire sauter
-                un lutin et permettre à un lutin de flotter à gauche ou à droite.
-                Dans les derniers niveaux la classe combine ces mouvements pour animer
-                et contrôler un seul lutin et construire un jeu simple dans lequel
-                un personnage vole et recueille des pièces de monnaie.
-              description_teacher: Les étudiants apprennent à combiner les propriétés
-                de vitesse des lutins avec le compteur modèle pour créer un mouvement
-                de lutins plus complexe. En particulier, les élèves apprendront à
-                simuler la gravité, à faire sauter un lutin et à permettre à un lutin
-                de flotter à gauche ou à droite. Dans les derniers niveaux de la progression
-                de Code Studio, les étudiants combinent ces mouvements pour animer
-                et contrôler un seul lutin et construire un jeu simple dans lequel
-                un personnage vole et recueille une pièce de monnaie. Les étudiants
-                sont encouragés à faire leurs propres ajouts au jeu dans le dernier
-                niveau.
-            Collisions:
-              name: Collisions
-              description_student: La classe programme ses lutins pour interagir de
-                nouvelles façons. Après une brève révision de la façon dont elle a
-                utilisé le bloc Touche, la classe réfléchit, en groupes, à d'autres
-                façons dont deux lutins pourraient interagir. Elle utilise ensuite
-                isTouching pour faire en sorte qu'un lutin en pousse un autre, sur
-                l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter,
-                déloger, bondir et rebondir).
-              description_teacher: Les étudiants programment leurs lutins pour interagir
-                de nouvelles façons. Après une brève révision de la façon dont ils
-                ont utilisé le bloc Touche, les étudiants réfléchissent, en groupes,
-                à d'autres façons dont deux lutins pourraient interagir. Ils utilisent
-                ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre,
-                sur l'écran, avant de s'entraîner avec les quatre blocs de collision
-                (heurter, déloger, bondir et rebondir).
-            Functions:
-              name: fonctions
-              description_student: Cette leçon couvre les fonctions comme un moyen
-                d'organiser leur code, de le rendre plus lisible et de supprimer les
-                blocs de code répétés. La classe apprend qu'un niveau supérieur ou
-                des étapes plus abstraites facilitent la compréhension et le raisonnement
-                quant aux étapes, puis commence à créer des fonctions dans le Labo
-                des Jeux. À la fin de la leçon, la classe utilise ces compétences
-                pour organiser et ajouter des fonctionnalités à la version finale
-                de leur jeu à défilement latéral.
-              description_teacher: Les élèves apprennent à créer des fonctions pour
-                organiser leur code, le rendre plus lisible et supprimer des blocs
-                de code répétés. Un échauffement débranché explore comment les directions
-                à différents niveaux de détail peuvent être utiles en fonction du
-                contexte. Les élèves apprennent que des étapes de niveau supérieur
-                ou plus abstraites facilitent la compréhension et le raisonnement
-                quant aux étapes. Ensuite, les élèves apprennent à créer des fonctions
-                dans le Labo des Jeux. Ils utiliseront des fonctions pour supprimer
-                de longs blocs de code de leur boucle Dessiner et pour remplacer des
-                morceaux de code répétés par une seule fonction. À la fin de la leçon,
-                les élèves utilisent ces compétences pour organiser et ajouter des
-                fonctionnalités à la version finale de leur jeu à défilement latéral.
-            The Game Design Process:
-              name: Le Processus de Conception d'un Jeu
-              description_student: Cette leçon présente le processus que la classe
-                utilisera pour concevoir des jeux pour le reste de l'unité. La classe
-                parcourt ce processus dans une série de niveaux. Dans le cadre de
-                cette leçon, la classe apprend également brièvement à utiliser des
-                animations multi-images dans le Labo des Jeux. À la fin de la leçon,
-                ils ont la possibilité d'apporter des améliorations au jeu pour se
-                l'approprier.
-              description_teacher: Cette leçon présente aux élèves le processus qu'ils
-                utiliseront pour concevoir des jeux pour le reste de l'unité. Ce processus
-                est centré autour d'un guide de projet qui demande aux élèves de définir
-                leurs lutins, variables et fonctions avant de commencer à programmer
-                leur jeu. Dans cette leçon, les élèves commencent par jouer à un jeu
-                sur le Labo des Jeux où le code est caché. Ils discutent de ce qu'ils
-                pensent que les lutins, les variables et les fonctions devraient être
-                pour créer le jeu. Ils reçoivent ensuite un guide de projet complet
-                qui montre une façon de mettre en œuvre le jeu. Les élèves suivent
-                ensuite ce processus à travers une série de niveaux. Dans le cadre
-                de cette leçon, les élèves apprennent également brièvement à utiliser
-                des animations multi-images dans le Labo des Jeux. À la fin de la
-                leçon, les élèves ont la possibilité d'apporter des améliorations
-                au jeu pour se l'approprier.
-            Using the Game Design Process:
-              name: Utiliser le Processus de Conception d'un Jeu
-              description_student: Dans cette leçon de plusieurs jours, la classe
-                utilise le processus de résolution de problèmes de l'Unité 1 pour
-                créer un jeu de saut plate-forme.  Après avoir regardé un exemple
-                de jeu, la classe définit à quoi ressembleront leurs jeux et utilise
-                un processus structuré pour les construire.  Enfin, la classe réfléchit
-                à la façon dont les jeux pourraient être améliorés et met en œuvre
-                ces changements.
-              description_teacher: Dans cette leçon de plusieurs jours, les élèves
-                utilisent le processus de résolution de problèmes de l'Unité 1 pour
-                créer un jeu de saut plate-forme.  Ils commencent par regarder un
-                exemple de saut plate-forme, puis définissent à quoi ressembleront
-                leurs jeux.  Ensuite, ils utilisent un processus structuré pour planifier
-                les arrière-plans, les variables, les lutins et les fonctions dont
-                ils auront besoin pour mettre en œuvre leur jeu leur jeu. Après avoir
-                écrit le code du jeu, les élèves réfléchiront à la façon dont le jeu
-                pourrait être amélioré et mettront en œuvre ces changements.
-            Project - Design a Game:
-              name: Projet - Concevoir un Jeu
-              description_student: La classe planifie et construit des jeux originaux
-                en utilisant le guide de projet des deux leçons précédentes. Travaillant
-                individuellement ou par paires, la classe planifie, développe et donne
-                des commentaires sur les jeux. Après avoir intégré les commentaires
-                des pairs, la classe partage les jeux terminés.
-              description_teacher: Les élèves planifieront et construiront leur propre
-                jeu en utilisant le guide de projet des deux leçons précédentes pour
-                guider leur projet. Travaillant individuellement ou en paires, les
-                élèves décideront d'abord du type de jeu qu'ils aimeraient construire,
-                en s'inspirant d'un ensemble d'exemples de jeux. Ils compléteront
-                ensuite un guide de projet vierge dans lequel ils décriront le comportement
-                du jeu et définiront les variables, les lutins et les fonctions dont
-                ils auront besoin pour construire. Dans Code Studio, une série de
-                niveaux les invite sur une séquence générale qu'ils peuvent utiliser
-                pour mettre en œuvre ce plan. À mi-parcours du processus, les élèves
-                partageront leurs projets pour examen par les pairs et intégreront
-                les commentaires en finissant leur partie. À la fin de la leçon, les
-                élèves pourront partager leurs jeux avec leurs camarades de classe.
-                Ce projet couvrira plusieurs classes et peut facilement prendre de
-                3 à 5 périodes de classe.
-            Post-Project Test:
-              name: Test Post-Projet
-            CS Discoveries Post Course survey:
-              name: CS Discoveries Enquête Post Cours
-            Shapes and Parameters:
-              name: Formes et paramètres
-            Random Numbers:
-              name: Nombres aléatoires
-            Sprites and Animations:
-              name: Les Lutins et les Animations
-            Sprite Properties:
-              name: Propriétés du sprite
-            Text and Captioned Scenes:
-              name: Le Texte et les Scènes Sous-Titrées
         jess-test-script:
           stages:
             new stage:
               name: nouvelle phase
             Debugging:
               name: Le Débogage
+            Module 1:
+              name: Module 1
           lessons:
             new stage:
               name: nouvelle phase
             Debugging:
               name: Le Débogage
+            Module 1:
+              name: Module 1
         csd2-virtual:
           stages:
             Exploring Web Pages:
@@ -43560,3 +43073,770 @@ fr:
               name: Unité 5  Évaluation 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unité 5 Évaluation 5 - AP Pratique Pseudocode - Questions
+        k5-onlinepd-2020:
+          description: Apprenez à enseigner l'informatique en utilisant les Principes
+            Fondamentaux de l'Informatique de Code.org avec ce cours en ligne gratuit
+            et auto-rythmé !
+          stages:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique
+                »
+            Understanding the Computer Science Fundamentals Courses:
+              name: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
+            Sequencing:
+              name: Séquençage
+            Loops:
+              name: boucles
+            Events:
+              name: Événements
+            Conditionals:
+              name: Instructions conditionnelles
+            End of Course projects:
+              name: Projets de Fin de Cours
+            Functions:
+              name: fonctions
+            Variables:
+              name: variables
+            For Loops:
+              name: Boucles « Pour »
+            Sprite Lab:
+              name: Le Labo des Lutins
+            Reviewing your reflections:
+              name: Examiner vos réflexions
+            Next steps:
+              name: Prochaines étapes
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique
+                »
+            Understanding the Computer Science Fundamentals Courses:
+              name: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
+            Sequencing:
+              name: Séquençage
+            Loops:
+              name: boucles
+            Events:
+              name: Événements
+            Conditionals:
+              name: Instructions conditionnelles
+            End of Course projects:
+              name: Projets de Fin de Cours
+            Functions:
+              name: fonctions
+            Variables:
+              name: variables
+            For Loops:
+              name: Boucles « Pour »
+            Sprite Lab:
+              name: Le Labo des Lutins
+            Reviewing your reflections:
+              name: Examiner vos réflexions
+            Next steps:
+              name: Prochaines étapes
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: La Mise en Route
+            k5_basic_concepts_1:
+              display_name: Concepts de Codage de Base et Pratiques D'enseignement
+            k5_diving_deeper_1:
+              display_name: 'Immersion Totale : Cours E et F'
+            k5_next_steps_1:
+              display_name: Prochaines étapes
+        dani-june-2020-test:
+          stages:
+            CS Principles Pre-survey:
+              name: CSP Pré-enquête
+            Buttons and Events:
+              name: Les boutons et les Événements
+          lessons:
+            CS Principles Pre-survey:
+              name: CSP Pré-enquête
+            Buttons and Events:
+              name: Les boutons et les Événements
+          lesson_groups:
+            cspSurvey:
+              display_name: Enquête
+            csp5_1:
+              display_name: 'Chapitre 1 : La Programmation Événementielle'
+        csd3-virtual:
+          description_short: Programmation
+          stages:
+            Programming for Entertainment:
+              name: Programmer pour le Divertissement
+              description_student: La classe est invitée à considérer les « problèmes
+                » d'ennui et d'expression de soi, et à réfléchir à la façon dont elle
+                aborde ces problèmes dans sa propre vie. À partir de là, elle explorera
+                comment l'informatique, en général, et la programmation, en particulier,
+                jouent un rôle dans une forme spécifique de divertissement ou comme
+                véhicule d'expression de soi.
+              description_teacher: Les élèves sont invités à considérer les « problèmes
+                » de d'ennui et d'expression de soi, et à réfléchir à la façon dont
+                ils abordent ces problèmes dans leur propre vie. À partir de là, les
+                élèves exploreront comment l'informatique, en général, et la programmation,
+                en particulier, jouent un rôle dans une forme spécifique de divertissement
+                ou comme véhicule d'expression de soi.
+            Plotting Shapes:
+              name: Tracer Des Formes
+              description_student: Les élèves explorent les défis de communiquer la
+                manière de dessiner avec des formes et utilisent un outil qui présente
+                comment ce problème est abordé dans le Labo des Jeux. L'activité d'échauffement
+                démontre rapidement les défis de la communication de la position sans
+                un point de référence commun. Dans l'activité principale, les élèves
+                explorent un outil du Labo des Jeux qui permet aux élèves de placer
+                de manière interactive des formes sur la grille 400 par 400 du Labo
+                des Jeux. Ils se relaient ensuite pour enseigner à un partenaire comment
+                dessiner une image cachée à l'aide de cet outil, ce qui représente
+                de nombreux défis que les étudiants rencontreront lors de la programmation
+                dans le Labo des Jeux. Les élèves créent, éventuellement, leur propre
+                image pour communiquer avant une discussion de débriefing.
+              description_teacher: Les élèves explorent les défis de communiquer la
+                manière de dessiner avec des formes et utilisent un outil qui présente
+                comment ce problème est abordé dans le Labo des Jeux. L'activité d'échauffement
+                démontre rapidement les défis de la communication de la position sans
+                un point de référence commun. Dans l'activité principale, les élèves
+                explorent un outil du Labo des Jeux qui permet aux élèves de placer
+                de manière interactive des formes sur la grille 400 par 400 du Labo
+                des Jeux. Ils se relaient ensuite pour enseigner à un partenaire comment
+                dessiner une image cachée à l'aide de cet outil, ce qui représente
+                de nombreux défis que les étudiants rencontreront lors de la programmation
+                dans le Labo des Jeux. Les élèves créent, éventuellement, leur propre
+                image pour communiquer avant une discussion de débriefing.
+            Drawing in Game Lab:
+              name: Dessiner dans le Labo des Jeux
+              description_student: La classe est initiée au Labo des Jeux, l'environnement
+                de programmation de cette unité, et commence à l'utiliser pour positionner
+                des formes à l'écran. La leçon couvre les bases du séquencement et
+                du débogage, ainsi que quelques commandes simples. À la fin de la
+                leçon, la classe crée une version en ligne de l'image qu'ils ont conçue
+                dans la leçon précédente.
+              description_teacher: Les élèves sont initiés au Labo des Jeux, l'environnement
+                de programmation de cette unité, et commencent à l'utiliser pour positionner
+                des formes à l'écran. Ils apprennent les bases du séquencement et
+                du débogage, ainsi que quelques commandes simples. À la fin de la
+                leçon, les élèves seront en mesure de programmer des images comme
+                celles qu'ils ont faites avec l'outil de dessin dans la leçon précédente.
+            Shapes and Parameters:
+              name: Formes et paramètres
+            Variables:
+              name: variables
+              description_student: Cette leçon présente les variables comme un moyen
+                d'étiqueter un nombre dans un programme ou d'enregistrer une valeur
+                générée aléatoirement. La classe commence la leçon avec une description
+                très basique du but d'une variable et des pratiques, en utilisant
+                les nouveaux blocs. Ensuite, la classe utilise des variables pour
+                enregistrer un nombre aléatoire, permettant aux programmes d'utiliser
+                le même nombre aléatoire plusieurs fois.
+              description_teacher: Dans cette leçon, les élèves apprennent à utiliser
+                des variables pour étiqueter un nombre dans leur programme ou enregistrer
+                une valeur générée aléatoirement. Les élèves commencent la leçon avec
+                une description très basique du but d'une variable. Les élèves effectuent
+                ensuite une progression de niveau qui renforce le modèle d'une variable
+                comme un moyen d'étiqueter ou de nommer un nombre. Les élèves utilisent
+                des variables pour enregistrer un nombre aléatoire pour voir que les
+                variables stockent ou enregistrent réellement leurs valeurs, ce qui
+                leur permet d'utiliser le même nombre aléatoire plusieurs fois dans
+                leurs programmes.
+            Random Numbers:
+              name: Nombres aléatoires
+            Sprites:
+              name: Les Lutins
+            Sprite Properties:
+              name: Propriétés du sprite
+            Text:
+              name: Texte
+            The Draw Loop:
+              name: La Boucle Dessiner
+              description_student: Cette leçon présente la boucle draw, l’un des principaux
+                paradigmes de programmation du labo des jeux. La classe combine la
+                boucle draw avec des nombres aléatoires pour manipuler des animations
+                simples avec des points, puis des sprites. Ensuite, tout le monde
+                utilise ce qu'il a appris pour mettre à jour la scène du sprite de
+                la leçon précédente.
+              description_teacher: Dans cette leçon, les élèves se familiarisent avec
+                la boucle d’étirage, l’un des principaux paradigmes de programmation
+                du labo des jeux. Pour commencer la leçon, les élèves examinent des
+                folioscopes afin de constater que le fait de montrer plusieurs images
+                à la suite crée l’impression de mouvement. Les élèves regardent ensuite
+                une vidéo expliquant comment la boucle draw du labo des jeux contribue
+                à créer cette même impression dans leurs programmes. Les élèves combinent
+                la boucle draw avec des nombres aléatoires pour manipuler des animations
+                simples avec des points, puis des sprites. À la fin de la leçon, les
+                élèves utilisent ce qu'ils ont appris pour mettre à jour la scène
+                de sprites de la leçon précédente.
+            Sprite Movement:
+              name: Le Déplacement du Lutin
+              description_student: En combinant la Boucle Dessiner et le Modèle de
+                Compteur, la classe écrit des programmes qui déplacent des lutins
+                sur l'écran, et animent également d'autres propriétés de lutin.
+              description_teacher: En combinant la Boucle Dessiner et le compteur
+                modèle, les étudiants écrivent des programmes qui déplacent des lutins
+                sur l'écran, et animent également d'autres propriétés de lutin.
+            Conditionals:
+              name: Instructions conditionnelles
+              description_student: La classe commence par utiliser des booléens pour
+                comparer la valeur actuelle d'une propriété de lutin avec une valeur
+                cible, en utilisant cette comparaison pour déterminer quand un sprite
+                a atteint un point sur l'écran, atteint une taille donnée ou encore
+                atteint une valeur à l'aide du compteur modèle. Après avoir utilisé
+                des booléens directement pour étudier les valeurs ou les propriétés
+                du lutin, la classe ajoute des déclarations conditionnelles si pour
+                écrire du code qui répond à ces comparaisons booléennes.
+              description_teacher: Les étudiants commencent par utiliser des booléens
+                pour comparer la valeur actuelle d'une propriété de lutin avec une
+                valeur cible, en utilisant cette comparaison pour déterminer quand
+                un sprite a atteint un point sur l'écran, atteint une taille donnée
+                ou encore atteint une valeur à l'aide du compteur modèle. Après avoir
+                utilisé des booléens directement pour étudier les valeurs ou les propriétés
+                du lutin, les étudiants ajoutent des déclarations conditionnelles
+                _si_ pour écrire du code qui répond à ces comparaisons booléennes.
+            Keyboard Input:
+              name: Entrée Au Clavier
+              description_student: Après l'introduction aux booléens et aux déclarations
+                si, dans la leçon précédente, les élèves sont initiés à un nouveau
+                bloc appelé keyDown() qui renvoie un booléen et peut être utilisé
+                dans les déclarations conditionnelles pour déplacer les lutins autour
+                de l'écran. À la fin de cette leçon, les étudiants auront des programmes
+                écrits qui s'approprient la saisie au clavier de l'utilisateur pour
+                contrôler les lutins à l'écran.
+              description_teacher: Après l'introduction aux booléens et aux déclarations
+                _si_, dans la leçon précédente, les élèves sont initiés à un nouveau
+                bloc appelé `keyDown()` qui renvoie un booléen et peut être utilisé
+                dans les déclarations conditionnelles pour déplacer les lutins autour
+                de l'écran. À la fin de cette leçon, les étudiants auront des programmes
+                écrits qui s'approprient la saisie au clavier de l'utilisateur pour
+                contrôler les lutins à l'écran.
+            Project - Interactive Card:
+              name: Projet - Carte Interactive
+              description_student: Dans ce projet cumulatif pour le Chapitre 1, la
+                classe planifie et développe une carte de voeux interactive en utilisant
+                toutes les techniques de programmation qu'elle a apprises jusqu'à
+                présent.
+              description_teacher: Dans ce projet cumulatif pour le Chapitre 1, les
+                étudiants planifient et développent une carte de vœux interactive
+                en utilisant toutes les techniques de programmation qu'ils ont apprises
+                jusqu'à présent.
+            Velocity:
+              name: Vitesse
+              description_student: Après une bref examen de la façon dont le compteur
+                modèle est utilisé pour déplacer les lutins, la classe est initiée
+                aux propriétés qui définissent, directement, la vitesse et la vitesse
+                de rotation. En utilisant ces nouvelles propriétés de différentes
+                manières, elle acquiert les compétences dont elle a besoin pour créer
+                un jeu à défilement latéral de base.
+              description_teacher: Après une brève révision de la façon dont ils ont
+                utilisé le compteur modèle pour déplacer les lutins, dans la leçon
+                précédente, les étudiants sont initiés aux propriétés qui définissent,
+                directement, la vitesse et la vitesse de rotation. En utilisant ces
+                nouvelles propriétés de différentes manières, ils acquièrent les compétences
+                dont ils ont besoin pour créer un jeu à défilement latéral de base.
+            Collision Detection:
+              name: Détection de collision
+              description_student: La classe apprend ce qu'est la détection de collision
+                sur l'ordinateur. Travaillant en paires, elle explore comment un ordinateur
+                pourrait utiliser les propriétés de localisation et de taille des
+                lutins, ainsi que les mathématiques pour détecter si deux lutins se
+                touchent. La classe utilise ensuite le bloc isTouching() pour créer
+                différents effets lorsque les lutins entrent en collision, y compris
+                la lecture de sons.  Enfin, elle utilise ses nouvelles compétences
+                pour améliorer le jeu à défilement latéral qu'elle a commencé dans
+                la dernière leçon.
+              description_teacher: Les étudiants apprennent ce qu'est la détection
+                de collision sur l'ordinateur. Travaillant en paires, ils explorent
+                comment un ordinateur pourrait utiliser les propriétés de localisation
+                et de taille des lutins, ainsi que les mathématiques pour détecter
+                si deux lutins se touchent.  Ils utilisent ensuite le bloc isTouching()
+                pour créer différents effets lorsque les lutins entrent en collision,
+                y compris la lecture de sons.  Enfin, ils utilisent leurs nouvelles
+                compétences pour améliorer le jeu à défilement latéral qu'ils ont
+                commencé dans la dernière leçon.
+            Complex Sprite Movement:
+              name: Déplacement Complexe du Lutin
+              description_student: La classe apprend à combiner les propriétés de
+                vitesse des lutins avec le compteur modèle pour créer un mouvement
+                de lutins plus complexe, tels que simuler la gravité, faire sauter
+                un lutin et permettre à un lutin de flotter à gauche ou à droite.
+                Dans les derniers niveaux la classe combine ces mouvements pour animer
+                et contrôler un seul lutin et construire un jeu simple dans lequel
+                un personnage vole et recueille des pièces de monnaie.
+              description_teacher: Les étudiants apprennent à combiner les propriétés
+                de vitesse des lutins avec le compteur modèle pour créer un mouvement
+                de lutins plus complexe. En particulier, les élèves apprendront à
+                simuler la gravité, à faire sauter un lutin et à permettre à un lutin
+                de flotter à gauche ou à droite. Dans les derniers niveaux de la progression
+                de Code Studio, les étudiants combinent ces mouvements pour animer
+                et contrôler un seul lutin et construire un jeu simple dans lequel
+                un personnage vole et recueille une pièce de monnaie. Les étudiants
+                sont encouragés à faire leurs propres ajouts au jeu dans le dernier
+                niveau.
+            Collisions:
+              name: Collisions
+              description_student: La classe programme ses lutins pour interagir de
+                nouvelles façons. Après une brève révision de la façon dont elle a
+                utilisé le bloc Touche, la classe réfléchit, en groupes, à d'autres
+                façons dont deux lutins pourraient interagir. Elle utilise ensuite
+                isTouching pour faire en sorte qu'un lutin en pousse un autre, sur
+                l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter,
+                déloger, bondir et rebondir).
+              description_teacher: Les étudiants programment leurs lutins pour interagir
+                de nouvelles façons. Après une brève révision de la façon dont ils
+                ont utilisé le bloc Touche, les étudiants réfléchissent, en groupes,
+                à d'autres façons dont deux lutins pourraient interagir. Ils utilisent
+                ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre,
+                sur l'écran, avant de s'entraîner avec les quatre blocs de collision
+                (heurter, déloger, bondir et rebondir).
+            Functions:
+              name: fonctions
+              description_student: Cette leçon couvre les fonctions comme un moyen
+                d'organiser leur code, de le rendre plus lisible et de supprimer les
+                blocs de code répétés. La classe apprend qu'un niveau supérieur ou
+                des étapes plus abstraites facilitent la compréhension et le raisonnement
+                quant aux étapes, puis commence à créer des fonctions dans le Labo
+                des Jeux. À la fin de la leçon, la classe utilise ces compétences
+                pour organiser et ajouter des fonctionnalités à la version finale
+                de leur jeu à défilement latéral.
+              description_teacher: Les élèves apprennent à créer des fonctions pour
+                organiser leur code, le rendre plus lisible et supprimer des blocs
+                de code répétés. Un échauffement débranché explore comment les directions
+                à différents niveaux de détail peuvent être utiles en fonction du
+                contexte. Les élèves apprennent que des étapes de niveau supérieur
+                ou plus abstraites facilitent la compréhension et le raisonnement
+                quant aux étapes. Ensuite, les élèves apprennent à créer des fonctions
+                dans le Labo des Jeux. Ils utiliseront des fonctions pour supprimer
+                de longs blocs de code de leur boucle Dessiner et pour remplacer des
+                morceaux de code répétés par une seule fonction. À la fin de la leçon,
+                les élèves utilisent ces compétences pour organiser et ajouter des
+                fonctionnalités à la version finale de leur jeu à défilement latéral.
+            The Game Design Process:
+              name: Le Processus de Conception d'un Jeu
+              description_student: Cette leçon présente le processus que la classe
+                utilisera pour concevoir des jeux pour le reste de l'unité. La classe
+                parcourt ce processus dans une série de niveaux. Dans le cadre de
+                cette leçon, la classe apprend également brièvement à utiliser des
+                animations multi-images dans le Labo des Jeux. À la fin de la leçon,
+                ils ont la possibilité d'apporter des améliorations au jeu pour se
+                l'approprier.
+              description_teacher: Cette leçon présente aux élèves le processus qu'ils
+                utiliseront pour concevoir des jeux pour le reste de l'unité. Ce processus
+                est centré autour d'un guide de projet qui demande aux élèves de définir
+                leurs lutins, variables et fonctions avant de commencer à programmer
+                leur jeu. Dans cette leçon, les élèves commencent par jouer à un jeu
+                sur le Labo des Jeux où le code est caché. Ils discutent de ce qu'ils
+                pensent que les lutins, les variables et les fonctions devraient être
+                pour créer le jeu. Ils reçoivent ensuite un guide de projet complet
+                qui montre une façon de mettre en œuvre le jeu. Les élèves suivent
+                ensuite ce processus à travers une série de niveaux. Dans le cadre
+                de cette leçon, les élèves apprennent également brièvement à utiliser
+                des animations multi-images dans le Labo des Jeux. À la fin de la
+                leçon, les élèves ont la possibilité d'apporter des améliorations
+                au jeu pour se l'approprier.
+            Using the Game Design Process:
+              name: Utiliser le Processus de Conception d'un Jeu
+              description_student: Dans cette leçon de plusieurs jours, la classe
+                utilise le processus de résolution de problèmes de l'Unité 1 pour
+                créer un jeu de saut plate-forme.  Après avoir regardé un exemple
+                de jeu, la classe définit à quoi ressembleront leurs jeux et utilise
+                un processus structuré pour les construire.  Enfin, la classe réfléchit
+                à la façon dont les jeux pourraient être améliorés et met en œuvre
+                ces changements.
+              description_teacher: Dans cette leçon de plusieurs jours, les élèves
+                utilisent le processus de résolution de problèmes de l'Unité 1 pour
+                créer un jeu de saut plate-forme.  Ils commencent par regarder un
+                exemple de saut plate-forme, puis définissent à quoi ressembleront
+                leurs jeux.  Ensuite, ils utilisent un processus structuré pour planifier
+                les arrière-plans, les variables, les lutins et les fonctions dont
+                ils auront besoin pour mettre en œuvre leur jeu leur jeu. Après avoir
+                écrit le code du jeu, les élèves réfléchiront à la façon dont le jeu
+                pourrait être amélioré et mettront en œuvre ces changements.
+            Project - Design a Game:
+              name: Projet - Concevoir un Jeu
+              description_student: La classe planifie et construit des jeux originaux
+                en utilisant le guide de projet des deux leçons précédentes. Travaillant
+                individuellement ou par paires, la classe planifie, développe et donne
+                des commentaires sur les jeux. Après avoir intégré les commentaires
+                des pairs, la classe partage les jeux terminés.
+              description_teacher: Les élèves planifieront et construiront leur propre
+                jeu en utilisant le guide de projet des deux leçons précédentes pour
+                guider leur projet. Travaillant individuellement ou en paires, les
+                élèves décideront d'abord du type de jeu qu'ils aimeraient construire,
+                en s'inspirant d'un ensemble d'exemples de jeux. Ils compléteront
+                ensuite un guide de projet vierge dans lequel ils décriront le comportement
+                du jeu et définiront les variables, les lutins et les fonctions dont
+                ils auront besoin pour construire. Dans Code Studio, une série de
+                niveaux les invite sur une séquence générale qu'ils peuvent utiliser
+                pour mettre en œuvre ce plan. À mi-parcours du processus, les élèves
+                partageront leurs projets pour examen par les pairs et intégreront
+                les commentaires en finissant leur partie. À la fin de la leçon, les
+                élèves pourront partager leurs jeux avec leurs camarades de classe.
+                Ce projet couvrira plusieurs classes et peut facilement prendre de
+                3 à 5 périodes de classe.
+            Post-Project Test:
+              name: Test Post-Projet
+            CS Discoveries Post Course survey:
+              name: CS Discoveries Enquête Post Cours
+          lessons:
+            Programming for Entertainment:
+              name: Programmer pour le Divertissement
+              description_student: La classe est invitée à considérer les « problèmes
+                » d'ennui et d'expression de soi, et à réfléchir à la façon dont elle
+                aborde ces problèmes dans sa propre vie. À partir de là, elle explorera
+                comment l'informatique, en général, et la programmation, en particulier,
+                jouent un rôle dans une forme spécifique de divertissement ou comme
+                véhicule d'expression de soi.
+              description_teacher: Les élèves sont invités à considérer les « problèmes
+                » de d'ennui et d'expression de soi, et à réfléchir à la façon dont
+                ils abordent ces problèmes dans leur propre vie. À partir de là, les
+                élèves exploreront comment l'informatique, en général, et la programmation,
+                en particulier, jouent un rôle dans une forme spécifique de divertissement
+                ou comme véhicule d'expression de soi.
+            Plotting Shapes:
+              name: Tracer Des Formes
+              description_student: Les élèves explorent les défis de communiquer la
+                manière de dessiner avec des formes et utilisent un outil qui présente
+                comment ce problème est abordé dans le Labo des Jeux. L'activité d'échauffement
+                démontre rapidement les défis de la communication de la position sans
+                un point de référence commun. Dans l'activité principale, les élèves
+                explorent un outil du Labo des Jeux qui permet aux élèves de placer
+                de manière interactive des formes sur la grille 400 par 400 du Labo
+                des Jeux. Ils se relaient ensuite pour enseigner à un partenaire comment
+                dessiner une image cachée à l'aide de cet outil, ce qui représente
+                de nombreux défis que les étudiants rencontreront lors de la programmation
+                dans le Labo des Jeux. Les élèves créent, éventuellement, leur propre
+                image pour communiquer avant une discussion de débriefing.
+              description_teacher: Les élèves explorent les défis de communiquer la
+                manière de dessiner avec des formes et utilisent un outil qui présente
+                comment ce problème est abordé dans le Labo des Jeux. L'activité d'échauffement
+                démontre rapidement les défis de la communication de la position sans
+                un point de référence commun. Dans l'activité principale, les élèves
+                explorent un outil du Labo des Jeux qui permet aux élèves de placer
+                de manière interactive des formes sur la grille 400 par 400 du Labo
+                des Jeux. Ils se relaient ensuite pour enseigner à un partenaire comment
+                dessiner une image cachée à l'aide de cet outil, ce qui représente
+                de nombreux défis que les étudiants rencontreront lors de la programmation
+                dans le Labo des Jeux. Les élèves créent, éventuellement, leur propre
+                image pour communiquer avant une discussion de débriefing.
+            Drawing in Game Lab:
+              name: Dessiner dans le Labo des Jeux
+              description_student: La classe est initiée au Labo des Jeux, l'environnement
+                de programmation de cette unité, et commence à l'utiliser pour positionner
+                des formes à l'écran. La leçon couvre les bases du séquencement et
+                du débogage, ainsi que quelques commandes simples. À la fin de la
+                leçon, la classe crée une version en ligne de l'image qu'ils ont conçue
+                dans la leçon précédente.
+              description_teacher: Les élèves sont initiés au Labo des Jeux, l'environnement
+                de programmation de cette unité, et commencent à l'utiliser pour positionner
+                des formes à l'écran. Ils apprennent les bases du séquencement et
+                du débogage, ainsi que quelques commandes simples. À la fin de la
+                leçon, les élèves seront en mesure de programmer des images comme
+                celles qu'ils ont faites avec l'outil de dessin dans la leçon précédente.
+            Shapes and Parameters:
+              name: Formes et paramètres
+            Variables:
+              name: variables
+              description_student: Cette leçon présente les variables comme un moyen
+                d'étiqueter un nombre dans un programme ou d'enregistrer une valeur
+                générée aléatoirement. La classe commence la leçon avec une description
+                très basique du but d'une variable et des pratiques, en utilisant
+                les nouveaux blocs. Ensuite, la classe utilise des variables pour
+                enregistrer un nombre aléatoire, permettant aux programmes d'utiliser
+                le même nombre aléatoire plusieurs fois.
+              description_teacher: Dans cette leçon, les élèves apprennent à utiliser
+                des variables pour étiqueter un nombre dans leur programme ou enregistrer
+                une valeur générée aléatoirement. Les élèves commencent la leçon avec
+                une description très basique du but d'une variable. Les élèves effectuent
+                ensuite une progression de niveau qui renforce le modèle d'une variable
+                comme un moyen d'étiqueter ou de nommer un nombre. Les élèves utilisent
+                des variables pour enregistrer un nombre aléatoire pour voir que les
+                variables stockent ou enregistrent réellement leurs valeurs, ce qui
+                leur permet d'utiliser le même nombre aléatoire plusieurs fois dans
+                leurs programmes.
+            Random Numbers:
+              name: Nombres aléatoires
+            Sprites:
+              name: Les Lutins
+            Sprite Properties:
+              name: Propriétés du sprite
+            Text:
+              name: Texte
+            The Draw Loop:
+              name: La Boucle Dessiner
+              description_student: Cette leçon présente la boucle draw, l’un des principaux
+                paradigmes de programmation du labo des jeux. La classe combine la
+                boucle draw avec des nombres aléatoires pour manipuler des animations
+                simples avec des points, puis des sprites. Ensuite, tout le monde
+                utilise ce qu'il a appris pour mettre à jour la scène du sprite de
+                la leçon précédente.
+              description_teacher: Dans cette leçon, les élèves se familiarisent avec
+                la boucle d’étirage, l’un des principaux paradigmes de programmation
+                du labo des jeux. Pour commencer la leçon, les élèves examinent des
+                folioscopes afin de constater que le fait de montrer plusieurs images
+                à la suite crée l’impression de mouvement. Les élèves regardent ensuite
+                une vidéo expliquant comment la boucle draw du labo des jeux contribue
+                à créer cette même impression dans leurs programmes. Les élèves combinent
+                la boucle draw avec des nombres aléatoires pour manipuler des animations
+                simples avec des points, puis des sprites. À la fin de la leçon, les
+                élèves utilisent ce qu'ils ont appris pour mettre à jour la scène
+                de sprites de la leçon précédente.
+            Sprite Movement:
+              name: Le Déplacement du Lutin
+              description_student: En combinant la Boucle Dessiner et le Modèle de
+                Compteur, la classe écrit des programmes qui déplacent des lutins
+                sur l'écran, et animent également d'autres propriétés de lutin.
+              description_teacher: En combinant la Boucle Dessiner et le compteur
+                modèle, les étudiants écrivent des programmes qui déplacent des lutins
+                sur l'écran, et animent également d'autres propriétés de lutin.
+            Conditionals:
+              name: Instructions conditionnelles
+              description_student: La classe commence par utiliser des booléens pour
+                comparer la valeur actuelle d'une propriété de lutin avec une valeur
+                cible, en utilisant cette comparaison pour déterminer quand un sprite
+                a atteint un point sur l'écran, atteint une taille donnée ou encore
+                atteint une valeur à l'aide du compteur modèle. Après avoir utilisé
+                des booléens directement pour étudier les valeurs ou les propriétés
+                du lutin, la classe ajoute des déclarations conditionnelles si pour
+                écrire du code qui répond à ces comparaisons booléennes.
+              description_teacher: Les étudiants commencent par utiliser des booléens
+                pour comparer la valeur actuelle d'une propriété de lutin avec une
+                valeur cible, en utilisant cette comparaison pour déterminer quand
+                un sprite a atteint un point sur l'écran, atteint une taille donnée
+                ou encore atteint une valeur à l'aide du compteur modèle. Après avoir
+                utilisé des booléens directement pour étudier les valeurs ou les propriétés
+                du lutin, les étudiants ajoutent des déclarations conditionnelles
+                _si_ pour écrire du code qui répond à ces comparaisons booléennes.
+            Keyboard Input:
+              name: Entrée Au Clavier
+              description_student: Après l'introduction aux booléens et aux déclarations
+                si, dans la leçon précédente, les élèves sont initiés à un nouveau
+                bloc appelé keyDown() qui renvoie un booléen et peut être utilisé
+                dans les déclarations conditionnelles pour déplacer les lutins autour
+                de l'écran. À la fin de cette leçon, les étudiants auront des programmes
+                écrits qui s'approprient la saisie au clavier de l'utilisateur pour
+                contrôler les lutins à l'écran.
+              description_teacher: Après l'introduction aux booléens et aux déclarations
+                _si_, dans la leçon précédente, les élèves sont initiés à un nouveau
+                bloc appelé `keyDown()` qui renvoie un booléen et peut être utilisé
+                dans les déclarations conditionnelles pour déplacer les lutins autour
+                de l'écran. À la fin de cette leçon, les étudiants auront des programmes
+                écrits qui s'approprient la saisie au clavier de l'utilisateur pour
+                contrôler les lutins à l'écran.
+            Project - Interactive Card:
+              name: Projet - Carte Interactive
+              description_student: Dans ce projet cumulatif pour le Chapitre 1, la
+                classe planifie et développe une carte de voeux interactive en utilisant
+                toutes les techniques de programmation qu'elle a apprises jusqu'à
+                présent.
+              description_teacher: Dans ce projet cumulatif pour le Chapitre 1, les
+                étudiants planifient et développent une carte de vœux interactive
+                en utilisant toutes les techniques de programmation qu'ils ont apprises
+                jusqu'à présent.
+            Velocity:
+              name: Vitesse
+              description_student: Après une bref examen de la façon dont le compteur
+                modèle est utilisé pour déplacer les lutins, la classe est initiée
+                aux propriétés qui définissent, directement, la vitesse et la vitesse
+                de rotation. En utilisant ces nouvelles propriétés de différentes
+                manières, elle acquiert les compétences dont elle a besoin pour créer
+                un jeu à défilement latéral de base.
+              description_teacher: Après une brève révision de la façon dont ils ont
+                utilisé le compteur modèle pour déplacer les lutins, dans la leçon
+                précédente, les étudiants sont initiés aux propriétés qui définissent,
+                directement, la vitesse et la vitesse de rotation. En utilisant ces
+                nouvelles propriétés de différentes manières, ils acquièrent les compétences
+                dont ils ont besoin pour créer un jeu à défilement latéral de base.
+            Collision Detection:
+              name: Détection de collision
+              description_student: La classe apprend ce qu'est la détection de collision
+                sur l'ordinateur. Travaillant en paires, elle explore comment un ordinateur
+                pourrait utiliser les propriétés de localisation et de taille des
+                lutins, ainsi que les mathématiques pour détecter si deux lutins se
+                touchent. La classe utilise ensuite le bloc isTouching() pour créer
+                différents effets lorsque les lutins entrent en collision, y compris
+                la lecture de sons.  Enfin, elle utilise ses nouvelles compétences
+                pour améliorer le jeu à défilement latéral qu'elle a commencé dans
+                la dernière leçon.
+              description_teacher: Les étudiants apprennent ce qu'est la détection
+                de collision sur l'ordinateur. Travaillant en paires, ils explorent
+                comment un ordinateur pourrait utiliser les propriétés de localisation
+                et de taille des lutins, ainsi que les mathématiques pour détecter
+                si deux lutins se touchent.  Ils utilisent ensuite le bloc isTouching()
+                pour créer différents effets lorsque les lutins entrent en collision,
+                y compris la lecture de sons.  Enfin, ils utilisent leurs nouvelles
+                compétences pour améliorer le jeu à défilement latéral qu'ils ont
+                commencé dans la dernière leçon.
+            Complex Sprite Movement:
+              name: Déplacement Complexe du Lutin
+              description_student: La classe apprend à combiner les propriétés de
+                vitesse des lutins avec le compteur modèle pour créer un mouvement
+                de lutins plus complexe, tels que simuler la gravité, faire sauter
+                un lutin et permettre à un lutin de flotter à gauche ou à droite.
+                Dans les derniers niveaux la classe combine ces mouvements pour animer
+                et contrôler un seul lutin et construire un jeu simple dans lequel
+                un personnage vole et recueille des pièces de monnaie.
+              description_teacher: Les étudiants apprennent à combiner les propriétés
+                de vitesse des lutins avec le compteur modèle pour créer un mouvement
+                de lutins plus complexe. En particulier, les élèves apprendront à
+                simuler la gravité, à faire sauter un lutin et à permettre à un lutin
+                de flotter à gauche ou à droite. Dans les derniers niveaux de la progression
+                de Code Studio, les étudiants combinent ces mouvements pour animer
+                et contrôler un seul lutin et construire un jeu simple dans lequel
+                un personnage vole et recueille une pièce de monnaie. Les étudiants
+                sont encouragés à faire leurs propres ajouts au jeu dans le dernier
+                niveau.
+            Collisions:
+              name: Collisions
+              description_student: La classe programme ses lutins pour interagir de
+                nouvelles façons. Après une brève révision de la façon dont elle a
+                utilisé le bloc Touche, la classe réfléchit, en groupes, à d'autres
+                façons dont deux lutins pourraient interagir. Elle utilise ensuite
+                isTouching pour faire en sorte qu'un lutin en pousse un autre, sur
+                l'écran, avant de s'entraîner avec les quatre blocs de collision (heurter,
+                déloger, bondir et rebondir).
+              description_teacher: Les étudiants programment leurs lutins pour interagir
+                de nouvelles façons. Après une brève révision de la façon dont ils
+                ont utilisé le bloc Touche, les étudiants réfléchissent, en groupes,
+                à d'autres façons dont deux lutins pourraient interagir. Ils utilisent
+                ensuite isTouching pour faire en sorte qu'un lutin en pousse un autre,
+                sur l'écran, avant de s'entraîner avec les quatre blocs de collision
+                (heurter, déloger, bondir et rebondir).
+            Functions:
+              name: fonctions
+              description_student: Cette leçon couvre les fonctions comme un moyen
+                d'organiser leur code, de le rendre plus lisible et de supprimer les
+                blocs de code répétés. La classe apprend qu'un niveau supérieur ou
+                des étapes plus abstraites facilitent la compréhension et le raisonnement
+                quant aux étapes, puis commence à créer des fonctions dans le Labo
+                des Jeux. À la fin de la leçon, la classe utilise ces compétences
+                pour organiser et ajouter des fonctionnalités à la version finale
+                de leur jeu à défilement latéral.
+              description_teacher: Les élèves apprennent à créer des fonctions pour
+                organiser leur code, le rendre plus lisible et supprimer des blocs
+                de code répétés. Un échauffement débranché explore comment les directions
+                à différents niveaux de détail peuvent être utiles en fonction du
+                contexte. Les élèves apprennent que des étapes de niveau supérieur
+                ou plus abstraites facilitent la compréhension et le raisonnement
+                quant aux étapes. Ensuite, les élèves apprennent à créer des fonctions
+                dans le Labo des Jeux. Ils utiliseront des fonctions pour supprimer
+                de longs blocs de code de leur boucle Dessiner et pour remplacer des
+                morceaux de code répétés par une seule fonction. À la fin de la leçon,
+                les élèves utilisent ces compétences pour organiser et ajouter des
+                fonctionnalités à la version finale de leur jeu à défilement latéral.
+            The Game Design Process:
+              name: Le Processus de Conception d'un Jeu
+              description_student: Cette leçon présente le processus que la classe
+                utilisera pour concevoir des jeux pour le reste de l'unité. La classe
+                parcourt ce processus dans une série de niveaux. Dans le cadre de
+                cette leçon, la classe apprend également brièvement à utiliser des
+                animations multi-images dans le Labo des Jeux. À la fin de la leçon,
+                ils ont la possibilité d'apporter des améliorations au jeu pour se
+                l'approprier.
+              description_teacher: Cette leçon présente aux élèves le processus qu'ils
+                utiliseront pour concevoir des jeux pour le reste de l'unité. Ce processus
+                est centré autour d'un guide de projet qui demande aux élèves de définir
+                leurs lutins, variables et fonctions avant de commencer à programmer
+                leur jeu. Dans cette leçon, les élèves commencent par jouer à un jeu
+                sur le Labo des Jeux où le code est caché. Ils discutent de ce qu'ils
+                pensent que les lutins, les variables et les fonctions devraient être
+                pour créer le jeu. Ils reçoivent ensuite un guide de projet complet
+                qui montre une façon de mettre en œuvre le jeu. Les élèves suivent
+                ensuite ce processus à travers une série de niveaux. Dans le cadre
+                de cette leçon, les élèves apprennent également brièvement à utiliser
+                des animations multi-images dans le Labo des Jeux. À la fin de la
+                leçon, les élèves ont la possibilité d'apporter des améliorations
+                au jeu pour se l'approprier.
+            Using the Game Design Process:
+              name: Utiliser le Processus de Conception d'un Jeu
+              description_student: Dans cette leçon de plusieurs jours, la classe
+                utilise le processus de résolution de problèmes de l'Unité 1 pour
+                créer un jeu de saut plate-forme.  Après avoir regardé un exemple
+                de jeu, la classe définit à quoi ressembleront leurs jeux et utilise
+                un processus structuré pour les construire.  Enfin, la classe réfléchit
+                à la façon dont les jeux pourraient être améliorés et met en œuvre
+                ces changements.
+              description_teacher: Dans cette leçon de plusieurs jours, les élèves
+                utilisent le processus de résolution de problèmes de l'Unité 1 pour
+                créer un jeu de saut plate-forme.  Ils commencent par regarder un
+                exemple de saut plate-forme, puis définissent à quoi ressembleront
+                leurs jeux.  Ensuite, ils utilisent un processus structuré pour planifier
+                les arrière-plans, les variables, les lutins et les fonctions dont
+                ils auront besoin pour mettre en œuvre leur jeu leur jeu. Après avoir
+                écrit le code du jeu, les élèves réfléchiront à la façon dont le jeu
+                pourrait être amélioré et mettront en œuvre ces changements.
+            Project - Design a Game:
+              name: Projet - Concevoir un Jeu
+              description_student: La classe planifie et construit des jeux originaux
+                en utilisant le guide de projet des deux leçons précédentes. Travaillant
+                individuellement ou par paires, la classe planifie, développe et donne
+                des commentaires sur les jeux. Après avoir intégré les commentaires
+                des pairs, la classe partage les jeux terminés.
+              description_teacher: Les élèves planifieront et construiront leur propre
+                jeu en utilisant le guide de projet des deux leçons précédentes pour
+                guider leur projet. Travaillant individuellement ou en paires, les
+                élèves décideront d'abord du type de jeu qu'ils aimeraient construire,
+                en s'inspirant d'un ensemble d'exemples de jeux. Ils compléteront
+                ensuite un guide de projet vierge dans lequel ils décriront le comportement
+                du jeu et définiront les variables, les lutins et les fonctions dont
+                ils auront besoin pour construire. Dans Code Studio, une série de
+                niveaux les invite sur une séquence générale qu'ils peuvent utiliser
+                pour mettre en œuvre ce plan. À mi-parcours du processus, les élèves
+                partageront leurs projets pour examen par les pairs et intégreront
+                les commentaires en finissant leur partie. À la fin de la leçon, les
+                élèves pourront partager leurs jeux avec leurs camarades de classe.
+                Ce projet couvrira plusieurs classes et peut facilement prendre de
+                3 à 5 périodes de classe.
+            Post-Project Test:
+              name: Test Post-Projet
+            CS Discoveries Post Course survey:
+              name: CS Discoveries Enquête Post Cours
+          lesson_groups:
+            csd3_1:
+              display_name: Contenu
+            csd3_2:
+              display_name: Contenu
+            cspSurvey:
+              display_name: Contenu
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Leçon
+          lessons:
+            Lesson:
+              name: Leçon
+          lesson_groups:
+            lg_1:
+              display_name: Contenu
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Leçon
+          lessons:
+            Lesson:
+              name: Leçon
+          lesson_groups:
+            lg_1:
+              display_name: Contenu
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Leçon
+          lessons:
+            Lesson:
+              name: Leçon
+          lesson_groups:
+            lg_1:
+              display_name: Contenu
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Leçon
+          lessons:
+            Lesson:
+              name: Leçon
+          lesson_groups:
+            lg_1:
+              display_name: Contenu
+        kaitie-test-script:
+          stages:
+            Module 1:
+              name: Module 1
+          lessons:
+            Module 1:
+              name: Module 1

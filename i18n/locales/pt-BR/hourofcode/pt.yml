@@ -11,6 +11,24 @@ pt:
   campaign_date_full: 4-10 de dezembro
   campaign_date_year: '2017'
   campaign_date_full_year: 4-10 de dezembro de 2017
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Aprenda Ciência da Computação. Mude o mundo.
   hoc2019_header_line1_mobile: Aprenda Ciência da Computação.
   hoc2019_header_line2_mobile: Mude o mundo.
@@ -172,8 +190,8 @@ pt:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -4079,10 +4097,10 @@ pt:
     users can create their own tune and download it as an app for an Android device.
     Students can also modify the app by following a link to the App Inventor source
     code.
-  tutorial_computeit_longdescription: Vamos mudar os papéis. Desta vez, você é o computador!
-    Leia e interprete os programas para encontrar a trajetória certa e ganhe os desafios.
-    Você terá que se concentrar e usar suas habilidades intuitivas para entender alguns
-    conceitos básicos de programação.
+  tutorial_computeit_longdescription: Let's switch roles. This time YOU are the computer!
+    Read and interpret the programs to find the right trajectory and win the challenges.
+    You will have to focus and use your intuitive abilities to understand some core
+    concepts of programming.
   tutorial_codesterssj_longdescription: In this activity, students use our drag-to-text
     toolkit to start coding in Python right away! As they work through introductory
     skill building activities, students begin to learn about basic syntax, variables,

@@ -857,6 +857,7 @@ ko:
       email: '이메일'
       school_name: '학교 이름'
       school_country: '학교 국가정보'
+      colombian_school_name: '학교 이름'
     form_entries:
       gender:
         male: '남'

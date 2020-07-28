@@ -49,7 +49,7 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       AllowVersionUpgrade: true
-      AutomatedSnapshotRetentionPeriod: 1
+      AutomatedSnapshotRetentionPeriod: 5
       ClusterParameterGroupName: default.redshift-1.0
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
       ClusterType: single-node
@@ -59,7 +59,8 @@ Resources:
       KmsKeyId: alias/aws/redshift
       MasterUsername: {Ref: RedshiftUsername}
       MasterUserPassword: {Ref: RedshiftPassword}
-      NodeType: dc1.large
+      NodeType: ra3.4xlarge
+      NumberOfNodes: 3
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
   TableauSync:

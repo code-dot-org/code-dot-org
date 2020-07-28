@@ -53,7 +53,7 @@ id:
         reset_password_token: "Tautan pengaturan ulang kata sandi yang telah Anda ikuti"
         error:
           future: tidak mungkin di masa depan
-  beta: "versi uji-coba"
+  beta: "Percobaan"
   hello: "Halo dunia"
   welcome_back: "Selamat datang kembali, %{name}"
   your_professional_learning_plan: "Rencana Pembelajaran Profesional Anda"
@@ -168,7 +168,7 @@ id:
     accept_terms: "Anda menyetujui untuk membuat akun"
     error: "Sebuah kesalahan terjadi."
     email_preference_question: "Dapat kami email Anda tentang pembaruan kursus kami, peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)"
-    email_preference_privacy: "(Lihat kebijakan privasi)"
+    email_preference_privacy: "(Lihat kebijakan privasi kami)\n"
     email_preference_yes: "Ya"
     email_preference_no: "Tidak"
     email_preference_required: "Anda harus menentukan preferensi email."
@@ -310,7 +310,7 @@ id:
       report_bug: "Laporkan masalah"
       report_abuse: "Laporkan penyalahgunaan"
       teacher_community: "Komunitas guru"
-      professional_learning: "Pembelajaran profesional"
+      professional_learning: "Belajar profesional"
       documentation: "Dokumentasi"
       tutorials: "Tutorial"
       app_lab_documentation: "Dokumentasi aplikasi Lab"
@@ -375,18 +375,18 @@ id:
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab: 'Laboratorium Game'
-      gamelab_jr: 'Game Lab (beta)'
+      gamelab_jr: 'Lab permainan (beta)'
       gumball: 'Dunia Gumball yang menakjubkan'
       iceage: 'Zaman Es'
-      infinity: 'Tidak terhingga'
+      infinity: '∞'
       makerlab: 'Pembuat Toolkit'
       minecraft_adventurer: 'Petualang Minecraft'
       minecraft_aquatic: 'Minecraft Aquatic'
       minecraft_codebuilder: 'Minecraft: Sambungan Kode'
       minecraft_designer: 'Minecraft'
-      minecraft_hero: 'Minecraft Hero'
+      minecraft_hero: 'Pahlawan Minecraft'
       playlab: 'Play Lab/Lab Permainan'
-      playlab_k1: 'Play Lab (pra-pembaca)'
+      playlab_k1: 'Lab bermain (pra-pembaca)'
       scratch: 'Scratch'
       sports: 'Olahraga'
       spritelab: 'Sprite Lab'
@@ -757,7 +757,7 @@ id:
     ok: "Oke!"
     startover_title: "Apakah Anda yakin Anda ingin memulai dari awal?"
     startover_body: "Ini akan mengembalikan puzzle ke kondisi awal dan membatalkan penambahan atau perubahan data."
-    startover_ok: "Memulai kembali"
+    startover_ok: "Mulai kembali"
     startover_cancel: "Batal"
   time:
     hour: '1 jam'
@@ -958,8 +958,10 @@ id:
       email_alternate: 'Email alternatif'
       gender: 'Identitas gender'
       school_name: 'Nama Sekolah'
-      school_city: 'Kota Sekolah'
+      school_city: 'Kota sekolah'
       school_country: 'Negara Sekolah'
+      colombian_school_city: 'Kota sekolah'
+      colombian_school_name: 'Nama Sekolah'
       ages: 'Umur berapa kamu mengajar tahun ini?'
       subjects: 'Subjek mana kamu mengajar tahun ini?'
       resources: 'Sumber daya pendidikan CS mana yang Anda gunakan?'

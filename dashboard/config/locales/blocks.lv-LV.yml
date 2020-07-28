@@ -262,6 +262,10 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       gamelab_keyPressed:
         options:
           CONDITION:

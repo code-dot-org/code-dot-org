@@ -1017,6 +1017,10 @@ uk:
         options:
           CHOICE:
             '"this"': це
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_hideTitleScreen:
         text: приховати заголовок екрана
       gamelab_isTouchingEdges:

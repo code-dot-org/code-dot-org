@@ -193,6 +193,10 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       gamelab_keyPressed:
         options:
           CONDITION:

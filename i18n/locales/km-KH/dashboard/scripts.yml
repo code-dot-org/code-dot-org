@@ -870,21 +870,6 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
-        csd3-virtual:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-          lessons:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
         csp5-virtual:
           stages:
             Variables:
@@ -906,3 +891,45 @@ km:
           lessons:
             Events:
               name: ព្រឹត្តិការណ៍
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: រង្វិល​ជុំ
+            Events:
+              name: ព្រឹត្តិការណ៍
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+            Variables:
+              name: អ​ថេរ
+          lessons:
+            Loops:
+              name: រង្វិល​ជុំ
+            Events:
+              name: ព្រឹត្តិការណ៍
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+            Variables:
+              name: អ​ថេរ
+        csd3-virtual:
+          stages:
+            Variables:
+              name: អ​ថេរ
+            Text:
+              name: អត្ថ​​បទ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+          lessons:
+            Variables:
+              name: អ​ថេរ
+            Text:
+              name: អត្ថ​​បទ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍

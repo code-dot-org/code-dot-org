@@ -1,5 +1,5 @@
 {
- "title": "Teacher end-of-year survey CSF, CSD, CSP",
+ "title": "Code.org End-of-Year Teacher Survey 2020",
  "pages": [
   {
    "name": "Welcome",
@@ -13,7 +13,7 @@
     {
      "type": "html",
      "name": "welcome_preamble",
-     "html": "<p><h2>Welcome to the 2019-20 {course} post-course survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered a $10 Amazon gift card for your time (supplies limited.)</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
+     "html": "<p><h2>Welcome to the 2019-20 {course} post-course survey</h2>\n<p>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>This survey should take less than 15 minutes to complete. </strong></p>\n<p><strong>At the end you will be offered a $10 Amazon gift card for your time (supplies limited).</strong></p>\n<p><strong>Your honesty and candor are appreciated and help us improve.<br /></strong></p>"
     }
    ]
   },
@@ -266,7 +266,7 @@
         },
         {
          "value": "explore_pt_prep",
-         "text": "Explore-PT Prep"
+         "text": "Explore PT Prep"
         },
         {
          "value": "create_pt_prep",
@@ -399,7 +399,7 @@
     {
      "type": "html",
      "name": "post_covid_preamble",
-     "html": "<h2>Impacts of COVID-19 on your classroom - Teaching Remotely</h2>\n\n<p>The COVID-19 pandemic changed the way almost all schools in the US operated around mid-March, 2020. Most schools switched completely, or in part, to remote or virtual learning environments.</p>\n\n\n<p>We’d like you to reflect on the impacts of COVID-19 pandemic on your classroom. </p>\n<p>This section asks you about teaching Code.org <strong>remotely</strong>. We assume that most teachers did some or all of their teaching remotely at some after March, 2020.  Please answer the items below thinking about any remote teaching you did.</p>"
+     "html": "<h2>Impacts of COVID-19 on your classroom - Teaching Remotely</h2>\n\n<p>The COVID-19 pandemic changed the way almost all schools in the US operated around mid-March, 2020. Most schools switched completely, or in part, to remote or virtual learning environments.</p>\n\n\n<p>We’d like you to reflect on the impacts of COVID-19 pandemic on your classroom. </p>\n<p>This section asks you about teaching Code.org <strong>remotely</strong>. We assume that most teachers did some or all of their teaching remotely at some point after March, 2020.  Please answer the items below thinking about any remote teaching you did.</p>"
     },
     {
      "type": "radiogroup",
@@ -511,7 +511,7 @@
     {
      "type": "radiogroup",
      "name": "lms_tool_remote",
-     "title": "What is the primary (Learning Management System) LMS you make use of?  (If you, your school or district uses multiple LMS's please choose the one you like the most)",
+     "title": "What is the primary Learning Management System (LMS) you make use of?  (If you, your school or district uses multiple LMS's please choose the one you like the most)",
      "choices": [
       {
        "value": "none",
@@ -547,6 +547,13 @@
       }
      ],
      "hasOther": true
+    },
+    {
+     "type": "comment",
+     "name": "third_party_integration_FR",
+     "title": "Are there any third party tools you use in your classroom that you wish were better integrated with Code.org (e.g., LMS, collaboration apps, communication apps, etc.)? If so, which tools and how would you want to use them with Code.org?",
+     "cols": 40,
+     "rows": 3
     },
     {
      "type": "matrix",
@@ -684,6 +691,51 @@
      "title": "For one of the items you identified as a challenge (or for a different challenge not listed), please describe any ideas you have for how Code.org might address it.",
      "cols": 40,
      "rows": 3
+    },
+    {
+     "type": "matrix",
+     "name": "cdo_supports_used",
+     "title": "Code.org created some supports for at home teachers and students this past spring. Did you use any of these supports?",
+     "columns": [
+      {
+       "value": "not_aware",
+       "text": "I wasn't aware of this"
+      },
+      {
+       "value": "did_not_try",
+       "text": "I did not try this"
+      },
+      {
+       "value": "tried_not_helpful",
+       "text": "I tried this, but it wasn't helpful/I didn't like it"
+      },
+      {
+       "value": "tried_helpful",
+       "text": "I tried this and it was helpful/I liked it"
+      }
+     ],
+     "rows": [
+      {
+       "value": "code_break",
+       "text": "Code Break weekly coding lessons"
+      },
+      {
+       "value": "parent_letter",
+       "text": "Parent letter with Code.org sign in information"
+      },
+      {
+       "value": "teacher_guide",
+       "text": "Guide for teaching {course} during school closures"
+      },
+      {
+       "value": "create_pt_resources",
+       "text": "Create PT resources"
+      },
+      {
+       "value": "project_ideas",
+       "text": "Project ideas"
+      }
+     ]
     },
     {
      "type": "matrix",

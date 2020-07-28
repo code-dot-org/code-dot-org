@@ -1020,6 +1020,10 @@ id:
           CHOICE:
             '"this"': ini
             '"other"': lainnya
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       gamelab_hideTitleScreen:
         text: menyembunyikan judul layar
       gamelab_isTouchingEdges:
@@ -1486,7 +1490,7 @@ id:
             '"w"': B
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': S
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1497,7 +1501,7 @@ id:
             '"w"': B
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': S
       Mikelab_whenMouseClicked:
         text: ketika mouse diklik
       Mikelab_whenYesNoClicked:

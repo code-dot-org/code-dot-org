@@ -5266,11 +5266,19 @@ Studio.vanishActor = function(opts) {
 };
 
 Studio.setSpriteEmotion = function(opts) {
-  Studio.sprite[opts.spriteIndex].emotion = opts.value;
+  let sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
+  sprite.emotion = opts.value;
 };
 
 Studio.getSpriteEmotion = function(opts) {
-  let emotion = Studio.sprite[opts.spriteIndex].emotion;
+  let sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
+  let emotion = sprite.emotion;
   Studio.queueCallback(opts.callback, [emotion]);
 };
 
@@ -5279,7 +5287,11 @@ Studio.setSpriteSpeed = function(opts) {
     Math.max(opts.value, constants.SpriteSpeed.SLOW),
     constants.SpriteSpeed.VERY_FAST
   );
-  Studio.sprite[opts.spriteIndex].setSpeed(speed);
+  let sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
+  sprite.setSpeed(speed);
 };
 
 var DROID_SPEEDS = {
@@ -5311,6 +5323,9 @@ Studio.setDroidSpeed = function(opts) {
 
 Studio.setSpriteSize = function(opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
   if (sprite.size === opts.value) {
     return;
   }
@@ -5699,13 +5714,19 @@ Studio.setSprite = function(opts) {
 };
 
 Studio.getSpriteVisibility = function(opts) {
-  let visibility = Studio.sprite[opts.spriteIndex].visible;
-  Studio.queueCallback(opts.callback, [visibility]);
+  let sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
+  Studio.queueCallback(opts.callback, [sprite.visible]);
 };
 
 Studio.getSpriteValue = function(opts) {
-  let value = Studio.sprite[opts.spriteIndex].value;
-  Studio.queueCallback(opts.callback, [value]);
+  let sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
+  Studio.queueCallback(opts.callback, [sprite.value]);
 };
 
 var moveAudioState = false;
@@ -5994,14 +6015,18 @@ Studio.hideInputPrompt = function() {
 };
 
 Studio.hideSpeechBubble = function(opts) {
+  let sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
   var speechBubble = document.getElementById('speechBubble' + opts.spriteIndex);
   speechBubble.setAttribute('visibility', 'hidden');
   speechBubble.removeAttribute('onTop');
   speechBubble.removeAttribute('onRight');
   speechBubble.removeAttribute('height');
   opts.complete = true;
-  Studio.sprite[opts.spriteIndex].bubbleVisible = false;
-  delete Studio.sprite[opts.spriteIndex].bubbleTimeoutFunc;
+  sprite.bubbleVisible = false;
+  delete sprite.bubbleTimeoutFunc;
   Studio.sayComplete++;
 };
 
@@ -6084,19 +6109,19 @@ var createSpeechBubble = function(spriteIndex, text) {
 };
 
 Studio.stop = function(opts) {
+  let sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
   cancelQueuedMovements(opts.spriteIndex, true);
   cancelQueuedMovements(opts.spriteIndex, false);
-  Studio.sprite[opts.spriteIndex].setActivity(constants.BEHAVIOR_STOP);
+  sprite.setActivity(constants.BEHAVIOR_STOP);
 
   if (!opts.dontResetCollisions) {
     // Reset collisionMasks so the next movement will fire another collision
     // event against the same sprite if needed. This makes it easier to write code
     // that says "when sprite X touches Y" => "stop sprite X", and have it do what
     // you expect it to do...
-    var sprite = Studio.sprite[opts.spriteIndex];
-    if (!sprite) {
-      return;
-    }
     sprite.clearCollisions();
     for (var i = 0; i < Studio.spriteCount; i++) {
       if (i === opts.spriteIndex) {
@@ -6317,6 +6342,9 @@ Studio.collideSpriteWith = function(spriteIndex, target, allowQueueExtension) {
 
 Studio.setSpritePosition = function(opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
   if (opts.value) {
     // fill in .x and .y from the constants.Position value in opts.value
     opts.x = utils.xFromPosition(opts.value, Studio.MAZE_WIDTH, sprite.width);
@@ -6337,6 +6365,9 @@ Studio.setSpritePosition = function(opts) {
 
 Studio.setSpriteXY = function(opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
   var x = opts.x - sprite.width / 2;
   var y = opts.y - sprite.height / 2;
   var samePosition = sprite.x === x && sprite.y === y;
@@ -6354,6 +6385,9 @@ Studio.setSpriteXY = function(opts) {
 
 Studio.getSpriteXY = function(opts) {
   let sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
   Studio.queueCallback(opts.callback, [sprite.x, sprite.y]);
 };
 
@@ -6364,10 +6398,10 @@ function getSpritesByName(name) {
 }
 
 Studio.setSpriteBehavior = function(opts) {
-  Studio.sprite[opts.spriteIndex].setActivity(
-    opts.behavior,
-    opts.targetSpriteIndex
-  );
+  const sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite) {
+    sprite.setActivity(opts.behavior, opts.targetSpriteIndex);
+  }
 };
 
 Studio.setSpritesWander = function(opts) {
@@ -6509,6 +6543,9 @@ Studio.turnSingle = function(opts) {
   }
 
   const sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
   sprite.lastMove = Studio.tickCount;
   sprite.setActivity(constants.BEHAVIOR_GRID_ALIGNED);
   sprite.addAction(new GridTurn(opts.dir, skin.slowExecutionFactor));
@@ -6530,6 +6567,9 @@ Studio.turnSingle = function(opts) {
  */
 Studio.moveSingle = function(opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite === undefined) {
+    return;
+  }
   sprite.lastMove = Studio.tickCount;
   var distance = skin.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
@@ -6983,9 +7023,11 @@ var checkFinished = function() {
   var hasSuccessCondition =
     level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition =
-    !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
+    !hasSuccessCondition ||
+    utils.valueOr(level.goal.successCondition(studioMsg), true);
   var achievedRequiredSuccessCondition =
-    hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+    hasSuccessCondition &&
+    utils.valueOr(level.goal.successCondition(studioMsg), false);
 
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success

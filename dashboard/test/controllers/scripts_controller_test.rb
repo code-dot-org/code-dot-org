@@ -758,22 +758,22 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in script family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'coursea', version_year: '1901'
+    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901'
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'coursea'}
+      get :show, params: {id: 'ui-test-versioned-script'}
     end
 
     dogs1.update!(is_stable: true)
-    get :show, params: {id: 'coursea'}
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'coursea', version_year: '1902', is_stable: true
-    get :show, params: {id: 'coursea'}
+    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', is_stable: true
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'coursea', version_year: '1899', is_stable: true
-    get :show, params: {id: 'coursea'}
+    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', is_stable: true
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
   end
 

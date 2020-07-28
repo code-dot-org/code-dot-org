@@ -2248,21 +2248,6 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
-        csd3-virtual:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
-          lessons:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
         csp5-virtual:
           stages:
             Variables:
@@ -2291,3 +2276,92 @@ az:
               name: Alqoritmlər
             Events:
               name: Hadisələr
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: dövrlər
+            Events:
+              name: Hadisələr
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+            Variables:
+              name: dəyişənlər
+          lessons:
+            Loops:
+              name: dövrlər
+            Events:
+              name: Hadisələr
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+            Variables:
+              name: dəyişənlər
+        csd3-virtual:
+          stages:
+            Variables:
+              name: dəyişənlər
+            Text:
+              name: mətn
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+          lessons:
+            Variables:
+              name: dəyişənlər
+            Text:
+              name: mətn
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+          lesson_groups:
+            csd3_1:
+              display_name: Məzmun
+            csd3_2:
+              display_name: Məzmun
+            cspSurvey:
+              display_name: Məzmun
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Dərs
+          lessons:
+            Lesson:
+              name: Dərs
+          lesson_groups:
+            lg_1:
+              display_name: Məzmun
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Dərs
+          lessons:
+            Lesson:
+              name: Dərs
+          lesson_groups:
+            lg_1:
+              display_name: Məzmun
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Dərs
+          lessons:
+            Lesson:
+              name: Dərs
+          lesson_groups:
+            lg_1:
+              display_name: Məzmun
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Dərs
+          lessons:
+            Lesson:
+              name: Dərs
+          lesson_groups:
+            lg_1:
+              display_name: Məzmun

@@ -3017,21 +3017,6 @@ sl:
           lessons:
             Creating Functions:
               name: Ustvarjanje funkcij
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
-          lessons:
-            Variables:
-              name: Spremenljivke
-            Conditionals:
-              name: Pogoji
-            Functions:
-              name: Funkcije
         csp5-virtual:
           stages:
             While Loops:
@@ -3071,3 +3056,68 @@ sl:
           lessons:
             While Loops:
               name: 'Zanka: dokler velja'
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Zanke
+            Events:
+              name: Dogodki
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Spremenljivke
+          lessons:
+            Loops:
+              name: Zanke
+            Events:
+              name: Dogodki
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Spremenljivke
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Text:
+              name: Besedilo
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+          lessons:
+            Variables:
+              name: Spremenljivke
+            Text:
+              name: Besedilo
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+          lesson_groups:
+            csd3_1:
+              display_name: Vsebina
+            csd3_2:
+              display_name: Vsebina
+            cspSurvey:
+              display_name: Vsebina
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Vsebina
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Vsebina
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Vsebina
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Vsebina

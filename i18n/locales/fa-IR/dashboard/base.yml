@@ -639,6 +639,7 @@ fa:
       last_name: 'نام خانوادگی'
       email: 'ایمیل'
       school_name: 'نام مدرسه'
+      colombian_school_name: 'نام مدرسه'
     form_entries:
       gender:
         male: 'مرد'

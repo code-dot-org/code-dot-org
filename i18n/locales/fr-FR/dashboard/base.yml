@@ -115,7 +115,7 @@ fr:
     powerschool: 'Powerschool'
     forgot_password: 'Mot de passe oublié ?'
     migration_success: 'Succès ! Vous pouvez maintenant profiter de notre nouvelle expérience de compte.'
-    demigration_success: 'La nouvelle expérience de compte est à présent désactivée sur votre compte.'
+    demigration_success: 'La nouvelle expérience de compte est désormais désactivée sur votre compte.'
     need_confirmation: "Pas reçu les instructions de confirmation ?"
     need_unlock: "Pas reçu les instructions de déverrouillage?"
     not_linked: "Désolé, votre compte Code.org n'est pas lié à %{provider}. Vous devez vous identifier en tapant votre mot de passe, ci-dessous."
@@ -757,6 +757,8 @@ fr:
     open_response_body: "Merci pour ta réponse !"
     correct_title: "Correct"
     correct_body: "C'est la bonne réponse."
+  lesson_extras:
+    bonus_level: "Niveau bonus"
   dialog:
     ok: "OK"
     startover_title: "Es-tu certain(e) de vouloir recommencer ?"
@@ -964,6 +966,8 @@ fr:
       school_name: 'Nom de l''école'
       school_city: 'Ville de l’École'
       school_country: 'Pays de l’École'
+      colombian_school_city: 'Ville de l’École'
+      colombian_school_name: 'Nom de l''école'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'

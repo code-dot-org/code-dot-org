@@ -2480,6 +2480,20 @@ ky:
               name: Сүрөтчүдөгү функциялар
             For Loops in Artist:
               name: Сүрөтчүдөгү for циклдары
+            Creating Art with Code:
+              name: Код менен Сүрөт жаратуу
+            Sticker Art with Loops:
+              name: Чаптама өнөрү циклдар менен
+            Snowflakes with Anna and Elsa:
+              name: Анна жана Элза менен карчалар
+            Functions with Artist:
+              name: Сүрөтчү менен функциялар
+            Variables with Artist:
+              name: Сүрөтчү менен өзгөрмөлөр
+            Changing Variables with Artist:
+              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
+            For Loops with Artist:
+              name: Сүрөтчү менен for циклдары
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2500,14 +2514,31 @@ ky:
               name: Сүрөтчүдөгү функциялар
             For Loops in Artist:
               name: Сүрөтчүдөгү for циклдары
+            Creating Art with Code:
+              name: Код менен Сүрөт жаратуу
+            Sticker Art with Loops:
+              name: Чаптама өнөрү циклдар менен
+            Snowflakes with Anna and Elsa:
+              name: Анна жана Элза менен карчалар
+            Functions with Artist:
+              name: Сүрөтчү менен функциялар
+            Variables with Artist:
+              name: Сүрөтчү менен өзгөрмөлөр
+            Changing Variables with Artist:
+              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
+            For Loops with Artist:
+              name: Сүрөтчү менен for циклдары
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Spelling Bee
             Ocean Scene with Loops:
               name: Океан көрүнүшү циклдар менен
+              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
+            Drawing Gardens with Loops:
+              name: Циклдар менен бакчаларды тартуу
           lesson_groups:
             csf_loops:
               display_name: Циклдер
@@ -2518,23 +2549,11 @@ ky:
               name: Spelling Bee
             Ocean Scene with Loops:
               name: Океан көрүнүшү циклдар менен
+              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
-          lessons:
-            Variables:
-              name: Өзгөрмөлөр
-            Conditionals:
-              name: Шартуулар
-            Functions:
-              name: Функциялар
+            Drawing Gardens with Loops:
+              name: Циклдар менен бакчаларды тартуу
         csp5-virtual:
           stages:
             Variables:
@@ -2560,3 +2579,73 @@ ky:
               name: Алгоритмдер
             Events:
               name: Окуялар
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Циклдер
+            Events:
+              name: Окуялар
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Өзгөрмөлөр
+          lessons:
+            Loops:
+              name: Циклдер
+            Events:
+              name: Окуялар
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Өзгөрмөлөр
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
+            Text:
+              name: Тексттер
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+          lessons:
+            Variables:
+              name: Өзгөрмөлөр
+            Text:
+              name: Тексттер
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: Сабак
+          lessons:
+            Lesson:
+              name: Сабак
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: Сабак
+          lessons:
+            Lesson:
+              name: Сабак
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: Сабак
+          lessons:
+            Lesson:
+              name: Сабак
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: Сабак
+          lessons:
+            Lesson:
+              name: Сабак

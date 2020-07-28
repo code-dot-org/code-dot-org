@@ -4513,6 +4513,9 @@ et:
           stages:
             Binary Numbers:
               name: Binaararvud
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
           lessons:
             Binary Numbers:
               name: Binaararvud
@@ -4523,25 +4526,6 @@ et:
           lessons:
             Creating Functions:
               name: Loomisfunktsioonid
-        csd3-virtual:
-          stages:
-            Variables:
-              name: Muutujad
-            Conditionals:
-              name: Tingimuslaused
-            Velocity:
-              name: Velocity
-            Functions:
-              name: Funktsioonid
-          lessons:
-            Variables:
-              name: Muutujad
-            Conditionals:
-              name: Tingimuslaused
-            Velocity:
-              name: Velocity
-            Functions:
-              name: Funktsioonid
         csp5-virtual:
           stages:
             While Loops:
@@ -4585,3 +4569,83 @@ et:
           lessons:
             While Loops:
               name: "„Kui“ tsüklid"
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: Tsüklid
+            Events:
+              name: Sündmused
+            Conditionals:
+              name: Tingimuslaused
+            Functions:
+              name: Funktsioonid
+            Variables:
+              name: Muutujad
+            For Loops:
+              name: For tsükkel
+          lessons:
+            Loops:
+              name: Tsüklid
+            Events:
+              name: Sündmused
+            Conditionals:
+              name: Tingimuslaused
+            Functions:
+              name: Funktsioonid
+            Variables:
+              name: Muutujad
+            For Loops:
+              name: For tsükkel
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Järgmised sammud
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Muutujad
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+          lessons:
+            Variables:
+              name: Muutujad
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+          lesson_groups:
+            csd3_1:
+              display_name: Sisu
+            csd3_2:
+              display_name: Sisu
+            cspSurvey:
+              display_name: Sisu
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Sisu
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Sisu
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Sisu
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Sisu

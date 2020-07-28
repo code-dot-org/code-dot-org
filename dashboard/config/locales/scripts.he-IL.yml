@@ -4953,6 +4953,12 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
           lesson_groups:
             csf_warmup:
               display_name: חימום
@@ -4979,6 +4985,12 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
         pre-express-2020:
           stages:
             Programming in Maze:
@@ -4987,6 +4999,17 @@ he:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
+                של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
+                ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו
+                לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            Tell a Story in Play Lab:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
+                במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
+                אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            Loops with Scrat:
+              name: לולאות עם סקראט
           lesson_groups:
             csf_loops:
               display_name: חזרות
@@ -4999,32 +5022,25 @@ he:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
+                של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
+                ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו
+                לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            Tell a Story in Play Lab:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
+                במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
+                אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            Loops with Scrat:
+              name: לולאות עם סקראט
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
         csp3-virtual:
           lesson_groups:
             csp3_1_2018:
               display_name: 'יחידה 3: מבוא לתכנות'
-        csd3-virtual:
-          stages:
-            Variables:
-              name: משתנים
-            Conditionals:
-              name: תנאים
-            Functions:
-              name: פונקציות
-            Sprite Properties:
-              name: מאפייני ספרייט
-          lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-          lessons:
-            Variables:
-              name: משתנים
-            Conditionals:
-              name: תנאים
-            Functions:
-              name: פונקציות
-            Sprite Properties:
-              name: מאפייני ספרייט
         csd2-virtual:
           stages:
             Intro to HTML:
@@ -5112,3 +5128,88 @@ he:
           lessons:
             While Loops:
               name: לולאות "כל עוד"
+        k5-onlinepd-2020:
+          stages:
+            Loops:
+              name: חזרות
+            Events:
+              name: אירועים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+          lessons:
+            Loops:
+              name: חזרות
+            Events:
+              name: אירועים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Variables:
+              name: משתנים
+            For Loops:
+              name: בשביל לולאות
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: השלבים הבאים
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csd3-virtual:
+          stages:
+            Variables:
+              name: משתנים
+            Sprite Properties:
+              name: מאפייני ספרייט
+            Text:
+              name: טקסט
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+          lessons:
+            Variables:
+              name: משתנים
+            Sprite Properties:
+              name: מאפייני ספרייט
+            Text:
+              name: טקסט
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+        ui-test-script-in-course-2017:
+          stages:
+            Lesson:
+              name: שיעור
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-script-in-course-2019:
+          stages:
+            Lesson:
+              name: שיעור
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-versioned-script-2017:
+          stages:
+            Lesson:
+              name: שיעור
+          lessons:
+            Lesson:
+              name: שיעור
+        ui-test-versioned-script-2019:
+          stages:
+            Lesson:
+              name: שיעור
+          lessons:
+            Lesson:
+              name: שיעור

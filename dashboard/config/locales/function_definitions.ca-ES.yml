@@ -367,7 +367,14 @@ ca-ES:
         draw flame:
           parameters:
             x: x
+      courseC_artist_prog3_2020:
+        draw flame:
+          parameters:
+            x: x
       courseC_data wizard:
+        do something:
+          name: fes alguna cosa
+      courseC_data wizard_2020:
         do something:
           name: fes alguna cosa
       courseE_artist_concept1:
@@ -399,6 +406,9 @@ ca-ES:
       courseE_artist_functions10_2019:
         do something:
           name: fes alguna cosa
+      courseE_artist_functions10_2020:
+        do something:
+          name: fes alguna cosa
       courseE_artist_functions2:
         draw a square:
           name: dibuixa un quadrat
@@ -408,6 +418,9 @@ ca-ES:
       courseE_artist_functions2_2019:
         draw a square:
           name: dibuixa un quadrat
+      courseE_artist_functions2_2020:
+        draw a square:
+          name: dibuixa un quadrat
       courseE_artist_functions2_copy:
         draw a square:
           name: dibuixa un quadrat
@@ -415,6 +428,9 @@ ca-ES:
         draw a star:
           name: dibuixa una estrella
       courseE_artist_functions3_2019:
+        draw a star:
+          name: dibuixa una estrella
+      courseE_artist_functions3_2020:
         draw a star:
           name: dibuixa una estrella
       courseE_artist_functions4:
@@ -432,6 +448,9 @@ ca-ES:
       courseE_artist_functions5_2019:
         draw a star:
           name: dibuixa una estrella
+      courseE_artist_functions5_2020:
+        draw a star:
+          name: dibuixa una estrella
       courseE_artist_functions5_copy:
         draw a star:
           name: dibuixa una estrella
@@ -441,6 +460,9 @@ ca-ES:
       courseE_artist_functions7_2018:
         draw a house:
           name: dibuixa una casa
+      courseE_artist_functions7_2020:
+        draw a house:
+          name: dibuixa una casa
       courseE_artist_functions8:
         do something:
           name: fes alguna cosa
@@ -448,6 +470,9 @@ ca-ES:
         do something:
           name: fes alguna cosa
       courseE_artist_functions8_2019:
+        do something:
+          name: fes alguna cosa
+      courseE_artist_functions8_2020:
         do something:
           name: fes alguna cosa
       courseE_artist_functions8a_2018:
@@ -460,16 +485,27 @@ ca-ES:
           name: dibuixa un quadrat
         do something:
           name: fes alguna cosa
+      courseE_artist_functions8a_2020:
+        draw a square:
+          name: dibuixa un quadrat
+        do something:
+          name: fes alguna cosa
       courseE_artist_functions8b_2018:
         do something:
           name: fes alguna cosa
       courseE_artist_functions8b_2019:
         do something:
           name: fes alguna cosa
+      courseE_artist_functions8b_2020:
+        do something:
+          name: fes alguna cosa
       courseE_artist_functions8c_2018:
         do something:
           name: fes alguna cosa
       courseE_artist_functions8c_2019:
+        do something:
+          name: fes alguna cosa
+      courseE_artist_functions8c_2020:
         do something:
           name: fes alguna cosa
       courseE_artist_functions9:
@@ -481,6 +517,9 @@ ca-ES:
       courseE_artist_functions9_2019:
         do something:
           name: fes alguna cosa
+      courseE_artist_functions9_2020:
+        do something:
+          name: fes alguna cosa
       courseE_artist_functions_challenge1:
         do something:
           name: fes alguna cosa
@@ -488,6 +527,9 @@ ca-ES:
         do something:
           name: fes alguna cosa
       courseE_artist_functions_challenge1_2019:
+        do something:
+          name: fes alguna cosa
+      courseE_artist_functions_challenge1_2020:
         do something:
           name: fes alguna cosa
       courseE_artist_functions_challenge2:
@@ -499,6 +541,9 @@ ca-ES:
       courseE_artist_functions_challenge2_2019:
         do something:
           name: fes alguna cosa
+      courseE_artist_functions_challenge2_2020:
+        do something:
+          name: fes alguna cosa
       courseE_artist_functions_predict1:
         draw a square:
           name: dibuixa un quadrat
@@ -506,6 +551,9 @@ ca-ES:
         draw a square:
           name: dibuixa un quadrat
       courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: dibuixa un quadrat
+      courseE_artist_functions_predict1_2020:
         draw a square:
           name: dibuixa un quadrat
       courseE_artist_functions_predict1_copy:
@@ -518,6 +566,9 @@ ca-ES:
         do something:
           name: fes alguna cosa
       courseE_artist_functions_predict2_2019:
+        do something:
+          name: fes alguna cosa
+      courseE_artist_functions_predict2_2020:
         do something:
           name: fes alguna cosa
       courseE_bee_functions1:
@@ -702,9 +753,15 @@ ca-ES:
       courseF_bee_variables_7_2019:
         collect:
           name: agafa
+      courseF_bee_variables_7_2020:
+        collect:
+          name: agafa
       courseF_bee_variables_8_2018:
         collect:
           name: agafa
       courseF_bee_variables_8_2019:
+        collect:
+          name: agafa
+      courseF_bee_variables_8_2020:
         collect:
           name: agafa

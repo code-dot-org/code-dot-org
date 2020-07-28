@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -1221,6 +1221,8 @@ pt-BR:
       school_name: Nome da escola
       school_city: Cidade da Escola
       school_country: País da Escola
+      colombian_school_city: Cidade da Escola
+      colombian_school_name: Nome da escola
       ages: Qual idade(s) você ensina este ano?
       subjects: Qual(is) disciplina(s) você ensina este ano?
       resources: Quais dos seguintes recursos de educação de Ciência da Computação

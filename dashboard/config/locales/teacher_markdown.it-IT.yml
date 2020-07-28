@@ -107,6 +107,77 @@ it-IT:
         Non ci sono ampi obiettivi di apprendimento in questo video, gli studenti dovrebbero prendere confidenza con la pagina del Laboratorio Web: le istruzioni per l'esercizio sono visualizzate nel riquadro largo in alto mentre i tre pannelli in basso, da sinistra a destra, includono rispettivamente l'elenco dei file su cui stanno lavorando, l'area in cui digitano il loro codice e l'area in cui vedono la pagina Web generata dal loro codice. Inizialmente, non devono preoccuparsi di ogni pulsante, la cui funzione sarà descritta in seguito, ma dovrebbero soffermarsi sullo strumento 'Ispeziona' che li aiuta a collegare parti della pagina Web con il codice che le ha create e sul pulsante 'Aggiorna e Salva' che consente di aggiornare la loro pagina Web se non si aggiorna automaticamente quando modificano il codice.
 
         Sebbene non faccia parte del video, il riquadro delle istruzioni spesso include una casella a discesa con domande e risposte che gli studenti possono consultare mentre completano l'esercizio. In alcuni livelli, nella parte superiore del riquadro delle istruzioni, si trova un collegamento a "Guida e Suggerimenti' che visualizza informazioni di riferimento relative all'esercizio.
+      OPD-K5-spritelab-2: "Questa lezione contiene un **mini-progetto** chiamato _Pesce
+        nuotante_. Questa progressione potrà sembrare molto diversa rispetto a quanto
+        è accaduto prima nel corso sia per te che per i tuoi studenti. Questi livelli
+        hanno alcune nuove caratteristiche che potresti voler esplorare prima di iniziare.
+        \n\n-   Il codice che i tuoi studenti scrivono in un livello passerà automaticamente
+        agli altri livelli. Ciò gli permette di costruire gradualmente e iterare sulle
+        loro idee mentre apprendono.\n-   Questi livelli consentono maggiore creatività
+        senza limiti . Consenti ai tuoi studenti di determinare autonomamente quando
+        hanno completato ogni attività. Non esiste una risposta giusta! \n-   Sono
+        disponibili soluzioni di esempio per questo passaggio di progressione che
+        possono essere visualizzate aprendo il pannello dell'insegnante a destra.\n\nQuesto
+        livello convaliderà il codice di uno studente verificando che siano soddisfatte
+        le seguenti condizioni:\n\n-   Lo studente deve avere almeno uno sprite di
+        pesce con un comportamento attivo."
+      OPD-K5-spritelab-3: "Questa lezione contiene un **mini-progetto** chiamato _Pesce
+        nuotante_. Questa progressione potrà sembrare molto diversa rispetto a quanto
+        è accaduto prima nel corso sia per te che per i tuoi studenti. Questi livelli
+        hanno alcune nuove caratteristiche che potresti voler esplorare prima di iniziare.
+        \n\n-   Il codice che i tuoi studenti scrivono in un livello passerà automaticamente
+        agli altri livelli. Ciò gli permette di costruire gradualmente e iterare sulle
+        loro idee mentre apprendono.\n-   Questi livelli consentono maggiore creatività
+        senza limiti . Consenti ai tuoi studenti di determinare autonomamente quando
+        hanno completato ogni attività. Non esiste una risposta giusta! \n-   Sono
+        disponibili soluzioni di esempio per questo passaggio di progressione che
+        possono essere visualizzate aprendo il pannello dell'insegnante a destra.\n\nQuesto
+        livello convaliderà il codice di uno studente verificando che siano soddisfatte
+        le seguenti condizioni:\n\n-   Lo studente deve avere almeno uno sprite di
+        pesce con un comportamento attivo.\n-   Lo sprite del pesce deve muoversi
+        a destra e sinistra. Per farlo muovere occorre cambiare il suo comportamento
+        in `nuoto a destra e sinistra`."
+      OPD-K5-spritelab-4: "Questa lezione contiene un **mini-progetto** chiamato _NOME
+        DI PROGRESSIONE_. Questa progressione potrà sembrare molto diversa rispetto
+        a quanto è accaduto prima nel corso sia per te che per i tuoi studenti. Questi
+        livelli hanno alcune nuove caratteristiche che potresti voler esplorare prima
+        di iniziare. \n\n-   Il codice che i tuoi studenti scrivono in un livello
+        passerà automaticamente agli altri livelli. Ciò gli permette di costruire
+        gradualmente e iterare sulle loro idee mentre apprendono.\n-   Questi livelli
+        consentono maggiore creatività senza limiti . Consenti ai tuoi studenti di
+        determinare autonomamente quando hanno completato ogni attività. Non esiste
+        una risposta giusta! \n-   Sono disponibili soluzioni di esempio per questo
+        passaggio di progressione che possono essere visualizzate aprendo il pannello
+        dell'insegnante a destra.\n\nQuesto livello convaliderà il codice di uno studente
+        verificando che siano soddisfatte le seguenti condizioni:\n\n-   Lo studente
+        deve cambiare lo sfondo con qualcosa di diverso dal bianco."
+      OPD-K5-spritelab-6: "Questa lezione contiene un **mini-progetto** chiamato _Pesce
+        nuotante_. Questa progressione potrà sembrare molto diversa rispetto a quanto
+        è accaduto prima nel corso sia per te che per i tuoi studenti. Questi livelli
+        hanno alcune nuove caratteristiche che potresti voler esplorare prima di iniziare.
+        \n\n-   Il codice che i tuoi studenti scrivono in un livello passerà automaticamente
+        agli altri livelli. Ciò gli permette di costruire gradualmente e iterare sulle
+        loro idee mentre apprendono.\n-   Questi livelli consentono maggiore creatività
+        senza limiti . Consenti ai tuoi studenti di determinare autonomamente quando
+        hanno completato ogni attività. Non esiste una risposta giusta! \n-   Sono
+        disponibili soluzioni di esempio per questo passaggio di progressione che
+        possono essere visualizzate aprendo il pannello dell'insegnante a destra.\n\nQuesto
+        livello convaliderà il codice di uno studente verificando che siano soddisfatte
+        le seguenti condizioni:\n\n-   Lo studente deve creare esattamente due sprite
+        unici e uno deve essere un pesce."
+      OPD-K5-spritelab-7: "Questa lezione contiene un **mini-progetto** chiamato _Pesce
+        nuotante_. Questa progressione potrà sembrare molto diversa rispetto a quanto
+        è accaduto prima nel corso sia per te che per i tuoi studenti. Questi livelli
+        hanno alcune nuove caratteristiche che potresti voler esplorare prima di iniziare.
+        \n\n-   Il codice che i tuoi studenti scrivono in un livello passerà automaticamente
+        agli altri livelli. Ciò gli permette di costruire gradualmente e iterare sulle
+        loro idee mentre apprendono.\n-   Questi livelli consentono maggiore creatività
+        senza limiti . Consenti ai tuoi studenti di determinare autonomamente quando
+        hanno completato ogni attività. Non esiste una risposta giusta! \n-   Sono
+        disponibili soluzioni di esempio per questo passaggio di progressione che
+        possono essere visualizzate aprendo il pannello dell'insegnante a destra.\n\nQuesto
+        livello convaliderà il codice di uno studente verificando che siano soddisfatte
+        le seguenti condizioni:\n\n-   Ogni sprite deve avere un comportamento attivo."
       csd-pre-survey-2017-levelgroup_2018: |-
         [key]
 

@@ -470,6 +470,17 @@ class Pd::Workshop < ActiveRecord::Base
       rescue => e
         errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
+
+      # send pre-workshop email for CSD and CSP facilitators 10 days before the workshop only
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP)
+      workshop.facilitators.each do |facilitator|
+        next unless facilitator.email
+        begin
+          Pd::WorkshopMailer.facilitator_pre_workshop(facilitator, workshop).deliver_now
+        rescue => e
+          errors << "pre email for facilitator #{facilitator.id} - #{e.message}"
+        end
+      end
     end
 
     raise "Failed to send #{days} day workshop reminders: #{errors.join(', ')}" unless errors.empty?
@@ -667,7 +678,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def associated_online_course
-    ::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+    ::UnitGroup.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 
   # Get all the teachers that have actually attended this workshop via the attendence.
@@ -677,7 +688,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Get all teachers who have attended all sessions of this workshop.
   def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
-    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher)
+    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher).compact
 
     # Filter attendances to only scholarship teachers
     if filter_by_cdo_scholarship
@@ -803,7 +814,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   def pre_survey_course
     return nil unless pre_survey?
-    Course.find_by_name! pre_survey_course_name
+    UnitGroup.find_by_name! pre_survey_course_name
   rescue ActiveRecord::RecordNotFound
     # Raise a RuntimeError if the course name is not found, so we'll be notified in Honeybadger
     # Otherwise the RecordNotFound error will result in a 404, and we won't know.
@@ -867,5 +878,9 @@ class Pd::Workshop < ActiveRecord::Base
 
   def friday_institute?
     third_party_provider == 'friday_institute'
+  end
+
+  def user_attended?(user)
+    attending_teachers.include?(user)
   end
 end
