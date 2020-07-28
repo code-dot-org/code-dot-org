@@ -12,7 +12,7 @@
 #  relative_position :integer          not null
 #  properties        :text(65535)
 #  lesson_group_id   :integer
-#  key               :string(255)
+#  key               :string(255)      not null
 #
 # Indexes
 #
