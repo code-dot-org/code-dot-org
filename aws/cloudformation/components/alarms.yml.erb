@@ -44,7 +44,7 @@
     Type: "AWS::CloudWatch::Alarm"
     Properties:
       AlarmActions:
-        - "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
       AlarmDescription: Send page if number of outbound transactional emails sent drops below threshold.
       AlarmName: <%="#{stack_name}_no_outbound_emails_sent" %>
       ComparisonOperator: Lower
