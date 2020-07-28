@@ -1,10 +1,10 @@
-
+-# Note this partial assumes the presence of a signed in user.
 #thank-donors-modal.modal{style: 'display: none;'}
   %button#close-thank-donors-dialog.close{'data-dismiss' => 'modal', 'aria-label' => 'Close'}
     %span{'aria-hidden' => 'true'}= '&times;'.html_safe
   .modal-dialog
     .modal-content.no-modal-icon
-      %h2.donor-header= t('donor_interstitial.title') + '...'
+      %h2.donor-header= t('donor_interstitial.title')
       %p= t('donor_interstitial.subtitle', donors_url: CDO.code_org_url('/about/donors'), markdown: :inline).html_safe
       %h2.donor-subheader= t('donor_interstitial.global_supporters')
       .clear
