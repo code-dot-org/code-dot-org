@@ -1,0 +1,48 @@
+{
+  "sl-SI": {
+    "data": {
+      "title": {
+        "BigEvent": "Veliki dogodek",
+        "BigEvent_2018": "Veliki dogodek",
+        "BinaryImages": "Binarne slike",
+        "BinaryImages_2018": "Binarne slike",
+        "BuildingAFoundation": "Graditi temelje",
+        "ComputationalThinking": "Računalniško razmišljanje",
+        "Conditionals": "Pogoji",
+        "Conditionals_2018": "Pogoji",
+        "Crowdsourcing": "Crowdsourcing",
+        "DiceRace": "Življenjski algoritmi: Igra s kocko",
+        "DigitalCitizenship": "Digitalno državljanstvo",
+        "EnvelopeVariables": "Spremeljivke v ovojnicah",
+        "ForLoopFun": "Zabava s \"for\" zankami",
+        "FunctionalSuncatchers": "Funkcionalni lovilci svetlobe",
+        "GoingPlacesSafely": "Kako varno potovati",
+        "GoingPlacesSafely_2018": "Kako varno potovati",
+        "GraphPaperProgramming": "Obarvajmo kvadratke",
+        "GraphPaperProgramming_2018": "Obarvajmo kvadratke",
+        "Internet": "Internet",
+        "MoveIt": "Dajmo, dajmo",
+        "MoveItMoveIt_2018": "Premakni se, premakni",
+        "PaperPlanes": "Življenjski algoritmi: Papirnata letala",
+        "PaperPlanes_2018": "Življenjski algoritmi: Papirnata letala",
+        "PlantASeed": "Življenjski algoritmi: Zasadi seme",
+        "PlantASeed_2018": "Življenjski algoritmi: Zasadi seme",
+        "RelayProgramming": "Relejsko programiranje",
+        "RelayProgramming_2018": "Relejsko programiranje",
+        "SongwritingParameters": "Napiši pesem",
+        "SongwritingWithParameters": "Pisanje pesmi s parametri",
+        "TangramAlgorithms": "Tangram algoritmi",
+        "UnplugHappyMaps": "Veseli zemljevidi",
+        "UnplugHappyMaps_2018": "Veseli zemljevidi",
+        "courseB_unplugged_MRF": "Dejavnost brez prijave",
+        "courseB_unplugged_MRF_2018": "Moji robotski prijatelji",
+        "courseB_unplugged_loopyMRF": "Dejavnost brez prijave",
+        "courseC_Unplugged_ScreenOutTheMean": "Dejavnost brez prijave",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "Dejavnost brez prijave",
+        "courseD_unplugged_digitalCitizenship": "Dejavnost brez prijave",
+        "courseD_unplugged_digitalCitizenship_2018": "Dejavnost brez prijave",
+        "courseF_unplugged_powerOfWords": "Dejavnost brez prijave"
+      }
+    }
+  }
+}
