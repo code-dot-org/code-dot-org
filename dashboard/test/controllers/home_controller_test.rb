@@ -281,6 +281,8 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'anonymous does not get thank donors dialog' do
+    assert_nil current_user
+
     get :home
 
     assert_select '#thank-donors-modal', false
@@ -288,7 +290,8 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'student on first login gets thank donors dialog' do
     # Devise does not run callbacks (eg, increment sign in count)
-    # when using sign_in.
+    # when using sign_in according to this 2014 discussion:
+    # https://github.com/heartcombo/devise/issues/2905
     student = create(:user, sign_in_count: 1)
 
     sign_in student

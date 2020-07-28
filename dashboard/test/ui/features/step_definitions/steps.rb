@@ -1274,7 +1274,7 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
   end
 end
 
-And(/^I create a (new )?(young )?student named "([^"]*)"( and go home)?$/) do |new_account, young, name, home|
+And(/^I create a (young )?student( who has never signed in)? named "([^"]*)"( and go home)?$/) do |young, new_account, name, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
@@ -1289,7 +1289,7 @@ And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   )
 end
 
-And(/^I create a (new )?teacher named "([^"]*)"( and go home)?$/) do |new_account, name, home|
+And(/^I create a teacher( who has never signed in)? named "([^"]*)"( and go home)?$/) do |new_account, name, home|
   sign_in_count = new_account ? 0 : 2
 
   create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes', sign_in_count: sign_in_count)
