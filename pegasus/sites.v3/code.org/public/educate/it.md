@@ -44,7 +44,7 @@ For the very best experience with all Code.org content, we recommend consulting 
 
 All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
 - Microsoft Surface Pro with an external keyboard
-- iPad running iOS 13.4 or later with an external keyboard and a bluetooth mouse or touchpad
+- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
 All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
 
