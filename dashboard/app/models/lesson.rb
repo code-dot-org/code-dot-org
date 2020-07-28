@@ -58,13 +58,14 @@ class Lesson < ActiveRecord::Base
 
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
-          name: raw_lesson[:name],
+          key: raw_lesson[:key],
           script: script
         ) do |s|
           s.relative_position = 0 # will be updated below, but cant be null
         end
 
       lesson.assign_attributes(
+        name: raw_lesson[:name],
         absolute_position: (counters.lesson_position += 1),
         lesson_group: lesson_group,
         lockable: !!raw_lesson[:lockable],
@@ -148,7 +149,7 @@ class Lesson < ActiveRecord::Base
 
   def localized_name
     if script.lessons.many?
-      I18n.t "data.script.name.#{script.name}.lessons.#{name}.name"
+      I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
