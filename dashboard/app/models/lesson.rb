@@ -65,7 +65,6 @@ class Lesson < ActiveRecord::Base
         end
 
       lesson.assign_attributes(
-        key: raw_lesson[:name], #TODO: once key has been added to all the lessons update to use key in the find
         absolute_position: (counters.lesson_position += 1),
         lesson_group: lesson_group,
         lockable: !!raw_lesson[:lockable],
