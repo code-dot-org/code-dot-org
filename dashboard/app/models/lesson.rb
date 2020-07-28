@@ -56,12 +56,13 @@ class Lesson < ActiveRecord::Base
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
 
-      lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
+      lesson = script.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
           key: raw_lesson[:key],
           script: script
-        ) do |s|
-          s.relative_position = 0 # will be updated below, but cant be null
+        ) do |l|
+          l.name = raw_lesson[:name]
+          l.relative_position = 0 # will be updated below, but cant be null
         end
 
       lesson.assign_attributes(
