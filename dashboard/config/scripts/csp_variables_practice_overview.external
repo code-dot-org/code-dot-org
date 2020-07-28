@@ -5,7 +5,7 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 # Understanding the Variables Practice Lesson
-**Goal:** he purpose of this section is to better understand the role of the teacher and student in the “Practice” lesson type.  To do this, we will focus on the Variables Practice lesson. *(Estimated time: 35 minutes.)*
+**Goal:** The purpose of this section is to better understand the role of the teacher and student in the “Practice” lesson type.  To do this, we will focus on the Variables Practice lesson. *(Estimated time: 35 minutes.)*
 
 ## Context
 In your Module 1 workshop, you saw a “live demo” of the Explore and Investigate lessons from the Variables EIPM sequence in Unit 4.  In these lessons, students develop a shared mental model of Variables by using baggies and stickies to store values.  Students also see examples of working code that uses variables as well as strategies for debugging code using a “watcher” in App Lab.  In levels 2 - 13, you will be looking at the next lesson in this EIPM sequence - the Variables Practice lesson, or Unit 4, Lesson 3. 
@@ -24,6 +24,6 @@ As a reminder, the goal of Practice lessons is that students gain confidence in 
 2. Match the lesson plans to the corresponding slides for the lesson.  You can find the slides linked in the “Links” section of the lesson plan. 
 3. As you review these materials, consider how this lesson builds on the experiences students have in the corresponding Explore and Investigate lessons. 
 
-After you have done the above 3 tasks, you will complete 8 levels that students will see in Code Studio during this lesson.  Completing these levels will help you understand the content and resources available in Code Studio for students in the Variables Practice lesson.
+After you have done the three tasks above, you will complete eight levels that students will see in Code Studio during this lesson.  Completing these levels will help you understand the content and resources available in Code Studio for students in the Variables Practice lesson.
 
 MARKDOWN
