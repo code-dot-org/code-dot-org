@@ -1,0 +1,29 @@
+{
+  "ps-AF": {
+    "data": {
+      "function_definitions": {
+        "NEW Course 4 Artist Params 15": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        }
+      }
+    }
+  }
+}
