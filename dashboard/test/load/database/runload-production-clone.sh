@@ -21,8 +21,10 @@ cp /home/ec2-user/code-dot-org/dashboard/test/load/database/lua/* /home/ec2-user
 cd src
 cd lua
 
-# production-clone-loadtest-cluster writer instance class is db.r4.8xlarge, which defaults to 5000 max connections.
-max_db_connections=5000
+
+# As of July 2020, production cluster db writer instance is db.r5.4xlarge, which defaults to 4000 max connections via
+# Parameter Group expression: GREATEST({log(DBInstanceClassMemory/805306368)*45},{log(DBInstanceClassMemory/8187281408)*1000})
+max_db_connections=4000
 
 # Threads per sysbench client.
 threads=20
