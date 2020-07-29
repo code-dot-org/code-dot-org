@@ -98,7 +98,6 @@ class Census::StateCsOffering < ApplicationRecord
     AK
     AR
     CA
-    CO
     CT
     FL
     GA
