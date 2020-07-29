@@ -65,6 +65,7 @@ export default class StudentSelector extends React.Component {
         <div className="clear" />
         {this.state.selectedStudentIds.length !== 0 && (
           <button
+            style={{marginLeft: 0}}
             type="button"
             onClick={this.handleSubmit}
             className="addPartners"
