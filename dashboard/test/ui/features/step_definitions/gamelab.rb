@@ -57,6 +57,7 @@ Then /^I select a blank animation$/ do
 end
 
 Then /^I select the animal category of the animation library$/ do
+  wait_until {@browser.execute_script("return $(\"img[src*='/category_animals.png']\").length != 0;")}
   @browser.execute_script("$(\"img[src*='/category_animals.png']\")[1].click();")
 end
 
