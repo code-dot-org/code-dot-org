@@ -1,0 +1,100 @@
+{
+  "ru-RU": {
+    "data": {
+      "behavior_names": {
+        "Virtual Pet 1_2019": {
+          "mystery": "тайна\n"
+        },
+        "Virtual Pet 1_2020": {
+          "mystery": "тайна\n"
+        },
+        "Virtual Pet 3_2019": {
+          "wandering2": "гуляние2\n",
+          "moving east2": "движение на восток2\n",
+          "spinning left2": "вращение влево2\n",
+          "spinning right2": "вращение вправо2\n",
+          "shrinking2": "уменьшение2\n",
+          "growing2": "увеличение2\n",
+          "moving south2": "движение на юг2\n",
+          "swimming left and right2": "плавание влево и вправо\n",
+          "moving north2": "движение на север2\n",
+          "jittering2": "пульсация2\n",
+          "moving west2": "движение на запад2\n",
+          "patrolling2": "патрулирование2\n"
+        },
+        "Virtual Pet 3_2020": {
+          "wandering2": "гуляние2\n",
+          "moving east2": "движение на восток2\n",
+          "spinning left2": "вращение влево2\n",
+          "spinning right2": "вращение вправо2\n",
+          "shrinking2": "уменьшение2\n",
+          "growing2": "увеличение2\n",
+          "moving south2": "движение на юг2\n",
+          "swimming left and right2": "плавание влево и вправо\n",
+          "moving north2": "движение на север2\n",
+          "jittering2": "пульсация2\n",
+          "moving west2": "движение на запад2\n",
+          "patrolling2": "патрулирование2\n"
+        },
+        "behaviors 1": {
+          "mystery behavior": "таинственное поведение\n",
+          "running east": "бег на восток\n"
+        },
+        "behaviors 1_2020": {
+          "mystery behavior": "таинственное поведение\n",
+          "running east": "бег на восток\n"
+        },
+        "behaviors 2": {
+          "flying": "полет\n",
+          "running east": "бег на восток\n"
+        },
+        "behaviors 2_2020": {
+          "flying": "полет\n",
+          "running east": "бег на восток\n"
+        },
+        "behaviors 3": {
+          "zooming east": "увеличение на восток\n",
+          "driving east": "езда на восток\n"
+        },
+        "behaviors 3_2020": {
+          "zooming east": "увеличение на восток\n",
+          "driving east": "езда на восток\n"
+        },
+        "behaviors 3a": {
+          "zooming east": "увеличение на восток\n",
+          "driving east": "езда на восток\n"
+        },
+        "behaviors 3a_2020": {
+          "zooming east": "увеличение на восток\n",
+          "driving east": "езда на восток\n"
+        },
+        "behaviors 4": {
+          "move south and west": "движение на юг и на запад\n",
+          "running east": "бег на восток\n"
+        },
+        "behaviors 4_2020": {
+          "move south and west": "движение на юг и на запад\n",
+          "running east": "бег на восток\n"
+        },
+        "behaviors 6": {
+          "running east": "бег на восток\n"
+        },
+        "behaviors 6_2020": {
+          "running east": "бег на восток\n"
+        },
+        "behaviors 7": {
+          "running east": "бег на восток\n"
+        },
+        "behaviors 7_2020": {
+          "running east": "бег на восток\n"
+        },
+        "behaviors free play": {
+          "spinning and growing": "вращение и увеличение\n"
+        },
+        "behaviors free play_2020": {
+          "spinning and growing": "вращение и увеличение\n"
+        }
+      }
+    }
+  }
+}

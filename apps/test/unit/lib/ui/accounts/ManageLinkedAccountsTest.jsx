@@ -8,7 +8,6 @@ import {
 
 const DEFAULT_PROPS = {
   userType: 'student',
-  authenticityToken: 'fake CSRF token',
   authenticationOptions: {},
   disconnect: () => {},
   userHasPassword: true,
