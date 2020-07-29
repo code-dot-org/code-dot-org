@@ -158,8 +158,8 @@ export default class Pairing extends React.Component {
       <div
         style={{maxHeight: window.innerHeight * 0.8 - 100, overflowY: 'auto'}}
       >
-        <p className="dialog_title">{i18n.pairProgramming()}</p>
-        <h1>{i18n.pairProgrammingChosePartners()}</h1>
+        <h1>{i18n.pairProgramming()}</h1>
+        <h2>{i18n.pairProgrammingChosePartners()}</h2>
         <br />
         <form>
           <SectionSelector
