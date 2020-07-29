@@ -636,7 +636,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.can_view_version?(student)
   end
 
-  test 'can_view_version? is true if student has progress in course script belongs to' do
+  test 'can_view_version? is true if student has progress in unit group unit belongs to' do
     unit_group = create :unit_group, family_name: 'script-fam'
     script1 = create :script, name: 'script1', family_name: 'script-fam'
     create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
