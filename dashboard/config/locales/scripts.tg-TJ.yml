@@ -24,9 +24,6 @@ tg:
           description_short: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо
             дар галактикаи дур"-ро эҷод намоед.
         csp4-pilot:
-          stages:
-            Surveys:
-              name: Тадқиқҳо
           lessons:
             Surveys:
               name: Тадқиқҳо
