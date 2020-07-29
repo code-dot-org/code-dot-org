@@ -1777,6 +1777,8 @@
   "updateUnpluggedLessonProgress": "Update unplugged lesson progress",
   "updateUnpluggedLessonProgressSubHeading": "Make sure your report accurately reflects the unplugged lessons* your class has worked on.",
   "updateUnpluggedProgress": "Update unplugged progress",
+  "useCircuitPlayground": "Use Circuit Playground",
+  "useMicroBit": "Use micro:bit",
   "usernameLabel": "Username: ",
   "useToView": "You can use this view to:",
   "useToViewList1": "Keep track of your class’s **progress on standards**",
