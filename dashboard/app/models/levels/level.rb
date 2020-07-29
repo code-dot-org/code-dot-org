@@ -338,7 +338,7 @@ class Level < ActiveRecord::Base
       end
     end
 
-    !(current_parent && current_parent.type == "LevelGroup")
+    !(current_parent&.type == "LevelGroup")
   end
 
   def self.level_file_path(level_name)
