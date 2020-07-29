@@ -11,7 +11,8 @@ const defaultProps = {
     status: LevelStatus.perfect,
     url: '/foo/bar',
     name: 'level_name',
-    progression: 'progression_name'
+    progression: 'progression_name',
+    progressionDisplayName: 'progression_display_name'
   },
   disabled: false
 };
@@ -220,7 +221,7 @@ describe('ProgressBubble', () => {
     assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. level_name');
   });
 
-  it('uses progression name when no name is specified', () => {
+  it('uses progression display name when no name is specified', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
@@ -232,7 +233,7 @@ describe('ProgressBubble', () => {
     );
     assert.equal(
       wrapper.find('TooltipWithIcon').props().text,
-      '1. progression_name'
+      '1. progression_display_name'
     );
   });
 

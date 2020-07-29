@@ -326,6 +326,7 @@ describe('sectionProgressRedux', () => {
                       url: 'url',
                       name: 'name',
                       progression: 'progression',
+                      progression_display_name: 'progression display name',
                       kind: 'assessment',
                       icon: 'fa-computer',
                       is_concept_level: false,
@@ -353,6 +354,7 @@ describe('sectionProgressRedux', () => {
                 levelNumber: 'hello world',
                 name: 'name',
                 progression: 'progression',
+                progressionDisplayName: 'progression display name',
                 url: 'url',
                 bonus: false,
                 sublevels: []
