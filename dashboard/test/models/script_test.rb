@@ -15,7 +15,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     @unit_group = create(:unit_group)
     @script_in_course = create(:script, hidden: true)
-    create(:course_script, position: 1, unit_group: @unit_group, script: @script_in_course)
+    create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @script_in_course)
 
     @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
     @script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
@@ -575,10 +575,10 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
-    create :course_script, unit_group: csp_2017, script: csp1_2017, position: 1
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create :course_script, unit_group: csp_2018, script: csp1_2018, position: 1
+    create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
     section = create :section, unit_group: csp_2018
     section.students << student
 
@@ -639,9 +639,9 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can_view_version? is true if student has progress in course script belongs to' do
     unit_group = create :unit_group, family_name: 'script-fam'
     script1 = create :script, name: 'script1', family_name: 'script-fam'
-    create :course_script, unit_group: unit_group, script: script1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
     script2 = create :script, name: 'script2', family_name: 'script-fam'
-    create :course_script, unit_group: unit_group, script: script2, position: 2
+    create :unit_group_unit, unit_group: unit_group, script: script2, position: 2
     student = create :student
     student.scripts << script1
 
@@ -688,10 +688,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'self.latest_assigned_version returns latest assigned script in family if script is in course family' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
-    create :course_script, unit_group: csp_2017, script: csp1_2017, position: 1
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create :course_script, unit_group: csp_2018, script: csp1_2018, position: 1
+    create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
 
     student = create :student
     section = create :section, unit_group: csp_2017
@@ -866,11 +866,11 @@ class ScriptTest < ActiveSupport::TestCase
   test 'summarize includes show_course_unit_version_warning' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
-    create(:course_script, unit_group: csp_2017, script: csp1_2017, position: 1)
+    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018')
-    create(:course_script, unit_group: csp_2018, script: csp1_2018, position: 1)
+    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
 
     refute csp1_2017.summarize[:show_course_unit_version_warning]
 
@@ -914,11 +914,11 @@ class ScriptTest < ActiveSupport::TestCase
   test 'summarize only shows one version warning' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', version_year: '2017')
-    create(:course_script, unit_group: csp_2017, script: csp1_2017, position: 1)
+    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
-    create(:course_script, unit_group: csp_2018, script: csp1_2018, position: 1)
+    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
 
     user = create(:student)
     create(:user_script, user: user, script: csp1_2017)
@@ -1258,8 +1258,8 @@ class ScriptTest < ActiveSupport::TestCase
     script = create :script
     unit_group = create :unit_group, name: 'csp'
     other_course = create :unit_group, name: 'othercsp'
-    create :course_script, position: 1, unit_group: unit_group, script: script
-    create :course_script, position: 1, unit_group: other_course, script: script
+    create :unit_group_unit, position: 1, unit_group: unit_group, script: script
+    create :unit_group_unit, position: 1, unit_group: other_course, script: script
 
     assert_nil script.course_link
   end
@@ -1267,7 +1267,7 @@ class ScriptTest < ActiveSupport::TestCase
   test "course_link returns course_path if script is in one course" do
     script = create :script
     unit_group = create :unit_group, name: 'csp'
-    create :course_script, position: 1, unit_group: unit_group, script: script
+    create :unit_group_unit, position: 1, unit_group: unit_group, script: script
 
     assert_equal '/courses/csp', script.course_link
   end
