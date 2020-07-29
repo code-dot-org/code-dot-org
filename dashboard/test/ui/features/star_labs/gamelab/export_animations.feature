@@ -5,8 +5,6 @@ Feature: Game Lab Export
 Scenario: Export library animation
   Given I start a new Game Lab project
   And I switch to the animation tab
-  # Wait to make sure library manifest has loaded
-  And I wait for 2 seconds
   And I add the bear animation from the library
   And I switch to the code tab in Game Lab
   And I press "runButton"

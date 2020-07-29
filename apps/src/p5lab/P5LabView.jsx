@@ -53,10 +53,6 @@ class P5LabView extends React.Component {
     return undefined;
   }
 
-  getLibraryManifest = () => {
-    return this.state.libraryManifest;
-  };
-
   componentDidMount() {
     this.props.onMount();
     const locale = window.appOptions.locale;
@@ -105,7 +101,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
-              getLibraryManifest={this.getLibraryManifest}
+              libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.props.spriteLab}
               hideAnimationNames={this.props.spriteLab}
             />
@@ -133,7 +129,7 @@ class P5LabView extends React.Component {
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        getLibraryManifest={this.getLibraryManifest}
+        libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.props.spriteLab}
         hideAnimationNames={this.props.spriteLab}
       />
