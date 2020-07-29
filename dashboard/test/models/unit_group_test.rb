@@ -246,7 +246,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     test 'select default course script for teacher without experiment' do
       assert_equal(
         @default_course_script,
-        @course.select_course_script(@other_teacher, @default_course_script)
+        @course.select_unit_group_unit(@other_teacher, @default_course_script)
       )
     end
 
@@ -254,7 +254,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
         @alternate_course_script,
-        @course.select_course_script(@other_teacher, @default_course_script)
+        @course.select_unit_group_unit(@other_teacher, @default_course_script)
       )
       experiment.destroy
     end
@@ -262,7 +262,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     test 'select default course script for student by default' do
       assert_equal(
         @default_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @course.select_unit_group_unit(@student, @default_course_script)
       )
     end
 
@@ -271,7 +271,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment = create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
       assert_equal(
         @alternate_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @course.select_unit_group_unit(@student, @default_course_script)
       )
       experiment.destroy
     end
@@ -281,7 +281,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
         @default_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @course.select_unit_group_unit(@student, @default_course_script)
       )
       experiment.destroy
     end
@@ -290,7 +290,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       create :user_script, user: @student, script: @script2a
       assert_equal(
         @alternate_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @course.select_unit_group_unit(@student, @default_course_script)
       )
     end
 
@@ -299,7 +299,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       create :user_script, user: @student, script: @script2a
       assert_equal(
         @default_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @course.select_unit_group_unit(@student, @default_course_script)
       )
     end
   end

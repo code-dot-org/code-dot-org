@@ -351,7 +351,7 @@ class UnitGroup < ApplicationRecord
   # @return [Array<Script>]
   def scripts_for_user(user)
     default_unit_group_units.map do |cs|
-      select_course_script(user, cs).script
+      select_unit_group_unit(user, cs).script
     end
   end
 
@@ -374,7 +374,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User|nil]
   # @param default_course_script [UnitGroupUnit]
   # @return [UnitGroupUnit]
-  def select_course_script(user, default_course_script)
+  def select_unit_group_unit(user, default_course_script)
     return default_course_script unless user
 
     alternates = alternate_unit_group_units.where(default_script: default_course_script.script).all
