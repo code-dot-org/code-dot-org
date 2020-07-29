@@ -372,12 +372,12 @@ class UnitGroup < ApplicationRecord
   # 4. Otherwise, show the default course script.
   #
   # @param user [User|nil]
-  # @param default_course_script [UnitGroupUnit]
+  # @param default_unit_group_unit [UnitGroupUnit]
   # @return [UnitGroupUnit]
-  def select_unit_group_unit(user, default_course_script)
-    return default_course_script unless user
+  def select_unit_group_unit(user, unit_group_unit)
+    return unit_group_unit unless user
 
-    alternates = alternate_unit_group_units.where(default_script: default_course_script.script).all
+    alternates = alternate_unit_group_units.where(default_script: unit_group_unit.script).all
 
     if user.teacher?
       alternates.each do |cs|
@@ -392,7 +392,7 @@ class UnitGroup < ApplicationRecord
           return cs if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: cs.experiment_name)
         end
       end
-      return default_course_script
+      return unit_group_unit
     end
 
     if user.student?
@@ -404,7 +404,7 @@ class UnitGroup < ApplicationRecord
       end
     end
 
-    default_course_script
+    unit_group_unit
   end
 
   # @param user [User]
