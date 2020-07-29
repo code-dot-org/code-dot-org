@@ -21,7 +21,7 @@ class UnitGroup < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_unit_group_units, source: :script
-  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_one :course_version, as: :content_root
 
   after_save :write_serialization
@@ -117,7 +117,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def summarize_alternate_scripts
-    alternates = alternate_course_scripts.all
+    alternates = alternate_unit_group_units.all
     return nil if alternates.empty?
     alternates.map do |cs|
       {
@@ -377,7 +377,7 @@ class UnitGroup < ApplicationRecord
   def select_course_script(user, default_course_script)
     return default_course_script unless user
 
-    alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
+    alternates = alternate_unit_group_units.where(default_script: default_course_script.script).all
 
     if user.teacher?
       alternates.each do |cs|
