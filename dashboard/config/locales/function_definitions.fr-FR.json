@@ -690,13 +690,15 @@
           "n-sided shape": {
             "name": "forme à n côtés",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur"
             }
           },
           "draw a loop": {
             "name": "dessiner une boucle",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           },
           "draw spiral circle": {
@@ -710,7 +712,8 @@
           "draw a loop": {
             "name": "dessiner une boucle",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           },
           "n-sided shape": {
@@ -917,12 +920,14 @@
           "draw a polygon": {
             "name": "dessiner un polygone",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur"
             }
           },
           "do something": {
             "name": "faire quelque chose",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur"
             }
           }
@@ -931,7 +936,8 @@
           "draw a polygon": {
             "name": "dessiner un polygone",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
@@ -939,7 +945,8 @@
           "draw a polygon": {
             "name": "dessiner un polygone",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
@@ -947,7 +954,8 @@
           "draw a polygon": {
             "name": "dessiner un polygone",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
@@ -955,24 +963,31 @@
           "draw a spiral edge": {
             "name": "dessiner un bord de spirale",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
         "NEW Course 4 Artist Params 15": {
           "draw a star": {
             "name": "dessine une étoile",
+            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
             "parameters": {
               "points": "points",
               "length": "longueur"
             }
           },
           "draw a circle": {
-            "name": "dessine un cercle"
+            "name": "dessine un cercle",
+            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "parameters": {
+              "radius": "rayon"
+            }
           },
           "draw a pinwheel": {
             "name": "dessiner une girouette",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur",
               "repeat": "répéter"
             }
@@ -986,6 +1001,7 @@
           "draw a shape": {
             "name": "dessiner une forme",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur"
             }
           },
@@ -998,7 +1014,8 @@
           "draw a square": {
             "name": "dessine un carré",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
@@ -1089,7 +1106,8 @@
           "draw a polygon": {
             "name": "dessiner un polygone",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
@@ -1112,17 +1130,23 @@
         "New Artist Project": {
           "draw a star": {
             "name": "dessine une étoile",
+            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
             "parameters": {
               "points": "points",
               "length": "longueur"
             }
           },
           "draw a circle": {
-            "name": "dessine un cercle"
+            "name": "dessine un cercle",
+            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "parameters": {
+              "radius": "rayon"
+            }
           },
           "draw a pinwheel": {
             "name": "dessiner une girouette",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur",
               "repeat": "répéter"
             }
@@ -1136,6 +1160,7 @@
           "draw a shape": {
             "name": "dessiner une forme",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur"
             }
           },
@@ -1328,7 +1353,10 @@
             }
           },
           "draw a polygon": {
-            "name": "dessiner un polygone"
+            "name": "dessiner un polygone",
+            "parameters": {
+              "sides": "côtés"
+            }
           },
           "draw a square 20": {
             "name": "dessiner un carré 20"
@@ -1810,6 +1838,70 @@
           }
         },
         "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "name": "dessiner"
+          },
+          "draw bit": {
+            "name": "dessiner un peu"
+          }
+        },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "name": "dessiner"
+          },
+          "draw bit": {
+            "name": "dessiner un peu"
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw bit": {
+            "name": "dessiner un peu"
+          },
+          "draw": {
+            "name": "dessiner"
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw bit": {
+            "name": "dessiner un peu"
+          },
+          "draw": {
+            "name": "dessiner"
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw bit": {
+            "name": "dessiner un peu"
+          },
+          "draw": {
+            "name": "dessiner"
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw bit": {
+            "name": "dessiner un peu"
+          },
+          "draw": {
+            "name": "dessiner"
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw bit": {
+            "name": "dessiner un peu"
+          },
+          "draw": {
+            "name": "dessiner"
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "name": "dessiner"
+          },
+          "draw bit": {
+            "name": "dessiner un peu"
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
           "draw": {
             "name": "dessiner"
           },
@@ -3016,7 +3108,8 @@
           "draw a polygon": {
             "name": "dessiner un polygone",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
@@ -3024,7 +3117,8 @@
           "draw a polygon": {
             "name": "dessiner un polygone",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
@@ -3032,7 +3126,8 @@
           "draw a spiral edge": {
             "name": "dessiner un bord de spirale",
             "parameters": {
-              "length": "longueur"
+              "length": "longueur",
+              "sides": "côtés"
             }
           }
         },
@@ -3041,6 +3136,7 @@
             "name": "dessiner un bord de spirale",
             "parameters": {
               "length": "longueur",
+              "sides": "côtés",
               "min": "min"
             }
           }
@@ -3050,6 +3146,7 @@
             "name": "dessiner un bord de spirale",
             "parameters": {
               "length": "longueur",
+              "sides": "côtés",
               "min": "min"
             }
           }
@@ -3057,17 +3154,23 @@
         "courseF_artist_fwp9": {
           "draw a star": {
             "name": "dessine une étoile",
+            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
             "parameters": {
               "points": "points",
               "length": "longueur"
             }
           },
           "draw a circle": {
-            "name": "dessine un cercle"
+            "name": "dessine un cercle",
+            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "parameters": {
+              "radius": "rayon"
+            }
           },
           "draw a pinwheel": {
             "name": "dessiner une girouette",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur",
               "repeat": "répéter"
             }
@@ -3081,6 +3184,7 @@
           "draw a shape": {
             "name": "dessiner une forme",
             "parameters": {
+              "sides": "côtés",
               "length": "longueur"
             }
           },
@@ -3100,6 +3204,7 @@
             "name": "dessiner un bord de spirale",
             "parameters": {
               "length": "longueur",
+              "sides": "côtés",
               "min": "min"
             }
           }
@@ -3112,7 +3217,10 @@
             }
           },
           "draw a polygon": {
-            "name": "dessiner un polygone"
+            "name": "dessiner un polygone",
+            "parameters": {
+              "sides": "côtés"
+            }
           },
           "draw a square 20": {
             "name": "dessiner un carré 20"
@@ -3440,6 +3548,46 @@
           },
           "collect": {
             "name": "collecte"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "name": "dessiner"
+          },
+          "draw bit": {
+            "name": "dessiner un peu"
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "name": "dessiner"
+          },
+          "draw bit": {
+            "name": "dessiner un peu"
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "name": "dessiner"
+          },
+          "draw bit": {
+            "name": "dessiner un peu"
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "name": "dessiner"
+          },
+          "draw bit": {
+            "name": "dessiner un peu"
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "name": "dessiner"
+          },
+          "draw bit": {
+            "name": "dessiner un peu"
           }
         }
       }

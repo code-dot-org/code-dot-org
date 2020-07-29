@@ -42,13 +42,13 @@
           "CSD_U3_variables": "Zmeňte číslo tu"
         },
         "CSD U3 Variables Predict Where XY": {
-          "grid": "Kliknite sem pre zobrazenie mriežky."
+          "grid": "Pre zobrazenie mriežky klikni sem."
         },
         "CSD U3 Variables Predict Where XY_2018": {
-          "grid": "Kliknite sem pre zobrazenie mriežky."
+          "grid": "Pre zobrazenie mriežky klikni sem."
         },
         "CSD U3 Variables Predict Where XY_2019": {
-          "grid": "Kliknite sem pre zobrazenie mriežky."
+          "grid": "Pre zobrazenie mriežky klikni sem."
         },
         "CSD U3 Variables Predict Where X_2018": {
           "CSD_U3_variables": "Zmeňte číslo tu"
@@ -703,9 +703,6 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "Toto vám umožní vybrať \"náhodný\" zvuk, čo znamená, že nebudete vedieť, čo sa bude hrať až kým to nespustíte!"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_1": "Iba jeden z týchto blokov je v paneli s nástrojmi. Ako ho použijete?"
-        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Po pripojení všetkých blokov stlač tlačidlo \"Spustiť\", ktoré spustí tvoj program."
         },
@@ -733,17 +730,8 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "Iba jeden z týchto blokov je v paneli s nástrojmi. Ako ho použijete?"
         },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "Toto číslo znamená počet blokov, ktoré môžete použiť v tejto hre."
-        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Toto číslo znamená, že už nemáte k dispozícií žiaden takýto ďaľší blok."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "Toto číslo znamená, že len jeden typ blokov môže byť použitý v riešení."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_1": "Vedel si, že môžeš kedykoľvek po čiare kresliť aj smerom naspäť?"
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať."

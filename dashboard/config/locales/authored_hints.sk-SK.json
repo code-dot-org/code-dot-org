@@ -884,9 +884,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Prejdi si pomaly prstom celý program aby si prišiel/prišla na to, kde sa stala chyba.",
-          "courseA_artist_loops3_b": "Mal/a by si použiť blok ako tento, na vyriešenie tejto úlohy.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť číslo navrchu bloku.",
-          "courseB_artist_loops2_b": "Vyskúšaj najskôr spustiť kód, aby si uvidel, kde umelec skončí."
+          "courseA_artist_loops3_b": "Mal/a by si použiť blok ako tento, na vyriešenie tejto úlohy.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť číslo navrchu bloku.",
@@ -902,10 +900,7 @@
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť číslo navrchu bloku.",
-          "courseA_artist_loops4_b": "Keďže môžeš použiť len jeden blok <xml><block type=\"simple_move_right\"/></xml>,\n\nvyskúšaj ho vložiť do vnútra cyklu  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> .",
-          "courseB_artist_loops4_a": "Blok \"skoč\" ti umožní sa pohnúť dopredu bez toho, aby si nakreslil čiaru.",
-          "courseB_artist_loops4_b": "Budeš potrebovať pridať blok dovnútra cyklu opakuj, aby si vyriešil túto úlohu.",
-          "courseB_artist_loops4_c": "Nezabudni zmeniť počet, koľko krát sa cyklus zopakuje."
+          "courseA_artist_loops4_b": "Keďže môžeš použiť len jeden blok <xml><block type=\"simple_move_right\"/></xml>,\n\nvyskúšaj ho vložiť do vnútra cyklu  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> ."
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "Na dokončenie tejto úlohy vyskúšaj využiť čo si sa naučil/a o blokoch <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
@@ -925,8 +920,7 @@
         "courseA_artist_loops5_2020": {
           "courseA_artist_loops5_a": "Na dokončenie tejto úlohy vyskúšaj využiť čo si sa naučil/a o blokoch <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
           "courseA_artist_loops5_b": "Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť číslo navrchu bloku.",
-          "courseA_artist_loops5_c": "Keďže môžeš použiť len jeden blok <xml><block type=\"simple_move_right\"/></xml>, vyskúšaj ho vložiť do vnútra cyklu  \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> .",
-          "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, a potom doňho vlož ostatné bloky. Koľko krát ich potrebuješ zopakovať?"
+          "courseA_artist_loops5_c": "Keďže môžeš použiť len jeden blok <xml><block type=\"simple_move_right\"/></xml>, vyskúšaj ho vložiť do vnútra cyklu  \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ."
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "Nevieš prísť na to ako spraviť kopec? Vysúšaj sa trochu pohrať s blokmi aby si zistil/a, čo každý z nich kreslí.",
@@ -942,8 +936,7 @@
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "Nevieš prísť na to ako spraviť kopec? Vysúšaj sa trochu pohrať s blokmi aby si zistil/a, čo každý z nich kreslí.",
-          "courseA_artist_loops6_b": "Na vyriešenie tejto úlohy, budeš potreovať 2 bloky, ktoré idú 2 rôznymi smermi.",
-          "courseB_artist_loops6_b": "Skús si zapísať všetky kroky na kus papiera a pohľadaj vzor, ktorý sa opakuje."
+          "courseA_artist_loops6_b": "Na vyriešenie tejto úlohy, budeš potreovať 2 bloky, ktoré idú 2 rôznymi smermi."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor.",
@@ -963,10 +956,7 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor.",
           "courseA_artist_loops7_b": "Najprv napíš kód na vytvorenie jednej vlny, potom to zopakuj aby si nakreslil/a ďalšie dve.",
-          "courseA_artist_loops7_c": "Nezabudni, do vnútra cyklu <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> môžeš vložiť viac ako jeden blok.",
-          "courseB_artist_loops7_a": "Táto výzva potrebuje **4** cykly, jeden za druhým!",
-          "courseB_artist_loops7_b": "Všimni si, že každý cyklus opakuje schodový vzor, ktorý ide iným smerom.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "Cykly by mali spraviť toto:\n\n-   Cyklus 1\n\n-   Doprava\n\n-   Dole\n\n-   Cyklus 2\n\n-   Doprava\n\n-   Hore\n\n-   Cyklus 3\n\n-   Doľava\n\n-   Hore\n\n-   Cyklus 4\n\n-   Doľava\n\n-   Dole"
+          "courseA_artist_loops7_c": "Nezabudni, do vnútra cyklu <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> môžeš vložiť viac ako jeden blok."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "Vyskúšaj spustiť kód, ktorý už je pre teba napísaný.",
@@ -986,9 +976,7 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "Vyskúšaj spustiť kód, ktorý už je pre teba napísaný.",
           "courseA_artist_loops8_b": "Ako by si vyrobil/a cyklus z kódu, ktorý sme ti dali?",
-          "courseA_artist_loops8_c": "Čo ten kód robí?\\\nČo by mal robiť?\\\nČo ti to hovorí?",
-          "courseB_artist_loops8_a": "Koľko krát by si mal zopakovať tento vzor, aby si vytvoril rebrík?",
-          "courseB_artist_loops8_b": "Vyskúšaj spustiť kód, ktorý sme pre teba pripravili a zisti, čo robí."
+          "courseA_artist_loops8_c": "Čo ten kód robí?\\\nČo by mal robiť?\\\nČo ti to hovorí?"
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "Pridaj ku kódu, ktorý si dostal/a ešte blok, aby si dokončil/a zvyšok schodov.",
@@ -1005,10 +993,7 @@
         },
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Pridaj ku kódu, ktorý si dostal/a ešte blok, aby si dokončil/a zvyšok schodov.",
-          "courseA_artist_loops9_c": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor.",
-          "courseB_artist_loops9_a": "Pamätaj, že blok \"skoč\" môže byť použitý na pohyb bez nakreslenia čiary.",
-          "courseB_artist_loops9_b": "Budeš chcieť použiť blok Z, aby si vyriešil túto úlohu.",
-          "courseB_artist_loops9_c": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor."
+          "courseA_artist_loops9_c": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor."
         },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_a": "Potom ako si sa dostal/a k štvorcu spokladom , použi tento blok na jeho zobratie.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
@@ -1703,10 +1688,6 @@
         "courseA_playLab_events7_2020": {
           "courseA_playLab_events7_a": "Použi tento blok, aby si vedel/a ovplyvniť čo sa stane potom ako do seba postavičky narazia.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_a": "Nezabudni použiť blok `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> , aby si napísal lepší kód!",
-          "courseB_artist_loops3_b": "Umelec sa bude musieť pohnúť na Juh, aby nakreslil túto čiaru."
-        },
         "courseB_Scrat_ramp1_2018": {
           "1": "Ak Scrat nerobí to, čo chceš, tak sa uisti, či sú oba bloky správne pripojené a potom znovu klikni \"Spustiť\".",
           "2": "Neboj sa urobiť chybu! Vyskúšaj niečo, a keď to nefunguje, tak vyskúšaj niečo iné!"
@@ -1720,7 +1701,7 @@
           "2": "Neboj sa urobiť chybu! Vyskúšaj niečo, a keď to nefunguje, tak vyskúšaj niečo iné!"
         },
         "courseB_Scrat_ramp2_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp2_2019": {
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> </block> </next> </block> </next> </block> </xml>"
@@ -1729,7 +1710,7 @@
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveNorth\"/> </next> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveNorth\"/> </next> </block> </next> </block> </next> </block> </xml>"
@@ -1747,7 +1728,7 @@
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveSouth\"/> </next> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveEast\"> <next> <block type=\"maze_moveSouth\"/> </next> </block> </next> </block> </next> </block> </xml>"
@@ -1756,7 +1737,7 @@
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2018": {
-          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveWest\"> <next> <block type=\"maze_moveWest\"> </block> </next> </block> </next> </block> </xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
           "1": "Tvoj kód by mal vyzerať takto:\n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\"> <next> <block type=\"maze_moveWest\"> <next> <block type=\"maze_moveWest\"> </block> </next> </block> </next> </block> </xml>"
@@ -1777,8 +1758,6 @@
           "courseB_artist_loops2_b": "Vyskúšaj najskôr spustiť kód, aby si uvidel, kde umelec skončí."
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "Prejdi si pomaly prstom celý program aby si prišiel/prišla na to, kde sa stala chyba.",
-          "courseA_artist_loops3_b": "Mal/a by si použiť blok ako tento, na vyriešenie tejto úlohy.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť číslo navrchu bloku.",
           "courseB_artist_loops2_b": "Vyskúšaj najskôr spustiť kód, aby si uvidel, kde umelec skončí."
         },
@@ -1786,7 +1765,7 @@
           "courseB_artist_loops3_b": "Umelec sa bude musieť pohnúť na Juh, aby nakreslil túto čiaru."
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_a": "Nezabudni použiť blok `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> , aby si napísal lepší kód!",
+          "courseB_artist_loops3_a": "Nezabudni použiť blok `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, aby si napísal lepší kód!",
           "courseB_artist_loops3_b": "Umelec sa bude musieť pohnúť na Juh, aby nakreslil túto čiaru."
         },
         "courseB_artist_loops3_2019": {
@@ -1813,8 +1792,6 @@
           "courseB_artist_loops4_c": "Nezabudni zmeniť počet, koľko krát sa cyklus zopakuje."
         },
         "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť číslo navrchu bloku.",
-          "courseA_artist_loops4_b": "Keďže môžeš použiť len jeden blok <xml><block type=\"simple_move_right\"/></xml>,\n\nvyskúšaj ho vložiť do vnútra cyklu  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> .",
           "courseB_artist_loops4_a": "Blok \"skoč\" ti umožní sa pohnúť dopredu bez toho, aby si nakreslil čiaru.",
           "courseB_artist_loops4_b": "Budeš potrebovať pridať blok dovnútra cyklu opakuj, aby si vyriešil túto úlohu.",
           "courseB_artist_loops4_c": "Nezabudni zmeniť počet, koľko krát sa cyklus zopakuje."
@@ -1823,15 +1800,12 @@
           "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj`, a potom vlož doňho ostatné bloky. Koľko krát ich potrebuješ zopakovať?"
         },
         "courseB_artist_loops5_2018": {
-          "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, a potom doňho vlož ostatné bloky. Koľko krát ich potrebuješ zopakovať?"
+          "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, a potom doňho vlož ostatné bloky. Koľko krát ich potrebuješ zopakovať?"
         },
         "courseB_artist_loops5_2019": {
           "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, a potom doňho vlož ostatné bloky. Koľko krát ich potrebuješ zopakovať?"
         },
         "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Na dokončenie tejto úlohy vyskúšaj využiť čo si sa naučil/a o blokoch <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
-          "courseA_artist_loops5_b": "Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť číslo navrchu bloku.",
-          "courseA_artist_loops5_c": "Keďže môžeš použiť len jeden blok <xml><block type=\"simple_move_right\"/></xml>, vyskúšaj ho vložiť do vnútra cyklu  \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> .",
           "courseB_artist_loops5_a": "Vytiahni cyklus `opakuj`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, a potom doňho vlož ostatné bloky. Koľko krát ich potrebuješ zopakovať?"
         },
         "courseB_artist_loops6": {
@@ -1844,8 +1818,6 @@
           "courseB_artist_loops6_b": "Skús si zapísať všetky kroky na kus papiera a pohľadaj vzor, ktorý sa opakuje."
         },
         "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "Nevieš prísť na to ako spraviť kopec? Vysúšaj sa trochu pohrať s blokmi aby si zistil/a, čo každý z nich kreslí.",
-          "courseA_artist_loops6_b": "Na vyriešenie tejto úlohy, budeš potreovať 2 bloky, ktoré idú 2 rôznymi smermi.",
           "courseB_artist_loops6_b": "Skús si zapísať všetky kroky na kus papiera a pohľadaj vzor, ktorý sa opakuje."
         },
         "courseB_artist_loops7": {
@@ -1864,9 +1836,6 @@
           "courseB_artist_loops7_c": "Cykly by mali spraviť toto:\n\n-   Cyklus 1\n\n-   Doprava\n\n-   Dole\n\n-   Cyklus 2\n\n-   Doprava\n\n-   Hore\n\n-   Cyklus 3\n\n-   Doľava\n\n-   Hore\n\n-   Cyklus 4\n\n-   Doľava\n\n-   Dole"
         },
         "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor.",
-          "courseA_artist_loops7_b": "Najprv napíš kód na vytvorenie jednej vlny, potom to zopakuj aby si nakreslil/a ďalšie dve.",
-          "courseA_artist_loops7_c": "Nezabudni, do vnútra cyklu <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> môžeš vložiť viac ako jeden blok.",
           "courseB_artist_loops7_a": "Táto výzva potrebuje **4** cykly, jeden za druhým!",
           "courseB_artist_loops7_b": "Všimni si, že každý cyklus opakuje schodový vzor, ktorý ide iným smerom.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Cykly by mali spraviť toto:\n\n-   Cyklus 1\n\n-   Doprava\n\n-   Dole\n\n-   Cyklus 2\n\n-   Doprava\n\n-   Hore\n\n-   Cyklus 3\n\n-   Doľava\n\n-   Hore\n\n-   Cyklus 4\n\n-   Doľava\n\n-   Dole"
@@ -1884,9 +1853,6 @@
           "courseB_artist_loops8_b": "Vyskúšaj spustiť kód, ktorý sme pre teba pripravili a zisti, čo robí."
         },
         "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Vyskúšaj spustiť kód, ktorý už je pre teba napísaný.",
-          "courseA_artist_loops8_b": "Ako by si vyrobil/a cyklus z kódu, ktorý sme ti dali?",
-          "courseA_artist_loops8_c": "Čo ten kód robí?\\\nČo by mal robiť?\\\nČo ti to hovorí?",
           "courseB_artist_loops8_a": "Koľko krát by si mal zopakovať tento vzor, aby si vytvoril rebrík?",
           "courseB_artist_loops8_b": "Vyskúšaj spustiť kód, ktorý sme pre teba pripravili a zisti, čo robí."
         },
@@ -1906,8 +1872,6 @@
           "courseB_artist_loops9_c": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Pridaj ku kódu, ktorý si dostal/a ešte blok, aby si dokončil/a zvyšok schodov.",
-          "courseA_artist_loops9_c": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor.",
           "courseB_artist_loops9_a": "Pamätaj, že blok \"skoč\" môže byť použitý na pohyb bez nakreslenia čiary.",
           "courseB_artist_loops9_b": "Budeš chcieť použiť blok Z, aby si vyriešil túto úlohu.",
           "courseB_artist_loops9_c": "Nevieš prísť na to, kam máš dať cyklus? Skús napísať kód krok za krokom a pohľadaj v ňom nejaký vzor."
@@ -2016,7 +1980,7 @@
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_a": "Skús použiť tlačidlo Krok a zisti, kde nastala chyba.",
           "courseB_collector_loops4_b": "Aby si zmenil, ako ďaleko Laurel zájde, tak zmeň počet opakovaní daného cyklu.",
-          "courseB_collector_loops4_c": "Laurel potrebuje prejsť dolu a pozbierať drahokami potom ako dokončí cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laurel potrebuje prejsť dolu a pozbierať drahokamy hneď potom, ako dokončí cyklus `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "Skús použiť tlačidlo Krok a zisti, kde nastala chyba.",
@@ -2053,7 +2017,7 @@
         "courseB_collector_loops6_2018": {
           "courseB_collector_loops6_a": "Nevieš prísť na to, kde sa to pokazí? Použi tlačidlo \"Krok\", aby si prešiel vždy iba jeden blok tvojho progamu.",
           "courseB_collector_loops6_b": "Kliknutím na \"3\" a zmenou na iné číslo môžeš zmeniť počet opakovaní cyklu.",
-          "courseB_collector_loops6_c": "Aby si vyriešil túto úlohu,  budeš chcieť použiť 3 cykly `opakuj`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>.",
+          "courseB_collector_loops6_c": "Budeš chcieť použiť 3 cykly `opakuj` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, aby si vyriešil túto úlohu.",
           "courseB_collector_loops6_d": "Ak nevieš ako ďalej, tak si skús túto úlohu rozdeliť na 3 časti."
         },
         "courseB_collector_loops6_2019": {
@@ -2195,8 +2159,8 @@
           "courseB_iceage_loops2_c": "Choď po tejto ceste, aby si dostal Scrata k žaluďu."
         },
         "courseB_iceage_loops3": {
-          "courseB_iceage_loops3_a": "Použi tento nový blok! <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj`,\n\n<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>\n\na potom vlož dovnútra blok, ktorý chceš."
+          "courseB_iceage_loops3_a": "Použi tento nový blok! <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "Na opakovanie kódu vytiahni cyklus `opakuj`,\n\n<xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>\n\na potom vlož dovnútra blok, ktorý chceš."
         },
         "courseB_iceage_loops3_2019": {
           "courseB_iceage_loops3_a": "Použi tento nový blok!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
@@ -2282,8 +2246,8 @@
           "courseB_maze_seq1_b": "Vytiahni tri takéto šípky <xml><block type=\"maze_moveSouth\"/></xml> a pripoj ich ku bloku <xml><block type=\"when_run\"/></xml>, aby sa tvoj vták dostal k prasiatku."
         },
         "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1_a": "Aby sa Scrat pohol, pripoj bloky ku bloku <xml><block type=\"when_run\"/></xml>!",
-          "courseB_maze_seq1_b": "Aby sa Scrat dostal k žaluďu, vytiahni tri takéto šípky <xml><block type=\"maze_moveSouth\"/></xml> a pripoj ich ku bloku <xml><block type=\"when_run\"/></xml>."
+          "courseB_maze_seq1_a": "Pripoj bloky ku bloku <xml><block type=\"when_run\"/></xml>, aby sa Scrat pohol!",
+          "courseB_maze_seq1_b": "Vytiahni tri takéto šípky <xml><block type=\"maze_moveSouth\"/></xml> a pripoj ich ku bloku <xml><block type=\"when_run\"/></xml>, aby sa Scrat dostal k žaluďu."
         },
         "courseB_maze_seq1_2019": {
           "courseB_maze_seq1_a": "Pripoj bloky ku bloku <xml><block type=\"when_run\"/></xml>, aby sa Scrat pohol!",
@@ -2733,7 +2697,7 @@
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
           "courseB_starWars_prog9_b": "Je veľa spôsobov ako vyriešiť túto úlohu.",
-          "courseB_starWars_prog9_c": "Pomohol by tu cyklus  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> `opakuj` ?"
+          "courseB_starWars_prog9_c": "Pomohol by tu cyklus <xml><block type=\"controls_repeat_simplified\"> <title name=\"TIMES\">3</title> </block></xml>?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
@@ -2744,10 +2708,6 @@
           "courseB_starWars_prog9_a": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. ",
           "courseB_starWars_prog9_b": "Je veľa spôsobov ako vyriešiť túto úlohu.",
           "courseB_starWars_prog9_c": "Pomohol by tu cyklus  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> `opakuj` ?"
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "Nevieš prísť na to ako nakresliť čiaru? Začni s pripájaním blokov k bloku <xml><block type=\"when_run\"/></xml> a uvidíš čo sa stane.",
-          "courseA_artist_loops2_b": "Použi tento blok block <xml><block type=\"simple_move_right\"/></xml> na vyriešenie úlohy."
         },
         "courseC_PlayLab_events1": {
           "courseC_PlayLab_events1_a": "Pripoj tento blok k bloku `pri spustení`:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>"
@@ -4773,6 +4733,35 @@
         },
         "courseD_artist_ramp12": {
           "courseD_artist_ramp12_c": "Môžeš použiť šípku nadol s rozbaľovacou ponukou na blokoch \"otoč sa o\", aby si zistil aký uhol potrebuješ!"
+        },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "Klikni na `Spustiť` a sleduj, čo sa stane!"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_a": "Úlohu vyriešiš pomocou jednej z postupností nadefinovaných v paneli nástrojov. ",
+          "courseD_artist_binary3_b": "Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti a svoj kód spusti aj keď ešte nevieš správnu odpoveď."
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "Pozri sa na prvé tri štvorce v prvom rade. Myslíš, že by sa ich opakovaním dal nakresliť celý vzor?",
+          "courseD_artist_binary4_b": "Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj, čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie."
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "Skús si najprv spustiť ponúkaný kód, nech vieš, s čím pracuješ.",
+          "courseD_artist_binary5_b": "Stačí vymeniť 2 riadky.",
+          "courseD_artist_binary5_c": "Ak sa ti stále nedarí, skús si jednotlivé riadky nakresliť na papier a riešenie pohľadaj tam."
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "Začni vľavo hore a sleduj vzor. Ako ďaleko musíš zájsť, aby sa ten vzor začal opakovať?",
+          "courseD_artist_binary6_b": "Svoj kód môžeš vybudovať znak po znaku a priebežne ho testovať!"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "Začni vľavo hore a sleduj vzor. Ako ďaleko musíš zájsť, aby sa ten vzor začal opakovať?",
+          "courseD_artist_binary7_b": "Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj, čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie."
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "Tá špirála ťa možno zmiatla. V tomto cvičení si musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.",
+          "courseD_artist_binary8_b": "Skús si najprv spustiť ponúkaný kód, nech vieš, s čím pracuješ.",
+          "courseD_artist_binary8_c": "Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti a svoj kód spusti aj keď ešte nevieš správnu odpoveď."
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_a": "Niekedy sa tam kvet bude nachádzať a niekedy nie. Ak chceš, aby tvoj kód fungoval v oboch prípadoch, určite použi podmienku `ak`.",
