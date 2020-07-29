@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200722061339) do
+ActiveRecord::Schema.define(version: 20200728201407) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1443,6 +1443,7 @@ ActiveRecord::Schema.define(version: 20200722061339) do
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
     t.integer  "lesson_group_id"
+    t.string   "key"
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 
