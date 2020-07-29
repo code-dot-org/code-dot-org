@@ -193,6 +193,10 @@ hy:
             '"right"': ճիշտ
             '"space"': տարածություն
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -210,6 +214,15 @@ hy:
         options:
           UNIT:
             '"seconds"': վայրկյան
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

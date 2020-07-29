@@ -990,9 +990,6 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "这让你选择一个 \"随机\" 的声音，这意味着在你听到声音前，不知道你会得到什么!"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_1": "工具箱中只有一个这样的模块。你将如何使用它？"
-        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
         },
@@ -1020,17 +1017,8 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "工具箱中只有一个这样的模块。你将如何使用它？"
         },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
-        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "这个数字意味着工具箱中不再有这个块了。"
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "这个数字意味着只有一个这样的模块可以在最终的答案中使用。"
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_1": "你知道在任何时候，都能往回画线吗？"
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
