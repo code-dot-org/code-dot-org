@@ -44,7 +44,12 @@ class TestFlakiness
   def self.summarize_by_job(num_requests = NUM_REQUESTS, per_request = PER_REQUEST)
     jobs = []
     num_requests.times do
-      jobs += get_jobs(limit: per_request, skip: jobs.count)
+      options = {
+        limit: per_request,
+        skip: jobs.count,
+        from: from_timestamp
+      }.compact
+      jobs += get_jobs(options)
     end
     jobs.group_by {|job| job['name']}.map do |name, samples|
       passed = samples.select {|job| job['passed']}
@@ -68,6 +73,16 @@ class TestFlakiness
     max_reruns = [1, [recommended_reruns, 5].min].max.ceil
     confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
     return [max_reruns, confidence]
+  end
+
+  FLAKINESS_TIMESTAMP_FILENAME = (File.dirname(__FILE__) + "/../../bin/ui_test_flakiness_timestamp.json").freeze
+
+  # Sets a timestamp that corresponds to the oldest results we will request from SauceLabs
+  # for calculating flakiness.
+  # @param timestamp [Integer] Unix timestamp (e.g., Time.now.to_i)
+  def self.reset(timestamp)
+    file_data = {timestamp: timestamp}.to_json
+    File.open(FLAKINESS_TIMESTAMP_FILENAME, "w") {|f| f.write(file_data)}
   end
 
   CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze
@@ -117,5 +132,11 @@ class TestFlakiness
       # If values for scenarios and feature both exist, average the two.
       (scenario + feature) / 2.0
     end
+  end
+
+  cached def self.from_timestamp
+    return nil unless File.exist?(FLAKINESS_TIMESTAMP_FILENAME)
+    timestamp = JSON.parse(File.read(FLAKINESS_TIMESTAMP_FILENAME))['timestamp']
+    timestamp.is_a?(Integer) ? timestamp : nil
   end
 end
