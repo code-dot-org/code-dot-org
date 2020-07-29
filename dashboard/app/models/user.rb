@@ -1783,10 +1783,7 @@ class User < ActiveRecord::Base
       user_level.atomic_save!
     end
 
-    current_level = user_level.level
-    should_allow_pairing = current_level.should_allow_pairing?(script.id)
-
-    if should_allow_pairing && pairing_user_ids
+    if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,
