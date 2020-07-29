@@ -16,6 +16,7 @@ select
   lsl.level_id, 
   le.name level_name, 
   sl.position as level_number,
+  sensitive_data AS child_nickname_on_playground,
   case when json_extract_path_text(sl.properties, 'challenge') = 'true' then 1 else 0 end as challenge,
   case when sl.assessment = 1 then 1 else 0 end as assessment,
   case when json_extract_path_text(le.properties, 'mini_rubric') = 'true' then 1 else 0 end as mini_rubric
