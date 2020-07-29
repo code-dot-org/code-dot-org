@@ -119,11 +119,11 @@ class UnitGroup < ApplicationRecord
   def summarize_alternate_scripts
     alternates = alternate_unit_group_units.all
     return nil if alternates.empty?
-    alternates.map do |cs|
+    alternates.map do |ugu|
       {
-        experiment_name: cs.experiment_name,
-        alternate_script: cs.script.name,
-        default_script: cs.default_script.name
+        experiment_name: ugu.experiment_name,
+        alternate_script: ugu.script.name,
+        default_script: ugu.default_script.name
       }
     end
   end
@@ -166,8 +166,8 @@ class UnitGroup < ApplicationRecord
 
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
-      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |cs|
-        cs.position = index + 1
+      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |ugu|
+        ugu.position = index + 1
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -177,10 +177,10 @@ class UnitGroup < ApplicationRecord
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
       position = default_unit_group_units.find_by(script: default_script).position
-      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
-        cs.position = position
-        cs.experiment_name = hash['experiment_name']
-        cs.default_script = default_script
+      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_script) do |ugu|
+        ugu.position = position
+        ugu.experiment_name = hash['experiment_name']
+        ugu.default_script = default_script
       end
       unit_group_unit.update!(
         position: position,
@@ -350,8 +350,8 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Array<Script>]
   def scripts_for_user(user)
-    default_unit_group_units.map do |cs|
-      select_unit_group_unit(user, cs).script
+    default_unit_group_units.map do |ugu|
+      select_unit_group_unit(user, ugu).script
     end
   end
 
@@ -380,26 +380,26 @@ class UnitGroup < ApplicationRecord
     alternates = alternate_unit_group_units.where(default_script: unit_group_unit.script).all
 
     if user.teacher?
-      alternates.each do |cs|
-        return cs if SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
+      alternates.each do |ugu|
+        return ugu if SingleUserExperiment.enabled?(user: user, experiment_name: ugu.experiment_name)
       end
     end
 
     course_sections = user.sections_as_student.where(unit_group: self)
     unless course_sections.empty?
-      alternates.each do |cs|
+      alternates.each do |ugu|
         course_sections.each do |section|
-          return cs if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: cs.experiment_name)
+          return ugu if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: ugu.experiment_name)
         end
       end
       return unit_group_unit
     end
 
     if user.student?
-      alternates.each do |cs|
+      alternates.each do |ugu|
         # include hidden scripts when iterating over user scripts.
         user.user_scripts.each do |us|
-          return cs if cs.script == us.script
+          return ugu if ugu.script == us.script
         end
       end
     end

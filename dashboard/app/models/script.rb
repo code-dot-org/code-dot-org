@@ -1436,9 +1436,9 @@ class Script < ActiveRecord::Base
   # due to existing progress or a course experiment, return that script. Otherwise,
   # return nil.
   def alternate_script(user)
-    unit_group_units.each do |cs|
-      alternate_cs = cs.unit_group.select_unit_group_unit(user, cs)
-      return alternate_cs.script if cs != alternate_cs
+    unit_group_units.each do |ugu|
+      alternate_ugu = ugu.unit_group.select_unit_group_unit(user, ugu)
+      return alternate_ugu.script if ugu != alternate_ugu
     end
     nil
   end
