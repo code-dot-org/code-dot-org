@@ -3,7 +3,13 @@ import React, {Component} from 'react';
 import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
-import Dialog, {Title, Body} from '../../templates/Dialog';
+import Dialog, {
+  Title,
+  Body,
+  Footer,
+  Confirm,
+  Cancel
+} from '../../templates/Dialog';
 import experiments from '@cdo/apps/util/experiments';
 
 const style = {
@@ -16,6 +22,13 @@ const style = {
     fontStyle: 'italic',
     textAlign: 'center',
     padding: 10
+  },
+  footerButtons: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  buttonGroupSpacing: {
+    marginLeft: 15
   }
 };
 
@@ -30,9 +43,13 @@ export class ConfirmEnableMakerDialog extends Component {
     return (
       <Dialog
         isOpen={this.props.isOpen}
-        confirmText={msg.enable()}
-        onConfirm={this.props.handleConfirm}
-        onCancel={this.props.handleCancel}
+        confirmText={experiments.isEnabled('microbit') ? null : msg.enable()}
+        onConfirm={
+          experiments.isEnabled('microbit') ? null : this.props.handleConfirm
+        }
+        onCancel={
+          experiments.isEnabled('microbit') ? null : this.props.handleCancel
+        }
         handleClose={this.props.handleCancel}
       >
         <Title>{msg.enableMakerDialogTitle()}</Title>
@@ -49,6 +66,24 @@ export class ConfirmEnableMakerDialog extends Component {
             <div style={style.warning}>
               {msg.enableMakerDialogWarningOnlyCP()}
             </div>
+          )}
+          {experiments.isEnabled('microbit') && (
+            <Footer key="footer">
+              <div style={style.footerButtons}>
+                <Cancel onClick={this.props.handleCancel} />
+                <div>
+                  <Confirm onClick={this.props.handleConfirm}>
+                    {msg.useMicroBit()}
+                  </Confirm>
+                  <Confirm
+                    onClick={this.props.handleConfirm}
+                    style={style.buttonGroupSpacing}
+                  >
+                    {msg.useCircuitPlayground()}
+                  </Confirm>
+                </div>
+              </div>
+            </Footer>
           )}
         </Body>
       </Dialog>
