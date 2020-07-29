@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Debugging
 
-One important classroom management strategy many educators use is strategic grouping. At Code.org, we suggest trying the strategic grouping strategy used in the real-world offices of the top tech firms: pair programming.
+Goal: Review debugging resources and practice debugging in Game Lab (Estimated Time: 25 minutes)
 
 > **Debugging** is the process of finding and fixing bugs in code. 
 
@@ -13,13 +13,14 @@ Bugs are opportunities to:
 - Identify and address student misconceptions
 - Further develop good debugging skills 
 
-Your role as the teacher is to avoid directly debugging for your students, but to instead guide students in better taking advantage of these opportunities. 
+Your role as the teacher is to avoid directly debugging for your students, but to instead guide students in developing their own debugging skills. 
 
 ## Revisiting the Debugging Process
 
 As we begin adding more complexity to our programs in Game Lab, more opportunities for bugs arise. One common barrier to supporting students during a programming unit is knowing how to support them effectively when they encounter bugs while programming. 
 
-Over the summer reviewed the resources available to support the process of debugging. We also practiced debugging in Wed Lab. In the following actives you will have the opportunity to practice debugging in Game Lab. Below are the resources that you explored over the summer. Revisit them if you would like to review or click continue to move on to the next activity. 
+Over the summer reviewed the resources available to support the process of debugging. We also practiced debugging in Wed Lab. In the following activities you will have the opportunity to practice debugging in Game Lab. Below are the resources that you explored over the summer. Revisit them if you would like to review or click continue to move on to the next activity.
+
 
 ## Debugging Resources
 

@@ -55,17 +55,19 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 20712,
     "name_suffix": "_2020",
-    "preload_asset_list": null,
     "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "mini_rubric": "false",
-    "libraries_enabled": "false"
+    "display_name": "Unit 3 Lesson 11 Level 5",
+    "thumbnail_url": "https://images.code.org/dddb680ec958875b9bfee4ae46dbee04-image-1595615464275.26.59 PM.png"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:44:49 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-05 20:28:51 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2020-07-16 15:50:37 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:44:49 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-05 20:28:51 +0000\",\"changed\":[\"code_functions\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2020-07-16 15:50:37 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-24 18:28:41 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-24 18:32:03 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
