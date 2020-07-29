@@ -81,8 +81,7 @@ class TestFlakiness
   # for calculating flakiness.
   # @param timestamp [Integer] Unix timestamp (e.g., Time.now.to_i)
   def self.reset(timestamp)
-    file_data = {timestamp: timestamp}.to_json
-    File.open(FLAKINESS_TIMESTAMP_FILENAME, "w") {|f| f.write(file_data)}
+    File.open(FLAKINESS_TIMESTAMP_FILENAME, "w") {|f| f.write({timestamp: timestamp}.to_json)}
   end
 
   CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze
