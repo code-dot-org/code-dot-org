@@ -21,7 +21,12 @@ DB.transaction do
   deleted_at_time = DateTime.now
   DB[:poste_urls].each do |poste_url|
     if !POSTE_URLS_TO_KEEP.include?(poste_url[:id])
-      poste_url.update(deleted_at: deleted_at_time)
+      begin
+        DB[:poste_urls].where(id: poste_url[:id]).update(deleted_at: deleted_at_time)
+      rescue => e
+        # continue on exception
+        puts "Hit exception #{e.message} deprecating url with id #{poste_url[:id]}"
+      end
     else
       urls_kept << poste_url[:url]
     end
@@ -33,6 +38,6 @@ DB.transaction do
     puts "Rolling back..."
     raise Sequel::Rollback
   else
-    puts "Update complete! Kept #{urls_kept.count}"
+    puts "Update complete! Kept #{urls_kept.count} urls"
   end
 end
