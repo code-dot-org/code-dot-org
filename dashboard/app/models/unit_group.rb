@@ -160,7 +160,7 @@ class UnitGroup < ApplicationRecord
   def update_scripts(new_scripts, alternate_scripts = nil)
     alternate_scripts ||= []
     new_scripts = new_scripts.reject(&:empty?)
-    # we want to delete existing course scripts that aren't in our new list
+    # we want to delete existing unit group units that aren't in our new list
     scripts_to_delete = default_unit_group_units.map(&:script).map(&:name) - new_scripts
     scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
 
@@ -255,7 +255,7 @@ class UnitGroup < ApplicationRecord
 
   # @param user [User]
   # @returns [Boolean] Whether the user has any experiment enabled which is
-  #   associated with an alternate course script.
+  #   associated with an alternate unit group unit.
   def self.has_any_course_experiments?(user)
     Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
   end
@@ -355,21 +355,21 @@ class UnitGroup < ApplicationRecord
     end
   end
 
-  # Return an alternate course script associated with the specified default
-  # course script (or the default course script itself) by evaluating these
+  # Return an alternate unit group unit associated with the specified default
+  # unit group unit (or the default unit group unit itself) by evaluating these
   # rules in order:
   #
   # 1. If the user is a teacher, and they have a course experiment enabled,
-  # show the corresponding alternate course script.
+  # show the corresponding alternate unit group unit.
   #
   # 2. If the user is in a section assigned to this course: show an alternate
-  # course script if any section's teacher is in a corresponding course
-  # experiment, otherwise show the default course script.
+  # unit group unit if any section's teacher is in a corresponding course
+  # experiment, otherwise show the default unit group unit.
   #
-  # 3. If the user is a student and has progress in an alternate course script,
-  # show the alternate course script.
+  # 3. If the user is a student and has progress in an alternate unit group unit,
+  # show the alternate unit group unit.
   #
-  # 4. Otherwise, show the default course script.
+  # 4. Otherwise, show the default unit group unit.
   #
   # @param user [User|nil]
   # @param default_unit_group_unit [UnitGroupUnit]

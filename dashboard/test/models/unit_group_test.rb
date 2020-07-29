@@ -237,20 +237,20 @@ class UnitGroupTest < ActiveSupport::TestCase
       create :unit_group_unit, unit_group: @course, script: @script3, position: 3
     end
 
-    test 'course script test data is properly initialized' do
+    test 'unit group unit test data is properly initialized' do
       assert_equal 'my-course', @course.name
       assert_equal %w(script1 script2 script3), @course.default_scripts.map(&:name)
       assert_equal %w(script2a), @course.alternate_unit_group_units.map(&:script).map(&:name)
     end
 
-    test 'select default course script for teacher without experiment' do
+    test 'select default unit group unit for teacher without experiment' do
       assert_equal(
         @unit_group_unit,
         @course.select_unit_group_unit(@other_teacher, @unit_group_unit)
       )
     end
 
-    test 'select alternate course script for teacher with experiment' do
+    test 'select alternate unit group unit for teacher with experiment' do
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
         @alternate_unit_group_unit,
@@ -259,14 +259,14 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment.destroy
     end
 
-    test 'select default course script for student by default' do
+    test 'select default unit group unit for student by default' do
       assert_equal(
         @unit_group_unit,
         @course.select_unit_group_unit(@student, @unit_group_unit)
       )
     end
 
-    test 'select alternate course script for student when course teacher has experiment' do
+    test 'select alternate unit group unit for student when course teacher has experiment' do
       create :follower, section: @course_section, student_user: @student
       experiment = create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
       assert_equal(
@@ -276,7 +276,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment.destroy
     end
 
-    test 'select default course script for student when other teacher has experiment' do
+    test 'select default unit group unit for student when other teacher has experiment' do
       create :follower, section: @other_section, student_user: @student
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
@@ -286,7 +286,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment.destroy
     end
 
-    test 'select alternate course script for student with progress' do
+    test 'select alternate unit group unit for student with progress' do
       create :user_script, user: @student, script: @script2a
       assert_equal(
         @alternate_unit_group_unit,
