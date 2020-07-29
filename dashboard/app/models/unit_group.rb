@@ -166,10 +166,10 @@ class UnitGroup < ApplicationRecord
 
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
-      course_script = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |cs|
+      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |cs|
         cs.position = index + 1
       end
-      course_script.update!(position: index + 1)
+      unit_group_unit.update!(position: index + 1)
     end
 
     alternate_scripts.each do |hash|
@@ -177,12 +177,12 @@ class UnitGroup < ApplicationRecord
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
       position = default_unit_group_units.find_by(script: default_script).position
-      course_script = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
+      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
         cs.position = position
         cs.experiment_name = hash['experiment_name']
         cs.default_script = default_script
       end
-      course_script.update!(
+      unit_group_unit.update!(
         position: position,
         experiment_name: hash['experiment_name'],
         default_script: default_script
@@ -478,9 +478,9 @@ class UnitGroup < ApplicationRecord
   def has_progress?(user)
     return nil unless user
     user_script_ids = user.user_scripts.pluck(:script_id)
-    course_scripts_with_progress = default_unit_group_units.where('course_scripts.script_id' => user_script_ids)
+    unit_group_units_with_progress = default_unit_group_units.where('course_scripts.script_id' => user_script_ids)
 
-    course_scripts_with_progress.count > 0
+    unit_group_units_with_progress.count > 0
   end
 
   # @param user [User]
