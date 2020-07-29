@@ -4,8 +4,6 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
-
 # How to do an Hour of Code with your child
 Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
 
@@ -92,5 +90,3 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 <h2>What comes after the Hour of Code?</h2>
 
 Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
-
-{{ signup_button }}

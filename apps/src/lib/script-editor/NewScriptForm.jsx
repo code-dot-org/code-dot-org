@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import RailsAuthenticityToken from '../util/RailsAuthenticityToken';
 
 const buttonStyle = {
   marginLeft: 0,
@@ -7,10 +7,10 @@ const buttonStyle = {
   marginBottom: 20
 };
 
-export default function NewScriptForm({csrfToken}) {
+export default function NewScriptForm() {
   return (
     <form action="/s" method="post">
-      <input type="hidden" name="authenticity_token" value={csrfToken} />
+      <RailsAuthenticityToken />
       <label>Name</label>
       <input name="script[name]" />
       <br />
@@ -20,7 +20,3 @@ export default function NewScriptForm({csrfToken}) {
     </form>
   );
 }
-
-NewScriptForm.propTypes = {
-  csrfToken: PropTypes.string.isRequired
-};

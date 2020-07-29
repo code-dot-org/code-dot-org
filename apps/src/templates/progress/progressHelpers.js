@@ -173,6 +173,7 @@ export const processedLevel = level => {
     url: level.url,
     name: level.name,
     progression: level.progression,
+    progressionDisplayName: level.progression_display_name,
     kind: level.kind,
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,

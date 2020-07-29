@@ -37,7 +37,10 @@ import {
   ProgramManager,
   CsfFacilitator
 } from '../permission';
-import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  Subjects,
+  VirtualOnlySubjects
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
@@ -463,6 +466,66 @@ export class WorkshopForm extends React.Component {
             {this.renderFundedSelect(validation)}
           </Col>
         </Row>
+        <Row>
+          <Col sm={5}>
+            <FormGroup validationState={validation.style.virtual}>
+              <ControlLabel>
+                Is this a virtual workshop?
+                <HelpTip>
+                  <p>When a workshop is virtual, our system:</p>
+                  <ul>
+                    <li>
+                      Will not send most email notifications to enrollees, such
+                      as enrollment receipts and workshop reminders
+                    </li>
+                    <li>
+                      Will send a post-workshop survey designed for virtual
+                      workshops
+                    </li>
+                  </ul>
+                </HelpTip>
+              </ControlLabel>
+              <SelectIsVirtual
+                value={this.currentVirtualStatus()}
+                onChange={this.handleVirtualChange}
+                readOnly={
+                  this.props.readOnly ||
+                  VirtualOnlySubjects.includes(this.state.subject)
+                }
+              />
+              <HelpBlock>{validation.help.virtual}</HelpBlock>
+            </FormGroup>
+          </Col>
+          <Col sm={5}>
+            <FormGroup validationState={validation.style.suppress_email}>
+              <ControlLabel>
+                Enable email notifications?
+                <HelpTip>
+                  <p>
+                    Code.org can send email notifications about this workshop to
+                    your attendees on your behalf. Notifications may include:
+                  </p>
+                  <ul>
+                    <li>Enrollment receipts</li>
+                    <li>10-day and 3-day workshop reminders</li>
+                    <li>Updates when workshop details change</li>
+                  </ul>
+                  <p>
+                    Code.org will always email a post-workshop survey to
+                    participants, even if you disable workshop notifications
+                    here.
+                  </p>
+                </HelpTip>
+              </ControlLabel>
+              <SelectSuppressEmail
+                onChange={this.handleSuppressEmailChange}
+                value={this.state.suppress_email || false}
+                readOnly={this.props.readOnly || this.state.virtual}
+              />
+              <HelpBlock>{validation.help.suppress_email}</HelpBlock>
+            </FormGroup>
+          </Col>
+        </Row>
       </FormGroup>
     );
   }
@@ -741,6 +804,17 @@ export class WorkshopForm extends React.Component {
     this.loadAvailableFacilitators(course);
   };
 
+  handleSubjectChange = event => {
+    const subject = this.handleFieldChange(event);
+
+    if (VirtualOnlySubjects.includes(subject)) {
+      this.setState({
+        virtual: true,
+        suppress_email: true
+      });
+    }
+  };
+
   handleCustomizeFeeChange = event => {
     const customizeFee = event.target.value === 'yes';
     const fee = customizeFee ? '' : null;
@@ -946,64 +1020,6 @@ export class WorkshopForm extends React.Component {
           />
           <br />
           <Row>
-            <Col sm={5}>
-              <FormGroup validationState={validation.style.virtual}>
-                <ControlLabel>
-                  Is this a virtual workshop?
-                  <HelpTip>
-                    <p>When a workshop is virtual, our system:</p>
-                    <ul>
-                      <li>
-                        Will not send most email notifications to enrollees,
-                        such as enrollment receipts and workshop reminders
-                      </li>
-                      <li>
-                        Will send a post-workshop survey designed for virtual
-                        workshops
-                      </li>
-                    </ul>
-                  </HelpTip>
-                </ControlLabel>
-                <SelectIsVirtual
-                  value={this.currentVirtualStatus()}
-                  onChange={this.handleVirtualChange}
-                  readOnly={this.props.readOnly}
-                />
-                <HelpBlock>{validation.help.virtual}</HelpBlock>
-              </FormGroup>
-            </Col>
-            <Col sm={5}>
-              <FormGroup validationState={validation.style.suppress_email}>
-                <ControlLabel>
-                  Enable email notifications?
-                  <HelpTip>
-                    <p>
-                      Code.org can send email notifications about this workshop
-                      to your attendees on your behalf. Notifications may
-                      include:
-                    </p>
-                    <ul>
-                      <li>Enrollment receipts</li>
-                      <li>10-day and 3-day workshop reminders</li>
-                      <li>Updates when workshop details change</li>
-                    </ul>
-                    <p>
-                      Code.org will always email a post-workshop survey to
-                      participants, even if you disable workshop notifications
-                      here.
-                    </p>
-                  </HelpTip>
-                </ControlLabel>
-                <SelectSuppressEmail
-                  onChange={this.handleSuppressEmailChange}
-                  value={this.state.suppress_email || false}
-                  readOnly={this.props.readOnly || this.state.virtual}
-                />
-                <HelpBlock>{validation.help.suppress_email}</HelpBlock>
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
             <Col sm={4}>
               <FormGroup validationState={validation.style.location_name}>
                 <ControlLabel>Location Name</ControlLabel>
@@ -1077,7 +1093,7 @@ export class WorkshopForm extends React.Component {
                   readOnly={this.props.readOnly}
                   inputStyle={this.getInputStyle()}
                   validation={validation}
-                  onChange={this.handleFieldChange}
+                  onChange={this.handleSubjectChange}
                 />
               )}
             </Col>
