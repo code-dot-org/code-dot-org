@@ -40,6 +40,7 @@ level 'VPL - CSD U3 game intro_2018_2019_pilot_2020', progression: 'Conclusions 
 level 'VPL - CSD - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~ 10 mins)'
 
 lesson 'Module 3'
+level 'VPL - CSD Module 3 Overview'
 level 'VirtualPLOverview'
 
 lesson 'Module 4'
