@@ -4,7 +4,7 @@
 # This timestamp corresponds to the "from" parameter when requesting jobs from
 # SauceLabs in bin/test_flakiness: https://wiki.saucelabs.com/display/DOCS/Job+Methods
 #
-# Recommended usage: Run this script, then commit the artifact file, describing why
+# Recommended usage: Run this script and commit the artifact file, describing why
 # you are resetting UI test flakiness in your commit message.
 
 require_relative '../deployment'
