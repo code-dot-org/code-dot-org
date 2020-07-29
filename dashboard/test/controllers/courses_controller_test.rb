@@ -262,14 +262,14 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal ['script1', 'script2', 'script3'], course.default_unit_group_units.map(&:script).map(&:name)
 
     assert_equal 1, course.alternate_unit_group_units.length
-    alternate_course_script = course.alternate_unit_group_units.first
-    assert_equal 'script2-alt', alternate_course_script.script.name
-    assert_equal 'script2', alternate_course_script.default_script.name
-    assert_equal 'my_experiment', alternate_course_script.experiment_name
+    alternate_unit_group_unit = course.alternate_unit_group_units.first
+    assert_equal 'script2-alt', alternate_unit_group_unit.script.name
+    assert_equal 'script2', alternate_unit_group_unit.default_script.name
+    assert_equal 'my_experiment', alternate_unit_group_unit.experiment_name
 
     default_script = Script.find_by(name: 'script2')
     expected_position = course.default_unit_group_units.find_by(script: default_script).position
-    assert_equal expected_position, alternate_course_script.position,
+    assert_equal expected_position, alternate_unit_group_unit.position,
       'an alternate script must have the same position as the default script it replaces'
 
     assert_redirected_to '/courses/csp'

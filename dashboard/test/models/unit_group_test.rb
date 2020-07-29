@@ -227,7 +227,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       create :unit_group_unit, unit_group: @course, script: @script1, position: 1
 
       @unit_group_unit = create :unit_group_unit, unit_group: @course, script: @script2, position: 2
-      @alternate_course_script = create :unit_group_unit,
+      @alternate_unit_group_unit = create :unit_group_unit,
         unit_group: @course,
         script: @script2a,
         position: 2,
@@ -253,7 +253,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     test 'select alternate course script for teacher with experiment' do
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
-        @alternate_course_script,
+        @alternate_unit_group_unit,
         @course.select_unit_group_unit(@other_teacher, @unit_group_unit)
       )
       experiment.destroy
@@ -270,7 +270,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       create :follower, section: @course_section, student_user: @student
       experiment = create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
       assert_equal(
-        @alternate_course_script,
+        @alternate_unit_group_unit,
         @course.select_unit_group_unit(@student, @unit_group_unit)
       )
       experiment.destroy
@@ -289,7 +289,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     test 'select alternate course script for student with progress' do
       create :user_script, user: @student, script: @script2a
       assert_equal(
-        @alternate_course_script,
+        @alternate_unit_group_unit,
         @course.select_unit_group_unit(@student, @unit_group_unit)
       )
     end
