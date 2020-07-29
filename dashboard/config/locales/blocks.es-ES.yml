@@ -969,6 +969,10 @@ es:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_changePropBy:
         text: cambiar {SPRITE} {PROPERTY} por {VAL}.
         options:
@@ -1021,6 +1025,40 @@ es:
             '"seconds"': segundos
       gamelab_hideTitleScreen:
         text: ocultar pantalla de título
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando los bordes"
       gamelab_jumpTo:

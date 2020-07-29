@@ -967,6 +967,10 @@ fi:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
       gamelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} määrä {VAL}
         options:
@@ -1018,6 +1022,39 @@ fi:
             '"seconds"': sekuntia
       gamelab_hideTitleScreen:
         text: piilota otsikkonäyttö
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} koskettaa reunoja"
       gamelab_jumpTo:

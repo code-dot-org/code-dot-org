@@ -902,12 +902,16 @@ pl:
       school_city: 'Miasto szkoły'
       school_country: 'Kraj'
       colombian_school_city: 'Miasto szkoły'
+      colombian_school_department: 'Okręg  Szkoły'
+      colombian_school_municipality: 'Gmina Szkoły'
       colombian_school_name: 'Nazwa szkoły'
     form_entries:
       gender:
         male: 'Mężczyzna'
         female: 'Kobieta'
         none: 'Wolę nie odpowiadać'
+      school_country:
+        colombia: 'Kolumbia'
       subjects:
         cs: 'Informatyka'
         math: 'Matematyka'

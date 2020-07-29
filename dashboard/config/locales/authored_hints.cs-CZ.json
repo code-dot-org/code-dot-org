@@ -2378,6 +2378,26 @@
         "courseD_artist_ramp12": {
           "courseD_artist_ramp12_c": "Pomocí rozbalovací nabídky na blocích `otočit` zjistíš, jaký úhel potřebuješ!"
         },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "Klikni na `Spustit`, abys viděl program v akci!"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_b": "Neboj se dělat chyby! Zkus napsat kód a spusť ho, abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a)."
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_b": "Neboj se dělat chyby! Zkus napsat kód a spusť ho, abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a)."
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.",
+          "courseD_artist_binary5_b": "Musíš jen vyměnit dvě řady, abys vytvořil(a) úsměv."
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_b": "Neboj se dělat chyby! Zkus napsat kód a spusť ho, abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a)."
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_b": "Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.",
+          "courseD_artist_binary8_c": "Neboj se dělat chyby! Zkus napsat kód a spusť ho, abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a)."
+        },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_a": "Někdy tam květina bude a někdy nebude. Pokud chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz."
         },
@@ -2681,6 +2701,9 @@
         },
         "courseD_collector_debugging9": {
           "courseD_collector_debugging9_a": "Je několik cest, jak tuto úlohu vyřešit... ale všechny zahrnují otočky!"
+        },
+        "courseD_farmer_condLoops5_2019": {
+          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
         },
         "courseD_farmer_condLoops6_2018": {
           "courseD_farmer_condLoops6_a": "Využij cyklus `pokud je cesta vpřed` nebo blok `když je cesta vpřed / jinak`, abys posunul(a) farmářku dále přes spirálu.",

@@ -220,6 +220,10 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -237,6 +241,15 @@ fa:
         options:
           UNIT:
             '"seconds"': ثانیه
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+            '"x"': طول (x)
       gamelab_keyPressed:
         options:
           CONDITION:

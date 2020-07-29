@@ -190,6 +190,10 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -207,6 +211,15 @@ si:
         options:
           UNIT:
             '"seconds"': තත්පර
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
