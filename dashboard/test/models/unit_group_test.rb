@@ -240,7 +240,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     test 'course script test data is properly initialized' do
       assert_equal 'my-course', @course.name
       assert_equal %w(script1 script2 script3), @course.default_scripts.map(&:name)
-      assert_equal %w(script2a), @course.alternate_course_scripts.map(&:script).map(&:name)
+      assert_equal %w(script2a), @course.alternate_unit_group_units.map(&:script).map(&:name)
     end
 
     test 'select default course script for teacher without experiment' do
