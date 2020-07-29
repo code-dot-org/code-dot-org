@@ -19,9 +19,9 @@ class UnitGroup < ApplicationRecord
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
-  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_course_scripts, source: :script
-  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
+  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_one :course_version, as: :content_root
 
   after_save :write_serialization
@@ -166,7 +166,7 @@ class UnitGroup < ApplicationRecord
 
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
-      course_script = CourseScript.find_or_create_by!(unit_group: self, script: script) do |cs|
+      course_script = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |cs|
         cs.position = index + 1
       end
       course_script.update!(position: index + 1)
@@ -177,7 +177,7 @@ class UnitGroup < ApplicationRecord
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
       position = default_course_scripts.find_by(script: default_script).position
-      course_script = CourseScript.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
+      course_script = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
         cs.position = position
         cs.experiment_name = hash['experiment_name']
         cs.default_script = default_script
@@ -191,7 +191,7 @@ class UnitGroup < ApplicationRecord
 
     scripts_to_delete.each do |script_name|
       script = Script.find_by_name!(script_name)
-      CourseScript.where(unit_group: self, script: script).destroy_all
+      UnitGroupUnit.where(unit_group: self, script: script).destroy_all
     end
     # Reload model so that default_course_scripts is up to date
     transaction {reload}
@@ -257,7 +257,7 @@ class UnitGroup < ApplicationRecord
   # @returns [Boolean] Whether the user has any experiment enabled which is
   #   associated with an alternate course script.
   def self.has_any_course_experiments?(user)
-    Experiment.any_enabled?(user: user, experiment_names: CourseScript.experiments)
+    Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
   end
 
   # Get the set of valid courses for the dropdown in our sections table.
@@ -372,8 +372,8 @@ class UnitGroup < ApplicationRecord
   # 4. Otherwise, show the default course script.
   #
   # @param user [User|nil]
-  # @param default_course_script [CourseScript]
-  # @return [CourseScript]
+  # @param default_course_script [UnitGroupUnit]
+  # @return [UnitGroupUnit]
   def select_course_script(user, default_course_script)
     return default_course_script unless user
 
@@ -529,7 +529,7 @@ class UnitGroup < ApplicationRecord
   # generates our course_cache from what is in the Rails cache
   def self.course_cache_from_cache
     # make sure possible loaded objects are completely loaded
-    [CourseScript, Plc::Course].each(&:new)
+    [UnitGroupUnit, Plc::Course].each(&:new)
     Rails.cache.read COURSE_CACHE_KEY
   end
 

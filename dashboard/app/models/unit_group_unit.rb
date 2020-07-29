@@ -28,7 +28,7 @@ class UnitGroupUnit < ApplicationRecord
 
   def self.experiments
     Rails.cache.fetch("course_script_experiments") do
-      CourseScript.where.not(experiment_name: nil).map(&:experiment_name)
+      UnitGroupUnit.where.not(experiment_name: nil).map(&:experiment_name)
     end
   end
 end
