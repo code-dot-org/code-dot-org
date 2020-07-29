@@ -16,6 +16,9 @@ class CreateUnitGroups < ActiveRecord::Migration[5.0]
   end
 
   def down
+    add_foreign_key :sections, :courses, column: :course_id
+    add_foreign_key :plc_courses, :courses, column: :course_id
+
     drop_table :unit_groups
   end
 
