@@ -16,7 +16,9 @@
        "type": "matrix",
        "name": "csd_module_1",
        "visible": false,
+       "visibleIf":"{workshop_course}='CS Discoveries'",
        "title": "CS Discoveries: Module 1 Activities",
+
        "columns": [
         {
          "value": "1",
@@ -53,19 +55,19 @@
        ],
        "rows": [
         {
-         "value": "(pre-work)_Reading_and_co",
-         "text": "(pre-work) Reading and comparing the “standard” lesson plan to the “model” lesson plan"
+         "value": "pre_work_reading",
+         "text": "(pre-work) Reading and comparing the \“standard\” lesson plan to the \“model\” lesson plan"
         },
         {
-         "value": "(virtual_meeting)_Checkin",
+         "value": "virtual_meeting_checkin",
          "text": "(virtual meeting) Checking in on how things are going in the classroom. "
         },
         {
-         "value": "(virtual_meeting)_Discuss",
+         "value": "virtual_discuss_teaching_practices",
          "text": "(virtual meeting) Discussing the teaching practices from the model lesson"
         },
         {
-         "value": "(virtual_meeting)_Discuss",
+         "value": "virtual_discuss_engagement",
          "text": "(virtual meeting) Discussing how to counsel students who are disengaging or becoming more passive in class."
         }
        ]
@@ -74,6 +76,7 @@
        "type": "matrix",
        "name": "csp_module_1",
        "visible": false,
+       "visibleIf":"{workshop_course}='CS Principles'",
        "title": "CS Principles: Module 1 Activities",
        "columns": [
         {
@@ -111,19 +114,19 @@
        ],
        "rows": [
         {
-         "value": "(pre-work)_Reading_and_co",
-         "text": "(pre-work) Reading and comparing the “standard” lesson plan to the “model” lesson plan"
+         "value": "pre_work_reading",
+         "text": "(pre-work) Reading and comparing the \“standard\” lesson plan to the \“model\” lesson plan"
         },
         {
-         "value": "(virtual_meeting)_Checkin",
+         "value": "virtual_meeting_checkin",
          "text": "(virtual meeting) Checking in on how things are going in the classroom. "
         },
         {
-         "value": "(virtual_meeting)_Discuss",
+         "value": "virtual_discuss_teaching_practices",
          "text": "(virtual meeting) Discussing the teaching practices from the model lesson"
         },
         {
-         "value": "(virtual_meeting)_Discuss",
+         "value": "(virtual_discuss_engagement",
          "text": "(virtual meeting) Discussing how to counsel students who are disengaging or becoming more passive in class."
         }
        ]
@@ -133,7 +136,7 @@
        "name": "other_activities",
        "title": "If you participated in any other activities during this module, please describe them below.",
        "cols": 40,
-       "rows": 6
+       "rows": 2
       }
      ]
     }
