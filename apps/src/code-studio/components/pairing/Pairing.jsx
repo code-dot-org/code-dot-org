@@ -6,6 +6,8 @@ import SectionSelector from './SectionSelector.jsx';
 import StudentSelector from './StudentSelector.jsx';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import color from '@cdo/apps/util/color';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 /**
  * A component for managing pair programming.
@@ -55,6 +57,10 @@ export default class Pairing extends React.Component {
   };
 
   handleAddPartners = studentIds => {
+    this.setState({
+      hasError: false,
+      loading: true
+    });
     const pairings = this.selectedSection().students.filter(
       student => studentIds.indexOf(student.id) !== -1
     );
@@ -76,8 +82,6 @@ export default class Pairing extends React.Component {
       }
     );
 
-    this.props.handleClose && this.props.handleClose();
-
     $.ajax({
       url: this.props.source,
       data: JSON.stringify({pairings, sectionId: this.selectedSection().id}),
@@ -86,15 +90,22 @@ export default class Pairing extends React.Component {
       dataType: 'json',
       context: this
     })
-      .done(this.refreshUserMenu)
+      .done(() => {
+        this.props.handleClose && this.props.handleClose();
+        this.refreshUserMenu();
+      })
       .fail((jqXHR, textStatus, errorThrown) => {
-        // TODO what to do here?
+        this.setState({
+          hasError: true,
+          loading: false
+        });
       });
   };
 
   handleStop = event => {
     this.setState({
-      pairings: []
+      hasError: false,
+      loading: true
     });
 
     $.ajax({
@@ -105,11 +116,17 @@ export default class Pairing extends React.Component {
       dataType: 'json'
     })
       .done(() => {
+        this.setState({
+          pairings: []
+        });
         this.refreshUserMenu();
         this.props.handleClose(); // close dialog
       })
       .fail((_, textStatus, errorThrown) => {
-        // TODO what to do here?
+        this.setState({
+          hasError: true,
+          loading: false
+        });
       });
 
     event.preventDefault();
@@ -155,6 +172,10 @@ export default class Pairing extends React.Component {
             students={this.studentsInSection()}
             handleSubmit={this.handleAddPartners}
           />
+          {this.state.loading && (
+            <Spinner size="medium" style={{marginTop: '10px'}} />
+          )}
+          {this.renderError()}
         </form>
       </div>
     );
@@ -171,15 +192,28 @@ export default class Pairing extends React.Component {
           </div>
         ))}
         <div className="clear" />
-        <button type="button" className="stop" onClick={this.handleStop}>
+        <button
+          type="button"
+          className="stop"
+          onClick={this.handleStop}
+          style={{marginLeft: 0}}
+        >
           {i18n.pairProgrammingStop()}
         </button>
         <button type="button" className="ok" onClick={this.props.handleClose}>
           OK
         </button>
+        {this.state.loading && <Spinner size="medium" />}
+        {this.renderError()}
       </div>
     );
   }
+
+  renderError = () => {
+    return this.state.hasError ? (
+      <p style={{color: color.red}}>{i18n.pairProgrammingError()}</p>
+    ) : null;
+  };
 
   render() {
     if (this.state.pairings.length === 0) {
