@@ -1,0 +1,25 @@
+---
+nn:
+  data:
+    progressions:
+      Artist Project: Kunstnarprosjekt
+      'Artist: Variables': 'Kunstnar: Variablar'
+      Binary Numbers: Binære tal
+      Drawing: Teikning
+      Events: Hendingar
+      For Loops: For-løkker
+      Free Play: Gjer kva du vil
+      Functions: Funksjonar
+      Functions with Parameters: Funksjonar med parameter
+      Lesson Extras: Bonusleksjonar
+      Lists: Lister
+      Measures: Taktar
+      Pair Programming: Parprogrammering
+      Project: Prosjekt
+      Properties: Eigenskapar
+      Reflection: Refleksjon
+      Sprite Lab Project: Sprite-laboratorieprosjekt
+      The Harvester: Samler
+      Velocity: Fart
+      Video: Video
+      Wrap-up: Oppsummering
