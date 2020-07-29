@@ -15,14 +15,5 @@ class DropCoursesTable < ActiveRecord::Migration[5.0]
     # fix the name of the index
     remove_index :courses, :name
     add_index :courses, :name
-
-    remove_foreign_key_if_exists :sections, :course_id
-    remove_foreign_key_if_exists :plc_courses, :course_id
-  end
-
-  private
-
-  def remove_foreign_key_if_exists(table, key)
-    remove_foreign_key table, column: key unless foreign_keys(table).find_index {|x| x.column == key.to_s}.nil?
   end
 end
