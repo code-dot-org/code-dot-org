@@ -9,6 +9,22 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
+const styles = {
+  pairingSelector: {
+    maxHeight: window.innerHeight * 0.8 - 100,
+    overflowY: 'auto'
+  },
+  spinner: {
+    marginTop: '10px'
+  },
+  leftButton: {
+    marginLeft: 0
+  },
+  errorMessage: {
+    color: color.red
+  }
+};
+
 /**
  * A component for managing pair programming.
  */
@@ -20,7 +36,9 @@ export default class Pairing extends React.Component {
 
   state = {
     pairings: [],
-    sections: []
+    sections: [],
+    hasError: false,
+    loading: true
   };
 
   componentWillMount() {
@@ -32,11 +50,15 @@ export default class Pairing extends React.Component {
       .done(result => {
         this.setState({
           pairings: result.pairings,
-          sections: result.sections
+          sections: result.sections,
+          loading: false
         });
       })
       .fail(result => {
-        // TODO what to do here?
+        this.setState({
+          loading: false,
+          hasError: true
+        });
       });
   }
 
@@ -120,7 +142,7 @@ export default class Pairing extends React.Component {
           pairings: []
         });
         this.refreshUserMenu();
-        this.props.handleClose(); // close dialog
+        this.props.handleClose && this.props.handleClose();
       })
       .fail((_, textStatus, errorThrown) => {
         this.setState({
@@ -155,9 +177,7 @@ export default class Pairing extends React.Component {
 
   renderPairingSelector() {
     return (
-      <div
-        style={{maxHeight: window.innerHeight * 0.8 - 100, overflowY: 'auto'}}
-      >
+      <div style={styles.pairingSelector}>
         <h1>{i18n.pairProgramming()}</h1>
         <h2>{i18n.pairProgrammingChosePartners()}</h2>
         <br />
@@ -173,7 +193,7 @@ export default class Pairing extends React.Component {
             handleSubmit={this.handleAddPartners}
           />
           {this.state.loading && (
-            <Spinner size="medium" style={{marginTop: '10px'}} />
+            <Spinner size="medium" style={styles.spinner} />
           )}
           {this.renderError()}
         </form>
@@ -196,12 +216,12 @@ export default class Pairing extends React.Component {
           type="button"
           className="stop"
           onClick={this.handleStop}
-          style={{marginLeft: 0}}
+          style={styles.leftButton}
         >
           {i18n.pairProgrammingStop()}
         </button>
         <button type="button" className="ok" onClick={this.props.handleClose}>
-          OK
+          {i18n.dialogOK()}
         </button>
         {this.state.loading && <Spinner size="medium" />}
         {this.renderError()}
@@ -211,7 +231,7 @@ export default class Pairing extends React.Component {
 
   renderError = () => {
     return this.state.hasError ? (
-      <p style={{color: color.red}}>{i18n.pairProgrammingError()}</p>
+      <p style={styles.errorMessage}>{i18n.unexpectedError()}</p>
     ) : null;
   };
 
