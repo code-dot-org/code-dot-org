@@ -263,13 +263,14 @@ def distribute_course_content(locale)
     extension = type == "dsls" ? "yml" : "json"
     type_file = "dashboard/config/locales/#{type}.#{locale}.#{extension}"
 
+    existing_data = YAML.load_file(type_file).dig(locale, "data", type) || {}
+
     type_data = Hash.new
     type_data[locale] = Hash.new
     type_data[locale]["data"] = Hash.new
-    type_data[locale]["data"][type] = translations.sort.to_h
+    type_data[locale]["data"][type] = existing_data.deep_merge(translations.sort.to_h)
 
-    existing_data = YAML.load_file(type_file)
-    sanitize_data_and_write(existing_data.deep_merge(type_data), type_file)
+    sanitize_data_and_write(type_data, type_file)
   end
 end
 
