@@ -3311,9 +3311,9 @@ class UserTest < ActiveSupport::TestCase
       teacher = create :teacher
 
       course = create :unit_group, name: 'testcourse'
-      course_script1 = create :unit_group_unit, unit_group: course, script: (create :script, name: 'testscript1'), position: 1
+      unit_group_unit1 = create :unit_group_unit, unit_group: course, script: (create :script, name: 'testscript1'), position: 1
       create :unit_group_unit, unit_group: course, script: (create :script, name: 'testscript2'), position: 2
-      create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
+      create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
       other_script = create :script, name: 'otherscript'
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
