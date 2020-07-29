@@ -107,11 +107,11 @@ class UnitGroupTest < ActiveSupport::TestCase
       course.update_scripts(['script1', 'script2'])
 
       course.reload
-      assert_equal 2, course.default_course_scripts.length
-      assert_equal 1, course.default_course_scripts[0].position
-      assert_equal 'script1', course.default_course_scripts[0].script.name
-      assert_equal 2, course.default_course_scripts[1].position
-      assert_equal 'script2', course.default_course_scripts[1].script.name
+      assert_equal 2, course.default_unit_group_units.length
+      assert_equal 1, course.default_unit_group_units[0].position
+      assert_equal 'script1', course.default_unit_group_units[0].script.name
+      assert_equal 2, course.default_unit_group_units[1].position
+      assert_equal 'script2', course.default_unit_group_units[1].script.name
     end
 
     test "remove CourseScripts" do
@@ -123,9 +123,9 @@ class UnitGroupTest < ActiveSupport::TestCase
       course.update_scripts(['script2'])
 
       course.reload
-      assert_equal 1, course.default_course_scripts.length
-      assert_equal 1, course.default_course_scripts[0].position
-      assert_equal 'script2', course.default_course_scripts[0].script.name
+      assert_equal 1, course.default_unit_group_units.length
+      assert_equal 1, course.default_unit_group_units[0].position
+      assert_equal 'script2', course.default_unit_group_units[0].script.name
     end
   end
 
