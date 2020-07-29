@@ -640,6 +640,9 @@
         "courseD_artist_binary7_2018": "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?",
         "courseD_artist_binary7_2019": "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?",
         "courseD_artist_binary7_2020": "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?",
+        "courseD_autorun_binary4_2019": "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?",
+        "courseD_autorun_binary6_2019": "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?",
+        "courseD_autorun_binary7_2019": "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?",
         "courseD_bee_nestedLoops8": "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado.",
         "courseD_bee_nestedLoops8_2018": "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado.",
         "courseD_bee_nestedLoops8_2019": "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado.",
@@ -701,6 +704,10 @@
         "frozen square loop": "Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado\ncom o bloco \"repita\", que usa menos blocos. Quantas vezes (???) o bloco\n\"repita\" deve repetir os blocos dentro dele para fazer um quadrado?",
         "frozen square loop 3x": "Vamos criar três quadrados, virando depois\nde cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado.",
         "frozen square snowflake": "Você consegue criar um floco de neve usando o bloco\n\"repita\" para criar um quadrado 10 vezes e o bloco \"vire\" para virar 36\ngraus entre cada quadrado?",
+        "grade5_artist_binary11": "Atividade livre: aqui temos uma tela de maior\nresolução para desenhar - 16 bits por 16 bits!",
+        "grade5_artist_binary4": "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?",
+        "grade5_artist_binary5": "Cada string binária representa uma linha dessa\nimagem. Você consegue reorganizá-las de forma que elas desenhem um rostinho feliz\nao invés de um rostinho triste?",
+        "grade5_artist_binary8": "Termine o desenho.",
         "k-1 maze 1": "Você pode me mover para o oeste para chegar até o porco?"
       }
     }
