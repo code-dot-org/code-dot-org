@@ -193,6 +193,10 @@ hr:
             '"right"': desno
             '"space"': svemir
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -214,6 +218,15 @@ hr:
         options:
           UNIT:
             '"seconds"': sekunde
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

@@ -7,67 +7,32 @@ km:
         math_category_name: គណិត​វិទ្យា
       name:
         course2:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
         course3:
-          stages:
-            Bounce:
-              name: បាល់​លោត
-            Computational Thinking:
-              name: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
           lessons:
             Bounce:
               name: បាល់​លោត
             Computational Thinking:
               name: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         usability:
-          stages:
-            Variables:
-              name: អ​ថេរ
           lessons:
             Variables:
               name: អ​ថេរ
         algebra:
-          stages:
-            'Eval: Conditionals':
-              name: លក្ខខណ្ឌ
           lessons:
             'Eval: Conditionals':
               name: លក្ខខណ្ឌ
         infinity:
-          stages:
-            Infinity:
-              name: អនន្ត
           lessons:
             Infinity:
               name: អនន្ត
         K5PD:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         20-hour:
-          stages:
-            Computational Thinking:
-              name: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-            Introduction to Computer Science:
-              name: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
-            The Artist:
-              name: វិចិត្រករ
-            The Farmer:
-              name: កសិករ
-            The Internet:
-              name: អ៊ីនធឺណិត
           lessons:
             Computational Thinking:
               name: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
@@ -84,9 +49,6 @@ km:
             The Internet:
               name: អ៊ីនធឺណិត
         edit-code:
-          stages:
-            The Artist:
-              name: វិចិត្រករ
           lessons:
             The Artist:
               name: វិចិត្រករ
@@ -94,93 +56,55 @@ km:
           title: ព្រឹត្តិការណ៍
           description: ព្រឹត្តិការណ៍
           description_short: ព្រឹត្តិការណ៍
-          stages:
-            Bounce:
-              name: បាល់​លោត
           lessons:
             Bounce:
               name: បាល់​លោត
         flappy:
           title: Flappy កូដ
           description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
-          stages:
-            Flappy Code:
-              name: Flappy កូដ
           lessons:
             Flappy Code:
               name: Flappy កូដ
         step:
           title: ជំហាន
-          stages:
-            Step:
-              name: ជំហាន
           lessons:
             Step:
               name: ជំហាន
         algebraPD:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         algebraPD3:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         algebraPD-NexTech:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         algebraPD-iZone:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         cspunit2:
-          stages:
-            The Internet:
-              name: អ៊ីនធឺណិត
           lessons:
             The Internet:
               name: អ៊ីនធឺណិត
         allthethings:
-          stages:
-            Bounce:
-              name: បាល់​លោត
-            Web Lab:
-              name: បន្ទប់វេប
           lessons:
             Bounce:
               name: បាល់​លោត
             Web Lab:
               name: បន្ទប់វេប
         algebraPD2b:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         K5-OnlinePD:
-          stages:
-            Computer Science Fundamentals:
-              name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
           lessons:
             Computer Science Fundamentals:
               name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
         algebraPD2:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
@@ -188,70 +112,38 @@ km:
           title: Minecraft Hour of Code
           description: ប្រើប្លុកនៃកូដដើម្បី Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងនៅក្នុងពិភព Minecraft នេះ។
         algebraPD1:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         csp1-2017:
-          stages:
-            The Internet:
-              name: អ៊ីនធឺណិត
           lessons:
             The Internet:
               name: អ៊ីនធឺណិត
         CSDU3-Draft:
-          stages:
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Functions:
               name: អនុ​គមន៍
         algebraFacilitator:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         gradeKinder:
-          stages:
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Loops:
-              name: រង្វិល​ជុំ
           lessons:
             Events:
               name: ព្រឹត្តិការណ៍
             Loops:
               name: រង្វិល​ជុំ
         grade1:
-          stages:
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Loops:
-              name: រង្វិល​ជុំ
           lessons:
             Events:
               name: ព្រឹត្តិការណ៍
             Loops:
               name: រង្វិល​ជុំ
         grade3:
-          stages:
-            Bounce:
-              name: បាល់​លោត
           lessons:
             Bounce:
               name: បាល់​លោត
         csd3-2017:
-          stages:
-            Functions:
-              name: អនុ​គមន៍
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lessons:
             Functions:
               name: អនុ​គមន៍
@@ -260,17 +152,6 @@ km:
             Conditionals:
               name: លក្ខខណ្ឌ
         k5concepts:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Functions:
-              name: អនុ​គមន៍
-            Loops:
-              name: រង្វិល​ជុំ
-            Variables:
-              name: អ​ថេរ
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
@@ -283,69 +164,38 @@ km:
             Variables:
               name: អ​ថេរ
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
         basketball:
-          stages:
-            Bounce:
-              name: បាល់​លោត
           lessons:
             Bounce:
               name: បាល់​លោត
         csd2-2017:
-          stages:
-            Lists:
-              name: បញ្ជី
           lessons:
             Lists:
               name: បញ្ជី
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: Flappy កូដ
           lessons:
             Flappy Code:
               name: Flappy កូដ
         coursee-draft:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
         csd6-draft:
-          stages:
-            Lists:
-              name: បញ្ជី
           lessons:
             Lists:
               name: បញ្ជី
         coursee-ramp:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
         csd6-2017:
-          stages:
-            Lists:
-              name: បញ្ជី
           lessons:
             Lists:
               name: បញ្ជី
         csd3-draft:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Variables:
               name: អ​ថេរ
@@ -354,29 +204,14 @@ km:
             Functions:
               name: អនុ​គមន៍
         csd3-old:
-          stages:
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Functions:
               name: អនុ​គមន៍
         csd2-draft:
-          stages:
-            Lists:
-              name: បញ្ជី
           lessons:
             Lists:
               name: បញ្ជី
         csd3-chapters:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-            'null':
-              name: 'ទទេ'
           lessons:
             Variables:
               name: អ​ថេរ
@@ -387,32 +222,18 @@ km:
             'null':
               name: 'ទទេ'
         artist-and-bb8:
-          stages:
-            Bounce:
-              name: បាល់​លោត
           lessons:
             Bounce:
               name: បាល់​លោត
         e-f-ramp:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
         new-e:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
         hero:
-          stages:
-            'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: ដំណើរផ្សងព្រេងរបស់វារៈបុរស Hour of Code'
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           title: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
           description_short: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់ Hour of Code!
           description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
@@ -422,27 +243,14 @@ km:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         course-e-2018:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
         csd6-old:
-          stages:
-            Lists:
-              name: បញ្ជី
           lessons:
             Lists:
               name: បញ្ជី
         csd3-1819draft:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Variables:
               name: អ​ថេរ
@@ -451,13 +259,6 @@ km:
             Functions:
               name: អនុ​គមន៍
         csd3-2018:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Variables:
               name: អ​ថេរ
@@ -466,34 +267,20 @@ km:
             Functions:
               name: អនុ​គមន៍
         csd2-2018:
-          stages:
-            Lists:
-              name: បញ្ជី
           lessons:
             Lists:
               name: បញ្ជី
         express-2018:
-          stages:
-            Internet:
-              name: អ៊ីនធឺណិត
           lessons:
             Internet:
               name: អ៊ីនធឺណិត
         coursee-2018:
-          stages:
-            Internet:
-              name: អ៊ីនធឺណិត
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           lessons:
             Internet:
               name: អ៊ីនធឺណិត
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         csp1-2018:
-          stages:
-            The Internet:
-              name: អ៊ីនធឺណិត
           lessons:
             The Internet:
               name: អ៊ីនធឺណិត
@@ -506,11 +293,6 @@ km:
             csp_functions:
               display_name: អនុ​គមន៍
         coursef-2019:
-          stages:
-            The Artist:
-              name: វិចិត្រករ
-            Internet:
-              name: អ៊ីនធឺណិត
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
@@ -542,9 +324,6 @@ km:
             csf_variables:
               display_name: អ​ថេរ
         andrea-test:
-          stages:
-            'null':
-              name: 'ទទេ'
           lessons:
             'null':
               name: 'ទទេ'
@@ -573,20 +352,10 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         csd2-2019:
-          stages:
-            Lists:
-              name: បញ្ជី
           lessons:
             Lists:
               name: បញ្ជី
         csd3-2019:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Variables:
               name: អ​ថេរ
@@ -603,9 +372,6 @@ km:
             csp_functions:
               display_name: អនុ​គមន៍
         csp1-2019:
-          stages:
-            The Internet:
-              name: អ៊ីនធឺណិត
           lessons:
             The Internet:
               name: អ៊ីនធឺណិត
@@ -678,20 +444,10 @@ km:
             csp_loops:
               display_name: រង្វិល​ជុំ
         csd2-pilot:
-          stages:
-            Lists:
-              name: បញ្ជី
           lessons:
             Lists:
               name: បញ្ជី
         csd3-pilot:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Variables:
               name: អ​ថេរ
@@ -706,19 +462,6 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         k5-onlinepd-2019:
-          stages:
-            Computer Science Fundamentals:
-              name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
-            Loops:
-              name: រង្វិល​ជុំ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Functions:
-              name: អនុ​គមន៍
-            Variables:
-              name: អ​ថេរ
           lessons:
             Computer Science Fundamentals:
               name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
@@ -741,9 +484,6 @@ km:
             csp_functions:
               display_name: អនុ​គមន៍
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
@@ -754,9 +494,6 @@ km:
             csf_functions:
               display_name: អនុ​គមន៍
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -768,9 +505,6 @@ km:
             Conditionals:
               name: លក្ខខណ្ឌ
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -796,15 +530,6 @@ km:
             csp_loops:
               display_name: រង្វិល​ជុំ
         csd3-2020:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-            Text:
-              name: អត្ថ​​បទ
           lessons:
             Variables:
               name: អ​ថេរ
@@ -845,9 +570,6 @@ km:
             csf_functions:
               display_name: អនុ​គមន៍
         coursef-2020:
-          stages:
-            Internet:
-              name: អ៊ីនធឺណិត
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
@@ -871,38 +593,18 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         csp5-virtual:
-          stages:
-            Variables:
-              name: អ​ថេរ
           lessons:
             Variables:
               name: អ​ថេរ
         virtual-holding-place:
-          stages:
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Functions:
               name: អនុ​គមន៍
         code-break:
-          stages:
-            Events:
-              name: ព្រឹត្តិការណ៍
           lessons:
             Events:
               name: ព្រឹត្តិការណ៍
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: រង្វិល​ជុំ
-            Events:
-              name: ព្រឹត្តិការណ៍
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
-            Variables:
-              name: អ​ថេរ
           lessons:
             Loops:
               name: រង្វិល​ជុំ
@@ -915,15 +617,6 @@ km:
             Variables:
               name: អ​ថេរ
         csd3-virtual:
-          stages:
-            Variables:
-              name: អ​ថេរ
-            Text:
-              name: អត្ថ​​បទ
-            Conditionals:
-              name: លក្ខខណ្ឌ
-            Functions:
-              name: អនុ​គមន៍
           lessons:
             Variables:
               name: អ​ថេរ

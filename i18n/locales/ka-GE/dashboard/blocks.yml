@@ -382,6 +382,10 @@ ka:
         text: დაყენება
       Dancelab_whenSetup2:
         text: დაყენება
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': წამები
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -412,6 +416,20 @@ ka:
         options:
           UNIT:
             '"seconds"': წამები
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:

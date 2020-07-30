@@ -882,14 +882,14 @@ sk-SK:
         - text: Je pravda po celý čas, čo je klávesa stlačená, alebo držaná.
         title: 'Spájanie: odpovede na stlačenie kláves'
       CSD U3 Lesson Overview 1:
-        markdown: |
+        markdown: |-
           #Prehľad
 
-          Trieda je vyzvaná k tomu, aby sa zamyslela nad „problémom“ nudy a seba-vyjadrenia, a aby pouvažovala, ako k týmto problémom pristupuje vo svojom živote. Žiaci budú skúmať ako informatika vo všeobecnosti, a programovanie zvlášť, zohrávajú úlohu buď ako špecifická forma zábavy alebo ako prostriedok seba-vyjadrenia.
+          Na začiatku nášho kurzu sa zamyslíme nad „problémami“ nudy a seba-vyjadrenia a nad spôsobmi, ako k týmto problémom pristupujeme v našom živote. Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika a programovanie  - či ako špecifická forma zábavy alebo ako prostriedok na seba-vyjadrenie.
 
           ##Zdroje
 
-          *[Informatika v zábavnom priemysle - Pracovný zošit] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+          *[Informatika v zábavnom priemysle - Pracovný list] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
       CSD U3 Lesson Overview 10:
         markdown: |-
           # Prehľad
@@ -906,16 +906,16 @@ sk-SK:
 
           * [Pracovný zošit](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf)
       CSD U3 Lesson Overview 11:
-        markdown: "# Prehľad\n\nV tejto lekcii budeš používať logické výrazy na porovnanie
-          aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou hodnotou. Toto
+        markdown: "# Prehľad\n\nV tejto lekcii použijeme logické výrazy na porovnanie
+          aktuálnej hodnoty vlastnosti „sprite“ objektu s jej cieľovou hodnotou. Toto
           porovnanie použijeme na určenie toho, či „sprite“ dosiahol určený bod na
-          obrazovke, narástol do definovanej veľkosti alebo dosiahol inú hodnotu pri
-          použití kódu na počítanie. Po tejto aktvite začneme používať podmienkové
-          výroky, ktoré využívajú logické výrazy.\n## Slovník\n\n* **Logický výraz**
-          - v programovaní ide o výraz, ktorý hodnotí, či ide o pravdu alebo nepravdu.
-          \n* **Podmienkový výrok („If“ výrok)** - bežný programovací nástroj, ktorý
-          definuje podmienky.\n\n## Nový kód\n\n* [If statement](//studio.code.org/docs/gamelab/ifBlock/)
-          – „if“ výrok\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
+          obrazovke, narástol do definovanej veľkosti alebo dosiahol inú hodnotu.
+          Nakoniec pridáme podmienkové výroky, \"if\", v ktorých logické výrazy použíjeme
+          ako základ pre rozhodovanie\n\n## Slovník\n\n* **Logický výraz** - v programovaní
+          ide o výraz, ktorý hodnotí, či ide o pravdu alebo nepravdu. \n* **Podmienkový
+          výrok („If“ výrok)** - bežný programovací nástroj, ktorý definuje podmienky.\n\n##
+          Nový kód\n\n* [If statement](//studio.code.org/docs/gamelab/ifBlock/) –
+          „if“ výrok\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
           – znamienko „menší ako“\n* [Inequality operator](//studio.code.org/docs/gamelab/inequalityOperator/)
           – znamienko „nerovná sa“\n* [Less than or equal operator](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)
           – znamienko „menší alebo rovný ako“\n* [Greater than operator](//studio.code.org/docs/gamelab/greaterThanOperator/)
@@ -958,11 +958,94 @@ sk-SK:
         markdown: |
           # Prehľad
 
-          V tejto lekcii si precvičíme komunikáciu inštrukcií na kreslenie tvarov na želanom mieste. Využijeme pritom interaktívny nástroj Game Labu, ktorý nám umožní vkladanie tvarov do mriežky 400x400. Žiaci sa vystriedajú pri komunikácii inštrukcií na nakreslenie skrytého obrázku a pri jeho kreslení podľa vypočutých inštrukcií. Tým si priblížia vicero z výziev programovania v Game Lab.
+          V tejto lekcii si precvičíme komunikáciu inštrukcií na kreslenie tvarov na želanom mieste. Využijeme pritom interaktívny nástroj Game Labu, ktorý nám umožní vkladanie tvarov do mriežky 400x400. Žiaci sa vystriedajú pri komunikácii inštrukcií na nakreslenie skrytého obrázku a pri jeho kreslení podľa vypočutých inštrukcií. Tým si priblížia viacero z výziev programovania v Game Labe.
 
           ## Zdroje
 
           * [Kreslenie tvarov - Sprievodca aktivitou](https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+      CSD U3 Lesson Overview 3:
+        markdown: |+
+          # Prehľad
+
+          V tejto lekcii sa oboznámíme s programovacím prostredím Game Labu. Na úvod sa naučíme umiestniť tvary na konkrétne miesto mriežky. Ďalej sa oboznámime s dôležitosťou správnej postupnosti príkazov, vyskúšame si hľadanie a opravovanie chýb a naučíme sa niekoľko jednoduchých príkazov. Na konci hodiny vytvoríme online verziu obrázku navrhnutého v predchádzajúcej lekcii.
+
+          ## Slovná zásoba
+
+          * **Chyba** - časť programu, ktorý nefunguje správne (angl. Bug).
+          * **Oprava chýb** - nájdenie a odstránenie problémov v algoritme alebo programe (angl. Debugging).
+          * **Program** - algoritmus naprogramovaný tak, aby ho vedel vykonať počítač.
+
+          ## Nový kód
+
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [fill()](//studio.code.org/docs/gamelab/fill/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: "# Prehľad \n\nV tejto lekcii vylepšíme naše kreslenie pomocou určovania
+          šírky a výšky tvarov a naučíme sa generovať náhodné čísla. Pomocou parametrov
+          výška a šírka  nakreslíme obdĺžniky a kruhy rôznej veľkosti a pomocou príkazu`background()`
+          vyfarbíme celé pozadie obrazovky. Na konci lekcie si predstavíme príkaz
+          `randomNumber()` a pomocou nových blokov nakreslíme dúhového hada náhodného
+          tvaru.\n\n## Slovník\n\n* **Parameter** - Dodatočná informácia pomocou ktorej
+          upravíme funkciu na dosiahnutie požadovaného výsledku.\n\n## Nový kód\n\n*
+          [background()](//studio.code.org/docs/gamelab/background/)\n* [ellipse()](//studio.code.org/docs/gamelab/ellipse/)\n*
+          [rect()](//studio.code.org/docs/gamelab/rect/)\n* [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)\n\n"
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii si predstavíme premenné ako spôsob na označenie čísla, alebo uloženie náhodne vygenerovanej hodnoty. Začneme jednoduchým popisom premenných a ich využitia a vyskúšame ich použitie v praxi. Premenné použijeme na uloženie náhodného čísla, čo nám umožní rovnakú hodnotu použiť na rôznych miestach nášho programu.
+
+          ## Slovník
+
+          * **Variable** - premenná. Slúži na uschovanie hodnoty, pričom samotná hodnota sa môže zmeniť..
+
+          ## Nový kód
+
+          * [Deklarácia premennej](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Deklarácia premennej a priradenie hodnoty](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Zdroje
+
+          * [Predstavenie premenných](https://youtu.be/G41G_PEWFjE) - Video ([stiahnuť](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U3 Lesson Overview 6:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii si predstavíme objekt "sprite", ktorý nám umožní vytvárať zaujímavejšie a detailnejšie obrázky. Každému "sprite" objektu  môžeme prideliť obrázok, ktorý bude zobrazovať. „Sprite“ objekty tiež zaznamenávajú viaceré hodnoty, čo sa nám zíde pri vytváraní animácií. Na konci lekcie si každý pomocou "sprite" objektov vytvorí vlastnú scénu.
+
+          ## Slovná zásoba
+
+          * **Charakteristika (property)** - atribúty, vlastnosti, ktoré popisujú daný objekt
+          * **Sprite** - grafický objekt na obrazovke s charakteristikami, ktoré popisujú jeho umiestnenie, pohyb a vzhľad.
+
+          ## Nový kód
+
+          * [drawSprites()](//studio.code.org/docs/gamelab/drawSprites/)
+          * [sprite.scale](//studio.code.org/docs/gamelab/scale/)
+          * [var sprite = createSprite()](//studio.code.org/docs/gamelab/createSprite/)
+
+          ## Zdroje
+
+          * [Plánovanie scény so "sprite" objektami - Activity Guide](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+      CSD U3 Lesson Overview 7:
+        markdown: |+
+          # Prehľad
+
+          V tejto lekcii si predstavíme cyklus kreslenia - jednu z hlavných programovacích paradigiem Game Labu. Cyklus kreslenia spojíme s náhodnými číslami na vytvorenie jednoduchých animácií s bodkami a potom so „sprite“ objektami. Následne nové vedomosti využijeme na vylepšenie scény so "sprite" objektami z predchádzajúcej lekcie.
+
+          ## Slovná zásoba
+
+          * **Animácia ** - séria obrázov, ktoré vytvárajú ilúziu pohybu tým, že sa zobrazujú rýchlo jeden po druhom
+          * **Snímka** - jeden obrázok v rámci animácie
+          * **Frame Rate** - rýchlosť zobrazovania snímok v animácii, najčastejšie meraná v snímkach za sekundu
+
+          ## Nový kód
+
+          * [World.frameRate](//studio.code.org/docs/gamelab/World.frameRate/)
+          * [function draw() {}](//studio.code.org/docs/gamelab/draw/)
+
       CSD U3 Project Build a Game SFLP:
         markdown: "# Prehľad\n\nV tejto lekcii si pomocou Sprievodcu projektom a postupu
           z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne,
@@ -1009,7 +1092,7 @@ sk-SK:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Keď spustíš kód, kde bude `mySprite` umiestnený?
       CSD U3 Sprites intro predict multi_2018:
         answers:
         - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
@@ -1018,7 +1101,7 @@ sk-SK:
         - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
         - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
-        - {}
+        - text: Keď spustíš kód, kde bude `mySprite` umiestnený?
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
         - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
@@ -1027,7 +1110,7 @@ sk-SK:
         - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
         - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
-        - {}
+        - text: Keď spustíš kód, kde bude `mySprite` umiestnený?
       CSD U3 Using the Game Design Process SLFP:
         markdown: |
           # Prehľad

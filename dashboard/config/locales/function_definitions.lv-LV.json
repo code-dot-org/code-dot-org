@@ -1364,6 +1364,46 @@
             "name": "zīmēt"
           }
         },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
         "courseE_artist_concept1": {
           "do something": {
             "name": "kaut ko"
@@ -2112,6 +2152,31 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "iegūt"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "name": "zīmēt"
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "name": "zīmēt"
           }
         }
       }
