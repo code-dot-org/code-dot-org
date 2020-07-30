@@ -19,14 +19,14 @@ class UnitGroup < ApplicationRecord
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
-  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
-  has_many :default_scripts, through: :default_course_scripts, source: :script
-  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_scripts, through: :default_unit_group_units, source: :script
+  has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_one :course_version, as: :content_root
 
   after_save :write_serialization
 
-  scope :with_associated_models, -> {includes([:plc_course, :default_course_scripts])}
+  scope :with_associated_models, -> {includes([:plc_course, :default_unit_group_units])}
 
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
@@ -109,7 +109,7 @@ class UnitGroup < ApplicationRecord
     JSON.pretty_generate(
       {
         name: name,
-        script_names: default_course_scripts.map(&:script).map(&:name),
+        script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_scripts: summarize_alternate_scripts,
         properties: properties
       }.compact
@@ -117,7 +117,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def summarize_alternate_scripts
-    alternates = alternate_course_scripts.all
+    alternates = alternate_unit_group_units.all
     return nil if alternates.empty?
     alternates.map do |cs|
       {
@@ -161,7 +161,7 @@ class UnitGroup < ApplicationRecord
     alternate_scripts ||= []
     new_scripts = new_scripts.reject(&:empty?)
     # we want to delete existing course scripts that aren't in our new list
-    scripts_to_delete = default_course_scripts.map(&:script).map(&:name) - new_scripts
+    scripts_to_delete = default_unit_group_units.map(&:script).map(&:name) - new_scripts
     scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
 
     new_scripts.each_with_index do |script_name, index|
@@ -176,7 +176,7 @@ class UnitGroup < ApplicationRecord
       alternate_script = Script.find_by_name!(hash['alternate_script'])
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
-      position = default_course_scripts.find_by(script: default_script).position
+      position = default_unit_group_units.find_by(script: default_script).position
       course_script = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
         cs.position = position
         cs.experiment_name = hash['experiment_name']
@@ -193,7 +193,7 @@ class UnitGroup < ApplicationRecord
       script = Script.find_by_name!(script_name)
       UnitGroupUnit.where(unit_group: self, script: script).destroy_all
     end
-    # Reload model so that default_course_scripts is up to date
+    # Reload model so that default_unit_group_units is up to date
     transaction {reload}
   end
 
@@ -215,7 +215,7 @@ class UnitGroup < ApplicationRecord
     info[:category_priority] = -1
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
-      default_course_scripts.map(&:script_id)
+      default_unit_group_units.map(&:script_id)
     info
   end
 
@@ -350,8 +350,8 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Array<Script>]
   def scripts_for_user(user)
-    default_course_scripts.map do |cs|
-      select_course_script(user, cs).script
+    default_unit_group_units.map do |cs|
+      select_unit_group_unit(user, cs).script
     end
   end
 
@@ -372,12 +372,12 @@ class UnitGroup < ApplicationRecord
   # 4. Otherwise, show the default course script.
   #
   # @param user [User|nil]
-  # @param default_course_script [UnitGroupUnit]
+  # @param default_unit_group_unit [UnitGroupUnit]
   # @return [UnitGroupUnit]
-  def select_course_script(user, default_course_script)
-    return default_course_script unless user
+  def select_unit_group_unit(user, unit_group_unit)
+    return unit_group_unit unless user
 
-    alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
+    alternates = alternate_unit_group_units.where(default_script: unit_group_unit.script).all
 
     if user.teacher?
       alternates.each do |cs|
@@ -392,7 +392,7 @@ class UnitGroup < ApplicationRecord
           return cs if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: cs.experiment_name)
         end
       end
-      return default_course_script
+      return unit_group_unit
     end
 
     if user.student?
@@ -404,7 +404,7 @@ class UnitGroup < ApplicationRecord
       end
     end
 
-    default_course_script
+    unit_group_unit
   end
 
   # @param user [User]
@@ -478,7 +478,7 @@ class UnitGroup < ApplicationRecord
   def has_progress?(user)
     return nil unless user
     user_script_ids = user.user_scripts.pluck(:script_id)
-    course_scripts_with_progress = default_course_scripts.where('course_scripts.script_id' => user_script_ids)
+    course_scripts_with_progress = default_unit_group_units.where('course_scripts.script_id' => user_script_ids)
 
     course_scripts_with_progress.count > 0
   end
@@ -490,7 +490,7 @@ class UnitGroup < ApplicationRecord
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     UnitGroup.
-      joins(:default_course_scripts).
+      joins(:default_unit_group_units).
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
       # select only older versions

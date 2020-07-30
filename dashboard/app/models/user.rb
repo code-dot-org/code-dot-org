@@ -1621,7 +1621,7 @@ class User < ActiveRecord::Base
     primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    course_scripts_script_ids = courses_as_student.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
