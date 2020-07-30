@@ -1272,11 +1272,6 @@ FactoryGirl.define do
     association :teacher
   end
 
-  factory :validated_user_level do
-    time_spent 10
-    user_level_id 1
-  end
-
   factory :donor_school
 
   factory :contact_rollups_raw do
