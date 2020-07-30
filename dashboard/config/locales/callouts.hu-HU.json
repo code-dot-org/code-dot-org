@@ -439,15 +439,6 @@
         "courseB_Scrat_ramp3a_2020": {
           "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
         },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "Ez a szám azt mondja el, hogy ezek közül a blokkok közül mennyit használhatsz a feladvány megoldásához."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "Ez a szám azt jelenti, hogy csak egy blokkot használhatsz ebből a típusból a végső megoldáshoz."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_1": "Tudtad, hogy a sort visszahúzhatod, ahová csak szeretnéd?"
-        },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Újabb blokkokat látsz itt? Ne aggódj, még ebben a szakaszban megmutatjuk, hogy hogyan kell használni."
         },
@@ -699,6 +690,7 @@
           "snowflake_dropdown": "Használd ezt a legördülő menüt különféle hópelyhek létrehozásához!"
         },
         "frozen line": {
+          "run": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat!",
           "move_elsa_forward": "Húzd a \"menj előre\" blokkot és illeszd azt a \"futtatáskor\" blokk alá ahhoz, hogy Elsa előre lépjen"
         },
         "frozen perpendicular": {

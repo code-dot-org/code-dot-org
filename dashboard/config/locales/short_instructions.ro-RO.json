@@ -744,6 +744,9 @@
         "courseD_artist_binary7_2018": "Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?",
         "courseD_artist_binary7_2019": "Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?",
         "courseD_artist_binary7_2020": "Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?",
+        "courseD_autorun_binary4_2019": "Poţi desena acest model prin rularea în buclă a unui şir binar de trei digiți?",
+        "courseD_autorun_binary6_2019": "Care şir binar de 6 caractere, repetat de 11 ori va desena această imagine?",
+        "courseD_autorun_binary7_2019": "Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?",
         "courseD_bee_nestedLoops8": "Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. ",
         "courseD_bee_nestedLoops8_2018": "Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. ",
         "courseD_bee_nestedLoops8_2019": "Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. ",
@@ -817,6 +820,11 @@
         "frozen square loop": "Salutare! Eu sunt Anna din Arendelle. Hai să facem un pătrat cu blocul \"Repetă\", care folosește mai puține blocuri. De câte ori (???) ar trebui ca blocul \"Repetă\" să bucleze blocurile în interiorul său pentru a crea un pătrat?",
         "frozen square loop 3x": "Hai să creăm trei pătrate, rotind după fiecare pătrat. Asigură-te că rotești cu 120 de grade înainte de fiecare pătrat nou.",
         "frozen square snowflake": "Poţi crea un fulg de zăpadă folosind blocul \"Repetă\" pentru a face un pătrat de 10 ori, precum și blocul \"Întoarce\" pentru a se roti cu 36 de grade între fiecare pătrat?",
+        "grade5_artist_binary11": "Joc liber: Aici ai o pânză de desen cu o rezoluţie mare - 16 biţi pe 16 biţi!",
+        "grade5_artist_binary4": "Poţi desena acest model prin rularea în buclă a unui şir binar de trei digiți?",
+        "grade5_artist_binary5": "Fiecare şir binar reprezintă o linie din această imagine. Poţi să rearanjezi liniile astfel încât desenul să reprezinte o faţă zâmbitoare în loc de o faţă tristă?",
+        "grade5_artist_binary8": "Finalizează acest desen.",
+        "grade5_artist_binary9": "Aici este o pânză de rezoluţie mai mare pentru a desena - 16 pixeli 16 pixeli! \\\r \\\r Vezi ce se întâmplă atunci când începem sa cream cu biţi?",
         "k-1 maze 1": "Poţi să mă muţi spre vest pentru a ajunge la porc?"
       }
     }

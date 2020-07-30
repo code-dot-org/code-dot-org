@@ -971,6 +971,10 @@ ru:
         text: Спрайт {SPRITE} Начинается {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_changePropBy:
         text: изменить {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -1022,6 +1026,40 @@ ru:
             '"seconds"': секунд
       gamelab_hideTitleScreen:
         text: скрыть экран заголовка
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
+            '"a"': a
+            '"b"': B
+            '"c"': C
+            '"d"': D
+            '"e"': E
+            '"f"': f
+            '"g"': g
+            '"h"': H
+            '"i"': Я
+            '"j"': J
+            '"k"': K
+            '"l"': L
+            '"m"': М
+            '"n"': N
+            '"o"': O
+            '"p"': P
+            '"q"': q
+            '"r"': R
+            '"s"': s
+            '"t"': T
+            '"u"': U
+            '"v"': V
+            '"w"': Ж
+            '"x"': x
+            '"y"': у
+            '"z"': Z
       gamelab_isTouchingEdges:
         text: "{SPRITE} трогательно края"
       gamelab_jumpTo:

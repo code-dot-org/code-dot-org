@@ -185,6 +185,10 @@ gl:
             '"down"': abaixo
             '"right"': dereita
             '"space"': espazo
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -206,6 +210,14 @@ gl:
         options:
           UNIT:
             '"seconds"': segundos
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
       gamelab_keyPressed:
         options:
           CONDITION:

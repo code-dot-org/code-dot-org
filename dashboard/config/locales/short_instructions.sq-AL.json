@@ -273,6 +273,9 @@
         "courseD_artist_binary7_2018": "Cili është vargu më i shkurtër binar që ti mund të përsërisësh për të vizatuar këtë figurë?",
         "courseD_artist_binary7_2019": "Cili është vargu më i shkurtër binar që ti mund të përsërisësh për të vizatuar këtë figurë?",
         "courseD_artist_binary7_2020": "Cili është vargu më i shkurtër binar që ti mund të përsërisësh për të vizatuar këtë figurë?",
+        "courseD_autorun_binary4_2019": "Mund t'a bësh këtë model duke e lidhur një varg 3 shifror binar?",
+        "courseD_autorun_binary6_2019": "Cili varg 6 shifror binar i përsëritur 11 herë do t'a vizatojë këtë figurë?",
+        "courseD_autorun_binary7_2019": "Cili është vargu më i shkurtër binar që ti mund të përsërisësh për të vizatuar këtë figurë?",
         "courseD_bee_nestedLoops8": "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. ",
         "courseD_bee_nestedLoops8_2018": "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. ",
         "courseD_bee_nestedLoops8_2019": "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. ",
@@ -343,6 +346,11 @@
         "frozen square loop": "Përshendetje, quhem Ana nga Arendelle! Le të bëjmë një katror me bllokun \"Perserit\", që përdor pak blloqe. Sa herë (???) duhet të përseritet cikli i bllokut \"Përserit\" për të bërë një katror?",
         "frozen square loop 3x": "Le të krijojmë tre katrorë, që kthehen pas çdo katrori. Sigurohu të kthehesh me 120 gradë përpara çdo katrori të ri.",
         "frozen square snowflake": "Mund të krijosh një flokë dëbore duke përdorur bllokun \"Përserit\" duke bërë një katror 10 herë, dhe bllokun \"Kthehu\" për t'u kthyer 36 gradë midis çdo katrori?",
+        "grade5_artist_binary11": "Lojë e Lirë: Këtu duhet nxjerrë një pikturë me rezolucion të lartë - 16 bit me 16 bit!",
+        "grade5_artist_binary4": "Mund t'a bësh këtë model duke e lidhur një varg 3 shifror binar?",
+        "grade5_artist_binary5": "Secili varg binar përfaqëson një rresht të këtij vizatimi. Mund t'i ribësh në mënyrë që të vizatoje një fytyrë të buzëqeshur në vend të një fytyre te vërenjtur?",
+        "grade5_artist_binary8": "Perfundo këtë vizatim.",
+        "grade5_artist_binary9": "Këtu është një hapësirë për të vizatuar në rezolucion më të lartë\n\n-   16 piksele nga 16 pixels! \\\\ r\n    \\\\ r",
         "k-1 maze 1": "A mund të më bësh që të leviz në perëndim dhe të marr derrkucin?"
       }
     }
