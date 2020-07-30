@@ -277,3 +277,5 @@ rescue => error
   ChatClient.log 'Unable to emit metrics', color: 'red'
   ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
 end
+
+main
