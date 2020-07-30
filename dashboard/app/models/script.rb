@@ -1437,7 +1437,7 @@ class Script < ActiveRecord::Base
   # return nil.
   def alternate_script(user)
     unit_group_units.each do |cs|
-      alternate_cs = cs.unit_group.select_course_script(user, cs)
+      alternate_cs = cs.unit_group.select_unit_group_unit(user, cs)
       return alternate_cs.script if cs != alternate_cs
     end
     nil
