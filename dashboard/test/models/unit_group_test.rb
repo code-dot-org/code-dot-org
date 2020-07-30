@@ -62,9 +62,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test "should serialize to json" do
     course = create(:unit_group, name: 'my-course', is_stable: true)
-    create(:course_script, unit_group: course, position: 1, script: create(:script, name: "script1"))
-    create(:course_script, unit_group: course, position: 2, script: create(:script, name: "script2"))
-    create(:course_script, unit_group: course, position: 3, script: create(:script, name: "script3"))
+    create(:unit_group_unit, unit_group: course, position: 1, script: create(:script, name: "script1"))
+    create(:unit_group_unit, unit_group: course, position: 2, script: create(:script, name: "script2"))
+    create(:unit_group_unit, unit_group: course, position: 3, script: create(:script, name: "script3"))
 
     serialization = course.serialize
 
@@ -107,25 +107,25 @@ class UnitGroupTest < ActiveSupport::TestCase
       course.update_scripts(['script1', 'script2'])
 
       course.reload
-      assert_equal 2, course.default_course_scripts.length
-      assert_equal 1, course.default_course_scripts[0].position
-      assert_equal 'script1', course.default_course_scripts[0].script.name
-      assert_equal 2, course.default_course_scripts[1].position
-      assert_equal 'script2', course.default_course_scripts[1].script.name
+      assert_equal 2, course.default_unit_group_units.length
+      assert_equal 1, course.default_unit_group_units[0].position
+      assert_equal 'script1', course.default_unit_group_units[0].script.name
+      assert_equal 2, course.default_unit_group_units[1].position
+      assert_equal 'script2', course.default_unit_group_units[1].script.name
     end
 
     test "remove CourseScripts" do
       course = create :unit_group
 
-      create(:course_script, unit_group: course, position: 0, script: create(:script, name: 'script1'))
-      create(:course_script, unit_group: course, position: 1, script: create(:script, name: 'script2'))
+      create(:unit_group_unit, unit_group: course, position: 0, script: create(:script, name: 'script1'))
+      create(:unit_group_unit, unit_group: course, position: 1, script: create(:script, name: 'script2'))
 
       course.update_scripts(['script2'])
 
       course.reload
-      assert_equal 1, course.default_course_scripts.length
-      assert_equal 1, course.default_course_scripts[0].position
-      assert_equal 'script2', course.default_course_scripts[0].script.name
+      assert_equal 1, course.default_unit_group_units.length
+      assert_equal 1, course.default_unit_group_units[0].position
+      assert_equal 'script2', course.default_unit_group_units[0].script.name
     end
   end
 
@@ -158,8 +158,8 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    create(:course_script, unit_group: course, position: 0, script: create(:script, name: 'script1'))
-    create(:course_script, unit_group: course, position: 1, script: create(:script, name: 'script2'))
+    create(:unit_group_unit, unit_group: course, position: 0, script: create(:script, name: 'script1'))
+    create(:unit_group_unit, unit_group: course, position: 1, script: create(:script, name: 'script2'))
 
     course.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
@@ -224,73 +224,73 @@ class UnitGroupTest < ActiveSupport::TestCase
       @script2a = create(:script, name: 'script2a')
       @script3 = create(:script, name: 'script3')
 
-      create :course_script, unit_group: @course, script: @script1, position: 1
+      create :unit_group_unit, unit_group: @course, script: @script1, position: 1
 
-      @default_course_script = create :course_script, unit_group: @course, script: @script2, position: 2
-      @alternate_course_script = create :course_script,
+      @unit_group_unit = create :unit_group_unit, unit_group: @course, script: @script2, position: 2
+      @alternate_unit_group_unit = create :unit_group_unit,
         unit_group: @course,
         script: @script2a,
         position: 2,
         default_script: @script2,
         experiment_name: 'my-experiment'
 
-      create :course_script, unit_group: @course, script: @script3, position: 3
+      create :unit_group_unit, unit_group: @course, script: @script3, position: 3
     end
 
-    test 'course script test data is properly initialized' do
+    test 'unit group unit test data is properly initialized' do
       assert_equal 'my-course', @course.name
       assert_equal %w(script1 script2 script3), @course.default_scripts.map(&:name)
-      assert_equal %w(script2a), @course.alternate_course_scripts.map(&:script).map(&:name)
+      assert_equal %w(script2a), @course.alternate_unit_group_units.map(&:script).map(&:name)
     end
 
-    test 'select default course script for teacher without experiment' do
+    test 'select default unit group unit for teacher without experiment' do
       assert_equal(
-        @default_course_script,
-        @course.select_course_script(@other_teacher, @default_course_script)
+        @unit_group_unit,
+        @course.select_unit_group_unit(@other_teacher, @unit_group_unit)
       )
     end
 
-    test 'select alternate course script for teacher with experiment' do
+    test 'select alternate unit group unit for teacher with experiment' do
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
-        @alternate_course_script,
-        @course.select_course_script(@other_teacher, @default_course_script)
+        @alternate_unit_group_unit,
+        @course.select_unit_group_unit(@other_teacher, @unit_group_unit)
       )
       experiment.destroy
     end
 
-    test 'select default course script for student by default' do
+    test 'select default unit group unit for student by default' do
       assert_equal(
-        @default_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @unit_group_unit,
+        @course.select_unit_group_unit(@student, @unit_group_unit)
       )
     end
 
-    test 'select alternate course script for student when course teacher has experiment' do
+    test 'select alternate unit group unit for student when course teacher has experiment' do
       create :follower, section: @course_section, student_user: @student
       experiment = create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
       assert_equal(
-        @alternate_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @alternate_unit_group_unit,
+        @course.select_unit_group_unit(@student, @unit_group_unit)
       )
       experiment.destroy
     end
 
-    test 'select default course script for student when other teacher has experiment' do
+    test 'select default unit group unit for student when other teacher has experiment' do
       create :follower, section: @other_section, student_user: @student
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
-        @default_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @unit_group_unit,
+        @course.select_unit_group_unit(@student, @unit_group_unit)
       )
       experiment.destroy
     end
 
-    test 'select alternate course script for student with progress' do
+    test 'select alternate unit group unit for student with progress' do
       create :user_script, user: @student, script: @script2a
       assert_equal(
-        @alternate_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @alternate_unit_group_unit,
+        @course.select_unit_group_unit(@student, @unit_group_unit)
       )
     end
 
@@ -298,8 +298,8 @@ class UnitGroupTest < ActiveSupport::TestCase
       create :follower, section: @course_section, student_user: @student
       create :user_script, user: @student, script: @script2a
       assert_equal(
-        @default_course_script,
-        @course.select_course_script(@student, @default_course_script)
+        @unit_group_unit,
+        @course.select_unit_group_unit(@student, @unit_group_unit)
       )
     end
   end
@@ -355,7 +355,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     setup do
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
       @csp1_2017 = create(:script, name: 'csp1-2017')
-      create :course_script, unit_group: @csp_2017, script: @csp1_2017, position: 1
+      create :unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
       create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019')
       @student = create :student
@@ -418,18 +418,18 @@ class UnitGroupTest < ActiveSupport::TestCase
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
       @csp1_2017 = create(:script, name: 'csp1-2017')
       @csp2_2017 = create(:script, name: 'csp2-2017')
-      create :course_script, unit_group: @csp_2017, script: @csp1_2017, position: 1
-      create :course_script, unit_group: @csp_2017, script: @csp2_2017, position: 1
+      create :unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1
+      create :unit_group_unit, unit_group: @csp_2017, script: @csp2_2017, position: 1
 
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       @csp1_2018 = create(:script, name: 'csp1-2018')
       @csp2_2018 = create(:script, name: 'csp2-2018')
-      create :course_script, unit_group: @csp_2018, script: @csp1_2018, position: 1
-      create :course_script, unit_group: @csp_2018, script: @csp2_2018, position: 1
+      create :unit_group_unit, unit_group: @csp_2018, script: @csp1_2018, position: 1
+      create :unit_group_unit, unit_group: @csp_2018, script: @csp2_2018, position: 1
 
       @csd = create(:unit_group, name: 'csd')
       @csd1 = create(:script, name: 'csd1')
-      create :course_script, unit_group: @csd, script: @csd1, position: 1
+      create :unit_group_unit, unit_group: @csd, script: @csd1, position: 1
 
       @student = create :student
     end
@@ -496,16 +496,16 @@ class UnitGroupTest < ActiveSupport::TestCase
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
 
-    create(:course_script, position: 1, unit_group: csp, script: csp1)
-    create(:course_script, position: 2, unit_group: csp, script: csp2)
-    create(:course_script,
+    create(:unit_group_unit, position: 1, unit_group: csp, script: csp1)
+    create(:unit_group_unit, position: 2, unit_group: csp, script: csp2)
+    create(:unit_group_unit,
       position: 2,
       unit_group: csp,
       script: csp2_alt,
       experiment_name: 'csp2-alt-experiment',
       default_script: csp2
     )
-    create(:course_script, position: 3, unit_group: csp, script: csp3)
+    create(:unit_group_unit, position: 3, unit_group: csp, script: csp3)
 
     csp_assign_info = csp.assignable_info
 
@@ -578,7 +578,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     course = create :unit_group
     pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
     script_in_pilot_course = create :script
-    create :course_script, unit_group: pilot_course, script: script_in_pilot_course, position: 1
+    create :unit_group_unit, unit_group: pilot_course, script: script_in_pilot_course, position: 1
 
     student = create :student
     teacher = create :teacher
