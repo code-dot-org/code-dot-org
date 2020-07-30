@@ -342,8 +342,8 @@ class SectionTest < ActiveSupport::TestCase
     script1 = create :script
     script2 = create :script
     course = create :unit_group
-    create :course_script, unit_group: course, script: script1, position: 1
-    create :course_script, unit_group: course, script: script2, position: 2
+    create :unit_group_unit, unit_group: course, script: script1, position: 1
+    create :unit_group_unit, unit_group: course, script: script2, position: 2
     course.reload
 
     section = create :section, script: script2, unit_group: course
@@ -354,8 +354,8 @@ class SectionTest < ActiveSupport::TestCase
     script1 = create :script
     script2 = create :script
     course = create :unit_group
-    create :course_script, unit_group: course, script: script1, position: 1
-    create :course_script, unit_group: course, script: script2, position: 2
+    create :unit_group_unit, unit_group: course, script: script1, position: 1
+    create :unit_group_unit, unit_group: course, script: script2, position: 2
     course.reload
 
     section = create :section, script: nil, unit_group: course

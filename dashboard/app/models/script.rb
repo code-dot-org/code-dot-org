@@ -44,8 +44,8 @@ class Script < ActiveRecord::Base
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
-  has_many :course_scripts
-  has_many :unit_groups, through: :course_scripts
+  has_many :unit_group_units
+  has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root
 
   scope :with_associated_models, -> do
@@ -61,7 +61,7 @@ class Script < ActiveRecord::Base
         {
           lessons: [{script_levels: [:levels]}]
         },
-        :course_scripts
+        :unit_group_units
       ]
     )
   end
@@ -313,7 +313,7 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     [
-      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly, CourseScript
+      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly, UnitGroupUnit
     ].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
@@ -1415,8 +1415,8 @@ class Script < ActiveRecord::Base
   # A script is considered to have a matching course if there is exactly one
   # course for this script
   def unit_group
-    return nil if course_scripts.length != 1
-    UnitGroup.get_from_cache(course_scripts[0].course_id)
+    return nil if unit_group_units.length != 1
+    UnitGroup.get_from_cache(unit_group_units[0].course_id)
   end
 
   # @return {String|nil} path to the course overview page for this script if there
@@ -1436,7 +1436,7 @@ class Script < ActiveRecord::Base
   # due to existing progress or a course experiment, return that script. Otherwise,
   # return nil.
   def alternate_script(user)
-    course_scripts.each do |cs|
+    unit_group_units.each do |cs|
       alternate_cs = cs.unit_group.select_course_script(user, cs)
       return alternate_cs.script if cs != alternate_cs
     end
