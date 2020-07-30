@@ -17,7 +17,11 @@
 class Foorm::Form < ActiveRecord::Base
   include Seeded
 
-  has_many :foorm_submissions
+  has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
+
+  def key
+    "#{name}.#{version}"
+  end
 
   def self.setup
     forms = Dir.glob('config/foorm/forms/**/*.json').sort.map.with_index(1) do |path, id|
