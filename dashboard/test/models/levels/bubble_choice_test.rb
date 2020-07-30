@@ -229,6 +229,9 @@ DSL
       level 'sublevel_3_copy'
     DSL
 
+    # access a translation, to trigger any file reads, before we stub File.read
+    I18n.t('auth.signed_in')
+
     File.stubs(:exist?).returns(true)
     File.stubs(:read).with {|filepath| filepath.to_s.end_with?('bubble_choice.bubble_choice')}.returns(input_dsl).once
 
