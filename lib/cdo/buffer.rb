@@ -93,13 +93,15 @@ module Cdo
     # Schedule a flush in the future when the next batch is ready.
     # @param [Boolean] force flush batch even if not full.
     def schedule_flush(force = false)
-      delay = batch_ready(force)
-      if @scheduled_flush.pending?
-        @scheduled_flush.reschedule(delay)
-      else
-        @scheduled_flush = Concurrent::ScheduledTask.execute(delay) do
-          flush_batch
-          schedule_flush unless @buffer.empty?
+      @scheduled_flush.send(:synchronize) do
+        delay = batch_ready(force)
+        if @scheduled_flush.pending?
+          @scheduled_flush.reschedule(delay)
+        else
+          @scheduled_flush = Concurrent::ScheduledTask.execute(delay) do
+            flush_batch
+            schedule_flush unless @buffer.empty?
+          end
         end
       end
     end
