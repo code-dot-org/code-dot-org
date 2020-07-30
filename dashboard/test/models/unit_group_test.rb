@@ -16,13 +16,13 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "get_from_cache uses cache" do
-      course = create(:unit_group, name: 'acourse')
-      # Ensure cache is populated with this course by name and id
+      unit_group = create(:unit_group, name: 'acourse')
+      # Ensure cache is populated with this unit_group by name and id
       UnitGroup.stubs(:should_cache?).returns true
-      UnitGroup.get_from_cache(course.name)
-      UnitGroup.get_from_cache(course.id)
+      UnitGroup.get_from_cache(unit_group.name)
+      UnitGroup.get_from_cache(unit_group.id)
 
-      uncached_course = UnitGroup.get_without_cache(course.id)
+      uncached_course = UnitGroup.get_without_cache(unit_group.id)
 
       populate_cache_and_disconnect_db
 
@@ -32,41 +32,41 @@ class UnitGroupTest < ActiveSupport::TestCase
       end
 
       assert_equal uncached_course, UnitGroup.get_from_cache('acourse')
-      assert_equal uncached_course, UnitGroup.get_from_cache(course.id)
+      assert_equal uncached_course, UnitGroup.get_from_cache(unit_group.id)
     end
   end
 
   class NameValidationTests < ActiveSupport::TestCase
-    test "should allow valid course names" do
+    test "should allow valid unit_group names" do
       create(:unit_group, name: 'valid-name')
     end
 
-    test "should not allow uppercase letters in course name" do
+    test "should not allow uppercase letters in unit_group name" do
       assert_raises ActiveRecord::RecordInvalid do
         create(:unit_group, name: 'UpperCase')
       end
     end
 
-    test "should not allow spaces in course name" do
+    test "should not allow spaces in unit_group name" do
       assert_raises ActiveRecord::RecordInvalid do
         create(:unit_group, name: 'spaced out')
       end
     end
 
     test "should allow uppercase letters if it is a plc course" do
-      course = UnitGroup.new(name: 'PLC Course')
-      course.plc_course = Plc::Course.new(unit_group: course)
-      course.save!
+      unit_group = UnitGroup.new(name: 'PLC Course')
+      unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
+      unit_group.save!
     end
   end
 
   test "should serialize to json" do
-    course = create(:unit_group, name: 'my-course', is_stable: true)
-    create(:unit_group_unit, unit_group: course, position: 1, script: create(:script, name: "script1"))
-    create(:unit_group_unit, unit_group: course, position: 2, script: create(:script, name: "script2"))
-    create(:unit_group_unit, unit_group: course, position: 3, script: create(:script, name: "script3"))
+    unit_group = create(:unit_group, name: 'my-course', is_stable: true)
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
 
-    serialization = course.serialize
+    serialization = unit_group.serialize
 
     obj = JSON.parse(serialization)
     assert_equal 'my-course', obj['name']
@@ -74,63 +74,63 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert obj['properties']['is_stable']
   end
 
-  test "stable?: true if course has plc_course" do
-    course = UnitGroup.new(family_name: 'plc')
-    course.plc_course = Plc::Course.new(unit_group: course)
-    course.save
+  test "stable?: true if unit_group has plc_course" do
+    unit_group = UnitGroup.new(family_name: 'plc')
+    unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
+    unit_group.save
 
-    assert course.stable?
+    assert unit_group.stable?
   end
 
-  test "stable?: true if course is not in a family" do
-    course = create :unit_group
-    assert course.stable?
+  test "stable?: true if unit_group is not in a family" do
+    unit_group = create :unit_group
+    assert unit_group.stable?
   end
 
-  test "stable?: true if course in family has is_stable set" do
-    course = create :unit_group, family_name: 'csd', is_stable: true
-    assert course.stable?
+  test "stable?: true if unit_group in family has is_stable set" do
+    unit_group = create :unit_group, family_name: 'csd', is_stable: true
+    assert unit_group.stable?
   end
 
-  test "stable?: defaults to false if course in family does not have is_stable set" do
-    course = create :unit_group, family_name: 'csd'
-    refute course.stable?
+  test "stable?: defaults to false if unit_group in family does not have is_stable set" do
+    unit_group = create :unit_group, family_name: 'csd'
+    refute unit_group.stable?
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
     test "add CourseScripts" do
-      course = create :unit_group
+      unit_group = create :unit_group
 
       create(:script, name: 'script1')
       create(:script, name: 'script2')
 
-      course.update_scripts(['script1', 'script2'])
+      unit_group.update_scripts(['script1', 'script2'])
 
-      course.reload
-      assert_equal 2, course.default_unit_group_units.length
-      assert_equal 1, course.default_unit_group_units[0].position
-      assert_equal 'script1', course.default_unit_group_units[0].script.name
-      assert_equal 2, course.default_unit_group_units[1].position
-      assert_equal 'script2', course.default_unit_group_units[1].script.name
+      unit_group.reload
+      assert_equal 2, unit_group.default_unit_group_units.length
+      assert_equal 1, unit_group.default_unit_group_units[0].position
+      assert_equal 'script1', unit_group.default_unit_group_units[0].script.name
+      assert_equal 2, unit_group.default_unit_group_units[1].position
+      assert_equal 'script2', unit_group.default_unit_group_units[1].script.name
     end
 
     test "remove CourseScripts" do
-      course = create :unit_group
+      unit_group = create :unit_group
 
-      create(:unit_group_unit, unit_group: course, position: 0, script: create(:script, name: 'script1'))
-      create(:unit_group_unit, unit_group: course, position: 1, script: create(:script, name: 'script2'))
+      create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'script1'))
+      create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'script2'))
 
-      course.update_scripts(['script2'])
+      unit_group.update_scripts(['script2'])
 
-      course.reload
-      assert_equal 1, course.default_unit_group_units.length
-      assert_equal 1, course.default_unit_group_units[0].position
-      assert_equal 'script2', course.default_unit_group_units[0].script.name
+      unit_group.reload
+      assert_equal 1, unit_group.default_unit_group_units.length
+      assert_equal 1, unit_group.default_unit_group_units[0].position
+      assert_equal 'script2', unit_group.default_unit_group_units[0].script.name
     end
   end
 
   test "summarize" do
-    course = create :unit_group, name: 'my-course', family_name: 'my-family', version_year: '1999'
+    unit_group = create :unit_group, name: 'my-course', family_name: 'my-family', version_year: '1999'
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -158,12 +158,12 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    create(:unit_group_unit, unit_group: course, position: 0, script: create(:script, name: 'script1'))
-    create(:unit_group_unit, unit_group: course, position: 1, script: create(:script, name: 'script2'))
+    create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'script1'))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'script2'))
 
-    course.teacher_resources = [['curriculum', '/link/to/curriculum']]
+    unit_group.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
-    summary = course.summarize
+    summary = unit_group.summarize
 
     assert_equal [:name, :id, :title, :assignment_family_title,
                   :family_name, :version_year, :visible, :is_stable,
@@ -266,7 +266,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       )
     end
 
-    test 'select alternate unit group unit for student when course teacher has experiment' do
+    test 'select alternate unit group unit for student when unit_group teacher has experiment' do
       create :follower, section: @course_section, student_user: @student
       experiment = create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
       assert_equal(
@@ -294,7 +294,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       )
     end
 
-    test 'ignore progress if assigned to course teacher without experiment' do
+    test 'ignore progress if assigned to unit_group teacher without experiment' do
       create :follower, section: @course_section, student_user: @student
       create :user_script, user: @student, script: @script2a
       assert_equal(
@@ -318,7 +318,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil @csp_2017.redirect_to_course_url(teacher)
     end
 
-    test 'returns nil for student assigned to this course' do
+    test 'returns nil for student assigned to this unit_group' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       section = create :section, unit_group: @csp_2017
       student = create :student
@@ -326,13 +326,13 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil @csp_2017.redirect_to_course_url(student)
     end
 
-    test 'returns nil for student not assigned to any course' do
+    test 'returns nil for student not assigned to any unit_group' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       student = create :student
       assert_nil @csp_2017.redirect_to_course_url(student)
     end
 
-    test 'returns link to latest assigned course for student assigned to a course in this family' do
+    test 'returns link to latest assigned unit_group for student assigned to a unit_group in this family' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       section = create :section, unit_group: csp_2018
@@ -341,7 +341,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal csp_2018.link, @csp_2017.redirect_to_course_url(student)
     end
 
-    test 'returns nil if latest assigned course is an older version than the current course' do
+    test 'returns nil if latest assigned unit_group is an older version than the current unit_group' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       section = create :section, unit_group: @csp_2017
@@ -445,7 +445,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       refute @csp_2018.has_progress?(@student)
     end
 
-    test 'student with progress in course has progress' do
+    test 'student with progress in unit_group has progress' do
       create :user_script, user: @student, script: @csp1_2017
 
       assert @csp_2017.has_progress?(@student)
@@ -568,14 +568,14 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "update_teacher_resources" do
-    course = create :unit_group
-    course.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
+    unit_group = create :unit_group
+    unit_group.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
 
-    assert_equal [['professionalLearning', '/link/to/plc']], course.teacher_resources
+    assert_equal [['professionalLearning', '/link/to/plc']], unit_group.teacher_resources
   end
 
   test 'has pilot access' do
-    course = create :unit_group
+    unit_group = create :unit_group
     pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
     script_in_pilot_course = create :script
     create :unit_group_unit, unit_group: pilot_course, script: script_in_pilot_course, position: 1
@@ -585,7 +585,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
 
-    # student in a pilot teacher's section which is assigned to a pilot course
+    # student in a pilot teacher's section which is assigned to a pilot unit group
     pilot_section = create :section, user: pilot_teacher, unit_group: pilot_course
     assigned_pilot_student = create(:follower, section: pilot_section).student_user
 
@@ -605,16 +605,16 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     levelbuilder = create :levelbuilder
 
-    refute course.pilot?
-    refute course.has_pilot_access?
-    refute course.has_pilot_access?(student)
-    refute course.has_pilot_access?(teacher)
-    refute course.has_pilot_access?(pilot_teacher)
-    refute course.has_pilot_access?(assigned_pilot_student)
-    refute course.has_pilot_access?(teacher_in_section)
-    refute course.has_pilot_access?(pilot_student_with_progress)
-    refute course.has_pilot_access?(student_of_pilot_teacher)
-    refute course.has_pilot_access?(levelbuilder)
+    refute unit_group.pilot?
+    refute unit_group.has_pilot_access?
+    refute unit_group.has_pilot_access?(student)
+    refute unit_group.has_pilot_access?(teacher)
+    refute unit_group.has_pilot_access?(pilot_teacher)
+    refute unit_group.has_pilot_access?(assigned_pilot_student)
+    refute unit_group.has_pilot_access?(teacher_in_section)
+    refute unit_group.has_pilot_access?(pilot_student_with_progress)
+    refute unit_group.has_pilot_access?(student_of_pilot_teacher)
+    refute unit_group.has_pilot_access?(levelbuilder)
 
     assert pilot_course.pilot?
     refute pilot_course.has_pilot_access?
@@ -624,7 +624,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert pilot_course.has_pilot_access?(assigned_pilot_student)
     assert pilot_course.has_pilot_access?(teacher_in_section)
     assert pilot_course.has_pilot_access?(pilot_student_with_progress)
-    refute course.has_pilot_access?(student_of_pilot_teacher)
+    refute unit_group.has_pilot_access?(student_of_pilot_teacher)
     assert pilot_course.has_pilot_access?(levelbuilder)
   end
 
