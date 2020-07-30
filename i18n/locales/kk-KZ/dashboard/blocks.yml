@@ -183,6 +183,10 @@ kk:
             '"right"': оңға
             '"space"': кеңестік
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -200,6 +204,15 @@ kk:
         options:
           UNIT:
             '"seconds"': секунд
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

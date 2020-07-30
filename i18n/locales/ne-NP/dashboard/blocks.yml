@@ -187,6 +187,10 @@ ne:
             '"right"': दाँया
             '"space"': space
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -204,6 +208,15 @@ ne:
         options:
           UNIT:
             '"seconds"': seconds
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

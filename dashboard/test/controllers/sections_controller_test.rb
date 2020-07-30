@@ -27,7 +27,7 @@ class SectionsControllerTest < ActionController::TestCase
     # to a file if levelbuilder_mode is true
     @unit_group = create(:unit_group)
     @script_in_course = create(:script)
-    create(:course_script, script: @script_in_course, unit_group: @unit_group, position: 1)
+    create(:unit_group_unit, script: @script_in_course, unit_group: @unit_group, position: 1)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
   end

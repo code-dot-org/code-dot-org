@@ -25,7 +25,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @csp_course = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
     @csp_course_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
     @csp_script = create(:script, name: 'csp1')
-    create(:course_script, unit_group: @csp_course, script: @csp_script, position: 1)
+    create(:unit_group_unit, unit_group: @csp_course, script: @csp_script, position: 1)
   end
 
   test 'logged out cannot list sections' do

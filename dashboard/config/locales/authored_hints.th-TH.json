@@ -897,8 +897,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "ลองลากตามรอยช้าๆไปตามโปรแกรม ด้วยการใช้นิ้วมือของคุณ เพื่อดูว่ามีอะไรไม่ถูกต้อง",
-          "courseA_artist_loops3_b": "คุณต้องใช้บล็อกแบบนี้เพื่อแก้ปริศนา\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้"
+          "courseA_artist_loops3_b": "คุณต้องใช้บล็อกแบบนี้เพื่อแก้ปริศนา\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
@@ -1010,8 +1009,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
           "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
-          "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ",
-          "courseB_artist_loops9_c": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู"
+          "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ"
         },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>",
@@ -1632,7 +1630,7 @@
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1650,7 +1648,7 @@
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1659,7 +1657,7 @@
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2018": {
-          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1677,32 +1675,7 @@
           "courseB_artist_loops2_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้"
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "ลองลากตามรอยช้าๆไปตามโปรแกรม ด้วยการใช้นิ้วมือของคุณ เพื่อดูว่ามีอะไรไม่ถูกต้อง",
-          "courseA_artist_loops3_b": "คุณต้องใช้บล็อกแบบนี้เพื่อแก้ปริศนา\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้"
-        },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>"
-        },
-        "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
-          "courseA_artist_loops5_b": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
-        },
-        "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "คิดไม่ออก..วิธีที่จะวาดเนินเขาหรือเปล่า?  ลองเล่นกับบล็อกต่างๆ ดูสักนิด เพื่อดูว่าแต่ละบล็อกวาดอะไร",
-          "courseA_artist_loops6_b": "คุณต้องใช้บล็อก 2 บล็อกที่วาดไปสองทิศทางเพื่อแก้ปริศนานี้"
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
-          "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "ลองเรียกใช้งานโค้ด เพื่อดูสิ่งที่ถูกเขียนขึ้นไว้แล้วว่า ทำอะไรให้คุณบ้าง",
-          "courseA_artist_loops8_b": "คุณจะวนลูปโค้ดที่คุณได้รับมาอย่างไร",
-          "courseA_artist_loops8_c": "โค้ดทำอะไรได้บ้าง\nมันควรจะทำอะไร?\nมันบอกอะไรแก่คุณ?"
         },
         "courseB_artist_loops9": {
           "courseB_artist_loops9_c": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู"
@@ -1714,9 +1687,6 @@
           "courseB_artist_loops9_c": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู"
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
-          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
-          "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ",
           "courseB_artist_loops9_c": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู"
         },
         "courseB_collector_loops2": {
@@ -2060,10 +2030,6 @@
           "courseB_starWars_prog9_a": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม",
           "courseB_starWars_prog9_b": "มีวิธีการแก้ปริศนานี้ได้ หลากหลายวิธี",
           "courseB_starWars_prog9_c": "คุณสามารถใช้ลูป `ทำซ้ำ`ได้ที่นี่หรือไม่"
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type=\"when_run\"/></xml>เพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_artist_loops2_b": "ใช้บล็อกนี้ <xml><block type=\"simple_move_right\"/></xml>เพื่อแก้ปริศนาในด่านนี้"
         },
         "courseC_PlayLab_events2": {
           "courseC_PlayLab_events2_a": "ต่อบล็อกนี้สองบล็อกเข้ากับบล็อก `เมื่อเรียกใช้งาน`:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>",
@@ -3449,6 +3415,34 @@
         },
         "courseD_artist_ramp12": {
           "courseD_artist_ramp12_c": "คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!"
+        },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "เพียงคลิก `เริ่ม`เพื่อดูโปรแกรมนี้ทำงาน"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม"
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "ให้มองดูที่สี่เหลี่ยมจตุรัสสามอันแรกแถวบนสุด คุณสามารถทำรูปทั้งสามเหล่านี้ซ้ำแล้วซ้ำอีกเพื่อให้ได้รูปแบบทั้งผืนตามที่คุณต้องการ ได้หรือไม่?",
+          "courseD_artist_binary4_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณเองจะไม่ได้คิดว่าคุณจะสามารถแก้ไขปริศนาได้แล้วก็ตาม"
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "ลองเรียกใช้งานโค้ดดูก่อน เพื่อดูว่า มีอะไรที่คุณใช้ได้บ้าง",
+          "courseD_artist_binary5_b": "คุณแค่สลับแถว เพียงสองแถวเพื่อสร้างรอยยิ้ม",
+          "courseD_artist_binary5_c": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนโค้ดไบนารีแถวนั้นลงบนกระดาษสักแผ่น แล้วมองหาดูว่ามีรูปแบบอะไร"
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "เริ่มต้นที่ด้านซ้ายบนสุด สังเกตุว่ามันจะไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มซ้ำไปซ้ำมา?",
+          "courseD_artist_binary6_b": "คุณสามารถสร้างสายอัขระไบนารีทีละเล็กทีละน้อย และทำการทดสอบไปเรื่อยๆ!"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "เริ่มต้นที่ด้านซ้ายบนสุด สังเกตุว่ามันจะไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มซ้ำไปซ้ำมา?",
+          "courseD_artist_binary7_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณเองจะไม่ได้คิดว่าคุณจะสามารถแก้ไขปริศนาได้แล้วก็ตาม"
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "รูปเกลียวนั้นสามารถสร้างความสับสนในบางครั้ง. แยกเส้นแนวนอนแต่ละเส้นไว้ในใจของคุณในขณะที่คุณออกแบบ",
+          "courseD_artist_binary8_b": "ลองเรียกใช้งานโค้ดดูก่อน เพื่อดูว่า มีอะไรที่คุณใช้ได้บ้าง",
+          "courseD_artist_binary8_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม"
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",

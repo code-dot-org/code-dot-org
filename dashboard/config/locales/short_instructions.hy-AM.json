@@ -240,6 +240,9 @@
         "courseD_artist_binary7_2018": "What is the shortest binary string that\nyou can repeat to draw this image?",
         "courseD_artist_binary7_2019": "What is the shortest binary string that\nyou can repeat to draw this image?",
         "courseD_artist_binary7_2020": "What is the shortest binary string that\nyou can repeat to draw this image?",
+        "courseD_autorun_binary4_2019": "Can you draw this pattern by looping\njust three binary digits (0s and 1s)?",
+        "courseD_autorun_binary6_2019": "Which 6 digit binary string, repeated\n11 times, will draw this image?",
+        "courseD_autorun_binary7_2019": "What is the shortest binary string that\nyou can repeat to draw this image?",
         "courseD_bee_nestedLoops8": "Collect all of the nectar from each flower\nand make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. ",
         "courseD_bee_nestedLoops8_2018": "Collect all of the nectar from each flower\nand make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. ",
         "courseD_bee_nestedLoops8_2019": "Collect all of the nectar from each flower\nand make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. ",
@@ -310,6 +313,11 @@
         "frozen square loop": "Hi, I’m Anna of Arendelle! Let’s make a square\nwith the “Repeat” block, which uses fewer blocks. How many times (???) should\nthe “Repeat” block loop the blocks inside it to make a square?",
         "frozen square loop 3x": "Let's create three squares, turning after\neach square. Be sure to turn by 120 degrees before each new square.",
         "frozen square snowflake": "Can you create a snowflake using the\n“Repeat” block to make a square 10 times, and the “Turn” block to turn 36\ndegrees between each square?",
+        "grade5_artist_binary11": "Free Play: Here's a blank\ncanvas for you to draw on.  Have fun!",
+        "grade5_artist_binary4": "Can you draw this pattern by looping\njust three binary digits (0s and 1s)?",
+        "grade5_artist_binary5": "Each binary string represents one row\nof this picture. Can you rearrange them so it draws a smiley face instead\nof a frowny face?",
+        "grade5_artist_binary8": "Finish this drawing.",
+        "grade5_artist_binary9": "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we\nstart to get creative with the bits?",
         "k-1 maze 1": "Can you make me move West to get to the pig?"
       }
     }
