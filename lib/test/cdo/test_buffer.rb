@@ -1,5 +1,6 @@
 require_relative '../test_helper'
 require 'cdo/buffer'
+require 'benchmark'
 
 class BufferTest < Minitest::Test
   class TestBuffer < Cdo::Buffer
@@ -81,16 +82,14 @@ class BufferTest < Minitest::Test
   end
 
   def test_min_interval
-    b = TestBuffer.new(batch_count: 1, min_interval: 0.1)
-    start = Concurrent.monotonic_time
-    4.times {b.buffer('foo')}
-    b.flush!
-    finish = Concurrent.monotonic_time
-    assert_equal 4, b.flushes
-    time_taken = finish - start
-    # Given a min_interval of 1 second and 4 flushes, assert the flush! takes 3-4 seconds.
-    assert_operator time_taken, :>, 0.3
-    assert_operator time_taken, :<, 0.4
+    n = 4
+    interval = 0.1
+
+    b = TestBuffer.new(batch_count: 1, min_interval: interval)
+    Array.new(n) {Thread.new {b.buffer('foo')}}.each(&:join)
+    # Assert the flush! takes the expected amount of time to complete.
+    assert_in_delta (n - 1) * interval, Benchmark.realtime {b.flush!}, interval / 2
+    assert_equal n, b.flushes
   end
 
   def test_min_interval_no_flush
