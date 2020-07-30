@@ -83,7 +83,7 @@ class CoursesController < ApplicationController
     if unit_group.save
       redirect_to action: :edit, course_name: unit_group.name
     else
-      render 'new', locals: {course: unit_group}
+      render 'new', locals: {unit_group: unit_group}
     end
   end
 
