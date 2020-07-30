@@ -3,18 +3,18 @@
 - if @user_course_enrollments.empty?
   %p Course enrollments for the users you manage will show up here. Right now, you do not have any.
 -else
-  - @plc_courses.each do |course|
-    - enrollments = @user_course_enrollments.where(plc_course: course)
+  - @plc_courses.each do |plc_course|
+    - enrollments = @user_course_enrollments.where(plc_course: plc_course)
     - next if enrollments.empty?
 
     %h3
-      Viewing progress for #{course.name}
+      Viewing progress for #{plc_course.name}
 
     %table
       %thead
         %th
           Teacher Name
-        - course.plc_course_units.each do |course_unit|
+        - plc_course.plc_course_units.each do |course_unit|
           %th
             #{course_unit.unit_name}
       %tbody
