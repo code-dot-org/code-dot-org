@@ -54,3 +54,5 @@ function initializeBlocklyWrapper() {
 }
 
 window.Blockly = initializeBlocklyWrapper();
+
+module.exports = initializeBlocklyWrapper;
