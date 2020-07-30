@@ -229,7 +229,9 @@ DSL
       level 'sublevel_3_copy'
     DSL
 
-    # access a translation, to trigger any file reads, before we stub File.read
+    # Access a translation, to trigger any file reads, before we stub File.read.
+    # According to https://guides.rubyonrails.org/i18n.html, The translation
+    # files are lazy-loaded when a translation is looked up for the first time.
     I18n.t('auth.signed_in')
 
     File.stubs(:exist?).returns(true)
