@@ -3,7 +3,7 @@
 - if @user_course_enrollments.empty?
   %p Course enrollments for the users you manage will show up here. Right now, you do not have any.
 -else
-  - @courses.each do |course|
+  - @plc_courses.each do |course|
     - enrollments = @user_course_enrollments.where(plc_course: course)
     - next if enrollments.empty?
 
