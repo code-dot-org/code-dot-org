@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../../lib/cdo/only_one'
-exit unless only_one_running?(__FILE__)
+exit(1) unless only_one_running?(__FILE__)
 
 # If run with the "interactive" flag, runs all steps necessary for a full i18n
 # update:
