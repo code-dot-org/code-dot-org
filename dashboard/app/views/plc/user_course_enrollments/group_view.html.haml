@@ -23,4 +23,4 @@
             %td
               = link_to enrollment.user.name, '/plc/user_course_enrollments/manager_view/' + enrollment.id.to_s
             - enrollment.plc_unit_assignments.each do |unit_assignment|
-              %td #{unit_assignment.status.titleize}
+              %td= unit_assignment.status.titleize
