@@ -11,5 +11,6 @@
 #
 
 class Foorm::Submission < ActiveRecord::Base
-  belongs_to :foorm_form
+  has_one :metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
+  belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 end
