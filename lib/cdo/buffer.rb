@@ -33,7 +33,9 @@ module Cdo
       @min_interval = min_interval
       @log = log
 
-      @scheduled_flush = Concurrent::ScheduledTask.new(0.0) {}
+      @task = RescheduledTask.new(0.0, &method(:flush_batch)).
+        with_observer(&method(:schedule_flush))
+
       @buffer = []
 
       @ruby_pid = $$
@@ -77,11 +79,36 @@ module Cdo
         @log.info "Flushing #{self.class}, waiting #{wait} seconds"
         schedule_flush(true)
         # Block until the pending flush is completed or timeout is reached.
-        @scheduled_flush.wait(wait.infinite? ? nil : wait)
+        @task.wait(wait.infinite? ? nil : wait)
       end
     end
 
     private
+
+    # Extend ScheduledTask to support rescheduling after being executed.
+    class RescheduledTask < Concurrent::ScheduledTask
+      # Reschedule the task using the given delay and the current time.
+      # A task can be reset from any state except `:processing`.
+      #
+      # @yieldreturn [Float] number of seconds to wait for before executing the task.
+      #   Passed as a block instead of an argument for thread-safety.
+      def reschedule
+        synchronize do
+          delay = yield
+          if compare_and_set_state(:pending, :fulfilled, :rejected, :unscheduled)
+            event.reset
+            ns_schedule(delay)
+          else
+            super(delay)
+          end
+        end
+      end
+
+      # Don't delete observers after notifying so they can be reused.
+      def notify_observers(*)
+        observers.notify_observers
+      end
+    end
 
     # Track time each object was added to the buffer.
     BufferObject = Struct.new(:object, :added_at)
@@ -93,17 +120,7 @@ module Cdo
     # Schedule a flush in the future when the next batch is ready.
     # @param [Boolean] force flush batch even if not full.
     def schedule_flush(force = false)
-      @scheduled_flush.send(:synchronize) do
-        delay = batch_ready(force)
-        if @scheduled_flush.pending?
-          @scheduled_flush.reschedule(delay)
-        else
-          @scheduled_flush = Concurrent::ScheduledTask.execute(delay) do
-            flush_batch
-            schedule_flush unless @buffer.empty?
-          end
-        end
-      end
+      @task.reschedule {batch_ready(force)} unless @buffer.empty?
     end
 
     # Determine when the next batch of existing buffered objects will be ready to be flushed.
@@ -148,7 +165,7 @@ module Cdo
     def reset_if_forked
       if $$ != @ruby_pid
         @buffer.clear
-        @scheduled_flush.cancel
+        @task.cancel
         @ruby_pid = $$
       end
     end
