@@ -16,7 +16,9 @@
 #  index_course_scripts_on_script_id          (script_id)
 #
 
-class CourseScript < ApplicationRecord
+class UnitGroupUnit < ApplicationRecord
+  self.table_name = 'course_scripts'
+
   belongs_to :unit_group, foreign_key: 'course_id'
   belongs_to :script
 
@@ -26,7 +28,7 @@ class CourseScript < ApplicationRecord
 
   def self.experiments
     Rails.cache.fetch("course_script_experiments") do
-      CourseScript.where.not(experiment_name: nil).map(&:experiment_name)
+      UnitGroupUnit.where.not(experiment_name: nil).map(&:experiment_name)
     end
   end
 end

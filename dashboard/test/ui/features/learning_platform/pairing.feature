@@ -18,6 +18,8 @@ Feature: Student pairing
     Then I wait to see ".modal"
     And I wait until element "#confirm-button" is visible
     And I click selector "#confirm-button"
+    # safari sometimes doesn't wait for the page load to initiate before checking if it's finished
+    And I wait for 5 seconds
     And I wait until I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/8"
     And I wait for the page to fully load
     And I verify progress in the header of the current page is "perfect_assessment" for level 7
