@@ -61,7 +61,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "should serialize to json" do
-    unit_group = create(:unit_group, name: 'my-course', is_stable: true)
+    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
@@ -69,7 +69,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     serialization = unit_group.serialize
 
     obj = JSON.parse(serialization)
-    assert_equal 'my-course', obj['name']
+    assert_equal 'my-unit-group', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
     assert obj['properties']['is_stable']
   end
@@ -130,7 +130,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "summarize" do
-    unit_group = create :unit_group, name: 'my-course', family_name: 'my-family', version_year: '1999'
+    unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999'
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -138,8 +138,8 @@ class UnitGroupTest < ActiveSupport::TestCase
       'data' => {
         'course' => {
           'name' => {
-            'my-course' => {
-              'title' => 'my-course-title',
+            'my-unit-group' => {
+              'title' => 'my-unit-group-title',
               'description_short' => 'short description',
               'description_student' => 'Student description here',
               'description_teacher' => 'Teacher description here'
@@ -170,8 +170,8 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
                   :has_verified_resources, :versions, :show_assign_button], summary.keys
-    assert_equal 'my-course', summary[:name]
-    assert_equal 'my-course-title', summary[:title]
+    assert_equal 'my-unit-group', summary[:name]
+    assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
     assert_equal 'Student description here', summary[:description_student]
     assert_equal 'Teacher description here', summary[:description_teacher]
@@ -184,7 +184,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'script1-description', summary[:scripts][0]['description']
 
     assert_equal 1, summary[:versions].length
-    assert_equal 'my-course', summary[:versions].first[:name]
+    assert_equal 'my-unit-group', summary[:versions].first[:name]
     assert_equal '1999', summary[:versions].first[:version_year]
 
     # make sure we dont have stage info
@@ -211,7 +211,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
     setup do
-      @unit_group = create(:unit_group, name: 'my-course')
+      @unit_group = create(:unit_group, name: 'my-unit-group')
 
       @course_teacher = create :teacher
       @course_section = create :section, user: @course_teacher, unit_group: @unit_group
@@ -238,7 +238,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'unit group unit test data is properly initialized' do
-      assert_equal 'my-course', @unit_group.name
+      assert_equal 'my-unit-group', @unit_group.name
       assert_equal %w(script1 script2 script3), @unit_group.default_scripts.map(&:name)
       assert_equal %w(script2a), @unit_group.alternate_unit_group_units.map(&:script).map(&:name)
     end
