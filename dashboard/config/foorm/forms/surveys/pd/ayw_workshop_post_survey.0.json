@@ -1,0 +1,119 @@
+{
+ "pages": [
+   {
+    "name":"front page",
+    "elements":
+    [
+      {
+        "type":"library_item",
+        "library_name":"surveys/pd/workshop_elements",
+        "library_version": 0,
+        "name":"survey_preamble_header_and_text"
+      }
+    ]
+  },
+
+  {
+   "name":"satisfaction_page",
+   "title": "Workshop Satisfaction",
+   "elements": 
+   [
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/ayw_satisfaction_panel",
+      "library_version": 0,
+      "name":"workshop_satisfaction_panel"
+    },
+    {
+      "type":"library_item",
+      "library_name":"surveys/pd/ayw_virtual_panel",
+      "library_version": 0,
+      "name":"ayw_virtual_panel"
+    }
+
+  ]
+ },
+ {
+   "name":"module1_page",
+   "title": "Module 1 Feedback",
+
+   "elements": [
+    {"type":"html",
+      "title":"comment",
+      "name":"comment_module1",
+     "html":"<p style='background-color: yellow'>Showing module 1 as example. NEED TO re-add logic to show only if module1 == true.  <pre>'visibleIf': '{module1}='true''</pre>"
+    }
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/ayw_module_1",
+      "library_version": 0,
+      "name":"module_1_panel"
+    }
+  ]
+ },
+ {
+   "name":"module2_page",
+   "title": "Module 2 Feedback",
+   "visibleIf": "{module2}='true'",
+   "elements": [
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/ayw_module_2",
+      "library_version": 0,
+      "name":"module_panel"
+    }
+  ]
+ },
+ {
+   "name":"module3_page",
+   "title": "Module 3 Feedback",
+   "visibleIf": "{module3}='true'",
+   "elements": [
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/ayw_module_3",
+      "library_version": 0,
+      "name":"module_panel"
+    }
+  ]
+ },
+ {
+   "name":"module4_page",
+   "title": "Module 4 Feedback",
+   "visibleIf": "{module4}='true'",
+   "elements": [
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/ayw_module_4",
+      "library_version": 0,
+      "name":"module_panel"
+    }
+  ]
+ },
+ {
+   "name":"facilitator_feedback",
+   "title": "Facilitator Feedback",
+   "elements": [
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/facilitator_panel",
+      "library_version": 0,
+      "name":"facilitator_heading"
+    },
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/facilitator_panel",
+      "library_version": 0,
+      "name":"facilitators"
+    },
+   {
+      "type":"library_item",
+      "library_name":"surveys/pd/workshop_elements",
+      "library_version": 0,
+      "baker_comment":"Update this after learning what thank you page is actually",
+      "name":"thank_you_heading"
+    }
+  ]
+ }
+]
+}

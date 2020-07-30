@@ -6,6 +6,8 @@
     {
      "type": "panel",
      "name": "workshop_satisfaction_panel",
+          "title": "How much do you agree or disagree with the following statements about the workshop overall?",
+
      "elements": [
       {
        "type": "matrix",
