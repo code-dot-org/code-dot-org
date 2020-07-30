@@ -20,7 +20,7 @@
 # is an easy way to force a rebuild without needing to make a commit.
 #
 require_relative '../lib/cdo/only_one'
-exit(1) unless only_one_running?(__FILE__)
+exit(0) unless only_one_running?(__FILE__)
 
 require 'active_support/inflector'
 require_relative '../deployment'
