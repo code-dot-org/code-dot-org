@@ -589,11 +589,11 @@ class UnitGroupTest < ActiveSupport::TestCase
     pilot_section = create :section, user: pilot_teacher, unit_group: pilot_course
     assigned_pilot_student = create(:follower, section: pilot_section).student_user
 
-    # teacher in a pilot teacher's section, assigned to the course
+    # teacher in a pilot teacher's section, assigned to the unit group
     teacher_in_section = create :teacher
     create(:follower, section: pilot_section, student_user: teacher_in_section)
 
-    # student who has progress in a pilot course, but is not currently assigned to it
+    # student who has progress in a pilot unit group, but is not currently assigned to it
     other_section = create :section, user: pilot_teacher, unit_group: pilot_course
     pilot_student_with_progress = create :student
     create(:follower, section: other_section, student_user: pilot_student_with_progress)
