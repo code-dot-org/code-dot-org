@@ -102,7 +102,7 @@ class CoursesController < ApplicationController
 
     # We don't support an edit experience for plc courses
     raise ActiveRecord::ReadOnlyRecord if unit_group.try(:plc_course)
-    render 'edit', locals: {course: unit_group}
+    render 'edit', locals: {unit_group: unit_group}
   end
 
   def i18n_params
