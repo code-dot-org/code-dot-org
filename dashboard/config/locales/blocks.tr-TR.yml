@@ -968,6 +968,10 @@ tr:
         text: sprite {SPRITE} Başlar {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': saniye
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
         options:
@@ -1020,6 +1024,40 @@ tr:
             '"seconds"': saniye
       gamelab_hideTitleScreen:
         text: başlık ekranını gizle
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
+            '"a"': bir
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': J
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} kenarlara dokunuyor"
       gamelab_jumpTo:

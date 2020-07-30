@@ -487,6 +487,9 @@
         "courseD_artist_binary7_2018": "Hva er den korteste binærstrengen du kan repetere for å tegne dette bildet?",
         "courseD_artist_binary7_2019": "Hva er den korteste binærstrengen du kan repetere for å tegne dette bildet?",
         "courseD_artist_binary7_2020": "Hva er den korteste binærstrengen du kan repetere for å tegne dette bildet?",
+        "courseD_autorun_binary4_2019": "Kan du tegne dette mønsteret ved å kjøre en løkke over en tresifret binærstreng (0-er og 1-erer)?",
+        "courseD_autorun_binary6_2019": "Hvilken 6-siftret binærstreng, repetert 11 ganger, vil tegne dette bildet?",
+        "courseD_autorun_binary7_2019": "Hva er den korteste binærstrengen du kan repetere for å tegne dette bildet?",
         "courseD_bee_nestedLoops8": "Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.",
         "courseD_bee_nestedLoops8_2018": "Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.",
         "courseD_bee_nestedLoops8_2019": "Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.",
@@ -573,6 +576,11 @@
         "frozen square loop": "Hei, jeg heter Anna av Arendelle! La oss lage et kvadrat ved hjelp av \"Gjenta\" blokken som bruker færre blokker. Hvor mange ganger trenger \"Gjenta\" blokken gå gjennom blokkene inni for å lage et kvadrat?",
         "frozen square loop 3x": "La oss lage tre firkanter med spissen mot hverandre. Husk å snu 120 grader før hvert nytt firkant.",
         "frozen square snowflake": "Får du til å lage et snøfnugg ved å bruke \"repeter\"-blokken til å lage 10 kvadrater og \"Snu\"-blokken for å snu deg 36 grader mellom hvert kvadrat?",
+        "grade5_artist_binary11": "Fritt splitt: Her er et lerret med høyere oppløsning du kan tegne på - 16 biter ganger 16 biter!",
+        "grade5_artist_binary4": "Kan du tegne dette mønsteret ved å kjøre en løkke over en tresifret binærstreng (0-er og 1-erer)?",
+        "grade5_artist_binary5": "Hver binærstreng representerer en rad i dette bildet. Kan du ordne strengene slik at de tegner et smile-ansikt i stedet for et trist ansikt?",
+        "grade5_artist_binary8": "Fullfør tegningen.",
+        "grade5_artist_binary9": "Her er et lerret å tegne på med høyere oppløsning - 16 ganger 16 piskler!\\\r\n\\\r\nSe hva som skjer når vi blir kreative med bitene!",
         "k-1 maze 1": "Kan du bevege meg til vest for å komme til grisen?"
       }
     }

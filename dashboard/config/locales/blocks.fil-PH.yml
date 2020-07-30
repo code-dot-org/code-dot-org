@@ -974,6 +974,10 @@ fil:
         text: sprite {SPRITE} ay nagsisimula {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': mga segundo
       gamelab_changePropBy:
         text: palitan ang {SPRITE} {PROPERTY} ng {VAL}
         options:
@@ -1026,6 +1030,40 @@ fil:
             '"seconds"': mga segundo
       gamelab_hideTitleScreen:
         text: itago ang title screen
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': paitaas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': espasyo
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} ay hawakan gilid"
       gamelab_jumpTo:

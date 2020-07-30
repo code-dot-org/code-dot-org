@@ -1817,6 +1817,70 @@
             "name": "teikna bita"
           }
         },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
         "courseE_Dogger_2": {
           "stop_everything": {
             "name": "stöðva_allt"
@@ -3440,6 +3504,46 @@
           },
           "collect": {
             "name": "safna"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
           }
         }
       }

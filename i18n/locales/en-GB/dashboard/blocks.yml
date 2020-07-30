@@ -146,6 +146,11 @@ en-GB:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"space"': space
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

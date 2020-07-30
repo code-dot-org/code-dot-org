@@ -1645,12 +1645,12 @@ pl-PL:
       behaviors 1 predict:
         answers:
         - text: Duszek się zakręci.
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: Duszek się skurczy.
           correct: true
           feedback: Poprawnie!
         - text: Duszek się poruszy.
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: 'Duszek zmieni kolory.
 
 '
@@ -1660,12 +1660,12 @@ pl-PL:
       behaviors 1 predict_2020:
         answers:
         - text: Duszek się zakręci.
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: Duszek się skurczy.
           correct: true
           feedback: Poprawnie!
         - text: Duszek się poruszy.
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: 'Duszek zmieni kolory.
 
 '
@@ -1675,7 +1675,7 @@ pl-PL:
       behaviors 4 predict:
         answers:
         - text: W lewo, a potem w dół
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: Diagonalnie
           correct: true
           feedback: Poprawnie!
@@ -1688,7 +1688,7 @@ pl-PL:
       behaviors 4 predict_2020:
         answers:
         - text: W lewo, a potem w dół
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: Diagonalnie
           correct: true
           feedback: Poprawnie!
@@ -1700,180 +1700,180 @@ pl-PL:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
-        - text: Grafik narysuje trójkąt o trzech równych bokach.
-          feedback: Źle. Grafik rysuje kwadrat.
+        - text: Artysta narysuje trójkąt o trzech równych bokach.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - text: 'Artysta narysuje pojedynczą linię. '
-          feedback: Źle. Grafik rysuje kwadrat.
-        - text: Artysta rysuje prostokąt.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
+        - text: Artysta rysuje kwadrat.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Artysta rysuje prostokąt.
+          feedback: Artysta rysuje kwadrat.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - text: Grafik narysuje trójkąt o trzech równych bokach.
-          feedback: Źle. Grafik rysuje kwadrat.
+        - text: Artysta narysuje trójkąt o trzech równych bokach.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - text: 'Artysta narysuje pojedynczą linię. '
-          feedback: Źle. Grafik rysuje kwadrat.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Artysta rysuje prostokąt.
+          feedback: Artysta rysuje kwadrat.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - text: Grafik narysuje trójkąt o trzech równych bokach.
-          feedback: Źle. Grafik rysuje kwadrat.
+        - text: Artysta narysuje trójkąt o trzech równych bokach.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - text: 'Artysta narysuje pojedynczą linię. '
-          feedback: Źle. Grafik rysuje kwadrat.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Artysta rysuje prostokąt.
+          feedback: Artysta rysuje kwadrat.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - text: Grafik narysuje trójkąt o trzech równych bokach.
-          feedback: Źle. Grafik rysuje kwadrat.
+        - text: Artysta narysuje trójkąt o trzech równych bokach.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - text: 'Artysta narysuje pojedynczą linię. '
-          feedback: Źle. Grafik rysuje kwadrat.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Artysta rysuje prostokąt.
+          feedback: Artysta rysuje kwadrat.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
-          feedback: Źle. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje
-            12!
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
         - text: '12'
           correct: true
           feedback: Poprawnie!
         - text: '15'
-          feedback: Źle. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje
-            12!
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
         - text: Nie wiem.
           feedback: Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje 12!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer kiedy klikniesz
+        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer, kiedy klikniesz
             "Uruchom"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
-          feedback: Źle. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje
-            12!
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
         - text: '12'
           correct: true
           feedback: Poprawnie!
         - text: '15'
-          feedback: Źle. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje
-            12!
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
         - text: Nie wiem.
           feedback: Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje 12!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer kiedy klikniesz
+        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer, kiedy klikniesz
             "Uruchom"?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
-          feedback: Źle. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje
-            12!
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
         - text: '12'
           correct: true
           feedback: Poprawnie!
         - text: '15'
-          feedback: Źle. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje
-            12!
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
         - text: Nie wiem.
           feedback: Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje 12!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer kiedy klikniesz
+        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer, kiedy klikniesz
             "Uruchom"?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
-          feedback: Źle. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje
-            12!
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
         - text: '12'
           correct: true
           feedback: Poprawnie!
         - text: '15'
-          feedback: Źle. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje
-            12!
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
         - text: Nie wiem.
           feedback: Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy 3 daje 12!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer kiedy klikniesz
+        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer, kiedy klikniesz
             "Uruchom"?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Program nie zawiedzie. Scrat dotrze do żołędzia.
-          feedback: Źle. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
+          feedback: Niepoprawnie. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
         - text: Scrat pójdzie złą drogą po pokonaniu ostatniego zakrętu.
           correct: true
           feedback: Poprawnie!
-        - text: Scrat wykonuje o kilka kroków za dużo i nie zdobywa żołędzia
-          feedback: Źle. Wykonanie o jednego kroku za mało, ma miejsce po tym, gdy
-            Scrat skręca w niewłaściwą stronę.
+        - text: Scrat wykonuje o kilka kroków za mało i nie zdobywa żołędzia
+          feedback: Niepoprawnie. Wykonanie o jednego kroku za mało, ma miejsce po
+            tym, gdy Scrat skręca w niewłaściwą stronę.
         - text: Nie wiem.
-          feedback: 'Pierwszym błędem jest to , że Scrat idzie w złą stronę po pokonaniu
-            ostatniego zakrętu. '
+          feedback: 'Pierwszym błędem jest, że Scrat idzie w złą stronę po pokonaniu
+            ostatniego skrętu. '
         questions:
-        - text: Spójrz uważnie na kod poniżej. Który robal sprawi jako pierwszy, że
+        - text: Spójrz uważnie na kod poniżej. Który błąd sprawi jako pierwszy, że
             program przestanie działać?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - text: Program nie zawiedzie. Scrat dotrze do żołędzia.
-          feedback: Źle. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
+          feedback: Niepoprawnie. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
         - text: Scrat pójdzie złą drogą po pokonaniu ostatniego zakrętu.
           correct: true
           feedback: Poprawnie!
-        - text: Scrat wykonuje o kilka kroków za dużo i nie zdobywa żołędzia
-          feedback: Źle. Wykonanie o jednego kroku za mało, ma miejsce po tym, gdy
-            Scrat skręca w niewłaściwą stronę.
+        - text: Scrat wykonuje o kilka kroków za mało i nie zdobywa żołędzia
+          feedback: Niepoprawnie. Wykonanie o jednego kroku za mało, ma miejsce po
+            tym, gdy Scrat skręca w niewłaściwą stronę.
         - text: Nie wiem.
-          feedback: 'Pierwszym błędem jest to , że Scrat idzie w złą stronę po pokonaniu
-            ostatniego zakrętu. '
+          feedback: 'Pierwszym błędem jest, że Scrat idzie w złą stronę po pokonaniu
+            ostatniego skrętu. '
         questions:
-        - text: Spójrz uważnie na kod poniżej. Który robal sprawi jako pierwszy, że
+        - text: Spójrz uważnie na kod poniżej. Który błąd sprawi jako pierwszy, że
             program przestanie działać?
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - text: Program nie zawiedzie. Scrat dotrze do żołędzia.
-          feedback: Źle. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
+          feedback: Niepoprawnie. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
         - text: Scrat pójdzie złą drogą po pokonaniu ostatniego zakrętu.
           correct: true
           feedback: Poprawnie!
-        - text: Scrat wykonuje o kilka kroków za dużo i nie zdobywa żołędzia
-          feedback: Źle. Wykonanie o jednego kroku za mało, ma miejsce po tym, gdy
-            Scrat skręca w niewłaściwą stronę.
+        - text: Scrat wykonuje o kilka kroków za mało i nie zdobywa żołędzia
+          feedback: Niepoprawnie. Wykonanie o jednego kroku za mało, ma miejsce po
+            tym, gdy Scrat skręca w niewłaściwą stronę.
         - text: Nie wiem.
-          feedback: 'Pierwszym błędem jest to , że Scrat idzie w złą stronę po pokonaniu
-            ostatniego zakrętu. '
+          feedback: 'Pierwszym błędem jest, że Scrat idzie w złą stronę po pokonaniu
+            ostatniego skrętu. '
         questions:
-        - text: Spójrz uważnie na kod poniżej. Który robal sprawi jako pierwszy, że
+        - text: Spójrz uważnie na kod poniżej. Który błąd sprawi jako pierwszy, że
             program przestanie działać?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - text: Program nie zawiedzie. Scrat dotrze do żołędzia.
-          feedback: Źle. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
+          feedback: Niepoprawnie. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
         - text: Scrat pójdzie złą drogą po pokonaniu ostatniego zakrętu.
           correct: true
           feedback: Poprawnie!
-        - text: Scrat wykonuje o kilka kroków za dużo i nie zdobywa żołędzia
-          feedback: Źle. Wykonanie o jednego kroku za mało, ma miejsce po tym, gdy
-            Scrat skręca w niewłaściwą stronę.
+        - text: Scrat wykonuje o kilka kroków za mało i nie zdobywa żołędzia
+          feedback: Niepoprawnie. Wykonanie o jednego kroku za mało, ma miejsce po
+            tym, gdy Scrat skręca w niewłaściwą stronę.
         - text: Nie wiem.
-          feedback: 'Pierwszym błędem jest to , że Scrat idzie w złą stronę po pokonaniu
-            ostatniego zakrętu. '
+          feedback: 'Pierwszym błędem jest, że Scrat idzie w złą stronę po pokonaniu
+            ostatniego skrętu. '
         questions:
-        - text: Spójrz uważnie na kod poniżej. Który robal sprawi jako pierwszy, że
+        - text: Spójrz uważnie na kod poniżej. Który błąd sprawi jako pierwszy, że
             program przestanie działać?
       courseC_multi_maze_programming8_predict1:
         answers:
@@ -1935,7 +1935,7 @@ pl-PL:
         - text: BB-8 przemieści się tylko o jedno miejsce.
           feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
             5 razy.
-        - text: BB-8 przemieści się 5 razy ii zbierze cały złom
+        - text: BB-8 przemieści się 5 razy i zbierze cały złom
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem
@@ -1950,7 +1950,7 @@ pl-PL:
         - text: BB-8 przemieści się tylko o jedno miejsce.
           feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
             5 razy.
-        - text: BB-8 przemieści się 5 razy ii zbierze cały złom
+        - text: BB-8 przemieści się 5 razy i zbierze cały złom
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem
@@ -1965,7 +1965,7 @@ pl-PL:
         - text: BB-8 przemieści się tylko o jedno miejsce.
           feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
             5 razy.
-        - text: BB-8 przemieści się 5 razy ii zbierze cały złom
+        - text: BB-8 przemieści się 5 razy i zbierze cały złom
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem
@@ -1980,7 +1980,7 @@ pl-PL:
         - text: BB-8 przemieści się tylko o jedno miejsce.
           feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
             5 razy.
-        - text: BB-8 przemieści się 5 razy ii zbierze cały złom
+        - text: BB-8 przemieści się 5 razy i zbierze cały złom
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem
@@ -1989,127 +1989,127 @@ pl-PL:
         - text: Jak myślisz, co się stanie, gdy naciśniesz "Uruchom"?
       courseC_multi_starWars_predict2:
         answers:
-        - text: W ramach pierwszej pętli BB-8 pojedzie za daleko.
-          feedback: 'Źle. Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca,
-            gdy trzeba przemieścić się o 3 miejsca. '
-        - text: BB-8 nie dojedzie wystarczająco daleko w ramach pierwszej pętli, aby
-            zebrać cały złom.
+        - text: BB-8 pojedzie za daleko w pierwszej pętli.
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
+        - text: BB-8 nie dojedzie wystarczająco daleko w pierwszej pętli, aby zebrać
+            cały złom.
           correct: true
           feedback: Poprawnie!
         - text: BB-8 bez żadnego problemu zbierze cały złom
-          feedback: 'Źle. Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca,
-            gdy trzeba przemieścić się o 3 miejsca. '
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
         - text: Nie wiem.
-          feedback: 'Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca, gdy
-            trzeba przemieścić się o 3 miejsca. '
+          feedback: 'Pierwsza pętla pozwala BB-8 przemieścić się tylko o dwa miejsca,
+            gdy trzeba przemieścić się o 3 miejsca. '
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - text: W ramach pierwszej pętli BB-8 pojedzie za daleko.
-          feedback: 'Źle. Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca,
-            gdy trzeba przemieścić się o 3 miejsca. '
-        - text: BB-8 nie dojedzie wystarczająco daleko w ramach pierwszej pętli, aby
-            zebrać cały złom.
+        - text: BB-8 pojedzie za daleko w pierwszej pętli.
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
+        - text: BB-8 nie dojedzie wystarczająco daleko w pierwszej pętli, aby zebrać
+            cały złom.
           correct: true
           feedback: Poprawnie!
         - text: BB-8 bez żadnego problemu zbierze cały złom
-          feedback: 'Źle. Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca,
-            gdy trzeba przemieścić się o 3 miejsca. '
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
         - text: Nie wiem.
-          feedback: 'Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca, gdy
-            trzeba przemieścić się o 3 miejsca. '
+          feedback: 'Pierwsza pętla pozwala BB-8 przemieścić się tylko o dwa miejsca,
+            gdy trzeba przemieścić się o 3 miejsca. '
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - text: W ramach pierwszej pętli BB-8 pojedzie za daleko.
-          feedback: 'Źle. Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca,
-            gdy trzeba przemieścić się o 3 miejsca. '
-        - text: BB-8 nie dojedzie wystarczająco daleko w ramach pierwszej pętli, aby
-            zebrać cały złom.
+        - text: BB-8 pojedzie za daleko w pierwszej pętli.
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
+        - text: BB-8 nie dojedzie wystarczająco daleko w pierwszej pętli, aby zebrać
+            cały złom.
           correct: true
           feedback: Poprawnie!
         - text: BB-8 bez żadnego problemu zbierze cały złom
-          feedback: 'Źle. Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca,
-            gdy trzeba przemieścić się o 3 miejsca. '
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
         - text: Nie wiem.
-          feedback: 'Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca, gdy
-            trzeba przemieścić się o 3 miejsca. '
+          feedback: 'Pierwsza pętla pozwala BB-8 przemieścić się tylko o dwa miejsca,
+            gdy trzeba przemieścić się o 3 miejsca. '
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - text: W ramach pierwszej pętli BB-8 pojedzie za daleko.
-          feedback: 'Źle. Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca,
-            gdy trzeba przemieścić się o 3 miejsca. '
-        - text: BB-8 nie dojedzie wystarczająco daleko w ramach pierwszej pętli, aby
-            zebrać cały złom.
+        - text: BB-8 pojedzie za daleko w pierwszej pętli.
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
+        - text: BB-8 nie dojedzie wystarczająco daleko w pierwszej pętli, aby zebrać
+            cały złom.
           correct: true
           feedback: Poprawnie!
         - text: BB-8 bez żadnego problemu zbierze cały złom
-          feedback: 'Źle. Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca,
-            gdy trzeba przemieścić się o 3 miejsca. '
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
         - text: Nie wiem.
-          feedback: 'Pierwsza pętla pozwala BB-8 przemieścić się o dwa miejsca, gdy
-            trzeba przemieścić się o 3 miejsca. '
+          feedback: 'Pierwsza pętla pozwala BB-8 przemieścić się tylko o dwa miejsca,
+            gdy trzeba przemieścić się o 3 miejsca. '
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: B
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: B
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: R
           correct: true
           feedback: Poprawnie!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
+        - text: Spójrz uważnie na kod poniżej. Jaki wykona rysunek, gdy klikniesz
             "Uruchom"?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: B
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: B
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: R
           correct: true
           feedback: Poprawnie!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
+        - text: Spójrz uważnie na kod poniżej. Jaki wykona rysunek, gdy klikniesz
             "Uruchom"?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: B
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: B
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: R
           correct: true
           feedback: Poprawnie!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
+        - text: Spójrz uważnie na kod poniżej. Jaki wykona rysunek, gdy klikniesz
             "Uruchom"?
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: B
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: B
-          feedback: Źle.
+          feedback: Niepoprawnie.
         - text: R
           correct: true
           feedback: Poprawnie!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
+        - text: Spójrz uważnie na kod poniżej. Jaki wykona rysunek, gdy klikniesz
             "Uruchom"?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
@@ -2117,11 +2117,11 @@ pl-PL:
           correct: true
           feedback: Poprawnie!
         - text: B
-          feedback: Źle. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza
-            to 4 razy w okręgu.
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
         - text: B
-          feedback: Źle. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza
-            to 4 razy w okręgu.
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
         - text: Nie wiem.
           feedback: Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza to 4
             razy w okręgu.
@@ -2134,11 +2134,11 @@ pl-PL:
           correct: true
           feedback: Poprawnie!
         - text: B
-          feedback: Źle. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza
-            to 4 razy w okręgu.
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
         - text: B
-          feedback: Źle. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza
-            to 4 razy w okręgu.
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
         - text: Nie wiem.
           feedback: Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza to 4
             razy w okręgu.
@@ -2151,11 +2151,11 @@ pl-PL:
           correct: true
           feedback: Poprawnie!
         - text: B
-          feedback: Źle. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza
-            to 4 razy w okręgu.
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
         - text: B
-          feedback: Źle. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza
-            to 4 razy w okręgu.
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
         - text: Nie wiem.
           feedback: Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza to 4
             razy w okręgu.
@@ -2168,11 +2168,11 @@ pl-PL:
           correct: true
           feedback: Poprawnie!
         - text: B
-          feedback: Źle. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza
-            to 4 razy w okręgu.
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
         - text: B
-          feedback: Źle. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza
-            to 4 razy w okręgu.
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
         - text: Nie wiem.
           feedback: Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna powtarza to 4
             razy w okręgu.
@@ -2183,18 +2183,18 @@ pl-PL:
         answers:
         - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
             na okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
-        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar jeśli jest pod
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar, jeśli jest pod
             nią kwiatek.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do chmury i nie zrobi nic więcej, bez względu na
             okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
+            będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         - text: Nie wiem.
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
+          feedback: Blok "jeśli obok kwiatka" zapewnia, że pszczółka będzie próbować
             zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         questions:
         - text: Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
@@ -2205,18 +2205,18 @@ pl-PL:
         answers:
         - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
             na okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
-        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar jeśli jest pod
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar, jeśli jest pod
             nią kwiatek.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do chmury i nie zrobi nic więcej, bez względu na
             okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
+            będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         - text: Nie wiem.
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
+          feedback: Blok "jeśli obok kwiatka" zapewnia, że pszczółka będzie próbować
             zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         questions:
         - text: Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
@@ -2227,18 +2227,18 @@ pl-PL:
         answers:
         - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
             na okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
-        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar jeśli jest pod
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar, jeśli jest pod
             nią kwiatek.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do chmury i nie zrobi nic więcej, bez względu na
             okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
+            będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         - text: Nie wiem.
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
+          feedback: Blok "jeśli obok kwiatka" zapewnia, że pszczółka będzie próbować
             zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         questions:
         - text: Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
@@ -2249,18 +2249,18 @@ pl-PL:
         answers:
         - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
             na okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
-        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar jeśli jest pod
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar, jeśli jest pod
             nią kwiatek.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do chmury i nie zrobi nic więcej, bez względu na
             okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
+            będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         - text: Nie wiem.
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
+          feedback: Blok "jeśli obok kwiatka" zapewnia, że pszczółka będzie próbować
             zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         questions:
         - text: Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
@@ -2271,18 +2271,18 @@ pl-PL:
         answers:
         - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
             na okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
-        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar jeśli jest pod
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar, jeśli jest pod
             nią kwiatek.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do chmury i nie zrobi nic więcej, bez względu na
             okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
+            będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         - text: Nie wiem.
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
+          feedback: Blok "jeśli obok kwiatka" zapewnia, że pszczółka będzie próbować
             zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         questions:
         - text: Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
@@ -2297,14 +2297,14 @@ pl-PL:
           feedback: Poprawnie!
         - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
             plastrze miodu.
-          feedback: Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar z
-            każdego kwiatka i  miód na każdym plastrze miodu.
-        - text: Pszczółka podejmie próbę zebrania nektaru zarówno z kwiatków, jak
-            i z plastra miodu.
-          feedback: Źle. Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar
-            z każdego kwiatka i  miód na każdym plastrze miodu..
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatkau" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i  miód na każdym plastrze miodu.
+        - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
+            z plastra miodu.
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i  miód na każdym plastrze miodu..
         - text: Nie wiem.
-          feedback: Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar z każdego
+          feedback: Blok "jeśli obok kwiatka" pozwala pszczółce zebrać nektar z każdego
             kwiatka i  miód na każdym plastrze miodu.
         questions:
         - text: 'Przyjrzyj się uważnie poniższemu kodowi. Jak myślisz, co się stanie,
@@ -2318,14 +2318,14 @@ pl-PL:
           feedback: Poprawnie!
         - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
             plastrze miodu.
-          feedback: Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar z
-            każdego kwiatka i  miód na każdym plastrze miodu.
-        - text: Pszczółka podejmie próbę zebrania nektaru zarówno z kwiatków, jak
-            i z plastra miodu.
-          feedback: Źle. Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar
-            z każdego kwiatka i  miód na każdym plastrze miodu..
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatkau" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i  miód na każdym plastrze miodu.
+        - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
+            z plastra miodu.
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i  miód na każdym plastrze miodu..
         - text: Nie wiem.
-          feedback: Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar z każdego
+          feedback: Blok "jeśli obok kwiatka" pozwala pszczółce zebrać nektar z każdego
             kwiatka i  miód na każdym plastrze miodu.
         questions:
         - text: 'Przyjrzyj się uważnie poniższemu kodowi. Jak myślisz, co się stanie,
@@ -2337,8 +2337,8 @@ pl-PL:
           feedback: Poprawnie!
         - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
             plastrze miodu.
-        - text: Pszczółka podejmie próbę zebrania nektaru zarówno z kwiatków, jak
-            i z plastra miodu.
+        - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
+            z plastra miodu.
         - text: Nie wiem.
         questions:
         - {}
@@ -2348,181 +2348,173 @@ pl-PL:
           feedback: Poprawnie!
         - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
             plastrze miodu.
-        - text: Pszczółka podejmie próbę zebrania nektaru zarówno z kwiatków, jak
-            i z plastra miodu.
+        - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
+            z plastra miodu.
         - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - text: Pszczółka poleci do przodu i zbierze nektar tylko jeden raz.
-          feedback: Źle. Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+        - text: Pszczółka poleci do przodu i zbiera nektar tylko jeden raz.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         - text: Pszczółka zbierze tylko 2 nektary.
-          feedback: Źle. Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         - text: Pszczółka zbierze cały nektar.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+          feedback: Pszczółka wykonuje w pętli pętlę poruszania się do przodu i zbierania
+            nektaru, aby w ten sposób rozwiązać łamigłówkę.
         questions:
         - text: Spójrz uważnie na zagnieżdżone pętle poniżej. Co się stanie, gdy klikniesz
             "Uruchom"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - text: Pszczółka poleci do przodu i zbierze nektar tylko jeden raz.
-          feedback: Źle. Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+        - text: Pszczółka poleci do przodu i zbiera nektar tylko jeden raz.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         - text: Pszczółka zbierze tylko 2 nektary.
-          feedback: Źle. Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         - text: Pszczółka zbierze cały nektar.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+          feedback: Pszczółka wykonuje w pętli pętlę poruszania się do przodu i zbierania
+            nektaru, aby w ten sposób rozwiązać łamigłówkę.
         questions:
         - text: Spójrz uważnie na zagnieżdżone pętle poniżej. Co się stanie, gdy klikniesz
             "Uruchom"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - text: Pszczółka poleci do przodu i zbierze nektar tylko jeden raz.
-          feedback: Źle. Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+        - text: Pszczółka poleci do przodu i zbiera nektar tylko jeden raz.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         - text: Pszczółka zbierze tylko 2 nektary.
-          feedback: Źle. Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         - text: Pszczółka zbierze cały nektar.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+          feedback: Pszczółka wykonuje w pętli pętlę poruszania się do przodu i zbierania
+            nektaru, aby w ten sposób rozwiązać łamigłówkę.
         questions:
         - text: Spójrz uważnie na zagnieżdżone pętle poniżej. Co się stanie, gdy klikniesz
             "Uruchom"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - text: Pszczółka poleci do przodu i zbierze nektar tylko jeden raz.
-          feedback: Źle. Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+        - text: Pszczółka poleci do przodu i zbiera nektar tylko jeden raz.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         - text: Pszczółka zbierze tylko 2 nektary.
-          feedback: Źle. Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         - text: Pszczółka zbierze cały nektar.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Pszczółka wykonuje pętle działania w pętli w postaci przemieszczania
-            się do przodu i zbierania nektaru pozwalając jej rozwiązać zadanie.
+          feedback: Pszczółka wykonuje w pętli pętlę poruszania się do przodu i zbierania
+            nektaru, aby w ten sposób rozwiązać łamigłówkę.
         questions:
         - text: Spójrz uważnie na zagnieżdżone pętle poniżej. Co się stanie, gdy klikniesz
             "Uruchom"?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
-          feedback: Źle. Pszczółka zbiera nektar 2 w pętli przemieszczania się do
-            przodu, a następnie nektar 2 w pętli na dole.  To wszystko dzieje się
-            wewnątrz innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi
-            8!
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
         - text: '8'
           correct: true
           feedback: Poprawnie!
         - text: '12'
-          feedback: Źle. Pszczółka zbiera nektar 2 w pętli przemieszczania się do
-            przodu, a następnie nektar 2 w pętli na dole.  To wszystko dzieje się
-            wewnątrz innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi
-            8!
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
         - text: Nie wiem.
-          feedback: Pszczółka zbiera nektar 2 w pętli przemieszczania się do przodu,
-            a następnie nektar 2 w pętli na dole.  To wszystko dzieje się wewnątrz
-            innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi 8!
+          feedback: Pszczółka zbiera 2 nektary w pętli poruszając się do przodu, a
+            następnie 2 nektary w pętli do dołu. To wszystko dzieje się w innej pętli
+            dwukrotnie. 4 razy 2 wynosi 8!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
-            klikniesz "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Ile miodu zrobi pszczółka, kiedy klikniesz
+            "Uruchom"?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
-          feedback: Źle. Pszczółka zbiera nektar 2 w pętli przemieszczania się do
-            przodu, a następnie nektar 2 w pętli na dole.  To wszystko dzieje się
-            wewnątrz innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi
-            8!
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
         - text: '8'
           correct: true
           feedback: Poprawnie!
         - text: '12'
-          feedback: Źle. Pszczółka zbiera nektar 2 w pętli przemieszczania się do
-            przodu, a następnie nektar 2 w pętli na dole.  To wszystko dzieje się
-            wewnątrz innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi
-            8!
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
         - text: Nie wiem.
-          feedback: Pszczółka zbiera nektar 2 w pętli przemieszczania się do przodu,
-            a następnie nektar 2 w pętli na dole.  To wszystko dzieje się wewnątrz
-            innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi 8!
+          feedback: Pszczółka zbiera 2 nektary w pętli poruszając się do przodu, a
+            następnie 2 nektary w pętli do dołu. To wszystko dzieje się w innej pętli
+            dwukrotnie. 4 razy 2 wynosi 8!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
-            klikniesz "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Ile miodu zrobi pszczółka, kiedy klikniesz
+            "Uruchom"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
-          feedback: Źle. Pszczółka zbiera nektar 2 w pętli przemieszczania się do
-            przodu, a następnie nektar 2 w pętli na dole.  To wszystko dzieje się
-            wewnątrz innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi
-            8!
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
         - text: '8'
           correct: true
           feedback: Poprawnie!
         - text: '12'
-          feedback: Źle. Pszczółka zbiera nektar 2 w pętli przemieszczania się do
-            przodu, a następnie nektar 2 w pętli na dole.  To wszystko dzieje się
-            wewnątrz innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi
-            8!
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
         - text: Nie wiem.
-          feedback: Pszczółka zbiera nektar 2 w pętli przemieszczania się do przodu,
-            a następnie nektar 2 w pętli na dole.  To wszystko dzieje się wewnątrz
-            innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi 8!
+          feedback: Pszczółka zbiera 2 nektary w pętli poruszając się do przodu, a
+            następnie 2 nektary w pętli do dołu. To wszystko dzieje się w innej pętli
+            dwukrotnie. 4 razy 2 wynosi 8!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
-            klikniesz "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Ile miodu zrobi pszczółka, kiedy klikniesz
+            "Uruchom"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
-          feedback: Źle. Pszczółka zbiera nektar 2 w pętli przemieszczania się do
-            przodu, a następnie nektar 2 w pętli na dole.  To wszystko dzieje się
-            wewnątrz innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi
-            8!
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
         - text: '8'
           correct: true
           feedback: Poprawnie!
         - text: '12'
-          feedback: Źle. Pszczółka zbiera nektar 2 w pętli przemieszczania się do
-            przodu, a następnie nektar 2 w pętli na dole.  To wszystko dzieje się
-            wewnątrz innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi
-            8!
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
         - text: Nie wiem.
-          feedback: Pszczółka zbiera nektar 2 w pętli przemieszczania się do przodu,
-            a następnie nektar 2 w pętli na dole.  To wszystko dzieje się wewnątrz
-            innej pętli, która realizuje się dwukrotnie. 4 razy 2 wynosi 8!
+          feedback: Pszczółka zbiera 2 nektary w pętli poruszając się do przodu, a
+            następnie 2 nektary w pętli do dołu. To wszystko dzieje się w innej pętli
+            dwukrotnie. 4 razy 2 wynosi 8!
         questions:
-        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
-            klikniesz "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Ile miodu zrobi pszczółka, kiedy klikniesz
+            "Uruchom"?
       courseD_multi_collector_debugging10_predict1:
         answers:
         - text: Laurel wykona skręt w złym kierunku, przy tworzeniu kwadratu.
-          feedback: Źle. To było częściowo prawidłowe, ale pętla nie trwa wystarczająco
-            długo na to, aby zdobyć cały skarb.
-        - text: Pętla nie trwa wystarczająco długo, aby Laurel zdobyła cały skarb.
-          feedback: Źle. To było częściowo prawidłowe, ale pszczółka również wykonuje
-            skręt w niewłaściwą stronę, próbując wykonać kwadrat.
-        - text: Laurel wykonuje skręt w niewłaściwą stronę *i* pętla nie trwa wystarczająco
-            długo, aby Laurel zdobyła cały skarb.
+          feedback: Niepoprawnie. To było częściowo prawidłowe, ale pętla nie przebiega
+            wystarczająco długo na to, aby zdobyć cały skarb.
+        - text: Pętla nie przebiega wystarczająco długo, aby Laurel zdobyła cały skarb.
+          feedback: Niepoprawnie. To było częściowo prawidłowe, ale pszczółka również
+            wykonuje skręt w niewłaściwą stronę, próbując wykonać kwadrat.
+        - text: Laurel wykonuje skręt w niewłaściwą stronę *i* pętla nie przebiega
+            wystarczająco długo, aby Laurel zdobyła cały skarb.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Laurel wykonuje skręt w niewłaściwą stronę *i* pętla nie trwa
+          feedback: Laurel wykonuje skręt w niewłaściwą stronę *i* pętla nie przebiega
             wystarczająco długo, aby Laurel zdobyła cały skarb.
         questions:
         - text: 'Przyjrzyj się uważnie poniższemu kodowi. Dlaczego Laurel nie zbierze
@@ -2532,10 +2524,10 @@ pl-PL:
       courseD_multi_farmer_condLoops9_predict1:
         answers:
         - text: Żniwiarka zbierze cały plon.
-          feedback: " Źle. Nie ma kodu na zbieranie dyni."
+          feedback: Niepoprawnie. Nie ma tutaj kodu na zbieranie dyni.
         - text: Żniwiarka nie zbierze żadnych plonów na obranej przez siebie ścieżce.
-          feedback: Źle. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie wzoru
-            kaskadowego i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi.
+          feedback: Niepoprawnie. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie
+            wzoru kaskadowego i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi.
             Nie będzie zbierać dyń.
         - text: Żniwiarka zbierze cały plon, z wyjątkiem dyń.
           correct: true
@@ -2545,8 +2537,7 @@ pl-PL:
             i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi. Nie będzie zbierać
             dyń.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, po tym, gdy klikniesz
-            "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: Żniwiarka zbierze cały plon.
@@ -2555,8 +2546,7 @@ pl-PL:
           feedback: Poprawnie!
         - text: Nie wiem.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, po tym, gdy klikniesz
-            "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: Żniwiarka zbierze cały plon.
@@ -2565,8 +2555,7 @@ pl-PL:
           feedback: Poprawnie!
         - text: Nie wiem.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, po tym, gdy klikniesz
-            "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - text: Żniwiarka zbierze cały plon.
@@ -2575,25 +2564,24 @@ pl-PL:
           feedback: Poprawnie!
         - text: Nie wiem.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, po tym, gdy klikniesz
-            "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_farmer_ramp13:
         answers:
-        - text: Farmer przejdzie do końca ścieżki i zebrać dynię.
-          feedback: Źle. Blok "Zbierz dynię" znajduje się wewnątrz pętli, więc farmer
-            będzie zbierać dynie, przy każdym kroku, a nie tylko na końcu.
+        - text: Farmer przejdzie do końca ścieżki i zbierze dynię.
+          feedback: Niepoprawnie. Blok "zbierz dynię" znajduje się wewnątrz pętli,
+            więc farmer będzie zbierać dynie, przy każdym kroku, a nie tylko na końcu.
         - text: Farmer spróbuje zbierać dynie na każdym kwadracie, ale nigdy nie dojdzie
             do dyni.
           correct: true
           feedback: Poprawnie!
         - text: Farmer przejdzie cztery miejsca, a następnie spróbuje zebrać dynię.
-          feedback: Źle. Blok "Zbierz dynię" znajduje się wewnątrz pętli, więc farmer
-            będzie zbierać dynie, przy każdym kroku, a nie tylko na końcu.
+          feedback: Niepoprawnie. Blok "zbierz dynię" znajduje się wewnątrz pętli,
+            więc farmer będzie zbierać dynie, przy każdym kroku, a nie tylko na końcu.
         - text: Nie wiem.
-          feedback: Blok "Zbierz dynię" znajduje się wewnątrz pętli, więc farmer będzie
+          feedback: Blok "zbierz dynię" znajduje się wewnątrz pętli, więc farmer będzie
             zbierać dynie, przy każdym kroku, a nie tylko na końcu.
         markdown: |+
-          Tutaj jest nowy rodzaj zadania, w którym wykorzystuje się bloki podobne do tego, co już widziałeś. Czy może dokonać prognozy odnośnie tego, co się wydarzy, gdy uruchomimy poniższy kod?
+          Tutaj jest nowy rodzaj łamigłówki, w której wykorzystuje się bloki podobne do tego, co już widziałeś. Czy może przewidzieć, co się wydarzy, gdy uruchomisz poniższy kod?
 
 
         questions:
@@ -2601,150 +2589,146 @@ pl-PL:
       courseD_multi_farmer_while10_predict2:
         answers:
         - text: Nic. Ten kod pozostawi jedynie zniwelowany grunt.
-          feedback: " Źle. Nie ma kodu na usunięcie brudu z tego stosu."
-        - text: Ten kod pozostawi stertę w stanie całkowicie nietkniętym.
+          feedback: Niepoprawnie. Nie ma kodu na usunięcie brudu z tego stosu.
+        - text: Ten kod pozostawi stertę całkowicie nietkniętą.
           correct: true
           feedback: Poprawnie!
-        - text: Ten kod pozostawi dziury w stanie całkowicie nietkniętym.
-          feedback: ' Źle. Pętle "W trakcie" będzie obsługiwać pętle dowolnego rozmiaru,
-            natomiast nie ma kodu na usunięcie brudu z tej sterty.'
+        - text: Ten kod pozostawi dziury całkowicie nietknięte.
+          feedback: Niepoprawnie. Pętle "dopóki" będzie obsługiwać pętle dowolnego
+            rozmiaru, natomiast nie ma kodu do usunięcia brudu z tej sterty.
         - text: Nie wiem.
-          feedback: Pętle "W trakcie" będzie obsługiwać pętle dowolnego rozmiaru,
-            natomiast nie ma kodu na usunięcie brudu z tej sterty.
+          feedback: Pętla "dopóki" będzie obsługiwać pętle dowolnego rozmiaru, natomiast
+            nie ma kodu na usunięcie brudu z tej sterty.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co pozostanie pod koniec tego zadania?
+        - text: Spójrz uważnie na kod poniżej. Co pozostanie na końcu tej łamigłówki?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - text: Nic. Ten kod pozostawi jedynie zniwelowany grunt.
-          feedback: " Źle. Nie ma kodu na usunięcie brudu z tego stosu."
-        - text: Ten kod pozostawi stertę w stanie całkowicie nietkniętym.
+          feedback: Niepoprawnie. Nie ma kodu na usunięcie brudu z tego stosu.
+        - text: Ten kod pozostawi stertę całkowicie nietkniętą.
           correct: true
           feedback: Poprawnie!
-        - text: Ten kod pozostawi dziury w stanie całkowicie nietkniętym.
-          feedback: ' Źle. Pętle "W trakcie" będzie obsługiwać pętle dowolnego rozmiaru,
-            natomiast nie ma kodu na usunięcie brudu z tej sterty.'
+        - text: Ten kod pozostawi dziury całkowicie nietknięte.
+          feedback: Niepoprawnie. Pętle "dopóki" będzie obsługiwać pętle dowolnego
+            rozmiaru, natomiast nie ma kodu do usunięcia brudu z tej sterty.
         - text: Nie wiem.
-          feedback: Pętle "W trakcie" będzie obsługiwać pętle dowolnego rozmiaru,
-            natomiast nie ma kodu na usunięcie brudu z tej sterty.
+          feedback: Pętla "dopóki" będzie obsługiwać pętle dowolnego rozmiaru, natomiast
+            nie ma kodu na usunięcie brudu z tej sterty.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co pozostanie pod koniec tego zadania?
+        - text: Spójrz uważnie na kod poniżej. Co pozostanie na końcu tej łamigłówki?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - text: Nic. Ten kod pozostawi jedynie zniwelowany grunt.
-          feedback: " Źle. Nie ma kodu na usunięcie brudu z tego stosu."
-        - text: Ten kod pozostawi stertę w stanie całkowicie nietkniętym.
+          feedback: Niepoprawnie. Nie ma kodu na usunięcie brudu z tego stosu.
+        - text: Ten kod pozostawi stertę całkowicie nietkniętą.
           correct: true
           feedback: Poprawnie!
-        - text: Ten kod pozostawi dziury w stanie całkowicie nietkniętym.
-          feedback: ' Źle. Pętle "W trakcie" będzie obsługiwać pętle dowolnego rozmiaru,
-            natomiast nie ma kodu na usunięcie brudu z tej sterty.'
+        - text: Ten kod pozostawi dziury całkowicie nietknięte.
+          feedback: Niepoprawnie. Pętle "dopóki" będzie obsługiwać pętle dowolnego
+            rozmiaru, natomiast nie ma kodu do usunięcia brudu z tej sterty.
         - text: Nie wiem.
-          feedback: Pętle "W trakcie" będzie obsługiwać pętle dowolnego rozmiaru,
-            natomiast nie ma kodu na usunięcie brudu z tej sterty.
+          feedback: Pętla "dopóki" będzie obsługiwać pętle dowolnego rozmiaru, natomiast
+            nie ma kodu na usunięcie brudu z tej sterty.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co pozostanie pod koniec tego zadania?
+        - text: Spójrz uważnie na kod poniżej. Co pozostanie na końcu tej łamigłówki?
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - text: Nic. Ten kod pozostawi jedynie zniwelowany grunt.
-          feedback: " Źle. Nie ma kodu na usunięcie brudu z tego stosu."
-        - text: Ten kod pozostawi stertę w stanie całkowicie nietkniętym.
+          feedback: Niepoprawnie. Nie ma kodu na usunięcie brudu z tego stosu.
+        - text: Ten kod pozostawi stertę całkowicie nietkniętą.
           correct: true
           feedback: Poprawnie!
-        - text: Ten kod pozostawi dziury w stanie całkowicie nietkniętym.
-          feedback: ' Źle. Pętle "W trakcie" będzie obsługiwać pętle dowolnego rozmiaru,
-            natomiast nie ma kodu na usunięcie brudu z tej sterty.'
+        - text: Ten kod pozostawi dziury całkowicie nietknięte.
+          feedback: Niepoprawnie. Pętle "dopóki" będzie obsługiwać pętle dowolnego
+            rozmiaru, natomiast nie ma kodu do usunięcia brudu z tej sterty.
         - text: Nie wiem.
-          feedback: Pętle "W trakcie" będzie obsługiwać pętle dowolnego rozmiaru,
-            natomiast nie ma kodu na usunięcie brudu z tej sterty.
+          feedback: Pętla "dopóki" będzie obsługiwać pętle dowolnego rozmiaru, natomiast
+            nie ma kodu na usunięcie brudu z tej sterty.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co pozostanie pod koniec tego zadania?
+        - text: Spójrz uważnie na kod poniżej. Co pozostanie na końcu tej łamigłówki?
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: Nic się nie wydarzy.
-          feedback: Źle. Farmer będzie usuwać brud jeśli istnieje stos, a następnie
-            przestanie, gdy sterta przestanie istnieć.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
         - text: Farmer nigdy nie przestanie usuwać brudu.
-          feedback: Źle. Farmer będzie usuwać brud jeśli istnieje stos, a następnie
-            przestanie, gdy sterta przestanie istnieć.
-        - text: Farmer będzie usuwać brud jeśli istnieje stos, a następnie przestanie,
-            gdy stos przestanie istnieć.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
+        - text: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Farmer będzie usuwać brud jeśli istnieje stos, a następnie przestanie,
-            gdy stos przestanie istnieć
+          feedback: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, po tym, gdy klikniesz
-            "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: Nic się nie wydarzy.
-          feedback: Źle. Farmer będzie usuwać brud jeśli istnieje stos, a następnie
-            przestanie, gdy sterta przestanie istnieć.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
         - text: Farmer nigdy nie przestanie usuwać brudu.
-          feedback: Źle. Farmer będzie usuwać brud jeśli istnieje stos, a następnie
-            przestanie, gdy sterta przestanie istnieć.
-        - text: Farmer będzie usuwać brud jeśli istnieje stos, a następnie przestanie,
-            gdy stos przestanie istnieć.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
+        - text: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Farmer będzie usuwać brud jeśli istnieje stos, a następnie przestanie,
-            gdy stos przestanie istnieć
+          feedback: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, po tym, gdy klikniesz
-            "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: Nic się nie wydarzy.
-          feedback: Źle. Farmer będzie usuwać brud jeśli istnieje stos, a następnie
-            przestanie, gdy sterta przestanie istnieć.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
         - text: Farmer nigdy nie przestanie usuwać brudu.
-          feedback: Źle. Farmer będzie usuwać brud jeśli istnieje stos, a następnie
-            przestanie, gdy sterta przestanie istnieć.
-        - text: Farmer będzie usuwać brud jeśli istnieje stos, a następnie przestanie,
-            gdy stos przestanie istnieć.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
+        - text: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Farmer będzie usuwać brud jeśli istnieje stos, a następnie przestanie,
-            gdy stos przestanie istnieć
+          feedback: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, po tym, gdy klikniesz
-            "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: Nic się nie wydarzy.
-          feedback: Źle. Farmer będzie usuwać brud jeśli istnieje stos, a następnie
-            przestanie, gdy sterta przestanie istnieć.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
         - text: Farmer nigdy nie przestanie usuwać brudu.
-          feedback: Źle. Farmer będzie usuwać brud jeśli istnieje stos, a następnie
-            przestanie, gdy sterta przestanie istnieć.
-        - text: Farmer będzie usuwać brud jeśli istnieje stos, a następnie przestanie,
-            gdy stos przestanie istnieć.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
+        - text: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Farmer będzie usuwać brud jeśli istnieje stos, a następnie przestanie,
-            gdy stos przestanie istnieć
+          feedback: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, po tym, gdy klikniesz
-            "Uruchom"?
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until10_predict2:
         answers:
         - text: Zombie gwałtownie skręci w prawo i utknie.
           correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
-          feedback: Źle. W ramach tego kodu szuka skrętu w prawo *zanim* spojrzy czy
-            może iść prosto. Z tego względu zadania nie da się rozwiązać.
-        - text: Zombie skręci w prawo na pierwszej ścieżce i będzie już zawsze chodził
+          feedback: Niepoprawnie. W tym kodzie, szuka skrętu w prawo *zanim* spojrzy,
+            czy może iść prosto. Z tego powodu rozwizanie łamigłówki nie działa.
+        - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
-          feedback: Źle. Zombie szuka tylko skrętu w prawo lub ścieżki wiodącej prosto.
-            Nigdy nie szuka skrętu w lewo, zatem natychmiast się klinuje.
+          feedback: Niepoprawnie. Zombie szuka tylko skrętu w prawo lub ścieżki wiodącej
+            prosto. Nigdy nie szuka skrętu w lewo, zatem natychmiast się klinuje.
         - text: Nie wiem.
-          feedback: W ramach tego kodu szuka skrętu w prawo *zanim* spojrzy czy może
-            iść prosto. Z tego względu zadania nie da się rozwiązać.
+          feedback: W tym kodzie szuka skrętu w prawo *zanim* spojrzy czy może iść
+            prosto. Z tego powodu rozwizanie łamigłówki nie działa.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until10_predict2_2018:
@@ -2752,7 +2736,7 @@ pl-PL:
         - correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
-        - text: Zombie skręci w prawo na pierwszej ścieżce i będzie już zawsze chodził
+        - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
         - text: Nie wiem.
         questions:
@@ -2762,7 +2746,7 @@ pl-PL:
         - correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
-        - text: Zombie skręci w prawo na pierwszej ścieżce i będzie już zawsze chodził
+        - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
         - text: Nie wiem.
         questions:
@@ -2772,7 +2756,7 @@ pl-PL:
         - correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
-        - text: Zombie skręci w prawo na pierwszej ścieżce i będzie już zawsze chodził
+        - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
         - text: Nie wiem.
         questions:
@@ -2780,79 +2764,83 @@ pl-PL:
       courseD_multi_maze_until2_predict1:
         answers:
         - text: 'Ptak nie będzie się w ogóle poruszał. '
-          feedback: Źle! Kod sprawia, że ptak porusza się do przodu jeśli jest ścieżka,
-            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         - text: Ptak dotrze do świnki.
           correct: true
           feedback: Poprawnie!
         - text: Ptak będzie się poruszać do przodu i wpadnie na TNT.
-          feedback: Źle! Kod sprawia, że ptak porusza się do przodu o ile jest bezpieczna
-            ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest bezpieczna ścieżka, a następnie skręca w lewo. Robi to, aż dotrze
+            do świnki!
         - text: Nie wiem.
-          feedback: Kod sprawia, że ptak porusza się do przodu jeśli jest ścieżka,
-            a następnie skręca w lewo. Robi to, aż dotrze do świnki!.
+          feedback: Kod sprawia, że ptak porusza się do przodu, jeśli jest ścieżka,
+            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         questions:
         - text: Spójrz uważnie na kod poniżej. Jak myślisz, co się stanie, gdy klikniesz
             "Uruchom"?
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - text: 'Ptak nie będzie się w ogóle poruszał. '
-          feedback: Źle! Kod sprawia, że ptak porusza się do przodu jeśli jest ścieżka,
-            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         - text: Ptak dotrze do świnki.
           correct: true
           feedback: Poprawnie!
         - text: Ptak będzie się poruszać do przodu i wpadnie na TNT.
-          feedback: Źle! Kod sprawia, że ptak porusza się do przodu o ile jest bezpieczna
-            ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest bezpieczna ścieżka, a następnie skręca w lewo. Robi to, aż dotrze
+            do świnki!
         - text: Nie wiem.
-          feedback: Kod sprawia, że ptak porusza się do przodu jeśli jest ścieżka,
-            a następnie skręca w lewo. Robi to, aż dotrze do świnki!.
+          feedback: Kod sprawia, że ptak porusza się do przodu, jeśli jest ścieżka,
+            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         questions:
         - text: Spójrz uważnie na kod poniżej. Jak myślisz, co się stanie, gdy klikniesz
             "Uruchom"?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - text: 'Ptak nie będzie się w ogóle poruszał. '
-          feedback: Źle! Kod sprawia, że ptak porusza się do przodu jeśli jest ścieżka,
-            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         - text: Ptak dotrze do świnki.
           correct: true
           feedback: Poprawnie!
         - text: Ptak będzie się poruszać do przodu i wpadnie na TNT.
-          feedback: Źle! Kod sprawia, że ptak porusza się do przodu o ile jest bezpieczna
-            ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest bezpieczna ścieżka, a następnie skręca w lewo. Robi to, aż dotrze
+            do świnki!
         - text: Nie wiem.
-          feedback: Kod sprawia, że ptak porusza się do przodu jeśli jest ścieżka,
-            a następnie skręca w lewo. Robi to, aż dotrze do świnki!.
+          feedback: Kod sprawia, że ptak porusza się do przodu, jeśli jest ścieżka,
+            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         questions:
         - text: Spójrz uważnie na kod poniżej. Jak myślisz, co się stanie, gdy klikniesz
             "Uruchom"?
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - text: 'Ptak nie będzie się w ogóle poruszał. '
-          feedback: Źle! Kod sprawia, że ptak porusza się do przodu jeśli jest ścieżka,
-            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         - text: Ptak dotrze do świnki.
           correct: true
           feedback: Poprawnie!
         - text: Ptak będzie się poruszać do przodu i wpadnie na TNT.
-          feedback: Źle! Kod sprawia, że ptak porusza się do przodu o ile jest bezpieczna
-            ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest bezpieczna ścieżka, a następnie skręca w lewo. Robi to, aż dotrze
+            do świnki!
         - text: Nie wiem.
-          feedback: Kod sprawia, że ptak porusza się do przodu jeśli jest ścieżka,
-            a następnie skręca w lewo. Robi to, aż dotrze do świnki!.
+          feedback: Kod sprawia, że ptak porusza się do przodu, jeśli jest ścieżka,
+            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         questions:
         - text: Spójrz uważnie na kod poniżej. Jak myślisz, co się stanie, gdy klikniesz
             "Uruchom"?
       courseD_multi_scrat_predict1:
         answers:
-        - feedback: Źle. Umieszczenie bloku "Idź do przodu" wewnątrz bloku "Powtarzaj"
-            spowoduje, że Scrat pójdzie do przodu trzy razy.
+        - feedback: Niepoprawnie. Umieszczenie bloku "idź do przodu" wewnątrz bloku
+            "powtórz" spowoduje, że Scrat pójdzie do przodu trzy razy.
         - correct: true
           feedback: Poprawnie!
-        - feedback: Źle. Umieszczenie bloku "Idź do przodu" wewnątrz bloku "Powtarzaj"
-            spowoduje, że Scrat pójdzie do przodu trzy razy.
+        - feedback: Niepoprawnie. Umieszczenie bloku "idź do przodu" wewnątrz bloku
+            "powtórz" spowoduje, że Scrat pójdzie do przodu trzy razy.
         - text: Nie wiem.
         questions:
         - {}
@@ -2866,11 +2854,11 @@ pl-PL:
           feedback: Dobrze! To nie ma znaczenia, że jest inna ilość miodu. Funkcja
             jest zaprogramowana w taki sposób, aby sobie z tym radzić.
         - text: Pszczółka nie zrobi wystarczającej ilości miodu.
-          feedback: Źle. Funkcja jest zaprogramowana tak, aby poradzić sobie z dowolną
-            ilością miodu większą od 0.
+          feedback: Niepoprawnie. Funkcja jest zaprogramowana tak, aby poradzić sobie
+            z dowolną ilością miodu większą od 0.
         - text: Pszczółka będzie próbowała robić za dużo miodu.
-          feedback: Źle. Funkcja jest zaprogramowana tak, aby poradzić sobie z dowolną
-            ilością miodu większą od 0.
+          feedback: Niepoprawnie. Funkcja jest zaprogramowana tak, aby poradzić sobie
+            z dowolną ilością miodu większą od 0.
         - text: Nie wiem.
           feedback: Program będzie działał tak, aby rozwiązać również tę łamigłówkę.
             jest zaprogramowany tak, aby radzić sobie z dowolną ilością miodu większą
@@ -2885,10 +2873,11 @@ pl-PL:
           feedback: Źle. Pani żniwiarka nie wywołuje "Sprawdź i podnieś", zanim nie
             dotrze do kukurydzy.
         - text: Pani żniwiarka zbierze wszystkie dynie.
-          feedback: Źle. Pani żniwiarka nie wywołuje "Sprawdź i podnieś", zanim nie
-            dotrze do kukurydzy.
+          feedback: Niepoprawnie. Pani żniwiarka nie wywołuje "Sprawdź i podnieś",
+            zanim nie dotrze do kukurydzy.
         - text: Pani żniwiarka zbierze sałatę.
-          feedback: Źle. Pani żniwiarka wykonuje tylko jeden skręt i kończy przy kukurydzy.
+          feedback: Niepoprawnie. Pani żniwiarka wykonuje tylko jeden skręt i kończy
+            przy kukurydzy.
         - text: Pani żniwiarka zbierze kukurydzę.
           correct: true
           feedback: Poprawnie!
@@ -2927,75 +2916,85 @@ pl-PL:
       courseE_prediction_artistFunction1:
         answers:
         - text: Nic. Funkcja nie jest wywołana w programie.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje jeden kwadrat.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje dwa, nakładające się na siebie kwadraty.
-          feedback: Źle. Długość każdego boku kwadratu wynosi tylko 100 pikseli, ale
-            grafik przeskakuje o 175 pikseli pomiędzy funkcjami.
-        - text: Grafik narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje jeden kwadrat.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje dwa, nakładające się na siebie kwadraty.
+          feedback: Niepoprawnie. Długość każdego boku kwadratu wynosi tylko 100 pikseli,
+            ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
+        - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Żle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
+          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
             w międzyczasie.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseE_prediction_artistFunction1_2018:
         answers:
         - text: Nic. Funkcja nie jest wywołana w programie.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje jeden kwadrat.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje dwa, nakładające się na siebie kwadraty.
-          feedback: Źle. Długość każdego boku kwadratu wynosi tylko 100 pikseli, ale
-            grafik przeskakuje o 175 pikseli pomiędzy funkcjami.
-        - text: Grafik narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje jeden kwadrat.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje dwa, nakładające się na siebie kwadraty.
+          feedback: Niepoprawnie. Długość każdego boku kwadratu wynosi tylko 100 pikseli,
+            ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
+        - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Żle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
+          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
             w międzyczasie.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
         - text: Nic. Funkcja nie jest wywołana w programie.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje jeden kwadrat.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje dwa, nakładające się na siebie kwadraty.
-          feedback: Źle. Długość każdego boku kwadratu wynosi tylko 100 pikseli, ale
-            grafik przeskakuje o 175 pikseli pomiędzy funkcjami.
-        - text: Grafik narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje jeden kwadrat.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje dwa, nakładające się na siebie kwadraty.
+          feedback: Niepoprawnie. Długość każdego boku kwadratu wynosi tylko 100 pikseli,
+            ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
+        - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Żle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
+          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
             w międzyczasie.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - text: Nic. Funkcja nie jest wywołana w programie.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje jeden kwadrat.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje dwa, nakładające się na siebie kwadraty.
-          feedback: Źle. Długość każdego boku kwadratu wynosi tylko 100 pikseli, ale
-            grafik przeskakuje o 175 pikseli pomiędzy funkcjami.
-        - text: Grafik narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje jeden kwadrat.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje dwa, nakładające się na siebie kwadraty.
+          feedback: Niepoprawnie. Długość każdego boku kwadratu wynosi tylko 100 pikseli,
+            ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
+        - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Żle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
+          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
             w międzyczasie.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseE_prediction_artistFunction1_copy:
         answers:
         - text: Nic. Funkcja nie jest wywołana w programie.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje jeden kwadrat.
-          feedback: Żle. Funkcja jest tak naprawdę wywołana dwukrotnie w programie.
-        - text: Grafik narysuje dwa, nakładające się na siebie kwadraty.
-          feedback: Źle. Długość każdego boku kwadratu wynosi tylko 100 pikseli, ale
-            grafik przeskakuje o 175 pikseli pomiędzy funkcjami.
-        - text: Grafik narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje jeden kwadrat.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje dwa, nakładające się na siebie kwadraty.
+          feedback: Niepoprawnie. Długość każdego boku kwadratu wynosi tylko 100 pikseli,
+            ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
+        - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Żle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
+          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
             w międzyczasie.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
@@ -3208,18 +3207,18 @@ pl-PL:
         answers:
         - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
             na okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
-        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar jeśli jest pod
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar, jeśli jest pod
             nią kwiatek.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do chmury i nie zrobi nic więcej, bez względu na
             okoliczności. '
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
-            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
+            będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         - text: Nie wiem.
-          feedback: Źle. Blok 'Jeśli obok kwiatka" zapewnia, że pszczoła będzie próbować
+          feedback: Blok "jeśli obok kwiatka" zapewnia, że pszczółka będzie próbować
             zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         markdown: 'Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
           pszczółka będzie musiała zebrać nektar **raz**. '
@@ -3236,8 +3235,8 @@ pl-PL:
           feedback: Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar z
             każdego kwiatka i  robić miód jeśli kwiatka nie będzie (a zatem będzie
             plaster miodu.).
-        - text: Pszczółka podejmie próbę zebrania nektaru zarówno z kwiatków, jak
-            i z plastra miodu.
+        - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
+            z plastra miodu.
           feedback: Źle. Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar
             z każdego kwiatka i  miód na każdym plastrze miodu.
         - text: Nie wiem.
@@ -3359,58 +3358,62 @@ pl-PL:
             "Ali"?
       coursee_prediction_artistfunction2:
         answers:
-        - text: Grafik rozwiąże tę łamigłówkę poprawnie.
-          feedback: Źle. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj rząd
-            wielokątów".
-        - text: Grafik narysuje cztery kwadraty w schemacie okna.
+        - text: Artysta rozwiąże tę łamigłówkę poprawnie.
+          feedback: Niepoprawnie. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj
+            rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty w postaci okna.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik narysuje tylko jeden rząd kwadratów.
-          feedback: Źle. Program nie wywołuje "Narysuj rząd wielokątów".
-        - text: Grafik narysuje cztery kwadraty, jeden na drugim.
-          feedback: Źle. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj wielokąt".
+        - text: Artysta narysuje tylko jeden rząd kwadratów.
+          feedback: Niepoprawnie. Program nie wywołuje "Narysuj rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty, jeden na drugim.
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj
+            wielokąt".
         questions:
         - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - text: Grafik rozwiąże tę łamigłówkę poprawnie.
-          feedback: Źle. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj rząd
-            wielokątów".
-        - text: Grafik narysuje cztery kwadraty w schemacie okna.
+        - text: Artysta rozwiąże tę łamigłówkę poprawnie.
+          feedback: Niepoprawnie. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj
+            rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty w postaci okna.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik narysuje tylko jeden rząd kwadratów.
-          feedback: Źle. Program nie wywołuje "Narysuj rząd wielokątów".
-        - text: Grafik narysuje cztery kwadraty, jeden na drugim.
-          feedback: Źle. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj wielokąt".
+        - text: Artysta narysuje tylko jeden rząd kwadratów.
+          feedback: Niepoprawnie. Program nie wywołuje "Narysuj rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty, jeden na drugim.
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj
+            wielokąt".
         questions:
         - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - text: Grafik rozwiąże tę łamigłówkę poprawnie.
-          feedback: Źle. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj rząd
-            wielokątów".
-        - text: Grafik narysuje cztery kwadraty w schemacie okna.
+        - text: Artysta rozwiąże tę łamigłówkę poprawnie.
+          feedback: Niepoprawnie. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj
+            rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty w postaci okna.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik narysuje tylko jeden rząd kwadratów.
-          feedback: Źle. Program nie wywołuje "Narysuj rząd wielokątów".
-        - text: Grafik narysuje cztery kwadraty, jeden na drugim.
-          feedback: Źle. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj wielokąt".
+        - text: Artysta narysuje tylko jeden rząd kwadratów.
+          feedback: Niepoprawnie. Program nie wywołuje "Narysuj rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty, jeden na drugim.
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj
+            wielokąt".
         questions:
         - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
-        - text: Grafik rozwiąże tę łamigłówkę poprawnie.
-          feedback: Źle. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj rząd
-            wielokątów".
-        - text: Grafik narysuje cztery kwadraty w schemacie okna.
+        - text: Artysta rozwiąże tę łamigłówkę poprawnie.
+          feedback: Niepoprawnie. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj
+            rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty w postaci okna.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik narysuje tylko jeden rząd kwadratów.
-          feedback: Źle. Program nie wywołuje "Narysuj rząd wielokątów".
-        - text: Grafik narysuje cztery kwadraty, jeden na drugim.
-          feedback: Źle. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj wielokąt".
+        - text: Artysta narysuje tylko jeden rząd kwadratów.
+          feedback: Niepoprawnie. Program nie wywołuje "Narysuj rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty, jeden na drugim.
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj
+            wielokąt".
         questions:
         - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
       csd-pre-survey-2017-levelgroup:
@@ -3430,33 +3433,33 @@ pl-PL:
       grade2_multi_collector_A_predict1:
         answers:
         - text: Przy pomocy tego kodu Laurel zbierze 4 elementy skarbu.
-          feedback: Źle. Laurel próbuje zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
-        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
+        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co spowoduje
+            błąd.
           correct: true
           feedback: Poprawnie!
         - text: Laurel zbierze cały skarb.
-          feedback: Źle. Laurel próbuje zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
         - text: Nie wiem.
           feedback: Laurel próbuje zebrać skarb tam, gdzie go nie ma i powoduje powstanie
             błędu.
         questions:
-        - text: Przyjrzyj się uważnie kodowi poniżej. Jeśli kod pracowałby do końca
-            (ignorując wszelkie błędy) ile elementów skarbu zebrałaby Laurel?
+        - text: Przyjrzyj się uważnie kodowi poniżej. Jeśli kod działałby do końca
+            (ignorując wszelkie błędy), ile elementów skarbu zebrałaby Laurel?
       grade2_multi_collector_A_predict1_2018:
         answers:
         - text: Przy pomocy tego kodu Laurel zbierze 4 elementy skarbu.
-          feedback: Źle. Laurel próbuje zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
-        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
+        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co spowoduje
+            błąd.
           correct: true
           feedback: Poprawnie!
         - text: Laurel zbierze cały skarb.
-          feedback: Źle. Laurel próbuje zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
         - text: Nie wiem.
           feedback: Laurel próbuje zebrać skarb tam, gdzie go nie ma i powoduje powstanie
             błędu.
@@ -3465,15 +3468,15 @@ pl-PL:
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: Przy pomocy tego kodu Laurel zbierze 4 elementy skarbu.
-          feedback: Źle. Laurel próbuje zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
-        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
+        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co spowoduje
+            błąd.
           correct: true
           feedback: Poprawnie!
         - text: Laurel zbierze cały skarb.
-          feedback: Źle. Laurel próbuje zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
         - text: Nie wiem.
           feedback: Laurel próbuje zebrać skarb tam, gdzie go nie ma i powoduje powstanie
             błędu.
@@ -3482,15 +3485,15 @@ pl-PL:
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: Przy pomocy tego kodu Laurel zbierze 4 elementy skarbu.
-          feedback: Źle. Laurel próbuje zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
-        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
+        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co spowoduje
+            błąd.
           correct: true
           feedback: Poprawnie!
         - text: Laurel zbierze cały skarb.
-          feedback: Źle. Laurel próbuje zebrać skarb tam, gdzie go nie ma, co powoduje
-            powstanie błędu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
         - text: Nie wiem.
           feedback: Laurel próbuje zebrać skarb tam, gdzie go nie ma i powoduje powstanie
             błędu.

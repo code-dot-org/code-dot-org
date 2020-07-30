@@ -897,6 +897,10 @@ ta:
         text: செட்அப்
       Dancelab_whenSetup2:
         text: செட்அப்
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': விநாடிகள்
       gamelab_changePropBy:
         text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
@@ -921,6 +925,39 @@ ta:
         options:
           UNIT:
             '"seconds"': விநாடிகள்
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': மேலே
+            '"down"': கீழே
+            '"left"': இடது
+            '"right"': வலது
+            '"space"': வெளி
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} குதிக்கவும் {LOCATION}"
       gamelab_keyPressed:

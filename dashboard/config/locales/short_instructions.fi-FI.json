@@ -341,7 +341,9 @@
         "frozen square iterative": "Näyttää siltä että olemme puolivälissä neliön piirtämisessä. Yhdistetäänpä 4 viivaa, niin muodostuu neliö.",
         "frozen square loop": "Hei, olen Arendellen Anna! Tehdäänpä neliö käyttäen \"Toista\"-lohkoa, jolloin tarvitaan vähemmän lohkoja. Kuinka monta kertaa (???) \"Toista\"-lohkossa olevat lohkot pitää toistaa?",
         "frozen square loop 3x": "Luodaanpa kolme neliötä, kääntyen kunkin neliön jälkeen. Pidä huolta että käännyt 120 astetta ennen kutakin uutta neliötä.",
-        "frozen square snowflake": "Osaatko luoda lumihiutaleen käyttäen \"toista\"-lohkoa 10 neliön tekemiseen ja \"käänny\"-lohkoa 36 asteen käännökseen neliöiden välillä?"
+        "frozen square snowflake": "Osaatko luoda lumihiutaleen käyttäen \"toista\"-lohkoa 10 neliön tekemiseen ja \"käänny\"-lohkoa 36 asteen käännökseen neliöiden välillä?",
+        "grade5_artist_binary11": "Vapaa leikki: Tässä sinulle tyhjä maalauspohja, jolle voit piirtää. Pidä hauskaa!",
+        "grade5_artist_binary8": "Tee tämä piirustus valmiiksi."
       }
     }
   }

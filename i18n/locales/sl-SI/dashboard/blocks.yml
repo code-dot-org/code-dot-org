@@ -394,6 +394,10 @@ sl:
             '"space"': vesolje
             '"x"': x
             '"y"': 'y'
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -415,6 +419,16 @@ sl:
         options:
           UNIT:
             '"seconds"': sekund(e)
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:
