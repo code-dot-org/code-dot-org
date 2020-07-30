@@ -45,7 +45,9 @@ export class ConfirmEnableMakerDialog extends Component {
         isOpen={this.props.isOpen}
         confirmText={experiments.isEnabled('microbit') ? null : msg.enable()}
         onConfirm={
-          experiments.isEnabled('microbit') ? null : this.props.handleConfirm
+          experiments.isEnabled('microbit')
+            ? null
+            : () => this.props.handleConfirm('circuitPlayground')
         }
         onCancel={
           experiments.isEnabled('microbit') ? null : this.props.handleCancel
@@ -72,11 +74,13 @@ export class ConfirmEnableMakerDialog extends Component {
               <div style={style.footerButtons}>
                 <Cancel onClick={this.props.handleCancel} />
                 <div>
-                  <Confirm onClick={this.props.handleConfirm}>
+                  <Confirm onClick={() => this.props.handleConfirm('microbit')}>
                     {msg.useMicroBit()}
                   </Confirm>
                   <Confirm
-                    onClick={this.props.handleConfirm}
+                    onClick={() =>
+                      this.props.handleConfirm('circuitPlayground')
+                    }
                     style={style.buttonGroupSpacing}
                   >
                     {msg.useCircuitPlayground()}

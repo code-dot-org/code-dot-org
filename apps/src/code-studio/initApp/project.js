@@ -1217,13 +1217,13 @@ var projects = (module.exports = {
    * so that the toolbox gets re-initialized.
    * @returns {Promise} (mostly useful for tests)
    */
-  toggleMakerEnabled() {
+  setMakerEnabled(apisEnabled) {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
-            makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
+            makerAPIsEnabled: apisEnabled
           },
           () => {
             resolve();
