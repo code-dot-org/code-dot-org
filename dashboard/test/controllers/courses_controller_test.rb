@@ -17,7 +17,7 @@ class CoursesControllerTest < ActionController::TestCase
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
 
-    @course_regular = create :unit_group, name: 'non-plc-course'
+    @unit_group_regular = create :unit_group, name: 'non-plc-course'
 
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
@@ -38,7 +38,7 @@ class CoursesControllerTest < ActionController::TestCase
   # Tests for show
 
   test "show: regular courses get sent to show" do
-    get :show, params: {course_name: @course_regular.name}
+    get :show, params: {course_name: @unit_group_regular.name}
     assert_template 'courses/show'
   end
 
@@ -48,9 +48,9 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
-  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}, queries: 8
+  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 8
 
-  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 2
+  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
 
   test "show: redirect to latest stable version in course family" do
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
