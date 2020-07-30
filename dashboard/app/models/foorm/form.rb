@@ -88,4 +88,44 @@ class Foorm::Form < ActiveRecord::Base
     end
     return questions
   end
+
+  def submissions_to_csv
+    formatted_submissions = []
+
+    submissions.each do |submission|
+      formatted_submission = {}
+
+      parsed_answers = JSON.parse submission.answers
+      parsed_questions[:general][key].each do |question_id, question_details|
+        if question_details[:type] == 'matrix'
+          section_preamble = question_details[:title]
+          matrix_questions_full_text = question_details[:rows]
+          parsed_answers[question_id].each do |matrix_question_id, answer|
+            # "Right now, I know how to... >> Teach CS: 1"
+            question_full_text_key = "#{section_preamble} >> #{matrix_questions_full_text[matrix_question_id]}"
+            formatted_submission[question_full_text_key] = answer
+          end
+        else
+          puts "#{question_details[:title]}: #{parsed_answers[question_id]}"
+        end
+      end
+
+      formatted_submission['user_id'] = submission.metadata&.user&.id
+      formatted_submission['pd_workshop_id'] = submission.metadata&.pd_workshop&.id
+      formatted_submission['pd_session_id'] = submission.metadata&.pd_session&.id
+
+      formatted_submissions << formatted_submission
+    end
+
+    CSV.open("/Users/benjaminbrooks/data.csv", "wb") do |csv|
+      csv << formatted_submissions.first.keys
+      formatted_submissions.each do |hash|
+        csv << hash.values
+      end
+    end
+  end
+
+  def parsed_questions
+    Pd::Foorm::FoormParser.parse_forms([self])
+  end
 end
