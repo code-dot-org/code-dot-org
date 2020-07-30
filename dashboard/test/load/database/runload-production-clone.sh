@@ -29,6 +29,9 @@ max_db_connections=4000
 # Threads per sysbench client.
 threads=20
 
+# Number of events each thread should execute per second.
+rate=5
+
 # Each sysbench thread opens one database connection.
 let num_sysbench_clients=max_db_connections/threads
 
@@ -39,7 +42,7 @@ mysql -h$1 -udb -p$PASSWORD -e "drop schema if exists sysbench;create schema sys
 # Launch multiple sysbench clients
 for i in $(seq 1 $num_sysbench_clients)
 do
-	(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --threads=$threads --time=1800 --mysql-ignore-errors=all run)&
+	(/home/ec2-user/sysbench/src/sysbench ./$2 --mysql-host=$1 --mysql-port=3306 --mysql-db=sysbench --mysql-user=db --mysql-password=$PASSWORD --db-driver=mysql --threads=$threads --rate=$rate --time=1800 --mysql-ignore-errors=all run)&
 
 	# Sleep one second
 	sleep 1
