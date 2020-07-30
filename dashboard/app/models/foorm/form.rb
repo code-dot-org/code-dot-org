@@ -19,6 +19,8 @@ class Foorm::Form < ActiveRecord::Base
 
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 
+  # We have a uniqueness constraint on form name and version for this table.
+  # This key format is used elsewhere in Foorm to uniquely identify a form.
   def key
     "#{name}.#{version}"
   end
@@ -89,19 +91,22 @@ class Foorm::Form < ActiveRecord::Base
     return questions
   end
 
+  # For a given Form, this method will produce a CSV of all responses
+  # received for that Form. It includes the content of the form submitted
+  # by a user, as well as some additional metadata about the context
+  # in which the form was submitted (eg, workshop ID, user ID).
   def submissions_to_csv
     formatted_submissions = []
 
     submissions.each do |submission|
       formatted_submission = {}
 
-      parsed_answers = JSON.parse submission.answers
+      parsed_answers = JSON.parse(submission.answers)
       parsed_questions[:general][key].each do |question_id, question_details|
         if question_details[:type] == 'matrix'
           section_preamble = question_details[:title]
           matrix_questions_full_text = question_details[:rows]
           parsed_answers[question_id].each do |matrix_question_id, answer|
-            # "Right now, I know how to... >> Teach CS: 1"
             question_full_text_key = "#{section_preamble} >> #{matrix_questions_full_text[matrix_question_id]}"
             formatted_submission[question_full_text_key] = answer
           end
