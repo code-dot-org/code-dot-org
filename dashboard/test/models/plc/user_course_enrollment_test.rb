@@ -81,8 +81,8 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
 
   test 'unenrolling a user from one of multiple course enrollments does not remove their authorized teacher user permission' do
     create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
-    course2 = create :plc_course, name: 'course2'
-    enrollment2 = create(:plc_user_course_enrollment, user: @user, plc_course: course2)
+    plc_course2 = create :plc_course, name: 'plc_course2'
+    enrollment2 = create(:plc_user_course_enrollment, user: @user, plc_course: plc_course2)
     assert UserPermission.exists?(user_id: @user.id, permission: UserPermission::AUTHORIZED_TEACHER)
 
     enrollment2.destroy
