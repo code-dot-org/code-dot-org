@@ -211,10 +211,10 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
     setup do
-      @course = create(:unit_group, name: 'my-course')
+      @unit_group = create(:unit_group, name: 'my-course')
 
       @course_teacher = create :teacher
-      @course_section = create :section, user: @course_teacher, unit_group: @course
+      @course_section = create :section, user: @course_teacher, unit_group: @unit_group
       @other_teacher = create :teacher
       @other_section = create :section, user: @other_teacher
       @student = create :student
@@ -224,29 +224,29 @@ class UnitGroupTest < ActiveSupport::TestCase
       @script2a = create(:script, name: 'script2a')
       @script3 = create(:script, name: 'script3')
 
-      create :unit_group_unit, unit_group: @course, script: @script1, position: 1
+      create :unit_group_unit, unit_group: @unit_group, script: @script1, position: 1
 
-      @unit_group_unit = create :unit_group_unit, unit_group: @course, script: @script2, position: 2
+      @unit_group_unit = create :unit_group_unit, unit_group: @unit_group, script: @script2, position: 2
       @alternate_unit_group_unit = create :unit_group_unit,
-        unit_group: @course,
+        unit_group: @unit_group,
         script: @script2a,
         position: 2,
         default_script: @script2,
         experiment_name: 'my-experiment'
 
-      create :unit_group_unit, unit_group: @course, script: @script3, position: 3
+      create :unit_group_unit, unit_group: @unit_group, script: @script3, position: 3
     end
 
     test 'unit group unit test data is properly initialized' do
-      assert_equal 'my-course', @course.name
-      assert_equal %w(script1 script2 script3), @course.default_scripts.map(&:name)
-      assert_equal %w(script2a), @course.alternate_unit_group_units.map(&:script).map(&:name)
+      assert_equal 'my-course', @unit_group.name
+      assert_equal %w(script1 script2 script3), @unit_group.default_scripts.map(&:name)
+      assert_equal %w(script2a), @unit_group.alternate_unit_group_units.map(&:script).map(&:name)
     end
 
     test 'select default unit group unit for teacher without experiment' do
       assert_equal(
         @unit_group_unit,
-        @course.select_unit_group_unit(@other_teacher, @unit_group_unit)
+        @unit_group.select_unit_group_unit(@other_teacher, @unit_group_unit)
       )
     end
 
@@ -254,7 +254,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
         @alternate_unit_group_unit,
-        @course.select_unit_group_unit(@other_teacher, @unit_group_unit)
+        @unit_group.select_unit_group_unit(@other_teacher, @unit_group_unit)
       )
       experiment.destroy
     end
@@ -262,7 +262,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     test 'select default unit group unit for student by default' do
       assert_equal(
         @unit_group_unit,
-        @course.select_unit_group_unit(@student, @unit_group_unit)
+        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
       )
     end
 
@@ -271,7 +271,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment = create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
       assert_equal(
         @alternate_unit_group_unit,
-        @course.select_unit_group_unit(@student, @unit_group_unit)
+        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
       )
       experiment.destroy
     end
@@ -281,7 +281,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
         @unit_group_unit,
-        @course.select_unit_group_unit(@student, @unit_group_unit)
+        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
       )
       experiment.destroy
     end
@@ -290,7 +290,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       create :user_script, user: @student, script: @script2a
       assert_equal(
         @alternate_unit_group_unit,
-        @course.select_unit_group_unit(@student, @unit_group_unit)
+        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
       )
     end
 
@@ -299,7 +299,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       create :user_script, user: @student, script: @script2a
       assert_equal(
         @unit_group_unit,
-        @course.select_unit_group_unit(@student, @unit_group_unit)
+        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
       )
     end
   end
