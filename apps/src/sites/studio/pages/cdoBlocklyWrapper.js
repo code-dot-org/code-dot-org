@@ -28,8 +28,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
-  blocklyWrapper.wrapSettableProperty('assetUrl');
-  blocklyWrapper.wrapSettableProperty('behaviorEditor');
   blocklyWrapper.wrapReadOnlyProperty('bindEvent_');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
@@ -37,8 +35,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockSpace');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('BlockValueType');
-  blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
-  blocklyWrapper.wrapSettableProperty('BUMP_UNCONNECTED');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
@@ -73,11 +69,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
-  blocklyWrapper.wrapSettableProperty('HSV_SATURATION');
   blocklyWrapper.wrapReadOnlyProperty('html');
   blocklyWrapper.wrapReadOnlyProperty('inject');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
-  blocklyWrapper.wrapSettableProperty('JavaScript');
   blocklyWrapper.wrapReadOnlyProperty('js');
   blocklyWrapper.wrapReadOnlyProperty('mainBlockSpace');
   blocklyWrapper.wrapReadOnlyProperty('mainBlockSpaceEditor');
@@ -86,20 +80,27 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Names');
   blocklyWrapper.wrapReadOnlyProperty('netsim_locale');
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
-  blocklyWrapper.wrapSettableProperty('readOnly');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
   blocklyWrapper.wrapReadOnlyProperty('RTL');
-  blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
-  blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
   blocklyWrapper.wrapReadOnlyProperty('SVG_NS');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
-  blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
-  blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
+
+  blocklyWrapper.wrapSettableProperty('assetUrl');
+  blocklyWrapper.wrapSettableProperty('behaviorEditor');
+  blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
+  blocklyWrapper.wrapSettableProperty('BUMP_UNCONNECTED');
+  blocklyWrapper.wrapSettableProperty('HSV_SATURATION');
+  blocklyWrapper.wrapSettableProperty('JavaScript');
+  blocklyWrapper.wrapSettableProperty('readOnly');
+  blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
+  blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
+  blocklyWrapper.wrapSettableProperty('typeHints');
+  blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
   return blocklyWrapper;
 }
