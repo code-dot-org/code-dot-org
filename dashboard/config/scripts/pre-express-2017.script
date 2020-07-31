@@ -99,6 +99,9 @@ level 'courseB_starWars_prog9'
 level 'courseB_starWars_prog10'
 level 'courseB_starWars_prog11'
 
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends'
+level 'courseB_unplugged_loopyMRF'
+
 lesson 'Loops in Collector', display_name: 'Loops in Collector'
 level 'courseAB_video_collector'
 level 'courseB_collector_loops1'
@@ -115,9 +118,6 @@ level 'courseB_collector_loops10'
 level 'courseB_collector_loops11'
 bonus 'courseB_collector_loops_challenge1'
 bonus 'courseB_collector_loops_challenge2'
-
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends'
-level 'courseB_unplugged_loopyMRF'
 
 lesson 'Loops in Artist', display_name: 'Loops in Artist'
 level 'courseB_video_ArtistIntro'

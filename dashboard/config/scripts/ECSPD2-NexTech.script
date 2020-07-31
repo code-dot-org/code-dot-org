@@ -10,9 +10,7 @@ level 'ECSPD course goals'
 level 'ECSPD strategies'
 level 'ECSPD Online Units'
 
-lesson 'Unit 1, Days 1-2
-What Is a Computer?', display_name: 'Unit 1, Days 1-2
-What Is a Computer?'
+lesson 'Unit 1, Days 1-2 What Is a Computer?', display_name: 'Unit 1, Days 1-2 What Is a Computer?'
 level 'ECSPD Online U1D1-2'
 level 'ECSPD Online U1D1-2 Resources'
 level 'ECSPD Online U1D1-2 Assessment 2'

@@ -115,9 +115,6 @@ level 'courseC_artist_loops6a_2018'
 level 'courseC_artist_loops7a_2018'
 level 'courseC_artist_loops8a_2018'
 
-lesson 'Copyright and Creativity', display_name: 'Copyright and Creativity'
-level 'courseE_unplugged_CnC_2018'
-
 lesson 'Concept Practice with Minecraft ', display_name: 'Looking Ahead with Minecraft'
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
@@ -133,6 +130,9 @@ level 'Underground Avoiding Lava'
 level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
+
+lesson 'Copyright and Creativity', display_name: 'Copyright and Creativity'
+level 'courseE_unplugged_CnC_2018'
 
 lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Bee'
 level 'courseD_bee_nestedLoops1a_2018'
