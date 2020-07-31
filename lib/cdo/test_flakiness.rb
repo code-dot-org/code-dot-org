@@ -138,6 +138,9 @@ class TestFlakiness
   cached def self.from_timestamp
     return nil unless File.exist?(FLAKINESS_TIMESTAMP_FILENAME)
     timestamp = JSON.parse(File.read(FLAKINESS_TIMESTAMP_FILENAME))['timestamp']
-    timestamp.is_a?(Integer) ? timestamp : nil
+    return nil unless timestamp.is_a?(Integer)
+    current_time = Time.now.to_i
+    raise "Timestamp #{timestamp} is in the future. Current server time is #{current_time}." if timestamp > current_time
+    timestamp
   end
 end
