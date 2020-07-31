@@ -41,9 +41,9 @@
     {"type":"html",
       "title":"comment",
       "name":"comment_module1",
-     "html":"<p style='background-color: yellow'>Showing module 1 as example. NEED TO re-add logic to show only if module1 == true.  <pre>'visibleIf': '{module1}='true''</pre>"
-    }
-     {
+      "html":"<p style='background-color: yellow'>Showing module 1 as example. NEED TO re-add logic to show only if module1 == true.  <pre>'visibleIf': '{module1}='true''</pre>"
+    },
+    {
       "type":"library_item",
       "library_name":"surveys/pd/ayw_module_1",
       "library_version": 0,
@@ -100,13 +100,13 @@
       "library_version": 0,
       "name":"facilitator_heading"
     },
-     {
+    {
       "type":"library_item",
       "library_name":"surveys/pd/facilitator_panel",
       "library_version": 0,
       "name":"facilitators"
     },
-   {
+    {
       "type":"library_item",
       "library_name":"surveys/pd/workshop_elements",
       "library_version": 0,
