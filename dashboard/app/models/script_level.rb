@@ -337,7 +337,11 @@ class ScriptLevel < ActiveRecord::Base
       display_as_unplugged: display_as_unplugged
     }
 
-    summary[:progression] = progression if progression
+    if progression
+      summary[:progression] = progression
+      localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+      summary[:progression_display_name] = localized_progression_name
+    end
 
     if named_level
       summary[:name] = level.display_name || level.name
