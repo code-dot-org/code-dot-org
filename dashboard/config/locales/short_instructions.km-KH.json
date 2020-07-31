@@ -98,6 +98,7 @@
         "courseD_artist_project4a_2018": "Try playing around with what you've\ncreated. Draw whatever you like!\\\r\n\n-   What happens if you use two different\n    angles in your stair step pattern?\\\r\n-   What happens if you make your diamond\n    pattern longer or shorter?\\\r\n-   What does it look like to draw two snowflakes\n    on top of one another?",
         "courseD_artist_project4a_2019": "Try playing around with what you've\ncreated. Draw whatever you like!\\\r\n\n-   What happens if you use two different\n    angles in your stair step pattern?\\\r\n-   What happens if you make your diamond\n    pattern longer or shorter?\\\r\n-   What does it look like to draw two snowflakes\n    on top of one another?",
         "courseD_artist_project4a_2020": "Try playing around with what you've\ncreated. Draw whatever you like!\\\r\n\n-   What happens if you use two different\n    angles in your stair step pattern?\\\r\n-   What happens if you make your diamond\n    pattern longer or shorter?\\\r\n-   What does it look like to draw two snowflakes\n    on top of one another?",
+        "courseD_autorun_binary5_2019": "Each binary string below represents one\nrow of this picture. \\\r\n\\\r\nCan you rearrange them so it draws a smiley face\ninstead of a frown?",
         "courseD_bee_conditionals3": "Help the bee collect all of the nectar.\n\\\r\n\\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower.",
         "courseD_bee_conditionals3_2018": "Help the bee collect all of the nectar.\n\\\r\n\\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower.",
         "courseD_bee_conditionals3_2019": "Help the bee collect all of the nectar.\n\\\r\n\\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower.",
@@ -114,7 +115,8 @@
         "courseE_artist_functions2": "This time, use the `draw a square`\nfunction to create the glasses. \\\r",
         "courseE_artist_functions2_copy": "This time, use the `draw a square`\nfunction to create the glasses. \\\r",
         "courseE_playLab_challenge1": "Something should happen when\nyou get enough points or when you run out of points. Add some code to the\n`win game` and `lose game` functions to make the game work the way it should.\n\\\r\nClick the hints for ideas!",
-        "courseF_bee_conditionals8": "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake honey (because there is a honeycomb)."
+        "courseF_bee_conditionals8": "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake honey (because there is a honeycomb).",
+        "grade5_artist_binary9": "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we\nstart to get creative with the bits?"
       }
     }
   }

@@ -844,11 +844,6 @@
           "courseA_playlab_events_challenge2_b": "Du kan få en robot til at bippe.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Du kan få et monster til at knurre.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Tilføj en anden blok til koden for at tegne resten af trinene.",
-          "courseA_artist_loops9_b": "Blokken du tilføjer skal ind i\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n løkken.",
-          "courseA_artist_loops9_c": "Hvis du ikke kan se hvor du skal bruge løkken, så prøv at skrive koden trin for trin, og kig efter gentagelser."
-        },
         "courseB_collector_loops2": {
           "courseB_collector_loops2_a": "Du skal bevæge den, før den kan samle skatten op."
         },

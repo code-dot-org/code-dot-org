@@ -1116,8 +1116,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.",
-          "courseA_artist_loops3_b": "Gugustuhin mong gumamit ng bloke gaya nito para malutas ang palaisipang ito.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke."
+          "courseA_artist_loops3_b": "Gugustuhin mong gumamit ng bloke gaya nito para malutas ang palaisipang ito.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
@@ -1229,8 +1228,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.",
           "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop.",
-          "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern.",
-          "courseB_artist_loops9_c": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern."
+          "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern."
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito <xml>  <block type=\"simple_move_up_left\"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
@@ -1687,32 +1685,7 @@
           "courseB_artist_loops2_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke."
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.",
-          "courseA_artist_loops3_b": "Gugustuhin mong gumamit ng bloke gaya nito para malutas ang palaisipang ito.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke."
-        },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob ng <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block> na loop."
-        },
-        "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!",
-          "courseA_artist_loops5_b": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
-        },
-        "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "Hindi matukoy kung paano gumawa ng bundok? Subukang paglaruan ang mga blokeng ito para makita kung ano ang maiguhit ng bawat isa.",
-          "courseA_artist_loops6_b": "Kakailanganin mo nang 2 mga bloke sa 2 mga direksyon para malutas ang palaisipang ito."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.",
-          "courseA_artist_loops7_b": "Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.",
-          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Subukang patakbuhin ang code para makita kung ana ang naisulat para sa iyo.",
-          "courseA_artist_loops8_b": "Paano mo i-loop ang iyong code na ibinigay sa iyo?",
-          "courseA_artist_loops8_c": "Ano ang ginagawa ng code?\\\nAno ang dapat gawin nito?\\\nAno ang sinabi nito sa iyo?"
         },
         "courseB_artist_loops9": {
           "courseB_artist_loops9_c": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern."
@@ -1724,9 +1697,6 @@
           "courseB_artist_loops9_c": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.",
-          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop.",
-          "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern.",
           "courseB_artist_loops9_c": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern."
         },
         "courseB_collector_loops2": {
@@ -1903,10 +1873,6 @@
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan."
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type=\"when_run\"/></xml> na bloke para makita kung ano ang mangyayari.",
-          "courseA_artist_loops2_b": "Gamitin ang blokeng ito <block type=\"simple_move_right\"/> para malutas ang palaisipang ito."
         },
         "courseC_flappy_events1": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -2096,7 +2062,8 @@
         "courseF_artist_for_challenge1": {
           "courseF_artist_for_challenge1_a": "Ang `pen width` ay 1. Ang unang parisukat ay mayroong 50 pixel na mga gilid, at bawat parisukay ay mas malapad nang 50 pixels kaysa sa huli.",
           "courseF_artist_for_challenge1_b": "Ang opacity na nasa brush ay parating `counter`/2.",
-          "courseF_artist_for_challenge1_c": "Pagkatapos mong magawa ang bawat parisukat, huwag kalimutang tumalon patalikod, lumiko, tumalon ulit, pagkatapos ay babalik!"
+          "courseF_artist_for_challenge1_c": "Pagkatapos mong magawa ang bawat parisukat, huwag kalimutang tumalon patalikod, lumiko, tumalon ulit, pagkatapos ay babalik!",
+          "courseF_artist_for_challenge1_d": "**Solusyon:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_picker\">\n<title name=\"COLOUR\">#0000cd</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">50</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">350</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">50</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"alpha\" inline=\"true\" id=\"alpha\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">DIVIDE</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"math_number\">\n<title name=\"NUM\">4</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"jump\" inline=\"true\">\n<title name=\"DIR\">jumpBackward</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n<next>\n<block type=\"jump\" inline=\"true\">\n<title name=\"DIR\">jumpBackward</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnLeft</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseF_artist_for_challenge1_2018": {
           "courseF_artist_for_challenge1_a": "Ang `pen width` ay 1. Ang unang parisukat ay mayroong 50 pixel na mga gilid, at bawat parisukay ay mas malapad nang 50 pixels kaysa sa huli.",
@@ -2146,7 +2113,8 @@
         "courseF_bee_for_challenge2": {
           "courseF_bee_for_challenge2_a": "Tingnan ang opsyon na ito para sa paggalaw: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "Subukang gamitin ang dalawang `for` na mga loops: Isa para sa pag-akyat sa taas at pagkuha ng nektar, at isa pa para sa pag-akyat pababa at paggawa ng pulot.",
-          "courseF_bee_for_challenge2_c": "Bigyang-pansin na ang isang `for` na loop ay nangangailangan ng iilang mga karaniwang mga loop sa loob ng repeat na `counter` na beses para magawa ang pataas na hagdanang pattern. \nAng isa pang `for` na loop ay nangangailangan lang ng isang karaniwang loop para makagawa na `counter` na halaga ng pulot."
+          "courseF_bee_for_challenge2_c": "Bigyang-pansin na ang isang `for` na loop ay nangangailangan ng iilang mga karaniwang mga loop sa loob ng repeat na `counter` na beses para magawa ang pataas na hagdanang pattern. \nAng isa pang `for` na loop ay nangangailangan lang ng isang karaniwang loop para makagawa na `counter` na halaga ng pulot.",
+          "courseF_bee_for_challenge2_d": "**Solusyon:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_for\" inline=\"true\">\n<title name=\"VAR\">counter</title>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">3</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_moveForward\"/>\n</statement>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_nectar\"/>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_moveForward\"/>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n<next>\n<block type=\"controls_for\" inline=\"true\">\n<title name=\"VAR\">counter</title>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_moveForward\">\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"maze_moveForward\">\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_honey\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseF_bee_for_challenge2_2018": {
           "courseF_bee_for_challenge2_a": "Tingnan ang opsyon na ito para sa paggalaw: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",

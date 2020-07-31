@@ -7,13 +7,6 @@ uz:
         math_category_name: Matematik
       name:
         course1:
-          stages:
-            'Maze: Debugging':
-              name: 'Labirint: Tuzatish'
-            'Maze: Sequence':
-              name: 'Labirint: Ketma-ketlik'
-            Spelling Bee:
-              name: Bilimdon Ari
           lessons:
             'Maze: Debugging':
               name: 'Labirint: Tuzatish'
@@ -22,15 +15,6 @@ uz:
             Spelling Bee:
               name: Bilimdon Ari
         course2:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
-            Graph Paper Programming:
-              name: Katakchali varaqda dasturlash
-            'Maze: Sequence':
-              name: 'Labirint: Ketma-ketlik'
-            Relay programming:
-              name: Estafetali dasturlash
           lessons:
             Conditionals:
               name: Shart buyruqlari
@@ -41,81 +25,26 @@ uz:
             Relay programming:
               name: Estafetali dasturlash
         course3:
-          stages:
-            Bounce:
-              name: Sakrash
-            Computational Thinking:
-              name: Dasturiy fikrlash
           lessons:
             Bounce:
               name: Sakrash
             Computational Thinking:
               name: Dasturiy fikrlash
         Course4pre:
-          stages:
-            'Maze: Sequence':
-              name: 'Labirint: Ketma-ketlik'
           lessons:
             'Maze: Sequence':
               name: 'Labirint: Ketma-ketlik'
         usability:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
           lessons:
             Variables:
               name: O‘zgaruvchilar
         algebra:
-          stages:
-            'Eval: Conditionals':
-              name: Shart buyruqlari
           lessons:
             'Eval: Conditionals':
               name: Shart buyruqlari
         netsim:
           title: Internet simulyator
         20-hour:
-          stages:
-            Abstraction:
-              name: Abstraksiya
-            Algorithms:
-              name: Algoritmlar
-            Computational Thinking:
-              name: Dasturiy fikrlash
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            Graph Paper Programming:
-              name: Katakchali varaqda dasturlash
-            Introduction to Computer Science:
-              name: Informatikaga kirish
-            Relay Programming:
-              name: Estafetali dasturlash
-            Song Writing:
-              name: Musiqa yozish
-            The Artist:
-              name: Rassom
-            The Artist 2:
-              name: Rassom 2
-            The Artist 3:
-              name: Rassom 3
-            The Artist 4:
-              name: Rassom 4
-            The Artist 5:
-              name: Rassom 5
-            The Farmer:
-              name: Fermer
-            The Farmer 2:
-              name: Fermer 2
-            The Farmer 3:
-              name: Fermer 3
-            The Internet:
-              name: Internet
-            The Maze:
-              name: Labirint
-            Wrap-up:
-              name: Yakun
           lessons:
             Abstraction:
               name: Abstraksiya
@@ -158,63 +87,33 @@ uz:
             Wrap-up:
               name: Yakun
         edit-code:
-          stages:
-            The Artist:
-              name: Rassom
-            The Maze:
-              name: Labirint
           lessons:
             The Artist:
               name: Rassom
             The Maze:
               name: Labirint
         events:
-          stages:
-            Bounce:
-              name: Sakrash
           lessons:
             Bounce:
               name: Sakrash
         jigsaw:
           title: Topishmoq
-          stages:
-            Jigsaw:
-              name: Topishmoq
           lessons:
             Jigsaw:
               name: Topishmoq
         allthethings:
-          stages:
-            Bounce:
-              name: Sakrash
-            Jigsaw:
-              name: Topishmoq
           lessons:
             Bounce:
               name: Sakrash
             Jigsaw:
               name: Topishmoq
         cspfacilitator:
-          stages:
-            App Lab:
-              name: Ilova labaratoriyasi
-            Internet Simulator:
-              name: Internet simulyator
           lessons:
             App Lab:
               name: Ilova labaratoriyasi
             Internet Simulator:
               name: Internet simulyator
         ECSPD2:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Yakun
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -225,15 +124,6 @@ uz:
             Wrap-up:
               name: Yakun
         ECSPD2-iZone:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Yakun
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -244,15 +134,6 @@ uz:
             Wrap-up:
               name: Yakun
         ECSPD2-NexTech:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Yakun
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -263,9 +144,6 @@ uz:
             Wrap-up:
               name: Yakun
         asUnplugged:
-          stages:
-            Graph Paper Programming:
-              name: Katakchali varaqda dasturlash
           lessons:
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
@@ -274,43 +152,22 @@ uz:
           description: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
             bloklaridan foydalaning.
         csp1-2017:
-          stages:
-            The Internet:
-              name: Internet
           lessons:
             The Internet:
               name: Internet
         CSDU3-Draft:
-          stages:
-            Functions:
-              name: Funksiyalar
           lessons:
             Functions:
               name: Funksiyalar
         gradeKinder:
-          stages:
-            Loops:
-              name: Sikllar
           lessons:
             Loops:
               name: Sikllar
         grade1:
-          stages:
-            Loops:
-              name: Sikllar
           lessons:
             Loops:
               name: Sikllar
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Yakun
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -321,20 +178,10 @@ uz:
             Wrap-up:
               name: Yakun
         grade3:
-          stages:
-            Bounce:
-              name: Sakrash
           lessons:
             Bounce:
               name: Sakrash
         csd3-2017:
-          stages:
-            Functions:
-              name: Funksiyalar
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
           lessons:
             Functions:
               name: Funksiyalar
@@ -343,17 +190,6 @@ uz:
             Conditionals:
               name: Shart buyruqlari
         k5concepts:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            Functions with Parameters:
-              name: Funksiyalar (parameterlari bilan)
-            Loops:
-              name: Sikllar
-            Variables:
-              name: O‘zgaruvchilar
           lessons:
             Conditionals:
               name: Shart buyruqlari
@@ -366,52 +202,28 @@ uz:
             Variables:
               name: O‘zgaruvchilar
         basketball:
-          stages:
-            Bounce:
-              name: Sakrash
           lessons:
             Bounce:
               name: Sakrash
         csd2-2017:
-          stages:
-            Lists:
-              name: Ro‘yxatlar
           lessons:
             Lists:
               name: Ro‘yxatlar
         coursee-draft:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
           lessons:
             Conditionals:
               name: Shart buyruqlari
         csd6-draft:
-          stages:
-            Lists:
-              name: Ro‘yxatlar
-            Functions with Parameters:
-              name: Funksiyalar (parameterlari bilan)
           lessons:
             Lists:
               name: Ro‘yxatlar
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
         coursee-ramp:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
           lessons:
             Conditionals:
               name: Shart buyruqlari
         csd6-2017:
-          stages:
-            Lists:
-              name: Ro‘yxatlar
-            Functions with Parameters:
-              name: Funksiyalar (parameterlari bilan)
-            Functions with Parameters_:
-              name: Funksiyalar (parameterlari bilan)
           lessons:
             Lists:
               name: Ro‘yxatlar
@@ -420,13 +232,6 @@ uz:
             Functions with Parameters_:
               name: Funksiyalar (parameterlari bilan)
         csd3-draft:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
           lessons:
             Variables:
               name: O‘zgaruvchilar
@@ -435,29 +240,14 @@ uz:
             Functions:
               name: Funksiyalar
         csd3-old:
-          stages:
-            Functions:
-              name: Funksiyalar
           lessons:
             Functions:
               name: Funksiyalar
         csd2-draft:
-          stages:
-            Lists:
-              name: Ro‘yxatlar
           lessons:
             Lists:
               name: Ro‘yxatlar
         csd3-chapters:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            'null':
-              name: nol
           lessons:
             Variables:
               name: O‘zgaruvchilar
@@ -468,69 +258,38 @@ uz:
             'null':
               name: nol
         artist-and-bb8:
-          stages:
-            Bounce:
-              name: Sakrash
           lessons:
             Bounce:
               name: Sakrash
         pre-express-2017:
-          stages:
-            Spelling Bee:
-              name: Bilimdon Ari
           lessons:
             Spelling Bee:
               name: Bilimdon Ari
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: Rahmat
           lessons:
             Thanks:
               name: Rahmat
         e-f-ramp:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
           lessons:
             Conditionals:
               name: Shart buyruqlari
         new-e:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
           lessons:
             Conditionals:
               name: Shart buyruqlari
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Maynkraft Dasturlash soati
           lessons:
             Minecraft Hour of Code:
               name: Maynkraft Dasturlash soati
         course-e-2018:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
           lessons:
             Conditionals:
               name: Shart buyruqlari
         csd6-old:
-          stages:
-            Lists:
-              name: Ro‘yxatlar
           lessons:
             Lists:
               name: Ro‘yxatlar
         csd3-1819draft:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
           lessons:
             Variables:
               name: O‘zgaruvchilar
@@ -539,13 +298,6 @@ uz:
             Functions:
               name: Funksiyalar
         csd3-2018:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
           lessons:
             Variables:
               name: O‘zgaruvchilar
@@ -554,22 +306,10 @@ uz:
             Functions:
               name: Funksiyalar
         csd2-2018:
-          stages:
-            Lists:
-              name: Ro‘yxatlar
           lessons:
             Lists:
               name: Ro‘yxatlar
         express-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Katakchali varaqda dasturlash
-            Internet:
-              name: Internet
-            Relay Programming:
-              name: Estafetali dasturlash
-            Graph Paper Programming:
-              name: Katakchali varaqda dasturlash
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Katakchali varaqda dasturlash
@@ -580,13 +320,6 @@ uz:
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
         coursed-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Katakchali varaqda dasturlash
-            Graph Paper Programming:
-              name: Katakchali varaqda dasturlash
-            Relay Programming:
-              name: Estafetali dasturlash
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Katakchali varaqda dasturlash
@@ -595,34 +328,20 @@ uz:
             Relay Programming:
               name: Estafetali dasturlash
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: Funksiyalar (parameterlari bilan)
           lessons:
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
         coursee-2018:
-          stages:
-            Internet:
-              name: Internet
-            Minecraft Hour of Code:
-              name: Maynkraft Dasturlash soati
           lessons:
             Internet:
               name: Internet
             Minecraft Hour of Code:
               name: Maynkraft Dasturlash soati
         csp1-2018:
-          stages:
-            The Internet:
-              name: Internet
           lessons:
             The Internet:
               name: Internet
         pre-express-2018:
-          stages:
-            Spelling Bee:
-              name: Bilimdon Ari
           lessons:
             Spelling Bee:
               name: Bilimdon Ari
@@ -635,11 +354,6 @@ uz:
             csp_functions:
               display_name: Funksiyalar
         coursef-2019:
-          stages:
-            The Artist:
-              name: Rassom
-            Internet:
-              name: Internet
           lesson_groups:
             csf_variables:
               display_name: O‘zgaruvchilar
@@ -649,11 +363,6 @@ uz:
             Internet:
               name: Internet
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Katakchali varaqda dasturlash
-            Relay Programming:
-              name: Estafetali dasturlash
           lesson_groups:
             csf_loops:
               display_name: Sikllar
@@ -669,9 +378,6 @@ uz:
             csf_functions:
               display_name: Funksiyalar
         express-2019:
-          stages:
-            Relay Programming:
-              name: Estafetali dasturlash
           lesson_groups:
             csf_loops:
               display_name: Sikllar
@@ -685,9 +391,6 @@ uz:
             Relay Programming:
               name: Estafetali dasturlash
         andrea-test:
-          stages:
-            'null':
-              name: nol
           lessons:
             'null':
               name: nol
@@ -704,9 +407,6 @@ uz:
             csf_loops:
               display_name: Sikllar
         pre-express-2019:
-          stages:
-            Spelling Bee:
-              name: Bilimdon Ari
           lesson_groups:
             csf_loops:
               display_name: Sikllar
@@ -714,20 +414,10 @@ uz:
             Spelling Bee:
               name: Bilimdon Ari
         csd2-2019:
-          stages:
-            Lists:
-              name: Ro‘yxatlar
           lessons:
             Lists:
               name: Ro‘yxatlar
         csd3-2019:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
           lessons:
             Variables:
               name: O‘zgaruvchilar
@@ -736,9 +426,6 @@ uz:
             Functions:
               name: Funksiyalar
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Funksiyalar (parameterlari bilan)
           lessons:
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
@@ -751,9 +438,6 @@ uz:
             csp_functions:
               display_name: Funksiyalar
         csp1-2019:
-          stages:
-            The Internet:
-              name: Internet
           lessons:
             The Internet:
               name: Internet
@@ -820,9 +504,6 @@ uz:
             csp_functions:
               display_name: Funksiyalar
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: Katakchali varaqda dasturlash
           lessons:
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
@@ -833,22 +514,10 @@ uz:
             csp_loops:
               display_name: Sikllar
         csd2-pilot:
-          stages:
-            Lists:
-              name: Ro‘yxatlar
           lessons:
             Lists:
               name: Ro‘yxatlar
         csd3-pilot:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            Sprite Properties:
-              name: Sprait hususiyatlari
           lessons:
             Variables:
               name: O‘zgaruvchilar
@@ -863,15 +532,6 @@ uz:
             csf_loops:
               display_name: Sikllar
         k5-onlinepd-2019:
-          stages:
-            Loops:
-              name: Sikllar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            Variables:
-              name: O‘zgaruvchilar
           lessons:
             Loops:
               name: Sikllar
@@ -890,9 +550,6 @@ uz:
             csp_functions:
               display_name: Funksiyalar
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
           lessons:
             Conditionals:
               name: Shart buyruqlari
@@ -903,9 +560,6 @@ uz:
             csf_functions:
               display_name: Funksiyalar
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
           lesson_groups:
             csf_loops:
               display_name: Sikllar
@@ -915,9 +569,6 @@ uz:
             Conditionals:
               name: Shart buyruqlari
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
           lesson_groups:
             csf_loops:
               display_name: Sikllar
@@ -941,24 +592,10 @@ uz:
             csp_loops:
               display_name: Sikllar
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Funksiyalar (parameterlari bilan)
           lessons:
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
         csd3-2020:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Sprite Properties:
-              name: Sprait hususiyatlari
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            Text:
-              name: Matn
           lessons:
             Variables:
               name: O‘zgaruvchilar
@@ -983,11 +620,6 @@ uz:
             csf_loops:
               display_name: Sikllar
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Katakchali varaqda dasturlash
-            Relay Programming:
-              name: Estafetali dasturlash
           lesson_groups:
             csf_loops:
               display_name: Sikllar
@@ -1003,9 +635,6 @@ uz:
             csf_functions:
               display_name: Funksiyalar
         coursef-2020:
-          stages:
-            Internet:
-              name: Internet
           lesson_groups:
             csf_variables:
               display_name: O‘zgaruvchilar
@@ -1023,9 +652,6 @@ uz:
             csf_variables:
               display_name: O‘zgaruvchilar
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: Bilimdon Ari
           lesson_groups:
             csf_loops:
               display_name: Sikllar
@@ -1033,36 +659,18 @@ uz:
             Spelling Bee:
               name: Bilimdon Ari
         csp5-virtual:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
           lessons:
             Variables:
               name: O‘zgaruvchilar
         virtual-holding-place:
-          stages:
-            Functions:
-              name: Funksiyalar
           lessons:
             Functions:
               name: Funksiyalar
         code-break:
-          stages:
-            Algorithms:
-              name: Algoritmlar
           lessons:
             Algorithms:
               name: Algoritmlar
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: Sikllar
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
-            Variables:
-              name: O‘zgaruvchilar
           lessons:
             Loops:
               name: Sikllar
@@ -1073,17 +681,6 @@ uz:
             Variables:
               name: O‘zgaruvchilar
         csd3-virtual:
-          stages:
-            Variables:
-              name: O‘zgaruvchilar
-            Sprite Properties:
-              name: Sprait hususiyatlari
-            Text:
-              name: Matn
-            Conditionals:
-              name: Shart buyruqlari
-            Functions:
-              name: Funksiyalar
           lessons:
             Variables:
               name: O‘zgaruvchilar

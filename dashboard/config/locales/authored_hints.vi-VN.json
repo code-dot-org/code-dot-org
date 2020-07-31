@@ -587,8 +587,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Dùng ngón tay để dò theo từng dòng trong chương trình của bạn để xem nó sai ở đâu.",
-          "courseA_artist_loops3_b": "Bạn sẽ sử dụng một khối như thế này để giải câu đố này.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh."
+          "courseA_artist_loops3_b": "Bạn sẽ sử dụng một khối như thế này để giải câu đố này.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh.",
@@ -697,8 +696,7 @@
         },
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Thêm một khối khác vào mã bạn được cung cấp để vẽ phần còn lại của cầu thang.",
-          "courseA_artist_loops9_c": "Nếu bạn chưa tìm ra nơi để đặt vòng lặp, hãy thử viết mã của bạn từng bước một và tìm ra sự lặp lại trong đó.",
-          "courseB_artist_loops9_c": "Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết mã từng bước một và tìm sự lặp lại trong đó."
+          "courseA_artist_loops9_c": "Nếu bạn chưa tìm ra nơi để đặt vòng lặp, hãy thử viết mã của bạn từng bước một và tìm ra sự lặp lại trong đó."
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi chia nó làm hai phần, phần trước góc và phần sau góc."
@@ -805,7 +803,7 @@
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",
           "courseA_maze_seq13_b": "Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh và chạy chương trình xem điều gì sẽ xảy ra.",
-          "courseA_maze_seq13_c": "Những khối này <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nsẽ giúp đến gần chú lợn hơn."
+          "courseA_maze_seq13_c": "Những khối <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> sẽ giúp bạn đến gần hơn với chú lợn."
         },
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",
@@ -979,7 +977,7 @@
           "courseA_playLab_events7_a": "Dùng khối này khi các nhân vật va vào nhau.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseB_Scrat_ramp1_2018": {
-          "1": "Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng các khối đã được ghép vào với nhau rồi ấn \"Chạy\" lần nữa.",
+          "1": "Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng cả hai khối đã được ghép vào với nhau rồi ấn \"Chạy\" lần nữa.",
           "2": "Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử một cái khác!"
         },
         "courseB_Scrat_ramp1_2019": {
@@ -1045,32 +1043,7 @@
           "courseB_artist_loops2_a": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh."
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "Dùng ngón tay để dò theo từng dòng trong chương trình của bạn để xem nó sai ở đâu.",
-          "courseA_artist_loops3_b": "Bạn sẽ sử dụng một khối như thế này để giải câu đố này.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh."
-        },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh.",
-          "courseA_artist_loops4_b": "Vì bạn chỉ có thể sử dụng một khối <xml><block type=\"simple_move_right\"/></xml>, \n\nthử đặt nó bên trong vòng lặp <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>."
-        },
-        "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Hãy thử sử dụng những gì bạn từng học về khối <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> để hoàn thành câu đố này!",
-          "courseA_artist_loops5_b": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh.",
-          "courseA_artist_loops5_c": "Vì bạn chỉ có thể sử dụng một khối <xml><block type=\"simple_move_right\"/></xml>, thử đặt nó bên trong vòng lặp <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
-        },
-        "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "Bạn chưa biết cách vẽ ngọn đồi? Hãy thử với từng khối để xem chúng sẽ vẽ gì.",
-          "courseA_artist_loops6_b": "Bạn sẽ cần 2 khối lệnh theo 2 hướng để giải câu đố này."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết mã từng bước một và tìm sự lặp lại trong đó.",
-          "courseA_artist_loops7_b": "Viết mã cho 1 con sóng trước, và lặp lại để vẽ 2 con sóng còn lại.",
-          "courseA_artist_loops7_c": "Hãy nhớ rằng bạn có thể đặt nhiều hơn một khối trong vòng lặp <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Hãy thử chạy mã để xem những gì đã được viết cho bạn.",
-          "courseA_artist_loops8_b": "Bạn sẽ sử dụng vòng lặp thế nào ở đây?",
-          "courseA_artist_loops8_c": "Đoạn mã này để làm gì?\\\nNó cần thực hiện điều gì đây?\\\nĐiều đó nói gì với bạn?"
         },
         "courseB_artist_loops9": {
           "courseB_artist_loops9_c": "Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết mã từng bước một và tìm sự lặp lại trong đó."
@@ -1082,8 +1055,6 @@
           "courseB_artist_loops9_c": "Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết mã từng bước một và tìm sự lặp lại trong đó."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Thêm một khối khác vào mã bạn được cung cấp để vẽ phần còn lại của cầu thang.",
-          "courseA_artist_loops9_c": "Nếu bạn chưa tìm ra nơi để đặt vòng lặp, hãy thử viết mã của bạn từng bước một và tìm ra sự lặp lại trong đó.",
           "courseB_artist_loops9_c": "Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết mã từng bước một và tìm sự lặp lại trong đó."
         },
         "courseB_iceage_loops1": {
@@ -1414,10 +1385,6 @@
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
           "courseB_starWars_prog9_b": "Có rất nhiều cách để giải câu đố này."
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "Bạn chưa biết cách để vẽ 1 đường?  Bắt đầu gắn các khối vào khối <xml><block type=\"when_run\"/></xml> để xem điều gì sẽ xảy ra.",
-          "courseA_artist_loops2_b": "Sử dụng khối <xml><block type=\"simple_move_right\"/></xml> để giải câu đố này."
         },
         "courseC19_playLab_EOC2": {
           "courseE_playLab_scaffold1_c": "Khi bạn hoàn thành, bạn có thể di chuyển nhân vật anh hùng của bạn bằng các phím mũi tên!"

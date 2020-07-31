@@ -62,7 +62,7 @@ level 'CSP U10L12 SFLP 20-21', progression: 'Lesson Overview'
 lesson 'Project: Innovation Simulation Part 7'
 level 'CSP U10L13 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Lesson 14: Unit Assessment Day'
+lesson 'Lesson 14: Unit Assessment Day', lockable: true
 level 'CSP U10L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Unit 10 Assessment', progression: 'Unit 10 Exam', assessment: true
 

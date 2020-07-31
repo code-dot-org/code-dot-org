@@ -393,6 +393,9 @@
         "courseD_artist_binary7_2018": "Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?",
         "courseD_artist_binary7_2019": "Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?",
         "courseD_artist_binary7_2020": "Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?",
+        "courseD_autorun_binary4_2019": "Kan du rita detta mönster genom att upprepa en tresiffrig binär sträng?",
+        "courseD_autorun_binary6_2019": "Vilken 6-siffriga binära sträng upprepad 11 gånger kommer att rita denna bild?",
+        "courseD_autorun_binary7_2019": "Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?",
         "courseD_bee_nestedLoops8": "Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. ",
         "courseD_bee_nestedLoops8_2018": "Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. ",
         "courseD_bee_nestedLoops8_2019": "Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. ",
@@ -463,6 +466,11 @@
         "frozen square loop": "Hej, heter jag Anna av Arendal! Låt oss göra en kvadrat med blocket \"Upprepa\" för att använda färre block. Hur många gånger (???) bör \"Upprepa\"-blocket upprepa blocken inom sig för att göra en kvadrat?",
         "frozen square loop 3x": "Låt oss göra tre kvadrater, och svänga efter varje kvadrat. Se till att svänga 120 grader före varje ny kvadrat.",
         "frozen square snowflake": "Kan du skapa en snöflinga med \"Upprepa\"-blocket för att göra en fyrkant 10 gånger, och \"Vända\"-blocket för att vända 36 grader mellan varje fyrkant?",
+        "grade5_artist_binary11": "Fri lek: Här är en tom duk du kan rita på. Ha så roligt!",
+        "grade5_artist_binary4": "Kan du rita detta mönster genom att upprepa en tresiffrig binär sträng?",
+        "grade5_artist_binary5": "Varje binärsträng representerar en rad i denna bild. Kan du arrangera om dem så att ett glatt ansikte ritas istället för ett ledset?",
+        "grade5_artist_binary8": "Slutför denna bild.",
+        "grade5_artist_binary9": "Här är en större duk du kan rita på 16 x 16 pixlar!\\\r\n\\\r\nSe vad som händer när vi börjar bli kreativa med bitar?",
         "k-1 maze 1": "Kan du göra så att jag flyttar västerut till grisen?"
       }
     }

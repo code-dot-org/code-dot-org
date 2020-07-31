@@ -971,6 +971,10 @@ hu:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': másodperc
       gamelab_changePropBy:
         text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
@@ -1021,6 +1025,40 @@ hu:
             '"seconds"': másodperc
       gamelab_hideTitleScreen:
         text: címoldal elrejtése
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+            '"space"': világűr
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': p
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} megérinti a szélét"
       gamelab_jumpTo:
