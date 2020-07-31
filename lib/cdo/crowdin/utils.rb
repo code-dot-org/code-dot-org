@@ -8,6 +8,13 @@ module Crowdin
   MAX_THREADS = 10
 
   class Utils
+    attr_reader :project
+    attr_reader :changes_json
+    attr_reader :etags_json
+    attr_reader :locales_dir
+    attr_reader :locale_subdir
+    attr_reader :logger
+
     # @param project [Crowdin::Project]
     # @param options [Hash, nil]
     # @param options.changes_json [String, nil] path to file where files with

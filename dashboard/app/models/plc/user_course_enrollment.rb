@@ -81,7 +81,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   def summarize
     {
       courseName: plc_course.name,
-      link: Rails.application.routes.url_helpers.course_path(plc_course.course),
+      link: Rails.application.routes.url_helpers.course_path(plc_course.unit_group),
       status: status,
       courseUnits: plc_unit_assignments.sort_by {|a| a.plc_course_unit.unit_order || 0}.map do |unit_assignment|
         {

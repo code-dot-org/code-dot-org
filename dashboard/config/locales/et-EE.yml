@@ -880,6 +880,7 @@ et:
     form_labels:
       email: E-post
       school_name: Kooli nimi
+      colombian_school_name: Kooli nimi
     form_entries:
       gender:
         male: Mees

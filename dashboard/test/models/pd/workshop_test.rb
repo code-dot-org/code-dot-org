@@ -802,6 +802,42 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_reminder_for_upcoming_in_days(1)
   end
 
+  test '10 day reminder for academic year workshop sends pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :academic_year_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).times(2)
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test '10 day reminder for csf workshop does not send pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csf_deep_dive_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test '3 day reminder for summer workshop does not send pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csp_summer_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::Workshop.send_reminder_for_upcoming_in_days(3)
+  end
+
   test 'workshop starting date picks the day of the first session' do
     workshop = create :workshop, sessions: [
       session1 = create(:pd_session, start: Date.today + 15.days),
@@ -1019,13 +1055,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pre_survey_units_and_lessons' do
-    course = create :course, name: 'pd-workshop-pre-survey-test'
+    course = create :unit_group, name: 'pd-workshop-pre-survey-test'
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
       create(:script).tap do |script|
-        create :course_script, course: course, script: script, position: (next_position += 1)
+        create :unit_group_unit, unit_group: course, script: script, position: (next_position += 1)
+        create :lesson_group, script: script
         I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
-        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name}
+        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 
@@ -1057,11 +1094,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # With valid course name
     workshop.stubs(:pre_survey?).returns(true)
     workshop.stubs(:pre_survey_course_name).returns(course_name)
-    Course.expects(:find_by_name!).with(course_name).returns(mock_course)
+    UnitGroup.expects(:find_by_name!).with(course_name).returns(mock_course)
     assert_equal mock_course, workshop.pre_survey_course
 
     # With invalid course name
-    Course.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    UnitGroup.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
     e = assert_raises RuntimeError do
       workshop.pre_survey_course
     end
@@ -1378,6 +1415,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute workshop.valid?
 
     workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'virtual specific subjects must be virtual' do
+    workshop = build :pd_workshop,
+      course: COURSE_CSP,
+      subject: SUBJECT_CSP_WORKSHOP_1,
+      virtual: false,
+      suppress_email: true
+
+    assert workshop.valid?
+
+    workshop.subject = VIRTUAL_ONLY_SUBJECTS.first
+    refute workshop.valid?
+
+    workshop.virtual = true
     assert workshop.valid?
   end
 

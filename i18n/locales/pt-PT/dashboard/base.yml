@@ -824,6 +824,7 @@ pt:
       email: 'E-mail'
       school_name: 'Nome da escola'
       school_country: 'País da escola'
+      colombian_school_name: 'Nome da escola'
     form_entries:
       gender:
         male: 'Masculino'

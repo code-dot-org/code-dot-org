@@ -738,6 +738,7 @@ da:
       gender: 'Køn'
       school_name: 'Skolens navn'
       school_country: 'Skolens land'
+      colombian_school_name: 'Skolens navn'
       ages: 'Hvilket alderstrin underviser du på?'
       subjects: 'Hvilke emner underviser du i?'
       workshop_course: 'Workshop kursus'

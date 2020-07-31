@@ -15,17 +15,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @course = create(:course)
+    @course = create(:unit_group)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
 
     @script = create(:script)
     @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_course = create(:course, name: CSP_COURSE_NAME, visible: true, is_stable: true)
-    @csp_course_soft_launched = create(:course, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
+    @csp_course = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
+    @csp_course_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
     @csp_script = create(:script, name: 'csp1')
-    create(:course_script, course: @csp_course, script: @csp_script, position: 1)
+    create(:unit_group_unit, unit_group: @csp_course, script: @csp_script, position: 1)
   end
 
   test 'logged out cannot list sections' do
@@ -417,7 +417,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
     test "can create with a course id but no script id - #{existing_course_name}" do
-      existing_course = Course.find_by(name: existing_course_name)
+      existing_course = UnitGroup.find_by(name: existing_course_name)
 
       sign_in @teacher
       post :create, params: {
@@ -426,7 +426,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       }
 
       assert_equal existing_course.id, returned_json['course_id']
-      assert_equal existing_course, returned_section.course
+      assert_equal existing_course, returned_section.unit_group
       assert_nil returned_json['script']['id']
       assert_nil returned_section.script
     end
@@ -442,7 +442,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # TODO: Better to fail here?
 
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
   test 'can create with a script id but no course id' do
@@ -455,7 +455,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal @script.id, returned_json['script']['id']
     assert_equal @script, returned_section.script
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
   test 'cannot assign an invalid script id' do
@@ -470,12 +470,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_json['script']['id']
     assert_nil returned_section.script
     assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_nil returned_section.unit_group
   end
 
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
     test "can create with both a course id and a script id - #{existing_course_name}" do
-      existing_course = Course.find_by(name: existing_course_name)
+      existing_course = UnitGroup.find_by(name: existing_course_name)
 
       sign_in @teacher
       post :create, params: {
@@ -485,7 +485,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       }
 
       assert_equal existing_course.id, returned_json['course_id']
-      assert_equal existing_course, returned_section.course
+      assert_equal existing_course, returned_section.unit_group
       assert_equal @csp_script.id, returned_json['script']['id']
       assert_equal @csp_script, returned_section.script
     end
@@ -547,7 +547,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: can update section you own" do
-    Course.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:valid_course_id?).returns(true)
 
     sign_in @teacher
     section_with_script = create(
@@ -594,7 +594,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: name is ignored if empty or all whitespace" do
-    Course.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:valid_course_id?).returns(true)
 
     section = create :section, name: 'Old section name'
     sign_in section.teacher
@@ -634,7 +634,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section.reload
     assert_response :success
     assert_equal @csp_script.id, section.script_id
-    assert_equal @csp_script.course.id, section.course_id
+    assert_equal @csp_script.unit_group.id, section.course_id
   end
 
   test "update: script_id is cleared if not provided" do
@@ -652,7 +652,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: course_id is not updated if invalid" do
-    Course.stubs(:valid_course_id?).returns(false)
+    UnitGroup.stubs(:valid_course_id?).returns(false)
 
     sign_in @teacher
     section = create(:section, user: @teacher, course_id: nil)

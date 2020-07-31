@@ -1251,6 +1251,8 @@ de:
       school_name: Schulname
       school_city: Stadt der Schule
       school_country: Land der Schule
+      colombian_school_city: Stadt der Schule
+      colombian_school_name: Schulname
       ages: Welches Alter unterrichten Sie in diesem Jahr?
       subjects: Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?
       resources: Welche der folgenden informatischen Bildungsressourcen nutzen Sie?

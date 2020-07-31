@@ -1224,6 +1224,8 @@ it:
       school_name: Nome della scuola
       school_city: Città della scuola
       school_country: Paese della Scuola
+      colombian_school_city: Città della scuola
+      colombian_school_name: Nome della scuola
       ages: Qual è l'età degli studenti a cui insegni quest'anno?
       subjects: Quali materie insegni quest'anno?
       resources: Quali delle seguenti risorse di informatica utilizzi?

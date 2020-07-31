@@ -9,8 +9,8 @@
       - course.errors.full_messages.each do |msg|
         %li= msg
 
-%h1= t('crud.new_model', model: Course.model_name.human)
-= form_for(course || :course, course ? {} : {url: courses_path}) do |f|
+%h1= t('crud.new_model', model: UnitGroup.model_name.human)
+= form_for(course || :course, course ? {url: course_path(course)} : {url: courses_path}) do |f|
   .field
     = f.label :name
     = f.text_field :name

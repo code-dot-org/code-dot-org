@@ -178,6 +178,7 @@ ky:
     form_labels:
       email: 'Эмейл'
       school_city: 'Мектеп жайгашкан шаар'
+      colombian_school_city: 'Мектеп жайгашкан шаар'
     form_entries:
       subjects:
         cs: 'Информатика'

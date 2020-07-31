@@ -1,0 +1,173 @@
+{
+  "sq-AL": {
+    "data": {
+      "callouts": {
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "Fut numrin e herëve që zombi duhet të lëvizë për të bërë një rreth të plotë"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "Përdor bllokun \"Repeat\" dhe përmblidhe rreth blloqeve në vendin e punës"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "Zhvendos ndryshoren tënde të numërimit brenda këtij blloku"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "Përdor bllokun \"Repeat\" dhe përmblidhe rreth blloqeve në vendin e punës"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "Përdor këtë bllok për të vendosur \"gjatësinë\" tek vlera e duhur."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "Përdor këtë bllok për të vendosur \"gjatësinë\" tek vlera e duhur."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "Ndaje 360 nga numri i anëve për të gjetur masën e çdo këndi në gradë."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "Përdor këtë buton për të redaktuar funksionin dhe ndrysho drejtimin që Bleta do kthehet të marrë nektarin."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "Vendos blloqe brenda ciklit për të përsëritur komandat"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "Kliko këtu për të redaktuar funksionin tënd."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "Kliko redakto për të shtuar një parametër në funksionin tënd"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "Përdor shigjetat për të lëvizur aktorin"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "Vendos një tingull kur të ndodhi ky event."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "Cili bllok do e bëjë Baymax-in të lëvizi sipër kur shigjeta e sipërme është e shtypur?",
+          "Infinity_move_directions_callout_arrow": "Përdor këto shigjeta për orientim"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "Shto lëviz bllokun këtu"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "Vendos bllogjet e Lëvizjes këtu brënda"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "Kliko këtu për të redaktuar funksionin tënd."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "Kliko këtu për të redaktuar funksionin tënd."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "Kliko këtu për të hapur \"Funksionet\", më pas kliko butonin \"Krijo një Funksion\"."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "Kliko redakto për të shtuar një parametër në funksionin tënd",
+          "add_and_drag_parameter": "Shkruaj emrin e parametrit tënd këtu, kliko shto, dhe më pas zhvendos atë në përcaktimin e funksionit tënd"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "Zhvendos ndryshorin e gjatësisë këtu për të rivendosur pikëpyetjet"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "Shiriti i mjeteve mori një pamje të re! Blloqet \"Actions\" janë këtu tani."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Përdor këtë listë për të krijuar flokë të ndryshme dëbore!"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "Përdor bllokun \"create a circle\" dhe ndrysho madhësinë."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Përdor këtë bllok dhe vendose rreth blloqeve gri në vendin tënd të punës",
+          "repeat_blocks_2": "(2) Lëviz bllokun \"Repeat\" këtu dhe vendosi blloqet gri brenda"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Përdor bllokun përsërit për të krijuar këtë formë."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Përdor bllokun përsërit për të krijuar këtë formë."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Përdor këtë listë për të krijuar flokë të ndryshme dëbore!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "Lëviz një bllok \"Move Forward\" dhe vendose poshtë bllokut \"When Run\" për ta bërë Elsën të ecë përpara"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Përdor bllokun \"turn\" për ta bërë Elsën të kthehet. Numri në listën drop down përcakton sa herë kthehet Elsa"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "Përdor bllokun \"create a snowflake\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Bashko më shumë blloqe këtu për të krijuar një katror"
+        },
+        "frozen square loop": {
+          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
+        }
+      }
+    }
+  }
+}

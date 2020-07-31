@@ -12,6 +12,24 @@ fr:
   campaign_date_full: Du 7 au 13 décembre
   campaign_date_year: '2016'
   campaign_date_full_year: 5-11 décembre, 2016
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2016'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2016'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2016'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Apprends l'informatique. Change le monde.
   hoc2019_header_line1_mobile: Apprends l'informatique.
   hoc2019_header_line2_mobile: Change le monde.
@@ -168,13 +186,15 @@ fr:
   hourofcode_homepage_hoc2018_header_line2: 'Âge : de 4 à 104 ans.'
   hoc2018_tutorial_mchoc_description: Utilise des blocs de code pour accompagner Alex
     ou Steve dans leur aventures au sein de cet univers Minecraft.
-  codeorg_homepage_hoc2019_dance_heading: Essayez la nouvelle <span class="highlight-word">Fête&nbsp;dansante!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Essaies la nouvelle <span class="highlight-word">Soirée&nbsp;Dansante
+    !</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Essaies la nouvelle **Soirée&nbsp;Dansante
+    !**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
-  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
-    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -2808,9 +2828,9 @@ fr:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
+  tutorial_dance2019_longdescription: Code une Soirée Dansante à partager avec tes
+    amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, et 34 autres !
   tutorial_danceparty_longdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !

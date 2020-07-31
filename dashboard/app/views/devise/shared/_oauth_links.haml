@@ -17,8 +17,8 @@
       %strong
         Hi! If you are having trouble with OAuth features on
         = Rails.env
-        %a{href: 'http://wiki.code.org/display/PROD/Developer+Oauth+setup'}
-          check the wiki.
+        %a{href: 'https://docs.google.com/document/d/1QfHFWQ1mN8deGJz6CW9F3UTgReYGADO2P7aRGo0monU/edit'}
+          check this document.
 
     - [:google_oauth2, :facebook, :microsoft_v2_auth].each do |provider|
       = button_to omniauth_authorize_path(resource_name, provider), class: "oauth-sign-in with-#{provider}" do

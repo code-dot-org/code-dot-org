@@ -331,6 +331,7 @@ ku:
       email: 'پۆستی ئەلیكترۆنی'
       school_name: 'ناوی قوتابخانە'
       school_country: 'وڵاتی قوتابخانە'
+      colombian_school_name: 'ناوی قوتابخانە'
     form_entries:
       gender:
         male: 'نێر'

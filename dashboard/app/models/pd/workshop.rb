@@ -94,6 +94,7 @@ class Pd::Workshop < ActiveRecord::Base
   validate :all_virtual_workshops_suppress_email
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
   validate :friday_institute_workshops_must_be_virtual
+  validate :virtual_only_subjects_must_be_virtual
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -132,6 +133,12 @@ class Pd::Workshop < ActiveRecord::Base
   def friday_institute_workshops_must_be_virtual
     if friday_institute? && !virtual?
       errors.add :properties, 'Friday Institute workshops must be virtual'
+    end
+  end
+
+  def virtual_only_subjects_must_be_virtual
+    if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
+      errors.add :properties, "Workshops with the subject #{subject} must be virtual"
     end
   end
 
@@ -470,6 +477,17 @@ class Pd::Workshop < ActiveRecord::Base
       rescue => e
         errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
+
+      # send pre-workshop email for CSD and CSP facilitators 10 days before the workshop only
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP)
+      workshop.facilitators.each do |facilitator|
+        next unless facilitator.email
+        begin
+          Pd::WorkshopMailer.facilitator_pre_workshop(facilitator, workshop).deliver_now
+        rescue => e
+          errors << "pre email for facilitator #{facilitator.id} - #{e.message}"
+        end
+      end
     end
 
     raise "Failed to send #{days} day workshop reminders: #{errors.join(', ')}" unless errors.empty?
@@ -667,7 +685,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def associated_online_course
-    ::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
+    ::UnitGroup.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 
   # Get all the teachers that have actually attended this workshop via the attendence.
@@ -803,7 +821,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   def pre_survey_course
     return nil unless pre_survey?
-    Course.find_by_name! pre_survey_course_name
+    UnitGroup.find_by_name! pre_survey_course_name
   rescue ActiveRecord::RecordNotFound
     # Raise a RuntimeError if the course name is not found, so we'll be notified in Honeybadger
     # Otherwise the RecordNotFound error will result in a 404, and we won't know.

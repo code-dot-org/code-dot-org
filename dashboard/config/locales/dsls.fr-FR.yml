@@ -2562,28 +2562,44 @@ fr-FR:
             chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: L'abeille obtiendra du nectar à chaque fleur et fabriquera du miel
+            à chaque rayon de miel.
+          correct: true
           feedback: Correct!
         - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+          feedback: 'Faux. Avec le bloc "si à la fleur", l''abeille ramasse du nectar
+            à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
             d'abeilles.
+          feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
+            du nectar à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: Je ne sais pas.
+          feedback: 'Avec le bloc "si à la fleur", l''abeille ramasse du nectar à
+            chaque fleur et fabrique du miel à chaque rayon de miel. '
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
-            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
-            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
+            après avoir cliquer sur "Démarrer"? Souviens toi: il n''y aura toujours  qu''*un*
+            rayon de miel ou qu''*une* fleur derrière chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: L'abeille obtiendra du nectar à chaque fleur et fabriquera du miel
+            à chaque rayon de miel.
+          correct: true
           feedback: Correct!
         - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+          feedback: 'Faux. Avec le bloc "si à la fleur", l''abeille ramasse du nectar
+            à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
             d'abeilles.
+          feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
+            du nectar à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: Je ne sais pas.
+          feedback: 'Avec le bloc "si à la fleur", l''abeille ramasse du nectar à
+            chaque fleur et fabrique du miel à chaque rayon de miel. '
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
-            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
-            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
+            après avoir cliquer sur "Démarrer"? Souviens toi: il n''y aura toujours  qu''*un*
+            rayon de miel ou qu''*une* fleur derrière chaque nuage.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: L'abeille avancera et prendra le nectar seulement une fois.

@@ -506,7 +506,6 @@ describe('entry tests', () => {
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
     'layouts/_parent_email_banner':
       './src/sites/studio/pages/layouts/_parent_email_banner.js',
-    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_race_interstitial':
       './src/sites/studio/pages/layouts/_race_interstitial.js',
     'layouts/_school_info_confirmation_dialog':
@@ -547,11 +546,11 @@ describe('entry tests', () => {
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
+    'report_abuse/report_abuse_form':
+      './src/sites/studio/pages/report_abuse/report_abuse_form.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
-    'shared/_header_progress':
-      './src/sites/studio/pages/shared/_header_progress.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     'teacher_dashboard/show':
       './src/sites/studio/pages/teacher_dashboard/show.js',

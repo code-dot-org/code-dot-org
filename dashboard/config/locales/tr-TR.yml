@@ -1137,6 +1137,8 @@ tr:
       school_name: Okulun Adı
       school_city: Okulun bulunduğu şehir
       school_country: Okulun bulunduğu ülke
+      colombian_school_city: Okulun bulunduğu şehir
+      colombian_school_name: Okulun Adı
     form_entries:
       gender:
         male: Erkek

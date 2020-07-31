@@ -8,59 +8,35 @@ te:
           description: ఈవెంట్లు
           description_short: ఈవెంట్లు
         gradeKinder:
-          stages:
-            Events:
-              name: ఈవెంట్లు
           lessons:
             Events:
               name: ఈవెంట్లు
         grade1:
-          stages:
-            Events:
-              name: ఈవెంట్లు
           lessons:
             Events:
               name: ఈవెంట్లు
         k5concepts:
-          stages:
-            Events:
-              name: ఈవెంట్లు
           lessons:
             Events:
               name: ఈవెంట్లు
         dance:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           title: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         dance--draft:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         dance-draft:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         dance-low:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         coursed-2019:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
@@ -68,9 +44,6 @@ te:
             Dance Party:
               name: డాన్స్ పార్టీ
         express-2019:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
@@ -95,16 +68,10 @@ te:
             csf_events:
               display_name: ఈవెంట్లు
         dance-2019:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
         k5-onlinepd-2019:
-          stages:
-            Events:
-              name: ఈవెంట్లు
           lessons:
             Events:
               name: ఈవెంట్లు
@@ -129,9 +96,6 @@ te:
             csf_events:
               display_name: ఈవెంట్లు
         coursed-2020:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
@@ -139,9 +103,6 @@ te:
             Dance Party:
               name: డాన్స్ పార్టీ
         express-2020:
-          stages:
-            Dance Party:
-              name: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
@@ -150,16 +111,10 @@ te:
             csf_events:
               display_name: ఈవెంట్లు
         code-break:
-          stages:
-            Events:
-              name: ఈవెంట్లు
           lessons:
             Events:
               name: ఈవెంట్లు
         k5-onlinepd-2020:
-          stages:
-            Events:
-              name: ఈవెంట్లు
           lessons:
             Events:
               name: ఈవెంట్లు

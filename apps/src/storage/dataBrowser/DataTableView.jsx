@@ -173,11 +173,7 @@ class DataTableView extends React.Component {
           readOnly={readOnly}
         />
         <div style={debugDataStyle}>{this.getTableJson()}</div>
-        {!this.state.showDebugView && (
-          <div style={{overflow: 'auto'}}>
-            <DataTable readOnly={readOnly} />
-          </div>
-        )}
+        {!this.state.showDebugView && <DataTable readOnly={readOnly} />}
       </div>
     );
   }

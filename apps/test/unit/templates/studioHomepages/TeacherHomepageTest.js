@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert} from 'chai';
-import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
+import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import {courses, topCourse} from './homepagesTestData';
 

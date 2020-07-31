@@ -902,6 +902,7 @@ cs:
       gender: 'Rod'
       school_name: 'Název školy'
       school_country: 'Země školy'
+      colombian_school_name: 'Název školy'
     form_entries:
       gender:
         male: 'Muž'

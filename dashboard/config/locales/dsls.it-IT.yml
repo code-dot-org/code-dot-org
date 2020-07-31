@@ -3072,7 +3072,7 @@ it-IT:
         markdown: |-
           # Lezione tradizionale: Il grande evento
 
-          > Un **evento** è una porzione di codice che dice al tuo computer di "restare in ascolto" di qualcosa che deve accadere e quali azioni compiere quando ciò avviene. Ad esempio, nelle pagine Web, spesso è possibile visualizzare un menù a discesa quando si passa il mouse sulla barra di navigazione. Il passaggio del mouse in una certa zona è un evento che attiva un'azione.
+          > Un **evento** è qualcosa che deve accadere. Una porzione di codice - denominata "gestore di evento" - dice al tuo computer di "restare in ascolto" di un certo evento e quali azioni compiere quando ciò avviene. Ad esempio, nelle pagine Web, spesso è possibile visualizzare un menù a discesa quando si passa il mouse sulla barra di navigazione. Il passaggio del mouse in una certa zona è un evento che attiva un'azione.
 
           ***
           ## **1. Consulta il piano di lavoro della lezione "<a href="https://curriculum.code.org/csf-19/coursec/14/" target="blank">Il grande evento</a>" del corso C.**

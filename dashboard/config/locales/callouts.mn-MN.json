@@ -1,0 +1,1259 @@
+{
+  "mn-MN": {
+    "data": {
+      "callouts": {
+        "2-3 Artist Debugging 1": {
+          "2-3_Artist_Debugging_1_a": "Зураачид \"Алхам\" товч байхгүй байгаа ч, хөтөлбөрөө та илүү анхааралтай явуулахын тулд гулгагчаа зүүн тийш татаж болно."
+        },
+        "2-3 Bee Conditionals 5": {
+          "Bee_Cond_5_1a": "Хөх ягаан цэцгэнд 1 эсвэл 0 шүүс байна...гэхдээ та кодыг ажиллуулах хүртэл үүнийг мэдэхгүй!"
+        },
+        "4-5 Artist Patterns Free Play": {
+          "4-5_Artist_Patterns_Free_Play_1": "Таны дуртай бүх блокуудыг одоо ангилалд хуваасан болно. Бүх зүйл хаашаа явсныг харахын тулд эдгээр үгс дээр дараарай!"
+        },
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "САНАГТУН, үүл БҮРТ ЦЭЦЭГ байгаа эсэхийг шалгаарай. Та зөгийн сархинаг заавал шалгах шаардлагагүй."
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Дэлгэц ногоон болж хувирсан уу? Тийм бол 'Дуусгах' товчийг дараарай. Үгүй бол 'Дахин тохируулах' дээр дараад, кодоо өөрчлөн 'Ажиллуулах'-г дахиад дараарай."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Та одоо Дизайн горимд байна."
+        },
+        "CSDU4 - Design Mode - 3": {
+          "": "Гарчигийншошгоны текстийг өөрчлөхийн тулд Тексттохируулах блок ашиглаарай"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "Бүтэн тойрог хийхийн тулд зомби хэдэн удаа шилжихийг оруул"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "\"Давтах\" блокийг ашиглаад ажлын талбар дахь блокуудын эргэн тойронд боож өгнө"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "Энэ блок дотор өөрийн тоолог хувьсагчаа чирнэ үү"
+        },
+        "Course 4 Artist Functions challenge": {
+          "Course_4_Artist_Functions_challenge_1": "Бид бүх блокийг ангилж, зүйлсийг цэгцтэй байлгах үүднээс ангилалд хуваасныг ажиглаарай. Өөрт хэрэгтэй бүх блокийг олохын тулд энд дараарай."
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "\"Давтах\" блокийг ашиглаад ажлын талбар дахь блокуудын эргэн тойронд боож өгнө"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "Энэ блокыг ашиглан \"уртыг\" зөв утгаар тохируулна уу."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "Энэ блокыг ашиглан \"уртыг\" зөв утгаар тохируулна уу."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "Булангийн хэмжээг градусаар авахын тулд 360 талыг талуудын тоогоор хуваана."
+        },
+        "Course 4 Artist Vars 8": {
+          "Course_4_Artist_Vars_8_a": "Илүү их зай хэрэгтэй байна уу? Энэхүү хөндлөвчийг татаж, кодын талбайг өргөсгөөрэй."
+        },
+        "Course 4 Bee 1": {
+          "if_bee_nectar": "Зөгий шүүс цуглуулах, эсвэл зөгийн бал хийх эсэхийг шийдэхийн тулд \"хэрвээ\" блокийг ашиглаарай"
+        },
+        "Course 4 Bee 3": {
+          "if_else_bee": "\"Хэрвээ/үгүй\" блокийг ашиглаарай, ингэснээр Зөгий цэцэгнээс шүүс цуглуулан, цэцэг биш байвал зөгийн бал хийнэ"
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "Энэ товчлуурыг ашиглан функцийг засч, зөгий нь бал авахын тулд чиглэлээ өөрчилнө."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "Командуудыг давтахын тулд блокуудыг давталтын дотор байрлуулна"
+        },
+        "Course 4 Play Lab Params 2": {
+          "Course_4 _Play_Lab_Params_2_1": "\"Засах\" дээр дарж энэхүү функцийг шинэчилж, ингэснээр энэ нь өндөрийн параметрийг хэрэглэх болно."
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "Функцээ засахын тулд энд дарна уу."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "Функцдаа параметр нэмэхийн тулд засварлах дээр дарна уу"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "Жүжигчинг шилжүүлэхдээ сумыг ашигла"
+        },
+        "Course 4 Play Lab Vars 9": {
+          "Course_4_Play_Lab_Vars_9_1": "Ангиллын ард бүх блокуудыг тань зохион байгуулсан болно! Доторх хэсгийг харахын тулд шошго дээр дараарай."
+        },
+        "Course 4 Playlab For Loops 4b": {
+          "Course_4_Playlab_For_Loops_4b_1": "'Эсрэг' хувьсагчид баатар бүрийн өөр өөр нэр байгаа гэдгийг анзаарч байна уу? Тэгэхээр '-д зориулав' гогцоо өөрийн тоогоо хянаж чадна гэсэн үг.",
+          "Course_4_Playlab_For_Loops_4b_2": "Энэхүү таавар дээр, '-д зориулав' гогцооны \"нэмэгдэл\"-г зөвхөн өөрчлөхийг танд зөвшөөрнө."
+        },
+        "Course 4 SCV 6": {
+          "Course_4_SCV_6": "Энэхүү блок нь таныг харахыг хүсэж буй ямар нэг зүйл шигээ болгож өнгийг хувиргах боломжийг олгоно. Юу болохыг харахын тулд тоогоор тоглоно уу!"
+        },
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "Бүжигчний төрлийг эндээс сонгоорой."
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "Энэхүү блокийг программдаа нэмээрэй.",
+          "arrow_buttons": "Сумтай товчийг дарж бүжигчнээ удирдаарай."
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Энэхүү блокийг программдаа нэмээрэй!"
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "Өөрийн программ дээрээ шинэ үйл явдал нэмэх."
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Шинэ блок!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Шинэ блок!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Шинэ блок!",
+          "new_block_4": "Шинэ блок!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Энэхүү блокийг программдаа нэмээрэй!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Энэхүү блокийг программдаа нэмээрэй!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Энэхүү блокийг программдаа нэмээрэй!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Энд шинэ бүжигчнээ нэмээрэй"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Шинэ блок!",
+          "dance_callout_11_b": "Шинэ блок!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Эндээс \"бүх нугаснууд\" блокийг хайгаарай"
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "Бүжигчний төрлийг эндээс сонгоорой."
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "Энэхүү блокийг программдаа нэмээрэй.",
+          "arrow_buttons": "Сумтай товчийг дарж бүжигчнээ удирдаарай."
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Энэхүү блокийг программдаа нэмээрэй!"
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "Өөрийн программ дээрээ шинэ үйл явдал нэмэх."
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Шинэ блок!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Шинэ блок!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Шинэ блок!",
+          "new_block_4": "Шинэ блок!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "Энэхүү блокийг программдаа нэмээрэй!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Энэхүү блокийг программдаа нэмээрэй!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Энэхүү блокийг программдаа нэмээрэй!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Энд шинэ бүжигчнээ нэмээрэй"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Шинэ блок!",
+          "dance_callout_11_b": "Шинэ блок!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Эндээс \"бүх нугаснууд\" блокийг хайгаарай"
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "Таны код хэрхэн ажиллаж байгааг өөртөө болон багшдаа анзааруулахын тулд энэхүү блокийг ашиглаарай."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "Таны код хэрхэн ажиллаж байгааг өөртөө болон багшдаа анзааруулахын тулд энэхүү блокийг ашиглаарай."
+        },
+        "Geometric Sun": {
+          "4-5_Artist_Patterns_Free_Play_1": "Таны дуртай бүх блокуудыг одоо ангилалд хуваасан болно. Бүх зүйл хаашаа явсныг харахын тулд эдгээр үгс дээр дараарай!"
+        },
+        "Geometric Sun_2018": {
+          "4-5_Artist_Patterns_Free_Play_1": "Таны дуртай бүх блокуудыг одоо ангилалд хуваасан болно. Бүх зүйл хаашаа явсныг харахын тулд эдгээр үгс дээр дараарай!"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "Энэ үйл явдал тохиолдох үед дуу гарга."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "Дээш чиглэсэн сум дарагдсан байхад аль блок Ваумах-г дээшлүүлэх вэ?",
+          "Infinity_move_directions_callout_arrow": "Эдгээр сумыг ашиглан жолоодох боломжтой"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "Энд шилжих блок нэмнэ үү"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "Үүн дотор шилжих блокуудыг байрлуулна уу"
+        },
+        "InspirationalArtwork": {
+          "InspirationalArtwork_1": "Тэмдэглэлээ программ дотор өөрөө орхихын тулд энэ шошгын доор шинэ 'сэтгэгдэл` блокийг ашиглаж үзээрэй!"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Бэлэн болсон үедээ \"Ажиллуулах\" товчийг дарж программаа туршиж үзээрэй."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Хөдөлж эхлэхийн тулд \"Ажиллуулах\" товчийг дараарай."
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "NEW_Course_4_Artist_Functions_3_1": "Шинэ функцийг засаж квадрат үүсгэдэг болгохын тулд энд дараарай."
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "Функцээ засахын тулд энд дарна уу."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "Функцээ засахын тулд энд дарна уу."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "\"Функцууд\" гэсэн хуудсыг нээх бол энд дарж \"Функц үүсгэх\" товчийг дарна уу."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "Функцдаа параметр нэмэхийн тулд засварлах дээр дарна уу",
+          "add_and_drag_parameter": "Параметрынхаа нэр дээр бичээд, нэмэх дээр дарж өөрийн үйлдлийн тодорхойлолт руу чирнэ үү"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "Асуултын тэмдгийг орлуулахын тулд уртын хувьсагчийг чирнэ үү"
+        },
+        "NEW Course 4 Bee For Loops 4": {
+          "bee_for_loop": "Энд зөгийгөөр цуглуулахыг хүсэж буй шүүсний хамгийн их тоог оруулаарай"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "Хэрэгслийн хайрцаг шинэ дүр төрхтэй боллоо! \"Үйл ажиллагаа\" блокууд энд байна."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Энэ доош урсах цэсийг ашиглан өөр өөр цасан ширхгийг бий болго!"
+        },
+        "OPD-K5-forloops-5": {
+          "courseF_bee_for4_1": "Та энд `-д зориулав` гогцоог олох болно!"
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "Дараагийн шатанд шилжихийн тулд жүжигчдийг энэ туг дээр аваачаарай."
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "Таны код хэрхэн ажиллаж байгааг өөртөө болон багшдаа анзааруулахын тулд энэхүү блокийг ашиглаарай."
+        },
+        "OPD-K5-variables-1": {
+          "grade5_artist_variables_triangles1_1": "Одоо блокууд тоог оруулах шинэ аргатай байгааг анзаараарай. Эдгээр `мат` блокуудыг сугалж авчраад хөдөлгөж болно!"
+        },
+        "OPD-K5-variables-5": {
+          "courseF_artist_variables3_a": "Үүнийг ашиглан `урт` хувьсагчийн утгыг тохируулаарай"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Эхлэхийн тулд бид энд хэдэн блок тавьсан"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "Эхлэхийн тулд бид энд хэдэн блок тавьсан"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "Эхлэхийн тулд бид энд хэдэн блок тавьсан"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Энэ код нь таны байшинг барьж эхлэх болно. Та үүнийг дуусгаж чадах уу?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "Энэ код нь таны байшинг барьж эхлэх болно. Та үүнийг дуусгаж чадах уу?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "Энэ код нь таны байшинг барьж эхлэх болно. Та үүнийг дуусгаж чадах уу?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Програмаа туршиж үзэхийн тулд \"Тоглуулах\" товчийг дарна уу",
+          "craft_drag_block_callout": "\"Урагш шилжих\" блокийг чирж, нөгөө блокийн доор байрлуулаарай"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "Програмаа туршиж үзэхийн тулд \"Тоглуулах\" товчийг дарна уу",
+          "craft_drag_block_callout": "\"Урагш шилжих\" блокийг чирж, нөгөө блокийн доор байрлуулаарай"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "Програмаа туршиж үзэхийн тулд \"Тоглуулах\" товчийг дарна уу",
+          "craft_drag_block_callout": "\"Урагш шилжих\" блокийг чирж, нөгөө блокийн доор байрлуулаарай"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "Энд блокуудыг байрлуулснаар үйлдлүүдийг давт"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "Энд блокуудыг байрлуулснаар үйлдлүүдийг давт"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "Энд блокуудыг байрлуулснаар үйлдлүүдийг давт"
+        },
+        "Robot Doodle": {
+          "4-5_Artist_Patterns_Free_Play_2": "Тэмдэглэлээ программ дотор өөрөө орхихын тулд энэ шошгын доор шинэ 'сэтгэгдэл` блокийг ашиглаж үзээрэй!"
+        },
+        "Robot Doodle_2018": {
+          "4-5_Artist_Patterns_Free_Play_2": "Тэмдэглэлээ программ дотор өөрөө орхихын тулд энэ шошгын доор шинэ 'сэтгэгдэл` блокийг ашиглаж үзээрэй!"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Энэ код нь лаавыг шалгах болно, та урагшлах тушаал нэмж болох уу?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "Энэ код нь лаавыг шалгах болно, та урагшлах тушаал нэмж болох уу?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "Энэ код нь лаавыг шалгах болно, та урагшлах тушаал нэмж болох уу?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "Энэ төмрийг олборло!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "Энэ төмрийг олборло!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "Энэ төмрийг олборло!"
+        },
+        "Virtual Pet 2_2019": {
+          "": "Энд дараарай!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "Энд дараарай!"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "Энэхүү зан чанар хэрхэн ажиллахыг харахын тулд энд дараарай."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "Энэхүү зан чанар хэрхэн ажиллахыг харахын тулд энд дараарай."
+        },
+        "behaviors 3a": {
+          "behavior_callout": "Яагаад энэ шинж чанар дундын одонд ажиллахгүй байна вэ?",
+          "star2_callout": "Энэхүү хувцасны блокийг устгаж, \"энэхүү шидтэн\"-ий блокийг оронд нь ашиглаарай.",
+          "this_sprite_callout": "Доор байрлах хувцасны блокийг үүнтэй солиорой."
+        },
+        "behaviors 3a_2020": {
+          "behavior_callout": "Яагаад энэ шинж чанар дундын одонд ажиллахгүй байна вэ?",
+          "star2_callout": "Энэхүү хувцасны блокийг устгаж, \"энэхүү шидтэн\"-ий блокийг оронд нь ашиглаарай.",
+          "this_sprite_callout": "Доор байрлах хувцасны блокийг үүнтэй солиорой."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "Энэхүү зан чанар хэрхэн ажиллахыг харахын тулд энд дараарай."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "Энэхүү зан чанар хэрхэн ажиллахыг харахын тулд энд дараарай."
+        },
+        "behaviors 5": {
+          "behaviors_edit": "Энэхүү зан чанарт код нэмээрэй."
+        },
+        "behaviors 5_2020": {
+          "behaviors_edit": "Энэхүү зан чанарт код нэмээрэй."
+        },
+        "behaviors free play": {
+          "behaviors_edit": "Энэхүү зан чанарт код нэмээрэй."
+        },
+        "behaviors free play_2020": {
+          "behaviors_edit": "Энэхүү зан чанарт код нэмээрэй."
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Нэг цэцгээс (эсвэл сархинагаас) бүх шүүс (эсвэл зөгийн бал) цуглуулахын тулд энэ гогцоог ашиглаарай."
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge1_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge2_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "course3_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "Зөгийг арагшлуулахын тулд энэ командыг ашиглаарай."
+        },
+        "course3_bee_functions_challenge3": {
+          "courseF_bee_functions_challenge1_1": "Энэ функцэд та ямар код оруулах ёстой вэ?",
+          "courseF_bee_functions_challenge1_2": "\"Шүүс эсвэл зөгийн бал шалгах\" функцийг энд ашиглаж болох ба гэхдээ зөгийн балыг олон удаа хийхээр зассан тохиолдолд юм."
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Энэ блок нь жүжигчдийг тоглоомын талбайн өөр хэсэгт шилжүүлэх боломжийг танд олгоно."
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge2_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "course4_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "Энэ функц нь эрдэнэ шиштэй хамт сайн ажил хийх болно, гэхдээ бусад ногоотой хэрхэн ажиллах вэ?"
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "Энэ тоо нь энэ тааварт ашиглаж болох блокуудаас хичнээнийг ашиглаж болохыг хэлж өгнө."
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_1": "Энэ тоо нь энэ тааварт ашиглаж болох блокуудаас хичнээнийг ашиглаж болохыг хэлж өгнө."
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_1": "Энэ тоо нь энэ тааварт ашиглаж болох блокуудаас хичнээнийг ашиглаж болохыг хэлж өгнө."
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_1": "Энэ тоо нь энэ тааварт ашиглаж болох блокуудаас хичнээнийг ашиглаж болохыг хэлж өгнө."
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "Энэ тоо нь эцсийн хариултад зөвхөн нэг төрлийн блок ашиглах боломжтой гэсэн үг юм."
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "Энэ тоо нь эцсийн хариултад зөвхөн нэг төрлийн блок ашиглах боломжтой гэсэн үг юм."
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "Энэ тоо нь эцсийн хариултад зөвхөн нэг төрлийн блок ашиглах боломжтой гэсэн үг юм."
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "Энэ тоо нь эцсийн хариултад зөвхөн нэг төрлийн блок ашиглах боломжтой гэсэн үг юм."
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "Та хэрэгтэй үедээ шугамаа буцааж зурж болохыг мэдэж байсан уу?"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "Та хэрэгтэй үедээ шугамаа буцааж зурж болохыг мэдэж байсан уу?"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "Та хэрэгтэй үедээ шугамаа буцааж зурж болохыг мэдэж байсан уу?"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "Та хэрэгтэй үедээ шугамаа буцааж зурж болохыг мэдэж байсан уу?"
+        },
+        "courseA_collector_loops1": {
+          "courseA_collector_loops1_1": "Хэрэгслийн хайрцаг дахь зарим шинэ блокийг харж байна уу? Санаа зоволтгүй, дараа нь эдгээрийг тайзан дээр хэрхэн ашиглахыг харуулах болно."
+        },
+        "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "Энэ тоо нь энэ тааварт ашиглаж болох блокуудаас хичнээнийг ашиглаж болохыг хэлж өгнө."
+        },
+        "courseA_collector_loops3_2018": {
+          "gradek_adventurer_loops2_1": "Энэ тоо нь энэ тааварт ашиглаж болох блокуудаас хичнээнийг ашиглаж болохыг хэлж өгнө."
+        },
+        "courseA_collector_loops3_2019": {
+          "gradek_adventurer_loops2_1": "Энэ тоо нь энэ тааварт ашиглаж болох блокуудаас хичнээнийг ашиглаж болохыг хэлж өгнө."
+        },
+        "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "Энэ тоо нь энэ тааварт ашиглаж болох блокуудаас хичнээнийг ашиглаж болохыг хэлж өгнө."
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Кодыг ажиллаж байгааг харахын тулд энд дараарай!"
+        },
+        "courseA_collector_preLoops2": {
+          "courseA_collector_loops1_1": "Хэрэгслийн хайрцаг дахь зарим шинэ блокийг харж байна уу? Санаа зоволтгүй, дараа нь эдгээрийг тайзан дээр хэрхэн ашиглахыг харуулах болно."
+        },
+        "courseA_collector_preLoops3": {
+          "courseA_collector_loops1_1": "Хэрэгслийн хайрцаг дахь зарим шинэ блокийг харж байна уу? Санаа зоволтгүй, дараа нь эдгээрийг тайзан дээр хэрхэн ашиглахыг харуулах болно."
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_loops1_1": "Хэрэгслийн хайрцаг дахь зарим шинэ блокийг харж байна уу? Санаа зоволтгүй, дараа нь эдгээрийг тайзан дээр хэрхэн ашиглахыг харуулах болно."
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_loops1_1": "Хэрэгслийн хайрцаг дахь зарим шинэ блокийг харж байна уу? Санаа зоволтгүй, дараа нь эдгээрийг тайзан дээр хэрхэн ашиглахыг харуулах болно."
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_loops1_1": "Хэрэгслийн хайрцаг дахь зарим шинэ блокийг харж байна уу? Санаа зоволтгүй, дараа нь эдгээрийг тайзан дээр хэрхэн ашиглахыг харуулах болно."
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Танд түлхүүр хэрэгтэй бол гэрлийн чийдэн дээр дараарай!"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "Танд түлхүүр хэрэгтэй бол гэрлийн чийдэн дээр дараарай!"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "Танд түлхүүр хэрэгтэй бол гэрлийн чийдэн дээр дараарай!"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "Танд түлхүүр хэрэгтэй бол гэрлийн чийдэн дээр дараарай!"
+        },
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "Алхам товчлуурыг ашиглан програм дундуур алхам алхмаар яваарай. Энэ нь танд алдааг олоход тусална!"
+        },
+        "courseA_maze_seq4": {
+          "made_of_stone": "Эдгээр блокууд чулуугаар хийгдсэн байна. Та тэдгээрийг шилжүүлж болно, гэхдээ та тэдгээрийг устгах боломжгүй!"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "Энэ бол диаграмм юм"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "Энэ бол диаграмм юм"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "Энэ бол диаграмм юм"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "Энэ бол диаграмм юм"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "Үйл явдлыг сумны чиглэлийг өөрчлөх бол энд дараарай."
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "Үйл явдлыг сумны чиглэлийг өөрчлөх бол энд дараарай."
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "Үйл явдлыг сумны чиглэлийг өөрчлөх бол энд дараарай."
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "Үйл явдлыг сумны чиглэлийг өөрчлөх бол энд дараарай."
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "Энэ нь \"санамсаргүй\" дууг сонгох боломжийг танд олгож, энэ нь та сонсох хүртлээ юу авахаа мэдэхгүй байгаагаа илэрхийлнэ!"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "Энэ нь \"санамсаргүй\" дууг сонгох боломжийг танд олгож, энэ нь та сонсох хүртлээ юу авахаа мэдэхгүй байгаагаа илэрхийлнэ!"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "Энэ нь \"санамсаргүй\" дууг сонгох боломжийг танд олгож, энэ нь та сонсох хүртлээ юу авахаа мэдэхгүй байгаагаа илэрхийлнэ!"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "Энэ нь \"санамсаргүй\" дууг сонгох боломжийг танд олгож, энэ нь та сонсох хүртлээ юу авахаа мэдэхгүй байгаагаа илэрхийлнэ!"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "Хэрэгслийн хайрцагт эдгээр блокуудын зөвхөн нэг нь л байдаг. Та үүнийг хэрхэн ашиглах вэ?"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "Хэрэгслийн хайрцагт эдгээр блокуудын зөвхөн нэг нь л байдаг. Та үүнийг хэрхэн ашиглах вэ?"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "Хэрэгслийн хайрцагт эдгээр блокуудын зөвхөн нэг нь л байдаг. Та үүнийг хэрхэн ашиглах вэ?"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "Хэрэгслийн хайрцагт эдгээр блокуудын зөвхөн нэг нь л байдаг. Та үүнийг хэрхэн ашиглах вэ?"
+        },
+        "courseB_artist_loops5": {
+          "courseB_artist_loops5_1": "Энэ тоо нь хэрэгслийн хайрцагт үлдсэн энэхүү блок байхгүй байна гэсэн үг юм."
+        },
+        "courseB_collector_loops1": {
+          "courseB_collector_loops1_1": "Хэрэгслийн хайрцаг дахь зарим шинэ блокийг харж байна уу? Санаа зоволтгүй, дараа нь эдгээрийг тайзан дээр хэрхэн ашиглахыг харуулах болно."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Танд түлхүүр хэрэгтэй бол гэрлийн чийдэн дээр дараарай!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "Танд түлхүүр хэрэгтэй бол гэрлийн чийдэн дээр дараарай!"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "Танд түлхүүр хэрэгтэй бол гэрлийн чийдэн дээр дараарай!"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "Танд түлхүүр хэрэгтэй бол гэрлийн чийдэн дээр дараарай!"
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "Алхам товчлуурыг ашиглан програм дундуур алхам алхмаар яваарай. Энэ нь танд алдааг олоход тусална!"
+        },
+        "courseB_maze_seq3": {
+          "courseB_maze_seq3_1": "Саарал блокуудыг чулуугаар хийсэн бөгөөд холдуулах боломжгүй юм."
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "Чиглэлийг өөрчлөхийн тулд доошоо чиглэсэн ногоон сумыг ашиглаарай."
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "Чиглэлийг өөрчлөхийн тулд доошоо чиглэсэн ногоон сумыг ашиглаарай."
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "Чиглэлийг өөрчлөхийн тулд доошоо чиглэсэн ногоон сумыг ашиглаарай."
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "Чиглэлийг өөрчлөхийн тулд доошоо чиглэсэн ногоон сумыг ашиглаарай."
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "Дараагийн шатанд шилжихийн тулд жүжигчдийг энэ туг дээр аваачаарай."
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "Дараагийн шатанд шилжихийн тулд жүжигчдийг энэ туг дээр аваачаарай."
+        },
+        "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "Ваддлес ба Чомп хүрэхэд энэ блокыг ашиглаарай!"
+        },
+        "courseC_PlayLab_events8_2018": {
+          "courseC_PlayLab_events8_callout1": "Ваддлес ба Чомп хүрэхэд энэ блокыг ашиглаарай!"
+        },
+        "courseC_PlayLab_events8_2019": {
+          "courseC_PlayLab_events8_callout1": "Ваддлес ба Чомп хүрэхэд энэ блокыг ашиглаарай!"
+        },
+        "courseC_PlayLab_events8_2020": {
+          "courseC_PlayLab_events8_callout1": "Ваддлес ба Чомп хүрэхэд энэ блокыг ашиглаарай!"
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Энэ блок нь жүжигчдийг тоглоомын талбайн өөр хэсэгт шилжүүлэх боломжийг танд олгоно."
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "Энэ блок нь жүжигчдийг тоглоомын талбайн өөр хэсэгт шилжүүлэх боломжийг танд олгоно."
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "Энэ блок нь жүжигчдийг тоглоомын талбайн өөр хэсэгт шилжүүлэх боломжийг танд олгоно."
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "Энэ блок нь жүжигчдийг тоглоомын талбайн өөр хэсэгт шилжүүлэх боломжийг танд олгоно."
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Энэхүү блок нь тус төсөлд маш чухал ач холбогдолтой. Үүнийг ашиглахаа мартуузай!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Энэхүү блок нь тус төсөлд маш чухал ач холбогдолтой. Үүнийг ашиглахаа мартуузай!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Программынхаа дунд үүнийг нэмээрэй."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Программынхаа дунд үүнийг нэмээрэй."
+        },
+        "courseC_artist_loopsPrePre1a": {
+          "courseC_artist_loopsPrePre1a_1": "Зураачийг дэлгэцийн төвд байлгахын тулд энэ блокыг ашиглаж эхлээрэй."
+        },
+        "courseC_artist_loopsPrePre1a_2018": {
+          "courseC_artist_loopsPrePre1a_1": "Зураачийг дэлгэцийн төвд байлгахын тулд энэ блокыг ашиглаж эхлээрэй."
+        },
+        "courseC_artist_loopsPrePre1a_2019": {
+          "courseC_artist_loopsPrePre1a_1": "Зураачийг дэлгэцийн төвд байлгахын тулд энэ блокыг ашиглаж эхлээрэй."
+        },
+        "courseC_artist_loopsPrePre1a_2020": {
+          "courseC_artist_loopsPrePre1a_1": "Зураачийг дэлгэцийн төвд байлгахын тулд энэ блокыг ашиглаж эхлээрэй."
+        },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_1": "Хэрэгслийн хайрцаг дахь зарим шинэ блокийг харж байна уу? Санаа зоволтгүй, дараа нь эдгээрийг тайзан дээр хэрхэн ашиглахыг харуулах болно."
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "Танд хэрэгтэй бол хэрэгслийн хайрцгаас илүү олон блок авах боломжтой!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_1": "Танд хэрэгтэй бол хэрэгслийн хайрцгаас илүү олон блок авах боломжтой!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_1": "Танд хэрэгтэй бол хэрэгслийн хайрцгаас илүү олон блок авах боломжтой!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_1": "Танд хэрэгтэй бол хэрэгслийн хайрцгаас илүү олон блок авах боломжтой!"
+        },
+        "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "Хулуун дээрх дөрвийн тоо нь цуглуулж болох дөрвөн хулуу байгааг хэлдэг."
+        },
+        "courseC_harvester_loops1_2018": {
+          "courseC_harvester_loops1_callout1": "Хулуун дээрх дөрвийн тоо нь цуглуулж болох дөрвөн хулуу байгааг хэлдэг."
+        },
+        "courseC_harvester_loops1_2019": {
+          "courseC_harvester_loops1_callout1": "Хулуун дээрх дөрвийн тоо нь цуглуулж болох дөрвөн хулуу байгааг хэлдэг."
+        },
+        "courseC_harvester_loops1_2020": {
+          "courseC_harvester_loops1_callout1": "Хулуун дээрх дөрвийн тоо нь цуглуулж болох дөрвөн хулуу байгааг хэлдэг."
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "Саарал блокуудыг устгах боломжгүй!"
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "Эдгээр блокууд түгжигдсэн ба устгаж болохгүй!"
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "Эдгээр блокууд түгжигдсэн ба устгаж болохгүй!"
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Багажны хайрцагнаас блокуудыг татаж, ажлын талбар дээрээ авчраарай."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Багажны хайрцагнаас блокуудыг татаж, ажлын талбар дээрээ авчраарай."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Багажны хайрцагнаас блокуудыг татаж, ажлын талбар дээрээ авчраарай."
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой.",
+          "courseC_maze_programming3_3": "Эдгээр блокууд нь чулуу бөгөөд шидэх боломжгүй юм."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой.",
+          "courseC_maze_programming3_3": "Эдгээр блокууд нь чулуу бөгөөд шидэх боломжгүй юм."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой.",
+          "courseC_maze_programming3_3": "Эдгээр блокууд нь чулуу бөгөөд шидэх боломжгүй юм."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой.",
+          "courseC_maze_programming3_3": "Эдгээр блокууд нь чулуу бөгөөд шидэх боломжгүй юм."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseC_maze_programming5": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "Энэ бол таны анхны сорилтын таавар юм! Эдгээр нь хэцүү байх бөгөөд хэд хэдэн удаа оролдох хэрэгтэй.",
+          "courseC_maze_programming7_2": "Эдгээр блокуудыг чулуугаар хийсэн бөгөөд шидэх боломжгүй юм."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "Энэ бол таны анхны сорилтын таавар юм! Эдгээр нь хэцүү байх бөгөөд хэд хэдэн удаа оролдох хэрэгтэй.",
+          "courseC_maze_programming7_2": "Эдгээр блокуудыг чулуугаар хийсэн бөгөөд шидэх боломжгүй юм."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "Энэ бол таны анхны сорилтын таавар юм! Эдгээр нь хэцүү байх бөгөөд хэд хэдэн удаа оролдох хэрэгтэй.",
+          "courseC_maze_programming7_2": "Эдгээр блокуудыг чулуугаар хийсэн бөгөөд шидэх боломжгүй юм."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "Энэ бол таны анхны сорилтын таавар юм! Эдгээр нь хэцүү байх бөгөөд хэд хэдэн удаа оролдох хэрэгтэй.",
+          "courseC_maze_programming7_2": "Эдгээр блокуудыг чулуугаар хийсэн бөгөөд шидэх боломжгүй юм."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "Танд энэ тааварт байгаа эдгээр блокуудын зөвхөн нэг нь л байна."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "Танд энэ тааварт байгаа эдгээр блокуудын зөвхөн нэг нь л байна."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "Танд энэ тааварт байгаа эдгээр блокуудын зөвхөн нэг нь л байна."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "Танд энэ тааварт байгаа эдгээр блокуудын зөвхөн нэг нь л байна."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "Танд энэ тааварт байгаа эдгээр блокуудын зөвхөн нэг нь л байна."
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "Энэ тааврыг зөв бодохын тулд өнгө ашиглах шаардлагагүй. Та хүсвэл энэ \"санамсаргүй өнгө\" блок нь үүнийг хялбаршуулдаг!"
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "Энэ тааврыг зөв бодохын тулд өнгө ашиглах шаардлагагүй. Та хүсвэл энэ \"санамсаргүй өнгө\" блок нь үүнийг хялбаршуулдаг!"
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "Энэ тааврыг зөв бодохын тулд өнгө ашиглах шаардлагагүй. Та хүсвэл энэ \"санамсаргүй өнгө\" блок нь үүнийг хялбаршуулдаг!"
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "Энэ тааврыг зөв бодохын тулд өнгө ашиглах шаардлагагүй. Та хүсвэл энэ \"санамсаргүй өнгө\" блок нь үүнийг хялбаршуулдаг!"
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11_1": "Та энэ тоог өөрчилж болно.",
+          "courseD_artist_ramp11_2": "Кодыг давтахын тулд, давтах удаагийн тоог бичихийн тулд энд дараарай."
+        },
+        "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "САНАГТУН, үүл БҮРТ ЦЭЦЭГ байгаа эсэхийг шалгаарай. Та зөгийн сархинаг заавал шалгах шаардлагагүй.",
+          "4_5_Bee_Conditionals_2_2": "Тусламж хэрэгтэй юу? ВИДЕО түлхүүрийг энд дарж үзээрэй!"
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "САНАГТУН, үүл БҮРТ ЦЭЦЭГ байгаа эсэхийг шалгаарай. Та зөгийн сархинаг заавал шалгах шаардлагагүй."
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "САНАГТУН, үүл БҮРТ ЦЭЦЭГ байгаа эсэхийг шалгаарай. Та зөгийн сархинаг заавал шалгах шаардлагагүй."
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "САНАГТУН, үүл БҮРТ ЦЭЦЭГ байгаа эсэхийг шалгаарай. Та зөгийн сархинаг заавал шалгах шаардлагагүй."
+        },
+        "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "САНАГТУН, үүл БҮРТ ЦЭЦЭГ байгаа эсэхийг шалгаарай. Та зөгийн сархинаг заавал шалгах шаардлагагүй.",
+          "4_5_Bee_Conditionals_2_2": "Тусламж хэрэгтэй юу? ВИДЕО түлхүүрийг энд дарж үзээрэй!"
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Нэг цэцгээс (эсвэл сархинагаас) бүх шүүс (эсвэл зөгийн бал) цуглуулахын тулд энэ гогцоог ашиглаарай."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "Нэг цэцгээс (эсвэл сархинагаас) бүх шүүс (эсвэл зөгийн бал) цуглуулахын тулд энэ гогцоог ашиглаарай."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "Нэг цэцгээс (эсвэл сархинагаас) бүх шүүс (эсвэл зөгийн бал) цуглуулахын тулд энэ гогцоог ашиглаарай."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "Нэг цэцгээс (эсвэл сархинагаас) бүх шүүс (эсвэл зөгийн бал) цуглуулахын тулд энэ гогцоог ашиглаарай."
+        },
+        "courseD_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "Зөгийг арагшлуулахын тулд энэ командыг ашиглаарай."
+        },
+        "courseD_bee_debugging_challenge1a": {
+          "courseD_bee_debugging_challenge1_callout1": "Зөгийг арагшлуулахын тулд энэ командыг ашиглаарай."
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "Энэ блокыг ашиглан ганцхан эрдэнэс цуглуулаарай.  "
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой.",
+          "stone_block_2": "Саарал блокуудыг чулуугаар хийсэн бөгөөд холдуулах боломжгүй юм."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой.",
+          "stone_block_2": "Саарал блокуудыг чулуугаар хийсэн бөгөөд холдуулах боломжгүй юм."
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой.",
+          "stone_block_2": "Саарал блокийг авч болохгүй."
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой.",
+          "stone_block_2": "Саарал блокийг авч болохгүй."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseD_maze_ramp5": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_maze_ramp6": {
+          "courseD_maze_ramp6_1": "Таны энд оруулсан бүх кодыг өөрийн хэлсэн удаагаар давтаж дараа нь программынхаа бусад хэсгийг үргэлжлүүлэн ажиллуулаарай."
+        },
+        "courseD_playLab_condFP": {
+          "courseD_playLab_condFP_1": "бид танд тоглуулахаар илүү их код өгөх үүднээс блокуудыг ангилал болгон зохион байгууллаа! Энд дарж бүх зүйл хаашаа явсан талаар үзээрэй."
+        },
+        "courseD_playLab_condFP_2018": {
+          "courseD_playLab_condFP_1": "бид танд тоглуулахаар илүү их код өгөх үүднээс блокуудыг ангилал болгон зохион байгууллаа! Энд дарж бүх зүйл хаашаа явсан талаар үзээрэй."
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Бүх блокуудыг холбосны дараа \"Ажиллуулах\" товчийг дарж програмаа эхлүүлээрэй."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "Энэ бол хэрэгслийн хайрцаг юм. Эндээс та таавраа дуусгах нэмэлт блокуудыг олох болно."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "Та нэмэлт блокуудыг хэрэгслийн хайрцаг руу чирж аваачих боломжтой."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "Энэ бол таны блокийн хязгаар юм. Энэ нь танд ашиглуулахаар эдгээр блокийн хэд үлдсэнийг танд хэлэх болно."
+        },
+        "courseD_scrat_ramp5": {
+          "": "Эдгээр блокууд дээр тоо байхгүй байна. Та хүссэн хэмжээгээрээ ашиглаж болно!"
+        },
+        "courseD_scrat_ramp6": {
+          "courseD_maze_ramp6_1": "Таны энд оруулсан бүх кодыг өөрийн хэлсэн удаагаар давтаж дараа нь программынхаа бусад хэсгийг үргэлжлүүлэн ажиллуулаарай."
+        },
+        "courseD_scrat_ramp7": {
+          "courseD_maze_ramp6_1": "Таны энд оруулсан бүх кодыг өөрийн хэлсэн удаагаар давтаж дараа нь программынхаа бусад хэсгийг үргэлжлүүлэн ажиллуулаарай."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "Энэ бол таны анхны сорилтын таавар юм! Эдгээр нь хэцүү байх бөгөөд хэд хэдэн удаа оролдох хэрэгтэй."
+        },
+        "courseE_aboutme_2": {
+          "": "Энд дараарай!"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "Энд дараарай!"
+        },
+        "courseE_artist_functions1": {
+          "courseD_artist_functions1_1": "Энэ блокийг ашиглан эхний квадратыг үүсгэхэд тусалж эхлүүлье."
+        },
+        "courseE_artist_functions1_copy": {
+          "courseD_artist_functions1_1": "Энэ блокийг ашиглан эхний квадратыг үүсгэхэд тусалж эхлүүлье."
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "Энэ ногоон блок ажиллаж байх үед функц доторх бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_1": "Энэ ногоон блок ажиллаж байх үед функц доторх бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_1": "Энэ ногоон блок ажиллаж байх үед функц доторх бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_1": "Энэ ногоон блок ажиллаж байх үед функц доторх бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_1": "Энэ ногоон блок ажиллаж байх үед функц доторх бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "Таны функц үүсгэх блокууд нь хэрэгслийн хайрцагт энэ шошго руу зөөгдсөн байна."
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "Таны функц үүсгэх блокууд нь хэрэгслийн хайрцагт энэ шошго руу зөөгдсөн байна."
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "Таны функц үүсгэх блокууд нь хэрэгслийн хайрцагт энэ шошго руу зөөгдсөн байна."
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "Таны функц үүсгэх блокууд нь хэрэгслийн хайрцагт энэ шошго руу зөөгдсөн байна."
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge1_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge1_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge1_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge1_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge2_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge2_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge2_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge2_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge2_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout1": "Доод талд илүү олон код нэмж энэ програмыг үргэлжлүүлээрэй.",
+          "courseE_artist_functions_challenge2_callout2": "Танд энэ загвар таалагдаагүй бол хүссэн зүйлээ өөрчлөөрэй!"
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_1": "Та энэ тоог өөрчилж болно.",
+          "courseE_artist_ramp8_2": "Кодыг давтахын тулд, давтах удаагийн тоог бичихийн тулд энд дараарай."
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "Та энэ тоог өөрчилж болно.",
+          "courseE_artist_ramp8_2": "Кодыг давтахын тулд, давтах удаагийн тоог бичихийн тулд энд дараарай."
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "Хэрэгслийн хайрцгийг энэ удаад арай өөрөөр зохион байгуулж байна! Өөр өөр категорууд дээр дарж аль блок танд байгааг харах боломжтой."
+        },
+        "courseE_farmer_functions13_2018": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions13_2019": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "Хэрэгслийн хайрцгийг энэ удаад арай өөрөөр зохион байгуулж байна! Өөр өөр категорууд дээр дарж аль блок танд байгааг харах боломжтой."
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "Хэрэгслийн хайрцгийг энэ удаад арай өөрөөр зохион байгуулж байна! Өөр өөр категорууд дээр дарж аль блок танд байгааг харах боломжтой."
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "Хэрэгслийн хайрцгийг энэ удаад арай өөрөөр зохион байгуулж байна! Өөр өөр категорууд дээр дарж аль блок танд байгааг харах боломжтой."
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions1a_1": "Энэ цагаан хоолтон тодорхойгүй байна. Энэ нь таныг програм ажиллуулах бүрт өөрчлөгддөг."
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Энэ блок нь жүжигчдийг тоглоомын талбайн өөр хэсэгт шилжүүлэх боломжийг танд олгоно."
+        },
+        "courseE_playLab_scaffold3": {
+          "courseE_playLab_scaffold3_1": "Дараагийн шатанд шилжихийн тулд жүжигчдийг энэ туг дээр аваачаарай."
+        },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "Хэрэгслийн хайрцаг нь \"категорийн\" горимд байгаа бөгөөд энэ нь таны кодонд илүү зай гаргах болно. `-д зориулав` гогцоо нь энд амьдардаг."
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "Хэрэгслийн хайрцаг нь \"категорийн\" горимд байгаа бөгөөд энэ нь таны кодонд илүү зай гаргах болно. `-д зориулав` гогцоо нь энд амьдардаг."
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "Хэрэгслийн хайрцаг нь \"категорийн\" горимд байгаа бөгөөд энэ нь таны кодонд илүү зай гаргах болно. `-д зориулав` гогцоо нь энд амьдардаг."
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "Хэрэгслийн хайрцаг нь \"категорийн\" горимд байгаа бөгөөд энэ нь таны кодонд илүү зай гаргах болно. `-д зориулав` гогцоо нь энд амьдардаг."
+        },
+        "courseF_artist_fwp1": {
+          "courseF_artist_fwp1_1": "Функц доторх кодыг өөрчлөхийн тулд \"засварлах\" товчийг дараарай."
+        },
+        "courseF_artist_fwp4": {
+          "courseF_artist_fwp4_1": "Олон өнцөгтөө дуусгахын тулд үргэлж 360 ÷ 'талууд' хэмээр эргэж байгаа эсэхээ шалгаарай."
+        },
+        "courseF_artist_fwp5": {
+          "courseF_artist_fwp5_1": "Та олон өнцөгт функцийг эндээс олох болно."
+        },
+        "courseF_artist_variables3": {
+          "courseF_artist_variables3_a": "Үүнийг ашиглан `урт` хувьсагчийн утгыг тохируулаарай"
+        },
+        "courseF_artist_variables3_2018": {
+          "courseF_artist_variables3_a": "Үүнийг ашиглан `урт` хувьсагчийн утгыг тохируулаарай"
+        },
+        "courseF_artist_variables3_2019": {
+          "courseF_artist_variables3_a": "Үүнийг ашиглан `урт` хувьсагчийн утгыг тохируулаарай"
+        },
+        "courseF_artist_variables3_2020": {
+          "courseF_artist_variables3_a": "Үүнийг ашиглан `урт` хувьсагчийн утгыг тохируулаарай"
+        },
+        "courseF_artist_variables6": {
+          "courseF_artist_variables6_1": "Та ижил тооны олон хувийг өөрчлөх шаардлагатай үед хувьсагч нь тустай байж болох юм."
+        },
+        "courseF_artist_variables6_2018": {
+          "courseF_artist_variables6_1": "Та ижил тооны олон хувийг өөрчлөх шаардлагатай үед хувьсагч нь тустай байж болох юм."
+        },
+        "courseF_artist_variables6_2019": {
+          "courseF_artist_variables6_1": "Та ижил тооны олон хувийг өөрчлөх шаардлагатай үед хувьсагч нь тустай байж болох юм."
+        },
+        "courseF_artist_variables6_2020": {
+          "courseF_artist_variables6_1": "Та ижил тооны олон хувийг өөрчлөх шаардлагатай үед хувьсагч нь тустай байж болох юм."
+        },
+        "courseF_artist_variables6a": {
+          "courseF_artist_variables6a_1": "Та ижил тооны олон хувийг өөрчлөх шаардлагатай үед хувьсагч нь тустай байж болох юм."
+        },
+        "courseF_artist_variables6a_2018": {
+          "courseF_artist_variables6a_1": "Та ижил тооны олон хувийг өөрчлөх шаардлагатай үед хувьсагч нь тустай байж болох юм."
+        },
+        "courseF_artist_variables6a_2019": {
+          "courseF_artist_variables6a_1": "Та ижил тооны олон хувийг өөрчлөх шаардлагатай үед хувьсагч нь тустай байж болох юм."
+        },
+        "courseF_artist_variables6a_2020": {
+          "courseF_artist_variables6a_1": "Та ижил тооны олон хувийг өөрчлөх шаардлагатай үед хувьсагч нь тустай байж болох юм."
+        },
+        "courseF_bee_conditionals2": {
+          "courseF_bee_conditionals2_2": "Хэрэгслийн хайрцаг одоо категорийн горимд байна. Танд хэрэгтэй бүх блокууд эдгээр шошгон доор байрладаг!"
+        },
+        "courseF_bee_conditionals5": {
+          "courseF_bee_conditionals5_1": "Замын урт өөрчлөгдөх үед (тэгш өнцөгтийн хажуу тал шиг) энэ блокийг ашиглаарай"
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "Та энд `-д зориулав` гогцоог олох болно!"
+        },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "Та энд `-д зориулав` гогцоог олох болно!"
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "Та энд `-д зориулав` гогцоог олох болно!"
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "Та энд `-д зориулав` гогцоог олох болно!"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "Та энд `мат блокийг олох болно."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "Та энд `мат блокийг олох болно."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "Та энд `мат блокийг олох болно."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "Та энд `мат блокийг олох болно."
+        },
+        "courseF_bee_functions2": {
+          "courseF_bee_functions2_1": "Энэ блок нь функцийг дууддаг. Дотор нь юу байгааг харахын тулд энэ \"засварлах\" товчийг дараарай!"
+        },
+        "courseF_bee_functions6": {
+          "courseF_bee_functions6_1": "Үүнийг хялбар болгох үүднээс энд өөр бусад блокуудыг хайхаа мартуузай!"
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "Энэ функцэд та ямар код оруулах ёстой вэ?",
+          "courseF_bee_functions_challenge1_2": "\"Шүүс эсвэл зөгийн бал шалгах\" функцийг энд ашиглаж болох ба гэхдээ зөгийн балыг олон удаа хийхээр зассан тохиолдолд юм."
+        },
+        "courseF_bee_fwp1": {
+          "courseF_bee_fwp1_1": "Та `хэрэв` мэдэгдлийг эндээс олж болно."
+        },
+        "courseF_bee_fwp2": {
+          "courseF_bee_fwp2_a": "Таны функцийг дууддаг блок энд амьдардаг."
+        },
+        "courseF_bee_fwp3": {
+          "courseF_bee_fwp3_1": "Энэ функцийг хоосон орон зай, үүл зэргийг шалгахад ашиглаж болно."
+        },
+        "courseF_bee_fwp4": {
+          "courseF_bee_fwp4_1": "Энэ функцэд параметр нэмэхийн тулд \"засварлах\" товчийг дараарай."
+        },
+        "courseF_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "Энэ функц нь эрдэнэ шиштэй хамт сайн ажил хийх болно, гэхдээ бусад ногоотой хэрхэн ажиллах вэ?"
+        },
+        "courseF_playlab_variables1a": {
+          "courseF_playlab_variables1a_1": "Хэрэгслийн хайрцгийг хэрэгтэй блокуудыг олоход хялбар болгох үүднээс ангилсан."
+        },
+        "courseF_playlab_variables5c": {
+          "courseF_playlab_variables5c_1": "Та хувьсагчийн блокоо эндээс олох боломжтой."
+        },
+        "courseF_playlab_variables6c": {
+          "courseF_playlab_variables5c_1": "Та хувьсагчийн блокоо эндээс олох боломжтой."
+        },
+        "courseF_playlab_variables7c": {
+          "courseF_playlab_variables7c_1": "Эндээс 'асуух` блок олоорой!"
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Багажны хайрцагнаас блокуудыг татаж, ажлын талбар дээрээ авчраарай."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Багажны хайрцагнаас блокуудыг татаж, ажлын талбар дээрээ авчраарай."
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "\"Тойрог үүсгэх\" блокийг ашиглаж хэмжээг өөрчлөөрэй."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Энэ блокийг ашиглаад саарал блокуудыг ажлын талбар дээр байрлуул",
+          "repeat_blocks_2": "(2) \"Давтах\" блокийг энд оруулаад саарал блокуудыг дотор нь байрлуул"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "\"???\" -г тоогоор орлуулахын тулд доош урсах цэсийг ашиглана уу"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Энэ дүрсийг үүсгэхийн тулд давталтын блокыг ашиглана уу."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Энэ дүрсийг үүсгэхийн тулд давталтын блокыг ашиглана уу."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Энэ доош урсах цэсийг ашиглан өөр өөр цасан ширхгийг бий болго!"
+        },
+        "frozen line": {
+          "run": "Програмаа туршиж үзэхийн тулд \"Тоглуулах\"-г дараарай!",
+          "move_elsa_forward": "Эльсаг урагшлуулахын тулд \"Урагшлах\" блокийг чирээд \"Ажиллаж байх үед\" блокийн доор байрлуулна уу"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Эльсаг эргүүлэхийн тулд \"Эрүүлэх\" блок ашиглана уу. Доош урсах цэс дээр байгаа тоо нь Эльсагийн хэр зэрэг эргэхийг тодорхойлдог"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "\"Цасан ширхгийн мөчир үүсгэх\" блок ашиглана уу"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Квадрат үүсгэхийн тулд энд илүү олон блок хавсаргана уу"
+        },
+        "frozen square loop": {
+          "replace_questions": "\"???\" -г тоогоор орлуулахын тулд доош урсах цэсийг ашиглана уу"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "\"???\" -г тоогоор орлуулахын тулд доош урсах цэсийг ашиглана уу"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "\"???\" -г тоогоор орлуулахын тулд доош урсах цэсийг ашиглана уу"
+        },
+        "grade5_artist_variables_triangles1": {
+          "grade5_artist_variables_triangles1_1": "Одоо блокууд тоог оруулах шинэ аргатай байгааг анзаараарай. Эдгээр `мат` блокуудыг сугалж авчраад хөдөлгөж болно!"
+        },
+        "grade5_artist_variables_triangles1_2018": {
+          "grade5_artist_variables_triangles1_1": "Одоо блокууд тоог оруулах шинэ аргатай байгааг анзаараарай. Эдгээр `мат` блокуудыг сугалж авчраад хөдөлгөж болно!"
+        },
+        "grade5_artist_variables_triangles1_2019": {
+          "grade5_artist_variables_triangles1_1": "Одоо блокууд тоог оруулах шинэ аргатай байгааг анзаараарай. Эдгээр `мат` блокуудыг сугалж авчраад хөдөлгөж болно!"
+        },
+        "grade5_artist_variables_triangles1_2020": {
+          "grade5_artist_variables_triangles1_1": "Одоо блокууд тоог оруулах шинэ аргатай байгааг анзаараарай. Эдгээр `мат` блокуудыг сугалж авчраад хөдөлгөж болно!"
+        }
+      }
+    }
+  }
+}

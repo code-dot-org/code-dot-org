@@ -8,7 +8,6 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import PercentAnsweredCell from './PercentAnsweredCell';
-import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
 
@@ -16,27 +15,31 @@ export const COLUMNS = {
   QUESTION: 0
 };
 
-const ANSWER_COLUMN_WIDTH = 70;
-const PADDING = 20;
+const ANSWER_COLUMN_WIDTH = 40;
+const MIN_ROW_HEIGHT = 35;
 
 const styles = {
+  table: {
+    ...tableLayoutStyles.table,
+    tableLayout: 'fixed'
+  },
   answerColumnHeader: {
     width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
+    textAlign: 'center',
+    height: MIN_ROW_HEIGHT
   },
   answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH,
     padding: 0,
-    height: 40
+    height: '100%'
+  },
+  answerColumnCellContent: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
   },
   questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  },
-  notAnsweredCell: {
-    padding: 0,
-    height: 40
+    height: MIN_ROW_HEIGHT
   },
   link: {
     color: color.teal
@@ -51,12 +54,13 @@ const answerColumnsFormatter = (
 ) => {
   const cell = rowData.answers[columnIndex - 1];
 
-  let percentValue = 0;
+  // Default value for questions that don't include this column
+  let percentValue = -1;
 
   if (property === NOT_ANSWERED) {
     percentValue = rowData.notAnswered;
-  } else {
-    percentValue = cell && cell.percentAnswered;
+  } else if (cell) {
+    percentValue = cell.percentAnswered;
   }
 
   return (
@@ -64,6 +68,8 @@ const answerColumnsFormatter = (
       id={rowData.id}
       percentValue={percentValue}
       isSurvey={true}
+      mainLayoutStyle={styles.answerColumnCellContent}
+      valueLayoutStyle={{}}
     />
   );
 };
@@ -144,7 +150,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   getNotAnsweredColumn = () => ({
     property: NOT_ANSWERED,
     header: {
-      label: i18n.notAnswered(),
+      label: i18n.none(),
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
@@ -157,7 +163,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.notAnsweredCell
+          ...styles.answerColumnCell
         }
       }
     }
@@ -196,10 +202,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.questionCell,
-          maxWidth:
-            styleConstants['content-width'] -
-            numAnswers * (ANSWER_COLUMN_WIDTH + PADDING)
+          ...styles.questionCell
         }
       }
     }
@@ -225,6 +228,12 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     ];
   };
 
+  onBodyRow(row, {rowIndex, rowKey}) {
+    return {
+      style: {height: MIN_ROW_HEIGHT}
+    };
+  }
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -242,9 +251,9 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     })(this.props.multipleChoiceSurveyData);
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+      <Table.Provider columns={columns} style={styles.table}>
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
+        <Table.Body rows={sortedRows} rowKey="id" onRow={this.onBodyRow} />
       </Table.Provider>
     );
   }

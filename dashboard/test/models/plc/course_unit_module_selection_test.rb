@@ -7,8 +7,8 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
 
     @course_unit = create(:plc_course_unit, plc_course: course)
 
-    @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE)
-    @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE)
+    @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @course_unit.script)
+    @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE, script: @course_unit.script)
 
     @lesson_cliffs = create(:lesson, name: 'Cliff lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
     @lesson_ornithology = create(:lesson, name: 'Ornithology lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
@@ -86,7 +86,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     DSL
 
     @evaluation = LevelGroup.create_from_level_builder({name: 'evaluation'}, {dsl_text: levelgroup_dsl})
-    create(:script_level, script: @course_unit.script, levels: [@evaluation])
+    create(:script_level, script: @course_unit.script, levels: [@evaluation], lesson: @lesson_honesty)
     @user_level = create(:user_level, user: @user, script: @course_unit.script, level: @evaluation)
     @activity = create(:activity, user: @user, level: @evaluation)
     @user_level = create(:user_level, user: @user, level: @evaluation)

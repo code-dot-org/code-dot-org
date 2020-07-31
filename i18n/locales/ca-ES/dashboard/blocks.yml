@@ -739,6 +739,10 @@ ca:
         text: configuració
       Dancelab_whenSetup2:
         text: configuració
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segons
       gamelab_changePropBy:
         text: canvi {SPRITE} {PROPERTY} per {VAL}
         options:
@@ -757,6 +761,19 @@ ca:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segons
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+            '"x"': x
       gamelab_jumpTo:
         text: "{SPRITE} salta a {LOCATION}"
       gamelab_keyPressed:

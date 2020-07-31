@@ -3,10 +3,24 @@ require 'cdo/activity_constants'
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
-  factory :course_script do
+  factory :course_version do
+    sequence(:key) {|n| "202#{n - 1}"}
+    sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
+    with_unit_group
+
+    trait :with_unit_group do
+      association(:content_root, factory: :unit_group)
+    end
+
+    trait :with_unit do
+      association(:content_root, factory: :script)
+    end
   end
 
-  factory :course do
+  factory :unit_group_unit do
+  end
+
+  factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
@@ -863,11 +877,8 @@ FactoryGirl.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        sublevels = [create(:sublevel), create(:sublevel), create(:sublevel)]
-        lg.properties['pages'] = [
-          {levels: [sublevels[0].name, sublevels[1].name]},
-          {levels: [sublevels[2].name]}
-        ]
+        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
       end
     end
   end

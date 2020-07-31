@@ -1147,6 +1147,8 @@ ar:
       school_name: اسم المؤسسة
       school_city: مدينة المدرسة
       school_country: بلد المؤسسة
+      colombian_school_city: مدينة المدرسة
+      colombian_school_name: اسم المؤسسة
       ages: ما العمر/الأعمار التي تدرِّس لها هذا العام؟
       subjects: ما المادة/المواد الدراسية التي تدرِّسها هذا العام؟
       resources: أي من المصادر التالية لتعليم علوم الكمبيوتر تستخدمها؟

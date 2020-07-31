@@ -11,6 +11,24 @@ es:
   campaign_date_full: Del 7 al 13 de diciembre
   campaign_date_year: '2017'
   campaign_date_full_year: Del 4 al 10 de diciembre de 2017
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Aprende a programar. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -71,17 +89,18 @@ es:
     las imágenes del conjunto de entrenamiento con los resultados más similares.
   oceans_behind_the_scenes_1_markdown: Los niveles 2-4 usan el modelo predefinido
     provisto por el proyecto [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
-    El modelo de MobileNet es un [red neuronal convolucional] que ha sido entrenada
-    en [ImageNet](http://www.image-net.org/), un conjunto de datos de más de 14 millones
-    de imágenes escritas a mano con palabras como "globo" o "fresa". Para personalizar
-    este modelo con los datos de entrenamiento etiquetados que genera el estudiante
-    en esta actividad, usamos una técnica llamada [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Cada imagen en el conjunto de datos de entrenamiento se alimenta a MobileNet,
-    como pixeles, para obtener una lista de anotaciones que es más probable que se
-    apliquen. Luego, para una nueva imagen, la enviamos a MobileNet y comparamos su
-    lista resultante de anotaciones con las del conjunto de datos de capacitación.
-    Clasificamos la nueva imagen con la misma etiqueta (como "pez" o "no pez") que
-    las imágenes del conjunto de entrenamiento con los resultados más similares.
+    El modelo de MobileNet es un [red neuronal convolucional](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    que ha sido entrenada en [ImageNet](http://www.image-net.org/), un conjunto de
+    datos de más de 14 millones de imágenes escritas a mano con palabras como "globo"
+    o "fresa". Para personalizar este modelo con los datos de entrenamiento etiquetados
+    que genera el estudiante en esta actividad, usamos una técnica llamada [Transfer
+    Learning](https://en.wikipedia.org/wiki/Transfer_learning). Cada imagen en el
+    conjunto de datos de entrenamiento se alimenta a MobileNet, como pixeles, para
+    obtener una lista de anotaciones que es más probable que se apliquen. Luego, para
+    una nueva imagen, la enviamos a MobileNet y comparamos su lista resultante de
+    anotaciones con las del conjunto de datos de capacitación. Clasificamos la nueva
+    imagen con la misma etiqueta (como "pez" o "no pez") que las imágenes del conjunto
+    de entrenamiento con los resultados más similares.
   oceans_behind_the_scenes_2: Los niveles 6-8 usan una <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). Observamos cada componente del pez (como los ojos, la boca,
     el cuerpo) y reunimos todos los metadatos de los componentes (como el número de

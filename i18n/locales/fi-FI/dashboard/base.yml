@@ -839,6 +839,7 @@ fi:
       email: 'Sähköposti'
       school_name: 'Koulun nimi'
       school_country: 'Koulun maa'
+      colombian_school_name: 'Koulun nimi'
     form_entries:
       gender:
         male: 'Mies'

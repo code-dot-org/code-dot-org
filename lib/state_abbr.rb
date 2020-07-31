@@ -28,6 +28,15 @@ def get_us_state_abbr_from_name(name, include_dc = false)
   return abbr_sym.try(&:to_s)
 end
 
+# Given a state name or abbreviation, resolves to a two-letter state abbreviation.
+# @param [String|Symbol] name_or_abbr - full state name or state abbreviation
+# @param [Boolean] include_dc - (default: false) Whether to include Washington DC as a state.
+# @returns [String] two-letter state abbreviation, or nil
+def get_us_state_abbr(name_or_abbr, include_dc = false)
+  name = get_us_state_from_abbr(name_or_abbr, include_dc) || name_or_abbr
+  get_us_state_abbr_from_name name, include_dc
+end
+
 # Returns whether the abbreviation is a state (including Washington DC)
 # abbreviation.
 def us_state_abbr?(abbr, include_dc = false)

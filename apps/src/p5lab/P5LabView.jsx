@@ -18,8 +18,6 @@ import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
-import {AnimationCategories} from './gamelab/constants';
-import {CostumeCategories} from './spritelab/constants';
 
 /**
  * Top-level React wrapper for GameLab
@@ -44,6 +42,10 @@ class P5LabView extends React.Component {
     spriteLab: PropTypes.bool.isRequired
   };
 
+  state = {
+    libraryManifest: {}
+  };
+
   getChannelId() {
     if (dashboard && dashboard.project) {
       return dashboard.project.getCurrentId();
@@ -51,21 +53,11 @@ class P5LabView extends React.Component {
     return undefined;
   }
 
-  getLibraryManifest = () => {
-    return this.state.libraryManifest;
-  };
-
-  getCategories() {
-    return this.props.spriteLab ? CostumeCategories : AnimationCategories;
-  }
-
   componentDidMount() {
     this.props.onMount();
-    fetch(
-      `/api/v1/animation-library/manifest/${
-        this.props.spriteLab ? 'spritelab' : 'gamelab'
-      }`
-    )
+    const locale = window.appOptions.locale;
+    const app = this.props.spriteLab ? 'spritelab' : 'gamelab';
+    fetch(`/api/v1/animation-library/manifest/${app}/${locale}`)
       .then(response => response.json())
       .then(libraryManifest => {
         this.setState({libraryManifest});
@@ -109,8 +101,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
-              getLibraryManifest={this.getLibraryManifest}
-              categories={this.getCategories()}
+              libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.props.spriteLab}
               hideAnimationNames={this.props.spriteLab}
             />
@@ -138,8 +129,7 @@ class P5LabView extends React.Component {
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        getLibraryManifest={this.getLibraryManifest}
-        categories={this.getCategories()}
+        libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.props.spriteLab}
         hideAnimationNames={this.props.spriteLab}
       />

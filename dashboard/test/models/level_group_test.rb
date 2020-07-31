@@ -76,16 +76,15 @@ MARKDOWN
     # Validate the page offsets and page_numbers.
     pages = level_group.pages
     assert_equal 'Long Assessment', level_group.properties['title']
-    assert_equal pages[0].offset, 0
+    assert_equal pages[0].levels_and_texts_offset, 0
+    assert_equal pages[0].levels_offset, 0
     assert_equal pages[0].page_number, 1
-    assert_equal pages[1].offset, 3
+    assert_equal pages[1].levels_and_texts_offset, 3
+    assert_equal pages[1].levels_offset, 3
     assert_equal pages[1].page_number, 2
-    assert_equal pages[2].offset, 5
+    assert_equal pages[2].levels_and_texts_offset, 6
+    assert_equal pages[2].levels_offset, 5
     assert_equal pages[2].page_number, 3
-
-    # Validate the text index.
-    texts = level_group.properties["texts"]
-    assert_equal texts[0]["index"], 4
   end
 
   # Test that a level_group can't be created if it has duplicate levels.
@@ -201,8 +200,16 @@ MARKDOWN
     script = create :script
     level1 = create :multi
     level2 = create :multi
-    properties = {pages: [{levels: [level1.name]}, {levels: [level2.name]}]}
-    create :level_group, name: 'level_group', properties: properties
+    level_group_dsl = <<~DSL
+      name 'level_group'
+
+      page
+      level '#{level1.name}'
+
+      page
+      level '#{level2.name}'
+    DSL
+    LevelGroup.create_from_level_builder({}, {name: 'level_group', dsl_text: level_group_dsl})
 
     teacher = create :teacher
     student = create :student
@@ -388,8 +395,7 @@ level 'level1 copy2'"
     assert_equal level_group_copy1_dsl, level_group_copy1.dsl_text
     assert_equal 'level_group_test assessment copy1', level_group_copy1.name
     assert_equal 'level1 copy1', level_group_copy1.pages.first.levels.first.name
-    assert_equal 'external1 copy1', level_group_copy1.properties['texts'].first['level_name']
-    refute_nil Level.find_by_name('external1 copy1')
+    assert_equal 'external1 copy1', level_group_copy1.pages.first.texts.first.name
 
     # Copy the level group again. copy2 suffix replaces copy1 suffix throughout,
     # rather than being concatenated, due to name_suffix field.
@@ -397,8 +403,7 @@ level 'level1 copy2'"
     assert_equal level_group_copy2_dsl, level_group_copy2.dsl_text
     assert_equal 'level_group_test assessment copy2', level_group_copy2.name
     assert_equal 'level1 copy2', level_group_copy2.pages.first.levels.first.name
-    assert_equal 'external1 copy2', level_group_copy2.properties['texts'].first['level_name']
-    refute_nil Level.find_by_name('external1 copy2')
+    assert_equal 'external1 copy2', level_group_copy2.pages.first.texts.first.name
 
     # clean up
     File.delete(level_group_copy1.filename)
@@ -411,6 +416,8 @@ level 'level1 copy2'"
 
     # Create script with an anonymous assessment.
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
     sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
@@ -431,7 +438,7 @@ level 'level1 copy2'"
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    script_level = create :script_level, script: script, levels: [level1], assessment: true
+    script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     updated_at = Time.now
 
@@ -524,6 +531,8 @@ level 'level1 copy2'"
   test 'get_summarized_survey_results returns no results when less than 5 responses' do
     # Create script with an anonymous assessment.
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     create :text_match, name: 'level_free_response', type: 'TextMatch'
     create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     create :multi, name: 'level_multi_unattempted', type: 'Multi'
@@ -540,7 +549,7 @@ level 'level1 copy2'"
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    script_level = create :script_level, script: script, levels: [level1], assessment: true
+    script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # Create a section
     teacher = create(:teacher)

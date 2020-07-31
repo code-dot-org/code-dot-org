@@ -970,6 +970,10 @@ es-MX:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_changePropBy:
         text: cambiar {SPRITE} {PROPERTY} por {VAL}.
         options:
@@ -988,7 +992,7 @@ es-MX:
       gamelab_clickedOn:
         text: cuando {SPRITE} haz clic
       gamelab_clickedSpritePointer:
-        text: clic en sprite
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_createNewSprite:
@@ -1015,8 +1019,46 @@ es-MX:
           CHOICE:
             '"this"': este
             '"other"': otro
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_hideTitleScreen:
         text: ocultar pantalla de título
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando los bordes"
       gamelab_jumpTo:
@@ -1092,7 +1134,7 @@ es-MX:
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
       gamelab_objectSpritePointer:
-        text: clic en sprite
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: Patrullar hacia arriba y abajo
       gamelab_playSound:
@@ -1173,7 +1215,7 @@ es-MX:
             '"when"': cuando
             '"while"': mientras
       gamelab_subjectSpritePointer:
-        text: clic en sprite
+        text: "{SPRITE}"
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:

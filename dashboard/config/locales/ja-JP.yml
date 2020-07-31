@@ -920,6 +920,8 @@ ja:
       school_name: 学校名
       school_city: 学校の市町村名
       school_country: 学校のある国
+      colombian_school_city: 学校の市町村名
+      colombian_school_name: 学校名
     form_entries:
       gender:
         male: 男性
