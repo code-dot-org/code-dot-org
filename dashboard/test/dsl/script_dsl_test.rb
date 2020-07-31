@@ -56,6 +56,7 @@ class ScriptDslTest < ActiveSupport::TestCase
           display_name: nil,
           lessons: [
             {
+              key: 'Lesson1',
               name: 'Lesson1',
               script_levels: [
                 {levels: [{name: 'Level 1'}]},
@@ -64,6 +65,7 @@ class ScriptDslTest < ActiveSupport::TestCase
               ]
             },
             {
+              key: 'Lesson2',
               name: 'Lesson2',
               script_levels: [
                 {levels: [{name: 'Level 4'}]},
@@ -105,6 +107,7 @@ level 'Level 3'
           display_name: nil,
           lessons: [
             {
+              key: "Lesson1",
               name: "Lesson1",
               script_levels: [
                 {levels: [{name: "Level 1"}]},
@@ -150,6 +153,7 @@ endvariants
           display_name: nil,
           lessons: [
             {
+              key: "Lesson1",
               name: "Lesson1",
               script_levels: [
                 {levels: [{name: "Level 1"}]},
@@ -205,7 +209,7 @@ endvariants
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'Lesson 1', display_name: 'Lesson1'
+      lesson 'Lesson 1', display_name: 'Lesson 1'
       variants
         level 'maze 1'
         level 'maze 2', experiments: ["testExperiment"]
@@ -231,6 +235,7 @@ endvariants
           display_name: nil,
           lessons: [
             {
+              key: "Lesson1",
               name: "Lesson1",
               lockable: true,
               script_levels: [
@@ -238,6 +243,7 @@ endvariants
               ]
             },
             {
+              key: "Lesson2",
               name: "Lesson2",
               script_levels: [
                 {levels: [{name: "Level 2"}]},
@@ -387,6 +393,7 @@ endvariants
           lessons: [
             {
               name: "Lesson1",
+              key: "Lesson1",
               script_levels: [
                 {levels: [{name: "Level 1"}]},
                 {levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
@@ -419,6 +426,7 @@ level 'Level 3'
           display_name: nil,
           lessons: [
             {
+              key: "Lesson1",
               name: "Lesson1",
               script_levels: [
                 {levels: [{name: "Level 1"}]},
@@ -476,6 +484,7 @@ level 'Level 3'
           lessons: [
             {
               name: "Lesson1",
+              key: "Lesson1",
               script_levels: [
                 {levels: [{name: "Level 1"}]},
                 {levels: [{name: "Level 2"}]},
@@ -518,6 +527,7 @@ level 'Level 3'
           lessons: [
             {
               name: "Lesson1",
+              key: "Lesson1",
               visible_after: '2020-04-01 08:00:00 -0700',
               script_levels: [
                 {levels: [{name: "Level 1"}]},
@@ -548,6 +558,7 @@ level 'Level 3'
           lessons: [
             {
               name: "Lesson1",
+              key: "Lesson1",
               visible_after: '2020-04-01 10:00:00 -0700',
               script_levels: [
                 {levels: [{name: "Level 1"}]},
@@ -571,7 +582,7 @@ level 'Level 3'
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'Lesson 1', visible_after: '2020-04-01 08:00:00 -0800'
+      lesson 'Lesson 1', display_name: 'Lesson 1', visible_after: '2020-04-01 08:00:00 -0800'
       level 'maze 1'
 
     SCRIPT
@@ -593,6 +604,7 @@ level 'Level 3'
           lessons: [
             {
               name: "Lesson1",
+              key: "Lesson1",
               script_levels: [
                 {levels: [{name: "Level 1"}]},
                 {levels: [{name: "Level 2"}]},
@@ -616,7 +628,7 @@ level 'Level 3'
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'lesson 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level 'maze 1'
 
     SCRIPT
@@ -633,7 +645,7 @@ level 'Level 3'
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'lesson 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level 'maze 1'
 
     SCRIPT
@@ -658,11 +670,11 @@ level 'Level 3'
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
       lesson_group 'content1', display_name: 'Content1'
-      lesson 'lesson 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level 'maze 1'
 
       lesson_group 'content2', display_name: 'Content2'
-      lesson 'lesson 2'
+      lesson 'lesson 2', display_name: 'lesson 2'
       level 'maze 2'
 
     SCRIPT
@@ -741,6 +753,7 @@ level 'Level 3'
           lessons: [
             {
               name: "Lesson1",
+              key: "Lesson1",
               script_levels: [
                 {levels: [{name: "Level 1"}]},
                 {levels: [{name: "Level 2"}]},
@@ -790,7 +803,7 @@ level 'Level 3'
 
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'Lesson 1'
+      lesson 'Lesson 1', display_name: 'Lesson 1'
       level 'maze 1', named: true
 
     SCRIPT
@@ -799,7 +812,7 @@ level 'Level 3'
 
   test 'Script DSL with named: true' do
     input_dsl = <<~DSL
-      lesson 'stage 1'
+      lesson 'stage 1', display_name: 'stage 1'
       level 'maze 1', named: true
     DSL
     expected = DEFAULT_PROPS.merge(
@@ -809,6 +822,7 @@ level 'Level 3'
           display_name: nil,
           lessons: [
             {
+              key: "stage 1",
               name: "stage 1",
               script_levels: [{levels: [{name: "maze 1"}], named_level: true},]
             }
@@ -836,7 +850,7 @@ level 'Level 3'
 
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson 'Lesson 1'
+      lesson 'Lesson 1', display_name: 'Lesson 1'
       level 'maze 1', assessment: true
 
     SCRIPT
@@ -845,7 +859,7 @@ level 'Level 3'
 
   test 'Script DSL with assessment: true' do
     input_dsl = <<~DSL
-      lesson 'stage 1'
+      lesson 'stage 1', display_name: 'stage 1'
       level 'maze 1', assessment: true
     DSL
     expected = DEFAULT_PROPS.merge(
@@ -855,6 +869,7 @@ level 'Level 3'
           display_name: nil,
           lessons: [
             {
+              key: "stage 1",
               name: "stage 1",
               script_levels: [
                 {
@@ -875,7 +890,7 @@ level 'Level 3'
   test 'script DSL with single quotes' do
     input_dsl = <<~DSL
       lesson_group 'my_group', display_name: 'Display Name'
-      lesson 'Bob\\'s stage'
+      lesson 'Bob\\'s stage', display_name: 'Bob\\'s stage'
       level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
     DSL
@@ -889,6 +904,7 @@ level 'Level 3'
           display_name: "Display Name",
           lessons: [
             {
+              key: "Bob's stage",
               name: "Bob's stage",
               script_levels: [
                 {levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
@@ -931,10 +947,10 @@ level 'Level 3'
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
       lesson_group 'content1', display_name: 'Content'
-      lesson 'lesson 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level 'maze 1'
 
-      lesson 'lesson 2'
+      lesson 'lesson 2', display_name: 'lesson 2'
       level 'maze 2'
 
     SCRIPT
