@@ -22,7 +22,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       UnitGroup.get_from_cache(unit_group.name)
       UnitGroup.get_from_cache(unit_group.id)
 
-      uncached_course = UnitGroup.get_without_cache(unit_group.id)
+      uncached_unit_group = UnitGroup.get_without_cache(unit_group.id)
 
       populate_cache_and_disconnect_db
 
@@ -31,8 +31,8 @@ class UnitGroupTest < ActiveSupport::TestCase
         UnitGroup.find_by_name('acourse')
       end
 
-      assert_equal uncached_course, UnitGroup.get_from_cache('acourse')
-      assert_equal uncached_course, UnitGroup.get_from_cache(unit_group.id)
+      assert_equal uncached_unit_group, UnitGroup.get_from_cache('acourse')
+      assert_equal uncached_unit_group, UnitGroup.get_from_cache(unit_group.id)
     end
   end
 
@@ -576,9 +576,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test 'has pilot access' do
     unit_group = create :unit_group
-    pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
-    script_in_pilot_course = create :script
-    create :unit_group_unit, unit_group: pilot_course, script: script_in_pilot_course, position: 1
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment'
+    script_in_pilot_unit_group = create :script
+    create :unit_group_unit, unit_group: pilot_unit_group, script: script_in_pilot_unit_group, position: 1
 
     student = create :student
     teacher = create :teacher
@@ -586,7 +586,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
 
     # student in a pilot teacher's section which is assigned to a pilot unit group
-    pilot_section = create :section, user: pilot_teacher, unit_group: pilot_course
+    pilot_section = create :section, user: pilot_teacher, unit_group: pilot_unit_group
     assigned_pilot_student = create(:follower, section: pilot_section).student_user
 
     # teacher in a pilot teacher's section, assigned to the unit group
@@ -594,10 +594,10 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:follower, section: pilot_section, student_user: teacher_in_section)
 
     # student who has progress in a pilot unit group, but is not currently assigned to it
-    other_section = create :section, user: pilot_teacher, unit_group: pilot_course
+    other_section = create :section, user: pilot_teacher, unit_group: pilot_unit_group
     pilot_student_with_progress = create :student
     create(:follower, section: other_section, student_user: pilot_student_with_progress)
-    create :user_script, user: pilot_student_with_progress, script: script_in_pilot_course
+    create :user_script, user: pilot_student_with_progress, script: script_in_pilot_unit_group
 
     # student of pilot teacher, without assignment or progress
     non_pilot_section = create :section, user: pilot_teacher
@@ -616,16 +616,16 @@ class UnitGroupTest < ActiveSupport::TestCase
     refute unit_group.has_pilot_access?(student_of_pilot_teacher)
     refute unit_group.has_pilot_access?(levelbuilder)
 
-    assert pilot_course.pilot?
-    refute pilot_course.has_pilot_access?
-    refute pilot_course.has_pilot_access?(student)
-    refute pilot_course.has_pilot_access?(teacher)
-    assert pilot_course.has_pilot_access?(pilot_teacher)
-    assert pilot_course.has_pilot_access?(assigned_pilot_student)
-    assert pilot_course.has_pilot_access?(teacher_in_section)
-    assert pilot_course.has_pilot_access?(pilot_student_with_progress)
+    assert pilot_unit_group.pilot?
+    refute pilot_unit_group.has_pilot_access?
+    refute pilot_unit_group.has_pilot_access?(student)
+    refute pilot_unit_group.has_pilot_access?(teacher)
+    assert pilot_unit_group.has_pilot_access?(pilot_teacher)
+    assert pilot_unit_group.has_pilot_access?(assigned_pilot_student)
+    assert pilot_unit_group.has_pilot_access?(teacher_in_section)
+    assert pilot_unit_group.has_pilot_access?(pilot_student_with_progress)
     refute unit_group.has_pilot_access?(student_of_pilot_teacher)
-    assert pilot_course.has_pilot_access?(levelbuilder)
+    assert pilot_unit_group.has_pilot_access?(levelbuilder)
   end
 
   test 'has any pilot access' do
