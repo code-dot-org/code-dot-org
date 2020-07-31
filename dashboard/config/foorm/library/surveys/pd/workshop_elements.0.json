@@ -28,8 +28,8 @@
     {
      "type": "html",
      "name": "thank_you_heading",
-     "html": "<h2>Thank you!</h2>
-    },
+     "html": "<h2>Thank you!</h2>"
+    }
 
       ]
     }
