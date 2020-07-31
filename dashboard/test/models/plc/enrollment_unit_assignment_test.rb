@@ -3,10 +3,10 @@ require 'test_helper'
 class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
   setup do
     @teacher = create :teacher
-    @course = create :plc_course
-    @course_unit = create(:plc_course_unit, plc_course: @course)
+    @plc_course = create :plc_course
+    @course_unit = create(:plc_course_unit, plc_course: @plc_course)
     @script = @course_unit.script
-    @script.update(professional_learning_course: @course.name)
+    @script.update(professional_learning_course: @plc_course.name)
 
     @required_lesson_group = create(:lesson_group, key: Plc::LearningModule::REQUIRED_MODULE, script: @script)
     @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @script)
@@ -22,7 +22,7 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     Plc::EnrollmentModuleAssignment.any_instance.stubs(:status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
 
-    @enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @course)
+    @enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @plc_course)
     @unit_enrollment = @enrollment.plc_unit_assignments.first
   end
 
