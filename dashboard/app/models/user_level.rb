@@ -108,6 +108,13 @@ class UserLevel < ActiveRecord::Base
     driver? || navigator?
   end
 
+  def calculate_total_time_spent(additional_time)
+    additional_time if additional_time > 0
+    # TODO: return the total time spent once time_spent has been added to the user_levels table.
+    # https://github.com/code-dot-org/code-dot-org/pull/31696/files
+    # additional_time > 0 ? time_spent + additional_time : time_spent
+  end
+
   def submitted_or_resubmitted?
     submitted_changed?(to: true) || (submitted? && level_source_id_changed?)
   end
