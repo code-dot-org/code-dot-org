@@ -49,7 +49,9 @@ class TestFlakiness
         skip: jobs.count,
         from: from_timestamp
       }.compact
-      jobs += get_jobs(options)
+      new_jobs = get_jobs(options)
+      break if new_jobs.empty?
+      jobs += new_jobs
     end
     jobs.group_by {|job| job['name']}.map do |name, samples|
       passed = samples.select {|job| job['passed']}
