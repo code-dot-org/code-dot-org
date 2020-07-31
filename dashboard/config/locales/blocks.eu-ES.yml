@@ -577,6 +577,10 @@ eu:
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} hasi {BEHAVIOR}
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segundu
       gamelab_changePropBy:
         text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
         options:
@@ -611,6 +615,19 @@ eu:
         options:
           UNIT:
             '"seconds"': segundu
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

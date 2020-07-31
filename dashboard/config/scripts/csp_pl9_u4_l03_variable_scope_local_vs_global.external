@@ -6,7 +6,7 @@ css 'unplugged'
 
 markdown <<MARKDOWN
 
-*Note: This is the same level as U4L3 - Level 9 in the CS Principles Curriculum. Consider how the lesson plan for this lesson asks you to help students make sense of the content on this page.  What are some other ways you can formatively assess students' understanding of this content?*
+<span style="color:red"><i>Note: This is the same level as U4L3 - Level 9 in the CS Principles Curriculum. Consider how the lesson plan for this lesson asks you to help students make sense of the content on this page.  What are some other ways you can formatively assess students' understanding of this content?</i></span>
 
 
 [![](https://images.code.org/b0e16c1ff38f5f5448465a7b0654bcfd-image-1571329455230.png)](https://www.youtube.com/watch?v=Vlj1_X474to)

@@ -88,6 +88,10 @@ uz:
         options:
           KEY:
             '"space"': koinot
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"space"': koinot
       gamelab_keyPressed:
         options:
           KEY:

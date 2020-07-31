@@ -1,0 +1,1357 @@
+{
+  "sl-SI": {
+    "data": {
+      "function_definitions": {
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "podrobnosti"
+          },
+          "draw eyebrow": {
+            "name": "nariši obrv"
+          },
+          "draw pupil": {
+            "name": "nariši zenico"
+          }
+        },
+        "2-3 Artist 3.4": {
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a car": {
+            "name": "nariši avto"
+          }
+        },
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "name": "nariši_pravokotnik",
+            "parameters": {
+              "height": "višina"
+            }
+          }
+        },
+        "2-3 Artist Debugging 10": {
+          "draw square": {
+            "parameters": {
+              "height": "višina"
+            }
+          },
+          "jump to middle": {
+            "name": "skoči na sredino"
+          },
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a button": {
+            "name": "nariši gumb"
+          },
+          "draw cord": {
+            "name": "nariši kabel"
+          },
+          "draw R pad": {
+            "name": "nariši R gumb"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw left leg": {
+            "name": "nariši levo nogo"
+          },
+          "draw right leg": {
+            "name": "nariši desno nogo"
+          },
+          "draw body and arms": {
+            "name": "nariši telo in roke"
+          },
+          "draw a head": {
+            "name": "nariši glavo"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw right leg": {
+            "name": "nariši desno nogo"
+          },
+          "draw arms": {
+            "name": "nariši roke"
+          },
+          "jump to neck": {
+            "name": "skoči do vratu"
+          },
+          "draw left leg": {
+            "name": "nariši levo nogo"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw O": {
+            "name": "nariši O"
+          },
+          "draw D": {
+            "name": "nariši D"
+          },
+          "draw E": {
+            "name": "nariši E"
+          }
+        },
+        "2-3 Artist Functions 10": {
+          "big gear": {
+            "name": "velik zobnik"
+          },
+          "small gear": {
+            "name": "majhen zobnik"
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "nariši šesterokotnik"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "nariši šesterokotnik"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "nariši rožo"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "nariši snežinko"
+          }
+        },
+        "2-3 Bee Functions 10": {
+          "collect purple nectar": {
+            "name": "pridobi ves nektar"
+          }
+        },
+        "2-3 Bee Functions Assessment 1": {
+          "get 7": {
+            "name": "dobi 7"
+          }
+        },
+        "2-3 Bee Functions Assessment 2": {
+          "move and get 3": {
+            "name": "premakni se in dobi 3"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "nariši rožo"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "nariši drevo"
+          }
+        },
+        "4-5 Artist 7": {
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a car": {
+            "name": "nariši avto"
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "nariši krog"
+          },
+          "draw goal": {
+            "name": "nariši gol"
+          }
+        },
+        "4-5 Bee Conditionals 7": {
+          "check purple flower": {
+            "name": "preveri vijolično rožo"
+          }
+        },
+        "4-5 Bee Conditionals 8": {
+          "check flower make honey": {
+            "name": "preveri rožo naredi med"
+          }
+        },
+        "4-5 Bee Conditionals Assessment 1": {
+          "get nectar or make honey": {
+            "name": "dobi nektar ali naredi med"
+          }
+        },
+        "4-5 Bee Debugging 7": {
+          "make 3 honey": {
+            "name": "naredi 3-krat med"
+          }
+        },
+        "4-5 Bee Debugging 9": {
+          "make all honey": {
+            "name": "naredi med"
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "parameters": {
+              "honey": "med"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "skoči"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "točk"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "skoči"
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "name": "skoči",
+            "parameters": {
+              "height": "višina",
+              "actor": "igralec"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 4": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "parameters": {
+              "actor": "igralec"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "parameters": {
+              "actor": "igralec"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "parameters": {
+              "actor": "igralec",
+              "speed": "hitrost"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "parameters": {
+              "actor": "igralec",
+              "speed": "hitrost"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "točk"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "nastavi rezultat"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "nastavi rezultat"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "nariši šesterokotnik"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": "dobi nektar",
+            "parameters": {
+              "counter": "števec"
+            }
+          }
+        },
+        "Course 4 SCF 3": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "Course E: Play Lab Project": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "Find the Wizard": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "točk"
+            }
+          }
+        },
+        "Geometric Sun": {
+          "diamond": {
+            "name": "diamant"
+          },
+          "draw a house": {
+            "name": "nariši hišo"
+          }
+        },
+        "Geometric Sun_2018": {
+          "diamond": {
+            "name": "diamant"
+          },
+          "draw a house": {
+            "name": "nariši hišo"
+          }
+        },
+        "InspirationalArtwork": {
+          "n-sided shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a loop": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw spiral circle": {
+            "parameters": {
+              "size": "velikost"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw spiral circle": {
+            "parameters": {
+              "size": "velikost"
+            }
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "nariši trikotnik"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw a hexagon": {
+            "name": "nariši šesterokotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "do something": {
+            "name": "naredi nekaj",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a star": {
+            "name": "nariši zvezdo",
+            "parameters": {
+              "points": "točk",
+              "length": "dolžina"
+            }
+          },
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "dolžina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a house": {
+            "name": "nariši hišo",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "description": "nariši trikotnik"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "nariši trikotnik"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a hexagon": {
+            "name": "nariši šesterokotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a sqaure": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "name": "skoči",
+            "parameters": {
+              "height": "višina",
+              "actor": "igralec"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "igralec",
+              "speed": "hitrost"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a star": {
+            "name": "nariši zvezdo",
+            "parameters": {
+              "points": "točk",
+              "length": "dolžina"
+            }
+          },
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "dolžina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a house": {
+            "name": "nariši hišo",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "skoči",
+            "parameters": {
+              "height": "višina",
+              "actor": "igralec"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "igralec",
+              "speed": "hitrost"
+            }
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "nariši rožo"
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw a hexagon": {
+            "name": "nariši šesterokotnik"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "nariši šesterokotnik"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a house": {
+            "name": "nariši hišo"
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a house": {
+            "name": "nariši hišo"
+          }
+        },
+        "courseE_artist_functions7_2020": {
+          "draw a house": {
+            "name": "nariši hišo"
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          },
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          },
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          },
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          },
+          "checker": {
+            "parameters": {
+              "size": "velikost"
+            }
+          },
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "Make gingham": {
+            "parameters": {
+              "size": "velikost"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_artist_fwp2": {
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "size": "velikost"
+            }
+          },
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "Make gingham": {
+            "parameters": {
+              "size": "velikost"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square2": {
+            "parameters": {
+              "size": "velikost"
+            }
+          },
+          "filled square": {
+            "parameters": {
+              "size": "velikost"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "dolžina",
+              "min": "min"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "dolžina",
+              "min": "min"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a star": {
+            "name": "nariši zvezdo",
+            "parameters": {
+              "points": "točk",
+              "length": "dolžina"
+            }
+          },
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "dolžina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a house": {
+            "name": "nariši hišo",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "dolžina",
+              "min": "min"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "poberi"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "poberi"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "poberi"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "poberi"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "poberi"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "poberi"
+          }
+        }
+      }
+    }
+  }
+}
