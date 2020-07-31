@@ -206,18 +206,18 @@ namespace :seed do
   end
 
   timed_task courses: :environment do
-    Dir.glob(Course.file_path('**')).sort.map do |path|
-      Course.load_from_path(path)
+    Dir.glob(UnitGroup.file_path('**')).sort.map do |path|
+      UnitGroup.load_from_path(path)
     end
   end
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse csp-2017 csp-2018 csp-2019 csp-2020).each do |course_name|
-      Course.load_from_path("config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
-      Course.load_from_path("test/ui/config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
 

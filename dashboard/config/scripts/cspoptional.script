@@ -47,7 +47,3 @@ level 'U2L17 - Vocabulary matching', assessment: true
 level 'U2L18 Free Response Getting Started', assessment: true
 level 'U2L18 Assessment', assessment: true
 level 'U2L18 Free Response Wrap Up', assessment: true
-
-lesson 'Algorithms Detour - Minimum Spanning Tree'
-lesson 'Algorithms Detour - Shortest Path'
-lesson 'Algorithms Detour - How Routers Learn'

@@ -7,7 +7,7 @@ import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
-import {disconnect} from './manageLinkedAccountsRedux';
+import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 
 const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
@@ -36,11 +36,9 @@ class ManageLinkedAccounts extends React.Component {
   static propTypes = {
     // Provided by redux
     authenticationOptions: PropTypes.objectOf(authOptionPropType),
-    authenticityToken: PropTypes.string.isRequired,
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
-    isCleverStudent: PropTypes.bool.isRequired,
-    disconnect: PropTypes.func.isRequired
+    isCleverStudent: PropTypes.bool.isRequired
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -157,7 +155,6 @@ class ManageLinkedAccounts extends React.Component {
               return (
                 <OauthConnection
                   key={option.id || _.uniqueId('empty_')}
-                  authenticityToken={this.props.authenticityToken}
                   displayName={this.getDisplayName(option.credentialType)}
                   id={option.id}
                   email={this.formatEmail(option)}
@@ -178,28 +175,18 @@ class ManageLinkedAccounts extends React.Component {
 
 export const UnconnectedManageLinkedAccounts = ManageLinkedAccounts;
 
-export default connect(
-  state => ({
-    authenticationOptions: state.manageLinkedAccounts.authenticationOptions,
-    authenticityToken: state.manageLinkedAccounts.authenticityToken,
-    userHasPassword: state.manageLinkedAccounts.userHasPassword,
-    isGoogleClassroomStudent:
-      state.manageLinkedAccounts.isGoogleClassroomStudent,
-    isCleverStudent: state.manageLinkedAccounts.isCleverStudent
-  }),
-  dispatch => ({
-    disconnect(id) {
-      dispatch(disconnect(id));
-    }
-  })
-)(ManageLinkedAccounts);
+export default connect(state => ({
+  authenticationOptions: state.manageLinkedAccounts.authenticationOptions,
+  userHasPassword: state.manageLinkedAccounts.userHasPassword,
+  isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
+  isCleverStudent: state.manageLinkedAccounts.isCleverStudent
+}))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
   static propTypes = {
     displayName: PropTypes.string.isRequired,
     id: PropTypes.number,
     credentialType: PropTypes.string.isRequired,
-    authenticityToken: PropTypes.string.isRequired,
     email: PropTypes.string,
     disconnectDisabledStatus: PropTypes.string,
     error: PropTypes.string
@@ -218,7 +205,6 @@ class OauthConnection extends React.Component {
 
   render() {
     const {
-      authenticityToken,
       credentialType,
       disconnectDisabledStatus,
       displayName,
@@ -263,11 +249,7 @@ class OauthConnection extends React.Component {
                 text={buttonText}
                 disabled={!!disconnectDisabledStatus}
               />
-              <input
-                type="hidden"
-                name="authenticity_token"
-                value={authenticityToken}
-              />
+              <RailsAuthenticityToken />
             </form>
             {disconnectDisabledStatus && (
               <ReactTooltip

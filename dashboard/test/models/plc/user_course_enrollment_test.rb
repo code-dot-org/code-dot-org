@@ -44,7 +44,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
     expected_summary = {
       courseName: @course.name,
-      link: Rails.application.routes.url_helpers.course_path(@course.course),
+      link: Rails.application.routes.url_helpers.course_path(@course.unit_group),
       status: enrollment.status,
       courseUnits: [
         {

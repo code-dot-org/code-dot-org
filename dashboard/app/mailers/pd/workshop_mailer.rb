@@ -142,6 +142,17 @@ class Pd::WorkshopMailer < ActionMailer::Base
          reply_to: email_address(@user.name, @user.email)
   end
 
+  def facilitator_pre_workshop(user, workshop)
+    @user = user
+    @workshop = workshop
+
+    mail content_type: 'text/html',
+         from: from_facilitators,
+         subject: 'Preparing for your upcoming workshop',
+         to: email_address(@user.name, @user.email),
+         reply_to: from_facilitators
+  end
+
   def facilitator_post_workshop(user, workshop)
     @user = user
     @workshop = workshop

@@ -25,11 +25,26 @@ const SIGN_UP_URL = studio(
 const SIGN_IN_URL = studio(`/users/sign_in?${RETURN_TO}`);
 
 export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
-  logSignUpButtonPress = () => {
-    firehoseClient.putRecord({
-      study: 'amazon-future-engineer-eligibility',
-      event: 'sign_up_button_press'
-    });
+  signUpButtonPress = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'amazon-future-engineer-eligibility',
+        event: 'sign_up_button_press'
+      },
+      {callback: () => (window.location = SIGN_UP_URL)}
+    );
+  };
+
+  signInButtonPress = event => {
+    event.preventDefault();
+
+    firehoseClient.putRecord(
+      {
+        study: 'amazon-future-engineer-eligibility',
+        event: 'sign_in_button_press'
+      },
+      {callback: () => (window.location = SIGN_IN_URL)}
+    );
   };
 
   render() {
@@ -43,13 +58,15 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
           if you already have one.
         </div>
         <div style={styles.body}>
-          Already have a Code.org account? <a href={SIGN_IN_URL}>Sign in.</a>
+          Already have a Code.org account?{' '}
+          <a href="#" onClick={this.signInButtonPress}>
+            Sign in.
+          </a>
         </div>
         <Button
           id="sign_up"
-          href={SIGN_UP_URL}
           style={styles.button}
-          onClick={this.logSignUpButtonPress}
+          onClick={this.signUpButtonPress}
         >
           Sign up
         </Button>

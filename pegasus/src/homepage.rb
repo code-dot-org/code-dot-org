@@ -450,7 +450,7 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    true
+    false
   end
 
   def self.show_courses_banner(request)
@@ -458,7 +458,7 @@ class Homepage
   end
 
   def self.show_special2020_banner(request)
-    false
+    true
   end
 
   def self.get_dance_stars

@@ -38,14 +38,6 @@ If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.or
 
 [<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
 
-<br>
-<img src="/images/fit-500/marketing/givewithbing-2020-final.png" style="border-radius: 0px; margin-left: 0px;">
-
-## Give with Bing
-Support computer science students through Give with Bing. Join Microsoft Rewards, choose Code.org and your Bing searches will earn Rewards points that are automatically donated directly to Code.org.
-
-[<button>Join now</button>](https://aka.ms/give-to-codeorg)
-
 ## Ask your school to teach computer science
 Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://studio.code.org/courses?view=teacher) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
 

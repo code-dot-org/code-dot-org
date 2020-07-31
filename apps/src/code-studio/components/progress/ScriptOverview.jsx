@@ -43,6 +43,7 @@ class ScriptOverview extends React.Component {
     courseName: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
+    minimal: PropTypes.bool,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -101,7 +102,8 @@ class ScriptOverview extends React.Component {
       courseName,
       showAssignButton,
       userId,
-      assignedSectionId
+      assignedSectionId,
+      minimal
     } = this.props;
 
     const displayRedirectDialog =
@@ -158,7 +160,7 @@ class ScriptOverview extends React.Component {
             />
           </div>
         )}
-        <ProgressTable />
+        <ProgressTable minimal={minimal} />
         {onOverviewPage && (
           <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
         )}

@@ -6,7 +6,7 @@ Feature: Libraries
 
   @as_student
   Scenario: Publishing and unpublishing a library
-    Given I publish a basic library
+    Given I publish a basic library in Applab
     Then I save the URL
 
     # Check for library on /projects/libraries
@@ -24,7 +24,7 @@ Feature: Libraries
   Scenario: Adding and removing a library from a project
     # Student1 publishes a library
     Given I create a student named "Student1"
-    Given I publish a basic library
+    Given I publish a basic library in Applab
     Then I save the channel id
 
     # Student2 imports Student1's library
@@ -50,7 +50,7 @@ Feature: Libraries
   Scenario: Assigning a library to a section as a teacher
     Given I create a teacher named "Library_Teacher"
     And I create a new section
-    Given I publish a basic library
+    Given I publish a basic library in Applab
     When I close the dialog
 
     # Teacher assigns library to a section

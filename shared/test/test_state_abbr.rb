@@ -114,6 +114,23 @@ class StateAbbrTest < Minitest::Test
     assert_equal 'DC', get_us_state_abbr_from_name('WASHINGTON DC', true)
   end
 
+  def test_get_us_state_abbr
+    # This method will coerce to the two-letter abbreviation
+    # whether you pass it an abbreviation or full name.
+    assert_equal 'IL', get_us_state_abbr('Illinois')
+    assert_equal 'IL', get_us_state_abbr('il')
+    assert_equal 'WA', get_us_state_abbr('Washington')
+    assert_equal 'WA', get_us_state_abbr('wa')
+    assert_nil get_us_state_abbr('British Columbia')
+    assert_nil get_us_state_abbr('BC')
+
+    # With DC option
+    assert_equal 'DC', get_us_state_abbr('Washington DC', true)
+    assert_equal 'DC', get_us_state_abbr('dc', true)
+    assert_nil get_us_state_abbr('Washington DC', false)
+    assert_nil get_us_state_abbr('dc', false)
+  end
+
   def test_us_state_abbr
     assert_equal true, us_state_abbr?(:IL)
     assert_equal true, us_state_abbr?(:IL, false)

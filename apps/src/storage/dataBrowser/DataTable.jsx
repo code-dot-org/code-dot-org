@@ -29,11 +29,7 @@ const styles = {
     }
   ],
   table: {
-    minWidth: MIN_TABLE_WIDTH,
-    overflow: 'scroll'
-  },
-  pagination: {
-    overflow: 'auto'
+    minWidth: MIN_TABLE_WIDTH
   },
   plusIcon: {
     alignItems: 'center',
@@ -222,85 +218,78 @@ class DataTable extends React.Component {
     return (
       <div>
         <DataEntryError isVisible={this.state.showError} />
-        {numPages > 1 && (
-          <div style={styles.pagination}>
-            <PaginationWrapper
-              totalPages={numPages}
-              currentPage={this.state.currentPage + 1}
-              onChangePage={this.onChangePageNumber}
-              label={msg.paginationLabel()}
-            />
-          </div>
-        )}
-        <table style={styles.table}>
-          <tbody>
-            <tr>
-              {columnNames.map(columnName => (
-                <ColumnHeader
-                  key={columnName}
-                  coerceColumn={this.coerceColumn}
-                  columnName={columnName}
+        <div style={{overflow: 'auto', height: 'calc(100vh - 300px)'}}>
+          <table style={styles.table}>
+            <tbody>
+              <tr>
+                {columnNames.map(columnName => (
+                  <ColumnHeader
+                    key={columnName}
+                    coerceColumn={this.coerceColumn}
+                    columnName={columnName}
+                    columnNames={columnNames}
+                    deleteColumn={this.deleteColumn}
+                    editColumn={this.editColumn}
+                    /* hide gear icon if an operation is pending on another column */
+                    isEditable={
+                      columnName !== 'id' &&
+                      !(
+                        this.state.pendingColumn &&
+                        this.state.pendingColumn !== columnName
+                      ) &&
+                      !this.state.pendingAdd
+                    }
+                    isEditing={editingColumn === columnName}
+                    isPending={this.state.pendingColumn === columnName}
+                    readOnly={this.props.readOnly}
+                    renameColumn={this.renameColumn}
+                  />
+                ))}
+                {!this.props.readOnly && (
+                  <th style={styles.addColumnHeader}>
+                    {this.state.pendingAdd ? (
+                      <FontAwesome icon="spinner" className="fa-spin" />
+                    ) : (
+                      <FontAwesome
+                        id="addColumnButton"
+                        icon="plus"
+                        style={styles.plusIcon}
+                        onClick={this.addColumn}
+                      />
+                    )}
+                  </th>
+                )}
+                {!this.props.readOnly && (
+                  <th style={dataStyles.headerCell}>Actions</th>
+                )}
+              </tr>
+
+              {!this.props.readOnly && (
+                <AddTableRow
+                  tableName={this.props.tableName}
                   columnNames={columnNames}
-                  deleteColumn={this.deleteColumn}
-                  editColumn={this.editColumn}
-                  /* hide gear icon if an operation is pending on another column */
-                  isEditable={
-                    columnName !== 'id' &&
-                    !(
-                      this.state.pendingColumn &&
-                      this.state.pendingColumn !== columnName
-                    ) &&
-                    !this.state.pendingAdd
-                  }
-                  isEditing={editingColumn === columnName}
-                  isPending={this.state.pendingColumn === columnName}
+                  showError={this.showError}
+                  hideError={this.hideError}
+                />
+              )}
+
+              {Object.keys(rows).map(id => (
+                <EditTableRow
+                  columnNames={columnNames}
+                  tableName={this.props.tableName}
+                  record={JSON.parse(rows[id])}
+                  key={id}
                   readOnly={this.props.readOnly}
-                  renameColumn={this.renameColumn}
+                  showError={this.showError}
+                  hideError={this.hideError}
                 />
               ))}
-              {!this.props.readOnly && (
-                <th style={styles.addColumnHeader}>
-                  {this.state.pendingAdd ? (
-                    <FontAwesome icon="spinner" className="fa-spin" />
-                  ) : (
-                    <FontAwesome
-                      id="addColumnButton"
-                      icon="plus"
-                      style={styles.plusIcon}
-                      onClick={this.addColumn}
-                    />
-                  )}
-                </th>
-              )}
-              {!this.props.readOnly && (
-                <th style={dataStyles.headerCell}>Actions</th>
-              )}
-            </tr>
+            </tbody>
+          </table>
+        </div>
 
-            {!this.props.readOnly && (
-              <AddTableRow
-                tableName={this.props.tableName}
-                columnNames={columnNames}
-                showError={this.showError}
-                hideError={this.hideError}
-              />
-            )}
-
-            {Object.keys(rows).map(id => (
-              <EditTableRow
-                columnNames={columnNames}
-                tableName={this.props.tableName}
-                record={JSON.parse(rows[id])}
-                key={id}
-                readOnly={this.props.readOnly}
-                showError={this.showError}
-                hideError={this.hideError}
-              />
-            ))}
-          </tbody>
-        </table>
         {numPages > 1 && (
-          <div style={styles.pagination}>
+          <div>
             <PaginationWrapper
               totalPages={numPages}
               currentPage={this.state.currentPage + 1}

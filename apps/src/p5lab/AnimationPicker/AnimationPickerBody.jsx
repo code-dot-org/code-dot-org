@@ -44,8 +44,7 @@ export default class AnimationPickerBody extends React.Component {
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    getLibraryManifest: PropTypes.func.isRequired,
-    categories: PropTypes.object.isRequired,
+    libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired
   };
@@ -67,7 +66,7 @@ export default class AnimationPickerBody extends React.Component {
       categoryQuery = this.state.categoryQuery;
     }
     if (libraryManifest === undefined) {
-      libraryManifest = this.props.getLibraryManifest();
+      libraryManifest = this.props.libraryManifest;
     }
 
     return searchAssets(
@@ -127,10 +126,16 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   animationCategoriesRendering() {
-    return Object.keys(this.props.categories).map(category => (
+    const categories = Object.keys(this.props.libraryManifest.categories || []);
+    categories.push('all');
+    return categories.map(category => (
       <AnimationPickerListItem
         key={category}
-        label={this.props.categories[category]}
+        label={
+          msg[`animationCategory_${category}`]
+            ? msg[`animationCategory_${category}`]()
+            : category
+        }
         category={category}
         onClick={this.onCategoryChange}
       />
@@ -150,13 +155,11 @@ export default class AnimationPickerBody extends React.Component {
   }
 
   render() {
-    const libraryManifest = this.props.getLibraryManifest();
-    if (!libraryManifest) {
+    if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
     const {searchQuery, categoryQuery, results} = this.state;
     const {
-      categories,
       hideUploadOption,
       is13Plus,
       onDrawYourOwnClick,
@@ -183,7 +186,7 @@ export default class AnimationPickerBody extends React.Component {
                 >
                   {'All categories > '}
                 </span>
-                <span>{categories[categoryQuery]}</span>
+                <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
               </div>
             )}
           </div>

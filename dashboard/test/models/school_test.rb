@@ -55,7 +55,7 @@ class SchoolTest < ActiveSupport::TestCase
       {
         school_id: school.id,
         school_year: '1998-1999',
-        students_total: 4
+        students_total: 100
       }
     )
     school.save!
@@ -68,8 +68,8 @@ class SchoolTest < ActiveSupport::TestCase
       {
         school_id: school.id,
         school_year: '1998-1999',
-        students_total: 1000,
-        frl_eligible_total: 499
+        students_total: 100,
+        frl_eligible_total: 49
       }
     )
     school.save!
@@ -127,8 +127,8 @@ class SchoolTest < ActiveSupport::TestCase
       {
         school_id: school.id,
         school_year: '1998-1999',
-        students_total: 1000,
-        frl_eligible_total: 401
+        students_total: 100,
+        frl_eligible_total: 41
       }
     )
     school.save!
@@ -141,12 +141,26 @@ class SchoolTest < ActiveSupport::TestCase
       {
         school_id: school.id,
         school_year: '1998-1999',
-        students_total: 4,
-        student_bl_count: 2
+        students_total: 100,
+        student_bl_count: 50
       }
     )
     school.save!
     assert school.afe_high_needs?
+  end
+
+  test 'AFE high needs false when urm percent below 40 percent of students' do
+    school = create :school
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        students_total: 100,
+        student_bl_count: 25
+      }
+    )
+    school.save!
+    refute school.afe_high_needs?
   end
 
   test 'AFE high needs true when title_i_status is yes' do
@@ -168,12 +182,12 @@ class SchoolTest < ActiveSupport::TestCase
       {
         school_id: school.id,
         school_year: '1998-1999',
-        students_total: 5,
-        student_bl_count: 0,
+        students_total: 100,
+        student_bl_count: 5,
         student_am_count: 0,
         student_hi_count: 0,
-        student_hp_count: 0,
-        frl_eligible_total: 0,
+        student_hp_count: 5,
+        frl_eligible_total: 20,
         title_i_status: '6'
       }
     )
@@ -187,8 +201,8 @@ class SchoolTest < ActiveSupport::TestCase
       school.school_stats_by_year << SchoolStatsByYear.new(
         school_id: school.id,
         school_year: '1998-1999',
-        students_total: 4,
-        student_bl_count: 2
+        students_total: 100,
+        student_bl_count: 50
       )
     school.save!
     assert_equal(50.0, stats_by_year.first.urm_percent)

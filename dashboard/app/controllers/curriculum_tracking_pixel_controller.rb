@@ -42,17 +42,20 @@ class CurriculumTrackingPixelController < ApplicationController
       end
 
       FirehoseClient.instance.put_record(
-        study: STUDY_NAME,
-        study_group: 'v1',
-        event: EVENT_NAME,
-        user_id: user_id,
-        data_string: curriculum_page,
-        data_json: {
-          locale: locale,
-          csx: csx,
-          course_or_unit: course_or_unit,
-          lesson: lesson
-        }.to_json
+        :analysis,
+        {
+          study: STUDY_NAME,
+          study_group: 'v1',
+          event: EVENT_NAME,
+          user_id: user_id,
+          data_string: curriculum_page,
+          data_json: {
+            locale: locale,
+            csx: csx,
+            course_or_unit: course_or_unit,
+            lesson: lesson
+          }.to_json
+        }
       )
     end
 

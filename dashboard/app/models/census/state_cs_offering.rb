@@ -98,7 +98,6 @@ class Census::StateCsOffering < ApplicationRecord
     AK
     AR
     CA
-    CO
     CT
     FL
     GA
@@ -109,7 +108,6 @@ class Census::StateCsOffering < ApplicationRecord
     LA
     MA
     MD
-    ME
     MN
     MO
     MS
