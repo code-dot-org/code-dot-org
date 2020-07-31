@@ -16,6 +16,12 @@ get '/l/:id/:url' do |id, url_64|
   end
   url = DB[:poste_urls].where(id: url_id).first
   pass unless url
+  if url[:deleted_at]
+
+    path = resolve_template('views', settings.template_extnames, 'url_inactive')
+    content = path ? document(path) : "Not found\n"
+    halt(200, content)
+  end
 
   DB[:poste_clicks].insert(
     contact_id: delivery[:contact_id],
