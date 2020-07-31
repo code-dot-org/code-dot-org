@@ -1,6 +1,5 @@
 import * as api from './api';
 import _ from 'lodash';
-import experiments from '@cdo/apps/util/experiments';
 import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
@@ -574,23 +573,22 @@ export const categories = {
     color: 'cyan',
     rgb: color.droplet_cyan,
     blocks: []
+  },
+  [MICROBIT_CATEGORY]: {
+    color: 'red',
+    rgb: color.droplet_red,
+    blocks: []
+  },
+  [CIRCUIT_CATEGORY]: {
+    color: 'red',
+    rgb: color.droplet_red,
+    blocks: []
   }
 };
 
-export let blocks = [];
-
-if (experiments.isEnabled(experiments.MICROBIT)) {
-  categories[MICROBIT_CATEGORY] = {
-    color: 'red',
-    rgb: color.droplet_red,
-    blocks: []
-  };
-  blocks = [...makerBlocks, ...microBitBlocks];
-} else {
-  categories[CIRCUIT_CATEGORY] = {
-    color: 'red',
-    rgb: color.droplet_red,
-    blocks: []
-  };
-  blocks = [...makerBlocks, ...circuitPlaygroundBlocks];
-}
+export let blocksMicrobit = [...makerBlocks, ...microBitBlocks];
+export let blocksCircuitPlayground = [
+  ...makerBlocks,
+  ...circuitPlaygroundBlocks
+];
+export let blocks = blocksCircuitPlayground;

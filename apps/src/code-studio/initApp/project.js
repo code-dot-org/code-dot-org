@@ -104,7 +104,7 @@ let thumbnailPngBlob = null;
 var currentSources = {
   source: null,
   html: null,
-  makerAPIsEnabled: false,
+  makerAPIsEnabled: null,
   animations: null,
   selectedSong: null
 };
@@ -295,10 +295,14 @@ var projects = (module.exports = {
   },
 
   /**
-   * Whether this project's source has Maker APIs enabled.
-   * @returns {boolean}
+   * Whether this project's source has the micro:bit or Circuit Playground Maker APIs enabled.
+   * Deprecated values: false/true.
+   * Updated values: 'circuitPlayground', 'microBit', or null.
+   * Deprecated value {false} maps to updated value {null}.
+   * Deprecated value {true} maps to updated value {circuitPlayground}.
+   * @returns {string}
    */
-  useMakerAPIs() {
+  getMakerAPIs() {
     return currentSources.makerAPIsEnabled;
   },
 
@@ -666,7 +670,7 @@ var projects = (module.exports = {
 
       setMakerAPIsStatusFromLevel();
       setMakerAPIsStatusFromQueryParams();
-      if (currentSources.makerAPIsEnabled) {
+      if (this.getMakerAPIs()) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
@@ -1213,7 +1217,7 @@ var projects = (module.exports = {
   },
 
   /**
-   * Save the project with the maker API state toggled, then reload the page
+   * Save the project with the maker API state set, then reload the page
    * so that the toolbox gets re-initialized.
    * @returns {Promise} (mostly useful for tests)
    */
@@ -1868,12 +1872,12 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
-    currentSources.makerAPIsEnabled = true;
+    currentSources.makerAPIsEnabled = 'circuitPlayground';
     updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
-    currentSources.makerAPIsEnabled = false;
+    currentSources.makerAPIsEnabled = null;
     updateQueryParam('disableMaker', undefined, true);
   }
 }
@@ -1883,10 +1887,12 @@ function setMakerAPIsStatusFromQueryParams() {
  * This is the case with New Maker Lab Project.level, and projects created
  * based off of that template (/p/makerlab), done prior to maker API support
  * within applab.
+ *
+ * Note: for backwards compatibility, levels with makerLabEnabled default to circuitPlayground
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
-    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
+    currentSources.makerAPIsEnabled = 'circuitPlayground';
   }
 }
 
