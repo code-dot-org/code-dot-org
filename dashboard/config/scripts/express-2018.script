@@ -276,9 +276,6 @@ bonus 'courseE_artist_functions_challenge2_2018'
 lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean'
 level 'courseC_Unplugged_ScreenOutTheMean_2018'
 
-lesson 'Events: The Big Event', display_name: 'The Big Event'
-level 'BigEvent_2018'
-
 lesson 'Determine the Concept', display_name: 'Determine the Concept'
 level 'courseE_bee_concept1_2018'
 level 'courseE_farmer_concept1_2018'
@@ -292,6 +289,9 @@ level 'courseE_farmer_concept3_2018'
 level 'courseE_artist_concept4_2018'
 bonus 'courseE_artist_concept_challenge1_2018'
 bonus 'courseE_artist_concept_challenge2_2018'
+
+lesson 'Events: The Big Event', display_name: 'The Big Event'
+level 'BigEvent_2018'
 
 lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game'
 level 'courseC_video_flappyIntro_2018'
