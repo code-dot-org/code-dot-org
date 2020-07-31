@@ -3271,8 +3271,8 @@ class UserTest < ActiveSupport::TestCase
       teacher = create :teacher
 
       course = create :unit_group, name: 'csd'
-      create :course_script, unit_group: course, script: (create :script, name: 'csd1'), position: 1
-      create :course_script, unit_group: course, script: (create :script, name: 'csd2'), position: 2
+      create :unit_group_unit, unit_group: course, script: (create :script, name: 'csd1'), position: 1
+      create :unit_group_unit, unit_group: course, script: (create :script, name: 'csd2'), position: 2
 
       other_script = create :script, name: 'other'
       @student.assign_script(other_script)
@@ -3311,9 +3311,9 @@ class UserTest < ActiveSupport::TestCase
       teacher = create :teacher
 
       course = create :unit_group, name: 'testcourse'
-      course_script1 = create :course_script, unit_group: course, script: (create :script, name: 'testscript1'), position: 1
-      create :course_script, unit_group: course, script: (create :script, name: 'testscript2'), position: 2
-      create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
+      unit_group_unit1 = create :unit_group_unit, unit_group: course, script: (create :script, name: 'testscript1'), position: 1
+      create :unit_group_unit, unit_group: course, script: (create :script, name: 'testscript2'), position: 2
+      create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
       other_script = create :script, name: 'otherscript'
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
@@ -3373,12 +3373,12 @@ class UserTest < ActiveSupport::TestCase
     student = create :student
     single_script = create :script
     (create :section, script: single_script).students << student
-    course_script = create :script
+    unit_group_unit = create :script
     course_with_script = create :unit_group
-    create :course_script, unit_group: course_with_script, script: course_script, position: 1
+    create :unit_group_unit, unit_group: course_with_script, script: unit_group_unit, position: 1
     (create :section, unit_group: course_with_script).students << student
 
-    assert_equal [single_script, course_script], student.section_scripts
+    assert_equal [single_script, unit_group_unit], student.section_scripts
   end
 
   test "last_joined_section returns the most recently joined section" do
@@ -3659,9 +3659,9 @@ class UserTest < ActiveSupport::TestCase
 
       @script2 = create :script
       @script3 = create :script
-      create :course_script, position: 1, unit_group: @course, script: @script
-      create :course_script, position: 2, unit_group: @course, script: @script2
-      create :course_script, position: 2, unit_group: @course, script: @script3
+      create :unit_group_unit, position: 1, unit_group: @course, script: @script
+      create :unit_group_unit, position: 2, unit_group: @course, script: @script2
+      create :unit_group_unit, position: 2, unit_group: @course, script: @script3
     end
 
     def put_student_in_section(student, teacher, script, course=nil)
