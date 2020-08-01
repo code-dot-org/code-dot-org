@@ -70,4 +70,20 @@ class FreeResponse < Level
       smart: true
     )
   end
+
+  # Summarizes the level.
+  # @return [Hash]
+  def summarize
+    summary = {
+      id: id,
+      placeholder: get_property(:placeholder) || I18n.t('free_response.placeholder'),
+      height: try(:height) || 80,
+      title: get_property(:title),
+      longInstructions: get_property(:long_instructions),
+      allow_user_uploads: try(:allow_user_uploads)&.to_bool,
+      solution: try(:solution)
+    }
+
+    summary
+  end
 end
