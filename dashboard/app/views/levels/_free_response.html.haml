@@ -1,9 +1,6 @@
 - if @script_level
   - @page_title = @script_level.level.display_name
 
-%div#free-response
-.free-response
-
 - level = level || @level
 - data = {}
 - data[:level] = level.summarize
@@ -11,8 +8,13 @@
 - data[:readonly] = @view_options.readonly_workspace || false
 - data[:showUnderageWarning] = !app_options[:is13Plus]
 
-%script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: data.to_json}}
-
 - if level.allow_user_uploads?
   %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
   %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
+
+%div#free-response
+.free-response
+  = render partial: 'levels/dialog', locals: {app: 'free_response'}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+
+%script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: data.to_json}}
