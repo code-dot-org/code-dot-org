@@ -59,8 +59,7 @@ Resources:
       KmsKeyId: alias/aws/redshift
       MasterUsername: {Ref: RedshiftUsername}
       MasterUserPassword: {Ref: RedshiftPassword}
-      NodeType: ra3.4xlarge
-      NumberOfNodes: 3
+      NodeType: dc1.large
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
   TableauSync:
