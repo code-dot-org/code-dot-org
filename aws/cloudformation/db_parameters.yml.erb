@@ -166,9 +166,6 @@ AuroraCluster: &aurora
   # IAM role ARN used to select data into AWS S3.
   aurora_select_into_s3_role: {'Fn::GetAtt': [AuroraS3Role, Arn]}
 
-  # Temporarily disable binlog filtering so that gh-ost can be used to modify the schema of a large table.
-  aurora_enable_repl_bin_log_filtering: 0
-
 # Aurora Reporting cluster parameters.
 AuroraReportingCluster:
   <<: *aurora
