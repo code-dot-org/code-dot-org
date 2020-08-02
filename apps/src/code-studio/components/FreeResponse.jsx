@@ -29,9 +29,10 @@ export default class FreeResponse extends React.Component {
 
     return (
       <div>
-        <h1>{level.title}</h1>
+        <h1 className="free-response-title">{level.title}</h1>
         <SafeMarkdown markdown={level.longInstructions} />
         <textarea
+          className="free-response-textarea"
           id={`level_${level.id}`}
           placeholder={level.placeholder}
           style={styles.textArea}

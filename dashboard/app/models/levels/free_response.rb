@@ -81,7 +81,9 @@ class FreeResponse < Level
       title: get_property(:title),
       longInstructions: get_property(:long_instructions),
       allow_user_uploads: try(:allow_user_uploads)&.to_bool,
-      solution: try(:solution)
+      solution: try(:solution),
+      submittable: try(:submittable),
+      test_result: try(:submittable) ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT
     }
 
     summary
