@@ -3177,12 +3177,12 @@ class UserTest < ActiveSupport::TestCase
   class AssignedCoursesAndScripts < ActiveSupport::TestCase
     setup do
       @student = create :student
-      @course = create :unit_group, name: 'course'
+      @unit_group = create :unit_group, name: 'course'
     end
 
     test "it returns assigned courses" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, unit_group: @course
+      section = create :section, user_id: teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
 
       assigned_courses = @student.assigned_courses
@@ -3225,14 +3225,14 @@ class UserTest < ActiveSupport::TestCase
 
     test "it checks for assigned courses and scripts, assigned course" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, unit_group: @course
+      section = create :section, user_id: teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
       assert @student.assigned_course_or_script?
     end
 
     test "it checks for assigned courses and scripts, assigned course and assigned visible script" do
       teacher = create :teacher
-      section = create :section, user_id: teacher.id, unit_group: @course
+      section = create :section, user_id: teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
       visible_script = create :script, name: 'visible-script'
       @student.assign_script(visible_script)
@@ -3270,14 +3270,14 @@ class UserTest < ActiveSupport::TestCase
       @student = create :student
       teacher = create :teacher
 
-      course = create :unit_group, name: 'csd'
-      create :unit_group_unit, unit_group: course, script: (create :script, name: 'csd1'), position: 1
-      create :unit_group_unit, unit_group: course, script: (create :script, name: 'csd2'), position: 2
+      unit_group = create :unit_group, name: 'csd'
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd1'), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd2'), position: 2
 
       other_script = create :script, name: 'other'
       @student.assign_script(other_script)
 
-      section = create :section, user_id: teacher.id, unit_group: course
+      section = create :section, user_id: teacher.id, unit_group: unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
     end
 
@@ -3310,15 +3310,15 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       teacher = create :teacher
 
-      course = create :unit_group, name: 'testcourse'
-      unit_group_unit1 = create :unit_group_unit, unit_group: course, script: (create :script, name: 'testscript1'), position: 1
-      create :unit_group_unit, unit_group: course, script: (create :script, name: 'testscript2'), position: 2
+      unit_group = create :unit_group, name: 'testcourse'
+      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1'), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2'), position: 2
       create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
       other_script = create :script, name: 'otherscript'
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
 
-      section = create :section, user_id: teacher.id, unit_group: course
+      section = create :section, user_id: teacher.id, unit_group: unit_group
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
       courses_and_scripts = student.recent_courses_and_scripts(true)
@@ -3334,10 +3334,10 @@ class UserTest < ActiveSupport::TestCase
       @student = create :student
       @teacher = create :teacher
       @grand_teacher = create :teacher
-      @course = create :unit_group, name: 'csd'
+      @unit_group = create :unit_group, name: 'csd'
     end
     test "it returns courses in which a teacher exists as a student" do
-      grand_section = create :section, user_id: @grand_teacher.id, unit_group: @course
+      grand_section = create :section, user_id: @grand_teacher.id, unit_group: @unit_group
       Follower.create!(section_id: grand_section.id, student_user_id: @teacher.id, user: @grand_teacher)
 
       courses = @teacher.section_courses
@@ -3346,7 +3346,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it returns courses in which a teacher exists as a teacher" do
-      section = create :section, user_id: @teacher.id, unit_group: @course
+      section = create :section, user_id: @teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
 
       courses = @teacher.section_courses
@@ -3355,7 +3355,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it returns courses in which a student exists as a student" do
-      section = create :section, user_id: @teacher.id, unit_group: @course
+      section = create :section, user_id: @teacher.id, unit_group: @unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
 
       courses = @student.section_courses
@@ -3655,17 +3655,17 @@ class UserTest < ActiveSupport::TestCase
 
       # explicitly disable LB mode so that we don't create a .course file
       Rails.application.config.stubs(:levelbuilder_mode).returns false
-      @course = create :unit_group
+      @unit_group = create :unit_group
 
       @script2 = create :script
       @script3 = create :script
-      create :unit_group_unit, position: 1, unit_group: @course, script: @script
-      create :unit_group_unit, position: 2, unit_group: @course, script: @script2
-      create :unit_group_unit, position: 2, unit_group: @course, script: @script3
+      create :unit_group_unit, position: 1, unit_group: @unit_group, script: @script
+      create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script2
+      create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script3
     end
 
-    def put_student_in_section(student, teacher, script, course=nil)
-      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: course.try(:id)
+    def put_student_in_section(student, teacher, script, unit_group=nil)
+      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: unit_group.try(:id)
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
       section
     end
@@ -3769,45 +3769,45 @@ class UserTest < ActiveSupport::TestCase
     test "user in two sections, both attached to course" do
       student = create :student
 
-      section1 = put_student_in_section(student, @teacher, @script, @course)
-      section2 = put_student_in_section(student, @teacher, @script, @course)
+      section1 = put_student_in_section(student, @teacher, @script, @unit_group)
+      section2 = put_student_in_section(student, @teacher, @script, @unit_group)
 
       hide_scripts_in_sections(section1, section2)
 
       # when attached to course, we should hide only if hidden in every section
-      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id], student.get_hidden_script_ids(@unit_group)
 
       # ignore any archived sections
       section2.hidden = true
       section2.save!
       student.reload
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
       section1.hidden = true
       section1.save!
       student.reload
-      assert_equal [], student.get_hidden_script_ids(@course)
+      assert_equal [], student.get_hidden_script_ids(@unit_group)
     end
 
     test "user in two sections, both attached to course but no script" do
       student = create :student
 
-      section1 = put_student_in_section(student, @teacher, nil, @course)
-      section2 = put_student_in_section(student, @teacher, nil, @course)
+      section1 = put_student_in_section(student, @teacher, nil, @unit_group)
+      section2 = put_student_in_section(student, @teacher, nil, @unit_group)
 
       hide_scripts_in_sections(section1, section2)
 
       # when attached to course, we should hide only if hidden in every section
-      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id], student.get_hidden_script_ids(@unit_group)
 
       # ignore any archived sections
       section2.hidden = true
       section2.save!
       student.reload
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
       section1.hidden = true
       section1.save!
       student.reload
-      assert_equal [], student.get_hidden_script_ids(@course)
+      assert_equal [], student.get_hidden_script_ids(@unit_group)
     end
 
     test "user in two sections, neither attached to script" do
@@ -3838,7 +3838,7 @@ class UserTest < ActiveSupport::TestCase
       hide_scripts_in_sections(section1, section2)
 
       # when not attached to course, we should hide when hidden in any section
-      assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_script_ids(@unit_group)
     end
 
     test "user in two sections, one attached to script one not" do
@@ -3861,13 +3861,13 @@ class UserTest < ActiveSupport::TestCase
     test "user in two sections, one attached to course one not" do
       student = create :student
 
-      attached_section = put_student_in_section(student, @teacher, @script, @course)
+      attached_section = put_student_in_section(student, @teacher, @script, @unit_group)
       unattached_section = put_student_in_section(student, @teacher, create(:script))
 
       hide_scripts_in_sections(attached_section, unattached_section)
 
       # only the scripts hidden in the attached section are considered hidden
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@unit_group)
     end
 
     test "user in no sections" do
@@ -3908,9 +3908,9 @@ class UserTest < ActiveSupport::TestCase
       teacher_teacher = create :teacher
       student = create :student
 
-      teacher_owner_section = put_student_in_section(student, teacher, @script, @course)
-      teacher_owner_section2 = put_student_in_section(student, teacher, @script, @course)
-      teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script, @course)
+      teacher_owner_section = put_student_in_section(student, teacher, @script, @unit_group)
+      teacher_owner_section2 = put_student_in_section(student, teacher, @script, @unit_group)
+      teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script, @unit_group)
 
       # lesson 1 is hidden in the first section owned by the teacher
       SectionHiddenScript.create(section_id: teacher_owner_section.id, script_id: @script.id)
@@ -3927,13 +3927,13 @@ class UserTest < ActiveSupport::TestCase
         teacher_owner_section.id => [@script.id],
         teacher_owner_section2.id => [@script.id, @script2.id]
       }
-      assert_equal expected, teacher.get_hidden_script_ids(@course)
+      assert_equal expected, teacher.get_hidden_script_ids(@unit_group)
     end
 
     test "script_hidden?" do
       teacher = create :teacher
       student = create :student
-      section = put_student_in_section(student, teacher, @script, @course)
+      section = put_student_in_section(student, teacher, @script, @unit_group)
       SectionHiddenScript.create(section_id: section.id, script_id: @script.id)
 
       # returns true for student
