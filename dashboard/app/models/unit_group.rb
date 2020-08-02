@@ -269,7 +269,7 @@ class UnitGroup < ApplicationRecord
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
-    valid_courses.any? {|course| course.id == course_id.to_i}
+    valid_courses.any? {|unit_group| unit_group.id == course_id.to_i}
   end
 
   # @param user [User]
@@ -535,9 +535,9 @@ class UnitGroup < ApplicationRecord
 
   def self.course_cache_from_db
     {}.tap do |cache|
-      UnitGroup.with_associated_models.find_each do |course|
-        cache[course.name] = course
-        cache[course.id.to_s] = course
+      UnitGroup.with_associated_models.find_each do |unit_group|
+        cache[unit_group.name] = unit_group
+        cache[unit_group.id.to_s] = unit_group
       end
     end
   end
