@@ -143,16 +143,8 @@ Reporting:
 
 # System variables for the Aurora DB cluster.
 AuroraCluster: &aurora
-  # When using row-based logging, the master writes events to the binary log that indicate how individual table rows are changed.
-  # Replication of the master to the slave works by copying the events representing the changes to the table rows to the slave.
-  # ROW required for DMS Change Data Capture:
-  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-  binlog_format: ROW
-  # When enabled, this variable causes the master to write a checksum for each event in the binary log.
-  # When disabled (value NONE), write and check the event length (rather than a checksum) for each event.
-  # NONE required for DMS Change Data Capture:
-  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-  binlog_checksum: NONE
+  # Disable binary logging to improve write performance.
+  binlog_format: 'OFF'
 
   # Enable GTIDs: https://aws.amazon.com/blogs/database/amazon-aurora-for-mysql-compatibility-now-supports-global-transaction-identifiers-gtids-replication/
   gtid-mode: ON_PERMISSIVE
