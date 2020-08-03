@@ -16,7 +16,10 @@ import shapes from './shapes';
 
 const styles = {
   content: {
-    maxWidth: styleConstants['content-width']
+    width: '100%',
+    maxWidth: styleConstants['content-width'],
+    marginLeft: 'auto',
+    marginRight: 'auto'
   }
 };
 
@@ -64,6 +67,7 @@ class Courses extends Component {
         ? i18n.coursesTeachHeroDescription()
         : i18n.coursesLearnHeroDescription();
     }
+
     return heroStrings;
   }
 
@@ -82,20 +86,13 @@ class Courses extends Component {
       description,
       buttonText
     } = this.getHeroStrings();
-
-    // Verify background image works for both LTR and RTL languages.
-    const backgroundUrl = isTeacher
-      ? '/shared/images/banners/courses-hero-teacher.jpg'
-      : '/shared/images/banners/courses-hero-student.jpg';
-
     return (
-      <div>
+      <div style={styles.content}>
         <HeaderBanner
           headingText={headingText}
           subHeadingText={subHeadingText}
           description={description}
           short={!isSignedOut}
-          backgroundUrl={backgroundUrl}
         >
           {isSignedOut && (
             <Button
@@ -106,39 +103,36 @@ class Courses extends Component {
             />
           )}
         </HeaderBanner>
-        <div className={'contentContainer'}>
-          <div className={'content'} style={styles.content}>
-            <ProtectedStatefulDiv ref="flashes" />
 
-            {/* English, teacher.  (Also can be shown when signed out.) */}
-            {isEnglish && isTeacher && (
-              <div className={'announcements'}>
-                {specialAnnouncement && (
-                  <SpecialAnnouncementActionBlock
-                    announcement={specialAnnouncement}
-                  />
-                )}
-                <CoursesTeacherEnglish />
-              </div>
-            )}
+        <ProtectedStatefulDiv ref="flashes" />
 
-            {/* English, student.  (Also the default to be shown when signed out.) */}
-            {isEnglish && !isTeacher && (
-              <div className={'announcements'}>
-                <SpecialAnnouncement isTeacher={isTeacher} />
-                <CoursesStudentEnglish />
-              </div>
-            )}
-
-            {/* Non-English */}
-            {!isEnglish && (
-              <CourseBlocksIntl
-                isTeacher={isTeacher}
-                showModernElementaryCourses={modernElementaryCoursesAvailable}
+        {/* English, teacher.  (Also can be shown when signed out.) */}
+        {isEnglish && isTeacher && (
+          <div>
+            {specialAnnouncement && (
+              <SpecialAnnouncementActionBlock
+                announcement={specialAnnouncement}
               />
             )}
+            <CoursesTeacherEnglish />
           </div>
-        </div>
+        )}
+
+        {/* English, student.  (Also the default to be shown when signed out.) */}
+        {isEnglish && !isTeacher && (
+          <div>
+            <SpecialAnnouncement isTeacher={isTeacher} />
+            <CoursesStudentEnglish />
+          </div>
+        )}
+
+        {/* Non-English */}
+        {!isEnglish && (
+          <CourseBlocksIntl
+            isTeacher={isTeacher}
+            showModernElementaryCourses={modernElementaryCoursesAvailable}
+          />
+        )}
       </div>
     );
   }
