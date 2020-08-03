@@ -89,8 +89,11 @@ module Pd
 
     test 'pre-workshop foorm survey shows thanks when a response exists' do
       setup_summer_workshop
-      create :day_0_workshop_foorm_submission,
+      existing_survey = create :daily_workshop_day_0_foorm_submission,
         :answers_high,
+        form_name: "surveys/pd/summer_workshop_pre_survey"
+      create :day_0_workshop_foorm_submission,
+        foorm_submission: existing_survey,
         pd_workshop: @summer_workshop,
         user: @enrolled_summer_teacher
 
