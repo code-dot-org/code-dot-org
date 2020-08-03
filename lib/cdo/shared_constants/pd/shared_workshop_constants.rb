@@ -24,6 +24,7 @@ module Pd
       SUBJECT_CSF_201: SUBJECT_CSF_201 = 'Deep Dive'.freeze,
       SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
       SUBJECT_VIRTUAL_1: SUBJECT_VIRTUAL_1 = 'Virtual Workshop 1'.freeze,
       SUBJECT_VIRTUAL_2: SUBJECT_VIRTUAL_2 = 'Virtual Workshop 2'.freeze,
       SUBJECT_VIRTUAL_3: SUBJECT_VIRTUAL_3 = 'Virtual Workshop 3'.freeze,
@@ -62,6 +63,7 @@ module Pd
         SUBJECT_CSP_WORKSHOP_6 = '2-day, Workshops 3+4: Unit 5, Create Task, and Multiple Choice Exam'.freeze,
         SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSP_FIT = SUBJECT_FIT,
+        SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
         SUBJECT_CSP_VIRTUAL_1 = SUBJECT_VIRTUAL_1,
         SUBJECT_CSP_VIRTUAL_2 = SUBJECT_VIRTUAL_2,
         SUBJECT_CSP_VIRTUAL_3 = SUBJECT_VIRTUAL_3,
@@ -82,6 +84,7 @@ module Pd
         SUBJECT_CSD_WORKSHOP_6 = '2-day, Workshops 3+4: Units 5 and 6'.freeze,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSD_FIT = SUBJECT_FIT,
+        SUBJECT_CSD_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
         SUBJECT_CSD_VIRTUAL_1 = SUBJECT_VIRTUAL_1,
         SUBJECT_CSD_VIRTUAL_2 = SUBJECT_VIRTUAL_2,
         SUBJECT_CSD_VIRTUAL_3 = SUBJECT_VIRTUAL_3,
@@ -97,6 +100,10 @@ module Pd
         SUBJECT_CSF_FIT = SUBJECT_FIT
       ]
     }.freeze
+
+    VIRTUAL_ONLY_SUBJECTS = [
+      SUBJECT_VIRTUAL_KICKOFF
+    ].freeze
 
     LEGACY_SUBJECTS = {
       COURSE_CSP => [

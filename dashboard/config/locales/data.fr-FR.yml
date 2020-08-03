@@ -597,7 +597,7 @@ fr:
         C2_artist_loops: Boucles d'Artiste
         C2_artist_debugging: Débogage de l’artiste
         C2_bee_loops: Abeilles et boucles
-        C2_bee_debugging: Abeilles et debugging
+        C2_bee_debugging: Débogage d'Abeilles
         C2_bee_conditionals: Abeilles et instructions conditionnelles
         C2_playlab_createstory: Jouer au Labo - Créer une Histoire
         C2_graph_paper: Programmation sur papier quadrillé
@@ -616,7 +616,7 @@ fr:
         C3_artist_nested_loops: Boucles Imbriquées
         C3_farmer_while: Boucles « Tant que »
         C3_bee_nested_loops: Boucles imbriquées
-        C3_bee_debugging: Abeilles et debugging
+        C3_bee_debugging: Débogage d'Abeilles
         C3_bounce: Rebond
         C3_playlab_create_game: Labo de jeux - Créer un jeu
         C3_computational_thinking: L'algorithmique
@@ -646,9 +646,9 @@ fr:
         C4_unplugged_binary: Binaire
         CSF_a_b_artist_loops: Les Boucles dans Artiste
         CSF_artist_angles: Angles dans l’Artiste
-        CSF_collector_k1_blocks: 'Fondamentaux de l’Informatique: Le Collecteur'
+        CSF_collector_k1_blocks: 'Fondamentaux de l’Informatique: La Collectrice'
         CSF_collector_repeat_loops: Les Boucles Répéter du Collecteur
-        CSF_collector_text_blocks: 'Fondamentaux de l’Informatique: Le Collecteur'
+        CSF_collector_text_blocks: 'Fondamentaux de l’Informatique: La Collectrice'
         CSF_create_functions: Créer des Fonctions
         CSF_debugging_k1_blocks: Le Débogage
         CSF_debugging_text_blocks: Le Débogage
@@ -844,7 +844,7 @@ fr:
         csd_what_computers_do: Que font les ordinateurs?
         csf_my_online_neighborhood_2020: Mon Quartier en Ligne
         csf_follow_the_digital_trail: Suivez la Traînée Digitale
-        csf_private_and_personal_information: Informations Privées et Personnelles
+        csf_private_and_personal_information: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
         csd_what_computers_are: Qu'est ce qu'un Ordinateur ?
         codebreak_e01: 'Code Break 1.0: Algorithmes avec Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypes avec Mark Cuban et Lyndsey Scott'
