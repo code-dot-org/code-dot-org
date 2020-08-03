@@ -84,12 +84,12 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with assigned course" do
-    course = create :unit_group
-    create :course_script, unit_group: course, script: Script.get_from_cache('allthethings'), position: 1
-    create :course_script, unit_group: course, script: Script.get_from_cache(Script::FLAPPY_NAME), position: 2
-    course.reload
+    unit_group = create :unit_group
+    create :unit_group_unit, unit_group: unit_group, script: Script.get_from_cache('allthethings'), position: 1
+    create :unit_group_unit, unit_group: unit_group, script: Script.get_from_cache(Script::FLAPPY_NAME), position: 2
+    unit_group.reload
 
-    section = create(:section, user: @teacher, login_type: 'word', unit_group: course)
+    section = create(:section, user: @teacher, login_type: 'word', unit_group: unit_group)
     student = create(:student, name: 'student_in_course')
     create(:follower, section: section, student_user: student)
     section.reload

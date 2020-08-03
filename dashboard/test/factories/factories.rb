@@ -17,7 +17,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :course_script do
+  factory :unit_group_unit do
   end
 
   factory :unit_group do

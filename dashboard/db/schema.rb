@@ -1588,6 +1588,7 @@ ActiveRecord::Schema.define(version: 20200730231738) do
     t.boolean  "submitted"
     t.boolean  "readonly_answers"
     t.datetime "unlocked_at"
+    t.integer  "time_spent"
     t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
   end
 

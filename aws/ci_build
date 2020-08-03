@@ -19,6 +19,8 @@
 # NOTE: running `touch build-started` (or running the `bin/start-build` script)
 # is an easy way to force a rebuild without needing to make a commit.
 #
+require_relative '../lib/cdo/only_one'
+exit(0) unless only_one_running?(__FILE__)
 
 require 'active_support/inflector'
 require_relative '../deployment'
@@ -31,7 +33,6 @@ require 'cdo/honeybadger'
 require 'cdo/infra_production_topic'
 require 'cdo/rake_utils'
 require 'cdo/test_server_status'
-require 'cdo/only_one'
 require 'cdo/metrics_helper'
 require 'dynamic_config/dcdo'
 require 'aws-sdk-cloudwatch'
@@ -277,4 +278,4 @@ rescue => error
   ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
 end
 
-main if only_one_running?(__FILE__)
+main
