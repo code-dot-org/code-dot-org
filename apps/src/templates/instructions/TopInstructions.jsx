@@ -30,6 +30,7 @@ import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
+import FreeResponse from '@cdo/apps/code-studio/components/FreeResponse';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -117,6 +118,14 @@ const styles = {
     float: 'right',
     paddingTop: 6,
     paddingRight: 30
+  },
+  questionLevel: {
+    top: null,
+    bottom: null,
+    right: null,
+    left: null,
+    width: '90%',
+    height: 500
   }
 };
 
@@ -180,7 +189,8 @@ class TopInstructions extends Component {
     shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool
+    widgetMode: PropTypes.bool,
+    isQuestionLevel: PropTypes.bool
   };
 
   constructor(props) {
@@ -529,7 +539,8 @@ class TopInstructions extends Component {
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
       this.props.widgetMode &&
-        (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth})
+        (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth}),
+      this.props.isQuestionLevel && {height: 500}
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
@@ -690,6 +701,21 @@ class TopInstructions extends Component {
             id="scroll-container"
           >
             <div ref="instructions">
+              {this.props.isQuestionLevel && (
+                <FreeResponse
+                  level={{
+                    placeholder: 'Enter answer here',
+                    height: 100,
+                    id: 10,
+                    title: 'Title',
+                    longInstructions: this.props.longInstructions,
+                    allow_user_uploads: false
+                  }}
+                  readOnly={false}
+                  lastAttempt={null}
+                  showUnderageWarning={false}
+                />
+              )}
               {this.props.hasContainedLevels && (
                 <div>
                   <ContainedLevel
@@ -698,7 +724,7 @@ class TopInstructions extends Component {
                   />
                 </div>
               )}
-              {!this.props.hasContainedLevels &&
+              {!(this.props.hasContainedLevels || this.props.isQuestionLevel) &&
                 isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <InstructionsCSF
@@ -711,7 +737,7 @@ class TopInstructions extends Component {
                     }
                   />
                 )}
-              {!this.props.hasContainedLevels &&
+              {!(this.props.hasContainedLevels || this.props.isQuestionLevel) &&
                 isCSDorCSP &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>
@@ -762,7 +788,7 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!this.props.isEmbedView && (
+          {!(this.props.isEmbedView || this.props.isQuestionLevel) && (
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={this.props.height}

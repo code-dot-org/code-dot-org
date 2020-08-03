@@ -12,9 +12,9 @@
   %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
   %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
 
-%div#free-response
-.free-response
-  = render partial: 'levels/dialog', locals: {app: 'free_response'}
-  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+%link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
+#codeApp
+  %div#free-response
+  .free-response
 
 %script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: data.to_json}}
