@@ -1,6 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
+import CompletionButton from '@cdo/apps/templates/CompletionButton';
+
+let styles = {
+  buttonArea: {
+    top: 450,
+    right: 0,
+    position: 'absolute'
+  }
+};
 
 /**
  * Top-level React wrapper for Question Levels.
@@ -24,6 +33,9 @@ export default class QuestionView extends React.Component {
     return (
       <div>
         <TopInstructions isQuestionLevel={true} />
+        <div style={styles.buttonArea}>
+          <CompletionButton />
+        </div>
       </div>
     );
   }

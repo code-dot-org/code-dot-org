@@ -540,7 +540,7 @@ class TopInstructions extends Component {
       this.props.isEmbedView && styles.embedView,
       this.props.widgetMode &&
         (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth}),
-      this.props.isQuestionLevel && {height: 500}
+      this.props.isQuestionLevel && {height: 450}
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
@@ -703,17 +703,16 @@ class TopInstructions extends Component {
             <div ref="instructions">
               {this.props.isQuestionLevel && (
                 <FreeResponse
+                  ref="instructions"
                   level={{
                     placeholder: 'Enter answer here',
                     height: 100,
                     id: 10,
                     title: 'Title',
-                    longInstructions: this.props.longInstructions,
                     allow_user_uploads: false
                   }}
-                  readOnly={false}
                   lastAttempt={null}
-                  showUnderageWarning={false}
+                  hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                 />
               )}
               {this.props.hasContainedLevels && (

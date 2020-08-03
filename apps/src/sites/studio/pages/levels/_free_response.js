@@ -46,10 +46,11 @@ $(document).ready(() => {
       noVisualization: true,
       isShareView: false,
       isProjectLevel: false,
-      isSubmittable: false,
+      isSubmittable: level.submittable || false,
       isSubmitted: false,
       hideSource: true,
-      isReadOnlyWorkspace: level.readonly || false
+      isReadOnlyWorkspace: level.readonly || false,
+      is13Plus: true
     })
   );
 

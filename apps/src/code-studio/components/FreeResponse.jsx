@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import Attachments from './Attachments';
+import {connect} from 'react-redux';
 
 const styles = {
   textArea: {
@@ -9,28 +10,38 @@ const styles = {
   }
 };
 
-export default class FreeResponse extends React.Component {
+class FreeResponse extends React.Component {
   static propTypes = {
+    hidden: PropTypes.bool,
+
     lastAttempt: PropTypes.string,
-    readOnly: PropTypes.bool,
-    showUnderageWarning: PropTypes.bool,
     level: PropTypes.shape({
       placeholder: PropTypes.string,
       height: PropTypes.number,
       id: PropTypes.number,
       title: PropTypes.string,
-      longInstructions: PropTypes.string,
       allow_user_uploads: PropTypes.bool
-    })
+    }),
+
+    //redux
+    showUnderageWarning: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    instructions: PropTypes.string
   };
 
   render() {
-    const {level, lastAttempt, readOnly, showUnderageWarning} = this.props;
+    const {
+      level,
+      lastAttempt,
+      readOnly,
+      showUnderageWarning,
+      instructions
+    } = this.props;
 
     return (
-      <div>
+      <div hidden={this.props.hidden}>
         <h1 className="free-response-title">{level.title}</h1>
-        <SafeMarkdown markdown={level.longInstructions} />
+        <SafeMarkdown markdown={instructions} />
         <textarea
           className="free-response-textarea"
           id={`level_${level.id}`}
@@ -51,3 +62,9 @@ export default class FreeResponse extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  instructions: state.instructions.longInstructions,
+  readOnly: state.pageConstants.isReadOnlyWorkspace,
+  showUnderageWarning: state.pageConstants.is13Plus
+}))(FreeResponse);
