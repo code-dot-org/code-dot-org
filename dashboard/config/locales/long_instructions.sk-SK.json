@@ -1047,6 +1047,8 @@
         "courseA_maze_ramp3a_2019": "Zober <xml><block type=\"maze_moveNorth\"/></xml> z panelu nástrojov a pridaj ich na spodok ostatných blokov, aby si dokončíl tento kód, potom klikni \"▶ Spustiť\".",
         "courseA_maze_ramp3a_2020": "Na dokončenie tvojho kódu, zober blok <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> z panelu nástrojov a pridaj ho na spodok ostatných blokov, potom klikni \"▶ Spustiť\".",
         "courseA_maze_ramp3b_2018": "Na konci tohto kódu je jeden blok navyše! \n\nPotiahni ho naspäť do panelu nástrojov, aby si ho zahodil preč.",
+        "courseA_maze_ramp3b_2019": "Na konci tohto kódu je jeden blok <xml><block type=\"maze_moveSouth\" block-text=\"move south\"/></xml> navyše!\n\nPotiahni ho naspäť do panelu nástrojov, aby si ho zahodil preč.",
+        "courseA_maze_ramp3b_2020": "Na konci tohto kódu je jeden blok <xml><block type=\"maze_moveSouth\" block-text=\"move south\"/></xml> navyše!\n\nPotiahni ho naspäť do panelu nástrojov, aby si ho zahodil preč.",
         "courseA_maze_ramp4a_2018": "Dokážeš prísť na to, ktorý blok potrebuješ pridať na spodok ostatných blokov, aby si dokončíl tento kód?",
         "courseA_maze_ramp4a_2019": "Dokážeš prísť na to, ktorý blok potrebuješ pridať na spodok ostatných blokov, aby si dokončíl tento kód?",
         "courseA_maze_ramp4a_2020": "Dokážeš prísť na to, ktorý blok potrebuješ pridať na spodok ostatných blokov, aby si dokončíl tento kód?",
