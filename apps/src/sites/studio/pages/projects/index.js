@@ -48,12 +48,10 @@ $(document).ready(() => {
           projectCount={projectsData.projectCount}
           specialAnnouncement={specialAnnouncement}
         />
-        <div className={'main container'}>
-          <ProjectsGallery
-            limitedGallery={projectsData.limitedGallery}
-            canShare={projectsData.canShare}
-          />
-        </div>
+        <ProjectsGallery
+          limitedGallery={projectsData.limitedGallery}
+          canShare={projectsData.canShare}
+        />
       </div>
     </Provider>,
     document.querySelector('#projects-page')
