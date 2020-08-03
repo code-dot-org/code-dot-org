@@ -35,8 +35,7 @@ describe('TeacherHomepage', () => {
     const headerBanner = wrapper.find('Connect(HeaderBanner)');
     assert.deepEqual(headerBanner.props(), {
       headingText: 'My Dashboard',
-      short: true,
-      backgroundUrl: '/shared/images/banners/teacher-homepage-hero.jpg'
+      short: true
     });
   });
 
