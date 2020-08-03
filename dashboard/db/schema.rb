@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200728201407) do
+ActiveRecord::Schema.define(version: 20200730194330) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1552,6 +1552,14 @@ ActiveRecord::Schema.define(version: 20200728201407) do
     t.index ["user_level_id"], name: "index_teacher_scores_on_user_level_id", using: :btree
   end
 
+  create_table "unit_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.text     "properties", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["name"], name: "index_unit_groups_on_name", using: :btree
+  end
+
   create_table "user_geos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                             null: false
     t.datetime "created_at",                          null: false
@@ -1580,6 +1588,7 @@ ActiveRecord::Schema.define(version: 20200728201407) do
     t.boolean  "submitted"
     t.boolean  "readonly_answers"
     t.datetime "unlocked_at"
+    t.integer  "time_spent"
     t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
   end
 
@@ -1791,14 +1800,12 @@ ActiveRecord::Schema.define(version: 20200728201407) do
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
-  add_foreign_key "plc_courses", "courses"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
-  add_foreign_key "sections", "courses"
   add_foreign_key "state_cs_offerings", "schools", column: "state_school_id", primary_key: "state_school_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"

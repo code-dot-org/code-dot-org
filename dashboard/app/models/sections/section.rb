@@ -205,7 +205,7 @@ class Section < ActiveRecord::Base
   # @return [Script, nil]
   def default_script
     return script if script
-    return unit_group.try(:default_course_scripts).try(:first).try(:script)
+    return unit_group.try(:default_unit_group_units).try(:first).try(:script)
   end
 
   def summarize_without_students
