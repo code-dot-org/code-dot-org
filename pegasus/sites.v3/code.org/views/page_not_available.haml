@@ -12,7 +12,7 @@ theme: responsive
     %br
     .error-message
       %h1= I18n.t(:page_not_available_title)
-      = I18n.t(:page_not_available_description)
+      = I18n.t(:page_not_available_description).html_safe
       %br
       %br
       %a{href: '/'}
