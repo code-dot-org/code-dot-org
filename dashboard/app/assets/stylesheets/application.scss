@@ -139,7 +139,7 @@ img.video_thumbnail {
 
 .header-wrapper {
   padding-top: 0;
-  min-height: 50px;
+  min-height: 60px;
   position: relative;
   user-select: none;
 
@@ -345,69 +345,20 @@ img.video_thumbnail {
 }
 
 #header-banner {
-  background-size: cover;
-  background-position: 90% 30%;
-  display: flex;
-  justify-content: center;
-
-  .bannerContent {
-    max-width: 60%;
-  }
-
-  /*
-    The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
-    banner needs to be flipped horizontally so the background image empty space is on the right.
-   */
-  html[dir=rtl] & {
-    transform: scaleX(-1);
-    /*
-      Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
-      layout is not backwards
-     */
-    .bannerContentContainer {
-      transform: scaleX(-1);
-    }
-  }
-
-  #projects-page & {
-    margin-bottom: 16px;
-  }
-}
-
-#header-banner-overflow {
-  margin: 16px;
-}
-
-#header-banner, #header-banner-overflow {
-  .children {
-    margin-top: 16px;
-  }
-}
-
-.bannerContentContainer {
-  display: flex;
-  align-items: center;
+  top: 0;
+  position: absolute;
   width: 100%;
-  margin: 16px;
-}
-#courses-container {
-  #header-banner {
-    background-position: 75% 40%;
+  height: 320px;
+  z-index: -1000;
+  background-position: 90% 10%;
+  background-size: cover;
+
+  &.header-banner-short {
+    height: 180px;
   }
 
-  .announcements {
-    margin-top: 16px;
-  }
-
-  .contentContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-
-    .content {
-      width: 100%;
-      margin: 0 16px;
-    }
+  &.header-banner-courses {
+    background-position: 75% 10%;
   }
 }
 
@@ -765,15 +716,19 @@ $small-footer-standard-width: 400px;
   line-height: 1.6em;
 }
 
-.full_container, .responsive_full_container {
-  padding: 0;
+.full_container {
+  padding: 0 25px 25px 25px;
 }
-
 body.embedded_iframe {
   .full_container {
     padding-left: 0;
   }
 }
+
+.responsive_full_container {
+  padding: 0 10px 10px 10px;
+}
+
 
 $default-modal-width: 640px;
 
