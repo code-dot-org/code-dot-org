@@ -68,8 +68,8 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'emails are not sent for workshops with virtual workshop subject' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_VIRTUAL_1, num_sessions: 1
-    enrollment = create :pd_enrollment, workshop: workshop
+    workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::LEGACY_SUBJECT_CSD_VIRTUAL_1, num_sessions: 1
+    enrollment = build :pd_enrollment, workshop: workshop
 
     assert_no_emails do
       Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
