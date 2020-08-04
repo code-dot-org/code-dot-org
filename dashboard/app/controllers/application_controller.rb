@@ -148,7 +148,7 @@ class ApplicationController < ActionController::Base
     school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
   ]
 
-  PERMITTED_USER_FIELDS.push(*UI_TEST_ATTRIBUTES) if %i(test development).include? rack_env
+  PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
   PERMITTED_USER_FIELDS.freeze
 
   def configure_permitted_parameters
