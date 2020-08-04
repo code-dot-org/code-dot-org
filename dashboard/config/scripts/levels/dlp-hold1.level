@@ -6,9 +6,8 @@
   "user_id": 838,
   "properties": {
     "encrypted": "false",
-    "title": "hold page",
     "instructions_important": "false",
-    "long_instructions": "> Prompt: Is a hot dog a sandwich?",
+    "long_instructions": "# hold page\r\n\r\n> Prompt: Is a hot dog a sandwich?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "true",

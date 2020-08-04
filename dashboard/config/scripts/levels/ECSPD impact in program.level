@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Impact of Computing",
     "height": "100",
-    "long_instructions": "\n\n#### What connections do you think might exist between the ideas covered in the videos you just watched and the units of ECS that you learned about earlier?\n",
+    "long_instructions": "# Impact of Computing\r\n\r\n\n\n#### What connections do you think might exist between the ideas covered in the videos you just watched and the units of ECS that you learned about earlier?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

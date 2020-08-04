@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Conditional Basics Question 8",
-    "long_instructions": "What is the result of a Boolean expression?\n\n\n",
+    "long_instructions": "# Conditional Basics Question 8\r\n\r\nWhat is the result of a Boolean expression?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

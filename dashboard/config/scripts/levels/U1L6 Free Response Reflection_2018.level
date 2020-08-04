@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Number Systems",
-    "long_instructions": " In 50 words or less, describe the concept of a number system. \n\nWhy are rules required for a number system to be useful?\n",
+    "long_instructions": " # Reflection: Number Systems\r\n\r\nIn 50 words or less, describe the concept of a number system. \n\nWhy are rules required for a number system to be useful?\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 1914,

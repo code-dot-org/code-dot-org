@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Open text response example",
     "placeholder": "I loved it because...",
-    "long_instructions": "# Open text response example\n\nThis is an example Markdown content header.\n\n## YouTube video\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nKIu9yen5nc\" frameborder=\"0\" allowfullscreen></iframe>\n\nWhat did you think of the video?\n",
+    "long_instructions": "# Open text response example\r\n\r\n# Open text response example\n\nThis is an example Markdown content header.\n\n## YouTube video\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nKIu9yen5nc\" frameborder=\"0\" allowfullscreen></iframe>\n\nWhat did you think of the video?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

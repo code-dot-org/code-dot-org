@@ -5,10 +5,9 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Degree of Difficulty",
     "height": "200",
     "placeholder": "Your thoughts here",
-    "long_instructions": "Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?",
+    "long_instructions": "# Degree of Difficulty\r\n\r\nWas programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?",
     "skip_dialog": true,
     "skip_sound": true
   },

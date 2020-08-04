@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Free Response: Short description here",
-    "long_instructions": "This is the free response question text.\n",
+    "long_instructions": "# Free Response: Short description here\r\n\r\nThis is the free response question text.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

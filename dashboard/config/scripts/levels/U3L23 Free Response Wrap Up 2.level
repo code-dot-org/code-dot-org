@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Natural Language Processing",
-    "long_instructions": "\"Age Bot\" is a personal assistant that gives information about age-related milestones in a person's life. Write an algorithm so Age Bot can answer the question \"What is the voting age in the United States?\"\n",
+    "long_instructions": "# Natural Language Processing\r\n\r\n\"Age Bot\" is a personal assistant that gives information about age-related milestones in a person's life. Write an algorithm so Age Bot can answer the question \"What is the voting age in the United States?\"\n",
     "skip_dialog": true,
     "skip_sound": true
   },

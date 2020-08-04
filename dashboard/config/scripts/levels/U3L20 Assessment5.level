@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Conditional Basics Question 5",
-    "long_instructions": "How do you decide when to use an \"if\" statement or \"if-else\" statement?\n",
+    "long_instructions": "# Conditional Basics Question 5\r\n\r\nHow do you decide when to use an \"if\" statement or \"if-else\" statement?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Enter title here",
-    "long_instructions": "More questions!\n",
+    "long_instructions": "# Enter title here\r\n\r\nMore questions!\n",
     "skip_dialog": true,
     "skip_sound": true
   },

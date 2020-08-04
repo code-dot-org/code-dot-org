@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "The Need for Addressing: Question 1",
-    "long_instructions": "Why was it necessary to include the sender's and recipient's names in the NetSim version of Battleship, but not in the face-to-face game?\n",
+    "long_instructions": "# The Need for Addressing: Question 1\r\n\r\nWhy was it necessary to include the sender's and recipient's names in the NetSim version of Battleship, but not in the face-to-face game?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Compound Conditionals: Assessment",
-    "long_instructions": "Write a compound conditional/nested if statement to fit the situation:\n\nHenry and Milton flip a coin twice. \n\nIf the coin lands on the same side twice, Henry wins. \n\nIf the coin lands on different sides for each flip, Milton wins.\n",
+    "long_instructions": "# Compound Conditionals: Assessment\r\n\r\nWrite a compound conditional/nested if statement to fit the situation:\n\nHenry and Milton flip a coin twice. \n\nIf the coin lands on the same side twice, Henry wins. \n\nIf the coin lands on different sides for each flip, Milton wins.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

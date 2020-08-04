@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Programming Efficiency: Reflection",
-    "long_instructions": "In less than 50 words, summarize what efficiency means in programming.\n",
+    "long_instructions": "# Programming Efficiency: Reflection\r\n\r\nIn less than 50 words, summarize what efficiency means in programming.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

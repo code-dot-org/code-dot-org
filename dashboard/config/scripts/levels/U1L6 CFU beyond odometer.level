@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "Modern car odometers can record up to a million miles driven. What happens to the odometer reading when a car drives beyond its maximum reading? ",
+    "long_instructions": "# Reflection: Car Odometer\r\n\r\nModern car odometers can record up to a million miles driven. What happens to the odometer reading when a car drives beyond its maximum reading? ",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",
@@ -17,8 +17,7 @@
     "name_suffix": "_2019",
     "encrypted_solution": "fnIPdd0gYbkuaf7GwyNQc2ebctAgC9E/JaZV8pDFjwQLJwraVImFTYJ4gtyF\nVavruWJJLQ0bGYxu/ZYhLDxgARA4i13dPMB4CvILSNOgp1lEEQNgyrQa4DyS\nCjlbMd4UMYzjk6k6N0RVfjE+d/p+TUrvUZ1bwpHkk6Rz3B6Ovyo=\n",
     "encrypted": "false",
-    "optional": "false",
-    "title": "Reflection: Car Odometer"
+    "optional": "false"
   },
   "published": true,
   "notes": "",

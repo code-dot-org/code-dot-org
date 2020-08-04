@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Text Compression",
-    "long_instructions": "What made compressing text hard to do?",
+    "long_instructions": "# Reflection: Text Compression\r\n\r\nWhat made compressing text hard to do?",
     "skip_dialog": true,
     "skip_sound": true
   },

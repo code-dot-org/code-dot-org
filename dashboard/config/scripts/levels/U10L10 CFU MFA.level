@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Multiple Representations",
-    "long_instructions": "# Reflection: Multifactor Authentication\r\n\r\nWhat concerns do you have about multifactor authentication? Is it a good long term solution for data privacy? ",
+    "long_instructions": "# Reflection: Multiple Representations\r\n\r\n# Reflection: Multifactor Authentication\r\n\r\nWhat concerns do you have about multifactor authentication? Is it a good long term solution for data privacy? ",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 18870,

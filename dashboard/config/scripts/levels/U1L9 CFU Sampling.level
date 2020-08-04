@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Sampling",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "Your computer science teacher asks you to sample a black and white image that is 4\" x 6\". How would you sample the image to provide a good digital approximation using the pixelation widget? What sample size would you use? How would your decision affect the digital representation? ",
+    "long_instructions": "# Reflection: Sampling\r\n\r\nYour computer science teacher asks you to sample a black and white image that is 4\" x 6\". How would you sample the image to provide a good digital approximation using the pixelation widget? What sample size would you use? How would your decision affect the digital representation? ",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

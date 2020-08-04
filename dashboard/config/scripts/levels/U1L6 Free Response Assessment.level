@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Assessment: Number Systems",
-    "long_instructions": "If you had to represent numbers with A/B states from sending-bits widget, could you?\n\nWrite a represent of the numbers 0 through 15 using only the letters A and B.\n\n\n",
+    "long_instructions": "# Assessment: Number Systems\r\n\r\nIf you had to represent numbers with A/B states from sending-bits widget, could you?\n\nWrite a represent of the numbers 0 through 15 using only the letters A and B.\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

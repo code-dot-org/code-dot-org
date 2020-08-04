@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Free Response: String and Substring",
-    "long_instructions": "What is the output of this code segment?\n\n\tvar phrase = \"I am so\";\n\tvar emotion = \"excited\";\n\tvar sentence = phrase + \" \" + emotion.toUpperCase() + \"!\";\n\tconsole.log(sentence);\n<br/>\n",
+    "long_instructions": "# Free Response: String and Substring\r\n\r\nWhat is the output of this code segment?\n\n\tvar phrase = \"I am so\";\n\tvar emotion = \"excited\";\n\tvar sentence = phrase + \" \" + emotion.toUpperCase() + \"!\";\n\tconsole.log(sentence);\n<br/>\n",
     "encrypted_solution": "jeQkInnwl8KpX+E1uxZKHMus5mhaDKccTlDtb8rANpIgGzahj9oBlQ2bcX/5\nJ+Gm\n",
     "skip_dialog": true,
     "skip_sound": true,

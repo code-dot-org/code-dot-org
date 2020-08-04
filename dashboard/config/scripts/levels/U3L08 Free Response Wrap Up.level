@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Functions with Parameters: Wrap Up",
-    "long_instructions": "How are parameterized functions involved in the children's game \"Simon Says?\"\n",
+    "long_instructions": "# Functions with Parameters: Wrap Up\r\n\r\nHow are parameterized functions involved in the children's game \"Simon Says?\"\n",
     "skip_dialog": true,
     "skip_sound": true
   },

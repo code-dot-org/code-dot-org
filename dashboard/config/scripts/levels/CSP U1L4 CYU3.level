@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Counting in Binary",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "How would you explain a number system to someone who had never seen numbers before?",
+    "long_instructions": "# Reflection: Counting in Binary\r\n\r\nHow would you explain a number system to someone who had never seen numbers before?",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

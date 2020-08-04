@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Data Storage",
-    "long_instructions": "Respond to this prompt or to another as directed by your teacher.\r\n\r\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \r\n\r\nIs the salesperson telling me the truth? Why or why not?\r\n",
+    "long_instructions": "# Reflection: Data Storage\r\n\r\nRespond to this prompt or to another as directed by your teacher.\r\n\r\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \r\n\r\nIs the salesperson telling me the truth? Why or why not?\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 12989,

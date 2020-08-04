@@ -5,14 +5,13 @@
   "level_num": "custom",
   "user_id": 225,
   "properties": {
-    "short_instructions": "Here are your instructions for this free response.  ",
+    "short_instructions": "# Here is a title\r\n\r\nHere are your instructions for this free response.  ",
     "submittable": "false",
-    "title": "Here is a title",
     "allow_user_uploads": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "long_instructions": "Here is *some* **markdown**"
+    "long_instructions": "# Here is a title\r\n\r\nHere is *some* **markdown**"
   },
   "published": true,
   "notes": "",

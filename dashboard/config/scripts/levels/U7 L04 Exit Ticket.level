@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Evaluate if the following function is a good candidate to be placed in a library. Why or why not?\r\n\r\n![](https://images.code.org/4bc40bd7f5dd2218c5819e7e0fe5ca05-image-1559055528331.PNG)",
-    "title": "Updating Variables",
+    "long_instructions": "# Updating Variables\r\n\r\nEvaluate if the following function is a good candidate to be placed in a library. Why or why not?\r\n\r\n![](https://images.code.org/4bc40bd7f5dd2218c5819e7e0fe5ca05-image-1559055528331.PNG)",
     "allow_user_uploads": "false",
     "submittable": "true",
     "peer_reviewable": "false",

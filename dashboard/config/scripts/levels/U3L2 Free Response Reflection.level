@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Free Response Reflection",
-    "long_instructions": "Respond to your teacher's prompt in the space below.\n",
+    "long_instructions": "# Free Response Reflection\r\n\r\nRespond to your teacher's prompt in the space below.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

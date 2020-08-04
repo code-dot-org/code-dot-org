@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Scene Design Part 3: Reflection",
-    "long_instructions": "What was the most important skill you developed in this project?\n\nHow will you be able to apply that skill to future projects both in and out of computer science?\n\n\n",
+    "long_instructions": "# Scene Design Part 3: Reflection\r\n\r\nWhat was the most important skill you developed in this project?\n\nHow will you be able to apply that skill to future projects both in and out of computer science?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

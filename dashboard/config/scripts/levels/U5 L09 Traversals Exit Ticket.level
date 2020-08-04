@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": " Why is traversal with a for loop a good method for accessing and updating items in a lengthy list?",
-    "title": "Updating Variables",
+    "long_instructions": "# Updating Variables\r\n\r\n Why is traversal with a for loop a good method for accessing and updating items in a lengthy list?",
     "allow_user_uploads": "false",
     "submittable": "true",
     "peer_reviewable": "false",

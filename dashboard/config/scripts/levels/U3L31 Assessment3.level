@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Photo Album: Question 3",
-    "long_instructions": "What was the most significant feedback another student provided to your project that helped you review, revise, and improve your program? (100 words max)\n",
+    "long_instructions": "# Photo Album: Question 3\r\n\r\nWhat was the most significant feedback another student provided to your project that helped you review, revise, and improve your program? (100 words max)\n",
     "skip_dialog": true,
     "skip_sound": true
   },

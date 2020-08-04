@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Text Compression",
-    "long_instructions": "Describe the thinking process you used in solving this challenge.",
+    "long_instructions": "# Reflection: Text Compression\r\n\r\nDescribe the thinking process you used in solving this challenge.",
     "skip_dialog": true,
     "skip_sound": true
   },

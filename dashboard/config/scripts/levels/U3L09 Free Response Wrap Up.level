@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Scene Design Part 1: Plan",
-    "long_instructions": "Describe how your team \"decomposed\" the design of the digital scene project.\n\nDescribe the \"levels of abstraction\" that were included in the component you were responsible for.\n\n\n",
+    "long_instructions": "# Scene Design Part 1: Plan\r\n\r\nDescribe how your team \"decomposed\" the design of the digital scene project.\n\nDescribe the \"levels of abstraction\" that were included in the component you were responsible for.\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

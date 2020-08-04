@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Invent an Addressing Protocol: Wrap Up",
-    "long_instructions": "Why does it make more sense to use IP addresses for online accounts instead of users' real names?\n",
+    "long_instructions": "# Invent an Addressing Protocol: Wrap Up\r\n\r\nWhy does it make more sense to use IP addresses for online accounts instead of users' real names?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

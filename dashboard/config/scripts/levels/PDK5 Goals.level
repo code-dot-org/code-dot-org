@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Goals for using Code.org in your Classroom",
     "height": "200",
-    "long_instructions": "What are your goals or intentions for integrating Code.org in your classroom?\n",
+    "long_instructions": "# Goals for using Code.org in your Classroom\r\n\r\nWhat are your goals or intentions for integrating Code.org in your classroom?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

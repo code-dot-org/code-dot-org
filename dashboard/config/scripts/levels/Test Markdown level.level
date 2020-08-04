@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Enter title here",
-    "long_instructions": "Enter prompt here\n\n# Test Markdown title\n\nTest Markdown prompt\n\n\n",
+    "long_instructions": "# Enter title here\r\n\r\nEnter prompt here\n\n# Test Markdown title\n\nTest Markdown prompt\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

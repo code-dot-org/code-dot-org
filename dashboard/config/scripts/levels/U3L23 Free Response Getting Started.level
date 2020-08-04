@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Getting Started: A Look at Siri",
-    "long_instructions": "Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below.\r\n\r\n[Video](https://www.youtube.com/watch?v=2zoRh-Kuwpo)\r\n<br/>\r\n\r\nReflect on the prompts below:\r\n\r\n- What types of information does Siri respond to in the video?\r\n- What do you think Siri is paying attention to in order to create these answers?\r\n",
+    "long_instructions": "# Getting Started: A Look at Siri\r\n\r\nSiri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below.\r\n\r\n[Video](https://www.youtube.com/watch?v=2zoRh-Kuwpo)\r\n<br/>\r\n\r\nReflect on the prompts below:\r\n\r\n- What types of information does Siri respond to in the video?\r\n- What do you think Siri is paying attention to in order to create these answers?\r\n",
     "encrypted_solution": "DQMiMS6bxKLYLV1gK9Zm61af8QyIwjATVj7k0yf3UKZF0Vdzx2HXSenQ6d2p\nYmvNqBQYp4yuHJHILh/pG5SjF8irMdQDOA7tJbmI1gMl4DiDctuXqvCOpcLk\nSYFPh9SlPvDsG0fVvXFWt/oYXZRlg7wjaeE/qCyzSUGMc6ujInMMEaE8VyZU\nEyLXcuhNdosGw+jzt7SG2vZEoO2/h2lT1Gk0khI27dMNOABK/6qrZELi0szP\nflH51oT2Vurts8JC9dQ+kZ9sc+RmU+bSUzXVxJgRABQ2+2ocQRM5eLO19oMj\n5HUhXsnkKOHTQxrkLPfonGvb48zUY0oAlA4zI2dGG1d9ZEMbNp4jpSojpAk6\n76WoKiLDw2x89bKsgHIOr9sjWBHcTEuCY8/m+gZkkfHtf1jtZ2f2TzHRT/c+\nOs92sXIIhH6HGDQZHq/2FwpNBOBX\n",
     "skip_dialog": true,
     "skip_sound": true,

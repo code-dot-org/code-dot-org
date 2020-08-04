@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection:",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "How is a Creative Commons license different from a regular copyright? ",
+    "long_instructions": "# Reflection:\r\n\r\nHow is a Creative Commons license different from a regular copyright? ",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Sending Binary Messages",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": " Modify your question so that it could be answered with a binary message. Explain why it can now be answered with a binary message.\n\n\n",
+    "long_instructions": "# Reflection: Sending Binary Messages\r\n\r\nModify your question so that it could be answered with a binary message. Explain why it can now be answered with a binary message.\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

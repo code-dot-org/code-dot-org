@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Conditional Basics Question 4",
-    "long_instructions": "How do you know if a program needs a conditional statement?\n",
+    "long_instructions": "# Conditional Basics Question 4\r\n\r\nHow do you know if a program needs a conditional statement?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

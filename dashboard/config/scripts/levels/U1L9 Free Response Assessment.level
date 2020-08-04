@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Real-World Numbers ",
-    "long_instructions": "Choose one of the topics you most enjoyed learning about today. Describe what new information you learned and how it relates to the way we create and use number systems.\n",
+    "long_instructions": "# Reflection: Real-World Numbers \r\n\r\nChoose one of the topics you most enjoyed learning about today. Describe what new information you learned and how it relates to the way we create and use number systems.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

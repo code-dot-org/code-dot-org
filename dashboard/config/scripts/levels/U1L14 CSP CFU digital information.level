@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection:",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "## Digital Information\r\n\r\nWhy should we care about information being represented digitally? How does this impact you personally?",
+    "long_instructions": "# Reflection:\r\n\r\n## Digital Information\r\n\r\nWhy should we care about information being represented digitally? How does this impact you personally?",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

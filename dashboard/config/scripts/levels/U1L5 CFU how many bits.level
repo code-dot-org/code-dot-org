@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "How many bits would be needed to count all of the students in class today?",
+    "long_instructions": "# Reflection: Bits Needed\r\n\r\nHow many bits would be needed to count all of the students in class today?",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",
@@ -17,8 +17,7 @@
     "name_suffix": "_2019",
     "encrypted_solution": "QsS08bS895/ADxuFalGCTO3RYVkkjiNk/5JctGPe5tMo8xfVzP6vZ+h/loNu\ni5/bSvXqj41PWftClU++MDp6GbMb17yxkRkNkhgtGONJTd0PZQ/PHvFgYkCH\nKK4vYk0SmDwMHH/HwLikK6nrrKFLxPW7vcgGLDTxzJLS8uS/fhuSlyGKWpZb\nc20KjqjfrCr/ou2q2Vhqpxp/yLd3urJPDndl+rNMcaYMQZLxEnmJtGFnuMi9\nvMcHYJObpKHeQqfo5Ny6GwFtMrcHergSEoMc/M55mJzWdVFUX4z3N4Mr8+8D\nmwj6ctMADdQU6nm7m9wz6NVSuoNKpd4tnJQaFExEYQ==\n",
     "encrypted": "false",
-    "optional": "false",
-    "title": "Reflection: Bits Needed"
+    "optional": "false"
   },
   "published": true,
   "notes": "",

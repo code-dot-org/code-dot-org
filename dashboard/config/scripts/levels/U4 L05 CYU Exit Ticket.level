@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
-    "title": "Updating Variables",
+    "long_instructions": "# Updating Variables\r\n\r\nCan a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
     "allow_user_uploads": "false",
     "submittable": "true",
     "peer_reviewable": "false",

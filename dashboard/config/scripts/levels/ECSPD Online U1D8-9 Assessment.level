@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Impact of Computers and Communication",
-    "long_instructions": "List three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.",
+    "long_instructions": "# Impact of Computers and Communication\r\n\r\nList three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.",
     "skip_dialog": true,
     "skip_sound": true
   },

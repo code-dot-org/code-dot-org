@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Functions with Parameters: Getting Started",
-    "long_instructions": "In previous lessons, you used parameterized functions. \n\n* In what situations are parameterized functions useful? \n* What problems do parameterized functions solve?\n",
+    "long_instructions": "# Functions with Parameters: Getting Started\r\n\r\nIn previous lessons, you used parameterized functions. \n\n* In what situations are parameterized functions useful? \n* What problems do parameterized functions solve?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

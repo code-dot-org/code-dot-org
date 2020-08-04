@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection",
-    "long_instructions": "Why is it important to use meaningful names for the functions in your library?\r\n",
+    "long_instructions": "# Reflection\r\n\r\nWhy is it important to use meaningful names for the functions in your library?\r\n",
     "encrypted_solution": "dfOyl/HDKLLdPriJgQnqNQCtswoDC/FX/H8bTXjGRY2okZk8MTnx7T6MqMeH\nwvs6MuwpUWOnXgwUvpHFSZsn+DGpGZu54oX811qNfmWqVa3l2on89gTF1n38\nkWqoVCH9IrR58LS/XcPLSAnP/EOkx2qMxFkGaHa1DNrFnF8GI+zjHL4IQv6v\nhejG891idncAlC1dPH+AUZXhVbKW14xnmQ==\n",
     "skip_dialog": true,
     "skip_sound": true,

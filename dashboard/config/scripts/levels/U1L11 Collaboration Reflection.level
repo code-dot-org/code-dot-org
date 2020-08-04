@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Sending Formatted Text",
-    "long_instructions": "What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?\n\nDescribe one instance in which collaboration with a partner influenced the final protocol your team produced.\n",
+    "long_instructions": "# Reflection: Sending Formatted Text\r\n\r\nWhat problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?\n\nDescribe one instance in which collaboration with a partner influenced the final protocol your team produced.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

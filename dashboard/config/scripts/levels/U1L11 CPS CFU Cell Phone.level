@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection:",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "You’ve been given a new cell phone with a 2 gigabyte data plan. You plan to use your phone for text messages, images, video, and music. Which of these categories are best compressed using lossless compression? Which of these categories are best compressed using lossy compression? Why?",
+    "long_instructions": "# Reflection:\r\n\r\nYou’ve been given a new cell phone with a 2 gigabyte data plan. You plan to use your phone for text messages, images, video, and music. Which of these categories are best compressed using lossless compression? Which of these categories are best compressed using lossy compression? Why?",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

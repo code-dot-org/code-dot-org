@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Following the Pattern",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "The binary odometer has been counting and read “1011, 1100, 1101” - what are the next 3 numbers the odometer will read?",
+    "long_instructions": "# Reflection: Following the Pattern\r\n\r\nThe binary odometer has been counting and read “1011, 1100, 1101” - what are the next 3 numbers the odometer will read?",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

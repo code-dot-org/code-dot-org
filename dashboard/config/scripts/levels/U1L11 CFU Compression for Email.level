@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection:",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "An author is preparing to send their book to a publisher as an email attachment. The file on their computer is 1000 bytes. When they attach the file to their email, it shows as 750 bytes. The author gets very upset because they are concerned that part of their book has been deleted by the email address.\r\n\r\nIf you could talk to this author, how would you explain what is happening to their book? ",
+    "long_instructions": "# Reflection:\r\n\r\nAn author is preparing to send their book to a publisher as an email attachment. The file on their computer is 1000 bytes. When they attach the file to their email, it shows as 750 bytes. The author gets very upset because they are concerned that part of their book has been deleted by the email address.\r\n\r\nIf you could talk to this author, how would you explain what is happening to their book? ",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

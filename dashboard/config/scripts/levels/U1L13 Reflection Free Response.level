@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Conclusion 3: Text Compression",
-    "long_instructions": "If you send a compressed segment of text would your friend will be able to read it?  \n\nWhy is the dictionary important?\n",
+    "long_instructions": "# Conclusion 3: Text Compression\r\n\r\nIf you send a compressed segment of text would your friend will be able to read it?  \n\nWhy is the dictionary important?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection:",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "Many museums have digital catalogs of their collections. What are the potential benefits and harms of creating these digital catalogs?",
+    "long_instructions": "# Reflection:\r\n\r\nMany museums have digital catalogs of their collections. What are the potential benefits and harms of creating these digital catalogs?",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

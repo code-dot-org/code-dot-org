@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Assessment: Question 2",
-    "long_instructions": "What makes one encryption better than another?\n",
+    "long_instructions": "# Assessment: Question 2\r\n\r\nWhat makes one encryption better than another?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

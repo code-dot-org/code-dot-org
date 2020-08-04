@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Programming Efficiency Question 3",
-    "long_instructions": "How can functions be used to make code more readable?\n",
+    "long_instructions": "# Programming Efficiency Question 3\r\n\r\nHow can functions be used to make code more readable?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Images are Arrays: Getting Started",
-    "long_instructions": "Did you ever own a \"lite-brite\" toy as a child? Describe how an image is created with this toy. What would you have to do to change everything that is red to blue?\n",
+    "long_instructions": "# Images are Arrays: Getting Started\r\n\r\nDid you ever own a \"lite-brite\" toy as a child? Describe how an image is created with this toy. What would you have to do to change everything that is red to blue?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

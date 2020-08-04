@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Sending Complex Messages",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "Recall when you built your information sending device. Why did we decide to send a message as a sequence of two options rather than modifying our devices to represent more options? \r\n\r\n**For example:**\r\n\r\nModifications with two options \r\n\r\n* bend straw forward once\r\n* bend straw backwards once\r\n* bend straw forwards twice\r\n* bend straw backwards twice\r\n\r\nvs.\r\n\r\nFour options\r\n\r\n* bend straw forward\r\n* bend straw backwards\r\n* bend straw to the left\r\n* bend straw to the right\r\n",
+    "long_instructions": "# Reflection: Sending Complex Messages\r\n\r\nRecall when you built your information sending device. Why did we decide to send a message as a sequence of two options rather than modifying our devices to represent more options? \r\n\r\n**For example:**\r\n\r\nModifications with two options \r\n\r\n* bend straw forward once\r\n* bend straw backwards once\r\n* bend straw forwards twice\r\n* bend straw backwards twice\r\n\r\nvs.\r\n\r\nFour options\r\n\r\n* bend straw forward\r\n* bend straw backwards\r\n* bend straw to the left\r\n* bend straw to the right\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

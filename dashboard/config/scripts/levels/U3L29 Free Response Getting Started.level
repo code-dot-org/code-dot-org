@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "While Loops and Counting: Getting Started",
-    "long_instructions": "***Think about gathering data from a coin flip game.*** In addition to the number of heads and tails, what other data might be interesting to gather?\n",
+    "long_instructions": "# While Loops and Counting: Getting Started\r\n\r\n***Think about gathering data from a coin flip game.*** In addition to the number of heads and tails, what other data might be interesting to gather?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

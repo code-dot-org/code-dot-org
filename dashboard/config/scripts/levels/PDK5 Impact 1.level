@@ -5,10 +5,9 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Impact for students",
     "height": "200",
     "placeholder": "Your thoughts here",
-    "long_instructions": "Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?",
+    "long_instructions": "# Impact for students\r\n\r\nDo you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?",
     "skip_dialog": true,
     "skip_sound": true
   },

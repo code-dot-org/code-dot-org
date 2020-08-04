@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Scene Design Part 2: Code",
-    "long_instructions": "What issues have arisen during this collaborative project? \n\nHow were they resolved?\n",
+    "long_instructions": "# Scene Design Part 2: Code\r\n\r\nWhat issues have arisen during this collaborative project? \n\nHow were they resolved?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

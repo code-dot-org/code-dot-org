@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Evaluate if the following function is a good candidate to be placed in a library. Why or why not?\r\n\r\n\r\nfunction updateScore(player, points)\r\n    if(player == \"player1\"){\r\n        player1Points = player1Points + points;\r\n    } else {\r\n        player2Points = player2Points + points;\r\n    }\r\n}\r\n",
-    "title": "Updating Variables",
+    "long_instructions": "# Updating Variables\r\n\r\nEvaluate if the following function is a good candidate to be placed in a library. Why or why not?\r\n\r\n\r\nfunction updateScore(player, points)\r\n    if(player == \"player1\"){\r\n        player1Points = player1Points + points;\r\n    } else {\r\n        player2Points = player2Points + points;\r\n    }\r\n}\r\n",
     "allow_user_uploads": "false",
     "submittable": "true",
     "peer_reviewable": "false",

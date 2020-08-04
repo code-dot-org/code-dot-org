@@ -5,9 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection:",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "Now that we understand Copyright, what would need to change in order for the scenario from the warm-up to be okay? As a reminder, here was the scenario from the warm-up:\r\n\r\n```Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each.```",
+    "long_instructions": "# Reflection:\r\n\r\nNow that we understand Copyright, what would need to change in order for the scenario from the warm-up to be okay? As a reminder, here was the scenario from the warm-up:\r\n\r\n```Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each.```",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

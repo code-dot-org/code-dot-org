@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Permanent Data Storage Assessment",
-    "long_instructions": "Why is an inline function used in your clicker game to get or set a key/value pair?\n",
+    "long_instructions": "# Permanent Data Storage Assessment\r\n\r\nWhy is an inline function used in your clicker game to get or set a key/value pair?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

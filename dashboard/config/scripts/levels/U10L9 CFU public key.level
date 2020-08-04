@@ -5,8 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Frequency Analysis",
-    "long_instructions": "# Public Key Encryption\r\n\r\nHow does asymmetric (public key) encryption keep data secure?",
+    "long_instructions": "# Reflection: Frequency Analysis\r\n\r\n# Public Key Encryption\r\n\r\nHow does asymmetric (public key) encryption keep data secure?",
     "encrypted_solution": "YKPHLAd9STAv+lOeOi2kxMihhH60g3ShJy5R/4MwHT3YnhaKEtr/5SS4zmmg\n6kS2fwxVBW3yvpA0lplC6hgURPRwMOp8zAgH20MUJV6EP/Gls3flsZVEzIYZ\nE3q8k9lkIZaQ8CKV8KW+xQEAtIWo1EUoEImxiBvxN5P1m8rSJkwvuoeALYgB\n9SfWlwCOpfFUsdhwRGcKCtQCmAcD2qrGaJqvIHk8rhNVV+0dbOjxP449IUvg\n0CSE4STtEyw3Ywu9Juw501gucvbrQqBif43hk8OYtKgXoRJHd0tAFaSvPIoV\nWypTaQez9zDlopQdRVhMGGbKfJUsedNnkhj4QzolFdnc3fFRTABaNcEkmaI1\nchc=\n",
     "skip_dialog": true,
     "skip_sound": true,
