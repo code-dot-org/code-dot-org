@@ -527,8 +527,8 @@ describe('entry tests', () => {
     'levels/_external': './src/sites/studio/pages/levels/_external.js',
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
-    'levels/_free_response':
-      './src/sites/studio/pages/levels/_free_response.js',
+    'levels/_question_level':
+      './src/sites/studio/pages/levels/_question_level.js',
     'levels/_free_response_as_sublevel':
       './src/sites/studio/pages/levels/_free_response_as_sublevel.js',
     'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',

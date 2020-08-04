@@ -12,8 +12,8 @@ import {
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 $(document).ready(() => {
-  const script = document.querySelector('script[data-freeresponse]');
-  const data = JSON.parse(script.dataset.freeresponse);
+  const script = document.querySelector('script[data-questionlevel]');
+  const data = JSON.parse(script.dataset.questionlevel);
 
   var level = data.level;
 
@@ -87,6 +87,6 @@ $(document).ready(() => {
         showUnderageWarning={data.showUnderageWarning}
       />
     </Provider>,
-    document.querySelector('#free-response')
+    document.querySelector('#question-level')
   );
 });
