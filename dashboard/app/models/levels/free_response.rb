@@ -25,7 +25,6 @@
 
 class FreeResponse < Level
   serialized_attrs %w(
-    title
     height
     placeholder
     encrypted_solution
