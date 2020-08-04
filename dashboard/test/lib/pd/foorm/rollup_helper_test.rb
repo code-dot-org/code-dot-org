@@ -10,6 +10,12 @@ module Pd::Foorm
       @parsed_forms_csd = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5])
     end
 
+    teardown_all do
+      @daily_survey_day_0.delete
+      @daily_survey_day_5.delete
+      @csf_intro_post.delete
+    end
+
     test 'creates question details for CSD rollup' do
       questions_to_summarize = @rollup_configuration['CS Discoveries'.to_sym]
       question_details = RollupHelper.get_question_details_for_rollup(@parsed_forms_csd, questions_to_summarize)

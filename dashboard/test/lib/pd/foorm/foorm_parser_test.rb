@@ -9,6 +9,12 @@ module Pd::Foorm
       @csf_survey = create :foorm_form_csf_intro_post_survey
     end
 
+    teardown_all do
+      @daily_survey_day_0.delete
+      @daily_survey_day_5.delete
+      @csf_survey.delete
+    end
+
     test 'parses day 0 form correctly' do
       parsed_form = FoormParser.parse_forms([@daily_survey_day_0])
       expected_form = {

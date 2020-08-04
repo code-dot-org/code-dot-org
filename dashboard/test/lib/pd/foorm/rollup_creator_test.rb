@@ -5,8 +5,13 @@ module Pd::Foorm
     self.use_transactional_test_case = true
 
     setup_all do
-      create :foorm_form_summer_post_survey
-      create :foorm_form_csf_intro_post_survey
+      @summer_post_survey = create :foorm_form_summer_post_survey
+      @summer_pre_survey = create :foorm_form_csf_intro_post_survey
+    end
+
+    teardown_all do
+      @summer_post_survey.delete
+      @summer_pre_survey.delete
     end
 
     test 'creates correct general rollup' do
