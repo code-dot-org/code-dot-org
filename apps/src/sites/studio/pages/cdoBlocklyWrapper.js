@@ -1,6 +1,6 @@
 const BlocklyWrapper = function(blocklyInstance) {
   this.blockly_ = blocklyInstance;
-  this.Msg = blocklyInstance.Msg;
+  this.Msg = this.blockly_.Msg;
   this.inject = this.blockly_.inject;
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
