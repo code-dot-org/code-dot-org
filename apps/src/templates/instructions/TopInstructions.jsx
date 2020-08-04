@@ -708,7 +708,6 @@ class TopInstructions extends Component {
                     placeholder: 'Enter answer here',
                     height: 100,
                     id: 10,
-                    title: 'Title',
                     allow_user_uploads: false
                   }}
                   lastAttempt={null}

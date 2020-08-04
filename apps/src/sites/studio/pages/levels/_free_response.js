@@ -13,6 +13,7 @@ $(document).ready(() => {
   const data = JSON.parse(script.dataset.freeresponse);
 
   var level = data.level;
+  console.log(data.appOptions);
 
   window.dashboard.codeStudioLevels.registerGetResult(function getResult() {
     var forceSubmittable =
@@ -32,38 +33,38 @@ $(document).ready(() => {
 
   store.dispatch(
     setPageConstants({
-      ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
-      ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
-      isEmbedView: false,
-      noInstructionsWhenCollapsed: true,
-      hasContainedLevels: false,
-      puzzleNumber: level.puzzle_number,
       stageTotal: level.stage_total,
-      userId: 1,
       verifiedTeacher: true,
-      textToSpeechEnabled: true,
+      isSubmitted: data.appOptions.submitted,
+      userId: data.appOptions.userId,
+      puzzleNumber: data.appOptions.levelPosition,
+      isSubmittable: !!data.appOptions.level.submittable,
+      isReadOnlyWorkspace: data.appOptions.readonlyWorkspace,
+      is13Plus: data.appOptions.is13Plus,
+
+      //needed for top instructions
+      textToSpeechEnabled: false,
       isK1: false,
       noVisualization: true,
       isShareView: false,
       isProjectLevel: false,
-      isSubmittable: level.submittable || false,
-      isSubmitted: false,
       hideSource: true,
-      isReadOnlyWorkspace: level.readonly || false,
-      is13Plus: true
+      isEmbedView: false,
+      noInstructionsWhenCollapsed: true,
+      hasContainedLevels: false
     })
   );
 
   store.dispatch(
     setInstructionsConstants({
+      longInstructions: data.appOptions.level.longInstructions,
+      teacherMarkdown: level.solution,
+      levelVideos: data.appOptions.level.levelVideos,
+      mapReference: data.appOptions.level.mapReference,
+      referenceLinks: data.appOptions.level.referenceLinks,
       noInstructionsWhenCollapsed: true,
       overlayVisible: false,
-      longInstructions: level.longInstructions,
-      teacherMarkdown: level.solution,
-      hasContainedLevels: false,
-      levelVideos: null,
-      mapReference: null,
-      referenceLinks: null
+      hasContainedLevels: false
     })
   );
 

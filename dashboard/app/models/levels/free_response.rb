@@ -78,12 +78,9 @@ class FreeResponse < Level
       id: id,
       placeholder: get_property(:placeholder) || I18n.t('free_response.placeholder'),
       height: try(:height) || 80,
-      title: get_property(:title),
-      longInstructions: get_property(:long_instructions),
       allow_user_uploads: try(:allow_user_uploads)&.to_bool,
       solution: try(:solution),
-      submittable: try(:submittable),
-      test_result: try(:submittable) ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT
+      test_result: try(:submittable)&.to_bool ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT
     }
 
     summary

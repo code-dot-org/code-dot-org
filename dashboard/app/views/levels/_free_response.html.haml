@@ -5,8 +5,7 @@
 - data = {}
 - data[:level] = level.summarize
 - data[:last_attempt] = @last_attempt unless local_assigns.has_key? :last_attempt
-- data[:readonly] = @view_options.readonly_workspace || false
-- data[:showUnderageWarning] = !app_options[:is13Plus]
+- data[:appOptions] = app_options
 
 - if level.allow_user_uploads?
   %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
