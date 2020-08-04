@@ -14,7 +14,6 @@
 #  submitted        :boolean
 #  readonly_answers :boolean
 #  unlocked_at      :datetime
-#  time_spent       :integer
 #
 # Indexes
 #
