@@ -9,10 +9,10 @@ import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const CSV_LOGIN_INFO_HEADERS = [
-  {label: 'Section Code', key: 'sectionCode'},
-  {label: 'Section Name', key: 'sectionName'},
-  {label: 'Student Name', key: 'studentName'},
-  {label: 'Secret Words', key: 'secretWords'}
+  {label: i18n.loginExportHeader_sectionCode(), key: 'sectionCode'},
+  {label: i18n.loginExportHeader_sectionName(), key: 'sectionName'},
+  {label: i18n.loginExportHeader_studentName(), key: 'studentName'},
+  {label: i18n.loginExportHeader_secretWords(), key: 'secretWords'}
 ];
 
 export default class LoginDownload extends Component {
@@ -34,12 +34,12 @@ export default class LoginDownload extends Component {
     return (
       <div>
         <CSVLink
-          filename="logins.csv"
+          filename={`${i18n.loginExportFilename()}.csv`}
           data={this.state.logins}
           headers={CSV_LOGIN_INFO_HEADERS}
         >
           <Button
-            text="Download logins"
+            text={i18n.loginExportButton()}
             onClick={() => {}}
             color={Button.ButtonColor.gray}
           />
