@@ -25,8 +25,8 @@ module Pd
     SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze
     SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze
     SUBJECT_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze
-    SUBJECT_WORKSHOP_5 = 'Academic Year Workshop 1 + 2'.freeze
-    SUBJECT_WORKSHOP_6 = 'Academic Year Workshop 3 + 4'.freeze
+    SUBJECT_WORKSHOP_1_2 = 'Academic Year Workshop 1 + 2'.freeze
+    SUBJECT_WORKSHOP_3_4 = 'Academic Year Workshop 3 + 4'.freeze
 
     # Note: the original intent of this constant is to put subjects
     # in here that will be used explicitly in JS code.
@@ -65,8 +65,8 @@ module Pd
         SUBJECT_CSP_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
         SUBJECT_CSP_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
         SUBJECT_CSP_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
-        SUBJECT_CSP_WORKSHOP_5 = SUBJECT_WORKSHOP_5,
-        SUBJECT_CSP_WORKSHOP_6 = SUBJECT_WORKSHOP_6,
+        SUBJECT_CSP_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
+        SUBJECT_CSP_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
         SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSP_FIT = SUBJECT_FIT,
         SUBJECT_CSP_FOR_RETURNING_TEACHERS,
@@ -78,8 +78,8 @@ module Pd
         SUBJECT_CSD_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
         SUBJECT_CSD_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
         SUBJECT_CSD_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
-        SUBJECT_CSD_WORKSHOP_5 = SUBJECT_WORKSHOP_5,
-        SUBJECT_CSD_WORKSHOP_6 = SUBJECT_WORKSHOP_6,
+        SUBJECT_CSD_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
+        SUBJECT_CSD_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSD_FIT = SUBJECT_FIT,
       ],
@@ -102,12 +102,14 @@ module Pd
         LEGACY_SUBJECT_CSP_WORKSHOP_4_1920 = 'Workshop 4: Unit 5 and Multiple Choice Exam'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_5_1920 = '2-day, Workshops 1+2: Units 3-4 and Explore Task'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_6_1920 = '2-day, Workshops 3+4: Unit 5, Create Task, and Multiple Choice Exam'.freeze,
+
         LEGACY_SUBJECT_CSP_WORKSHOP_1 = '1-day Academic Year, Units 1 and 2'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_2 = '1-day Academic Year, Unit 3'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_3 = '1-day Academic Year, Unit 4 + Explore Prep'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_4 = '1-day Academic Year, Unit 5 + Create Prep'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_5 = '2-day Academic Year, Units 1 to 3'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_6 = '2-day Academic Year, Units 4 and 5 + AP Prep'.freeze,
+
         LEGACY_SUBJECT_CSP_VIRTUAL_1 = 'Virtual Workshop 1'.freeze,
         LEGACY_SUBJECT_CSP_VIRTUAL_2 = 'Virtual Workshop 2'.freeze,
         LEGACY_SUBJECT_CSP_VIRTUAL_3 = 'Virtual Workshop 3'.freeze,
@@ -124,12 +126,14 @@ module Pd
         LEGACY_SUBJECT_CSD_WORKSHOP_4_1920 = 'Workshop 4: Unit 6'.freeze,
         LEGACY_SUBJECT_CSD_WORKSHOP_5_1920 = '2-day, Workshops 1+2: Units 3 and 4'.freeze,
         LEGACY_SUBJECT_CSD_WORKSHOP_6_1920 = '2-day, Workshops 3+4: Units 5 and 6'.freeze,
+
         LEGACY_SUBJECT_CSD_UNITS_2_3 = '1-day Academic Year, Units 1 and 2'.freeze,
         LEGACY_SUBJECT_CSD_UNIT_3_4 = '1-day Academic Year, Unit 3'.freeze,
         LEGACY_SUBJECT_CSD_UNITS_4_5 = '1-day Academic Year, Units 4 and 5'.freeze,
         LEGACY_SUBJECT_CSD_UNIT_6 = '1-day Academic Year, Unit 6'.freeze,
         LEGACY_SUBJECT_CSD_UNITS_1_3 = '2-day Academic Year, Units 1 to 3'.freeze,
         LEGACY_SUBJECT_CSD_UNITS_4_6 = '2-day Academic Year, Units 4 to 6'.freeze,
+
         LEGACY_SUBJECT_CSD_VIRTUAL_1 = 'Virtual Workshop 1'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_2 = 'Virtual Workshop 2'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_3 = 'Virtual Workshop 3'.freeze,
