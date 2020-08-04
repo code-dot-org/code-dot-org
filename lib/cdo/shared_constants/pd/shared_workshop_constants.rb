@@ -96,6 +96,12 @@ module Pd
 
     LEGACY_SUBJECTS = {
       COURSE_CSP => [
+        LEGACY_SUBJECT_CSP_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_2_1920 = 'Workshop 2: Unit 4 and Explore Task'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_3_1920 = 'Workshop 3: Unit 5 and Create Task'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_4_1920 = 'Workshop 4: Unit 5 and Multiple Choice Exam'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_5_1920 = '2-day, Workshops 1+2: Units 3-4 and Explore Task'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_6_1920 = '2-day, Workshops 3+4: Unit 5, Create Task, and Multiple Choice Exam'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_1 = '1-day Academic Year, Units 1 and 2'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_2 = '1-day Academic Year, Unit 3'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_3 = '1-day Academic Year, Unit 4 + Explore Prep'.freeze,
@@ -112,6 +118,12 @@ module Pd
         LEGACY_SUBJECT_CSP_VIRTUAL_8 = 'Virtual Workshop 8'.freeze
       ],
       COURSE_CSD => [
+        LEGACY_SUBJECT_CSD_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
+        LEGACY_SUBJECT_CSD_WORKSHOP_2_1920 = 'Workshop 2: Unit 4'.freeze,
+        LEGACY_SUBJECT_CSD_WORKSHOP_3_1920 = 'Workshop 3: Unit 5'.freeze,
+        LEGACY_SUBJECT_CSD_WORKSHOP_4_1920 = 'Workshop 4: Unit 6'.freeze,
+        LEGACY_SUBJECT_CSD_WORKSHOP_5_1920 = '2-day, Workshops 1+2: Units 3 and 4'.freeze,
+        LEGACY_SUBJECT_CSD_WORKSHOP_6_1920 = '2-day, Workshops 3+4: Units 5 and 6'.freeze,
         LEGACY_SUBJECT_CSD_UNITS_2_3 = '1-day Academic Year, Units 1 and 2'.freeze,
         LEGACY_SUBJECT_CSD_UNIT_3_4 = '1-day Academic Year, Unit 3'.freeze,
         LEGACY_SUBJECT_CSD_UNITS_4_5 = '1-day Academic Year, Units 4 and 5'.freeze,
