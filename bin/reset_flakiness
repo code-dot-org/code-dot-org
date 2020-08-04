@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+# Resets the timestamp for checking UI test flakiness in SauceLabs.
+# This timestamp corresponds to the "from" parameter when requesting jobs from
+# SauceLabs in bin/test_flakiness: https://wiki.saucelabs.com/display/DOCS/Job+Methods
+#
+# Recommended usage: Run this script and commit the artifact file, describing why
+# you are resetting UI test flakiness in your commit message.
+
+require_relative '../deployment'
+require 'cdo/test_flakiness'
+require 'optparse'
+
+options = {timestamp: Time.now.to_i}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-t', '--timestamp T', 'Unix timestamp to begin tracking flakiness. Optional, defaults to now.') do |t|
+    options[:timestamp] = Integer(t)
+  end
+  opts.on('-h', '--help', 'Prints this help') do
+    puts opts
+    exit
+  end
+end.parse!
+
+TestFlakiness.reset(options[:timestamp])
