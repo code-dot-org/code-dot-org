@@ -47,6 +47,7 @@ class UpdateAcademicYearWorkshopSubjects < ActiveRecord::Migration[5.0]
       csd_workshops.each do |csd_workshop|
         csd_workshop.update(
           subject: subject_name[:to],
+          virtual: true,
           suppress_email: true
         )
       end
@@ -59,6 +60,7 @@ class UpdateAcademicYearWorkshopSubjects < ActiveRecord::Migration[5.0]
       csp_workshops.each do |csp_workshop|
         csp_workshop.update(
           subject: subject_name[:to],
+          virtual: true,
           suppress_email: true
         )
       end
@@ -70,6 +72,8 @@ class UpdateAcademicYearWorkshopSubjects < ActiveRecord::Migration[5.0]
   # is being applied. However, we want to suppress email in
   # Academic Year Workshops this school year, so in the case of a problem
   # with subject naming we'll leave the email suppression as-is.
+  # It also will rename subjects originally named "Virtual Workshop #"
+  # to "Workshop 1: Unit 3", which we think is ok in this situation.
   def down
     CSD_SUBJECTS.each do |subject_name|
       csd_workshops = Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:to]).
