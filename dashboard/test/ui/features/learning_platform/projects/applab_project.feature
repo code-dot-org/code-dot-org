@@ -103,8 +103,6 @@ Scenario: Save Project After Signing Out
   When I sign out using jquery
   And I add code "// comment 2" to ace editor
   And ace editor code is equal to "// comment 1// comment 2"
-  And I press "resetButton"
-  And I click selector "#runButton" once I see it
   Then I get redirected to "/users/sign_in" via "dashboard"
 
   When I sign in as "Sally Student" from the sign in page
