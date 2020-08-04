@@ -19,6 +19,19 @@ module Pd
     ].freeze
 
     SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
+
+    # Academic Year Workshop subjects shared between CSP and CSD.
+    SUBJECT_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze
+    SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze
+    SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze
+    SUBJECT_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze
+    SUBJECT_WORKSHOP_5 = 'Academic Year Workshop 1 + 2'.freeze
+    SUBJECT_WORKSHOP_6 = 'Academic Year Workshop 3 + 4'.freeze
+
+    # Note: the original intent of this constant is to put subjects
+    # in here that will be used explicitly in JS code.
+    # See this PR for more detail:
+    # https://github.com/code-dot-org/code-dot-org/pull/29510
     SUBJECT_NAMES = {
       SUBJECT_CSF_101: SUBJECT_CSF_101 = 'Intro'.freeze,
       SUBJECT_CSF_201: SUBJECT_CSF_201 = 'Deep Dive'.freeze,
@@ -47,28 +60,28 @@ module Pd
       ],
       COURSE_CSP => [
         SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-        SUBJECT_CSP_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze,
-        SUBJECT_CSP_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze,
-        SUBJECT_CSP_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze,
-        SUBJECT_CSP_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze,
-        SUBJECT_CSP_WORKSHOP_5 = 'Academic Year Workshop 1 + 2'.freeze,
-        SUBJECT_CSP_WORKSHOP_6 = 'Academic Year Workshop 3 + 4'.freeze,
+        SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
+        SUBJECT_CSP_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
+        SUBJECT_CSP_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
+        SUBJECT_CSP_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
+        SUBJECT_CSP_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
+        SUBJECT_CSP_WORKSHOP_5 = SUBJECT_WORKSHOP_5,
+        SUBJECT_CSP_WORKSHOP_6 = SUBJECT_WORKSHOP_6,
         SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSP_FIT = SUBJECT_FIT,
-        SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
-        SUBJECT_CSP_FOR_RETURNING_TEACHERS
+        SUBJECT_CSP_FOR_RETURNING_TEACHERS,
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-        SUBJECT_CSD_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze,
-        SUBJECT_CSD_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze,
-        SUBJECT_CSD_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze,
-        SUBJECT_CSD_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze,
-        SUBJECT_CSD_WORKSHOP_5 = 'Academic Year Workshop 1 + 2'.freeze,
-        SUBJECT_CSD_WORKSHOP_6 = 'Academic Year Workshop 3 + 4'.freeze,
+        SUBJECT_CSD_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
+        SUBJECT_CSD_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
+        SUBJECT_CSD_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
+        SUBJECT_CSD_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
+        SUBJECT_CSD_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
+        SUBJECT_CSD_WORKSHOP_5 = SUBJECT_WORKSHOP_5,
+        SUBJECT_CSD_WORKSHOP_6 = SUBJECT_WORKSHOP_6,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSD_FIT = SUBJECT_FIT,
-        SUBJECT_CSD_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF
       ],
       COURSE_CSF => [
         SUBJECT_CSF_101,
