@@ -14,6 +14,7 @@ import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButt
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import LoginDownload from './LoginDownload';
 
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
@@ -244,6 +245,10 @@ class WordOrPictureLogins extends React.Component {
 
     return (
       <div>
+        <LoginDownload
+          section={section}
+          students={students}
+        />
         <SignInInstructions
           loginType={section.loginType}
           studioUrlPrefix={studioUrlPrefix}
