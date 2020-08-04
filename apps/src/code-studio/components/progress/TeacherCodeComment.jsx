@@ -2,7 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {hideCommentModal} from './teacherCodeCommentRedux';
+import {
+  addOrUpdateComment,
+  hideCommentModal,
+  setComments
+} from './teacherCodeCommentRedux';
 
 const styles = {
   container: {
@@ -16,17 +20,53 @@ const styles = {
 
 class TeacherCodeComment extends React.Component {
   static propTypes = {
-    handleClose: PropTypes.func.isRequired,
+    addOrUpdateComment: PropTypes.func.isRequired,
+    comments: PropTypes.object,
+    hideCommentModal: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
     lineNumber: PropTypes.number,
+    setComments: PropTypes.func.isRequired,
     position: PropTypes.shape({
       left: PropTypes.number.isRequired,
       top: PropTypes.number.isRequired
     })
   };
 
-  close = () => {
-    this.props.handleClose();
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  componentWillMount() {
+    // load existing comments into redux
+    this.props.setComments({
+      3: 'initial comment'
+    });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.lineNumber !== this.props.lineNumber) {
+      // clear line number before change
+      let comment = '';
+      if (this.props.isOpen && this.props.lineNumber in this.props.comments) {
+        comment = this.props.comments[this.props.lineNumber];
+      }
+      this.setState({
+        comment
+      });
+    }
+  }
+
+  handleChange = e => {
+    this.setState({
+      comment: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    this.props.addOrUpdateComment(this.state.comment, this.props.lineNumber);
+    this.props.hideCommentModal();
   };
 
   render() {
@@ -42,9 +82,12 @@ class TeacherCodeComment extends React.Component {
           ...styles.container
         }}
       >
-        <textarea />
-        <button type="submit">submit</button>
-        <button type="button" onClick={this.close}>
+        <span>Add comment to line #{this.props.lineNumber}</span>
+        <textarea onChange={this.handleChange} value={this.state.comment} />
+        <button type="submit" onClick={this.handleSubmit}>
+          submit
+        </button>
+        <button type="button" onClick={this.props.hideCommentModal}>
           cancel
         </button>
       </div>
@@ -55,7 +98,9 @@ class TeacherCodeComment extends React.Component {
 export const UnconnectedTeacherCodeComment = TeacherCodeComment;
 export default connect(
   state => state.teacherCodeComment,
-  dispatch => ({
-    handleClose: () => dispatch(hideCommentModal())
-  })
+  {
+    addOrUpdateComment,
+    hideCommentModal,
+    setComments
+  }
 )(TeacherCodeComment);
