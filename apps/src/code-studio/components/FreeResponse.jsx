@@ -18,7 +18,7 @@ class FreeResponse extends React.Component {
     level: PropTypes.shape({
       placeholder: PropTypes.string,
       height: PropTypes.number,
-      id: PropTypes.number,
+      title: PropTypes.string,
       allow_user_uploads: PropTypes.bool
     }),
 
@@ -39,10 +39,12 @@ class FreeResponse extends React.Component {
 
     return (
       <div hidden={this.props.hidden}>
+        {this.props.level.title && (
+          <h1 className="free-response-title">{level.title}</h1>
+        )}
         <SafeMarkdown markdown={instructions} />
         <textarea
           className="free-response-textarea"
-          id={`level_${level.id}`}
           placeholder={level.placeholder}
           style={styles.textArea}
           height={level.height}

@@ -75,9 +75,9 @@ class FreeResponse < Level
   # @return [Hash]
   def summarize
     summary = {
-      id: id,
       placeholder: get_property(:placeholder) || I18n.t('free_response.placeholder'),
       height: try(:height) || 80,
+      title: get_property(:title),
       allow_user_uploads: try(:allow_user_uploads)&.to_bool,
       solution: try(:solution),
       test_result: try(:submittable)&.to_bool ? ActivityConstants::UNREVIEWED_SUBMISSION_RESULT : ActivityConstants::FREE_PLAY_RESULT

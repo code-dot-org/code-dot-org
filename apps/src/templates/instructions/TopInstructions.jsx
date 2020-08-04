@@ -118,14 +118,6 @@ const styles = {
     float: 'right',
     paddingTop: 6,
     paddingRight: 30
-  },
-  questionLevel: {
-    top: null,
-    bottom: null,
-    right: null,
-    left: null,
-    width: '90%',
-    height: 500
   }
 };
 
@@ -232,6 +224,9 @@ class TopInstructions extends Component {
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+    if (this.props.isQuestionLevel) {
+      this.props.setInstructionsRenderedHeight(this.props.maxHeight);
+    }
 
     const promises = [];
 
@@ -539,8 +534,7 @@ class TopInstructions extends Component {
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
       this.props.widgetMode &&
-        (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth}),
-      this.props.isQuestionLevel && {height: 450}
+        (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth})
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];

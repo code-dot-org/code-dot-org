@@ -5,7 +5,10 @@ import {Provider} from 'react-redux/src';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import {setInstructionsConstants} from '@cdo/apps/redux/instructions';
+import {
+  setInstructionsConstants,
+  setInstructionsMaxHeightAvailable
+} from '@cdo/apps/redux/instructions';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 $(document).ready(() => {
@@ -13,7 +16,6 @@ $(document).ready(() => {
   const data = JSON.parse(script.dataset.freeresponse);
 
   var level = data.level;
-  console.log(data.appOptions);
 
   window.dashboard.codeStudioLevels.registerGetResult(function getResult() {
     var forceSubmittable =
@@ -67,6 +69,10 @@ $(document).ready(() => {
       hasContainedLevels: false
     })
   );
+
+  var questionAreaHeight = $(window).height() - 50 - 165 - 125 - 50; //header - footer - button - extra
+
+  store.dispatch(setInstructionsMaxHeightAvailable(questionAreaHeight));
 
   store.dispatch(setViewType(ViewType.Teacher));
 
