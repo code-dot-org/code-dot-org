@@ -28,7 +28,7 @@ namespace :db do
     schema_cache_file = dashboard_dir('db/schema_cache.dump')
     2.times do
       data = File.binread(schema_cache_file)
-      checksum = Digest::MD5.digest data
+      checksum = Digest::MD5.hexdigest data
       open(schema_cache_file, 'wb') do |f|
         f.write(Marshal.dump(Marshal.load(data)))
       end
