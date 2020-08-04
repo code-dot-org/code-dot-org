@@ -8,12 +8,15 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
+import TeacherCodeComment from '@cdo/apps/code-studio/components/progress/TeacherCodeComment';
 import {getHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {
   renderTeacherPanel,
   queryLockStatus
 } from '@cdo/apps/code-studio/teacherPanelHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+
+import * as teacherCodeCommentRedux from '@cdo/apps/code-studio/components/progress/teacherCodeCommentRedux';
 
 $(document).ready(initPage);
 
@@ -67,3 +70,35 @@ function renderTeacherContentToggle(store) {
     element
   );
 }
+
+$(window).on('appInitialized', function() {
+  let commentContainer = document.getElementById(
+    'teacher-code-comment-container'
+  );
+  if (!commentContainer) {
+    commentContainer = document.createElement('div');
+    commentContainer.setAttribute('id', 'teacher-code-comment-container');
+    document.body.appendChild(commentContainer);
+  }
+
+  const store = getStore();
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <TeacherCodeComment />
+    </Provider>,
+    commentContainer
+  );
+
+  const lineNumbers = $('.droplet-gutter-line');
+  lineNumbers.click(function() {
+    const rect = this.getBoundingClientRect();
+    const lineNumber = parseInt(this.innerText);
+    store.dispatch(
+      teacherCodeCommentRedux.showCommentModal(lineNumber, {
+        left: rect.right,
+        top: rect.bottom
+      })
+    );
+  });
+});

@@ -15,6 +15,7 @@ import projects from '../templates/projects/projectsRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
+import teacherCodeComment from './components/progress/teacherCodeCommentRedux';
 
 registerReducers({
   header,
@@ -31,7 +32,8 @@ registerReducers({
   projects,
   verifiedTeacher,
   currentUser,
-  arrowDisplay
+  arrowDisplay,
+  teacherCodeComment
 });
 
 export {getStore};

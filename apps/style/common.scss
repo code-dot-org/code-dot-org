@@ -1727,3 +1727,16 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 
 @import "RotateContainer";
 @import "HideToolbarHelper";
+
+.droplet-gutter-line {
+  cursor: pointer;
+}
+
+.droplet-gutter-line:hover {
+  background-color: #a8a8a8;
+  font-size: 0 !important;
+  &:after {
+    content: "💬";
+    font-size: 15px;
+  }
+}
