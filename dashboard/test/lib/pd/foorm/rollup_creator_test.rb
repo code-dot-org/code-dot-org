@@ -4,6 +4,11 @@ module Pd::Foorm
   class RollupCreatorTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
 
+    setup_all do
+      create :foorm_form_summer_post_survey
+      create :foorm_form_csf_intro_post_survey
+    end
+
     test 'creates correct general rollup' do
       setup_csd_workshop
       rollup = RollupCreator.calculate_averaged_rollup(
@@ -116,7 +121,6 @@ module Pd::Foorm
       workshop = create :csd_summer_workshop
       create :day_5_workshop_foorm_submission, :answers_low, pd_workshop_id: workshop.id
       create :day_5_workshop_foorm_submission, :answers_high, pd_workshop_id: workshop.id
-      create :foorm_form_summer_post_survey
       ws_submissions, foorm_submissions, forms = SurveyReporter.get_raw_data_for_workshop(workshop.id)
       parsed_forms = FoormParser.parse_forms(forms)
       @summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)
@@ -140,7 +144,6 @@ module Pd::Foorm
         facilitator_id: @facilitator_id
       create_list :csf_intro_post_workshop_submission, 2, :answers_low, pd_workshop_id: workshop.id
       create_list :csf_intro_post_workshop_submission, 3, :answers_high, pd_workshop_id: workshop.id
-      create :foorm_form_csf_intro_post_survey
       ws_submissions, foorm_submissions, forms = SurveyReporter.get_raw_data_for_workshop(workshop.id)
       parsed_forms = FoormParser.parse_forms(forms)
       @summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)

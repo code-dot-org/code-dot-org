@@ -6,6 +6,7 @@ module Pd::Foorm
     setup_all do
       @daily_survey_day_0 = create :foorm_form_summer_pre_survey
       @daily_survey_day_5 = create :foorm_form_summer_post_survey
+      @csf_survey = create :foorm_form_csf_intro_post_survey
     end
 
     test 'parses day 0 form correctly' do
@@ -145,8 +146,7 @@ module Pd::Foorm
     end
 
     test 'correctly parses form with facilitator panel' do
-      csf_survey = create :foorm_form_csf_intro_post_survey
-      parsed_form = FoormParser.parse_forms([csf_survey]).with_indifferent_access
+      parsed_form = FoormParser.parse_forms([@csf_survey]).with_indifferent_access
 
       facilitator_questions = parsed_form[:facilitator]['surveys/pd/workshop_csf_intro_post_test.0']
       assert_not_empty facilitator_questions

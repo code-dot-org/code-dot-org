@@ -6,6 +6,7 @@ module Pd::Foorm
     setup_all do
       daily_survey_day_0 = create :foorm_form_summer_pre_survey
       daily_survey_day_5 = create :foorm_form_summer_post_survey
+      @csf_intro_post_survey = create :foorm_form_csf_intro_post_survey
       @parsed_forms = FoormParser.parse_forms([daily_survey_day_0, daily_survey_day_5])
     end
 
@@ -83,8 +84,7 @@ module Pd::Foorm
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
-      csf_form = create :foorm_form_csf_intro_post_survey
-      parsed_form = FoormParser.parse_forms([csf_form])
+      parsed_form = FoormParser.parse_forms([@csf_intro_post_survey])
       summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(
         foorm_submissions,
         parsed_form,
@@ -122,8 +122,7 @@ module Pd::Foorm
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
-      csf_form = create :foorm_form_csf_intro_post_survey
-      parsed_form = FoormParser.parse_forms([csf_form])
+      parsed_form = FoormParser.parse_forms([@csf_intro_post_survey])
       summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(
         foorm_submissions,
         parsed_form,
