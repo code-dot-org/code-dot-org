@@ -66,7 +66,9 @@ $(document).ready(() => {
       referenceLinks: data.appOptions.level.referenceLinks,
       noInstructionsWhenCollapsed: true,
       overlayVisible: false,
-      hasContainedLevels: false
+      hasContainedLevels: false,
+      freeResponsePlaceholder: level.placeholder,
+      freeResponseTextAreaHeight: level.height
     })
   );
 

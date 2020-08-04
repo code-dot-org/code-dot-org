@@ -699,8 +699,6 @@ class TopInstructions extends Component {
                 <FreeResponse
                   ref="instructions"
                   level={{
-                    placeholder: 'Enter answer here',
-                    height: 100,
                     id: 10,
                     allow_user_uploads: false
                   }}

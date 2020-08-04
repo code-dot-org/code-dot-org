@@ -16,13 +16,13 @@ class FreeResponse extends React.Component {
 
     lastAttempt: PropTypes.string,
     level: PropTypes.shape({
-      placeholder: PropTypes.string,
-      height: PropTypes.number,
       title: PropTypes.string,
       allow_user_uploads: PropTypes.bool
     }),
 
     //redux
+    freeResponseTextAreaHeight: PropTypes.number,
+    freeResponsePlaceholder: PropTypes.string,
     showUnderageWarning: PropTypes.bool,
     readOnly: PropTypes.bool,
     instructions: PropTypes.string
@@ -45,9 +45,11 @@ class FreeResponse extends React.Component {
         <SafeMarkdown markdown={instructions} />
         <textarea
           className="free-response-textarea"
-          placeholder={level.placeholder}
-          style={styles.textArea}
-          height={level.height}
+          placeholder={this.props.freeResponsePlaceholder}
+          style={{
+            ...styles.textArea,
+            ...{height: this.props.freeResponseTextAreaHeight}
+          }}
           readOnly={readOnly}
         >
           {lastAttempt}
@@ -66,5 +68,7 @@ class FreeResponse extends React.Component {
 export default connect(state => ({
   instructions: state.instructions.longInstructions,
   readOnly: state.pageConstants.isReadOnlyWorkspace,
-  showUnderageWarning: state.pageConstants.is13Plus
+  showUnderageWarning: state.pageConstants.is13Plus,
+  freeResponsePlaceholder: state.instructions.freeResponsePlaceholder,
+  freeResponseTextAreaHeight: state.instructions.freeResponseTextAreaHeight
 }))(FreeResponse);

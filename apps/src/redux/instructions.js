@@ -40,6 +40,8 @@ const instructionsInitialState = {
   shortInstructions2: undefined,
   longInstructions: undefined,
   teacherMarkdown: undefined,
+  freeResponsePlaceholder: undefined,
+  freeResponseTextAreaHeight: undefined,
   hasContainedLevels: false,
   collapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
@@ -73,6 +75,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       hasContainedLevels,
       overlayVisible,
       teacherMarkdown,
+      freeResponsePlaceholder,
+      freeResponseTextAreaHeight,
       levelVideos,
       mapReference,
       referenceLinks
@@ -88,6 +92,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       shortInstructions2,
       longInstructions,
       teacherMarkdown,
+      freeResponsePlaceholder,
+      freeResponseTextAreaHeight,
       hasContainedLevels,
       overlayVisible,
       collapsed,
@@ -172,6 +178,8 @@ export const setInstructionsConstants = ({
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
+  freeResponsePlaceholder,
+  freeResponseTextAreaHeight,
   levelVideos,
   mapReference,
   referenceLinks
@@ -184,6 +192,8 @@ export const setInstructionsConstants = ({
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
+  freeResponsePlaceholder,
+  freeResponseTextAreaHeight,
   levelVideos,
   mapReference,
   referenceLinks

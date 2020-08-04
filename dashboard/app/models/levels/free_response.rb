@@ -76,7 +76,7 @@ class FreeResponse < Level
   def summarize
     summary = {
       placeholder: get_property(:placeholder) || I18n.t('free_response.placeholder'),
-      height: try(:height) || 80,
+      height: try(:height)&.to_i || 80,
       title: get_property(:title),
       allow_user_uploads: try(:allow_user_uploads)&.to_bool,
       solution: try(:solution),

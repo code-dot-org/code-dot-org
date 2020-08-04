@@ -16,17 +16,6 @@ let styles = {
  */
 class QuestionView extends React.Component {
   static propTypes = {
-    lastAttempt: PropTypes.string,
-    readOnly: PropTypes.bool,
-    showUnderageWarning: PropTypes.bool,
-    level: PropTypes.shape({
-      placeholder: PropTypes.string,
-      height: PropTypes.number,
-      id: PropTypes.number,
-      title: PropTypes.string,
-      longInstructions: PropTypes.string,
-      allow_user_uploads: PropTypes.bool
-    }),
     instructionsHeight: PropTypes.number
   };
 
