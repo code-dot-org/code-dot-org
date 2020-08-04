@@ -1,6 +1,3 @@
-# Brad investigating (2018-04-25)
-@skip
-@no_circle
 @as_student
 Feature: Weblab Versions
 
