@@ -1,5 +1,3 @@
-# Brad (2018-11-14) Skip on IE due to webdriver exception
-@no_ie
 @single_session
 Feature: Complete a bounce level
 
