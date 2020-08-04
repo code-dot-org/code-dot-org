@@ -1,5 +1,3 @@
-# Brad (2018-11-14) Skip on IE due to webdriver exception
-@no_ie
 @no_mobile
 Feature: Shared content restrictions
 
