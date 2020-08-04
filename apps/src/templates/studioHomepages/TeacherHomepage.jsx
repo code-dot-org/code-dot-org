@@ -175,8 +175,8 @@ export class UnconnectedTeacherHomepage extends Component {
       specialAnnouncement
     } = this.props;
 
-    // Hide the regular announcement/notification for now.
-    const showAnnouncement = false;
+    // Show the regular announcement/notification for now.
+    const showAnnouncement = true;
 
     return (
       <div>
