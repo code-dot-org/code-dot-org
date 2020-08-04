@@ -1,0 +1,237 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction removeBehaviorSimple(sprite, behavior) {\r\n  removeBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction jitter(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.scale = 1 + (randomNumber(-1, 1) / 50);\r\n  }\r\n  behavior.name='jitter';\r\n  return behavior;\r\n}\r\n\r\nfunction grow(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.scale += 0.01;\r\n  }\r\n  behavior.name='grow';\r\n  return behavior;\r\n}\r\n\r\nfunction shrink(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.scale -= 0.01;\r\n  }\r\n  behavior.name='shrink';\r\n  return behavior;\r\n}\r\n\r\nfunction spin(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation++;\r\n  }\r\n  behavior.name='spin';\r\n  return behavior;\r\n}\r\n\r\nfunction wander(sprite) {\r\n  var behavior = function(sprite) {\r\n    if (!sprite.xoff) {\r\n      sprite.xoff = randomNumber(0, 1000);\r\n      sprite.yoff = randomNumber(0, 1000);\r\n    }\r\n    sprite.x = map(noise(sprite.xoff + World.frameCount / 100), 0, 1, 0, World.width);\r\n    sprite.y = map(noise(sprite.yoff + World.frameCount / 100), 0, 1, 0, World.height);\r\n  }\r\n  behavior.name='wander';\r\n  return behavior;\r\n}\r\n\r\nfunction runUp(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveUp();\r\n  }\r\n  behavior.name = 'runUp';\r\n  return behavior;\r\n}\r\n\r\nfunction runDown(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveDown();\r\n  }\r\n  behavior.name = 'runDown';\r\n  return behavior;\r\n}\r\n\r\nfunction runLeft(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveLeft();\r\n  }\r\n  behavior.name = 'runLeft';\r\n  return behavior;\r\n}\r\n\r\nfunction runRight(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveRight();\r\n  }\r\n  behavior.name = 'runRight';\r\n  return behavior;\r\n}\r\n\r\nfunction danceParty(sprite) {\r\n  var behavior = function(sprite) {\r\n    if (World.frameCount % 10 === 0) {\r\n      sprite.rotation += randomNumber(-5, 5);\r\n    }\r\n    if (World.frameCount % 20 === 0) {\r\n      sprite.scale = 1 + (randomNumber(-1, 1) / 10);\r\n    }\r\n  }\r\n  behavior.name = 'danceParty';\r\n  return behavior;\r\n}\r\n\r\nfunction randomizeLocation(sprite) {\r\n   sprite.x=Math.floor(Math.random()*400);\r\n   sprite.y=Math.floor(Math.random()*400);\r\n}\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\nfunction myBehavior() {\r\n  my_behavior.name = \"my behavior\";\r\n  return my_behavior;\r\n}\r\nfunction turnRight(sprite) {\r\n  sprite.rotation+=6;\r\n}\r\nfunction turnLeft(sprite) {\r\n  sprite.rotation-=6;\r\n}",
+    "custom_blocks": "[\n  {\n    \"func\": \"isDestroyed\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ],\n    \"blockText\": \"{SPRITE} is destroyed?\",\n    \"returnType\": \"Boolean\"\n  },\n  {\n    \"func\": \"jump\",\n    \"blockText\": \"{THIS} jump\",\n    \"methodCall\": true\n  },\n  {\n    \"func\": \"whenSpace\",\n    \"blockText\": \"while spacebar pressed\",\n    \"eventLoopBlock\": true\n  },\n  {\n    \"func\": \"randomizeLocation\",\n    \"blockText\": \"send {SPRITE} randomly\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"jitter\",\n    \"blockText\": \"jitter\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"wander\",\n    \"blockText\": \"wander\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"grow\",\n    \"blockText\": \"grow\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"shrink\",\n    \"blockText\": \"shrink\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"spin\",\n    \"blockText\": \"spin\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"danceParty\",\n    \"blockText\": \"dance party\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runUp\",\n    \"blockText\": \"run up\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"draggable\",\n    \"blockText\": \"drag and drop\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runDown\",\n    \"blockText\": \"run down\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runLeft\",\n    \"blockText\": \"run left\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runRight\",\n    \"blockText\": \"run right\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"myBehavior\",\n    \"blockText\": \"my behavior\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"turnRight\",\n    \"blockText\": \"{SPRITE} turn right\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"turnLeft\",\n    \"blockText\": \"{SPRITE} turn left\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  }\n]\n",
+    "hide_custom_blocks": "true",
+    "short_instructions": "**It's time to make your own virtual pet!** You can change whatever code you want to to make your own pet. Here are some ideas:\r\n* Can you make your pet start a new behavior when you click on it?\r\n* Can you make your pet run away when you drag the vacuum to it?\r\n* Can you add other animal friends to your pet's area? ",
+    "parent_level_id": 12163,
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-05 02:25:50 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:27:00 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:27:56 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\",\"custom_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:34:05 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:35:36 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:37:38 +0000\",\"changed\":[\"use_default_sprites\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:38:45 +0000\",\"changed\":[\"instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:40:51 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:42:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:42:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:44:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:45:44 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:47:46 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:48:44 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:49:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:49:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:51:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:51:52 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:55:45 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:56:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:56:51 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:58:06 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:01:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:06:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:07:39 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:10:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:12:47 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:14:05 +0000\",\"changed\":[\"custom_helper_library\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:15:37 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:18:32 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="sprite_variables_set" inline="false">
+              <title name="VAR">Daisy</title>
+              <value name="VALUE">
+                <block type="gamelab_makeNewSprite" inline="true">
+                  <title name="ANIMATION">"dog"</title>
+                  <value name="X">
+                    <block type="math_number">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                  <value name="Y">
+                    <block type="math_number">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="sprite_variables_set" inline="false">
+                  <title name="VAR">carrot</title>
+                  <value name="VALUE">
+                    <block type="gamelab_makeNewSprite" inline="true">
+                      <title name="ANIMATION">"carrot"</title>
+                      <value name="X">
+                        <block type="math_number">
+                          <title name="NUM">300</title>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="math_number">
+                          <title name="NUM">300</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple" inline="true">
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_draggable"/>
+                      </value>
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">carrot</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">my behavior</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Sprites">
+          <block type="sprite_variables_set" inline="false">
+            <title name="VAR">mySprite</title>
+            <value name="VALUE">
+              <block type="gamelab_makeNewSprite" inline="true">
+                <title name="ANIMATION">"dog"</title>
+                <value name="X">
+                  <block type="math_number">
+                    <title name="NUM">200</title>
+                  </block>
+                </value>
+                <value name="Y">
+                  <block type="math_number">
+                    <title name="NUM">200</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+          <block type="sprite_variables_get">
+            <title name="VAR">mySprite</title>
+          </block>
+          <block type="gamelab_setAnimation" inline="true">
+            <title name="ANIMATION">"dog"</title>
+          </block>
+          <block type="gamelab_setTint" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeTint" inline="true"/>
+          <block type="gamelab_randomizeLocation" inline="true"/>
+          <block type="gamelab_turnLeft" inline="true"/>
+          <block type="gamelab_turnRight" inline="true"/>
+          <block type="gamelab_moveUp" inline="true"/>
+          <block type="gamelab_moveDown" inline="true"/>
+          <block type="gamelab_moveLeft" inline="true"/>
+          <block type="gamelab_moveRight" inline="true"/>
+          <block type="gamelab_destroy" inline="true"/>
+        </category>
+        <category name="World">
+          <block type="gamelab_setBackground" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_showTitleScreen" inline="false">
+            <value name="TITLE">
+              <block type="text">
+                <title name="TEXT">top</title>
+              </block>
+            </value>
+            <value name="SUBTITLE">
+              <block type="text">
+                <title name="TEXT">bottom</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_hideTitleScreen"/>
+        </category>
+        <category name="Behaviors">
+          <block type="gamelab_addBehaviorSimple" inline="true"/>
+          <block type="gamelab_removeBehaviorSimple" inline="true"/>
+          <block type="gamelab_jitter"/>
+          <block type="gamelab_myBehavior"/>
+          <block type="gamelab_danceParty"/>
+          <block type="gamelab_draggable"/>
+          <block type="gamelab_grow"/>
+          <block type="gamelab_shrink"/>
+          <block type="gamelab_wander"/>
+          <block type="gamelab_runUp"/>
+          <block type="gamelab_runDown"/>
+          <block type="gamelab_runRight"/>
+          <block type="gamelab_runLeft"/>
+        </category>
+        <category name="Events">
+          <block type="gamelab_whenTouching" inline="true"/>
+          <block type="gamelab_clickedOn" inline="true"/>
+          <block type="gamelab_whenUpArrow"/>
+          <block type="gamelab_whenDownArrow"/>
+          <block type="gamelab_whenLeftArrow"/>
+          <block type="gamelab_whenRightArrow"/>
+          <block type="gamelab_whileUpArrow"/>
+          <block type="gamelab_whileDownArrow"/>
+          <block type="gamelab_whileLeftArrow"/>
+          <block type="gamelab_whileRightArrow"/>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+          </block>
+          <block type="math_random_int" inline="true">
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>
