@@ -4,12 +4,15 @@ module Api::V1::Pd
   class WorkshopSurveyFoormReportControllerTest < ::ActionController::TestCase
     self.use_transactional_test_case = true
 
-    setup do
-      @workshop = create :csd_summer_workshop
-      @workshop_admin = create :workshop_admin
+    setup_all do
       create :foorm_form_summer_post_survey
       create :foorm_form_summer_pre_survey
       create :foorm_form_csf_intro_post_survey
+    end
+
+    setup do
+      @workshop = create :csd_summer_workshop
+      @workshop_admin = create :workshop_admin
     end
 
     test 'get generic survey report correctly' do
