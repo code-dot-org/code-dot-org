@@ -1594,8 +1594,8 @@ class Script < ActiveRecord::Base
   def all_descendant_levels
     contained_levels = levels.map(&:contained_levels).flatten
     template_levels = levels.map(&:project_template_level).compact
-    level_groups = levels.select {|l| l.type == 'level_group'}
-    level_group_sublevels = level_groups.map(&:pages).map(&:levels).flatten
+    level_groups = levels.select {|l| l.type == 'LevelGroup'}
+    level_group_sublevels = level_groups.map(&:levels).flatten
     levels + contained_levels + template_levels + level_group_sublevels
   end
 end
