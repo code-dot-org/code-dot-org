@@ -129,13 +129,17 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_equal user.oauth_refresh_token, result_user.oauth_refresh_token
   end
 
-  test 'cancel deletes the partial registration from the session' do
+  test 'cancel deletes the partial registration from the session and cache' do
     user = build :user, :google_sso_provider
+    cache_key = PartialRegistration.cache_key user
+
     PartialRegistration.persist_attributes @session, user
     refute_nil @session[PartialRegistration::SESSION_KEY]
+    assert CDO.shared_cache.exist? cache_key
 
     PartialRegistration.cancel @session
     assert_nil @session[PartialRegistration::SESSION_KEY]
+    refute CDO.shared_cache.exist? cache_key
   end
 
   test 'get_provider returns nil when partial registration is not in progress' do
