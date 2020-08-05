@@ -7343,6 +7343,10 @@ zh-CN:
         content1: 描述
       csf_putting_a_stop_to_online_meanness:
         content1: 描述
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          我的网上邻居
+          你是如何在网上安全地浏览信息
       grade2_multi_collector_A_predict1:
         answers:
         - text: 用这段代码让罗瑞尔收集4个宝贝

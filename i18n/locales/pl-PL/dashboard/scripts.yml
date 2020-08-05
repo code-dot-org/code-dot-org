@@ -5961,6 +5961,10 @@ pl:
               display_name: 'Rozdział 2: Style i CSS'
             cspSurvey:
               display_name: Ankieta
+            csd2_1v2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            csd2_2v2:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
           lessons:
             Intro to HTML:
               name: Wprowadzenie do HTML
@@ -6865,6 +6869,7 @@ pl:
           lessons:
             Module 2:
               name: Moduł 2
+          title: Wirtualne Profesjonalne Kształcenie w zakresie Odkrywania Informatyki w latach 2020-2021
         vpl-csp-2020:
           lessons:
             Module 2:
@@ -6881,3 +6886,4 @@ pl:
               name: Moduł 7
             Module 8:
               name: Moduł 8
+          title: Wirtualne Profesjonalne Kształcenie w zakresie Podstaw Informatyki
