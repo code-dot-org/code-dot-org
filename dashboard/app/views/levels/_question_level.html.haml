@@ -18,4 +18,6 @@
   %div#question-level
   .question-level
 
+= render partial: 'levels/dialog', locals: {app: 'free_response'}
+
 %script{src: webpack_asset_path('js/levels/_question_level.js'), data: {questionlevel: data.to_json}}

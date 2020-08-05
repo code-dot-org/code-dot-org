@@ -118,6 +118,9 @@ const styles = {
     float: 'right',
     paddingTop: 6,
     paddingRight: 30
+  },
+  questionLevel: {
+    top: 60
   }
 };
 
@@ -534,7 +537,8 @@ class TopInstructions extends Component {
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
       this.props.widgetMode &&
-        (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth})
+        (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth}),
+      this.props.isQuestionLevel && styles.questionLevel
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];

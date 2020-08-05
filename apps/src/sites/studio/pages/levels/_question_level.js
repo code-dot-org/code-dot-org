@@ -80,7 +80,7 @@ $(document).ready(() => {
     })
   );
 
-  var questionAreaHeight = $(window).height() - 50 - 165 - 125 - 50; //header - footer - button - extra
+  var questionAreaHeight = $(window).height() - 50 - 165 - 75 - 50; //header - footer - button - extra
 
   store.dispatch(setInstructionsMaxHeightAvailable(questionAreaHeight));
 

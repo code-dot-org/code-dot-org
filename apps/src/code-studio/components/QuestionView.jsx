@@ -1,17 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
-import CompletionButton from '@cdo/apps/templates/CompletionButton';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
-
-let styles = {
-  buttonArea: {
-    right: 0,
-    position: 'absolute'
-  }
-};
 
 /**
  * Top-level React wrapper for Question Levels.
@@ -42,7 +34,7 @@ class QuestionView extends React.Component {
     this.setState({windowHeight});
 
     this.props.setInstructionsMaxHeightAvailable(
-      Math.max(windowHeight - 50 - 165 - 125 - 50, 150)
+      Math.max(windowHeight - 50 - 165 - 75 - 50, 150)
     );
   };
 
@@ -58,14 +50,6 @@ class QuestionView extends React.Component {
     return (
       <div>
         <TopInstructions isQuestionLevel={true} />
-        <div
-          style={{
-            ...styles.buttonArea,
-            ...{top: this.props.instructionsHeight}
-          }}
-        >
-          <CompletionButton />
-        </div>
       </div>
     );
   }
