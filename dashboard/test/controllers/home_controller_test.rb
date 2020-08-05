@@ -280,6 +280,63 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#age-modal', false
   end
 
+  test 'anonymous does not get thank donors dialog' do
+    assert_nil current_user
+
+    get :home
+
+    assert_select '#thank-donors-modal', false
+  end
+
+  test 'student on first login gets thank donors dialog' do
+    # Devise does not run callbacks (eg, increment sign in count)
+    # when using sign_in according to this 2014 discussion:
+    # https://github.com/heartcombo/devise/issues/2905
+    student = create(:user, sign_in_count: 1)
+
+    sign_in student
+    get :home
+
+    assert_select '#thank-donors-modal', true
+  end
+
+  test 'teacher on first login gets thank donors dialog' do
+    teacher = create(
+      :teacher,
+      :with_terms_of_service,
+      sign_in_count: 1
+    )
+
+    sign_in teacher
+    get :home
+
+    assert_select '#thank-donors-modal', true
+  end
+
+  test 'student on second login does not get thank donors dialog' do
+    # Devise does not run callbacks (eg, increment sign in count)
+    # when using sign_in.
+    student = create(:user, sign_in_count: 2)
+
+    sign_in student
+    get :home
+
+    assert_select '#thank-donors-modal', false
+  end
+
+  test 'teacher on second login does not get thank donors dialog' do
+    teacher = create(
+      :teacher,
+      :with_terms_of_service,
+      sign_in_count: 2
+    )
+
+    sign_in teacher
+    get :home
+
+    assert_select '#thank-donors-modal', false
+  end
+
   # This exception is actually annoying to handle because it never gets to
   # ActionController (so we can't use the rescue in ApplicationController).
   # test "bad http methods are rejected" do
