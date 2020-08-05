@@ -67,7 +67,7 @@ class RegistrationsController < Devise::RegistrationsController
     SignUpTracking.log_cancel_finish_sign_up(session, provider)
     SignUpTracking.end_sign_up_tracking(session)
 
-    PartialRegistration.cancel(session)
+    PartialRegistration.delete(session)
     redirect_to new_user_registration_path
   end
 
