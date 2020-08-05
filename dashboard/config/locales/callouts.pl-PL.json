@@ -394,7 +394,7 @@
           "courseF_bee_for4_1": "Tutaj znajdziesz tutaj pętlę `for`!"
         },
         "OPD-K5-projects-4": {
-          "courseE_playLab_scaffold3_1": "Przesuń aktora do tej flagi, aby przejść do następnego poziomu."
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Ułożyliśmy już kilka bloków na dobry początek"
@@ -671,10 +671,10 @@
           "courseB_playlab_events6_a": "Użyj zielonej strzałki w dół, by zmieniać kierunki."
         },
         "courseC19_playLab_EOC3": {
-          "courseE_playLab_scaffold3_1": "Przesuń aktora do tej flagi, aby przejść do następnego poziomu."
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
         "courseC19_playLab_EOC3_2020": {
-          "courseE_playLab_scaffold3_1": "Przesuń aktora do tej flagi, aby przejść do następnego poziomu."
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
         "courseC_PlayLab_events8": {
           "courseC_PlayLab_events8_callout1": "Użyj tego bloku, gdy Waddles i Chomp się dotkną!"
@@ -897,31 +897,31 @@
           "courseD_artist_functions1_1": "Zacznij używając tego bloku, aby pomóc utworzyć pierwszy kwadrat."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_1": "Gdy ten zielony blok jest uruchomiony, cały kod w funkcji będzie uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
         },
         "courseE_artist_functions2_2018": {
-          "courseD_artist_functions2_1": "Gdy ten zielony blok jest uruchomiony, cały kod w funkcji będzie uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
         },
         "courseE_artist_functions2_2019": {
-          "courseD_artist_functions2_1": "Gdy ten zielony blok jest uruchomiony, cały kod w funkcji będzie uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
         },
         "courseE_artist_functions2_2020": {
-          "courseD_artist_functions2_1": "Gdy ten zielony blok jest uruchomiony, cały kod w funkcji będzie uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_1": "Gdy ten zielony blok jest uruchomiony, cały kod w funkcji będzie uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
         },
         "courseE_artist_functions8": {
-          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione w ramach tej etykiety do przybornika."
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
         },
         "courseE_artist_functions8a_2018": {
-          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione w ramach tej etykiety do przybornika."
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
         },
         "courseE_artist_functions8a_2019": {
-          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione w ramach tej etykiety do przybornika."
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
         },
         "courseE_artist_functions8a_2020": {
-          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione w ramach tej etykiety do przybornika."
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
         },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "Przedłuż działanie programu dodając więcej kodu na dole.",
@@ -964,55 +964,55 @@
           "courseE_artist_ramp8_2": "Kliknij tutaj, aby wpisać liczby powtórzeń kodu."
         },
         "courseE_farmer_functions1": {
-          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki."
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
         },
         "courseE_farmer_functions13_2018": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions13_2019": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions13_2020": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions1_2018": {
-          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki."
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
         },
         "courseE_farmer_functions1_2019": {
-          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki."
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
         },
         "courseE_farmer_functions1_2020": {
-          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, które masz bloki."
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
         },
         "courseE_farmer_functions1a": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions1a_2018": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions1a_2019": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions1a_2020": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions2b": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions2b_2018": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions2b_2019": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_farmer_functions2b_2020": {
-          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym włączeniu programu."
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
         },
         "courseE_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Ten blok umożliwia przesuwanie postaci do innych części przestrzeni gry."
         },
         "courseE_playLab_scaffold3": {
-          "courseE_playLab_scaffold3_1": "Przesuń aktora do tej flagi, aby przejść do następnego poziomu."
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
         "courseF_bee_conditionals2": {
           "courseF_bee_conditionals2_2": "Przybornik jest teraz w trybie kategorii. Wszystkie bloki, których potrzebujesz są pod tymi etykietami!"

@@ -1,0 +1,446 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": true,
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "custom_helper_library": "function addBehaviorSimple(sprite, name, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\n\r\nfunction tossable() {\r\n  var behavior = function(sprite) {\r\n    if (mouseWentUp()) {\r\n      sprite.maxVelocity = 5;\r\n      sprite.setVelocity(min(mouseX - pmouseX, sprite.maxVelocity), min(mouseY - pmouseY, sprite.maxVelocity));\r\n    }\r\n  }\r\n  behavior.name = \"tossable\";\r\n  return behavior;\r\n}\r\n\r\nfunction gravity() {\r\n    var behavior = function(sprite) {\r\n      sprite.maxVelocity = 5;\r\n      if (sprite.velocityY < sprite.maxVelocity) {\r\n    \tsprite.velocityY = sprite.velocityY + 0.1;\r\n      }\r\n    }\r\n    behavior.name=\"gravity\";\r\n    return behavior;\r\n}\r\n\r\nfunction bounceOffEdges(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.bounceOff(edges);\r\n  }\r\n  behavior.name = 'bounceOffEdges';\r\n  return behavior;\r\n}",
+    "custom_blocks": "[\n  {\n    \"func\": \"draggable\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"draggable\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"gravity\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"gravity\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"tossable\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"tossable\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"setVelocity\",\n    \"color\": [\n      184,\n      1,\n      0.74\n    ],\n    \"args\": [\n      {\n        \"name\": \"X\"\n      },\n      {\n        \"name\": \"Y\"\n      }\n    ],\n    \"blockText\": \"Set {THIS} velocity {X}, {Y}\",\n    \"methodCall\": true\n  }\n]\n",
+    "parent_level_id": 11142,
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-13 19:57:48 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:58:33 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 20:00:37 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 18:59:40 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:00:51 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:01:26 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:02:00 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:03:35 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:04:18 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:04:47 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:06:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:09:01 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:12:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:14:29 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:15:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:15:48 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 19:17:13 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-14 23:08:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-14 23:09:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-14 23:13:22 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-14 23:15:49 +0000\",\"changed\":[\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-14 23:16:59 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-14 23:20:11 +0000\",\"changed\":[\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-14 23:23:46 +0000\",\"changed\":[\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-14 23:24:36 +0000\",\"changed\":[\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-14 23:26:19 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 02:14:32 +0000\",\"changed\":[\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 02:15:08 +0000\",\"changed\":[\"custom_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 02:23:53 +0000\",\"changed\":[\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 02:24:41 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 02:25:48 +0000\",\"changed\":[\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 02:26:50 +0000\",\"changed\":[\"custom_helper_library\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 02:28:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:06:44 +0000\",\"changed\":[\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:09:23 +0000\",\"changed\":[\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:10:42 +0000\",\"changed\":[\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:12:14 +0000\",\"changed\":[\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:17:26 +0000\",\"changed\":[\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:21:49 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:23:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:28:17 +0000\",\"changed\":[\"custom_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:29:24 +0000\",\"changed\":[\"custom_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:32:39 +0000\",\"changed\":[\"custom_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:35:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:40:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:42:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:44:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:46:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 04:49:32 +0000\",\"changed\":[\"instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 15:17:19 +0000\",\"changed\":[\"start_animations\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="sprite_variables_set" inline="false">
+              <title name="VAR">left_score</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">0</title>
+                </block>
+              </value>
+              <next>
+                <block type="sprite_variables_set" inline="false">
+                  <title name="VAR">right_score</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="sprite_variables_set" inline="false">
+                      <title name="VAR">penguin</title>
+                      <value name="VALUE">
+                        <block type="gamelab_makeNewSprite" inline="true">
+                          <title name="ANIMATION">"penguin"</title>
+                          <value name="X">
+                            <block type="math_number">
+                              <title name="NUM">200</title>
+                            </block>
+                          </value>
+                          <value name="Y">
+                            <block type="math_number">
+                              <title name="NUM">200</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="sprite_variables_set" inline="false">
+                          <title name="VAR">paddleL</title>
+                          <value name="VALUE">
+                            <block type="gamelab_makeNewSprite" inline="true">
+                              <title name="ANIMATION">"paddle"</title>
+                              <value name="X">
+                                <block type="math_number">
+                                  <title name="NUM">25</title>
+                                </block>
+                              </value>
+                              <value name="Y">
+                                <block type="math_number">
+                                  <title name="NUM">200</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="sprite_variables_set" inline="false">
+                              <title name="VAR">paddleR</title>
+                              <value name="VALUE">
+                                <block type="gamelab_makeNewSprite" inline="true">
+                                  <title name="ANIMATION">"paddle"</title>
+                                  <value name="X">
+                                    <block type="math_number">
+                                      <title name="NUM">375</title>
+                                    </block>
+                                  </value>
+                                  <value name="Y">
+                                    <block type="math_number">
+                                      <title name="NUM">200</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_setVelocity" inline="true">
+                                  <value name="THIS">
+                                    <block type="sprite_variables_get">
+                                      <title name="VAR">penguin</title>
+                                    </block>
+                                  </value>
+                                  <value name="X">
+                                    <block type="math_number">
+                                      <title name="NUM">2</title>
+                                    </block>
+                                  </value>
+                                  <value name="Y">
+                                    <block type="math_number">
+                                      <title name="NUM">3</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whileUpArrow">
+          <statement name="DO">
+            <block type="gamelab_moveUp" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">paddleR</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveDown" inline="true">
+                  <value name="THIS">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">paddleL</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_whileDownArrow">
+          <statement name="DO">
+            <block type="gamelab_moveDown" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">paddleR</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveUp" inline="true">
+                  <value name="THIS">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">paddleL</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_whenTouching" inline="true">
+          <value name="SPRITE1">
+            <block type="sprite_variables_get">
+              <title name="VAR">penguin</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="sprite_variables_get">
+              <title name="VAR">topEdge</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_bounceOff" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">penguin</title>
+                </block>
+              </value>
+              <value name="TARGET">
+                <block type="sprite_variables_get">
+                  <title name="VAR">topEdge</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenTouching" inline="true">
+          <value name="SPRITE1">
+            <block type="sprite_variables_get">
+              <title name="VAR">penguin</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="sprite_variables_get">
+              <title name="VAR">bottomEdge</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_bounceOff" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">penguin</title>
+                </block>
+              </value>
+              <value name="TARGET">
+                <block type="sprite_variables_get">
+                  <title name="VAR">bottomEdge</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenTouching" inline="true">
+          <value name="SPRITE1">
+            <block type="sprite_variables_get">
+              <title name="VAR">penguin</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="sprite_variables_get">
+              <title name="VAR">leftEdge</title>
+            </block>
+          </value>
+          <next>
+            <block type="sprite_variables_set" inline="false">
+              <title name="VAR">right_score</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true">
+                  <title name="OP">ADD</title>
+                  <value name="A">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">right_score</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_showTitleScreen" inline="false">
+                  <value name="TITLE">
+                    <block type="text_join_simple" inline="false" inputcount="3">
+                      <value name="ADD0">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">left_score</title>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="text">
+                          <title name="TEXT"> | </title>
+                        </block>
+                      </value>
+                      <value name="ADD2">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">right_score</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="SUBTITLE">
+                    <block type="text">
+                      <title name="TEXT"/>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setPosition" inline="true">
+                      <title name="POSITION">{x: 200, y: 200}</title>
+                      <value name="THIS">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">penguin</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenTouching" inline="true">
+          <value name="SPRITE1">
+            <block type="sprite_variables_get">
+              <title name="VAR">penguin</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="sprite_variables_get">
+              <title name="VAR">rightEdge</title>
+            </block>
+          </value>
+          <next>
+            <block type="sprite_variables_set" inline="false">
+              <title name="VAR">left_score</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true">
+                  <title name="OP">ADD</title>
+                  <value name="A">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">left_score</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_showTitleScreen" inline="false">
+                  <value name="TITLE">
+                    <block type="text_join_simple" inline="false" inputcount="3">
+                      <value name="ADD0">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">left_score</title>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="text">
+                          <title name="TEXT"> | </title>
+                        </block>
+                      </value>
+                      <value name="ADD2">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">right_score</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="SUBTITLE">
+                    <block type="text">
+                      <title name="TEXT"/>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setPosition" inline="true">
+                      <title name="POSITION">{x: 200, y: 200}</title>
+                      <value name="THIS">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">penguin</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenTouching" inline="true">
+          <value name="SPRITE1">
+            <block type="sprite_variables_get">
+              <title name="VAR">penguin</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="sprite_variables_get">
+              <title name="VAR">paddleL</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_bounceOff" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">penguin</title>
+                </block>
+              </value>
+              <value name="TARGET">
+                <block type="sprite_variables_get">
+                  <title name="VAR">paddleL</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenTouching" inline="true">
+          <value name="SPRITE1">
+            <block type="sprite_variables_get">
+              <title name="VAR">penguin</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="sprite_variables_get">
+              <title name="VAR">paddleR</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_bounceOff" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">penguin</title>
+                </block>
+              </value>
+              <value name="TARGET">
+                <block type="sprite_variables_get">
+                  <title name="VAR">paddleR</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</GamelabJr>
