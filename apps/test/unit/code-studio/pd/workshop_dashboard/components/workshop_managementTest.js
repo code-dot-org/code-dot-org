@@ -94,7 +94,7 @@ describe('WorkshopManagement', () => {
     it('uses daily results for academic year workshop past August 2018', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2018-09-01',
-        subject: 'Workshop 1: Unit 3'
+        subject: 'Academic Year Workshop 1'
       });
       expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
@@ -102,7 +102,7 @@ describe('WorkshopManagement', () => {
     it('uses survey results for academic year workshop before August 2018', () => {
       const surveyUrl = getSurveyUrlForProps({
         date: '2018-07-01',
-        subject: 'Workshop 1: Unit 3'
+        subject: 'Academic Year Workshop 1'
       });
       expect(surveyUrl).to.eql(null);
     });

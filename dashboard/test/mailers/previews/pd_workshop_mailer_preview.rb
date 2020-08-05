@@ -208,7 +208,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   def facilitator_pre_workshop_csd
     mail :facilitator_pre_workshop,
       Pd::Workshop::COURSE_CSD,
-      Pd::Workshop::SUBJECT_CSD_VIRTUAL_1,
+      Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
       target: :facilitator
   end
 
