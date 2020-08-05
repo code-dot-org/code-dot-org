@@ -698,11 +698,6 @@ class TopInstructions extends Component {
               {this.props.isQuestionLevel && (
                 <FreeResponse
                   ref="instructions"
-                  level={{
-                    id: 10,
-                    allow_user_uploads: false
-                  }}
-                  lastAttempt={null}
                   hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                 />
               )}

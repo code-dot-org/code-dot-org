@@ -75,6 +75,7 @@ class FreeResponse < Level
   # @return [Hash]
   def summarize
     summary = {
+      type: type,
       placeholder: get_property(:placeholder) || I18n.t('free_response.placeholder'),
       height: try(:height)&.to_i || 80,
       title: get_property(:title),

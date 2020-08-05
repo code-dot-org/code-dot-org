@@ -6,7 +6,8 @@ import {connect} from 'react-redux';
 
 const styles = {
   textArea: {
-    width: '95%'
+    width: '95%',
+    marginTop: 5
   }
 };
 
@@ -14,35 +15,32 @@ class FreeResponse extends React.Component {
   static propTypes = {
     hidden: PropTypes.bool,
 
-    lastAttempt: PropTypes.string,
-    level: PropTypes.shape({
-      title: PropTypes.string,
-      allow_user_uploads: PropTypes.bool
-    }),
-
     //redux
+    freeResponseTitle: PropTypes.string,
     freeResponseTextAreaHeight: PropTypes.number,
     freeResponsePlaceholder: PropTypes.string,
+    freeResponseLastAttempt: PropTypes.string,
     showUnderageWarning: PropTypes.bool,
     readOnly: PropTypes.bool,
-    instructions: PropTypes.string
+    instructions: PropTypes.string,
+    allowUserUploads: PropTypes.bool
   };
 
   render() {
-    const {
-      level,
-      lastAttempt,
-      readOnly,
-      showUnderageWarning,
-      instructions
-    } = this.props;
-
     return (
       <div hidden={this.props.hidden}>
-        {this.props.level.title && (
-          <h1 className="free-response-title">{level.title}</h1>
+        {this.props.freeResponseTitle && (
+          <h1 className="free-response-title">
+            {this.props.freeResponseTitle}
+          </h1>
         )}
-        <SafeMarkdown markdown={instructions} />
+        <SafeMarkdown markdown={this.props.instructions} />
+        {this.props.allowUserUploads && (
+          <Attachments
+            readOnly={this.props.readOnly}
+            showUnderageWarning={this.props.showUnderageWarning}
+          />
+        )}
         <textarea
           className="free-response-textarea"
           placeholder={this.props.freeResponsePlaceholder}
@@ -50,16 +48,9 @@ class FreeResponse extends React.Component {
             ...styles.textArea,
             ...{height: this.props.freeResponseTextAreaHeight}
           }}
-          readOnly={readOnly}
-        >
-          {lastAttempt}
-        </textarea>
-        {level.allow_user_uploads && (
-          <Attachments
-            readOnly={readOnly}
-            showUnderageWarning={showUnderageWarning}
-          />
-        )}
+          readOnly={this.props.readOnly}
+          value={this.props.freeResponseLastAttempt}
+        />
       </div>
     );
   }
@@ -70,5 +61,8 @@ export default connect(state => ({
   readOnly: state.pageConstants.isReadOnlyWorkspace,
   showUnderageWarning: state.pageConstants.is13Plus,
   freeResponsePlaceholder: state.instructions.freeResponsePlaceholder,
-  freeResponseTextAreaHeight: state.instructions.freeResponseTextAreaHeight
+  freeResponseTextAreaHeight: state.instructions.freeResponseTextAreaHeight,
+  freeResponseTitle: state.instructions.freeResponseTitle,
+  freeResponseLastAttempt: state.instructions.freeResponseLastAttempt,
+  allowUserUploads: state.instructions.allowUserUploads
 }))(FreeResponse);

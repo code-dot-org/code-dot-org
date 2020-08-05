@@ -5,19 +5,15 @@ import {Provider} from 'react-redux/src';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {
   setInstructionsConstants,
   setInstructionsMaxHeightAvailable
 } from '@cdo/apps/redux/instructions';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-$(document).ready(() => {
-  const script = document.querySelector('script[data-questionlevel]');
-  const data = JSON.parse(script.dataset.questionlevel);
-
-  var level = data.level;
-
-  window.dashboard.codeStudioLevels.registerGetResult(function getResult() {
+function getResult(level) {
+  return function() {
     var forceSubmittable =
       window.location.search.indexOf('force_submittable') !== -1;
 
@@ -27,7 +23,16 @@ $(document).ready(() => {
       result: true,
       testResult: level.test_result
     };
-  });
+  };
+}
+
+$(document).ready(() => {
+  const script = document.querySelector('script[data-questionlevel]');
+  const data = JSON.parse(script.dataset.questionlevel);
+
+  var level = data.level;
+
+  codeStudioLevels.registerGetResult(getResult(data.level));
 
   registerReducers(commonReducers);
 
@@ -68,7 +73,10 @@ $(document).ready(() => {
       overlayVisible: false,
       hasContainedLevels: false,
       freeResponsePlaceholder: level.placeholder,
-      freeResponseTextAreaHeight: level.height
+      freeResponseTextAreaHeight: level.height,
+      freeResponseTitle: level.title,
+      allowUserUploads: level.allow_user_uploads,
+      freeResponseLastAttempt: data.last_attempt
     })
   );
 
@@ -76,16 +84,15 @@ $(document).ready(() => {
 
   store.dispatch(setInstructionsMaxHeightAvailable(questionAreaHeight));
 
-  store.dispatch(setViewType(ViewType.Teacher));
+  if (data.isTeacher) {
+    store.dispatch(setViewType(ViewType.Teacher));
+  } else {
+    store.dispatch(setViewType(ViewType.Student));
+  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <QuestionView
-        level={data.level}
-        readOnly={data.readonly}
-        lastAttempt={data.last_attempt}
-        showUnderageWarning={data.showUnderageWarning}
-      />
+      <QuestionView />
     </Provider>,
     document.querySelector('#question-level')
   );
