@@ -35,9 +35,6 @@ module PartialRegistration
   end
 
   def self.cancel(session)
-    provider = get_provider(session) || 'email'
-    SignUpTracking.log_cancel_finish_sign_up(session, provider)
-    SignUpTracking.end_sign_up_tracking(session)
     session.delete(SESSION_KEY)
   end
 

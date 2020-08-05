@@ -183,6 +183,7 @@ module OmniauthCallbacksControllerTests
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_finish_sign_up'
+      assert PartialRegistration.in_progress? session
 
       get '/users/cancel'
 
@@ -196,6 +197,7 @@ module OmniauthCallbacksControllerTests
           google_oauth2-cancel-finish-sign-up
         )
       )
+      refute PartialRegistration.in_progress? session
     end
 
     test "fail to finish sign-up (new sign-up flow)" do

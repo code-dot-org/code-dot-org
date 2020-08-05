@@ -63,6 +63,10 @@ class RegistrationsController < Devise::RegistrationsController
   # Cancels the in-progress partial user registration and redirects to sign-up page.
   #
   def cancel
+    provider = PartialRegistration.get_provider(session) || 'email'
+    SignUpTracking.log_cancel_finish_sign_up(session, provider)
+    SignUpTracking.end_sign_up_tracking(session)
+
     PartialRegistration.cancel(session)
     redirect_to new_user_registration_path
   end
