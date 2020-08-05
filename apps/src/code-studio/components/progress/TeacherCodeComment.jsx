@@ -35,13 +35,26 @@ class TeacherCodeComment extends React.Component {
   constructor(props) {
     super(props);
 
+    // For some reason, requiring (or importing) project at the top of this
+    // file causes the following error:
+    //     TypeError: _project.default.useMakerAPIs is not a function
+    // There seems to be an issue with initialization order around this
+    // particular dependency; as a workaround, we require it here, in a
+    // construction hook.
+    // TODO fix the underlying error and remove this hack
+    this.project = require('@cdo/apps/code-studio/initApp/project');
+
     this.state = {};
   }
 
   componentWillMount() {
     // load existing comments into redux
-    this.props.setComments({
-      3: 'initial comment'
+    this.project.getTeacherComments((err, response) => {
+      if (err) {
+        console.error(err);
+      } else if (response && typeof response === 'object') {
+        this.props.setComments(response);
+      }
     });
   }
 
@@ -65,8 +78,19 @@ class TeacherCodeComment extends React.Component {
   };
 
   handleSubmit = e => {
-    this.props.addOrUpdateComment(this.state.comment, this.props.lineNumber);
-    this.props.hideCommentModal();
+    const newComments = {
+      ...this.props.comments,
+      [this.props.lineNumber]: this.state.comment
+    };
+
+    this.project.saveTeacherComments(newComments, (err, response) => {
+      if (err) {
+        console.error(err);
+      } else {
+        this.props.setComments(newComments);
+        this.props.hideCommentModal();
+      }
+    });
   };
 
   render() {

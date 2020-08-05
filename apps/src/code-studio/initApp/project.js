@@ -990,6 +990,17 @@ var projects = (module.exports = {
     }
   },
 
+  getTeacherComments(callback) {
+    const filename = 'comments.json';
+    const url = current.id + '/' + filename;
+    sources.fetch(url, callback);
+  },
+
+  saveTeacherComments(comments, callback) {
+    const filename = 'comments.json';
+    sources.put(current.id, JSON.stringify(comments), filename, callback);
+  },
+
   /**
    * Saves the project to the Channels API and Sources API. Calls `callback` on
    * success if a callback function was provided.

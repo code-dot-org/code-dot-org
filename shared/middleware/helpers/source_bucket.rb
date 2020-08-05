@@ -13,7 +13,7 @@ class SourceBucket < BucketHelper
   end
 
   def allowed_file_name?(filename)
-    MAIN_JSON_FILENAME == filename
+    [MAIN_JSON_FILENAME, "comments.json"].include? filename
   end
 
   def allowed_file_types

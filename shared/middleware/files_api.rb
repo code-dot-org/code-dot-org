@@ -316,8 +316,18 @@ class FilesApi < Sinatra::Base
     end
   end
 
+  def authorized_to_put_file(endpoint, encrypted_channel_id, filename)
+    # Teachers are allowed to add comments to source channels owned by their students
+    if endpoint == 'sources' && filename == 'comments.json'
+      # TODO check for ownership
+      return true
+    end
+
+    return owns_channel?(encrypted_channel_id)
+  end
+
   def put_file(endpoint, encrypted_channel_id, filename, body)
-    not_authorized unless owns_channel?(encrypted_channel_id)
+    not_authorized unless authorized_to_put_file(endpoint, encrypted_channel_id, filename)
     file_too_large(endpoint) unless body.length < max_file_size
 
     buckets = get_bucket_impl(endpoint).new

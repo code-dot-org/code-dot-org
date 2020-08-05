@@ -15,7 +15,6 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-  console.log('reducer', state, action);
   switch (action.type) {
     case SHOW_COMMENT_MODAL:
       return {
