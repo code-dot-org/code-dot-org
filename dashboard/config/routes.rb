@@ -584,8 +584,6 @@ Dashboard::Application.routes.draw do
     concerns :section_api_routes
     concerns :assessments_routes
   end
-
-  get '/GetTokenAndSubdomain', to: 'api#get_immersion_reader_token'
   # Wildcard routes for API controller: select all public instance methods in the controller,
   # and all template names in `app/views/api/*`.
   api_methods = (ApiController.instance_methods(false) +

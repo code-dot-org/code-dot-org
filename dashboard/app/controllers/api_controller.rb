@@ -16,8 +16,19 @@ class ApiController < ApplicationController
     end
   end
 
-  def get_immersion_reader_token
-    render json: {message: 'hello, world!'}
+  def immersion_reader_token
+    client = Signet::OAuth2::Client.new(
+      token_credential_uri:  "https://login.windows.net/#{CDO.imm_reader_tenant_id}/oauth2/token",
+      client_id: CDO.imm_reader_client_id,
+      client_secret: CDO.imm_reader_client_secret,
+    )
+    client.grant_type = 'client_credentials'
+    client.fetch_access_token!
+    response = {
+      token: client.access_token,
+      subdomain: CDO.imm_reader_subdomain
+    }
+    render json: response
   end
 
   def clever_classrooms
