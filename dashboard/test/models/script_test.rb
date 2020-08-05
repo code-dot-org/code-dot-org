@@ -2325,7 +2325,7 @@ endvariants
     end
     assert_equal 'Lessons must have at least one level in them.  Lesson: Lesson1.', raise.message
   end
-    
+
   test 'all_descendant_levels returns nested levels of all types' do
     # simple level
     level1 = create :level, name: 'level1'
@@ -2375,7 +2375,10 @@ endvariants
     nested_levels = [containee, template_level, level_group_sublevels].flatten
 
     assert_equal levels, script.levels
-    assert_equal levels + nested_levels, script.all_descendant_levels
+    expected_levels = levels + nested_levels
+    actual_levels = script.all_descendant_levels
+    assert_equal expected_levels.compact.map(&:name), actual_levels.compact.map(&:name)
+    assert_equal expected_levels, actual_levels
 
     # TODO: make sure recognize the following nested level types
     # levels within bubble choice levels
