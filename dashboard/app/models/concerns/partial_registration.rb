@@ -46,7 +46,7 @@ module PartialRegistration
     # interacting with the cache or doing deserialization.
     # Assumption: Provider names will not contain hyphens
     cache_key = session[SESSION_KEY]
-    /^([^-]+)-.+-partial-sso$/.match(cache_key)&.[](1)
+    /^([^-]+)-.+-partial-sso$/.match(cache_key)&.captures&.first
   end
 
   def self.cache_key(user)
