@@ -3475,3 +3475,15 @@ h2.danger {
     display: none;
   }
 }
+
+.immersive-reader-button {
+  background-color: $lightest_purple !important;
+
+  &:hover {
+    background-color: $cyan !important;
+  }
+
+  img {
+    filter: grayscale(1);
+  }
+}
