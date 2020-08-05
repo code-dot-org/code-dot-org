@@ -2353,7 +2353,7 @@ endvariants
     assert_equal 3, level_group_sublevels.length
 
     dsl = <<~SCRIPT
-      stage 'lesson1'
+      lesson 'lesson1'
       level '#{level1.name}'
       variants
         level '#{swap1.name}', active: false
@@ -2368,8 +2368,7 @@ endvariants
     script_data = ScriptDSL.parse(dsl, 'a filename')[0]
     script = Script.add_script(
       {name: 'all-levels-script'},
-      script_data[:lesson_groups],
-      script_data[:stages]
+      script_data[:lesson_groups]
     )
 
     levels = [level1, swap1, swap2, container,  template_backed_level, level_group, extra1, extra2]
