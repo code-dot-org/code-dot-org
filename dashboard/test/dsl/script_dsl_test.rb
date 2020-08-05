@@ -39,12 +39,12 @@ class ScriptDslTest < ActiveSupport::TestCase
 
   test 'test Script DSL' do
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'Lesson1', display_name: 'Lesson1'
+      lesson 'L1', display_name: 'Lesson1'
       level 'Level 1'
       level 'Level 2'
       level 'Level 3'
 
-      lesson 'Lesson2', display_name: 'Lesson2'
+      lesson 'L2', display_name: 'Lesson2'
       level 'Level 4'
       level 'Level 5'
     DSL
@@ -56,7 +56,7 @@ class ScriptDslTest < ActiveSupport::TestCase
           display_name: nil,
           lessons: [
             {
-              key: 'Lesson1',
+              key: 'L1',
               name: 'Lesson1',
               script_levels: [
                 {levels: [{name: 'Level 1'}]},
@@ -65,7 +65,7 @@ class ScriptDslTest < ActiveSupport::TestCase
               ]
             },
             {
-              key: 'Lesson2',
+              key: 'L2',
               name: 'Lesson2',
               script_levels: [
                 {levels: [{name: 'Level 4'}]},
@@ -80,8 +80,8 @@ class ScriptDslTest < ActiveSupport::TestCase
     i18n_expected = {
       'test' => {
         'lessons' => {
-          'Lesson1' => {'name' => 'Lesson1'},
-          'Lesson2' => {'name' => 'Lesson2'}
+          'L1' => {'name' => 'Lesson1'},
+          'L2' => {'name' => 'Lesson2'}
         },
         "lesson_groups" => {}
       }
@@ -623,12 +623,12 @@ level 'Level 3'
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: 'content', script: script, properties: {display_name: "Content"}
-    lesson = create :lesson, name: 'lesson 1', key: 'lesson 1', script: script, lesson_group: lesson_group
+    lesson = create :lesson, name: 'lesson 1', key: 'L1', script: script, lesson_group: lesson_group
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'lesson 1', display_name: 'lesson 1'
+      lesson 'L1', display_name: 'lesson 1'
       level 'maze 1'
 
     SCRIPT
