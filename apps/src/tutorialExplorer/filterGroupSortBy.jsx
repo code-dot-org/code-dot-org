@@ -49,7 +49,7 @@ export default class FilterGroupSortBy extends React.Component {
     return (
       <FilterGroupContainer text={i18n.filterSortBy()}>
         <label htmlFor="sort-by-dropdown" className="hidden-label">
-          Sort By
+          {i18n.filterSortBy()}
         </label>
         <select
           id="sort-by-dropdown"

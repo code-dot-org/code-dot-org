@@ -41,7 +41,7 @@ export default class FilterGroupOrgNames extends React.Component {
     return (
       <FilterGroupContainer text={i18n.filterOrgNames()}>
         <label htmlFor="created-by-dropdown" className="hidden-label">
-          Created By
+          {i18n.filterOrgNames()}
         </label>
         <select
           id="created-by-dropdown"
