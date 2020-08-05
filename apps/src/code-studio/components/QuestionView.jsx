@@ -7,6 +7,13 @@ import {
   setInstructionsMaxHeightAvailable,
   setInstructionsRenderedHeight
 } from '../../redux/instructions';
+import FreeResponse from '@cdo/apps/code-studio/components/FreeResponse';
+
+var styles = {
+  questionArea: {
+    width: 2 * ($(window).width() / 6)
+  }
+};
 
 /**
  * Top-level React wrapper for Question Levels.
@@ -37,11 +44,11 @@ class QuestionView extends React.Component {
     this.setState({windowHeight});
 
     this.props.setInstructionsMaxHeightAvailable(
-      Math.max(windowHeight - 50 - 165 - 75 - 50, 150)
+      Math.max(windowHeight - 50 - 165 - 70, 150)
     );
 
     this.props.setInstructionsRenderedHeight(
-      Math.max(windowHeight - 50 - 165 - 75 - 50, 150)
+      Math.max(windowHeight - 50 - 165 - 70, 150)
     );
   };
 
@@ -56,6 +63,9 @@ class QuestionView extends React.Component {
   render() {
     return (
       <div>
+        <div style={styles.questionArea}>
+          <FreeResponse />
+        </div>
         <TopInstructions isQuestionLevel={true} />
       </div>
     );

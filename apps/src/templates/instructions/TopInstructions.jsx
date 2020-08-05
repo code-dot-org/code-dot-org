@@ -30,7 +30,6 @@ import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
-import FreeResponse from '@cdo/apps/code-studio/components/FreeResponse';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -120,7 +119,7 @@ const styles = {
     paddingRight: 30
   },
   questionLevel: {
-    top: 60
+    left: 2 * ($(window).width() / 6) + 10
   }
 };
 
@@ -699,12 +698,6 @@ class TopInstructions extends Component {
             id="scroll-container"
           >
             <div ref="instructions">
-              {this.props.isQuestionLevel && (
-                <FreeResponse
-                  ref="instructions"
-                  hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
-                />
-              )}
               {this.props.hasContainedLevels && (
                 <div>
                   <ContainedLevel
@@ -713,7 +706,7 @@ class TopInstructions extends Component {
                   />
                 </div>
               )}
-              {!(this.props.hasContainedLevels || this.props.isQuestionLevel) &&
+              {!this.props.hasContainedLevels &&
                 isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <InstructionsCSF
@@ -726,7 +719,7 @@ class TopInstructions extends Component {
                     }
                   />
                 )}
-              {!(this.props.hasContainedLevels || this.props.isQuestionLevel) &&
+              {!this.props.hasContainedLevels &&
                 isCSDorCSP &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>

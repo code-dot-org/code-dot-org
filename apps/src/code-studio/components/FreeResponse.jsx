@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import Attachments from './Attachments';
 import {connect} from 'react-redux';
 
@@ -35,7 +34,6 @@ class FreeResponse extends React.Component {
             {this.props.freeResponseTitle}
           </h1>
         )}
-        <SafeMarkdown markdown={this.props.instructions} />
         {this.props.allowUserUploads && (
           <Attachments
             readOnly={this.props.readOnly}

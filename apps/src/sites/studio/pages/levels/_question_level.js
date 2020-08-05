@@ -48,8 +48,6 @@ $(document).ready(() => {
       isSubmittable: !!data.appOptions.level.submittable,
       isReadOnlyWorkspace: data.appOptions.readonlyWorkspace,
       is13Plus: data.appOptions.is13Plus,
-
-      //needed for top instructions
       textToSpeechEnabled: false,
       isK1: false,
       noVisualization: true,
@@ -58,7 +56,8 @@ $(document).ready(() => {
       hideSource: true,
       isEmbedView: false,
       noInstructionsWhenCollapsed: true,
-      hasContainedLevels: false
+      hasContainedLevels: false,
+      serverLevelId: level.id
     })
   );
 
@@ -81,7 +80,7 @@ $(document).ready(() => {
     })
   );
 
-  var questionAreaHeight = $(window).height() - 50 - 165 - 75 - 50; //header - footer - button - extra
+  var questionAreaHeight = $(window).height() - 50 - 165 - 70; //header - footer - extra
 
   store.dispatch(setInstructionsMaxHeightAvailable(questionAreaHeight));
 
