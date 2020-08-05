@@ -19,7 +19,10 @@ import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
 import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
-import {sectionCode} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  sectionCode,
+  sectionName
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
   AddStatus,
@@ -143,6 +146,7 @@ class ManageStudentsTable extends Component {
     // Provided by redux
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
+    sectionName: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
@@ -640,7 +644,9 @@ class ManageStudentsTable extends Component {
       transferStatus,
       transferData,
       sectionId,
-      sectionCode
+      sectionName,
+      sectionCode,
+      studentData
     } = this.props;
     return (
       <div>
@@ -734,6 +740,8 @@ class ManageStudentsTable extends Component {
         </Table.Provider>
         <ManageStudentsLoginInfo
           sectionId={sectionId}
+          sectionName={sectionName}
+          studentData={studentData}
           loginType={loginType}
           sectionCode={this.props.sectionCode}
           studioUrlPrefix={this.props.studioUrlPrefix}
@@ -749,6 +757,7 @@ export default connect(
   state => ({
     sectionId: state.sectionData.section.id,
     sectionCode: sectionCode(state, state.sectionData.section.id),
+    sectionName: sectionName(state, state.sectionData.section.id),
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
     editingData: state.manageStudents.editingData,
