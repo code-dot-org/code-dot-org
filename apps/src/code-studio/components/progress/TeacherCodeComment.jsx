@@ -80,7 +80,7 @@ class TeacherCodeComment extends React.Component {
 
   saveComments = newComments => {
     this.setState({
-      submitting: true
+      working: true
     });
 
     // treat empty strings, nulls, undefineds, all falsy values as though they
@@ -93,7 +93,7 @@ class TeacherCodeComment extends React.Component {
 
     this.project.saveTeacherComments(newComments, (err, response) => {
       this.setState({
-        submitting: false
+        working: false
       });
 
       if (err) {
@@ -131,7 +131,9 @@ class TeacherCodeComment extends React.Component {
     return (
       <div>
         <span style={styles.header}>
-          Add comment to line #{this.props.lineNumber}
+          {this.state.working
+            ? 'Saving ...'
+            : `Add comment to line #${this.props.lineNumber}`}
         </span>
         <textarea
           cols={48}
@@ -145,16 +147,18 @@ class TeacherCodeComment extends React.Component {
             type="button"
             style={styles.button}
             onClick={this.handleSubmit}
-            disabled={this.state.submitting}
+            disabled={this.state.working}
           >
-            <i className="fa fa-save" />
-            {this.state.submitting ? ' submitting...' : ' submit'}
+            <i className="fa fa-save" /> submit
           </button>
           <button
             type="button"
             style={styles.button}
             onClick={this.handleDelete}
-            disabled={!(this.props.lineNumber in this.props.comments)}
+            disabled={
+              this.state.working ||
+              !(this.props.lineNumber in this.props.comments)
+            }
           >
             <i className="fa fa-trash" /> delete
           </button>
@@ -165,6 +169,7 @@ class TeacherCodeComment extends React.Component {
               float: 'right'
             }}
             onClick={this.props.hideCommentModal}
+            disabled={this.state.working}
           >
             <i className="fa fa-times" /> cancel
           </button>
