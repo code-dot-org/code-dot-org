@@ -514,6 +514,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_school_info_interstitial.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_thank_donors_interstitial':
+      './src/sites/studio/pages/layouts/_thank_donors_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
