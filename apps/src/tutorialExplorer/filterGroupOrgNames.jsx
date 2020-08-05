@@ -40,11 +40,11 @@ export default class FilterGroupOrgNames extends React.Component {
   render() {
     return (
       <FilterGroupContainer text={i18n.filterOrgNames()}>
-        <label htmlFor="created-by-dropdown" className="hidden-label">
+        <label htmlFor="filter-org-names-dropdown" className="hidden-label">
           {i18n.filterOrgNames()}
         </label>
         <select
-          id="created-by-dropdown"
+          id="filter-org-names-dropdown"
           value={this.props.orgName}
           onChange={this.handleChangeOrgName}
           style={styles.select}
