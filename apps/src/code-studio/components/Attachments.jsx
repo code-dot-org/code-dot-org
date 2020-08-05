@@ -1,10 +1,9 @@
 /* eslint-disable react/no-is-mounted */
-/* global dashboard */
 
 import PropTypes from 'prop-types';
 import React from 'react';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import assetListStore from '../assets/assetListStore';
+import * as assets from '../../code-studio/assets';
 
 const styles = {
   button: {
@@ -28,13 +27,16 @@ const styles = {
 export default class Attachments extends React.Component {
   static propTypes = {
     readonly: PropTypes.bool,
-    showUnderageWarning: PropTypes.bool
+    showUnderageWarning: PropTypes.bool,
+    projectId: PropTypes.string
   };
 
   state = {loaded: false};
 
   componentWillMount() {
-    assetsApi.getFiles(this.onAssetListReceived);
+    assetsApi
+      .withProjectId(this.props.projectId)
+      .getFiles(this.onAssetListReceived);
   }
 
   componentDidMount() {
@@ -46,14 +48,14 @@ export default class Attachments extends React.Component {
   }
 
   onAssetListReceived = result => {
-    assetListStore.reset(result.files);
+    assets.listStore.reset(result.files);
     if (this.isMounted_) {
       this.setState({loaded: true});
     }
   };
 
   showAssetManager = () => {
-    dashboard.assets.showAssetManager(
+    assets.showAssetManager(
       null,
       'document',
       this.setState.bind(this, {loaded: true}),
@@ -66,7 +68,7 @@ export default class Attachments extends React.Component {
   render() {
     let attachmentList = <span style={{fontSize: '0.8em'}}>Loading...</span>;
     if (this.state.loaded) {
-      attachmentList = assetListStore.list().map(asset => {
+      attachmentList = assets.listStore.list().map(asset => {
         const url = assetsApi.basePath(asset.filename);
         return (
           <a
@@ -103,6 +105,3 @@ export default class Attachments extends React.Component {
     );
   }
 }
-
-window.dashboard = window.dashboard || {};
-window.dashboard.Attachments = Attachments;

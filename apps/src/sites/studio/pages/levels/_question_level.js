@@ -76,7 +76,8 @@ $(document).ready(() => {
       freeResponseTextAreaHeight: level.height,
       freeResponseTitle: level.title,
       allowUserUploads: level.allow_user_uploads,
-      freeResponseLastAttempt: data.last_attempt
+      freeResponseLastAttempt: data.last_attempt,
+      freeResponseProjectId: data.appOptions.channel
     })
   );
 

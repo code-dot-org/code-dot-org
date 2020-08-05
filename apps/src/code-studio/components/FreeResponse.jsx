@@ -17,6 +17,7 @@ class FreeResponse extends React.Component {
 
     //redux
     freeResponseTitle: PropTypes.string,
+    freeResponseProjectId: PropTypes.string,
     freeResponseTextAreaHeight: PropTypes.number,
     freeResponsePlaceholder: PropTypes.string,
     freeResponseLastAttempt: PropTypes.string,
@@ -39,6 +40,7 @@ class FreeResponse extends React.Component {
           <Attachments
             readOnly={this.props.readOnly}
             showUnderageWarning={this.props.showUnderageWarning}
+            projectId={this.props.freeResponseProjectId}
           />
         )}
         <textarea
@@ -60,6 +62,7 @@ export default connect(state => ({
   instructions: state.instructions.longInstructions,
   readOnly: state.pageConstants.isReadOnlyWorkspace,
   showUnderageWarning: state.pageConstants.is13Plus,
+  freeResponseProjectId: state.instructions.freeResponseProjectId,
   freeResponsePlaceholder: state.instructions.freeResponsePlaceholder,
   freeResponseTextAreaHeight: state.instructions.freeResponseTextAreaHeight,
   freeResponseTitle: state.instructions.freeResponseTitle,
