@@ -2,11 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {
-  addOrUpdateComment,
-  hideCommentModal,
-  setComments
-} from './teacherCodeCommentRedux';
+import {hideCommentModal, setComments} from './teacherCodeCommentRedux';
 
 const styles = {
   container: {
@@ -15,12 +11,24 @@ const styles = {
     zIndex: 9999,
     padding: 10,
     border: '1px solid darkgray'
+  },
+  header: {
+    display: 'inline-block'
+  },
+  input: {
+    display: 'block',
+    width: '20em',
+    height: '5em'
+  },
+  button: {
+    fontSize: 14,
+    margin: 2,
+    padding: 6
   }
 };
 
 class TeacherCodeComment extends React.Component {
   static propTypes = {
-    addOrUpdateComment: PropTypes.func.isRequired,
     comments: PropTypes.object,
     hideCommentModal: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
@@ -50,9 +58,7 @@ class TeacherCodeComment extends React.Component {
   componentWillMount() {
     // load existing comments into redux
     this.project.getTeacherComments((err, response) => {
-      if (err) {
-        console.error(err);
-      } else if (response && typeof response === 'object') {
+      if (response && typeof response === 'object') {
         this.props.setComments(response);
       }
     });
@@ -71,6 +77,33 @@ class TeacherCodeComment extends React.Component {
     }
   }
 
+  saveComments = newComments => {
+    this.setState({
+      submitting: true
+    });
+
+    // treat empty strings, nulls, undefineds, all falsy values as though they
+    // were nonexistant
+    for (let key in newComments) {
+      if (!newComments[key]) {
+        delete newComments[key];
+      }
+    }
+
+    this.project.saveTeacherComments(newComments, (err, response) => {
+      this.setState({
+        submitting: false
+      });
+
+      if (err) {
+        console.error(err);
+      } else {
+        this.props.setComments(newComments);
+        this.props.hideCommentModal();
+      }
+    });
+  };
+
   handleChange = e => {
     this.setState({
       comment: e.target.value
@@ -82,15 +115,15 @@ class TeacherCodeComment extends React.Component {
       ...this.props.comments,
       [this.props.lineNumber]: this.state.comment
     };
+    this.saveComments(newComments);
+  };
 
-    this.project.saveTeacherComments(newComments, (err, response) => {
-      if (err) {
-        console.error(err);
-      } else {
-        this.props.setComments(newComments);
-        this.props.hideCommentModal();
-      }
-    });
+  handleDelete = e => {
+    const newComments = {
+      ...this.props.comments,
+      [this.props.lineNumber]: ''
+    };
+    this.saveComments(newComments);
   };
 
   render() {
@@ -106,14 +139,41 @@ class TeacherCodeComment extends React.Component {
           ...styles.container
         }}
       >
-        <span>Add comment to line #{this.props.lineNumber}</span>
-        <textarea onChange={this.handleChange} value={this.state.comment} />
-        <button type="submit" onClick={this.handleSubmit}>
-          submit
-        </button>
-        <button type="button" onClick={this.props.hideCommentModal}>
-          cancel
-        </button>
+        <span style={styles.header}>
+          Add comment to line #{this.props.lineNumber}
+        </span>
+        <textarea
+          cols={48}
+          rows={4}
+          style={styles.input}
+          onChange={this.handleChange}
+          value={this.state.comment}
+        />
+        <fieldset>
+          <button
+            type="button"
+            style={styles.button}
+            onClick={this.handleSubmit}
+            disabled={this.state.submitting}
+          >
+            {this.state.submitting ? 'submitting...' : 'submit'}
+          </button>
+          <button
+            type="button"
+            style={styles.button}
+            onClick={this.props.hideCommentModal}
+          >
+            cancel
+          </button>
+          <button
+            type="button"
+            style={styles.button}
+            onClick={this.handleDelete}
+            disabled={!(this.props.lineNumber in this.props.comments)}
+          >
+            delete
+          </button>
+        </fieldset>
       </div>
     );
   }
@@ -123,7 +183,6 @@ export const UnconnectedTeacherCodeComment = TeacherCodeComment;
 export default connect(
   state => state.teacherCodeComment,
   {
-    addOrUpdateComment,
     hideCommentModal,
     setComments
   }
