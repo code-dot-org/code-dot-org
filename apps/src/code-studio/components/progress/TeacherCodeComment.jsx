@@ -147,14 +147,8 @@ class TeacherCodeComment extends React.Component {
             onClick={this.handleSubmit}
             disabled={this.state.submitting}
           >
-            {this.state.submitting ? 'submitting...' : 'submit'}
-          </button>
-          <button
-            type="button"
-            style={styles.button}
-            onClick={this.props.hideCommentModal}
-          >
-            cancel
+            <i className="fa fa-save" />
+            {this.state.submitting ? ' submitting...' : ' submit'}
           </button>
           <button
             type="button"
@@ -162,7 +156,17 @@ class TeacherCodeComment extends React.Component {
             onClick={this.handleDelete}
             disabled={!(this.props.lineNumber in this.props.comments)}
           >
-            delete
+            <i className="fa fa-trash" /> delete
+          </button>
+          <button
+            type="button"
+            style={{
+              ...styles.button,
+              float: 'right'
+            }}
+            onClick={this.props.hideCommentModal}
+          >
+            <i className="fa fa-times" /> cancel
           </button>
         </fieldset>
       </div>
