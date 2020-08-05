@@ -32,6 +32,7 @@ class TeacherCodeComment extends React.Component {
     comments: PropTypes.object,
     hideCommentModal: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool,
     lineNumber: PropTypes.number,
     setComments: PropTypes.func.isRequired,
     position: PropTypes.shape({
@@ -126,19 +127,9 @@ class TeacherCodeComment extends React.Component {
     this.saveComments(newComments);
   };
 
-  render() {
-    if (!(this.props && this.props.isOpen)) {
-      return null;
-    }
-
+  renderTeacherEditInterface() {
     return (
-      <div
-        style={{
-          left: this.props.position.left,
-          top: this.props.position.top,
-          ...styles.container
-        }}
-      >
+      <div>
         <span style={styles.header}>
           Add comment to line #{this.props.lineNumber}
         </span>
@@ -174,6 +165,34 @@ class TeacherCodeComment extends React.Component {
             delete
           </button>
         </fieldset>
+      </div>
+    );
+  }
+
+  renderStudentViewInterface() {
+    return <span>{this.state.comment}</span>;
+  }
+
+  render() {
+    if (!(this.props && this.props.isOpen)) {
+      return null;
+    }
+
+    if (!this.props.isTeacher && !this.state.comment) {
+      return null;
+    }
+
+    return (
+      <div
+        style={{
+          left: this.props.position.left,
+          top: this.props.position.top,
+          ...styles.container
+        }}
+      >
+        {this.props.isTeacher
+          ? this.renderTeacherEditInterface()
+          : this.renderStudentViewInterface()}
       </div>
     );
   }

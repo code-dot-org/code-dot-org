@@ -60,6 +60,7 @@ import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
+import {initializeTeacherCodeComments} from './code-studio/teacherCodeCommentHelpers';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {
   setAchievements,
@@ -2524,6 +2525,9 @@ StudioApp.prototype.handleEditCode_ = function(config) {
       .match('^' + searchText + '$');
     return match && match.length > 0;
   };
+
+  // set up "teacher comment" stuff
+  initializeTeacherCodeComments();
 
   $(window).on(
     'prepareforcallout',

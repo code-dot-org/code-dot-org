@@ -1732,6 +1732,10 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   cursor: pointer;
 }
 
+.droplet-gutter-line.hasComment {
+  background-color: yellow;
+}
+
 .droplet-gutter-line:hover {
   background-color: #a8a8a8;
   font-size: 0 !important;
