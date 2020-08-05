@@ -14669,6 +14669,8 @@ pt:
           lessons:
             new stage:
               name: nova fase
+            Tools:
+              name: Ferramentas
             Debugging:
               name: Analisando
             Module 1:
