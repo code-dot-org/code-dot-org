@@ -41,7 +41,7 @@ $(document).ready(() => {
   store.dispatch(
     setPageConstants({
       stageTotal: level.stage_total,
-      verifiedTeacher: true,
+      verifiedTeacher: data.isVerifiedTeacher,
       isSubmitted: data.appOptions.submitted,
       userId: data.appOptions.userId,
       puzzleNumber: data.appOptions.levelPosition,

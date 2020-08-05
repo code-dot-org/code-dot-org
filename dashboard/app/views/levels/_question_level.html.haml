@@ -3,6 +3,7 @@
 
 - level = level || @level
 - data = {}
+- data[:isVerifiedTeacher] = current_user.authorized_teacher?
 - data[:isTeacher] = current_user.try(:teacher?)
 - data[:level] = level.summarize
 - data[:last_attempt] = @last_attempt unless local_assigns.has_key? :last_attempt
