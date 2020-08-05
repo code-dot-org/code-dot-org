@@ -51,7 +51,7 @@ class FreeResponse extends React.Component {
             ...{height: this.props.freeResponseTextAreaHeight}
           }}
           readOnly={this.props.readOnly}
-          value={this.props.freeResponseLastAttempt}
+          defaultValue={this.props.freeResponseLastAttempt}
         />
       </div>
     );
