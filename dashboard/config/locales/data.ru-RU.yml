@@ -556,7 +556,7 @@ ru:
         C1_maze_loops: 'Лабиринт: Циклы'
         C1_playlab_storytelling: Лаборатория игр. Создай историю
         C1_planting_seed: Посади семена
-        C1_building_foundation: Создание основы
+        C1_building_foundation: Строительство опоры
         C1_going_places_safely: Безопасное путешествие
         C2_maze_intro: Лабиринт - Введение
         C2_artist_intro: Художник - Введение
@@ -753,7 +753,11 @@ ru:
         mc_2018_conditionals: 'Майнкрафт: Водное путешествие. Условия'
         mc_2018_closing: 'Майнкрафт: Водное путешествие. Поздравления'
         hoc_dance_warmup: Танцевальная вечеринка - разминка
+        hoc_dance_events: Танцевальная вечеринка – события
+        hoc_dance_properties: Танцевальная вечеринка – свойства
         hoc_dance_congrats: Танцевальная вечеринка – вечеринка началась!
+        c_and_c_great_to_create: Честность в творчестве и игре
+        c_and_c_digital_sharing: Публикация цифровых произведений
         what_is_cs: Что такое информатика?
         lesson_planning: Планирование урока
         writing_first_program: Напишите вашу первую программу!
@@ -771,6 +775,7 @@ ru:
         hoc_dance_measures_2019: Танцевальная вечеринка 2019 г. – такты
         hoc_dance_properties_2019: Танцевальная вечеринка 2019 г. – свойства
         csd_what_computers_do: Что делают компьютеры?
+        csf_private_and_personal_information: Private and Personal Information
         csd_how_teamwork_works: Как устроена командная работа?
         csd_teamwork_and_disagreement: Командная работа - устранение разногласий
     callout:

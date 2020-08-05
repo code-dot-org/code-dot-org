@@ -35,7 +35,7 @@ ru:
             'Bee: Sequence':
               name: 'Пчела: Последовательность'
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Getting Loopy:
               name: Зацикливание
             Going Places Safely:
@@ -186,8 +186,8 @@ ru:
             открывающим магию и красоту льда. Вы будете кататься на коньках и рисовать
             на льду снежинки и узоры, создавать зимнюю страну чудес и делиться этим
             с друзьями.
-          description_short: Давайте использовать код, чтобы присоединиться к Анне
-            и Эльзе, открывающим магию и красоту льда.
+          description_short: Давай используем программу, чтобы присоединиться к Анне
+            и Эльзе, открывающим для себя красоту и магию льда.
           lessons:
             Artist:
               name: Художник
@@ -363,7 +363,7 @@ ru:
             Reflection:
               name: Рефлексия
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
             Unplugged lessons:
               name: Уроки без компьютера
             Writing computer programs:
@@ -540,7 +540,7 @@ ru:
             Introduction to PD:
               name: Введение в профессиональные разработки
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
         algPDmiami:
           lessons:
             Booleans:
@@ -633,7 +633,7 @@ ru:
             Strings and Images:
               name: Строки и картинки
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
             The Big Game:
               name: Большая игра
             The Design Recipe:
@@ -655,7 +655,7 @@ ru:
             Introduction to PD:
               name: Введение в профессиональные разработки
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
         algebraPD-iZone:
           lessons:
             Course Overview:
@@ -665,7 +665,7 @@ ru:
             Introduction to PD:
               name: Введение в профессиональные разработки
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
         sciencePD-NexTech:
           lessons:
             Introduction to Complex Adaptive Systems:
@@ -814,7 +814,7 @@ ru:
             Strings and Images:
               name: Строки и картинки
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
             Writing Contracts:
               name: Текстовые соглашения
         cspfacilitator:
@@ -868,7 +868,7 @@ ru:
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
           lessons:
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
             The Design Recipe:
               name: Создание рецепта
             Welcome!:
@@ -942,7 +942,7 @@ ru:
             Binary Bracelets:
               name: Двоичные браслеты
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Getting Loopy:
               name: Зацикливание
             Graph Paper Programming:
@@ -1166,7 +1166,7 @@ ru:
             Introduction to PD:
               name: Введение в профессиональные разработки
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
         algebraPD3c:
           lessons:
             Getting Started:
@@ -1326,7 +1326,7 @@ ru:
             Introduction to PD:
               name: Введение в профессиональные разработки
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
         sciencePD1:
           lessons:
             Introduction to Complex Adaptive Systems:
@@ -1402,6 +1402,8 @@ ru:
               name: Циклы
             Loops Intro:
               name: Введение в циклы
+            Loops Unplugged:
+              name: Loops Unplugged
             Programming:
               name: Программирование
             'Real-life Algorithms: Plant a Seed':
@@ -1422,6 +1424,8 @@ ru:
               name: Циклы
             Loops Intro:
               name: Введение в циклы
+            Loops Unplugged:
+              name: Loops Unplugged
             Programming:
               name: Программирование
             Unspotted Bugs:
@@ -1559,7 +1563,7 @@ ru:
         algebrapdnext:
           lessons:
             Teacher Dashboard:
-              name: Панель управления преподавателя
+              name: Панель управления учителя
             The Design Recipe:
               name: Создание рецепта
             Welcome!:
@@ -1703,7 +1707,7 @@ ru:
             Your Digital Footprint:
               name: Твой цифровой след
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
         coursed-draft:
           lessons:
             Nested Loops in Maze:
@@ -1739,6 +1743,8 @@ ru:
               name: Цифровое гражданство
             Build Your Project:
               name: Создать свой проект
+            Private and Personal Information:
+              name: Private and Personal Information
             Internet:
               name: интернет
             Crowdsourcing:
@@ -1945,7 +1951,7 @@ ru:
             Conditionals:
               name: Условные команды
             'Real Life Algorithms: Dice Race':
-              name: 'Алгоритмы из повседневной жизни: Гонки кубиков'
+              name: 'Алгоритмы из реальной жизни: игра в кости'
         csd6-2017:
           description_short: Программирование с физическими устройствами
           lesson_groups:
@@ -2078,6 +2084,8 @@ ru:
           title: Курс A
           assignment_family_title: Курс A
           description_audience: 'Возраст: 4-7'
+          description_short: Введение в компьютерные науки для детей, еще не умеющих
+            читать.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
@@ -2093,6 +2101,8 @@ ru:
         courseb-2017:
           title: Курс B
           assignment_family_title: Курс B
+          description_short: Введение в компьютерные науки для детей, еще не умеющих
+            читать (аналог курса А, но с большим разнообразием для учащихся постарше).
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
@@ -2112,6 +2122,8 @@ ru:
           title: Курс D
           assignment_family_title: Курс D
           description_audience: 'Возраст: 7-11'
+          description_short: Быстро повтори понятия из курса C, а затем перейди к
+            алгоритмам, вложенным циклам, условным инструкциям и пр.
           lessons:
             'Algorithms: Graph Paper Programming':
               description_teacher: Составляя друг для друга программы для рисования
@@ -2133,6 +2145,8 @@ ru:
           title: Курс E
           assignment_family_title: Курс E
           description_audience: 'Возраст: 8-12'
+          description_short: Быстро повтори понятия из курсов C и D, а затем перейди
+            к функциям.
           lesson_groups:
             csf_e_1:
               display_name: Продвинуться к Курсу Е (опционально)
@@ -2164,7 +2178,7 @@ ru:
                 большой программы. Этот урок поможет учащимся интуитивно понять, почему
                 объединение частей кода в функцию является такой полезной практикой.
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
@@ -2173,6 +2187,8 @@ ru:
           title: Курс F
           assignment_family_title: Курс F
           description_audience: 'Возраст: 9-13'
+          description_short: Изучи все понятия в Основах компьютерных наук и создай
+            собственную картинку, игру или историю!
           lesson_groups:
             csf_f_1:
               display_name: Продвинуться к Курсу Ф (опционально)
@@ -2188,7 +2204,7 @@ ru:
             Build Your Project:
               name: Создать свой проект
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
         csdnovice:
@@ -2327,7 +2343,7 @@ ru:
             Conditional Loops in Maze:
               name: Условия и циклы в Лабиринте
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Nested Loops:
               name: Вложенные циклы
         pre-express-2017:
@@ -2381,13 +2397,15 @@ ru:
               display_name: Дополнительный материал для курса
           lessons:
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
               name: Вложенные циклы
             Conditionals:
               name: Условные команды
+            Private and Personal Information:
+              name: Private and Personal Information
             Build Your Project:
               name: Создать свой проект
             Internet:
@@ -2417,7 +2435,7 @@ ru:
             Artist Binary:
               name: 'Художник: двоичная система'
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
@@ -2446,7 +2464,7 @@ ru:
             Build Your Project:
               name: Создать свой проект
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Nested Loops:
               name: Вложенные циклы
         new-stages-sept-2017:
@@ -2463,11 +2481,13 @@ ru:
               display_name: Дополнительный материал для курса
           lessons:
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Conditionals:
               name: Условные команды
+            Private and Personal Information:
+              name: Private and Personal Information
             Build Your Project:
               name: Создать свой проект
             Internet:
@@ -2482,7 +2502,7 @@ ru:
               display_name: Содержание Курса Ф
           lessons:
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             'Algorithms: Tangrams':
@@ -2584,7 +2604,7 @@ ru:
               display_name: Дополнительный материал для курса
           lessons:
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
@@ -2593,6 +2613,8 @@ ru:
               name: Введение
             Conditionals:
               name: Условные команды
+            Private and Personal Information:
+              name: Private and Personal Information
             Build Your Project:
               name: Создать свой проект
             Internet:
@@ -2607,7 +2629,7 @@ ru:
               display_name: Содержание Курса Ф
           lessons:
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             'Algorithms: Tangrams':
@@ -2704,6 +2726,8 @@ ru:
               name: Списки
         coursea-2018:
           assignment_family_title: Курс A
+          description_short: Введение в компьютерные науки для детей, еще не умеющих
+            читать.
           description_audience: 'Возраст: 4-7'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -2735,7 +2759,7 @@ ru:
             Introduction:
               name: Введение
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
@@ -2789,6 +2813,8 @@ ru:
               name: Циклы в исполнителе Художник
             Move It, Move It:
               name: Вперед, вперед
+            Copyright and Creativity:
+              name: Честность в творчестве и игре
         coursed-2018:
           assignment_family_title: Курс D
           description_audience: 'Возраст: 7-11'
@@ -2798,7 +2824,7 @@ ru:
             Introduction:
               name: Введение
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
@@ -2831,7 +2857,7 @@ ru:
           assignment_family_title: Курс С
           lessons:
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             'Loops: Getting Loopy':
               name: Зацикливание
             Loops in Artist:
@@ -2878,13 +2904,17 @@ ru:
             'Programming: My Robotic Friends':
               name: Мои друзья роботы
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
+            'Loops: My Loopy Robotic Friends':
+              name: My Loopy Robotic Friends
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
               name: Вложенные циклы в Лабиринте
             Introduction:
               name: Введение
+            Private and Personal Information:
+              name: Private and Personal Information
             'Functions: Songwriting':
               name: Написание песен
               description_teacher: Одним из самых великолепных структур в мире компьютерной
@@ -2902,8 +2932,12 @@ ru:
               name: Условные выражения с картами
             Minecraft Hour of Code:
               name: Час кода с Minecraft
+            Copyright and Creativity:
+              name: Публикация цифровых произведений
         coursef-2018:
           assignment_family_title: Курс F
+          description_short: Изучи все понятия в Основах компьютерных наук и создай
+            собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
           lesson_groups:
             csf_f_1:
@@ -2914,7 +2948,9 @@ ru:
             'Programming: My Robotic Friends':
               name: Мои друзья роботы
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
+            'Loops: My Loopy Robotic Friends':
+              name: My Loopy Robotic Friends
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee/Zombie:
@@ -3251,6 +3287,8 @@ ru:
               name: Вперед, вперед
             Your Digital Footprint:
               name: Твой цифровой след
+            Copyright and Creativity:
+              name: Честность в творчестве и игре
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стиви и Большой Проект
         fit-test:
@@ -3302,9 +3340,11 @@ ru:
             csp_project:
               display_name: Проект
         dance-extras:
-          description: Дополнительные идеи для проектов уведут вас за пределы первого
-            часа.
+          description: Дополнительные идеи проектов помогут тебе продолжить обучение
+            после первого часа.
         coursef-2019:
+          description_short: Изучи все понятия в Основах компьютерных наук и создай
+            собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
           lesson_groups:
             ramp_up:
@@ -3319,7 +3359,7 @@ ru:
               display_name: Цифровое гражданство
           lessons:
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Conditionals with Cards:
@@ -3344,6 +3384,14 @@ ru:
               name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Digital Sharing:
+              name: Публикация цифровых произведений
+              description_teacher: Предоставленный курсу "Основы компьютерных наук"
+                сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"),
+                этот урок призван объяснить учащимся проблемы и преимущества уважения
+                права собственности и авторского права, особенно в цифровой среде.
+                Учащимся следует объяснить, что, не уважая прав артистов, невозможно
+                быть этичным цифровым гражданином.
         dance-low:
           lessons:
             Dance Party:
@@ -3368,6 +3416,10 @@ ru:
               name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
+              description_teacher: Это занятие начнется с небольшого урока по отладке
+                и настойчивости, а затем у нас быстро начнется гонка со временем,
+                когда учащиеся разделятся на команды и будут вместе писать программу
+                каждый по одной инструкции.
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Artist:
@@ -3401,13 +3453,15 @@ ru:
               display_name: функции
           lessons:
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
               name: Вложенные циклы
             Conditionals with Cards:
               name: Условные выражения с картами
+            Private and Personal Information:
+              name: Private and Personal Information
             'Functions: Songwriting':
               name: Написание песен
               description_teacher: Одним из самых великолепных структур в мире компьютерной
@@ -3427,6 +3481,10 @@ ru:
                 вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
+            Digital Sharing:
+              name: Публикация цифровых произведений
+            Simon Says:
+              name: Саймон говорит
             Songwriting:
               name: Написание песен
         express-2019:
@@ -3498,9 +3556,9 @@ ru:
             'null':
               name: нуль
         dance-extras-gallery:
-          title: Продолжайте танцевать
-          description: Дополнительные идеи для проектов уведут вас за пределы первого
-            часа.
+          title: Продолжай танцевать
+          description: Дополнительные идеи проектов помогут тебе продолжить обучение
+            после первого часа.
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -3523,9 +3581,11 @@ ru:
             Binary Bracelets:
               name: Двоичные браслеты
             Powerful Passwords:
-              name: Надёжные пароли
+              name: Надежные пароли
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
+            Picturing Data:
+              name: Изображение данных
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -3533,6 +3593,8 @@ ru:
         gamelab:
           title: Лаборатория игр
         coursea-2019:
+          description_short: Введение в компьютерные науки для детей, еще не умеющих
+            читать.
           description_audience: 'Возраст: 4-7'
           lesson_groups:
             csf_digcit:
@@ -3582,6 +3644,8 @@ ru:
               name: Циклы в исполнителе Художник
             'Loops: Getting Loopy':
               name: Зацикливание
+            The Right App:
+              name: The Right App
         pre-express-2019:
           description_audience: 'Возраст: 4-8'
           lesson_groups:
@@ -3856,7 +3920,7 @@ ru:
             Conditionals with Cards:
               name: Условные выражения с картами
             Building a Foundation:
-              name: Создание основы
+              name: Строительство опоры
             Loops in Artist:
               name: Циклы в исполнителе Художник
         csp1-pilot-staging:
@@ -4200,8 +4264,8 @@ ru:
             For Loops:
               name: Циклы с параметром
         dance-extras-2019:
-          description: Дополнительные идеи для проектов уведут вас за пределы первого
-            часа.
+          description: Дополнительные идеи проектов помогут тебе продолжить обучение
+            после первого часа.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -4216,6 +4280,12 @@ ru:
           lessons:
             Conditionals:
               name: Условные команды
+            Simon Says:
+              name: Саймон говорит
+            Private and Personal Information:
+              name: Private and Personal Information
+            Access Ability:
+              name: Возможность получения доступа
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -4269,6 +4339,12 @@ ru:
           lessons:
             Conditionals:
               name: Условные команды
+            Simon Says:
+              name: Саймон говорит
+            Private and Personal Information:
+              name: Private and Personal Information
+            Access Ability:
+              name: Возможность получения доступа
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -4286,6 +4362,12 @@ ru:
           lessons:
             Conditionals:
               name: Условные команды
+            Simon Says:
+              name: Саймон говорит
+            Private and Personal Information:
+              name: Private and Personal Information
+            Access Ability:
+              name: Возможность получения доступа
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -4411,6 +4493,8 @@ ru:
             Text:
               name: Текст
         coursea-2020:
+          description_short: Введение в компьютерные науки для детей, еще не умеющих
+            читать.
           description_audience: 'Возраст: 4-7'
           lesson_groups:
             csf_digcit:
@@ -4456,6 +4540,8 @@ ru:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            The Right App:
+              name: The Right App
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -4470,13 +4556,15 @@ ru:
               display_name: События
           lessons:
             Powerful Passwords:
-              name: Надёжные пароли
+              name: Надежные пароли
             Binary Bracelets:
               name: Двоичные браслеты
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
             'Events: The Big Event':
               name: Большое Событие
+            Picturing Data:
+              name: Изображение данных
         coursed-2020:
           description_audience: 'Возраст: 7-11'
           lesson_groups:
@@ -4497,6 +4585,10 @@ ru:
               name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
+              description_teacher: Это занятие начнется с небольшого урока по отладке
+                и настойчивости, а затем у нас быстро начнется гонка со временем,
+                когда учащиеся разделятся на команды и будут вместе писать программу
+                каждый по одной инструкции.
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Artist:
@@ -4527,6 +4619,10 @@ ru:
             csf_functions:
               display_name: функции
           lessons:
+            Simon Says:
+              name: Саймон говорит
+            Private and Personal Information:
+              name: Private and Personal Information
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
               description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
@@ -4540,7 +4636,17 @@ ru:
                 это мини-программы, которые можно использовать снова и снова внутри
                 большой программы. Этот урок поможет учащимся интуитивно понять, почему
                 объединение частей кода в функцию является такой полезной практикой.
+            Digital Sharing:
+              name: Публикация цифровых произведений
+              description_teacher: Предоставленный курсу "Основы компьютерных наук"
+                сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"),
+                этот урок призван объяснить учащимся проблемы и преимущества уважения
+                права собственности и авторского права, особенно в цифровой среде.
+                Учащимся следует объяснить, что, не уважая прав артистов, невозможно
+                быть этичным цифровым гражданином.
         coursef-2020:
+          description_short: Изучи все понятия в Основах компьютерных наук и создай
+            собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
           lesson_groups:
             ramp_up:
@@ -4568,6 +4674,14 @@ ru:
               name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Digital Sharing:
+              name: Публикация цифровых произведений
+              description_teacher: Предоставленный курсу "Основы компьютерных наук"
+                сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"),
+                этот урок призван объяснить учащимся проблемы и преимущества уважения
+                права собственности и авторского права, особенно в цифровой среде.
+                Учащимся следует объяснить, что, не уважая прав артистов, невозможно
+                быть этичным цифровым гражданином.
         express-2020:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'

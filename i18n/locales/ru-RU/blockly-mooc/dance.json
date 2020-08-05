@@ -18,5 +18,5 @@
   "danceFeedbackNeedLead": "Необходимо также создать одного ведущего танцора с помощью блока <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Необходимо создать группу подтанцовки с помощью блока <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackSetSize": "Когда начнется музыка, необходимо будет изменить размер, как минимум, одного танцора.",
-  "measure": "Такты:"
+  "measure": "Цифра: "
 }
