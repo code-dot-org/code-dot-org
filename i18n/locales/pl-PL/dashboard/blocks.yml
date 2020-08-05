@@ -986,6 +986,7 @@ pl:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: w {N} {UNIT}
         options:
           UNIT:
             '"seconds"': sekundy
@@ -1050,6 +1051,7 @@ pl:
       gamelab_hideTitleScreen:
         text: ukryj ekran tytułowy
       gamelab_isKeyPressed:
+        text: czy {KEY} został naciśnięty
         options:
           KEY:
             '"up"': do góry
@@ -1137,6 +1139,8 @@ pl:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
+      gamelab_makeNumSprites:
+        text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       gamelab_mirrorSprite:
         text: "{SPRITE} twarz {DIRECTION}"
         options:

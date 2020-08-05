@@ -2848,11 +2848,10 @@ pl-PL:
         description: 'Dotarłeś do końca Kursu E! Wybierz projekt do utworzenia. '
       courseE_multi_bee_functions_predict1:
         answers:
-        - text: Ten sam program będzie się sprawdzał również, jeśli chodzi o rozwiązanie
-            tej łamigłówki.
+        - text: Ten sam program będzie się działał także jako rozwiązanie tej łamigłówki.
           correct: true
           feedback: Dobrze! To nie ma znaczenia, że jest inna ilość miodu. Funkcja
-            jest zaprogramowana w taki sposób, aby sobie z tym radzić.
+            jest zaprogramowana tak, aby sobie z tym radzić.
         - text: Pszczółka nie zrobi wystarczającej ilości miodu.
           feedback: Niepoprawnie. Funkcja jest zaprogramowana tak, aby poradzić sobie
             z dowolną ilością miodu większą od 0.
@@ -2861,7 +2860,7 @@ pl-PL:
             z dowolną ilością miodu większą od 0.
         - text: Nie wiem.
           feedback: Program będzie działał tak, aby rozwiązać również tę łamigłówkę.
-            jest zaprogramowany tak, aby radzić sobie z dowolną ilością miodu większą
+            Jest tak zaprogramowany, aby poradzić sobie z dowolną ilością miodu większą
             od 0.
         questions:
         - text: Tutaj jest dokładnie taki sam program z ostatniej łamigłówki, ale
@@ -2870,49 +2869,49 @@ pl-PL:
       courseE_multi_farmer_functions11_predict:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.
-          feedback: Źle. Pani żniwiarka nie wywołuje "Sprawdź i podnieś", zanim nie
-            dotrze do kukurydzy.
-        - text: Pani żniwiarka zbierze wszystkie dynie.
+          feedback: Niepoprawnie. Zniwiarka nie wywołuje "sprawdź i podnieś", zanim
+            nie dotrze do kukurydzy.
+        - text: Żniwiarka zbierze wszystkie dynie.
           feedback: Niepoprawnie. Pani żniwiarka nie wywołuje "Sprawdź i podnieś",
             zanim nie dotrze do kukurydzy.
-        - text: Pani żniwiarka zbierze sałatę.
-          feedback: Niepoprawnie. Pani żniwiarka wykonuje tylko jeden skręt i kończy
-            przy kukurydzy.
-        - text: Pani żniwiarka zbierze kukurydzę.
+        - text: Żniwiarka zbierze sałatę.
+          feedback: Niepoprawnie. Żniwiarka wykonuje tylko jeden skręt i kończy przy
+            kukurydzy.
+        - text: Żniwiarka zbierze kukurydzę.
           correct: true
           feedback: Poprawnie!
         questions:
-        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać pani żniwiarka?
+        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać żniwiarka?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.
-        - text: Pani żniwiarka zbierze wszystkie dynie.
-        - text: Pani żniwiarka zbierze sałatę.
+        - text: Żniwiarka zbierze wszystkie dynie.
+        - text: Żniwiarka zbierze sałatę.
           correct: true
           feedback: Poprawnie!
-        - text: Pani żniwiarka zbierze kukurydzę.
+        - text: Żniwiarka zbierze kukurydzę.
         questions:
-        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać pani żniwiarka?
+        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać żniwiarka?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.
-        - text: Pani żniwiarka zbierze wszystkie dynie.
-        - text: Pani żniwiarka zbierze sałatę.
+        - text: Żniwiarka zbierze wszystkie dynie.
+        - text: Żniwiarka zbierze sałatę.
           correct: true
           feedback: Poprawnie!
-        - text: Pani żniwiarka zbierze kukurydzę.
+        - text: Żniwiarka zbierze kukurydzę.
         questions:
-        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać pani żniwiarka?
+        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać żniwiarka?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.
-        - text: Pani żniwiarka zbierze wszystkie dynie.
-        - text: Pani żniwiarka zbierze sałatę.
+        - text: Żniwiarka zbierze wszystkie dynie.
+        - text: Żniwiarka zbierze sałatę.
           correct: true
           feedback: Poprawnie!
-        - text: Pani żniwiarka zbierze kukurydzę.
+        - text: Żniwiarka zbierze kukurydzę.
         questions:
-        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać pani żniwiarka?
+        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać żniwiarka?
       courseE_prediction_artistFunction1:
         answers:
         - text: Nic. Funkcja nie jest wywołana w programie.
@@ -2926,8 +2925,8 @@ pl-PL:
             ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
         - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
-            w międzyczasie.
+          feedback: Poprwnie. Funkcja jest wywołana w programie 2 razy, ze skokiem
+            pomiędzy.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseE_prediction_artistFunction1_2018:
@@ -2943,8 +2942,8 @@ pl-PL:
             ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
         - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
-            w międzyczasie.
+          feedback: Poprwnie. Funkcja jest wywołana w programie 2 razy, ze skokiem
+            pomiędzy.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseE_prediction_artistFunction1_2018_2019:
@@ -2960,8 +2959,8 @@ pl-PL:
             ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
         - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
-            w międzyczasie.
+          feedback: Poprwnie. Funkcja jest wywołana w programie 2 razy, ze skokiem
+            pomiędzy.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseE_prediction_artistFunction1_2018_2019_2020:
@@ -2977,8 +2976,8 @@ pl-PL:
             ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
         - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
-            w międzyczasie.
+          feedback: Poprwnie. Funkcja jest wywołana w programie 2 razy, ze skokiem
+            pomiędzy.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseE_prediction_artistFunction1_copy:
@@ -2994,8 +2993,8 @@ pl-PL:
             ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
         - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
           correct: true
-          feedback: Źle. Funkcja jest wywołana dwukrotnie w programie, z przeskokiem
-            w międzyczasie.
+          feedback: Poprwnie. Funkcja jest wywołana w programie 2 razy, ze skokiem
+            pomiędzy.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_EOC_2020:
@@ -3042,93 +3041,97 @@ pl-PL:
         answers:
         - text: 'Grafik narysuje linię prostą, której grubość zwiększa się od jednej
             strony obszaru gry do drugiej. '
-          feedback: 'Źle. Grafik wykonuje skręty pomiędzy iteracjami pętli "Dla". '
+          feedback: 'Niepoprawnie. Grafik wykonuje skręty pomiędzy iteracjami pętli
+            "Dla". '
         - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
             linia wydłuża się i staje się cieńsza.  \n"
-          feedback: Źle. Za każdym razem, z uwagi na pętlę "Dla", grafik rysuje dłuższą
-            linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
+            rysuje dłuższą linię, która jest również grubsza.
         - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
             linia wydłuża się i staje się grubsza.  \n"
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Źle. Za każdym razem, z uwagi na pętlę "Dla", grafik rysuje dłuższą
-            linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
+            rysuje dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_artist_for10_predict1_2018:
         answers:
         - text: 'Grafik narysuje linię prostą, której grubość zwiększa się od jednej
             strony obszaru gry do drugiej. '
-          feedback: 'Źle. Grafik wykonuje skręty pomiędzy iteracjami pętli "Dla". '
+          feedback: 'Niepoprawnie. Grafik wykonuje skręty pomiędzy iteracjami pętli
+            "Dla". '
         - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
             linia wydłuża się i staje się cieńsza.  \n"
-          feedback: Źle. Za każdym razem, z uwagi na pętlę "Dla", grafik rysuje dłuższą
-            linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
+            rysuje dłuższą linię, która jest również grubsza.
         - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
             linia wydłuża się i staje się grubsza.  \n"
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Źle. Za każdym razem, z uwagi na pętlę "Dla", grafik rysuje dłuższą
-            linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
+            rysuje dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
         - text: 'Grafik narysuje linię prostą, której grubość zwiększa się od jednej
             strony obszaru gry do drugiej. '
-          feedback: 'Źle. Grafik wykonuje skręty pomiędzy iteracjami pętli "Dla". '
+          feedback: 'Niepoprawnie. Grafik wykonuje skręty pomiędzy iteracjami pętli
+            "Dla". '
         - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
             linia wydłuża się i staje się cieńsza.  \n"
-          feedback: Źle. Za każdym razem, z uwagi na pętlę "Dla", grafik rysuje dłuższą
-            linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
+            rysuje dłuższą linię, która jest również grubsza.
         - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
             linia wydłuża się i staje się grubsza.  \n"
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Źle. Za każdym razem, z uwagi na pętlę "Dla", grafik rysuje dłuższą
-            linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
+            rysuje dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - text: 'Grafik narysuje linię prostą, której grubość zwiększa się od jednej
             strony obszaru gry do drugiej. '
-          feedback: 'Źle. Grafik wykonuje skręty pomiędzy iteracjami pętli "Dla". '
+          feedback: 'Niepoprawnie. Grafik wykonuje skręty pomiędzy iteracjami pętli
+            "Dla". '
         - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
             linia wydłuża się i staje się cieńsza.  \n"
-          feedback: Źle. Za każdym razem, z uwagi na pętlę "Dla", grafik rysuje dłuższą
-            linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
+            rysuje dłuższą linię, która jest również grubsza.
         - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
             linia wydłuża się i staje się grubsza.  \n"
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Źle. Za każdym razem, z uwagi na pętlę "Dla", grafik rysuje dłuższą
-            linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
+            rysuje dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - text: Grafik będzie korzystać z tej samej funkcji, aby narysować dwie rubryki
-            o różnych rozmiarach.
+        - text: Artysta skorzysta z tej samej funkcji, aby narysować dwa pudełka o
+            różnych rozmiarach.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik będzie korzystać z dwóch różnych funkcji, aby narysować dwie
-            rubryki o różnych rozmiarach.
-          feedback: Źle. Korzystanie z parametrów pozwala Ci użyć jednej funkcji,
-            aby tworzyć różne wyniki.
-        - text: Grafik będzie korzystać z dwóch różnych funkcji, aby dwukrotnie narysować
-            rubrykę o tym samym rozmiarze.
-          feedback: Źle. Korzystanie z parametrów pozwala Ci użyć jednej funkcji,
-            aby tworzyć różne wyniki.
+        - text: Grafik będzie korzystać z dwóch różnych funkcji, aby narysować dwa
+            pudełka o różnych rozmiarach.
+          feedback: Niepoprawnie. Korzystanie z parametrów pozwala Ci użyć jednej
+            funkcji, aby tworzyć różne wyniki.
+        - text: Artysta skorzysta z dwóch różnych funkcji, aby dwukrotnie narysować
+            pudełko o tym samym rozmiarze.
+          feedback: Niepoprawnie. Korzystanie z parametrów pozwala Ci użyć jednej
+            funkcji, aby tworzyć różne wyniki.
         - text: Nie wiem.
           feedback: Program korzysta z parametrów, aby pozwolić pojedynczej funkcji
-            utworzyć dwie rubryki o różnych rozmiarach.
-        markdown: Dodaliśmy parametry do funkcji "Narysuj kwadrat". Kliknij w niebieski
-          przycisk "Edytuj", aby zostać całą definicję funkcji.
+            utworzyć dwa pudełka o różnych rozmiarach.
+        markdown: Dodaliśmy parametry do funkcji "rysuj kwadrat". Kliknij w niebieski
+          przycisk "Edytuj", aby zobaczyć całą definicję funkcji.
         questions:
         - text: Co się stanie, gdy uruchomisz ten program?
       courseF_multi_artist_variables3a_predict1:
@@ -3137,11 +3140,11 @@ pl-PL:
           correct: true
           feedback: Poprawnie!
         - text: Grafik narysuje wielokąt o 50 bokach o długości 3 pikseli.
-          feedback: 'Źle. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
+          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
             aby to się wydarzyło. '
         - text: Grafik narysuje trzy otwarte boki z zakrętami 50 stopni.
-          feedback: 'Źle. Zmienna "Długość" będzie musiała być stosowana w bloku "Obróć",
-            aby to się wydarzyło. '
+          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być stosowana
+            w bloku "Obróć", aby to się wydarzyło. '
         - text: Nie wiem.
           feedback: Zmienna "Długość" jest ustawiona na 50 i wykorzystywana w bloku
             "Przejdź do przodu o" tak, że grafik narysuje trójkąt o bokach o długości
@@ -3155,11 +3158,11 @@ pl-PL:
           correct: true
           feedback: Poprawnie!
         - text: Grafik narysuje wielokąt o 50 bokach o długości 3 pikseli.
-          feedback: 'Źle. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
+          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
             aby to się wydarzyło. '
         - text: Grafik narysuje trzy otwarte boki z zakrętami 50 stopni.
-          feedback: 'Źle. Zmienna "Długość" będzie musiała być stosowana w bloku "Obróć",
-            aby to się wydarzyło. '
+          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być stosowana
+            w bloku "Obróć", aby to się wydarzyło. '
         - text: Nie wiem.
           feedback: Zmienna "Długość" jest ustawiona na 50 i wykorzystywana w bloku
             "Przejdź do przodu o" tak, że grafik narysuje trójkąt o bokach o długości
@@ -3173,11 +3176,11 @@ pl-PL:
           correct: true
           feedback: Poprawnie!
         - text: Grafik narysuje wielokąt o 50 bokach o długości 3 pikseli.
-          feedback: 'Źle. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
+          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
             aby to się wydarzyło. '
         - text: Grafik narysuje trzy otwarte boki z zakrętami 50 stopni.
-          feedback: 'Źle. Zmienna "Długość" będzie musiała być stosowana w bloku "Obróć",
-            aby to się wydarzyło. '
+          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być stosowana
+            w bloku "Obróć", aby to się wydarzyło. '
         - text: Nie wiem.
           feedback: Zmienna "Długość" jest ustawiona na 50 i wykorzystywana w bloku
             "Przejdź do przodu o" tak, że grafik narysuje trójkąt o bokach o długości
@@ -3191,11 +3194,11 @@ pl-PL:
           correct: true
           feedback: Poprawnie!
         - text: Grafik narysuje wielokąt o 50 bokach o długości 3 pikseli.
-          feedback: 'Źle. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
+          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
             aby to się wydarzyło. '
         - text: Grafik narysuje trzy otwarte boki z zakrętami 50 stopni.
-          feedback: 'Źle. Zmienna "Długość" będzie musiała być stosowana w bloku "Obróć",
-            aby to się wydarzyło. '
+          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być stosowana
+            w bloku "Obróć", aby to się wydarzyło. '
         - text: Nie wiem.
           feedback: Zmienna "Długość" jest ustawiona na 50 i wykorzystywana w bloku
             "Przejdź do przodu o" tak, że grafik narysuje trójkąt o bokach o długości
@@ -3232,13 +3235,13 @@ pl-PL:
           feedback: Poprawnie!
         - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
             plastrze miodu.
-          feedback: Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar z
-            każdego kwiatka i  robić miód jeśli kwiatka nie będzie (a zatem będzie
-            plaster miodu.).
+          feedback: Niepoprawnie. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i  robić miód jeśli kwiatka nie będzie (a zatem
+            będzie plaster miodu.).
         - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
             z plastra miodu.
-          feedback: Źle. Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar
-            z każdego kwiatka i  miód na każdym plastrze miodu.
+          feedback: Niepoprawnie. Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i  miód na każdym plastrze miodu.
         - text: Nie wiem.
           feedback: Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar z każdego
             kwiatka, a jeśli nie pszczółka robi miód.
@@ -3251,79 +3254,79 @@ pl-PL:
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         - text: 'Pszczółka poleci do przodu i spróbuje zebrać więcej nektaru niż jest
             w kwiatach. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         - {}
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         - {}
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
-          feedback: Źle. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią ilość nektaru,
-            ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
+            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
         - {}
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: Pszczółka nie zbierze żadnego nektaru ani miodu.
-          feedback: Źle. Funkcja jest ustawiona tak, aby zbierać tyle nektaru lub
-            miodu, ile przechodzi przez parametr.
+          feedback: Niepoprawnie. Funkcja jest ustawiona tak, aby zbierać tyle nektaru
+            lub miodu, ile przechodzi przez parametr.
         - text: 'Pszczółka zbierze trzy nektary lub miody, a następnie dwa nektary
-            lub miody według schematu kaskadowego. '
+            lub miody w schemacie kaskadowym. '
           correct: true
           feedback: Dobrze! Funkcja jest ustawiona tak, aby zbierać tyle nektaru lub
             miodu, ile przechodzi przez parametr.
         - text: 'Pszczółka zbierze tylko jeden nektar lub miód w każdej iteracji pętli. '
-          feedback: Źle. Funkcja jest ustawiona tak, aby zbierać tyle nektaru lub
-            miodu, ile przechodzi przez parametr.
+          feedback: Niepoprawnie. Funkcja jest ustawiona tak, aby zbierać tyle nektaru
+            lub miodu, ile przechodzi przez parametr.
         - text: Nie wiem.
           feedback: Kliknięcie, aby sprawdzić, co dzieje się wewnątrz funkcji, ukazuje,
             że jest ona ustawiona tak, aby zbierać tyle nektaru lub miodu, ile przeszło
@@ -3340,14 +3343,14 @@ pl-PL:
           correct: true
           feedback: Dobrze.
         - text: 'Pirat powiedziałby: "Miło mi cię poznać." i to wszystko.'
-          feedback: Źle. Należy zauważyć, że blok "Dołącz" wprowadza podane imię do
-            zdania pirata.
+          feedback: Niepoprawnie. Należy zauważyć, że blok "Dołącz" wprowadza podane
+            imię do zdania pirata.
         - text: 'Pirat powiedziałby: "Ali" i to wszystko.'
-          feedback: Źle. Należy zauważyć, że blok "Dołącz" wprowadza podane imię do
-            zdania pirata.
+          feedback: Niepoprawnie. Należy zauważyć, że blok "Dołącz" wprowadza podane
+            imię do zdania pirata.
         - text: Nie wiem.
-          feedback: 'Źle. Należy zauważyć, że blok "Dołącz" wprowadza podane imię
-            (Ali) do zdania pirata. '
+          feedback: 'Niepoprawnie. Należy zauważyć, że blok "Dołącz" wprowadza podane
+            imię (Ali) do zdania pirata. '
         markdown: "**W tej łamigłówce wykorzystuje się nowy blok o nazwie \"Zapytaj\".**\n\nBlok
           \"Zapytaj' wstrzymuje program i podpowiada użytkownikowi, aby wpisał jakiś
           tekst. \n\nTekst wprowadzany przez użytkownika, bez względu na jego rodzaj,
@@ -3359,60 +3362,60 @@ pl-PL:
       coursee_prediction_artistfunction2:
         answers:
         - text: Artysta rozwiąże tę łamigłówkę poprawnie.
-          feedback: Niepoprawnie. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj
-            rząd wielokątów".
+          feedback: Niepoprawnie. Pętla wykorzystuje blok "narysuj wielokąt" zamiast
+            "narysuj rząd wielokątów".
         - text: Artysta narysuje cztery kwadraty w postaci okna.
           correct: true
           feedback: Poprawnie!
         - text: Artysta narysuje tylko jeden rząd kwadratów.
-          feedback: Niepoprawnie. Program nie wywołuje "Narysuj rząd wielokątów".
+          feedback: Niepoprawnie. Program nie wywołuje funkcji "narysuj rząd wielokątów".
         - text: Artysta narysuje cztery kwadraty, jeden na drugim.
-          feedback: Niepoprawnie. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni między wywołaniami "narysuj
             wielokąt".
         questions:
         - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
       coursee_prediction_artistfunction2_2018:
         answers:
         - text: Artysta rozwiąże tę łamigłówkę poprawnie.
-          feedback: Niepoprawnie. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj
-            rząd wielokątów".
+          feedback: Niepoprawnie. Pętla wykorzystuje blok "narysuj wielokąt" zamiast
+            "narysuj rząd wielokątów".
         - text: Artysta narysuje cztery kwadraty w postaci okna.
           correct: true
           feedback: Poprawnie!
         - text: Artysta narysuje tylko jeden rząd kwadratów.
-          feedback: Niepoprawnie. Program nie wywołuje "Narysuj rząd wielokątów".
+          feedback: Niepoprawnie. Program nie wywołuje funkcji "narysuj rząd wielokątów".
         - text: Artysta narysuje cztery kwadraty, jeden na drugim.
-          feedback: Niepoprawnie. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni między wywołaniami "narysuj
             wielokąt".
         questions:
         - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - text: Artysta rozwiąże tę łamigłówkę poprawnie.
-          feedback: Niepoprawnie. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj
-            rząd wielokątów".
+          feedback: Niepoprawnie. Pętla wykorzystuje blok "narysuj wielokąt" zamiast
+            "narysuj rząd wielokątów".
         - text: Artysta narysuje cztery kwadraty w postaci okna.
           correct: true
           feedback: Poprawnie!
         - text: Artysta narysuje tylko jeden rząd kwadratów.
-          feedback: Niepoprawnie. Program nie wywołuje "Narysuj rząd wielokątów".
+          feedback: Niepoprawnie. Program nie wywołuje funkcji "narysuj rząd wielokątów".
         - text: Artysta narysuje cztery kwadraty, jeden na drugim.
-          feedback: Niepoprawnie. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni między wywołaniami "narysuj
             wielokąt".
         questions:
         - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
         - text: Artysta rozwiąże tę łamigłówkę poprawnie.
-          feedback: Niepoprawnie. Pętla wykorzystuje "Narysuj wielokąt" zamiast "Narysuj
-            rząd wielokątów".
+          feedback: Niepoprawnie. Pętla wykorzystuje blok "narysuj wielokąt" zamiast
+            "narysuj rząd wielokątów".
         - text: Artysta narysuje cztery kwadraty w postaci okna.
           correct: true
           feedback: Poprawnie!
         - text: Artysta narysuje tylko jeden rząd kwadratów.
-          feedback: Niepoprawnie. Program nie wywołuje "Narysuj rząd wielokątów".
+          feedback: Niepoprawnie. Program nie wywołuje funkcji "narysuj rząd wielokątów".
         - text: Artysta narysuje cztery kwadraty, jeden na drugim.
-          feedback: Niepoprawnie. Pętla obraca o 90 stopni pomiędzy wywołaniami "Narysuj
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni między wywołaniami "narysuj
             wielokąt".
         questions:
         - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
