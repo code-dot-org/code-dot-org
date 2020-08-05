@@ -1596,6 +1596,8 @@ class Script < ActiveRecord::Base
     template_levels = levels.map(&:project_template_level).compact
     level_groups = levels.select {|l| l.type == 'LevelGroup'}
     level_group_sublevels = level_groups.map(&:levels).flatten
-    levels + contained_levels + template_levels + level_group_sublevels
+    bubble_choices = levels.select {|l| l.type == 'BubbleChoice'}
+    bubble_choice_sublevels = bubble_choices.map(&:sublevels).flatten
+    levels + contained_levels + template_levels + level_group_sublevels + bubble_choice_sublevels
   end
 end

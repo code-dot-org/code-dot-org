@@ -2352,6 +2352,11 @@ endvariants
     level_group_sublevels = level_group.pages.map(&:levels).flatten
     assert_equal 3, level_group_sublevels.length
 
+    # buble choice levels
+    bubble_choice = create :bubble_choice_level, :with_sublevels, name: 'bubble choice'
+    bubble_choice_sublevels = bubble_choice.sublevels
+    assert_equal 3, bubble_choice_sublevels.length
+
     dsl = <<~SCRIPT
       lesson 'lesson1'
       level '#{level1.name}'
@@ -2362,6 +2367,7 @@ endvariants
       level '#{container.name}'
       level '#{template_backed_level.name}'
       level '#{level_group.name}'
+      level '#{bubble_choice.name}'
       bonus '#{extra1.name}'
       bonus '#{extra2.name}'
     SCRIPT
@@ -2371,17 +2377,14 @@ endvariants
       script_data[:lesson_groups]
     )
 
-    levels = [level1, swap1, swap2, container,  template_backed_level, level_group, extra1, extra2]
-    nested_levels = [containee, template_level, level_group_sublevels].flatten
+    levels = [level1, swap1, swap2, container,  template_backed_level, level_group, bubble_choice, extra1, extra2]
+    nested_levels = [containee, template_level, level_group_sublevels, bubble_choice_sublevels].flatten
 
     assert_equal levels, script.levels
     expected_levels = levels + nested_levels
     actual_levels = script.all_descendant_levels
     assert_equal expected_levels.compact.map(&:name), actual_levels.compact.map(&:name)
     assert_equal expected_levels, actual_levels
-
-    # TODO: make sure recognize the following nested level types
-    # levels within bubble choice levels
   end
 
   private
