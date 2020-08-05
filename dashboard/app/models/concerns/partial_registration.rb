@@ -35,6 +35,7 @@ module PartialRegistration
   end
 
   def self.cancel(session)
+    CDO.shared_cache.delete(session[SESSION_KEY])
     session.delete(SESSION_KEY)
   end
 
