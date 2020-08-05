@@ -3,15 +3,18 @@ import React from 'react';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import {connect} from 'react-redux';
 import $ from 'jquery';
-import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
+import {
+  setInstructionsMaxHeightAvailable,
+  setInstructionsRenderedHeight
+} from '../../redux/instructions';
 
 /**
  * Top-level React wrapper for Question Levels.
  */
 class QuestionView extends React.Component {
   static propTypes = {
-    instructionsHeight: PropTypes.number,
-    setInstructionsMaxHeightAvailable: PropTypes.func
+    setInstructionsMaxHeightAvailable: PropTypes.func,
+    setInstructionsRenderedHeight: PropTypes.func
   };
 
   // only used so that we can rerender when resized
@@ -36,6 +39,10 @@ class QuestionView extends React.Component {
     this.props.setInstructionsMaxHeightAvailable(
       Math.max(windowHeight - 50 - 165 - 75 - 50, 150)
     );
+
+    this.props.setInstructionsRenderedHeight(
+      Math.max(windowHeight - 50 - 165 - 75 - 50, 150)
+    );
   };
 
   componentDidMount() {
@@ -56,12 +63,13 @@ class QuestionView extends React.Component {
 }
 
 export default connect(
-  state => ({
-    instructionsHeight: state.instructions.maxAvailableHeight
-  }),
+  state => ({}),
   dispatch => ({
     setInstructionsMaxHeightAvailable(height) {
       dispatch(setInstructionsMaxHeightAvailable(height));
+    },
+    setInstructionsRenderedHeight(height) {
+      dispatch(setInstructionsRenderedHeight(height));
     }
   })
 )(QuestionView);
