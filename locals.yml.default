@@ -108,3 +108,9 @@ use_my_apps: true
 # And this each time you need to start mailcatcher in the background again:
 #   `mailcatcher --ip=0.0.0.0`
 #use_mailcatcher: true
+
+# Added for the immersion reader hack
+imm_reader_tenant_id:
+imm_reader_client_id:
+imm_reader_client_secret:
+imm_reader_subdomain:

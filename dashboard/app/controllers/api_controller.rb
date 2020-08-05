@@ -16,6 +16,10 @@ class ApiController < ApplicationController
     end
   end
 
+  def get_immersion_reader_token
+    render json: {message: 'hello, world!'}
+  end
+
   def clever_classrooms
     return head :forbidden unless current_user
 
