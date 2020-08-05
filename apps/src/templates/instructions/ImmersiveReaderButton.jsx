@@ -4,18 +4,24 @@ import handleLaunchImmersiveReader from '@cdo/apps/util/immersive_reader';
 
 class ImmersiveReaderButton extends Component {
   static propTypes = {
+    title: PropTypes.string,
     text: PropTypes.string
   };
 
   render() {
-    const {text} = this.props;
+    const {title, text} = this.props;
 
     // We add a classname to this element exclusively so that UI tests can
     // easily detect its presence. This class should NOT be used for
     // styling.
     return (
-      <button type={'button'} onClick={handleLaunchImmersiveReader}>
-        {text}
+      <button
+        type={'button'}
+        onClick={function() {
+          handleLaunchImmersiveReader(title, text);
+        }}
+      >
+        {'Immersive Reader'}
       </button>
     );
   }

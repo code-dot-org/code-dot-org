@@ -16,26 +16,23 @@ function getTokenAndSubdomainAsync() {
   });
 }
 
-export default function handleLaunchImmersiveReader() {
+export default function handleLaunchImmersiveReader(title, text) {
   getTokenAndSubdomainAsync()
     .then(function(response) {
-      console.log('DAYNE');
-      console.log(response);
       const token = response.token;
       const subdomain = response.subdomain;
-      const content = {
-        title: 'Daynes content title',
+      const data = {
+        title: title,
         chunks: [
           {
-            content: 'Hello Dayne. How are you doing?',
+            content: text,
             lang: 'en'
           }
         ]
       };
-      launchAsync(token, subdomain, content, {});
+      launchAsync(token, subdomain, data, {});
     })
     .catch(function(error) {
-      console.log('DAYNE ERROR');
       console.log(error);
     });
 }
