@@ -192,8 +192,8 @@ class LevelGroup < DSLDefined
   end
 
   # @override
-  def all_descendant_levels
-    child_levels.all + super
+  def all_child_levels
+    child_levels.all
   end
 
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.

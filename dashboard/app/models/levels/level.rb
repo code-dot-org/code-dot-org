@@ -718,9 +718,13 @@ class Level < ActiveRecord::Base
   # Returns all child levels of this level, which could include contained levels,
   # project template levels, BubbleChoice sublevels, or LevelGroup sublevels.
   def all_descendant_levels
-    my_child_levels = (contained_levels + [project_template_level]).compact
-    child_child_levels = my_child_levels.map(&:all_descendant_levels).flatten
-    my_child_levels + child_child_levels
+    my_child_levels = all_child_levels
+    child_descendant_levels = my_child_levels.map(&:all_descendant_levels).flatten
+    my_child_levels + child_descendant_levels
+  end
+
+  def all_child_levels
+    (contained_levels + [project_template_level]).compact
   end
 
   # validation method for subclasses to use
