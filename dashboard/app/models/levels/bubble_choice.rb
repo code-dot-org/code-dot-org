@@ -65,11 +65,9 @@ class BubbleChoice < DSLDefined
     i.present? ? i + 1 : nil
   end
 
-  # no need to call super or recurse here, because bubble choice levels and
-  # their children cannot have contained levels or project template levels.
   # @override
   def all_child_levels
-    sublevels
+    sublevels + super
   end
 
   # Summarizes the level.
