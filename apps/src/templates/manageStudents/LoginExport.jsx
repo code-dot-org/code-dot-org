@@ -8,7 +8,7 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 const CSV_LOGIN_INFO_HEADERS = [
   {label: i18n.loginExportHeader_sectionCode(), key: 'sectionCode'},
   {label: i18n.loginExportHeader_sectionName(), key: 'sectionName'},
-  {label: i18n.loginExportHeader_studentLoginType(), key: 'sectionLoginType'},
+  {label: i18n.loginExportHeader_sectionLoginType(), key: 'sectionLoginType'},
   {label: i18n.loginExportHeader_studentName(), key: 'studentName'},
   {
     label: i18n.loginExportHeader_studentLoginSecret(),
@@ -27,6 +27,7 @@ export default class LoginExport extends Component {
   constructor(props) {
     super(props);
     let logins = [];
+
     props.students.forEach(student => {
       if (student.username !== '') {
         logins.push({
