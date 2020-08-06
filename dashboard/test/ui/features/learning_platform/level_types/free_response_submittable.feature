@@ -9,17 +9,17 @@ Background:
   And element ".submitButton" is visible
 
 Scenario: Loading the level
-  And element ".free-response > h1" has text "Submit a Lesson Plan: Routing and Packets"
+  And element ".free-response-title" has text "Submit a Lesson Plan: Routing and Packets"
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.
-  And I type "sample response" into ".free-response > textarea"
+  And I type "sample response" into ".free-response-textarea"
   And I press ".submitButton" using jQuery to load a new page
 
   # Reload the page to see that unsubmit is the option.
   And I am on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
   And I wait to see ".unsubmitButton"
-  And element ".free-response > textarea" contains text "sample response"
+  And element ".free-response-textarea" contains text "sample response"
   And element ".unsubmitButton" is visible
   And element ".submitButton" is not visible
 
