@@ -28,6 +28,8 @@ class LevelGroup < DSLDefined
     levels_and_texts_per_page
   )
 
+  validate :no_contained_or_template_levels
+
   def dsl_default
     <<~ruby
       name 'unique level name here'
