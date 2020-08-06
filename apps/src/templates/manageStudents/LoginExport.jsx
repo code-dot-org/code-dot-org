@@ -18,30 +18,32 @@ const CSV_LOGIN_INFO_HEADERS = [
 
 export default class LoginExport extends Component {
   static propTypes = {
-    sectionCode: PropTypes.string.isRequired,
-    sectionName: PropTypes.string.isRequired,
-    sectionLoginType: PropTypes.string.isRequired,
-    students: PropTypes.array.isRequired
+    sectionCode: PropTypes.string,
+    sectionName: PropTypes.string,
+    sectionLoginType: PropTypes.string,
+    students: PropTypes.array
   };
 
   constructor(props) {
     super(props);
     let logins = [];
 
-    props.students.forEach(student => {
-      if (student.username !== '') {
-        logins.push({
-          sectionCode: props.sectionCode,
-          sectionName: props.sectionName,
-          sectionLoginType: props.sectionLoginType,
-          studentName: student.name,
-          studentLoginSecret:
-            props.sectionLoginType === SectionLoginType.word
-              ? student.secretWords
-              : pegasus(`/images/${student.secretPicturePath}`)
-        });
-      }
-    });
+    if (props.students) {
+      props.students.forEach(student => {
+        if (student.username !== '') {
+          logins.push({
+            sectionCode: props.sectionCode,
+            sectionName: props.sectionName,
+            sectionLoginType: props.sectionLoginType,
+            studentName: student.name,
+            studentLoginSecret:
+              props.sectionLoginType === SectionLoginType.word
+                ? student.secretWords
+                : pegasus(`/images/${student.secretPicturePath}`)
+          });
+        }
+      });
+    }
     this.state = {logins};
   }
 
