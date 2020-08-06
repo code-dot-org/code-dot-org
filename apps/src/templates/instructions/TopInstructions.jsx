@@ -327,7 +327,10 @@ class TopInstructions extends Component {
    * contents of the comment tab.
    */
   forceTabResizeToMaxHeight = () => {
-    if (this.state.tabSelected === TabType.COMMENTS) {
+    if (
+      this.state.tabSelected === TabType.COMMENTS &&
+      !this.props.isQuestionLevel
+    ) {
       this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
     }
   };
