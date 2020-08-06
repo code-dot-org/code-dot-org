@@ -715,6 +715,8 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # we must search recursively for child levels, because some bubble choice
+  # sublevels have project template levels.
   def all_descendant_levels
     my_child_levels = all_child_levels
     child_descendant_levels = my_child_levels.map(&:all_descendant_levels).flatten
