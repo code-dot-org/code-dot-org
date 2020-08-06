@@ -192,7 +192,7 @@ class LevelGroup < DSLDefined
   end
 
   # @override
-  def all_child_levels
+  def all_descendant_levels
     child_levels.all + super
   end
 

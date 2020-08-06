@@ -1594,7 +1594,7 @@ class Script < ActiveRecord::Base
   end
 
   def all_descendant_levels
-    sublevels = levels.map(&:all_child_levels).flatten
+    sublevels = levels.map(&:all_descendant_levels).flatten
     levels + sublevels
   end
 end

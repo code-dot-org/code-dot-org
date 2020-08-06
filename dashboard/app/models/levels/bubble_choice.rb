@@ -66,7 +66,7 @@ class BubbleChoice < DSLDefined
   end
 
   # @override
-  def all_child_levels
+  def all_descendant_levels
     sublevels + super
   end
 
