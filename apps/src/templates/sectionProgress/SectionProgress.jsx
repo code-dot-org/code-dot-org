@@ -12,15 +12,14 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from '../../lib/ui/Headings';
 import {
-  ViewType,
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  scriptDataPropType,
   setCurrentView,
   tooltipIdForStudent
 } from './sectionProgressRedux';
+import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {

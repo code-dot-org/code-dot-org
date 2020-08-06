@@ -3,7 +3,6 @@ import {
   levelsByLesson
 } from '@cdo/apps/code-studio/progressRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
-import PropTypes from 'prop-types';
 import {
   NAME_COLUMN_WIDTH,
   PROGRESS_BUBBLE_WIDTH,
@@ -19,6 +18,7 @@ import {
   fetchStandardsCoveredForScript,
   fetchStudentLevelScores
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import {ViewType} from './sectionProgressConstants';
 
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
@@ -86,43 +86,6 @@ export const addStudentTimestamps = (scriptId, studentTimestamps) => ({
 });
 
 const NUM_STUDENTS_PER_PAGE = 50;
-
-// Types of views of the progress tab
-export const ViewType = {
-  SUMMARY: 'summary', // lessons
-  DETAIL: 'detail', // levels
-  STANDARDS: 'standards'
-};
-
-/**
- * Shape for scriptData
- * The data we get from the server's call to script.summarize. The format
- * ends up being similar to that which we send to initProgress in progressRedux.
- * The important part is scriptData.stages, which gets used by levelsWithLesson
- */
-export const scriptDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  csf: PropTypes.bool,
-  hasStandards: PropTypes.bool,
-  title: PropTypes.string,
-  path: PropTypes.string,
-  stages: PropTypes.arrayOf(
-    PropTypes.shape({
-      levels: PropTypes.arrayOf(PropTypes.object).isRequired
-    })
-  ),
-  family_name: PropTypes.string,
-  version_year: PropTypes.string
-});
-
-/**
- * Shape for studentLevelProgress
- * For each student id, has a mapping from level id to the student's result
- * on that level
- */
-export const studentLevelProgressPropType = PropTypes.objectOf(
-  PropTypes.objectOf(PropTypes.number)
-);
 
 const INITIAL_LESSON_OF_INTEREST = 1;
 
@@ -264,7 +227,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
 
 /**
  * Retrieves the progress for the section in the selected script
- * @returns {studentLevelProgressPropType} keys are student ids, values are
+ * @returns {number} keys are student ids, values are
  * objects of {levelIds: LevelStatus}
  */
 export const getCurrentProgress = state => {

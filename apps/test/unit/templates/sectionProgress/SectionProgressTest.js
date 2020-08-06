@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 
 const studentData = [
   {id: 1, name: 'studentb'},
