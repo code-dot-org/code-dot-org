@@ -6,13 +6,81 @@ theme: responsive
 ---
 <link rel="stylesheet" type="text/css" rel= "stylesheet" href="/css/jobs.css" />
 
-# How will you change the world?
+<link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+<style>
+  .backgroundimage {
+    background-image: url(<%= CDO.code_org_url('/shared/images/banners/small-teal-icons.png') %>);
+    background-size: cover;
+    padding:10px;
+  }
 
-Code.org is a nonprofit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
+  ul li:before {
+    color: black;
+  }
+</style>
 
-## Our vision is that every student in every school should have the opportunity to learn computer science.
+<h1 class="backgroundimage" style="color:white;">
+Help us change the world, one student at a time
+</h1>
 
-**We are currently hiring for:**
+<div class="col-50" style="padding-right: 10px">
+
+<% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
+<% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+
+
+<%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
+
+</div>
+
+[col-50]
+
+Code.org is a nonprofit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
+
+[/col-50]
+
+<a href= ## We are currently hiring for:><button>Explore Roles!</button></a>
+
+***
+## Our Core Values
+Our values bring us all together and are at the forefront of how and why we work.
+***
+<img src="/images/fit-700/AllHands2020.jpg">
+
+We're a team of 85 passionate, fun folks headquartered in Seattle and spread across 20 states. Learn more about [the full team](https://code.org/about/team).
+
+## Live your best life
+There’s life at work and life outside of work. We want everyone to be healthy, travel often, get time to give back, and have the financial resources and support they need. As an organization, Code.org is committed to providing an inclusive environment, with equitable access and opportunity for growth and advancement for all Code.org staff regardless of gender, race, ethnicity, nationality, religion, age, marital status, sexual orientation, or identity.
+
+<img src="/images/fit-100/infographics/Heart.png"> 
+Health Benefits For You and Your Family
+<watch icon>
+<img src="/images/fit-100/infographics/Watch.png"> 
+Generous PTO and Leave Plans
+<img src="/images/fit-100/infographics/flexible.png"> 
+Flexible Work Environment
+<img src="/images/fit-100/infographics/Book.png"> 
+Growth and Learning Opportunities
+
+
+***
+<link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+<style>
+  .backgroundimage {
+    background-image: url(<%= CDO.code_org_url('/shared/images/banners/small-teal-icons.png') %>);
+    background-size: cover;
+    padding:10px;
+  }
+
+  ul li:before {
+    color: black;
+  }
+</style>
+
+<h1 class="backgroundimage" style="color:white;">
+Come Work with Us
+</h1>
+<a>## We are currently hiring for:
 <div id='lever-jobs-container'></div>
 <script type='text/javascript'>
 
@@ -20,5 +88,11 @@ Code.org is a nonprofit organization dedicated to expanding participation in com
 
 </script>
 <script type='text/javascript' src='https://andreasmb.github.io/lever-jobs-embed/index.js'></script>
+## Other ways to get involved:
+[Join the Facilitator Development Program](https://code.org/educate/professional-learning/facilitator)
+
+[Volunteer in Classrooms](https://code.org/volunteer)
+
+[Help Translate Courses](https://code.org/translate)
 
 _**COVID-19 update:** We are continuing to closely monitor the evolving situation and we appreciate your understanding and flexibility with any related changes to our interviewing process._
