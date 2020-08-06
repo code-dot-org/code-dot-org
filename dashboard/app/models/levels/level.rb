@@ -49,7 +49,6 @@ class Level < ActiveRecord::Base
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
-  validate :no_nested_child_levels
 
   after_save :write_custom_level_file
   after_save :update_key_list
@@ -719,15 +718,9 @@ class Level < ActiveRecord::Base
   # Returns all child levels of this level, which could include contained levels,
   # project template levels, BubbleChoice sublevels, or LevelGroup sublevels.
   def all_child_levels
-    (contained_levels + [project_template_level]).compact
-  end
-
-  def no_nested_child_levels
-    all_child_levels.each do |child_level|
-      if child_level.all_child_levels.any?
-        errors.add(:child_levels, "child level #{child_level.name} cannot have its own child levels")
-      end
-    end
+    my_child_levels = (contained_levels + [project_template_level]).compact
+    child_child_levels = my_child_levels.map(&:all_child_levels).flatten
+    my_child_levels + child_child_levels
   end
 
   # validation method for subclasses to use
