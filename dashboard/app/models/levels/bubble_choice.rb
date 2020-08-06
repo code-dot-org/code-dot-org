@@ -63,6 +63,13 @@ class BubbleChoice < DSLDefined
     i.present? ? i + 1 : nil
   end
 
+  # no need to call super or recurse here, because bubble choice levels and
+  # their children cannot have contained levels or project template levels.
+  # @override
+  def all_child_levels
+    sublevels
+  end
+
   # Summarizes the level.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
   # previous/next levels, and script will be included in the summary.
