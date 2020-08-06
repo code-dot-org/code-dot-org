@@ -22,7 +22,6 @@ class FreeResponse extends React.Component {
     freeResponseLastAttempt: PropTypes.string,
     showUnderageWarning: PropTypes.bool,
     readOnly: PropTypes.bool,
-    instructions: PropTypes.string,
     allowUserUploads: PropTypes.bool
   };
 
@@ -57,7 +56,6 @@ class FreeResponse extends React.Component {
 }
 
 export default connect(state => ({
-  instructions: state.instructions.longInstructions,
   readOnly: state.pageConstants.isReadOnlyWorkspace,
   showUnderageWarning: state.pageConstants.is13Plus,
   freeResponseProjectId: state.instructions.freeResponseProjectId,
