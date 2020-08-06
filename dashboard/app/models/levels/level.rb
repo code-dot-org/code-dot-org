@@ -715,6 +715,12 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # Returns all child levels of this level, which could include contained levels,
+  # project template levels, BubbleChoice sublevels, or LevelGroup sublevels.
+  def all_child_levels
+    (contained_levels + [project_template_level]).compact
+  end
+
   private
 
   # Returns the level name, removing the name_suffix first (if present).
