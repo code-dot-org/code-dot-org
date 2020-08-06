@@ -44,7 +44,10 @@ class Level < ActiveRecord::Base
   has_many :child_levels, through: :levels_child_levels, inverse_of: :parent_levels
 
   has_one :contained_levels_child_level, -> {where(kind: 'contained').order('position ASC')}, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
-  has_one :contained_child_level, through: :contained_levels_child_level, source: :child_level
+  has_one :contained_child_level, through: :contained_levels_child_level, source: :child_level, inverse_of: :containing_parent_levels
+
+  has_many :containing_levels_parent_levels, -> {where(kind: 'contained')}, class_name: 'ParentLevelsChildLevel', foreign_key: :child_level_id
+  has_many :containing_parent_levels, through: :containing_levels_parent_levels, source: :parent_level, inverse_of: :contained_child_level
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
