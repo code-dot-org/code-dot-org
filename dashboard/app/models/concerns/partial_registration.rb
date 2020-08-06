@@ -35,6 +35,9 @@ module PartialRegistration
   end
 
   def self.delete(session)
+    # On production, it's unsafe to delete(nil) from the cache, so check that
+    # we actually have a partial registration before we try to clear it.
+    return unless in_progress? session
     CDO.shared_cache.delete(session[SESSION_KEY])
     session.delete(SESSION_KEY)
   end
