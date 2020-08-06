@@ -63,7 +63,11 @@ class RegistrationsController < Devise::RegistrationsController
   # Cancels the in-progress partial user registration and redirects to sign-up page.
   #
   def cancel
-    PartialRegistration.cancel(session)
+    provider = PartialRegistration.get_provider(session) || 'email'
+    SignUpTracking.log_cancel_finish_sign_up(session, provider)
+    SignUpTracking.end_sign_up_tracking(session)
+
+    PartialRegistration.delete(session)
     redirect_to new_user_registration_path
   end
 
@@ -111,9 +115,11 @@ class RegistrationsController < Devise::RegistrationsController
     TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
     should_send_parent_email = current_user && current_user.parent_email.present?
     ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
-    if current_user
+
+    if current_user # successful registration
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
+      PartialRegistration.delete session
     end
 
     SignUpTracking.log_sign_up_result resource, session
