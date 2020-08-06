@@ -48,7 +48,7 @@ $(document).ready(() => {
       isSubmittable: !!data.appOptions.level.submittable,
       isReadOnlyWorkspace: data.appOptions.readonlyWorkspace,
       is13Plus: data.appOptions.is13Plus,
-      textToSpeechEnabled: false,
+      textToSpeechEnabled: true,
       isK1: false,
       noVisualization: true,
       isShareView: false,
@@ -57,7 +57,9 @@ $(document).ready(() => {
       isEmbedView: false,
       noInstructionsWhenCollapsed: true,
       hasContainedLevels: false,
-      serverLevelId: level.id
+      serverLevelId: level.id,
+      ttsLongInstructionsUrl: level.tts_long_instructions_url,
+      locale: 'en_us'
     })
   );
 

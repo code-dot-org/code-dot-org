@@ -77,6 +77,7 @@ class FreeResponse < Level
     summary = {
       id: id,
       type: type,
+      tts_long_instructions_url: tts_long_instructions_text.empty? ? "" : tts_url(tts_long_instructions_text),
       placeholder: get_property(:placeholder) || I18n.t('free_response.placeholder'),
       height: try(:height)&.to_i || 80,
       title: get_property(:title),
