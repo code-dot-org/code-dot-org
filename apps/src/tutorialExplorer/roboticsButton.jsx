@@ -61,7 +61,7 @@ export default class RoboticsButton extends React.Component {
                 <img
                   src="/images/learn/robotics-link.png"
                   style={styles.roboticsButtonImage}
-                  alt="A humanoid robot"
+                  alt=""
                 />
                 <div style={styles.roboticsButtonText}>
                   {i18n.roboticsButtonText()}
