@@ -1,7 +1,6 @@
 import {assert, expect} from '../../../util/deprecatedChai';
 import sectionProgress, {
   setCurrentView,
-  ViewType,
   addScriptData,
   addStudentLevelProgress,
   addStudentLevelPairing,
@@ -14,6 +13,7 @@ import sectionProgress, {
   getCurrentProgress,
   getCurrentScriptData
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import _ from 'lodash';
