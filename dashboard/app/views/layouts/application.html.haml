@@ -49,7 +49,9 @@
 
     - gdpr_data = {}
     - if current_user
-      - gdpr_data[:show_gdpr_dialog] = GdprDialogHelper.show?(current_user, request)
+      - already_accepted = current_user.data_transfer_agreement_accepted == true
+      - force_eu = request.params['force_in_eu'].present?
+      - gdpr_data[:show_gdpr_dialog] = (request.gdpr? || force_eu) && !already_accepted
       - gdpr_data[:current_user_id] = current_user.id
 
     #gdpr-dialog
