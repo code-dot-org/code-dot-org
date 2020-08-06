@@ -2,18 +2,25 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import {CSVLink} from 'react-csv';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const CSV_LOGIN_INFO_HEADERS = [
   {label: i18n.loginExportHeader_sectionCode(), key: 'sectionCode'},
   {label: i18n.loginExportHeader_sectionName(), key: 'sectionName'},
+  {label: i18n.loginExportHeader_studentLoginType(), key: 'sectionLoginType'},
   {label: i18n.loginExportHeader_studentName(), key: 'studentName'},
-  {label: i18n.loginExportHeader_secretWords(), key: 'secretWords'}
+  {
+    label: i18n.loginExportHeader_studentLoginSecret(),
+    key: 'studentLoginSecret'
+  }
 ];
 
 export default class LoginExport extends Component {
   static propTypes = {
     sectionCode: PropTypes.string.isRequired,
     sectionName: PropTypes.string.isRequired,
+    sectionLoginType: PropTypes.string.isRequired,
     students: PropTypes.array.isRequired
   };
 
@@ -25,8 +32,12 @@ export default class LoginExport extends Component {
         logins.push({
           sectionCode: props.sectionCode,
           sectionName: props.sectionName,
+          sectionLoginType: props.sectionLoginType,
           studentName: student.name,
-          secretWords: student.secretWords
+          studentLoginSecret:
+            props.sectionLoginType === SectionLoginType.word
+              ? student.secretWords
+              : pegasus(`/images/${student.secretPicturePath}`)
         });
       }
     });

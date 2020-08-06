@@ -75,6 +75,7 @@ class ManageStudentsLoginInfo extends Component {
               <LoginExport
                 sectionCode={sectionCode}
                 sectionName={sectionName}
+                sectionLoginType={loginType}
                 students={this.props.studentData}
               />
             </div>
@@ -106,6 +107,19 @@ class ManageStudentsLoginInfo extends Component {
                 )
               })}
             />
+            <div style={styles.sublistAlign}>
+              <InlineMarkdown
+                markdown={i18n.loginExportInstructions({
+                  articleLink: 'support.code.org'
+                })}
+              />{' '}
+              <LoginExport
+                sectionCode={sectionCode}
+                sectionName={sectionName}
+                sectionLoginType={loginType}
+                students={this.props.studentData}
+              />
+            </div>
             <SafeMarkdown
               markdown={i18n.setUpClass3({
                 parentLetterLink: teacherDashboardUrl(
