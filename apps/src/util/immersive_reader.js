@@ -25,7 +25,7 @@ export default function handleLaunchImmersiveReader(title, text) {
         title: title,
         chunks: [
           {
-            content: text,
+            content: sanitizeText(text),
             lang: 'en'
           }
         ]
@@ -35,4 +35,16 @@ export default function handleLaunchImmersiveReader(title, text) {
     .catch(function(error) {
       console.log(error);
     });
+}
+
+function sanitizeText(text) {
+  if (!text) {
+    return text;
+  }
+  // Strip XML
+  text = text.replace(/<[^>]*>/g, '');
+
+  // Strip markdown characters
+  text = text.replace(/[`*`]/g, '');
+  return text;
 }
