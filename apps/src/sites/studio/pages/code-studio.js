@@ -32,9 +32,8 @@ window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.Radium = require('radium');
 
-// TODO (bbuchanan): Stop including these components in a global way, just
-//                   require them specifically where needed.
-require('@cdo/apps/code-studio/components/SmallFooter');
+// TODO (bbuchanan): Stop including this component in a global way, just
+//                   require it specifically where needed.
 require('@cdo/apps/code-studio/components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
