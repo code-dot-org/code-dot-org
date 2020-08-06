@@ -142,6 +142,16 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     refute CDO.shared_cache.exist? cache_key
   end
 
+  test 'delete can be called safely when no partial registration is in progress' do
+    # Cache#delete(nil) throws on production (where we're using memcached)
+    # but not in other environments (where we're using a file cache).
+    # Force failure if we call this method with nil.
+    CDO.shared_cache.stubs(:delete).with(nil).raises(Exception, "Can't delete nil key.")
+
+    refute PartialRegistration.in_progress? @session
+    PartialRegistration.delete @session
+  end
+
   test 'get_provider returns nil when partial registration is not in progress' do
     assert_nil PartialRegistration.get_provider @session
   end
