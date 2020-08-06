@@ -730,16 +730,6 @@ class Level < ActiveRecord::Base
     (contained_levels + [project_template_level]).compact
   end
 
-  # validation method for subclasses to use
-  def no_contained_or_template_levels
-    if contained_levels.first
-      errors.add(:properties, 'this level type cannot have a contained level')
-    end
-    if project_template_level
-      errors.add(:properties, 'this level type cannot have a project template level')
-    end
-  end
-
   private
 
   # Returns the level name, removing the name_suffix first (if present).
