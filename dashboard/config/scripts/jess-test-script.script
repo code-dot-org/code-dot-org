@@ -41,13 +41,14 @@ level 'VPL - CSD - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap U
 
 lesson 'Module 3'
 level 'VPL - CSD Module 3 Overview', progression: 'Module 3 Overview'
-level 'VPL - CSD M3 Theme Introduction', progression: 'Theme Introduction'
+level 'VPL - CSD M3 Theme Introduction', progression: 'Theme Introduction (~5 mins)'
 level 'VPL - CSD - Module 3 - U4L1 Investigation', progression: 'Lesson Investigation (~30 mins)'
 level 'VPL - CSD - Module 3 - U4L1', progression: 'Lesson Investigation (~30 mins)'
-level 'VPL - CSD - Module 3 - Problem Solving Process Guide', progression: 'Reflection (~5 mins)'
-level 'VPL - CSD Module 3 Problem Solving Process', progression: 'Reflection (~5 mins)'
+level 'VPL - CSD - Module 3 - Problem Solving Process Guide', progression: 'Reflection (~10 mins)'
+level 'VPL - CSD Module 3 Problem Solving Process', progression: 'Reflection (~10 mins)'
 level 'VPL - CSD - Module 3 - U4L2 Investigation', progression: 'Lesson Investigation (~30 mins)'
 level 'VPL - CSD - Module 3 - U4L2', progression: 'Lesson Investigation (~30 mins)'
+level 'VPL - CSD Module 3 U4L2 Reflection', progression: 'Reflection (~5 mins)'
 level 'VPL - CSD - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap Up (~10 mins)'
 
 lesson 'Module 4'
@@ -60,6 +61,7 @@ level 'VPL - CSD Module 4 U4L8 Reflection', progression: 'Lesson Investigation (
 level 'VPL CSD Module 4 U4L12', progression: 'Lesson Investigation (~60 mins)'
 level 'VPL - CSD Module 4 U4L12 Reflection', progression: 'Lesson Investigation (~60 mins)'
 level 'VPL - CSD - Module 4 - Conclusions and Connections', progression: 'Conclusions and Connections (~20 mins)'
+level 'VPL - CSD U4 Chapter 1 Project', progression: 'Conclusions and Connections (~20 mins)'
 level 'VPL - CSD - Module 4 Wrap Up', progression: 'Module 4 Asynchronous Wrap Up (~10 mins)'
 
 lesson 'Module 5'
