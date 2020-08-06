@@ -529,8 +529,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/_external_link.js',
     'levels/_question_level':
       './src/sites/studio/pages/levels/_question_level.js',
-    'levels/_free_response_as_sublevel':
-      './src/sites/studio/pages/levels/_free_response_as_sublevel.js',
+    'levels/_free_response':
+      './src/sites/studio/pages/levels/_free_response.js',
     'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',

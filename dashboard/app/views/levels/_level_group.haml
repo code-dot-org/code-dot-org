@@ -46,7 +46,7 @@
               - level.properties['answers'] = nil
             = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt }
           - elsif level_class == "free_response"
-            = render partial: 'levels/free_response_as_sublevel', locals: {in_level_group: true, level: level, last_attempt: sublevel_last_attempt}
+            = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: sublevel_last_attempt}
           - elsif level_class == "match"
             = render partial: 'levels/single_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt}
 
