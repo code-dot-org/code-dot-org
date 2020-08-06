@@ -60,26 +60,10 @@ export default class Tutorial extends React.Component {
     tutorialClicked: PropTypes.func.isRequired
   };
 
-  state = {
-    ariaPressed: false
-  };
-
-  selectTutorial = () => {
-    this.setState({ariaPressed: true});
-    this.props.tutorialClicked();
-  };
-
   keyboardSelectTutorial = event => {
     if (event.keyCode === 32 || event.keyCode === 13) {
       event.preventDefault();
-      this.selectTutorial();
-    }
-  };
-
-  onKeyUp = event => {
-    if (event.keyCode === 32 || event.keyCode === 13) {
-      this.setState({ariaPressed: false});
-      event.preventDefault();
+      this.props.tutorialClicked();
     }
   };
 
@@ -96,12 +80,10 @@ export default class Tutorial extends React.Component {
     return (
       <div
         style={tutorialOuterStyle}
-        onClick={this.selectTutorial}
+        onClick={this.props.tutorialClicked}
         onKeyDown={this.keyboardSelectTutorial}
-        onKeyUp={this.onKeyUp}
         tabIndex="0"
         role="button"
-        aria-pressed={this.state.ariaPressed}
       >
         <div style={styles.tutorialImageContainer}>
           <div style={styles.tutorialImageBackground} />
