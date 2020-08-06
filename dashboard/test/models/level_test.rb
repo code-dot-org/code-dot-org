@@ -1056,4 +1056,15 @@ class LevelTest < ActiveSupport::TestCase
     )
     assert_equal [child1, child2, child3], parent.child_levels
   end
+
+  test 'contained level associations' do
+    containee = create :level, name: 'containee'
+    container = create :level, name: 'container'
+    assert_nil container.contained_child_level
+    assert_equal [], containee.containing_parent_levels
+
+    container.contained_child_level = containee
+    containee.reload
+    assert_equal [container], containee.containing_parent_levels
+  end
 end
