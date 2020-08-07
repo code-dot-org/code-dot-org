@@ -1373,6 +1373,10 @@ When(/^I am not signed in/) do
   steps 'element ".header_user:contains(Sign in)" is visible'
 end
 
+And(/^I delete the cookie named "([^"]*)"$/) do |cookie|
+  @browser.manage.delete_cookie cookie
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
