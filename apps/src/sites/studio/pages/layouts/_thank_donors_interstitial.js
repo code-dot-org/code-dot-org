@@ -4,7 +4,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 $(document).ready(function() {
   var already_shown = !!cookies.get('has_seen_thank_donors');
-  if (!already_shown && window.innerWidth > 720) {
+  if (!already_shown && window.innerWidth > 800 && window.innerHeight > 600) {
     $('#thank-donors-modal').modal('show');
     cookies.set('has_seen_thank_donors', '1');
 
