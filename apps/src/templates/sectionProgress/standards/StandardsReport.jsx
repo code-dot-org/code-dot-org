@@ -25,7 +25,7 @@ import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import {loadScript} from '../sectionProgressRedux';
+import {loadScript} from '../sectionProgressLoader';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
