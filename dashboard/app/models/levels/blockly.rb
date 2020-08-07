@@ -123,6 +123,7 @@ class Blockly < Level
     contained_level_names = properties["contained_level_names"]
     contained_level_names.try(:delete_if, &:blank?)
     contained_level_names = nil unless contained_level_names.try(:present?)
+    contained_level_names = contained_level_names.try(:uniq)
     properties["contained_level_names"] = contained_level_names
   end
 

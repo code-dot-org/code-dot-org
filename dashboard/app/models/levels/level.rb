@@ -743,6 +743,8 @@ class Level < ActiveRecord::Base
     self.contained_child_levels = level_names.map do |level_name|
       Level.find_by_name!(level_name)
     end
+  rescue => e
+    raise e, "Error updating level '#{name}' with contained level names #{level_names}: #{e}"
   end
 
   private
