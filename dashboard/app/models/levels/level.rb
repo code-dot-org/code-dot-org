@@ -49,6 +49,8 @@ class Level < ActiveRecord::Base
   has_many :containing_levels_parent_levels, -> {where(kind: 'contained')}, class_name: 'ParentLevelsChildLevel', foreign_key: :child_level_id
   has_many :containing_parent_levels, through: :containing_levels_parent_levels, source: :parent_level, inverse_of: :contained_child_levels
 
+  before_save :update_contained_child_levels
+
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 
@@ -734,6 +736,13 @@ class Level < ActiveRecord::Base
   # This method may be overridden by subclasses.
   def all_child_levels
     (contained_levels + [project_template_level]).compact
+  end
+
+  def update_contained_child_levels
+    level_names = try(:contained_level_names) || []
+    self.contained_child_levels = level_names.map do |level_name|
+      Level.find_by_name!(level_name)
+    end
   end
 
   private
