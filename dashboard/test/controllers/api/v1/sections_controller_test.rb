@@ -15,17 +15,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @course = create(:unit_group)
-    @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
+    @unit_group = create(:unit_group)
+    @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
     @script = create(:script)
     @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_course = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
-    @csp_course_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
+    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, visible: true, is_stable: true)
+    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true)
     @csp_script = create(:script, name: 'csp1')
-    create(:unit_group_unit, unit_group: @csp_course, script: @csp_script, position: 1)
+    create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
   end
 
   test 'logged out cannot list sections' do
@@ -78,8 +78,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    course_id = returned_json.find {|section| section['id'] == @section_with_course.id}['course_id']
-    assert_equal @course.id, course_id
+    course_id = returned_json.find {|section| section['id'] == @section_with_unit_group.id}['course_id']
+    assert_equal @unit_group.id, course_id
   end
 
   test 'logged out cannot view section detail' do
@@ -116,10 +116,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'specifies course_id' do
     sign_in @teacher
 
-    get :show, params: {id: @section_with_course.id}
+    get :show, params: {id: @section_with_unit_group.id}
     assert_response :success
 
-    assert_equal @course.id, returned_json['course_id']
+    assert_equal @unit_group.id, returned_json['course_id']
   end
 
   test "join with invalid section code" do
@@ -415,18 +415,18 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal true, returned_section.pairing_allowed
   end
 
-  [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
-    test "can create with a course id but no script id - #{existing_course_name}" do
-      existing_course = UnitGroup.find_by(name: existing_course_name)
+  [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_unit_group_name|
+    test "can create with a course id but no script id - #{existing_unit_group_name}" do
+      existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
 
       sign_in @teacher
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        course_id: existing_course.id,
+        course_id: existing_unit_group.id,
       }
 
-      assert_equal existing_course.id, returned_json['course_id']
-      assert_equal existing_course, returned_section.unit_group
+      assert_equal existing_unit_group.id, returned_json['course_id']
+      assert_equal existing_unit_group, returned_section.unit_group
       assert_nil returned_json['script']['id']
       assert_nil returned_section.script
     end
@@ -436,7 +436,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_id: @course.id, # Not CSP or CSD
+      course_id: @unit_group.id, # Not CSP or CSD
     }
     assert_response :success
     # TODO: Better to fail here?
@@ -473,19 +473,19 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_section.unit_group
   end
 
-  [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_course_name|
-    test "can create with both a course id and a script id - #{existing_course_name}" do
-      existing_course = UnitGroup.find_by(name: existing_course_name)
+  [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_unit_group_name|
+    test "can create with both a course id and a script id - #{existing_unit_group_name}" do
+      existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
 
       sign_in @teacher
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        course_id: existing_course.id,
+        course_id: existing_unit_group.id,
         script: {id: @csp_script.id},
       }
 
-      assert_equal existing_course.id, returned_json['course_id']
-      assert_equal existing_course, returned_section.unit_group
+      assert_equal existing_unit_group.id, returned_json['course_id']
+      assert_equal existing_unit_group, returned_section.unit_group
       assert_equal @csp_script.id, returned_json['script']['id']
       assert_equal @csp_script, returned_section.script
     end
@@ -529,7 +529,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_id: @csp_course.id,
+      course_id: @csp_unit_group.id,
     }
     assert_response :success
     assert_equal 0, @teacher.scripts.size
@@ -563,7 +563,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section_with_script.id,
-      course_id: @course.id,
+      course_id: @unit_group.id,
       name: "My Section",
       login_type: Section::LOGIN_TYPE_PICTURE,
       grade: "K",
@@ -576,7 +576,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # Cannot use section_with_script.reload because login_type has changed
     section_with_script = Section.find(section_with_script.id)
 
-    assert_equal(@course.id, section_with_script.course_id)
+    assert_equal(@unit_group.id, section_with_script.course_id)
     assert_nil(section_with_script.script_id)
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
@@ -611,7 +611,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update: course_id is cleared if not provided and script has no default course" do
     sign_in @teacher
-    section = create(:section, user: @teacher, course_id: @course.id)
+    section = create(:section, user: @teacher, course_id: @unit_group.id)
 
     refute_nil section.course_id
 
@@ -697,7 +697,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in other_teacher
     post :update, params: {
       id: @section.id,
-      course_id: @course.id,
+      course_id: @unit_group.id,
     }
     assert_response :forbidden
   end
@@ -705,7 +705,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "update: cannot update section if not logged in " do
     post :update, params: {
       id: @section.id,
-      course_id: @course.id,
+      course_id: @unit_group.id,
     }
     assert_response :forbidden
   end
@@ -715,12 +715,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
     post :update, as: :json, params: {
       id: section.id,
-      course_id: @csp_course.id,
+      course_id: @csp_unit_group.id,
       script_id: @csp_script.id
     }
     assert_response :success
     section.reload
-    assert_equal(@csp_course.id, section.course_id)
+    assert_equal(@csp_unit_group.id, section.course_id)
     assert_equal(@csp_script.id, section.script_id)
   end
 
@@ -729,7 +729,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
     post :update, params: {
       id: section.id,
-      course_id: @course.id,
+      course_id: @unit_group.id,
       script_id: Script.artist_script.id
     }
     assert_response 400

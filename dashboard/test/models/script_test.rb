@@ -14,8 +14,8 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
-    @script_in_course = create(:script, hidden: true)
-    create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @script_in_course)
+    @script_in_unit_group = create(:script, hidden: true)
+    create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @script_in_unit_group)
 
     @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
     @script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
@@ -1257,9 +1257,9 @@ class ScriptTest < ActiveSupport::TestCase
   test "course_link returns nil if script is in two courses" do
     script = create :script
     unit_group = create :unit_group, name: 'csp'
-    other_course = create :unit_group, name: 'othercsp'
+    other_unit_group = create :unit_group, name: 'othercsp'
     create :unit_group_unit, position: 1, unit_group: unit_group, script: script
-    create :unit_group_unit, position: 1, unit_group: other_course, script: script
+    create :unit_group_unit, position: 1, unit_group: other_unit_group, script: script
 
     assert_nil script.course_link
   end
@@ -1276,7 +1276,7 @@ class ScriptTest < ActiveSupport::TestCase
     populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
     UnitGroup.stubs(:should_cache?).returns true
-    script = Script.get_from_cache(@script_in_course.name)
+    script = Script.get_from_cache(@script_in_unit_group.name)
     assert_equal "/courses/#{@unit_group.name}", script.course_link
   end
 
@@ -1769,32 +1769,32 @@ endvariants
   test 'section_hidden_unit_info' do
     teacher = create :teacher
     section1 = create :section, user: teacher
-    assert_equal({}, @script_in_course.section_hidden_unit_info(teacher))
+    assert_equal({}, @script_in_unit_group.section_hidden_unit_info(teacher))
 
-    create :section_hidden_script, section: section1, script: @script_in_course
-    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+    create :section_hidden_script, section: section1, script: @script_in_unit_group
+    assert_equal({section1.id => [@script_in_unit_group.id]}, @script_in_unit_group.section_hidden_unit_info(teacher))
 
     # other script has no effect
     other_script = create :script
     create :section_hidden_script, section: section1, script: other_script
-    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+    assert_equal({section1.id => [@script_in_unit_group.id]}, @script_in_unit_group.section_hidden_unit_info(teacher))
 
     # other teacher's sections have no effect
     other_teacher = create :teacher
     other_teacher_section = create :section, user: other_teacher
-    create :section_hidden_script, section: other_teacher_section, script: @script_in_course
-    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+    create :section_hidden_script, section: other_teacher_section, script: @script_in_unit_group
+    assert_equal({section1.id => [@script_in_unit_group.id]}, @script_in_unit_group.section_hidden_unit_info(teacher))
 
     # other section for same teacher hidden for same script appears in list
     section2 = create :section, user: teacher
-    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
-    create :section_hidden_script, section: section2, script: @script_in_course
+    assert_equal({section1.id => [@script_in_unit_group.id]}, @script_in_unit_group.section_hidden_unit_info(teacher))
+    create :section_hidden_script, section: section2, script: @script_in_unit_group
     assert_equal(
       {
-        section1.id => [@script_in_course.id],
-        section2.id => [@script_in_course.id]
+        section1.id => [@script_in_unit_group.id],
+        section2.id => [@script_in_unit_group.id]
       },
-      @script_in_course.section_hidden_unit_info(teacher)
+      @script_in_unit_group.section_hidden_unit_info(teacher)
     )
   end
 

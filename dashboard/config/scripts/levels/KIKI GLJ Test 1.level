@@ -1,0 +1,170 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_animation_mode": true,
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "edit_code": "false",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\n\r\nfunction tossable() {\r\n  var behavior = function(sprite) {\r\n    if (mouseWentUp()) {\r\n      sprite.maxVelocity = 5;\r\n      sprite.setVelocity(min(mouseX - pmouseX, sprite.maxVelocity), min(mouseY - pmouseY, sprite.maxVelocity));\r\n    }\r\n  }\r\n  behavior.name = \"tossable\";\r\n  return behavior;\r\n}\r\n\r\nfunction gravity() {\r\n    var behavior = function(sprite) {\r\n      sprite.maxVelocity = 5;\r\n      if (sprite.velocityY < sprite.maxVelocity) {\r\n    \tsprite.velocityY = sprite.velocityY + 0.1;\r\n      }\r\n    }\r\n    behavior.name=\"gravity\";\r\n    return behavior;\r\n}\r\n\r\nfunction bounceOffEdges(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.bounceOff(edges);\r\n  }\r\n  behavior.name = 'bounceOffEdges';\r\n  return behavior;\r\n}\r\n\r\nfunction followBehavior(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotateToDirection = true;\r\n    // If sprite is not touching target\r\n    if (!sprite.isTouching(target)) {\r\n      // Point sprite to target\r\n      sprite.pointTo(target.x, target.y);\r\n      // Set sprite speed to 2\r\n      sprite.velocity.x = cos(sprite.rotation) * 2;\r\n      sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    } else {\r\n      // Set sprite speed to 0\r\n      sprite.velocity.x = 0;\r\n      sprite.velocity.y = 0;\r\n    }\r\n  }\r\n  behavior.name = 'follow';\r\n  return behavior;\r\n}\r\nfunction fleeBehavior(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotateToDirection = true;\r\n    // Point sprite away from target\r\n    sprite.pointTo(target.x, target.y);\r\n    sprite.rotation = (sprite.rotation + 180) % 360;\r\n    // Set sprite speed to 2\r\n    sprite.velocity.x = cos(sprite.rotation) * 2;\r\n    sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    edges.displace(sprite);\r\n  }\r\n  behavior.name = 'flee';\r\n  return behavior;\r\n}\r\nfunction jump(sprite) {\r\n  if (sprite.y>339) {\r\n\t  sprite.y-=10;\r\n\t  sprite.velocity.y=-12;\r\n\t  console.log(sprite.y);\r\n  }\r\n}\r\nfunction setSize(sprite,scale) {\r\n  sprite.scale = scale;\r\n}\r\nfunction moveBehavior() {\r\n  move.name = \"move\";\r\n  return move;\r\n}\r\nfunction gravityBehavior() {\r\n  var behavior = function(sprite) {\r\n\tif (sprite.y <=340) {\r\n      if (sprite.velocity.y < 10)\r\n\t      sprite.velocity.y+=1;\r\n    } else {\r\n      sprite.velocity.y=0;\r\n    }\r\n  }\r\n  behavior.name = 'gravity';\r\n  return behavior;\r\n}\r\n",
+    "custom_blocks": "[\n  {\n    \"func\": \"draggable\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"draggable\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"gravity\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"gravity\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"tossable\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"tossable\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"bounceOffEdges\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"bounce off edges\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"bounceOff\",\n    \"color\": [\n      184,\n      1,\n      0.74\n    ],\n    \"args\": [\n      {\n        \"name\": \"TARGET\"\n      }\n    ],\n    \"blockText\": \"{THIS} bounce off {TARGET}\",\n    \"methodCall\": true\n  },\n  {\n    \"func\": \"setVelocity\",\n    \"color\": [\n      184,\n      1,\n      0.74\n    ],\n    \"args\": [\n      {\n        \"name\": \"X\"\n      },\n      {\n        \"name\": \"Y\"\n      }\n    ],\n    \"blockText\": \"Set {THIS} velocity {X}, {Y}\",\n    \"methodCall\": true\n  },\n  {\n    \"func\": \"followBehavior\",\n    \"blockText\": \"chase {TARGET}\",\n    \"args\": [\n      {\n        \"name\": \"TARGET\"\n      }\n    ],\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"fleeBehavior\",\n    \"blockText\": \"flee {TARGET}\",\n    \"args\": [\n      {\n        \"name\": \"TARGET\"\n      }\n    ],\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"expression\": \"edges\",\n    \"blockText\": \"edges\",\n    \"name\": \"edges\",\n    \"returnType\": \"None\"\n  },\n  {\n    \"func\": \"gravityBehavior\",\n    \"blockText\": \"gravity\",\n    \"args\": [],\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"followBehavior\",\n    \"blockText\": \"chase {TARGET}\",\n    \"args\": [\n      {\n        \"name\": \"TARGET\"\n      }\n    ],\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"moveBehavior\",\n    \"blockText\": \"move\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"jump\",\n    \"blockText\": \"{SPRITE} jumps\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  }\n]\n",
+    "parent_level_id": 11577,
+    "contained_level_names": [
+      "KIKI GLJ Test Response"
+    ],
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-21 19:18:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-02-23 01:34:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-02-23 01:34:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-09 23:59:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-09 23:59:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-10 00:00:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-10 00:00:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 01:25:54 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 01:26:33 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 01:28:15 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 01:28:50 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 01:33:35 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 01:35:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 16:59:55 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 17:46:47 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 17:50:26 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 17:51:57 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 17:52:35 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 17:54:40 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 17:55:26 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 17:56:26 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 17:57:53 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 18:03:48 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 18:13:33 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-12 21:56:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-19 18:51:37 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-19 23:42:50 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-19 23:45:44 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 00:32:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 00:39:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 02:20:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 02:24:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 02:40:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 02:42:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 02:56:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 18:48:44 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 18:53:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 18:59:58 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 19:04:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 19:18:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 19:19:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 19:23:46 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-21 19:34:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="sprite_variables_set" inline="false">
+              <title name="VAR">mySprite</title>
+              <value name="VALUE">
+                <block type="gamelab_makeNewSprite" inline="true">
+                  <title name="ANIMATION">"plane"</title>
+                  <value name="X">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                  <value name="Y">
+                    <block type="math_number">
+                      <title name="NUM">150</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_addBehaviorSimple" inline="true">
+                  <value name="BEHAVIOR">
+                    <block type="gamelab_moveBehavior"/>
+                  </value>
+                  <value name="SPRITE">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">mySprite</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">move</title>
+          <statement name="STACK">
+            <block type="gamelab_moveRight" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">mySprite</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Make Sprite">
+          <block type="sprite_variables_set" inline="false">
+            <title name="VAR">myCat</title>
+          </block>
+          <block type="gamelab_makeNewSprite" inline="true">
+            <title name="ANIMATION">"dog"</title>
+            <value name="X">
+              <block type="math_number">
+                <title name="NUM">200</title>
+              </block>
+            </value>
+            <value name="Y">
+              <block type="math_number">
+                <title name="NUM">200</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Movement">
+          <block type="gamelab_moveUp" inline="true">
+            <value name="THIS">
+              <block type="sprite_variables_get">
+                <title name="VAR">myCat</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveDown" inline="true">
+            <value name="THIS">
+              <block type="sprite_variables_get">
+                <title name="VAR">myCat</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveLeft" inline="true">
+            <value name="THIS">
+              <block type="sprite_variables_get">
+                <title name="VAR">myCat</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveRight" inline="true">
+            <value name="THIS">
+              <block type="sprite_variables_get">
+                <title name="VAR">myCat</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Behaviors">
+          <block type="gamelab_gravityBehavior"/>
+          <block type="gamelab_moveBehavior"/>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>
