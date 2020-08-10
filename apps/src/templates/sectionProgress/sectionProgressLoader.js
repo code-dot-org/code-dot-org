@@ -118,7 +118,9 @@ export function loadScript(scriptId, sectionId) {
   });
 
   requests.push(scriptRequest);
+  debugger;
   Promise.all(requests).then(() => {
+    debugger;
     const studentLevelProgress =
       sectionProgress.studentLevelProgressByScript[scriptId];
     const studentLevelPairing =

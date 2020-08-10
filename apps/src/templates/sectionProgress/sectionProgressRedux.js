@@ -65,6 +65,7 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === FINISH_LOADING_PROGRESS) {
+    debugger;
     return {
       ...state,
       isLoadingProgress: false
@@ -85,28 +86,29 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === ADD_DATA_BY_SCRIPT) {
+    debugger;
     const scriptId = action.scriptId;
     return {
       ...state,
       scriptDataByScript: {
         ...state.scriptDataByScript,
-        [scriptId]: action.data.scriptData
+        ...action.data.scriptDataByScript
       },
       levelsByLessonByScript: {
         ...state.levelsByLessonByScript,
-        [scriptId]: action.data.levelsByLesson
+        ...action.data.levelsByLessonByScript
       },
       studentLevelProgressByScript: {
         ...state.studentLevelProgressByScript,
-        [scriptId]: action.data.studentLevelProgress
+        ...action.data.studentLevelProgressByScript
       },
       studentLevelPairingByScript: {
         ...state.studentLevelPairingByScript,
-        [scriptId]: action.data.studentLevelPairing
+        ...action.data.studentLevelPairingByScript
       },
       studentTimestampsByScript: {
-        ...state.studentLevelPairingByScript, // double check that this line should be here... it wasn't before the refactor
-        [scriptId]: action.data.studentTimestamps
+        ...state.studentTimestampsByScript, // double check that this line should be here... it wasn't before the refactor
+        ...action.data.studentTimestampsByScript
       }
     };
   }
@@ -154,6 +156,7 @@ export const getCurrentProgress = state => {
  * @returns {scriptDataPropType} object containing metadata about the script structure
  */
 export const getCurrentScriptData = state => {
+  debugger;
   const script =
     state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId];
 

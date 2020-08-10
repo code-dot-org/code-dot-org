@@ -81,7 +81,7 @@ class SectionProgress extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
-    loadScript: PropTypes.func.isRequired,
+    // loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
@@ -91,12 +91,12 @@ class SectionProgress extends Component {
   };
 
   componentDidMount() {
-    this.props.loadScript(this.props.scriptId, this.props.section.id);
+    loadScript(this.props.scriptId, this.props.section.id);
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    this.props.loadScript(scriptId, this.props.section.id);
+    loadScript(scriptId, this.props.section.id);
 
     firehoseClient.putRecord(
       {
@@ -202,7 +202,7 @@ class SectionProgress extends Component {
       isLoadingProgress,
       showStandardsIntroDialog
     } = this.props;
-
+debugger;
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
     const scriptWithStandardsSelected =
@@ -294,9 +294,9 @@ export default connect(
     localeCode: state.locales.localeCode
   }),
   dispatch => ({
-    loadScript(scriptId, sectionId) {
-      dispatch(loadScript(scriptId, sectionId));
-    },
+    // loadScript(scriptId, sectionId) {
+    //   dispatch(loadScript(scriptId, sectionId));
+    // },
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
     },
