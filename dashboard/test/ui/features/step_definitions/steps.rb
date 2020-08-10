@@ -1373,8 +1373,10 @@ When(/^I am not signed in/) do
   steps 'element ".header_user:contains(Sign in)" is visible'
 end
 
-And(/^I delete the cookie named "([^"]*)"$/) do |cookie|
-  @browser.manage.delete_cookie cookie
+And(/^I delete the cookie named "([^"]*)"$/) do |cookie_name|
+  if @browser.manage.all_cookies.any? {|cookie| cookie[:name] == cookie_name}
+    @browser.manage.delete_cookie cookie
+  end
 end
 
 When(/^I debug cookies$/) do
