@@ -2,7 +2,7 @@ hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit7/"], ["vocabulary", "https://curriculum.code.org/csp-20/unit7/vocab/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit7/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit7/standards/"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit7/{LESSON}'
