@@ -134,22 +134,22 @@ id:
         title: Loop Unplugged
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       courseB_unplugged_MRF:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Dalam perjalanan ini, anda akan 'program' teman-teman anda!
       courseB_unplugged_loopyMRF:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Seperti di "Teman Robot Saya", anda akan"memprogram" teman-teman anda, tapi kali ini dengan loop!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       courseD_unplugged_digitalCitizenship:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital.
       courseE_unplugged_privateInformation:
         title: 'Pendidikan Akal Sehat: Privasi dan Informasi Pribadi '
         desc: Hari ini anda akan belajar perbedaan antara privasi dan informasi pribadi!
       courseF_unplugged_powerOfWords:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       deeper learning description:
         desc: 'terjemahan hilang: en-US.data.unplugged.desc'
@@ -249,10 +249,10 @@ id:
         title: Pemrograman grafis diatas kertas
         desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       Conditionals_2018:
         title: Kondisi
@@ -310,7 +310,7 @@ id:
         title: Pemrograman bergiliran
         desc: Aktivitas ini akan dimulai dengan pelajaran singkat tentang debugging dan kegigihan, lalu segera beralih ke berpacu dengan waktu pada saat para siswa menyebar ke dalam tim dan bekerja sama untuk membuat sebuah program, satu instruksi setiap saat.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital.
       BinaryImages_2019:
         title: gambar Biner
@@ -334,7 +334,7 @@ id:
         title: Dapat berulang-ulang
         desc: Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       BigEvent_2019:
         title: Acara besar

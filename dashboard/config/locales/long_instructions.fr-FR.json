@@ -2854,6 +2854,7 @@
         "courseF_bee_variables_4_2018": "« Incroyable ! »   Modifie le code afin qu'il fonctionne pour cette énigme.",
         "courseF_bee_variables_4_2019": "« Continuons ! »\n\nModifie le code afin qu'il fonctionne pour cette énigme.",
         "courseF_bee_variables_4_2020": "« Continuons ! »\n\nModifie le code afin qu'il fonctionne pour cette énigme.",
+        "courseF_extras_sim": "# Crée ta propre simulation!\n\nVoici une autre version de la simulation. Essaye de faire quelques changements sur les costumes du lutin ou le code ci-dessous. Amuse-toi à personnaliser ta propre simulation!",
         "courseF_playlab_variables1a": "Les variables peuvent être utilisées pour stocker le texte que tu souhaites utiliser ultérieurement. \n\nFais crier \"But !\", par Kiki, le joueur de football, en attribuant ce texte à la variable `crier`.",
         "courseF_playlab_variables2b": "Nous pouvons rendre les phrases plus intéressantes en mélangeant des morceaux de texte avec des variables. \n\nInsère la variable `couleur` au milieu d'une phrase en la positionnant dans l'emplacement vide du bloc `joindre`.",
         "courseF_playlab_variables3b_josh": "Aide Kiki à avoir une conversation avec Brian en utilisant la variable \"âge\" partout où l'âge `12` devrait être utilisé. ",
