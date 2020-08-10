@@ -17,6 +17,7 @@ import {
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import GoogleClassroomShareButton from './GoogleClassroomShareButton';
 
 const styles = {
   buttonContainer: {
@@ -34,6 +35,7 @@ const styles = {
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
+    shareUrl: PropTypes.string.isRequired,
 
     // redux provided
     sectionId: PropTypes.string,
@@ -66,7 +68,8 @@ class ProgressLessonTeacherInfo extends React.Component {
       scriptAllowsHiddenStages,
       hiddenStageState,
       hasNoSections,
-      lesson
+      lesson,
+      shareUrl
     } = this.props;
 
     const showHiddenForSectionToggle =
@@ -97,6 +100,11 @@ class ProgressLessonTeacherInfo extends React.Component {
             onChange={this.onClickHiddenToggle}
           />
         )}
+        <GoogleClassroomShareButton
+          buttonId={`gc-button-${lesson.id}`}
+          url={shareUrl}
+          title={lesson.name}
+        />
       </TeacherInfoBox>
     );
   }
