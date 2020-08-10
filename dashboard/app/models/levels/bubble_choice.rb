@@ -63,6 +63,11 @@ class BubbleChoice < DSLDefined
     i.present? ? i + 1 : nil
   end
 
+  # @override
+  def all_child_levels
+    sublevels
+  end
+
   # Summarizes the level.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
   # previous/next levels, and script will be included in the summary.
