@@ -985,6 +985,12 @@ pl:
         text: sprite {SPRITE} rozpoczyna się {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        text: w {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': sekundy
+            '"frames"': ramki
       gamelab_bounceOff:
         text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
@@ -1008,6 +1014,8 @@ pl:
         text: kliknął {SPRITE}
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
+      gamelab_countByAnimation:
+        text: liczba {SPRITE}
       gamelab_createNewSprite:
         text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at
           {LOCATION}"
@@ -1017,6 +1025,8 @@ pl:
         text: jest przeciągany
       gamelab_edgesDisplace:
         text: krawędzie bloku {SPRITE} z ruchu
+      gamelab_getAllSprites:
+        text: wszystkie duszki
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1034,11 +1044,48 @@ pl:
             '"this"': tego
             '"other"': inne
       gamelab_getTime:
+        text: czas w {UNIT}
         options:
           UNIT:
             '"seconds"': sekundy
+            '"frames"': ramki
       gamelab_hideTitleScreen:
         text: ukryj ekran tytułowy
+      gamelab_isKeyPressed:
+        text: czy {KEY} został naciśnięty
+        options:
+          KEY:
+            '"up"': do góry
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"space"': przestrzeń
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} dotyka krawędzi"
       gamelab_isTouchingSprite:
@@ -1093,6 +1140,8 @@ pl:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
+      gamelab_makeNumSprites:
+        text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       gamelab_mirrorSprite:
         text: "{SPRITE} twarz {DIRECTION}"
         options:

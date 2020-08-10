@@ -15,27 +15,6 @@ az:
             onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar üçün tövsiyyə olunur.
           description_short: Kurs 1 oxumağı təzə öyrənənlər üçü hazırlarnıb.
           description_audience: 4+ yaş (oxumağı bacarmayanlar)
-          stages:
-            'Artist: Loops':
-              name: 'Rəssam: Dövrlər'
-            'Artist: Sequence':
-              name: 'Rəssam: Ardıcıllıq'
-            'Artist: Shapes':
-              name: 'Rəssam: Fiqurlar'
-            'Bee: Loops':
-              name: 'Arı: Dövrlər'
-            'Bee: Sequence':
-              name: 'Arı: Ardıcıllıq'
-            Happy Maps:
-              name: Şən xəritələr
-            'Maze: Debugging':
-              name: 'Labirint: Sazlama'
-            'Maze: Loops':
-              name: 'Labirint: Dövrlər'
-            'Maze: Sequence':
-              name: 'Labirint: Ardıcıllıq'
-            'Studio: Create a Story':
-              name: 'Oyun labı: Bir əhvalat düzəldin'
           lessons:
             'Artist: Loops':
               name: 'Rəssam: Dövrlər'
@@ -65,35 +44,6 @@ az:
             və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə olunur.
           description_short: Kurs 2 oxumağı bacaran şagirdlər üçün hazırlanıb.
           description_audience: 6+ yaş (oxuma tələb olunur)
-          stages:
-            'Artist: Debugging':
-              name: 'Rəssam: Sazlama'
-            'Artist: Loops':
-              name: 'Rəssam: Dövrlər'
-            'Artist: Nested Loops':
-              name: 'Rəssam: İç-içə dövrlər'
-            'Artist: Sequence':
-              name: 'Rəssam: Ardıcıllıq'
-            'Bee: Conditionals':
-              name: 'Arı: Şərti ifadələr'
-            'Bee: Debugging':
-              name: Arı Sazlama
-            'Bee: Loops':
-              name: 'Arı: Dövrlər'
-            Conditionals:
-              name: Şərti ifadələr
-            Flappy:
-              name: Flappy
-            Graph Paper Programming:
-              name: Millimetrlik kağızda proqramlaşdırma
-            'Maze: Loops':
-              name: 'Labirint: Dövrlər'
-            'Maze: Sequence':
-              name: 'Labirint: Ardıcıllıq'
-            Relay programming:
-              name: Estafet proqramlaşdırması
-            'Studio: Create a Story':
-              name: 'Oyun labı: Bir əhvalat düzəldin'
           lessons:
             'Artist: Debugging':
               name: 'Rəssam: Sazlama'
@@ -127,31 +77,6 @@ az:
           title: Kurs 3
           description_short: Kurs 3 Kurs 2-nin davamıdır.
           description_audience: 8+ yaş (Kurs 2-dən sonra)
-          stages:
-            Artist:
-              name: Rəssam
-            'Artist: Functions':
-              name: 'Rəssam: Funksiyalar'
-            'Artist: Nested Loops':
-              name: 'Rəssam: İç-içə dövrlər'
-            'Bee: Conditionals':
-              name: 'Arı: Şərti ifadələr'
-            'Bee: Debugging':
-              name: Arı Sazlama
-            'Bee: Functions':
-              name: 'Arı: Funksiyalar'
-            Bounce:
-              name: Tullan
-            Computational Thinking:
-              name: Hesablama təfəkkürü
-            Dice Race:
-              name: Zər Yarışı
-            Internet:
-              name: İnternet
-            Maze:
-              name: Labirint
-            'Studio: Create a Story':
-              name: 'Oyun labı: Bir əhvalat düzəldin'
           lessons:
             Artist:
               name: Rəssam
@@ -181,9 +106,6 @@ az:
           title: Oyun labı
           description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
           description_short: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
-          stages:
-            Play Lab:
-              name: Oyun labı
           lessons:
             Play Lab:
               name: Oyun labı
@@ -191,9 +113,6 @@ az:
           title: Rəssam
           description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
           description_short: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
-          stages:
-            Artist:
-              name: Rəssam
           lessons:
             Artist:
               name: Rəssam
@@ -201,9 +120,6 @@ az:
           title: Ənənəvi labirint
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
-          stages:
-            Maze:
-              name: Labirint
           lessons:
             Maze:
               name: Labirint
@@ -215,9 +131,6 @@ az:
             biləcəyiniz bir qış möcüzəsi quracaqsınız!
           description_short: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və
             Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək.
-          stages:
-            Artist:
-              name: Rəssam
           lessons:
             Artist:
               name: Rəssam
@@ -225,17 +138,6 @@ az:
           title: Kurs 4
           description_short: Kurs 4 üçün şagirdlər artıq Kurs 2 və 3-ü keçmiş olmalıdırlar.
           description_audience: 10+ yaş (Kurs 3-dən sonra)
-          stages:
-            Artist:
-              name: Rəssam
-            'Artist: Functions':
-              name: 'Rəssam: Funksiyalar'
-            'Artist: Functions with Parameters':
-              name: 'Rəssam: Parametrli funksiyalar'
-            'Artist: Variables':
-              name: 'Rəssam: Dəyişənlər'
-            Maze and Bee:
-              name: Labirint və arı
           lessons:
             Artist:
               name: Rəssam
@@ -249,21 +151,6 @@ az:
               name: Labirint və arı
         Course4pre:
           title: Kurs 4 üçün lazımi şərtlər
-          stages:
-            'Artist: Functions':
-              name: 'Rəssam: Funksiyalar'
-            'Artist: Loops':
-              name: 'Rəssam: Dövrlər'
-            'Artist: Nested Loops':
-              name: 'Rəssam: İç-içə dövrlər'
-            'Artist: Sequence':
-              name: 'Rəssam: Ardıcıllıq'
-            'Bee: Conditionals':
-              name: 'Arı: Şərti ifadələr'
-            'Bee: Debugging':
-              name: Arı Sazlama
-            'Maze: Sequence':
-              name: 'Labirint: Ardıcıllıq'
           lessons:
             'Artist: Functions':
               name: 'Rəssam: Funksiyalar'
@@ -280,13 +167,6 @@ az:
             'Maze: Sequence':
               name: 'Labirint: Ardıcıllıq'
         usability:
-          stages:
-            Binary:
-              name: İkilik
-            Intro:
-              name: Giriş
-            Variables:
-              name: dəyişənlər
           lessons:
             Binary:
               name: İkilik
@@ -295,16 +175,10 @@ az:
             Variables:
               name: dəyişənlər
         algebra:
-          stages:
-            'Eval: Conditionals':
-              name: Şərti ifadələr
           lessons:
             'Eval: Conditionals':
               name: Şərti ifadələr
         infinity:
-          stages:
-            Infinity:
-              name: Sonsuzluq
           lessons:
             Infinity:
               name: Sonsuzluq
@@ -317,47 +191,6 @@ az:
           description_short: Bu 20 saatlıq kurs informatika və proqramlaşdırmanın
             2-4-cü kurslardakı əsas anlayışlarını təqdim edir.
           description_audience: 10+ yaş (Kurs 3-dən sonra)
-          stages:
-            Abstraction:
-              name: Mücərrədlik
-            Algorithms:
-              name: Alqoritmlər
-            Computational Thinking:
-              name: Hesablama təfəkkürü
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
-            Graph Paper Programming:
-              name: Millimetrlik kağızda proqramlaşdırma
-            Introduction to Computer Science:
-              name: İnformatikaya giriş
-            Relay Programming:
-              name: Estafet proqramlaşdırması
-            Song Writing:
-              name: Mahnı bəstələmə
-            The Artist:
-              name: Rəssam
-            The Artist 2:
-              name: Rəssam 2
-            The Artist 3:
-              name: Rəssam 3
-            The Artist 4:
-              name: Rəssam 4
-            The Artist 5:
-              name: Rəssam 5
-            The Farmer:
-              name: Fermer
-            The Farmer 2:
-              name: Fermer 2
-            The Farmer 3:
-              name: Fermer 3
-            The Internet:
-              name: İnternet
-            The Maze:
-              name: Labirint
-            Wrap-up:
-              name: Yekun
           lessons:
             Abstraction:
               name: Mücərrədlik
@@ -403,13 +236,6 @@ az:
           title: Koda düzəliş et
           description: Koda düzəliş et
           description_short: Koda düzəliş et
-          stages:
-            Play Lab:
-              name: Oyun labı
-            The Artist:
-              name: Rəssam
-            The Maze:
-              name: Labirint
           lessons:
             Play Lab:
               name: Oyun labı
@@ -421,15 +247,6 @@ az:
           title: Hadisələr
           description: Hadisələr
           description_short: Hadisələr
-          stages:
-            Bounce:
-              name: Tullan
-            Calc:
-              name: Hesablama
-            Eval:
-              name: Qiymət
-            Studio:
-              name: Studiya
           lessons:
             Bounce:
               name: Tullan
@@ -443,25 +260,16 @@ az:
           title: Qanadlı Kod
           description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz?
             Qanadlı Kod dərsliyimizi sınayın!
-          stages:
-            Flappy Code:
-              name: Qanadlı Kod
           lessons:
             Flappy Code:
               name: Qanadlı Kod
         jigsaw:
           title: Mozaika
-          stages:
-            Jigsaw:
-              name: Mozaika
           lessons:
             Jigsaw:
               name: Mozaika
         step:
           title: addım
-          stages:
-            Step:
-              name: addım
           lessons:
             Step:
               name: addım
@@ -469,71 +277,32 @@ az:
           title: Kod Saatı 2013
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
-          stages:
-            Hour of Code 2013:
-              name: Kod Saatı 2013
           lessons:
             Hour of Code 2013:
               name: Kod Saatı 2013
         CodeStudioPuzzleChallenge:
-          stages:
-            Puzzles:
-              name: Tapmacalar
           lessons:
             Puzzles:
               name: Tapmacalar
         Tutorial Video - Code Studio Puzzle Challenge:
-          stages:
-            Puzzles:
-              name: Tapmacalar
           lessons:
             Puzzles:
               name: Tapmacalar
         CSPLessonSamples:
-          stages:
-            Lesson 14:
-              name: Dərs 14
-            Lesson 15:
-              name: Dərs 15
           lessons:
             Lesson 14:
               name: Dərs 14
             Lesson 15:
               name: Dərs 15
         sciencePD2:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
         cspunit2:
-          stages:
-            The Internet:
-              name: İnternet
           lessons:
             The Internet:
               name: İnternet
         allthethings:
-          stages:
-            Artist:
-              name: Rəssam
-            Bee:
-              name: Arı
-            Bounce:
-              name: Tullan
-            Farmer:
-              name: Fermer
-            Flappy:
-              name: Flappy
-            Jigsaw:
-              name: Mozaika
-            Maze:
-              name: Labirint
-            Minecraft:
-              name: Minecraft
-            Studio:
-              name: Studiya
           lessons:
             Artist:
               name: Rəssam
@@ -554,22 +323,10 @@ az:
             Studio:
               name: Studiya
         cspfacilitator:
-          stages:
-            App Lab:
-              name: Proqram Labı
           lessons:
             App Lab:
               name: Proqram Labı
         ECSPD2:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Yekun
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -580,36 +337,18 @@ az:
             Wrap-up:
               name: Yekun
         sciencePD2b:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
         science-PD2:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
         sciencePD2b-iZone:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
         ECSPD2-iZone:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Yekun
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -620,15 +359,6 @@ az:
             Wrap-up:
               name: Yekun
         ECSPD2-NexTech:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Yekun
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -639,27 +369,16 @@ az:
             Wrap-up:
               name: Yekun
         CSPPD2:
-          stages:
-            Wrap Up and Next Steps:
-              name: Yekun və sonrakı addımlar
           lessons:
             Wrap Up and Next Steps:
               name: Yekun və sonrakı addımlar
         asUnplugged:
-          stages:
-            Graph Paper Programming:
-              name: Millimetrlik kağızda proqramlaşdırma
-            Happy Maps:
-              name: Şən xəritələr
           lessons:
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
             Happy Maps:
               name: Şən xəritələr
         ScienceP3OLPT2:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
@@ -685,32 +404,20 @@ az:
             dünyasında bir macəra yaşadın
           description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
         ScienceP3OLPT3:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
         csp1-2017:
-          stages:
-            The Internet:
-              name: İnternet
           lessons:
             The Internet:
               name: İnternet
         CSDU3-Draft:
-          stages:
-            Functions:
-              name: funksiyalar
           lessons:
             Functions:
               name: funksiyalar
         CSF_Secret_Sample:
           description_audience: 8+ yaş (Kurs 2-dən sonra)
         ECSPD1:
-          stages:
-            Wrap Up:
-              name: Yekun
           lessons:
             Wrap Up:
               name: Yekun
@@ -731,9 +438,6 @@ az:
             practice:
               display_name: Öyrədici proqramlar
         MikeTest:
-          stages:
-            Artist Functions:
-              name: Rəssam Funksiyalar
           lessons:
             Artist Functions:
               name: Rəssam Funksiyalar
@@ -748,55 +452,28 @@ az:
             practice:
               display_name: Öyrədici proqramlar
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: 'Arı: Şərti ifadələr'
           lessons:
             'Bee: Conditionals':
               name: 'Arı: Şərti ifadələr'
         gradeKinder:
-          stages:
-            Events:
-              name: Hadisələr
-            Loops:
-              name: dövrlər
           lessons:
             Events:
               name: Hadisələr
             Loops:
               name: dövrlər
         grade1:
-          stages:
-            Events:
-              name: Hadisələr
-            Loops:
-              name: dövrlər
           lessons:
             Events:
               name: Hadisələr
             Loops:
               name: dövrlər
         grade5:
-          stages:
-            'Artist: Functions with Parameters':
-              name: 'Rəssam: Parametrli funksiyalar'
-            'Artist: Variables':
-              name: 'Rəssam: Dəyişənlər'
           lessons:
             'Artist: Functions with Parameters':
               name: 'Rəssam: Parametrli funksiyalar'
             'Artist: Variables':
               name: 'Rəssam: Dəyişənlər'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Wrap-up:
-              name: Yekun
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -807,13 +484,6 @@ az:
             Wrap-up:
               name: Yekun
         grade3:
-          stages:
-            'Artist: Nested Loops':
-              name: 'Rəssam: İç-içə dövrlər'
-            Bee Debugging:
-              name: Arı Sazlama
-            Bounce:
-              name: Tullan
           lessons:
             'Artist: Nested Loops':
               name: 'Rəssam: İç-içə dövrlər'
@@ -830,13 +500,6 @@ az:
             practice:
               display_name: Öyrədici proqramlar
         csd3-2017:
-          stages:
-            Functions:
-              name: funksiyalar
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
           lessons:
             Functions:
               name: funksiyalar
@@ -845,28 +508,10 @@ az:
             Conditionals:
               name: Şərti ifadələr
         grade2:
-          stages:
-            Flappy:
-              name: Flappy
           lessons:
             Flappy:
               name: Flappy
         k5concepts:
-          stages:
-            Binary:
-              name: İkilik
-            Conditionals:
-              name: Şərti ifadələr
-            Events:
-              name: Hadisələr
-            Functions:
-              name: funksiyalar
-            Functions with Parameters:
-              name: Parametrli funksiyalar
-            Loops:
-              name: dövrlər
-            Variables:
-              name: dəyişənlər
           lessons:
             Binary:
               name: İkilik
@@ -899,28 +544,10 @@ az:
             practice:
               display_name: Öyrədici proqramlar
         basketball:
-          stages:
-            Bounce:
-              name: Tullan
           lessons:
             Bounce:
               name: Tullan
-        fesbinary:
-          title: İkilik
-          stages:
-            Binary Images:
-              name: İkilik təsvirlər
-            Play Lab:
-              name: Oyun labı
-          lessons:
-            Binary Images:
-              name: İkilik təsvirlər
-            Play Lab:
-              name: Oyun labı
         csd2-2017:
-          stages:
-            Lists:
-              name: Siyahılar
           lessons:
             Lists:
               name: Siyahılar
@@ -933,27 +560,14 @@ az:
             practice:
               display_name: Öyrədici proqramlar
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: Qanadlı Kod
           lessons:
             Flappy Code:
               name: Qanadlı Kod
         coursed-draft:
-          stages:
-            Introduction:
-              name: Giriş
           lessons:
             Introduction:
               name: Giriş
         coursee-draft:
-          stages:
-            Internet:
-              name: İnternet
-            Introduction:
-              name: Giriş
-            Conditionals:
-              name: Şərti ifadələr
           lesson_groups:
             content:
               display_name: Məzmun
@@ -965,9 +579,6 @@ az:
             Conditionals:
               name: Şərti ifadələr
         coursef-draft:
-          stages:
-            Introduction:
-              name: Giriş
           lesson_groups:
             content:
               display_name: Məzmun
@@ -977,32 +588,20 @@ az:
         classic-hoc-impact-study:
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
-          stages:
-            Hour of Code 2013:
-              name: Kod Saatı 2013
           lessons:
             Hour of Code 2013:
               name: Kod Saatı 2013
         hoc-impact-study:
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
-          stages:
-            Hour of Code 2013:
-              name: Kod Saatı 2013
           lessons:
             Hour of Code 2013:
               name: Kod Saatı 2013
         2016_sciencePD-phase2b:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
         2016_sciencePD_phase2b:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
@@ -1023,23 +622,14 @@ az:
             practice:
               display_name: Öyrədici proqramlar
         sciencepd4:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
         science-pd-ol-pt-5:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
         csf2harvey:
-          stages:
-            Binary:
-              name: İkilik
           lesson_groups:
             content:
               display_name: Məzmun
@@ -1047,9 +637,6 @@ az:
             Binary:
               name: İkilik
         sciencepd5:
-          stages:
-            Wrap-Up:
-              name: Sarımaq
           lessons:
             Wrap-Up:
               name: Sarımaq
@@ -1066,13 +653,6 @@ az:
             content:
               display_name: Məzmun
         csd6-draft:
-          stages:
-            Lists:
-              name: Siyahılar
-            Map:
-              name: Xəritə
-            Functions with Parameters:
-              name: Parametrli funksiyalar
           lessons:
             Lists:
               name: Siyahılar
@@ -1081,38 +661,20 @@ az:
             Functions with Parameters:
               name: Parametrli funksiyalar
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: Giriş
           lessons:
             Introduction:
               name: Giriş
         coursed-ramp:
-          stages:
-            Introduction:
-              name: Giriş
           lessons:
             Introduction:
               name: Giriş
         coursee-ramp:
-          stages:
-            Introduction:
-              name: Giriş
-            Conditionals:
-              name: Şərti ifadələr
           lessons:
             Introduction:
               name: Giriş
             Conditionals:
               name: Şərti ifadələr
         csd6-2017:
-          stages:
-            Lists:
-              name: Siyahılar
-            Functions with Parameters:
-              name: Parametrli funksiyalar
-            Functions with Parameters_:
-              name: Parametrli funksiyalar
           lessons:
             Lists:
               name: Siyahılar
@@ -1121,13 +683,6 @@ az:
             Functions with Parameters_:
               name: Parametrli funksiyalar
         csd3-draft:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
           lessons:
             Variables:
               name: dəyişənlər
@@ -1136,29 +691,14 @@ az:
             Functions:
               name: funksiyalar
         csd3-old:
-          stages:
-            Functions:
-              name: funksiyalar
           lessons:
             Functions:
               name: funksiyalar
         csd2-draft:
-          stages:
-            Lists:
-              name: Siyahılar
           lessons:
             Lists:
               name: Siyahılar
         csd3-chapters:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
-            'null':
-              name: boş
           lessons:
             Variables:
               name: dəyişənlər
@@ -1169,30 +709,18 @@ az:
             'null':
               name: boş
         coursef-ramp:
-          stages:
-            Introduction:
-              name: Giriş
           lessons:
             Introduction:
               name: Giriş
         artist-and-bb8:
-          stages:
-            Bounce:
-              name: Tullan
           lessons:
             Bounce:
               name: Tullan
         csdnovice:
-          stages:
-            Wrap Up:
-              name: Yekun
           lessons:
             Wrap Up:
               name: Yekun
         cspnovice:
-          stages:
-            Wrap Up:
-              name: Yekun
           lesson_groups:
             required:
               display_name: Yekun
@@ -1268,11 +796,6 @@ az:
             content:
               display_name: Məzmun
         express-2017:
-          stages:
-            Introduction:
-              name: Giriş
-            Internet:
-              name: İnternet
           lesson_groups:
             content:
               display_name: Məzmun
@@ -1282,34 +805,20 @@ az:
             Internet:
               name: İnternet
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: Təşəkkürlər,
           lessons:
             Thanks:
               name: Təşəkkürlər,
         e-f-ramp:
-          stages:
-            Conditionals:
-              name: Şərti ifadələr
-            Internet:
-              name: İnternet
           lessons:
             Conditionals:
               name: Şərti ifadələr
             Internet:
               name: İnternet
         new-d:
-          stages:
-            Introduction:
-              name: Giriş
           lessons:
             Introduction:
               name: Giriş
         new-express:
-          stages:
-            Introduction:
-              name: Giriş
           lesson_groups:
             content:
               display_name: Məzmun
@@ -1317,31 +826,16 @@ az:
             Introduction:
               name: Giriş
         new-e:
-          stages:
-            Conditionals:
-              name: Şərti ifadələr
-            Internet:
-              name: İnternet
           lessons:
             Conditionals:
               name: Şərti ifadələr
             Internet:
               name: İnternet
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Maynkraft Kod Saatı
           lessons:
             Minecraft Hour of Code:
               name: Maynkraft Kod Saatı
         course-e-2018:
-          stages:
-            Introduction:
-              name: Giriş
-            Conditionals:
-              name: Şərti ifadələr
-            Internet:
-              name: İnternet
           lessons:
             Introduction:
               name: Giriş
@@ -1350,27 +844,14 @@ az:
             Internet:
               name: İnternet
         course-f-2018:
-          stages:
-            Introduction:
-              name: Giriş
           lessons:
             Introduction:
               name: Giriş
         csd6-old:
-          stages:
-            Lists:
-              name: Siyahılar
           lessons:
             Lists:
               name: Siyahılar
         csd3-1819draft:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
           lessons:
             Variables:
               name: dəyişənlər
@@ -1379,13 +860,6 @@ az:
             Functions:
               name: funksiyalar
         csd3-2018:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
           lessons:
             Variables:
               name: dəyişənlər
@@ -1394,33 +868,14 @@ az:
             Functions:
               name: funksiyalar
         csd2-2018:
-          stages:
-            Lists:
-              name: Siyahılar
           lessons:
             Lists:
               name: Siyahılar
         coursea-2018:
-          stages:
-            'Programming: Happy Maps':
-              name: Şən xəritələr
           lessons:
             'Programming: Happy Maps':
               name: Şən xəritələr
         express-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Millimetrlik kağızda proqramlaşdırma
-            Introduction:
-              name: Giriş
-            'Unplugged: Binary':
-              name: İkilik təsvirlər
-            Internet:
-              name: İnternet
-            Relay Programming:
-              name: Estafet proqramlaşdırması
-            Graph Paper Programming:
-              name: Millimetrlik kağızda proqramlaşdırma
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
@@ -1435,17 +890,6 @@ az:
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
         coursed-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Millimetrlik kağızda proqramlaşdırma
-            Introduction:
-              name: Giriş
-            'Unplugged: Binary':
-              name: İkilik təsvirlər
-            Graph Paper Programming:
-              name: Millimetrlik kağızda proqramlaşdırma
-            Relay Programming:
-              name: Estafet proqramlaşdırması
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
@@ -1458,20 +902,10 @@ az:
             Relay Programming:
               name: Estafet proqramlaşdırması
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: Parametrli funksiyalar
           lessons:
             Functions with Parameters:
               name: Parametrli funksiyalar
         coursee-2018:
-          stages:
-            Introduction:
-              name: Giriş
-            Internet:
-              name: İnternet
-            Minecraft Hour of Code:
-              name: Maynkraft Kod Saatı
           lessons:
             Introduction:
               name: Giriş
@@ -1480,16 +914,10 @@ az:
             Minecraft Hour of Code:
               name: Maynkraft Kod Saatı
         coursef-2018:
-          stages:
-            Introduction:
-              name: Giriş
           lessons:
             Introduction:
               name: Giriş
         csp1-2018:
-          stages:
-            The Internet:
-              name: İnternet
           lessons:
             The Internet:
               name: İnternet
@@ -1572,13 +1000,6 @@ az:
             content:
               display_name: Məzmun
         csd-novice-18:
-          stages:
-            Wrap Up:
-              name: Yekun
-            Friday:
-              name: Cümə
-            Monday:
-              name: Bazar ertəsi
           lesson_groups:
             required:
               display_name: Yekun
@@ -1592,9 +1013,6 @@ az:
             Monday:
               name: Bazar ertəsi
         csd-apprentice-18:
-          stages:
-            Wrap Up:
-              name: Yekun
           lesson_groups:
             required:
               display_name: Yekun
@@ -1604,11 +1022,6 @@ az:
             Wrap Up:
               name: Yekun
         csp-novice-18:
-          stages:
-            Wrap Up:
-              name: Yekun
-            Monday:
-              name: Bazar ertəsi
           lesson_groups:
             required:
               display_name: Yekun
@@ -1620,9 +1033,6 @@ az:
             Monday:
               name: Bazar ertəsi
         csp-apprentice-18:
-          stages:
-            Wrap Up:
-              name: Yekun
           lesson_groups:
             required:
               display_name: Yekun
@@ -1638,23 +1048,14 @@ az:
             content:
               display_name: Məzmun
         frozen-2018:
-          stages:
-            Artist:
-              name: Rəssam
           lessons:
             Artist:
               name: Rəssam
         frozen-2018-test:
-          stages:
-            Artist:
-              name: Rəssam
           lessons:
             Artist:
               name: Rəssam
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: Rəssam
           lessons:
             Artist:
               name: Rəssam
@@ -1667,11 +1068,6 @@ az:
             csp_functions:
               display_name: funksiyalar
         coursef-2019:
-          stages:
-            The Artist:
-              name: Rəssam
-            Internet:
-              name: İnternet
           lesson_groups:
             csf_variables:
               display_name: dəyişənlər
@@ -1683,13 +1079,6 @@ az:
             Internet:
               name: İnternet
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Millimetrlik kağızda proqramlaşdırma
-            Relay Programming:
-              name: Estafet proqramlaşdırması
-            'Unplugged: Binary':
-              name: İkilik təsvirlər
           lesson_groups:
             csf_events:
               display_name: Hadisələr
@@ -1707,9 +1096,6 @@ az:
             'Unplugged: Binary':
               name: İkilik təsvirlər
         coursee-2019:
-          stages:
-            Internet:
-              name: İnternet
           lesson_groups:
             csf_functions:
               display_name: funksiyalar
@@ -1717,11 +1103,6 @@ az:
             Internet:
               name: İnternet
         express-2019:
-          stages:
-            Relay Programming:
-              name: Estafet proqramlaşdırması
-            Internet:
-              name: İnternet
           lesson_groups:
             csf_loops:
               display_name: dövrlər
@@ -1737,9 +1118,6 @@ az:
             Internet:
               name: İnternet
         andrea-test:
-          stages:
-            'null':
-              name: boş
           lesson_groups:
             required:
               display_name: Yekun
@@ -1759,9 +1137,6 @@ az:
             csf_events:
               display_name: Hadisələr
         coursea-2019:
-          stages:
-            'Programming: Happy Maps':
-              name: Şən xəritələr
           lesson_groups:
             csf_loops:
               display_name: dövrlər
@@ -1783,20 +1158,10 @@ az:
             csf_events:
               display_name: Hadisələr
         csd2-2019:
-          stages:
-            Lists:
-              name: Siyahılar
           lessons:
             Lists:
               name: Siyahılar
         csd3-2019:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
           lessons:
             Variables:
               name: dəyişənlər
@@ -1805,16 +1170,10 @@ az:
             Functions:
               name: funksiyalar
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Parametrli funksiyalar
           lessons:
             Functions with Parameters:
               name: Parametrli funksiyalar
         csp4-pilot:
-          stages:
-            Surveys:
-              name: Anketlər
           lesson_groups:
             csp_variables:
               display_name: dəyişənlər
@@ -1828,9 +1187,6 @@ az:
             Surveys:
               name: Anketlər
         csp1-2019:
-          stages:
-            The Internet:
-              name: İnternet
           lessons:
             The Internet:
               name: İnternet
@@ -1901,9 +1257,6 @@ az:
             csp_functions:
               display_name: funksiyalar
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: Millimetrlik kağızda proqramlaşdırma
           lessons:
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
@@ -1916,9 +1269,6 @@ az:
             required:
               display_name: Yekun
         fit2019-novice:
-          stages:
-            Wrap Up:
-              name: Yekun
           lesson_groups:
             required:
               display_name: Yekun
@@ -1928,9 +1278,6 @@ az:
             Wrap Up:
               name: Yekun
         fit2019-apprentice:
-          stages:
-            Wrap Up:
-              name: Yekun
           lesson_groups:
             required:
               display_name: Yekun
@@ -1940,20 +1287,10 @@ az:
             Wrap Up:
               name: Yekun
         csd2-pilot:
-          stages:
-            Lists:
-              name: Siyahılar
           lessons:
             Lists:
               name: Siyahılar
         csd3-pilot:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
           lessons:
             Variables:
               name: dəyişənlər
@@ -2040,9 +1377,6 @@ az:
             required:
               display_name: Yekun
         peru-2019:
-          stages:
-            Introduction:
-              name: Giriş
           lessons:
             Introduction:
               name: Giriş
@@ -2053,17 +1387,6 @@ az:
             required:
               display_name: Yekun
         k5-onlinepd-2019:
-          stages:
-            Loops:
-              name: dövrlər
-            Conditionals:
-              name: Şərti ifadələr
-            Events:
-              name: Hadisələr
-            Functions:
-              name: funksiyalar
-            Variables:
-              name: dəyişənlər
           lessons:
             Loops:
               name: dövrlər
@@ -2084,9 +1407,6 @@ az:
             csp_functions:
               display_name: funksiyalar
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: Şərti ifadələr
           lessons:
             Conditionals:
               name: Şərti ifadələr
@@ -2097,9 +1417,6 @@ az:
             csf_functions:
               display_name: funksiyalar
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Şərti ifadələr
           lesson_groups:
             csf_loops:
               display_name: dövrlər
@@ -2111,9 +1428,6 @@ az:
             Conditionals:
               name: Şərti ifadələr
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Şərti ifadələr
           lesson_groups:
             csf_loops:
               display_name: dövrlər
@@ -2143,22 +1457,10 @@ az:
             csp_loops:
               display_name: dövrlər
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Parametrli funksiyalar
           lessons:
             Functions with Parameters:
               name: Parametrli funksiyalar
         csd3-2020:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
-            Text:
-              name: mətn
           lessons:
             Variables:
               name: dəyişənlər
@@ -2169,9 +1471,6 @@ az:
             Text:
               name: mətn
         coursea-2020:
-          stages:
-            'Programming: Happy Maps':
-              name: Şən xəritələr
           lesson_groups:
             csf_loops:
               display_name: dövrlər
@@ -2195,13 +1494,6 @@ az:
             csf_events:
               display_name: Hadisələr
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Millimetrlik kağızda proqramlaşdırma
-            Relay Programming:
-              name: Estafet proqramlaşdırması
-            'Unplugged: Binary':
-              name: İkilik təsvirlər
           lesson_groups:
             csf_events:
               display_name: Hadisələr
@@ -2223,9 +1515,6 @@ az:
             csf_functions:
               display_name: funksiyalar
         coursef-2020:
-          stages:
-            Internet:
-              name: İnternet
           lesson_groups:
             csf_variables:
               display_name: dəyişənlər
@@ -2249,16 +1538,10 @@ az:
             csf_events:
               display_name: Hadisələr
         csp5-virtual:
-          stages:
-            Variables:
-              name: dəyişənlər
           lessons:
             Variables:
               name: dəyişənlər
         virtual-holding-place:
-          stages:
-            Functions:
-              name: funksiyalar
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2266,28 +1549,12 @@ az:
             Functions:
               name: funksiyalar
         code-break:
-          stages:
-            Algorithms:
-              name: Alqoritmlər
-            Events:
-              name: Hadisələr
           lessons:
             Algorithms:
               name: Alqoritmlər
             Events:
               name: Hadisələr
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: dövrlər
-            Events:
-              name: Hadisələr
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
-            Variables:
-              name: dəyişənlər
           lessons:
             Loops:
               name: dövrlər
@@ -2300,15 +1567,6 @@ az:
             Variables:
               name: dəyişənlər
         csd3-virtual:
-          stages:
-            Variables:
-              name: dəyişənlər
-            Text:
-              name: mətn
-            Conditionals:
-              name: Şərti ifadələr
-            Functions:
-              name: funksiyalar
           lessons:
             Variables:
               name: dəyişənlər
@@ -2326,9 +1584,6 @@ az:
             cspSurvey:
               display_name: Məzmun
         ui-test-script-in-course-2017:
-          stages:
-            Lesson:
-              name: Dərs
           lessons:
             Lesson:
               name: Dərs
@@ -2336,9 +1591,6 @@ az:
             lg_1:
               display_name: Məzmun
         ui-test-script-in-course-2019:
-          stages:
-            Lesson:
-              name: Dərs
           lessons:
             Lesson:
               name: Dərs
@@ -2346,9 +1598,6 @@ az:
             lg_1:
               display_name: Məzmun
         ui-test-versioned-script-2017:
-          stages:
-            Lesson:
-              name: Dərs
           lessons:
             Lesson:
               name: Dərs
@@ -2356,9 +1605,6 @@ az:
             lg_1:
               display_name: Məzmun
         ui-test-versioned-script-2019:
-          stages:
-            Lesson:
-              name: Dərs
           lessons:
             Lesson:
               name: Dərs

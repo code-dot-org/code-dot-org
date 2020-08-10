@@ -134,22 +134,22 @@ fr:
         title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       courseB_unplugged_MRF:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Dans cette leçon, tu "programmeras" tes amis!
       courseB_unplugged_loopyMRF:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Tout comme dans « Mes Amis Robotisés », tu vas « programmer » tes amis mais, cette fois, avec des boucles !
       courseC_Unplugged_ScreenOutTheMean:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       courseD_unplugged_digitalCitizenship:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education : Information Privée et Personnelle '
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       courseF_unplugged_powerOfWords:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       deeper learning description:
         desc: 'traduction manquante : en-US.data.unplugged.desc'
@@ -241,7 +241,7 @@ fr:
         title: Se Déplacer en Toute Sécurité
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants présentent comment rester en sécurité durant la navigation sur Internet.
       courseA_unplugged_loops_2018:
-        title: Les Boucles Débranchées
+        title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       BigEvent_2018:
         title: Le Grand Événement
@@ -250,10 +250,10 @@ fr:
         title: Programmation sur papier quadrillé
         desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades dans la reproduction d’un dessin.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       Conditionals_2018:
         title: Instructions conditionnelles
@@ -312,7 +312,7 @@ fr:
         title: Programmation de relais
         desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance, puis passera rapidement à une course contre la montre, pendant laquelle les élèves formeront des équipes et travailleront ensemble à la rédaction d'un programme, instruction par instruction.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
       BinaryImages_2019:
         title: Images Binaires
@@ -336,7 +336,7 @@ fr:
         title: Tourner en Rond
         desc: Cette leçon présente le concept de programmation des boucles (instructions répétées) par le biais d’une activité de danse. Les élèves apprendront une chorégraphie simple, puis devront la répéter.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Activité manuelle
+        title: Activité "Déconnectée"
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       BigEvent_2019:
         title: Le Grand Événement
@@ -359,7 +359,7 @@ fr:
         title: Se Déplacer en Toute Sécurité
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants présentent comment rester en sécurité durant la navigation sur Internet.
       courseA_unplugged_loops_2019:
-        title: Les Boucles Débranchées
+        title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       MoveItMoveIt_2019:
         title: Bouge, Bouge

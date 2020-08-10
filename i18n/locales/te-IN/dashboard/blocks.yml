@@ -836,6 +836,10 @@ te:
         text: సెటప్
       Dancelab_whenSetup2:
         text: సెటప్
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': సెకండ్లు
       gamelab_changePropBy:
         text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
         options:
@@ -855,6 +859,38 @@ te:
         options:
           UNIT:
             '"seconds"': సెకండ్లు
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': అప్
+            '"down"': డౌన్
+            '"left"': ఎడమ
+            '"right"': కుడి
+            '"space"': స్పేస్
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} జంప్ చేయండి {LOCATION} కు"
       gamelab_keyPressed:

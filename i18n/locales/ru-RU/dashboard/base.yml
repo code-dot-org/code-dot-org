@@ -310,10 +310,16 @@ ru:
       sections: "Секции"
       help_support: "Помощь и поддержка"
       report_bug: "Сообщить об ошибке"
+      report_abuse: "Сообщить о нарушении"
       teacher_community: "Сообщество учителей"
       professional_learning: "Профессиональное обучение"
       documentation: "Документация"
       tutorials: "Обучающие материалы"
+      app_lab_documentation: "Документация Лаборатории приложений"
+      app_lab_tutorials: "Уроки Лаборатории приложений"
+      game_lab_documentation: "Документация Лаборатории игр"
+      game_lab_tutorials: "Уроки Лаборатории игр"
+      sprite_lab_documentation: "Документация Лаборатории спрайтов"
       sprite_lab_tutorials: "Лаборатория спрайтов: учебники"
       educate_overview: "Обзор преподавателя"
       educate_elementary: "Начальная школа"
@@ -508,6 +514,7 @@ ru:
     no_primary_course: "Попробуйте курс студии кода"
     choose_next_course: "Попробуйте курс студии кода, выбрав один из вариантов ниже"
     print_certificate: "Распечатать сертификат"
+  certificate_sponsor_message: "%{sponsor_name} сделал щедрый подарок, чтобы спонсировать ваше обучение."
   move_students:
     new_section_dne: "Извините, но группа %{new_section_code} не существует. Пожалуйста, введите код другой группы."
     section_code_cant_be_current_section: "Текущий раздел не может быть таким же, как и новый раздел."
@@ -1051,7 +1058,9 @@ ru:
     logout: 'Выйти'
     yes: 'Да'
   page_not_found_title: "Страница не найдена"
-  page_not_found_header: '404: страница не найдена'
+  page_not_found_header: '404: Страница не найдена'
+  page_not_found_description: "Страница, которую вы ищете, отсутствует по этому адресу. Проверьте адрес в Интернете, повторите отправку или вернитесь на нашу домашнюю страницу."
+  page_not_found_button: "Вернуться на домашнюю страницу"
   copy: 'Копировать'
   maker:
     google_oauth:

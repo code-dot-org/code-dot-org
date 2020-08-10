@@ -1,0 +1,93 @@
+{
+ "pages": [
+  {
+   "name": "page_1",
+   "elements": [
+    {
+     "type": "panel",
+     "name": "workshop_satisfaction_panel",
+     "elements": [
+      {
+       "type": "matrix",
+       "title": "How much do you agree or disagree with the following statements about the workshop overall?",
+       "name": "workshop_satisfaction",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+       },
+       {
+         "value": "2",
+         "text": "Disagree"
+       },
+       {
+         "value": "3",
+         "text": "Slightly Disagree"
+       },
+       {
+         "value": "4",
+         "text": "Neutral"
+       },
+       {
+         "value": "5",
+         "text": "Slightly Agree"
+       },
+       {
+         "value": "6",
+         "text": "Agree"
+       },
+       {
+         "value": "7",
+         "text": "Strongly Agree"
+       }
+     ],
+       "rows": [
+        {
+         "value": "feel_prepared",
+         "text": "I feel more prepared to teach {workshop_course} than I did at the beginning of the day."
+       },
+       {
+         "value": "love_curriculum",
+         "text": "I love teaching with this curriculum."
+       },
+       {
+         "value": "comfort_collaborating",
+         "text": "I feel comfortable collaborating with teachers in my cohort and asking for support."
+       },
+       {
+         "value": "teacher_community",
+         "text": "I feel like I am connected to a community of teachers in my {workshop_course} workshop."
+       },
+       {
+         "value": "excited_about_next_time",
+         "text": "I am excited about what we will do next time in this workshop."
+       }
+     ]
+     },
+     {
+       "type": "comment",
+       "name": "what_supported",
+       "title": "What supported your learning the most today and why?",
+       "cols": 60,
+       "rows": 2
+     },
+     {
+       "type": "comment",
+       "name": "what_detracted",
+       "title": "What detracted from your learning today and why?",
+       "cols": 60,
+       "rows": 2
+     },
+     {
+       "type": "comment",
+       "name": "discuss_tomorrow",
+       "title": "What is one thing you hope to discuss or learn more about the next time we meet?",
+       "cols": 60,
+       "rows": 2
+     }
+   ]
+   }
+ ]
+ }
+]
+}

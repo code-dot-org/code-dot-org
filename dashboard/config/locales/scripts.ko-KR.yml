@@ -18,43 +18,6 @@ ko:
             만들어 공유할 수 있습니다. K-1(초등 1학년) 학생들에게 권장합니다.
           description_short: 과정1은 글을 이제 막 읽기 시작한 아이들을 대상으로 만들어졌습니다.
           description_audience: 4-6 세
-          stages:
-            'Artist: Loops':
-              name: '화가: 반복'
-            'Artist: Sequence':
-              name: '화가: 순차'
-            'Artist: Shapes':
-              name: '화가: 도형'
-            'Bee: Loops':
-              name: '꿀벌: 반복'
-            'Bee: Sequence':
-              name: '꿀벌 : 순차'
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Getting Loopy:
-              name: 반복시키기
-            Going Places Safely:
-              name: 안전하게 자리잡기
-            Happy Maps:
-              name: 즐거운 맵
-            'Jigsaw: Learn to drag and drop':
-              name: '퍼즐 맞추기: 드래그와 드롭'
-            'Maze: Debugging':
-              name: '미로: 디버깅'
-            'Maze: Loops':
-              name: '미로: 반복'
-            'Maze: Sequence':
-              name: '미로: 순차'
-            Move it, Move it:
-              name: 움직여 움직여
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
-            Spelling Bee:
-              name: 말하는 꿀벌
-            'Studio: Create a Story':
-              name: 'Play Lab: 이야기 만들기'
-            The Big Event:
-              name: 큰 이벤트
           lessons:
             'Artist: Loops':
               name: '화가: 반복'
@@ -99,45 +62,6 @@ ko:
             학생들에게 추천합니다.
           description_short: 과정2는 글을 읽을 수 있는 학생을 대상으로 만들어졌습니다.
           description_audience: 6세 이상 (읽기 요구됨)
-          stages:
-            'Artist: Debugging':
-              name: '화가: 디버깅'
-            'Artist: Loops':
-              name: '화가: 반복'
-            'Artist: Nested Loops':
-              name: '화가: 중첩 반복'
-            'Artist: Sequence':
-              name: '화가: 순차'
-            'Bee: Conditionals':
-              name: '꿀벌: 조건선택'
-            'Bee: Debugging':
-              name: '꿀벌: 디버깅'
-            'Bee: Loops':
-              name: '꿀벌: 반복'
-            Binary Bracelets:
-              name: 2진 팔찌
-            Conditionals:
-              name: 조건
-            Flappy:
-              name: 플래피
-            Getting Loopy:
-              name: 반복시키기
-            Graph Paper Programming:
-              name: 모눈 종이 프로그래밍
-            'Maze: Loops':
-              name: '미로: 반복'
-            'Maze: Sequence':
-              name: '미로: 순차'
-            'Real-life Algorithms: Paper Planes':
-              name: '실시간 알고리즘: 종이 비행기'
-            Relay programming:
-              name: 릴레이 프로그래밍
-            'Studio: Create a Story':
-              name: 'Play Lab: 이야기 만들기'
-            The Big Event:
-              name: 큰 이벤트
-            Your Digital Footprint:
-              name: 디지털 개인정보 흔적
           lessons:
             'Artist: Debugging':
               name: '화가: 디버깅'
@@ -184,49 +108,6 @@ ko:
             공유할 수 있게 됩니다. K4-5(초등4-5학년) 학생들에게 권장합니다.
           description_short: 과정3은 과정2의 다음 과정입니다.
           description_audience: 8-18 세
-          stages:
-            Artist:
-              name: 화가
-            'Artist: Functions':
-              name: '화가: 함수'
-            'Artist: Nested Loops':
-              name: '화가: 중첩 반복'
-            'Artist: Patterns':
-              name: '화가: 패턴'
-            'Bee: Conditionals':
-              name: '꿀벌: 조건선택'
-            'Bee: Debugging':
-              name: '꿀벌: 디버깅'
-            'Bee: Functions':
-              name: '꿀벌: 함수'
-            'Bee: Nested Loops':
-              name: '꿀벌: 중첩 반복'
-            Bounce:
-              name: 바운스
-            Computational Thinking:
-              name: 컴퓨터과학(정보과학)적 사고
-            Crowdsourcing:
-              name: 클라우드소싱
-            Dice Race:
-              name: 주사위 레이스
-            Digital Citizenship:
-              name: 디지털 시민의식
-            'Farmer: While Loops':
-              name: '농부: ~인동안 반복'
-            Functional Suncatchers:
-              name: 기능성 색유리
-            Internet:
-              name: 인터넷
-            Maze:
-              name: 미로
-            'Maze: Conditionals':
-              name: '미로: 조건선택'
-            Songwriting:
-              name: 노래 만들기
-            'Studio: Create a Game':
-              name: 'Play Lab: 게임 만들기'
-            'Studio: Create a Story':
-              name: 'Play Lab: 이야기 만들기'
           lessons:
             Artist:
               name: 화가
@@ -274,9 +155,6 @@ ko:
           title: Play Lab
           description: Play Lab을 이용해 스토리나 게임을 만드세요!
           description_short: Play Lab을 이용해 스토리나 게임을 만드세요!
-          stages:
-            Play Lab:
-              name: Play Lab
           lessons:
             Play Lab:
               name: Play Lab
@@ -284,9 +162,6 @@ ko:
           title: 화가
           description: 화가를 이용해 멋진 그림과 디자인을 만들어보세요!
           description_short: 예술가를 이용해 멋진 그림과 디자인을 만들어보세요!
-          stages:
-            Artist:
-              name: 화가
           lessons:
             Artist:
               name: 화가
@@ -295,9 +170,6 @@ ko:
           description: 컴퓨터과학(정보과학) 의 기초를 앵그리버드, Plats vs Zombies, 아이스 에지지의 스크랫 캐릭터들과
             함께 배워보세요.
           description_short: 컴퓨터과학(정보과학) 의 기초를 재미있는 캐릭터들과 함께 배워보세요!
-          stages:
-            Maze:
-              name: 미로
           lessons:
             Maze:
               name: 미로
@@ -306,9 +178,6 @@ ko:
           description: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게 눈
             송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
           description_short: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
-          stages:
-            Artist:
-              name: 화가
           lessons:
             Artist:
               name: 화가
@@ -320,51 +189,6 @@ ko:
             초4-중2 학년에 추천됩니다.
           description_short: 과정4는 과정2와 과정3을 먼저 완료했어야 합니다.
           description_audience: 나이 10세-13세
-          stages:
-            Artist:
-              name: 화가
-            Artist Binary:
-              name: 화가 2진
-            'Artist: For Loops':
-              name: '화가: 반복'
-            'Artist: Functions':
-              name: '화가: 함수'
-            'Artist: Functions with Parameters':
-              name: '화가: 매개변수 함수'
-            'Artist: Variables':
-              name: '화가: 변수'
-            'Bee: For Loops':
-              name: '꿀벌: 반복'
-            'Bee: Functions with Parameters':
-              name: '꿀벌: 매개변수를 사용하는 함수'
-            Extreme Challenge - Comprehensive:
-              name: 슈퍼 챌린지 - 종합
-            Maze and Bee:
-              name: 미로와 꿀벌
-            'Play Lab: For Loops':
-              name: 'Play Lab: 반복'
-            'Play Lab: Functions with Parameters':
-              name: 'Play Lab: 매개변수를 사용하는 함수'
-            'Play Lab: Variables':
-              name: 'Play Lab: 변수'
-            Super Challenge - For Loops:
-              name: 슈퍼 챌린지 - For 반복문
-            Super Challenge - Functions and Parameters:
-              name: 슈퍼 챌린지 - 함수와 매개변수
-            Super Challenge - Variables:
-              name: 슈퍼 챌린지 - 변수
-            'Unplugged: Binary':
-              name: '언플러그드: 2진'
-            'Unplugged: Envelope Variables':
-              name: '언플러그드: 변수들 묶기'
-            'Unplugged: For Loop Fun':
-              name: '언플러그드: 재미있는 반복'
-            'Unplugged: Madlibs':
-              name: '언플러그드: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: '언플러그드: 매개변수를 사용한 노래 만들기'
-            'Unplugged: Tangrams':
-              name: '언플러그드: 탱그램'
           lessons:
             Artist:
               name: 화가
@@ -414,25 +238,6 @@ ko:
           title: 과정4 준비조건
           description: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
           description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
-          stages:
-            'Artist: Functions':
-              name: '화가: 함수'
-            'Artist: Loops':
-              name: '화가: 반복'
-            'Artist: Nested Loops':
-              name: '화가: 중첩 반복'
-            'Artist: Sequence':
-              name: '화가: 순차'
-            'Bee: Conditionals':
-              name: '꿀벌: 조건선택'
-            'Bee: Debugging':
-              name: '꿀벌: 디버깅'
-            'Bee: Nested Loops':
-              name: '꿀벌: 중첩 반복'
-            'Farmer: While Loops':
-              name: '농부: ~인동안 반복'
-            'Maze: Sequence':
-              name: '미로: 순차'
           lessons:
             'Artist: Functions':
               name: '화가: 함수'
@@ -455,17 +260,6 @@ ko:
         usability:
           title: 사용성 테스트
           description: 사용성 테스트를 위한 4가지 수준의 코스 선택
-          stages:
-            Binary:
-              name: 2진
-            For Loops:
-              name: 반복을 위한
-            Functions and Functions with Parameters:
-              name: 함수와 매개변수가 있는 함수
-            Intro:
-              name: 소개
-            Variables:
-              name: 변수
           lessons:
             Binary:
               name: 2진
@@ -478,17 +272,6 @@ ko:
             Variables:
               name: 변수
         algebra:
-          stages:
-            'Eval: Conditionals':
-              name: 조건
-            'Eval: Strings and Images':
-              name: 문자열과 이미지
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: '언플러그드: 조건선택과 함수 조각'
-            'Unplugged: The Design Recipe':
-              name: '언플러그드: 디자인 레시피'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: '언플러그드: 비디오 게임과 좌표 평면'
           lessons:
             'Eval: Conditionals':
               name: 조건
@@ -504,20 +287,10 @@ ko:
           title: 디즈니  무한 반복 Play lab
           description: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
           description_short: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
-          stages:
-            Infinity:
-              name: 무한
           lessons:
             Infinity:
               name: 무한
         algebrademo:
-          stages:
-            Defining Variables:
-              name: 변수 정의
-            Evaluation Blocks:
-              name: 평가 블록
-            The Design Recipe:
-              name: 디자인 레시피
           lessons:
             Defining Variables:
               name: 변수 정의
@@ -526,17 +299,11 @@ ko:
             The Design Recipe:
               name: 디자인 레시피
         K5PD:
-          stages:
-            Teacher Dashboard:
-              name: 선생님용 대시보드
           lessons:
             Teacher Dashboard:
               name: 선생님용 대시보드
         netsim:
           title: 인터넷 시뮬레이터
-          stages:
-            Manual DNS:
-              name: 수동 DNS
           lessons:
             Manual DNS:
               name: 수동 DNS
@@ -546,47 +313,6 @@ ko:
             학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
           description_short: 이 20시간 과정은 과정2-4 에서의 핵심 컴퓨터과학(정보과학) 과 프로그래밍을 배웁니다.
           description_audience: 나이 10세-13세
-          stages:
-            Abstraction:
-              name: 추상화
-            Algorithms:
-              name: 알고리즘
-            Computational Thinking:
-              name: 컴퓨터과학(정보과학)적 사고
-            Conditionals:
-              name: 조건
-            Functions:
-              name: 함수
-            Graph Paper Programming:
-              name: 모눈 종이 프로그래밍
-            Introduction to Computer Science:
-              name: 컴퓨터과학(정보과학) 소개
-            Relay Programming:
-              name: 릴레이 프로그래밍
-            Song Writing:
-              name: 노래 만들기
-            The Artist:
-              name: 화가
-            The Artist 2:
-              name: 화가2
-            The Artist 3:
-              name: 화가3
-            The Artist 4:
-              name: 화가4
-            The Artist 5:
-              name: 화가5
-            The Farmer:
-              name: 농부
-            The Farmer 2:
-              name: 농부2
-            The Farmer 3:
-              name: 농부3
-            The Internet:
-              name: 인터넷
-            The Maze:
-              name: 미로 퍼즐
-            Wrap-up:
-              name: 마무리
           lessons:
             Abstraction:
               name: 추상화
@@ -632,13 +358,6 @@ ko:
           title: 코드 수정
           description: 코드 수정
           description_short: 코드 수정
-          stages:
-            Play Lab:
-              name: Play Lab
-            The Artist:
-              name: 화가
-            The Maze:
-              name: 미로 퍼즐
           lessons:
             Play Lab:
               name: Play Lab
@@ -650,15 +369,6 @@ ko:
           title: 이벤트
           description: 이벤트
           description_short: 이벤트
-          stages:
-            Bounce:
-              name: 바운스
-            Calc:
-              name: 계산
-            Eval:
-              name: 평가
-            Studio:
-              name: 스튜디오
           lessons:
             Bounce:
               name: 바운스
@@ -672,9 +382,6 @@ ko:
           title: 플래피 코드
           description: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
           description_short: 10분 보다 적은 시간에 자신만의 플래피 게임을 만들어보세요!
-          stages:
-            Flappy Code:
-              name: 플래피 코드
           lessons:
             Flappy Code:
               name: 플래피 코드
@@ -682,9 +389,6 @@ ko:
           title: 직소퍼즐
           description: 그림 맞추기 튜토리얼을 해보세요.
           description_short: 그림 맞추기 튜토리얼을 해보세요.
-          stages:
-            Jigsaw:
-              name: 직소퍼즐
           lessons:
             Jigsaw:
               name: 직소퍼즐
@@ -692,9 +396,6 @@ ko:
           title: 단계
           description: 튜토리얼 단계
           description_short: 튜토리얼 단계
-          stages:
-            Step:
-              name: 단계
           lessons:
             Step:
               name: 단계
@@ -702,36 +403,20 @@ ko:
           title: Hour of Code 2013
           description: 컴퓨터과학(정보과학) 의 기초를 앵그리버드, Plats vs Zombies 캐릭터들과 함께 배워보세요.
           description_short: 컴퓨터과학(정보과학) 의 기초를 재미있는 캐릭터들과 함께 배워보세요!
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         CodeStudioPuzzleChallenge:
-          stages:
-            Puzzles:
-              name: 퍼즐
           lessons:
             Puzzles:
               name: 퍼즐
         Tutorial Video - Code Studio Puzzle Challenge:
-          stages:
-            Puzzles:
-              name: 퍼즐
           lessons:
             Puzzles:
               name: 퍼즐
         cspunit1:
           description_short: 프로그래밍
         algebraPD:
-          stages:
-            Course Overview:
-              name: 코스 개요
-            Evaluation Blocks:
-              name: 평가 블록
-            Teacher Dashboard:
-              name: 선생님용 대시보드
           lessons:
             Course Overview:
               name: 코스 개요
@@ -740,19 +425,6 @@ ko:
             Teacher Dashboard:
               name: 선생님용 대시보드
         algPDmiami:
-          stages:
-            Booleans:
-              name: 불(참 또는 거짓)값들
-            Evaluation Blocks:
-              name: 평가 블록
-            Luigi's Pizza:
-              name: 루이지의 피자
-            Rocket-Height:
-              name: 로켓-높이
-            Strings and Images:
-              name: 문자열과 이미지
-            Your Game - Animation:
-              name: 여러분의 게임-애니메이션
           lessons:
             Booleans:
               name: 불(참 또는 거짓)값들
@@ -770,32 +442,17 @@ ko:
           title: 컴퓨터 과학 원리 PD
           description: CSP의 온라인 소개
           description_short: CSP의 온라인 소개
-          stages:
-            Exploring CSP Instructional Materials:
-              name: CSP 교육용 자료 탐색
-            What is CSP?:
-              name: CSP가 무엇입니까?
           lessons:
             Exploring CSP Instructional Materials:
               name: CSP 교육용 자료 탐색
             What is CSP?:
               name: CSP가 무엇입니까?
         sciencePD:
-          stages:
-            What to Expect:
-              name: 기대 할 것은
           lessons:
             What to Expect:
               name: 기대 할 것은
         cspunit3:
           description_short: 프로그래밍
-          stages:
-            Creating Functions:
-              name: 함수 만들기
-            Creating functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
-            While Loops:
-              name: "~인 동안 반복"
           lessons:
             Creating Functions:
               name: 함수 만들기
@@ -804,17 +461,6 @@ ko:
             While Loops:
               name: "~인 동안 반복"
         algebraPD3:
-          stages:
-            Course Overview:
-              name: 코스 개요
-            Evaluation Blocks:
-              name: 평가 블록
-            Strings and Images:
-              name: 문자열과 이미지
-            Teacher Dashboard:
-              name: 선생님용 대시보드
-            The Design Recipe:
-              name: 디자인 레시피
           lessons:
             Course Overview:
               name: 코스 개요
@@ -827,13 +473,6 @@ ko:
             The Design Recipe:
               name: 디자인 레시피
         algebraPD-NexTech:
-          stages:
-            Course Overview:
-              name: 코스 개요
-            Evaluation Blocks:
-              name: 평가 블록
-            Teacher Dashboard:
-              name: 선생님용 대시보드
           lessons:
             Course Overview:
               name: 코스 개요
@@ -842,13 +481,6 @@ ko:
             Teacher Dashboard:
               name: 선생님용 대시보드
         algebraPD-iZone:
-          stages:
-            Course Overview:
-              name: 코스 개요
-            Evaluation Blocks:
-              name: 평가 블록
-            Teacher Dashboard:
-              name: 선생님용 대시보드
           lessons:
             Course Overview:
               name: 코스 개요
@@ -857,27 +489,16 @@ ko:
             Teacher Dashboard:
               name: 선생님용 대시보드
         sciencePD-NexTech:
-          stages:
-            What to Expect:
-              name: 기대 할 것은
           lessons:
             What to Expect:
               name: 기대 할 것은
         sciencePD-iZone:
-          stages:
-            What to Expect:
-              name: 기대 할 것은
           lessons:
             What to Expect:
               name: 기대 할 것은
         sciencePD2:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
@@ -885,32 +506,12 @@ ko:
               name: 마무리
         cspunit2:
           description_short: 프로그래밍
-          stages:
-            The Internet:
-              name: 모든 사람을 위한 인터넷
           lessons:
             The Internet:
               name: 모든 사람을 위한 인터넷
         algebraPD2a:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            Booleans:
-              name: 불(참 또는 거짓)값들
-            Defining Variables:
-              name: 변수 정의
-            Evaluation Blocks:
-              name: 평가 블록
-            Free Play:
-              name: 자유 플레이
-            Luigi's Pizza:
-              name: 루이지의 피자
-            Rocket-Height:
-              name: 로켓-높이
-            Strings and Images:
-              name: 문자열과 이미지
-            The Design Recipe:
-              name: 디자인 레시피
           lessons:
             Booleans:
               name: 불(참 또는 거짓)값들
@@ -932,39 +533,6 @@ ko:
           title: 모든 것!
           description: UI 테스트에 대한 모든 레벨의 종류
           description_short: UI 테스트에 대한 모든 레벨의 종류
-          stages:
-            AppLab:
-              name: 앱 연구소
-            Artist:
-              name: 화가
-            Bee:
-              name: 꿀벌
-            Bounce:
-              name: 바운스
-            Farmer:
-              name: 농부
-            Flappy:
-              name: 플래피
-            Jigsaw:
-              name: 직소퍼즐
-            Match:
-              name: 짝 맞추기
-            Maze:
-              name: 미로
-            Minecraft:
-              name: 마인크래프트
-            Multi:
-              name: 객관식
-            Odometer:
-              name: 주행 거리계
-            Online PD:
-              name: 온라인 PD
-            Studio:
-              name: 스튜디오
-            Web Lab:
-              name: 웹 연구소
-            Sprite Lab:
-              name: 스프라이트 연구소
           lessons:
             AppLab:
               name: 앱 연구소
@@ -1001,25 +569,6 @@ ko:
         algebraPD2b:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            Booleans:
-              name: 불(참 또는 거짓)값들
-            Course Overview:
-              name: 코스 개요
-            Defining Functions:
-              name: 함수 정의
-            Defining Variables:
-              name: 변수 정의
-            'Eval: Conditionals':
-              name: '평가: 조건/선택'
-            Evaluation Blocks:
-              name: 평가 블록
-            Rocket-Height:
-              name: 로켓-높이
-            Strings and Images:
-              name: 문자열과 이미지
-            Teacher Dashboard:
-              name: 선생님용 대시보드
           lessons:
             Booleans:
               name: 불(참 또는 거짓)값들
@@ -1040,13 +589,6 @@ ko:
             Teacher Dashboard:
               name: 선생님용 대시보드
         cspfacilitator:
-          stages:
-            App Lab:
-              name: 앱 연구실
-            Internet Simulator:
-              name: 인터넷 시뮬레이터
-            Welcome!:
-              name: 환영합니다!
           lessons:
             App Lab:
               name: 앱 연구실
@@ -1055,26 +597,12 @@ ko:
             Welcome!:
               name: 환영합니다!
         K5-OnlinePD:
-          stages:
-            Computer Science Fundamentals:
-              name: 컴퓨터 과학 기초
           lessons:
             Computer Science Fundamentals:
               name: 컴퓨터 과학 기초
         ECSPD2:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: 환영합니다!
-            Wrap-up:
-              name: 마무리
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1089,13 +617,6 @@ ko:
         algebraPD2:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            Teacher Dashboard:
-              name: 선생님용 대시보드
-            The Design Recipe:
-              name: 디자인 레시피
-            Welcome!:
-              name: 환영합니다!
           lessons:
             Teacher Dashboard:
               name: 선생님용 대시보드
@@ -1106,11 +627,6 @@ ko:
         sciencePD2b:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
@@ -1119,11 +635,6 @@ ko:
         science-PD2:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
@@ -1132,11 +643,6 @@ ko:
         sciencePD2b-iZone:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
@@ -1145,17 +651,6 @@ ko:
         ECSPD2-iZone:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: 환영합니다!
-            Wrap-up:
-              name: 마무리
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1170,17 +665,6 @@ ko:
         ECSPD2-NexTech:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: 환영합니다!
-            Wrap-up:
-              name: 마무리
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1193,25 +677,6 @@ ko:
             Wrap-up:
               name: 마무리
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: 2진 팔찌
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Getting Loopy:
-              name: 반복시키기
-            Graph Paper Programming:
-              name: 모눈 종이 프로그래밍
-            Happy Maps:
-              name: 즐거운 맵
-            Move it, Move it:
-              name: 움직여 움직여
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
-            Songwriting:
-              name: 노래 만들기
-            The Big Event:
-              name: 큰 이벤트
           lessons:
             Binary Bracelets:
               name: 2진 팔찌
@@ -1232,11 +697,6 @@ ko:
             The Big Event:
               name: 큰 이벤트
         ScienceP3OLPT2:
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
@@ -1250,17 +710,11 @@ ko:
           title: 아이스 에이지 Play Lab
           description: 아이스 에이지 Play Lab! 과 함께 이야기나 게임을 만들어 보세요!
           description_short: 아이스 에이지 Play Lab! 과 함께 이야기나 게임을 만들어 보세요!
-          stages:
-            Ice Age Play Lab:
-              name: 아이스 에이지 Play Lab
           lessons:
             Ice Age Play Lab:
               name: 아이스 에이지 Play Lab
         cspunit3temp:
           description_short: 프로그래밍
-          stages:
-            While Loops:
-              name: "~인 동안 반복"
           lessons:
             While Loops:
               name: "~인 동안 반복"
@@ -1268,9 +722,6 @@ ko:
           title: 검볼 Play Lab
           description: 검볼 Play Lab과 함께 이야기나 게임을 만들어 보세요!
           description_short: 검볼 Play Lab과 함께 이야기나 게임을 만들어 보세요!
-          stages:
-            Gumball Play Lab:
-              name: 검볼 Play Lab
           lessons:
             Gumball Play Lab:
               name: 검볼 Play Lab
@@ -1278,9 +729,6 @@ ko:
           title: '스타워즈: 코드로 은하계 건설하기'
           description: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
           description_short: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
@@ -1288,9 +736,6 @@ ko:
           title: '스타워즈: 코드로 은하계 건설하기'
           description: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
           description_short: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
@@ -1298,18 +743,10 @@ ko:
           title: 마인크래프트 Hour of Code
           description: 코드 블록을 사용해 스티브나 알렉스가 Minecraft 월드에서 모험을 펼치게 하세요
           description_short: 코드를 통해 Minecraft 월드를 탐험하세요
-          stages:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
         ScienceP3OLPT3:
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
@@ -1320,25 +757,6 @@ ko:
         cspunit4:
           description_short: 프로그래밍
         AlgebraA:
-          stages:
-            'Calc: Defining Variables':
-              name: '계산: 변수 정의하기'
-            'Calc: Evaluation Blocks':
-              name: '계산: 평가(결과 계산) 블럭'
-            'Eval: Defining Functions':
-              name: '평가: 함수 정의하기'
-            'Eval: Functions':
-              name: '평가: 함수'
-            'Eval: Strings and Images':
-              name: '평가: 문자열(문장)과 이미지'
-            'Eval: Writing Contracts':
-              name: '평가: 제한 조건 쓰기'
-            'Play Lab: Defining Functions':
-              name: '플레이 랩: 함수 정의하기'
-            'Unplugged: Contracts':
-              name: '언플러그드 : 제한 조건'
-            'Unplugged: The Design Recipe':
-              name: '언플러그드: 디자인 레시피'
           lessons:
             'Calc: Defining Variables':
               name: '계산: 변수 정의하기'
@@ -1359,29 +777,6 @@ ko:
             'Unplugged: The Design Recipe':
               name: '언플러그드: 디자인 레시피'
         AlgebraB:
-          stages:
-            'Eval: Boolean Operators':
-              name: '평가: 참/거짓(논리) 연산자'
-            'Eval: Conditionals':
-              name: '평가: 조건/선택'
-            'Play Lab: Animation (Big Game)':
-              name: 'Play Lab: 애니메이션 (빅 게임)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Play Lab: 참/거짓값 (빅 게임)'
-            'Play Lab: Booleans':
-              name: 'Play Lab: 불(참 또는 거짓 값)'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Play Lab: 충돌 감지 (빅 게임)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Play Lab: 변수 정의하기 (빅 게임)'
-            'Unplugged: Booleans':
-              name: '언플러그드: 참/거짓값'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: '언플러그드: 충돌 감지와 거리 계산식'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: '언플러그드: 조건선택과 함수 조각'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: '언플러그드: 비디오 게임과 좌표 평면'
           lessons:
             'Eval: Boolean Operators':
               name: '평가: 참/거짓(논리) 연산자'
@@ -1407,13 +802,6 @@ ko:
               name: '언플러그드: 비디오 게임과 좌표 평면'
         algebraPD1:
           title: 대수학에서의 CS part 1
-          stages:
-            Course Overview:
-              name: 코스 개요
-            Evaluation Blocks:
-              name: 평가 블록
-            Teacher Dashboard:
-              name: 선생님용 대시보드
           lessons:
             Course Overview:
               name: 코스 개요
@@ -1422,21 +810,11 @@ ko:
             Teacher Dashboard:
               name: 선생님용 대시보드
         csp1-2017:
-          stages:
-            The Internet:
-              name: 인터넷
           lessons:
             The Internet:
               name: 인터넷
         csp3-2017:
           description_short: 프로그래밍
-          stages:
-            Creating Functions:
-              name: 함수 만들기
-            Creating functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
-            Creating Functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
           lessons:
             Creating Functions:
               name: 함수 만들기
@@ -1445,28 +823,15 @@ ko:
             Creating Functions with Parameters:
               name: 매개변수가 있는 함수 만들기
         csp4-2017:
-          stages:
-            Simple Encryption:
-              name: 간단한 암호화
           lessons:
             Simple Encryption:
               name: 간단한 암호화
         csp5-2017:
-          stages:
-            While Loops:
-              name: "~인 동안 반복"
           lessons:
             While Loops:
               name: "~인 동안 반복"
         CSDU3-Draft:
           description_short: 프로그래밍
-          stages:
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
-            Velocity:
-              name: 속도
           lessons:
             Collision Detection:
               name: 충돌 감지
@@ -1475,9 +840,6 @@ ko:
             Velocity:
               name: 속도
         2016_sciencePD_phase1:
-          stages:
-            What to Expect:
-              name: 기대 할 것은
           lessons:
             What to Expect:
               name: 기대 할 것은
@@ -1486,20 +848,12 @@ ko:
         CSF_Secret_Sample:
           description_audience: 8-18 세
         algebraFacilitator:
-          stages:
-            Evaluation Blocks:
-              name: 평가 블록
-            Teacher Dashboard:
-              name: 선생님용 대시보드
           lessons:
             Evaluation Blocks:
               name: 평가 블록
             Teacher Dashboard:
               name: 선생님용 대시보드
         sciencePD1:
-          stages:
-            What to Expect:
-              name: 기대 할 것은
           lessons:
             What to Expect:
               name: 기대 할 것은
@@ -1520,30 +874,18 @@ ko:
             practice:
               display_name: 선생님 연습
         allthehiddenthings:
-          stages:
-            Game Lab:
-              name: 게임 연구소
           lessons:
             Game Lab:
               name: 게임 연구소
         CSDU4-Draft:
-          stages:
-            Design Mode:
-              name: 디자인 모드
           lessons:
             Design Mode:
               name: 디자인 모드
         CSDU2-Draft:
-          stages:
-            Peer Review:
-              name: 동료 평가
           lessons:
             Peer Review:
               name: 동료 평가
         MikeTest:
-          stages:
-            Artist Functions:
-              name: 예술가 함수
           lessons:
             Artist Functions:
               name: 예술가 함수
@@ -1558,24 +900,10 @@ ko:
             practice:
               display_name: 선생님 연습
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: '꿀벌: 조건선택'
           lessons:
             'Bee: Conditionals':
               name: '꿀벌: 조건선택'
         gradeKinder:
-          stages:
-            Events:
-              name: 이벤트
-            'Jigsaw: Learn to drag and drop':
-              name: '퍼즐 맞추기: 드래그와 드롭'
-            Loops:
-              name: 반복
-            Programming:
-              name: 프로그래밍
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
           lessons:
             Events:
               name: 이벤트
@@ -1588,26 +916,12 @@ ko:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
         grade4:
-          stages:
-            Digital Citizenship:
-              name: 디지털 시민의식
-            Songwriting:
-              name: 노래 만들기
           lessons:
             Digital Citizenship:
               name: 디지털 시민의식
             Songwriting:
               name: 노래 만들기
         grade1:
-          stages:
-            Events:
-              name: 이벤트
-            'Jigsaw: Learn to drag and drop':
-              name: '퍼즐 맞추기: 드래그와 드롭'
-            Loops:
-              name: 반복
-            Programming:
-              name: 프로그래밍
           lessons:
             Events:
               name: 이벤트
@@ -1618,27 +932,6 @@ ko:
             Programming:
               name: 프로그래밍
         grade5:
-          stages:
-            'Artist: For Loops':
-              name: '화가: 반복'
-            'Artist: Functions with Parameters':
-              name: '화가: 매개변수 함수'
-            'Artist: Variables':
-              name: '화가: 변수'
-            'Bee: For Loops':
-              name: '꿀벌: 반복'
-            'Bee: Functions with Parameters':
-              name: '꿀벌: 매개변수를 사용하는 함수'
-            Digital Citizenship:
-              name: 디지털 시민의식
-            'Play Lab: Variables':
-              name: 'Play Lab: 변수'
-            'Unplugged: Envelope Variables':
-              name: '언플러그드: 변수들 묶기'
-            'Unplugged: For Loop Fun':
-              name: '언플러그드: 재미있는 반복'
-            'Unplugged: Songwriting with Parameters':
-              name: '언플러그드: 매개변수를 사용한 노래 만들기'
           lessons:
             'Artist: For Loops':
               name: '화가: 반복'
@@ -1661,17 +954,6 @@ ko:
             'Unplugged: Songwriting with Parameters':
               name: '언플러그드: 매개변수를 사용한 노래 만들기'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: 환영합니다!
-            Wrap-up:
-              name: 마무리
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1684,15 +966,6 @@ ko:
             Wrap-up:
               name: 마무리
         grade3:
-          stages:
-            'Artist: Nested Loops':
-              name: '화가: 중첩 반복'
-            Bee Debugging:
-              name: 꿀벌 디버깅
-            Bounce:
-              name: 바운스
-            'Farmer: While Loops':
-              name: '농부: ~인동안 반복'
           lessons:
             'Artist: Nested Loops':
               name: '화가: 중첩 반복'
@@ -1712,17 +985,6 @@ ko:
               display_name: 선생님 연습
         csd3-2017:
           description_short: 프로그래밍
-          stages:
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
           lesson_groups:
             csd3_1:
               display_name: '1 장: 이미지와 애니메이션'
@@ -1740,15 +1002,6 @@ ko:
             Conditionals:
               name: 조건
         grade2:
-          stages:
-            Flappy:
-              name: 플래피
-            Binary Bracelets:
-              name: 2진 팔찌
-            'Real-life Algorithms: Paper Planes':
-              name: '실시간 알고리즘: 종이 비행기'
-            The Big Event:
-              name: 큰 이벤트
           lessons:
             Flappy:
               name: 플래피
@@ -1759,27 +1012,6 @@ ko:
             The Big Event:
               name: 큰 이벤트
         k5concepts:
-          stages:
-            Binary:
-              name: 2진
-            Conditionals:
-              name: 조건
-            Events:
-              name: 이벤트
-            For Loops:
-              name: 반복을 위한
-            Functions:
-              name: 함수
-            Functions with Parameters:
-              name: 함수(값 전달)
-            Loops:
-              name: 반복
-            Nested Loops:
-              name: 중첩 반복
-            Variables:
-              name: 변수
-            While Loops:
-              name: "~인 동안 반복"
           lessons:
             Binary:
               name: 2진
@@ -1802,13 +1034,6 @@ ko:
             While Loops:
               name: "~인 동안 반복"
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: 선생님용 대시보드
-            The Design Recipe:
-              name: 디자인 레시피
-            Welcome!:
-              name: 환영합니다!
           lessons:
             Teacher Dashboard:
               name: 선생님용 대시보드
@@ -1842,41 +1067,14 @@ ko:
           title: 팀을 선택하고 농구경기를 하세요
           description_short: 팀을 선택하고 농구경기를 하세요
           description: 팀을 선택하고 농구경기를 하세요
-          stages:
-            Bounce:
-              name: 바운스
           lessons:
             Bounce:
               name: 바운스
         hoc-encryption:
-          stages:
-            Simple Encryption:
-              name: 간단한 암호화
           lessons:
             Simple Encryption:
               name: 간단한 암호화
-        fesbinary:
-          title: 2진
-          stages:
-            Binary Bracelets:
-              name: 2진 팔찌
-            Binary Images:
-              name: 2진 이미지
-            Play Lab:
-              name: Play Lab
-          lessons:
-            Binary Bracelets:
-              name: 2진 팔찌
-            Binary Images:
-              name: 2진 이미지
-            Play Lab:
-              name: Play Lab
         csd2-2017:
-          stages:
-            Peer Review:
-              name: 동료 평가
-            Lists:
-              name: 리스트
           lesson_groups:
             csd2_1:
               display_name: '1 장: 웹 콘텐츠 및 HTML'
@@ -1905,51 +1103,26 @@ ko:
           title: Minecraft Hour of Code 디자이너
           description_short: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
           description: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
-          stages:
-            Minecraft Hour of Code Designer:
-              name: Minecraft Hour of Code 디자이너
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code 디자이너
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: 플래피 코드
           lessons:
             Flappy Code:
               name: 플래피 코드
         coursea-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
-            Going Places Safely:
-              name: 안전하게 자리잡기
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
             Going Places Safely:
               name: 안전하게 자리잡기
         courseb-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
-            Your Digital Footprint:
-              name: 디지털 개인정보 흔적
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
             Your Digital Footprint:
               name: 디지털 개인정보 흔적
         coursec-draft:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: '실시간 알고리즘: 종이 비행기'
-            Binary Bracelets:
-              name: 2진 팔찌
-            Your Digital Footprint:
-              name: 디지털 개인정보 흔적
-            Building a Foundation:
-              name: 건물 기초 만들기
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: '실시간 알고리즘: 종이 비행기'
@@ -1960,19 +1133,6 @@ ko:
             Building a Foundation:
               name: 건물 기초 만들기
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Digital Citizenship:
-              name: 디지털 시민의식
-            'Unplugged: Binary':
-              name: '언플러그드: 2진'
-            Artist Binary:
-              name: 화가 2진
-            Nested Loops:
-              name: 중첩 반복
-            Introduction:
-              name: 소개
           lessons:
             Conditionals with Cards:
               name: 조건선택 카드
@@ -1987,17 +1147,6 @@ ko:
             Introduction:
               name: 소개
         coursee-draft:
-          stages:
-            Digital Citizenship:
-              name: 디지털 시민의식
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
-            Introduction:
-              name: 소개
-            Conditionals:
-              name: 조건
           lesson_groups:
             content:
               display_name: 콘텐츠
@@ -2015,21 +1164,6 @@ ko:
             Conditionals:
               name: 조건
         coursef-draft:
-          stages:
-            Digital Citizenship:
-              name: 디지털 시민의식
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Songwriting with Parameters:
-              name: 매개변수를 사용하는 음악 작곡
-            Introduction:
-              name: 소개
-            Ice Age Play Lab:
-              name: 아이스 에이지 Play Lab
-            'Algorithms: Tangrams':
-              name: '알고리즘: 탱그램'
           lesson_groups:
             content:
               display_name: 콘텐츠
@@ -2050,17 +1184,11 @@ ko:
               name: '알고리즘: 탱그램'
         classic-hoc-impact-study:
           description_short: 컴퓨터과학(정보과학) 의 기초를 재미있는 캐릭터들과 함께 배워보세요!
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         hoc-impact-study:
           description_short: 컴퓨터과학(정보과학) 의 기초를 재미있는 캐릭터들과 함께 배워보세요!
-          stages:
-            Hour of Code 2013:
-              name: Hour of Code 2013
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
@@ -2069,22 +1197,12 @@ ko:
           description_short: 스포츠 전반 조합하기
           description: 스포츠 전반 조합하기
         2016_sciencePD-phase2b:
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
             Wrap-Up:
               name: 마무리
         2016_sciencePD_phase2b:
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
@@ -2107,31 +1225,18 @@ ko:
             practice:
               display_name: 선생님 연습
         sciencepd4:
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
             Wrap-Up:
               name: 마무리
         science-pd-ol-pt-5:
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
             Wrap-Up:
               name: 마무리
         csf2harvey:
-          stages:
-            Binary:
-              name: 2진
           lesson_groups:
             content:
               display_name: 콘텐츠
@@ -2139,11 +1244,6 @@ ko:
             Binary:
               name: 2진
         sciencepd5:
-          stages:
-            Welcome!:
-              name: 환영합니다!
-            Wrap-Up:
-              name: 마무리
           lessons:
             Welcome!:
               name: 환영합니다!
@@ -2162,13 +1262,6 @@ ko:
             content:
               display_name: 콘텐츠
         csd6-draft:
-          stages:
-            Lists:
-              name: 리스트
-            For Loops:
-              name: 반복을 위한
-            Functions with Parameters:
-              name: 함수(값 전달)
           lesson_groups:
             csd6_1:
               display_name: '1 장: 하드웨어 출력'
@@ -2182,9 +1275,6 @@ ko:
             Functions with Parameters:
               name: 함수(값 전달)
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: 소개
           lessons:
             Introduction:
               name: 소개
@@ -2195,20 +1285,10 @@ ko:
             csd5_2:
               display_name: '2 장: 데이터 문제 해결하기'
         coursed-ramp:
-          stages:
-            Introduction:
-              name: 소개
           lessons:
             Introduction:
               name: 소개
         coursee-ramp:
-          stages:
-            Introduction:
-              name: 소개
-            Conditionals:
-              name: 조건
-            'Real Life Algorithms: Dice Race':
-              name: '실생활 알고리즘: 주사위 레이스'
           lessons:
             Introduction:
               name: 소개
@@ -2217,15 +1297,6 @@ ko:
             'Real Life Algorithms: Dice Race':
               name: '실생활 알고리즘: 주사위 레이스'
         csd6-2017:
-          stages:
-            Lists:
-              name: 리스트
-            For Loops:
-              name: 반복을 위한
-            Functions with Parameters:
-              name: 함수(값 전달)
-            Functions with Parameters_:
-              name: 함수(값 전달)
           lesson_groups:
             csd6_1:
               display_name: '1 장: 하드웨어 출력'
@@ -2241,17 +1312,6 @@ ko:
             Functions with Parameters_:
               name: 함수(값 전달)
         csd3-draft:
-          stages:
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
           lessons:
             Variables:
               name: 변수
@@ -2270,13 +1330,6 @@ ko:
             csd5_2:
               display_name: '2 장: 데이터 문제 해결하기'
         csd3-old:
-          stages:
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
           lessons:
             Velocity:
               name: 속도
@@ -2285,28 +1338,10 @@ ko:
             Functions:
               name: 함수
         csd2-draft:
-          stages:
-            Lists:
-              name: 리스트
           lessons:
             Lists:
               name: 리스트
         csd3-chapters:
-          stages:
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
-            'Chapter 1: Images and Animation':
-              name: '1 장: 이미지와 애니메이션'
-            'null':
-              name: 값 없음
           lessons:
             Variables:
               name: 변수
@@ -2323,13 +1358,6 @@ ko:
             'null':
               name: 값 없음
         coursef-ramp:
-          stages:
-            'Algorithms: Tangrams':
-              name: '알고리즘: 탱그램'
-            Introduction:
-              name: 소개
-            Ice Age Play Lab:
-              name: 아이스 에이지 Play Lab
           lessons:
             'Algorithms: Tangrams':
               name: '알고리즘: 탱그램'
@@ -2338,58 +1366,34 @@ ko:
             Ice Age Play Lab:
               name: 아이스 에이지 Play Lab
         csd2-old:
-          stages:
-            Peer Review:
-              name: 동료 평가
           lessons:
             Peer Review:
               name: 동료 평가
         artist-and-bb8:
-          stages:
-            Ice Age Play Lab:
-              name: 아이스 에이지 Play Lab
-            Bounce:
-              name: 바운스
           lessons:
             Ice Age Play Lab:
               name: 아이스 에이지 Play Lab
             Bounce:
               name: 바운스
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
           title: 과정 A
           assignment_family_title: 과정 A
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
         courseb-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
           title: 과정 B
           assignment_family_title: 과정 B
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
         coursec-2017:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: '실시간 알고리즘: 종이 비행기'
           title: 과정 C
           assignment_family_title: 과정 C
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: '실시간 알고리즘: 종이 비행기'
         coursed-2017:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              description_teacher: 다른 사람이 그림을 그려내기 위해서 프로그래밍을 하는 과정에서, 학생들은 프로그래밍이
-                무엇인지 깨닫게 될 것입니다. 학생들은 어떤 그림을 만들어내기 위해 모눈종이에 채워져야하는 색들을 지시하면서 시작될 것입니다.
-                시간이 흐르면, 학생들은 그림을 완성하게 될 것입니다.
-            Nested Loops:
-              name: 중첩 반복
           title: 과정 D
           assignment_family_title: 과정 D
           lessons:
@@ -2400,26 +1404,6 @@ ko:
             Nested Loops:
               name: 중첩 반복
         coursee-2017:
-          stages:
-            'Algorithms: Tangrams':
-              name: '알고리즘: 탱그램'
-            Ice Age Play Lab:
-              name: 아이스 에이지 Play Lab
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Songwriting with Parameters:
-              name: 매개변수를 사용하는 음악 작곡
-            'Functions: Songwriting':
-              description_teacher: 컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램,
-                매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수
-                있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할
-                수 있도록 합니다.
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Nested Loops:
-              name: 중첩 반복
           title: 과정 E
           assignment_family_title: 과정 E
           lesson_groups:
@@ -2446,11 +1430,6 @@ ko:
             Nested Loops:
               name: 중첩 반복
         coursef-2017:
-          stages:
-            'Algorithms: Tangrams':
-              name: '알고리즘: 탱그램'
-            Building a Foundation:
-              name: 건물 기초 만들기
           title: 과정 F
           assignment_family_title: 과정 F
           lessons:
@@ -2531,25 +1510,6 @@ ko:
             content:
               display_name: 콘텐츠
         express-2017:
-          stages:
-            Introduction:
-              name: 소개
-            Internet:
-              name: 인터넷
-            Digital Citizenship:
-              name: 디지털 시민의식
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Songwriting with Parameters:
-              name: 매개변수를 사용하는 음악 작곡
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Nested Loops:
-              name: 중첩 반복
           lesson_groups:
             content:
               display_name: 콘텐츠
@@ -2573,29 +1533,16 @@ ko:
             Nested Loops:
               name: 중첩 반복
         pre-express-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
-            Spelling Bee:
-              name: 말하는 꿀벌
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
             Spelling Bee:
               name: 말하는 꿀벌
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: 감사합니다,
           lessons:
             Thanks:
               name: 감사합니다,
         csp3-research-mxghyt:
-          stages:
-            Creating Functions:
-              name: 함수 만들기
-            Creating functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
           description_short: 프로그래밍
           lessons:
             Creating Functions:
@@ -2609,17 +1556,6 @@ ko:
             csd4_2:
               display_name: '2 장: 앱 프로토타입'
         e-f-ramp:
-          stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Nested Loops:
-              name: 중첩 반복
-            Conditionals:
-              name: 조건
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
           lesson_groups:
             extra_course_content:
               display_name: 추가 코스 내용
@@ -2635,21 +1571,6 @@ ko:
             Crowdsourcing:
               name: 클라우드소싱
         new-d:
-          stages:
-            Introduction:
-              name: 소개
-            Nested Loops:
-              name: 중첩 반복
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Digital Citizenship:
-              name: 디지털 시민의식
-            'Unplugged: Binary':
-              name: '언플러그드: 2진'
-            Artist Binary:
-              name: 화가 2진
-            Building a Foundation:
-              name: 건물 기초 만들기
           lessons:
             Introduction:
               name: 소개
@@ -2666,13 +1587,6 @@ ko:
             Building a Foundation:
               name: 건물 기초 만들기
         new-express:
-          stages:
-            Introduction:
-              name: 소개
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Nested Loops:
-              name: 중첩 반복
           lesson_groups:
             content:
               display_name: 콘텐츠
@@ -2684,15 +1598,6 @@ ko:
             Nested Loops:
               name: 중첩 반복
         new-e:
-          stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Conditionals:
-              name: 조건
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
           lesson_groups:
             extra_course_content:
               display_name: 추가 코스 내용
@@ -2706,19 +1611,6 @@ ko:
             Crowdsourcing:
               name: 클라우드소싱
         new-f:
-          stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
-            'Algorithms: Tangrams':
-              name: '알고리즘: 탱그램'
-            Ice Age Play Lab:
-              name: 아이스 에이지 Play Lab
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Songwriting with Parameters:
-              name: 매개변수를 사용하는 음악 작곡
           lessons:
             Building a Foundation:
               name: 건물 기초 만들기
@@ -2745,45 +1637,21 @@ ko:
             csd4_2:
               display_name: '2 장: 앱 프로토타입'
         csp3-staging:
-          stages:
-            Creating Functions:
-              name: 함수 만들기
-            Creating functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
           lessons:
             Creating Functions:
               name: 함수 만들기
             Creating functions with Parameters:
               name: 매개변수가 있는 함수 만들기
         pwc:
-          stages:
-            Simple Encryption:
-              name: 간단한 암호화
           lessons:
             Simple Encryption:
               name: 간단한 암호화
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: 마인크래프트 Hour of Code
           description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요.
           lessons:
             Minecraft Hour of Code:
               name: 마인크래프트 Hour of Code
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Nested Loops:
-              name: 중첩 반복
-            Introduction:
-              name: 소개
-            Conditionals:
-              name: 조건
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
           lesson_groups:
             extra_course_content:
               display_name: 추가 코스 내용
@@ -2801,21 +1669,6 @@ ko:
             Crowdsourcing:
               name: 클라우드소싱
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
-            'Algorithms: Tangrams':
-              name: '알고리즘: 탱그램'
-            Introduction:
-              name: 소개
-            Ice Age Play Lab:
-              name: 아이스 에이지 Play Lab
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Songwriting with Parameters:
-              name: 매개변수를 사용하는 음악 작곡
           lessons:
             Building a Foundation:
               name: 건물 기초 만들기
@@ -2832,11 +1685,6 @@ ko:
             Songwriting with Parameters:
               name: 매개변수를 사용하는 음악 작곡
         csd6-old:
-          stages:
-            Lists:
-              name: 리스트
-            For Loops:
-              name: 반복을 위한
           lesson_groups:
             csd6_1:
               display_name: '1 장: 하드웨어 출력'
@@ -2848,17 +1696,6 @@ ko:
             For Loops:
               name: 반복을 위한
         csd3-1819draft:
-          stages:
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
           description_short: 프로그래밍
           lesson_groups:
             csd3_1:
@@ -2878,17 +1715,6 @@ ko:
               name: 함수
         csd3-2018:
           description_short: 프로그래밍
-          stages:
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
           lesson_groups:
             csd3_1:
               display_name: '1 장: 이미지와 애니메이션'
@@ -2906,9 +1732,6 @@ ko:
             Functions:
               name: 함수
         csd2-2018:
-          stages:
-            Lists:
-              name: 리스트
           lesson_groups:
             csd2_1:
               display_name: '1 장: 웹 콘텐츠 및 HTML'
@@ -2919,15 +1742,6 @@ ko:
               name: 리스트
         coursea-2018:
           assignment_family_title: 과정 A
-          stages:
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: 스티비와 큰 프로젝트
-            'Programming: Happy Maps':
-              name: 즐거운 맵
-            Going Places Safely:
-              name: 안전하게 자리잡기
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: 스티비와 큰 프로젝트
           lessons:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 스티비와 큰 프로젝트
@@ -2938,41 +1752,6 @@ ko:
             'Persistence & Frustration: Stevie and the Big Project':
               name: 스티비와 큰 프로젝트
         express-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: 모눈 종이 프로그래밍
-            Introduction:
-              name: 소개
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Nested Loops:
-              name: 중첩 반복
-            'Events: The Big Event':
-              name: 큰 이벤트
-            'Loops: Getting Loopy':
-              name: 반복시키기
-            Conditionals with Cards:
-              name: 조건선택 카드
-            'Functions: Songwriting':
-              name: 노래 만들기
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Binary Bracelets:
-              name: 2진 팔찌
-            'Unplugged: Binary':
-              name: 2진 이미지
-            Artist Binary:
-              name: 화가 2진
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
-            Relay Programming:
-              name: 릴레이 프로그래밍
-            Graph Paper Programming:
-              name: 모눈 종이 프로그래밍
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 모눈 종이 프로그래밍
@@ -3010,13 +1789,6 @@ ko:
               name: 모눈 종이 프로그래밍
         courseb-2018:
           assignment_family_title: 과정 B
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
-            Your Digital Footprint:
-              name: 디지털 개인정보 흔적
-            Move It, Move It:
-              name: 빨리 빨리 움직이자!
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
@@ -3026,25 +1798,6 @@ ko:
               name: 빨리 빨리 움직이자!
         coursed-2018:
           assignment_family_title: 과정 D
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: 모눈 종이 프로그래밍
-            Introduction:
-              name: 소개
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Digital Citizenship:
-              name: 디지털 시민의식
-            'Unplugged: Binary':
-              name: 2진 이미지
-            Artist Binary:
-              name: 화가 2진
-            Graph Paper Programming:
-              name: 모눈 종이 프로그래밍
-            Relay Programming:
-              name: 릴레이 프로그래밍
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 모눈 종이 프로그래밍
@@ -3066,15 +1819,6 @@ ko:
               name: 릴레이 프로그래밍
         coursec-2018:
           assignment_family_title: 과정 C
-          stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
-            'Loops: Getting Loopy':
-              name: 반복시키기
-            'Events: The Big Event':
-              name: 큰 이벤트
-            Binary Bracelets:
-              name: 2진 팔찌
           lessons:
             Building a Foundation:
               name: 건물 기초 만들기
@@ -3085,11 +1829,6 @@ ko:
             Binary Bracelets:
               name: 2진 팔찌
         csd6-2018:
-          stages:
-            Functions with Parameters_:
-              name: 함수(값 전달)
-            Functions with Parameters:
-              name: 함수(값 전달)
           lesson_groups:
             csd6_1:
               display_name: '1 장: 하드웨어 출력'
@@ -3102,27 +1841,6 @@ ko:
               name: 함수(값 전달)
         coursee-2018:
           assignment_family_title: 과정 E
-          stages:
-            'Programming: My Robotic Friends':
-              name: 내 로봇 친구
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Introduction:
-              name: 소개
-            'Functions: Songwriting':
-              name: 노래 만들기
-              description_teacher: 컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램,
-                매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수
-                있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할
-                수 있도록 합니다.
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Minecraft Hour of Code:
-              name: 마인크래프트 Hour of Code
           lesson_groups:
             extra_course_content:
               display_name: 추가 코스 내용
@@ -3149,25 +1867,6 @@ ko:
               name: 마인크래프트 Hour of Code
         coursef-2018:
           assignment_family_title: 과정 F
-          stages:
-            'Programming: My Robotic Friends':
-              name: 내 로봇 친구
-            Building a Foundation:
-              name: 건물 기초 만들기
-            'Algorithms: Tangrams':
-              name: '알고리즘: 탱그램'
-            Introduction:
-              name: 소개
-            Ice Age Play Lab:
-              name: 아이스 에이지 Play Lab
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Songwriting with Parameters:
-              name: 매개변수를 사용하는 음악 작곡
-            Conditionals with Cards:
-              name: 조건선택 카드
           lessons:
             'Programming: My Robotic Friends':
               name: 내 로봇 친구
@@ -3188,9 +1887,6 @@ ko:
             Conditionals with Cards:
               name: 조건선택 카드
         csp1-2018:
-          stages:
-            The Internet:
-              name: 인터넷
           lessons:
             The Internet:
               name: 인터넷
@@ -3218,13 +1914,6 @@ ko:
               display_name: '유닛 2: 디지털 정보'
         csp3-2018:
           description_short: 프로그래밍
-          stages:
-            Creating Functions:
-              name: 함수 만들기
-            Creating functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
-            Creating Functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
           lessons:
             Creating Functions:
               name: 함수 만들기
@@ -3233,16 +1922,10 @@ ko:
             Creating Functions with Parameters:
               name: 매개변수가 있는 함수 만들기
         csp4-2018:
-          stages:
-            Simple Encryption:
-              name: 간단한 암호화
           lessons:
             Simple Encryption:
               name: 간단한 암호화
         csp5-2018:
-          stages:
-            While Loops:
-              name: "~인 동안 반복"
           lessons:
             While Loops:
               name: "~인 동안 반복"
@@ -3349,19 +2032,6 @@ ko:
             content:
               display_name: 콘텐츠
         pre-express-2018:
-          stages:
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: 스티비와 큰 프로젝트
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
-            Spelling Bee:
-              name: 말하는 꿀벌
-            Move It, Move It:
-              name: 빨리 빨리 움직이자!
-            Your Digital Footprint:
-              name: 디지털 개인정보 흔적
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: 스티비와 큰 프로젝트
           lessons:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 스티비와 큰 프로젝트
@@ -3382,23 +2052,14 @@ ko:
             content:
               display_name: 콘텐츠
         frozen-2018:
-          stages:
-            Artist:
-              name: 화가
           lessons:
             Artist:
               name: 화가
         frozen-2018-test:
-          stages:
-            Artist:
-              name: 화가
           lessons:
             Artist:
               name: 화가
         dance:
-          stages:
-            Dance Party:
-              name: 댄스 파티
           title: 댄스 파티
           description_short: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara
             등 25팀과 함께합니다!
@@ -3407,25 +2068,16 @@ ko:
             Dance Party:
               name: 댄스 파티
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: 화가
           lessons:
             Artist:
               name: 화가
         aquatic:
           description_short: 창의성, 문제해결 능력, 코드를 사용해 언더워터 월드를 탐험하고 만들어 보세요!
         dance--draft:
-          stages:
-            Dance Party:
-              name: 댄스 파티
           lessons:
             Dance Party:
               name: 댄스 파티
         dance-draft:
-          stages:
-            Dance Party:
-              name: 댄스 파티
           lessons:
             Dance Party:
               name: 댄스 파티
@@ -3440,21 +2092,6 @@ ko:
         dance-extras:
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         coursef-2019:
-          stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            The Artist:
-              name: 화가
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
           lesson_groups:
             csf_variables:
               display_name: 변수
@@ -3480,28 +2117,10 @@ ko:
             Crowdsourcing:
               name: 클라우드소싱
         dance-low:
-          stages:
-            Dance Party:
-              name: 댄스 파티
           lessons:
             Dance Party:
               name: 댄스 파티
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: 모눈 종이 프로그래밍
-            Relay Programming:
-              name: 릴레이 프로그래밍
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Digital Citizenship:
-              name: 디지털 시민의식
-            'Unplugged: Binary':
-              name: 2진 이미지
-            Artist Binary:
-              name: 화가 2진
-            Dance Party:
-              name: 댄스 파티
           lesson_groups:
             csf_events:
               display_name: 이벤트
@@ -3529,25 +2148,6 @@ ko:
             Dance Party:
               name: 댄스 파티
         coursee-2019:
-          stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
-            Nested Loops:
-              name: 중첩 반복
-            Conditionals with Cards:
-              name: 조건선택 카드
-            'Functions: Songwriting':
-              name: 노래 만들기
-              description_teacher: 컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램,
-                매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수
-                있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할
-                수 있도록 합니다.
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
-            Songwriting:
-              name: 노래 만들기
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -3575,27 +2175,6 @@ ko:
             Songwriting:
               name: 노래 만들기
         express-2019:
-          stages:
-            Relay Programming:
-              name: 릴레이 프로그래밍
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Binary Bracelets:
-              name: 2진 팔찌
-            'Unplugged: Binary':
-              name: '언플러그드: 2진'
-            Artist Binary:
-              name: 화가 2진
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
-            Dance Party:
-              name: 댄스 파티
           lesson_groups:
             csf_loops:
               display_name: 반복
@@ -3635,9 +2214,6 @@ ko:
             csd1_2:
               display_name: '2 장: 컴퓨터와 문제 해결'
         andrea-test:
-          stages:
-            'null':
-              name: 값 없음
           lesson_groups:
             required:
               display_name: 개요
@@ -3650,13 +2226,6 @@ ko:
           title: 계속 춤추기
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         coursec-2019:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: '실시간 알고리즘: 종이 비행기'
-            'Events: The Big Event':
-              name: 큰 이벤트
-            Binary Bracelets:
-              name: 2진 팔찌
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -3676,11 +2245,6 @@ ko:
         gamelab:
           title: 게임 연구소
         coursea-2019:
-          stages:
-            'Programming: Happy Maps':
-              name: 즐거운 맵
-            Going Places Safely:
-              name: 안전하게 자리잡기
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -3694,13 +2258,6 @@ ko:
             Going Places Safely:
               name: 안전하게 자리잡기
         courseb-2019:
-          stages:
-            Move It, Move It:
-              name: 빨리 빨리 움직이자!
-            Your Digital Footprint:
-              name: 디지털 개인정보 흔적
-            'Loops: Getting Loopy':
-              name: 반복시키기
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -3716,13 +2273,6 @@ ko:
             'Loops: Getting Loopy':
               name: 반복시키기
         pre-express-2019:
-          stages:
-            Move It, Move It:
-              name: 빨리 빨리 움직이자!
-            Your Digital Footprint:
-              name: 디지털 개인정보 흔적
-            Spelling Bee:
-              name: 말하는 꿀벌
           lesson_groups:
             csf_loops:
               display_name: 반복
@@ -3736,16 +2286,10 @@ ko:
             Spelling Bee:
               name: 말하는 꿀벌
         removed19:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
         csd2-2019:
-          stages:
-            Lists:
-              name: 리스트
           lesson_groups:
             csd2_1:
               display_name: '1 장: 웹 콘텐츠 및 HTML'
@@ -3756,17 +2300,6 @@ ko:
               name: 리스트
         csd3-2019:
           description_short: 프로그래밍
-          stages:
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
           lesson_groups:
             csd3_1:
               display_name: '1 장: 이미지와 애니메이션'
@@ -3798,9 +2331,6 @@ ko:
             csd5_2:
               display_name: '2 장: 데이터 문제 해결하기'
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: 함수(값 전달)
           lesson_groups:
             csd6_1:
               display_name: '1 장: 하드웨어 출력'
@@ -3810,9 +2340,6 @@ ko:
             Functions with Parameters:
               name: 함수(값 전달)
         csp4-pilot:
-          stages:
-            Surveys:
-              name: 설문
           lesson_groups:
             csp_variables:
               display_name: 변수
@@ -3826,9 +2353,6 @@ ko:
             Surveys:
               name: 설문
         csp1-2019:
-          stages:
-            The Internet:
-              name: 인터넷
           lessons:
             The Internet:
               name: 인터넷
@@ -3838,27 +2362,16 @@ ko:
               display_name: '유닛 2: 디지털 정보'
         csp3-2019:
           description_short: 프로그래밍
-          stages:
-            Creating Functions:
-              name: 함수 만들기
-            Creating functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
           lessons:
             Creating Functions:
               name: 함수 만들기
             Creating functions with Parameters:
               name: 매개변수가 있는 함수 만들기
         csp4-2019:
-          stages:
-            Simple Encryption:
-              name: 간단한 암호화
           lessons:
             Simple Encryption:
               name: 간단한 암호화
         csp5-2019:
-          stages:
-            While Loops:
-              name: "~인 동안 반복"
           lessons:
             While Loops:
               name: "~인 동안 반복"
@@ -3867,13 +2380,6 @@ ko:
             required:
               display_name: 개요
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: 클라우드소싱
-            Conditionals with Cards:
-              name: 조건선택 카드
-            Building a Foundation:
-              name: 건물 기초 만들기
           lessons:
             Crowdsourcing:
               name: 클라우드소싱
@@ -3945,9 +2451,6 @@ ko:
             csp_functions:
               display_name: 함수
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: 모눈 종이 프로그래밍
           lessons:
             Graph Paper Programming:
               name: 모눈 종이 프로그래밍
@@ -3978,9 +2481,6 @@ ko:
             csd1_2:
               display_name: '2 장: 컴퓨터와 문제 해결'
         csd2-pilot:
-          stages:
-            Lists:
-              name: 리스트
           lesson_groups:
             csd2_1:
               display_name: '1 장: 웹 콘텐츠 및 HTML'
@@ -3991,19 +2491,6 @@ ko:
               name: 리스트
         csd3-pilot:
           description_short: 프로그래밍
-          stages:
-            Variables:
-              name: 변수
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
-            Sprite Properties:
-              name: 스프라이트 속성
           lesson_groups:
             csd3_1:
               display_name: '1 장: 이미지와 애니메이션'
@@ -4105,11 +2592,6 @@ ko:
             required:
               display_name: 개요
         peru-2019:
-          stages:
-            Introduction:
-              name: 소개
-            Nested Loops:
-              name: 중첩 반복
           lessons:
             Introduction:
               name: 소개
@@ -4122,31 +2604,11 @@ ko:
             required:
               display_name: 개요
         dance-2019:
-          stages:
-            Dance Party:
-              name: 댄스 파티
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
           lessons:
             Dance Party:
               name: 댄스 파티
         k5-onlinepd-2019:
-          stages:
-            Computer Science Fundamentals:
-              name: 컴퓨터 과학 기초
-            Loops:
-              name: 반복
-            Conditionals:
-              name: 조건
-            Events:
-              name: 이벤트
-            Functions:
-              name: 함수
-            Sprite Lab:
-              name: 스프라이트 연구소
-            Variables:
-              name: 변수
-            For Loops:
-              name: 반복을 위한
           lessons:
             Computer Science Fundamentals:
               name: 컴퓨터 과학 기초
@@ -4175,18 +2637,10 @@ ko:
             csp_functions:
               display_name: 함수
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: 조건
           lessons:
             Conditionals:
               name: 조건
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: 클라우드소싱
-            Conditionals with Cards:
-              name: 조건선택 카드
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -4202,9 +2656,6 @@ ko:
             Conditionals with Cards:
               name: 조건선택 카드
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: 조건
           lesson_groups:
             csf_loops:
               display_name: 반복
@@ -4218,9 +2669,6 @@ ko:
             Conditionals:
               name: 조건
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: 조건
           lesson_groups:
             csf_loops:
               display_name: 반복
@@ -4278,9 +2726,6 @@ ko:
             csd5_2:
               display_name: '2 장: 데이터 문제 해결하기'
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: 함수(값 전달)
           lesson_groups:
             csd6_1:
               display_name: '1 장: 하드웨어 출력'
@@ -4291,21 +2736,6 @@ ko:
               name: 함수(값 전달)
         csd3-2020:
           description_short: 프로그래밍
-          stages:
-            Variables:
-              name: 변수
-            Sprite Properties:
-              name: 스프라이트 속성
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
-            Text:
-              name: 문장
           lesson_groups:
             csd3_1:
               display_name: '1 장: 이미지와 애니메이션'
@@ -4327,11 +2757,6 @@ ko:
             Text:
               name: 문장
         coursea-2020:
-          stages:
-            Going Places Safely:
-              name: 안전하게 자리잡기
-            'Programming: Happy Maps':
-              name: 즐거운 맵
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -4345,13 +2770,6 @@ ko:
             'Programming: Happy Maps':
               name: 즐거운 맵
         courseb-2020:
-          stages:
-            Your Digital Footprint:
-              name: 디지털 개인정보 흔적
-            Move It, Move It:
-              name: 빨리 빨리 움직이자!
-            'Loops: Getting Loopy':
-              name: 반복시키기
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -4367,11 +2785,6 @@ ko:
             'Loops: Getting Loopy':
               name: 반복시키기
         coursec-2020:
-          stages:
-            Binary Bracelets:
-              name: 2진 팔찌
-            'Events: The Big Event':
-              name: 큰 이벤트
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -4387,21 +2800,6 @@ ko:
             'Events: The Big Event':
               name: 큰 이벤트
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: 모눈 종이 프로그래밍
-            Relay Programming:
-              name: 릴레이 프로그래밍
-            Conditionals with Cards:
-              name: 조건선택 카드
-            'Unplugged: Binary':
-              name: 2진 이미지
-            Artist Binary:
-              name: 화가 2진
-            Digital Citizenship:
-              name: 디지털 시민의식
-            Dance Party:
-              name: 댄스 파티
           lesson_groups:
             csf_events:
               display_name: 이벤트
@@ -4429,13 +2827,6 @@ ko:
             Dance Party:
               name: 댄스 파티
         coursee-2020:
-          stages:
-            'Functions: Songwriting':
-              name: 노래 만들기
-              description_teacher: 컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램,
-                매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수
-                있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할
-                수 있도록 합니다.
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -4451,15 +2842,6 @@ ko:
                 있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할
                 수 있도록 합니다.
         coursef-2020:
-          stages:
-            Envelope Variables:
-              name: 변수들 함께 묶기
-            For Loop Fun:
-              name: 재미있는 반복
-            Internet:
-              name: 인터넷
-            Crowdsourcing:
-              name: 클라우드소싱
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -4477,9 +2859,6 @@ ko:
             Crowdsourcing:
               name: 클라우드소싱
         express-2020:
-          stages:
-            Dance Party:
-              name: 댄스 파티
           lesson_groups:
             csf_loops:
               display_name: 반복
@@ -4495,9 +2874,6 @@ ko:
             Dance Party:
               name: 댄스 파티
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: 말하는 꿀벌
           lesson_groups:
             csf_loops:
               display_name: 반복
@@ -4516,11 +2892,6 @@ ko:
               display_name: CS 원리 2단원
         csp3-virtual:
           description_short: 프로그래밍
-          stages:
-            Creating Functions:
-              name: 함수 만들기
-            Creating functions with Parameters:
-              name: 매개변수가 있는 함수 만들기
           lessons:
             Creating Functions:
               name: 함수 만들기
@@ -4533,24 +2904,12 @@ ko:
             csd2_2:
               display_name: '2 장: 스타일링 및 CSS'
         csp5-virtual:
-          stages:
-            While Loops:
-              name: "~인 동안 반복"
-            Variables:
-              name: 변수
           lessons:
             While Loops:
               name: "~인 동안 반복"
             Variables:
               name: 변수
         virtual-holding-place:
-          stages:
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
           lesson_groups:
             content:
               display_name: 콘텐츠
@@ -4564,39 +2923,16 @@ ko:
             Functions:
               name: 함수
         code-break:
-          stages:
-            Algorithms:
-              name: 알고리즘
-            Events:
-              name: 이벤트
           lessons:
             Algorithms:
               name: 알고리즘
             Events:
               name: 이벤트
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: "~인 동안 반복"
           lessons:
             While Loops:
               name: "~인 동안 반복"
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: 반복
-            Events:
-              name: 이벤트
-            Conditionals:
-              name: 조건
-            Functions:
-              name: 함수
-            Variables:
-              name: 변수
-            For Loops:
-              name: 반복을 위한
-            Sprite Lab:
-              name: 스프라이트 연구소
           lessons:
             Loops:
               name: 반복
@@ -4614,21 +2950,6 @@ ko:
               name: 스프라이트 연구소
         csd3-virtual:
           description_short: 프로그래밍
-          stages:
-            Variables:
-              name: 변수
-            Sprite Properties:
-              name: 스프라이트 속성
-            Text:
-              name: 문장
-            Conditionals:
-              name: 조건
-            Velocity:
-              name: 속도
-            Collision Detection:
-              name: 충돌 감지
-            Functions:
-              name: 함수
           lessons:
             Variables:
               name: 변수

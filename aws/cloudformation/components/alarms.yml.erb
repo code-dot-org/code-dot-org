@@ -38,3 +38,23 @@
       Statistic: Maximum
       Threshold: 87
       TreatMissingData: missing
+<% if environment == :production -%>
+  # Detect problems with the bin/cron/deliver_poste_messages scheduled job by monitoring outbound emails sent by AWS SES.
+  OutboundEmailAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
+      AlarmDescription: Send page if number of outbound transactional emails sent drops below threshold.
+      AlarmName: <%="#{stack_name}_no_outbound_emails_sent" %>
+      ComparisonOperator: LessThanThreshold
+      MetricName: Send
+      Namespace: 'AWS/SES'
+      # No outbound transactional emails (password reset, new account welcome, etc.) sent per hour for 4 consecutive hours.
+      Period: 3600
+      EvaluationPeriods: 4
+      Statistic: Sum
+      Threshold: 1
+      TreatMissingData: breaching
+<%  end -%>
+
