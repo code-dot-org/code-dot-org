@@ -53,6 +53,7 @@
         dashboard.createCallouts(appOptions.callouts);
       - if @level.is_a?(Widget)
         = render partial: 'levels/widget'
+        //TODO: Add multi and match here once those are working using the QuestionView
       - elsif @level.is_a?(FreeResponse)
         = render partial: 'levels/question_level'
       - else

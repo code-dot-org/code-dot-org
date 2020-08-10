@@ -48,6 +48,15 @@ $(document).ready(() => {
       isSubmittable: !!data.appOptions.level.submittable,
       isReadOnlyWorkspace: data.appOptions.readonlyWorkspace,
       is13Plus: data.appOptions.is13Plus,
+      serverLevelId: level.id,
+      ttsLongInstructionsUrl: level.tts_long_instructions_url,
+      //TODO: The locale needs to not be hard coded
+      locale: 'en_us',
+
+      /*
+      TODO: Check if some of these can be generated from level
+      or appoptions so that we don't have to hard code them here
+       */
       textToSpeechEnabled: true,
       isK1: false,
       noVisualization: true,
@@ -56,10 +65,7 @@ $(document).ready(() => {
       hideSource: true,
       isEmbedView: false,
       noInstructionsWhenCollapsed: true,
-      hasContainedLevels: false,
-      serverLevelId: level.id,
-      ttsLongInstructionsUrl: level.tts_long_instructions_url,
-      locale: 'en_us'
+      hasContainedLevels: false
     })
   );
 
@@ -70,9 +76,21 @@ $(document).ready(() => {
       levelVideos: data.appOptions.level.levelVideos,
       mapReference: data.appOptions.level.mapReference,
       referenceLinks: data.appOptions.level.referenceLinks,
+
+      /*
+      TODO: Check if there is a way to get this information from the level
+      or appoptions instead of hard coding it here.
+       */
       noInstructionsWhenCollapsed: true,
       overlayVisible: false,
       hasContainedLevels: false,
+
+      /*
+      TODO: These values should be pulled out of instructions redux (since
+      its not what is getting displayed in the instructions area anymore)
+      and put in a new questions redux where we keep all the values we
+      need to display the left visualization area for question type levels.
+       */
       freeResponsePlaceholder: level.placeholder,
       freeResponseTextAreaHeight: level.height,
       freeResponseTitle: level.title,
@@ -82,6 +100,9 @@ $(document).ready(() => {
     })
   );
 
+  /*
+  See note in QuestionView about these numbers.
+   */
   var questionAreaHeight = $(window).height() - 50 - 165 - 70; //header - footer - extra
 
   store.dispatch(setInstructionsMaxHeightAvailable(questionAreaHeight));

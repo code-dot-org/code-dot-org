@@ -324,7 +324,8 @@ class TopInstructions extends Component {
    * Function to force the height of the instructions area to be the
    * full size of the content for that area. This is used when the comment
    * tab loads in order to make the instructions area show the whole
-   * contents of the comment tab.
+   * contents of the comment tab. Since Question Levels already use the full area
+   * we don't need to use this.
    */
   forceTabResizeToMaxHeight = () => {
     if (

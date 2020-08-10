@@ -10,6 +10,11 @@ import {
 import FreeResponse from '@cdo/apps/code-studio/components/FreeResponse';
 
 var styles = {
+  /*
+  This matches to the left value provided in top instructions so that
+  the spacing of the question area and the instructions area match up.
+  There might be a better way to do this.
+   */
   questionArea: {
     width: 2 * ($(window).width() / 6)
   }
@@ -43,6 +48,17 @@ class QuestionView extends React.Component {
 
     this.setState({windowHeight});
 
+    /*
+    The numbers (50 - 165 - 70) are the size of the Header, Footer and then
+    so extra padding to make sure the size of the instructions fits inside
+    the level area. I could not find global constants to use for those but
+    if you can that would be great. The 150 was just a min height.
+
+    In general I'm not sure if this resizing should be owned here but that was
+    how I was able to make it work. The TopInstructions component is in real need
+    of clean up and the height resizing on it is already overly complicated.
+     */
+
     this.props.setInstructionsMaxHeightAvailable(
       Math.max(windowHeight - 50 - 165 - 70, 150)
     );
@@ -59,6 +75,15 @@ class QuestionView extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
   }
+
+  /*
+  TODO: Instead of having the FreeResponse component here we should probably try
+  to mirror what we do with WebLabView/AppLabView components and have a "QuestionVisualizationArea"
+  component where we decide what type of question the level is and then decide which component
+  such as FreeResponse to render
+
+  TODO: It would be better if isQuestionLevel was part of instructions redux
+   */
 
   render() {
     return (
