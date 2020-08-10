@@ -1,0 +1,54 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2018-11-29T20:04:53.000Z",
+  "level_num": "custom",
+  "user_id": 831,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "include_shared_functions": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"1b79e483-7a23-47e8-b649-d4ff8f1e5572\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"1b79e483-7a23-47e8-b649-d4ff8f1e5572\": {\r\n      \"name\": \"mike\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/9QVNHaKLxhOhfDq4L4WRSoXS81adP8ij/smiley_face.png\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"GawH0GVZDNygSRgdC4OowpS8cVnRZAPP\"\r\n    }\r\n  }\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-11-29 20:05:42 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-29 20:08:30 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-29 20:10:19 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-29 20:19:20 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-29 20:26:19 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-29 20:26:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-29 20:27:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"auto_run_setup\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-29 20:28:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"auto_run_setup\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-30 16:38:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-30 16:39:23 +0000\",\"changed\":[\"use_default_sprites\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-30 16:40:09 +0000\",\"changed\":[\"hide_animation_mode\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-30 16:46:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-30 16:47:22 +0000\",\"changed\":[\"hide_animation_mode\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-11-30 16:54:48 +0000\",\"changed\":[\"custom_helper_library\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>
