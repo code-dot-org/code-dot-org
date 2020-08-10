@@ -1010,6 +1010,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'contained_level_names filters blank names before validation' do
     level = build :level
+    create :level, name: 'real_name'
     level.contained_level_names = ['', 'real_name']
     assert_equal level.contained_level_names, ['', 'real_name']
     level.valid?
