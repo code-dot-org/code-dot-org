@@ -41,6 +41,8 @@ import reducer, {
   isSaveInProgress,
   sectionsNameAndId,
   getSectionRows,
+  sortedSectionsList,
+  sortSectionsList,
   NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {OAuthSectionTypes} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -1746,10 +1748,10 @@ describe('teacherSectionsRedux', () => {
 
   describe('getVisibleSections', () => {
     it('filters out hidden sections', () => {
-      const expectedVisibleSections = {
-        11: {id: 11, hidden: false},
-        1: {id: 1, hidden: null}
-      };
+      const expectedVisibleSections = [
+        {id: 11, hidden: false},
+        {id: 1, hidden: null}
+      ];
       const state = {
         teacherSections: {
           sections: {
@@ -1760,10 +1762,7 @@ describe('teacherSectionsRedux', () => {
       };
       const actualVisibleSections = getVisibleSections(state);
 
-      assert.deepEqual(
-        Object.values(expectedVisibleSections),
-        actualVisibleSections
-      );
+      assert.deepEqual(expectedVisibleSections, actualVisibleSections);
     });
 
     it('returns an empty array if there are no visible sections', () => {
@@ -1797,16 +1796,16 @@ describe('teacherSectionsRedux', () => {
       const state = reducer(undefined, setSections(sections));
       const expected = [
         {
-          id: 11,
-          name: 'My Section'
+          id: 307,
+          name: 'My Third Section'
         },
         {
           id: 12,
           name: 'My Other Section'
         },
         {
-          id: 307,
-          name: 'My Third Section'
+          id: 11,
+          name: 'My Section'
         }
       ];
       assert.deepEqual(sectionsNameAndId(state), expected);
@@ -1849,6 +1848,23 @@ describe('teacherSectionsRedux', () => {
         }
       ];
       assert.deepEqual(data, expected);
+    });
+  });
+
+  describe('sortedSectionsList', () => {
+    it('creates a sorted array from a dictionary object', () => {
+      const state = reducer(undefined, setSections(sections));
+      const expected = sections
+        .map(section => sectionFromServerSection(section))
+        .reverse();
+      assert.deepEqual(sortedSectionsList(state.sections), expected);
+    });
+  });
+
+  describe('sortSectionsList', () => {
+    it('sorts an array of sections by descending id', () => {
+      const expected = sections.reverse();
+      assert.deepEqual(sortSectionsList(sections), expected);
     });
   });
 });
