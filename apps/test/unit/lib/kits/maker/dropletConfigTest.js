@@ -68,7 +68,7 @@ describe('maker/dropletConfig.js', () => {
       ).to.deep.equal(['"change"', '"data"']);
     });
 
-    // TODO (bbuchanan): Enable when captouch is on by default
+    // Enable when captouch is on by default
     describe.skip('touchPads', () => {
       [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
         it(`touchPad${pin} dropdown`, () => {
