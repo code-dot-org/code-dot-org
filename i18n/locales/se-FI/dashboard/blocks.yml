@@ -885,6 +885,7 @@ se:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: dáppe {N} {UNIT}
         options:
           UNIT:
             '"frames"': govat
@@ -928,6 +929,7 @@ se:
         options:
           CHOICE:
             '"this"': dát
+            '"other"': eará
       gamelab_getTime:
         text: áigi {UNIT}
         options:
@@ -936,6 +938,7 @@ se:
       gamelab_hideTitleScreen:
         text: čiega šearpma bajilčállaga
       gamelab_isKeyPressed:
+        text: go {KEY} lea deaddiluvvon
         options:
           KEY:
             '"a"': a
@@ -1006,6 +1009,8 @@ se:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
+      gamelab_makeNumSprites:
+        text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
       gamelab_mirrorSprite:
         text: "{SPRITE} geahčesta {DIRECTION}"
       gamelab_mouseLocation:
