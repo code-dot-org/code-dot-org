@@ -6,6 +6,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit5/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit5/{LESSON}'
+script_announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
