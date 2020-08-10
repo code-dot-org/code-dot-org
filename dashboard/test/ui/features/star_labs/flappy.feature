@@ -1,4 +1,4 @@
-# Brad (2018-11-14) Skip on IE due to exception on Javascript click or drag functions
+# Skip on IE due to exception on Javascript click or drag functions
 @no_ie
 Feature: Flappy puzzles can be solved
 
