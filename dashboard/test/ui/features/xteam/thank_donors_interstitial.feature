@@ -17,11 +17,10 @@ Feature: Thank Donors Interstitial
     And I wait until element "#thank-donors-modal" is not visible
 
   @only_phone
-  Scenario: New student sign in from code.org does not show donor interstitial on mobile'
+  Scenario: New student sign in from code.org does not show donor interstitial on mobile
     Given I delete the cookie named "has_seen_thank_donors"
     Then I create a student who has never signed in named "Bob" and go home
     Then element "#thank-donors-modal" is not visible
-    And I sign out using jquery
 
   @eyes
   Scenario: Thank Donors Interstitial
