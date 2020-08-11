@@ -1375,7 +1375,7 @@ end
 
 And(/^I delete the cookie named "([^"]*)"$/) do |cookie_name|
   if @browser.manage.all_cookies.any? {|cookie| cookie[:name] == cookie_name}
-    @browser.manage.delete_cookie cookie
+    @browser.manage.delete_cookie cookie_name
   end
 end
 
