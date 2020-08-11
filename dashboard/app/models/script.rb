@@ -920,7 +920,7 @@ class Script < ActiveRecord::Base
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
         add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       rescue => e
-        raise e, "Error adding script named '#{options[:name]}': #{e}"
+        raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
       end
       [added_scripts, custom_i18n]
     end
