@@ -67,11 +67,7 @@ class ManageStudentsLoginInfo extends Component {
               })}
             />
             <div style={styles.sublistAlign}>
-              <InlineMarkdown
-                markdown={i18n.loginExportInstructions({
-                  articleLink: 'support.code.org'
-                })}
-              />{' '}
+              <InlineMarkdown markdown={i18n.loginExportInstructions()} />{' '}
               <LoginExport
                 sectionCode={sectionCode}
                 sectionName={sectionName}
