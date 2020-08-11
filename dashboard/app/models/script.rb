@@ -806,7 +806,22 @@ class Script < ActiveRecord::Base
   end
 
   def pre_reader_tts_level?
-    k5_course?
+    [
+        Script::COURSEA_DRAFT_NAME,
+        Script::COURSEB_DRAFT_NAME,
+        Script::COURSEA_NAME,
+        Script::COURSEB_NAME,
+        Script::PRE_READER_EXPRESS_NAME,
+        Script::COURSEA_2018_NAME,
+        Script::COURSEB_2018_NAME,
+        Script::PRE_READER_EXPRESS_2018_NAME,
+        Script::COURSEA_2019_NAME,
+        Script::COURSEB_2019_NAME,
+        Script::PRE_READER_EXPRESS_2019_NAME,
+        Script::COURSEA_2020_NAME,
+        Script::COURSEB_2020_NAME,
+        Script::PRE_READER_EXPRESS_2020_NAME,
+    ].include?(name)
   end
 
   def text_to_speech_enabled?
