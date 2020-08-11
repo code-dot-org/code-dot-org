@@ -47,7 +47,7 @@ cron:
 - dashboard.levels
 - dashboard.script_levels
 - dashboard.levels_script_levels
-- dashboard.unit_groups
+- dashboard.unit_groups:
     rename: courses
 - dashboard.course_scripts
 - dashboard.survey_results
