@@ -5,6 +5,7 @@ import {
   finishLoadingProgress,
   addDataByScript
 } from './sectionProgressRedux';
+import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   fetchStandardsCoveredForScript,
   fetchStudentLevelScores
@@ -39,6 +40,7 @@ export function loadScript(scriptId, sectionId) {
     studentLevelPairingByScript: {}
   };
 
+  // Get the script data
   getStore().dispatch(startLoadingProgress());
   const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
     credentials: 'include'
@@ -70,6 +72,7 @@ export function loadScript(scriptId, sectionId) {
       }
     });
 
+  // get the student data
   const numStudents = sectionData.students.length;
   const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
 
@@ -80,71 +83,88 @@ export function loadScript(scriptId, sectionId) {
     return fetch(url, {credentials: 'include'})
       .then(response => response.json())
       .then(data => {
-        const dataByStudent = data.students;
         sectionProgress.studentLevelProgressByScript = {
           [scriptId]: {
             ...sectionProgress.studentLevelProgressByScript,
-            ...getStudentLevelResult(dataByStudent)
+            ...getInfoByStudentByLevel(data.students, getLevelResult)
           }
         };
 
-        const studentTimestamps = _.mapValues(
-          data.student_timestamps,
-          seconds => seconds * 1000
-        );
         sectionProgress.studentTimestampsByScript = {
           [scriptId]: {
             ...sectionProgress.studentTimestampsByScript,
-            ...studentTimestamps
+            ...processStudentTimestamps(data.student_timestamps)
           }
         };
 
-        const studentPairing = getStudentPairing(dataByStudent);
-        const isValid = Object.keys(studentPairing).every(userId =>
-          Object.keys(studentPairing[userId]).every(
-            levelId => typeof studentPairing[userId][levelId] === 'boolean'
-          )
-        );
-        if (!isValid) {
-          throw new Error('Input is invalid');
-        }
         sectionProgress.studentLevelPairingByScript = {
           [scriptId]: {
             ...sectionProgress.studentLevelPairingByScript,
-            ...studentPairing
+            ...processStudentPairing(data.students)
           }
         };
       });
   });
 
+  // Combine and transform the data
   requests.push(scriptRequest);
-  debugger;
   Promise.all(requests).then(() => {
-    debugger;
-    const studentLevelProgress =
-      sectionProgress.studentLevelProgressByScript[scriptId];
-    const studentLevelPairing =
-      sectionProgress.studentLevelPairingByScript[scriptId];
-    const scriptData = sectionProgress.scriptDataByScript[scriptId];
-    let levelsByLessonByStudent = {};
-    for (const studentId of Object.keys(studentLevelProgress)) {
-      levelsByLessonByStudent[studentId] = levelsByLesson({
-        stages: scriptData.stages,
-        levelProgress: studentLevelProgress[studentId],
-        levelPairing: studentLevelPairing[studentId],
-        currentLevelId: null
-      });
-    }
-    sectionProgress.levelsByLessonByScript = {
-      [scriptId]: levelsByLessonByStudent
-    };
-    getStore().dispatch(addDataByScript(scriptId, sectionProgress));
+    sectionProgress.levelsByLessonByScript = postProcessLevelsByLesson(
+      scriptId,
+      sectionProgress
+    );
+    sectionProgress.scriptDataByScript[scriptId] = postProcessDataByScript(
+      sectionProgress.scriptDataByScript[scriptId]
+    );
+    getStore().dispatch(addDataByScript(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
   });
 }
 
-export function getStudentLevelResult(dataByStudent) {
-  return getInfoByStudentByLevel(dataByStudent, getLevelResult);
+function processStudentTimestamps(timestamps) {
+  const studentTimestamps = _.mapValues(timestamps, seconds => seconds * 1000);
+  return studentTimestamps;
+}
+
+function processStudentPairing(students) {
+  const studentPairing = getStudentPairing(students);
+  const isValid = Object.keys(studentPairing).every(userId =>
+    Object.keys(studentPairing[userId]).every(
+      levelId => typeof studentPairing[userId][levelId] === 'boolean'
+    )
+  );
+  if (!isValid) {
+    throw new Error('Input is invalid');
+  }
+  return studentPairing;
+}
+
+function postProcessDataByScript(scriptData) {
+  return {
+    ...scriptData,
+    stages: scriptData.stages.map(stage => {
+      return {
+        ...stage,
+        levels: stage.levels.map(level => processedLevel(level))
+      };
+    })
+  };
+}
+
+function postProcessLevelsByLesson(scriptId, progress) {
+  const studentLevelProgress = progress.studentLevelProgressByScript[scriptId];
+  const pairing = progress.studentLevelPairingByScript[scriptId];
+  const scriptData = progress.scriptDataByScript[scriptId];
+  let levelsByLessonByStudent = {};
+  for (const studentId of Object.keys(studentLevelProgress)) {
+    levelsByLessonByStudent[studentId] = levelsByLesson({
+      stages: scriptData.stages,
+      levelProgress: studentLevelProgress[studentId],
+      levelPairing: pairing[studentId],
+      currentLevelId: null
+    });
+  }
+  return {[scriptId]: levelsByLessonByStudent};
 }
 
 function getStudentPairing(dataByStudent) {

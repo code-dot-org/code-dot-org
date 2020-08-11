@@ -1,4 +1,3 @@
-import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   NAME_COLUMN_WIDTH,
   PROGRESS_BUBBLE_WIDTH,
@@ -25,9 +24,8 @@ export const setLessonOfInterest = lessonOfInterest => ({
   lessonOfInterest
 });
 export const setCurrentView = viewType => ({type: SET_CURRENT_VIEW, viewType});
-export const addDataByScript = (scriptId, data) => ({
+export const addDataByScript = data => ({
   type: ADD_DATA_BY_SCRIPT,
-  scriptId,
   data
 });
 
@@ -65,7 +63,6 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === FINISH_LOADING_PROGRESS) {
-    debugger;
     return {
       ...state,
       isLoadingProgress: false
@@ -86,8 +83,6 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === ADD_DATA_BY_SCRIPT) {
-    debugger;
-    const scriptId = action.scriptId;
     return {
       ...state,
       scriptDataByScript: {
@@ -156,26 +151,9 @@ export const getCurrentProgress = state => {
  * @returns {scriptDataPropType} object containing metadata about the script structure
  */
 export const getCurrentScriptData = state => {
-  debugger;
-  const script =
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId];
-
-  if (script) {
-    const stages = script.stages.map(stage => {
-      return {
-        ...stage,
-        levels: stage.levels.map(level => {
-          return processedLevel(level);
-        })
-      };
-    });
-    return {
-      ...script,
-      stages: stages
-    };
-  }
-
-  return script;
+  return state.sectionProgress.scriptDataByScript[
+    state.scriptSelection.scriptId
+  ];
 };
 
 /**

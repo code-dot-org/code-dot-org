@@ -202,7 +202,6 @@ class SectionProgress extends Component {
       isLoadingProgress,
       showStandardsIntroDialog
     } = this.props;
-debugger;
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
     const scriptWithStandardsSelected =
