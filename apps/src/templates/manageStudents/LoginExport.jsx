@@ -24,35 +24,36 @@ export default class LoginExport extends Component {
     students: PropTypes.array
   };
 
-  constructor(props) {
-    super(props);
+  generateLogins() {
+    const {students} = this.props;
     let logins = [];
 
-    if (props.students) {
-      props.students.forEach(student => {
+    if (students) {
+      students.forEach(student => {
         if (student.username !== '') {
           logins.push({
-            sectionCode: props.sectionCode,
-            sectionName: props.sectionName,
-            sectionLoginType: props.sectionLoginType,
+            sectionCode: this.props.sectionCode,
+            sectionName: this.props.sectionName,
+            sectionLoginType: this.props.sectionLoginType,
             studentName: student.name,
             studentLoginSecret:
-              props.sectionLoginType === SectionLoginType.word
+              this.props.sectionLoginType === SectionLoginType.word
                 ? student.secretWords
                 : pegasus(`/images/${student.secretPicturePath}`)
           });
         }
       });
     }
-    this.state = {logins};
+    return logins;
   }
 
   render() {
+    console.log(this.props.students.length);
     return (
       <div style={{display: 'inline'}}>
         <CSVLink
           filename={`${i18n.loginExportFilename()}.csv`}
-          data={this.state.logins}
+          data={this.generateLogins()}
           headers={CSV_LOGIN_INFO_HEADERS}
         >
           {i18n.loginExportLink()}
