@@ -8,7 +8,7 @@
     %br
     .error-message
       %h1= I18n.t(:page_not_available_title)
-      = I18n.t(:page_not_available_description).html_safe
+      = I18n.t(:page_not_available_description, support_email_link: 'mailto:support@code.org', markdown: :inline).html_safe
       %br
       %br
       %a{href: '/'}
