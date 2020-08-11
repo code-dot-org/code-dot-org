@@ -42,8 +42,8 @@ class CourseVersion < ApplicationRecord
       return nil
     end
 
-    raise "family_name must be set, since is_course is true, for: #{content_root.name}" if family_name.nil_or_empty?
-    raise "version_year must be set, since is_course is true, for: #{content_root.name}" if version_year.nil_or_empty?
+    raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
+    raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
 
     # TODO: Once the Course model is added, change this to just be version_year, since then the
     # unique index will be on (course_id, key).
