@@ -92,7 +92,7 @@ class HomeController < ApplicationController
   def init_homepage
     raise 'init_homepage can only be called when there is a current_user' unless current_user
 
-    view_options(full_width: true, responsive_content: false, has_i18n: true)
+    view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
 
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
