@@ -1418,6 +1418,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
+  test 'academic year workshops must suppress email' do
+    workshop = build :workshop, course: COURSE_CSP
+
+    # Non-academic year workshops may suppress email or not
+    workshop.subject = SUBJECT_SUMMER_WORKSHOP
+    workshop.suppress_email = false
+    assert workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+
+    # Academic year workshops must suppress email
+    workshop.subject = SUBJECT_CSP_WORKSHOP_1
+    workshop.suppress_email = false
+    refute workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
   test 'virtual specific subjects must be virtual' do
     workshop = build :pd_workshop,
       course: COURSE_CSP,
