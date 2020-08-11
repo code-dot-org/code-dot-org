@@ -727,7 +727,7 @@ class Level < ActiveRecord::Base
   # project template levels, BubbleChoice sublevels, or LevelGroup sublevels.
   # This method may be overridden by subclasses.
   def all_child_levels
-    (contained_levels + [project_template_level]).compact
+    (contained_levels + [project_template_level] - [self]).compact
   end
 
   private

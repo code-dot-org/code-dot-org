@@ -1056,4 +1056,12 @@ class LevelTest < ActiveSupport::TestCase
     )
     assert_equal [child1, child2, child3], parent.child_levels
   end
+
+  test 'all_descendant_levels works on self-referential project template levels' do
+    level_name = 'project-template-level'
+    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
+    assert_equal level, level.project_template_level
+
+    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
+  end
 end
