@@ -1,6 +1,7 @@
 module ViewOptionsHelper
   AppViewOptions = Struct.new(
-    :full_width,
+    :full_width, # The container for the main page content should span the full width of the screen.
+    :no_padding_container, # The container for the main page content should have no padding/margins
     :no_header,
     :no_footer,
     :small_footer,
@@ -31,7 +32,7 @@ module ViewOptionsHelper
     :user_id,
     :has_contained_levels,
     :next_level_url,
-    :responsive_content,
+    :responsive_content, # The container for the main page content will be responsive to small screen sizes.
     :answerdash,
     :signed_replay_log_url,
     :azure_speech_service_token,
