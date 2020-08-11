@@ -18,10 +18,10 @@ const CSV_LOGIN_INFO_HEADERS = [
 
 export default class LoginExport extends Component {
   static propTypes = {
-    sectionCode: PropTypes.string,
-    sectionName: PropTypes.string,
-    sectionLoginType: PropTypes.string,
-    students: PropTypes.array
+    sectionCode: PropTypes.string.isRequired,
+    sectionName: PropTypes.string.isRequired,
+    sectionLoginType: PropTypes.string.isRequired,
+    students: PropTypes.array.isRequired
   };
 
   generateLogins() {
@@ -30,7 +30,7 @@ export default class LoginExport extends Component {
 
     if (students) {
       students.forEach(student => {
-        if (student.username !== '') {
+        if (student.name !== '') {
           logins.push({
             sectionCode: this.props.sectionCode,
             sectionName: this.props.sectionName,
@@ -48,7 +48,6 @@ export default class LoginExport extends Component {
   }
 
   render() {
-    console.log(this.props.students.length);
     return (
       <div style={{display: 'inline'}}>
         <CSVLink
