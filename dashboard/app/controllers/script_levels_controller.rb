@@ -79,7 +79,7 @@ class ScriptLevelsController < ApplicationController
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
-    @autoplay_enabled = current_user&.sections_as_student&.find_by(script_id: @script.id)&.autoplay_enabled
+    @autoplay_enabled = current_user&.sections_as_student&.map(&:autoplay_enabled)&.reduce(false, :|)
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
