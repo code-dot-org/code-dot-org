@@ -66,18 +66,13 @@ class Pd::Workshop < ActiveRecord::Base
     # by several partners during summer 2020.
     'third_party_provider',
 
-    # If true, our system will not send enrollee-facing
-    # emails related to this workshop *except* for a receipt for the teacher
-    # if they cancel their enrollment and the post-workshop survey,
-    # which is exempt from this policy
-    # because it is important for our measurement of workshop outcomes.
-    # This option is useful to regional partners who may wish to have more
-    # direct control over workshop communication, at the cost of managing it
-    # themselves.
+    # If true, our system will not enrollees reminders related to this workshop.
     # Note that this is one of (at least) three mechanisms we use to suppress
     # email in various cases -- see Workshop.suppress_reminders? for
-    # subject-specific suppression of reminder emails, and
-    # WorkshopMailer.check_should_send, which suppresses ALL email
+    # subject-specific suppression of reminder emails. This is functionally
+    # extremely similar (identical?) to the logic currently implemented
+    # by this serialized attribute.
+    # See also WorkshopMailer.check_should_send, which suppresses ALL email
     # for workshops with a virtual subject (note, this is different than the
     # virtual serialized attribute)
     'suppress_email'
@@ -92,6 +87,7 @@ class Pd::Workshop < ActiveRecord::Base
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
   validate :all_virtual_workshops_suppress_email
+  validate :all_academic_year_workshops_suppress_email
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
   validate :friday_institute_workshops_must_be_virtual
   validate :virtual_only_subjects_must_be_virtual
@@ -127,6 +123,12 @@ class Pd::Workshop < ActiveRecord::Base
   def all_virtual_workshops_suppress_email
     if virtual? && !suppress_email?
       errors.add :properties, 'All virtual workshops must suppress email.'
+    end
+  end
+
+  def all_academic_year_workshops_suppress_email
+    if MUST_SUPPRESS_EMAIL_SUBJECTS.include?(subject) && !suppress_email?
+      errors.add :properties, 'All academic year workshops must suppress email.'
     end
   end
 
