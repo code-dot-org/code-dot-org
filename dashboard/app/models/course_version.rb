@@ -39,9 +39,10 @@ class CourseVersion < ApplicationRecord
     # delete its associated CourseVersion object if it exists. This handles the case where a .script or .course file
     # had "is_course true" at one point, and then later "is_course true" is removed.
     unless content_root.is_course?
-      CourseVersion.find_by(key: key)&.destroy
-      content_root.course_version = nil
-      content_root.save
+      if content_root.course_version
+        content_root.course_version.destroy
+        content_root.reload
+      end
       return nil
     end
 
