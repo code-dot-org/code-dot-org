@@ -19,7 +19,18 @@
 class CourseVersion < ApplicationRecord
   belongs_to :content_root, polymorphic: true
 
-  def self.update_course_version(content_root)
+  # Seeding method for creating / updating / deleting the CourseVersion for the given
+  # potential content root, i.e. a Script or UnitGroup.
+  #
+  # Examples:
+  #
+  # coursea-2019.script represents the content root for Course A, Version 2019.
+  # Therefore, it should contain "is_course true", which will cause this method to create the
+  # corresponding CourseVersion object.
+  #
+  # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
+  # Therefore, it does not contain "is_course true". so this method will not create a CourseVersion object for it.
+  def self.add_course_version(content_root)
     # TODO: Once the Course model is added, change this to just be version_year, since then the
     # unique index will be on (course_id, key).
     key = "#{content_root.family_name}-#{content_root.version_year}"
