@@ -56,6 +56,7 @@ class Lesson < ActiveRecord::Base
   def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
+      Lesson.prevent_blank_display_name(raw_lesson)
 
       lesson = script.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
@@ -82,6 +83,12 @@ class Lesson < ActiveRecord::Base
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
 
       lesson
+    end
+  end
+
+  def self.prevent_blank_display_name(raw_lesson)
+    if raw_lesson[:name].blank?
+      raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
     end
   end
 
