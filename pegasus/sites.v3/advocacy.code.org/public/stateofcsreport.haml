@@ -1,0 +1,76 @@
+---
+theme: responsive_wide
+layout: wide
+social:
+  "og:title": "Advocate for computer science education"
+  "og:description": "Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of the K-12 education."
+  "twitter:site": "@codeorg"
+  "twitter:title": "Advocate for computer science education"
+  "twitter:description": "Learn about our local policy and access resources to support computer science in our state."
+  "twitter:url": "https://advocacy.code.org/"
+video_player: false
+---
+
+-# Put advocacy.css after other CSS files so that it can override them.
+=inline_css 'interactive-map.css'
+=inline_css 'advocacy-stateofcsreport.css'
+
+- banner_body = capture_haml do
+  Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of K-12 education.
+
+  .learn-more
+    %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf"), target: '_blank'}
+      %button.header-button
+        Learn more
+
+#homepage
+
+  #fullwidth.banner-container
+    .banner
+      .banner-shade
+        .container_responsive
+          %h1 Advocate for computer science education
+          .desktop-feature
+            = banner_body
+
+    = view :header
+
+  .container_responsive
+    .non-banner.mobile-feature
+      = banner_body
+
+    = view :forum_banner
+
+    %h2.tablet-feature See what’s happening in your state
+    %h3.centered
+      Click the map below for state-specific data on the computer science landscape
+    -state ||= nil
+    = view :interactive_map, use_url: false, advocacy_variation: true
+
+    .clear{style: "clear:both"}
+
+    %h2
+      Drive the change in your state
+
+    =inline_css 'homepage.css'
+
+    #audienceblocks
+      - blocks = AdvocacySite.get_blocks(request)
+      - blocks.each do |block|
+        .block
+          - if block[:type] == "block"
+            = view :homepage_quarterslot_links, entry: block, desktop_column_width: 50, layout_class: 'quarterslot-links-large'
+
+    .clear
+
+    .coalition
+      %h2 Our Coalition
+      .centered
+        %a{href: "https://go.pardot.com/l/153401/2018-04-13/kspz3t", target: "_blank"}
+          %button Join the newsletter
+        &nbsp;&nbsp;
+        %a{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
+          %button Join the coalition
+
+      = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
+      = view :about_people, people: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacylist')

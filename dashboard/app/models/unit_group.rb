@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: courses
+# Table name: unit_groups
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
@@ -10,13 +10,12 @@
 #
 # Indexes
 #
-#  index_courses_on_name  (name)
+#  index_unit_groups_on_name  (name)
 #
+
 require 'cdo/script_constants'
 
 class UnitGroup < ApplicationRecord
-  self.table_name = 'courses'
-
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
