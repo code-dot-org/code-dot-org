@@ -7,7 +7,7 @@ module Pd::Foorm
       @daily_survey_day_0 = create :foorm_form_summer_pre_survey
       @daily_survey_day_5 = create :foorm_form_summer_post_survey
       @csf_intro_post_survey = create :foorm_form_csf_intro_post_survey
-      @parsed_forms = FoormParser.parse_forms([daily_survey_day_0, daily_survey_day_5])
+      @parsed_forms = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5])
     end
 
     teardown_all do
