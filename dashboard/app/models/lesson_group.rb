@@ -65,6 +65,10 @@ class LessonGroup < ApplicationRecord
         LessonGroup.prevent_changing_plc_display_name(raw_lesson_group)
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
 
+        if script.is_stable && ScriptConstants.i18n?(script.name) && !(I18n.t "data.script.name.#{script.name}.lesson_groups").keys.map(&:to_s).include?(raw_lesson_group[:key])
+          raise "Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: #{raw_lesson_group[:key]}"
+        end
+
         lesson_group = LessonGroup.find_or_create_by(
           key: raw_lesson_group[:key],
           script: script,

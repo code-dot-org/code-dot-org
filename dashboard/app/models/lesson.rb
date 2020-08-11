@@ -58,12 +58,16 @@ class Lesson < ActiveRecord::Base
       Lesson.prevent_empty_lesson(raw_lesson)
       Lesson.prevent_blank_display_name(raw_lesson)
 
+      if script.is_stable && ScriptConstants.i18n?(script.name) && !(I18n.t "data.script.name.#{script.name}.lessons").keys.map(&:to_s).include?(raw_lesson[:key])
+        raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
+      end
+
       lesson = script.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
           key: raw_lesson[:key],
           script: script
         ) do |l|
-          l.name = "" # will be updated below, but cant be null
+          l.name = " " # will be updated below, but cant be null
           l.relative_position = 0 # will be updated below, but cant be null
         end
 
@@ -94,6 +98,12 @@ class Lesson < ActiveRecord::Base
 
   def self.prevent_empty_lesson(raw_lesson)
     raise "Lessons must have at least one level in them.  Lesson: #{raw_lesson[:name]}." if raw_lesson[:script_levels].empty?
+  end
+
+  def self.prevent_blank_display_name(raw_lesson)
+    if raw_lesson[:name].blank?
+      raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
+    end
   end
 
   # Go through all the script levels for this lesson, except the last one,
