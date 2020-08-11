@@ -39,7 +39,8 @@ import {
 } from '../permission';
 import {
   Subjects,
-  VirtualOnlySubjects
+  VirtualOnlySubjects,
+  MustSuppressEmailSubjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
@@ -520,7 +521,11 @@ export class WorkshopForm extends React.Component {
               <SelectSuppressEmail
                 onChange={this.handleSuppressEmailChange}
                 value={this.state.suppress_email || false}
-                readOnly={this.props.readOnly || this.state.virtual}
+                readOnly={
+                  this.props.readOnly ||
+                  this.state.virtual ||
+                  MustSuppressEmailSubjects.includes(this.state.subject)
+                }
               />
               <HelpBlock>{validation.help.suppress_email}</HelpBlock>
             </FormGroup>
@@ -810,6 +815,12 @@ export class WorkshopForm extends React.Component {
     if (VirtualOnlySubjects.includes(subject)) {
       this.setState({
         virtual: true,
+        suppress_email: true
+      });
+    }
+
+    if (MustSuppressEmailSubjects.includes(subject)) {
+      this.setState({
         suppress_email: true
       });
     }

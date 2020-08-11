@@ -94,6 +94,15 @@ module Pd
       SUBJECT_VIRTUAL_KICKOFF
     ].freeze
 
+    MUST_SUPPRESS_EMAIL_SUBJECTS = [
+      SUBJECT_WORKSHOP_1,
+      SUBJECT_WORKSHOP_2,
+      SUBJECT_WORKSHOP_3,
+      SUBJECT_WORKSHOP_4,
+      SUBJECT_WORKSHOP_1_2,
+      SUBJECT_WORKSHOP_3_4
+    ].freeze
+
     LEGACY_SUBJECTS = {
       COURSE_CSP => [
         LEGACY_SUBJECT_CSP_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
