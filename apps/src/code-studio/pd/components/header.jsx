@@ -82,7 +82,7 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={'breadcrumbHeader'}>
         <Breadcrumb>{this.renderBreadcrumbItems()}</Breadcrumb>
         {this.props.children}
       </div>
