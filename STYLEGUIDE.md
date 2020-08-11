@@ -7,7 +7,7 @@ We try to maintain a consistent style for two reasons:
 
 Set up your editor to do the heavy lifting. If your editor is capable, configure it to align with the standards listed below. This makes mistakenly introducing style errors less likely.
 
-Some lint and style rules are enforced by [Rubocop](https://github.com/bbatsov/rubocop). You can check your changes locally by running `rake lint`. Hound CI will also comment on issues it sees in Pull Requests.
+Some lint and style rules are enforced by [Rubocop](https://github.com/bbatsov/rubocop). You can check your changes locally by running `rake lint`.
 
 ## All Languages
 - Be consistent with surrounding code. When working in a new file, take a bit of time to get a feel for the style. The intent is to keep the code readable and not interrupt the flow.
