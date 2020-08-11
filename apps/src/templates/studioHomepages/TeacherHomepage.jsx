@@ -178,76 +178,90 @@ export class UnconnectedTeacherHomepage extends Component {
     // Show the regular announcement/notification for now.
     const showAnnouncement = true;
 
+    // Verify background image works for both LTR and RTL languages.
+    const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
+
     return (
       <div>
-        <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
-        <ProtectedStatefulDiv ref="flashes" />
-        <ProtectedStatefulDiv ref="teacherReminders" />
-        {isEnglish && specialAnnouncement && (
-          <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
-        )}
-        {announcement && showAnnouncement && (
-          <div>
-            <Notification
-              type={announcement.type || 'bullhorn'}
-              notice={announcement.heading}
-              details={announcement.description}
-              dismissible={true}
-              buttonText={announcement.buttonText}
-              buttonLink={announcement.link}
-              newWindow={true}
-              analyticId={announcement.id}
-            />
-            <div style={styles.clear} />
-          </div>
-        )}
-        {this.state.showCensusBanner && (
-          <div>
-            <CensusTeacherBanner
-              ref={this.bindCensusBanner}
-              schoolYear={schoolYear}
-              ncesSchoolId={ncesSchoolId}
-              question={censusQuestion}
-              teaches={this.state.censusBannerTeachesSelection}
-              inClass={this.state.censusBannerInClassSelection}
-              teacherId={teacherId}
-              teacherName={teacherName}
-              teacherEmail={teacherEmail}
-              showInvalidError={this.state.showCensusInvalidError}
-              showUnknownError={this.state.showCensusUnknownError}
-              submittedSuccessfully={this.state.censusSubmittedSuccessfully}
-              onSubmit={() => this.handleCensusBannerSubmit()}
-              onDismiss={() => this.dismissAndHideCensusBanner()}
-              onPostpone={() => this.postponeCensusBanner()}
-              onTeachesChange={event =>
-                this.handleCensusBannerTeachesChange(event)
-              }
-              onInClassChange={event =>
-                this.handleCensusBannerInClassChange(event)
-              }
-            />
-            <br />
-          </div>
-        )}
-        {isEnglish && this.state.donorBannerName && (
-          <div>
-            <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
-            <div style={styles.clear} />
-          </div>
-        )}
-        <TeacherSections />
-        <RecentCourses
-          courses={courses}
-          topCourse={topCourse}
-          showAllCoursesLink={true}
-          isTeacher={true}
+        <HeaderBanner
+          headingText={i18n.homepageHeading()}
+          short={true}
+          backgroundUrl={backgroundUrl}
         />
-        <TeacherResources />
-        <ProjectWidgetWithData
-          canViewFullList={true}
-          canViewAdvancedTools={canViewAdvancedTools}
-        />
-        <StudentSections initialSections={joinedSections} isTeacher={true} />
+        <div className={'container main'}>
+          <ProtectedStatefulDiv ref="flashes" />
+          <ProtectedStatefulDiv ref="teacherReminders" />
+          {isEnglish && specialAnnouncement && (
+            <SpecialAnnouncementActionBlock
+              announcement={specialAnnouncement}
+            />
+          )}
+          {announcement && showAnnouncement && (
+            <div>
+              <Notification
+                type={announcement.type || 'bullhorn'}
+                notice={announcement.heading}
+                details={announcement.description}
+                dismissible={true}
+                buttonText={announcement.buttonText}
+                buttonLink={announcement.link}
+                newWindow={true}
+                analyticId={announcement.id}
+              />
+              <div style={styles.clear} />
+            </div>
+          )}
+          {this.state.showCensusBanner && (
+            <div>
+              <CensusTeacherBanner
+                ref={this.bindCensusBanner}
+                schoolYear={schoolYear}
+                ncesSchoolId={ncesSchoolId}
+                question={censusQuestion}
+                teaches={this.state.censusBannerTeachesSelection}
+                inClass={this.state.censusBannerInClassSelection}
+                teacherId={teacherId}
+                teacherName={teacherName}
+                teacherEmail={teacherEmail}
+                showInvalidError={this.state.showCensusInvalidError}
+                showUnknownError={this.state.showCensusUnknownError}
+                submittedSuccessfully={this.state.censusSubmittedSuccessfully}
+                onSubmit={() => this.handleCensusBannerSubmit()}
+                onDismiss={() => this.dismissAndHideCensusBanner()}
+                onPostpone={() => this.postponeCensusBanner()}
+                onTeachesChange={event =>
+                  this.handleCensusBannerTeachesChange(event)
+                }
+                onInClassChange={event =>
+                  this.handleCensusBannerInClassChange(event)
+                }
+              />
+              <br />
+            </div>
+          )}
+          {isEnglish && this.state.donorBannerName && (
+            <div>
+              <DonorTeacherBanner
+                showPegasusLink={true}
+                source="teacher_home"
+              />
+              <div style={styles.clear} />
+            </div>
+          )}
+          <TeacherSections />
+          <RecentCourses
+            courses={courses}
+            topCourse={topCourse}
+            showAllCoursesLink={true}
+            isTeacher={true}
+          />
+          <TeacherResources />
+          <ProjectWidgetWithData
+            canViewFullList={true}
+            canViewAdvancedTools={canViewAdvancedTools}
+          />
+          <StudentSections initialSections={joinedSections} isTeacher={true} />
+        </div>
       </div>
     );
   }

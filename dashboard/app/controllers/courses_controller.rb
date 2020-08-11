@@ -7,14 +7,13 @@ class CoursesController < ApplicationController
   authorize_resource class: 'UnitGroup', except: [:index]
 
   def index
-    view_options(full_width: true, responsive_content: true, has_i18n: true)
+    view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
     respond_to do |format|
       format.html do
         @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
         @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
-        @header_banner_image_filename = !@is_teacher ? "courses-hero-student" : "courses-hero-teacher"
         @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
