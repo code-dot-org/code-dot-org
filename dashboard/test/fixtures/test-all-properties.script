@@ -1,3 +1,5 @@
+family_name 'csd1'
+
 hideable_lessons true
 project_widget_visible true
 student_detail_progress_view true
