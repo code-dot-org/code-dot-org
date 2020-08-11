@@ -82,12 +82,14 @@ class BubbleChoice < DSLDefined
     if script_level
       previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
       next_level_url = script_level.next_level ? build_script_level_url(script_level.next_level) : nil
+      finish_url = script_level.script.finish_url
 
       summary.merge!(
         {
           previous_level_url: previous_level_url,
           next_level_url: next_level_url,
-          script_url: script_url(script_level.script)
+          script_url: script_url(script_level.script),
+          finish_url: finish_url
         }
       )
     end

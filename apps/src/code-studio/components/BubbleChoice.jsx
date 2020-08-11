@@ -55,10 +55,26 @@ export default class BubbleChoice extends React.Component {
     navigateToHref(url + location.search);
   };
 
+  nextButton = level => {
+    const url = level.next_level_url || level.finish_url;
+    const label = level.next_level_url ? i18n.continue() : i18n.finish();
+    console.log('url: ' + url + ' label: ' + label);
+    return (
+      url && (
+        <button
+          type="button"
+          onClick={() => this.goToUrl(url)}
+          style={{...styles.btn, ...styles.btnOrange}}
+        >
+          {label}
+        </button>
+      )
+    );
+  };
+
   renderButtons = () => {
     const {level} = this.props;
     const backButtonUrl = level.previous_level_url || level.script_url;
-    const continueButtonUrl = level.next_level_url || level.script_url;
 
     return (
       <div>
@@ -71,15 +87,7 @@ export default class BubbleChoice extends React.Component {
             {i18n.back()}
           </button>
         )}
-        {continueButtonUrl && (
-          <button
-            type="button"
-            onClick={() => this.goToUrl(continueButtonUrl)}
-            style={{...styles.btn, ...styles.btnOrange}}
-          >
-            {level.next_level_url ? i18n.continue() : i18n.finish()}
-          </button>
-        )}
+        {this.nextButton(level)}
       </div>
     );
   };
