@@ -313,8 +313,12 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
       enrollment_in_finished_teachercon_did_survey = teachercon3.enrollments.first,
     ]
 
-    create :csf_intro_post_workshop_submission,
+    existing_survey = create :csf_intro_post_foorm_submission,
       :answers_high,
+      form_name: "surveys/pd/workshop_csf_intro_post"
+
+    create :csf_intro_post_workshop_submission,
+      foorm_submission: existing_survey,
       user: enrollment_with_processed_survey.user,
       pd_workshop_id: enrollment_with_processed_survey.workshop.id
 
@@ -334,8 +338,12 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
 
     # complete survey
-    create :day_5_workshop_foorm_submission,
+    existing_survey = create :daily_workshop_day_5_foorm_submission,
       :answers_high,
+      form_name: "surveys/pd/summer_workshop_post_survey"
+
+    create :day_5_workshop_foorm_submission,
+      foorm_submission: existing_survey,
       user: enrollment.user,
       pd_workshop_id: enrollment.workshop.id
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
