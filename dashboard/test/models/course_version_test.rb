@@ -26,14 +26,14 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "update_course_version creates CourseVersion for script that doesn't have one if is_course is true" do
     script = create :script, family_name: 'csz', version_year: '2050', is_course: true
-    course_version = CourseVersion.update_course_version(script)
+    course_version = CourseVersion.add_course_version(script)
 
     assert_equal course_version, CourseVersion.find_by(key: 'csz-2050')
   end
 
   test "update_course_version updates existing CourseVersion for script if properties change" do
     script = create :script, family_name: 'csz', version_year: '2050', is_course: true
-    CourseVersion.update_course_version(script)
+    CourseVersion.add_course_version(script)
 
     assert_equal 'csz-2050', script.course_version.key
     assert_equal '2050', script.course_version.display_name
@@ -42,7 +42,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     script.version_year = '2060'
     script.save
 
-    CourseVersion.update_course_version(script)
+    CourseVersion.add_course_version(script)
 
     assert_equal 'csx-2060', script.course_version.key
     assert_equal '2060', script.course_version.display_name
@@ -52,13 +52,13 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "update_course_version deletes CourseVersion for script if is_course is changed to false" do
     script = create :script, family_name: 'csz', version_year: '2050', is_course: true
-    CourseVersion.update_course_version(script)
+    CourseVersion.add_course_version(script)
 
     assert_not_nil script.course_version
 
     script.is_course = false
     script.save
-    course_version = CourseVersion.update_course_version(script)
+    course_version = CourseVersion.add_course_version(script)
 
     assert_nil course_version
     assert_nil script.course_version
@@ -67,7 +67,7 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "update_course_version does nothing for script without CourseVersion if is_course is false" do
     script = create :script, family_name: 'csz', version_year: '2050'
-    course_version = CourseVersion.update_course_version(script)
+    course_version = CourseVersion.add_course_version(script)
 
     assert_nil course_version
     assert_nil script.course_version
