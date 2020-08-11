@@ -1010,6 +1010,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'contained_level_names filters blank names before validation' do
     level = build :level
+    create :level, name: 'real_name'
     level.contained_level_names = ['', 'real_name']
     assert_equal level.contained_level_names, ['', 'real_name']
     level.valid?
@@ -1054,5 +1055,13 @@ class LevelTest < ActiveSupport::TestCase
       position: 2
     )
     assert_equal [child1, child2, child3], parent.child_levels
+  end
+
+  test 'all_descendant_levels works on self-referential project template levels' do
+    level_name = 'project-template-level'
+    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
+    assert_equal level, level.project_template_level
+
+    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
   end
 end

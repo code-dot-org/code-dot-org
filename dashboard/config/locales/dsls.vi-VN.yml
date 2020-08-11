@@ -1467,6 +1467,10 @@ vi-VN:
         - {}
         questions:
         - {}
+      courseD_EOC_2020:
+        description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
+          muốn nhé.
+        display_name: Dự án cuối khóa học
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A

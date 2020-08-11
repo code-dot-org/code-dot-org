@@ -1,10 +1,10 @@
 # Most academic year workshops are one day workshops.
 # These specific workshop types are two day workshops.
 TWO_DAY_AYW_SUBJECTS = [
-  Pd::Workshop::SUBJECT_CSD_WORKSHOP_5,
-  Pd::Workshop::SUBJECT_CSD_WORKSHOP_6,
-  Pd::Workshop::SUBJECT_CSP_WORKSHOP_5,
-  Pd::Workshop::SUBJECT_CSP_WORKSHOP_6
+  Pd::Workshop::SUBJECT_CSD_WORKSHOP_1_2,
+  Pd::Workshop::SUBJECT_CSD_WORKSHOP_3_4,
+  Pd::Workshop::SUBJECT_CSP_WORKSHOP_1_2,
+  Pd::Workshop::SUBJECT_CSP_WORKSHOP_3_4
 ]
 
 #
@@ -164,9 +164,9 @@ FactoryGirl.define do
       trait :two_day do
         subject do
           if course == Pd::Workshop::COURSE_CSP
-            Pd::Workshop::SUBJECT_CSP_WORKSHOP_5
+            Pd::Workshop::SUBJECT_CSP_WORKSHOP_1_2
           else
-            Pd::Workshop::SUBJECT_CSD_WORKSHOP_5
+            Pd::Workshop::SUBJECT_CSD_WORKSHOP_1_2
           end
         end
       end
@@ -187,8 +187,8 @@ FactoryGirl.define do
         # Pd::Workshop::SUBJECT_CSP_WORKSHOP_2
         # Pd::Workshop::SUBJECT_CSP_WORKSHOP_3
         # Pd::Workshop::SUBJECT_CSP_WORKSHOP_4
-        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_5 (2-day)
-        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_6 (2-day)
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_1_2 (2-day)
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_3_4 (2-day)
         subject Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
       end
       factory(:csp_academic_year_workshop) {csp}
@@ -203,8 +203,8 @@ FactoryGirl.define do
         # Pd::Workshop::SUBJECT_CSD_WORKSHOP_2
         # Pd::Workshop::SUBJECT_CSD_WORKSHOP_3
         # Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
-        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_5 (2-day)
-        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_6 (2-day)
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_1_2 (2-day)
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_3_4 (2-day)
         subject Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
       end
       factory(:csd_academic_year_workshop) {csd}
