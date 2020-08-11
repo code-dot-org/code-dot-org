@@ -103,5 +103,4 @@
       = render partial: 'shared/maybe_set_hoc_secret'
 
     = render file: Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml'), locals: {dashboard: true}
-    = render partial: 'layouts/parent_email_banner'
     = yield :body_scripts
