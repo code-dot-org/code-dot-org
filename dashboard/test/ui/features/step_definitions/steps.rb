@@ -1148,6 +1148,13 @@ And /^I dismiss the language selector$/ do
   }
 end
 
+And /^I dismiss the teacher panel$/ do
+  steps %Q{
+    And I click selector ".fa-chevron-right"
+    And I wait until I see selector ".fa-chevron-left"
+  }
+end
+
 And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])

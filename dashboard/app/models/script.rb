@@ -408,6 +408,8 @@ class Script < ActiveRecord::Base
     @@level_cache[level.id] = level if level && should_cache?
     @@level_cache[level.name] = level if level && should_cache?
     level
+  rescue => e
+    raise e, "Error finding level #{level_identifier}: #{e}"
   end
 
   def cached
@@ -1591,5 +1593,10 @@ class Script < ActiveRecord::Base
 
   def self.get_version_year_options
     UnitGroup.get_version_year_options
+  end
+
+  def all_descendant_levels
+    sublevels = levels.map(&:all_descendant_levels).flatten
+    levels + sublevels
   end
 end
