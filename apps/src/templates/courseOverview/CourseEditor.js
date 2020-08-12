@@ -58,6 +58,7 @@ export default class CourseEditor extends Component {
       courseFamilies,
       versionYearOptions
     } = this.props;
+    const urlPath = `/courses/${name}`;
     return (
       <div>
         <h1>{name}</h1>
@@ -68,6 +69,15 @@ export default class CourseEditor extends Component {
             name="title"
             defaultValue={title}
             style={styles.input}
+          />
+        </label>
+        <label>
+          Course URL
+          <input
+            type="text"
+            value={urlPath}
+            style={styles.input}
+            disabled={true}
           />
         </label>
         <label>
