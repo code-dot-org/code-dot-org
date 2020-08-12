@@ -86,17 +86,15 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'specific emails are not sent for workshops with suppress_email attribute' do
+  test 'reminders are not sent for workshops with suppress_email attribute' do
     workshop = create :csp_summer_workshop, suppress_email: true
     facilitator = workshop.facilitators.first
     enrollment = create :pd_enrollment, workshop: workshop
 
     assert_no_emails do
       Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
-      Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
-      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
     end
   end
 
@@ -104,7 +102,10 @@ class WorkshopMailerTest < ActionMailer::TestCase
     workshop = create :csp_summer_workshop, suppress_email: true
     enrollment = create :pd_enrollment, workshop: workshop
 
-    assert_emails 4 do
+    assert_emails 6 do
+      Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
+      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
+
       # Still send cancellation receipt and exit survey to teachers
       Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
       Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
