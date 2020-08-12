@@ -83,7 +83,10 @@ export default class CourseEditor extends Component {
           />
         </label>
         <label>
-          Short Description (used in course cards on homepage)
+          Short Description
+          <HelpTip>
+            <p>used in course cards on homepage</p>
+          </HelpTip>
           <textarea
             name="description_short"
             defaultValue={descriptionShort}
@@ -129,17 +132,19 @@ export default class CourseEditor extends Component {
         <h2>Basic settings</h2>
         <label>
           Verified Resources
+          <HelpTip>
+            <p>
+              Check if this course has resources (such as lockable lessons and
+              answer keys) for verified teachers, and we want to notify
+              non-verified teachers that this is the case.
+            </p>
+          </HelpTip>
           <input
             name="has_verified_resources"
             type="checkbox"
             defaultChecked={this.props.hasVerifiedResources}
             style={styles.checkbox}
           />
-          <p>
-            Check if this course has resources (such as lockable lessons and
-            answer keys) for verified teachers, and we want to notify
-            non-verified teachers that this is the case.
-          </p>
         </label>
         <h2>Publishing settings</h2>
         <label>
