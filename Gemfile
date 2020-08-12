@@ -284,6 +284,7 @@ gem 'unf_ext', '0.0.7.2'
 gem 'acmesmith', '~> 2.3.1'
 
 gem 'addressable'
+# bcrypt version specified due to "Invalid Hash" error in Linux
 gem 'bcrypt', '3.1.13'
 gem 'firebase'
 gem 'firebase_token_generator'
