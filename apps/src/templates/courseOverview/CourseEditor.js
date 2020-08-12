@@ -81,6 +81,49 @@ export default class CourseEditor extends Component {
           />
         </label>
         <label>
+          Short Description (used in course cards on homepage)
+          <textarea
+            name="description_short"
+            defaultValue={descriptionShort}
+            rows={5}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Student Description
+          <textarea
+            name="description_student"
+            defaultValue={descriptionStudent}
+            rows={5}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Teacher Description
+          <textarea
+            name="description_teacher"
+            defaultValue={descriptionTeacher}
+            rows={5}
+            style={styles.input}
+          />
+        </label>
+        <h2>Basic settings</h2>
+        <label>
+          Verified Resources
+          <input
+            name="has_verified_resources"
+            type="checkbox"
+            defaultChecked={this.props.hasVerifiedResources}
+            style={styles.checkbox}
+          />
+          <p>
+            Check if this course has resources (such as lockable lessons and
+            answer keys) for verified teachers, and we want to notify
+            non-verified teachers that this is the case.
+          </p>
+        </label>
+        <h2>Publishing settings</h2>
+        <label>
           Family Name
           <select
             name="family_name"
@@ -129,49 +172,8 @@ export default class CourseEditor extends Component {
             recommended version.
           </p>
         </label>
+        <h2>Units</h2>
         <label>
-          Short Description (used in course cards on homepage)
-          <textarea
-            name="description_short"
-            defaultValue={descriptionShort}
-            rows={5}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Student Description
-          <textarea
-            name="description_student"
-            defaultValue={descriptionStudent}
-            rows={5}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Teacher Description
-          <textarea
-            name="description_teacher"
-            defaultValue={descriptionTeacher}
-            rows={5}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Verified Resources
-          <input
-            name="has_verified_resources"
-            type="checkbox"
-            defaultChecked={this.props.hasVerifiedResources}
-            style={styles.checkbox}
-          />
-          <p>
-            Check if this course has resources (such as lockable lessons and
-            answer keys) for verified teachers, and we want to notify
-            non-verified teachers that this is the case.
-          </p>
-        </label>
-        <label>
-          <h4>Scripts</h4>
           <div>
             The dropdown(s) below represent the ordered set of scripts in this
             course. To remove a script, just set the dropdown to the default
@@ -184,7 +186,7 @@ export default class CourseEditor extends Component {
           />
         </label>
         <div>
-          <h4>Teacher Resources</h4>
+          <h2>Teacher Resources</h2>
           <div>
             Select up to three Teacher Resources buttons you'd like to have show
             up on the top of the course overview page
