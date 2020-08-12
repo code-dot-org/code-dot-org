@@ -64,12 +64,13 @@
       - if view_options[:code_studio_logo]
         = render partial: 'layouts/logo'
       - page = yield
+
       - if view_options[:full_width]
         - if view_options[:responsive_content]
-          .responsive_full_container
+          .responsive_full_container{style: ('padding: 0' if view_options[:no_padding_container])}
             = page
         - else
-          .full_container
+          .full_container{style: ('padding: 0' if view_options[:no_padding_container])}
             = page
       - else
         .container.main
@@ -102,5 +103,4 @@
       = render partial: 'shared/maybe_set_hoc_secret'
 
     = render file: Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml'), locals: {dashboard: true}
-    = render partial: 'layouts/parent_email_banner'
     = yield :body_scripts

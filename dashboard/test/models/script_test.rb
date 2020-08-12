@@ -2363,6 +2363,67 @@ endvariants
     assert_equal 'Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: lg', raise.message
   end
 
+  test 'all_descendant_levels returns nested levels of all types' do
+    # simple level
+    level1 = create :level, name: 'level1'
+
+    # level swapping
+    swap1 = create :level, name: 'swap1'
+    swap2 = create :level, name: 'swap2'
+
+    # lesson extras
+    extra1 = create :level, name: 'extra1'
+    extra2 = create :level, name: 'extra2'
+
+    # contained levels
+    containee = create :multi, name: 'containee'
+    container = create :applab, name: 'container', contained_level_names: [containee.name]
+
+    # project template levels
+    template_level = create :applab, name: 'template'
+    template_backed_level = create :applab, name: 'template_backed', project_template_level_name: template_level.name
+
+    # level groups
+    level_group = create :level_group, :with_sublevels, name: 'level group'
+    assert_equal 2, level_group.pages.length
+    level_group_sublevels = level_group.pages.map(&:levels).flatten
+    assert_equal 3, level_group_sublevels.length
+
+    # buble choice levels
+    bubble_choice = create :bubble_choice_level, :with_sublevels, name: 'bubble choice'
+    bubble_choice_sublevels = bubble_choice.sublevels
+    assert_equal 3, bubble_choice_sublevels.length
+
+    dsl = <<~SCRIPT
+      lesson 'lesson1'
+      level '#{level1.name}'
+      variants
+        level '#{swap1.name}', active: false
+        level '#{swap2.name}'
+      endvariants
+      level '#{container.name}'
+      level '#{template_backed_level.name}'
+      level '#{level_group.name}'
+      level '#{bubble_choice.name}'
+      bonus '#{extra1.name}'
+      bonus '#{extra2.name}'
+    SCRIPT
+    script_data = ScriptDSL.parse(dsl, 'a filename')[0]
+    script = Script.add_script(
+      {name: 'all-levels-script'},
+      script_data[:lesson_groups]
+    )
+
+    levels = [level1, swap1, swap2, container,  template_backed_level, level_group, bubble_choice, extra1, extra2]
+    nested_levels = [containee, template_level, level_group_sublevels, bubble_choice_sublevels].flatten
+
+    assert_equal levels, script.levels
+    expected_levels = levels + nested_levels
+    actual_levels = script.all_descendant_levels
+    assert_equal expected_levels.compact.map(&:name), actual_levels.compact.map(&:name)
+    assert_equal expected_levels, actual_levels
+  end
+
   private
 
   def has_hidden_script?(scripts)
