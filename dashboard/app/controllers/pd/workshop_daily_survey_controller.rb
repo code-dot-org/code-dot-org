@@ -383,6 +383,21 @@ module Pd
     def thanks
     end
 
+    # Pre survey controller for academic year workshops
+    def new_ayw_pre
+      # get workshop (based on url/user)
+      workshop_subject = ACADEMIC_YEAR_WORKSHOPS[params[:workshop_subject]]
+      return render_404 unless workshop_subject
+      workshop = Pd::Workshop.
+        where(subject: workshop_subject).
+        enrolled_in_by(current_user).nearest
+      return render_404 unless workshop
+
+      survey_name = PRE_SURVEY_CONFIG_PATHS[workshop_subject]
+
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: nil)
+    end
+
     protected
 
     def get_attended_workshop_by_enrollment_or_course(enrollment_code, course, subject)
