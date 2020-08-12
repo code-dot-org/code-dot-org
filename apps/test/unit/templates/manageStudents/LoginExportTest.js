@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import LoginExport from '@cdo/apps/templates/manageStudents/LoginExport';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const DEFAULT_PROPS = {
   sectionCode: 'ABCDEF',
@@ -73,19 +74,19 @@ describe('LoginExport', () => {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studentb',
-        studentLoginSecret: '/images/wizard.png'
+        studentLoginSecret: pegasus('/images/wizard.png')
       },
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studenta',
-        studentLoginSecret: '/images/ghost.png'
+        studentLoginSecret: pegasus('/images/ghost.png')
       },
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studentf',
-        studentLoginSecret: '/images/robot.png'
+        studentLoginSecret: pegasus('/images/robot.png')
       }
     ]);
   });
