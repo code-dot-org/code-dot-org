@@ -4,9 +4,21 @@ module Api::V1::Pd
   class WorkshopSurveyFoormReportControllerTest < ::ActionController::TestCase
     self.use_transactional_test_case = true
 
+    setup_all do
+      @summer_post_survey = create :foorm_form_summer_post_survey
+      @summer_pre_survey = create :foorm_form_summer_pre_survey
+      @csf_intro_post_survey = create :foorm_form_csf_intro_post_survey
+    end
+
     setup do
       @workshop = create :csd_summer_workshop
       @workshop_admin = create :workshop_admin
+    end
+
+    teardown_all do
+      @summer_post_survey.delete
+      @summer_pre_survey.delete
+      @csf_intro_post_survey.delete
     end
 
     test 'get generic survey report correctly' do
@@ -53,7 +65,7 @@ module Api::V1::Pd
       day_0_general_response = response['this_workshop']['Pre Workshop']['general']
 
       assert_equal 2, day_0_general_response['response_count']
-      matrix_response = day_0_general_response['surveys/pd/summer_workshop_pre_survey.0']['teaching_cs_matrix']
+      matrix_response = day_0_general_response['surveys/pd/summer_workshop_pre_survey_test.0']['teaching_cs_matrix']
 
       assert_not_nil matrix_response['committed_to_teaching_cs']
       assert_not_nil matrix_response['like_teaching_cs']
@@ -198,7 +210,7 @@ module Api::V1::Pd
 
       assert_equal 7, response[:this_workshop]['Post Workshop'][:facilitator][:response_count][facilitator_1_id]
 
-      overall_facilitator = response[:this_workshop]['Post Workshop'][:facilitator]['surveys/pd/workshop_csf_intro_post.0'.to_sym]
+      overall_facilitator = response[:this_workshop]['Post Workshop'][:facilitator]['surveys/pd/workshop_csf_intro_post_test.0'.to_sym]
       facilitator_effectiveness = overall_facilitator[:facilitator_effectiveness]
       # Verify see results for facilitator 1
       assert_not_nil facilitator_effectiveness[facilitator_1_id][:on_track]
@@ -238,7 +250,7 @@ module Api::V1::Pd
 
     def create_survey_submission(survey_response)
       submission = Foorm::Submission.create(
-        form_name: 'surveys/pd/summer_workshop_pre_survey',
+        form_name: 'surveys/pd/summer_workshop_pre_survey_test',
         form_version: 0,
         answers: survey_response
       )
