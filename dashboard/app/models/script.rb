@@ -1329,7 +1329,9 @@ class Script < ActiveRecord::Base
   end
 
   def summarize_i18n_for_display(include_lessons=true)
-    summarize_i18n_for_edit(include_lessons)
+    data = summarize_i18n_for_edit(include_lessons)
+    data['title'] = localized_title
+    data
   end
 
   # Returns an array of objects showing the name and version year for all scripts
@@ -1365,7 +1367,13 @@ class Script < ActiveRecord::Base
   end
 
   def localized_title
-    I18n.t "data.script.name.#{name}.title"
+    title = I18n.t "data.script.name.#{name}.title"
+    has_prefix = unit_group&.has_numbered_units
+    return title unless has_prefix
+
+    position = unit_group_units&.first&.position
+    prefix = I18n.t "unit_prefix", n: position
+    "#{prefix} - #{title}"
   end
 
   def localized_assignment_family_title

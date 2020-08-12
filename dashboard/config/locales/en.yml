@@ -1162,3 +1162,4 @@ en:
     not_now: "Not now"
   behaviors:
     this_sprite: "this sprite"
+  unit_prefix: "Unit %{n}"
