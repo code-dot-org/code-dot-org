@@ -102,6 +102,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
+  blocklyWrapper.getGenerator = function() {
+    return blocklyWrapper.Generator.get('JavaScript');
+  };
+
   return blocklyWrapper;
 }
 
