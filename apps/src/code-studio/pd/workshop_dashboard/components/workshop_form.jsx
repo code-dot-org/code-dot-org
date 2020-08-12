@@ -67,14 +67,6 @@ const placeholderSession = {
   endTime: '5:00pm'
 };
 
-// When selecting whether a workshop is virtual through the UI,
-// a user is really selecting two things:
-//  a) whether the workshop is occurring virtually, and
-//  b) if there's a third party responsible for the content/structure of the workshop.
-// These two things are stored as separate attributes in the workshop model.
-const virtualWorkshopTypes = ['regional', 'friday_institute'];
-const thirdPartyProviders = ['friday_institute'];
-
 export class WorkshopForm extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
@@ -101,7 +93,6 @@ export class WorkshopForm extends React.Component {
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
       virtual: PropTypes.bool,
-      third_party_provider: PropTypes.string,
       suppress_email: PropTypes.bool,
       organizer: PropTypes.shape({
         id: PropTypes.number,
@@ -141,8 +132,7 @@ export class WorkshopForm extends React.Component {
       showTypeOptionsHelpDisplay: false,
       regional_partner_id: '',
       virtual: false,
-      suppress_email: false,
-      third_party_provider: null
+      suppress_email: false
     };
 
     if (props.workshop) {
@@ -163,8 +153,7 @@ export class WorkshopForm extends React.Component {
           'regional_partner_id',
           'organizer',
           'virtual',
-          'suppress_email',
-          'third_party_provider'
+          'suppress_email'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -486,7 +475,7 @@ export class WorkshopForm extends React.Component {
                 </HelpTip>
               </ControlLabel>
               <SelectIsVirtual
-                value={this.currentVirtualStatus()}
+                value={this.state.virtual}
                 onChange={this.handleVirtualChange}
                 readOnly={
                   this.props.readOnly ||
@@ -733,32 +722,16 @@ export class WorkshopForm extends React.Component {
     return value;
   };
 
-  currentVirtualStatus = () => {
-    const {virtual, third_party_provider} = this.state;
-
-    // First, check if the third party provider is a valid
-    // virtual workshop type.
-    if (virtualWorkshopTypes.includes(third_party_provider)) {
-      return third_party_provider;
-    } else if (virtual) {
-      return 'regional';
-    } else {
-      return 'in_person';
-    }
-  };
-
   handleVirtualChange = event => {
     // This field gets its own handler both so we can coerce its value to
     // boolean, and so we can enforce some business logic that says:
     // Virtual workshops ALWAYS suppress email.
-    const value = event.target.value;
-    const virtual = virtualWorkshopTypes.includes(value);
+    const virtual = event.target.value === 'true';
     const suppress_email = virtual || this.state.suppress_email;
 
     this.setState({
       virtual,
-      suppress_email,
-      third_party_provider: thirdPartyProviders.includes(value) ? value : null
+      suppress_email
     });
   };
 
@@ -839,7 +812,6 @@ export class WorkshopForm extends React.Component {
       notes: this.state.notes,
       virtual: this.state.virtual,
       suppress_email: this.state.suppress_email,
-      third_party_provider: this.state.third_party_provider,
       sessions_attributes: this.prepareSessionsForApi(
         this.state.sessions,
         this.state.destroyedSessions
@@ -1170,19 +1142,16 @@ const SelectIsVirtual = ({value, readOnly, onChange}) => (
     style={readOnly ? styles.readOnlyInput : undefined}
     disabled={readOnly}
   >
-    <option key={'in_person'} value={'in_person'}>
+    <option key={false} value={false}>
       No, this is an in-person workshop.
     </option>
-    <option key={'friday_institute'} value={'friday_institute'}>
-      Yes, this is a Code.org-Friday Institute virtual workshop.
-    </option>
-    <option key={'regional'} value={'regional'}>
-      Yes, this is a regional virtual workshop.
+    <option key={true} value={true}>
+      Yes, this is a virtual workshop.
     </option>
   </FormControl>
 );
 SelectIsVirtual.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.bool.isRequired,
   readOnly: PropTypes.bool,
   onChange: PropTypes.func.isRequired
 };
