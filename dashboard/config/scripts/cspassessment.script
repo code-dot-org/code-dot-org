@@ -1,6 +1,6 @@
 login_required true
 
-lesson 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment', display_name: 'translation missing: en-US.data.script.name.cspassessment.lessons.NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment.name'
+lesson 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment', display_name: 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment'
 level 'CSP_Final_instructions'
 level 'CSP Culminating Assessment', assessment: true
 
