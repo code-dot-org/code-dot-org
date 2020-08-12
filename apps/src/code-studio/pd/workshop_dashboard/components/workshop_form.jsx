@@ -473,11 +473,7 @@ export class WorkshopForm extends React.Component {
               <ControlLabel>
                 Is this a virtual workshop?
                 <HelpTip>
-                  <p>When a workshop is virtual, enrollees will not receive:</p>
-                  <ul>
-                    <li>10-day and 3-day workshop reminder emails</li>
-                    <li>A post-workshop survey reminder email</li>
-                  </ul>
+                  <p>Please update your selection if/when your plans change.</p>
                 </HelpTip>
               </ControlLabel>
               <SelectIsVirtual
@@ -494,28 +490,19 @@ export class WorkshopForm extends React.Component {
           <Col sm={5}>
             <FormGroup validationState={validation.style.suppress_email}>
               <ControlLabel>
-                Enable email reminders?
+                Enable workshop reminder notifications?
                 <HelpTip>
                   <p>
-                    Code.org can send email notifications about this workshop to
-                    your enrollees on your behalf. If you suppress email
-                    notifications, enrollees <strong>will not</strong> receive:
+                    <strong>
+                      This functionality is disabled for all academic year
+                      workshops and virtual CSF workshops.
+                    </strong>
                   </p>
-                  <ul>
-                    <li>10-day and 3-day workshop reminders</li>
-                    <li>A post-workshop survey reminder</li>
-                  </ul>
                   <p>
-                    Even if you disable reminders, Code.org will continue to
-                    send certain emails, such as:
+                    For in-person CSF workshops, choose if you'd like automated
+                    10-day and 3-day pre-workshop reminders to be sent to your
+                    participants.
                   </p>
-                  <ul>
-                    <li>Enrollment receipts</li>
-                    <li>
-                      Workshop detail change notifications (e.g., date and time
-                      changes)
-                    </li>
-                  </ul>
                 </HelpTip>
               </ControlLabel>
               <SelectSuppressEmail
@@ -1209,10 +1196,10 @@ const SelectSuppressEmail = ({value, readOnly, onChange}) => (
     disabled={readOnly}
   >
     <option key={false} value={false}>
-      Yes, send notifications on my behalf.
+      Yes, send reminders on my behalf.
     </option>
     <option key={true} value={true}>
-      No, I will handle communication with attendees myself.
+      No, I will remind enrollees myself.
     </option>
   </FormControl>
 );
