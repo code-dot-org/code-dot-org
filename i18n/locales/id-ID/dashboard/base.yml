@@ -755,7 +755,7 @@ id:
     correct_body: "Itu jawaban yang benar."
   dialog:
     ok: "Oke!"
-    startover_title: "Apakah Anda yakin Anda ingin memulai dari awal?"
+    startover_title: "Kamu yakin ingin memulainya dari awal?"
     startover_body: "Ini akan mengembalikan puzzle ke kondisi awal dan membatalkan penambahan atau perubahan data."
     startover_ok: "Mulai kembali"
     startover_cancel: "Batal"
