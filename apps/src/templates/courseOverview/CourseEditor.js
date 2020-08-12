@@ -5,6 +5,7 @@ import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
   input: {
@@ -27,6 +28,7 @@ export default class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    versionTitle: PropTypes.string,
     familyName: PropTypes.string,
     versionYear: PropTypes.string,
     visible: PropTypes.bool.isRequired,
@@ -47,6 +49,7 @@ export default class CourseEditor extends Component {
     const {
       name,
       title,
+      versionTitle,
       familyName,
       versionYear,
       descriptionShort,
@@ -104,6 +107,23 @@ export default class CourseEditor extends Component {
             name="description_teacher"
             defaultValue={descriptionTeacher}
             rows={5}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Version Year Display Name
+          <HelpTip>
+            <p>
+              Controls the text which represents this course in the "version
+              year dropdown" in the top right of the course overview page. This
+              will only be visible if a version year is selected below.
+            </p>
+          </HelpTip>
+          <input
+            type="text"
+            defaultValue={versionTitle}
+            placeholder="e.g. '19-'20"
+            name="version_title"
             style={styles.input}
           />
         </label>

@@ -109,7 +109,8 @@ class CoursesController < ApplicationController
       :title,
       :description_short,
       :description_student,
-      :description_teacher
+      :description_teacher,
+      :version_title
     ).to_h
   end
 
