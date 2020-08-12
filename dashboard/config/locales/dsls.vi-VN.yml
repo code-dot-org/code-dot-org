@@ -2141,10 +2141,20 @@ vi-VN:
         - {}
       csf_be_a_super_digital_citizen:
         content1: mô tả ở đây
+      csf_digital_trails:
+        markdown: |-
+          # Theo dấu chân số
+
+          ## Thông tin nào là OK để có trong dấu chân số của bạn?
       csf_password_power-up:
         content1: mô tả ở đây
       csf_putting_a_stop_to_online_meanness:
         content1: mô tả ở đây
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Khu phố trực tuyến của tôi
+
+          ## Làm thế nào để bạn đến những nơi trực tuyến một cách an toàn
       grade2_multi_collector_A_predict1:
         answers:
         - {}

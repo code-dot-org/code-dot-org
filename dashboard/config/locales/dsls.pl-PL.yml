@@ -2835,15 +2835,23 @@ pl-PL:
             "Uruchom"?
       courseD_multi_scrat_predict1:
         answers:
-        - feedback: Niepoprawnie. Umieszczenie bloku "idź do przodu" wewnątrz bloku
+        - text: Nic. Scrat nie będzie się w ogóle poruszał.
+          feedback: Niepoprawnie. Umieszczenie bloku "idź do przodu" wewnątrz bloku
             "powtórz" spowoduje, że Scrat pójdzie do przodu trzy razy.
-        - correct: true
+        - text: Scrat pójdzie trzy razy do przodu, skręci, następnie pójdzie trzy
+            razy do przodu i będzie się zbliżać do żołędzia!
+          correct: true
           feedback: Poprawnie!
-        - feedback: Niepoprawnie. Umieszczenie bloku "idź do przodu" wewnątrz bloku
+        - text: Scrat będzie szedł do przodu, następnie skręci i wpadnie na coś.
+          feedback: Niepoprawnie. Umieszczenie bloku "idź do przodu" wewnątrz bloku
             "powtórz" spowoduje, że Scrat pójdzie do przodu trzy razy.
         - text: Nie wiem.
+          feedback: Umieszczenie bloku "idź do przodu" wewnątrz bloku "powtórz" spowoduje,
+            że Scrat pójdzie do przodu trzy razy. Następnie skręci, pójdzie do przodu
+            kolejne trzy razy i będzie się zbliżać do żołędzia!
         questions:
-        - {}
+        - text: W tym kodzie wykorzystano nowy blok. Jak myślisz, co się stanie, gdy
+            naciśniesz "Uruchom"?
       courseE_EOC_2020:
         description: 'Dotarłeś do końca Kursu E! Wybierz projekt do utworzenia. '
       courseE_multi_bee_functions_predict1:
@@ -3032,85 +3040,81 @@ pl-PL:
       courseF_external_variableConstant:
         markdown: "<h2>Więcej informacji o zmiennych</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Właśnie poznałeś
-          jeden ze wspaniałych sposobów korzystania ze zmiennej...jako stałej!  \nGdy
-          używasz zmiennej jako stałej, ustawiasz wartość raz, a następnie używasz
-          tej *samej* wartości wiele razy w swoim programie bez wprowadzania do niej
-          zmian po kliknięciu \"Uruchom\". </h3>\n<br/><hr/>\n<h3>W kolejnej cześci
-          serii napiszesz kod ze zmiennymi, które *dokonują* zmiany wewnątrz programu.</h3>\n\n"
+          jeden z ważnych sposobów korzystania ze zmiennej...jako stałej!  \nGdy używasz
+          zmiennej jako stałej, ustawiasz wartość raz, a następnie używasz tej *samej*
+          wartości wiele razy w swoim programie bez wprowadzania do niej zmian po
+          kliknięciu \"Uruchom\". </h3>\n<br/><hr/>\n<h3>W dalszej cześci napiszesz
+          kod ze zmiennymi, które *zmieniają* wartość wewnątrz programu.</h3>\n\n"
       courseF_multi_artist_for10_predict1:
         answers:
-        - text: 'Grafik narysuje linię prostą, której grubość zwiększa się od jednej
+        - text: 'Artysta narysuje linię prostą, której grubość zwiększa się od jednej
             strony obszaru gry do drugiej. '
-          feedback: 'Niepoprawnie. Grafik wykonuje skręty pomiędzy iteracjami pętli
-            "Dla". '
-        - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
+          feedback: 'Niepoprawnie. Artysta skręca pomiędzy iteracjami pętli "dla". '
+        - text: "Artysa będzie rysował spiralę i za każdym razem w pętli \"dla\",
             linia wydłuża się i staje się cieńsza.  \n"
-          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
-            rysuje dłuższą linię, która jest również grubsza.
-        - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
-            linia wydłuża się i staje się grubsza.  \n"
+          feedback: Niepoprawnie. Za każdym razem przechodzc pętlę "dla", grafik rysuje
+            dłuższą linię, która jest również grubsza.
+        - text: Artysta narysuje spiralę i za każdym razem przechodzc pętlę "dla",
+            linia staje się guższa i grubsza.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
-            rysuje dłuższą linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem przechodzc pętlę "dla", grafik rysuje
+            dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - text: 'Grafik narysuje linię prostą, której grubość zwiększa się od jednej
+        - text: 'Artysta narysuje linię prostą, której grubość zwiększa się od jednej
             strony obszaru gry do drugiej. '
-          feedback: 'Niepoprawnie. Grafik wykonuje skręty pomiędzy iteracjami pętli
-            "Dla". '
-        - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
+          feedback: 'Niepoprawnie. Artysta skręca pomiędzy iteracjami pętli "dla". '
+        - text: "Artysa będzie rysował spiralę i za każdym razem w pętli \"dla\",
             linia wydłuża się i staje się cieńsza.  \n"
-          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
-            rysuje dłuższą linię, która jest również grubsza.
-        - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
-            linia wydłuża się i staje się grubsza.  \n"
+          feedback: Niepoprawnie. Za każdym razem przechodzc pętlę "dla", grafik rysuje
+            dłuższą linię, która jest również grubsza.
+        - text: Artysta narysuje spiralę i za każdym razem przechodzc pętlę "dla",
+            linia staje się guższa i grubsza.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
-            rysuje dłuższą linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem przechodzc pętlę "dla", grafik rysuje
+            dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
-        - text: 'Grafik narysuje linię prostą, której grubość zwiększa się od jednej
+        - text: 'Artysta narysuje linię prostą, której grubość zwiększa się od jednej
             strony obszaru gry do drugiej. '
-          feedback: 'Niepoprawnie. Grafik wykonuje skręty pomiędzy iteracjami pętli
-            "Dla". '
-        - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
+          feedback: 'Niepoprawnie. Artysta skręca pomiędzy iteracjami pętli "dla". '
+        - text: "Artysa będzie rysował spiralę i za każdym razem w pętli \"dla\",
             linia wydłuża się i staje się cieńsza.  \n"
-          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
-            rysuje dłuższą linię, która jest również grubsza.
-        - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
-            linia wydłuża się i staje się grubsza.  \n"
+          feedback: Niepoprawnie. Za każdym razem przechodzc pętlę "dla", grafik rysuje
+            dłuższą linię, która jest również grubsza.
+        - text: Artysta narysuje spiralę i za każdym razem przechodzc pętlę "dla",
+            linia staje się guższa i grubsza.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
-            rysuje dłuższą linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem przechodzc pętlę "dla", grafik rysuje
+            dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
-        - text: 'Grafik narysuje linię prostą, której grubość zwiększa się od jednej
+        - text: 'Artysta narysuje linię prostą, której grubość zwiększa się od jednej
             strony obszaru gry do drugiej. '
-          feedback: 'Niepoprawnie. Grafik wykonuje skręty pomiędzy iteracjami pętli
-            "Dla". '
-        - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
+          feedback: 'Niepoprawnie. Artysta skręca pomiędzy iteracjami pętli "dla". '
+        - text: "Artysa będzie rysował spiralę i za każdym razem w pętli \"dla\",
             linia wydłuża się i staje się cieńsza.  \n"
-          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
-            rysuje dłuższą linię, która jest również grubsza.
-        - text: "Grafik narysuje spiralę i za każdym razem, z uwagi na pętlę \"Dla\",
-            linia wydłuża się i staje się grubsza.  \n"
+          feedback: Niepoprawnie. Za każdym razem przechodzc pętlę "dla", grafik rysuje
+            dłuższą linię, która jest również grubsza.
+        - text: Artysta narysuje spiralę i za każdym razem przechodzc pętlę "dla",
+            linia staje się guższa i grubsza.
           correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
-          feedback: Niepoprawnie. Za każdym razem, z uwagi na pętlę "Dla", grafik
-            rysuje dłuższą linię, która jest również grubsza.
+          feedback: Niepoprawnie. Za każdym razem przechodzc pętlę "dla", grafik rysuje
+            dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_artist_fwp2_predict1:
@@ -3136,75 +3140,71 @@ pl-PL:
         - text: Co się stanie, gdy uruchomisz ten program?
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - text: Grafik narysuje trójkąt o bokach o długości 50 pikseli.
+        - text: Artysta narysuje trójkąt o bokach 50 pikseli.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik narysuje wielokąt o 50 bokach o długości 3 pikseli.
-          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
+        - text: Artysta narysuje wielokąt o 50 bokach długości 3 pikseli.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być w pętli "powtarzaj",
             aby to się wydarzyło. '
-        - text: Grafik narysuje trzy otwarte boki z zakrętami 50 stopni.
-          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być stosowana
-            w bloku "Obróć", aby to się wydarzyło. '
+        - text: Artysta narysuje trzy otwarte boki ze skrętami 50 stopni.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być użyta w bloku
+            "skręć", aby to się wydarzyło. '
         - text: Nie wiem.
-          feedback: Zmienna "Długość" jest ustawiona na 50 i wykorzystywana w bloku
-            "Przejdź do przodu o" tak, że grafik narysuje trójkąt o bokach o długości
-            50 pikseli.
+          feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
+            "idź do przodu o" tak, że artysta narysuje trójkąt o bokach 50 pikseli.
         questions:
-        - text: Ustawiliśmy zmienną "Długość" na 50. Co się stanie, gdy klikniesz
+        - text: Ustawiliśmy zmienną "długość" na 50. Co się stanie, gdy klikniesz
             "Uruchom"?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - text: Grafik narysuje trójkąt o bokach o długości 50 pikseli.
+        - text: Artysta narysuje trójkąt o bokach 50 pikseli.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik narysuje wielokąt o 50 bokach o długości 3 pikseli.
-          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
+        - text: Artysta narysuje wielokąt o 50 bokach długości 3 pikseli.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być w pętli "powtarzaj",
             aby to się wydarzyło. '
-        - text: Grafik narysuje trzy otwarte boki z zakrętami 50 stopni.
-          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być stosowana
-            w bloku "Obróć", aby to się wydarzyło. '
+        - text: Artysta narysuje trzy otwarte boki ze skrętami 50 stopni.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być użyta w bloku
+            "skręć", aby to się wydarzyło. '
         - text: Nie wiem.
-          feedback: Zmienna "Długość" jest ustawiona na 50 i wykorzystywana w bloku
-            "Przejdź do przodu o" tak, że grafik narysuje trójkąt o bokach o długości
-            50 pikseli.
+          feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
+            "idź do przodu o" tak, że artysta narysuje trójkąt o bokach 50 pikseli.
         questions:
-        - text: Ustawiliśmy zmienną "Długość" na 50. Co się stanie, gdy klikniesz
+        - text: Ustawiliśmy zmienną "długość" na 50. Co się stanie, gdy klikniesz
             "Uruchom"?
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - text: Grafik narysuje trójkąt o bokach o długości 50 pikseli.
+        - text: Artysta narysuje trójkąt o bokach 50 pikseli.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik narysuje wielokąt o 50 bokach o długości 3 pikseli.
-          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
+        - text: Artysta narysuje wielokąt o 50 bokach długości 3 pikseli.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być w pętli "powtarzaj",
             aby to się wydarzyło. '
-        - text: Grafik narysuje trzy otwarte boki z zakrętami 50 stopni.
-          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być stosowana
-            w bloku "Obróć", aby to się wydarzyło. '
+        - text: Artysta narysuje trzy otwarte boki ze skrętami 50 stopni.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być użyta w bloku
+            "skręć", aby to się wydarzyło. '
         - text: Nie wiem.
-          feedback: Zmienna "Długość" jest ustawiona na 50 i wykorzystywana w bloku
-            "Przejdź do przodu o" tak, że grafik narysuje trójkąt o bokach o długości
-            50 pikseli.
+          feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
+            "idź do przodu o" tak, że artysta narysuje trójkąt o bokach 50 pikseli.
         questions:
-        - text: Ustawiliśmy zmienną "Długość" na 50. Co się stanie, gdy klikniesz
+        - text: Ustawiliśmy zmienną "długość" na 50. Co się stanie, gdy klikniesz
             "Uruchom"?
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
-        - text: Grafik narysuje trójkąt o bokach o długości 50 pikseli.
+        - text: Artysta narysuje trójkąt o bokach 50 pikseli.
           correct: true
           feedback: Poprawnie!
-        - text: Grafik narysuje wielokąt o 50 bokach o długości 3 pikseli.
-          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być w pętli "Powtarzaj",
+        - text: Artysta narysuje wielokąt o 50 bokach długości 3 pikseli.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być w pętli "powtarzaj",
             aby to się wydarzyło. '
-        - text: Grafik narysuje trzy otwarte boki z zakrętami 50 stopni.
-          feedback: 'Niepoprawnie. Zmienna "Długość" będzie musiała być stosowana
-            w bloku "Obróć", aby to się wydarzyło. '
+        - text: Artysta narysuje trzy otwarte boki ze skrętami 50 stopni.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być użyta w bloku
+            "skręć", aby to się wydarzyło. '
         - text: Nie wiem.
-          feedback: Zmienna "Długość" jest ustawiona na 50 i wykorzystywana w bloku
-            "Przejdź do przodu o" tak, że grafik narysuje trójkąt o bokach o długości
-            50 pikseli.
+          feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
+            "idź do przodu o" tak, że artysta narysuje trójkąt o bokach 50 pikseli.
         questions:
-        - text: Ustawiliśmy zmienną "Długość" na 50. Co się stanie, gdy klikniesz
+        - text: Ustawiliśmy zmienną "długość" na 50. Co się stanie, gdy klikniesz
             "Uruchom"?
       courseF_multi_bee_conditionals1_predict1:
         answers:
@@ -3235,16 +3235,16 @@ pl-PL:
           feedback: Poprawnie!
         - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
             plastrze miodu.
-          feedback: Niepoprawnie. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać
-            nektar z każdego kwiatka i  robić miód jeśli kwiatka nie będzie (a zatem
-            będzie plaster miodu.).
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i  robić miód, jeśli nie będzie kwiatka (a zatem
+            będzie to plaster miodu.).
         - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
             z plastra miodu.
-          feedback: Niepoprawnie. Źle. Blok "Jeśli na kwiatku" pozwala pszczółce zebrać
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce zebrać
             nektar z każdego kwiatka i  miód na każdym plastrze miodu.
         - text: Nie wiem.
-          feedback: Blok "Jeśli na kwiatku" pozwala pszczółce zebrać nektar z każdego
-            kwiatka, a jeśli nie pszczółka robi miód.
+          feedback: Blok "jeśli na kwiatku" pozwala pszczółce zebrać nektar z każdego
+            kwiatka, w przeciwnym razie pszczółka robi miód.
         markdown: 'Czasami chmurka zasłania kwiatek, a czasem plaster miodu! Pod każdą
           chmurką zawsze będzie albo tylko **jeden** kwiatek, albo tylko **jeden**
           plaster miodu. '
@@ -3254,63 +3254,63 @@ pl-PL:
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         - text: 'Pszczółka poleci do przodu i spróbuje zebrać więcej nektaru niż jest
             w kwiatach. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         - {}
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         - {}
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
           feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
-          feedback: Niepoprawnie. Pętla "Dla" pozwoli pszczółce zbierać odpowiednią
-            ilość nektaru, ale jest ustawiona tylko tak, aby dolecieć do 4 kwiatków.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         - {}
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
@@ -3328,37 +3328,35 @@ pl-PL:
           feedback: Niepoprawnie. Funkcja jest ustawiona tak, aby zbierać tyle nektaru
             lub miodu, ile przechodzi przez parametr.
         - text: Nie wiem.
-          feedback: Kliknięcie, aby sprawdzić, co dzieje się wewnątrz funkcji, ukazuje,
-            że jest ona ustawiona tak, aby zbierać tyle nektaru lub miodu, ile przeszło
-            przez parametr.
+          feedback: Klikając, aby zobaczyć wnętrze funkcji widać, że jest ona ustawiona,
+            aby zebrać tyle nektaru lub miodu, ile przejdzie przez parametr.
         markdown: Poniżej tych chmurek jest albo kwiatek, na którym znajduje się dokładnie
           1 nektar albo plaster miodu, w którym znajduje się dokładnie 1 miód. Kliknij
-          niebieski przycisk "Edytuj" na funkcji, aby zobaczyć, co jest w środku przed
-          udzieleniem odpowiedzi na poniższe pytanie.
+          niebieski przycisk "edytuj" na funkcji, aby zobaczyć, co jest w jej środku
+          przed udzieleniem odpowiedzi na poniższe pytanie.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - text: 'Pirat powiedziałby: "Miło mi cię poznać, Ali." i to wszystko.'
+        - text: 'Pirat powiedziałby: "Miło mi cię spotkać, Ali." i to wszystko.'
           correct: true
           feedback: Dobrze.
-        - text: 'Pirat powiedziałby: "Miło mi cię poznać." i to wszystko.'
-          feedback: Niepoprawnie. Należy zauważyć, że blok "Dołącz" wprowadza podane
-            imię do zdania pirata.
+        - text: 'Pirat powiedziałby: "Miło mi cię spotkać" i to wszystko.'
+          feedback: Niepoprawnie. Zauważ, że blok "dołącz" wprowadza podane imię do
+            zdania pirata.
         - text: 'Pirat powiedziałby: "Ali" i to wszystko.'
-          feedback: Niepoprawnie. Należy zauważyć, że blok "Dołącz" wprowadza podane
-            imię do zdania pirata.
+          feedback: Niepoprawnie. Zauważ, że blok "dołącz" wprowadza podane imię do
+            zdania pirata.
         - text: Nie wiem.
-          feedback: 'Niepoprawnie. Należy zauważyć, że blok "Dołącz" wprowadza podane
+          feedback: 'Niepoprawnie. Należy zauważyć, że blok "dołącz" wprowadza podane
             imię (Ali) do zdania pirata. '
-        markdown: "**W tej łamigłówce wykorzystuje się nowy blok o nazwie \"Zapytaj\".**\n\nBlok
-          \"Zapytaj' wstrzymuje program i podpowiada użytkownikowi, aby wpisał jakiś
-          tekst. \n\nTekst wprowadzany przez użytkownika, bez względu na jego rodzaj,
-          jest następnie zapisywany do zmiennej przedstawianej na końcu bloku \"Zapytaj\".
-          W tym przypadku, tą zmienną jest \"Imię\". \n"
+        markdown: "**W tej łamigłówce wykorzystuje się nowy blok \"zapytaj\".**\n\nBlok
+          \"zapytaj' wstrzymuje program i zachęca użytkownika, aby wpisał jakiś tekst.
+          \n\nJakikolwiek tekst wprowadzany przez użytkownika jest następnie zapisywany
+          do zmiennej przedstawianej na końcu bloku \"zapytaj\". W tym przypadku,
+          jest to zmienna \"imię\". \n"
         questions:
-        - text: Co by się stało, gdyby, po podpowiedzi, użytkownik wprowadził imię
-            "Ali"?
+        - text: Co by się stało, gdyby, po zachęcie, użytkownik wprowadził imię "Ali"?
       coursee_prediction_artistfunction2:
         answers:
         - text: Artysta rozwiąże tę łamigłówkę poprawnie.
@@ -3502,3 +3500,8 @@ pl-PL:
             błędu.
         questions:
         - {}
+      gradek1_activity_beNice:
+        markdown: "# Zachowanie w laboratorium komputerowym\n\n<br/><br/>    \n    \n<a
+          href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\n\nPrzejdź do planu lekcji\n\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"

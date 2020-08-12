@@ -714,7 +714,7 @@
           "courseD_bee_conditionals_challenge1_a": "Poţi găsi un drum care trece pe la fiecare floare si fiecare fagure fără a lovi vreun copac? Cel mai bun drum este o spirala.\n\n**Poţi rezolva această problemă fără a te întoarce la stânga.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "La fel ca şi blocul \"dacă eşti la floare\", codul din interiorul unui bloc \"cât timp nectar > 0\" va rula doar dacă albina este la o floare. Diferenţa principală este a acest cod se va executa repetat până când nu mai este nectar. Încearcă acest model:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "La fel ca şi blocul \"dacă eşti la floare\", codul din interiorul unui bloc \"cât timp nectar > 0\" va rula doar dacă albina este la o floare. Diferenţa principală este a acest cod se va executa repetat până când nu mai este nectar. Încearcă acest model:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Codul original ar merge perfect - doar dacă ar fi o singură comoară in fiecare grămadă!"
