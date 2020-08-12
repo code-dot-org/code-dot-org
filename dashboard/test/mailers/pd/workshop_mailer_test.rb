@@ -132,16 +132,21 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'exit survey email links are complete urls' do
+    # Note these commented out test cases should be re-enabled
+    # once we stop suppressing post-workshop emails for Academic Year Workshops.
     test_cases = [
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON},
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
       {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2},
+      # {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
+      # {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
     ]
 
     test_cases.each do |test_case|
-      workshop = create :workshop, :ended, course: test_case[:course], subject: test_case[:subject]
+      workshop = create :workshop,
+        :ended,
+        course: test_case[:course],
+        subject: test_case[:subject]
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.exit_survey(enrollment)
 
