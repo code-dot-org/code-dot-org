@@ -8,8 +8,8 @@
  *     "applab_locale", etc.
  */
 export default function safeLoadLocale(localeKey) {
-  if (window.blockly && window.blockly[localeKey]) {
-    return window.blockly[localeKey];
+  if (window.locales && window.locales[localeKey]) {
+    return window.locales[localeKey];
   } else {
     console.warn(
       'Loading translations can only be done in a context where blockly is ' +
