@@ -18194,3 +18194,18 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Course A
+            Course B:
+              name: Course B
+            Course E/F:
+              name: Course E/F
+          lesson_groups:
+            lesson group:
+              display_name: display name
+          title: Curriculum Sandbox Levels
+          description_audience: Internal
+          description_short: 'Levels that are linked directly in lesson plans but do not appear in other scripts. '
+          description: ''
