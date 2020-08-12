@@ -13,7 +13,7 @@ video_player: false
 
 -# Put advocacy.css after other CSS files so that it can override them.
 =inline_css 'interactive-map.css'
-=inline_css 'advocacy-stateofcsreport.css'
+=inline_css 'advocacy-home.css'
 
 - banner_body = capture_haml do
   Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of K-12 education.
@@ -64,13 +64,11 @@ video_player: false
     .clear
 
     .coalition
-      %h2 Our Coalition
-      .centered
-        %a{href: "https://go.pardot.com/l/153401/2018-04-13/kspz3t", target: "_blank"}
-          %button Join the newsletter
-        &nbsp;&nbsp;
-        %a{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
-          %button Join the coalition
-
-      = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
-      = view :about_people, people: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacylist')
+      %h3.left Get your State of CS report
+      %h4.left 
+        Choose a digital PDF or order a physical copy today
+      %a{href: "https://go.pardot.com/l/153401/2018-04-13/kspz3t", target: "_blank"}
+        %button.left Download PDF
+      &nbsp;&nbsp;
+      %a{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
+        %button.left Order Report
