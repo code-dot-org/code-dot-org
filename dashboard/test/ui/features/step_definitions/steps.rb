@@ -1150,8 +1150,8 @@ end
 
 And /^I dismiss the teacher panel$/ do
   steps %Q{
-    And I click selector ".fa-chevron-right"
-    And I wait until I see selector ".fa-chevron-left"
+    And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
+    And I wait until I see selector ".teacher-panel > .show-handle > .fa-chevron-left"
   }
 end
 
