@@ -62,7 +62,7 @@ class Pd::Workshop < ActiveRecord::Base
     # organization.
     # Only current allowed values are "friday_institute" and nil.
     # "friday_institute" represents The Friday Institute,
-    # a regional partner whose model of virtual workshop is being used
+    # a regional partner whose model of virtual workshop was used
     # by several partners during summer 2020.
     'third_party_provider',
 
@@ -93,7 +93,6 @@ class Pd::Workshop < ActiveRecord::Base
   validates_inclusion_of :funded, in: [true, false]
   validate :all_virtual_workshops_suppress_email
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
-  validate :friday_institute_workshops_must_be_virtual
   validate :virtual_only_subjects_must_be_virtual
 
   validates :funding_type,
@@ -127,12 +126,6 @@ class Pd::Workshop < ActiveRecord::Base
   def all_virtual_workshops_suppress_email
     if virtual? && !suppress_email?
       errors.add :properties, 'All virtual workshops must suppress email.'
-    end
-  end
-
-  def friday_institute_workshops_must_be_virtual
-    if friday_institute? && !virtual?
-      errors.add :properties, 'Friday Institute workshops must be virtual'
     end
   end
 
