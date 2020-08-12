@@ -20,4 +20,8 @@
   = render layout: 'shared/extra_links' do
     %strong= unit_group.name
     %ul
-      %li= link_to "Edit", edit_course_path(unit_group)
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to "Edit", edit_course_path(unit_group)
+      - else
+        - lb_path = "https://levelbuilder-studio.code.org#{course_path(unit_group)}"
+        %li= link_to "View on levelbuilder", lb_path
