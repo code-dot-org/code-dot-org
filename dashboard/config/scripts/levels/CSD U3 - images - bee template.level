@@ -31,7 +31,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/4TwrQUly6PDa9O2izubCkg/632b7a80-3526-48b4-8b27-333199f6d3cf.png?version=NSixfcN8r9yoB788st2wA1ZyhYX3gFD9\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 86\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"NSixfcN8r9yoB788st2wA1ZyhYX3gFD9\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/9Qzj.nME0f5qINTF6HSNJpgBmEDGXBrx/bee_single_frame.png\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 86\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"NSixfcN8r9yoB788st2wA1ZyhYX3gFD9\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
