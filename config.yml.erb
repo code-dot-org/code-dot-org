@@ -544,7 +544,7 @@ pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
 pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
 
 # Configurations for making calls to the Immersive Reader API on Azure
-imm_reader_tenant_id:
+imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
 imm_reader_client_id:
 imm_reader_client_secret: !Secret
-imm_reader_subdomain:
+imm_reader_subdomain:     cdo-immersive-reader-<%=env%>
