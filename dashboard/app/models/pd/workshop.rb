@@ -66,7 +66,7 @@ class Pd::Workshop < ActiveRecord::Base
     # by several partners during summer 2020.
     'third_party_provider',
 
-    # If true, our system will not enrollees reminders related to this workshop.
+    # If true, our system will not send enrollees reminders related to this workshop.
     # Note that this is one of (at least) three mechanisms we use to suppress
     # email in various cases -- see Workshop.suppress_reminders? for
     # subject-specific suppression of reminder emails. This is functionally
