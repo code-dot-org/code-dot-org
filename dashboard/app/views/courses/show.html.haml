@@ -15,3 +15,9 @@
   %script{ src: webpack_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
 
 #course_overview
+
+- if can? :edit, unit_group
+  = render layout: 'shared/extra_links' do
+    %strong= unit_group.name
+    %ul
+      %li= link_to "Edit", edit_course_path(unit_group)
