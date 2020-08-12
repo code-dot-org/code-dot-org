@@ -151,6 +151,7 @@ class ProjectsController < ApplicationController
       return redirect_to '/', flash: {alert: 'Labs not allowed for admins.'} if current_user.admin
     end
 
+    view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
     @limited_gallery = limited_gallery?
     @current_tab = params[:tab_name]
   end
