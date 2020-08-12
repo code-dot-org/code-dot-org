@@ -244,6 +244,12 @@ class Pd::WorkshopMailer < ActionMailer::Base
     # Don't send if there's no associated survey
     return unless @survey_url
 
+    # Don't send for Academic Year Workshops.
+    # 2020-2021 AYW post-workshop survey configuration
+    # is too complicated to automate quickly, so we'll
+    # solicit survey responses by other means.
+    return if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include? @workshop.subject
+
     content_type = 'text/html'
     if @workshop.course == Pd::Workshop::COURSE_CSF
       attachments['certificate.jpg'] = generate_csf_certificate

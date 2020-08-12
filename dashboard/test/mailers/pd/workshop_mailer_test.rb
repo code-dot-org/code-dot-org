@@ -67,6 +67,16 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
+  test 'exit survey emails are skipped for academic year workshops' do
+    workshop = create :csp_academic_year_workshop, :ended
+    enrollment = create :pd_enrollment, workshop: workshop
+    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns('a url')
+
+    assert_emails 0 do
+      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
+    end
+  end
+
   test 'emails are not sent for workshops with virtual workshop subject' do
     workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::LEGACY_SUBJECT_CSD_VIRTUAL_1, num_sessions: 1
     enrollment = build :pd_enrollment, workshop: workshop
@@ -193,7 +203,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     test_cases.each do |test_case|
-      workshop = create :workshop, course: test_case[:course], subject: test_case[:subject]
+      workshop = if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(test_case[:subject])
+                   create :academic_year_workshop, course: test_case[:course], subject: test_case[:subject]
+                 else
+                   create :workshop, course: test_case[:course], subject: test_case[:subject]
+                 end
+
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
 
@@ -214,7 +229,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     test_cases.each do |test_case|
-      workshop = create :workshop, course: test_case[:course], subject: test_case[:subject]
+      workshop = if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(test_case[:subject])
+                   create :academic_year_workshop, course: test_case[:course], subject: test_case[:subject]
+                 else
+                   create :workshop, course: test_case[:course], subject: test_case[:subject]
+                 end
+
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: test_case[:days_before])
 
