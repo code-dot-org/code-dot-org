@@ -43,6 +43,7 @@ class UnitGroup < ApplicationRecord
   serialized_attrs %w(
     teacher_resources
     has_verified_resources
+    has_numbered_units
     family_name
     version_year
     is_stable
@@ -301,6 +302,7 @@ class UnitGroup < ApplicationRecord
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
+      has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
       show_assign_button: assignable?(user)
     }
