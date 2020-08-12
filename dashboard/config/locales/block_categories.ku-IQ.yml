@@ -3,11 +3,26 @@ ku:
   data:
     block_categories:
       Actions: کردەوەکان
+      Advanced: پێشکەوتوو
+      Behaviors: ڕەفتارەکان
+      Brushes: فڵچەکان
       Color: ڕەنگ
+      Comment: سەرنج
+      Comments: سەرنجەکان
       Conditionals: مەرجیەکان
+      Dancers: سەماکاران
+      Default: بنەڕەتی
       Functions: فرمانەکان
+      'Functions ': 'فرمانەکان '
+      Game/Score: یاری/خاڵ
+      Games/Score: یاریەکان/خاڵ
+      Groups: کۆمەڵەکان
+      Input: داخڵکردن
+      Locations: شوێنەکان
       Logic: لۆژيك
       Loops: گرێکان
       Math: بیرکاری
+      Numbers: ژمارەکان
+      Properties: خاسیەتەکان
       Text: دەق
       Variables: گۆڕاوەکان
