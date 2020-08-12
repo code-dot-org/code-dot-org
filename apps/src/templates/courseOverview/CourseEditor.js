@@ -62,7 +62,7 @@ export default class CourseEditor extends Component {
       <div>
         <h1>{name}</h1>
         <label>
-          Title
+          Display Name
           <input
             type="text"
             name="title"
