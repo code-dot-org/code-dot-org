@@ -2358,7 +2358,7 @@ endvariants
     assert_equal 3, bubble_choice_sublevels.length
 
     dsl = <<~SCRIPT
-      lesson 'lesson1'
+      lesson 'lesson1', display_name: 'lesson1'
       level '#{level1.name}'
       variants
         level '#{swap1.name}', active: false
