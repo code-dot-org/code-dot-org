@@ -3334,67 +3334,59 @@ de-DE:
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
             einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
+          feedback: 'Der ‚wiederhole‘ Block wird BB-8 5 mal vorwärts bewegen. '
         questions:
-        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
             einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
+          feedback: 'Der ‚wiederhole‘ Block wird BB-8 5 mal vorwärts bewegen. '
         questions:
-        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
             einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
+          feedback: 'Der ‚wiederhole‘ Block wird BB-8 5 mal vorwärts bewegen. '
         questions:
-        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
             einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
+          feedback: 'Der ‚wiederhole‘ Block wird BB-8 5 mal vorwärts bewegen. '
         questions:
-        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict2:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
@@ -3404,15 +3396,15 @@ de-DE:
             gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_starWars_predict2_2018:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
@@ -3422,15 +3414,15 @@ de-DE:
             gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
@@ -3440,15 +3432,15 @@ de-DE:
             gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
@@ -3458,15 +3450,15 @@ de-DE:
             gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_EOC_2020:
         display_name: Projekt am Ende des Kurses
       courseD_external_binary1:

@@ -1149,13 +1149,20 @@ pl:
             '"left"': w lewo
       gamelab_mouseLocation:
         text: lokalizacja myszy
+      gamelab_moveBackward:
+        text: przemieść o {SPRITE} {DISTANCE} pikseli do tyłu
+      gamelab_moveForward:
+        text: przemieść o {SPRITE} {DISTANCE} pikseli do przodu
       gamelab_moveInDirection:
+        text: przemieść o {SPRITE} {DISTANCE} pikseli {DIRECTION}
         options:
           DIRECTION:
             '"North"': Północ
             '"East"': Wschód
             '"South"': Południe
             '"West"': Zachód
+      gamelab_moveToward:
+        text: przemieść o {SPRITE} pikseli {DISTANCE} w kierunku {TARGET}
       gamelab_objectSpritePointer:
         text: kliknął {SPRITE}
       gamelab_patrollingUpDown:
@@ -1220,6 +1227,17 @@ pl:
             '"scale"': rozmiar
             '"width"': szerokość
             '"height"': wysokość
+      gamelab_setTint:
+        text: zmień kolor {THIS} na {COLOR}
+      gamelab_setupSim:
+        text: |-
+          ustaw symulację  z prędkością
+          {SPRITE1N}{SPRITE1COSTUME}{SPRITE1SPEED}
+          prędkością {SPRITE2N}{SPRITE2COSTUME}{SPRITE2SPEED}
+          zbieranie
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} kliknął"
         options:
@@ -1236,6 +1254,8 @@ pl:
           DIRECTION:
             '"right"': w prawo
             '"left"': w lewo
+      gamelab_updateTitleWithColor:
+        text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} kolor {COLOR}
       gamelab_whenDownArrow:
         text: po naciśnięciu strzałki w dół
       gamelab_whenKey:
@@ -1289,6 +1309,7 @@ pl:
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} rozpoczyna się {BEHAVIOR}
       Mikelab_addTrainingData:
+        text: 'dodaj dane szkolenia: {NAME},{LOCATION}'
         options:
           NAME:
             "{x: 201, y: 100}": obiektu
@@ -1337,6 +1358,7 @@ pl:
             '"all"': wszystkie
             '"this"': tego
       Mikelab_groupChangePropBy:
+        text: zamień {PROPERTY} {SELECT} przez  {VAL}
         options:
           SELECT:
             '"all"': wszystkie
@@ -1371,6 +1393,7 @@ pl:
       Mikelab_groupEdgesDisplace:
         text: krawędzie bloku {COSTUME} z ruchu
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
           SELECT:
             '"average"': średnia
@@ -1394,11 +1417,13 @@ pl:
             '"all"': wszystkie
             '"this"': tego
       Mikelab_groupRemoveTint:
+        text: usuń kolor z {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': wszystkie
             '"this"': tego
       Mikelab_groupSetProp:
+        text: ustaw {PROPERTY} {SELECT} na  {VAL}
         options:
           SELECT:
             '"all"': wszystkie
@@ -1421,6 +1446,10 @@ pl:
         text: gdy{COSTUME} dotyka {COSTUME2}
       Mikelab_groupWhileClicked:
         text: klikając {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          dopóki {COSTUME} dotyka {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} jest obecnie {BEHAVIOR}"
       Mikelab_hideFish:
@@ -1565,6 +1594,8 @@ pl:
         text: skręć w lewo
       RyanLab_turnRight:
         text: skręć w prawo
+      SpriteLab2Beta_spriteSay:
+        text: sprite {SPRITE} o treści {TEXT} przez {SECONDS} sekund
       Vector_createSpriteWith:
         text: |-
           utworzyć sprite
@@ -1579,14 +1610,23 @@ pl:
         text: losowa lokalizacja
       Vector_setColor:
         text: ustawić kolor na {COLOR}
+      Vector_setSize:
+        text: ustaw szerokość {WIDTH} wysokość {HEIGHT}
       Vector_teleportTo:
         text: ustawić pozycję {POSITION}
       Vector_vectorNorth:
         text: Północ
       Vector_where:
+        text: każdy sprite, gdzie {PROPERTY} wynosi {VALUE} wykonuje {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": kolor
+      aalab_addBehaviorForDuration:
+        text: sprite aalab {SPRITE} zaczyna {BEHAVIOR} przez {SECONDS} sekund
+      aalab_addBehaviorUntilBoolean:
+        text: sprite {SPRITE} zaczyna {BEHAVIOR} do {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: nowy sprite o nazwie {SPRITE_NAME} w kostiumie {ANIMATION_NAME} w miejscu {LOCATION}
       aalab_goToScene:
         text: przejdź do sceny {SCENE}
         options:
@@ -1595,6 +1635,7 @@ pl:
             '2': '2'
             '3': '3'
       aalab_moveInDirection:
+        text: przemieść o {SPRITE} {DISTANCE} pikseli {DIRECTION}
         options:
           DIRECTION:
             '"North"': Północ
@@ -1613,11 +1654,29 @@ pl:
       aalab_setupStory:
         text: historia konfiguracji
       aalab_starwars_playSound:
+        text: odtwórz dźwięk {OPTION}
         options:
           OPTION:
             '"random"': losowy
+            '"R2-D2 random"': Losowo R2-D2
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: remis binarny {BIN}
+      binary_drawBinScreen:
+        text: |-
+          przyciągnij ekran
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
       binary_drawDec:
         text: rysować dziesiętne {DEC}
       binary_drawPixelHere:

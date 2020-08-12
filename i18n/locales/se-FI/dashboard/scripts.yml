@@ -328,6 +328,8 @@ se:
           lessons:
             Automatic DNS node:
               name: Automahtalaš DNS-noda
+            Broadcasting messages:
+              name: Njuolggosádde dieđuid
             Internet Simulator Freeplay:
               name: Friddjaspeallan Interneahtta Simulator
             Manual DNS:
@@ -566,6 +568,8 @@ se:
               name: Ráhkat Funkšuvnnaid Paramehteriiguin
             Digital Assistant Project:
               name: Digitála Assisteanta Prošeakta
+            Event-Driven Programming and Debugging:
+              name: Dáhpáhus Stivrejuvvon Prográmmeren ja Vihkeohcan
             Events Unplugged:
               name: Dáhpáhusat Neahtahaga
             Functions and Top-Down Design:
@@ -726,10 +730,14 @@ se:
               name: Maid sáhttá vuordit
         sciencePD2:
           lessons:
+            Creating Breeds in Starlogo Nova:
+              name: Ráhkat Náliid Starlogo Novas
             Epidemic Model Extensions:
               name: Epidemiija Modealla Guhkideamit
             Review StarLogo Nova:
               name: Árvvoštala StarLogo Nova
+            Revisiting Agent Movement:
+              name: Ođđasit Fitnat Ageanta Lihkadeapmi
             Thinking Ahead to Implementation:
               name: Ovdagihtii Smiehttat Čađaheami
             Welcome!:
@@ -764,6 +772,8 @@ se:
               name: Čoavdagat ja Čoavddasánit
             HTTP and Abstraction:
               name: HTTP ja Abstrákšuvdna Interneahtas
+            Invent an Addressing Protocol:
+              name: Fuomášit Adreseren Protokolla
             One Way Functions - Ice Cream Vans:
               name: Ovttaguvlui Funkšuvnnat - WiFi Hotspot Váttisvuohta
             Packets and Making a Reliable Internet:
@@ -774,10 +784,14 @@ se:
               name: Hárjehala PT - Interneahtta ja Servodat
             Public Key Crypto:
               name: Almmolaš Čoavdda Kryptografiija
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
             Tell Me a Secret - Encrypting Text:
               name: Dárbu Krypteremii
             The Internet:
               name: Interneahtta lea Buohkaide
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
             The Need for DNS:
               name: Dárbu DNS:ii
         algebraPD2a:
@@ -888,6 +902,8 @@ se:
               name: Eksternat Sáhttet Čájehuvvot Neahtahaga
             Bubble Choice:
               name: Bulljaras Válljen
+            Contained Levels:
+              name: Sisdoalu dásit
             ML Fish:
               name: ML Guolli
         algebraPD2b:
@@ -1666,6 +1682,12 @@ se:
           lessons:
             Binary Numbers:
               name: Binára Nummarat
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
+            Encoding and Sending Formatted Text:
+              name: Kode ja Sádde Formaterejuvvon Teavstta
+            HTTP and Abstraction:
+              name: HTTP ja Abstrákšuvdna
             Number Systems:
               name: Nummar Systemat
             Packets and Making a Reliable Internet:
@@ -1674,14 +1696,26 @@ se:
               name: Persovnnalaš Innovašuvnnat
             Practice PT - The Internet and Society:
               name: Hárjehala PT - Interneahtta ja Servodat
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
             Sending Binary Messages:
               name: Sáddet Binára Dieđuid
             Sending Binary Messages with the Internet Simulator:
               name: Sáddet Binára Dieđuid Interneahta Simulatorain
             Sending Numbers:
               name: Sáddet Nummariid
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
             The Need for DNS:
               name: Dárbu DNS:ii
+            Unit 1 Chapter 1 Assessment:
+              name: Unit 1 Kapihtal 1 Árvvoštallan
+            Unit 1 Chapter 2 Assessment:
+              name: Unit 1 Kapihtal 2 Árvvoštallan
+            CSP Student Post Survey Staging:
+              name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
         csp2-2017:
@@ -1714,6 +1748,8 @@ se:
               name: Gávnna Treanddaid mas leat Visuáliseremat
             Good and Bad Data Visualizations:
               name: Buorit ja Fuones Data Visuáliseremat
+            Intro to Data:
+              name: Láidehus Dátaide
             Lossy Compression and File Formats:
               name: Lossy Komprimeren ja Fiila Formáhtat
             Making Data Visualizations:
@@ -1722,6 +1758,16 @@ se:
               name: Hárjehala PT - Muital Data Muitalusa
             Text Compression:
               name: TeakstaKomprimeren
+            Unit 2 Chapter 1 Assessment:
+              name: Unit 2 Kapihtal 1 Árvvoštallan
+            Unit 2 Chapter 2 Assessment:
+              name: Unit 2 Kapihtal 2 Árvvoštallan
+            CSP Student Post Survey Staging:
+              name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
+            Practice PT - Encode an Experience:
+              name: Hárjehala PT - Kode Vásáhusa
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
         csp3-2017:
@@ -1737,6 +1783,10 @@ se:
           lessons:
             APIs and Function Parameters:
               name: API Funkšuvdna Paramehterat
+            Creating functions with Parameters:
+              name: Ráhkat Funkšuvnnaid Paramehteriiguin
+            Creativity in Algorithms:
+              name: Kreativitehta Algoritmain
             Functions and Top-Down Design:
               name: Funkšuvnnat ja Bajil-Vulos Designa
             Looping and Random Numbers:
@@ -1745,12 +1795,24 @@ se:
               name: Hárjehala PT - Designe Digitála Lávddi
             The Need For Programming Languages:
               name: Dárbu PrográmmerenGielaide
+            The Need for Algorithms:
+              name: Dárbu Algoritmaide
             Using Simple Commands:
               name: Geavat Eaŋkilis Komándduid
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Kapihtal 1 Árvvoštallan
+            CSP Student Post Survey Staging:
+              name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
             Creating Functions with Parameters:
               name: Ráhkat Funkšuvnnaid Paramehteriiguin
             CSP End-of-Semester Mid-course survey:
               name: CSP Semestera Loappa Kursa-Gasku Iskkadeapm
+            CSP Mid-course survey:
+              name: CSP Kursa-Gasku Iskkadeapmi
+            Please complete the CSP Mid-course survey!:
+              name: Válbmes CSP Kursa-Gasku Iskkadeami!
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
         csp4-2017:
@@ -1768,18 +1830,32 @@ se:
               name: Alice ja Bob ja Asymmetrihkka Čoavdagat
             Cracking the Code:
               name: Čoavdit Koda
+            Encryption with Keys and Passwords:
+              name: Čoavdagiiguin ja Čoavddasániiguin Krypteret
             Identifying People with Data:
               name: Identifisere Olbmuid Dataiguin
             Practice PT - Cybersecurity Innovations:
               name: Hárjehala PT - Cybersihkarvuođa Innovašuvnnat
             Practice PT - Propose an Innovation:
               name: Hárjehala PT - Evttot Innovašuvnna
+            Public Key Crypto:
+              name: Almmolaš Čoavdda Krypto
             Rapid Research - Data Innovations:
               name: Jođánis Dutkan - Data Innovašuvnnat
             The Cost of Free:
               name: Haddi Nuvttá
             What is Big Data?:
               name: Mii Stuora Data lea?
+            Rapid Research - Cybercrime:
+              name: Jođánis Iskan - Neahttakriminalitehta
+            Practice PT - Big Data and Security Dilemmas:
+              name: Hárjehala PT - Stuora Dátat ja Sihkarvuođa Dilemmat
+            Unit 4 Chapter 1 Assessment:
+              name: Unit 4 Kapihtal 1 Árvvoštallan
+            CSP Student Post Survey Staging:
+              name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
             Student Post-Course Survey:
@@ -1787,6 +1863,10 @@ se:
         csp5-2017:
           title: CSP Unit 5 - Hukse App:id ('17-'18)
           lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            csp5_2:
+              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
@@ -1800,6 +1880,8 @@ se:
               name: Iskka Muittu Variábeliiguin
             Digital Assistant Project:
               name: Digitála Assisteanta Prošeakta
+            Event-Driven Programming and Debugging:
+              name: Dáhpáhus Stivrejuvvon Prográmmeren ja Vihkeohcan
             Events Unplugged:
               name: Dáhpáhusat Neahtahaga
             Functions with Return Values:
@@ -1830,12 +1912,62 @@ se:
               name: Geavat Variábeliid App:in
             Edited lessons ABOVE this line:
               name: Redigerejuvvon lekšuvnnat BAJÁBEALDE dán linnjá
+            Buttons and Events:
+              name: Boalut ja Dáhpáhusat
             Make Your Own Multi-Screen App:
               name: Ráhkat Iežat Máŋgga-šearpmat App:a
+            Unit 5 Assessment 1:
+              name: Unit 5 Árvvoštallan 1
+            Unit 5 Assessment 2:
+              name: Unit 5 Árvvoštallan 2
             "'If' Statements Unplugged":
               name: "'Jus' Cealkámušat Neahtahaga"
+            '"If" Statements Unplugged':
+              name: '"Jus" Cealkámušat Neahtahaga'
             Getting started with If Statements:
               name: Álgge 'Jus' Cealkámušaiguin
+            Unit 3 Chapter 1 Assessment 3:
+              name: Unit 3 Kapihtal 1 Árvvoštallan 3
+            If statements:
+              name: Jus cealkámušat
+            Unit 3 Assessment 3:
+              name: Unit 3 Árvvoštallan 3
+            Unit 3 Assessment 4:
+              name: Unit 3 Árvvoštallan 4
+            If-else-if and Conditional Logic:
+              name: Jus-eará-jus ja Evttolaš Logihkka
+            'Building an App: Color Sleuth':
+              name: 'Hukse App:a: Ivdnás Detektiiva'
+            Possibly use later:
+              name: Vejolaš geavahit maŋŋil
+            Unit 5 Assessment 3:
+              name: Unit 5 Árvvoštallan 3
+            Unit 5 Assessment 4:
+              name: Unit 5 Árvvoštallan 4
+            Boolean Expressions and "If" Statements:
+              name: Boolána Dajaldagat ja "Jus" Cealkámušat
+            '"if-else-if" and Conditional Logic':
+              name: '"jus-eará-jus" ja Evttolaš Logihkka'
+            'Building an App: Multi-Screen App':
+              name: 'Hukse App:a: Máŋgga-šearpmat App:a'
+            'Building an App: Clicker Game':
+              name: 'Hukse App:a: Deaddin Speallu'
+            'Building an App: Image Scroller':
+              name: 'Hukse App:a: Govva Scrollar'
+            'Building an App: Canvas Painter':
+              name: 'Hukse App:a: Canvas Málejeaddji'
+            Unit 5 Assessment 5 - Practice AP questions:
+              name: Unit 5 Árvvoštallan 5 - Hárjehala AP jearaldagaid
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unit 5 Árvvoštallan 5 - AP Pseudokode Hárjehallan Jearaldagat
+            CSP Student Post Survey Staging:
+              name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
+            '"if" Statements Unplugged':
+              name: '"jus" Cealkámušat Neahtahaga'
+            Boolean Expressions and "if" Statements:
+              name: Boolána Dajaldagat ja "Jus" Cealkámušat
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
         csp6:
@@ -1848,6 +1980,34 @@ se:
               name: Suorkkadala PT
             Explore PT Prep:
               name: Suorkkadala PT Ráhkkaneami
+            Create PT Prep - Reviewing the Task:
+              name: Ráhkat PT Ráhkkaneami - Guorahallat Barggu
+            Create PT Prep - Making a Plan:
+              name: Ráhkat PT Ráhkkaneami - Ráhkat Plána
+            Create PT - Complete the Task:
+              name: Ráhkat PT - Válbme Barggu
+            Explore PT Prep - Reviewing the Task:
+              name: Suokkardala PT Ráhkkaneami - Guorahala barggu
+            Explore PT - Making a Plan:
+              name: Suokkardala PT - Ráhkat Plána
+            Explore PT - Complete the Task:
+              name: Suokkardala PT - Válbme Barggu
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Teknihkkalaš Huksehus - AP Digitála Portefolia ja Eará Reaiddut
+            CSP Student Post Survey Staging:
+              name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
+        CSDU3-Draft:
+          lessons:
+            Sprite Movement Methods:
+              name: Sprite Lihkastan Vuogit
+            Platform Jumper:
+              name: Platfoarbma Njuikejeaddji
+            Defender:
+              name: Suodjaleaddji
+            'Project: Build a Game':
+              name: 'Prošeakta: Hukse Spealu'
         2016_sciencePD_phase1:
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -1876,6 +2036,25 @@ se:
               name: Maid sáhttá vuordit
         CSF_Secret_Sample:
           description_audience: Ahki 8-18
+          lessons:
+            Sample Stage:
+              name: GeahččalanDássi
+        ECSPD1:
+          lessons:
+            Background and Context:
+              name: Duogáš ja Konteaksta
+            'Classroom and Workshop Style ':
+              name: 'Klássalatnja ja Bargobáji Málle'
+            ECS Curriculum:
+              name: ECS Oahppoplána
+            Welcome to Phase 1!:
+              name: Bures boahtin 1. Fásii!
+            Wrap Up:
+              name: Loahpat
+            Classroom and workshop style:
+              name: Klássalatnja ja Bargobáji málle
+            'Classroom and workshop style ':
+              name: 'Klássalatnja ja Bargobáji málle'
         algebraFacilitator:
           lessons:
             Evaluation Blocks:
@@ -1912,16 +2091,166 @@ se:
               name: Maid sáhttá vuordit
         cspoptional:
           lessons:
+            Algorithms Detour - How Routers Learn:
+              name: Algoritmaid Liigemohkki - Movt Routárat Ohppet
             Algorithms Detour - Minimum Spanning Tree:
               name: Algoritmaid Liigemohkki - Unnimusmeari Faŋuhan Muorra
             Algorithms Detour - Shortest Path:
               name: Algoritmaid Liigemohkki - Oaneheamos Bálggis
+            Unit 1 - Encoding Numbers in the Real World:
+              name: Unit 1 - Kode Duohta Máilmmi Nummariid
+            Unit 1 - Sending Bits in the Real World:
+              name: Unit 1 - Sáddet Bihtáid Duohta Máilmmis
+            Unit 1 - Algorithms Detour - Minimum Spanning Tree:
+              name: Unit 1 - Algoritmaid Liigemohkki - Unnimusmeari Faŋuhan Muorra
+            Unit 1 - Algorithms Detour - Shortest Path:
+              name: Unit 1 - Algoritmaid Liigemohkki - Oaneheamos Bálggis
+            Unit 1 - How Routers Learn:
+              name: Unit 1 - Movt Routárat Ohppet
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem:
+              name: Unit 4 - Stuora Váttisvuođat - Mátkkošteaddji Vuovdi Váttisvuohta
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
+              name: Unit 4 - Ovttaguvlui Funkšuvnnat - WiFi Hotspot Váttisvuohta
         cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
           lessons:
+            Chapter Overviews:
+              name: Kapihtal Várdosat
+            Encoding and Sending Numbers:
+              name: Kode ja Sádde Nummáriid
+            Intro to the Unit:
+              name: Láidehus Unit:ii
+            Running a Constructive Classroom:
+              name: Jođihit Konstruktiiva Klássalanja
             Sending Binary Messages:
               name: Sáddet Binára Dieđuid
+            Strategies for Student Writing:
+              name: Strategiijat Ohppiid Čállimii
+            Supporting Peer Learning:
+              name: Doarju Nubbi Oahppa Nuppis
+            'Tool Talk: Intro to Netsim':
+              name: 'Tool Talk: Láidehus Netsim:ii'
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+          lessons:
+            test Unit 1 content module Alpha:
+              name: teasta Unit 1 Alpha sisdoallomodula
+            test Unit 1 content module Bravo:
+              name: teasta Unit 1 Bravo sisdoallomodula
+            test Unit 1 content module Charlie:
+              name: teasta  Unit 1 Charlie sisdoallomodula
+            test Unit 1 practice module Delta:
+              name: teasta Unit 1 Delta sisdoallomodula
+            test Unit 1 practice module Echo:
+              name: teasta Unit 1 Echo sisdoallomodula
+            test Unit 1 practice module Foxtrot:
+              name: teasta Unit 1 Foxtrot sisdoallomodula
+            test Unit 1 required reading:
+              name: teasta Unit 1 bákkolaš lohkan
+        allthehiddenthings:
+          lessons:
+            Contained Levels:
+              name: Sisdoalu dásit
+        cspunit1-support-test:
+          lessons:
+            Unit 1 Overview:
+              name: Unit 1 Várddus
+        cspunit1-tools:
+          lessons:
+            netsim:
+              name: netsim
+        csp-facilitators:
+          lessons:
+            Introduction to Events:
+              name: Láidehus Dáhpáhusaide
+            Introduction to Text Compression:
+              name: Láidehus TeakstaKomprimeremii
+        cspassessment:
+          lessons:
+            CS Principles Culminating Assessment:
+              name: CS Prinsihpat Kuliminerejuvvon Árvvoštallan
+            CSP Student Post Survey Staging:
+              name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
+            CSP Longitudinal Contact Request:
+              name: CSP Longitudinala Oktavuođa Jearaldat
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
+            "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
+              name: "[Heaittihuvvon - oahpaheaddji ii sáhte oaidnit bohtosiid] CSP Kuliminerejuvvon Árvvoštallan"
+            'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
+              name: 'FUOMÁŠ: Heaittihuvvon - oahpaheaddji ii sáhte oaidnit bohtosiid. CSP Kuliminerejuvvon Árvvoštallan'
+            'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
+              name: 'FUOMÁŠ: Heaittihuvvon - Oahpaheaddji ii sáhte oaidnit bohtosiid. CSP Kuliminerejuvvon Árvvoštallan'
+            RQB Questions test:
+              name: RQB Jearaldagat teasta
+        cspexam1-mWU7ilDYM9:
+          description_short: Dán máŋggaválljen árvvoštallamis leat jearagaldagat mat gokčet DihtorDiehtaga 7 stuora idea. Dát lea 1. oassi guovtti-oassásaš 50 jearaldateksámenis.
+          lessons:
+            CS Principles Culminating Assessment Part 1:
+              name: CS Prinsihpat Kuliminerejuvvon Árvvoštallan Oassi 1
+        cspexam2-AKwgAh1ac5:
+          description_short: Dán máŋggaválljen árvvoštallamis leat jearagaldagat mat gokčet DihtorDiehtaga 7 stuora idea. Dát lea 2. oassi guovtti-oassásaš 50 jearaldateksámenis.
+          lessons:
+            CS Principles Culminating Assessment Part 2:
+              name: CS Prinsihpat Kuliminerejuvvon Árvvoštallan Oassi 2
+        CSDU4-Draft:
+          lessons:
+            Adding Functionality (optional):
+              name: Lasihit Funkšunálitehta (válljenvejolašvuohta) 
+            Design Mode:
+              name: Designa Modus
+            Making it Interactive:
+              name: Ráhkat dan Interaktivan
+            Discovering Users:
+              name: Analysere Designa
+            UCD Micro Activity:
+              name: UCD Micro Aktivitehta
+            Designing for Social Impact:
+              name: Designet Social Impact
+            Conducting User-Centered Interviews:
+              name: Čađahit Geavaheaddji Sentrerejuvvon Jearahallamiid
+            Analyzing Interviews:
+              name: Analysere Jearahallamiid
+            Re-designing a Space:
+              name: Ođđasit-designet Space:a
+            Presenting Your Design:
+              name: Presentere Iežat Designa
+            User Research:
+              name: Geavaheaddjeiskan
+            Low Fidelity Prototyping:
+              name: Prototyhpet heajos luohtehahttivuođa
+            Preparing for Prototype Testing:
+              name: Ráhkkanit Prototyhpa Teastema
+            Preparing for App Testing:
+              name: Ráhkkanit Teastet App:a
+            App Testing:
+              name: App:a Teasten
+            Planning for Improvements:
+              name: Plánet Buoridemiid
+        CSF_Secret_Sample_Story:
+          lessons:
+            Sample Stage:
+              name: GeahččalanDássi
+        MikeTest:
+          lessons:
+            Sample Stage:
+              name: GeahččalanDássi
         artistExemplar:
           description_audience: Ahki 8-18
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
         kinderTest:
           lessons:
             'Bee: Conditionals':
@@ -1934,6 +2263,8 @@ se:
               name: Dáhpáhusat Neahtahaga
             'Jigsaw: Learn to drag and drop':
               name: 'Bihttáspeallu: Oahpa movt geassit ja luoitit'
+            Loops Unplugged:
+              name: Mohkit Neahtahaga
             'Real-life Algorithms: Plant a Seed':
               name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
         grade4:
@@ -1950,6 +2281,8 @@ se:
               name: Dáhpáhusat Neahtahaga
             'Jigsaw: Learn to drag and drop':
               name: 'Bihttáspeallu: Oahpa movt geassit ja luoitit'
+            Loops Unplugged:
+              name: Mohkit Neahtahaga
         grade5:
           lessons:
             'Artist: For Loops':
@@ -2074,12 +2407,23 @@ se:
               name: 'Dáiddár: Mohkit Mohkiin'
             'Farmer: While Loops':
               name: 'Boanda: Geardduhit-mohkiid'
+        alltheplcthings:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
         csd3-2017:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+          lessons:
+            'Project: Build a Game':
+              name: 'Prošeakta: Hukse Spealu'
+            Sprites:
+              name: Sprite:at
         grade2:
           lessons:
             Flappy:
@@ -2106,18 +2450,42 @@ se:
               name: Designa Ráhkadanneava
             Welcome!:
               name: Bures boahtin!
+        csp-pre-survey:
+          lessons:
+            Unit 1 Chapter 1 Assessment:
+              name: Unit 1 Kapihtal 1 Árvvoštallan
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Kapihtal 1 Árvvoštallan
+            Unit 4 Chapter 1 Assessment:
+              name: Unit 4 Kapihtal 1 Árvvoštallan
         csd1-2017:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
         csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
           lessons:
+            Unit 1 Overview:
+              name: Unit 1 Várddus
             Unit 2 Overview:
               name: Unit 2 Várddus
             Unit 3 Overview:
               name: Unit 3 Várddus
             Unit 5 Overview:
               name: Unit 5 Várddus
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+          lessons:
+            Unit 1 Overview:
+              name: Unit 1 Várddus
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -2127,6 +2495,11 @@ se:
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
         csp2-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
           lessons:
             Unit 2 Overview:
               name: Unit 2 Várddus
@@ -2134,6 +2507,17 @@ se:
           lesson_groups:
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+          lessons:
+            Discovering Users:
+              name: Analysere Designa
+            Designing for Social Impact:
+              name: Designet Social Impact
+            Conducting User-Centered Interviews:
+              name: Čađahit Geavaheaddji Sentrerejuvvon Jearahallamiid
+            Analyzing Interviews:
+              name: Analysere Jearahallamiid
+            Presenting Your Design:
+              name: Presentere Iežat Designa
         coursea-draft:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2165,14 +2549,22 @@ se:
             Artist Binary:
               name: Dáiddár Binára
         coursee-draft:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
           lessons:
             Digital Citizenship:
               name: Digitála Stáhtaborgárvuohta
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             Internet:
               name: Interneahtta
             Crowdsourcing:
               name: Joavkočohkken
         coursef-draft:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
           lessons:
             Digital Citizenship:
               name: Digitála Stáhtaborgárvuohta
@@ -2233,10 +2625,20 @@ se:
             Prep With Your Modules:
               name: Ráhkkan Iežat Modulaiguin
         csp3-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
           lessons:
             Unit 3 Overview:
               name: Unit 3 Várddus
         csp4-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
           lessons:
             Unit 3 Overview:
               name: Unit 3 Várddus
@@ -2262,6 +2664,10 @@ se:
               name: Fysikalaš Diehtaga Hástalusat
             Wrap-Up:
               name: Čoahkkáigeassu
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
         sciencepd5:
           lessons:
             Welcome!:
@@ -2275,12 +2681,19 @@ se:
             Wrap-Up:
               name: Čoahkkáigeassu
         csp5-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
           lessons:
             Unit 5 Overview:
               name: Unit 5 Várddus
         csppostap-2017:
           description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
           lesson_groups:
+            content:
+              display_name: Sisdoallu
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
@@ -2308,6 +2721,12 @@ se:
           lessons:
             Making Music:
               name: Ráhkat Musihka
+        workshop-gamelab:
+          lessons:
+            Sprites:
+              name: Sprite:at
+            Input:
+              name: Inputa
         coursee-ramp:
           lessons:
             'Real Life Algorithms: Dice Race':
@@ -2321,18 +2740,39 @@ se:
               name: Ráhkat Musihka
             Making Music_:
               name: Ráhkat Musihka
+        csd3-draft:
+          lessons:
+            Sprites:
+              name: Sprite:at
         csd5-2017:
           lesson_groups:
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+        csd3-chapters:
+          lessons:
+            Sprites:
+              name: Sprite:at
         coursef-ramp:
           lessons:
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
+        csppostsurvey-staging:
+          lessons:
+            CSP Student Post Survey Staging:
+              name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
+        csppostsurvey:
+          lessons:
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
         csp-post-survey:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
         artist-and-bb8:
           lessons:
             Ice Age Play Lab:
@@ -2363,7 +2803,103 @@ se:
           lessons:
             Building a Foundation:
               name: Hukset Vuođu
+        csdnovice:
+          lessons:
+            Wrap Up:
+              name: Loahpat
+        csp-explore-task:
+          lessons:
+            Explore PT Prep - Reviewing the Task:
+              name: Suokkardala PT Ráhkkaneami - Guorahala barggu
+            Explore PT - Making a Plan:
+              name: Suokkardala PT - Ráhkat Plána
+            Explore PT - Complete the Task:
+              name: Suokkardala PT - Válbme Barggu
+        csp-create-task:
+          lessons:
+            Create PT Prep - Reviewing the Task:
+              name: Ráhkat PT Ráhkkaneami - Guorahallat Barggu
+            Create PT Prep - Making a Plan:
+              name: Ráhkat PT Ráhkkaneami - Ráhkat Plána
+            Create PT - Complete the Task:
+              name: Ráhkat PT - Válbme Barggu
+        csp-ap-tech-setup:
+          lessons:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Teknihkkalaš Huksehus - AP Digitála Portefolia ja Eará Reaiddut
+        csp-ap:
+          lessons:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Teknihkkalaš Huksehus - AP Digitála Portefolia ja Eará Reaiddut
+            Create PT Prep - Reviewing the Task:
+              name: Ráhkat PT Ráhkkaneami - Guorahallat Barggu
+            Create PT Prep - Making a Plan:
+              name: Ráhkat PT Ráhkkaneami - Ráhkat Plána
+            Create PT - Complete the Task:
+              name: Ráhkat PT - Válbme Barggu
+            Explore PT Prep - Reviewing the Task:
+              name: Suokkardala PT Ráhkkaneami - Guorahala barggu
+            Explore PT - Making a Plan:
+              name: Suokkardala PT - Ráhkat Plána
+            Explore PT - Complete the Task:
+              name: Suokkardala PT - Válbme Barggu
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+          lessons:
+            Wrap Up:
+              name: Loahpat
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
         express-2017:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
           lessons:
             Internet:
               name: Interneahtta
@@ -2381,6 +2917,10 @@ se:
               name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
             Spelling Bee:
               name: Stávengilvu
+        subgoal-labels-opt-in:
+          lessons:
+            other:
+              name: eará
         csp3-research-mxghyt:
           lesson_groups:
             csp3_1:
@@ -2392,20 +2932,32 @@ se:
           lessons:
             The Need For Programming Languages:
               name: Dárbu PrográmmerenGielaide
+            The Need for Algorithms:
+              name: Dárbu Algoritmaide
+            Creativity in Algorithms:
+              name: Kreativitehta Algoritmain
             Using Simple Commands:
               name: Geavat Eaŋkilis Komándduid
             Functions and Top-Down Design:
               name: Funkšuvnnat ja Bajil-Vulos Designa
             APIs and Function Parameters:
               name: API Funkšuvdna Paramehterat
+            Creating functions with Parameters:
+              name: Ráhkat Funkšuvnnaid Paramehteriiguin
             Looping and Random Numbers:
               name: Mohkiid ráhkadit ja Sahtedohko Nummarat
             Practice PT - Design a Digital Scene:
               name: Hárjehala PT - Designe Digitála Lávddi
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Kapihtal 1 Árvvoštallan
+            CSP Mid-course survey:
+              name: CSP Kursa-Gasku Iskkadeapmi
         e-f-ramp:
           lessons:
             Building a Foundation:
               name: Hukset Vuođu
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             Internet:
               name: Interneahtta
             Crowdsourcing:
@@ -2425,6 +2977,9 @@ se:
             csp3_1:
               display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
         new-express:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
           lessons:
             Building a Foundation:
               name: Hukset Vuođu
@@ -2432,6 +2987,8 @@ se:
           lessons:
             Building a Foundation:
               name: Hukset Vuođu
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             Internet:
               name: Interneahtta
             Crowdsourcing:
@@ -2455,16 +3012,24 @@ se:
           lessons:
             The Need For Programming Languages:
               name: Dárbu PrográmmerenGielaide
+            The Need for Algorithms:
+              name: Dárbu Algoritmaide
+            Creativity in Algorithms:
+              name: Kreativitehta Algoritmain
             Using Simple Commands:
               name: Geavat Eaŋkilis Komándduid
             Functions and Top-Down Design:
               name: Funkšuvnnat ja Bajil-Vulos Designa
             APIs and Function Parameters:
               name: API Funkšuvdna Paramehterat
+            Creating functions with Parameters:
+              name: Ráhkat Funkšuvnnaid Paramehteriiguin
             Looping and Random Numbers:
               name: Mohkiid ráhkadit ja Sahtedohko Nummarat
             Practice PT - Design a Digital Scene:
               name: Hárjehala PT - Designe Digitála Lávddi
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Kapihtal 1 Árvvoštallan
         pwc:
           lessons:
             Personal Innovations:
@@ -2474,6 +3039,14 @@ se:
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Explore PT Prep - Reviewing the Task:
+              name: Suokkardala PT Ráhkkaneami - Guorahala barggu
+            Explore PT - Making a Plan:
+              name: Suokkardala PT - Ráhkat Plána
+            Explore PT - Complete the Task:
+              name: Suokkardala PT - Válbme Barggu
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Teknihkkalaš Huksehus - AP Digitála Portefolia ja Eará Reaiddut
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
         csp-create-2017:
@@ -2481,12 +3054,22 @@ se:
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Teknihkkalaš Huksehus - AP Digitála Portefolia ja Eará Reaiddut
+            Create PT Prep - Reviewing the Task:
+              name: Ráhkat PT Ráhkkaneami - Guorahallat Barggu
+            Create PT Prep - Making a Plan:
+              name: Ráhkat PT Ráhkkaneami - Ráhkat Plána
+            Create PT - Complete the Task:
+              name: Ráhkat PT - Válbme Barggu
             Post-Course Survey:
               name: Maŋŋil Kurssa Iskkadeapmi
         course-e-2018:
           lessons:
             Building a Foundation:
               name: Hukset Vuođu
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             Internet:
               name: Interneahtta
             Crowdsourcing:
@@ -2505,10 +3088,16 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Sprites:
+              name: Sprite:at
         csd3-2018:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Sprites:
+              name: Sprite:at
         csd2-2018:
           lesson_groups:
             cspSurvey:
@@ -2576,6 +3165,10 @@ se:
           lessons:
             Building a Foundation:
               name: Hukset Vuođu
+            'Loops: My Loopy Robotic Friends':
+              name: Mu Mohkke Robota Olbmát
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             'Functions: Songwriting':
               name: Lávlagiid čállit
             Crowdsourcing:
@@ -2586,6 +3179,8 @@ se:
           lessons:
             Building a Foundation:
               name: Hukset Vuođu
+            'Loops: My Loopy Robotic Friends':
+              name: Mu Mohkke Robota Olbmát
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
             Envelope Variables:
@@ -2601,6 +3196,8 @@ se:
             csp1_2:
               display_name: 'Kapihtal 2: Fuomáš Interneahta'
           lessons:
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
             Personal Innovations:
               name: Persovnnalaš Innovašuvnnat
             Sending Binary Messages:
@@ -2613,12 +3210,24 @@ se:
               name: Binára Nummarat
             Sending Numbers:
               name: Sáddet Nummariid
+            Encoding and Sending Formatted Text:
+              name: Kode ja Sádde Formaterejuvvon Teavstta
+            Unit 1 Chapter 1 Assessment:
+              name: Unit 1 Kapihtal 1 Árvvoštallan
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
             Packets and Making a Reliable Internet:
               name: Páhkat ja Ráhkadit Luohtehahtti interneahta
             The Need for DNS:
               name: Dárbu DNS:ii
+            HTTP and Abstraction:
+              name: HTTP ja Abstrákšuvdna
             Practice PT - The Internet and Society:
               name: Hárjehala PT - Interneahtta ja Servodat
+            Unit 1 Chapter 2 Assessment:
+              name: Unit 1 Kapihtal 2 Árvvoštallan
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -2646,6 +3255,12 @@ se:
               name: Kode Ivdne Govaid
             Lossy Compression and File Formats:
               name: Lossy Komprimeren ja Fiila Formáhtat
+            Practice PT - Encode an Experience:
+              name: Hárjehala PT - Kode Vásáhusa
+            Unit 2 Chapter 1 Assessment:
+              name: Unit 2 Kapihtal 1 Árvvoštallan
+            Intro to Data:
+              name: Láidehus Dátaide
             Finding Trends with Visualizations:
               name: Gávnna Treanddaid mas leat Visuáliseremat
             Check Your Assumptions:
@@ -2662,6 +3277,8 @@ se:
               name: Ráhkat Čoahkkaigeassu Tabeallaid
             Practice PT - Tell a Data Story:
               name: Hárjehala PT - Muital Data Muitalusa
+            Unit 2 Chapter 2 Assessment:
+              name: Unit 2 Kapihtal 2 Árvvoštallan
         csp3-2018:
           lesson_groups:
             cspAssessment:
@@ -2671,26 +3288,50 @@ se:
           lessons:
             The Need For Programming Languages:
               name: Dárbu PrográmmerenGielaide
+            The Need for Algorithms:
+              name: Dárbu Algoritmaide
+            Creativity in Algorithms:
+              name: Kreativitehta Algoritmain
             Using Simple Commands:
               name: Geavat Eaŋkilis Komándduid
             Functions and Top-Down Design:
               name: Funkšuvnnat ja Bajil-Vulos Designa
             APIs and Function Parameters:
               name: API Funkšuvdna Paramehterat
+            Creating functions with Parameters:
+              name: Ráhkat Funkšuvnnaid Paramehteriiguin
             Looping and Random Numbers:
               name: Mohkiid ráhkadit ja Sahtedohko Nummarat
             Practice PT - Design a Digital Scene:
               name: Hárjehala PT - Designe Digitála Lávddi
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Kapihtal 1 Árvvoštallan
+            Please complete the CSP Mid-course survey!:
+              name: Válbmes CSP Kursa-Gasku Iskkadeami!
             Creating Functions with Parameters:
               name: Ráhkat Funkšuvnnaid Paramehteriiguin
         csp-explore-2018:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Explore PT Prep - Reviewing the Task:
+              name: Suokkardala PT Ráhkkaneami - Guorahala barggu
+            Explore PT - Making a Plan:
+              name: Suokkardala PT - Ráhkat Plána
+            Explore PT - Complete the Task:
+              name: Suokkardala PT - Válbme Barggu
         csp-create-2018:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Create PT Prep - Reviewing the Task:
+              name: Ráhkat PT Ráhkkaneami - Guorahallat Barggu
+            Create PT Prep - Making a Plan:
+              name: Ráhkat PT Ráhkkaneami - Ráhkat Plána
+            Create PT - Complete the Task:
+              name: Ráhkat PT - Válbme Barggu
         csp4-2018:
           lesson_groups:
             cspAssessment:
@@ -2706,31 +3347,77 @@ se:
               name: Identifisere Olbmuid Dataiguin
             The Cost of Free:
               name: Haddi Nuvttá
+            Encryption with Keys and Passwords:
+              name: Čoavdagiiguin ja Čoavddasániiguin Krypteret
+            Public Key Crypto:
+              name: Almmolaš Čoavdda Krypto
+            Rapid Research - Cybercrime:
+              name: Jođánis Iskan - Neahttakriminalitehta
+            Practice PT - Big Data and Security Dilemmas:
+              name: Hárjehala PT - Stuora Dátat ja Sihkarvuođa Dilemmat
+            Unit 4 Chapter 1 Assessment:
+              name: Unit 4 Kapihtal 1 Árvvoštallan
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
             Finding Trends with Visualizations:
               name: Gávnna Treanddaid mas leat Visuáliseremat
             Check Your Assumptions:
               name: Iskka Iežat Navdimiid
         csp5-2018:
           lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            csp5_2:
+              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Buttons and Events:
+              name: Boalut ja Dáhpáhusat
             Multi-screen Apps:
               name: Máŋgga-šearpmat App:t
+            'Building an App: Multi-Screen App':
+              name: 'Hukse App:a: Máŋgga-šearpmat App:a'
             Controlling Memory with Variables:
               name: Iskka Muittu Variábeliiguin
+            'Building an App: Clicker Game':
+              name: 'Hukse App:a: Deaddin Speallu'
+            Unit 5 Assessment 1:
+              name: Unit 5 Árvvoštallan 1
             User Input and Strings:
               name: Geavaheaddji Inputa ja Streaŋggat
+            '"If" Statements Unplugged':
+              name: '"Jus" Cealkámušat Neahtahaga'
+            Boolean Expressions and "If" Statements:
+              name: Boolána Dajaldagat ja "Jus" Cealkámušat
+            '"if-else-if" and Conditional Logic':
+              name: '"jus-eará-jus" ja Evttolaš Logihkka'
+            'Building an App: Color Sleuth':
+              name: 'Hukse App:a: Ivdnás Detektiiva'
+            Unit 5 Assessment 2:
+              name: Unit 5 Árvvoštallan 2
             Loops and Simulations:
               name: Mohkit ja Simulášuvnnat
             Introduction to Arrays:
               name: Láidehus Matrisaide
+            'Building an App: Image Scroller':
+              name: 'Hukse App:a: Govva Scrollar'
+            Unit 5 Assessment 3:
+              name: Unit 5 Árvvoštallan 3
             Processing Arrays:
               name: Gieđahala Matrisaid
             Functions with Return Values:
               name: Funkšuvnnat main leat Ruovttoluotta Árvvut
+            'Building an App: Canvas Painter':
+              name: 'Hukse App:a: Canvas Málejeaddji'
+            Unit 5 Assessment 4:
+              name: Unit 5 Árvvoštallan 4
             'Practice PT: Create':
               name: 'Hárjehala PT: Ráhkat'
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unit 5 Árvvoštallan 5 - AP Pseudokode Hárjehallan Jearaldagat
+            Participate in a longitudinal study!:
+              name: Oassálaste longitudinala oahpus!
         csppostap-2018:
           description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
           lesson_groups:
@@ -2755,6 +3442,8 @@ se:
               name: Ovdamearkkat App:ide
             Final Project:
               name: Maŋemus Prošeakta
+            Intro to Data:
+              name: Láidehus Dátaide
             Finding Trends with Visualizations:
               name: Gávnna Treanddaid mas leat Visuáliseremat
             Check Your Assumptions:
@@ -2769,10 +3458,92 @@ se:
               name: Buhtis Data
             Creating Summary Tables:
               name: Ráhkat Čoahkkaigeassu Tabeallaid
+            Unit 2 Chapter 2 Assessment:
+              name: Unit 2 Kapihtal 2 Árvvoštallan
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
         csd-post-survey:
           lesson_groups:
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+          lessons:
+            Wrap Up:
+              name: Loahpat
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+          lessons:
+            Wrap Up:
+              name: Loahpat
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+          lessons:
+            Wrap Up:
+              name: Loahpat
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+          lessons:
+            Wrap Up:
+              name: Loahpat
         pre-express-2018:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2783,6 +3554,10 @@ se:
               name: Du Digitála Luodda
             Copyright and Creativity:
               name: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
         frozen-2018:
           lessons:
             Artist:
@@ -2799,6 +3574,8 @@ se:
           lesson_groups:
             csf_internet:
               display_name: Interneahtta
+            csf_sprites:
+              display_name: Sprite:at
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
           lessons:
@@ -2828,11 +3605,15 @@ se:
               name: Binára Govat
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
           lessons:
             Building a Foundation:
               name: Hukset Vuođu
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             'Functions: Songwriting':
               name: Lávlagiid čállit
             Internet:
@@ -2846,6 +3627,9 @@ se:
             Songwriting:
               name: Lávlagiid čállit
         express-2019:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
           lessons:
             Envelope Variables:
               name: Konvoluhtta Variábelat
@@ -2865,6 +3649,10 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+        andrea-test:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -2908,6 +3696,8 @@ se:
               name: Du Digitála Luodda
             'Loops: Getting Loopy':
               name: Šaddat Gáiggasin
+            The Right App:
+              name: Dat Rievttes App:a
         pre-express-2019:
           lesson_groups:
             csf_events:
@@ -2929,6 +3719,9 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Sprites:
+              name: Sprite:at
         csd4-2019:
           lesson_groups:
             cspSurvey:
@@ -2953,6 +3746,8 @@ se:
             csp1_2:
               display_name: 'Kapihtal 2: Fuomáš Interneahta'
           lessons:
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
             Personal Innovations:
               name: Persovnnalaš Innovašuvnnat
             Sending Binary Messages:
@@ -2965,12 +3760,22 @@ se:
               name: Binára Nummarat
             Sending Numbers:
               name: Sáddet Nummariid
+            Unit 1 Chapter 1 Assessment:
+              name: Unit 1 Kapihtal 1 Árvvoštallan
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
             Packets and Making a Reliable Internet:
               name: Páhkat ja Ráhkadit Luohtehahtti interneahta
             The Need for DNS:
               name: Dárbu DNS:ii
+            HTTP and Abstraction:
+              name: HTTP ja Abstrákšuvdna
             Practice PT - The Internet and Society:
               name: Hárjehala PT - Interneahtta ja Servodat
+            Unit 1 Chapter 2 Assessment:
+              name: Unit 1 Kapihtal 2 Árvvoštallan
         csp2-2019:
           lesson_groups:
             cspAssessment:
@@ -2995,16 +3800,24 @@ se:
           lessons:
             The Need For Programming Languages:
               name: Dárbu PrográmmerenGielaide
+            The Need for Algorithms:
+              name: Dárbu Algoritmaide
+            Creativity in Algorithms:
+              name: Kreativitehta Algoritmain
             Using Simple Commands:
               name: Geavat Eaŋkilis Komándduid
             Functions and Top-Down Design:
               name: Funkšuvnnat ja Bajil-Vulos Designa
             APIs and Function Parameters:
               name: API Funkšuvdna Paramehterat
+            Creating functions with Parameters:
+              name: Ráhkat Funkšuvnnaid Paramehteriiguin
             Looping and Random Numbers:
               name: Mohkiid ráhkadit ja Sahtedohko Nummarat
             Practice PT - Design a Digital Scene:
               name: Hárjehala PT - Designe Digitála Lávddi
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Kapihtal 1 Árvvoštallan
         csp4-2019:
           lesson_groups:
             cspAssessment:
@@ -3024,39 +3837,93 @@ se:
               name: Identifisere Olbmuid Dataiguin
             The Cost of Free:
               name: Haddi Nuvttá
+            Encryption with Keys and Passwords:
+              name: Čoavdagiiguin ja Čoavddasániiguin Krypteret
+            Public Key Crypto:
+              name: Almmolaš Čoavdda Krypto
+            Rapid Research - Cybercrime:
+              name: Jođánis Iskan - Neahttakriminalitehta
         csp5-2019:
           lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            csp5_2:
+              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Buttons and Events:
+              name: Boalut ja Dáhpáhusat
             Multi-screen Apps:
               name: Máŋgga-šearpmat App:t
+            'Building an App: Multi-Screen App':
+              name: 'Hukse App:a: Máŋgga-šearpmat App:a'
             Controlling Memory with Variables:
               name: Iskka Muittu Variábeliiguin
+            'Building an App: Clicker Game':
+              name: 'Hukse App:a: Deaddin Speallu'
+            Unit 5 Assessment 1:
+              name: Unit 5 Árvvoštallan 1
             User Input and Strings:
               name: Geavaheaddji Inputa ja Streaŋggat
+            '"If" Statements Unplugged':
+              name: '"Jus" Cealkámušat Neahtahaga'
+            Boolean Expressions and "If" Statements:
+              name: Boolána Dajaldagat ja "Jus" Cealkámušat
+            '"if-else-if" and Conditional Logic':
+              name: '"jus-eará-jus" ja Evttolaš Logihkka'
+            'Building an App: Color Sleuth':
+              name: 'Hukse App:a: Ivdnás Detektiiva'
+            Unit 5 Assessment 2:
+              name: Unit 5 Árvvoštallan 2
             Loops and Simulations:
               name: Mohkit ja Simulášuvnnat
             Introduction to Arrays:
               name: Láidehus Matrisaide
+            'Building an App: Image Scroller':
+              name: 'Hukse App:a: Govva Scrollar'
+            Unit 5 Assessment 3:
+              name: Unit 5 Árvvoštallan 3
             Processing Arrays:
               name: Gieđahala Matrisaid
             Functions with Return Values:
               name: Funkšuvnnat main leat Ruovttoluotta Árvvut
+            'Building an App: Canvas Painter':
+              name: 'Hukse App:a: Canvas Málejeaddji'
+            Unit 5 Assessment 4:
+              name: Unit 5 Árvvoštallan 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unit 5 Árvvoštallan 5 - AP Pseudokode Hárjehallan Jearaldagat
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Explore PT Prep - Reviewing the Task:
+              name: Suokkardala PT Ráhkkaneami - Guorahala barggu
+            Explore PT - Making a Plan:
+              name: Suokkardala PT - Ráhkat Plána
+            Explore PT - Complete the Task:
+              name: Suokkardala PT - Válbme Barggu
         csp-create-2019:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Create PT Prep - Reviewing the Task:
+              name: Ráhkat PT Ráhkkaneami - Guorahallat Barggu
+            Create PT Prep - Making a Plan:
+              name: Ráhkat PT Ráhkkaneami - Ráhkat Plána
+            Create PT - Complete the Task:
+              name: Ráhkat PT - Válbme Barggu
         csppostap-2019:
           description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Intro to Data:
+              name: Láidehus Dátaide
             Good and Bad Data Visualizations:
               name: Buorit ja Fuones Data Visuáliseremat
             Making Data Visualizations:
@@ -3096,9 +3963,14 @@ se:
               name: Sáddet Binára Dieđuid
             Sending Binary Messages with the Internet Simulator:
               name: Sáddet Binára Dieđuid Interneahta Simulatorain
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
             Binary Numbers:
               name: Binára Nummarat
         time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
           lessons:
             Crowdsourcing:
               name: Joavkočohkken
@@ -3112,6 +3984,20 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+          lessons:
+            Wrap Up:
+              name: Loahpat
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+          lessons:
+            Wrap Up:
+              name: Loahpat
         csd1-pilot:
           lesson_groups:
             cspSurvey:
@@ -3124,10 +4010,70 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Sprites:
+              name: Sprite:at
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
         csl-vn:
           lesson_groups:
             csf_events:
               display_name: Dáhpáhusaid
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+          lessons:
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -3165,6 +4111,8 @@ se:
           lessons:
             Simon Says:
               name: Simmon Sihtá
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             Access Ability:
               name: BeassanVejolašvuohta
         time4cs-control-unit-2:
@@ -3178,24 +4126,36 @@ se:
           lesson_groups:
             csf_events:
               display_name: Dáhpáhusaid
+            csf_sprites:
+              display_name: Sprite:at
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
           lessons:
             Simon Says:
               name: Simmon Sihtá
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             Access Ability:
               name: BeassanVejolašvuohta
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_events:
               display_name: Dáhpáhusaid
+            csf_sprites:
+              display_name: Sprite:at
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
           lessons:
             Simon Says:
               name: Simmon Sihtá
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             Access Ability:
               name: BeassanVejolašvuohta
+        csp8-pilot:
+          lessons:
+            Create PT - Complete the Task:
+              name: Ráhkat PT - Válbme Barggu
         csd2-2020:
           lesson_groups:
             cspSurvey:
@@ -3223,6 +4183,9 @@ se:
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+          lessons:
+            Sprites:
+              name: Sprite:at
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -3245,6 +4208,8 @@ se:
               name: Du Digitála Luodda
             'Loops: Getting Loopy':
               name: Šaddat Gáiggasin
+            The Right App:
+              name: Dat Rievttes App:a
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -3275,11 +4240,15 @@ se:
               name: Digitála Stáhtaborgárvuohta
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
           lessons:
             Simon Says:
               name: Simmon Sihtá
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
             'Functions: Songwriting':
               name: Lávlagiid čállit
             Digital Sharing:
@@ -3289,6 +4258,8 @@ se:
           lesson_groups:
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
           lessons:
             Envelope Variables:
               name: Konvoluhtta Variábelat
@@ -3301,6 +4272,10 @@ se:
               description_teacher: "Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.\n"
             AI for Oceans:
               name: AI Mearaide
+        express-2020:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
         pre-express-2020:
           lesson_groups:
             csf_events:
@@ -3315,50 +4290,119 @@ se:
           lessons:
             Binary Numbers:
               name: Binára Nummarat
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
+        csp2-2020:
+          lessons:
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
+        csp8-2020:
+          lessons:
+            Create PT - Complete the Task:
+              name: Ráhkat PT - Válbme Barggu
         csp3-virtual:
           lessons:
             The Need For Programming Languages:
               name: Dárbu PrográmmerenGielaide
+            The Need for Algorithms:
+              name: Dárbu Algoritmaide
+            Creativity in Algorithms:
+              name: Kreativitehta Algoritmain
             Using Simple Commands:
               name: Geavat Eaŋkilis Komándduid
             Functions and Top-Down Design:
               name: Funkšuvnnat ja Bajil-Vulos Designa
             APIs and Function Parameters:
               name: API Funkšuvdna Paramehterat
+            Creating functions with Parameters:
+              name: Ráhkat Funkšuvnnaid Paramehteriiguin
             Looping and Random Numbers:
               name: Mohkiid ráhkadit ja Sahtedohko Nummarat
             Practice PT - Design a Digital Scene:
               name: Hárjehala PT - Designe Digitála Lávddi
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Kapihtal 1 Árvvoštallan
         csp5-virtual:
           lessons:
+            Buttons and Events:
+              name: Boalut ja Dáhpáhusat
             Multi-screen Apps:
               name: Máŋgga-šearpmat App:t
+            'Building an App: Multi-Screen App':
+              name: 'Hukse App:a: Máŋgga-šearpmat App:a'
             Controlling Memory with Variables:
               name: Iskka Muittu Variábeliiguin
+            'Building an App: Clicker Game':
+              name: 'Hukse App:a: Deaddin Speallu'
+            Unit 5 Assessment 1:
+              name: Unit 5 Árvvoštallan 1
             User Input and Strings:
               name: Geavaheaddji Inputa ja Streaŋggat
+            '"If" Statements Unplugged':
+              name: '"Jus" Cealkámušat Neahtahaga'
+            Boolean Expressions and "If" Statements:
+              name: Boolána Dajaldagat ja "Jus" Cealkámušat
+            '"if-else-if" and Conditional Logic':
+              name: '"jus-eará-jus" ja Evttolaš Logihkka'
+            'Building an App: Color Sleuth':
+              name: 'Hukse App:a: Ivdnás Detektiiva'
+            Unit 5 Assessment 2:
+              name: Unit 5 Árvvoštallan 2
             Loops and Simulations:
               name: Mohkit ja Simulášuvnnat
             Introduction to Arrays:
               name: Láidehus Matrisaide
+            'Building an App: Image Scroller':
+              name: 'Hukse App:a: Govva Scrollar'
+            Unit 5 Assessment 3:
+              name: Unit 5 Árvvoštallan 3
             Processing Arrays:
               name: Gieđahala Matrisaid
             Functions with Return Values:
               name: Funkšuvnnat main leat Ruovttoluotta Árvvut
+            'Building an App: Canvas Painter':
+              name: 'Hukse App:a: Canvas Málejeaddji'
+            Unit 5 Assessment 4:
+              name: Unit 5 Árvvoštallan 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unit 5 Árvvoštallan 5 - AP Pseudokode Hárjehallan Jearaldagat
+        virtual-holding-place:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
         code-break:
           lessons:
             Events:
               name: Dáhpáhusaid
         csp5-virtual-part2:
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            csp5_2:
+              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
           lessons:
+            Unit 5 Assessment 2:
+              name: Unit 5 Árvvoštallan 2
             Loops and Simulations:
               name: Mohkit ja Simulášuvnnat
             Introduction to Arrays:
               name: Láidehus Matrisaide
+            'Building an App: Image Scroller':
+              name: 'Hukse App:a: Govva Scrollar'
+            Unit 5 Assessment 3:
+              name: Unit 5 Árvvoštallan 3
             Processing Arrays:
               name: Gieđahala Matrisaid
             Functions with Return Values:
               name: Funkšuvnnat main leat Ruovttoluotta Árvvut
+            'Building an App: Canvas Painter':
+              name: 'Hukse App:a: Canvas Málejeaddji'
+            Unit 5 Assessment 4:
+              name: Unit 5 Árvvoštallan 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unit 5 Árvvoštallan 5 - AP Pseudokode Hárjehallan Jearaldagat
         k5-onlinepd-2020:
           lessons:
             Events:
@@ -3371,6 +4415,40 @@ se:
             k5_next_steps_1:
               display_name: Boahttevaš Lávkkit
         dani-june-2020-test:
+          lessons:
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
+            Buttons and Events:
+              name: Boalut ja Dáhpáhusat
           lesson_groups:
             cspSurvey:
               display_name: Iskkadeapmi
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+        csd3-virtual:
+          lessons:
+            Sprites:
+              name: Sprite:at
+          lesson_groups:
+            csd3_1:
+              display_name: Sisdoallu
+            csd3_2:
+              display_name: Sisdoallu
+            cspSurvey:
+              display_name: Sisdoallu
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Sisdoallu
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Sisdoallu
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Sisdoallu
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Sisdoallu
