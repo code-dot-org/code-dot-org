@@ -30,7 +30,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/2ZesVwycWBmJLyddR2syE8rrnadjgBChyVkYkFIeNp4/4c542e7a-9e93-41da-988e-c0c2c611a601.png?version=bU7Zt1.iFxTyhHoGbUeuWfp2AQJDlJF0\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 86\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"bU7Zt1.iFxTyhHoGbUeuWfp2AQJDlJF0\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/9Qzj.nME0f5qINTF6HSNJpgBmEDGXBrx/bee_single_frame.png\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 86\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"bU7Zt1.iFxTyhHoGbUeuWfp2AQJDlJF0\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
