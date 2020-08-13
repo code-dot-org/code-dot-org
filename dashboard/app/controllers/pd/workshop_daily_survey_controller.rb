@@ -332,7 +332,7 @@ module Pd
     def new_csf_post101
       # Use enrollment_code to find a specific workshop
       # or search all CSF101 workshops the current user is enrolled in.
-      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+      attended_workshop = get_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
         SUBJECT_CSF_101
@@ -351,7 +351,7 @@ module Pd
     def new_csf_post201
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user is enrolled in and attended.
-      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+      attended_workshop = get_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
         SUBJECT_CSF_201
@@ -368,7 +368,7 @@ module Pd
     def new_csf_post201_foorm
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user is enrolled in and attended.
-      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+      attended_workshop = get_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
         SUBJECT_CSF_201
@@ -385,34 +385,28 @@ module Pd
 
     # Pre survey controller for academic year workshops
     def new_ayw_pre
-      # get workshop (based on url/user)
-      workshop_subject = ACADEMIC_YEAR_WORKSHOPS[params[:workshop_subject]]
-      return render_404 unless workshop_subject
-      workshop = Pd::Workshop.
-        where(subject: workshop_subject).
-        enrolled_in_by(current_user).nearest
-      return render_404 unless workshop
+      ayw_helper(PRE_SURVEY_CONFIG_PATHS, should_have_attended: false, day: 0)
+    end
 
-      survey_name = PRE_SURVEY_CONFIG_PATHS[workshop_subject]
-      agenda = params[:agenda] || nil
+    def new_ayw_daily
+      ayw_helper(DAILY_SURVEY_CONFIG_PATHS, should_have_attended: false, day: params[:day])
+    end
 
-      # remove / from agenda url so module/1 => module1
-      agenda.tr!("/", "") if agenda
-
-      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: nil, workshop_agenda: agenda)
+    def new_ayw_post
+      ayw_helper(POST_SURVEY_CONFIG_PATHS, should_have_attended: true, day: nil)
     end
 
     protected
 
-    def get_attended_workshop_by_enrollment_or_course(enrollment_code, course, subject)
-      attended_workshop = nil
+    def get_workshop_by_enrollment_or_course(enrollment_code, course, subject, should_have_attended=true)
+      workshop_to_return = nil
       if enrollment_code
         workshop = get_workshop_by_enrollment(params[:enrollment_code], current_user)
         unless workshop
           render :invalid_enrollment_code
           return false
         end
-        attended_workshop = workshop if workshop.user_attended?(current_user)
+        workshop_to_return = workshop if !should_have_attended || workshop.user_attended?(current_user)
       else
         enrolled_workshops = Workshop.
           where(course: course, subject: subject).
@@ -423,17 +417,19 @@ module Pd
           return false
         end
 
-        attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
+        workshop_to_return = should_have_attended ?
+           enrolled_workshops.with_nearest_attendance_by(current_user) :
+           enrolled_workshops.nearest
       end
 
-      # Render a message if no attendance for this workshop.
-      unless attended_workshop
+      # If workshop_to_return is nil here and we haven't already returned, it means there was no attendance
+      unless workshop_to_return
         render :no_attendance
         return false
       end
 
-      # otherwise return the attended workshp
-      attended_workshop
+      # otherwise return the workshop
+      workshop_to_return
     end
 
     def response_exists_general?(key_params)
@@ -531,6 +527,27 @@ module Pd
       end
 
       render :new_general
+    end
+
+    def ayw_helper(survey_map, should_have_attended:, day:)
+      # get workshop (based on url/user)
+      workshop_subject = ACADEMIC_YEAR_WORKSHOPS[params[:workshop_subject]]
+      return render_404 unless workshop_subject
+      workshop = get_workshop_by_enrollment_or_course(
+        nil,
+        [COURSE_CSD, COURSE_CSP],
+        workshop_subject,
+        should_have_attended
+      )
+      return unless workshop
+
+      survey_name = survey_map[workshop_subject]
+      agenda = params[:agenda] || nil
+
+      # remove / from agenda url so module/1 => module1
+      agenda.tr!("/", "") if agenda
+
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: day, workshop_agenda: agenda)
     end
 
     def render_survey_foorm(survey_name:, workshop:, session:, day:, workshop_agenda: nil)
