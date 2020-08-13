@@ -1,12 +1,13 @@
-tts true
 hidden false
 hideable_lessons true
 lesson_extras_available true
-project_widget_visible true
 has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course3/{LESSON}/Teacher'
+project_widget_visible true
 project_widget_types ["playlab", "artist"]
 curriculum_umbrella 'CSF'
+tts true
+is_translateable true
 
 lesson 'Computational Thinking'
 level 'ComputationalThinking'
@@ -270,3 +271,4 @@ level '4-5 Artist Patterns 11'
 level '4-5 Artist Patterns 12'
 level '4-5 Artist Patterns 13'
 level '4-5 Artist Patterns Free Play'
+

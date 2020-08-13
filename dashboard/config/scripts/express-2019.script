@@ -12,6 +12,7 @@ is_stable true
 supported_locales ["cs-CZ", "es-MX", "fr-FR", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
+is_translateable true
 
 lesson_group 'csf_warmup', display_name: 'Warm-Up'
 lesson 'Dance Party'

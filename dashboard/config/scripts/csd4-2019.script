@@ -12,6 +12,7 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
+is_translateable true
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
 lesson 'Analysis of Design'

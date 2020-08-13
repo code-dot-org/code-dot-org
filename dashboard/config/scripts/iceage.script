@@ -1,4 +1,5 @@
 hidden 'false'
+is_translateable true
 
 lesson 'Ice Age Play Lab'
 skin 'iceage'

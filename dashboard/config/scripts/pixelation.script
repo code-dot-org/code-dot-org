@@ -1,5 +1,6 @@
 hidden false
 has_lesson_plan true
+is_translateable true
 
 lesson 'Black & White Pixelation Tutorial'
 level 'Pixelation 4x4 Empty'
@@ -18,3 +19,4 @@ level 'Pixelation Bee'
 
 lesson 'Color Pixelation Freeplay'
 level 'Mixing Colors'
+

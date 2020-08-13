@@ -15,6 +15,7 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
+is_translateable true
 
 lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 lesson 'Innovations in Computing'

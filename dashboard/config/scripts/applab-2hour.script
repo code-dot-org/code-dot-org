@@ -1,4 +1,5 @@
 login_required true
+is_translateable true
 
 lesson 'Digital Design'
 level 'Building a UI with Design Mode', named: true
@@ -41,3 +42,4 @@ level 'CSD: setProperty', named: true
 level 'CSDU6 - UI and Inputs - setProperty first level', progression: 'UI Element Properties'
 level 'CSDU6 - UI and Inputs - setProperty Image', progression: 'UI Element Properties'
 level 'CSDU6 - UI and Inputs - setProperty', progression: 'UI Element Properties'
+

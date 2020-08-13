@@ -1,9 +1,10 @@
-tts true
 hidden false
 hideable_lessons true
 has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course4/{LESSON}/Teacher'
 curriculum_umbrella 'CSF'
+tts true
+is_translateable true
 
 lesson 'Unplugged: Tangrams'
 level 'TangramAlgorithms'
@@ -227,3 +228,4 @@ level 'Course 4 EC 1b'
 level 'Course 4 EC 2a'
 level 'Course 4 EC 2c'
 level 'Course 4 EC 2b'
+

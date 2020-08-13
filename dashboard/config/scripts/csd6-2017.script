@@ -1,4 +1,3 @@
-tts true
 hidden false
 login_required true
 hideable_lessons true
@@ -13,6 +12,8 @@ version_year '2017'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+tts true
+is_translateable true
 
 lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 lesson 'Innovations in Computing_'
@@ -249,3 +250,4 @@ level 'csd-pulse-check-survey-1-levelgroup U6Ch2', progression: 'Reflection', as
 lesson_group 'csd_survey', display_name: 'Post-Course Survey'
 lesson 'CSD Post-Course Survey', lockable: true
 level 'csd-post-survey-2018-markdown-with-link-to-survey', assessment: true
+

@@ -10,6 +10,7 @@ version_year '2018'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+is_translateable true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
 lesson 'CS Discoveries Pre-survey', lockable: true
@@ -42,3 +43,4 @@ level 'CSD U1L07 TFMD_2018', named: true
 lesson 'Project - Propose an App'
 level 'CSD U1L09 TFMD_2018', named: true
 level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018', progression: 'Reflection', assessment: true
+

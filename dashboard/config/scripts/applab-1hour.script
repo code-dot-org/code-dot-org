@@ -1,4 +1,5 @@
 login_required true
+is_translateable true
 
 lesson 'Room Escape'
 level 'Escape Room Example', named: true
@@ -18,3 +19,4 @@ level 'Room Escape Workshop - 9-2'
 level 'Room Escape Workshop - 10'
 level 'Room Escape Workshop - 10 - 2'
 level 'Final Room Escape App', named: true
+

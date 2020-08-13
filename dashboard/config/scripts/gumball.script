@@ -1,5 +1,6 @@
 hidden 'false'
 login_required 'false'
+is_translateable true
 
 lesson 'Gumball Play Lab'
 skin 'gumball'

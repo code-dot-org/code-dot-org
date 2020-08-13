@@ -1,4 +1,3 @@
-tts true
 hidden false
 login_required true
 hideable_lessons true
@@ -12,6 +11,8 @@ version_year '2018'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+tts true
+is_translateable true
 
 lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
 lesson 'Exploring Websites'
@@ -148,3 +149,4 @@ level 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018', progression: 'Reflection
 lesson_group 'cspSurvey', display_name: 'Survey'
 lesson 'CS Discoveries Post-Course Survey'
 level 'csd-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
+

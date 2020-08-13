@@ -1,4 +1,5 @@
 hidden false
+is_translateable true
 
 lesson 'Aquatic'
 level 'HOC 2018 Level_1'
@@ -13,3 +14,4 @@ level 'HOC 2018 Level_9b'
 level 'HOC 2018 Level_10'
 level 'HOC 2018 Level_11'
 level 'HOC 2018 Level_12'
+

@@ -1,12 +1,13 @@
-tts true
 hidden false
 hideable_lessons true
 lesson_extras_available true
-project_widget_visible true
 has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course2/{LESSON}/Teacher'
+project_widget_visible true
 project_widget_types ["playlab", "artist"]
 curriculum_umbrella 'CSF'
+tts true
+is_translateable true
 
 lesson 'Graph Paper Programming'
 level 'GraphPaperProgramming'
@@ -243,3 +244,4 @@ level '2-3 Artist Nested Loops 12'
 level '2-3 Artist Nested Loops Free Play'
 bonus 'course2_artist_nestedLoops_challenge1'
 bonus 'course2_artist_nestedLoops_challenge2'
+

@@ -12,6 +12,7 @@ version_year '2020'
 is_stable true
 curriculum_umbrella 'CSF'
 tts true
+is_translateable true
 
 lesson_group 'ramp_up', display_name: 'Ramp-Up'
 lesson 'Sequencing in the Maze'

@@ -12,6 +12,7 @@ version_year '2017'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
+is_translateable true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
 lesson 'CS Discoveries Pre-survey', lockable: true

@@ -10,6 +10,7 @@ is_stable true
 supported_locales ["cs-CZ", "sk-SK"]
 curriculum_umbrella 'CSF'
 tts true
+is_translateable true
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Algorithms: Graph Paper Programming'

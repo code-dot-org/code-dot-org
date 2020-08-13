@@ -12,6 +12,7 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
+is_translateable true
 
 lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
 lesson 'Exploring Websites'

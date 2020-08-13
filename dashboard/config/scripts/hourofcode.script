@@ -1,5 +1,6 @@
 hidden false
 wrapup_video 'hoc_wrapup'
+is_translateable true
 
 lesson 'Maze'
 skin 'birds'
@@ -70,3 +71,4 @@ level 'scrat 17'
 level 'scrat 18'
 level 'scrat 19'
 level 'scrat 20'
+

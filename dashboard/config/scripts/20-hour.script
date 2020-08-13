@@ -3,6 +3,7 @@ hidden false
 hideable_lessons true
 supported_locales ["de-DE"]
 curriculum_umbrella 'CSF'
+is_translateable true
 
 lesson 'Introduction to Computer Science'
 concepts 'sequence'

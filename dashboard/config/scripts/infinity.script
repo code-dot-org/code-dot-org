@@ -1,4 +1,5 @@
-hidden 'false'
+hidden false
+is_translateable true
 
 lesson 'Infinity'
 level 'Infinity_move_right'
@@ -11,3 +12,4 @@ level 'Infinity_shoot_directions'
 level 'Infinity_repeat'
 level 'Infinity_catch'
 level 'Infinity_finale'
+

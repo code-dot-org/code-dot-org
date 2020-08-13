@@ -3,7 +3,9 @@ login_required true
 hideable_lessons true
 has_verified_resources true
 has_lesson_plan true
+is_translateable true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
 lesson 'CSD post-course survey'
 level 'csd-post-survey-levelgroup-2018', progression: 'CS Discoveries Post-Course Survey', assessment: true
+

@@ -7,6 +7,7 @@ has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course1/{LESSON}/Teacher'
 project_widget_types ["playlab_k1", "artist_k1"]
 curriculum_umbrella 'CSF'
+is_translateable true
 
 lesson 'Happy Maps'
 level 'UnplugHappyMaps'

@@ -1,7 +1,8 @@
-tts true
 hidden false
 student_detail_progress_view true
 has_lesson_plan true
+tts true
+is_translateable true
 
 lesson 'Intro to App Lab'
 level 'App Lab Intro 8 - Video Getting Started', progression: 'Setting Properties'
@@ -19,3 +20,4 @@ level 'AppLab Intro 7 - thisOrThatAddScreen', progression: 'Design Mode'
 level 'AppLab Intro 7 - thisOrThatSetScreen', progression: 'Design Mode'
 level 'App Lab Intro 8 - Video Share Your App', progression: 'Share Your App'
 level 'AppLab Intro 7 - thisOrThatPersonalize', progression: 'Share Your App'
+

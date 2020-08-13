@@ -1,4 +1,5 @@
 hidden false
+is_translateable true
 
 lesson 'Hour of Code 2015'
 level 'Overworld Move to Sheep'
@@ -15,3 +16,4 @@ level 'Underground Avoiding Lava'
 level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
+

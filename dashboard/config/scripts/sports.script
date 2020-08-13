@@ -1,5 +1,6 @@
 tts true
 hidden false
+is_translateable true
 
 lesson 'Sports'
 skin 'sports'

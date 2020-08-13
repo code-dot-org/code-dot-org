@@ -1,5 +1,6 @@
 id '7'
 hidden false
+is_translateable true
 
 lesson 'Jigsaw'
 skin 'jigsaw'

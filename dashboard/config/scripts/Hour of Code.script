@@ -1,5 +1,6 @@
 id '2'
 wrapup_video 'hoc_wrapup'
+is_translateable true
 
 lesson 'Hour of Code 2013'
 skin 'birds'

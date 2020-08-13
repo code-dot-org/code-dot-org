@@ -12,6 +12,7 @@ version_year '2020'
 is_stable true
 curriculum_umbrella 'CSF'
 tts true
+is_translateable true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 lesson 'Digital Trails'

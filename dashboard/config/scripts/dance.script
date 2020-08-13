@@ -1,6 +1,7 @@
-tts true
 hidden false
 has_lesson_plan true
+tts true
+is_translateable true
 
 lesson 'Dance Party'
 level 'Dance_Party_01'
@@ -16,3 +17,4 @@ level 'Dance_Party_11'
 level 'Dance_Party_11b'
 level 'Dance_Party_11_5'
 level 'Dance_Party_12'
+

@@ -1,4 +1,5 @@
 login_required true
+is_translateable true
 
 lesson_group 'k5_getting_started', display_name: 'Getting Started'
 lesson 'Welcome to "Teaching Computer Science Fundamentals"'
@@ -165,3 +166,4 @@ level 'OPD-K5 Assessment_copy'
 level 'OPD-K5 Your Plan_copy'
 level 'OPD-K5 Connect_copy'
 level 'OPD-K5 Closing_copy'
+

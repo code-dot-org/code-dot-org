@@ -1,4 +1,5 @@
 hidden 'false'
+is_translateable true
 
 lesson 'Hour of Code 2015'
 skin 'hoc2015x'
