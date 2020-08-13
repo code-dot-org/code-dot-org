@@ -55,7 +55,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldVariable');
-  blocklyWrapper.wrapReadOnlyProperty('findEmptyContainerBlock');
   blocklyWrapper.wrapReadOnlyProperty('fireUiEvent');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
@@ -103,6 +102,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
   };
+  blocklyWrapper.findEmptyContainerBlock = function() {}; // TODO
   blocklyWrapper.BlockSpace = {};
   blocklyWrapper.BlockSpace.EVENTS = {};
   blocklyWrapper.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED =
@@ -112,7 +112,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.BlockSpace.EVENTS.BLOCK_SPACE_SCROLLED = 'blockSpaceScrolled';
   blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED = 'runButtonClicked';
   blocklyWrapper.BlockSpace.onMainBlockSpaceCreated = () => {}; // TODO
+  blocklyWrapper.BlockSpace.createReadOnlyBlockSpace = () => {}; // TODO
 
+  blocklyWrapper.Block.prototype.getTitleValue =
+    blocklyWrapper.Block.prototype.getFieldValue;
   blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
     return this.setColour(h);
   };
@@ -142,10 +145,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.Xml.domToBlockSpace = blocklyWrapper.Xml.domToWorkspace;
+  blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
   blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
   blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
     blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
+  blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
   blocklyWrapper.Workspace.prototype.setEnableToolbox = () => {}; // TODO
+  blocklyWrapper.Workspace.prototype.blockSpaceEditor = {
+    blockLimits: {
+      blockLimitExceeded: () => false, // TODO
+      getLimit: () => {} // TODO
+    }
+  };
   blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
@@ -163,6 +174,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));
     });
     return code.join('\n');
+  };
+  blocklyWrapper.Block.prototype.getTitles = function() {
+    let fields = [];
+    this.inputList.forEach(input => {
+      input.fieldRow.forEach(field => {
+        fields.push(field);
+      });
+    });
+    return fields;
   };
 
   return blocklyWrapper;
