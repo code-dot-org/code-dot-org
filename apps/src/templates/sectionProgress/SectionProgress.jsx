@@ -81,7 +81,6 @@ class SectionProgress extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
-    // loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
@@ -293,9 +292,6 @@ export default connect(
     localeCode: state.locales.localeCode
   }),
   dispatch => ({
-    // loadScript(scriptId, sectionId) {
-    //   dispatch(loadScript(scriptId, sectionId));
-    // },
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
     },
