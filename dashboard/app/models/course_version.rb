@@ -17,6 +17,11 @@
 #
 
 class CourseVersion < ApplicationRecord
+  # "Interface" for content_root:
+  #
+  # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
+  #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
+  #   False for the CSP1-2019 Unit.
   belongs_to :content_root, polymorphic: true
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
