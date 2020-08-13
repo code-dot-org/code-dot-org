@@ -30,7 +30,11 @@ level 'CSP - PL - Collaboration Reflection', progression: 'Collaborative and Ind
 level 'CSP - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 3'
-level 'VirtualPLOverview'
+level 'CSP-PL AYWS3 Workshop Overview', progression: 'Module 3 Overview (~5 minutes)'
+level 'CSP - Understanding the context for the Model Lesson overview', progression: 'Understanding the Context for Lists (~55 minutes)'
+level 'CSP - Synch3 - Reflection 1', progression: 'Understanding the Context for Lists (~55 minutes)'
+level 'CSP - Synch3 - Reflection 2', progression: 'Understanding the Context for Lists (~55 minutes)'
+level 'CSP - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 4'
 level 'VirtualPLOverview'
