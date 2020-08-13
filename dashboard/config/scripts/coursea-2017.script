@@ -9,7 +9,7 @@ new_name 'coursea-2017'
 family_name 'coursea'
 version_year '2017'
 is_stable true
-supported_locales ["es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "pt-BR", "zh-CN"]
+supported_locales ["ar-SA", "es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "pt-BR", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 
