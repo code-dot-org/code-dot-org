@@ -19,11 +19,11 @@ theme: responsive
     %p
       One sentence describing the report
     %a{href: "/2019_state_of_cs.pdf", target: "_blank"}
-      %button Download PDF
+      %button.download Download PDF
     %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
-      %button Order Report
+      %button.order Order Report
 
-%br/
+%br
 .container{style: "background-color: #F5F5F5"}
   .col-100{style: "text-align: center"}
     %h4
@@ -31,15 +31,15 @@ theme: responsive
     %p
       One sentence describing the images below and the state summaries
   .col-33
-    %img{src: "/images/fit-300/StatePage.png"}
+    %img.center{src: "/images/fit-300/StatePage.png"}
     %p
       Sentence describing the State Page
   .col-33
-    %img{src: "/images/fit-300/SchoolsTeaching.png"}
+    %img.center{src: "/images/fit-300/SchoolsTeaching.png"}
     %p
       Sentence describing the State Page
   .col-33
-    %img{src: "/images/fit-300/AccessParticipation.png"}
+    %img.center{src: "/images/fit-300/AccessParticipation.png"}
     %p
       Sentence describing the State Page
 
@@ -47,30 +47,44 @@ theme: responsive
 
 .container{style: "background-color: white"}
   .col-50
-    %img{src: "/images/fit-500/AccessReport.png"}
-  .col-50{style: "min-height: 300px; background-color: #F5F5F5"}
-    %h4{style: "text-align: center"}
+    %img{src: "/images/fit-450/AccessReport.png"}
+  .col-50{style: "min-height: 474px; background-color: #F5F5F5; text-align: center"}
+    %h4
       Access to Computer Science
-    %p{style: "text-align: center"}
+    %p
       Sentence describing Access Report
 
 .container{style: "background-color: white"}
-  .col-50{style: "background-color: #F5F5F5"}
+  .col-50{style: "min-height: 474px; background-color: #F5F5F5; text-align: center"}
     %h4
       Policy Maps
     %p
       Sentence describing Policy Maps
   .col-50
-    %img{src: "/images/fit-500/AccessReport.png"}
+    %img{src: "/images/fit-450/AccessReport.png"}
 
 .container{style: "background-color: white"}
   .col-50
-    %img{src: "/images/fit-500/9Policies.png"}
-  .col-50{style: "background-color: #F5F5F5"}
+    %img{src: "/images/fit-450/9Policies.png"}
+  .col-50{style: "min-height: 368px; background-color: #F5F5F5; text-align: center"}
     %h4
       Policy Maps
     %p
       Sentence describing Policy Maps
+
+%br
+
+/ .container
+/   .col-50
+/     %h4
+/       Get your State of CS Report
+/     %p
+/       Choose a digital PDF or order a physical copy today!
+/   .col-50
+/     %a.{href: "/2019_state_of_cs.pdf", target: "_blank"}
+/       %button Download PDF
+/     %a.{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
+/       %button Order Report
   
 / .col-50
 /   %img{src: "/images/fit-300/CodeLogo.png"} 
