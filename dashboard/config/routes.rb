@@ -533,8 +533,8 @@ Dashboard::Application.routes.draw do
     get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
 
     # Academic year workshops
-    get '/:workshop_subject/pre/(*module)', to: 'workshop_daily_survey#new_ayw_pre',
-        constraints: {workshop_subject: /AYW[0-9_]+/, module: /module\/[0-9_]+/}
+    get '/:workshop_subject/pre/(*agenda)', to: 'workshop_daily_survey#new_ayw_pre',
+        constraints: {workshop_subject: /AYW[0-9_]+/, agenda: /module\/[0-9_]+/}
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
