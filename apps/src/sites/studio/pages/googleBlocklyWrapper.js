@@ -80,7 +80,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
   blocklyWrapper.wrapReadOnlyProperty('RTL');
-  blocklyWrapper.wrapReadOnlyProperty('SVG_NS');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
@@ -130,6 +129,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function() {
       return this.blockly_.mainWorkspace;
+    }
+  });
+  Object.defineProperty(blocklyWrapper, 'SVG_NS', {
+    get: function() {
+      return this.blockly_.utils.dom.SVG_NS;
     }
   });
 
