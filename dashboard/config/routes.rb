@@ -534,7 +534,11 @@ Dashboard::Application.routes.draw do
 
     # Academic year workshops
     get '/:workshop_subject/pre/(*agenda)', to: 'workshop_daily_survey#new_ayw_pre',
-        constraints: {workshop_subject: /AYW[0-9_]+/, agenda: /module\/[0-9_]+/}
+        constraints: {agenda: /module\/[0-9_]+/}
+    get '/:workshop_subject/day/:day', to: 'workshop_daily_survey#new_ayw_daily',
+        constraints: {day: /\d/}
+    get '/:workshop_subject/post/(*agenda)', to: 'workshop_daily_survey#new_ayw_post',
+        constraints: {agenda: /(module\/[0-9_]+)|(in_person)/}
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
