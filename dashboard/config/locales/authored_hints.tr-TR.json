@@ -3221,22 +3221,22 @@
           "courseC_artist_prog5_d": "Her dönüş 90 derece sağa olmalıdır."
         },
         "courseC_artist_prog6": {
-          "courseC_artist_prog6_a": "Artist, ilk satırı çizgiyi çizmek için zaten doğru yöne bakıyor.",
+          "courseC_artist_prog6_a": "Sanatçı, ilk çizgiyi çizmek için zaten doğru yöne bakıyor.",
           "courseC_artist_prog6_b": "Bu baklava şekli aslında köşesi üzerinde duran bir kare.",
           "courseC_artist_prog6_c": "Bu baklava şekli, aynı zamanda bir kare. Köşelerde 90 derece döndüğünüzden emin olun."
         },
         "courseC_artist_prog6_2018": {
-          "courseC_artist_prog6_a": "Artist, ilk satırı çizgiyi çizmek için zaten doğru yöne bakıyor.",
+          "courseC_artist_prog6_a": "Sanatçı, ilk çizgiyi çizmek için zaten doğru yöne bakıyor.",
           "courseC_artist_prog6_b": "Bu baklava şekli aslında köşesi üzerinde duran bir kare.",
           "courseC_artist_prog6_c": "Bu baklava şekli, aynı zamanda bir kare. Köşelerde 90 derece döndüğünüzden emin olun."
         },
         "courseC_artist_prog6_2019": {
-          "courseC_artist_prog6_a": "Artist, ilk satırı çizgiyi çizmek için zaten doğru yöne bakıyor.",
+          "courseC_artist_prog6_a": "Sanatçı, ilk çizgiyi çizmek için zaten doğru yöne bakıyor.",
           "courseC_artist_prog6_b": "Bu baklava şekli aslında köşesi üzerinde duran bir kare.",
           "courseC_artist_prog6_c": "Bu baklava şekli, aynı zamanda bir kare. Köşelerde 90 derece döndüğünüzden emin olun."
         },
         "courseC_artist_prog6_2020": {
-          "courseC_artist_prog6_a": "Artist, ilk satırı çizgiyi çizmek için zaten doğru yöne bakıyor.",
+          "courseC_artist_prog6_a": "Sanatçı, ilk çizgiyi çizmek için zaten doğru yöne bakıyor.",
           "courseC_artist_prog6_b": "Bu baklava şekli aslında köşesi üzerinde duran bir kare.",
           "courseC_artist_prog6_c": "Bu baklava şekli, aynı zamanda bir kare. Köşelerde 90 derece döndüğünüzden emin olun."
         },
@@ -3848,19 +3848,19 @@
           "courseC_maze_debugging5_b": "Scrat'in yapması gerekeni dışınızdan söylemeyi deneyin. Çalışma alanındaki kodla aynı mı? Hata ne?"
         },
         "courseC_maze_debugging6": {
-          "courseC_maze_debugging6_a": "-   Scrat ne yapmalı?\n-   Scrat ne yapıyor?\n-   Bu size ne anlatıyor?",
+          "courseC_maze_debugging6_a": "-   Scrat ne yapmalı?\n-   Scrat ne yapıyor?\n-   Bunun anlamı nedir?",
           "courseC_maze_debugging6_b": "İlk hatayı bulup ayıkladıktan sonra ikinciyi bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.\n\nİşlemi, program çalışana dek tekrarlayın!"
         },
         "courseC_maze_debugging6_2018": {
-          "courseC_maze_debugging6_a": "-   Scrat ne yapmalı?\n-   Scrat ne yapıyor?\n-   Bu size ne anlatıyor?",
+          "courseC_maze_debugging6_a": "-   Scrat ne yapmalı?\n-   Scrat ne yapıyor?\n-   Bunun anlamı nedir?",
           "courseC_maze_debugging6_b": "İlk hatayı bulup ayıkladıktan sonra ikinciyi bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.\n\nİşlemi, program çalışana dek tekrarlayın!"
         },
         "courseC_maze_debugging6_2019": {
-          "courseC_maze_debugging6_a": "-   Scrat ne yapmalı?\n-   Scrat ne yapıyor?\n-   Bu size ne anlatıyor?",
+          "courseC_maze_debugging6_a": "-   Scrat ne yapmalı?\n-   Scrat ne yapıyor?\n-   Bunun anlamı nedir?",
           "courseC_maze_debugging6_b": "İlk hatayı bulup ayıkladıktan sonra ikinciyi bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.\n\nİşlemi, program çalışana dek tekrarlayın!"
         },
         "courseC_maze_debugging6_2020": {
-          "courseC_maze_debugging6_a": "-   Scrat ne yapmalı?\n-   Scrat ne yapıyor?\n-   Bu size ne anlatıyor?",
+          "courseC_maze_debugging6_a": "-   Scrat ne yapmalı?\n-   Scrat ne yapıyor?\n-   Bunun anlamı nedir?",
           "courseC_maze_debugging6_b": "İlk hatayı bulup ayıkladıktan sonra ikinciyi bulmak için hata ayıklama işlemini tekrarladığınızdan emin olun.\n\nİşlemi, program çalışana dek tekrarlayın!"
         },
         "courseC_maze_debugging7": {
@@ -5025,16 +5025,16 @@
           "courseD_bee_conditionals_challenge1_b": "Bu bulmacada her alanda çiçek, petek olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse (if/else) koşulunu tekrarlayabilirsin."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tıpkı \"çiçekteyse\" bloğu gibi \"while nektar>0\" içindeki kod yalnızca arı çiçekteyse çalışır. Farkı ise içindeki kodun nektar kalmayıncaya kadar çalışacak olmasıdır. Bu deseni deneyin:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Bu programın neden ilk yarısı çalıştı? Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden her geçtiklerinde arılar ne kadar nektar toplarlar?",
@@ -5175,7 +5175,7 @@
           "courseD_bounce_events7s_a": "İstiyorsanız daha fazla yere ses ekleyebilirsiniz!"
         },
         "courseD_collector_debugging1": {
-          "courseD_collector_debugging1_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.",
+          "courseD_collector_debugging1_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.\n\nPeki ya ikincide?\n\nİşler nerede karışıyor?",
           "courseD_collector_debugging1_b": "\"Tekrar\" döngüsü kullanılarak basitleştirilebilecek bir desen görüyor musunuz?",
           "courseD_collector_debugging1_c": "Ulaştığınızda hazineyi almak için \"topla\" bloğunu kullanmayı unutmayın."
         },
@@ -5184,32 +5184,32 @@
           "courseD_collector_debugging9_b": "Bulmacayı nasıl çözeceğinizi anlayın, sonra kodun kafanızdakiyle eşleşmesi için adım adım ilerlemeye çalışın."
         },
         "courseD_collector_debugging1a_2018": {
-          "courseD_collector_debugging1_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.",
+          "courseD_collector_debugging1_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.\n\nPeki ya ikincide?\n\nİşler nerede karışıyor?",
           "courseD_collector_debugging1_c": "Ulaştığınızda hazineyi almak için \"topla\" bloğunu kullanmayı unutmayın."
         },
         "courseD_collector_debugging1a_2019": {
-          "courseD_collector_debugging1_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.",
+          "courseD_collector_debugging1_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.\n\nPeki ya ikincide?\n\nİşler nerede karışıyor?",
           "courseD_collector_debugging1_c": "Ulaştığınızda hazineyi almak için \"topla\" bloğunu kullanmayı unutmayın."
         },
         "courseD_collector_debugging1a_2020": {
-          "courseD_collector_debugging1_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.",
+          "courseD_collector_debugging1_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.\n\nPeki ya ikincide?\n\nİşler nerede karışıyor?",
           "courseD_collector_debugging1_c": "Ulaştığınızda hazineyi almak için \"topla\" bloğunu kullanmayı unutmayın."
         },
         "courseD_collector_debugging2": {
-          "courseD_collector_debugging2_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.",
+          "courseD_collector_debugging2_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.\n\nPeki ya ikincide?\n\nİşler nerede karışıyor?",
           "courseD_collector_debugging2_b": "\"Tekrar\" döngüsü kullanılarak basitleştirilebilecek bir desen görüyor musunuz?",
           "courseD_collector_debugging2_c": "Bu U şeklinin bir tarafı için kod yazmayı deneyin. Diğer iki taraftaki hazineyi toplamak için bunu tekrar edebilir misin?"
         },
         "courseD_collector_debugging2a_2018": {
-          "courseD_collector_debugging2a_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.",
+          "courseD_collector_debugging2a_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.\n\nPeki ya ikincide?\n\nİşler nerede karışıyor?",
           "courseD_collector_debugging2a_c": "Ne oluyor?\n\nNe olması gerekir?\n\nBu sana ne söylüyor?"
         },
         "courseD_collector_debugging2a_2019": {
-          "courseD_collector_debugging2a_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.",
+          "courseD_collector_debugging2a_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.\n\nPeki ya ikincide?\n\nİşler nerede karışıyor?",
           "courseD_collector_debugging2a_c": "Ne oluyor?\n\nNe olması gerekir?\n\nBu sana ne söylüyor?"
         },
         "courseD_collector_debugging2a_2020": {
-          "courseD_collector_debugging2a_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.",
+          "courseD_collector_debugging2a_a": "İlk adımda her şey yolunda mı görmek için \"Adım\" düğmesini kullanın.\n\nPeki ya ikincide?\n\nİşler nerede karışıyor?",
           "courseD_collector_debugging2a_c": "Ne oluyor?\n\nNe olması gerekir?\n\nBu sana ne söylüyor?"
         },
         "courseD_collector_debugging3": {
@@ -7236,7 +7236,7 @@
           "iceage_hello3_a": "Bu bulmacayı çözmek için, \"taşı aktör 1 sağa 200 piksel\" bloğunu kullanın"
         },
         "iceage_repeat": {
-          "iceage_repeat_a": "Bu bulmacayı çözmek için \"taşı aktör 1 sola\" ve \"taşı aktör 1 sağa\" bloklarının ikisini de kullan."
+          "iceage_repeat_a": "Bu bulmacayı çözmek için \"aktör 1'i sola hareket ettir\" ve \"aktör 1'i sağa hareket ettir\" bloklarının ikisini de kullan."
         },
         "iceage_sound_and_points": {
           "iceage_sound_and_points_a": "\"Aktör 1, aktör 2'ye dokunduğunda\" olayının altına iki blok eklemelisiniz.",
@@ -7244,10 +7244,10 @@
         },
         "iceage_throw_hearts": {
           "iceage_throw_hearts_a": "Granny'ye kalpleri ne zaman fırlatsın? Oka basıldığında mı? Sid'e tıkladığınızda mı? Granny'ye tıkladığınızda mı? Karar sizin!",
-          "iceage_throw_hearts_b": "Granny'nin kalp aldığında mutlu olması için, \"ayarla aktör 2 mutlu ruh haline\" bloğunu \"aktör 2 atılana temas ettiğinde\" olayının altına bağlamalısınız."
+          "iceage_throw_hearts_b": "Granny'nin kalp aldığında mutlu olması için, \"aktör 2'yi mutlu ruh haline ayarla\" bloğunu \"aktör 2, atılan cisme temas ettiğinde\" olayının altına bağlamalısınız."
         },
         "iceage_warn_ice_age": {
-          "iceage_warn_ice_age_a": "Bu bulmacayı hakkınca çözmek için uygun olan yere 2 blok eklemeniz yeterli. ",
+          "iceage_warn_ice_age_a": "Bu bulmacayı çözmek için uygun olan yere 2 blok eklemeniz yeterli. ",
           "iceage_warn_ice_age_b": "İki yeni bloğu da \"çalıştığı zaman\" olayının altına ekleyerek program başlar başlamaz gerçekleşmelerini sağlayın."
         }
       }

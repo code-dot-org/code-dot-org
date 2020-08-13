@@ -98,7 +98,7 @@
     "debugger_disabled": "true",
     "callout_json": "[]",
     "hide_animation_mode": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\": {\r\n      \"name\": \"salt\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/ccdnzSzhf2kJL4Lm6QrdYNGiGgzRnzDJpZLzfBsKFs0/30cff2ca-74f5-47a9-b863-d3777b89b368.png?version=yA2tln0BDT.7U2r9wxbBQH1lY9Cx_4Hl\",\r\n      \"frameSize\": {\r\n        \"x\": 95,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"yA2tln0BDT.7U2r9wxbBQH1lY9Cx_4Hl\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\": {\r\n      \"name\": \"salt\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/lX2VmqhNVhJLH513Dr_..pOdV6WrY3QF/category_generic_items/salt.png\",\r\n      \"frameSize\": {\r\n        \"x\": 95,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"yA2tln0BDT.7U2r9wxbBQH1lY9Cx_4Hl\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
