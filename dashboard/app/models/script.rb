@@ -942,6 +942,7 @@ class Script < ActiveRecord::Base
     script.lesson_groups = temp_lgs
     script.save!
 
+    script.reload
     Script.check_lesson_position(script)
 
     script.generate_plc_objects
