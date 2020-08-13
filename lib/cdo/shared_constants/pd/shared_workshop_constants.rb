@@ -95,19 +95,8 @@ module Pd
       SUBJECT_VIRTUAL_KICKOFF
     ].freeze
 
-    # Used in create/edit workshop UI
-    MUST_SUPPRESS_EMAIL_SUBJECTS = [
-      SUBJECT_VIRTUAL_KICKOFF,
-      SUBJECT_WORKSHOP_1,
-      SUBJECT_WORKSHOP_2,
-      SUBJECT_WORKSHOP_3,
-      SUBJECT_WORKSHOP_4,
-      SUBJECT_WORKSHOP_1_2,
-      SUBJECT_WORKSHOP_3_4
-    ].freeze
-
-    # Used to suppress post-workshop emails
-    ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
+    # Used to suppress post-workshop emails and in create/edit workshop UI
+    MUST_SUPPRESS_EMAIL_SUBJECTS = ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
       SUBJECT_VIRTUAL_KICKOFF,
       SUBJECT_WORKSHOP_1,
       SUBJECT_WORKSHOP_2,
