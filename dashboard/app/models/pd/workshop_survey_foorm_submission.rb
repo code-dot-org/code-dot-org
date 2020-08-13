@@ -40,13 +40,14 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
     end
   end
 
-  def self.has_submitted_form?(user_id, pd_workshop_id, pd_session_id, day, form_name)
+  def self.has_submitted_form?(user_id, pd_workshop_id, pd_session_id, day, form_name, workshop_agenda)
     # Match on these values.
     submissions = Pd::WorkshopSurveyFoormSubmission.where(
       user_id: user_id,
       pd_workshop_id: pd_workshop_id,
       pd_session_id: pd_session_id,
-      day: day
+      day: day,
+      workshop_agenda: workshop_agenda
     )
 
     # If provided a form_name, narrow the search to match on that too.

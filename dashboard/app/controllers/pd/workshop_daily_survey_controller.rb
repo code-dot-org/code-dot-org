@@ -394,8 +394,12 @@ module Pd
       return render_404 unless workshop
 
       survey_name = PRE_SURVEY_CONFIG_PATHS[workshop_subject]
+      agenda = params[:agenda] || nil
 
-      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: nil)
+      # remove / from agenda url so module/1 => module1
+      agenda.tr!("/", "") if agenda
+
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: nil, workshop_agenda: agenda)
     end
 
     protected
@@ -529,7 +533,7 @@ module Pd
       render :new_general
     end
 
-    def render_survey_foorm(survey_name:, workshop:, session:, day:)
+    def render_survey_foorm(survey_name:, workshop:, session:, day:, workshop_agenda: nil)
       return render_404 unless survey_name
 
       if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
@@ -537,7 +541,8 @@ module Pd
         workshop.id,
         session&.id,
         day,
-        survey_name
+        survey_name,
+        workshop_agenda
       )
         render :thanks
         return
@@ -556,7 +561,8 @@ module Pd
             user_id: current_user.id,
             pd_session_id: session&.id,
             day: day,
-            pd_workshop_id: workshop.id
+            pd_workshop_id: workshop.id,
+            workshop_agenda: workshop_agenda
           }
         }.to_json
       }
