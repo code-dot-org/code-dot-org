@@ -120,12 +120,15 @@ es-MX:
     need_unlock: "¿No recibiste las instrucciones para desbloquear?"
     not_linked: "Lo sentimos, tu cuenta de Code.org no está vinculada a tu %{provider}. Tendrás que escribir tu contraseña debajo para iniciar sesión."
     use_clever: "Lo sentimos, tu cuenta de Code.org no está vinculada a tu %{provider}. Por favor, inicia sesión a través de tu Portal Clever."
+    invalid_provider: "Disculpe, Las cuentas de %{provider} no pueden ser ligadas a cuentas de Code.org."
+    migration_required: "Disculpe, no podemos conectar o desconectar cuentas que aun estén usando la versión antigua de cuentas. Por favor, actualice a la nueva experiencia de cuenta."
     unable_to_connect_provider: "No se pudo conectar tu cuenta de Code.org a tu %{provider}. Por favor, inténtalo de nuevo."
+    disconnect_successful: "¡Éxito!, Hemos desconectado la cuenta externa de su cuenta de Code.org."
     already_in_use: "Tu %{provider} ya está conectado a otra cuenta de Code.org."
     already_linked: "La cuenta con tu %{provider} ya está vinculada a tu cuenta de Code.org."
     existing_account:
       account_exists: "¡Buenas noticias! Ya tienes una cuenta de Code.org que utiliza %{email}"
-      sign_in: "Inicia sesión y te vincularemos con tu perfil de %{provider}."
+      sign_in: "Por favor, Inicie sesión con su cuenta actual. Entonces podrá vincular si perfil de %{provider} desde la página de \"Configuración de Cuenta\"."
       sign_up: "¿No es tu correo electrónico? ¿Quieres crear una nueva cuenta con una dirección de correo electrónico diferente? También vincularemos tu perfil de %{provider} si quieres hacerlo."
   signup_form:
     email_signup: 'Regístrate con tu dirección de correo electrónico'
@@ -876,7 +879,7 @@ es-MX:
     instructor_feedback: 'Comentarios del instructor'
     peer_feedback: 'Comentarios de los compañeros'
     outdated: 'Se añadieron estos comentarios a una versión presentada anteriormente'
-    peer_review: 'Revisión por pares'
+    peer_review: 'Revisión Por Pares'
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia una página que no es operada por Code.org.
@@ -980,6 +983,7 @@ es-MX:
       school_country:
         canada: 'Canadá'
         chile: 'Chile'
+        colombia: 'Colombia'
         israel: 'Israel'
         malaysia: 'Malasia'
         mexico: 'México'
@@ -1029,6 +1033,7 @@ es-MX:
         csf_express: 'Fundamentos de Ciencias de la Computación (Pre-Express o Express)'
         csd: 'Descubrimientos de Ciencias de la Computación'
         csp: 'Principios de Ciencias de la Computación'
+        not_applicable: "No Aplicable"
       email_opt_in:
         opt_in_yes: 'Sí'
         opt_in_no: 'No'
@@ -1037,6 +1042,9 @@ es-MX:
       intro: "Gracias por tomarte el tiempo de conocer el plan de estudios de Code.org. Nuestra misión de enseñar ciencias de la computación a cada niño de cada escuela alrededor del mundo no sería posible sin ti."
       instructions: "Completa el formulario a continuación para indicar que 1) asististe a un taller a cargo de uno de los socios internacionales de Code.org, y 2) estás de acuerdo en compartir tu información con nuestros socios internacionales en tu país, para que puedan ayudarte en tu viaje como docente de ciencias de la computación."
       thanks_markdown: "¡Gracias por enviarnos tu solicitud! Esperamos acompañarte mientras conoces el plan de estudios y las herramientas de Code.org. Si quieres compartir tus dudas y sugerencias con nosotros, ¡puedes escribirnos a [support@code.org](%{support_email_url}) o publicar en el [foro de docentes](%{teacher_forum_url})!"
+      facilitator_not_listed: "Mi facilitados no está listado"
+      facilitator_not_applicable: "No Aplicable"
+      organizer_not_listed: "Mi organizador no estpa listado"
     logged_out:
       heading: '¡Gracias por tu interés en el Programa de Aprendizaje Profesional!'
       body: 'Para empezar, necesitas iniciar sesión en tu cuenta de Code.org. Si quieres obtener más información acerca del programa antes de iniciar tu solicitud, echa un vistazo al <a href="%{url}">Programa de Aprendizaje Internacional</a>.'
@@ -1075,3 +1083,5 @@ es-MX:
     text: "**¿Eres un padre o tutor?** ¡Conecta tu correo electrónico a esta cuenta para mantenerte al tanto del progreso y proyectos de tu hijo!"
     link_your_email: "Conecta tu correo electrónico"
     not_now: "Ahora no"
+  behaviors:
+    this_sprite: "este sprite"

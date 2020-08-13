@@ -11,7 +11,7 @@
   "collectorCollectedSome": "Tốt lắm! Bạn đã thu thập {count} món đồ!",
   "collectorCollectedNotEnough": "Hãy tiếp tục lập trình! Bạn cần thu thập ít nhất {goal, plural,one {1 đồ vật}other {đồ vật}}",
   "collectorCollectedTooMany": "Không gian đó không có đủ đồ vật cho tôi để thu thập.",
-  "collectorTooManyBlocks": "Bạn chỉ có thể dùng khối {blockLimit}. Xem lại code của bạn!",
+  "collectorTooManyBlocks": "Bạn chỉ có thể sử dụng {blockLimit} khối. Hãy nhìn vào code của bạn và thử lại!",
   "continue": "Tiếp tục",
   "corn": "ngô",
   "cornTooltip": "Thu hoạch một ít ngô",
