@@ -396,7 +396,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
 
-    Pd::WorkshopMailer.any_instance.expects(:check_should_send).once
     Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
       with(Pd::Enrollment.for_user(teacher_attended).first)
 
