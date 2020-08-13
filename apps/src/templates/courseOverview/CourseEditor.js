@@ -5,6 +5,7 @@ import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
   input: {
@@ -27,6 +28,7 @@ export default class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    versionTitle: PropTypes.string,
     familyName: PropTypes.string,
     versionYear: PropTypes.string,
     visible: PropTypes.bool.isRequired,
@@ -47,6 +49,7 @@ export default class CourseEditor extends Component {
     const {
       name,
       title,
+      versionTitle,
       familyName,
       versionYear,
       descriptionShort,
@@ -62,7 +65,7 @@ export default class CourseEditor extends Component {
       <div>
         <h1>{name}</h1>
         <label>
-          Title
+          Display Name
           <input
             type="text"
             name="title"
@@ -70,6 +73,80 @@ export default class CourseEditor extends Component {
             style={styles.input}
           />
         </label>
+        <label>
+          URL slug
+          <input
+            type="text"
+            value={name}
+            style={styles.input}
+            disabled={true}
+          />
+        </label>
+        <label>
+          Short Description
+          <HelpTip>
+            <p>used in course cards on homepage</p>
+          </HelpTip>
+          <textarea
+            name="description_short"
+            defaultValue={descriptionShort}
+            rows={5}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Student Description
+          <textarea
+            name="description_student"
+            defaultValue={descriptionStudent}
+            rows={5}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Teacher Description
+          <textarea
+            name="description_teacher"
+            defaultValue={descriptionTeacher}
+            rows={5}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Version Year Display Name
+          <HelpTip>
+            <p>
+              Controls the text which represents this course in the "version
+              year dropdown" in the top right of the course overview page. This
+              will only be visible if a version year is selected below.
+            </p>
+          </HelpTip>
+          <input
+            type="text"
+            defaultValue={versionTitle}
+            placeholder="e.g. '19-'20"
+            name="version_title"
+            style={styles.input}
+          />
+        </label>
+        <h2>Basic settings</h2>
+        <label>
+          Verified Resources
+          <HelpTip>
+            <p>
+              Check if this course has resources (such as lockable lessons and
+              answer keys) for verified teachers, and we want to notify
+              non-verified teachers that this is the case.
+            </p>
+          </HelpTip>
+          <input
+            name="has_verified_resources"
+            type="checkbox"
+            defaultChecked={this.props.hasVerifiedResources}
+            style={styles.checkbox}
+          />
+        </label>
+        <h2>Publishing settings</h2>
         <label>
           Family Name
           <select
@@ -119,49 +196,8 @@ export default class CourseEditor extends Component {
             recommended version.
           </p>
         </label>
+        <h2>Units</h2>
         <label>
-          Short Description (used in course cards on homepage)
-          <textarea
-            name="description_short"
-            defaultValue={descriptionShort}
-            rows={5}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Student Description
-          <textarea
-            name="description_student"
-            defaultValue={descriptionStudent}
-            rows={5}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Teacher Description
-          <textarea
-            name="description_teacher"
-            defaultValue={descriptionTeacher}
-            rows={5}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Verified Resources
-          <input
-            name="has_verified_resources"
-            type="checkbox"
-            defaultChecked={this.props.hasVerifiedResources}
-            style={styles.checkbox}
-          />
-          <p>
-            Check if this course has resources (such as lockable lessons and
-            answer keys) for verified teachers, and we want to notify
-            non-verified teachers that this is the case.
-          </p>
-        </label>
-        <label>
-          <h4>Scripts</h4>
           <div>
             The dropdown(s) below represent the ordered set of scripts in this
             course. To remove a script, just set the dropdown to the default
@@ -174,7 +210,7 @@ export default class CourseEditor extends Component {
           />
         </label>
         <div>
-          <h4>Teacher Resources</h4>
+          <h2>Teacher Resources</h2>
           <div>
             Select up to three Teacher Resources buttons you'd like to have show
             up on the top of the course overview page
