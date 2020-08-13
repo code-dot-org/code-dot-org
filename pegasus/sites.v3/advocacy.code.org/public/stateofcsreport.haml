@@ -1,74 +1,132 @@
 ---
-theme: responsive_wide
-layout: wide
-social:
-  "og:title": "Advocate for computer science education"
-  "og:description": "Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of the K-12 education."
-  "twitter:site": "@codeorg"
-  "twitter:title": "Advocate for computer science education"
-  "twitter:description": "Learn about our local policy and access resources to support computer science in our state."
-  "twitter:url": "https://advocacy.code.org/"
-video_player: false
+title: 2018 Code.org/CSTA State Policy Forum
+theme: responsive
 ---
+.img-container{style: "text-align: center"}
+  .col-33
+    %img.center{src: "/images/fit-100/CodeLogo.png"}
+  .col-33
+    %img.center{src: "/images/fit-100/CSTALogo.png"}
+  .col-33
+    %img.center{src: "/images/fit-100/ECEPLogo.jpg"}
 
--# Put advocacy.css after other CSS files so that it can override them.
-=inline_css 'interactive-map.css'
-=inline_css 'advocacy-home.css'
+.container
+  .col-100{style: "text-align: center"}
+    %h1
+      2020 State of Computer Science Education:
+      %br
+      Illuminating Disparities
+    %p
+      One sentence describing the report
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank"}
+      %button Download PDF
+    %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
+      %button Order Report
 
-- banner_body = capture_haml do
-  Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of K-12 education.
+%br/
+.container{style: "background-color: #F5F5F5"}
+  .col-100{style: "text-align: center"}
+    %h4
+      State Summaries
+    %p
+      One sentence describing the images below and the state summaries
+  .col-33
+    %img{src: "/images/fit-300/StatePage.png"}
+    %p
+      Sentence describing the State Page
+  .col-33
+    %img{src: "/images/fit-300/SchoolsTeaching.png"}
+    %p
+      Sentence describing the State Page
+  .col-33
+    %img{src: "/images/fit-300/AccessParticipation.png"}
+    %p
+      Sentence describing the State Page
 
-  .learn-more
-    %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf"), target: '_blank'}
-      %button.header-button
-        Learn more
+%br
 
-#homepage
+.container{style: "background-color: white"}
+  .col-50
+    %img{src: "/images/fit-500/AccessReport.png"}
+  .col-50{style: "min-height: 300px; background-color: #F5F5F5"}
+    %h4{style: "text-align: center"}
+      Access to Computer Science
+    %p{style: "text-align: center"}
+      Sentence describing Access Report
 
-  #fullwidth.banner-container
-    .banner
-      .banner-shade
-        .container_responsive
-          %h1 Advocate for computer science education
-          .desktop-feature
-            = banner_body
+.container{style: "background-color: white"}
+  .col-50{style: "background-color: #F5F5F5"}
+    %h4
+      Policy Maps
+    %p
+      Sentence describing Policy Maps
+  .col-50
+    %img{src: "/images/fit-500/AccessReport.png"}
 
-    = view :header
+.container{style: "background-color: white"}
+  .col-50
+    %img{src: "/images/fit-500/9Policies.png"}
+  .col-50{style: "background-color: #F5F5F5"}
+    %h4
+      Policy Maps
+    %p
+      Sentence describing Policy Maps
+  
+/ .col-50
+/   %img{src: "/images/fit-300/CodeLogo.png"} 
+/ .col-50{style: "background-color: #D3D3D3"}
+/   %h4
+/     National Momentum
+/   %p
+/     Sentence describing national momentum 
 
-  .container_responsive
-    .non-banner.mobile-feature
-      = banner_body
 
-    = view :forum_banner
+/ ---
+/ title: 2020 State of Code Report
+/ noindex: true
+/ theme: responsive
+/ ---
 
-    %h2.tablet-feature See what’s happening in your state
-    %h3.centered
-      Click the map below for state-specific data on the computer science landscape
-    -state ||= nil
-    = view :interactive_map, use_url: false, advocacy_variation: true
+/ .col-33
+/   %img{src: "/images/fit-300/CodeLogo.png"}
+/ .col-33
+/   %img{src: "/images/fit-300/CSTALogo.png"}
+/ .col-33
+/   %img{src: "/images/fit-300/ECEPLogo.jpg"}
 
-    .clear{style: "clear:both"}
+/ .col-100{style: "text-align: center"}
+/   %h1
+/     2020 State of Computer Science Education: Illuminating Disparities
+/   %p
+/     One sentence describing the report
 
-    %h2
-      Drive the change in your state
+/   %button
+/     %a{href: "/2019_state_of_cs.pdf", target: "_blank"}
 
-    =inline_css 'homepage.css'
+/   /  %button Order Report
 
-    #audienceblocks
-      - blocks = AdvocacySite.get_blocks(request)
-      - blocks.each do |block|
-        .block
-          - if block[:type] == "block"
-            = view :homepage_quarterslot_links, entry: block, desktop_column_width: 50, layout_class: 'quarterslot-links-large'
+/ / .col-100{style: "text-align: center"}
+/ /   %h2
+/ /     State Summaries
+/ /   %p
+/ /     One sentence describing the pictures below
 
-    .clear
-
-    .coalition
-      %h3.left Get your State of CS report
-      %h4.left 
-        Choose a digital PDF or order a physical copy today
-      %a{href: "https://go.pardot.com/l/153401/2018-04-13/kspz3t", target: "_blank"}
-        %button.left Download PDF
-      &nbsp;&nbsp;
-      %a{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
-        %button.left Order Report
+/ %br/
+/ .col-33
+/   %img{src: "/images/fit-300/CodeLogo.png"}
+/   caption 1
+/ .col-33
+/   %img{src: "/images/fit-300/CodeLogo.png"}
+/   caption 2
+/ .col-33
+/   %img{src: "/images/fit-300/CodeLogo.png"}
+/   caption 3
+/ %br/
+/ .col-66
+/   stuff on the left
+/ .col-33
+/   stuff on the right
+/ .col-50
+/   half left
+/ .col-50
+/   half right

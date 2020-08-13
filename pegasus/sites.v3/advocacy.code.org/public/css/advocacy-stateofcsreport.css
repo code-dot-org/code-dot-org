@@ -43,9 +43,9 @@
   height: 50px;
 }*/
 
-.banner {
+/*.banner {
   background-image: url(/images/ECEPLogo.jpg);
-  /*background-image: url(/images/ECEPLogo.jpg); */
+  /*background-image: url(/images/ECEPLogo.jpg);
   height: 100px;
   background-size: cover;
   background-position: 50% 40%;
@@ -55,20 +55,7 @@
   display: flex;
   float: left;
   width: 30%;
-  font-size: 16px;
-  background-image: url(/images/ECEPLogo.jpg);
-  /*background-image: url(/images/ECEPLogo.jpg); */
-  height: 100px;
-  background-size: cover;
-  background-position: 50% 40%;
-  color: white;
-  text-align: center;
-  position: absolute;
-  display: flex;
-  float: right;
-  width: 30%;
-  font-size: 16px;
-}
+} */
 /*  background-image: url(/images/CodeLogo.png);
   height: 100px;
   background-size: cover;
@@ -101,11 +88,11 @@
   margin-top: 10px;
 }
 
-.banner-container .header-button {
+/*.banner-container .header-button {
   background-color: initial;
   border-color: white;
   border-width: 2px;
-}
+}*/
 
 .non-banner {
   text-align: center;
