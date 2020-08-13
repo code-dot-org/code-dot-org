@@ -75,14 +75,16 @@ export default class ScriptEditor extends React.Component {
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
     tts: PropTypes.bool,
-    hasCourse: PropTypes.bool
+    hasCourse: PropTypes.bool,
+    isTranslateable: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella
+      curriculumUmbrella: this.props.curriculumUmbrella,
+      isStable: this.props.isStable
     };
   }
 
@@ -95,6 +97,11 @@ export default class ScriptEditor extends React.Component {
   handleUmbrellaSelectChange = event => {
     const curriculumUmbrella = event.target.value;
     this.setState({curriculumUmbrella});
+  };
+
+  handleStableChange = event => {
+    const isStable = event.target.checked;
+    this.setState({isStable});
   };
 
   presubmit = e => {
@@ -361,6 +368,7 @@ export default class ScriptEditor extends React.Component {
                 type="checkbox"
                 defaultChecked={this.props.isStable}
                 style={styles.checkbox}
+                onChange={() => this.onStableCheck()}
               />
               <HelpTip>
                 <p>
@@ -369,6 +377,16 @@ export default class ScriptEditor extends React.Component {
                   the recommended version.
                 </p>
               </HelpTip>
+            </label>
+            <label>
+              Can be translated (only available if this script is stable)
+              <input
+                name="is_translateable"
+                type="checkbox"
+                defaultChecked={this.props.isTranslateable}
+                style={styles.checkbox}
+                disabled={!this.state.isStable}
+              />
             </label>
             <VisibleAndPilotExperiment
               visible={!this.props.hidden}

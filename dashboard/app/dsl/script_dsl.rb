@@ -30,6 +30,7 @@ class ScriptDSL < BaseDSL
     @project_sharing = nil
     @curriculum_umbrella = nil
     @tts = false
+    @is_translateable = false
   end
 
   integer :id
@@ -47,6 +48,7 @@ class ScriptDSL < BaseDSL
   boolean :is_stable
   boolean :project_sharing
   boolean :tts
+  boolean :is_translateable
 
   string :wrapup_video
   string :script_announcements
@@ -148,6 +150,7 @@ class ScriptDSL < BaseDSL
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
+      is_translateable: @is_translateable,
       lesson_groups: @lesson_groups
     }
   end
@@ -331,6 +334,7 @@ class ScriptDSL < BaseDSL
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
+    s << 'is_translateable true' if script.is_translateable
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)

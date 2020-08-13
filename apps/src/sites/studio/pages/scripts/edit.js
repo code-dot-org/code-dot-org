@@ -95,6 +95,7 @@ export default function initPage(scriptEditorData) {
         isLevelbuilder={scriptEditorData.is_levelbuilder}
         tts={scriptData.tts}
         hasCourse={scriptEditorData.has_course}
+        isTranslateable={scriptData.is_translateable}
       />
     </Provider>,
     document.querySelector('.edit_container')

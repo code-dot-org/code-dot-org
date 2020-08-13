@@ -144,6 +144,7 @@ class Script < ActiveRecord::Base
     project_sharing
     curriculum_umbrella
     tts
+    is_translateable
   )
 
   def self.twenty_hour_script
@@ -985,6 +986,7 @@ class Script < ActiveRecord::Base
     new_properties = {
       is_stable: false,
       tts: false,
+      is_translateable: false,
       script_announcements: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
@@ -1243,6 +1245,7 @@ class Script < ActiveRecord::Base
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      is_translateable: is_translateable?
     }
 
     # Filter out stages that have a visible_after date in the future
@@ -1398,7 +1401,8 @@ class Script < ActiveRecord::Base
       :has_lesson_plan,
       :is_stable,
       :project_sharing,
-      :tts
+      :tts,
+      :is_translateable
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
@@ -1410,7 +1414,6 @@ class Script < ActiveRecord::Base
     # If a boolean prop was missing from the input, it'll get populated in the result hash as false.
     boolean_keys.each {|k| result[k] = !!script_data[k]}
     not_defaulted_keys.each {|k| result[k] = script_data[k] if script_data.keys.include?(k)}
-
     result
   end
 
