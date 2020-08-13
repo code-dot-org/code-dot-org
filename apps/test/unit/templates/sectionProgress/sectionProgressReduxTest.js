@@ -1,22 +1,16 @@
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import sectionProgress, {
   setCurrentView,
-  addScriptData,
-  addStudentLevelProgress,
-  addStudentLevelPairing,
-  addStudentTimestamps,
+  addDataByScript,
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
-  getStudentPairing,
-  getStudentLevelResult,
   getCurrentProgress,
   getCurrentScriptData
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
-import _ from 'lodash';
 
 const fakeSectionData = {
   id: 123,
@@ -37,36 +31,33 @@ const fakeSectionData = {
 };
 
 const fakeScriptData789 = {
-  id: 789,
-  csf: true,
-  hasStandards: false,
-  title: 'Title 789',
-  path: '/',
-  lessons: [{id: 1, levels: []}, {id: 2, levels: []}],
-  family_name: 'fakeScript789',
-  version_year: 2020
+  scriptDataByScript: {
+    [789]: {
+      id: 789,
+      csf: true,
+      hasStandards: false,
+      title: 'Title 789',
+      path: '/',
+      lessons: [{id: 1, levels: []}, {id: 2, levels: []}],
+      family_name: 'fakeScript789',
+      version_year: 2020
+    }
+  }
 };
 
 const fakeScriptData456 = {
-  id: 456,
-  csf: true,
-  hasStandards: false,
-  title: 'Title 456',
-  path: '/',
-  lessons: [{id: 3, levels: []}, {id: 4, levels: []}],
-  family_name: 'fakeScript456',
-  version_year: 2020
-};
-
-const fakeStudentProgress = {
-  1: {242: 1001, 243: 1000},
-  2: {242: 1000, 243: 1000}
-};
-
-const timeInSeconds = Date.now() / 1000;
-const fakeStudentTimestamps = {
-  1: timeInSeconds,
-  2: timeInSeconds + 1
+  scriptDataByScript: {
+    [456]: {
+      id: 456,
+      csf: true,
+      hasStandards: false,
+      title: 'Title 456',
+      path: '/',
+      lessons: [{id: 3, levels: []}, {id: 4, levels: []}],
+      family_name: 'fakeScript456',
+      version_year: 2020
+    }
+  }
 };
 
 const lessonOfInterest = 16;
@@ -126,24 +117,16 @@ describe('sectionProgressRedux', () => {
     });
   });
 
-  describe('addScriptData', () => {
+  describe('addDataByScript', () => {
     it('adds multiple scriptData info', () => {
-      const action = addScriptData(456, fakeScriptData456);
+      const action = addDataByScript(fakeScriptData456);
       const nextState = sectionProgress(initialState, action);
-      const expected456 = {
-        ...fakeScriptData456,
-        stages: fakeScriptData456.lessons
-      };
-      delete expected456.lessons;
+      const expected456 = fakeScriptData456.scriptDataByScript[456];
       assert.deepEqual(nextState.scriptDataByScript[456], expected456);
 
-      const action2 = addScriptData(789, fakeScriptData789);
+      const action2 = addDataByScript(fakeScriptData789);
       const nextState2 = sectionProgress(nextState, action2);
-      const expected789 = {
-        ...fakeScriptData789,
-        stages: fakeScriptData789.lessons
-      };
-      delete expected789.lessons;
+      const expected789 = fakeScriptData789.scriptDataByScript[789];
       assert.deepEqual(nextState2.scriptDataByScript[456], expected456);
       assert.deepEqual(nextState2.scriptDataByScript[789], expected789);
     });
@@ -154,144 +137,6 @@ describe('sectionProgressRedux', () => {
       const action = setLessonOfInterest(lessonOfInterest);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.lessonOfInterest, lessonOfInterest);
-    });
-  });
-
-  describe('addStudentLevelPairing', () => {
-    function isValidInput(input) {
-      addStudentLevelPairing(130, input);
-    }
-
-    function isInvalidInput(input) {
-      expect(() => {
-        addStudentLevelPairing(130, input);
-      }).to.throw(
-        undefined,
-        undefined,
-        `
-        Expected input ${JSON.stringify(
-          input
-        )} to be rejected as invalid, but it was accepted`
-      );
-    }
-
-    it('no students is valid', () => {
-      isValidInput({});
-    });
-
-    it('students without progress are valid', () => {
-      isValidInput({
-        375: {}
-      });
-    });
-
-    it('students with progress, who did not pair are valid', () => {
-      isValidInput({
-        377: {
-          5336: false
-        }
-      });
-    });
-
-    it('students with progress, who did pair are valid', () => {
-      isValidInput({
-        377: {
-          5336: true
-        },
-        378: {
-          5336: true
-        }
-      });
-    });
-
-    it('invalid if contains too many properties', () => {
-      isInvalidInput({
-        377: {
-          5336: {
-            status: 'perfect',
-            result: 31,
-            paired: true
-          },
-          5337: {
-            status: 'perfect',
-            result: 31
-          }
-        }
-      });
-    });
-  });
-
-  describe('addStudentLevelProgress', () => {
-    it('adds multiple scriptData info', () => {
-      const action = addStudentLevelProgress(130, fakeStudentProgress);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(
-        nextState.studentLevelProgressByScript[130],
-        fakeStudentProgress
-      );
-
-      const action2 = addStudentLevelProgress(132, {
-        ...fakeStudentProgress,
-        3: {}
-      });
-      const nextState2 = sectionProgress(nextState, action2);
-      assert.deepEqual(
-        nextState2.studentLevelProgressByScript[130],
-        fakeStudentProgress
-      );
-      assert.deepEqual(nextState2.studentLevelProgressByScript[132], {
-        ...fakeStudentProgress,
-        3: {}
-      });
-
-      const action3 = addStudentLevelProgress(132, {4: {}});
-      const nextState3 = sectionProgress(nextState2, action3);
-      assert.deepEqual(
-        nextState2.studentLevelProgressByScript[130],
-        fakeStudentProgress
-      );
-      assert.deepEqual(nextState3.studentLevelProgressByScript[132], {
-        ...fakeStudentProgress,
-        3: {},
-        4: {}
-      });
-    });
-  });
-
-  describe('addStudentTimestamps', () => {
-    it('converts timestamps from seconds to milliseconds', () => {
-      const action = addStudentTimestamps(130, fakeStudentTimestamps);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(
-        _.mapValues(fakeStudentTimestamps, sec => sec * 1000),
-        nextState.studentTimestampsByScript[130]
-      );
-    });
-  });
-
-  describe('getStudentPairing', () => {
-    it('plucks paired value from object', () => {
-      expect(
-        getStudentPairing({
-          377: {
-            5336: {
-              status: 'perfect',
-              result: 31,
-              paired: true
-            },
-            5337: {
-              status: 'perfect',
-              result: 31,
-              paired: false
-            }
-          }
-        })
-      ).to.deep.equal({
-        377: {
-          5336: true,
-          5337: false
-        }
-      });
     });
   });
 
@@ -326,19 +171,20 @@ describe('sectionProgressRedux', () => {
                       url: 'url',
                       name: 'name',
                       progression: 'progression',
-                      progression_display_name: 'progression display name',
+                      progressionDisplayName: 'progression display name',
                       kind: 'assessment',
                       icon: 'fa-computer',
-                      is_concept_level: false,
-                      title: 'hello world',
+                      isConceptLevel: false,
+                      levelNumber: 'hello world',
                       bonus: false,
-                      display_as_unplugged: false,
+                      isUnplugged: false,
                       sublevels: []
                     }
                   ]
                 }
               ]
-            }
+            },
+            456: {}
           }
         }
       };
@@ -362,32 +208,6 @@ describe('sectionProgressRedux', () => {
             ]
           }
         ]
-      });
-    });
-  });
-
-  describe('getStudentLevelResult', () => {
-    it('plucks level result value from object', () => {
-      expect(
-        getStudentLevelResult({
-          377: {
-            5336: {
-              status: 'perfect',
-              result: 31,
-              paired: true
-            },
-            5337: {
-              status: 'perfect',
-              result: 31,
-              paired: false
-            }
-          }
-        })
-      ).to.deep.equal({
-        377: {
-          5336: 31,
-          5337: 31
-        }
       });
     });
   });
