@@ -12,7 +12,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   # One "integration test" of seeding from DSL creating a CourseVersion for a Script with is_course true.
-  # Other cases are covered by directly testing update_course_version below.
+  # Other cases are covered by directly testing add_course_version below.
   test "Script.setup creates CourseVersion if is_course is true" do
     script_file = File.join(self.class.fixture_path, 'test-script-course-version.script')
     scripts, _ = Script.setup([script_file])
@@ -24,14 +24,14 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_equal '1234', course_version.display_name
   end
 
-  test "update_course_version creates CourseVersion for script that doesn't have one if is_course is true" do
+  test "add_course_version creates CourseVersion for script that doesn't have one if is_course is true" do
     script = create :script, family_name: 'csz', version_year: '2050', is_course: true
     course_version = CourseVersion.add_course_version(script)
 
     assert_equal course_version, CourseVersion.find_by(key: 'csz-2050')
   end
 
-  test "update_course_version updates existing CourseVersion for script if properties change" do
+  test "add_course_version updates existing CourseVersion for script if properties change" do
     script = create :script, family_name: 'csz', version_year: '2050', is_course: true
     CourseVersion.add_course_version(script)
 
@@ -50,7 +50,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_nil CourseVersion.find_by(key: 'csz-2050') # old CourseVersion should be deleted
   end
 
-  test "update_course_version deletes CourseVersion for script if is_course is changed to false" do
+  test "add_course_version deletes CourseVersion for script if is_course is changed to false" do
     script = create :script, family_name: 'csz', version_year: '2050', is_course: true
     CourseVersion.add_course_version(script)
 
@@ -65,7 +65,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_nil CourseVersion.find_by(key: 'csz-2050')
   end
 
-  test "update_course_version does nothing for script without CourseVersion if is_course is false" do
+  test "add_course_version does nothing for script without CourseVersion if is_course is false" do
     script = create :script, family_name: 'csz', version_year: '2050'
     course_version = CourseVersion.add_course_version(script)
 
