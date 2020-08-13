@@ -115,14 +115,6 @@ class ApplicationController < ActionController::Base
     :school_name_other
   ].freeze
 
-  # We create users via HTTP requests in UI tests.
-  # This list includes attributes we might want to
-  # set in accounts created/updated in tests, but do not
-  # want to be set via account creates/updates otherwise.
-  UI_TEST_ATTRIBUTES = [
-    :sign_in_count
-  ].freeze
-
   PERMITTED_USER_FIELDS = [
     :name,
     :username,
@@ -133,8 +125,7 @@ class ApplicationController < ActionController::Base
     :gender,
     :login,
     :remember_me,
-    :age,
-    :school,
+    :age, :school,
     :full_address,
     :user_type,
     :hashed_email,
@@ -146,10 +137,7 @@ class ApplicationController < ActionController::Base
     :parent_email_preference_opt_in,
     :parent_email_preference_email,
     school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
-  ]
-
-  PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
-  PERMITTED_USER_FIELDS.freeze
+  ].freeze
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}

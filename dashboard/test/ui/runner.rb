@@ -645,8 +645,6 @@ def cucumber_arguments_for_browser(browser, options)
 
   arguments += skip_tag('@no_mobile') if browser['mobile']
   arguments += skip_tag('@only_mobile') unless browser['mobile']
-  arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
-  arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
   arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
 
