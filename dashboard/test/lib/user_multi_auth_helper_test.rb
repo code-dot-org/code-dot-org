@@ -18,20 +18,19 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'oauth_tokens_for_provider returns most recently updated tokens for migrated teacher' do
-    user = create :teacher
-    first_authentication_option = create :authentication_option, credential_type: AuthenticationOption::CLEVER, user: user
-    second_authentication_option = create :authentication_option, credential_type: AuthenticationOption::CLEVER, user: user
-    first_authentication_option.data = {
-      oauth_token: 'old-clever-token'
-    }.to_json
-    first_authentication_option.save!
-    second_authentication_option.updated_at = first_authentication_option.updated_at + 1
-    second_authentication_option.data = {
-      oauth_token: 'newer-clever-token'
-    }.to_json
-    second_authentication_option.save!
-    clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
-    assert_equal 'newer-clever-token', clever_token
+    Timecop.freeze do
+      user = create :teacher
+      create :authentication_option, credential_type: AuthenticationOption::CLEVER, user: user, data: {
+        oauth_token: 'old-clever-token'
+      }.to_json
+      Timecop.travel(1.minute) do
+        create :authentication_option, credential_type: AuthenticationOption::CLEVER, user: user, data: {
+          oauth_token: 'newer-clever-token'
+        }.to_json
+        clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
+        assert_equal 'newer-clever-token', clever_token
+      end
+    end
   end
 
   test 'oauth_tokens_for_provider returns nil values for migrated email teacher' do
