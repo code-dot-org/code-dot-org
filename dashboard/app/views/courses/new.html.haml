@@ -9,9 +9,10 @@
       - unit_group.errors.full_messages.each do |msg|
         %li= msg
 
-%h1= t('crud.new_model', model: UnitGroup.model_name.human)
+%h1
+  New Course
 = form_for(unit_group || :course, unit_group ? {url: course_path(unit_group)} : {url: courses_path}) do |f|
   .field
-    = f.label :name
-    = f.text_field :name
-  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes
+    = f.label 'URL slug'
+    = f.text_field :name, placeholder: 'e.g. csp-2019'
+  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Create
