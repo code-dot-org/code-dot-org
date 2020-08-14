@@ -39,7 +39,8 @@ import {
 } from '../permission';
 import {
   Subjects,
-  VirtualOnlySubjects
+  VirtualOnlySubjects,
+  MustSuppressEmailSubjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
@@ -461,17 +462,7 @@ export class WorkshopForm extends React.Component {
               <ControlLabel>
                 Is this a virtual workshop?
                 <HelpTip>
-                  <p>When a workshop is virtual, our system:</p>
-                  <ul>
-                    <li>
-                      Will not send most email notifications to enrollees, such
-                      as enrollment receipts and workshop reminders
-                    </li>
-                    <li>
-                      Will send a post-workshop survey designed for virtual
-                      workshops
-                    </li>
-                  </ul>
+                  <p>Please update your selection if/when your plans change.</p>
                 </HelpTip>
               </ControlLabel>
               <SelectIsVirtual
@@ -488,28 +479,29 @@ export class WorkshopForm extends React.Component {
           <Col sm={5}>
             <FormGroup validationState={validation.style.suppress_email}>
               <ControlLabel>
-                Enable email notifications?
+                Enable workshop reminder notifications?
                 <HelpTip>
                   <p>
-                    Code.org can send email notifications about this workshop to
-                    your attendees on your behalf. Notifications may include:
+                    <strong>
+                      This functionality is disabled for all academic year
+                      workshops and virtual CSF workshops.
+                    </strong>
                   </p>
-                  <ul>
-                    <li>Enrollment receipts</li>
-                    <li>10-day and 3-day workshop reminders</li>
-                    <li>Updates when workshop details change</li>
-                  </ul>
                   <p>
-                    Code.org will always email a post-workshop survey to
-                    participants, even if you disable workshop notifications
-                    here.
+                    For in-person CSF workshops, choose if you'd like automated
+                    10-day and 3-day pre-workshop reminders to be sent to your
+                    participants.
                   </p>
                 </HelpTip>
               </ControlLabel>
               <SelectSuppressEmail
                 onChange={this.handleSuppressEmailChange}
                 value={this.state.suppress_email || false}
-                readOnly={this.props.readOnly || this.state.virtual}
+                readOnly={
+                  this.props.readOnly ||
+                  this.state.virtual ||
+                  MustSuppressEmailSubjects.includes(this.state.subject)
+                }
               />
               <HelpBlock>{validation.help.suppress_email}</HelpBlock>
             </FormGroup>
@@ -783,6 +775,12 @@ export class WorkshopForm extends React.Component {
     if (VirtualOnlySubjects.includes(subject)) {
       this.setState({
         virtual: true,
+        suppress_email: true
+      });
+    }
+
+    if (MustSuppressEmailSubjects.includes(subject)) {
+      this.setState({
         suppress_email: true
       });
     }
@@ -1167,10 +1165,10 @@ const SelectSuppressEmail = ({value, readOnly, onChange}) => (
     disabled={readOnly}
   >
     <option key={false} value={false}>
-      Yes, send notifications on my behalf.
+      Yes, send reminders on my behalf.
     </option>
     <option key={true} value={true}>
-      No, I will handle communication with attendees myself.
+      No, I will remind enrollees myself.
     </option>
   </FormControl>
 );
