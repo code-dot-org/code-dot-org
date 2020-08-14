@@ -1,74 +1,91 @@
 ---
-theme: responsive_wide
-layout: wide
-social:
-  "og:title": "Advocate for computer science education"
-  "og:description": "Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of the K-12 education."
-  "twitter:site": "@codeorg"
-  "twitter:title": "Advocate for computer science education"
-  "twitter:description": "Learn about our local policy and access resources to support computer science in our state."
-  "twitter:url": "https://advocacy.code.org/"
-video_player: false
+title: 2018 Code.org/CSTA State Policy Forum
+theme: responsive
 ---
 
--# Put advocacy.css after other CSS files so that it can override them.
-=inline_css 'interactive-map.css'
-=inline_css 'advocacy-home.css'
 
-- banner_body = capture_haml do
-  Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of K-12 education.
 
-  .learn-more
-    %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf"), target: '_blank'}
-      %button.header-button
-        Learn more
+.img-container{style: "text-align: center"}
+  .col-33
+    %img.center{src: "/images/fit-100/CodeLogo.png"}
+  .col-33
+    %img.center{src: "/images/fit-100/CSTALogo.png"}
+  .col-33
+    %img.center{src: "/images/fit-100/ECEPLogo.jpg"}
 
-#homepage
+.container
+  .col-100{style: "text-align: center"}
+    %h1
+      2020 State of Computer Science Education:
+      %br
+      Illuminating Disparities
+    %p
+      One sentence describing the report
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank"}
+      %button Download PDF
+    %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
+      %button Order Report
 
-  #fullwidth.banner-container
-    .banner
-      .banner-shade
-        .container_responsive
-          %h1 Advocate for computer science education
-          .desktop-feature
-            = banner_body
+%br
+.container{style: "background-color: #F5F5F5; text-align: center"}
+  .col-100
+    %h4
+      State Summaries
+    %p
+      One sentence describing the images below and the state summaries
+  .col-33
+    %img.center{src: "/images/fit-300/StatePage.png"}
+    %p
+      Sentence describing the State Page
+  .col-33
+    %img.center{src: "/images/fit-300/SchoolsTeaching.png"}
+    %p
+      Sentence describing the State Page
+  .col-33
+    %img.center{src: "/images/fit-300/AccessParticipation.png"}
+    %p
+      Sentence describing the State Page
 
-    = view :header
+%br
 
-  .container_responsive
-    .non-banner.mobile-feature
-      = banner_body
+.container{style: "background-color: white"}
+  .col-50
+    %img{src: "/images/fit-450/AccessReport.png"}
+  .col-50{style: "min-height: 474px; background-color: #F5F5F5; text-align: center"}
+    %h4
+      Access to Computer Science
+    %p
+      Sentence describing Access Report
 
-    = view :forum_banner
+.container{style: "background-color: white"}
+  .col-50{style: "min-height: 474px; background-color: #F5F5F5; text-align: center"}
+    %h4
+      Policy Maps
+    %p
+      Sentence describing Policy Maps
+  .col-50
+    %img{src: "/images/fit-450/AccessReport.png"}
 
-    %h2.tablet-feature See what’s happening in your state
-    %h3.centered
-      Click the map below for state-specific data on the computer science landscape
-    -state ||= nil
-    = view :interactive_map, use_url: false, advocacy_variation: true
+.container{style: "background-color: white"}
+  .col-50
+    %img{src: "/images/fit-450/9Policies.png"}
+  .col-50{style: "min-height: 368px; background-color: #F5F5F5; text-align: center"}
+    %h4
+      Policy Maps
+    %p
+      Sentence describing Policy Maps
 
-    .clear{style: "clear:both"}
+%br
 
-    %h2
-      Drive the change in your state
-
-    =inline_css 'homepage.css'
-
-    #audienceblocks
-      - blocks = AdvocacySite.get_blocks(request)
-      - blocks.each do |block|
-        .block
-          - if block[:type] == "block"
-            = view :homepage_quarterslot_links, entry: block, desktop_column_width: 50, layout_class: 'quarterslot-links-large'
-
-    .clear
-
-    .coalition
-      %h3.left Get your State of CS report
-      %h4.left 
-        Choose a digital PDF or order a physical copy today
-      %a{href: "https://go.pardot.com/l/153401/2018-04-13/kspz3t", target: "_blank"}
-        %button.left Download PDF
-      &nbsp;&nbsp;
-      %a{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
-        %button.left Order Report
+.container
+  .col-50
+    %h4
+      Get your State of CS Report
+    %p
+      Choose a digital PDF or order a physical copy today!
+  .col-50
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank"}
+      %button Download PDF
+    %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
+      %button Order Report
+  
