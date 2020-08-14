@@ -3,9 +3,96 @@ import sinon from 'sinon';
 import {loadScript} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-// import * as sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-// import * as progress from '@cdo/apps/code-studio/progressRedux';
+import * as progress from '@cdo/apps/code-studio/progressRedux';
 import * as redux from '@cdo/apps/redux';
+
+const serverScriptResponse = {
+  csf: true,
+  family_name: 'courseb',
+  hasStandards: false,
+  id: 123,
+  path: 'test/url',
+  lessons: [{levels: []}],
+  title: 'Course B',
+  version_year: '2020'
+};
+
+const timeInSeconds = Date.now() / 1000;
+const serverProgressResponse = {
+  pagination: {
+    page: 1,
+    per: 50,
+    total_pages: 1
+  },
+  student_timestamps: {
+    100: null,
+    101: timeInSeconds,
+    102: timeInSeconds + 1
+  },
+  students: {
+    100: {},
+    101: {
+      2000: {status: 'locked'},
+      2001: {status: 'perfect', result: 30, paired: true}
+    },
+    102: {
+      2000: {status: 'perfect', result: 100}
+    }
+  }
+};
+
+const fullExpectedResult = {
+  levelsByLessonByScript: {
+    123: {
+      100: {},
+      101: {},
+      102: {}
+    }
+  },
+  scriptDataByScript: {
+    123: {
+      csf: true,
+      family_name: 'courseb',
+      hasStandards: false,
+      id: 123,
+      path: 'test/url',
+      stages: [{levels: []}],
+      title: 'Course B',
+      version_year: '2020'
+    }
+  },
+  studentLevelPairingByScript: {
+    123: {
+      100: {},
+      101: {
+        2000: false,
+        2001: true
+      },
+      102: {
+        2000: false
+      }
+    }
+  },
+  studentLevelProgressByScript: {
+    123: {
+      100: {},
+      101: {
+        2000: 1001,
+        2001: 30
+      },
+      102: {
+        2000: 100
+      }
+    }
+  },
+  studentTimestampsByScript: {
+    123: {
+      100: 0,
+      101: timeInSeconds * 1000,
+      102: (timeInSeconds + 1) * 1000
+    }
+  }
+};
 
 describe('sectionProgressLoader.loadScript', () => {
   let fetchStub, reduxStub, startLoadingProgressStub;
@@ -21,7 +108,7 @@ describe('sectionProgressLoader.loadScript', () => {
 
   afterEach(() => {
     redux.getStore.restore();
-    window.fetch.restore();
+    fetchStub.restore();
     sectionProgress.startLoadingProgress.restore();
   });
 
@@ -72,8 +159,8 @@ describe('sectionProgressLoader.loadScript', () => {
     });
 
     afterEach(() => {
-      sectionProgress.addDataByScript.restore();
       sectionProgress.finishLoadingProgress.restore();
+      addDataByScriptStub.restore();
       Promise.all.restore();
     });
 
@@ -129,6 +216,26 @@ describe('sectionProgressLoader.loadScript', () => {
       loadScript(0, 0);
       expect(addDataByScriptStub).to.have.been.calledWith(expectedResult);
       progressHelpers.processedLevel.restore();
+    });
+
+    it('transforms the data provided by the server', () => {
+      sinon.stub(progressHelpers, 'processedLevel');
+      sinon.stub(progress, 'levelsByLesson').returns({});
+      addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+      fetchStub.onCall(0).returns({
+        then: sinon.stub().returns({
+          then: sinon.stub().callsArgWith(0, serverScriptResponse)
+        })
+      });
+      fetchStub.onCall(1).returns({
+        then: sinon.stub().returns({
+          then: sinon.stub().callsArgWith(0, serverProgressResponse)
+        })
+      });
+      loadScript(123, 0);
+      expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
+      progressHelpers.processedLevel.restore();
+      progress.levelsByLesson.restore();
     });
   });
 });
