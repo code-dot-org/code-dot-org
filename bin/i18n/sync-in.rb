@@ -142,7 +142,7 @@ def localize_level_content
   # which relies on running a shell command
   Dir.chdir(Rails.root) do
     Script.all.each do |script|
-      next unless ScriptConstants.i18n? script.name
+      next unless script.is_translateable?
       script_strings = {}
       script.script_levels.each do |script_level|
         level = script_level.oldest_active_level
