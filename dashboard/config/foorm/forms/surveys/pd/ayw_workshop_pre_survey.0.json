@@ -5,18 +5,16 @@
    "elements": [
     {
      "type": "html",
-     "name": "question2",
-     "html": "<h2>{workshop_course} Workshop Pre-Survey</h2>"
+     "name": "pre_survey_preamble",
+     "baker_comment":"Whatever this becomes we should put into the workshop_elements library and pull from there",
+     "html": "<h2>{workshop_course} Workshop Pre-Survey</h2><br><p>NEED TO FILL IN PREAMBLE CONTENT</p>"
     },
-    {
-     "type": "html",
-     "name": "612_facilitator_post_header",
-     "html": "<h2></h2>"
-    },
+
     {
      "type": "radiogroup",
      "name": "workshop_course",
      "title": "For which Code.org course are you attending a workshop?",
+     "baker_comment":"Molly, will this survey have workshop_course available?",
      "choices": [
       {
        "value": "CS Principles",
@@ -45,7 +43,7 @@
     },
     {
      "type": "radiogroup",
-     "name": "question4",
+     "name": "planning_to_attend",
      "title": " Are you planning to attend this upcoming workshop?",
      "choices": [
       {
@@ -73,43 +71,43 @@
        "title": "In which unit from CS Principles is the lesson you most recently taught?",
        "choices": [
         {
-         "value": "Unit_1",
+         "value": "unit_1",
          "text": "Unit 1 - Digital Information"
         },
         {
-         "value": "Unit_2",
+         "value": "unit_2",
          "text": "Unit 2 - The Internet"
         },
         {
-         "value": "Unit_3",
+         "value": "unit_3",
          "text": "Unit 3 - Intro to App Design"
         },
         {
-         "value": "Unit_4",
+         "value": "unit_4",
          "text": "Unit 4 - Variables, Conditionals, and Functions"
         },
         {
-         "value": "Unit_5",
+         "value": "unit_5",
          "text": "Unit 5 - Lists, Loops, and Traversals"
         },
         {
-         "value": "Unit_6",
+         "value": "unit_6",
          "text": "Unit 6 - Algorithms"
         },
         {
-         "value": "Unit_7",
+         "value": "unit_7",
          "text": "Unit 7 - Parameters, Return, and Libraries"
         },
         {
-         "value": "Unit_8",
+         "value": "unit_8",
          "text": "Unit 8 - Create PT Prep"
         },
         {
-         "value": "Unit_9",
+         "value": "unit_9",
          "text": "Unit 9 - Data"
         },
         {
-         "value": "Unit_10",
+         "value": "unit_10",
          "text": "Unit 10 - Cybersecurity and Global Impacts"
         }
        ]
@@ -121,27 +119,27 @@
        "title": "In which unit from CS Discoveries is the lesson you most recently taught?",
        "choices": [
         {
-         "value": "Unit_1",
+         "value": "unit_1",
          "text": "Unit 1 - Problem Solving and Computing"
         },
         {
-         "value": "Unit_2",
+         "value": "unit_2",
          "text": "Unit 2 - Web Development"
         },
         {
-         "value": "Unit_3",
+         "value": "unit_3",
          "text": "Unit 3 - Interactive Animations and Games"
         },
         {
-         "value": "Unit_4",
+         "value": "unit_4",
          "text": "Unit 4 - The Design Process"
         },
         {
-         "value": "Unit_5",
+         "value": "unit_5",
          "text": "Unit 5 - Data and Society"
         },
         {
-         "value": "Unit_6",
+         "value": "unit_6",
          "text": "Unit 6 - Physical Computing"
         }
        ]
@@ -156,7 +154,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_1_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_1'",
+       "visibleIf": "{csp_unit} = 'unit_1'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -220,7 +218,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_2_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_2'",
+       "visibleIf": "{csp_unit} = 'unit_2'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -264,7 +262,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_3_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_3'",
+       "visibleIf": "{csp_unit} = 'unit_3'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -316,7 +314,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_4_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_4'",
+       "visibleIf": "{csp_unit} = 'unit_4'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -384,7 +382,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_5_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_5'",
+       "visibleIf": "{csp_unit} = 'unit_5'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -464,7 +462,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_6_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_6'",
+       "visibleIf": "{csp_unit} = 'unit_6'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -496,7 +494,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_7_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_7'",
+       "visibleIf": "{csp_unit} = 'unit_7'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -548,7 +546,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_8_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_8'",
+       "visibleIf": "{csp_unit} = 'unit_8'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -568,7 +566,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_9_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_9'",
+       "visibleIf": "{csp_unit} = 'unit_9'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -612,7 +610,7 @@
       {
        "type": "dropdown",
        "name": "csp_unit_10_lessons",
-       "visibleIf": "{csp_unit} = 'Unit_10'",
+       "visibleIf": "{csp_unit} = 'unit_10'",
        "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -668,7 +666,7 @@
          "text": "13. Project: Innovation Simulation Part 7"
         },
         {
-         "value": "14_Lesson_14:_Unit_Assessment_Day",
+         "value": "14_Lesson_14:_unit_Assessment_Day",
          "text": "14. Lesson 14: Unit Assessment Day"
         }
        ]
@@ -682,7 +680,7 @@
       {
        "type": "dropdown",
        "name": "csd_unit_1_lessons",
-       "visibleIf": "{csd_unit} = 'Unit_1'",
+       "visibleIf": "{csd_unit} = 'unit_1'",
        "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -750,7 +748,7 @@
       {
        "type": "dropdown",
        "name": "csd_unit_2_lessons",
-       "visibleIf": "{csd_unit} = 'Unit_2'",
+       "visibleIf": "{csd_unit} = 'unit_2'",
        "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -850,7 +848,7 @@
       {
        "type": "dropdown",
        "name": "csd_unit_3_lessons",
-       "visibleIf": "{csd_unit} = 'Unit_3'",
+       "visibleIf": "{csd_unit} = 'unit_3'",
        "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -974,7 +972,7 @@
       {
        "type": "dropdown",
        "name": "csd_unit_4_lessons",
-       "visibleIf": "{csd_unit} = 'Unit_4'",
+       "visibleIf": "{csd_unit} = 'unit_4'",
        "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -1054,7 +1052,7 @@
       {
        "type": "dropdown",
        "name": "csd_unit_5_lessons",
-       "visibleIf": "{csd_unit} = 'Unit_5'",
+       "visibleIf": "{csd_unit} = 'unit_5'",
        "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -1130,7 +1128,7 @@
       {
        "type": "dropdown",
        "name": "csd_unit_6_lessons",
-       "visibleIf": "{csd_unit} = 'Unit_6'",
+       "visibleIf": "{csd_unit} = 'unit_6'",
        "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
        "choices": [
         {
@@ -1211,12 +1209,12 @@
     },
     {
      "type": "comment",
-     "name": "question3",
+     "name": "questions_coming_in",
      "title": " What questions are on your mind leading into this workshop? What topics do you hope to discuss during the workshop?"
     },
     {
      "type": "radiogroup",
-     "name": "question5",
+     "name": "completed_async",
      "visibleIf": "{is_virtual} = 'true'",
      "title": "Have you completed the asynchronous work for this workshop?",
      "choices": [
@@ -1240,7 +1238,7 @@
     },
     {
      "type": "panel",
-     "name": "csd_plans_plans",
+     "name": "csd_plans",
      "elements": [
       {
        "type": "radiogroup",
@@ -1264,7 +1262,7 @@
       },
       {
        "type": "checkbox",
-       "name": "question10",
+       "name": "csd_which_units",
        "title": "Currently, my plan is to teach the following units as part of my course.",
        "description": "Check all that apply.",
        "choices": [
@@ -1309,7 +1307,7 @@
     },
     {
      "type": "radiogroup",
-     "name": "question6",
+     "name": "teaching_environment",
      "title": " During the next month, what is the primary teaching environment in which you expect to engage with this curriculum?",
      "choices": [
       {
@@ -1341,15 +1339,15 @@
     },
     {
      "type": "radiogroup",
-     "name": "question7",
+     "name": "same_teaching_evironment_as_last_time",
      "title": " Is that teaching environment the same in which you have been teaching since your last Code.org workshop? ",
      "choices": [
       {
-       "value": "Yes",
+       "value": "yes",
        "text": "Yes"
       },
       {
-       "value": "No",
+       "value": "no",
        "text": "No"
       }
      ],
@@ -1357,12 +1355,12 @@
     },
     {
      "type": "comment",
-     "name": "question8",
+     "name": "other_info_teaching_env",
      "title": "Is there any other information you would like to share about your teaching environment that can help us understand your situation?"
     },
     {
      "type": "html",
-     "name": "question1",
+     "name": "thank_you",
      "html": "<h2>Thank You</h2>\n<p>We're looking forward to seeing you at the workshop!</p>"
     }
    ]
