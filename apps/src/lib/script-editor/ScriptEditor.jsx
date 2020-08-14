@@ -83,8 +83,7 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella,
-      isStable: this.props.isStable
+      curriculumUmbrella: this.props.curriculumUmbrella
     };
   }
 
@@ -97,11 +96,6 @@ export default class ScriptEditor extends React.Component {
   handleUmbrellaSelectChange = event => {
     const curriculumUmbrella = event.target.value;
     this.setState({curriculumUmbrella});
-  };
-
-  handleStableChange = event => {
-    const isStable = event.target.checked;
-    this.setState({isStable});
   };
 
   presubmit = e => {
@@ -379,14 +373,20 @@ export default class ScriptEditor extends React.Component {
               </HelpTip>
             </label>
             <label>
-              Can be translated (only available if this script is stable)
+              Can be translated (only check this if the script is stable)
               <input
                 name="is_translateable"
                 type="checkbox"
                 defaultChecked={this.props.isTranslateable}
                 style={styles.checkbox}
-                disabled={!this.state.isStable}
               />
+              <HelpTip>
+                <p>
+                  If checked, this unit will be included in our translation
+                  pipeline. Major changes to this unit after translation has
+                  started can break translations.
+                </p>
+              </HelpTip>
             </label>
             <VisibleAndPilotExperiment
               visible={!this.props.hidden}
