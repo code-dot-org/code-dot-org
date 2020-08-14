@@ -479,7 +479,7 @@ export class WorkshopForm extends React.Component {
           <Col sm={5}>
             <FormGroup validationState={validation.style.suppress_email}>
               <ControlLabel>
-                Enable workshop reminder notifications?
+                Enable workshop reminders?
                 <HelpTip>
                   <p>
                     <strong>
