@@ -6,7 +6,7 @@
     {
      "type": "html",
      "name": "environment131",
-     "html": "<h2>{wrorkshop_course} Academic Year Workshops Kick-off Call</h2><p>"
+     "html": "<h2>{workshop_course} Academic Year Workshops Kick-off Call</h2><p>"
     },
     {
      "type": "rating",
@@ -15,7 +15,7 @@
      "rateMax": 7,
      "minRateDescription": "Strongly Disagree",
      "maxRateDescription": "Strongly Agree"
-    }
+    },
     {
      "type": "rating",
      "name": "teacher_community",
