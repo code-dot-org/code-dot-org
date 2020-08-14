@@ -15,7 +15,11 @@ import {
   MB_COMPONENT_EVENTS
 } from './boards/microBit/MicroBitConstants';
 
-export const MAKER_CATEGORY = 'Maker';
+const config = {};
+export default config;
+
+const MAKER_CATEGORY = 'Maker';
+config.MAKER_CATEGORY = MAKER_CATEGORY;
 const CIRCUIT_CATEGORY = 'Circuit';
 const MICROBIT_CATEGORY = 'micro:bit';
 
@@ -25,11 +29,12 @@ const colorPixelVariables = _.range(N_COLOR_LEDS).map(
 );
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
-export function stringifySong(song) {
+function stringifySong(song) {
   return (
     '[\n' + song.map(note => `  ${JSON.stringify(note)}`).join(',\n') + '\n]'
   );
 }
+config.stringifySong = stringifySong;
 
 /**
  * Generate an array of dropdown strings appropriate for the second
@@ -37,7 +42,7 @@ export function stringifySong(song) {
  * onBoardEvent.
  * @param {string} firstParam - first parameter to onBoardEvent
  */
-export function getBoardEventDropdownForParam(firstParam, componentEvents) {
+function getBoardEventDropdownForParam(firstParam, componentEvents) {
   const wrapInQuotes = e => `"${e}"`;
   const idealOptions = componentEvents[firstParam];
   if (Array.isArray(idealOptions)) {
@@ -57,11 +62,12 @@ export function getBoardEventDropdownForParam(firstParam, componentEvents) {
     .map(wrapInQuotes)
     .value();
 }
+config.getBoardEventDropdownForParam = getBoardEventDropdownForParam;
 
 // We don't want these to show up as blocks (because that interferes with
 // parameter dropdowns) but we also don't want them to generate "_ is not
 // defined" warnings from the linter.
-export const additionalPredefValues = Object.keys(CP_COMPONENT_EVENTS);
+config.additionalPredefValues = Object.keys(CP_COMPONENT_EVENTS);
 
 // Block properties we'll reuse in multiple entries
 const createLedProps = {
@@ -86,7 +92,7 @@ const createCapacitiveTouchSensorProps = {
 /**
  * Generic Johnny-Five / Firmata blocks
  */
-export const makerBlocks = [
+const makerBlocks = [
   {
     func: 'pinMode',
     parent: api,
@@ -568,27 +574,32 @@ const microBitBlocks = [
   {func: 'tempSensor.C', category: MICROBIT_CATEGORY, type: 'readonlyproperty'}
 ];
 
-export const categories = {
+config.categories = {
   [MAKER_CATEGORY]: {
     color: 'cyan',
     rgb: color.droplet_cyan,
     blocks: []
-  },
-  [MICROBIT_CATEGORY]: {
-    color: 'red',
-    rgb: color.droplet_red,
-    blocks: []
-  },
-  [CIRCUIT_CATEGORY]: {
-    color: 'red',
-    rgb: color.droplet_red,
-    blocks: []
   }
 };
 
-export let blocksMicrobit = [...makerBlocks, ...microBitBlocks];
-export let blocksCircuitPlayground = [
-  ...makerBlocks,
-  ...circuitPlaygroundBlocks
-];
-export let blocks = blocksCircuitPlayground;
+export let configMicrobit = {
+  categories: {
+    [MICROBIT_CATEGORY]: {
+      color: 'red',
+      rgb: color.droplet_red,
+      blocks: []
+    }
+  },
+  blocks: [...makerBlocks, ...microBitBlocks]
+};
+
+export let configCircuitPlayground = {
+  categories: {
+    [CIRCUIT_CATEGORY]: {
+      color: 'red',
+      rgb: color.droplet_red,
+      blocks: []
+    }
+  },
+  blocks: [...makerBlocks, ...circuitPlaygroundBlocks]
+};
