@@ -1,115 +1,18 @@
-.clear {
-  clear: both;
+
+.col {
+    width: 100%;
+
 }
 
-.greybox {
-  background-color: #fff;
-  color: #666;
-  border: 1px solid #888;
-  padding: 20px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.greybox ul li:before {
-  color: #666;
-}
-
-.info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
-  color: #888;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.fact.subfact {
-  color: #777;
-}
-
-.fact > a {
-  color: #777;
-}
-
-#fullwidth {
-  height: 400px;
-}
-
-/*#pageheader {
-  background-color: initial !important;
-  position: absolute;
-}
-
-#pageheader-wrapper #pageheader #logo-wrapper #logo {
-  width: initial;
-  height: 50px;
-}*/
-
-/*.banner {
-  background-image: url(/images/ECEPLogo.jpg);
-  /*background-image: url(/images/ECEPLogo.jpg);
-  height: 100px;
-  background-size: cover;
-  background-position: 50% 40%;
-  color: white;
-  text-align: center;
-  position: absolute;
-  display: flex;
-  float: left;
-  width: 30%;
-} */
-/*  background-image: url(/images/CodeLogo.png);
-  height: 100px;
-  background-size: cover;
-  background-position: 50% 40%;
-  color: white;
-  text-align: center;
-  position: absolute;
-  display: flex;
-  float: center;
-  width: 30%;
-  font-size: 16px;*/
-
-.banner-shade {
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,0.4416141456582633) 0%, rgba(0,0,0,0.33237044817927175) 57%, rgba(0,0,0,0) 76%);
-  height: 400px;
-  position: absolute;
-  width: 100%;
-}
-
-.banner h1 {
-  font-family: 'Gotham 7r', sans-serif;
-  font-size: 36px;
-  margin-top: 220px;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.learn-more {
-  margin-top: 10px;
-}
-
-/*.banner-container .header-button {
-  background-color: initial;
-  border-color: white;
-  border-width: 2px;
-}*/
-
-.non-banner {
-  text-align: center;
-  margin-top: 20px;
-}
-
-h2 {
-  font-size: 32px;
+h1 {
   color: grey;
   text-align: center;
 }
 
-.centered {
-  text-align: center;
+.button {
+  background-color: black;
 }
 
-#audienceblocks {
-  text-align: center;
-  margin-top: 0px;
+.banner {
+  
 }
