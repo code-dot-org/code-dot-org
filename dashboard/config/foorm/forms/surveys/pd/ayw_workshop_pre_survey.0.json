@@ -12,37 +12,6 @@
 
     {
      "type": "radiogroup",
-     "name": "workshop_course",
-     "title": "For which Code.org course are you attending a workshop?",
-     "baker_comment":"Molly, will this survey have workshop_course available?",
-     "choices": [
-      {
-       "value": "CS Principles",
-       "text": "CS Principles"
-      },
-      {
-       "value": "CS Discoveries",
-       "text": "CS Discoveries"
-      }
-     ]
-    },
-    {
-     "type": "radiogroup",
-     "name": "is_virtual",
-     "title": "Is the workshop you're attending in-person, or virtual?",
-     "choices": [
-      {
-       "value": "false",
-       "text": "In-Person"
-      },
-      {
-       "value": "true",
-       "text": "Virtual"
-      }
-     ]
-    },
-    {
-     "type": "radiogroup",
      "name": "planning_to_attend",
      "title": " Are you planning to attend this upcoming workshop?",
      "choices": [
@@ -68,7 +37,7 @@
        "type": "dropdown",
        "name": "csp_unit",
        "visibleIf": "{workshop_course} = 'CS Principles'",
-       "title": "In which unit from CS Principles is the lesson you most recently taught?",
+       "title": "Which unit from CS Principles contains the lesson you most recently taught?",
        "choices": [
         {
          "value": "unit_1",
@@ -145,7 +114,7 @@
        ]
       }
      ],
-     "title": "In order for us to plan for your workshop, it's helpful to know Which lesson from {workshop_course} you've MOST RECENTLY TAUGHT (or will have taught) just prior to attending."
+     "title": "In order for us to plan for your workshop, it's helpful to know which lesson from {workshop_course} you've MOST RECENTLY TAUGHT (or will have taught) just prior to attending."
     },
     {
      "type": "panel",
