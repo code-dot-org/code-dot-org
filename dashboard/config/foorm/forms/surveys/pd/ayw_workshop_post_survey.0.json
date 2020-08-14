@@ -23,7 +23,13 @@
       "library_name":"surveys/pd/ayw_satisfaction_panel",
       "library_version": 0,
       "name":"workshop_satisfaction_panel"
-    },
+     }
+    ]
+   },
+   {
+    "name":"virtual_page",
+    "title":"Virtual Workshop Satisfaction",
+    "elements":[
     {
      "type": "panel",
      "name": "ayw_post_virtual_panel",
