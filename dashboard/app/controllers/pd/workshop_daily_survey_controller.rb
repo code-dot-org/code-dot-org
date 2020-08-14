@@ -18,6 +18,7 @@ module Pd
     # The JotForm survey, on submit, will redirect to the new_facilitator route (see below)
     # for the relevant session id.
     # The pre-workshop survey, which has no session id, will redirect to thanks.
+    # TODO: Do not show AYW surveys for 2020 onwards
     def new_general
       # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
       day = params[:day].to_i

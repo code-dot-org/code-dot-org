@@ -69,7 +69,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
           pd_session_id: params[:pd_session_id],
           pd_workshop_id: params[:pd_workshop_id],
           day: params[:day],
-          facilitator_id: data[Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID]
+          facilitator_id: data[Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID],
+          workshop_agenda: params[:workshop_agenda].presence
         )
         begin
           survey_submission.save_with_foorm_submission(data.to_json, params[:form_name], params[:form_version])
