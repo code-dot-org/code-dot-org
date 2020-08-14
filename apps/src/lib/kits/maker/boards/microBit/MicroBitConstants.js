@@ -34,6 +34,12 @@ export const MB_SENSOR_VARS = [
   'compass'
 ];
 
+// milliseconds between samples for sensors
+export const SAMPLE_RATE = 50;
+
+// Max number of milliseconds for which we store historical data
+export const MAX_SENSOR_BUFFER = 3000;
+
 const BUTTON_EVENTS = ['down', 'up'];
 const SENSOR_EVENTS = ['change', 'data'];
 
