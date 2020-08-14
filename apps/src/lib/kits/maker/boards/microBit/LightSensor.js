@@ -93,8 +93,10 @@ export default class LightSensor extends EventEmitter {
       for (let i = 0; i < indicesRange; i++) {
         // bufferIndex points to the next spot to write, so first historical
         // data value is at (bufferIndex - 1)
-        let index = (this.bufferIndex - (i + 1)) % this.buffer.length;
-        sum += this.buffer[Math.abs(index)];
+        let index =
+          (this.buffer.length + (this.bufferIndex - (i + 1))) %
+          this.buffer.length;
+        sum += this.buffer[index];
       }
       return calculateValueWithinRange(
         sum / indicesRange,

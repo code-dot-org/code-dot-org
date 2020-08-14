@@ -2,7 +2,11 @@ import {MicrobitStubBoard} from '../makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
-import {sensor_channels} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import {
+  sensor_channels,
+  MAX_SENSOR_BUFFER,
+  SAMPLE_RATE
+} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
 describe('LightSensor', function() {
   let boardClient, lightSensor;
@@ -65,6 +69,39 @@ describe('LightSensor', function() {
       lightSensor.stop();
       expect(stopSpy).to.have.been.calledOnce;
       expect(stopSpy).to.have.been.calledWith(sensor_channels.lightSensor);
+    });
+  });
+
+  describe(`getAveragedValue`, () => {
+    it(`returns null if the requested range is outside of bounds`, () => {
+      expect(lightSensor.getAveragedValue(4)).to.equal(null);
+      expect(lightSensor.getAveragedValue(50000)).to.equal(null);
+    });
+
+    it(`returns average of values in buffer`, () => {
+      lightSensor.buffer = new Float32Array(MAX_SENSOR_BUFFER / SAMPLE_RATE);
+      for (let i = 0; i < lightSensor.buffer.length; i++) {
+        lightSensor.buffer[i] = i;
+      }
+
+      lightSensor.bufferIndex = 20;
+      expect(lightSensor.getAveragedValue(1000)).to.equal(9.5);
+
+      lightSensor.bufferIndex = 0;
+      expect(lightSensor.getAveragedValue(3000)).to.equal(29.5);
+
+      lightSensor.bufferIndex = 1;
+      expect(lightSensor.getAveragedValue(50)).to.equal(0);
+    });
+
+    it(`returns average of values in buffer within the set range`, () => {
+      lightSensor.setRange(10, 110);
+
+      lightSensor.buffer = new Float32Array(MAX_SENSOR_BUFFER / SAMPLE_RATE);
+      for (let i = 0; i < lightSensor.buffer.length; i++) {
+        lightSensor.buffer[i] = 5;
+      }
+      expect(lightSensor.getAveragedValue(800)).to.equal(11.96);
     });
   });
 
