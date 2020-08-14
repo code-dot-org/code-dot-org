@@ -34,6 +34,10 @@ level 'CSP-PL AYWS3 Workshop Overview', progression: 'Module 3 Overview (~5 minu
 level 'CSP - Understanding the context for the Model Lesson overview', progression: 'Understanding the Context for Lists (~55 minutes)'
 level 'CSP - Synch3 - Reflection 1', progression: 'Understanding the Context for Lists (~55 minutes)'
 level 'CSP - Synch3 - Reflection 2', progression: 'Understanding the Context for Lists (~55 minutes)'
+level 'CSP - Asynch3 - Intro to CI', progression: 'Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)'
+level 'CSP - Asynch3 - Broadening the def', progression: 'Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)'
+level 'CSP - Asynch3 - Feedback in CI', progression: 'Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)'
+level 'CSP - Asynch3 - Practice feedback', progression: 'Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)'
 level 'CSP - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 4'
