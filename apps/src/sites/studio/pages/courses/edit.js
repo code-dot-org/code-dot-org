@@ -20,6 +20,7 @@ function showCourseEditor() {
       <CourseEditor
         name={courseEditorData.course_summary.name}
         title={courseEditorData.course_summary.title}
+        versionTitle={courseEditorData.course_summary.version_title}
         familyName={courseEditorData.course_summary.family_name}
         versionYear={courseEditorData.course_summary.version_year}
         visible={courseEditorData.course_summary.visible}
