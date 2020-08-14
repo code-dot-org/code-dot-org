@@ -7,7 +7,10 @@ import trackEvent from '../../../util/trackEvent';
 import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
 import FakeBoard from './boards/FakeBoard';
 import * as commands from './commands';
-import * as dropletConfig from './dropletConfig';
+import dropletConfig, {
+  configMicrobit,
+  configCircuitPlayground
+} from './dropletConfig';
 import MakerError, {
   ConnectionCanceledError,
   UnsupportedBrowserError,
@@ -20,7 +23,7 @@ import MicroBitBoard from './boards/microBit/MicroBitBoard';
 import experiments from '@cdo/apps/util/experiments';
 
 // Re-export some modules so consumers only need this 'toolkit' module
-export {dropletConfig, MakerError};
+export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
 
 /**
  * @type {CircuitPlaygroundBoard} The current board controller, populated when

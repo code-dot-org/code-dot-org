@@ -689,15 +689,31 @@ Applab.init = function(config) {
 
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
+
     config.dropletConfig = utils.deepMergeConcatArrays(
       config.dropletConfig,
       makerToolkit.dropletConfig
     );
+
+    if (config.level.makerlabEnabled === 'microbit') {
+      config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        makerToolkit.configMicrobit
+      );
+    } else {
+      config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        makerToolkit.configCircuitPlayground
+      );
+    }
   } else {
-    // Push gray, no-autocomplete versions of maker blocks for display purposes.
-    const disabledMakerDropletConfig = makeDisabledConfig(
-      makerToolkit.dropletConfig
+    const makerConfig = utils.deepMergeConcatArrays(
+      makerToolkit.dropletConfig,
+      makerToolkit.configCircuitPlayground
     );
+
+    // Push gray, no-autocomplete versions of maker blocks for display purposes.
+    const disabledMakerDropletConfig = makeDisabledConfig(makerConfig);
     config.dropletConfig = utils.deepMergeConcatArrays(
       config.dropletConfig,
       disabledMakerDropletConfig
