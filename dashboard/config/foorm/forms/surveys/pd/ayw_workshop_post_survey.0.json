@@ -29,12 +29,9 @@
    {
     "name":"virtual_page",
     "title":"Virtual Workshop Satisfaction",
+         "visibleIf":"{is_virtual}='true'",
+
     "elements":[
-    {
-     "type": "panel",
-     "name": "ayw_post_virtual_panel",
-     "visibleIf":"{is_virtual}='true'",
-     "elements": [
       {
         "type":"library_item",
         "library_name":"surveys/pd/ayw_virtual_panel",
@@ -42,9 +39,7 @@
         "name":"ayw_virtual_panel"
       }
     ]
-   }
-  ]
- },
+   },
  {
    "name":"module1_page",
    "title": "Module 1 Feedback",
