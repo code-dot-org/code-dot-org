@@ -61,7 +61,6 @@ class StandardsReport extends Component {
   static propTypes = {
     //redux
     scriptId: PropTypes.number,
-    loadScript: PropTypes.func.isRequired,
     section: sectionDataPropType.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType,
@@ -84,7 +83,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    this.props.loadScript(scriptIdFromTD, this.props.section.id);
+    loadScript(scriptIdFromTD, this.props.section.id);
   }
 
   getLinkToOverview() {
@@ -222,9 +221,6 @@ export default connect(
     lessonsByStandard: lessonsByStandard(state)
   }),
   dispatch => ({
-    loadScript(scriptId, sectionId) {
-      dispatch(loadScript(scriptId, sectionId));
-    },
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));
     },
