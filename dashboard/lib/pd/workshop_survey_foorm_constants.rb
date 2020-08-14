@@ -4,7 +4,8 @@ module Pd
 
     DAILY_SURVEY_CONFIG_PATHS = {
       SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_daily_survey',
-      SUBJECT_WORKSHOP_1 => 'surveys/pd/ayw_workshop_post_survey'
+      # TODO: update with real survey and add rest of AYW subjects
+      SUBJECT_WORKSHOP_4 => 'surveys/pd/ayw_workshop_post_survey'
     }
 
     POST_SURVEY_CONFIG_PATHS = {
@@ -12,13 +13,15 @@ module Pd
       SUBJECT_CSF_101 => 'surveys/pd/workshop_csf_intro_post',
       SUBJECT_CSP_FOR_RETURNING_TEACHERS => 'surveys/pd/csp_wfrt_post_survey',
       SUBJECT_CSF_201 => 'surveys/pd/csf_deep_dive_post',
-      SUBJECT_WORKSHOP_1 => 'surveys/pd/ayw_workshop_post_survey'
+      # TODO: update with rest of AYW subjects
+      SUBJECT_WORKSHOP_4 => 'surveys/pd/ayw_workshop_post_survey'
     }
 
     PRE_SURVEY_CONFIG_PATHS = {
       SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_pre_survey',
       SUBJECT_CSF_201 => 'surveys/pd/csf_deep_dive_pre',
-      SUBJECT_WORKSHOP_1 => 'surveys/pd/ayw_workshop_post_survey'
+      # TODO: update with real survey and add rest of AYW subjects
+      SUBJECT_WORKSHOP_4 => 'surveys/pd/ayw_workshop_post_survey'
     }
 
     FOORM_SUBMIT_API = '/api/v1/pd/foorm/workshop_survey_submission'
