@@ -37,7 +37,8 @@ export function loadScript(scriptId, sectionId) {
   let sectionProgress = {
     studentLevelProgressByScript: {},
     studentTimestampsByScript: {},
-    studentLevelPairingByScript: {}
+    studentLevelPairingByScript: {},
+    scriptDataByScript: {}
   };
 
   // Get the script data
@@ -140,6 +141,9 @@ function processStudentPairing(students) {
 }
 
 function postProcessDataByScript(scriptData) {
+  if (!scriptData.stages) {
+    return scriptData;
+  }
   return {
     ...scriptData,
     stages: scriptData.stages.map(stage => {
@@ -152,7 +156,8 @@ function postProcessDataByScript(scriptData) {
 }
 
 function postProcessLevelsByLesson(scriptId, progress) {
-  const studentLevelProgress = progress.studentLevelProgressByScript[scriptId];
+  const studentLevelProgress =
+    progress.studentLevelProgressByScript[scriptId] || {};
   const pairing = progress.studentLevelPairingByScript[scriptId];
   const scriptData = progress.scriptDataByScript[scriptId];
   let levelsByLessonByStudent = {};
