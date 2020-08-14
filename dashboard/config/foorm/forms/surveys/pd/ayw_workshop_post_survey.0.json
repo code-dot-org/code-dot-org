@@ -25,18 +25,24 @@
       "name":"workshop_satisfaction_panel"
     },
     {
-      "type":"library_item",
-      "library_name":"surveys/pd/ayw_virtual_panel",
-      "library_version": 0,
-      "name":"ayw_virtual_panel"
-    }
-
+     "type": "panel",
+     "name": "ayw_post_virtual_panel",
+     "visibleIf":"{is_virtual}='true'",
+     "elements": [
+      {
+        "type":"library_item",
+        "library_name":"surveys/pd/ayw_virtual_panel",
+        "library_version": 0,
+        "name":"ayw_virtual_panel"
+      }
+    ]
+   }
   ]
  },
  {
    "name":"module1_page",
    "title": "Module 1 Feedback",
-
+  "visibleIf": "{workshop_agenda}='module1' or {workshop_agenda}='module1_2'",
    "elements": [
     {"type":"html",
       "title":"comment",
@@ -48,13 +54,15 @@
       "library_name":"surveys/pd/ayw_module_1",
       "library_version": 0,
       "name":"module_1_panel"
+
     }
   ]
  },
  {
    "name":"module2_page",
    "title": "Module 2 Feedback",
-   "visibleIf": "{module2}='true'",
+   "visibleIf": "{workshop_agenda}='module2' or {workshop_agenda}='module1_2'",
+
    "elements": [
      {
       "type":"library_item",
@@ -67,26 +75,54 @@
  {
    "name":"module3_page",
    "title": "Module 3 Feedback",
-   "visibleIf": "{module3}='true'",
+   "visibleIf": "{workshop_agenda}='module3' or {workshop_agenda}='module3_4'",
+
    "elements": [
      {
       "type":"library_item",
       "library_name":"surveys/pd/ayw_module_3",
       "library_version": 0,
       "name":"module_panel"
+
     }
   ]
  },
  {
    "name":"module4_page",
    "title": "Module 4 Feedback",
-   "visibleIf": "{module4}='true'",
+   "visibleIf": "{workshop_agenda}='module4' or {workshop_agenda}='module3_4'",
    "elements": [
      {
       "type":"library_item",
       "library_name":"surveys/pd/ayw_module_4",
       "library_version": 0,
       "name":"module_panel"
+    }
+  ]
+ },
+ {
+   "name":"ayw1_page",
+   "title": "Academic Year Workshop 1 Feedback",
+   "visibleIf": "{workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 1'",
+   "elements": [
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/ayw_inperson_1",
+      "library_version": 0,
+      "name":"ayw1_panel"
+    }
+  ]
+ },
+  {
+   "name":"ayw2_page",
+   "title": "Academic Year Workshop 2 Feedback",
+   "visibleIf": "{workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 2'",
+   "elements": [
+     {
+      "type":"library_item",
+      "library_name":"surveys/pd/ayw_inperson_2",
+      "library_version": 0,
+      "name":"ayw2_panel"
     }
   ]
  },
