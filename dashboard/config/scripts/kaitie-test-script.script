@@ -41,7 +41,9 @@ level 'CSP - Asynch3 - Practice feedback', progression: 'Broadening, labeling, a
 level 'CSP - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 4'
-level 'VirtualPLOverview'
+level 'CSP-PL AYWA4 Workshop Overview', progression: 'Module 4 Overview (~5 minutes)'
+level 'CSP - Understanding the content of the Lists EIPM sequence', progression: 'Understanding the content of the Lists EIPM sequence (~25 minutes)'
+level 'CSP - Lists EIPM reflection', progression: 'Understanding the content of the Lists EIPM sequence (~25 minutes)'
 
 lesson 'Module 5'
 level 'VirtualPLOverview'
