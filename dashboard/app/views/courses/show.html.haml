@@ -15,3 +15,13 @@
   %script{ src: webpack_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
 
 #course_overview
+
+- if can? :edit, unit_group
+  = render layout: 'shared/extra_links' do
+    %strong= unit_group.name
+    %ul
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to "Edit", edit_course_path(unit_group)
+      - else
+        - lb_path = "https://levelbuilder-studio.code.org#{course_path(unit_group)}"
+        %li= link_to "View on levelbuilder", lb_path
