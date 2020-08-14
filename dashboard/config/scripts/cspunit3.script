@@ -51,7 +51,7 @@ level 'U3L06 Assessment2', assessment: true
 level 'U3L06-API-multichoice', assessment: true
 level 'U3L06 Assessment', assessment: true
 
-lesson 'Creating functions with Parameters', display_name: 'Creating Functions with Parameters'
+lesson 'Creating Functions with Parameters', display_name: 'Creating Functions with Parameters'
 level 'U3L08 Student Lesson Introduction'
 level 'U3L08 - drawSquareWithParam'
 level 'U3L07 - createTriangleParam'

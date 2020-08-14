@@ -828,6 +828,8 @@ en:
               name: Using Variables in Apps
             While Loops:
               name: While Loops
+            Creating Functions with Parameters:
+              name: Creating Functions with Parameters
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
