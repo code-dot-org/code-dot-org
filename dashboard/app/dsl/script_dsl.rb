@@ -81,7 +81,6 @@ class ScriptDSL < BaseDSL
       @lesson_groups << {
         key: key,
         display_name: properties[:display_name],
-        description: "",
         big_questions: [],
         lessons: []
       }.compact
