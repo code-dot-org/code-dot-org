@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import DetailProgressTable from './DetailProgressTable';
-import SummaryProgressTable from './SummaryProgressTable';
-import FontAwesome from '../FontAwesome';
-import {levelType, lessonType} from './progressTypes';
+import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
+import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {
+  levelType,
+  lessonType,
+  lessonGroupType
+} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';
+import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   main: {
@@ -37,6 +43,9 @@ const styles = {
   bottom: {
     borderBottomLeftRadius: 4,
     borderBottomRightRadius: 4
+  },
+  lessonGroupInfo: {
+    padding: 10
   }
 };
 
@@ -47,7 +56,9 @@ const styles = {
 export default Radium(
   class LessonGroup extends React.Component {
     static propTypes = {
-      groupName: PropTypes.string.isRequired,
+      sectionId: PropTypes.number,
+      scriptId: PropTypes.number,
+      lessonGroup: lessonGroupType,
       lessons: PropTypes.arrayOf(lessonType).isRequired,
       levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType))
         .isRequired,
@@ -56,7 +67,8 @@ export default Radium(
     };
 
     state = {
-      collapsed: false
+      collapsed: false,
+      lessonGroupInfoDialogOpen: false
     };
 
     toggleCollapsed = () =>
@@ -64,9 +76,36 @@ export default Radium(
         collapsed: !this.state.collapsed
       });
 
+    openLessonGroupInfoDialog = () => {
+      this.setState({
+        collapsed: !this.state.collapsed,
+        lessonGroupInfoDialogOpen: true
+      });
+      firehoseClient.putRecord(
+        {
+          study: 'unit_overview_page',
+          study_group: 'lesson_group',
+          event: 'view_lesson_group_info',
+          data_json: JSON.stringify({
+            script_id: this.props.scriptId,
+            lesson_group_id: this.props.lessonGroup.id
+          })
+        },
+        {includeUserId: true}
+      );
+    };
+
+    closeLessonGroupInfoDialog = () => {
+      /*
+      Because the info button is on the header which collapses when clicked we have to
+      reverse the collapsing that happens.
+      */
+      this.setState({lessonGroupInfoDialogOpen: false});
+    };
+
     render() {
       const {
-        groupName,
+        lessonGroup,
         lessons,
         levelsByLesson,
         isSummaryView,
@@ -89,7 +128,21 @@ export default Radium(
             onClick={this.toggleCollapsed}
           >
             <FontAwesome icon={icon} />
-            <span style={styles.headingText}>{groupName}</span>
+            <span style={styles.headingText}>{lessonGroup.displayName}</span>
+            {(lessonGroup.description || lessonGroup.bigQuestions) && (
+              <FontAwesome
+                icon="info-circle"
+                style={styles.lessonGroupInfo}
+                onClick={this.openLessonGroupInfoDialog}
+              />
+            )}
+            <LessonGroupInfoDialog
+              isOpen={this.state.lessonGroupInfoDialogOpen}
+              displayName={lessonGroup.displayName}
+              bigQuestions={lessonGroup.bigQuestions}
+              description={lessonGroup.description}
+              closeDialog={this.closeLessonGroupInfoDialog}
+            />
           </div>
           {!this.state.collapsed && (
             <div
