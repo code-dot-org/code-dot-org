@@ -81,9 +81,21 @@ class ScriptDSL < BaseDSL
       @lesson_groups << {
         key: key,
         display_name: properties[:display_name],
+        description: "",
+        big_questions: [],
         lessons: []
       }.compact
     end
+  end
+
+  def lesson_group_description(description)
+    current_lesson_group = @lesson_groups.length - 1
+    @lesson_groups[current_lesson_group][:description] = description
+  end
+
+  def lesson_group_question(question)
+    current_lesson_group = @lesson_groups.length - 1
+    @lesson_groups[current_lesson_group][:big_questions] << question
   end
 
   def lesson(name, properties = {})
@@ -348,6 +360,11 @@ class ScriptDSL < BaseDSL
         t = "lesson_group '#{escape(lesson_group.key)}'"
         t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
+        s << "lesson_group_description '#{escape(lesson_group.description)}'" if lesson_group.description
+        lesson_group.big_questions&.each do |big_question|
+          s << "lesson_group_question '#{escape(big_question)}'"
+        end
+
       end
       lesson_group.lessons.each do |lesson|
         s << serialize_lesson(lesson)
