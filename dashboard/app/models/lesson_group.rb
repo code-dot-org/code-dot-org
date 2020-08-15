@@ -36,6 +36,8 @@ class LessonGroup < ApplicationRecord
 
   serialized_attrs %w(
     display_name
+    description
+    big_questions
   )
 
   Counters = Struct.new(:lockable_count, :non_lockable_count, :lesson_position, :chapter)
@@ -78,7 +80,11 @@ class LessonGroup < ApplicationRecord
 
         LessonGroup.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
 
-        lesson_group.assign_attributes(position: lesson_group_position += 1, properties: {display_name: raw_lesson_group[:display_name]})
+        lesson_group.assign_attributes(position: lesson_group_position += 1, properties: {
+          display_name: raw_lesson_group[:display_name],
+          description: raw_lesson_group[:description],
+          big_questions: raw_lesson_group[:big_questions]
+        })
         lesson_group.save! if lesson_group.changed?
       end
 
