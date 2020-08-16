@@ -130,13 +130,21 @@ class LessonGroup < ApplicationRecord
     I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.display_name", default: 'Content')
   end
 
+  def localized_description
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.description")
+  end
+
+  def localized_big_questions
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions")
+  end
+
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
     summary = {
       id: id,
       key: key,
       display_name: localized_display_name,
-      description: description,
-      big_questions: big_questions,
+      description: localized_description,
+      big_questions: localized_big_questions,
       user_facing: user_facing,
       position: position
     }
