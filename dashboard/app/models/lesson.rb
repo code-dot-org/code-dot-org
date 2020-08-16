@@ -59,6 +59,7 @@ class Lesson < ActiveRecord::Base
       lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
         Lesson.find_or_create_by(
           name: raw_lesson[:name],
+          key: raw_lesson[:name],
           script: script
         ) do |s|
           s.relative_position = 0 # will be updated below, but cant be null

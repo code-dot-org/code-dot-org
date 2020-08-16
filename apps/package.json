@@ -28,7 +28,6 @@
     "start:gamelab": "DEV=1 grunt dev --app=gamelab;",
     "start:craft": "DEV=1 grunt dev --app=craft --watch-notify;",
     "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server .",
-    "build:stats": "node ./script/build-stats.js",
     "prestorybook": "curl -o build/package/css/application.css http://localhost-studio.code.org:3000/assets/application.css || curl -o build/package/css/application.css https://code-dot-org.github.io/cdo-styleguide/css/application.css",
     "storybook": "start-storybook -p 9001 -s build/package/,../dashboard/public,../",
     "storybook:deploy": "./script/deploy-storybook.sh"
