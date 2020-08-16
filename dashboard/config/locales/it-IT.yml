@@ -1366,3 +1366,5 @@ it:
       rimanere aggiornato sui progressi e sui progetti di tuo figlio!"
     link_your_email: Collega la tua email
     not_now: Non ora
+  behaviors:
+    this_sprite: questo personaggio

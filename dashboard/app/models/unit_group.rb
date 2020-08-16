@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: courses
+# Table name: unit_groups
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
@@ -10,13 +10,12 @@
 #
 # Indexes
 #
-#  index_courses_on_name  (name)
+#  index_unit_groups_on_name  (name)
 #
+
 require 'cdo/script_constants'
 
 class UnitGroup < ApplicationRecord
-  self.table_name = 'courses'
-
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
@@ -295,6 +294,7 @@ class UnitGroup < ApplicationRecord
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
+      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
         include_stages = false
         script.summarize(include_stages, user).merge!(script.summarize_i18n(include_stages))
