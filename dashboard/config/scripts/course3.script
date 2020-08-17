@@ -1,3 +1,6 @@
+is_course true
+family_name 'course3'
+version_year 'default'
 tts true
 hidden false
 hideable_lessons true
