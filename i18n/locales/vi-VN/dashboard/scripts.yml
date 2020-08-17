@@ -141,7 +141,7 @@ vi:
             Functional Suncatchers:
               name: Chức năng của tấm hứng ánh nắng
             Internet:
-              name: 'internet'
+              name: internet
             Maze:
               name: Mê cung
             'Maze: Conditionals':
@@ -3117,7 +3117,7 @@ vi:
             Digital Citizenship:
               name: Công dân số
             Internet:
-              name: 'internet'
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Introduction:
@@ -3886,7 +3886,7 @@ vi:
             Introduction:
               name: Giới thiệu
             Internet:
-              name: 'internet'
+              name: internet
             Digital Citizenship:
               name: Công dân số
             Envelope Variables:
@@ -4010,7 +4010,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: 'internet'
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Nested Loops in Bee/Zombie:
@@ -4090,7 +4090,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: 'internet'
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
         new-f:
@@ -4267,7 +4267,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: 'internet'
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
         course-f-2018:
@@ -5145,7 +5145,7 @@ vi:
             csf_for_loops:
               display_name: Cho vòng lặp
             csf_internet:
-              display_name: 'internet'
+              display_name: internet
             csf_digcit:
               display_name: Công dân số
           lessons:
@@ -5222,7 +5222,7 @@ vi:
             'Functions: Songwriting':
               name: Sáng tác với tham số
             Internet:
-              name: 'internet'
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Nested Loops in Frozen:
@@ -5263,7 +5263,7 @@ vi:
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Internet:
-              name: 'internet'
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Dance Party:
