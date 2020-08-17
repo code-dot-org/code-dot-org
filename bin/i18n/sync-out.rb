@@ -186,7 +186,7 @@ def parse_file(path)
 end
 
 def sanitize_file_and_write(loc_path, dest_path)
-  parse_file(loc_path)
+  loc_data = parse_file(loc_path)
   sanitize_data_and_write(loc_data, dest_path)
 end
 
