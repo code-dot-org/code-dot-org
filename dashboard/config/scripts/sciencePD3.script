@@ -1,16 +1,17 @@
 professional_learning_course 'CS in Science Support'
-login_required 'true'
+login_required true
 
-lesson 'Welcome Back!'
+lesson 'Welcome Back!', display_name: 'Welcome Back!'
 level 'sciPDpart4_S1_L1'
 level 'sciPD2Part4_S1_L2'
 level 'sciPD2Part4_S1_L3'
 
-lesson 'Mystery Model'
+lesson 'Mystery Model', display_name: 'Mystery Model'
 level 'sciPD2Part4_S2_L1'
 level 'sciPD2Part4_S2_L2'
 
-lesson 'Decode and Share'
+lesson 'Decode and Share', display_name: 'Decode and Share'
 level 'sciPD2Part4_S3_L1'
 level 'sciPD2Part4_S3_L2'
 level 'sciPD2Part4_S3_L3'
+
