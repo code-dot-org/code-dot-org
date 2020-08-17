@@ -663,7 +663,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_empty script.lessons
 
     script_text = <<~SCRIPT_TEXT
-      lesson 'stage 1'
+      lesson 'stage 1', display_name: 'stage 1'
       level '#{level.name}'
     SCRIPT_TEXT
 
