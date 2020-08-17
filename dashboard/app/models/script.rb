@@ -1302,11 +1302,12 @@ class Script < ActiveRecord::Base
     data['lessons'] = {}
     lessons.each do |lesson|
       lesson_data = {
+        'key' => lesson.key,
         'name' => lesson.name,
-        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.name}.description_student", default: ''),
-        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.name}.description_teacher", default: '')
+        'description_student' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
+        'description_teacher' => (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
       }
-      data['lessons'][lesson.name] = lesson_data
+      data['lessons'][lesson.key] = lesson_data
     end
 
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
@@ -1318,11 +1319,12 @@ class Script < ActiveRecord::Base
     end.to_h
 
     if include_lessons
-      data['stageDescriptions'] = lessons.map do |stage|
+      data['stageDescriptions'] = lessons.map do |lesson|
         {
-          name: stage.name,
-          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_student", default: ''),
-          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{stage.name}.description_teacher", default: '')
+          key: lesson.key,
+          name: lesson.name,
+          descriptionStudent: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_student", default: ''),
+          descriptionTeacher: (I18n.t "data.script.name.#{name}.lessons.#{lesson.key}.description_teacher", default: '')
         }
       end
     end

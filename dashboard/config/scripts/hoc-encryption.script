@@ -1,7 +1,7 @@
 hidden false
 is_translateable true
 
-lesson 'Simple Encryption'
+lesson 'Simple Encryption', display_name: 'Simple Encryption'
 level 'Crack a Caesar Cipher', named: true
 level 'Terminology Recap', named: true
 level 'New Challenge Introduction', named: true

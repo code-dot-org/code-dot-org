@@ -2,7 +2,7 @@ hidden false
 wrapup_video 'hoc_wrapup'
 is_translateable true
 
-lesson 'Maze'
+lesson 'Maze', display_name: 'Maze'
 skin 'birds'
 video_key_for_next_level 'maze_intro'
 concepts 'sequence'

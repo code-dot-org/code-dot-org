@@ -1,7 +1,7 @@
 hidden false
 is_translateable true
 
-lesson 'Hour of Code 2015'
+lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015'
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'

@@ -1,7 +1,7 @@
 login_required true
 is_translateable true
 
-lesson 'Room Escape'
+lesson 'Room Escape', display_name: 'Room Escape'
 level 'Escape Room Example', named: true
 level 'Overview: Design Mode', named: true
 level 'Overview: Images', named: true

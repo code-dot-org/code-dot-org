@@ -1,7 +1,7 @@
 hidden false
 is_translateable true
 
-lesson 'Infinity'
+lesson 'Infinity', display_name: 'Infinity'
 level 'Infinity_move_right'
 level 'Infinity_say'
 level 'Infinity_move_directions'

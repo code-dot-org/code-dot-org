@@ -3,7 +3,7 @@ has_lesson_plan true
 tts true
 is_translateable true
 
-lesson 'Dance Party'
+lesson 'Dance Party', display_name: 'Dance Party'
 level 'Dance_Party_01'
 level 'Dance_Party_02'
 level 'Dance_Party_03'

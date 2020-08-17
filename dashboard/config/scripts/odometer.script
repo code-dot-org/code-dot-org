@@ -1,5 +1,5 @@
 is_translateable true
 
-lesson 'Odometer Widget'
+lesson 'Odometer Widget', display_name: 'Odometer Widget'
 level 'Odometer'
 
