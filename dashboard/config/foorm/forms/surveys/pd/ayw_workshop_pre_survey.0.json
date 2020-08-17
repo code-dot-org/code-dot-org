@@ -6,10 +6,8 @@
     {
      "type": "html",
      "name": "pre_survey_preamble",
-     "baker_comment":"Whatever this becomes we should put into the workshop_elements library and pull from there",
-     "html": "<h2>{workshop_course} Workshop Pre-Survey</h2><br><p>NEED TO FILL IN PREAMBLE CONTENT</p>"
+     "html": "<h2>{workshop_course} Workshop Pre-Survey</h2>\n<p><strong>Welcome back!</strong></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about 5 minutes to complete. </p>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
     },
-
     {
      "type": "radiogroup",
      "name": "planning_to_attend",
