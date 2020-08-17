@@ -1,4 +1,4 @@
-lesson 'Step'
+lesson 'Step', display_name: 'Step'
 skin 'birds'
 level 'blockly:MazeStep:2_1_step'
 skin 'birds'
@@ -11,3 +11,4 @@ skin 'farmer_night'
 level 'blockly:MazeStep:karel_2_9_step'
 skin 'bee'
 level 'blockly:MazeStep:karel_bee_1'
+
