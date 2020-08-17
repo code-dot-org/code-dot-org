@@ -2433,6 +2433,8 @@ pl:
               name: Bycie bezpiecznym w sieci
             'Loops: Happy Loops':
               name: 'Pętle: Szczęśliwe pętle'
+            Loops in Artist:
+              name: Pętle z Artystą
             Going Places Safely:
               name: Bezpiecznie dotrzeć na miejsce
             'Debugging: Unspotted Bugs':
@@ -2447,6 +2449,8 @@ pl:
               name: Bycie bezpiecznym w sieci
             Programming in Maze:
               name: Programowanie w labiryncie
+            Loops in Artist:
+              name: Pętle z Artystą
             More Computer Science:
               name: Więcej informatyki
             'Real-life Algorithms: Plant a Seed':
@@ -2472,6 +2476,8 @@ pl:
               name: Kładąc podwaliny (Building a Foundation)
             Debugging in Maze:
               name: Debugowanie labiryntu
+            Loops in Harvester:
+              name: Pętle w Żniwiarce
         coursed-draft:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           lessons:
@@ -3130,6 +3136,8 @@ pl:
               name: Programowanie w labiryncie
             'Loops: Happy Loops':
               name: 'Pętle: Szczęśliwe pętle'
+            Loops in Artist:
+              name: Pętle z Artystą
         courseb-2017:
           title: Kurs B
           assignment_family_title: Kurs B
@@ -3142,6 +3150,8 @@ pl:
               name: 'Algorytmy z życia wzięte: sadź nasiona'
             Programming in Maze:
               name: Programowanie w labiryncie
+            Loops in Artist:
+              name: Pętle z Artystą
         coursec-2017:
           title: Kurs C
           assignment_family_title: Kurs C
@@ -3156,8 +3166,12 @@ pl:
               name: 'Rzeczywiste algorytmy: Papierowe samoloty'
             Loops in Maze:
               name: Pętle w labiryncie
+            Loops in Harvester:
+              name: Pętle w Żniwiarce
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
+            Loops in Artist:
+              name: Pętle z Artystą
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
         coursed-2017:
@@ -3217,6 +3231,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Nested Loops:
               name: Zagnieżdżające się  pętle
         coursef-2017:
@@ -3254,6 +3270,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
         csdnovice:
           lessons:
             Tuesday:
@@ -3365,6 +3383,8 @@ pl:
           lessons:
             Introduction:
               name: Wstęp
+            Loops in Artist:
+              name: Pętle z Artystą
             Internet:
               name: Internet
             Digital Citizenship:
@@ -3414,6 +3434,8 @@ pl:
               name: Programowanie w labiryncie
             'Programming: Star Wars':
               name: 'Programowanie: Star Wars'
+            Loops in Artist:
+              name: Pętle z Artystą
             Spelling Bee:
               name: Literująca Pszczółka
         subgoal-labels-opt-in:
@@ -3518,6 +3540,8 @@ pl:
           lessons:
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Conditionals:
@@ -3554,6 +3578,8 @@ pl:
               name: 'Artysta: Binarny'
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Nested Loops in Bee:
               name: Zagnieżdżone pętle w pszczole
             Loops in Ice Age:
@@ -3572,6 +3598,8 @@ pl:
           lessons:
             Introduction:
               name: Wstęp
+            Loops in Artist:
+              name: Pętle z Artystą
             Events in Star Wars:
               name: Wydarzenia w Star Wars
             Conditional Loops in Maze:
@@ -3603,6 +3631,8 @@ pl:
         new-stages-sept-2017:
           title: Nowe fazy dla 9/17
           lessons:
+            Loops in Artist:
+              name: Pętle z Artystą
             Testing Template:
               name: Testowanie szablonu
         new-e:
@@ -3618,6 +3648,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Conditionals:
               name: Zdania z warunkami
             Functions in Bee:
@@ -3641,6 +3673,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             The Power of Words:
               name: Moc Słów
             Ice Age Play Lab:
@@ -3810,6 +3844,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Introduction:
@@ -3837,6 +3873,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Introduction:
               name: Wstęp
             The Power of Words:
@@ -4782,6 +4820,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Conditionals with Cards:
               name: Warunkowe z kartami
             The Power of Words:
@@ -4868,6 +4908,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Conditionals with Cards:
@@ -5008,6 +5050,8 @@ pl:
               name: 'Rzeczywiste algorytmy: Papierowe samoloty'
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
+            Loops in Artist:
+              name: Pętle z Artystą
             'Events: The Big Event':
               name: Wielkie wydarzenie
             Build a Flappy Game:
@@ -5043,6 +5087,8 @@ pl:
               name: Bezpiecznie dotrzeć na miejsce
             'Loops: Happy Loops':
               name: 'Pętle: Szczęśliwe pętle'
+            Loops in Artist:
+              name: Pętle z Artystą
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
         courseb-2019:
@@ -5454,6 +5500,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            Loops in Artist:
+              name: Pętle z Artystą
             Alien Dance Party with Sprite Lab:
               name: Wydarzenia z Sprite Lab
             Build a Flappy Game:
@@ -5790,6 +5838,8 @@ pl:
               name: nowy etap
             Introduction:
               name: Wstęp
+            Loops in Artist:
+              name: Pętle z Artystą
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Events in Star Wars:
@@ -5961,6 +6011,10 @@ pl:
               display_name: 'Rozdział 2: Style i CSS'
             cspSurvey:
               display_name: Ankieta
+            csd2_1v2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            csd2_2v2:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
           lessons:
             Intro to HTML:
               name: Wprowadzenie do HTML
@@ -6371,6 +6425,8 @@ pl:
               name: Debugowanie labiryntu
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
+            Loops in Artist:
+              name: Pętle z Artystą
             Nested Loops in Bee:
               name: Zagnieżdżone pętle w pszczole
             Conditionals in Bee:
@@ -6413,6 +6469,8 @@ pl:
               name: Literująca Pszczółka
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
+            Loops in Artist:
+              name: Pętle z Artystą
             Programming in with Angry Birds:
               name: Programowanie z Angry Birds
         csp1-2020:
@@ -6487,6 +6545,8 @@ pl:
           lessons:
             new stage:
               name: nowy etap
+            Tools:
+              name: Narzędzia
             Debugging:
               name: Debugowanie
             Virtual Professional Learning Overview:
@@ -6865,6 +6925,7 @@ pl:
           lessons:
             Module 2:
               name: Moduł 2
+          title: Wirtualne Profesjonalne Kształcenie w zakresie Odkrywania Informatyki w latach 2020-2021
         vpl-csp-2020:
           lessons:
             Module 2:
@@ -6881,3 +6942,4 @@ pl:
               name: Moduł 7
             Module 8:
               name: Moduł 8
+          title: Wirtualne Profesjonalne Kształcenie w zakresie Podstaw Informatyki

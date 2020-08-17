@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative('../../dashboard/config/environment')
 require 'cdo/contact_rollups'
 require 'cdo/contact_rollups_validation'
 require 'cdo/pardot'
 require 'cdo/chat_client'
-require 'cdo/only_one'
 require 'cdo/log_collector'
 require 'honeybadger/ruby'
 
@@ -50,4 +51,4 @@ ensure
   end
 end
 
-main if only_one_running?(__FILE__)
+main

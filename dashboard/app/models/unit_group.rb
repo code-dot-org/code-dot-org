@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: courses
+# Table name: unit_groups
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
@@ -10,23 +10,22 @@
 #
 # Indexes
 #
-#  index_courses_on_name  (name)
+#  index_unit_groups_on_name  (name)
 #
+
 require 'cdo/script_constants'
 
 class UnitGroup < ApplicationRecord
-  self.table_name = 'courses'
-
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
-  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
-  has_many :default_scripts, through: :default_course_scripts, source: :script
-  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_scripts, through: :default_unit_group_units, source: :script
+  has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_one :course_version, as: :content_root
 
   after_save :write_serialization
 
-  scope :with_associated_models, -> {includes([:plc_course, :default_course_scripts])}
+  scope :with_associated_models, -> {includes([:plc_course, :default_unit_group_units])}
 
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
@@ -109,7 +108,7 @@ class UnitGroup < ApplicationRecord
     JSON.pretty_generate(
       {
         name: name,
-        script_names: default_course_scripts.map(&:script).map(&:name),
+        script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_scripts: summarize_alternate_scripts,
         properties: properties
       }.compact
@@ -117,13 +116,13 @@ class UnitGroup < ApplicationRecord
   end
 
   def summarize_alternate_scripts
-    alternates = alternate_course_scripts.all
+    alternates = alternate_unit_group_units.all
     return nil if alternates.empty?
-    alternates.map do |cs|
+    alternates.map do |ugu|
       {
-        experiment_name: cs.experiment_name,
-        alternate_script: cs.script.name,
-        default_script: cs.default_script.name
+        experiment_name: ugu.experiment_name,
+        alternate_script: ugu.script.name,
+        default_script: ugu.default_script.name
       }
     end
   end
@@ -160,29 +159,29 @@ class UnitGroup < ApplicationRecord
   def update_scripts(new_scripts, alternate_scripts = nil)
     alternate_scripts ||= []
     new_scripts = new_scripts.reject(&:empty?)
-    # we want to delete existing course scripts that aren't in our new list
-    scripts_to_delete = default_course_scripts.map(&:script).map(&:name) - new_scripts
+    # we want to delete existing unit group units that aren't in our new list
+    scripts_to_delete = default_unit_group_units.map(&:script).map(&:name) - new_scripts
     scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
 
     new_scripts.each_with_index do |script_name, index|
       script = Script.find_by_name!(script_name)
-      course_script = CourseScript.find_or_create_by!(unit_group: self, script: script) do |cs|
-        cs.position = index + 1
+      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |ugu|
+        ugu.position = index + 1
       end
-      course_script.update!(position: index + 1)
+      unit_group_unit.update!(position: index + 1)
     end
 
     alternate_scripts.each do |hash|
       alternate_script = Script.find_by_name!(hash['alternate_script'])
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
-      position = default_course_scripts.find_by(script: default_script).position
-      course_script = CourseScript.find_or_create_by!(unit_group: self, script: alternate_script) do |cs|
-        cs.position = position
-        cs.experiment_name = hash['experiment_name']
-        cs.default_script = default_script
+      position = default_unit_group_units.find_by(script: default_script).position
+      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_script) do |ugu|
+        ugu.position = position
+        ugu.experiment_name = hash['experiment_name']
+        ugu.default_script = default_script
       end
-      course_script.update!(
+      unit_group_unit.update!(
         position: position,
         experiment_name: hash['experiment_name'],
         default_script: default_script
@@ -191,9 +190,9 @@ class UnitGroup < ApplicationRecord
 
     scripts_to_delete.each do |script_name|
       script = Script.find_by_name!(script_name)
-      CourseScript.where(unit_group: self, script: script).destroy_all
+      UnitGroupUnit.where(unit_group: self, script: script).destroy_all
     end
-    # Reload model so that default_course_scripts is up to date
+    # Reload model so that default_unit_group_units is up to date
     transaction {reload}
   end
 
@@ -215,7 +214,7 @@ class UnitGroup < ApplicationRecord
     info[:category_priority] = -1
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
-      default_course_scripts.map(&:script_id)
+      default_unit_group_units.map(&:script_id)
     info
   end
 
@@ -255,9 +254,9 @@ class UnitGroup < ApplicationRecord
 
   # @param user [User]
   # @returns [Boolean] Whether the user has any experiment enabled which is
-  #   associated with an alternate course script.
+  #   associated with an alternate unit group unit.
   def self.has_any_course_experiments?(user)
-    Experiment.any_enabled?(user: user, experiment_names: CourseScript.experiments)
+    Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
   end
 
   # Get the set of valid courses for the dropdown in our sections table.
@@ -269,7 +268,7 @@ class UnitGroup < ApplicationRecord
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
-    valid_courses.any? {|course| course.id == course_id.to_i}
+    valid_courses.any? {|unit_group| unit_group.id == course_id.to_i}
   end
 
   # @param user [User]
@@ -295,6 +294,7 @@ class UnitGroup < ApplicationRecord
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
+      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
         include_stages = false
         script.summarize(include_stages, user).merge!(script.summarize_i18n(include_stages))
@@ -350,61 +350,61 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Array<Script>]
   def scripts_for_user(user)
-    default_course_scripts.map do |cs|
-      select_course_script(user, cs).script
+    default_unit_group_units.map do |ugu|
+      select_unit_group_unit(user, ugu).script
     end
   end
 
-  # Return an alternate course script associated with the specified default
-  # course script (or the default course script itself) by evaluating these
+  # Return an alternate unit group unit associated with the specified default
+  # unit group unit (or the default unit group unit itself) by evaluating these
   # rules in order:
   #
   # 1. If the user is a teacher, and they have a course experiment enabled,
-  # show the corresponding alternate course script.
+  # show the corresponding alternate unit group unit.
   #
   # 2. If the user is in a section assigned to this course: show an alternate
-  # course script if any section's teacher is in a corresponding course
-  # experiment, otherwise show the default course script.
+  # unit group unit if any section's teacher is in a corresponding course
+  # experiment, otherwise show the default unit group unit.
   #
-  # 3. If the user is a student and has progress in an alternate course script,
-  # show the alternate course script.
+  # 3. If the user is a student and has progress in an alternate unit group unit,
+  # show the alternate unit group unit.
   #
-  # 4. Otherwise, show the default course script.
+  # 4. Otherwise, show the default unit group unit.
   #
   # @param user [User|nil]
-  # @param default_course_script [CourseScript]
-  # @return [CourseScript]
-  def select_course_script(user, default_course_script)
-    return default_course_script unless user
+  # @param default_unit_group_unit [UnitGroupUnit]
+  # @return [UnitGroupUnit]
+  def select_unit_group_unit(user, unit_group_unit)
+    return unit_group_unit unless user
 
-    alternates = alternate_course_scripts.where(default_script: default_course_script.script).all
+    alternates = alternate_unit_group_units.where(default_script: unit_group_unit.script).all
 
     if user.teacher?
-      alternates.each do |cs|
-        return cs if SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
+      alternates.each do |ugu|
+        return ugu if SingleUserExperiment.enabled?(user: user, experiment_name: ugu.experiment_name)
       end
     end
 
     course_sections = user.sections_as_student.where(unit_group: self)
     unless course_sections.empty?
-      alternates.each do |cs|
+      alternates.each do |ugu|
         course_sections.each do |section|
-          return cs if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: cs.experiment_name)
+          return ugu if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: ugu.experiment_name)
         end
       end
-      return default_course_script
+      return unit_group_unit
     end
 
     if user.student?
-      alternates.each do |cs|
+      alternates.each do |ugu|
         # include hidden scripts when iterating over user scripts.
         user.user_scripts.each do |us|
-          return cs if cs.script == us.script
+          return ugu if ugu.script == us.script
         end
       end
     end
 
-    default_course_script
+    unit_group_unit
   end
 
   # @param user [User]
@@ -478,9 +478,9 @@ class UnitGroup < ApplicationRecord
   def has_progress?(user)
     return nil unless user
     user_script_ids = user.user_scripts.pluck(:script_id)
-    course_scripts_with_progress = default_course_scripts.where('course_scripts.script_id' => user_script_ids)
+    unit_group_units_with_progress = default_unit_group_units.where('course_scripts.script_id' => user_script_ids)
 
-    course_scripts_with_progress.count > 0
+    unit_group_units_with_progress.count > 0
   end
 
   # @param user [User]
@@ -490,7 +490,7 @@ class UnitGroup < ApplicationRecord
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     UnitGroup.
-      joins(:default_course_scripts).
+      joins(:default_unit_group_units).
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
       # select only older versions
@@ -529,15 +529,15 @@ class UnitGroup < ApplicationRecord
   # generates our course_cache from what is in the Rails cache
   def self.course_cache_from_cache
     # make sure possible loaded objects are completely loaded
-    [CourseScript, Plc::Course].each(&:new)
+    [UnitGroupUnit, Plc::Course].each(&:new)
     Rails.cache.read COURSE_CACHE_KEY
   end
 
   def self.course_cache_from_db
     {}.tap do |cache|
-      UnitGroup.with_associated_models.find_each do |course|
-        cache[course.name] = course
-        cache[course.id.to_s] = course
+      UnitGroup.with_associated_models.find_each do |unit_group|
+        cache[unit_group.name] = unit_group
+        cache[unit_group.id.to_s] = unit_group
       end
     end
   end
