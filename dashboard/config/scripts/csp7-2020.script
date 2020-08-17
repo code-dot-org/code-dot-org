@@ -12,17 +12,17 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_parameters_return_values', display_name: 'Parameters and Return Values'
-lesson 'Parameters and Return Explore'
+lesson 'Parameters and Return Explore', display_name: 'Parameters and Return Explore'
 level 'CSP U7L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7L1 CFU Return', progression: 'Check For Understanding', assessment: true
 
-lesson 'Parameters and Return Investigate'
+lesson 'Parameters and Return Investigate', display_name: 'Parameters and Return Investigate'
 level 'CSP U7L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Investigate Rock', progression: 'App Investigation'
 level 'U7 Param Investigate Poetry App', progression: 'App Investigation'
 level 'U7L2 CSP CFU Param and Return', progression: 'Check For Understanding', assessment: true
 
-lesson 'Parameters and Return Practice'
+lesson 'Parameters and Return Practice', display_name: 'Parameters and Return Practice'
 level 'CSP U7L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Practice Part 1', progression: 'console.log Practice'
 level 'U7 Param Return Practice Part 2', progression: 'console.log Practice'
@@ -34,23 +34,23 @@ level 'U7 Param Practice App 2', progression: 'App Practice'
 level 'U7 Param Return Practice MOD', progression: 'MOD Practice'
 level 'U73 CFU Param Return AP', progression: 'Check For Understanding: AP Practice', assessment: true
 
-lesson 'Parameters and Return Make'
+lesson 'Parameters and Return Make', display_name: 'Parameters and Return Make'
 level 'CSP U7L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Make RPS App_2020', progression: 'Try the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App Project_2020', progression: 'Make the Rock Paper Scissors App', assessment: true
 
 lesson_group 'csp_libraries', display_name: 'Libraries'
-lesson 'Libraries Explore'
+lesson 'Libraries Explore', display_name: 'Libraries Explore'
 level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: true
 
-lesson 'Libraries Investigate'
+lesson 'Libraries Investigate', display_name: 'Libraries Investigate'
 level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7L6 States App Investigation', progression: 'States App'
 level 'U7L6 Pigify App Investigation', progression: 'Pigify App'
 level 'U7L6 CSP CFU Libraries', progression: 'Check For Understanding', assessment: true
 
-lesson 'Libraries Practice'
+lesson 'Libraries Practice', display_name: 'Libraries Practice'
 level 'CSP U7L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Practice 3', progression: 'Using Libraries'
 level 'U7 Libraries Practice 5', progression: 'Using Libraries'
@@ -58,20 +58,20 @@ level 'U7 Libraries Practice 2', progression: 'Testing Libraries'
 level 'U7 Libraries Practice 1', progression: 'Testing Libraries'
 level 'U7 Libraries Practice 4', progression: 'Testing Libraries'
 
-lesson 'Project - Make a Library Part 1'
+lesson 'Project - Make a Library Part 1', display_name: 'Project - Make a Library Part 1'
 level 'CSP U7L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Project Part 1', progression: 'Build Your Library'
 
-lesson 'Project - Make a Library Part 2'
+lesson 'Project - Make a Library Part 2', display_name: 'Project - Make a Library Part 2'
 level 'CSP U7L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Project Part 2', progression: 'Build Your Library'
 level 'U7 Libraries Project Test a Library', progression: 'Test a Classmate\'s Library'
 
-lesson 'Project - Make a Library Part 3'
+lesson 'Project - Make a Library Part 3', display_name: 'Project - Make a Library Part 3'
 level 'CSP U7L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Project Part 3', progression: 'Build Your Library', assessment: true
 
-lesson 'Lesson 11: Assessment Day', lockable: true
+lesson 'Lesson 11: Assessment Day', display_name: 'Lesson 11: Assessment Day', lockable: true
 level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 7 AP-Style Assessment _2020', progression: 'Unit 7 Exam', assessment: true
 
