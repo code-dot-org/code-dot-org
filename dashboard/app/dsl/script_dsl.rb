@@ -97,9 +97,9 @@ class ScriptDSL < BaseDSL
     @lesson_groups[current_lesson_group][:big_questions] << question
   end
 
-  def lesson(name, properties = {})
+  def lesson(key, properties = {})
     # For scripts that don't use lesson groups create a blank non-user facing lesson group
-    if name
+    if key
       if @lesson_groups.empty?
         @lesson_groups << {
           key: nil,
@@ -109,7 +109,8 @@ class ScriptDSL < BaseDSL
       end
 
       @lesson_groups.last[:lessons] << {
-        name: name,
+        key: key,
+        name: properties[:display_name],
         lockable: properties[:lockable],
         visible_after: determine_visible_after_time(properties[:visible_after]),
         script_levels: []
@@ -296,7 +297,7 @@ class ScriptDSL < BaseDSL
         end
       end
       lesson_group[:lessons].each do |lesson|
-        i18n_lesson_strings[lesson[:name]] = {'name' => lesson[:name]}
+        i18n_lesson_strings[lesson[:key]] = {'name' => lesson[:name]}
       end
     end
 
@@ -384,7 +385,8 @@ class ScriptDSL < BaseDSL
   def self.serialize_lesson(lesson)
     s = []
 
-    t = "lesson '#{escape(lesson.name)}'"
+    t = "lesson '#{escape(lesson.key)}'"
+    t += ", display_name: '#{escape(lesson.name)}'" if lesson.name
     t += ', lockable: true' if lesson.lockable
     t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
     s << t

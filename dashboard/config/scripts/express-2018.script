@@ -1,4 +1,3 @@
-tts true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/express/standards/"]]
@@ -13,11 +12,12 @@ version_year '2018'
 is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
+tts true
 
-lesson 'Graph Paper Programming'
+lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
 
-lesson 'Programming in Maze'
+lesson 'Programming in Maze', display_name: 'Coding with Angry Birds'
 level 'courseC_video_maze_2018'
 level 'courseC_maze_programming1_2018'
 level 'courseC_maze_programming2_2018'
@@ -32,10 +32,10 @@ level 'courseC_maze_programming9_2018'
 bonus 'courseC_maze_programming_challenge1_2018'
 bonus 'courseC_maze_programming_challenge2_2018'
 
-lesson 'Relay Programming'
+lesson 'Relay Programming', display_name: 'Relay Programming'
 level 'RelayProgramming_2018'
 
-lesson 'Debugging in Maze'
+lesson 'Debugging in Maze', display_name: 'Debugging with Scrat'
 level 'courseC_video_debugging_2018'
 level 'courseC_maze_debugging1_2018'
 level 'courseC_maze_debugging2_2018'
@@ -49,7 +49,7 @@ level 'courseC_maze_debugging9_2018'
 bonus 'courseC_maze_debugging_challenge1_2018'
 bonus 'courseC_maze_debugging_challenge2_2018'
 
-lesson 'Programming in Collector'
+lesson 'Programming in Collector', display_name: 'Collecting Treasure with Laurel'
 level 'courseC_video_collector_2018'
 level 'courseC_collector_prog1_2018'
 level 'courseC_collector_prog2_2018'
@@ -66,7 +66,7 @@ level 'grade2_collector_10_2018'
 bonus 'courseC_collector_prog_challenge1_2018'
 bonus 'courseC_collector_prog_challenge2_2018'
 
-lesson 'Programming in Artist'
+lesson 'Programming in Artist', display_name: 'Creating Art with Code'
 level 'courseC_video_artist_2018'
 level 'courseC_artist_prog1_2018'
 level 'courseC_artist_prog2_2018'
@@ -80,10 +80,10 @@ level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: Getting Loopy'
+lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy'
 level 'GettingLoopy_2018'
 
-lesson 'Loops with Rey and BB-8'
+lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8'
 level 'bb8_skinOverview_C-F_video'
 level 'courseC_starWars_loops1_2018'
 level 'courseC_starWars_loops1_predict1_2018'
@@ -101,7 +101,7 @@ level 'courseC_starWars_loops11_2018'
 bonus 'courseC_maze_loops_challenge1a_2018'
 bonus 'courseC_collector_loops_challenge2_2018'
 
-lesson 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Sticker Art with Loops'
 level 'courseC_artist_loopsPrePre1a_2018'
 level 'courseC_artist_loopsPre1a_2018'
 level 'courseC_artist_loop1_2018'
@@ -115,10 +115,10 @@ level 'courseC_artist_loops6a_2018'
 level 'courseC_artist_loops7a_2018'
 level 'courseC_artist_loops8a_2018'
 
-lesson 'Copyright and Creativity'
+lesson 'Copyright and Creativity', display_name: 'Copyright and Creativity'
 level 'courseE_unplugged_CnC_2018'
 
-lesson 'Concept Practice with Minecraft '
+lesson 'Concept Practice with Minecraft ', display_name: 'Looking Ahead with Minecraft'
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'
@@ -134,7 +134,7 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-lesson 'Nested Loops in Bee'
+lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Bee'
 level 'courseD_bee_nestedLoops1a_2018'
 level 'courseD_bee_nestedLoops1_2018'
 level 'courseD_video_nestedLoops_2018'
@@ -151,7 +151,7 @@ level 'courseD_bee_nestedLoops9_predict2_2018'
 bonus 'courseD_harvester_nested_loops_challenge1_2018'
 bonus 'courseD_collector_nested_loops_challenge2_2018'
 
-lesson 'Nested Loops in Frozen'
+lesson 'Nested Loops in Frozen', display_name: 'Nested Loops with Anna and Elsa'
 level 'courseD_artist_1_2018'
 level 'courseD_artist_2_2018'
 level 'courseD_artist_3_2018'
@@ -159,7 +159,7 @@ level 'courseD_artist_4_2018'
 level 'courseD_artist_5_2018'
 level 'courseD_artist_6_2018'
 
-lesson 'While Loops in Farmer'
+lesson 'While Loops in Farmer', display_name: 'While Loops with the Farmer'
 level 'courseD_farmer_while1_2018'
 level 'courseD_farmer_while2_2018'
 level 'courseD_farmer_while3_2018'
@@ -175,7 +175,7 @@ level 'courseD_farmer_while10_2018'
 level 'courseD_farmer_while10_predict2_2018'
 bonus 'courseD_farmer_while_challenge1_2018'
 
-lesson 'Until Loops in Maze'
+lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze'
 level 'courseD_maze_until1_2018'
 level 'courseD_video_repeatUntil_2018'
 level 'courseD_maze_until2_predict1_2018'
@@ -188,10 +188,10 @@ level 'courseD_maze_until9_2018', challenge: true
 level 'courseD_maze_until10_2018'
 level 'courseD_maze_until10_predict2_2018'
 
-lesson 'Conditionals with Cards'
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards'
 level 'Conditionals_2018'
 
-lesson 'Conditionals in Bee'
+lesson 'Conditionals in Bee', display_name: 'If/Else with Bee'
 level 'courseD_bee_conditionalsVid1_2018'
 level 'courseD_bee_conditionals1_predict1_2018'
 level 'courseD_bee_conditionals2_2018'
@@ -208,7 +208,7 @@ level 'courseD_bee_conditionals10_2018'
 bonus 'courseD_bee_conditionals_challenge1_2018'
 bonus 'courseD_bee_conditionals_challenge2_2018'
 
-lesson 'Conditionals & Loops in Harvester'
+lesson 'Conditionals & Loops in Harvester', display_name: 'Harvesting with Conditionals'
 level 'harvester_skinOverview_video'
 level 'courseD_farmer_condLoops1_2018'
 level 'courseD_farmer_condLoops2_2018'
@@ -223,10 +223,10 @@ level 'courseD_farmer_condLoops9_predict1_2018'
 bonus 'courseD_farmer_condLoops_challenge1_2018'
 bonus 'courseD_farmer_condLoops_challenge2_2018'
 
-lesson 'Functions: Songwriting'
+lesson 'Functions: Songwriting', display_name: 'Songwriting'
 level 'SongwritingParameters_2018'
 
-lesson 'Functions in Minecraft'
+lesson 'Functions in Minecraft', display_name: 'Functions with Minecraft'
 level 'MC_HOC_2017_01_RETRY'
 level 'MC_HOC_2017_02_Cole'
 level 'MC_HOC_2017_03_Cole'
@@ -240,7 +240,7 @@ level 'MC_HOC_2017_10_RETRY'
 level 'MC_HOC_2017_Ali'
 level 'MC_HOC_2017_FP20x20'
 
-lesson 'Functions in Harvester'
+lesson 'Functions in Harvester', display_name: 'Functions with the Harvester'
 level 'harvester_skinOverview_video'
 level 'courseE_farmer_functions1_2018'
 level 'courseE_farmer_functions1a_2018'
@@ -256,7 +256,7 @@ level 'courseE_farmer_functions10a1_2018', challenge: true
 level 'courseE_farmer_functions13_2018'
 level 'courseE_farmer_functions11_predict_2018'
 
-lesson 'Functions in Artist'
+lesson 'Functions in Artist', display_name: 'Functions in Artist'
 level 'courseE_artist_functions_predict1_2018'
 level 'courseE_artist_functions2_2018'
 level 'courseE_artist_functions3_2018'
@@ -273,10 +273,10 @@ level 'courseE_artist_functionsProj_2018'
 bonus 'courseE_artist_functions_challenge1_2018'
 bonus 'courseE_artist_functions_challenge2_2018'
 
-lesson 'Screen Out the Mean'
+lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean'
 level 'courseC_Unplugged_ScreenOutTheMean_2018'
 
-lesson 'Determine the Concept'
+lesson 'Determine the Concept', display_name: 'Determine the Concept'
 level 'courseE_bee_concept1_2018'
 level 'courseE_farmer_concept1_2018'
 level 'courseE_bee_concept2_2018'
@@ -290,10 +290,10 @@ level 'courseE_artist_concept4_2018'
 bonus 'courseE_artist_concept_challenge1_2018'
 bonus 'courseE_artist_concept_challenge2_2018'
 
-lesson 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'The Big Event'
 level 'BigEvent_2018'
 
-lesson 'Build a Flappy Game'
+lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game'
 level 'courseC_video_flappyIntro_2018'
 level 'courseC_flappy_events1_2018'
 level 'courseC_flappy_events2_2018'
@@ -306,13 +306,13 @@ level 'courseC_flappy_events8_2018'
 level 'courseC_flappy_events9_2018'
 level 'courseC_flappy_events10_2018'
 
-lesson 'The Power of Words'
+lesson 'The Power of Words', display_name: 'The Power of Words'
 level 'courseF_unplugged_powerOfWords_2018'
 
-lesson 'Envelope Variables'
+lesson 'Envelope Variables', display_name: 'Envelope Variables'
 level 'EnvelopeVariables_2018'
 
-lesson 'Variables as Constant in Artist'
+lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist'
 level 'grade5_artist_variables_triangles1_2018'
 level 'courseF_artist_variables2_2018'
 level 'courseF_markdown_variables_intro'
@@ -325,7 +325,7 @@ level 'courseF_artist_variables6_2018'
 level 'courseF_artist_variables6a_2018'
 level 'courseF_external_variableConstant_2018'
 
-lesson 'Variables that Change in Bee'
+lesson 'Variables that Change in Bee', display_name: 'Changing Variables with Bee'
 level 'courseF_bee_variables_1_2018'
 level 'courseF_bee_variables_2_2018'
 level 'courseF_bee_variables_3_2018'
@@ -335,7 +335,7 @@ level 'courseF_bee_variables_6_2018', challenge: true
 level 'courseF_bee_variables_7_2018'
 level 'courseF_bee_variables_8_2018'
 
-lesson 'Variables that Change in Artist'
+lesson 'Variables that Change in Artist', display_name: 'Changing Variables with Artist'
 level 'courseF_artist_variables7_2018'
 level 'courseF_artist_variables8_2018'
 level 'courseF_artist_variables9_2018'
@@ -345,10 +345,10 @@ level 'courseF_markdown_variables_end'
 bonus 'courseF_artist_variables_challenge1_2018'
 bonus 'courseF_artist_variables_challenge2_2018'
 
-lesson 'For Loop Fun'
+lesson 'For Loop Fun', display_name: 'For Loop Fun'
 level 'ForLoopFun_2018'
 
-lesson 'For Loops in Bee'
+lesson 'For Loops in Bee', display_name: 'For Loops with Bee'
 level 'courseF_bee_for1_2018'
 level 'courseF_bee_for2_2018'
 level 'courseF_markdown_forloops_intro'
@@ -366,7 +366,7 @@ level 'courseF_markdown_forloops_end'
 bonus 'courseF_bee_for_challenge1_2018'
 bonus 'courseF_bee_for_challenge2_2018'
 
-lesson 'For Loops in Artist'
+lesson 'For Loops in Artist', display_name: 'For Loops with Artist'
 level 'courseF_video_forArtist_2018'
 level 'courseF_artist_for1_2018'
 level 'courseF_artist_for2_2018'
@@ -382,7 +382,7 @@ level 'courseF_artist_for10_2018'
 bonus 'courseF_artist_for_challenge1_2018'
 bonus 'courseF_artist_for_challenge2_2018'
 
-lesson 'Learning Sprites with Sprite Lab'
+lesson 'Learning Sprites with Sprite Lab', display_name: 'Learning Sprite Lab'
 level 'CourseEF_video_IntroSpriteLab'
 level 'Fish Tank 1-validated'
 level 'Fish Tank 2-validated'
@@ -393,7 +393,7 @@ level 'Fish Tank 5-validated'
 level 'Fish Tank 6-validated'
 level 'Fish Tank 7-validated'
 
-lesson 'Alien Dance Party with Sprite Lab'
+lesson 'Alien Dance Party with Sprite Lab', display_name: 'Alien Dance Party'
 level 'Dance Party 1-validated'
 level 'Dance Party 2'
 level 'Dance Party 3'
@@ -403,7 +403,7 @@ level 'Dance Party 6'
 level 'Dance Party 7'
 level 'Dance Party Freeplay'
 
-lesson 'Pet Giraffe with Sprite Lab'
+lesson 'Pet Giraffe with Sprite Lab', display_name: 'Pet Giraffe'
 level 'Virtual Pet 1'
 level 'Virtual Pet 2'
 level 'Virtual Pet 3'
@@ -412,32 +412,32 @@ level 'Virtual Pet 5'
 level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
-lesson 'Explore Project Ideas'
+lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas'
 level 'courseF_video_csMatters_2018', named: true
 level 'InspirationalArtwork_2018', named: true
 level 'courseF_project_1', named: true
 
-lesson 'The Design Process'
+lesson 'The Design Process', display_name: 'The Design Process'
 level 'Begin planning your project_2018', named: true
 
-lesson 'Build Your Project'
+lesson 'Build Your Project', display_name: 'Build Your Project'
 level 'Course F: Artist Project_2018', named: true
 level 'CourseF_Project_SpriteLab', named: true
 
-lesson 'Revise Your Project'
+lesson 'Revise Your Project', display_name: 'Revise Your Project'
 level 'Course F: Artist Project - Revise_2018', named: true
 level 'CourseF_Project_Revise_SpriteLab', named: true
 
-lesson 'Present Your Project'
+lesson 'Present Your Project', display_name: 'Present Your Project'
 level 'Prepare for your presentation_2018', named: true
 
-lesson 'Binary Bracelets'
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets'
 level 'BinaryBracelets_2018'
 
-lesson 'Unplugged: Binary'
+lesson 'Unplugged: Binary', display_name: 'Binary Images'
 level 'BinaryImages_2018'
 
-lesson 'Artist Binary'
+lesson 'Artist Binary', display_name: 'Binary Images with Artist'
 level 'courseD_external_binary1_2018'
 level 'courseD_artist_binary1_2018'
 level 'courseD_artist_binary2_2018'
@@ -452,8 +452,9 @@ level 'courseD_artist_binaryFP_2018'
 bonus 'courseD_artist_binary_challenge1_2018'
 bonus 'courseD_artist_binary_challenge2_2018'
 
-lesson 'Internet'
+lesson 'Internet', display_name: 'The Internet'
 level 'Internet_2018'
 
-lesson 'Crowdsourcing'
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing'
 level 'Crowdsourcing_2018'
+
