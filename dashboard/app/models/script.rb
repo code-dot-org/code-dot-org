@@ -144,6 +144,7 @@ class Script < ActiveRecord::Base
     project_sharing
     curriculum_umbrella
     tts
+    is_course
     is_translateable
   )
 
@@ -922,7 +923,7 @@ class Script < ActiveRecord::Base
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
         add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       rescue => e
-        raise e, "Error adding script named '#{options[:name]}': #{e}"
+        raise e, "Error adding script named '#{options[:name]}': #{e}", e.backtrace
       end
       [added_scripts, custom_i18n]
     end
@@ -943,6 +944,8 @@ class Script < ActiveRecord::Base
     script.save!
 
     script.generate_plc_objects
+
+    CourseVersion.add_course_version(script)
 
     script
   end
@@ -1402,6 +1405,7 @@ class Script < ActiveRecord::Base
       :is_stable,
       :project_sharing,
       :tts,
+      :is_course,
       :is_translateable
     ]
     not_defaulted_keys = [

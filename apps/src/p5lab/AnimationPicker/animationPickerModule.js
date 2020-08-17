@@ -202,9 +202,12 @@ export function pickNewAnimation() {
 export function pickLibraryAnimation(animation) {
   firehoseClient.putRecord({
     study: 'sprite-use',
-    study_group: 'before-update',
+    study_group: 'before-update-v2',
     event: 'select-sprite',
-    data_string: animation.name
+    data_json: JSON.stringify({
+      name: animation.name,
+      sourceUrl: animation.sourceUrl
+    })
   });
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
