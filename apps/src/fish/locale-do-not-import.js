@@ -8,4 +8,4 @@
  */
 // locale for fish
 
-export default window.blockly.fish_locale;
+export default window.locales.fish_locale;
