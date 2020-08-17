@@ -174,16 +174,19 @@ def sanitize!(data)
   end
 end
 
+def parse_file(path)
+  case File.extname(path)
+  when '.yaml', '.yml'
+    YAML.load_file(path)
+  when '.json'
+    JSON.parse(File.read(path))
+  else
+    raise "do not know how to parse file #{path.inspect}"
+  end
+end
+
 def sanitize_file_and_write(loc_path, dest_path)
-  loc_data =
-    case File.extname(loc_path)
-    when '.yaml', '.yml'
-      YAML.load_file(loc_path)
-    when '.json'
-      JSON.parse(File.read(loc_path))
-    else
-      raise "do not know how to parse localization file from #{loc_path}"
-    end
+  parse_file(loc_path)
   sanitize_data_and_write(loc_data, dest_path)
 end
 
@@ -266,7 +269,7 @@ def distribute_course_content(locale)
     extension = type == "dsls" ? "yml" : "json"
     type_file = "dashboard/config/locales/#{type}.#{locale}.#{extension}"
 
-    existing_data = YAML.load_file(type_file).dig(locale, "data", type) || {}
+    existing_data = parse_file(type_file).dig(locale, "data", type) || {}
 
     type_data = Hash.new
     type_data[locale] = Hash.new
