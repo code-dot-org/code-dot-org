@@ -103,12 +103,6 @@ class Lesson < ActiveRecord::Base
     raise "Lessons must have at least one level in them.  Lesson: #{raw_lesson[:name]}." if raw_lesson[:script_levels].empty?
   end
 
-  def self.prevent_blank_display_name(raw_lesson)
-    if raw_lesson[:name].blank?
-      raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
-    end
-  end
-
   # Go through all the script levels for this lesson, except the last one,
   # and raise an exception if any of them are a multi-page assessment.
   # (That's when the script level is marked assessment, and the level itself

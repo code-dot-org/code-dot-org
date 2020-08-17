@@ -2035,6 +2035,24 @@ endvariants
     assert_equal 'Expect all lesson groups to have display names. The following lesson group does not have a display name: content1', raise.message
   end
 
+  test 'raises error if a lesson key is given without a display_name' do
+    l1 = create :level
+    dsl = <<-SCRIPT
+      lesson_group 'content1', display_name: 'Lesson Group 1'
+      lesson 'Lesson1'
+      level '#{l1.name}'
+
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'lesson-group-test-script'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    assert_equal 'Expect all lessons to have display names. The following lesson does not have a display name: Lesson1', raise.message
+  end
+
   test 'raises error if some lessons have lesson groups and some do not' do
     l1 = create :level
     l2 = create :level
