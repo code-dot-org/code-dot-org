@@ -23553,3 +23553,9 @@ es-MX:
           lessons:
             Module 1:
               name: Módulo 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Curso A
+            Course B:
+              name: Curso B
