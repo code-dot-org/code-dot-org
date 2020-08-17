@@ -344,11 +344,13 @@ def localize_markdown_content
   markdown_files_to_localize = ['international/about.md.partial',
                                 'educate/curriculum/csf-transition-guide.md',
                                 'athome.md.partial',
-                                'athome/csf.md.partial',
                                 'break.md.partial',
                                 'csforgood.md']
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)
+    original_path_exists = File.exist?(original_path)
+    puts "#{original_path} does not exist" unless original_path_exists
+    next unless original_path_exists
     # Remove the .partial if it exists
     source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
     FileUtils.mkdir_p(File.dirname(source_path))

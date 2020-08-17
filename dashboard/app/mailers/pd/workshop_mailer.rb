@@ -51,8 +51,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
     end
 
-    return if @workshop.suppress_email?
-
     mail content_type: 'text/html',
       from: from,
       subject: teacher_enrollment_subject(@workshop),
@@ -189,8 +187,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
 
-    return if @workshop.suppress_email?
-
     mail content_type: 'text/html',
       from: from_teacher,
       subject: detail_change_notification_subject(@workshop),
@@ -243,6 +239,12 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     # Don't send if there's no associated survey
     return unless @survey_url
+
+    # Don't send for Academic Year Workshops.
+    # 2020-2021 AYW post-workshop survey configuration
+    # is too complicated to automate quickly, so we'll
+    # solicit survey responses by other means.
+    return if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include? @workshop.subject
 
     content_type = 'text/html'
     if @workshop.course == Pd::Workshop::COURSE_CSF
