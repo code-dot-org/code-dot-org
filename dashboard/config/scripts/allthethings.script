@@ -161,6 +161,7 @@ video_key_for_next_level 'starwars_events'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:StudioEC:js_hoc2015_event_two_items'
 skin 'hoc2015x'
+concepts 'sequence'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_5'
 

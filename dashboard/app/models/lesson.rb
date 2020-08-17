@@ -48,7 +48,7 @@ class Lesson < ActiveRecord::Base
   # by a non-lockable lesson, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of :name, scope: :script_id
+  #validates_uniqueness_of :name, scope: :script_id TODO: Add this back after we have moved over to new key/name systems for lesson
   validates_uniqueness_of :key, scope: :script_id
 
   include CodespanOnlyMarkdownHelper

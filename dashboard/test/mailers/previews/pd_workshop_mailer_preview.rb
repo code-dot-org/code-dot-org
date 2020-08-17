@@ -289,13 +289,15 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_TEACHER_CON
   end
 
-  def exit_survey__csp_1
-    mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
-  end
-
-  def exit_survey__csd_1
-    mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
-  end
+  # Commenting these out while we are not sending
+  # post-workshop surveys for Academic Year Workshops
+  # def exit_survey__csp_1
+  #   mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+  # end
+  #
+  # def exit_survey__csd_1
+  #   mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+  # end
 
   def exit_survey__csp_for_returning_teachers
     mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
