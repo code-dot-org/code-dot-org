@@ -735,7 +735,7 @@
   "formErrorsBelow": "以下のエラーを修正してください。\n",
   "formServerError": "こちら側で問題が発生しました。後でもう一度やり直してください。\n",
   "forTeachersOnly": "先生のみ",
-  "fromWhen": "({when} から}):\n",
+  "fromWhen": "({when} から):\n",
   "gdprDialogHeader": "米国に拠点を置くウェブサイトを使用することに同意しますか？",
   "gdprDialogDetails": "当サイトの利用に関するあなたの情報は、米国に送信され、米国にて保管または処理される場合があります。",
   "gdprDialogSeePrivacyPolicy": "（詳細については、Code.orgのプライバシーポリシーをご覧ください）",
