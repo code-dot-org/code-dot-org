@@ -12,6 +12,7 @@ require_relative '../../deployment'
 require 'cdo/db'
 require 'cdo/aws/s3'
 require_relative './capture_queries'
+require 'minitest/stub_const'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
@@ -82,7 +83,9 @@ module SetupTest
 
     VCR.use_cassette(cassette_name, record: record_mode) do
       PEGASUS_DB.transaction(rollback: :always) do
-        AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
+        BucketHelper.stub_const(:USER_SESSION_LENGTH, 30.seconds) do
+          AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
+        end
       end
     end
 

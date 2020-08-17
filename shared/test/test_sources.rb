@@ -53,6 +53,7 @@ class SourcesTest < FilesApiTestBase
 
     # Overwrite it.
     new_file_data = '{"someData":"def 456"}'
+    sleep BucketHelper::USER_SESSION_LENGTH + 1.second if VCR.current_cassette.recording?
     @api.put_object(filename, new_file_data, file_headers)
     assert successful?
 

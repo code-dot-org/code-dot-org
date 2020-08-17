@@ -9,6 +9,10 @@ require 'cdo/firehose'
 # BucketHelper
 #
 class BucketHelper
+  # Typical length of a student's session on the learning platform. Used to determine which S3 Object Versions
+  # to return to the browser when pruning the version history.
+  USER_SESSION_LENGTH = 20.minutes.freeze
+
   cattr_accessor :s3
 
   def initialize(bucket, base_dir)
@@ -345,10 +349,11 @@ class BucketHelper
       s3.list_object_versions(bucket: @bucket, prefix: key).
         versions.
         # Sort descending order by time stamp.
-        sort_by(&:last_modified).reverse.
-        # Average student browser session is 20-30 minutes.
-        # A gap of this length in S3 Object Version history may indicate start of a new session.
-        slice_when {|a, b| (a.last_modified - b.last_modified) > 20.minutes}.
+        sort_by(&:last_modified).
+        reverse.
+        # If time gap since the last saved version is longer than a typical student session length, that indicates it's
+        # from a new session and should be displayed in the project history.
+        slice_when {|a, b| (a.last_modified - b.last_modified) > USER_SESSION_LENGTH}.
         # Take the most recent Version from each user session.
         map(&:first).
         map do |version|

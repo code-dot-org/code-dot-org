@@ -103,6 +103,7 @@ group :development, :test do
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
+  gem 'minitest-stub-const'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
