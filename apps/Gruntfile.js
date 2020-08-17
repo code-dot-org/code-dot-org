@@ -1129,7 +1129,7 @@ describe('entry tests', () => {
           '/*' +
           item +
           '*/ ' +
-          'module.exports = window.blockly.' +
+          'module.exports = window.locales.' +
           localeType +
           ';';
         fs.writeFileSync(path.join(current, item + '.js'), localeString);
