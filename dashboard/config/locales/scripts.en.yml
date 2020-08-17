@@ -16036,12 +16036,6 @@ en:
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
-              :description: Students build up toward programming interactive animations in the Game Lab environment. They begin with simple shapes and sprite objects, then use loops to create flipbook style animations. Next, they learn to use booleans and conditionals to respond to user input. At the end of the chapter, students design and create an interactive animation that they can share with the world.
-              :big_questions:
-              - What is a computer program?
-              - What are the core features of most programming languages?
-              - How does programming enable creativity and individual expression?
-              - What practices and strategies will help me as I write programs?
             csd3_2:
               display_name: 'Chapter 2: Building Games'
             cspSurvey:
