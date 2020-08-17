@@ -1196,6 +1196,35 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report Stage 1']['description_teacher']
   end
 
+  test "update_i18n with new lesson display name" do
+    # This simulates us doing a seed after adding new lessons to multiple of
+    # our script files. Doing so should update our object with the new lesson
+    # names (which we would then persist to sripts.en.yml)
+    original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
+
+    course3_yml = {'lessons' => {'course3' => {'name' => 'course3'}}}
+
+    lessons_i18n = {
+      'course3' => course3_yml,
+    }
+
+    # updated represents what will get written to scripts.en.yml
+    updated = Script.update_i18n(original_yml, lessons_i18n)
+
+    assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
+
+    course3_yml = {'lessons' => {'course3' => {'name' => 'course3-changed'}}}
+
+    lessons_i18n = {
+      'course3' => course3_yml,
+    }
+
+    # updated represents what will get written to scripts.en.yml
+    updated = Script.update_i18n(original_yml, lessons_i18n)
+
+    assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
+  end
+
   test '!text_to_speech_enabled? by default' do
     refute create(:script).text_to_speech_enabled?
   end
