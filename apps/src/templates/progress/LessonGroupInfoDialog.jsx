@@ -18,7 +18,11 @@ const styles = {
     paddingBottom: 20
   },
   bigQuestion: {
-    fontWeight: 'bolder'
+    fontWeight: 'bolder',
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  lessonGroupName: {
+    color: color.purple
   }
 };
 
@@ -40,7 +44,7 @@ export default class LessonGroupInfoDialog extends Component {
         useUpdatedStyles
         style={styles.dialog}
       >
-        <h2>{this.props.displayName}</h2>
+        <h2 style={styles.lessonGroupName}>{this.props.displayName}</h2>
         {this.props.description && (
           <div style={styles.description}>
             <SafeMarkdown
@@ -54,7 +58,12 @@ export default class LessonGroupInfoDialog extends Component {
             <h5 style={styles.bigQuestion}>{i18n.bigQuestions()}</h5>
             <ul>
               {this.props.bigQuestions.map(question => (
-                <li key={question}>{question}</li>
+                <li key={question}>
+                  <SafeMarkdown
+                    openExternalLinksInNewTab={true}
+                    markdown={question}
+                  />
+                </li>
               ))}
             </ul>
           </div>
