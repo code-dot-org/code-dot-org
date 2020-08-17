@@ -13,11 +13,11 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Principles Pre-survey', lockable: true
+lesson 'CS Principles Pre-survey', display_name: 'CS Principles Pre-survey', lockable: true
 level 'csp-pre-survey-2017-levelgroup_2018', assessment: true
 
 lesson_group 'csp1_1', display_name: 'Chapter 1: Representing and Transmitting Information'
-lesson 'Personal Innovations'
+lesson 'Personal Innovations', display_name: 'Personal Innovations'
 level 'CSP U1L01 SFLP', named: true
 level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything', named: true
 variants
@@ -25,14 +25,14 @@ variants
   level 'csp_socialBelonging_intervention_2018', progression: 'Reflection: starting out in computer science', assessment: true
 endvariants
 
-lesson 'Sending Binary Messages'
+lesson 'Sending Binary Messages', display_name: 'Sending Binary Messages'
 level 'CSP U1L02 SFLP', named: true
 level 'U1L2 Multiple Choice Assessment Question_2018', progression: 'Check Your Understanding', assessment: true
 level 'U1L3 Free response reflection question_2018', progression: 'Check Your Understanding', assessment: true
 level 'U1L2 Free response assessment question_2018', progression: 'Check Your Understanding', assessment: true
 level 'U1L3 Free Response_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Sending Binary Messages with the Internet Simulator'
+lesson 'Sending Binary Messages with the Internet Simulator', display_name: 'Sending Binary Messages with the Internet Simulator'
 level 'CSP U1L03 SFLP', named: true
 level 'Internet Simulator: Sending Binary Messages_2018', progression: 'Internet Simulator: Sending Binary Messages', named: true
 level 'The Internet: Wires, Cables, and Wifi_2018', progression: 'The Internet: Wires, Cables, and Wifi', named: true
@@ -41,24 +41,24 @@ level 'U1L3 Multiple Choice_2018', progression: 'Check Your Understanding', asse
 level 'U1L4 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 level 'U1L5 Matching Assessment_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Number Systems'
+lesson 'Number Systems', display_name: 'Number Systems'
 level 'CSP U1L04 SFLP', named: true
 level 'U1L6 Assessment multiple choice_2018', progression: 'Check Your Understanding', assessment: true
 level 'U1L6 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Binary Numbers'
+lesson 'Binary Numbers', display_name: 'Binary Numbers'
 level 'CSP U1L05 SFLP', named: true
 level 'Widget: Binary Odometer_2018', progression: 'Widget: Binary Odometer', named: true
 level 'U1L7 Free Response Assessment_2018', progression: 'Check Your Understanding', assessment: true
 level 'U1L7 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Sending Numbers'
+lesson 'Sending Numbers', display_name: 'Sending Numbers'
 level 'CSP U1L06 SFLP', named: true
 level 'Internet Simulator: Sending Numbers_2018', progression: 'Internet Simulator: Sending Numbers', named: true
 level 'U1L8 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 level 'U1L8 Multiple Choice_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Sending Text'
+lesson 'Sending Text', display_name: 'Sending Text'
 level 'CSP U1L07 SFLP', named: true
 level 'Internet Simulator: Sending Text_2018', progression: 'Internet Simulator: Sending Text', named: true
 level 'U1L10 Assessment 1_2018', progression: 'Check Your Understanding', assessment: true
@@ -67,11 +67,11 @@ level 'U1L11 Assessment 1_2018', progression: 'Check Your Understanding', assess
 level 'U1L11 Reflection Multiple Representations_2018', progression: 'Check Your Understanding', assessment: true
 level 'U1L11 Abstraction Reflection_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Unit 1 Chapter 1 Assessment', lockable: true
+lesson 'Unit 1 Chapter 1 Assessment', display_name: 'Unit 1 Chapter 1 Assessment', lockable: true
 level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018', assessment: true
 
 lesson_group 'csp1_2', display_name: 'Chapter 2: Inventing the Internet'
-lesson 'The Internet'
+lesson 'The Internet', display_name: 'The Internet'
 level 'CSP U1L08 SFLP', named: true
 level 'What is the Internet?_2018', progression: 'What is the Internet?', named: true
 level 'U2L01 Assessment 1_2018', progression: 'Check Your Understanding', assessment: true
@@ -80,7 +80,7 @@ level 'U2L01 Assessment 3_2018', progression: 'Check Your Understanding', assess
 level 'U2L01 Assessment 4_2018', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-1-levelgroup-U1Ch2_2018', progression: 'Quick Check-In', assessment: true
 
-lesson 'The Need for Addressing'
+lesson 'The Need for Addressing', display_name: 'The Need for Addressing'
 level 'CSP U1L09 SFLP', named: true
 level 'Internet Simulator: Broadcast_2018', progression: 'Internet Simulator: Broadcast', named: true
 level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS', named: true
@@ -90,7 +90,7 @@ level 'U2L02 Assessment 4_2018', progression: 'Check Your Understanding', assess
 level 'U2L02 Assessment 5_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L3 Assessment 2_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Routers and Redundancy'
+lesson 'Routers and Redundancy', display_name: 'Routers and Redundancy'
 level 'CSP U1L10 SFLP', named: true
 level 'Internet Simulator: Routers_2018', progression: 'Internet Simulator: Routers', named: true
 level 'U2L04 Assessment1_2018', progression: 'Check Your Understanding', assessment: true
@@ -99,7 +99,7 @@ level 'U2L04 Assessment5_2018', progression: 'Check Your Understanding', assessm
 level 'U2L04 Assessment2_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L04 Assessment3_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Packets and Making a Reliable Internet'
+lesson 'Packets and Making a Reliable Internet', display_name: 'Packets and Making a Reliable Internet'
 level 'CSP U1L11 SFLP', named: true
 level 'Internet Simulator: Packets_2018', progression: 'Internet Simulator: Packets', named: true
 level 'The Internet: Packets, Routing, and Reliability_2018', progression: 'The Internet: Packets, Routing, and Reliability', named: true
@@ -108,7 +108,7 @@ level 'U2L05 Assessment 1_2018', progression: 'Check Your Understanding', assess
 level 'U2L05 Assessment 2_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L3 Assessment_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'The Need for DNS'
+lesson 'The Need for DNS', display_name: 'The Need for DNS'
 level 'CSP U1L12 SFLP', named: true
 level 'Internet Simulator: DNS_2018', progression: 'Internet Simulator: DNS', named: true
 level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS', named: true
@@ -117,15 +117,16 @@ level 'U2L09 Assessment2_2018', progression: 'Check Your Understanding', assessm
 level 'U2L09 Free Response Wrap Up_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L10 Assessment1_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'HTTP and Abstraction'
+lesson 'HTTP and Abstraction', display_name: 'HTTP and Abstraction'
 level 'CSP U1L13 SFLP', named: true
 level 'The Internet: HTTP and HTML_2018', progression: 'The Internet: HTTP and HTML', named: true
 level 'U2L11 Assessment 1_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L11 Assessment 2_2018', progression: 'Check Your Understanding', assessment: true
 level 'U2L11 Free Response_2018', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Practice PT - The Internet and Society'
+lesson 'Practice PT - The Internet and Society', display_name: 'Practice PT - The Internet and Society'
 level 'CSP U1L14 SFLP', named: true
 
-lesson 'Unit 1 Chapter 2 Assessment', lockable: true
+lesson 'Unit 1 Chapter 2 Assessment', display_name: 'Unit 1 Chapter 2 Assessment', lockable: true
 level 'CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018', assessment: true
+
