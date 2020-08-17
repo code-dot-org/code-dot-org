@@ -333,7 +333,7 @@ describe('CircuitPlaygroundBoard', () => {
   itMakesCircuitPlaygroundComponentsAvailable(CircuitPlaygroundBoard);
 
   describe(`connect()`, () => {
-    // TODO (bbuchanan): Remove when maker-captouch is on by default.
+    // Remove these lines when maker-captouch is on by default.
     before(() => experiments.setEnabled('maker-captouch', true));
     after(() => experiments.setEnabled('maker-captouch', false));
 
