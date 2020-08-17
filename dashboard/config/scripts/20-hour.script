@@ -1,3 +1,6 @@
+is_course true
+family_name '20-hour'
+version_year 'default'
 id '1'
 hidden false
 hideable_lessons true
