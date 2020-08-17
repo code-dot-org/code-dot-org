@@ -12,6 +12,11 @@ curriculum_umbrella 'CSD'
 tts true
 
 lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
+lesson_group_description 'Students build up toward programming interactive animations in the Game Lab environment. They begin with simple shapes and sprite objects, then use loops to create flipbook style animations. Next, they learn to use booleans and conditionals to respond to user input. At the end of the chapter, students design and create an interactive animation that they can share with the world.'
+lesson_group_question 'What is a computer program?'
+lesson_group_question 'What are the core features of most programming languages?'
+lesson_group_question 'How does programming enable creativity and individual expression?'
+lesson_group_question 'What practices and strategies will help me as I write programs?'
 lesson 'Programming for Entertainment'
 level 'CSD U3L01 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U3 Entertainment_2018_2019_pilot_2020', progression: 'Exploring CS in Entertainment'
