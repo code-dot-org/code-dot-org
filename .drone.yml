@@ -36,6 +36,7 @@ steps:
 - name: restore-cache
   image: plugins/s3-cache
   settings:
+    root: code-dot-org
     pull: true
     restore: true
     filename: unit-tests-cache.tar
@@ -75,6 +76,7 @@ steps:
   - name: rbenv
     path: /home/circleci/.rbenv
   settings:
+    root: code-dot-org
     pull: true
     rebuild: true
     filename: unit-tests-cache.tar
@@ -209,6 +211,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 8d29e9e443fff4f14af3366ac692d366c1da12420ccb2ab00915c86c375752bd
+hmac: 80869904a8ae95b51ee06dec1402a58b963bd8cb34d1505551c20a6f0de4a1a4
 
 ...
