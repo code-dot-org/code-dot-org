@@ -231,6 +231,7 @@ class StageTest < ActiveSupport::TestCase
     assert_equal 1, lessons[1].script_levels.count
     assert_equal 1, lessons[2].script_levels.count
     assert_equal true, lessons[2].lockable
+    assert_equal LessonGroup::Counters.new(1, 2, 3, 4), counters
   end
 
   class StagePublishedTests < ActiveSupport::TestCase
