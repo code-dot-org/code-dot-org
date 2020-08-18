@@ -18,6 +18,7 @@ module Pd
     # The JotForm survey, on submit, will redirect to the new_facilitator route (see below)
     # for the relevant session id.
     # The pre-workshop survey, which has no session id, will redirect to thanks.
+    # TODO: Do not show AYW surveys for 2020 onwards
     def new_general
       # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
       day = params[:day].to_i
@@ -332,7 +333,7 @@ module Pd
     def new_csf_post101
       # Use enrollment_code to find a specific workshop
       # or search all CSF101 workshops the current user is enrolled in.
-      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+      attended_workshop = get_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
         SUBJECT_CSF_101
@@ -351,7 +352,7 @@ module Pd
     def new_csf_post201
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user is enrolled in and attended.
-      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+      attended_workshop = get_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
         SUBJECT_CSF_201
@@ -368,7 +369,7 @@ module Pd
     def new_csf_post201_foorm
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user is enrolled in and attended.
-      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+      attended_workshop = get_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
         SUBJECT_CSF_201
@@ -383,17 +384,44 @@ module Pd
     def thanks
     end
 
+    # Pre survey controller for academic year workshops
+    def new_ayw_pre
+      ayw_helper(PRE_SURVEY_CONFIG_PATHS, should_have_attended: false, day: 0)
+    end
+
+    def new_ayw_daily
+      ayw_helper(DAILY_SURVEY_CONFIG_PATHS, should_have_attended: false, day: params[:day])
+    end
+
+    def new_ayw_post
+      ayw_helper(POST_SURVEY_CONFIG_PATHS, should_have_attended: true, day: nil)
+    end
+
     protected
 
-    def get_attended_workshop_by_enrollment_or_course(enrollment_code, course, subject)
-      attended_workshop = nil
+    # This method finds a workshop either by enrollment code or by the given course and subject.
+    # @param enrollment_code String: enrollment code for a workshop
+    # @param course String: name of course (ex. CS Principles)
+    # @param subject String: name of subject (ex. Academic Year 1)
+    # @param should_have_attended Boolean (default true): If true, check that the user has attended the workshop, and
+    # if they have not, render not_attended. If false, don't check the teacher's attendance (this is useful for
+    # pre-surveys, where we don't care about attendance for surveys to be available)
+    # It works as follows:
+    # - If an enrollment_code is given, find the enrollment for that code. Check attendance for the current user
+    #  if should_have_attended is true.
+    # - If an enrollment code was not given, look for the workshops the current user has enrolled in with the given
+    # course and subject. If they have none, render not enrolled. If they have any and should_have_attended is false,
+    # return the most recent workshop. If should_have_attended is true, return the most recent workshop the user has
+    # attended, or render no attendance if the user has not attended any workshops.
+    def get_workshop_by_enrollment_or_course(enrollment_code, course, subject, should_have_attended=true)
+      workshop_to_return = nil
       if enrollment_code
         workshop = get_workshop_by_enrollment(params[:enrollment_code], current_user)
         unless workshop
           render :invalid_enrollment_code
           return false
         end
-        attended_workshop = workshop if workshop.user_attended?(current_user)
+        workshop_to_return = workshop if !should_have_attended || workshop.user_attended?(current_user)
       else
         enrolled_workshops = Workshop.
           where(course: course, subject: subject).
@@ -404,17 +432,19 @@ module Pd
           return false
         end
 
-        attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
+        workshop_to_return = should_have_attended ?
+           enrolled_workshops.with_nearest_attendance_by(current_user) :
+           enrolled_workshops.nearest
       end
 
-      # Render a message if no attendance for this workshop.
-      unless attended_workshop
+      # If workshop_to_return is nil here and we haven't already returned, it means there was no attendance
+      unless workshop_to_return
         render :no_attendance
         return false
       end
 
-      # otherwise return the attended workshp
-      attended_workshop
+      # otherwise return the workshop
+      workshop_to_return
     end
 
     def response_exists_general?(key_params)
@@ -514,7 +544,28 @@ module Pd
       render :new_general
     end
 
-    def render_survey_foorm(survey_name:, workshop:, session:, day:)
+    def ayw_helper(survey_map, should_have_attended:, day:)
+      # get workshop (based on url/user)
+      workshop_subject = ACADEMIC_YEAR_WORKSHOPS[params[:workshop_subject]]
+      return render_404 unless workshop_subject
+      workshop = get_workshop_by_enrollment_or_course(
+        nil,
+        [COURSE_CSD, COURSE_CSP],
+        workshop_subject,
+        should_have_attended
+      )
+      return unless workshop
+
+      survey_name = survey_map[workshop_subject]
+      agenda = params[:agenda] || nil
+
+      # remove / from agenda url so module/1 => module1
+      agenda.tr!("/", "") if agenda
+
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: day, workshop_agenda: agenda)
+    end
+
+    def render_survey_foorm(survey_name:, workshop:, session:, day:, workshop_agenda: nil)
       return render_404 unless survey_name
 
       if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
@@ -522,7 +573,8 @@ module Pd
         workshop.id,
         session&.id,
         day,
-        survey_name
+        survey_name,
+        workshop_agenda
       )
         render :thanks
         return
@@ -535,13 +587,14 @@ module Pd
           formQuestions: form_questions,
           formName: survey_name,
           formVersion: latest_version,
-          surveyData: get_foorm_survey_data(workshop, day),
+          surveyData: get_foorm_survey_data(workshop, day, workshop_agenda),
           submitApi: FOORM_SUBMIT_API,
           submitParams: {
             user_id: current_user.id,
             pd_session_id: session&.id,
             day: day,
-            pd_workshop_id: workshop.id
+            pd_workshop_id: workshop.id,
+            workshop_agenda: workshop_agenda
           }
         }.to_json
       }
@@ -642,7 +695,7 @@ module Pd
       return true
     end
 
-    def get_foorm_survey_data(workshop, day=nil)
+    def get_foorm_survey_data(workshop, day=nil, workshop_agenda=nil)
       facilitator_data = workshop.facilitators.each_with_index.map do |facilitator, i|
         {
           Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID => facilitator.id,
@@ -664,7 +717,8 @@ module Pd
         is_virtual: workshop.virtual?,
         num_facilitators: workshop.facilitators.count,
         day: day,
-        is_friday_institute: workshop.friday_institute?
+        is_friday_institute: workshop.friday_institute?,
+        workshop_agenda: workshop_agenda
       }
     end
   end
