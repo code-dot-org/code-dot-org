@@ -170,7 +170,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :family_name, :version_year, :visible, :is_stable,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources,
-                  :has_verified_resources, :versions, :show_assign_button], summary.keys
+                  :has_verified_resources, :has_numbered_units, :versions, :show_assign_button], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
