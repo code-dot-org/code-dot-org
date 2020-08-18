@@ -4,10 +4,8 @@ import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
-import {
-  getCurrentScriptData,
-  scriptDataPropType
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/scriptSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StandardsIntroDialog from './StandardsIntroDialog';
