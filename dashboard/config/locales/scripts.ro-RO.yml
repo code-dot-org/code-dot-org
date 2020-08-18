@@ -6737,3 +6737,10 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Curs A
+            Course B:
+              name: Curs B
+          description: "[șir gol]"

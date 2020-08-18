@@ -22433,3 +22433,9 @@ hi:
           lessons:
             Module 1:
               name: मॉड्यूल 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: कोर्स A
+            Course B:
+              name: कोर्स B
