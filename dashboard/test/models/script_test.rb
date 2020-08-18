@@ -2408,8 +2408,11 @@ endvariants
     )
 
     assert_equal script.lesson_groups[0].lessons[0], script.lessons[0]
+    assert_equal script.lesson_groups[0].lessons[0].absolute_position, 1
     assert_equal script.lesson_groups[0].lessons[1], script.lessons[1]
+    assert_equal script.lesson_groups[0].lessons[1].absolute_position, 2
     assert_equal script.lesson_groups[1].lessons[0], script.lessons[2]
+    assert_equal script.lesson_groups[1].lessons[0].absolute_position, 3
   end
 
   private
