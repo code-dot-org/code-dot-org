@@ -114,6 +114,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.BlockSpace.onMainBlockSpaceCreated = () => {}; // TODO
   blocklyWrapper.BlockSpace.createReadOnlyBlockSpace = () => {}; // TODO
 
+  blocklyWrapper.Block.prototype.isUserVisible = () => false; // TODO
   blocklyWrapper.Block.prototype.getTitleValue =
     blocklyWrapper.Block.prototype.getFieldValue;
   blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
@@ -146,6 +147,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.Xml.domToBlockSpace = blocklyWrapper.Xml.domToWorkspace;
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
+  blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
+  blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
+    const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
+    if (ignoreChildBlocks) {
+      Blockly.Xml.deleteNext(blockXml);
+    }
+    return blockXml;
+  };
   blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
   blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
     blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
