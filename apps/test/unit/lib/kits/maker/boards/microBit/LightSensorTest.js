@@ -5,7 +5,7 @@ import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
 import {
   SENSOR_CHANNELS,
   MAX_SENSOR_BUFFER,
-  SAMPLE_RATE
+  SAMPLE_INTERVAL
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
 describe('LightSensor', function() {
@@ -79,7 +79,9 @@ describe('LightSensor', function() {
     });
 
     it(`returns average of values in buffer`, () => {
-      lightSensor.buffer = new Float32Array(MAX_SENSOR_BUFFER / SAMPLE_RATE);
+      lightSensor.buffer = new Float32Array(
+        MAX_SENSOR_BUFFER / SAMPLE_INTERVAL
+      );
       for (let i = 0; i < lightSensor.buffer.length; i++) {
         lightSensor.buffer[i] = i;
       }
@@ -97,7 +99,9 @@ describe('LightSensor', function() {
     it(`returns average of values in buffer within the set range`, () => {
       lightSensor.setRange(10, 110);
 
-      lightSensor.buffer = new Float32Array(MAX_SENSOR_BUFFER / SAMPLE_RATE);
+      lightSensor.buffer = new Float32Array(
+        MAX_SENSOR_BUFFER / SAMPLE_INTERVAL
+      );
       for (let i = 0; i < lightSensor.buffer.length; i++) {
         lightSensor.buffer[i] = 5;
       }

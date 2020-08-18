@@ -1,5 +1,5 @@
 import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
-import {SAMPLE_RATE} from './MicroBitConstants';
+import {SAMPLE_INTERVAL} from './MicroBitConstants';
 
 export const ACCEL_EVENT_ID = 27;
 
@@ -13,7 +13,7 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     return Promise.resolve()
       .then(() => this.connect())
       .then(() => {
-        return this.setAnalogSamplingInterval(SAMPLE_RATE);
+        return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
       });
   }
 
