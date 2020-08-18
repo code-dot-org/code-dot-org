@@ -338,7 +338,7 @@ class Level < ActiveRecord::Base
       end
     end
 
-    !(current_parent && current_parent.type == "LevelGroup")
+    !(current_parent&.type == "LevelGroup")
   end
 
   def self.level_file_path(level_name)
@@ -713,6 +713,21 @@ class Level < ActiveRecord::Base
     else
       properties['teacher_markdown']
     end
+  end
+
+  # we must search recursively for child levels, because some bubble choice
+  # sublevels have project template levels.
+  def all_descendant_levels
+    my_child_levels = all_child_levels
+    child_descendant_levels = my_child_levels.map(&:all_descendant_levels).flatten
+    my_child_levels + child_descendant_levels
+  end
+
+  # Returns all child levels of this level, which could include contained levels,
+  # project template levels, BubbleChoice sublevels, or LevelGroup sublevels.
+  # This method may be overridden by subclasses.
+  def all_child_levels
+    (contained_levels + [project_template_level] - [self]).compact
   end
 
   private

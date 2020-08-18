@@ -44,7 +44,7 @@ export default class AnimationPickerBody extends React.Component {
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    getLibraryManifest: PropTypes.func.isRequired,
+    libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired
   };
@@ -66,7 +66,7 @@ export default class AnimationPickerBody extends React.Component {
       categoryQuery = this.state.categoryQuery;
     }
     if (libraryManifest === undefined) {
-      libraryManifest = this.props.getLibraryManifest();
+      libraryManifest = this.props.libraryManifest;
     }
 
     return searchAssets(
@@ -126,8 +126,7 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   animationCategoriesRendering() {
-    const libraryManifest = this.props.getLibraryManifest();
-    const categories = Object.keys(libraryManifest.categories);
+    const categories = Object.keys(this.props.libraryManifest.categories || []);
     categories.push('all');
     return categories.map(category => (
       <AnimationPickerListItem
@@ -156,8 +155,7 @@ export default class AnimationPickerBody extends React.Component {
   }
 
   render() {
-    const libraryManifest = this.props.getLibraryManifest();
-    if (!libraryManifest) {
+    if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
     const {searchQuery, categoryQuery, results} = this.state;

@@ -993,6 +993,12 @@ en:
         text: sprite {SPRITE} begins {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        text: at {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': seconds
+            '"frames"': frames
       gamelab_bounceOff:
         text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
@@ -1052,6 +1058,41 @@ en:
             '"frames"': frames
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_isKeyPressed:
+        text: is {KEY} pressed
+        options:
+          KEY:
+            '"up"': up
+            '"down"': down
+            '"left"': left
+            '"right"': right
+            '"space"': space
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} is touching edges"
       gamelab_isTouchingSprite:
@@ -1106,6 +1147,8 @@ en:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
+      gamelab_makeNumSprites:
+        text: make {NUM} new {ANIMATION_NAME} sprites
       gamelab_mirrorSprite:
         text: "{SPRITE} face {DIRECTION}"
         options:

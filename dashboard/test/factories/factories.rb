@@ -17,7 +17,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :course_script do
+  factory :unit_group_unit do
   end
 
   factory :unit_group do
@@ -768,6 +768,7 @@ FactoryGirl.define do
 
   factory :lesson do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
+    sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     script
 
     absolute_position do |lesson|
@@ -1270,11 +1271,6 @@ FactoryGirl.define do
   factory :teacher_score do
     association :user_level
     association :teacher
-  end
-
-  factory :validated_user_level do
-    time_spent 10
-    user_level_id 1
   end
 
   factory :donor_school

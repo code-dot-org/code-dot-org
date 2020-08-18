@@ -17,43 +17,6 @@ si:
             මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
           description_short: මුල් පාඨකයන් පාඨමාලා අංක 1 ආරම්භ කරන්න.
           description_audience: වයස් 4-6
-          stages:
-            'Artist: Loops':
-              name: 'කලාකරු: ලූපයන්'
-            'Artist: Sequence':
-              name: 'කලාකරු: අනුක්‍රමය'
-            'Artist: Shapes':
-              name: 'කලාකරු: හැඩයන්'
-            'Bee: Loops':
-              name: 'බඹරා: ලූපයන්'
-            'Bee: Sequence':
-              name: 'බඹරා: අනුක්‍රමය'
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Getting Loopy:
-              name: ඔල්මාද වීම
-            Going Places Safely:
-              name: තැන්වලට සුරක්ෂිතව යාම
-            Happy Maps:
-              name: සතුටු සිතියම්
-            'Jigsaw: Learn to drag and drop':
-              name: 'පින්තූර ප්‍රෙහේලිකාව: ඇදගෙන ගොස් දැමීමට පුරුදු වන්න'
-            'Maze: Debugging':
-              name: නි‍දොස් කිරීම
-            'Maze: Loops':
-              name: 'අවුල් ජාලය: ලූපයන්'
-            'Maze: Sequence':
-              name: 'අවුල් ජාලය: අනුක්‍රමය'
-            Move it, Move it:
-              name: එය ගෙන යන්න, ගෙන යන්න
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-            Spelling Bee:
-              name: අක්ෂර වින්‍යාස බඹරා
-            'Studio: Create a Story':
-              name: 'ක්‍රීඩා විද්‍යාගාරය: කථාවක් සාදන්න'
-            The Big Event:
-              name: විශාල සිදුවීම
           lessons:
             'Artist: Loops':
               name: 'කලාකරු: ලූපයන්'
@@ -98,45 +61,6 @@ si:
             නිර්මාණය කල යුතුයි. නැතහොත් ක්‍රීඩා හෝ කතන්දර සෑදිය හැක. මේවා බෙදා ගත
             හැක. වයස අවුරුදු 2 සිට 5 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
           description_short: කියවීම ට හැකි සිසුන් පාඨමාලා අංක 2 ආරම්භ කරන්න.
-          stages:
-            'Artist: Debugging':
-              name: 'කලාකරු: නිදොසීම'
-            'Artist: Loops':
-              name: 'කලාකරු: ලූපයන්'
-            'Artist: Nested Loops':
-              name: 'කලාකරු: කැදැලි ලූපයන්'
-            'Artist: Sequence':
-              name: 'කලාකරු: අනුක්‍රමය'
-            'Bee: Conditionals':
-              name: 'බඹරා: කොන්දෙසිගත'
-            'Bee: Debugging':
-              name: 'බඹරා: නිදොසීම'
-            'Bee: Loops':
-              name: 'බඹරා: ලූපයන්'
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Flappy:
-              name: ෆ්ලැපි
-            Getting Loopy:
-              name: ඔල්මාද වීම
-            Graph Paper Programming:
-              name: ප්‍රස්තාර රටා වැඩසටහන්
-            'Maze: Loops':
-              name: 'අවුල් ජාලය: ලූපයන්'
-            'Maze: Sequence':
-              name: 'අවුල් ජාලය: අනුක්‍රමය'
-            'Real-life Algorithms: Paper Planes':
-              name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
-            Relay programming:
-              name: ප්‍රතිචාරණ ක්‍රමලේඛනය
-            'Studio: Create a Story':
-              name: 'ක්‍රීඩා විද්‍යාගාරය: කථාවක් සාදන්න'
-            The Big Event:
-              name: විශාල සිදුවීම
-            Your Digital Footprint:
-              name: ඔබේ ඩිජිටල් පා සටහන
           lessons:
             'Artist: Debugging':
               name: 'කලාකරු: නිදොසීම'
@@ -185,49 +109,6 @@ si:
             කරයි. 4-5 ශ්‍රේණි සඳහා නිර්දේශිතයි.
           description_short: පාඨමාලා 3 , පාඨමාලා 2 හි පසු විපරමකි
           description_audience: වයස අවුරුදු 8-18
-          stages:
-            Artist:
-              name: කලාකරු
-            'Artist: Functions':
-              name: 'කලාකරු: ශ්‍රිත'
-            'Artist: Nested Loops':
-              name: 'කලාකරු: කැදැලි ලූපයන්'
-            'Artist: Patterns':
-              name: 'කලාකරු: රටා'
-            'Bee: Conditionals':
-              name: 'බඹරා: කොන්දෙසිගත'
-            'Bee: Debugging':
-              name: 'බඹරා: නිදොසීම'
-            'Bee: Functions':
-              name: 'බඹරා: ශ්‍රිත'
-            'Bee: Nested Loops':
-              name: 'බඹරා: කැදැලි ලූපයන්'
-            Bounce:
-              name: Bounce
-            Computational Thinking:
-              name: සංඛ්‍යාත්මක සිතීම
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
-            Dice Race:
-              name: දාදු කට වේගයෙන් ක්‍රියා කරනවා
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            'Farmer: While Loops':
-              name: 'ගොවියා: ලූපයන් අතරේ'
-            Functional Suncatchers:
-              name: කියාකාරී නිර්මානාත්මක විදුරු කැබැල්ල
-            Internet:
-              name: අන්තර්ජාලය
-            Maze:
-              name: පැටලිලි සහිත මාර්ගය
-            'Maze: Conditionals':
-              name: 'අවුල් ජාලය: කොන්දෙසිගත'
-            Songwriting:
-              name: ගීත ලිවීම
-            'Studio: Create a Game':
-              name: 'ක්‍රීඩා පරීක්ෂණාගාරය: ක්‍රීඩාවක් සාදන්න'
-            'Studio: Create a Story':
-              name: 'ක්‍රීඩා විද්‍යාගාරය: කථාවක් සාදන්න'
           lessons:
             Artist:
               name: කලාකරු
@@ -275,9 +156,6 @@ si:
           title: ක්‍රීඩා පරීක්ෂණාගාරය
           description: ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
           description_short: ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
-          stages:
-            Play Lab:
-              name: ක්‍රීඩා පරීක්ෂණාගාරය
           lessons:
             Play Lab:
               name: ක්‍රීඩා පරීක්ෂණාගාරය
@@ -285,9 +163,6 @@ si:
           title: කලාකරු
           description: චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!
           description_short: චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!
-          stages:
-            Artist:
-              name: කලාකරු
           lessons:
             Artist:
               name: කලාකරු
@@ -297,9 +172,6 @@ si:
             විද්‍යාවේ මූලික කරුණු ඉගෙනගන්න!
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
             කරන්න!
-          stages:
-            Maze:
-              name: පැටලිලි සහිත මාර්ගය
           lessons:
             Maze:
               name: පැටලිලි සහිත මාර්ගය
@@ -310,9 +182,6 @@ si:
             නිර්මාණය කර ඔබේ මිතුරන් සමග බෙදා ගත හැකියි!
           description_short: ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු වීමට
             අපිත් කෝඩ් කරමු.
-          stages:
-            Artist:
-              name: කලාකරු
           lessons:
             Artist:
               name: කලාකරු
@@ -325,51 +194,6 @@ si:
           description_short: පාඨමාලා අංක 4 තෝරාගන්නා සිසු 2වන සහ 3වන පාඨමාලා නිඅ කර
             තිබිය යුතුයි.
           description_audience: වයස අවුරුදු 10-18
-          stages:
-            Artist:
-              name: කලාකරු
-            Artist Binary:
-              name: කලාකරු ද්විමය
-            'Artist: For Loops':
-              name: 'කලාකරු: ලූපයන් සඳහා'
-            'Artist: Functions':
-              name: 'කලාකරු: ශ්‍රිත'
-            'Artist: Functions with Parameters':
-              name: 'කලාකරු: පරාමිතියන් සහිත ශ්‍රිත'
-            'Artist: Variables':
-              name: 'කලාකරු: විචල්‍ය'
-            'Bee: For Loops':
-              name: 'බඹරා: ලූපයන් සඳහා'
-            'Bee: Functions with Parameters':
-              name: 'බඹරා: පරාමිතියන් සහිත ශ්‍රිත'
-            Extreme Challenge - Comprehensive:
-              name: දැඩි අභියෝගය - පුළුල්
-            Maze and Bee:
-              name: අවුල් ජාලය සහ බඹරා
-            'Play Lab: For Loops':
-              name: 'ක්‍රීඩා පරීක්ෂණාගාරය: ලූපයන් සඳහා'
-            'Play Lab: Functions with Parameters':
-              name: 'ක්‍රීඩා පරීක්ෂණාගාරය: පරාමිතියන් සහිත ශ්‍රිත'
-            'Play Lab: Variables':
-              name: 'ක්‍රීඩා විද්‍යාගාරය: විචල්‍යන්'
-            Super Challenge - For Loops:
-              name: සුපිරි අභියෝගය - For loops
-            Super Challenge - Functions and Parameters:
-              name: සුපිරි අභියෝගය - පරාමිතියන් සහ ශ්‍රිත
-            Super Challenge - Variables:
-              name: සුපිරි අභියෝගය - විචල්‍යන්
-            'Unplugged: Binary':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
-            'Unplugged: Envelope Variables':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ආවරණය කරන ලද විචල්‍යන්'
-            'Unplugged: For Loop Fun':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: For Loop සෙල්ලම'
-            'Unplugged: Madlibs':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: පරාමිතීන් සමඟ ගීත ලිවීම'
-            'Unplugged: Tangrams':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: Tangrams'
           lessons:
             Artist:
               name: කලාකරු
@@ -420,25 +244,6 @@ si:
           description: පාඨමාලා 1 සහ 2 සම්පූර්ණ නොකරන ලද සිසුන් සඳහා කෙටි වැඩි කිරීමක්.
           description_short: පාඨමාලා 1 සහ 2 සම්පූර්ණ නොකරන ලද සිසුන් සඳහා කෙටි වැඩි
             කිරීමක්.
-          stages:
-            'Artist: Functions':
-              name: 'කලාකරු: ශ්‍රිත'
-            'Artist: Loops':
-              name: 'කලාකරු: ලූපයන්'
-            'Artist: Nested Loops':
-              name: 'කලාකරු: කැදැලි ලූපයන්'
-            'Artist: Sequence':
-              name: 'කලාකරු: අනුක්‍රමය'
-            'Bee: Conditionals':
-              name: 'බඹරා: කොන්දෙසිගත'
-            'Bee: Debugging':
-              name: 'බඹරා: නිදොසීම'
-            'Bee: Nested Loops':
-              name: 'බඹරා: කැදැලි ලූපයන්'
-            'Farmer: While Loops':
-              name: 'ගොවියා: ලූපයන් අතරේ'
-            'Maze: Sequence':
-              name: 'අවුල් ජාලය: අනුක්‍රමය'
           lessons:
             'Artist: Functions':
               name: 'කලාකරු: ශ්‍රිත'
@@ -459,17 +264,6 @@ si:
             'Maze: Sequence':
               name: 'අවුල් ජාලය: අනුක්‍රමය'
         usability:
-          stages:
-            Binary:
-              name: ද්විමය
-            For Loops:
-              name: ලූපයන් සඳහා
-            Functions and Functions with Parameters:
-              name: ශ්‍රිතයන් සහ පරාමිතියන් සහිත ශ්‍රිත
-            Intro:
-              name: හැඳින්වීම
-            Variables:
-              name: විචල්‍යන්
           lessons:
             Binary:
               name: ද්විමය
@@ -483,13 +277,6 @@ si:
               name: විචල්‍යන්
         algebra:
           title: වීජ ගණිතය තුළින් පරිගණක විද්‍යාව
-          stages:
-            'Eval: Boolean Operators':
-              name: බූලියන් මෙහෙයුම් සංකේත
-            'Eval: Conditionals':
-              name: කන්ඩිෂනලස්
-            'Eval: Strings and Images':
-              name: තන්තු සහ රූප
           lessons:
             'Eval: Boolean Operators':
               name: බූලියන් මෙහෙයුම් සංකේත
@@ -503,43 +290,14 @@ si:
             හෝ ක්‍රීඩාවක් සාදන්න.
           description_short: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත
             ඇති කතාවක් හෝ ක්‍රීඩාවක් සාදන්න.
-          stages:
-            Infinity:
-              name: අනන්තය
           lessons:
             Infinity:
               name: අනන්තය
         algebrademo:
-          stages:
-            The Design Recipe:
-              name: නිර්මාණ වට්ටෝරුව
           lessons:
             The Design Recipe:
               name: නිර්මාණ වට්ටෝරුව
         K5PD:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
-            K-5 Courses:
-              name: K-5 පාඨමාලා
-            Next Steps:
-              name: ඉදිරි පියවර
-            'Programming Concept: Conditionals':
-              name: 'ක්‍රමලේඛන සංකල්පය: කොන්දේසිගත'
-            'Programming Concept: Events':
-              name: 'ක්‍රමලේඛන සංකල්පය: සිදුවීම්'
-            'Programming Concept: Functions':
-              name: 'ක්‍රමලේඛන සංකල්පය: ශ්‍රිත'
-            'Programming Concept: Loops':
-              name: 'ක්‍රමලේඛන සංකල්පය: ලූපයන්'
-            Reflection:
-              name: අන්තරාවලෝකනය
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
-            Unplugged lessons:
-              name: එළිදැක්වූ පාඩම්
-            Writing computer programs:
-              name: පරිගණක ක්‍රමලේඛන ලිවිම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
@@ -567,17 +325,6 @@ si:
           title: අන්තර්ජාල සමාකෘතිය
           description: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න
           description_short: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න
-          stages:
-            Automatic DNS node:
-              name: ස්වයංක්‍රීය DNS නෝඩුව
-            Broadcasting messages:
-              name: ප්‍රචාරණ පණිවිඩ
-            Internet Simulator Freeplay:
-              name: අන්තර්ජාල සමාකෘති නිදහස්ව ක්‍රීඩා කිරීම
-            Manual DNS:
-              name: හස්තීය DNS
-            Overview and Setup Instructions:
-              name: දළ විශ්ලේෂණය සහ පිහිටුවීමේ උපදෙස්
           lessons:
             Automatic DNS node:
               name: ස්වයංක්‍රීය DNS නෝඩුව
@@ -598,47 +345,6 @@ si:
           description_short: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප ආවරණය
             වන අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය වේ.
           description_audience: වයස අවුරුදු 10-18
-          stages:
-            Abstraction:
-              name: ඇබ්ස්ට්‍රැක්ෂන්
-            Algorithms:
-              name: ඇල්ගොරිතම්
-            Computational Thinking:
-              name: සංඛ්‍යාත්මක සිතීම
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
-            Graph Paper Programming:
-              name: ප්‍රස්තාර රටා වැඩසටහන්
-            Introduction to Computer Science:
-              name: පරිඝණක විද්‍යාව හැදින්වීම
-            Relay Programming:
-              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
-            Song Writing:
-              name: ගීත රචනය
-            The Artist:
-              name: කලාකරුවා
-            The Artist 2:
-              name: කලාකරුවා 2
-            The Artist 3:
-              name: කලාකරුවා 3
-            The Artist 4:
-              name: කලාකරුවා 4
-            The Artist 5:
-              name: කලාකරුවා 5
-            The Farmer:
-              name: ගොවියා
-            The Farmer 2:
-              name: ගොවියා 2
-            The Farmer 3:
-              name: ගොවියා 3
-            The Internet:
-              name: අන්තර්ජාලය
-            The Maze:
-              name: වංකගිරිය
-            Wrap-up:
-              name: වෙළනවා
           lessons:
             Abstraction:
               name: ඇබ්ස්ට්‍රැක්ෂන්
@@ -684,13 +390,6 @@ si:
           title: කේතය සකසන්න
           description: කේතය සකසන්න
           description_short: කේතය සකසන්න
-          stages:
-            Play Lab:
-              name: ක්‍රීඩා පරීක්ෂණාගාරය
-            The Artist:
-              name: කලාකරුවා
-            The Maze:
-              name: වංකගිරිය
           lessons:
             Play Lab:
               name: ක්‍රීඩා පරීක්ෂණාගාරය
@@ -702,15 +401,6 @@ si:
           title: වැඩසටහන්
           description: වැඩසටහන්
           description_short: වැඩසටහන්
-          stages:
-            Bounce:
-              name: Bounce
-            Calc:
-              name: Calc
-            Eval:
-              name: Eval
-            Studio:
-              name: ස්ටූඩියෝව
           lessons:
             Bounce:
               name: Bounce
@@ -725,9 +415,6 @@ si:
           description: විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද?
             අපගේ Flappy Code නිබන්දනය කියවන්න!
           description_short: ඔබේම ෆ්ලැපී බර්ඩ් ගේම් එකක් විනාඩි 10කින් හදන්න!
-          stages:
-            Flappy Code:
-              name: ෆ්ලැපි කේතය
           lessons:
             Flappy Code:
               name: ෆ්ලැපි කේතය
@@ -735,9 +422,6 @@ si:
           title: පින්තූර ප්‍රෙහේලිකාව
           description: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න
           description_short: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න
-          stages:
-            Jigsaw:
-              name: පින්තූර ප්‍රෙහේලිකාව
           lessons:
             Jigsaw:
               name: පින්තූර ප්‍රෙහේලිකාව
@@ -745,9 +429,6 @@ si:
           title: පියවර
           description: පියවර නිබන්ධනය
           description_short: පියවර නිබන්ධනය
-          stages:
-            Step:
-              name: පියවර
           lessons:
             Step:
               name: පියවර
@@ -757,86 +438,46 @@ si:
             මූලිකාංග ඉගෙනගන්න!
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
             කරන්න!
-          stages:
-            Hour of Code 2013:
-              name: පැයේ කේතය 2013
           lessons:
             Hour of Code 2013:
               name: පැයේ කේතය 2013
         CodeStudioPuzzleChallenge:
-          stages:
-            Puzzles:
-              name: ප්‍රහේලිකා
           lessons:
             Puzzles:
               name: ප්‍රහේලිකා
         Tutorial Video - Code Studio Puzzle Challenge:
-          stages:
-            Puzzles:
-              name: ප්‍රහේලිකා
           lessons:
             Puzzles:
               name: ප්‍රහේලිකා
         algebraPD:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
             Teacher Dashboard:
               name: ගුරු උපකරණ පුවරුව
         algPDmiami:
-          stages:
-            Strings and Images:
-              name: තන්තු සහ රූප
           lessons:
             Strings and Images:
               name: තන්තු සහ රූප
         CSPPD:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
         ECSPD:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
         sciencePD:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
         cspunit3:
-          stages:
-            Creating Functions:
-              name: ශ්‍රිතය නිර්මාණය කරන්න
-            While Loops:
-              name: නැවත සිදුවන ලුප
           lessons:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
             While Loops:
               name: නැවත සිදුවන ලුප
         algebraPD3:
-          stages:
-            Next Steps:
-              name: ඉදිරි පියවර
-            Strings and Images:
-              name: තන්තු සහ රූප
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
-            The Design Recipe:
-              name: නිර්මාණ වට්ටෝරුව
           lessons:
             Next Steps:
               name: ඉදිරි පියවර
@@ -847,81 +488,44 @@ si:
             The Design Recipe:
               name: නිර්මාණ වට්ටෝරුව
         ECSPD-NexTech:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
         ECSPD-iZone:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
         algebraPD-NexTech:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
             Teacher Dashboard:
               name: ගුරු උපකරණ පුවරුව
         algebraPD-iZone:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
             Teacher Dashboard:
               name: ගුරු උපකරණ පුවරුව
         sciencePD-NexTech:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
         sciencePD-iZone:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
         sciencePD2:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
         cspunit2:
-          stages:
-            The Internet:
-              name: අන්තර්ජාලය
           lessons:
             The Internet:
               name: අන්තර්ජාලය
         algebraPD2a:
-          stages:
-            Free Play:
-              name: නොමිලේ ක්‍රීඩා කිරීම
-            Strings and Images:
-              name: තන්තු සහ රූප
-            The Design Recipe:
-              name: නිර්මාණ වට්ටෝරුව
           lessons:
             Free Play:
               name: නොමිලේ ක්‍රීඩා කිරීම
@@ -930,25 +534,6 @@ si:
             The Design Recipe:
               name: නිර්මාණ වට්ටෝරුව
         allthethings:
-          stages:
-            Artist:
-              name: කලාකරු
-            Bounce:
-              name: Bounce
-            Flappy:
-              name: ෆ්ලැපි
-            Jigsaw:
-              name: පින්තූර ප්‍රෙහේලිකාව
-            Match:
-              name: ගළපන්න
-            Maze:
-              name: පැටලිලි සහිත මාර්ගය
-            Minecraft:
-              name: Minecraft
-            Multi:
-              name: බහුවිධ
-            Studio:
-              name: ස්ටූඩියෝව
           lessons:
             Artist:
               name: කලාකරු
@@ -969,13 +554,6 @@ si:
             Studio:
               name: ස්ටූඩියෝව
         algebraPD2b:
-          stages:
-            Next Steps:
-              name: ඉදිරි පියවර
-            Strings and Images:
-              name: තන්තු සහ රූප
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
           lessons:
             Next Steps:
               name: ඉදිරි පියවර
@@ -984,13 +562,6 @@ si:
             Teacher Dashboard:
               name: ගුරු උපකරණ පුවරුව
         cspfacilitator:
-          stages:
-            App Lab:
-              name: මෘදුකාංග විද්‍යාගාරය
-            Internet Simulator:
-              name: අන්තර්ජාල සමාකෘතිය
-            Welcome!:
-              name: ආයුබෝවන්!
           lessons:
             App Lab:
               name: මෘදුකාංග විද්‍යාගාරය
@@ -999,24 +570,10 @@ si:
             Welcome!:
               name: ආයුබෝවන්!
         K5-OnlinePD:
-          stages:
-            Next Steps:
-              name: ඉදිරි පියවර
           lessons:
             Next Steps:
               name: ඉදිරි පියවර
         ECSPD2:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-up:
-              name: වෙළනවා
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1029,13 +586,6 @@ si:
             Wrap-up:
               name: වෙළනවා
         algebraPD2:
-          stages:
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
-            The Design Recipe:
-              name: නිර්මාණ වට්ටෝරුව
-            Welcome!:
-              name: ආයුබෝවන්!
           lessons:
             Teacher Dashboard:
               name: ගුරු උපකරණ පුවරුව
@@ -1044,57 +594,28 @@ si:
             Welcome!:
               name: ආයුබෝවන්!
         sciencePD2b:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
         science-PD2:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
         Equity-OnlinePD:
-          stages:
-            Next Steps:
-              name: ඉදිරි පියවර
           lessons:
             Next Steps:
               name: ඉදිරි පියවර
         sciencePD2b-iZone:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
         ECSPD2-iZone:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-up:
-              name: වෙළනවා
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1107,17 +628,6 @@ si:
             Wrap-up:
               name: වෙළනවා
         ECSPD2-NexTech:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-up:
-              name: වෙළනවා
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1130,25 +640,6 @@ si:
             Wrap-up:
               name: වෙළනවා
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Getting Loopy:
-              name: ඔල්මාද වීම
-            Graph Paper Programming:
-              name: ප්‍රස්තාර රටා වැඩසටහන්
-            Happy Maps:
-              name: සතුටු සිතියම්
-            Move it, Move it:
-              name: එය ගෙන යන්න, ගෙන යන්න
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-            Songwriting:
-              name: ගීත ලිවීම
-            The Big Event:
-              name: විශාල සිදුවීම
           lessons:
             Binary Bracelets:
               name: ද්විමය වළලු
@@ -1171,11 +662,6 @@ si:
         cspunit4draft:
           description_short: දත්ත
         ScienceP3OLPT2:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
@@ -1191,16 +677,10 @@ si:
             හදන්න!
           description_short: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
             එකක් හදන්න!
-          stages:
-            Ice Age Play Lab:
-              name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
           lessons:
             Ice Age Play Lab:
               name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
         cspunit3temp:
-          stages:
-            While Loops:
-              name: නැවත සිදුවන ලුප
           lessons:
             While Loops:
               name: නැවත සිදුවන ලුප
@@ -1210,9 +690,6 @@ si:
             හදන්න!
           description_short: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
             එකක් හදන්න!
-          stages:
-            Gumball Play Lab:
-              name: ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය
           lessons:
             Gumball Play Lab:
               name: ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය
@@ -1222,9 +699,6 @@ si:
             ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
           description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට
             මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
-          stages:
-            Hour of Code 2015:
-              name: පැයක කේතය 2015
           lessons:
             Hour of Code 2015:
               name: පැයක කේතය 2015
@@ -1234,9 +708,6 @@ si:
             ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
           description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට
             මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
-          stages:
-            Hour of Code 2015:
-              name: පැයක කේතය 2015
           lessons:
             Hour of Code 2015:
               name: පැයක කේතය 2015
@@ -1245,74 +716,43 @@ si:
           description: මෙම මයින්ක්‍රාෆ්ට් ලෝකය හරහා දුෂ්කර වූ ක්‍රියාවක් මත ස්ටීව්
             හෝ ඇලෙක්ස් රැඟෙන යාමට කේත කොටස් භාවිතා කරන්න
           description_short: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න
-          stages:
-            Hour of Code 2015:
-              name: පැයක කේතය 2015
           lessons:
             Hour of Code 2015:
               name: පැයක කේතය 2015
         ScienceP3OLPT3:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
         gamelab-hackathon:
-          stages:
-            Middle_School_Hackathon:
-              name: මධ්‍යම_පාසල්_හැකතනය
           lessons:
             Middle_School_Hackathon:
               name: මධ්‍යම_පාසල්_හැකතනය
         algebraPD1:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
             Teacher Dashboard:
               name: ගුරු උපකරණ පුවරුව
         csp1-2017:
-          stages:
-            The Internet:
-              name: අන්තර්ජාලය
           lessons:
             The Internet:
               name: අන්තර්ජාලය
         csp3-2017:
-          stages:
-            Creating Functions:
-              name: ශ්‍රිතය නිර්මාණය කරන්න
           lessons:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
         csp5-2017:
-          stages:
-            While Loops:
-              name: නැවත සිදුවන ලුප
           lessons:
             While Loops:
               name: නැවත සිදුවන ලුප
         CSDU3-Draft:
           description_short: ක්‍රමලේඛනය
-          stages:
-            Functions:
-              name: ශ්‍රිතයන්
           lessons:
             Functions:
               name: ශ්‍රිතයන්
         2016_sciencePD_phase1:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
@@ -1321,20 +761,12 @@ si:
         CSF_Secret_Sample:
           description_audience: වයස අවුරුදු 8-18
         algebraFacilitator:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
             Teacher Dashboard:
               name: ගුරු උපකරණ පුවරුව
         sciencePD1:
-          stages:
-            Introduction to PD:
-              name: PD වෙත හඳුන්වාදීම
           lessons:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
@@ -1355,18 +787,12 @@ si:
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
         CSDU2-Draft:
-          stages:
-            Peer Review:
-              name: සමූහ විමර්ශනය
           lessons:
             Peer Review:
               name: සමූහ විමර්ශනය
         CSDU5-Draft:
           description_short: දත්ත
         MikeTest:
-          stages:
-            Artist Functions:
-              name: කලාකරුවාගේ ශ්‍රිත
           lessons:
             Artist Functions:
               name: කලාකරුවාගේ ශ්‍රිත
@@ -1381,24 +807,10 @@ si:
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: 'බඹරා: කොන්දෙසිගත'
           lessons:
             'Bee: Conditionals':
               name: 'බඹරා: කොන්දෙසිගත'
         gradeKinder:
-          stages:
-            Events:
-              name: වැඩසටහන්
-            'Jigsaw: Learn to drag and drop':
-              name: 'පින්තූර ප්‍රෙහේලිකාව: ඇදගෙන ගොස් දැමීමට පුරුදු වන්න'
-            Loops:
-              name: ලූපයන්
-            Programming:
-              name: ක්‍රමලේඛනය
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
           lessons:
             Events:
               name: වැඩසටහන්
@@ -1411,26 +823,12 @@ si:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
         grade4:
-          stages:
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            Songwriting:
-              name: ගීත ලිවීම
           lessons:
             Digital Citizenship:
               name: ඩිජිටල් පුරවැසිකම
             Songwriting:
               name: ගීත ලිවීම
         grade1:
-          stages:
-            Events:
-              name: වැඩසටහන්
-            'Jigsaw: Learn to drag and drop':
-              name: 'පින්තූර ප්‍රෙහේලිකාව: ඇදගෙන ගොස් දැමීමට පුරුදු වන්න'
-            Loops:
-              name: ලූපයන්
-            Programming:
-              name: ක්‍රමලේඛනය
           lessons:
             Events:
               name: වැඩසටහන්
@@ -1441,27 +839,6 @@ si:
             Programming:
               name: ක්‍රමලේඛනය
         grade5:
-          stages:
-            'Artist: For Loops':
-              name: 'කලාකරු: ලූපයන් සඳහා'
-            'Artist: Functions with Parameters':
-              name: 'කලාකරු: පරාමිතියන් සහිත ශ්‍රිත'
-            'Artist: Variables':
-              name: 'කලාකරු: විචල්‍ය'
-            'Bee: For Loops':
-              name: 'බඹරා: ලූපයන් සඳහා'
-            'Bee: Functions with Parameters':
-              name: 'බඹරා: පරාමිතියන් සහිත ශ්‍රිත'
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            'Play Lab: Variables':
-              name: 'ක්‍රීඩා විද්‍යාගාරය: විචල්‍යන්'
-            'Unplugged: Envelope Variables':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ආවරණය කරන ලද විචල්‍යන්'
-            'Unplugged: For Loop Fun':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: For Loop සෙල්ලම'
-            'Unplugged: Songwriting with Parameters':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: පරාමිතීන් සමඟ ගීත ලිවීම'
           lessons:
             'Artist: For Loops':
               name: 'කලාකරු: ලූපයන් සඳහා'
@@ -1484,17 +861,6 @@ si:
             'Unplugged: Songwriting with Parameters':
               name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: පරාමිතීන් සමඟ ගීත ලිවීම'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-up:
-              name: වෙළනවා
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1507,15 +873,6 @@ si:
             Wrap-up:
               name: වෙළනවා
         grade3:
-          stages:
-            'Artist: Nested Loops':
-              name: 'කලාකරු: කැදැලි ලූපයන්'
-            Bee Debugging:
-              name: මී මැසි නිදොස් කිරීම
-            Bounce:
-              name: Bounce
-            'Farmer: While Loops':
-              name: 'ගොවියා: ලූපයන් අතරේ'
           lessons:
             'Artist: Nested Loops':
               name: 'කලාකරු: කැදැලි ලූපයන්'
@@ -1535,13 +892,6 @@ si:
               display_name: ඉගැන්වීමේ පිළිවෙත්
         csd3-2017:
           description_short: ක්‍රමලේඛනය
-          stages:
-            Functions:
-              name: ශ්‍රිතයන්
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
           lessons:
             Functions:
               name: ශ්‍රිතයන්
@@ -1550,15 +900,6 @@ si:
             Conditionals:
               name: කන්ඩිෂනලස්
         grade2:
-          stages:
-            Flappy:
-              name: ෆ්ලැපි
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            'Real-life Algorithms: Paper Planes':
-              name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
-            The Big Event:
-              name: විශාල සිදුවීම
           lessons:
             Flappy:
               name: ෆ්ලැපි
@@ -1569,27 +910,6 @@ si:
             The Big Event:
               name: විශාල සිදුවීම
         k5concepts:
-          stages:
-            Binary:
-              name: ද්විමය
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Events:
-              name: වැඩසටහන්
-            For Loops:
-              name: ලූපයන් සඳහා
-            Functions:
-              name: ශ්‍රිතයන්
-            Functions with Parameters:
-              name: පරාමිතියන් සහිත ශ්‍රිත
-            Loops:
-              name: ලූපයන්
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
-            Variables:
-              name: විචල්‍යන්
-            While Loops:
-              name: නැවත සිදුවන ලුප
           lessons:
             Binary:
               name: ද්විමය
@@ -1612,13 +932,6 @@ si:
             While Loops:
               name: නැවත සිදුවන ලුප
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: ගුරු උපකරණ පුවරුව
-            The Design Recipe:
-              name: නිර්මාණ වට්ටෝරුව
-            Welcome!:
-              name: ආයුබෝවන්!
           lessons:
             Teacher Dashboard:
               name: ගුරු උපකරණ පුවරුව
@@ -1643,34 +956,10 @@ si:
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
         basketball:
-          stages:
-            Bounce:
-              name: Bounce
           lessons:
             Bounce:
               name: Bounce
-        fesbinary:
-          title: ද්විමය
-          stages:
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            Binary Images:
-              name: ද්විමය පින්තූර
-            Play Lab:
-              name: ක්‍රීඩා පරීක්ෂණාගාරය
-          lessons:
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            Binary Images:
-              name: ද්විමය පින්තූර
-            Play Lab:
-              name: ක්‍රීඩා පරීක්ෂණාගාරය
         csd2-2017:
-          stages:
-            Peer Review:
-              name: සමූහ විමර්ශනය
-            Lists:
-              name: ලැයිස්තු
           lessons:
             Peer Review:
               name: සමූහ විමර්ශනය
@@ -1685,44 +974,22 @@ si:
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: ෆ්ලැපි කේතය
           lessons:
             Flappy Code:
               name: ෆ්ලැපි කේතය
         coursea-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-            Going Places Safely:
-              name: තැන්වලට සුරක්ෂිතව යාම
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
             Going Places Safely:
               name: තැන්වලට සුරක්ෂිතව යාම
         courseb-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-            Your Digital Footprint:
-              name: ඔබේ ඩිජිටල් පා සටහන
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
             Your Digital Footprint:
               name: ඔබේ ඩිජිටල් පා සටහන
         coursec-draft:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            Your Digital Footprint:
-              name: ඔබේ ඩිජිටල් පා සටහන
-            Building a Foundation:
-              name: පදනමක් තැනීම
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
@@ -1733,19 +1000,6 @@ si:
             Building a Foundation:
               name: පදනමක් තැනීම
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            'Unplugged: Binary':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
-            Artist Binary:
-              name: කලාකරු ද්විමය
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
-            Introduction:
-              name: හැදින්වීම
           lessons:
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
@@ -1760,17 +1014,6 @@ si:
             Introduction:
               name: හැදින්වීම
         coursee-draft:
-          stages:
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
-            Introduction:
-              name: හැදින්වීම
-            Conditionals:
-              name: කන්ඩිෂනලස්
           lesson_groups:
             content:
               display_name: අන්තර්ගතය
@@ -1786,19 +1029,6 @@ si:
             Conditionals:
               name: කන්ඩිෂනලස්
         coursef-draft:
-          stages:
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Songwriting with Parameters:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
-            Introduction:
-              name: හැදින්වීම
-            Ice Age Play Lab:
-              name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
           lesson_groups:
             content:
               display_name: අන්තර්ගතය
@@ -1818,38 +1048,22 @@ si:
         classic-hoc-impact-study:
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
             කරන්න!
-          stages:
-            Hour of Code 2013:
-              name: පැයේ කේතය 2013
           lessons:
             Hour of Code 2013:
               name: පැයේ කේතය 2013
         hoc-impact-study:
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
             කරන්න!
-          stages:
-            Hour of Code 2013:
-              name: පැයේ කේතය 2013
           lessons:
             Hour of Code 2013:
               name: පැයේ කේතය 2013
         2016_sciencePD-phase2b:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
         2016_sciencePD_phase2b:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
@@ -1872,31 +1086,18 @@ si:
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
         sciencepd4:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
         science-pd-ol-pt-5:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
         csf2harvey:
-          stages:
-            Binary:
-              name: ද්විමය
           lesson_groups:
             content:
               display_name: අන්තර්ගතය
@@ -1904,11 +1105,6 @@ si:
             Binary:
               name: ද්විමය
         sciencepd5:
-          stages:
-            Welcome!:
-              name: ආයුබෝවන්!
-            Wrap-Up:
-              name: වෙළනවා
           lessons:
             Welcome!:
               name: ආයුබෝවන්!
@@ -1927,13 +1123,6 @@ si:
             content:
               display_name: අන්තර්ගතය
         csd6-draft:
-          stages:
-            Lists:
-              name: ලැයිස්තු
-            For Loops:
-              name: ලූපයන් සඳහා
-            Functions with Parameters:
-              name: පරාමිතියන් සහිත ශ්‍රිත
           lessons:
             Lists:
               name: ලැයිස්තු
@@ -1942,27 +1131,14 @@ si:
             Functions with Parameters:
               name: පරාමිතියන් සහිත ශ්‍රිත
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: හැදින්වීම
           lessons:
             Introduction:
               name: හැදින්වීම
         coursed-ramp:
-          stages:
-            Introduction:
-              name: හැදින්වීම
           lessons:
             Introduction:
               name: හැදින්වීම
         coursee-ramp:
-          stages:
-            Introduction:
-              name: හැදින්වීම
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            'Real Life Algorithms: Dice Race':
-              name: 'තත්කාලීන ඇල්ගොරිතම: දාදු කැටය විහිදීම'
           lessons:
             Introduction:
               name: හැදින්වීම
@@ -1971,15 +1147,6 @@ si:
             'Real Life Algorithms: Dice Race':
               name: 'තත්කාලීන ඇල්ගොරිතම: දාදු කැටය විහිදීම'
         csd6-2017:
-          stages:
-            Lists:
-              name: ලැයිස්තු
-            For Loops:
-              name: ලූපයන් සඳහා
-            Functions with Parameters:
-              name: පරාමිතියන් සහිත ශ්‍රිත
-            Functions with Parameters_:
-              name: පරාමිතියන් සහිත ශ්‍රිත
           lessons:
             Lists:
               name: ලැයිස්තු
@@ -1990,13 +1157,6 @@ si:
             Functions with Parameters_:
               name: පරාමිතියන් සහිත ශ්‍රිත
         csd3-draft:
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
           lessons:
             Variables:
               name: විචල්‍යන්
@@ -2005,29 +1165,14 @@ si:
             Functions:
               name: ශ්‍රිතයන්
         csd3-old:
-          stages:
-            Functions:
-              name: ශ්‍රිතයන්
           lessons:
             Functions:
               name: ශ්‍රිතයන්
         csd2-draft:
-          stages:
-            Lists:
-              name: ලැයිස්තු
           lessons:
             Lists:
               name: ලැයිස්තු
         csd3-chapters:
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
-            'null':
-              name: ශුන්‍ය
           lessons:
             Variables:
               name: විචල්‍යන්
@@ -2038,76 +1183,38 @@ si:
             'null':
               name: ශුන්‍ය
         coursef-ramp:
-          stages:
-            Introduction:
-              name: හැදින්වීම
-            Ice Age Play Lab:
-              name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
           lessons:
             Introduction:
               name: හැදින්වීම
             Ice Age Play Lab:
               name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
         csd2-old:
-          stages:
-            Peer Review:
-              name: සමූහ විමර්ශනය
           lessons:
             Peer Review:
               name: සමූහ විමර්ශනය
         artist-and-bb8:
-          stages:
-            Ice Age Play Lab:
-              name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
-            Bounce:
-              name: Bounce
           lessons:
             Ice Age Play Lab:
               name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
             Bounce:
               name: Bounce
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
         courseb-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
         coursec-2017:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
         coursed-2017:
-          stages:
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
           lessons:
             Nested Loops:
               name: නැවත නැවත සිදුවන ලුප
         coursee-2017:
-          stages:
-            Ice Age Play Lab:
-              name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Songwriting with Parameters:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
           lessons:
             Ice Age Play Lab:
               name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
@@ -2122,9 +1229,6 @@ si:
             Nested Loops:
               name: නැවත නැවත සිදුවන ලුප
         coursef-2017:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
           lessons:
             Building a Foundation:
               name: පදනමක් තැනීම
@@ -2201,25 +1305,6 @@ si:
             content:
               display_name: අන්තර්ගතය
         express-2017:
-          stages:
-            Introduction:
-              name: හැදින්වීම
-            Internet:
-              name: අන්තර්ජාලය
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Songwriting with Parameters:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
           lesson_groups:
             content:
               display_name: අන්තර්ගතය
@@ -2243,42 +1328,20 @@ si:
             Nested Loops:
               name: නැවත නැවත සිදුවන ලුප
         pre-express-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-            Spelling Bee:
-              name: අක්ෂර වින්‍යාස බඹරා
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
             Spelling Bee:
               name: අක්ෂර වින්‍යාස බඹරා
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: ස්තූතියි
           lessons:
             Thanks:
               name: ස්තූතියි
         csp3-research-mxghyt:
-          stages:
-            Creating Functions:
-              name: ශ්‍රිතය නිර්මාණය කරන්න
           lessons:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
         e-f-ramp:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
           lessons:
             Building a Foundation:
               name: පදනමක් තැනීම
@@ -2291,21 +1354,6 @@ si:
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
         new-d:
-          stages:
-            Introduction:
-              name: හැදින්වීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            'Unplugged: Binary':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
-            Artist Binary:
-              name: කලාකරු ද්විමය
-            Building a Foundation:
-              name: පදනමක් තැනීම
           lessons:
             Introduction:
               name: හැදින්වීම
@@ -2322,13 +1370,6 @@ si:
             Building a Foundation:
               name: පදනමක් තැනීම
         new-express:
-          stages:
-            Introduction:
-              name: හැදින්වීම
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
           lesson_groups:
             content:
               display_name: අන්තර්ගතය
@@ -2340,15 +1381,6 @@ si:
             Nested Loops:
               name: නැවත නැවත සිදුවන ලුප
         new-e:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
           lessons:
             Building a Foundation:
               name: පදනමක් තැනීම
@@ -2359,17 +1391,6 @@ si:
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
         new-f:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Ice Age Play Lab:
-              name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Songwriting with Parameters:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
           lessons:
             Building a Foundation:
               name: පදනමක් තැනීම
@@ -2382,33 +1403,14 @@ si:
             Songwriting with Parameters:
               name: පරාමිතීන් සමඟ ගීත ලිවීම
         csp3-staging:
-          stages:
-            Creating Functions:
-              name: ශ්‍රිතය නිර්මාණය කරන්න
           lessons:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
-            Introduction:
-              name: හැදින්වීම
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
           lessons:
             Building a Foundation:
               name: පදනමක් තැනීම
@@ -2423,19 +1425,6 @@ si:
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Introduction:
-              name: හැදින්වීම
-            Ice Age Play Lab:
-              name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Songwriting with Parameters:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
           lessons:
             Building a Foundation:
               name: පදනමක් තැනීම
@@ -2450,24 +1439,12 @@ si:
             Songwriting with Parameters:
               name: පරාමිතීන් සමඟ ගීත ලිවීම
         csd6-old:
-          stages:
-            Lists:
-              name: ලැයිස්තු
-            For Loops:
-              name: ලූපයන් සඳහා
           lessons:
             Lists:
               name: ලැයිස්තු
             For Loops:
               name: ලූපයන් සඳහා
         csd3-1819draft:
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
           description_short: ක්‍රමලේඛනය
           lessons:
             Variables:
@@ -2478,13 +1455,6 @@ si:
               name: ශ්‍රිතයන්
         csd3-2018:
           description_short: ක්‍රමලේඛනය
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
           lessons:
             Variables:
               name: විචල්‍යන්
@@ -2493,59 +1463,16 @@ si:
             Functions:
               name: ශ්‍රිතයන්
         csd2-2018:
-          stages:
-            Lists:
-              name: ලැයිස්තු
           lessons:
             Lists:
               name: ලැයිස්තු
         coursea-2018:
-          stages:
-            'Programming: Happy Maps':
-              name: සතුටු සිතියම්
-            Going Places Safely:
-              name: තැන්වලට සුරක්ෂිතව යාම
           lessons:
             'Programming: Happy Maps':
               name: සතුටු සිතියම්
             Going Places Safely:
               name: තැන්වලට සුරක්ෂිතව යාම
         express-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: ප්‍රස්තාර රටා වැඩසටහන්
-            Introduction:
-              name: හැදින්වීම
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
-            'Events: The Big Event':
-              name: විශාල සිදුවීම
-            'Loops: Getting Loopy':
-              name: ඔල්මාද වීම
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            'Functions: Songwriting':
-              name: ගීත ලිවීම
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            'Unplugged: Binary':
-              name: ද්විමය පින්තූර
-            Artist Binary:
-              name: කලාකරු ද්විමය
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
-            Relay Programming:
-              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
-            Graph Paper Programming:
-              name: ප්‍රස්තාර රටා වැඩසටහන්
           lessons:
             'Algorithms: Graph Paper Programming':
               name: ප්‍රස්තාර රටා වැඩසටහන්
@@ -2582,13 +1509,6 @@ si:
             Graph Paper Programming:
               name: ප්‍රස්තාර රටා වැඩසටහන්
         courseb-2018:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-            Your Digital Footprint:
-              name: ඔබේ ඩිජිටල් පා සටහන
-            Move It, Move It:
-              name: එය ගෙන යන්න, ගෙන යන්න
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
@@ -2597,25 +1517,6 @@ si:
             Move It, Move It:
               name: එය ගෙන යන්න, ගෙන යන්න
         coursed-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: ප්‍රස්තාර රටා වැඩසටහන්
-            Introduction:
-              name: හැදින්වීම
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            'Unplugged: Binary':
-              name: ද්විමය පින්තූර
-            Artist Binary:
-              name: කලාකරු ද්විමය
-            Graph Paper Programming:
-              name: ප්‍රස්තාර රටා වැඩසටහන්
-            Relay Programming:
-              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
           lessons:
             'Algorithms: Graph Paper Programming':
               name: ප්‍රස්තාර රටා වැඩසටහන්
@@ -2636,15 +1537,6 @@ si:
             Relay Programming:
               name: ක්‍රමලේඛණය ප්‍රතිචාරණය
         coursec-2018:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            'Loops: Getting Loopy':
-              name: ඔල්මාද වීම
-            'Events: The Big Event':
-              name: විශාල සිදුවීම
-            Binary Bracelets:
-              name: ද්විමය වළලු
           lessons:
             Building a Foundation:
               name: පදනමක් තැනීම
@@ -2655,30 +1547,10 @@ si:
             Binary Bracelets:
               name: ද්විමය වළලු
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: පරාමිතියන් සහිත ශ්‍රිත
           lessons:
             Functions with Parameters:
               name: පරාමිතියන් සහිත ශ්‍රිත
         coursee-2018:
-          stages:
-            'Programming: My Robotic Friends':
-              name: මගේ රොබෝ මිතුරන්
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Introduction:
-              name: හැදින්වීම
-            'Functions: Songwriting':
-              name: ගීත ලිවීම
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           lessons:
             'Programming: My Robotic Friends':
               name: මගේ රොබෝ මිතුරන්
@@ -2697,23 +1569,6 @@ si:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         coursef-2018:
-          stages:
-            'Programming: My Robotic Friends':
-              name: මගේ රොබෝ මිතුරන්
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Introduction:
-              name: හැදින්වීම
-            Ice Age Play Lab:
-              name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Songwriting with Parameters:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
           lessons:
             'Programming: My Robotic Friends':
               name: මගේ රොබෝ මිතුරන්
@@ -2732,9 +1587,6 @@ si:
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
         csp1-2018:
-          stages:
-            The Internet:
-              name: අන්තර්ජාලය
           lessons:
             The Internet:
               name: අන්තර්ජාලය
@@ -2743,9 +1595,6 @@ si:
             csp2_1_2018:
               display_name: '2වන ඒකකය: අංකිත තොරතුරු'
         csp3-2018:
-          stages:
-            Creating Functions:
-              name: ශ්‍රිතය නිර්මාණය කරන්න
           lessons:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
@@ -2754,9 +1603,6 @@ si:
             csp4_1_2018:
               display_name: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
         csp5-2018:
-          stages:
-            While Loops:
-              name: නැවත සිදුවන ලුප
           lessons:
             While Loops:
               name: නැවත සිදුවන ලුප
@@ -2863,15 +1709,6 @@ si:
             content:
               display_name: අන්තර්ගතය
         pre-express-2018:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-            Spelling Bee:
-              name: අක්ෂර වින්‍යාස බඹරා
-            Move It, Move It:
-              name: එය ගෙන යන්න, ගෙන යන්න
-            Your Digital Footprint:
-              name: ඔබේ ඩිජිටල් පා සටහන
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
@@ -2888,23 +1725,14 @@ si:
             content:
               display_name: අන්තර්ගතය
         frozen-2018:
-          stages:
-            Artist:
-              name: කලාකරු
           lessons:
             Artist:
               name: කලාකරු
         frozen-2018-test:
-          stages:
-            Artist:
-              name: කලාකරු
           lessons:
             Artist:
               name: කලාකරු
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: කලාකරු
           lessons:
             Artist:
               name: කලාකරු
@@ -2917,21 +1745,6 @@ si:
             csp_functions:
               display_name: ශ්‍රිතයන්
         coursef-2019:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            The Artist:
-              name: කලාකරුවා
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
           lesson_groups:
             csf_variables:
               display_name: විචල්‍යන්
@@ -2959,19 +1772,6 @@ si:
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: ප්‍රස්තාර රටා වැඩසටහන්
-            Relay Programming:
-              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
-            'Unplugged: Binary':
-              name: ද්විමය පින්තූර
-            Artist Binary:
-              name: කලාකරු ද්විමය
           lesson_groups:
             csf_events:
               display_name: වැඩසටහන්
@@ -2997,21 +1797,6 @@ si:
             Artist Binary:
               name: කලාකරු ද්විමය
         coursee-2019:
-          stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            'Functions: Songwriting':
-              name: ගීත ලිවීම
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
-            Songwriting:
-              name: ගීත ලිවීම
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3035,25 +1820,6 @@ si:
             Songwriting:
               name: ගීත ලිවීම
         express-2019:
-          stages:
-            Relay Programming:
-              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            'Unplugged: Binary':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
-            Artist Binary:
-              name: කලාකරු ද්විමය
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
           lesson_groups:
             csf_loops:
               display_name: ලූපයන්
@@ -3085,9 +1851,6 @@ si:
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
         andrea-test:
-          stages:
-            'null':
-              name: ශුන්‍ය
           lesson_groups:
             required:
               display_name: දළ විශ්ලේෂණය
@@ -3097,13 +1860,6 @@ si:
             'null':
               name: ශුන්‍ය
         coursec-2019:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
-            'Events: The Big Event':
-              name: විශාල සිදුවීම
-            Binary Bracelets:
-              name: ද්විමය වළලු
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3123,11 +1879,6 @@ si:
             Binary Bracelets:
               name: ද්විමය වළලු
         coursea-2019:
-          stages:
-            'Programming: Happy Maps':
-              name: සතුටු සිතියම්
-            Going Places Safely:
-              name: තැන්වලට සුරක්ෂිතව යාම
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3141,13 +1892,6 @@ si:
             Going Places Safely:
               name: තැන්වලට සුරක්ෂිතව යාම
         courseb-2019:
-          stages:
-            Move It, Move It:
-              name: එය ගෙන යන්න, ගෙන යන්න
-            Your Digital Footprint:
-              name: ඔබේ ඩිජිටල් පා සටහන
-            'Loops: Getting Loopy':
-              name: ඔල්මාද වීම
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3163,13 +1907,6 @@ si:
             'Loops: Getting Loopy':
               name: ඔල්මාද වීම
         pre-express-2019:
-          stages:
-            Move It, Move It:
-              name: එය ගෙන යන්න, ගෙන යන්න
-            Your Digital Footprint:
-              name: ඔබේ ඩිජිටල් පා සටහන
-            Spelling Bee:
-              name: අක්ෂර වින්‍යාස බඹරා
           lesson_groups:
             csf_loops:
               display_name: ලූපයන්
@@ -3183,28 +1920,15 @@ si:
             Spelling Bee:
               name: අක්ෂර වින්‍යාස බඹරා
         removed19:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
         csd2-2019:
-          stages:
-            Lists:
-              name: ලැයිස්තු
           lessons:
             Lists:
               name: ලැයිස්තු
         csd3-2019:
           description_short: ක්‍රමලේඛනය
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
           lessons:
             Variables:
               name: විචල්‍යන්
@@ -3213,16 +1937,10 @@ si:
             Functions:
               name: ශ්‍රිතයන්
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: පරාමිතියන් සහිත ශ්‍රිත
           lessons:
             Functions with Parameters:
               name: පරාමිතියන් සහිත ශ්‍රිත
         csp4-pilot:
-          stages:
-            Surveys:
-              name: සමීක්ෂණ
           lesson_groups:
             csp_variables:
               display_name: විචල්‍යන්
@@ -3236,9 +1954,6 @@ si:
             Surveys:
               name: සමීක්ෂණ
         csp1-2019:
-          stages:
-            The Internet:
-              name: අන්තර්ජාලය
           lessons:
             The Internet:
               name: අන්තර්ජාලය
@@ -3247,9 +1962,6 @@ si:
             csp2_1_2018:
               display_name: '2වන ඒකකය: අංකිත තොරතුරු'
         csp3-2019:
-          stages:
-            Creating Functions:
-              name: ශ්‍රිතය නිර්මාණය කරන්න
           lessons:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
@@ -3258,9 +1970,6 @@ si:
             csp4_1_2018:
               display_name: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
         csp5-2019:
-          stages:
-            While Loops:
-              name: නැවත සිදුවන ලුප
           lessons:
             While Loops:
               name: නැවත සිදුවන ලුප
@@ -3269,13 +1978,6 @@ si:
             required:
               display_name: දළ විශ්ලේෂණය
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            Building a Foundation:
-              name: පදනමක් තැනීම
           lessons:
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
@@ -3346,9 +2048,6 @@ si:
             csp_functions:
               display_name: ශ්‍රිතයන්
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: ප්‍රස්තාර රටා වැඩසටහන්
           lessons:
             Graph Paper Programming:
               name: ප්‍රස්තාර රටා වැඩසටහන්
@@ -3373,21 +2072,11 @@ si:
             content:
               display_name: අන්තර්ගතය
         csd2-pilot:
-          stages:
-            Lists:
-              name: ලැයිස්තු
           lessons:
             Lists:
               name: ලැයිස්තු
         csd3-pilot:
           description_short: ක්‍රමලේඛනය
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
           lessons:
             Variables:
               name: විචල්‍යන්
@@ -3474,11 +2163,6 @@ si:
             required:
               display_name: දළ විශ්ලේෂණය
         peru-2019:
-          stages:
-            Introduction:
-              name: හැදින්වීම
-            Nested Loops:
-              name: නැවත නැවත සිදුවන ලුප
           lessons:
             Introduction:
               name: හැදින්වීම
@@ -3491,21 +2175,6 @@ si:
             required:
               display_name: දළ විශ්ලේෂණය
         k5-onlinepd-2019:
-          stages:
-            Next Steps:
-              name: ඉදිරි පියවර
-            Loops:
-              name: ලූපයන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Events:
-              name: වැඩසටහන්
-            Functions:
-              name: ශ්‍රිතයන්
-            Variables:
-              name: විචල්‍යන්
-            For Loops:
-              name: ලූපයන් සඳහා
           lesson_groups:
             k5_next_steps:
               display_name: ඉදිරි පියවර
@@ -3533,18 +2202,10 @@ si:
             csp_functions:
               display_name: ශ්‍රිතයන්
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: කන්ඩිෂනලස්
           lessons:
             Conditionals:
               name: කන්ඩිෂනලස්
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3560,9 +2221,6 @@ si:
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: කන්ඩිෂනලස්
           lesson_groups:
             csf_loops:
               display_name: ලූපයන්
@@ -3576,9 +2234,6 @@ si:
             Conditionals:
               name: කන්ඩිෂනලස්
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: කන්ඩිෂනලස්
           lesson_groups:
             csf_loops:
               display_name: ලූපයන්
@@ -3610,23 +2265,11 @@ si:
             csp_loops:
               display_name: ලූපයන්
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: පරාමිතියන් සහිත ශ්‍රිත
           lessons:
             Functions with Parameters:
               name: පරාමිතියන් සහිත ශ්‍රිත
         csd3-2020:
           description_short: ක්‍රමලේඛනය
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
-            Text:
-              name: පෙළ
           lessons:
             Variables:
               name: විචල්‍යන්
@@ -3637,11 +2280,6 @@ si:
             Text:
               name: පෙළ
         coursea-2020:
-          stages:
-            Going Places Safely:
-              name: තැන්වලට සුරක්ෂිතව යාම
-            'Programming: Happy Maps':
-              name: සතුටු සිතියම්
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3655,13 +2293,6 @@ si:
             'Programming: Happy Maps':
               name: සතුටු සිතියම්
         courseb-2020:
-          stages:
-            Your Digital Footprint:
-              name: ඔබේ ඩිජිටල් පා සටහන
-            Move It, Move It:
-              name: එය ගෙන යන්න, ගෙන යන්න
-            'Loops: Getting Loopy':
-              name: ඔල්මාද වීම
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3677,11 +2308,6 @@ si:
             'Loops: Getting Loopy':
               name: ඔල්මාද වීම
         coursec-2020:
-          stages:
-            Binary Bracelets:
-              name: ද්විමය වළලු
-            'Events: The Big Event':
-              name: විශාල සිදුවීම
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3699,19 +2325,6 @@ si:
             'Events: The Big Event':
               name: විශාල සිදුවීම
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: ප්‍රස්තාර රටා වැඩසටහන්
-            Relay Programming:
-              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
-            Conditionals with Cards:
-              name: කාඩ්පත් සමඟ කොන්දේසික
-            'Unplugged: Binary':
-              name: ද්විමය පින්තූර
-            Artist Binary:
-              name: කලාකරු ද්විමය
-            Digital Citizenship:
-              name: ඩිජිටල් පුරවැසිකම
           lesson_groups:
             csf_events:
               display_name: වැඩසටහන්
@@ -3737,9 +2350,6 @@ si:
             Digital Citizenship:
               name: ඩිජිටල් පුරවැසිකම
         coursee-2020:
-          stages:
-            'Functions: Songwriting':
-              name: ගීත ලිවීම
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3751,15 +2361,6 @@ si:
             'Functions: Songwriting':
               name: ගීත ලිවීම
         coursef-2020:
-          stages:
-            Envelope Variables:
-              name: ආවරණය කරන ලද විචල්‍ය
-            For Loop Fun:
-              name: For ලුපයේ සතුට
-            Internet:
-              name: අන්තර්ජාලය
-            Crowdsourcing:
-              name: Crowdsourcing වැඩසටහන
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
@@ -3791,9 +2392,6 @@ si:
             csf_for_loops:
               display_name: ලූපයන් සඳහා
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: අක්ෂර වින්‍යාස බඹරා
           lesson_groups:
             csf_loops:
               display_name: ලූපයන්
@@ -3807,27 +2405,16 @@ si:
             csp_unit1_2020:
               display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
         csp3-virtual:
-          stages:
-            Creating Functions:
-              name: ශ්‍රිතය නිර්මාණය කරන්න
           lessons:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
         csp5-virtual:
-          stages:
-            While Loops:
-              name: නැවත සිදුවන ලුප
-            Variables:
-              name: විචල්‍යන්
           lessons:
             While Loops:
               name: නැවත සිදුවන ලුප
             Variables:
               name: විචල්‍යන්
         virtual-holding-place:
-          stages:
-            Functions:
-              name: ශ්‍රිතයන්
           lesson_groups:
             content:
               display_name: අන්තර්ගතය
@@ -3835,37 +2422,16 @@ si:
             Functions:
               name: ශ්‍රිතයන්
         code-break:
-          stages:
-            Algorithms:
-              name: ඇල්ගොරිතම්
-            Events:
-              name: වැඩසටහන්
           lessons:
             Algorithms:
               name: ඇල්ගොරිතම්
             Events:
               name: වැඩසටහන්
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: නැවත සිදුවන ලුප
           lessons:
             While Loops:
               name: නැවත සිදුවන ලුප
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: ලූපයන්
-            Events:
-              name: වැඩසටහන්
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
-            Variables:
-              name: විචල්‍යන්
-            For Loops:
-              name: ලූපයන් සඳහා
           lessons:
             Loops:
               name: ලූපයන්
@@ -3884,15 +2450,6 @@ si:
               display_name: ඉදිරි පියවර
         csd3-virtual:
           description_short: ක්‍රමලේඛනය
-          stages:
-            Variables:
-              name: විචල්‍යන්
-            Text:
-              name: පෙළ
-            Conditionals:
-              name: කන්ඩිෂනලස්
-            Functions:
-              name: ශ්‍රිතයන්
           lessons:
             Variables:
               name: විචල්‍යන්

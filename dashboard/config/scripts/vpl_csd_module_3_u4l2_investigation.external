@@ -1,0 +1,32 @@
+name 'VPL - CSD - Module 3 - U4L2 Investigation'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Lesson Investigation: Unit 4 Lesson 2
+
+**Estimated Time: 30 minutes**
+
+## Overview
+
+Now let's go on to investigate Unit 4, Lesson 2: Understanding Your User which encourages students to think about how to design for different users.  Students engage in choosing a product for a specific user, critiquing product design, and suggesting improvements. 
+
+Lesson 2 builds on Lesson 1 by having students consider potential users, in addition to the users a product was originally designed for. Students continue to apply the Problem Solving Process. Empathy is still a part of the design process and now includes potential users. 
+
+## Goals
+
+* Review user profiles that students will use
+
+* Identify ways for students to make connections between
+	* a user profile and user preferences for a product
+    * a user profile and adding features to a product 
+
+
+
+
+
+
+
+
+MARKDOWN

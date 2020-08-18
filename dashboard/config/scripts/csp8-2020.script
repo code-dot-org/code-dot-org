@@ -2,19 +2,22 @@ hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit8"], ["standardMappings", "https://curriculum.code.org/csp-20/unit8/standards/"]]
 has_verified_resources true
+has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit8/{LESSON}'
+script_announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson 'Create PT - Review the Task'
+lesson 'Create PT - Review the Task', display_name: 'Create PT - Review the Task'
 level 'CSP U8L1 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Create PT - Make a Plan'
+lesson 'Create PT - Make a Plan', display_name: 'Create PT - Make a Plan'
 level 'CSP U8L2 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Create PT - Complete the Task'
+lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task'
 level 'CSP U8L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'csp-pt-tech-setup-and-tools_2020', progression: 'Tech Setup and Tools for Create PT'
 level 'Create PT Workspace 2020', progression: 'Create PT Coding Workspace'

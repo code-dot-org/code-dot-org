@@ -263,6 +263,10 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': 'y'
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -284,6 +288,16 @@ km:
         options:
           UNIT:
             '"seconds"': វិ​នាទី
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:

@@ -61,8 +61,8 @@ module Pd
         SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSP_WORKSHOP_5 => {min_days: 2, max_days: 2, max_hours: 12},
-        SUBJECT_CSP_WORKSHOP_6 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSP_WORKSHOP_1_2 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSP_WORKSHOP_3_4 => {min_days: 2, max_days: 2, max_hours: 12},
         SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5},
         SUBJECT_CSP_FOR_RETURNING_TEACHERS => {max_hours: 7}
       },
@@ -72,8 +72,8 @@ module Pd
         SUBJECT_CSD_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSD_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSD_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSD_WORKSHOP_5 => {min_days: 2, max_days: 2, max_hours: 12},
-        SUBJECT_CSD_WORKSHOP_6 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSD_WORKSHOP_1_2 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSD_WORKSHOP_3_4 => {min_days: 2, max_days: 2, max_hours: 12},
         SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
       },
       COURSE_CSF => {

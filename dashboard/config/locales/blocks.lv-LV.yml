@@ -249,6 +249,10 @@ lv:
             '"right"': pa labi
             '"space"': telpa
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -266,6 +270,15 @@ lv:
         options:
           UNIT:
             '"seconds"': sekundes
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

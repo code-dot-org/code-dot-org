@@ -540,7 +540,7 @@ export default {
       {
         initPostScript(block) {
           block.setHSV(136, 0.84, 0.8);
-          block.parameterNames_ = ['this sprite'];
+          block.parameterNames_ = [i18n.thisSprite()];
           block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
         },
         overrides: {

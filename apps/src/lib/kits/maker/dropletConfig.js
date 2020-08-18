@@ -337,7 +337,7 @@ const circuitPlaygroundBlocks = [
     type: 'property'
   },
 
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
+  // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'isPressed',
     objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
@@ -347,7 +347,7 @@ const circuitPlaygroundBlocks = [
     type: 'readonlyproperty',
     tipPrefix: '[Button].'
   },
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
+  // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'holdtime',
     objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
