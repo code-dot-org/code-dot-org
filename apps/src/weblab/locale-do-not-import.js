@@ -8,4 +8,4 @@
  */
 // locale for weblab
 
-export default window.blockly.weblab_locale;
+export default window.locales.weblab_locale;
