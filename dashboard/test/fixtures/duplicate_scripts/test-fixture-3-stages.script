@@ -1,7 +1,7 @@
-lesson 'lesson3'
+lesson 'lesson3', display_name: 'lesson3'
 level 'Level 4'
 level 'Level 5'
 
-lesson 'lesson1'
+lesson 'lesson1', display_name: 'lesson1'
 level 'Level 1'
 level 'Level 2'

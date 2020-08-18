@@ -4,10 +4,10 @@ import {connect} from 'react-redux';
 import {MultiGrid} from 'react-virtualized';
 import styleConstants from '../../../styleConstants';
 import {
-  scriptDataPropType,
   getLevels,
   jumpToLessonDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StudentProgressSummaryCell from './StudentProgressSummaryCell';
 import SectionProgressLessonNumberCell from '@cdo/apps/templates/sectionProgress/SectionProgressLessonNumberCell';

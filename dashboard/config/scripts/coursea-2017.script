@@ -9,20 +9,20 @@ new_name 'coursea-2017'
 family_name 'coursea'
 version_year '2017'
 is_stable true
-supported_locales ["ar-SA", "es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "pt-BR", "zh-CN", "zh-TW"]
+supported_locales ["ar-SA", "cs-CZ", "es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "pt-BR", "sk-SK", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 
-lesson 'Debugging: Unspotted Bugs'
+lesson 'Debugging: Unspotted Bugs', display_name: 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
 
-lesson 'Persistence & Frustration: Stevie and the Marbles'
+lesson 'Persistence & Frustration: Stevie and the Marbles', display_name: 'Persistence: Stevie and the Big Project'
 level 'courseA_video_Stevie'
 
-lesson 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed'
 level 'PlantASeed'
 
-lesson 'Learn to Drag and Drop'
+lesson 'Learn to Drag and Drop', display_name: 'Sequencing with Drag and Drop'
 level 'elementary_video_pairProgramming'
 skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
@@ -58,10 +58,10 @@ skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12'
 
-lesson 'Programming: Happy Maps'
+lesson 'Programming: Happy Maps', display_name: 'Programming: Happy Maps'
 level 'UnplugHappyMaps'
 
-lesson 'Programming in Maze'
+lesson 'Programming in Maze', display_name: 'Programming in Maze'
 level 'courseAB_video_NewIntro'
 level 'courseA_maze_seq1'
 level 'courseA_video_debug1'
@@ -80,13 +80,13 @@ level 'courseA_maze_seq13'
 bonus 'courseA_maze_seq_challenge1'
 bonus 'courseA_maze_seq_challenge2'
 
-lesson 'Going Places Safely'
+lesson 'Going Places Safely', display_name: 'Digital Citizenship: Going Places Safely'
 level 'GoingPlacesSafely'
 
-lesson 'Loops: Happy Loops'
+lesson 'Loops: Happy Loops', display_name: 'Loops: Happy Loops'
 level 'courseA_unplugged_loops'
 
-lesson 'Loops in Collector'
+lesson 'Loops in Collector', display_name: 'Loops in Collector'
 level 'courseAB_video_collector'
 level 'courseA_collector_loops1'
 level 'courseA_collector_loops2'
@@ -104,7 +104,7 @@ level 'courseA_collector_loops12'
 bonus 'courseA_collector_loops_challenge2kp'
 bonus 'courseA_collector_loops_challenge1'
 
-lesson 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist'
 level 'courseB_video_ArtistIntro'
 level 'courseA_artist_loops1'
 level 'courseA_artist_loops2'
@@ -122,10 +122,10 @@ level 'courseA_artist_loops12'
 bonus 'courseA_artist_loops_challenge2a'
 bonus 'courseA_artist_loops_challenge1'
 
-lesson 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event'
 level 'BigEvent'
 
-lesson 'Events in Play Lab'
+lesson 'Events in Play Lab', display_name: 'Events in Play Lab'
 level 'courseA_video_events'
 level 'courseA_playLab_events1'
 level 'courseA_playLab_events2'

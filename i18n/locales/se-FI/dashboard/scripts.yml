@@ -154,6 +154,7 @@ se:
             Artist:
               name: Dáiddár
         hourofcode:
+          title: Klassikalaš Labirynta
           description: Geahččal  dihtordiehtaga vuođđoáššiid mas geavahat figuraid Angy Bird:as, Šattut Zombiid vuostá, ja Scrat:a Jiekŋaáiggis.
           description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu somas figuraid.
           lessons:
@@ -383,7 +384,12 @@ se:
             Studio:
               name: Studio
         flappy:
+          title: Flappy Koda
+          description: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal min Flappy Koda neavvaga!
           description_short: Čále iežat Flappy spealu!
+          lessons:
+            Flappy Code:
+              name: Flappy Koda
         jigsaw:
           description: Geahččal Bihttáspealu neavvaga.
           description_short: Geahččal Bihttáspealu neavvaga.
@@ -854,6 +860,8 @@ se:
               name: Gilvu
             Maze:
               name: Labirynta
+            Minecraft:
+              name: Minecraft
             Multi:
               name: Multi
             Multi2:
@@ -1456,6 +1464,7 @@ se:
             Hour of Code 2015:
               name: KodenDiibmu 2015
         mc:
+          description_short: Guorahala Minecraft máilmmi kodemiin.
           lessons:
             Hour of Code 2015:
               name: KodenDiibmu 2015
@@ -2235,6 +2244,10 @@ se:
               name: App:a Teasten
             Planning for Improvements:
               name: Plánet Buoridemiid
+        CSDU2-Draft:
+          lessons:
+            Peer Review:
+              name: Eará Oahppi Árvvoštallan
         CSF_Secret_Sample_Story:
           lessons:
             Sample Stage:
@@ -2494,6 +2507,9 @@ se:
           lesson_groups:
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+          lessons:
+            Peer Review:
+              name: Eará Oahppi Árvvoštallan
         csp2-support:
           lesson_groups:
             content:
@@ -2518,6 +2534,13 @@ se:
               name: Analysere Jearahallamiid
             Presenting Your Design:
               name: Presentere Iežat Designa
+        minecraft:
+          description_short: Programmere elliid dahje eará Minecraft heakkalaččaid du iežat Minecraft-veršuvnnas.
+          description: Programmere elliid dahje eará Minecraft heakkalaččaid du iežat Minecraft-veršuvnnas.
+        flappy-impact-study:
+          lessons:
+            Flappy Code:
+              name: Flappy Koda
         coursea-draft:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2773,6 +2796,10 @@ se:
           lessons:
             Participate in a longitudinal study!:
               name: Oassálaste longitudinala oahpus!
+        csd2-old:
+          lessons:
+            Peer Review:
+              name: Eará Oahppi Árvvoštallan
         artist-and-bb8:
           lessons:
             Ice Age Play Lab:
@@ -2921,6 +2948,8 @@ se:
           lessons:
             other:
               name: eará
+            Thanks:
+              name: Giitu
         csp3-research-mxghyt:
           lesson_groups:
             csp3_1:
