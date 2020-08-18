@@ -64,7 +64,7 @@ class Lesson < ActiveRecord::Base
           key: raw_lesson[:key],
           script: script
         ) do |l|
-          l.name = " " # will be updated below, but cant be null
+          l.name = "" # will be updated below, but cant be null
           l.relative_position = 0 # will be updated below, but cant be null
         end
 
@@ -88,7 +88,7 @@ class Lesson < ActiveRecord::Base
   end
 
   def self.prevent_changing_stable_i18n_key(script, raw_lesson)
-    if script.is_stable && ScriptConstants.i18n?(script.name) && !(I18n.t "data.script.name.#{script.name}.lessons").keys.map(&:to_s).include?(raw_lesson[:key])
+    if script.is_stable && ScriptConstants.i18n?(script.name) && !(I18n.t "data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}")
       raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
     end
   end
