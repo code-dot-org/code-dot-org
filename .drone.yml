@@ -36,7 +36,9 @@ steps:
 - name: restore-cache
   image: plugins/s3-cache
   settings:
-    root: code-dot-org
+    endpoint: s3://code-dot-org
+    root: /
+    debug: true
     pull: true
     restore: true
     filename: unit-tests-cache.tar
@@ -76,7 +78,9 @@ steps:
   - name: rbenv
     path: /home/circleci/.rbenv
   settings:
-    root: code-dot-org
+    endpoint: s3://code-dot-org
+    root: /
+    debug: true
     pull: true
     rebuild: true
     filename: unit-tests-cache.tar
@@ -145,6 +149,9 @@ steps:
 - name: restore-cache
   image: plugins/s3-cache
   settings:
+    endpoint: s3://code-dot-org
+    root: /
+    debug: true
     pull: true
     restore: true
 
@@ -189,6 +196,9 @@ steps:
   - name: rbenv
     path: /home/circleci/.rbenv
   settings:
+    endpoint: s3://code-dot-org
+    root: /
+    debug: true
     pull: true
     rebuild: true
     mount:
@@ -211,6 +221,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 80869904a8ae95b51ee06dec1402a58b963bd8cb34d1505551c20a6f0de4a1a4
+hmac: 17f563ac1975c9dead0c4ffb6e49c74bdc9fab54d25aec6888d9b1761ec93bef
 
 ...
