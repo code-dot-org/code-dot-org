@@ -308,7 +308,11 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
-    azure_speech_service = azure_speech_service_options
+
+    # TODO: (madelynkasula) Re-enable this Azure request once we have root-caused this Honeybadger error:
+    # https://app.honeybadger.io/projects/3240/faults/66859534
+    # azure_speech_service = azure_speech_service_options
+
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -319,10 +323,7 @@ class ProjectsController < ApplicationController
       no_header: sharing || iframe_embed_app_and_code,
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
-      game_display_name: data_t("game.name", @game.name),
-      azure_speech_service_token: azure_speech_service[:azureSpeechServiceToken],
-      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion],
-      azure_speech_service_languages: azure_speech_service[:azureSpeechServiceLanguages]
+      game_display_name: data_t("game.name", @game.name)
     )
 
     if params[:key] == 'artist'
