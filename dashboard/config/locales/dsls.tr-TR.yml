@@ -2629,15 +2629,22 @@ tr-TR:
             olacak?
       courseD_multi_scrat_predict1:
         answers:
-        - feedback: Yanlış. "İlerle" bloğunu "tekrar" bloğuna yerleştirdiğinizde Scrat
+        - text: Bir şey olmadı. Scrat hareket etmeyecek.
+          feedback: Yanlış. "İlerle" bloğunu "tekrar" bloğuna yerleştirdiğinizde Scrat
             üç kez ilerler.
-        - correct: true
+        - text: Scrat üç kez ilerleyecek, dönecek, sonra üç kez daha ilerleyecek ve
+            meşe palamuduna ulaşacak.
+          correct: true
           feedback: Doğru!
-        - feedback: Yanlış. "İlerle" bloğunu "tekrar" bloğuna yerleştirdiğinizde Scrat
+        - text: Scrat ilerleyecek, sonra dönecek ve çarpacak.
+          feedback: Yanlış. "İlerle" bloğunu "tekrar" bloğuna yerleştirdiğinizde Scrat
             üç kez ilerler.
         - text: Bilmiyorum.
+          feedback: '"İlerle" bloğunu "tekrar" bloğuna yerleştirdiğinizde Scrat üç
+            kez ilerler. Sonra döner ve üç kez daha ilerler ve meşe palamuduna ulaşır.'
         questions:
-        - {}
+        - text: Bu kod yeni bir blok kullanmaktadır. "Çalıştır"a bastığınızda sizce
+            ne olacak?
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Aynı program bu bulmacayı çözmenize yardımcı olacak.
@@ -3257,3 +3264,8 @@ tr-TR:
             hataya neden oluyor.
         questions:
         - {}
+      gradek1_activity_beNice:
+        markdown: "# Bilgisayar Laboratuvarındaki Davranışlar\n  \n<br/><br/>    \n
+          \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nDers planına git\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Devam Et</a>\n"
