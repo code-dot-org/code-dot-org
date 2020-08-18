@@ -1,4 +1,4 @@
-lesson 'Artist'
+lesson 'Artist', display_name: 'Artist'
 level 'frozen line_b'
 level 'frozen perpendicular_b'
 level 'frozen_video_loops_b'
@@ -17,3 +17,4 @@ level 'frozen snowflake branch_b'
 level 'frozen snowflake full_b'
 level 'frozen snowflake fuller_b'
 level 'frozen freeplay_b'
+

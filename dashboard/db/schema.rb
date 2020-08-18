@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200728201407) do
+ActiveRecord::Schema.define(version: 20200812225058) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1048,6 +1048,7 @@ ActiveRecord::Schema.define(version: 20200728201407) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "facilitator_id"
+    t.string   "workshop_agenda"
     t.index ["foorm_submission_id"], name: "index_workshop_survey_foorm_submissions_on_foorm_id", unique: true, using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_session_id", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_workshop_id", using: :btree
@@ -1588,6 +1589,7 @@ ActiveRecord::Schema.define(version: 20200728201407) do
     t.boolean  "submitted"
     t.boolean  "readonly_answers"
     t.datetime "unlocked_at"
+    t.integer  "time_spent"
     t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
   end
 
@@ -1753,12 +1755,6 @@ ActiveRecord::Schema.define(version: 20200728201407) do
     t.index ["school_info_id"], name: "index_users_on_school_info_id", using: :btree
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
-  end
-
-  create_table "validated_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "time_spent",    default: 0
-    t.bigint  "user_level_id",             unsigned: true
-    t.index ["user_level_id"], name: "index_validated_user_levels_on_user_level_id", unique: true, using: :btree
   end
 
   create_table "videos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

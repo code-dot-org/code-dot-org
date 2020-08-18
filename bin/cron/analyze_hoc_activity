@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative './only_one'
-exit(1) unless only_one_running?(__FILE__)
+abort 'Script already running' unless only_one_running?(__FILE__)
 #
 # This script analyzes the activity that is launched from code.org/learn. We track outgoing clicks,
 # hidden image calls at the beginning and end of [3rd party] tutorials, and visits to our finish
