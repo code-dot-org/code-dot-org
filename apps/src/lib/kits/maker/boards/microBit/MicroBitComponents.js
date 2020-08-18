@@ -8,6 +8,7 @@ import MicroBitThermometer from './MicroBitThermometer';
 import Compass from './Compass';
 import LightSensor from './LightSensor';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
+import {MAX_SENSOR_BUFFER, SAMPLE_RATE} from './MicroBitConstants';
 
 /**
  * Initializes a set of components for the currently
@@ -70,6 +71,10 @@ export function cleanupMicroBitComponents(
       rangeMax: 255,
       currentReading: 0
     };
+    components.lightSensor.buffer = new Float32Array(
+      MAX_SENSOR_BUFFER / SAMPLE_RATE
+    );
+    components.lightSensor.bufferIndex = 0;
     components.lightSensor.stop();
   }
 
