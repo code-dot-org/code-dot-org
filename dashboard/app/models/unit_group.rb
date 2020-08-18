@@ -296,8 +296,8 @@ class UnitGroup < ApplicationRecord
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
-        include_stages = false
-        script.summarize(include_stages, user).merge!(script.summarize_i18n_for_display(include_stages))
+        include_lessons = false
+        script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
