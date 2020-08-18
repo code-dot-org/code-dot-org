@@ -5,5 +5,6 @@ has_verified_resources true
 has_lesson_plan true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CSD post-course survey'
+lesson 'CSD post-course survey', display_name: 'CSD post-course survey'
 level 'csd-post-survey-levelgroup-2018', progression: 'CS Discoveries Post-Course Survey', assessment: true
+

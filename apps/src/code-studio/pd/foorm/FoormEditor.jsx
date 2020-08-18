@@ -52,7 +52,8 @@ class FoormEditor extends React.Component {
         }
       ],
       day: 1,
-      is_friday_institute: false
+      is_friday_institute: false,
+      workshop_agenda: 'module1'
     };
   }
 
@@ -195,6 +196,16 @@ class FoormEditor extends React.Component {
                   onChange={e => this.setState({day: e.target.value})}
                 />
               </label>
+              <label>
+                workshop_agenda <br />
+                <input
+                  type="text"
+                  value={this.state.workshop_agenda}
+                  onChange={e =>
+                    this.setState({workshop_agenda: e.target.value})
+                  }
+                />
+              </label>
             </form>
             <Button onClick={this.previewFoorm}>Preview</Button>
             {this.state.formPreviewQuestions && (
@@ -213,7 +224,8 @@ class FoormEditor extends React.Component {
                   regional_partner_name: this.state.regional_partner_name,
                   is_virtual: this.state.is_virtual,
                   day: this.state.day,
-                  is_friday_institute: this.state.is_friday_institute
+                  is_friday_institute: this.state.is_friday_institute,
+                  workshop_agenda: this.state.workshop_agenda
                 }}
               />
             )}

@@ -32,13 +32,6 @@ window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.Radium = require('radium');
 
-// TODO (bbuchanan): Stop including these components in a global way, just
-//                   require them specifically where needed.
-require('@cdo/apps/code-studio/components/AbuseError');
-require('@cdo/apps/code-studio/components/SendToPhone');
-require('@cdo/apps/code-studio/components/SmallFooter');
-require('@cdo/apps/code-studio/components/Attachments');
-
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
 if ($.fn.modal) {

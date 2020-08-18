@@ -10,14 +10,14 @@ class CoursesControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
-    @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_course
+    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment'
+    @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
 
-    @course_regular = create :unit_group, name: 'non-plc-course'
+    @unit_group_regular = create :unit_group, name: 'non-plc-course'
 
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
@@ -38,7 +38,7 @@ class CoursesControllerTest < ActionController::TestCase
   # Tests for show
 
   test "show: regular courses get sent to show" do
-    get :show, params: {course_name: @course_regular.name}
+    get :show, params: {course_name: @unit_group_regular.name}
     assert_template 'courses/show'
   end
 
@@ -48,9 +48,9 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
-  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}, queries: 8
+  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 8
 
-  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 2
+  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
 
   test "show: redirect to latest stable version in course family" do
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
@@ -149,37 +149,37 @@ class CoursesControllerTest < ActionController::TestCase
   no_access_msg = "You don&#39;t have access to this course."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
-                              params: -> {{course_name: @pilot_course.name}},
+                              params: -> {{course_name: @pilot_unit_group.name}},
                               name: 'signed out user cannot view pilot script'
 
   test_user_gets_response_for(:show, response: :success, user: :student,
-                              params: -> {{course_name: @pilot_course.name}}, name: 'student cannot view pilot course'
+                              params: -> {{course_name: @pilot_unit_group.name}}, name: 'student cannot view pilot course'
   ) do
     assert response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
-                              params: -> {{course_name: @pilot_course.name}},
+                              params: -> {{course_name: @pilot_unit_group.name}},
                               name: 'teacher without pilot access cannot view pilot course'
   ) do
     assert response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
-                              params: -> {{course_name: @pilot_course.name, section_id: @pilot_section.id}},
+                              params: -> {{course_name: @pilot_unit_group.name, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot course'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
-                              params: -> {{course_name: @pilot_course.name}}, name: 'pilot student can view pilot course'
+                              params: -> {{course_name: @pilot_unit_group.name}}, name: 'pilot student can view pilot course'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-                              params: -> {{course_name: @pilot_course.name}}, name: 'levelbuilder can view pilot course'
+                              params: -> {{course_name: @pilot_unit_group.name}}, name: 'levelbuilder can view pilot course'
   ) do
     refute response.body.include? no_access_msg
   end
@@ -257,18 +257,18 @@ class CoursesControllerTest < ActionController::TestCase
         }
       ]
     }
-    course = UnitGroup.find_by_name('csp')
-    assert_equal 3, course.default_unit_group_units.length
-    assert_equal ['script1', 'script2', 'script3'], course.default_unit_group_units.map(&:script).map(&:name)
+    unit_group = UnitGroup.find_by_name('csp')
+    assert_equal 3, unit_group.default_unit_group_units.length
+    assert_equal ['script1', 'script2', 'script3'], unit_group.default_unit_group_units.map(&:script).map(&:name)
 
-    assert_equal 1, course.alternate_unit_group_units.length
-    alternate_unit_group_unit = course.alternate_unit_group_units.first
+    assert_equal 1, unit_group.alternate_unit_group_units.length
+    alternate_unit_group_unit = unit_group.alternate_unit_group_units.first
     assert_equal 'script2-alt', alternate_unit_group_unit.script.name
     assert_equal 'script2', alternate_unit_group_unit.default_script.name
     assert_equal 'my_experiment', alternate_unit_group_unit.experiment_name
 
     default_script = Script.find_by(name: 'script2')
-    expected_position = course.default_unit_group_units.find_by(script: default_script).position
+    expected_position = unit_group.default_unit_group_units.find_by(script: default_script).position
     assert_equal expected_position, alternate_unit_group_unit.position,
       'an alternate script must have the same position as the default script it replaces'
 
@@ -287,29 +287,29 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to course_params" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course = create :unit_group, name: 'csp-2019'
+    unit_group = create :unit_group, name: 'csp-2019'
 
-    assert_nil course.version_year
-    assert_nil course.family_name
-    refute course.has_verified_resources
-    refute course.visible?
-    refute course.is_stable?
+    assert_nil unit_group.version_year
+    assert_nil unit_group.family_name
+    refute unit_group.has_verified_resources
+    refute unit_group.visible?
+    refute unit_group.is_stable?
 
     post :update, params: {
-      course_name: course.name,
+      course_name: unit_group.name,
       version_year: '2019',
       family_name: 'csp',
       has_verified_resources: 'on',
       visible: 'on',
       is_stable: 'on'
     }
-    course.reload
+    unit_group.reload
 
-    assert_equal '2019', course.version_year
-    assert_equal 'csp', course.family_name
-    assert course.has_verified_resources
-    assert course.visible?
-    assert course.is_stable?
+    assert_equal '2019', unit_group.version_year
+    assert_equal 'csp', unit_group.family_name
+    assert unit_group.has_verified_resources
+    assert unit_group.visible?
+    assert unit_group.is_stable?
   end
 
   # tests for edit

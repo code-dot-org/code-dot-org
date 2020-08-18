@@ -216,3 +216,11 @@ iframe {
     margin-left: 1em;
   }
 }
+.hidden-label {
+  position: fixed;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

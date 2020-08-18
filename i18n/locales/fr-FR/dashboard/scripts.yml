@@ -14468,6 +14468,8 @@ fr:
           lessons:
             new stage:
               name: nouvelle phase
+            Tools:
+              name: Outils
             Debugging:
               name: Le Débogage
             Module 1:
