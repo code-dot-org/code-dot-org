@@ -22,29 +22,29 @@ module Pd::Foorm
     # Pre-Workshop is first, daily surveys (named Day X)
     # are ordered by day, and post-workshop is last.
     def get_index_for_survey_key(survey_key)
-      if survey_key == "Pre Workshop"
-        return 0
-      elsif survey_key.start_with? "Pre Workshop - Module"
+      if survey_key.start_with? "Pre Workshop - Module"
         # last character will be the module number, use that as an index
-        return survey_key[survey_key.length - 1].to_i
+        return survey_key[-1].to_i
       elsif survey_key.start_with? "Pre Workshop"
-        # either in person or unknown agenda, we want it to be before daily results
-        return 1
+        # any other pre-survey, return 0
+        return 0
       elsif survey_key.include?("Day")
         return 100 + survey_key[4..-1].to_i
-      elsif survey_key == "Post Workshop"
-        return 1000
-      elsif survey_key.starts_with? "Post Workshop - Module"
+      elsif survey_key.start_with? "Post Workshop - Module"
         # last character will be the module number, use that as an index
-        return 1000 + survey_key[survey_key.length - 1].to_i
+        return 1000 + survey_key[-1].to_i
       else
-        return 1001
+        # any other post workshop key--there should only be one if the workshop
+        # was not per-module.
+        return 1000
       end
     end
 
     protected
 
     def get_friendly_agenda(workshop_agenda)
+      # if workshop agenda starts with module, the agenda will be in the format "module1"
+      # convert to Module 1 for readability
       if workshop_agenda.start_with? "module"
         return workshop_agenda.sub("module", "Module ")
       elsif workshop_agenda == "in_person"
