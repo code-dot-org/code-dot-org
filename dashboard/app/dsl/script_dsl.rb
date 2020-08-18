@@ -88,13 +88,11 @@ class ScriptDSL < BaseDSL
   end
 
   def lesson_group_description(description)
-    current_lesson_group = @lesson_groups.length - 1
-    @lesson_groups[current_lesson_group][:description] = description
+    @lesson_groups.last[:description] = description
   end
 
   def lesson_group_question(question)
-    current_lesson_group = @lesson_groups.length - 1
-    @lesson_groups[current_lesson_group][:big_questions] << question
+    @lesson_groups.last[:big_questions] << question
   end
 
   def lesson(key, properties = {})
@@ -286,14 +284,9 @@ class ScriptDSL < BaseDSL
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
       if lesson_group[:key]
-        i18n_lesson_group_strings[lesson_group[:key]] = {
-          'display_name' => lesson_group[:display_name]
-        }
-        if lesson_group[:description]
-          i18n_lesson_group_strings[lesson_group[:key]][:description] = lesson_group[:description]
-        end
-        unless lesson_group[:big_questions].nil_or_empty?
-          i18n_lesson_group_strings[lesson_group[:key]][:big_questions] = lesson_group[:big_questions]
+        i18n_lesson_group_strings[lesson_group[:key]] = {}
+        lesson_group.select {|k, _| [:display_name, :description, :big_questions].include?(k)}.each do |k, v|
+          i18n_lesson_group_strings[lesson_group[:key]][k.to_s] = v unless v.nil_or_empty?
         end
       end
       lesson_group[:lessons].each do |lesson|
