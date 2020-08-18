@@ -11,7 +11,7 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
     pd_session_id = params[:pd_session_id].blank? ? nil : params[:pd_session_id].to_i
     day = params[:day].blank? ? nil : params[:day].to_i
     form_name = params[:form_name].presence
-    # agenda will be blank if none was provided, we would like to store it as null
+    # agenda will be an empty string if none was provided, we would like to store it as null
     workshop_agenda = params[:workshop_agenda].presence
 
     if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(

@@ -399,6 +399,20 @@ module Pd
 
     protected
 
+    # This method finds a workshop either by enrollment code or by the given course and subject.
+    # @param enrollment_code String: enrollment code for a workshop
+    # @param course String: name of course (ex. CS Principles)
+    # @param subject String: name of subject (ex. Academic Year 1)
+    # @param should_have_attended Boolean (default true): If true, check that the user has attended the workshop, and
+    # if they have not, render not_attended. If false, don't check the teacher's attendance (this is useful for
+    # pre-surveys, where we don't care about attendance for surveys to be available)
+    # It works as follows:
+    # - If an enrollment_code is given, find the enrollment for that code. Check attendance for the current user
+    #  if should_have_attended is true.
+    # - If an enrollment code was not given, look for the workshops the current user has enrolled in with the given
+    # course and subject. If they have none, render not enrolled. If they have any and should_have_attended is false,
+    # return the most recent workshop. If should_have_attended is true, return the most recent workshop the user has
+    # attended, or render no attendance if the user has not attended any workshops.
     def get_workshop_by_enrollment_or_course(enrollment_code, course, subject, should_have_attended=true)
       workshop_to_return = nil
       if enrollment_code
