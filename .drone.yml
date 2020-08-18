@@ -37,7 +37,6 @@ steps:
   image: plugins/s3-cache
   settings:
     endpoint: s3://code-dot-org
-    root: /
     debug: true
     pull: true
     restore: true
@@ -79,7 +78,6 @@ steps:
     path: /home/circleci/.rbenv
   settings:
     endpoint: s3://code-dot-org
-    root: /
     debug: true
     pull: true
     rebuild: true
@@ -150,7 +148,6 @@ steps:
   image: plugins/s3-cache
   settings:
     endpoint: s3://code-dot-org
-    root: /
     debug: true
     pull: true
     restore: true
@@ -197,7 +194,6 @@ steps:
     path: /home/circleci/.rbenv
   settings:
     endpoint: s3://code-dot-org
-    root: /
     debug: true
     pull: true
     rebuild: true
@@ -221,6 +217,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 17f563ac1975c9dead0c4ffb6e49c74bdc9fab54d25aec6888d9b1761ec93bef
+hmac: c4b01d2892b7314cb674278450cd30e012f01b3d5289eed1d6a2c933947ec623
 
 ...
