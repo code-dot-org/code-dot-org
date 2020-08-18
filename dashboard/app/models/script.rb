@@ -1310,7 +1310,7 @@ class Script < ActiveRecord::Base
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
   end
 
-  def summarize_i18n(include_lessons=true)
+  def summarize_i18n_for_edit(include_lessons=true)
     data = %w(title description description_short description_audience).map do |key|
       [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
@@ -1326,6 +1326,10 @@ class Script < ActiveRecord::Base
       end
     end
     data
+  end
+
+  def summarize_i18n_for_display(include_lessons=true)
+    summarize_i18n_for_edit(include_lessons)
   end
 
   # Returns an array of objects showing the name and version year for all scripts
