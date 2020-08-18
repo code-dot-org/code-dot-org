@@ -13152,6 +13152,13 @@ react-portal@^3.2.0:
   dependencies:
     prop-types "^15.5.8"
 
+react-progressive-list@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-progressive-list/-/react-progressive-list-0.1.2.tgz#a01285687f88c98984daaa9eb14151abf7db9ca8"
+  integrity sha512-sjgX+TqHKoZgIfJeV0Gv3cMJceLIABFAUVZtftOkGKfu8cMh1FZvr7wkbchF1GNmLXKsb/6vkcIyGhafuHZvqQ==
+  dependencies:
+    lodash "^4.17.4"
+
 react-prop-types@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/react-prop-types/-/react-prop-types-0.4.0.tgz#f99b0bfb4006929c9af2051e7c1414a5c75b93d0"
