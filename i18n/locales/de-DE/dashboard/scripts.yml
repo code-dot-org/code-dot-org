@@ -15314,3 +15314,9 @@ de:
           lessons:
             Module 1:
               name: Modul 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kurs A
+            Course B:
+              name: Kurs B

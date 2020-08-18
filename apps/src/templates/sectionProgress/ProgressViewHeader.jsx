@@ -2,11 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {
-  getCurrentScriptData,
-  ViewType,
-  scriptDataPropType
-} from './sectionProgressRedux';
+import {getCurrentScriptData} from './sectionProgressRedux';
+import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/scriptSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
