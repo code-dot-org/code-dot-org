@@ -942,26 +942,11 @@ class Script < ActiveRecord::Base
     script.lesson_groups = temp_lgs
     script.save!
 
-    script.reload
-    Script.check_lesson_position(script)
-
     script.generate_plc_objects
 
     CourseVersion.add_course_version(script)
 
     script
-  end
-
-  def self.check_lesson_position(script)
-    i = 0
-    script.lesson_groups.each do |lg|
-      lg.lessons.each do |lesson|
-        if lesson != script.lessons[i]
-          raise "There is a mismatch between accessing lessons by script.lessons and accessing lessons through their lesson groups (script.lesson_groups). Lesson #{lesson.name} does not match."
-        end
-        i += 1
-      end
-    end
   end
 
   # If there is more than 1 lesson group then the key should never
