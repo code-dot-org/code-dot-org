@@ -969,9 +969,13 @@ tr:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: "{N} {UNIT}'de"
         options:
           UNIT:
             '"seconds"': saniye
+            '"frames"': çerçeveler
+      gamelab_bounceOff:
+        text: "{TARGET}'in {SPRITE} sekmeleri"
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
         options:
@@ -993,6 +997,8 @@ tr:
         text: tıklandığında {SPRITE}
       gamelab_comment:
         text: 'yorum: {COMMENT}'
+      gamelab_countByAnimation:
+        text: "{SPRITE} sayısı"
       gamelab_createNewSprite:
         text: "yeni bir sprite yapmak \n Denilen {NAME} \n kostümlü {COSTUME} \n at
           {LOCATION}"
@@ -1002,6 +1008,8 @@ tr:
         text: sürüklenebilir olmak
       gamelab_edgesDisplace:
         text: kenarları blok {SPRITE} hareket
+      gamelab_getAllSprites:
+        text: tüm hareketli nesneler
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1019,12 +1027,15 @@ tr:
             '"this"': bu
             '"other"': diğer
       gamelab_getTime:
+        text: "{UNIT} cinsinden süre"
         options:
           UNIT:
             '"seconds"': saniye
+            '"frames"': çerçeveler
       gamelab_hideTitleScreen:
         text: başlık ekranını gizle
       gamelab_isKeyPressed:
+        text: "{KEY}'a basılır"
         options:
           KEY:
             '"up"': yukarı
@@ -1060,6 +1071,8 @@ tr:
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} kenarlara dokunuyor"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE}, {TARGET}' erişir."
       gamelab_jumpTo:
         text: "{SPRITE} {LOCATION}’a atla"
       gamelab_keyPressed:
@@ -1110,6 +1123,8 @@ tr:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
+      gamelab_makeNumSprites:
+        text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
       gamelab_mirrorSprite:
         text: "{SPRITE} yüz {DIRECTION}"
         options:
@@ -1118,6 +1133,8 @@ tr:
             '"left"': sol
       gamelab_mouseLocation:
         text: fare konumu
+      gamelab_moveBackward:
+        text: "{SPRITE}{DISTANCE} pikselleri arkaya taşı"
       gamelab_moveForward:
         text: hareket {SPRITE} {DISTANCE} piksel ileri
       gamelab_moveInDirection:
@@ -1132,6 +1149,8 @@ tr:
         text: "{SPRITE} piksel {DISTANCE} doğru hareket {TARGET}"
       gamelab_objectSpritePointer:
         text: tıklandığında {SPRITE}
+      gamelab_patrollingUpDown:
+        text: yukarı ve aşağı kontrol sağla
       gamelab_playSound:
         text: playSound {SOUND}
       gamelab_pointInDirection:
@@ -1212,12 +1231,16 @@ tr:
             '"while"': sürece
       gamelab_subjectSpritePointer:
         text: tıklandığında {SPRITE}
+      gamelab_tumbling:
+        text: karıştır
       gamelab_turn:
         text: "{SPRITE} {DIRECTION} {N} derece dönüş"
         options:
           DIRECTION:
             '"right"': sağ
             '"left"': sol
+      gamelab_updateTitleWithColor:
+        text: Başlık ekranını {BREAK} başlık {TITLE} renginde {COLOR} göster
       gamelab_whenDownArrow:
         text: aşağı ok basıldığında
       gamelab_whenKey:
@@ -1614,9 +1637,16 @@ tr:
       aalab_setupStory:
         text: kurulum öyküsü
       aalab_starwars_playSound:
+        text: "{OPTION}sesinioynat"
         options:
           OPTION:
             '"random"': gelişigüzel
+            '"R2-D2 random"': R2-D2 gelişigüzel
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: ikili {BIN} çizmek
       binary_drawBinScreen:

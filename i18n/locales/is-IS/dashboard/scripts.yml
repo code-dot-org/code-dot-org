@@ -6399,3 +6399,9 @@ is:
           lesson_groups:
             lg_1:
               display_name: Innihald
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Námskeið A
+            Course B:
+              name: Námskeið B
