@@ -184,13 +184,12 @@ end
 And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
-  workshop = FactoryGirl.create :summer_workshop, :ended,
-    organizer: FactoryGirl.create(:workshop_organizer, email: "test_organizer#{SecureRandom.hex}@code.org"),
-    num_sessions: 5, enrolled_and_attending_users: 10,
-    facilitators: [
-      (FactoryGirl.create :facilitator, email: "test_facilitator#{SecureRandom.hex}@code.org", name: 'F1'),
-      (FactoryGirl.create :facilitator, email: "test_facilitator#{SecureRandom.hex}@code.org", name: 'F2')
-    ]
+  workshop = FactoryGirl.create :summer_workshop,
+    :ended,
+    num_sessions: 5,
+    enrolled_and_attending_users: 10,
+    num_facilitators: 2
+
   create_fake_survey_questions workshop
   create_fake_daily_survey_results workshop
 

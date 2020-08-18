@@ -327,7 +327,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
 skip_locales:
 secret_pictures_csv:
 no_https_store:
@@ -542,3 +542,9 @@ dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%
 dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
 pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
 pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
+
+# Configurations for making calls to the Immersive Reader API on Azure
+imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
+imm_reader_client_id:
+imm_reader_client_secret: !Secret
+imm_reader_subdomain:     cdo-immersive-reader-<%=env%>

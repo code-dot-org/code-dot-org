@@ -57,7 +57,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     params = {num_sessions: 1, sessions_from: 2.months.from_now.to_date, organizer: @program_manager_1}
     assert_equal term_1, Pd::PaymentTerm.for_workshop(create(:workshop, **params, course: Pd::Workshop::COURSE_CSF))
     assert_equal term_2, Pd::PaymentTerm.for_workshop(create(:workshop, **params, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP))
-    assert_equal term_3, Pd::PaymentTerm.for_workshop(create(:workshop, **params, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1))
+    assert_equal term_3, Pd::PaymentTerm.for_workshop(create(:csp_academic_year_workshop, **params))
   end
 
   test 'validations for payment terms' do
