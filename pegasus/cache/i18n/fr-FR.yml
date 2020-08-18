@@ -2434,8 +2434,8 @@ fr-FR:
   hoc2018_dance_teacher_resources_tile1_button: Plan de cours
   hoc2018_dance_teacher_resources_tile2_title: Soirée Dansante Débranchée
   hoc2018_dance_teacher_resources_tile2_description: Pas besoin d’ordinateurs ! Apprenez
-    les concepts de codage pour chorégraphier une Soirée Dansante ensemble.
-  hoc2018_dance_teacher_resources_tile2_button: Activité manuelle
+    les concepts de code informatique pour chorégraphier une Soirée Dansante ensemble.
+  hoc2018_dance_teacher_resources_tile2_button: Activité "Déconnectée"
   hoc2018_dance_featured_student_creations_title: Créations d’Élèves en vedette
   hoc2018_dance_videos_section_heading: Trouve de l’Inspiration
   hoc2018_dance_video_title_what_is_creativity: Qu'est-ce que la Créativité ?
@@ -2443,10 +2443,17 @@ fr-FR:
     la Série Complète (5 min)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: En partenariat avec
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
-    Engineer* est un programme complet, qui s’étend de l’enfance jusqu’à l’âge actif,
-    destiné à inspirer, éduquer et former les enfants à faible revenu, ou autrement
-    défavorisés, et les jeunes à poursuivre une carrière dans l’informatique. <a href='%{amazon_future_engineer_link}'
-    target='_blank'>En savoir plus</a>
+    Engineer* est un programme destiné à sensibiliser les enfants défavorisés aux
+    opportunités du numérique et les aider à bâtir une carrière dans les métiers de
+    l’informatique. Ce programme sera destiné aux enfants défavorisés du primaire
+    au supérieur avec une attention toute particulière pour les jeunes filles. <a
+    href='%{amazon_future_engineer_link}' target='_blank'>En savoir plus</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* est un programme destiné à sensibiliser les enfants défavorisés
+    aux opportunités du numérique et les aider à bâtir une carrière dans les métiers
+    de l’informatique. Ce programme sera destiné aux enfants défavorisés du primaire
+    au supérieur avec une attention toute particulière pour les jeunes filles. [Learn
+    more](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Pour en savoir
     plus sur Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: À propos d'Amazon Future Engineer
@@ -2511,3 +2518,4 @@ fr-FR:
   hoc2019_dance_previous_versions: Vous cherchez une version antérieure de Soirée
     Dansante ?  Cliquez ici pour commencer [Partie 1](%{dance_2018_link}) et [Partie
     2](%{dance_extras_2018_link}) qui datent de l'année dernière.
+  page_not_available_button: Retourner à la page d’accueil

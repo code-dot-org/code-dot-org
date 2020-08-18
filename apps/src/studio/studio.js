@@ -7023,9 +7023,11 @@ var checkFinished = function() {
   var hasSuccessCondition =
     level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition =
-    !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
+    !hasSuccessCondition ||
+    utils.valueOr(level.goal.successCondition(studioMsg), true);
   var achievedRequiredSuccessCondition =
-    hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+    hasSuccessCondition &&
+    utils.valueOr(level.goal.successCondition(studioMsg), false);
 
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success

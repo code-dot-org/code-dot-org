@@ -1,0 +1,24 @@
+{
+  "mt-MT": {
+    "data": {
+      "long_instructions": {
+        "frozen circle": "Ċirku huwa forma speċjali. Tistgħa tahseb f'numru biex jissostitwixxi (?) biex tpingi cirku?",
+        "frozen circle function": "Uża l-Blokk ġdid \"Oħloq ċirku\" biex toħloq 10 ċrieki jirkbu fuq xulxin. Tinsiex taqbeż il-quddiem bejn cirku u iehor.",
+        "frozen circle function in circle": "Issa ejja noħloqu 20 ċirku li jirkbu fuq xulxin, dawwar 18 il-grad bejn kull ċirku.",
+        "frozen circle function with parameter": "Hawn huwa Blokk \"Oħloq ċirku\" \nli jistgħA jagħmEL ċrieki ta ' daqsijiet differenti. Tista ' tuża dan il-blokk biex tohloq ċirku żgħir ta ' daqs 5 u ċirku ikbar ta ' daqs 10?",
+        "frozen cross rotate": "Issa ejja nipprovaw nirrepetu 10 darbiet. Kemm għandek bżonn idawwar gradi bejn kull linja?",
+        "frozen cross rotate dense": "Ejja nirrepetu 90 darba! Kemm il darba 90 jithol f'360? Hjiel: Huwa numru verament zghir.",
+        "frozen diamond snowflake": "Issa, ejja noħolqu snowflake ġdida bl-użu ta ' l-Blokk Irrepeti biex nirrepetu l-parallelogram 10 darbiet, u induru lejn il-lemin b'36 grad bejn kull wieħed.",
+        "frozen freeplay": "Inti sirt ufficjalment Artist Mustaccun! Ohloq art tax-xitwa magika.",
+        "frozen perpendicular": "Issa ejja naraw jekk jirnexxilnix noholqu zewg linji li qeghdin 90 grad min xulxin. Ha jkollok bzonn tuza il Blokka \"Turn\" / \"Dawwar\" w anke il Blokka \"Mexxi\"/\"Move\".",
+        "frozen snowflake branch": "Prova uza il blokka \"Create a snowflake branch\" biex tohloq tlett ferghat, hekk tibda tidher qisha borra/snowflake.",
+        "frozen snowflake full": "Issa ejja nirrepetu kollox 8 darbiet, ha naghmlu snowflake sabiha.",
+        "frozen snowflower": "Forom ta snowflakes kumplikati jistghu jigu krejati billi tiza ftit forom semplici. Tistgha tahmel forma billi tirripeti 5 criki ta qis 5 u 5 ohra ta qis 10?",
+        "frozen square iterative": "Jidher li wasalna nofs triq biex naghmlu kaxxa. Ejja nitfghu 4 linji flimkien biex noholqu kaxxa.",
+        "frozen square loop": "Hello, Jien Anna ta Arendelle!, Ejja noholqu kaxxa billi nuzaw il-Blokka \"Irrepeti\" / \"Repeat\", b'hekk nuzaw inqas blokki. Kemm il darba (???)  il-Blokka \"Irrepeti\" trid tirrepeti il Blokkok l'ohra ta go fijha biex taghmel kaxxa?",
+        "frozen square loop 3x": "Ejja nikrejaw tlett kaxxi, induru wara kull kaxxa. Kunu certi li iddawru b'120 grad qabel ma tikrejaw kull kaxxa.",
+        "frozen square snowflake": "Tistgha tohloq snowflake billi tuza il Blokka \"Irrepeti\" / \"Repeat\" bix taghmel kaxxa 10 darbiet, u il Blokka \"Dawwar\" / \"Turn\" biex idawwar kull kaxxa 36 grad?"
+      }
+    }
+  }
+}

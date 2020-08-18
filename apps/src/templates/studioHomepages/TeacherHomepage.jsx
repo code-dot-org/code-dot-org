@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -15,6 +16,7 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
+import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   clear: {
@@ -23,7 +25,7 @@ const styles = {
   }
 };
 
-export default class TeacherHomepage extends Component {
+export class UnconnectedTeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
     hocLaunch: PropTypes.string,
@@ -41,7 +43,8 @@ export default class TeacherHomepage extends Component {
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
-    specialAnnouncement: shapes.specialAnnouncement
+    specialAnnouncement: shapes.specialAnnouncement,
+    beginGoogleImportRosterFlow: PropTypes.func
   };
 
   state = {
@@ -146,6 +149,13 @@ export default class TeacherHomepage extends Component {
     $('#flashes')
       .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
       .show();
+
+    // A special on-load behavior: If requested by queryparam, automatically
+    // launch the Google Classroom rostering flow.
+    const {queryStringOpen, beginGoogleImportRosterFlow} = this.props;
+    if (queryStringOpen === 'rosterDialog') {
+      beginGoogleImportRosterFlow();
+    }
   }
 
   render() {
@@ -161,85 +171,103 @@ export default class TeacherHomepage extends Component {
       teacherName,
       teacherEmail,
       canViewAdvancedTools,
-      queryStringOpen,
       isEnglish,
       specialAnnouncement
     } = this.props;
 
-    // Hide the regular announcement/notification for now.
-    const showAnnouncement = false;
+    // Show the regular announcement/notification for now.
+    const showAnnouncement = true;
+
+    // Verify background image works for both LTR and RTL languages.
+    const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
     return (
       <div>
-        <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
-        <ProtectedStatefulDiv ref="flashes" />
-        <ProtectedStatefulDiv ref="teacherReminders" />
-        {isEnglish && specialAnnouncement && (
-          <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
-        )}
-        {announcement && showAnnouncement && (
-          <div>
-            <Notification
-              type={announcement.type || 'bullhorn'}
-              notice={announcement.heading}
-              details={announcement.description}
-              dismissible={true}
-              buttonText={announcement.buttonText}
-              buttonLink={announcement.link}
-              newWindow={true}
-              analyticId={announcement.id}
-            />
-            <div style={styles.clear} />
-          </div>
-        )}
-        {this.state.showCensusBanner && (
-          <div>
-            <CensusTeacherBanner
-              ref={this.bindCensusBanner}
-              schoolYear={schoolYear}
-              ncesSchoolId={ncesSchoolId}
-              question={censusQuestion}
-              teaches={this.state.censusBannerTeachesSelection}
-              inClass={this.state.censusBannerInClassSelection}
-              teacherId={teacherId}
-              teacherName={teacherName}
-              teacherEmail={teacherEmail}
-              showInvalidError={this.state.showCensusInvalidError}
-              showUnknownError={this.state.showCensusUnknownError}
-              submittedSuccessfully={this.state.censusSubmittedSuccessfully}
-              onSubmit={() => this.handleCensusBannerSubmit()}
-              onDismiss={() => this.dismissAndHideCensusBanner()}
-              onPostpone={() => this.postponeCensusBanner()}
-              onTeachesChange={event =>
-                this.handleCensusBannerTeachesChange(event)
-              }
-              onInClassChange={event =>
-                this.handleCensusBannerInClassChange(event)
-              }
-            />
-            <br />
-          </div>
-        )}
-        {isEnglish && this.state.donorBannerName && (
-          <div>
-            <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
-            <div style={styles.clear} />
-          </div>
-        )}
-        <TeacherSections queryStringOpen={queryStringOpen} />
-        <RecentCourses
-          courses={courses}
-          topCourse={topCourse}
-          showAllCoursesLink={true}
-          isTeacher={true}
+        <HeaderBanner
+          headingText={i18n.homepageHeading()}
+          short={true}
+          backgroundUrl={backgroundUrl}
         />
-        <TeacherResources />
-        <ProjectWidgetWithData
-          canViewFullList={true}
-          canViewAdvancedTools={canViewAdvancedTools}
-        />
-        <StudentSections initialSections={joinedSections} isTeacher={true} />
+        <div className={'container main'}>
+          <ProtectedStatefulDiv ref="flashes" />
+          <ProtectedStatefulDiv ref="teacherReminders" />
+          {isEnglish && specialAnnouncement && (
+            <SpecialAnnouncementActionBlock
+              announcement={specialAnnouncement}
+            />
+          )}
+          {announcement && showAnnouncement && (
+            <div>
+              <Notification
+                type={announcement.type || 'bullhorn'}
+                notice={announcement.heading}
+                details={announcement.description}
+                dismissible={true}
+                buttonText={announcement.buttonText}
+                buttonLink={announcement.link}
+                newWindow={true}
+                analyticId={announcement.id}
+              />
+              <div style={styles.clear} />
+            </div>
+          )}
+          {this.state.showCensusBanner && (
+            <div>
+              <CensusTeacherBanner
+                ref={this.bindCensusBanner}
+                schoolYear={schoolYear}
+                ncesSchoolId={ncesSchoolId}
+                question={censusQuestion}
+                teaches={this.state.censusBannerTeachesSelection}
+                inClass={this.state.censusBannerInClassSelection}
+                teacherId={teacherId}
+                teacherName={teacherName}
+                teacherEmail={teacherEmail}
+                showInvalidError={this.state.showCensusInvalidError}
+                showUnknownError={this.state.showCensusUnknownError}
+                submittedSuccessfully={this.state.censusSubmittedSuccessfully}
+                onSubmit={() => this.handleCensusBannerSubmit()}
+                onDismiss={() => this.dismissAndHideCensusBanner()}
+                onPostpone={() => this.postponeCensusBanner()}
+                onTeachesChange={event =>
+                  this.handleCensusBannerTeachesChange(event)
+                }
+                onInClassChange={event =>
+                  this.handleCensusBannerInClassChange(event)
+                }
+              />
+              <br />
+            </div>
+          )}
+          {isEnglish && this.state.donorBannerName && (
+            <div>
+              <DonorTeacherBanner
+                showPegasusLink={true}
+                source="teacher_home"
+              />
+              <div style={styles.clear} />
+            </div>
+          )}
+          <TeacherSections />
+          <RecentCourses
+            courses={courses}
+            topCourse={topCourse}
+            showAllCoursesLink={true}
+            isTeacher={true}
+          />
+          <TeacherResources />
+          <ProjectWidgetWithData
+            canViewFullList={true}
+            canViewAdvancedTools={canViewAdvancedTools}
+          />
+          <StudentSections initialSections={joinedSections} isTeacher={true} />
+        </div>
       </div>
     );
   }
 }
+
+export default connect(
+  state => ({}),
+  {beginGoogleImportRosterFlow}
+)(UnconnectedTeacherHomepage);

@@ -850,6 +850,10 @@ bs:
         text: postavka
       Dancelab_whenSetup2:
         text: postavka
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_changePropBy:
         text: izmjeni {SPRITE} {PROPERTY} za {VAL}
         options:
@@ -870,6 +874,38 @@ bs:
             '"rotation"': rotacija
             '"direction"': smijer kretanja
             '"tint"': nijanse
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} skoči na {LOCATION}"
       gamelab_keyPressed:

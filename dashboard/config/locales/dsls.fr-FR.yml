@@ -1686,6 +1686,11 @@ fr-FR:
       PowerOfWords-Unplugged:
         markdown: "# La Pouvoir des Mots   Aujourd'hui tu apprendras ce qu'il faut
           faire si quelqu'un est méchant en ligne.\n"
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # Le pouvoir des mots
+
+          ## Que dois-tu faire quand quelqu'un utilise des paroles méchantes ou blessantes sur internet ?
       PowerfulPasswords-Unplugged:
         markdown: |
           # Mot de passe puissant
@@ -1706,6 +1711,11 @@ fr-FR:
           Education, cette leçon traite de la différence entre l'information qui peut
           être partagée en ligne en toute sécurité et l'information qui ne le peut
           pas.   ![] (https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)\n"
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Information privée et personnelle
+
+          ## Quelles informations vous concernant pouvez-vous partager en ligne?
       RelayProgramming-Unplugged:
         markdown: "# Programmation en Relais    Composez des équipes et travaillez
           ensemble pour écrire des programmes qui dessinent des images.\n"
@@ -2255,6 +2265,9 @@ fr-FR:
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
+      courseD_EOC_2020:
+        description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
+          créer.
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -2562,28 +2575,44 @@ fr-FR:
             chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: L'abeille obtiendra du nectar à chaque fleur et fabriquera du miel
+            à chaque rayon de miel.
+          correct: true
           feedback: Correct!
         - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+          feedback: 'Faux. Avec le bloc "si à la fleur", l''abeille ramasse du nectar
+            à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
             d'abeilles.
+          feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
+            du nectar à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: Je ne sais pas.
+          feedback: 'Avec le bloc "si à la fleur", l''abeille ramasse du nectar à
+            chaque fleur et fabrique du miel à chaque rayon de miel. '
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
-            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
-            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
+            après avoir cliquer sur "Démarrer"? Souviens toi: il n''y aura toujours  qu''*un*
+            rayon de miel ou qu''*une* fleur derrière chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: L'abeille obtiendra du nectar à chaque fleur et fabriquera du miel
+            à chaque rayon de miel.
+          correct: true
           feedback: Correct!
         - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+          feedback: 'Faux. Avec le bloc "si à la fleur", l''abeille ramasse du nectar
+            à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
             d'abeilles.
+          feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
+            du nectar à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: Je ne sais pas.
+          feedback: 'Avec le bloc "si à la fleur", l''abeille ramasse du nectar à
+            chaque fleur et fabrique du miel à chaque rayon de miel. '
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
-            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
-            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
+            après avoir cliquer sur "Démarrer"? Souviens toi: il n''y aura toujours  qu''*un*
+            rayon de miel ou qu''*une* fleur derrière chaque nuage.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: L'abeille avancera et prendra le nectar seulement une fois.
@@ -3167,6 +3196,8 @@ fr-FR:
             tu appuieras sur "Exécuter" ?
       courseD_project_exemplars_2020_2021:
         content1: Page du Manuel du Test Markdown
+      courseE_EOC_2020:
+        description: Tu as finis le Cours E! Choisis un projet à créer.
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Ce même programme fonctionnera pour résoudre ce puzzle, aussi.
@@ -3369,6 +3400,8 @@ fr-FR:
         content1: Page du Manuel du Test Markdown
       courseExpress_project_exemplars_2019_2020:
         content1: Page du Manuel du Test Markdown
+      courseF_EOC_2020:
+        description: Tu as finis le Cours F! Choisis un projet à créer.
       courseF_bee_variables_8a_2018:
         answers:
         - text: 'L''abeille ne recueillera aucun nectar parce que la variable ne s''appelle
@@ -3715,6 +3748,8 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
             dessine un trait plus long qui est aussi plus épais.
+        markdown: Nous utilisons le compteur de la boucle "pour" pour changer la largeur
+          du pinceau sur ce dessin.
         questions:
         - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
       courseF_multi_artist_for10_predict1_2018:
@@ -3734,6 +3769,8 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
             dessine un trait plus long qui est aussi plus épais.
+        markdown: Nous utilisons le compteur de la boucle "pour" pour changer la largeur
+          du pinceau sur ce dessin.
         questions:
         - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -3753,6 +3790,8 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
             dessine un trait plus long qui est aussi plus épais.
+        markdown: Nous utilisons le compteur de la boucle "pour" pour changer la largeur
+          du pinceau sur ce dessin.
         questions:
         - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
       courseF_multi_artist_for10_predict1_2018_2019_2020:
@@ -3772,6 +3811,8 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: Incorrect. A chaque fois, au travers de la bouce `pour`, l'artiste
             dessine un trait plus long qui est aussi plus épais.
+        markdown: Nous utilisons le compteur de la boucle "pour" pour changer la largeur
+          du pinceau sur ce dessin.
         questions:
         - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
       courseF_multi_artist_fwp2_predict1:
@@ -3928,6 +3969,7 @@ fr-FR:
             y a sur les fleurs. '
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -3951,6 +3993,7 @@ fr-FR:
             fleurs.
 
 '
+        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -3974,6 +4017,7 @@ fr-FR:
             fleurs.
 
 '
+        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -3997,6 +4041,7 @@ fr-FR:
             fleurs.
 
 '
+        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -4121,6 +4166,10 @@ fr-FR:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
       csf_be_a_super_digital_citizen:
         content1: description ici
+        markdown: |-
+          # Super citoyen numérique
+
+          ## Comment être fort quand on est témoin de cyber-harcèlement ?
       csf_password_power-up:
         content1: description ici
       csf_putting_a_stop_to_online_meanness:

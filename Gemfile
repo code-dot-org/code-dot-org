@@ -175,10 +175,7 @@ gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive',
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
-# temporarily disabled as of July 9 2020; an existing feature still depends on
-# the GET functionality blocked here, so we disable this gem to allow the
-# feature to continue to work until we can develop a secure alternative.
-#gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-rails_csrf_protection', '~> 0.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
@@ -195,7 +192,12 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/etc monitoring
+  # Ref:
+  # https://github.com/newrelic/newrelic-ruby-agent/pull/359
+  # https://github.com/newrelic/newrelic-ruby-agent/pull/372
+  # https://github.com/newrelic/newrelic-ruby-agent/issues/340
+  github: 'code-dot-org/newrelic-ruby-agent', ref: 'PR-359_prevent_reconnect_attempts_during_shutdowns'
 
 gem 'redcarpet', '~> 3.3.4'
 
@@ -237,21 +239,21 @@ gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 
 # AWS SDK and associated service APIs.
-gem 'aws-sdk-acm', '~> 1'
-gem 'aws-sdk-cloudformation', '~> 1'
-gem 'aws-sdk-cloudfront', '~> 1'
-gem 'aws-sdk-cloudwatch', '~> 1'
-gem 'aws-sdk-cloudwatchlogs', '~> 1'
-gem 'aws-sdk-core', '~> 3'
-gem 'aws-sdk-databasemigrationservice', '~> 1'
-gem 'aws-sdk-dynamodb', '~> 1'
-gem 'aws-sdk-ec2', '~> 1'
-gem 'aws-sdk-firehose', '~> 1.6'
-gem 'aws-sdk-glue', '~> 1'
-gem 'aws-sdk-rds', '>= 1.38.1'
-gem 'aws-sdk-route53', '~> 1'
-gem 'aws-sdk-s3', '~> 1'
-gem 'aws-sdk-secretsmanager', '~> 1'
+gem 'aws-sdk-acm'
+gem 'aws-sdk-cloudformation'
+gem 'aws-sdk-cloudfront'
+gem 'aws-sdk-cloudwatch'
+gem 'aws-sdk-cloudwatchlogs'
+gem 'aws-sdk-core'
+gem 'aws-sdk-databasemigrationservice'
+gem 'aws-sdk-dynamodb'
+gem 'aws-sdk-ec2'
+gem 'aws-sdk-firehose'
+gem 'aws-sdk-glue'
+gem 'aws-sdk-rds'
+gem 'aws-sdk-route53'
+gem 'aws-sdk-s3'
+gem 'aws-sdk-secretsmanager'
 
 # Lint tools
 group :development, :staging do
@@ -288,7 +290,8 @@ gem 'unf_ext', '0.0.7.2'
 gem 'acmesmith', '~> 2.3.1'
 
 gem 'addressable'
-gem 'bcrypt'
+# bcrypt version specified due to "Invalid Hash" error in Linux
+gem 'bcrypt', '3.1.13'
 gem 'firebase'
 gem 'firebase_token_generator'
 gem 'sshkit'

@@ -76,7 +76,6 @@ import {
 } from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
-import {findDropletParseErrors} from '@cdo/apps/util/dropletCommon';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -1042,18 +1041,6 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   }
   const userCodeStartOffset = code.length;
   code += this.studioApp_.getCode();
-
-  // Check that droplet can parse this code.
-  let foundDropletErrors = findDropletParseErrors(
-    this.studioApp_.editor,
-    (lineNumber, message) =>
-      this.handleExecutionError('error', lineNumber, message)
-  );
-
-  if (foundDropletErrors) {
-    return;
-  }
-
   this.JSInterpreter.parse({
     code,
     projectLibraries: this.level.projectLibraries,

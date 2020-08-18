@@ -67,13 +67,16 @@ class ActivitiesController < ApplicationController
         )
         if share_filtering_error
           FirehoseClient.instance.put_record(
-            study: 'share_filtering',
-            study_group: 'v0',
-            event: 'share_filtering_error',
-            data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
-            data_json: {
-              level_source_id: @level_source.id
-            }.to_json
+            :analysis,
+            {
+              study: 'share_filtering',
+              study_group: 'v0',
+              event: 'share_filtering_error',
+              data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
+              data_json: {
+                level_source_id: @level_source.id
+              }.to_json
+            }
           )
         end
       end

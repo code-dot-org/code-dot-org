@@ -92,7 +92,6 @@
       cronjob at:'0 9 * * 1-5', do:deploy_dir('bin', 'cron', 'check_for_census_inaccuracy_reports')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
-      cronjob at:'5 16 * * *', do:deploy_dir('bin', 'cron', 'calculate_workshop_survey_results')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
       cronjob at:'45 */2 * * *', do:deploy_dir('bin', 'cron', 'summer_workshop_enrollments_to_gdrive')
       cronjob at:'30 */2 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')

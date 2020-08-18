@@ -32,6 +32,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     )
 
     FirehoseClient.instance.put_record(
+      :analysis,
       {
         study: 'amazon-future-engineer-eligibility',
         event: 'submit_to_afe',

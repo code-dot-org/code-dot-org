@@ -963,6 +963,8 @@ zh-TW:
       school_name: '學校名稱'
       school_city: '學校所在城市'
       school_country: '學校所屬國家'
+      colombian_school_city: '學校所在城市'
+      colombian_school_name: '學校名稱'
       ages: '你今年教授的學生的年齡？'
       subjects: '你今年教授的科目？'
       resources: '你使用哪些資源來教授計算機科學？'

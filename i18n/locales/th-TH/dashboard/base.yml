@@ -556,6 +556,7 @@ th:
       email: 'อีเมล'
       school_name: 'ชื่อโรงเรียน'
       school_country: 'ประเทศของโรงเรียน'
+      colombian_school_name: 'ชื่อโรงเรียน'
     form_entries:
       gender:
         male: 'ชาย'

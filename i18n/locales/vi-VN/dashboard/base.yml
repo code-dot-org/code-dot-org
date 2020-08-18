@@ -623,6 +623,7 @@ vi:
     sports:
       body: "Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao."
     text-compression:
+      title: "Nén văn bản"
       body: "Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản bằng cách thay thế các mẫu với các ký hiệu."
     unplugged:
       audience: "Lứa tuổi 4 +"
@@ -866,6 +867,8 @@ vi:
       school_name: 'Tên trường'
       school_city: 'Thành phố của trường'
       school_country: 'Quốc gia'
+      colombian_school_city: 'Thành phố của trường'
+      colombian_school_name: 'Tên trường'
     form_entries:
       gender:
         male: 'Nam'

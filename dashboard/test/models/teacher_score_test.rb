@@ -12,14 +12,16 @@ class TeacherScoreTest < ActiveSupport::TestCase
     @section.add_student(@student_2)
     @section.add_student(@student_3)
     @script = create :script
+    @lesson_group = create :lesson_group, script: @script
+    @stage = create :lesson, script: @script, lesson_group: @lesson_group
     @script_level = create(
       :script_level,
       script: @script,
+      lesson: @stage,
       levels: [
         create(:unplugged, name: 'test level 1')
       ]
     )
-    @stage = @script_level.lesson
     @score = 100
     @score_2 = 0
     @level_1 = @script_level.levels[0]

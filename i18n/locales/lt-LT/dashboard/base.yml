@@ -648,6 +648,7 @@ lt:
     form_labels:
       email: 'El. paštas'
       school_name: 'Mokyklos pavadinimas'
+      colombian_school_name: 'Mokyklos pavadinimas'
     form_entries:
       gender:
         male: 'Vyras'

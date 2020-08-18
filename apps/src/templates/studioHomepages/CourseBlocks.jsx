@@ -30,12 +30,18 @@ class ModernCsfCourses extends Component {
         heading={i18n.courseBlocksCsfExpressHeading()}
         description={i18n.courseBlocksCsfExpressDescription()}
       >
-        <div className="row">
-          <ProtectedStatefulDiv ref="pre_express" />
-          <ProtectedStatefulDiv ref="express" />
+        <div className="tutorial-row">
+          <ProtectedStatefulDiv
+            className="tutorial-block-wide"
+            ref="pre_express"
+          />
+          <ProtectedStatefulDiv className="tutorial-block-wide" ref="express" />
         </div>
-        <div className="row">
-          <ProtectedStatefulDiv ref="unplugged" />
+        <div className="tutorial-row">
+          <ProtectedStatefulDiv
+            className="tutorial-block-wide"
+            ref="unplugged"
+          />
         </div>
       </ContentContainer>
     );
@@ -119,9 +125,12 @@ class AcceleratedAndUnplugged extends Component {
 
   render() {
     return (
-      <div className="row">
-        <ProtectedStatefulDiv ref="twenty_hour" />
-        <ProtectedStatefulDiv ref="unplugged" />
+      <div className="tutorial-row">
+        <ProtectedStatefulDiv
+          className="tutorial-block-wide"
+          ref="twenty_hour"
+        />
+        <ProtectedStatefulDiv className="tutorial-block-wide" ref="unplugged" />
       </div>
     );
   }

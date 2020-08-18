@@ -77,6 +77,12 @@ const createButtonProps = {
   paletteParams: ['pin'],
   params: ['0']
 };
+const createCapacitiveTouchSensorProps = {
+  parent: api,
+  category: MAKER_CATEGORY,
+  paletteParams: ['pin'],
+  params: ['0']
+};
 
 /**
  * Generic Johnny-Five / Firmata blocks
@@ -326,7 +332,7 @@ const circuitPlaygroundBlocks = [
     type: 'property'
   },
 
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
+  // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'isPressed',
     objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
@@ -336,7 +342,7 @@ const circuitPlaygroundBlocks = [
     type: 'readonlyproperty',
     tipPrefix: '[Button].'
   },
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
+  // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
     func: 'holdtime',
     objectDropdown: {options: CP_BUTTON_VARS, dropdownOnly: true},
@@ -402,6 +408,17 @@ const circuitPlaygroundBlocks = [
 const ledScreenPrefix = 'ledScreen[0][0].';
 /* micro:bit specific blocks */
 const microBitBlocks = [
+  {
+    func: 'createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    type: 'either'
+  },
+  {
+    func: 'var mySensor = createCapacitiveTouchSensor',
+    ...createCapacitiveTouchSensorProps,
+    noAutocomplete: true,
+    docFunc: 'createCapacitiveTouchSensor'
+  },
   {
     func: 'onBoardEvent',
     parent: api,

@@ -431,22 +431,22 @@ class LevelsHelperTest < ActionView::TestCase
     # (position 5) Non-Lockable 2
 
     input_dsl = <<~DSL
-      lesson 'Lockable1',
+      lesson 'Lockable1', display_name: 'Lockable1',
         lockable: true;
       assessment 'LockableAssessment1';
 
-      lesson 'Nonockable1'
+      lesson 'Nonockable1', display_name: 'NonLockable1'
       assessment 'NonLockableAssessment1';
 
-      lesson 'Lockable2',
+      lesson 'Lockable2', display_name: 'Lockable2',
         lockable: true;
       assessment 'LockableAssessment2';
 
-      lesson 'Lockable3',
+      lesson 'Lockable3', display_name: 'Lockable3',
         lockable: true;
       assessment 'LockableAssessment3';
 
-      lesson 'Nonockable2'
+      lesson 'Nonockable2', display_name: 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
 
@@ -460,8 +460,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:lesson_groups],
-      script_data[:lessons]
+      script_data[:lesson_groups]
     )
 
     stage = script.lessons[0]
@@ -497,7 +496,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
     input_dsl = <<~DSL
-      lesson 'Test bonus level links'
+      lesson 'Test bonus level links', display_name: 'Test bonus level links'
       level 'Level1'
       level 'BonusLevel1', bonus: true
     DSL
@@ -509,8 +508,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_bonus_level_links'},
-      script_data[:lesson_groups],
-      script_data[:lessons]
+      script_data[:lesson_groups]
     )
 
     bonus_script_level = script.lessons.first.script_levels[1]
@@ -523,7 +521,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'build_script_level_path handles bonus levels with or without solutions' do
     input_dsl = <<~DSL
-      lesson 'My cool stage'
+      lesson 'My cool stage', display_name: 'My cool stage'
       level 'Level1'
       level 'Level2'
       level 'BonusLevel1', bonus: true
@@ -539,8 +537,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'my_cool_script'},
-      script_data[:lesson_groups],
-      script_data[:lessons]
+      script_data[:lesson_groups]
     )
 
     stage = script.lessons[0]

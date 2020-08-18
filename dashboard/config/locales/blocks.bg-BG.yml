@@ -666,6 +666,10 @@ bg:
             '0': бас
             '1': mid
             '2': сопрано
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_changePropBy:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -691,8 +695,26 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
             '"tint"': оттенък
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_hideTitleScreen:
         text: скрива заглавния екран
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+            '"space"': космос
+            '"a"': а
+            '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': y
       gamelab_keyPressed:
         options:
           CONDITION:

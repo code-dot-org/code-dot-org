@@ -386,6 +386,15 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
 export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
 
 /**
+ * Start the process of importing a section from Google Classroom by opening
+ * the RosterDialog and loading the list of classrooms available for import.
+ */
+export const beginGoogleImportRosterFlow = () => dispatch => {
+  dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+  dispatch(beginImportRosterFlow());
+};
+
+/**
  * Import the course with the given courseId from a third-party provider
  * (like Google Classroom or Clever), creating a new section. If the course
  * in question has already been imported, update the existing section already
@@ -1009,7 +1018,7 @@ export function assignedScriptName(state) {
 
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
-  return (allSections || []).filter(s => !s.hidden);
+  return sortSectionsList(allSections || []).filter(section => !section.hidden);
 }
 
 /**
@@ -1166,33 +1175,48 @@ export function editedSectionId(state) {
 }
 
 /**
+ * @param {object} state - state.teacherSections in redux tree
  * Extract a list of name/id for each section
  */
 export function sectionsNameAndId(state) {
-  return state.sectionIds.map(id => ({
-    id: parseInt(id, 10),
-    name: state.sections[id].name
-  }));
+  return sortSectionsList(
+    state.sectionIds.map(id => ({
+      id: parseInt(id, 10),
+      name: state.sections[id].name
+    }))
+  );
 }
 
+/**
+ * @param {object} state - state.teacherSections in redux tree
+ */
 export function sectionsForDropdown(
   state,
   scriptId,
   courseId,
   onCourseOverview
 ) {
-  return state.sectionIds.map(id => ({
-    id: parseInt(id, 10),
-    name: state.sections[id].name,
-    scriptId: state.sections[id].scriptId,
-    courseId: state.sections[id].courseId,
+  return sortedSectionsList(state.sections).map(section => ({
+    ...section,
     isAssigned:
-      (scriptId !== null && state.sections[id].scriptId === scriptId) ||
-      (courseId !== null &&
-        state.sections[id].courseId === courseId &&
-        onCourseOverview)
+      (scriptId !== null && section.scriptId === scriptId) ||
+      (courseId !== null && section.courseId === courseId && onCourseOverview)
   }));
 }
+
+/**
+ * @param {object} sectionsObject - an object containing sections keyed by id
+ * Converts an unordered dictionary of sections into a sorted array
+ */
+export const sortedSectionsList = sectionsObject =>
+  sortSectionsList(Object.values(sectionsObject));
+
+/**
+ * @param {array} sectionsList - an array of section objects
+ * Sorts an array of sections by descending id
+ */
+export const sortSectionsList = sectionsList =>
+  sectionsList.sort((a, b) => b.id - a.id);
 
 /**
  * @param {object} state - Full state of redux tree

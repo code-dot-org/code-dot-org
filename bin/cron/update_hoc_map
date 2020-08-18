@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # The map on hourofcode.com is run off of Mapbox.
 # This script updates the data on Mapbox by querying all rows from
@@ -12,9 +14,9 @@
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require 'cdo/only_one'
 require 'cdo/properties'
 require 'dynamic_config/dcdo'
+require 'open3'
 require 'tempfile'
 
 require_relative 'upload_to_mapbox'
@@ -23,8 +25,6 @@ DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
 CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 def main
-  return unless only_one_running?(__FILE__)
-
   geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
 
   DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|

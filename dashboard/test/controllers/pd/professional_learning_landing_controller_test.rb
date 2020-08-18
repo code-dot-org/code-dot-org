@@ -156,7 +156,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     prepare_scenario
 
     ['Bills Fandom 101', 'ECS Support', 'CSP Support'].each do |name|
-      plc_course = Course.find_by(name: name).try(:plc_course) || create(:plc_course, name: name)
+      plc_course = UnitGroup.find_by(name: name).try(:plc_course) || create(:plc_course, name: name)
       Plc::UserCourseEnrollment.create(user: @teacher, plc_course: plc_course)
     end
 

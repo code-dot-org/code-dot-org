@@ -206,18 +206,18 @@ namespace :seed do
   end
 
   timed_task courses: :environment do
-    Dir.glob(Course.file_path('**')).sort.map do |path|
-      Course.load_from_path(path)
+    Dir.glob(UnitGroup.file_path('**')).sort.map do |path|
+      UnitGroup.load_from_path(path)
     end
   end
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse csp-2017 csp-2018 csp-2019 csp-2020).each do |course_name|
-      Course.load_from_path("config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
-      Course.load_from_path("test/ui/config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
 
@@ -408,5 +408,5 @@ namespace :seed do
   timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorm_libraries, :foorm_forms, :standards]
 
   desc "seed only dashboard data required for tests"
-  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards]
+  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorm_forms, :foorm_libraries]
 end

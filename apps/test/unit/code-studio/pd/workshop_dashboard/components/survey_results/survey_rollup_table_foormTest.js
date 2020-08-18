@@ -84,13 +84,12 @@ describe('Survey Rollup Table Foorm', () => {
     // 5 expected columns: Question, Average for this workshop,
     // Average for facilitator 1, Average for facilitator 1,
     // Average for this course
-    expect(headerCells).to.have.length(5);
+    expect(headerCells).to.have.length(4);
 
-    // 6 rows are total response count, average for the matrix,
-    // question header and averages for the 3 sub-questions
-    // with answers
+    // 7 rows are total response count, average for the matrix,
+    // question header and averages for all 4 sub-questions
     const bodyRows = rollupTable.find('BodyRow');
-    expect(bodyRows).to.have.length(6);
+    expect(bodyRows).to.have.length(7);
 
     const totalResponsesForThisWorkshop = bodyRows
       .first()

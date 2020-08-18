@@ -439,6 +439,10 @@ sr:
             '"space"': Простор
             '"x"': x
             '"y"': у
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунде
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -452,6 +456,20 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунде
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+            '"x"': x
+            '"y"': у
       gamelab_keyPressed:
         options:
           CONDITION:

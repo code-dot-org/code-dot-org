@@ -89,6 +89,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   test 'new-code-account is 0 if the user was created five minutes ago or more' do
+    skip # flaky; see https://github.com/code-dot-org/code-dot-org/pull/35830
     # Expect to submit with the appropriate new-code-account value
     Services::AFEEnrollment.expects(:submit).with do |params|
       params[:new_code_account] == false
@@ -107,6 +108,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
   end
 
   test 'new-code-account is 1 if the user was created less than five minutes ago' do
+    skip # flaky; see https://github.com/code-dot-org/code-dot-org/pull/35830
     # Expect to submit with the appropriate new-code-account value
     Services::AFEEnrollment.expects(:submit).with do |params|
       params[:new_code_account] == true

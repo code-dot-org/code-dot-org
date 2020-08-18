@@ -64,7 +64,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
     section.add_student driver
     section.add_student navigator
 
-    @controller.send :pairings=, [navigator]
+    @controller.send :pairings=, {pairings: [navigator], section_id: section.id}
 
     assert_difference 'AuthoredHintViewRequest.where(user: driver).count' do
       assert_difference 'AuthoredHintViewRequest.where(user: navigator).count' do

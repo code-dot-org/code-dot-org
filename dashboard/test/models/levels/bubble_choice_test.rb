@@ -229,6 +229,11 @@ DSL
       level 'sublevel_3_copy'
     DSL
 
+    # Access a translation, to trigger any file reads, before we stub File.read.
+    # According to https://guides.rubyonrails.org/i18n.html, The translation
+    # files are lazy-loaded when a translation is looked up for the first time.
+    I18n.t('auth.signed_in')
+
     File.stubs(:exist?).returns(true)
     File.stubs(:read).with {|filepath| filepath.to_s.end_with?('bubble_choice.bubble_choice')}.returns(input_dsl).once
 
@@ -245,5 +250,12 @@ DSL
 
     expected_names = %w(sublevel_1_copy sublevel_2_copy sublevel_3_copy)
     assert_equal expected_names, bubble_choice_copy.sublevels.map(&:name)
+  end
+
+  test 'all_descendant_levels includes template levels of sublevels' do
+    template = create :artist, name: 'template'
+    artist = create :artist, name: 'artist', properties: {project_template_level_name: template.name}
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', sublevels: [artist]
+    assert_equal [artist.name, template.name], bubble_choice.all_descendant_levels.map(&:name)
   end
 end

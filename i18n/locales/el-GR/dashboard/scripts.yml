@@ -18,43 +18,6 @@ el:
           description: Το Μάθημα 1 σχεδιάστηκε για να επιτρέψει σε νεαρούς αναγνώστες να δημιουργήσουν προγράμματα για τον υπολογιστή τα οποία τους βοηθούν να μάθουν να συνεργάζονται με άλλους, να αναπτύσσουν δεξιότητες επίλυσης προβλημάτων, και να επιμείνουν σε δύσκολες εργασίες. Στο τέλος του μαθήματος, οι μαθητές δημιουργούν το απόλυτα δικό τους παιχνίδι ή σενάριο το οποίο μπορούν να μοιραστούν. Συνιστάται για παιδιά Νηπιαγωγείου.
           description_short: Εισαγωγή στην Πληροφορική για νεαρούς αναγνώστες.
           description_audience: Ηλικίες 4-6
-          stages:
-            'Artist: Loops':
-              name: 'Καλλιτέχνης: Επαναλήψεις'
-            'Artist: Sequence':
-              name: 'Καλλιτέχνης: Ακολουθία'
-            'Artist: Shapes':
-              name: 'Καλλιτέχνης: Σχήματα'
-            'Bee: Loops':
-              name: 'Μέλισσα: Επαναλήψεις'
-            'Bee: Sequence':
-              name: 'Μέλισσα: Ακολουθία'
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Getting Loopy:
-              name: Επαναλαμβανόμαστε
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
-            Happy Maps:
-              name: Χαρούμενοι Χάρτες
-            'Jigsaw: Learn to drag and drop':
-              name: 'Παζλ: Μάθε την μεταφορά και απόθεση'
-            'Maze: Debugging':
-              name: 'Λαβύρινθο: εντοπισμός σφαλμάτων'
-            'Maze: Loops':
-              name: 'Λαβύρινθος: Επαναλήψεις'
-            'Maze: Sequence':
-              name: 'Λαβύρινθος: Ακολουθία'
-            Move it, Move it:
-              name: Κούνισέ το, Κούνισέ το
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
-            'Studio: Create a Story':
-              name: 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
           lessons:
             'Artist: Loops':
               name: 'Καλλιτέχνης: Επαναλήψεις'
@@ -97,45 +60,6 @@ el:
           description: Το Μάθημα 2 σχεδιάστηκε για μαθητές που μπορούν να διαβάσουν και χωρίς προηγούμενη εμπειρία προγραμματισμού. Στο μάθημα αυτό οι μαθητές θα δημιουργήσουν προγράμματα για επίλυση προβλημάτων και να αναπτύξουν διαδραστικά παιχνίδια ή σενάρια που μπορούν να μοιράσουν. Συνίσταται για τις πρώτες τάξεις του Δημοτικού.
           description_short: Εισαγωγή στην Πληροφορική για μαθητές που μπορούν να διαβάζουν.
           description_audience: Ηλικίες 6+ (απαιτείται ανάγνωση)
-          stages:
-            'Artist: Debugging':
-              name: 'Καλλιτέχνης: Εκσφαλμάτωση'
-            'Artist: Loops':
-              name: 'Καλλιτέχνης: Επαναλήψεις'
-            'Artist: Nested Loops':
-              name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
-            'Artist: Sequence':
-              name: 'Καλλιτέχνης: Ακολουθία'
-            'Bee: Conditionals':
-              name: 'Μέλισσα: Συνθήκες'
-            'Bee: Debugging':
-              name: 'Μέλισσα: Επαναλήψεις'
-            'Bee: Loops':
-              name: 'Μέλισσα: Επαναλήψεις'
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            Conditionals:
-              name: Συνθήκες
-            Flappy:
-              name: Πουλάκι
-            Getting Loopy:
-              name: Επαναλαμβανόμαστε
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            'Maze: Loops':
-              name: 'Λαβύρινθος: Επαναλήψεις'
-            'Maze: Sequence':
-              name: 'Λαβύρινθος: Ακολουθία'
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
-            Relay programming:
-              name: Προγραμματισμός με αναμετάδοση
-            'Studio: Create a Story':
-              name: 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
           lessons:
             'Artist: Debugging':
               name: 'Καλλιτέχνης: Εκσφαλμάτωση'
@@ -180,49 +104,6 @@ el:
           description: Έτοιμος για το επόμενο επίπεδο; Οι μαθητές θα εμβαθύνουν σε θέματα προγραμματισμού που εισήχθησαν σε προηγούμενα μαθήματα και να βρουν ευέλικτες λύσεις σε πιο σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού.
           description_short: Εξερευνήστε ακόμη περισσότερο τον προγραμματισμό ενώ δημιουργείτε παιχνίδια και διαδραστικές ιστορίες. Αυτή είναι η συνέχεια του Μαθήματος 2.
           description_audience: Ηλικίες 8-18
-          stages:
-            Artist:
-              name: Καλλιτέχνης
-            'Artist: Functions':
-              name: 'Καλλιτέχνης: Συναρτήσεις'
-            'Artist: Nested Loops':
-              name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
-            'Artist: Patterns':
-              name: 'Καλλιτέχνης: Σχέδια'
-            'Bee: Conditionals':
-              name: 'Μέλισσα: Συνθήκες'
-            'Bee: Debugging':
-              name: 'Μέλισσα: Επαναλήψεις'
-            'Bee: Functions':
-              name: 'Λειτουργίες μέλισσας'
-            'Bee: Nested Loops':
-              name: 'Μέλισσα: Εμφωλευμένοι βρόχοι'
-            Bounce:
-              name: Αναπήδηση
-            Computational Thinking:
-              name: Αλγοριθμική Σκέψη
-            Crowdsourcing:
-              name: Crowdsourcing
-            Dice Race:
-              name: Αγώνας ζαριών
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Farmer: While Loops':
-              name: 'Αγρότης: Βρόχοι όσο'
-            Functional Suncatchers:
-              name: Λειτουργικές Ηλιοκυνηγοί
-            Internet:
-              name: Διαδίκτυο
-            Maze:
-              name: Λαβύρινθος
-            'Maze: Conditionals':
-              name: 'Λαβύρινθος: Συνθήκες'
-            Songwriting:
-              name: Σύνθεση τραγουδιού
-            'Studio: Create a Game':
-              name: 'Εργαστήριο παιχνιδιών: Δημιουργήστε ένα παιχνίδι'
-            'Studio: Create a Story':
-              name: 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
           lessons:
             Artist:
               name: Καλλιτέχνης
@@ -270,9 +151,6 @@ el:
           title: Εργαστήριο Παιχνιδιού
           description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο Παιχνιδιού!
           description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο Παιχνιδιού!
-          stages:
-            Play Lab:
-              name: Εργαστήριο Παιχνιδιού
           lessons:
             Play Lab:
               name: Εργαστήριο Παιχνιδιού
@@ -280,9 +158,6 @@ el:
           title: Καλλιτέχνης
           description: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
           description_short: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
-          stages:
-            Artist:
-              name: Καλλιτέχνης
           lessons:
             Artist:
               name: Καλλιτέχνης
@@ -290,9 +165,6 @@ el:
           title: Κλασικός λαβύρινθος
           description: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με χαρακτήρες από τα Angry Birds, τα Plants vs. Zombies και τον Scrat από την Εποχή των Παγετών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!
-          stages:
-            Maze:
-              name: Λαβύρινθος
           lessons:
             Maze:
               name: Λαβύρινθος
@@ -300,9 +172,6 @@ el:
           title: Γράψτε Κώδικα με την Άννα και την Έλσα
           description: Ας χρησιμοποιήσουμε τον κώδικα για να βρεθούμε μαζί με την Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου. Θα δημιουργήσετε νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ και θα φτιάξετε υπέροχα χειμωνιάτικα τοπία τα οποία μπορείτε να μοιραστείτε με τους φίλους σας!
           description_short: Ας χρησιμοποιήσουμε τον κώδικα για να πάμε μαζί με την Άννα και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
-          stages:
-            Artist:
-              name: Καλλιτέχνης
           lessons:
             Artist:
               name: Καλλιτέχνης
@@ -311,51 +180,6 @@ el:
           description: Το Μάθημα 4 έχει σχεδιαστεί για τους μαθητές που έχουν πάρει τα μαθήματα 2 και 3. Οι μαθητές θα μάθουν πώς να αντιμετωπίσουν παζλ με αυξημένη πολυπλοκότητα δεδομένου ότι μαθαίνουν πώς να συνδυάσουν πολλές έννοιες κατά την επίλυση κάθε πρόκλησης. Από τη στιγμή που θα ολοκληρωθεί αυτό το μάθημα, οι μαθητές θα δημιουργήσουν προγράμματα που επιτρέπουν να δείχνουν πολλές δεξιότητες, συμπεριλαμβανομένων βρόχων "για" και λειτουργίες με παραμέτρους. Συνιστάται για Τάξεις Δ' Δημοτικού έως Β' Γυμνασίου.
           description_short: Δημιουργήστε πιο σύνθετα προγράμματα με έννοιες όπως βρόχοι και συναρτήσεις με παραμέτρους. Αυτή είναι η συνέχεια του Μαθήματος 3.
           description_audience: Ηλικίες 9-18
-          stages:
-            Artist:
-              name: Καλλιτέχνης
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            'Artist: For Loops':
-              name: 'Καλλιτέχνης: Βρόχοι Για'
-            'Artist: Functions':
-              name: 'Καλλιτέχνης: Συναρτήσεις'
-            'Artist: Functions with Parameters':
-              name: 'Καλλιτέχνης: Συναρτήσεις με Παραμέτρους'
-            'Artist: Variables':
-              name: 'Καλλιτέχνης: Μεταβλητές'
-            'Bee: For Loops':
-              name: 'Μέλισσα: Βρόχοι Για'
-            'Bee: Functions with Parameters':
-              name: 'Μέλισσα: Συναρτήσεις με Παραμέτρους'
-            Extreme Challenge - Comprehensive:
-              name: Ακραία πρόκληση - ολοκληρωμένη
-            Maze and Bee:
-              name: Λαβύρινθος και Μέλισσα
-            'Play Lab: For Loops':
-              name: 'Εργαστήριο Παιχνιδιού: Βρόχοι Για'
-            'Play Lab: Functions with Parameters':
-              name: 'Εργαστήριο Παιχνιδιού: Συναρτήσεις με Παραμέτρους'
-            'Play Lab: Variables':
-              name: 'Εργαστήριο Παιχνιδιού: Μεταβλητές'
-            Super Challenge - For Loops:
-              name: Σούπερ πρόκληση - για βρόχους
-            Super Challenge - Functions and Parameters:
-              name: Σούπερ πρόκληση - λειτουργίες και παραμέτρους
-            Super Challenge - Variables:
-              name: Σούπερ πρόκληση - μεταβλητές
-            'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            'Unplugged: Envelope Variables':
-              name: 'Εκτός Σύνδεσης: Εμφακέλωση Μεταβλητών'
-            'Unplugged: For Loop Fun':
-              name: 'Εκτός Σύνδεσης: Διασκέδαση με Βρόχους Για'
-            'Unplugged: Madlibs':
-              name: 'Εκτός Σύνδεσης: Malibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους'
-            'Unplugged: Tangrams':
-              name: 'Εκτός Σύνδεσης: Tangram'
           lessons:
             Artist:
               name: Καλλιτέχνης
@@ -405,25 +229,6 @@ el:
           title: Προαπαιτούμενα Μαθήματος 4
           description: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
           description_short: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
-          stages:
-            'Artist: Functions':
-              name: 'Καλλιτέχνης: Συναρτήσεις'
-            'Artist: Loops':
-              name: 'Καλλιτέχνης: Επαναλήψεις'
-            'Artist: Nested Loops':
-              name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
-            'Artist: Sequence':
-              name: 'Καλλιτέχνης: Ακολουθία'
-            'Bee: Conditionals':
-              name: 'Μέλισσα: Συνθήκες'
-            'Bee: Debugging':
-              name: 'Μέλισσα: Επαναλήψεις'
-            'Bee: Nested Loops':
-              name: 'Μέλισσα: Εμφωλευμένοι βρόχοι'
-            'Farmer: While Loops':
-              name: 'Αγρότης: Βρόχοι όσο'
-            'Maze: Sequence':
-              name: 'Λαβύρινθος: Ακολουθία'
           lessons:
             'Artist: Functions':
               name: 'Καλλιτέχνης: Συναρτήσεις'
@@ -446,17 +251,6 @@ el:
         usability:
           title: Δοκιμή χρηστικότητας
           description: Μία επιλογή επιπέδων από το Μάθημα 4 για δοκιμή χρηστικότητας.
-          stages:
-            Binary:
-              name: Δυαδικό
-            For Loops:
-              name: Βρόχοι Για
-            Functions and Functions with Parameters:
-              name: Συναρτήσεις και Συναρτήσεις με Παραμέτρους
-            Intro:
-              name: Εισαγωγή
-            Variables:
-              name: Μεταβλητές
           lessons:
             Binary:
               name: Δυαδικό
@@ -472,29 +266,6 @@ el:
           title: Η Επιστήμη των υπολογιστών στην Άλγεβρα
           description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
           description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
-          stages:
-            'Calc: Defining Variables':
-              name: Καθορισμός μεταβλητών και υποκατάσταση
-            'Calc: Evaluation Blocks':
-              name: Μπλοκ αξιολόγησης και αριθμητικές εκφράσεις
-            'Eval: Boolean Operators':
-              name: Λογικοί τελεστές
-            'Eval: Conditionals':
-              name: Συνθήκες
-            'Eval: Defining Functions':
-              name: Σύνθετες συναρτήσεις
-            'Eval: Strings and Images':
-              name: Strings και εικόνες
-            'Play Lab: Booleans':
-              name: Sam η νυχτερίδα
-            'Play Lab: Defining Variables (Big Game)':
-              name: Το Μεγάλο Παιχνίδι - Μεταβλητές
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Εκτός Σύνδεσης: Συνθήκες και Συναρτήσεις Piecewise'
-            'Unplugged: The Design Recipe':
-              name: 'Εκτός Σύνδεσης: Συνταγή Σχεδιασμού'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα'
           lessons:
             'Calc: Defining Variables':
               name: Καθορισμός μεταβλητών και υποκατάσταση
@@ -522,22 +293,10 @@ el:
           title: Disney Εργαστήριο Άπειρου Παιχνιδιού
           description: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
           description_short: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
-          stages:
-            Infinity:
-              name: Άπειρο
           lessons:
             Infinity:
               name: Άπειρο
         algebrademo:
-          stages:
-            Defining Variables:
-              name: Ορίζοντας μεταβλητές
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Making Pictures:
-              name: Δημιουργία εικόνων
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
           lessons:
             Defining Variables:
               name: Ορίζοντας μεταβλητές
@@ -548,11 +307,6 @@ el:
             The Design Recipe:
               name: Η Συνταγή του Σχεδιασμού
         K5PD:
-          stages:
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-            Writing computer programs:
-              name: Γραφή προγραμμάτων υπολογιστών
           lessons:
             Teacher Dashboard:
               name: πίνακας Δασκάλου
@@ -565,47 +319,6 @@ el:
           description: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
           description_short: Αυτό το 20ωρο μάθημα καλύπτει τα βασικά των εννοιών της επιστήμης των υπολογιστών και του προγραμματισμού στα μαθήματα 2-4.
           description_audience: Ηλικίες 10+ (μετά το Μάθημα 3)
-          stages:
-            Abstraction:
-              name: Αφαίρεση
-            Algorithms:
-              name: Αλγόριθμοι
-            Computational Thinking:
-              name: Αλγοριθμική Σκέψη
-            Conditionals:
-              name: Συνθήκες
-            Functions:
-              name: Συναρτήσεις
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Introduction to Computer Science:
-              name: Εισαγωγή στην Επιστήμη των Υπολογιστών
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Song Writing:
-              name: Συγγραφή τραγουδιού
-            The Artist:
-              name: Ο Καλλιτέχνης
-            The Artist 2:
-              name: Ο Καλλιτέχνης 2
-            The Artist 3:
-              name: Ο Καλλιτέχνης 3
-            The Artist 4:
-              name: Ο Καλλιτέχνης 4
-            The Artist 5:
-              name: Ο Καλλιτέχνης 5
-            The Farmer:
-              name: Ο Αγρότης
-            The Farmer 2:
-              name: Ο Αγρότης 2
-            The Farmer 3:
-              name: Ο Αγρότης 3
-            The Internet:
-              name: Το Διαδίκτυο
-            The Maze:
-              name: Ο Λαβύρινθος
-            Wrap-up:
-              name: συνοψίζω
           lessons:
             Abstraction:
               name: Αφαίρεση
@@ -651,13 +364,6 @@ el:
           title: Επεξεργασία κώδικα
           description: Επεξεργασία κώδικα
           description_short: Επεξεργασία κώδικα
-          stages:
-            Play Lab:
-              name: Εργαστήριο Παιχνιδιού
-            The Artist:
-              name: Ο Καλλιτέχνης
-            The Maze:
-              name: Ο Λαβύρινθος
           lessons:
             Play Lab:
               name: Εργαστήριο Παιχνιδιού
@@ -669,9 +375,6 @@ el:
           title: Συμβάντα
           description: Συμβάντα
           description_short: Συμβάντα
-          stages:
-            Bounce:
-              name: Αναπήδηση
           lessons:
             Bounce:
               name: Αναπήδηση
@@ -679,9 +382,6 @@ el:
           title: Flappy κώδικα
           description: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
           description_short: Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10 λεπτά!
-          stages:
-            Flappy Code:
-              name: Flappy κώδικα
           lessons:
             Flappy Code:
               name: Flappy κώδικα
@@ -689,9 +389,6 @@ el:
           title: Παζλ
           description: Δοκιμάστε τον οδηγό παζλ
           description_short: Δοκιμάστε τον οδηγό παζλ
-          stages:
-            Jigsaw:
-              name: Παζλ
           lessons:
             Jigsaw:
               name: Παζλ
@@ -699,9 +396,6 @@ el:
           title: Βήμα
           description: Οδηγός με βήματα
           description_short: Οδηγός με βήματα
-          stages:
-            Step:
-              name: Βήμα
           lessons:
             Step:
               name: Βήμα
@@ -709,41 +403,21 @@ el:
           title: Ώρα του Κώδικα 2013
           description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με χαρακτήρες από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!
-          stages:
-            Hour of Code 2013:
-              name: Ώρα του Κώδικα 2013
           lessons:
             Hour of Code 2013:
               name: Ώρα του Κώδικα 2013
         cspunit1:
           description_short: Προγραμματισμός
-          stages:
-            Text Compression:
-              name: Συμπίεση κειμένου
           lessons:
             Text Compression:
               name: Συμπίεση κειμένου
         algebraPD:
-          stages:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
           lessons:
             Evaluation Blocks:
               name: Μπλοκ Αξιολόγησης
             Teacher Dashboard:
               name: πίνακας Δασκάλου
         algPDmiami:
-          stages:
-            Booleans:
-              name: Δυαδικοί
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Sam the Bat:
-              name: Sam η νυχτερίδα
-            Strings and Images:
-              name: Strings και εικόνες
           lessons:
             Booleans:
               name: Δυαδικοί
@@ -755,34 +429,17 @@ el:
               name: Strings και εικόνες
         text-compression:
           title: Συμπίεση κειμένου
-          stages:
-            Text Compression:
-              name: Συμπίεση κειμένου
           lessons:
             Text Compression:
               name: Συμπίεση κειμένου
         cspunit3:
           description_short: Προγραμματισμός
-          stages:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
-            While Loops:
-              name: Βρόχοι με «Όσο»
           lessons:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
             While Loops:
               name: Βρόχοι με «Όσο»
         algebraPD3:
-          stages:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Strings and Images:
-              name: Strings και εικόνες
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
           lessons:
             Evaluation Blocks:
               name: Μπλοκ Αξιολόγησης
@@ -793,22 +450,12 @@ el:
             The Design Recipe:
               name: Η Συνταγή του Σχεδιασμού
         algebraPD-NexTech:
-          stages:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
           lessons:
             Evaluation Blocks:
               name: Μπλοκ Αξιολόγησης
             Teacher Dashboard:
               name: πίνακας Δασκάλου
         algebraPD-iZone:
-          stages:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
           lessons:
             Evaluation Blocks:
               name: Μπλοκ Αξιολόγησης
@@ -817,11 +464,6 @@ el:
         sciencePD2:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
@@ -829,32 +471,12 @@ el:
               name: συνοψίζω
         cspunit2:
           description_short: Προγραμματισμός
-          stages:
-            The Internet:
-              name: Το Διαδίκτυο
           lessons:
             The Internet:
               name: Το Διαδίκτυο
         algebraPD2a:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            Big Game - Variables:
-              name: Μεγάλο Kυνήγι - Mεταβλητές
-            Booleans:
-              name: Δυαδικοί
-            Defining Variables:
-              name: Ορίζοντας μεταβλητές
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Free Play:
-              name: Ελεύθερο παιχνίδι
-            Sam the Bat:
-              name: Sam η νυχτερίδα
-            Strings and Images:
-              name: Strings και εικόνες
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
           lessons:
             Big Game - Variables:
               name: Μεγάλο Kυνήγι - Mεταβλητές
@@ -873,29 +495,6 @@ el:
             The Design Recipe:
               name: Η Συνταγή του Σχεδιασμού
         allthethings:
-          stages:
-            Artist:
-              name: Καλλιτέχνης
-            Bee:
-              name: Μέλισσα
-            Bounce:
-              name: Αναπήδηση
-            Flappy:
-              name: Πουλάκι
-            Jigsaw:
-              name: Παζλ
-            Match:
-              name: Ταίριασμα
-            Maze:
-              name: Λαβύρινθος
-            Minecraft:
-              name: Minecraft
-            Multi:
-              name: Πολύ
-            Text Compression:
-              name: Συμπίεση κειμένου
-            Sprite Lab:
-              name: Sprite Lab
           lessons:
             Artist:
               name: Καλλιτέχνης
@@ -922,21 +521,6 @@ el:
         algebraPD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            Booleans:
-              name: Δυαδικοί
-            Defining Functions:
-              name: Ορίζοντας συναρτήσεις
-            Defining Variables:
-              name: Ορίζοντας μεταβλητές
-            'Eval: Conditionals':
-              name: 'Εκτιμητής: Συνθήκες'
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Strings and Images:
-              name: Strings και εικόνες
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
           lessons:
             Booleans:
               name: Δυαδικοί
@@ -953,13 +537,6 @@ el:
             Teacher Dashboard:
               name: πίνακας Δασκάλου
         cspfacilitator:
-          stages:
-            App Lab:
-              name: App Lab
-            Internet Simulator:
-              name: Προσομοιωτής Διαδικτύου
-            Welcome!:
-              name: Καλώς ήρθατε!
           lessons:
             App Lab:
               name: App Lab
@@ -968,26 +545,12 @@ el:
             Welcome!:
               name: Καλώς ήρθατε!
         K5-OnlinePD:
-          stages:
-            Computer Science Fundamentals:
-              name: Βασικές αρχές της Πληροφορικής
           lessons:
             Computer Science Fundamentals:
-              name: Βασικές αρχές της Πληροφορικής
+              name: Βασικές αρχές της επιστήμης υπολογιστών
         ECSPD2:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-up:
-              name: συνοψίζω
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1002,13 +565,6 @@ el:
         algebraPD2:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
-            Welcome!:
-              name: Καλώς ήρθατε!
           lessons:
             Teacher Dashboard:
               name: πίνακας Δασκάλου
@@ -1019,11 +575,6 @@ el:
         sciencePD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
@@ -1032,11 +583,6 @@ el:
         science-PD2:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
@@ -1045,11 +591,6 @@ el:
         sciencePD2b-iZone:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
@@ -1058,17 +599,6 @@ el:
         ECSPD2-iZone:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-up:
-              name: συνοψίζω
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1083,17 +613,6 @@ el:
         ECSPD2-NexTech:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-up:
-              name: συνοψίζω
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1106,25 +625,6 @@ el:
             Wrap-up:
               name: συνοψίζω
         asUnplugged:
-          stages:
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Getting Loopy:
-              name: Επαναλαμβανόμαστε
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Happy Maps:
-              name: Χαρούμενοι Χάρτες
-            Move it, Move it:
-              name: Κούνισέ το, Κούνισέ το
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Songwriting:
-              name: Σύνθεση τραγουδιού
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
           lessons:
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
@@ -1145,11 +645,6 @@ el:
             The Big Event:
               name: Το Μεγάλο Γεγονός
         ScienceP3OLPT2:
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
@@ -1163,17 +658,11 @@ el:
           title: Play Lab Εποχής των Παγετώνων
           description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Εποχής των Παγετώνων!
           description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Εποχής των Παγετώνων!
-          stages:
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
           lessons:
             Ice Age Play Lab:
               name: Play Lab Εποχής των Παγετώνων
         cspunit3temp:
           description_short: Προγραμματισμός
-          stages:
-            While Loops:
-              name: Βρόχοι με «Όσο»
           lessons:
             While Loops:
               name: Βρόχοι με «Όσο»
@@ -1181,9 +670,6 @@ el:
           title: Play Lab Τσιχλόμπαλα
           description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Τσιχλόμπαλας!
           description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Τσιχλόμπαλας!
-          stages:
-            Gumball Play Lab:
-              name: Play Lab Τσιχλόμπαλα
           lessons:
             Gumball Play Lab:
               name: Play Lab Τσιχλόμπαλα
@@ -1191,9 +677,6 @@ el:
           title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
-          stages:
-            Hour of Code 2015:
-              name: Ώρα του Κώδικα 2015
           lessons:
             Hour of Code 2015:
               name: Ώρα του Κώδικα 2015
@@ -1201,9 +684,6 @@ el:
           title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
-          stages:
-            Hour of Code 2015:
-              name: Ώρα του Κώδικα 2015
           lessons:
             Hour of Code 2015:
               name: Ώρα του Κώδικα 2015
@@ -1211,18 +691,10 @@ el:
           title: Η Ώρα του Κώδικα με το Minecraft
           description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
           description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
-          stages:
-            Hour of Code 2015:
-              name: Ώρα του Κώδικα 2015
           lessons:
             Hour of Code 2015:
               name: Ώρα του Κώδικα 2015
         ScienceP3OLPT3:
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
@@ -1235,19 +707,6 @@ el:
         AlgebraA:
           description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
           description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
-          stages:
-            'Calc: Defining Variables':
-              name: 'Υπολογιστήρας: Ορισμός Μεταβλητών'
-            'Calc: Evaluation Blocks':
-              name: 'Εκτιμητής: Μπλοκ Αξιολόγησης'
-            'Eval: Strings and Images':
-              name: 'Εκτιμητής: Κείμενα και Εικόνες'
-            'Eval: Writing Contracts':
-              name: 'Εκτιμητής: Σύνταξη Συμβολαίων'
-            'Unplugged: Contracts':
-              name: 'Εκτός Σύνδεσης: Συμβόλαια'
-            'Unplugged: The Design Recipe':
-              name: 'Εκτός Σύνδεσης: Συνταγή Σχεδιασμού'
           lessons:
             'Calc: Defining Variables':
               name: 'Υπολογιστήρας: Ορισμός Μεταβλητών'
@@ -1265,29 +724,6 @@ el:
           title: 'Η Επιστήμη των υπολογιστών στην Άλγεβρα'
           description: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
           description_short: Μάθε συναρτησιακό προγραμματισμό μέσω άλγεβρας
-          stages:
-            'Eval: Boolean Operators':
-              name: 'Εκτιμητής: Δυαδικοί Τελεστές'
-            'Eval: Conditionals':
-              name: 'Εκτιμητής: Συνθήκες'
-            'Play Lab: Animation (Big Game)':
-              name: 'Εργαστήριο Παιχνιδιού: Κινούμενα Σχέδια (Μεγάλο Παιχνίδι)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Εργαστήριο Παιχνιδιού: Δυαδικοί (Μεγάλο Παιχνίδι)'
-            'Play Lab: Booleans':
-              name: 'Εργαστήριο Παιχνιδιού: Δυαδικοί'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Εργαστήριο Παιχνιδιού: Ανίχνευση Σύγκρουσης (Μεγάλο Παιχνίδι)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Εργαστήριο Παιχνιδιού: Ορισμός Μεταβλητών (Μεγάλο Παιχνίδι)'
-            'Unplugged: Booleans':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Εκτός Σύνδεσης: Ανίχνευση Σύγκρουσης και Τύπος Απόστασης'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Εκτός Σύνδεσης: Συνθήκες και Συναρτήσεις Piecewise'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα'
           lessons:
             'Eval: Boolean Operators':
               name: 'Εκτιμητής: Δυαδικοί Τελεστές'
@@ -1312,20 +748,12 @@ el:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα'
         algebraPD1:
-          stages:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
           lessons:
             Evaluation Blocks:
               name: Μπλοκ Αξιολόγησης
             Teacher Dashboard:
               name: πίνακας Δασκάλου
         csp1-2017:
-          stages:
-            The Internet:
-              name: Το Διαδίκτυο
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -1333,9 +761,6 @@ el:
             The Internet:
               name: Το Διαδίκτυο
         csp2-2017:
-          stages:
-            Text Compression:
-              name: Συμπίεση κειμένου
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -1344,9 +769,6 @@ el:
               name: Συμπίεση κειμένου
         csp3-2017:
           description_short: Προγραμματισμός
-          stages:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -1354,9 +776,6 @@ el:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
         csp4-2017:
-          stages:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -1364,9 +783,6 @@ el:
             Simple Encryption:
               name: Απλή Κρυπτογράφηση
         csp5-2017:
-          stages:
-            While Loops:
-              name: Βρόχοι με «Όσο»
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -1375,11 +791,6 @@ el:
               name: Βρόχοι με «Όσο»
         CSDU3-Draft:
           description_short: Προγραμματισμός
-          stages:
-            Functions:
-              name: Συναρτήσεις
-            Velocity:
-              name: Ταχύτητα
           lessons:
             Functions:
               name: Συναρτήσεις
@@ -1390,11 +801,6 @@ el:
         CSF_Secret_Sample:
           description_audience: Ηλικίες 8-18
         algebraFacilitator:
-          stages:
-            Evaluation Blocks:
-              name: Μπλοκ Αξιολόγησης
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
           lessons:
             Evaluation Blocks:
               name: Μπλοκ Αξιολόγησης
@@ -1409,16 +815,10 @@ el:
             required:
               display_name: Επισκόπηση
         allthehiddenthings:
-          stages:
-            Game Lab:
-              name: Game Lab
           lessons:
             Game Lab:
               name: Game Lab
         MikeTest:
-          stages:
-            Artist Functions:
-              name: Λειτουργίες Καλλιτέχνη
           lessons:
             Artist Functions:
               name: Λειτουργίες Καλλιτέχνη
@@ -1429,24 +829,10 @@ el:
             required:
               display_name: Επισκόπηση
         kinderTest:
-          stages:
-            'Bee: Conditionals':
-              name: 'Μέλισσα: Συνθήκες'
           lessons:
             'Bee: Conditionals':
               name: 'Μέλισσα: Συνθήκες'
         gradeKinder:
-          stages:
-            Events:
-              name: Συμβάντα
-            'Jigsaw: Learn to drag and drop':
-              name: 'Παζλ: Μάθε την μεταφορά και απόθεση'
-            Loops:
-              name: Βρόχοι
-            Programming:
-              name: Προγραμματισμός
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
           lessons:
             Events:
               name: Συμβάντα
@@ -1459,28 +845,12 @@ el:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         grade4:
-          stages:
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Songwriting:
-              name: Σύνθεση τραγουδιού
           lessons:
             Digital Citizenship:
               name: Ψηφιακή υπηκοότητα
             Songwriting:
               name: Σύνθεση τραγουδιού
         grade1:
-          stages:
-            Events:
-              name: Συμβάντα
-            'Jigsaw: Learn to drag and drop':
-              name: 'Παζλ: Μάθε την μεταφορά και απόθεση'
-            Loops:
-              name: Βρόχοι
-            Programming:
-              name: Προγραμματισμός
-            Unspotted Bugs:
-              name: Μη εντοπισμένα bugs
           lessons:
             Events:
               name: Συμβάντα
@@ -1493,27 +863,6 @@ el:
             Unspotted Bugs:
               name: Μη εντοπισμένα bugs
         grade5:
-          stages:
-            'Artist: For Loops':
-              name: 'Καλλιτέχνης: Βρόχοι Για'
-            'Artist: Functions with Parameters':
-              name: 'Καλλιτέχνης: Συναρτήσεις με Παραμέτρους'
-            'Artist: Variables':
-              name: 'Καλλιτέχνης: Μεταβλητές'
-            'Bee: For Loops':
-              name: 'Μέλισσα: Βρόχοι Για'
-            'Bee: Functions with Parameters':
-              name: 'Μέλισσα: Συναρτήσεις με Παραμέτρους'
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Play Lab: Variables':
-              name: 'Εργαστήριο Παιχνιδιού: Μεταβλητές'
-            'Unplugged: Envelope Variables':
-              name: 'Εκτός Σύνδεσης: Εμφακέλωση Μεταβλητών'
-            'Unplugged: For Loop Fun':
-              name: 'Εκτός Σύνδεσης: Διασκέδαση με Βρόχους Για'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους'
           lessons:
             'Artist: For Loops':
               name: 'Καλλιτέχνης: Βρόχοι Για'
@@ -1536,17 +885,6 @@ el:
             'Unplugged: Songwriting with Parameters':
               name: 'Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-up:
-              name: συνοψίζω
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -1559,15 +897,6 @@ el:
             Wrap-up:
               name: συνοψίζω
         grade3:
-          stages:
-            'Artist: Nested Loops':
-              name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
-            Bee Debugging:
-              name: Εκσφαλμάτωση της Μέλισσας
-            Bounce:
-              name: Αναπήδηση
-            'Farmer: While Loops':
-              name: 'Αγρότης: Βρόχοι όσο'
           lessons:
             'Artist: Nested Loops':
               name: 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
@@ -1583,15 +912,6 @@ el:
               display_name: Επισκόπηση
         csd3-2017:
           description_short: Προγραμματισμός
-          stages:
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -1602,18 +922,11 @@ el:
               name: Συναρτήσεις
             Variables:
               name: Μεταβλητές
+            Sprites:
+              name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
         grade2:
-          stages:
-            Flappy:
-              name: Πουλάκι
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
-            The Big Event:
-              name: Το Μεγάλο Γεγονός
           lessons:
             Flappy:
               name: Πουλάκι
@@ -1624,27 +937,6 @@ el:
             The Big Event:
               name: Το Μεγάλο Γεγονός
         k5concepts:
-          stages:
-            Binary:
-              name: Δυαδικό
-            Conditionals:
-              name: Συνθήκες
-            Events:
-              name: Συμβάντα
-            For Loops:
-              name: Βρόχοι Για
-            Functions:
-              name: Συναρτήσεις
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
-            Loops:
-              name: Βρόχοι
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Variables:
-              name: Μεταβλητές
-            While Loops:
-              name: Βρόχοι με «Όσο»
           lessons:
             Binary:
               name: Δυαδικό
@@ -1667,13 +959,6 @@ el:
             While Loops:
               name: Βρόχοι με «Όσο»
         algebrapdnext:
-          stages:
-            Teacher Dashboard:
-              name: πίνακας Δασκάλου
-            The Design Recipe:
-              name: Η Συνταγή του Σχεδιασμού
-            Welcome!:
-              name: Καλώς ήρθατε!
           lessons:
             Teacher Dashboard:
               name: πίνακας Δασκάλου
@@ -1694,39 +979,14 @@ el:
             required:
               display_name: Επισκόπηση
         basketball:
-          stages:
-            Bounce:
-              name: Αναπήδηση
           lessons:
             Bounce:
               name: Αναπήδηση
         hoc-encryption:
-          stages:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
           lessons:
             Simple Encryption:
               name: Απλή Κρυπτογράφηση
-        fesbinary:
-          title: Δυαδικό
-          stages:
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            Binary Images:
-              name: Δυαδικές Εικόνες
-            Play Lab:
-              name: Εργαστήριο Παιχνιδιού
-          lessons:
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            Binary Images:
-              name: Δυαδικές Εικόνες
-            Play Lab:
-              name: Εργαστήριο Παιχνιδιού
         csd2-2017:
-          stages:
-            Lists:
-              name: Λίστες
           lessons:
             Lists:
               name: Λίστες
@@ -1738,44 +998,22 @@ el:
           description_short: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
           description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
         flappy-impact-study:
-          stages:
-            Flappy Code:
-              name: Flappy κώδικα
           lessons:
             Flappy Code:
               name: Flappy κώδικα
         coursea-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Going Places Safely:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
         courseb-draft:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Your Digital Footprint:
               name: Το Ψηφιακό σου Αποτύπωμα
         coursec-draft:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
@@ -1786,19 +1024,6 @@ el:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         coursed-draft:
-          stages:
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Introduction:
-              name: Εισαγωγή
           lessons:
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
@@ -1813,17 +1038,6 @@ el:
             Introduction:
               name: Εισαγωγή
         coursee-draft:
-          stages:
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Introduction:
-              name: Εισαγωγή
-            Conditionals:
-              name: Συνθήκες
           lessons:
             Digital Citizenship:
               name: Ψηφιακή υπηκοότητα
@@ -1836,19 +1050,6 @@ el:
             Conditionals:
               name: Συνθήκες
         coursef-draft:
-          stages:
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-            Introduction:
-              name: Εισαγωγή
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
           lessons:
             Digital Citizenship:
               name: Ψηφιακή υπηκοότητα
@@ -1864,44 +1065,25 @@ el:
               name: Play Lab Εποχής των Παγετώνων
         classic-hoc-impact-study:
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!
-          stages:
-            Hour of Code 2013:
-              name: Ώρα του Κώδικα 2013
           lessons:
             Hour of Code 2013:
               name: Ώρα του Κώδικα 2013
         hoc-impact-study:
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!
-          stages:
-            Hour of Code 2013:
-              name: Ώρα του Κώδικα 2013
           lessons:
             Hour of Code 2013:
               name: Ώρα του Κώδικα 2013
         sports:
-          stages:
-            Sports:
-              name: Αθλητισμός
           lessons:
             Sports:
               name: Αθλητισμός
         2016_sciencePD-phase2b:
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-Up:
               name: συνοψίζω
         2016_sciencePD_phase2b:
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
@@ -1916,40 +1098,22 @@ el:
             required:
               display_name: Επισκόπηση
         sciencepd4:
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-Up:
               name: συνοψίζω
         science-pd-ol-pt-5:
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-Up:
               name: συνοψίζω
         csf2harvey:
-          stages:
-            Binary:
-              name: Δυαδικό
           lessons:
             Binary:
               name: Δυαδικό
         sciencepd5:
-          stages:
-            Welcome!:
-              name: Καλώς ήρθατε!
-            Wrap-Up:
-              name: συνοψίζω
           lessons:
             Welcome!:
               name: Καλώς ήρθατε!
@@ -1964,13 +1128,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csd6-draft:
-          stages:
-            Lists:
-              name: Λίστες
-            For Loops:
-              name: Βρόχοι Για
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
           lessons:
             Lists:
               name: Λίστες
@@ -1979,27 +1136,18 @@ el:
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
         workshop-gamelab:
-          stages:
-            Introduction:
-              name: Εισαγωγή
           lessons:
             Introduction:
               name: Εισαγωγή
+            Sprites:
+              name: Χαρακτήρας
+            Input:
+              name: Είσοδος
         coursed-ramp:
-          stages:
-            Introduction:
-              name: Εισαγωγή
           lessons:
             Introduction:
               name: Εισαγωγή
         coursee-ramp:
-          stages:
-            Introduction:
-              name: Εισαγωγή
-            Conditionals:
-              name: Συνθήκες
-            'Real Life Algorithms: Dice Race':
-              name: 'Αλγόριθμοι στην πραγματικότητα: Αγώνας ζαριών'
           lessons:
             Introduction:
               name: Εισαγωγή
@@ -2008,15 +1156,6 @@ el:
             'Real Life Algorithms: Dice Race':
               name: 'Αλγόριθμοι στην πραγματικότητα: Αγώνας ζαριών'
         csd6-2017:
-          stages:
-            Lists:
-              name: Λίστες
-            For Loops:
-              name: Βρόχοι Για
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
-            Functions with Parameters_:
-              name: Συναρτήσεις με παραμέτρους
           lessons:
             Lists:
               name: Λίστες
@@ -2027,18 +1166,11 @@ el:
             Functions with Parameters_:
               name: Συναρτήσεις με παραμέτρους
         csd3-draft:
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
           lessons:
             Variables:
               name: Μεταβλητές
+            Sprites:
+              name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
             Velocity:
@@ -2046,38 +1178,21 @@ el:
             Functions:
               name: Συναρτήσεις
         csd3-old:
-          stages:
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
           lessons:
             Velocity:
               name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
         csd2-draft:
-          stages:
-            Lists:
-              name: Λίστες
           lessons:
             Lists:
               name: Λίστες
         csd3-chapters:
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            'null':
-              name: 'τίποτε'
           lessons:
             Variables:
               name: Μεταβλητές
+            Sprites:
+              name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
             Velocity:
@@ -2087,11 +1202,6 @@ el:
             'null':
               name: 'τίποτε'
         coursef-ramp:
-          stages:
-            Introduction:
-              name: Εισαγωγή
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
           lessons:
             Introduction:
               name: Εισαγωγή
@@ -2102,58 +1212,28 @@ el:
             cspSurvey:
               display_name: Έρευνα
         artist-and-bb8:
-          stages:
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Bounce:
-              name: Αναπήδηση
           lessons:
             Ice Age Play Lab:
               name: Play Lab Εποχής των Παγετώνων
             Bounce:
               name: Αναπήδηση
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         courseb-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         coursec-2017:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
         coursed-2017:
-          stages:
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
           lessons:
             Nested Loops:
               name: Φωλιασμένες Επαναλήψεις
         coursee-2017:
-          stages:
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
           lessons:
             Ice Age Play Lab:
               name: Play Lab Εποχής των Παγετώνων
@@ -2168,9 +1248,6 @@ el:
             Nested Loops:
               name: Φωλιασμένες Επαναλήψεις
         coursef-2017:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -2223,25 +1300,6 @@ el:
             required:
               display_name: Επισκόπηση
         express-2017:
-          stages:
-            Introduction:
-              name: Εισαγωγή
-            Internet:
-              name: Διαδίκτυο
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
           lessons:
             Introduction:
               name: Εισαγωγή
@@ -2262,27 +1320,16 @@ el:
             Nested Loops:
               name: Φωλιασμένες Επαναλήψεις
         pre-express-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Spelling Bee:
               name: Η μέλισσα της ορθογραφίας
         subgoal-labels-opt-in:
-          stages:
-            Thanks:
-              name: Ευχαριστούμε
           lessons:
             Thanks:
               name: Ευχαριστούμε
         csp3-research-mxghyt:
-          stages:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
           description_short: Προγραμματισμός
           lesson_groups:
             cspSurvey:
@@ -2291,17 +1338,6 @@ el:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
         e-f-ramp:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Conditionals:
-              name: Συνθήκες
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -2314,23 +1350,6 @@ el:
             Crowdsourcing:
               name: Crowdsourcing
         new-d:
-          stages:
-            Introduction:
-              name: Εισαγωγή
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
           lessons:
             Introduction:
               name: Εισαγωγή
@@ -2349,13 +1368,6 @@ el:
             Loops in Ice Age:
               name: Βρόχοι στην Εποχή των Παγετώνων
         new-express:
-          stages:
-            Introduction:
-              name: Εισαγωγή
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
           lessons:
             Introduction:
               name: Εισαγωγή
@@ -2364,15 +1376,6 @@ el:
             Nested Loops:
               name: Φωλιασμένες Επαναλήψεις
         new-e:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Conditionals:
-              name: Συνθήκες
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -2383,17 +1386,6 @@ el:
             Crowdsourcing:
               name: Crowdsourcing
         new-f:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -2406,23 +1398,14 @@ el:
             Songwriting with Parameters:
               name: Γράφουμε τραγούδια με παραμέτρους
         csp3-staging:
-          stages:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
           lessons:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
         pwc:
-          stages:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
           lessons:
             Simple Encryption:
               name: Απλή Κρυπτογράφηση
         hero:
-          stages:
-            Minecraft Hour of Code:
-              name: Η Ώρα του Κώδικα με το Minecraft
           description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
           lessons:
             Minecraft Hour of Code:
@@ -2436,19 +1419,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         course-e-2018:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Introduction:
-              name: Εισαγωγή
-            Conditionals:
-              name: Συνθήκες
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -2463,19 +1433,6 @@ el:
             Crowdsourcing:
               name: Crowdsourcing
         course-f-2018:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Introduction:
-              name: Εισαγωγή
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -2490,26 +1447,12 @@ el:
             Songwriting with Parameters:
               name: Γράφουμε τραγούδια με παραμέτρους
         csd6-old:
-          stages:
-            Lists:
-              name: Λίστες
-            For Loops:
-              name: Βρόχοι Για
           lessons:
             Lists:
               name: Λίστες
             For Loops:
               name: Βρόχοι Για
         csd3-1819draft:
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
           description_short: "Προγραμματισμός"
           lesson_groups:
             cspSurvey:
@@ -2517,6 +1460,8 @@ el:
           lessons:
             Variables:
               name: Μεταβλητές
+            Sprites:
+              name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
             Velocity:
@@ -2525,21 +1470,14 @@ el:
               name: Συναρτήσεις
         csd3-2018:
           description_short: "Προγραμματισμός"
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
           lessons:
             Variables:
               name: Μεταβλητές
+            Sprites:
+              name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
             Velocity:
@@ -2547,9 +1485,6 @@ el:
             Functions:
               name: Συναρτήσεις
         csd2-2018:
-          stages:
-            Lists:
-              name: Λίστες
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2557,17 +1492,6 @@ el:
             Lists:
               name: Λίστες
         coursea-2018:
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: Μη εντοπισμένα bugs
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: Ο Στίβι και το Μεγάλο Πρότζεκτ
-            'Programming: Happy Maps':
-              name: Χαρούμενοι Χάρτες
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: Ο Στίβι και το Μεγάλο Πρότζεκτ
           lessons:
             'Debugging: Unspotted Bugs':
               name: Μη εντοπισμένα bugs
@@ -2580,41 +1504,6 @@ el:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Ο Στίβι και το Μεγάλο Πρότζεκτ
         express-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Introduction:
-              name: Εισαγωγή
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            'Unplugged: Binary':
-              name: Δυαδικές Εικόνες
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Internet:
-              name: Το Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
@@ -2651,13 +1540,6 @@ el:
             Graph Paper Programming:
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
         courseb-2018:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -2666,27 +1548,6 @@ el:
             Move It, Move It:
               name: Μετακίνησέ το, Μετακίνησέ το
         coursed-2018:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Introduction:
-              name: Εισαγωγή
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Unplugged: Binary':
-              name: Δυαδικές Εικόνες
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
@@ -2709,15 +1570,6 @@ el:
             Relay Programming:
               name: Προγραμματισμός Ρελέ
         coursec-2018:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -2728,9 +1580,6 @@ el:
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
         csd6-2018:
-          stages:
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2738,23 +1587,6 @@ el:
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
         coursee-2018:
-          stages:
-            'Programming: My Robotic Friends':
-              name: Οι Ρομποτικοί φίλοι μου
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Introduction:
-              name: Εισαγωγή
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
-            Internet:
-              name: Το Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Minecraft Hour of Code:
-              name: Η Ώρα του Κώδικα με το Minecraft
           lessons:
             'Programming: My Robotic Friends':
               name: Οι Ρομποτικοί φίλοι μου
@@ -2773,23 +1605,6 @@ el:
             Minecraft Hour of Code:
               name: Η Ώρα του Κώδικα με το Minecraft
         coursef-2018:
-          stages:
-            'Programming: My Robotic Friends':
-              name: Οι Ρομποτικοί φίλοι μου
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Introduction:
-              name: Εισαγωγή
-            Ice Age Play Lab:
-              name: Play Lab Εποχής των Παγετώνων
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Songwriting with Parameters:
-              name: Γράφουμε τραγούδια με παραμέτρους
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
           lessons:
             'Programming: My Robotic Friends':
               name: Οι Ρομποτικοί φίλοι μου
@@ -2808,9 +1623,6 @@ el:
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
         csp1-2018:
-          stages:
-            The Internet:
-              name: Το Διαδίκτυο
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2830,17 +1642,11 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csp2-2018:
-          stages:
-            Text Compression:
-              name: Συμπίεση κειμένου
           lessons:
             Text Compression:
               name: Συμπίεση κειμένου
         csp3-2018:
           description_short: Προγραμματισμός
-          stages:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2856,9 +1662,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csp4-2018:
-          stages:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2866,9 +1669,6 @@ el:
             Simple Encryption:
               name: Απλή Κρυπτογράφηση
         csp5-2018:
-          stages:
-            While Loops:
-              name: Βρόχοι με «Όσο»
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -2948,21 +1748,6 @@ el:
             required:
               display_name: Επισκόπηση
         pre-express-2018:
-          stages:
-            'Debugging: Unspotted Bugs':
-              name: Μη εντοπισμένα bugs
-            'Persistence & Frustration: Stevie and the Marbles':
-              name: Ο Στίβι και το Μεγάλο Πρότζεκτ
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: Ο Στίβι και το Μεγάλο Πρότζεκτ
           lessons:
             'Debugging: Unspotted Bugs':
               name: Μη εντοπισμένα bugs
@@ -2983,23 +1768,14 @@ el:
             required:
               display_name: Επισκόπηση
         frozen-2018:
-          stages:
-            Artist:
-              name: Καλλιτέχνης
           lessons:
             Artist:
               name: Καλλιτέχνης
         frozen-2018-test:
-          stages:
-            Artist:
-              name: Καλλιτέχνης
           lessons:
             Artist:
               name: Καλλιτέχνης
         dance:
-          stages:
-            Dance Party:
-              name: Πάρτι Χορού
           title: Πάρτι Χορού
           description_short: Με τους Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, και 25 ακόμη!
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε με τους φίλους σας.
@@ -3007,32 +1783,20 @@ el:
             Dance Party:
               name: Πάρτι Χορού
         frozen-2018-test-b:
-          stages:
-            Artist:
-              name: Καλλιτέχνης
           lessons:
             Artist:
               name: Καλλιτέχνης
         aquatic:
-          stages:
-            Aquatic:
-              name: Υδάτινο
           title: 'Minecraft: Υδάτινο Ταξίδι'
           description_short: Χρησιμοποιήστε τη δημιουργικότητά σας και τις ικανότητες επίλυσης προβλημάτων που διαθέτετε, για να εξερευνήσετε και να δημιουργήσετε υποθαλάσσιους κόσμους με κώδικα!
           lessons:
             Aquatic:
               name: Υδάτινο
         dance--draft:
-          stages:
-            Dance Party:
-              name: Πάρτι Χορού
           lessons:
             Dance Party:
               name: Πάρτι Χορού
         dance-draft:
-          stages:
-            Dance Party:
-              name: Πάρτι Χορού
           lessons:
             Dance Party:
               name: Πάρτι Χορού
@@ -3049,21 +1813,6 @@ el:
         dance-extras:
           description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
         coursef-2019:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            The Artist:
-              name: Ο Καλλιτέχνης
-            Internet:
-              name: Το Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_variables:
               display_name: Μεταβλητές
@@ -3071,6 +1820,8 @@ el:
               display_name: Βρόχοι Για
             csf_internet:
               display_name: Διαδίκτυο
+            csf_sprites:
+              display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
           lessons:
@@ -3089,30 +1840,10 @@ el:
             Crowdsourcing:
               name: Crowdsourcing
         dance-low:
-          stages:
-            Dance Party:
-              name: Πάρτι Χορού
           lessons:
             Dance Party:
               name: Πάρτι Χορού
         coursed-2019:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            'Unplugged: Binary':
-              name: Δυαδικές Εικόνες
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Dance Party:
-              name: Πάρτι Χορού
           lesson_groups:
             csf_events:
               display_name: Συμβάντα
@@ -3142,22 +1873,9 @@ el:
             Dance Party:
               name: Πάρτι Χορού
         coursee-2019:
-          stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Songwriting:
-              name: Σύνθεση τραγουδιού
           lesson_groups:
+            csf_sprites:
+              display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_nested_loops:
@@ -3180,27 +1898,6 @@ el:
             Songwriting:
               name: Σύνθεση τραγουδιού
         express-2019:
-          stages:
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Internet:
-              name: Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
-            Dance Party:
-              name: Πάρτι Χορού
           lesson_groups:
             csf_warmup:
               display_name: Ζέσταμα
@@ -3214,6 +1911,8 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+            csf_sprites:
+              display_name: Χαρακτήρας
           lessons:
             Relay Programming:
               name: Προγραμματισμός Ρελέ
@@ -3240,9 +1939,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         andrea-test:
-          stages:
-            'null':
-              name: 'τίποτε'
           lesson_groups:
             required:
               display_name: Επισκόπηση
@@ -3253,13 +1949,6 @@ el:
           title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
         coursec-2019:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3283,11 +1972,6 @@ el:
         gamelab:
           title: Game Lab
         coursea-2019:
-          stages:
-            'Programming: Happy Maps':
-              name: Χαρούμενοι Χάρτες
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3301,15 +1985,6 @@ el:
             Going Places Safely:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
         courseb-2019:
-          stages:
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3327,13 +2002,6 @@ el:
             'Loops: Getting Loopy':
               name: Επαναλαμβανόμαστε
         pre-express-2019:
-          stages:
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
@@ -3347,16 +2015,10 @@ el:
             Spelling Bee:
               name: Η μέλισσα της ορθογραφίας
         removed19:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         csd2-2019:
-          stages:
-            Lists:
-              name: Λίστες
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3365,21 +2027,14 @@ el:
               name: Λίστες
         csd3-2019:
           description_short: "Προγραμματισμός"
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
           lessons:
             Variables:
               name: Μεταβλητές
+            Sprites:
+              name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
             Velocity:
@@ -3395,9 +2050,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csd6-2019:
-          stages:
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3417,9 +2069,6 @@ el:
             required:
               display_name: Επισκόπηση
         csp1-2019:
-          stages:
-            The Internet:
-              name: Το Διαδίκτυο
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3427,9 +2076,6 @@ el:
             The Internet:
               name: Το Διαδίκτυο
         csp2-2019:
-          stages:
-            Text Compression:
-              name: Συμπίεση κειμένου
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3438,9 +2084,6 @@ el:
               name: Συμπίεση κειμένου
         csp3-2019:
           description_short: Προγραμματισμός
-          stages:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3448,9 +2091,6 @@ el:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
         csp4-2019:
-          stages:
-            Simple Encryption:
-              name: Απλή Κρυπτογράφηση
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3458,9 +2098,6 @@ el:
             Simple Encryption:
               name: Απλή Κρυπτογράφηση
         csp5-2019:
-          stages:
-            While Loops:
-              name: Βρόχοι με «Όσο»
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3486,13 +2123,9 @@ el:
             required:
               display_name: Επισκόπηση
         time4csdemo:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+          lesson_groups:
+            csf_sprites:
+              display_name: Χαρακτήρας
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -3551,9 +2184,6 @@ el:
             csp_project:
               display_name: Έργο
         csp7-pilot-staging:
-          stages:
-            Libraries:
-              name: Βιβλιοθήκες
           lesson_groups:
             csp_libraries:
               display_name: Βιβλιοθήκες
@@ -3591,9 +2221,6 @@ el:
             csp_project:
               display_name: Έργο
         express-2018-vn:
-          stages:
-            Graph Paper Programming:
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
           lessons:
             Graph Paper Programming:
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
@@ -3628,9 +2255,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csd2-pilot:
-          stages:
-            Lists:
-              name: Λίστες
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3639,25 +2263,14 @@ el:
               name: Λίστες
         csd3-pilot:
           description_short: "Προγραμματισμός"
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            Random Numbers:
-              name: Τυχαίοι αριθμοί
-            Sprite Properties:
-              name: Ιδιότητες Χαρακτήρα
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
           lessons:
             Variables:
               name: Μεταβλητές
+            Sprites:
+              name: Χαρακτήρας
             Conditionals:
               name: Συνθήκες
             Velocity:
@@ -3673,9 +2286,6 @@ el:
             required:
               display_name: Επισκόπηση
         csl-vn:
-          stages:
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
@@ -3729,11 +2339,6 @@ el:
             required:
               display_name: Επισκόπηση
         peru-2019:
-          stages:
-            Introduction:
-              name: Εισαγωγή
-            Nested Loops:
-              name: Φωλιασμένες Επαναλήψεις
           lessons:
             Introduction:
               name: Εισαγωγή
@@ -3744,34 +2349,14 @@ el:
             required:
               display_name: Επισκόπηση
         dance-2019:
-          stages:
-            Dance Party:
-              name: Πάρτι Χορού
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε με τους φίλους σας.
           lessons:
             Dance Party:
               name: Πάρτι Χορού
         k5-onlinepd-2019:
-          stages:
-            Computer Science Fundamentals:
-              name: Βασικές αρχές της Πληροφορικής
-            Loops:
-              name: Βρόχοι
-            Conditionals:
-              name: Συνθήκες
-            Events:
-              name: Συμβάντα
-            Functions:
-              name: Συναρτήσεις
-            Sprite Lab:
-              name: Sprite Lab
-            Variables:
-              name: Μεταβλητές
-            For Loops:
-              name: Βρόχοι Για
           lessons:
             Computer Science Fundamentals:
-              name: Βασικές αρχές της Πληροφορικής
+              name: Βασικές αρχές της επιστήμης υπολογιστών
             Loops:
               name: Βρόχοι
             Conditionals:
@@ -3799,18 +2384,10 @@ el:
             csp_project:
               display_name: Έργο
         time4cs-original-unit-1:
-          stages:
-            Conditionals:
-              name: Συνθήκες
           lessons:
             Conditionals:
               name: Συνθήκες
         time4cs-control-unit-2:
-          stages:
-            Crowdsourcing:
-              name: Crowdsourcing
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3826,9 +2403,6 @@ el:
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
         time4cs-control-unit-1:
-          stages:
-            Conditionals:
-              name: Συνθήκες
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
@@ -3836,15 +2410,14 @@ el:
               display_name: Συνθήκες
             csf_events:
               display_name: Συμβάντα
+            csf_sprites:
+              display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
           lessons:
             Conditionals:
               name: Συνθήκες
         time4cs-experiment-unit-1:
-          stages:
-            Conditionals:
-              name: Συνθήκες
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
@@ -3852,6 +2425,8 @@ el:
               display_name: Συνθήκες
             csf_events:
               display_name: Συμβάντα
+            csf_sprites:
+              display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
           lessons:
@@ -3902,9 +2477,6 @@ el:
             cspSurvey:
               display_name: Έρευνα
         csd6-2020:
-          stages:
-            Functions with Parameters:
-              name: Συναρτήσεις με παραμέτρους
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3913,21 +2485,6 @@ el:
               name: Συναρτήσεις με παραμέτρους
         csd3-2020:
           description_short: "Προγραμματισμός"
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Random Numbers:
-              name: Τυχαίοι αριθμοί
-            Sprite Properties:
-              name: Ιδιότητες Χαρακτήρα
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
-            Text:
-              name: κείμενο
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
@@ -3946,12 +2503,9 @@ el:
               name: Συναρτήσεις
             Text:
               name: κείμενο
+            Sprites:
+              name: Χαρακτήρας
         coursea-2020:
-          stages:
-            Going Places Safely:
-              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
-            'Programming: Happy Maps':
-              name: Χαρούμενοι Χάρτες
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3965,13 +2519,6 @@ el:
             'Programming: Happy Maps':
               name: Χαρούμενοι Χάρτες
         courseb-2020:
-          stages:
-            Your Digital Footprint:
-              name: Το Ψηφιακό σου Αποτύπωμα
-            Move It, Move It:
-              name: Μετακίνησέ το, Μετακίνησέ το
-            'Loops: Getting Loopy':
-              name: Επαναλαμβανόμαστε
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -3987,11 +2534,6 @@ el:
             'Loops: Getting Loopy':
               name: Επαναλαμβανόμαστε
         coursec-2020:
-          stages:
-            Binary Bracelets:
-              name: Δυαδικά Βραχιόλια
-            'Events: The Big Event':
-              name: Το Μεγάλο Γεγονός
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -4007,23 +2549,6 @@ el:
             'Events: The Big Event':
               name: Το Μεγάλο Γεγονός
         coursed-2020:
-          stages:
-            'Algorithms: Graph Paper Programming':
-              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-            Relay Programming:
-              name: Προγραμματισμός Ρελέ
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
-            Conditionals with Cards:
-              name: Υποθέσεις με Κάρτες
-            'Unplugged: Binary':
-              name: Δυαδικές Εικόνες
-            Artist Binary:
-              name: Δυαδικοί Καλλιτέχνη
-            Digital Citizenship:
-              name: Ψηφιακή υπηκοότητα
-            Dance Party:
-              name: Πάρτι Χορού
           lesson_groups:
             csf_events:
               display_name: Συμβάντα
@@ -4053,10 +2578,9 @@ el:
             Dance Party:
               name: Πάρτι Χορού
         coursee-2020:
-          stages:
-            'Functions: Songwriting':
-              name: Σύνθεση τραγουδιού
           lesson_groups:
+            csf_sprites:
+              display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_nested_loops:
@@ -4067,15 +2591,6 @@ el:
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
         coursef-2020:
-          stages:
-            Envelope Variables:
-              name: Μεταβλητές
-            For Loop Fun:
-              name: Διασκέδαση με το Βρόχο Για
-            Internet:
-              name: Το Διαδίκτυο
-            Crowdsourcing:
-              name: Crowdsourcing
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -4083,6 +2598,8 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+            csf_sprites:
+              display_name: Χαρακτήρας
           lessons:
             Envelope Variables:
               name: Μεταβλητές
@@ -4093,9 +2610,6 @@ el:
             Crowdsourcing:
               name: Crowdsourcing
         express-2020:
-          stages:
-            Dance Party:
-              name: Πάρτι Χορού
           lesson_groups:
             csf_warmup:
               display_name: Ζέσταμα
@@ -4109,15 +2623,12 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+            csf_sprites:
+              display_name: Χαρακτήρας
           lessons:
             Dance Party:
               name: Πάρτι Χορού
         pre-express-2020:
-          stages:
-            Spelling Bee:
-              name: Η μέλισσα της ορθογραφίας
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
           lesson_groups:
             csf_loops:
               display_name: Βρόχοι
@@ -4134,68 +2645,32 @@ el:
               display_name: Έρευνα
         csp3-virtual:
           description_short: Προγραμματισμός
-          stages:
-            Creating Functions:
-              name: Δημιουργούμε Συναρτήσεις
           lessons:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
         csp5-virtual:
-          stages:
-            While Loops:
-              name: Βρόχοι με «Όσο»
-            Variables:
-              name: Μεταβλητές
           lessons:
             While Loops:
               name: Βρόχοι με «Όσο»
             Variables:
               name: Μεταβλητές
         virtual-holding-place:
-          stages:
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
           lessons:
             Velocity:
               name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
         code-break:
-          stages:
-            Algorithms:
-              name: Αλγόριθμοι
-            Events:
-              name: Συμβάντα
           lessons:
             Algorithms:
               name: Αλγόριθμοι
             Events:
               name: Συμβάντα
         csp5-virtual-part2:
-          stages:
-            While Loops:
-              name: Βρόχοι με «Όσο»
           lessons:
             While Loops:
               name: Βρόχοι με «Όσο»
         k5-onlinepd-2020:
-          stages:
-            Loops:
-              name: Βρόχοι
-            Events:
-              name: Συμβάντα
-            Conditionals:
-              name: Συνθήκες
-            Functions:
-              name: Συναρτήσεις
-            Variables:
-              name: Μεταβλητές
-            For Loops:
-              name: Βρόχοι Για
-            Sprite Lab:
-              name: Sprite Lab
           lessons:
             Loops:
               name: Βρόχοι
@@ -4217,26 +2692,13 @@ el:
               display_name: Έρευνα
         csd3-virtual:
           description_short: "Προγραμματισμός"
-          stages:
-            Variables:
-              name: Μεταβλητές
-            Random Numbers:
-              name: Τυχαίοι αριθμοί
-            Sprite Properties:
-              name: Ιδιότητες Χαρακτήρα
-            Text:
-              name: κείμενο
-            Conditionals:
-              name: Συνθήκες
-            Velocity:
-              name: Ταχύτητα
-            Functions:
-              name: Συναρτήσεις
           lessons:
             Variables:
               name: Μεταβλητές
             Random Numbers:
               name: Τυχαίοι αριθμοί
+            Sprites:
+              name: Χαρακτήρας
             Sprite Properties:
               name: Ιδιότητες Χαρακτήρα
             Text:

@@ -496,6 +496,8 @@ km:
       school_name: 'ឈ្មោះរបស់សាលា'
       school_city: 'ទីក្រុងរបស់សាលា'
       school_country: 'សាលាក្នុងប្រទេស'
+      colombian_school_city: 'ទីក្រុងរបស់សាលា'
+      colombian_school_name: 'ឈ្មោះរបស់សាលា'
     form_entries:
       gender:
         male: 'ប្រុស'

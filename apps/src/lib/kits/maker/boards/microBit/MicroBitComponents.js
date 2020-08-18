@@ -7,6 +7,7 @@ import Accelerometer from './Accelerometer';
 import MicroBitThermometer from './MicroBitThermometer';
 import Compass from './Compass';
 import LightSensor from './LightSensor';
+import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 
 /**
  * Initializes a set of components for the currently
@@ -34,10 +35,15 @@ export function createMicroBitComponents(board) {
  *   createMicroBitComponents.  This object will be mutated: Destroyed
  *   components will be removed. Additional members of this object will be
  *   ignored.
+ * @param {Object} dynamicComponents - array of dynamic components, from MicroBitBoard
  * @param {boolean} shouldDestroyComponents - whether or not to fully delete the
  *   components, or just reset to their initial state.
  */
-export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
+export function cleanupMicroBitComponents(
+  components,
+  dynamicComponents,
+  shouldDestroyComponents
+) {
   if (components.ledScreen) {
     components.ledScreen.clear();
   }
@@ -66,6 +72,13 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
     };
     components.lightSensor.stop();
   }
+
+  dynamicComponents.forEach(component => {
+    if (component instanceof CapacitiveTouchSensor) {
+      component.stop();
+      component.connected = false;
+    }
+  });
 
   if (shouldDestroyComponents) {
     delete components.ledScreen;

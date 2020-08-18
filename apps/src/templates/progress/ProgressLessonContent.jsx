@@ -40,7 +40,7 @@ export default class ProgressLessonContent extends React.Component {
       bubbles = progressions.map((progression, index) => (
         <ProgressLevelSet
           key={index}
-          name={progression.name}
+          name={progression.displayName}
           levels={progression.levels}
           disabled={disabled}
           selectedSectionId={selectedSectionId}

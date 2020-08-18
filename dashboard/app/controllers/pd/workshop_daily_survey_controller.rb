@@ -309,6 +309,23 @@ module Pd
       render_csf_survey(PRE_DEEPDIVE_SURVEY, workshop)
     end
 
+    # Display CSF201 (Deep Dive) pre-workshop survey using Foorm.
+    # Temporary separate method for testing--will eventually replace new_csf_pre201
+    # once all CSF201 surveys are converted to Foorm
+    # GET workshop_survey/foorm/csf/pre201
+    def new_csf_pre201_foorm
+      # Find the closest CSF 201 workshop the current user enrolled in.
+      workshop = Pd::Workshop.
+        where(course: COURSE_CSF, subject: SUBJECT_CSF_201).
+        enrolled_in_by(current_user).nearest
+
+      return render :not_enrolled unless workshop
+      return render :too_late unless workshop.state != STATE_ENDED
+
+      survey_name = PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201]
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: 0)
+    end
+
     # Display CSF101 (Intro) post-workshop survey.
     # The survey, on submit, will display thanks.
     # GET /pd/workshop_survey/csf/post101(/:enrollment_code)
@@ -333,7 +350,7 @@ module Pd
     # GET workshop_survey/csf/post201(/:enrollment_code)
     def new_csf_post201
       # Use enrollment_code to find a specific workshop
-      # or search all CSF201 workshops the current user enrolled in.
+      # or search all CSF201 workshops the current user is enrolled in and attended.
       attended_workshop = get_attended_workshop_by_enrollment_or_course(
         params[:enrollment_code],
         COURSE_CSF,
@@ -342,6 +359,24 @@ module Pd
       return unless attended_workshop
 
       render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
+    end
+
+    # Display CSF201 (Deep Dive) post-workshop survey using Foorm.
+    # Temporary separate method for testing--will eventually replace new_csf_post201
+    # once all CSF201 surveys are converted to Foorm
+    # GET workshop_survey/foorm/csf/post201
+    def new_csf_post201_foorm
+      # Use enrollment_code to find a specific workshop
+      # or search all CSF201 workshops the current user is enrolled in and attended.
+      attended_workshop = get_attended_workshop_by_enrollment_or_course(
+        params[:enrollment_code],
+        COURSE_CSF,
+        SUBJECT_CSF_201
+      )
+      return unless attended_workshop
+
+      survey_name = POST_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201]
+      render_survey_foorm(survey_name: survey_name, workshop: attended_workshop, session: nil, day: nil)
     end
 
     # GET /pd/workshop_survey/thanks
