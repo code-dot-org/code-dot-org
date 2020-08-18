@@ -109,10 +109,8 @@ class UserLevel < ActiveRecord::Base
   end
 
   def calculate_total_time_spent(additional_time)
-    additional_time if additional_time > 0
-    # TODO: return the total time spent once time_spent has been added to the user_levels table.
-    # https://github.com/code-dot-org/code-dot-org/pull/31696/files
-    # additional_time > 0 ? time_spent + additional_time : time_spent
+    existing_time_spent = time_spent ? time_spent : 0
+    additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
   end
 
   def submitted_or_resubmitted?
