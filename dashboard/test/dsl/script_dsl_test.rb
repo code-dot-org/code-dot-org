@@ -945,7 +945,7 @@ level 'Level 3'
   test 'serialize lesson group and properties' do
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: 'content1', script: script, position: 1, properties: {display_name: "Content", description: 'This is a description', big_questions: ['Q1', 'Q2']}
-    lesson1 = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1
+    lesson1 = create :lesson, key: 'l-1', name: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1
     level1 = create :maze, name: 'maze 1', level_num: 'custom'
     create :script_level, levels: [level1], lesson: lesson1, script: script
 
@@ -955,7 +955,7 @@ level 'Level 3'
       lesson_group_description 'This is a description'
       lesson_group_question 'Q1'
       lesson_group_question 'Q2'
-      lesson 'lesson 1'
+      lesson 'l-1', display_name: 'lesson 1'
       level 'maze 1'
 
     SCRIPT
