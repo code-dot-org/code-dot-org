@@ -10,7 +10,7 @@
             #fineprint{:style=>'font-size:18px; line-height:18px'}
               This curriculum is not yet final
         #right{:style=>'float:right; padding:5px'}
-          %img{:src=>'/images/logo.png'}
+          %img{:src=>'/images/logo.svg'}
 
     #bottom.printbackground{:style=>'clear:both'}
       - if unplugged
@@ -25,7 +25,7 @@
       %h1{:style=>'color:white'}=title
       %hr
 
-      Lesson time: #{time} Minutes 
+      Lesson time: #{time} Minutes
       - if days
         - daytext = days == 1 ? "#{days} Day" : "#{days} Days"
         (#{daytext})
