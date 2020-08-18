@@ -753,6 +753,8 @@ es-MX:
               name: Uso de variables en aplicaciones
             While Loops:
               name: Bucles `mientras`
+            Creating Functions with Parameters:
+              name: Creación de funciones con parámetros
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -5916,7 +5918,7 @@ es-MX:
             Conditionals & Loops in Harvester:
               name: Condicionales y bucles en Cosechadora
             Until Loops in Maze:
-              name: Bucles 'mientras' en el Laberinto
+              name: Bucles 'hasta' en el Laberinto
         pre-express-2017:
           title: Curso Express para prelectores
           assignment_family_title: Curso Express para prelectores
@@ -7357,7 +7359,7 @@ es-MX:
             Conditionals in Bee:
               name: Condicionales con Abeja
             Until Loops in Maze:
-              name: Bucles 'mientras' en el Laberinto
+              name: Bucles 'hasta' en el Laberinto
             Programming in Maze:
               name: Programación con Angry Birds
             Debugging in Maze:
@@ -7517,7 +7519,7 @@ es-MX:
             Nested Loops in Frozen:
               name: Copos de nieve con Anna y Elsa
             Until Loops in Maze:
-              name: Bucles 'mientras' en el Laberinto
+              name: Bucles 'hasta' en el Laberinto
             Conditionals in Maze:
               name: Condicionales en Laberinto
             Conditionals & Loops in Harvester:
@@ -9363,7 +9365,7 @@ es-MX:
               description_student: 'Los loops son tan útiles en la codificación. Esta lección te enseñará sobre un nuevo tipo de loops: ¡loops mientras!'
               description_teacher: "Para el momento en que los estudiantes lleguen a esta lección, ya deberían haber practicado lo suficiente con los bucles `repetir`. Ahora es tiempo de combinar todo. \\r\n\\r\nLos _bucles `mientras`_ son bucles que repiten comandos mientras se cumple alguna condición. Los bucles `mientras` se usan cuando el programador no conoce el número exacto de veces que se deben repetir los comandos, pero sí sabe qué condición debe existir para que el bucle se siga repitiendo. Por ejemplo, los estudiantes trabajarán para llenar hoyos y sacar tierra en la Granjera. No conocerán el tamaño de los hoyos ni la altura de las montañas de tierra, pero sabrán que necesitan seguir haciendo esas acciones mientras el suelo no esté plano."
             Until Loops in Maze:
-              name: Bucles 'mientras' en el Laberinto
+              name: Bucles 'hasta' en el Laberinto
               description_student: '¡Puedes hacer cosas asombrosas con los bucles `hasta`!'
               description_teacher: En esta lección, los estudiantes aprenderán acerca de los bucles `hasta`. Crearán programas en los cuales el personaje repetirá acciones `hasta` que llegue al punto de detención deseado.
             Conditionals with Cards:
@@ -9613,7 +9615,7 @@ es-MX:
             While Loops in Farmer:
               name: Bucles 'mientras' en la Granjera
             Until Loops in Maze:
-              name: Bucles 'mientras' en el Laberinto
+              name: Bucles 'hasta' en el Laberinto
             Conditionals with Cards:
               name: Condicionales con tarjetas
             Conditionals in Bee:
@@ -14052,7 +14054,7 @@ es-MX:
               description_student: 'Los loops son tan útiles en la codificación. Esta lección te enseñará sobre un nuevo tipo de loops: ¡loops mientras!'
               description_teacher: "Para el momento en que los estudiantes lleguen a esta lección, ya deberían haber practicado lo suficiente con los bucles `repetir`. Ahora es tiempo de combinar todo. \\r\n\\r\nLos _bucles `mientras`_ son bucles que repiten comandos mientras se cumple alguna condición. Los bucles `mientras` se usan cuando el programador no conoce el número exacto de veces que se deben repetir los comandos, pero sí sabe qué condición debe existir para que el bucle se siga repitiendo. Por ejemplo, los estudiantes trabajarán para llenar hoyos y sacar tierra en la Granjera. No conocerán el tamaño de los hoyos ni la altura de las montañas de tierra, pero sabrán que necesitan seguir haciendo esas acciones mientras el suelo no esté plano."
             Until Loops in Maze:
-              name: Bucles 'mientras' en el Laberinto
+              name: Bucles 'hasta' en el Laberinto
               description_student: '¡Puedes hacer cosas asombrosas con los bucles `hasta`!'
               description_teacher: En esta lección, los estudiantes aprenderán acerca de los bucles `hasta`. Crearán programas en los cuales el personaje repetirá acciones `hasta` que llegue al punto de detención deseado.
             Conditionals & Loops in Harvester:
@@ -14338,7 +14340,7 @@ es-MX:
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Condicionales en Minecraft: Voyage Aquatic'
             Until Loops in Maze:
-              name: Bucles 'mientras' en el Laberinto
+              name: Bucles 'hasta' en el Laberinto
             Conditionals & Loops in Harvester:
               name: Condicionales y bucles en Cosechadora
             Functions in Minecraft:
