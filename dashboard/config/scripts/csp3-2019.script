@@ -1,4 +1,3 @@
-tts true
 hidden false
 login_required true
 hideable_lessons true
@@ -12,21 +11,22 @@ version_year '2019'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
+tts true
 
 lesson_group 'csp3_1_2018', display_name: 'Unit 3: Intro to Programming'
-lesson 'The Need For Programming Languages'
+lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages'
 level 'CSP U3L01 SFLP_2019', named: true
 level 'U3L01 Assessment1_2019', progression: 'Check Your Understanding', assessment: true
 level 'U3L01 Assessment3_2019', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-4-levelgroup-U3Ch1_2018_2019', progression: 'Quick Check-In', assessment: true
 
-lesson 'The Need for Algorithms'
+lesson 'The Need for Algorithms', display_name: 'The Need for Algorithms'
 level 'CSP U3L02 SFLP_2019', named: true
 
-lesson 'Creativity in Algorithms'
+lesson 'Creativity in Algorithms', display_name: 'Creativity in Algorithms'
 level 'CSP U3L03 SFLP_2019', named: true
 
-lesson 'Using Simple Commands'
+lesson 'Using Simple Commands', display_name: 'Using Simple Commands'
 level 'CSP U3L04 SFLP_2019', named: true
 level 'csp_applab_turtle_2019', named: true
 level 'U3L2 Using Simple Commands_2019', progression: 'Using Simple Turtle Commands'
@@ -37,7 +37,7 @@ level 'U3L02 Free Response Getting Started_2019', progression: 'Check Your Under
 level 'csp_U3_square_v_rect_FR_2019', progression: 'Check Your Understanding', assessment: true
 level 'U3L02 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Creating Functions'
+lesson 'Creating Functions', display_name: 'Creating Functions'
 level 'CSP U3L05 SFLP_2019', named: true
 level 'csp_applab_functions_2019', progression: 'Defining and Calling Functions'
 level 'U3L03 Define and use turnAround_2019', progression: 'Using Functions With Turtle Commands'
@@ -53,7 +53,7 @@ level 'U3L03 Assessment_2018_2019', progression: 'Check Your Understanding', ass
 level 'U3L03 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 level 'csp_U3_plan_code_FR_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Functions and Top-Down Design'
+lesson 'Functions and Top-Down Design', display_name: 'Functions and Top-Down Design'
 level 'CSP U3L06 SFLP_2019', named: true
 level 'U3L04 - snowflake_2019', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 - 3 by 3 with functions_2019', progression: 'Using Functions with Turtle Commands'
@@ -62,7 +62,7 @@ level 'U3L04 Assessment1_2019', progression: 'Check Your Understanding', assessm
 level 'U3L04 Assessment2_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U3L04 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'APIs and Function Parameters'
+lesson 'APIs and Function Parameters', display_name: 'APIs and Function Parameters'
 level 'CSP U3L07 SFLP_2019', named: true
 level 'U3L06 - moveForwardwithParams_2019', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 1 triangle_2019', progression: 'Introduction to Parameters'
@@ -79,7 +79,7 @@ level 'U3L06-API-multichoice_2018_2019', progression: 'Check Your Understanding'
 level 'U3L06 Assessment_2019', progression: 'Check Your Understanding', assessment: true
 level 'csp3_U3_turtle_subgoal_mc_levelgroup_2018_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Creating functions with Parameters'
+lesson 'Creating functions with Parameters', display_name: 'Creating functions with Parameters'
 level 'CSP U3L08 SFLP_2019', named: true
 level 'csp_applab_functions_parameters_2019', progression: 'Functions with Parameters'
 level 'U3L08 - drawSquareWithParam_2019', progression: 'Drawing Shapes With Parameters'
@@ -101,7 +101,7 @@ level 'U3-AP-Practice-FR-manage-complexity_2019', progression: 'AP Practice Resp
 level 'U3L08 Assessment1_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U3L08 Assessment2_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Looping and Random Numbers'
+lesson 'Looping and Random Numbers', display_name: 'Looping and Random Numbers'
 level 'CSP U3L09 SFLP_2019', named: true
 level 'csp_applab_loops_2019', progression: 'Using Loops'
 level 'U3L07 - introSquare_2019', progression: 'Introduction to Loops'
@@ -122,17 +122,18 @@ level 'U3L07 - MC remove line of code loops_2018_2019', progression: 'Check Your
 level 'U3L07 Free Response Reflection_2019', progression: 'Check Your Understanding', assessment: true
 level 'subgoals_u3_top_down_FR_2019', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Practice PT - Design a Digital Scene'
+lesson 'Practice PT - Design a Digital Scene', display_name: 'Practice PT - Design a Digital Scene'
 level 'CSP U3L10 SFLP_2019', named: true
 level 'U3L08 - individualCode_2019', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates_2018_2019', progression: 'How to Share Code with Teammates'
 level 'U3L08 - digitalScene_2019', progression: 'Challenge: Design Your Digital Scene', assessment: true
 
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
-lesson 'Unit 3 Chapter 1 Assessment', lockable: true
+lesson 'Unit 3 Chapter 1 Assessment', display_name: 'Unit 3 Chapter 1 Assessment', lockable: true
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Principles Post Course survey', lockable: true
+lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true
+

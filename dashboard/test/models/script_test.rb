@@ -104,7 +104,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'cannot rename a script without a new_name' do
     l = create :level
     dsl = <<-SCRIPT
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     old_script = Script.add_script(
@@ -126,7 +126,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can rename a script between original name and new_name' do
     l = create :level
     dsl = <<-SCRIPT
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     old_script = Script.add_script(
@@ -310,7 +310,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'blockly level in custom script' do
     script_data, _ = ScriptDSL.parse(
-      "lesson 'lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
+      "lesson 'Lesson1', display_name: 'Lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
 
     script = Script.add_script({name: 'test script'}, script_data[:lesson_groups])
@@ -1082,11 +1082,11 @@ class ScriptTest < ActiveSupport::TestCase
     create :level, name: 'NonLockableAssessment3'
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'NonLockable1'
+      lesson 'NonLockable1', display_name: 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      lesson 'NonLockable2'
+      lesson 'NonLockable2', display_name: 'NonLockable2'
       assessment 'NonLockableAssessment2';
-      lesson 'NonLockable3'
+      lesson 'NonLockable3', display_name: 'NonLockable3'
       assessment 'NonLockableAssessment3';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
@@ -1098,11 +1098,11 @@ class ScriptTest < ActiveSupport::TestCase
     assert (/^Lesson 3:/.match(script.lessons[2].localized_title))
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'Lockable1', lockable: true
+      lesson 'Lockable1', display_name: 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
-      lesson 'NonLockable1'
+      lesson 'NonLockable1', display_name: 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      lesson 'NonLockable2'
+      lesson 'NonLockable2', display_name: 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
@@ -1114,11 +1114,11 @@ class ScriptTest < ActiveSupport::TestCase
     assert (/^Lesson 2:/.match(script.lessons[2].localized_title))
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'NonLockable1'
+      lesson 'NonLockable1', display_name: 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      lesson 'Lockable1', lockable: true
+      lesson 'Lockable1', display_name: 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
-      lesson 'NonLockable2'
+      lesson 'NonLockable2', display_name: 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
@@ -1134,7 +1134,7 @@ class ScriptTest < ActiveSupport::TestCase
     create :level, name: 'Level1'
     create :level, name: 'LockableAssessment1'
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'Lockable1', lockable: true
+      lesson 'Lockable1', display_name: 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
       level 'Level1';
     DSL
@@ -1332,11 +1332,11 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can make a challenge level not a challenge level' do
     l = create :level
     old_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}', challenge: true
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -1356,11 +1356,11 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can make a bonus level not a bonus level' do
     l = create :level
     old_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}', bonus: true
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -1381,11 +1381,11 @@ class ScriptTest < ActiveSupport::TestCase
     l = create :level
     old_dsl = <<-SCRIPT
       project_widget_visible true
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
@@ -1414,11 +1414,11 @@ class ScriptTest < ActiveSupport::TestCase
     l = create :level
     old_dsl = <<-SCRIPT
       script_announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
@@ -1448,9 +1448,9 @@ class ScriptTest < ActiveSupport::TestCase
     dsl = <<-SCRIPT
       has_lesson_plan true
       curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
-      lesson 'lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(dsl, 'a filename')
@@ -1583,7 +1583,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Ignore level names, since we are just testing whether the
     # variants / active / endvariants structure is correct.
     new_dsl_regex = <<-SCRIPT
-lesson 'lesson1'
+lesson 'lesson1', display_name: 'lesson1'
 variants
   level '[^']+'
   level '[^']+', active: false
@@ -1804,7 +1804,7 @@ endvariants
       hidden false
       pilot_experiment 'pilot-experiment'
 
-      lesson 'lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
 
@@ -1968,7 +1968,7 @@ endvariants
   test 'every lesson has a lesson group even if non specified' do
     l1 = create :level
     dsl = <<-SCRIPT
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
     SCRIPT
 
@@ -1985,7 +1985,7 @@ endvariants
     l1 = create :level
     dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Not Content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
     SCRIPT
@@ -2003,7 +2003,7 @@ endvariants
     l1 = create :level
     dsl = <<-SCRIPT
       lesson_group '', display_name: 'Display Name'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
     SCRIPT
@@ -2021,7 +2021,7 @@ endvariants
     l1 = create :level
     dsl = <<-SCRIPT
       lesson_group 'content1'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
     SCRIPT
@@ -2041,7 +2041,7 @@ endvariants
     create :lesson_group, key: 'content1', script: script
     dsl = <<-SCRIPT
       lesson_group 'content1', display_name: 'not content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
     SCRIPT
@@ -2059,11 +2059,11 @@ endvariants
     l1 = create :level
     l2 = create :level
     dsl = <<-SCRIPT
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2'
       level '#{l2.name}'
     SCRIPT
 
@@ -2082,13 +2082,13 @@ endvariants
     l3 = create :level
     dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
       lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2'
       level '#{l2.name}'
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson3'
+      lesson 'Lesson3', display_name: 'Lesson3'
       level '#{l3.name}'
     SCRIPT
 
@@ -2105,7 +2105,7 @@ endvariants
     l1 = create :level
     dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
       lesson_group 'required', display_name: 'Overview'
@@ -2127,14 +2127,14 @@ endvariants
     l3 = create :level
     dsl = <<-SCRIPT
       lesson_group 'required', display_name: 'Overview'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
-      lesson 'Lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2'
       level '#{l2.name}'
 
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson3'
+      lesson 'Lesson3', display_name: 'Lesson3'
       level '#{l3.name}'
     SCRIPT
 
@@ -2155,12 +2155,12 @@ endvariants
   test 'can add the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
       lesson_group 'required', display_name: 'Overview'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -2181,12 +2181,12 @@ endvariants
     l = create :level
     old_dsl = <<-SCRIPT
       lesson_group 'required', display_name: 'Overview'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -2207,11 +2207,11 @@ endvariants
     l = create :level
     old_dsl = <<-SCRIPT
       lesson_group 'required', display_name: 'Overview'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -2235,20 +2235,20 @@ endvariants
     l2 = create :level
     old_dsl = <<-SCRIPT
       lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2'
       level '#{l2.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
 
       lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2'
       level '#{l2.name}'
     SCRIPT
     script = Script.add_script(
@@ -2280,15 +2280,15 @@ endvariants
     l5 = create :level
     dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
       level '#{l1.name}'
       level '#{l2.name}'
 
-      lesson 'Lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2'
       level '#{l3.name}'
 
       lesson_group 'content2', display_name: 'Content'
-      lesson 'Lesson3'
+      lesson 'Lesson3', display_name: 'Lesson3'
       level '#{l4.name}'
       level '#{l5.name}'
     SCRIPT
@@ -2313,7 +2313,7 @@ endvariants
   test 'raise error if lesson with no levels' do
     dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'Content'
-      lesson 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1'
 
     SCRIPT
 
@@ -2358,7 +2358,7 @@ endvariants
     assert_equal 3, bubble_choice_sublevels.length
 
     dsl = <<~SCRIPT
-      lesson 'lesson1'
+      lesson 'lesson1', display_name: 'lesson1'
       level '#{level1.name}'
       variants
         level '#{swap1.name}', active: false
