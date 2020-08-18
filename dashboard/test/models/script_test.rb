@@ -1754,13 +1754,13 @@ endvariants
     assert_equal ['English'], script.supported_locale_names
 
     script.supported_locales = ['fr-FR']
-    assert_equal ['English', 'French'], script.supported_locale_names
+    assert_equal ['English', 'Français'], script.supported_locale_names
 
     script.supported_locales = ['fr-FR', 'ar-SA']
-    assert_equal ['Arabic', 'English', 'French'], script.supported_locale_names
+    assert_equal ['English', 'Français', 'العربية'], script.supported_locale_names
 
     script.supported_locales = ['en-US', 'fr-FR', 'ar-SA']
-    assert_equal ['Arabic', 'English', 'French'], script.supported_locale_names
+    assert_equal ['English', 'Français', 'العربية'], script.supported_locale_names
 
     script.supported_locales = ['fr-fr']
     assert_equal ['English', 'fr-fr'], script.supported_locale_names
