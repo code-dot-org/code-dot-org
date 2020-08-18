@@ -86,7 +86,7 @@ vi:
         title: 'Thuật toán trong thực tế: Chơi xúc sắc'
         desc: Bài học này chỉ ra cách chúng tôi sử dụng thuật toán trong cuộc sống hàng ngày. Là một phần trong đó, học sinh sẽ nhận biết và viết các thuật toán cho một trò chơi xúc xắc.
       Internet:
-        title: 'internet'
+        title: internet
         desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các bưu thiếp .
       Crowdsourcing:
         title: Đa nguồn
@@ -197,7 +197,7 @@ vi:
         title: Sáng tác với tham số
         desc: Học sinh sử dụng các khái niệm về đoạn điệp khúc trong một bài hát để tìm hiểu về gửi tham số (tham số có thể tùy chỉnh mà không cần phải viết lại toàn bộ biến chức năng).
       courseE_unplugged_internet:
-        title: 'internet'
+        title: internet
         desc: Sinh viên gửi thư đại diện tới các phương pháp truyền thông bằng các bưu thiếp .
       courseE_unplugged_crowdsourcing:
         title: Đa nguồn

@@ -14887,3 +14887,9 @@ zh-CN:
           lessons:
             Module 1:
               name: 模块 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: 课程 A
+            Course B:
+              name: 课程 B
