@@ -1,8 +1,9 @@
 hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/"], ["teacherForum", "https://forum.code.org/"], ["curriculumGuide", "https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview"], ["professionalLearning", "/link/to/professional/learning"]]
+pilot_experiment '20-21-virtual-AYW-CSD'
 
-lesson 'Module 1'
+lesson 'Module 1', display_name: 'Module 1'
 level 'OPL - CSD-PL AYWS1 Debugging Intro', progression: 'Module 1 Overview'
 level 'VPL - CSD - Module 1 Summer Review Overview', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
 level 'VPL-CSD 2020 Summer Review', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
@@ -20,6 +21,22 @@ level 'VPL-CSD Games variables practice_2020', progression: 'Debugging (~ 25 min
 level 'VPL - CSD Module 1 Debugging Reflection 2', progression: 'Debugging (~ 25 mins)'
 level 'VPL - CSD - Module 1 Wrap Up', progression: 'Module 1 Asynchronous Wrap Up (~ 10 mins)'
 
-lesson 'Module 2'
+lesson 'Module 2', display_name: 'Module 2'
 level 'VPL - CSD Module 2 Overview', progression: 'Module 2 Overview'
+level 'VPL - CSD - Module 1 - CI', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL - CSD: Introduction to the Draw Loop_2020', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL-CSD 2020 - Module 2 CI - Draw Loop', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL - CSD Module 2 CI The Draw Loop Reflection', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL - CSD: Animating Sprite Movement_2020', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL-CSD 2020 - Module 2 CI - Sprite Movement', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL - CSD Module 2 CI Sprite Movement Reflection', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL - CSD U3 - Booleans Video_2020', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL-CSD 2020 - Module 2 CI - Conditionals', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL - CSD Module 2 CI Conditionals Reflection', progression: 'Lesson Investigation (~ 60 min)'
+level 'VPL - CSD - Conclusions and Connections', progression: 'Conclusions and Connections (~ 20 mins)'
+level 'VPL - CSD U3 Chapter 1 Project', progression: 'Conclusions and Connections (~ 20 mins)'
+level 'VPL - CSD: Sprite Velocity_2020', progression: 'Conclusions and Connections (~ 20 mins)'
+level 'VPL - CSD U3 collisions car intro_2020', progression: 'Conclusions and Connections (~ 20 mins)'
+level 'VPL - CSD U3 game intro_2018_2019_pilot_2020', progression: 'Conclusions and Connections (~ 20 mins)'
+level 'VPL - CSD - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~ 10 mins)'
 

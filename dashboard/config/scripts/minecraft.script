@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Minecraft Hour of Code Designer'
+lesson 'Minecraft Hour of Code Designer', display_name: 'Minecraft Hour of Code Designer'
 level 'MC HOC 2016 Level 2-2'
 level 'MC HOC 2016 Level 3'
 level 'MC HOC 2016 Level 4'
@@ -13,3 +13,4 @@ level 'MC HOC 2016 New Spawn'
 level 'MC HOC 2016 Level 6'
 level 'MC HOC 2016 SCORE LEVEL'
 level 'MC HOC 2016 Level 10'
+

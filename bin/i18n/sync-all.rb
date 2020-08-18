@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # If run with the "interactive" flag, runs all steps necessary for a full i18n
 # update:
@@ -20,7 +22,6 @@
 # the full sync
 
 require_relative '../../deployment'
-require_relative '../../lib/cdo/only_one'
 require_relative '../../lib/cdo/github'
 
 require_relative 'i18n_script_utils'
@@ -297,4 +298,4 @@ class I18nSync
   end
 end
 
-I18nSync.new(ARGV).run if only_one_running?(__FILE__)
+I18nSync.new(ARGV).run

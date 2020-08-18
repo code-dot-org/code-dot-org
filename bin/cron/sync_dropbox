@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This syncs content changes from the shared dropbox folder to our github repo
 # on the staging machine. This is required for contents changes from dropbox to
@@ -6,12 +8,10 @@
 
 SCRIPT_START = Time.now
 
-require_relative "../../lib/cdo/only_one"
 require_relative "../../deployment"
 require "cdo/slack"
 require "cdo/high_frequency_reporter"
 require "open3"
-exit unless only_one_running?(__FILE__)
 
 FOLDERS = {
   "advocacy.code.org" => "sites.v3/advocacy.code.org",

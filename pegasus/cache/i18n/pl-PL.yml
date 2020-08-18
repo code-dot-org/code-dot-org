@@ -2045,9 +2045,8 @@ pl-PL:
     z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może
     nie działać właściwie.
   compatibility_unsupported_browser_markdown: Twoja przeglądarka nie jest obsługiwana.
-    Prosimy uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej
-    z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może
-    nie działać właściwie.
+    Prosimy uaktualnić przeglądarkę do [jednej z obsługiwanych przez nas przeglądarek](%{supported_browsers_url}).
+    Możesz wyświetlić stronę, ale może nie działać właściwie.
   flappy_shortcode: pofruń
   header_home: Strona główna
   header_my_dashboard: Mój pulpit
@@ -2092,7 +2091,7 @@ pl-PL:
   user_header_label: Witaj %{username}
   user_header_team: Zespół
   user_header_my_projects: Moje projekty
-  user_header_settings: Moje konto
+  user_header_settings: Ustawienia konta
   user_header_logout: Wyloguj się
   user_header_signin: Zaloguj się
   user_header_create: 'Twórz '
@@ -2377,3 +2376,7 @@ pl-PL:
   hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij
     tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link})
     z ostatniego roku."
+  page_not_available_title: Strona niedostępna
+  page_not_available_description: Przepraszamy, ta strona nie jest już dostępna pod
+    tym adresem. Jeśli nadal potrzebujesz dostępu, wyślij e-mail <a href='mailto:support@code.org'>support@code.org</a>.
+  page_not_available_button: Powrót do strony domowej

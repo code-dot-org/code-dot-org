@@ -231,7 +231,6 @@ module ScriptConstants
     APPLAB_2HOUR = 'applab-2hour'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
-    FESBINARY = 'fesbinary'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,

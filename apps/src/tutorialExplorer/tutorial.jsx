@@ -60,6 +60,13 @@ export default class Tutorial extends React.Component {
     tutorialClicked: PropTypes.func.isRequired
   };
 
+  keyboardSelectTutorial = event => {
+    if (event.keyCode === 32 || event.keyCode === 13) {
+      event.preventDefault();
+      this.props.tutorialClicked();
+    }
+  };
+
   render() {
     const tutorialOuterStyle = {
       ...styles.tutorialOuter,
@@ -71,11 +78,17 @@ export default class Tutorial extends React.Component {
       .replace('.png', '.jpg');
 
     return (
-      <div style={tutorialOuterStyle} onClick={this.props.tutorialClicked}>
+      <div
+        style={tutorialOuterStyle}
+        onClick={this.props.tutorialClicked}
+        onKeyDown={this.keyboardSelectTutorial}
+        tabIndex="0"
+        role="button"
+      >
         <div style={styles.tutorialImageContainer}>
           <div style={styles.tutorialImageBackground} />
           <LazyLoad offset={1000}>
-            <Image src={imageSrc} style={styles.tutorialImage} />
+            <Image src={imageSrc} style={styles.tutorialImage} alt="" />
           </LazyLoad>
         </div>
         <div style={styles.tutorialName}>{this.props.item.name}</div>
