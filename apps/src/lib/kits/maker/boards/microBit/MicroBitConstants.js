@@ -35,7 +35,7 @@ export const MB_SENSOR_VARS = [
 ];
 
 // milliseconds between samples for sensors
-export const SAMPLE_RATE = 50;
+export const SAMPLE_INTERVAL = 50;
 
 // Max number of milliseconds for which we store historical data
 export const MAX_SENSOR_BUFFER = 3000;
