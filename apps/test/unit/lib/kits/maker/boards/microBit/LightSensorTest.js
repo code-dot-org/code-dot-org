@@ -3,7 +3,7 @@ import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
 import {
-  sensor_channels,
+  SENSOR_CHANNELS,
   MAX_SENSOR_BUFFER,
   SAMPLE_RATE
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
@@ -34,26 +34,26 @@ describe('LightSensor', function() {
 
   describe(`value is calculated between ranges`, () => {
     it(`with the default values of 0 and 255`, () => {
-      boardClient.analogChannel[sensor_channels.lightSensor] = 0;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(0);
 
-      boardClient.analogChannel[sensor_channels.lightSensor] = 255;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 255;
       expect(lightSensor.value).to.equal(255);
 
-      boardClient.analogChannel[sensor_channels.lightSensor] = 123;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;
       expect(lightSensor.value).to.equal(123);
     });
 
     it(`after ranges are set to 10 and 110`, () => {
       lightSensor.setRange(10, 110);
 
-      boardClient.analogChannel[sensor_channels.lightSensor] = 0;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(10);
 
-      boardClient.analogChannel[sensor_channels.lightSensor] = 255;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 255;
       expect(lightSensor.value).to.equal(110);
 
-      boardClient.analogChannel[sensor_channels.lightSensor] = 123;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;
       expect(lightSensor.value).to.equal(58.23);
     });
   });
@@ -64,11 +64,11 @@ describe('LightSensor', function() {
       let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
       lightSensor.start();
       expect(startSpy).to.have.been.calledOnce;
-      expect(startSpy).to.have.been.calledWith(sensor_channels.lightSensor);
+      expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.lightSensor);
 
       lightSensor.stop();
       expect(stopSpy).to.have.been.calledOnce;
-      expect(stopSpy).to.have.been.calledWith(sensor_channels.lightSensor);
+      expect(stopSpy).to.have.been.calledWith(SENSOR_CHANNELS.lightSensor);
     });
   });
 
@@ -115,7 +115,7 @@ describe('LightSensor', function() {
       it(`when the data value crosses into the threshold`, () => {
         lightSensor.state.threshold = 128;
         lightSensor.state.currentReading = 123;
-        boardClient.analogChannel[sensor_channels.lightSensor] = 135;
+        boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 135;
 
         boardClient.receivedAnalogUpdate();
         expect(emitSpy).to.have.been.calledWith('data');
@@ -124,7 +124,7 @@ describe('LightSensor', function() {
       it(`when the data value stays above the threshold`, () => {
         lightSensor.state.threshold = 128;
         lightSensor.state.currentReading = 135;
-        boardClient.analogChannel[sensor_channels.lightSensor] = 190;
+        boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 190;
 
         boardClient.receivedAnalogUpdate();
         expect(emitSpy).to.have.been.calledWith('data');
@@ -133,7 +133,7 @@ describe('LightSensor', function() {
       it(`when the data value falls below the threshold`, () => {
         lightSensor.state.threshold = 128;
         lightSensor.state.currentReading = 135;
-        boardClient.analogChannel[sensor_channels.lightSensor] = 100;
+        boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 100;
 
         boardClient.receivedAnalogUpdate();
         expect(emitSpy).to.have.been.calledWith('data');
@@ -144,7 +144,7 @@ describe('LightSensor', function() {
       it(`when the value stays below the threshold`, () => {
         lightSensor.state.threshold = 128;
         lightSensor.state.currentReading = 100;
-        boardClient.analogChannel[sensor_channels.lightSensor] = 90;
+        boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 90;
 
         boardClient.receivedAnalogUpdate();
         expect(emitSpy).not.to.have.been.called;
@@ -157,7 +157,7 @@ describe('LightSensor', function() {
         boardClient.receivedAnalogUpdate();
 
         // Seed the light channel with 'different' data above threshold
-        boardClient.analogChannel[sensor_channels.lightSensor] = 200;
+        boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 200;
 
         boardClient.receivedAnalogUpdate();
         expect(emitSpy).to.have.been.calledWith('data');
@@ -171,7 +171,7 @@ describe('LightSensor', function() {
         boardClient.receivedAnalogUpdate();
 
         // Seed the light channel with 'different' data above threshold
-        boardClient.analogChannel[sensor_channels.lightSensor] = 20;
+        boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 20;
 
         boardClient.receivedAnalogUpdate();
         expect(emitSpy).not.to.have.been.called;
@@ -184,7 +184,7 @@ describe('LightSensor', function() {
         lightSensor.state.currentReading = 200;
 
         // Seed the light channel with 'different' data above threshold
-        boardClient.analogChannel[sensor_channels.lightSensor] = 200;
+        boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 200;
 
         boardClient.receivedAnalogUpdate();
         expect(emitSpy).to.have.been.calledWith('data');

@@ -1,4 +1,4 @@
-export const sensor_channels = {
+export const SENSOR_CHANNELS = {
   accelX: 8,
   accelY: 9,
   accelZ: 10,
