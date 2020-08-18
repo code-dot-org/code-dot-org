@@ -205,6 +205,9 @@
         "courseD_artist_binary7_2018": "Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?",
         "courseD_artist_binary7_2019": "Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?",
         "courseD_artist_binary7_2020": "Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?",
+        "courseD_autorun_binary4_2019": "Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti pomoću petlje kroz ovaj trocifreni binarni niz?",
+        "courseD_autorun_binary6_2019": "Koji će šestocifreni binarni niz. ponovljen 11 puta, nacrtati ovu sliku?",
+        "courseD_autorun_binary7_2019": "Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?",
         "courseD_bee_nestedLoops8": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
         "courseD_bee_nestedLoops8_2018": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
         "courseD_bee_nestedLoops8_2019": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
@@ -259,6 +262,10 @@
         "frozen square loop": "Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa \"Ponavljaj\" blokom koji koristi manje blokova. Koliko puta (???) bi trebao \"Ponavljaj\" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? ",
         "frozen square loop 3x": "Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.",
         "frozen square snowflake": "Možeš li napraviti pahulju snijega koristeći \"Ponavljaj\" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti \"Okreni\" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?",
+        "grade5_artist_binary11": "Vrijeme slobodnog igranja! Evo platna sa višom rezolucijom na kojem možeš crtati - 16 bita sa 16 bita!",
+        "grade5_artist_binary4": "Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti pomoću petlje kroz ovaj trocifreni binarni niz?",
+        "grade5_artist_binary5": "Svaki binarni niz predstavlja jedan red ove slike. Možeš li ih ispremetati tako da crtaju smješka umjesto ljutka?",
+        "grade5_artist_binary8": "Dovrši crtež.",
         "k-1 maze 1": "Možeš li me pokrenuti ka Zapadu da bih došao do svinje?"
       }
     }

@@ -1328,11 +1328,11 @@
         },
         "course3_bee_functions_challenge4": {
           "courseF_bee_functions_challenge2_a": "如果有一條向右的路徑，您應該進行以下操作：\n\n-   採集任何花蜜或釀造任何蜂蜜。\n-   向右轉向側徑。\n-   移至側徑的盡頭。\n-   向右轉。\n\n重複兩次以上操作，您就可以向後移動到主路徑。\n\n**如果要查看完整的解決方案，只需點選以獲取其他提示！**",
-          "courseF_bee_functions_challenge2_b": "\\*\\*解決方案：\n\n\\*\\* <xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
+          "courseF_bee_functions_challenge2_b": "\\*\\*解決方案：\n\n\\*\\* <xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">></title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">></title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "開始先從 2 堆寶石中的每 1 堆只收集 2 顆寶石。\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n使用這些積木。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "接下來，收集這一排中剩下的寶石。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n將這些模塊添加到您的程式。\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "開始先從 2 堆寶石中的每 1 堆只收集 2 顆寶石。\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n使用這些積木。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "接下來，收集這一排中剩下的寶石。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n將這些模塊添加到您的程式。\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "最後，收集剩下的寶藏。將這些模塊添加到您的程式。\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "這是通過本關的完整方案。\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1423,9 +1423,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "用手指在程式中緩慢跟蹤，來查看錯誤的地方。",
-          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木來過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
-          "courseB_artist_loops2_b": "先嘗試運行程式，看看小藝術家畫的結果如何。"
+          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木來過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
@@ -1441,10 +1439,7 @@
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
-          "courseA_artist_loops4_b": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>\n\n程式積木，所以試試將它放在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> 迴圈裡。",
-          "courseB_artist_loops4_a": "跳過模塊允許您向前移動，但不畫線。",
-          "courseB_artist_loops4_b": "您將需要添加一個模塊到重複迴圈中來通過本關。",
-          "courseB_artist_loops4_c": "別忘記更改迴圈重複次數。"
+          "courseA_artist_loops4_b": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>\n\n程式積木，所以試試將它放在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> 迴圈裡。"
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "試著用你學到的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 來完成這個關卡！",
@@ -1464,8 +1459,7 @@
         "courseA_artist_loops5_2020": {
           "courseA_artist_loops5_a": "試著用你學到的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 來完成這個關卡！",
           "courseA_artist_loops5_b": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
-          "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。",
-          "courseB_artist_loops5_a": "拖出一個`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈，然後把其他的積木放在裡面。你需要重複幾次？"
+          "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "不清楚怎樣造出一座山？嘗試不同的積木，看看每個積木都有什麼作用。",
@@ -1481,8 +1475,7 @@
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "不清楚怎樣造出一座山？嘗試不同的積木，看看每個積木都有什麼作用。",
-          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木來過這一關。",
-          "courseB_artist_loops6_b": "嘗試將動作寫在一張紙上，尋找模式。"
+          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木來過這一關。"
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。",
@@ -1502,10 +1495,7 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。",
           "courseA_artist_loops7_b": "首先為一個波浪編寫代碼，然後重複繪製另外兩個波浪。",
-          "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 迴圈裡。",
-          "courseB_artist_loops7_a": "這個挑戰用了 4 個迴圈，一個接著一個！",
-          "courseB_artist_loops7_b": "請注意每個迴圈都將形成一個不同方向的樓梯模式。\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "迴圈應該是這樣做的：\n\n-   迴圈1\n\n-   右\n\n-   下\n\n-   迴圈2\n\n-   右\n\n-   上\n\n-   迴圈3\n\n-   左\n\n-   上\n\n-   迴圈4\n\n-   左\n\n-   下"
+          "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 迴圈裡。"
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "嘗試運行代碼來查看為你編寫的內容。",
@@ -1525,9 +1515,7 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "嘗試運行代碼來查看為你編寫的內容。",
           "courseA_artist_loops8_b": "你將如何用我們提供給你的代碼來進行迴圈？",
-          "courseA_artist_loops8_c": "它做了什麼？\\\n它應該做什麼？\\\n這告訴你什麼？\\\\",
-          "courseB_artist_loops8_a": "您需要重複這個模式幾次來製作梯子？",
-          "courseB_artist_loops8_b": "嘗試運行所給的程式，看看結果如何。"
+          "courseA_artist_loops8_c": "它做了什麼？\\\n它應該做什麼？\\\n這告訴你什麼？\\\\"
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "在你得到的代碼中添加另一個積木來繪製其餘的樓梯。",
@@ -1547,10 +1535,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "在你得到的代碼中添加另一個積木來繪製其餘的樓梯。",
           "courseA_artist_loops9_b": "你應該把程式積木放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n迴圈裡。",
-          "courseA_artist_loops9_c": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。",
-          "courseB_artist_loops9_a": "記住跳躍模塊可以用於在不畫線的情況下移動。",
-          "courseB_artist_loops9_b": "您將需要使用W模塊來通過本關。",
-          "courseB_artist_loops9_c": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。"
+          "courseA_artist_loops9_c": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。"
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "像這樣的程式積木：<xml>  <block type=\"simple_move_up_left\"/></xml> 可以讓小藝術家斜著移動！",
@@ -2387,10 +2372,6 @@
           "courseA_playlab_events_challenge2_b": "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "你可以製造一個憤怒的怪物咆哮。\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_a": "記住要用`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈，這樣程式碼會更精簡！",
-          "courseB_artist_loops3_b": "小藝術家將向南移動來畫這條線。"
-        },
         "courseB_Scrat_ramp1_2018": {
           "1": "如果 Scrat 沒有按你的想法去做，請務必將兩個積木都完全按一下，然後再次按一下「執行」。",
           "2": "不要害怕犯錯！嘗試一下，如果不成功，再試試其他的東西！"
@@ -2461,8 +2442,6 @@
           "courseB_artist_loops2_b": "先嘗試運行程式，看看小藝術家畫的結果如何。"
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "用手指在程式中緩慢跟蹤，來查看錯誤的地方。",
-          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木來過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
           "courseB_artist_loops2_b": "先嘗試運行程式，看看小藝術家畫的結果如何。"
         },
@@ -2498,8 +2477,6 @@
           "courseB_artist_loops4_c": "別忘記更改迴圈重複次數。"
         },
         "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
-          "courseA_artist_loops4_b": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>\n\n程式積木，所以試試將它放在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> 迴圈裡。",
           "courseB_artist_loops4_a": "跳過模塊允許您向前移動，但不畫線。",
           "courseB_artist_loops4_b": "您將需要添加一個模塊到重複迴圈中來通過本關。",
           "courseB_artist_loops4_c": "別忘記更改迴圈重複次數。"
@@ -2514,9 +2491,6 @@
           "courseB_artist_loops5_a": "拖出一個`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈，然後把其他的積木放在裡面。你需要重複幾次？"
         },
         "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "試著用你學到的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 來完成這個關卡！",
-          "courseA_artist_loops5_b": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
-          "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。",
           "courseB_artist_loops5_a": "拖出一個`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈，然後把其他的積木放在裡面。你需要重複幾次？"
         },
         "courseB_artist_loops6": {
@@ -2529,8 +2503,6 @@
           "courseB_artist_loops6_b": "嘗試將動作寫在一張紙上，尋找模式。"
         },
         "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "不清楚怎樣造出一座山？嘗試不同的積木，看看每個積木都有什麼作用。",
-          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木來過這一關。",
           "courseB_artist_loops6_b": "嘗試將動作寫在一張紙上，尋找模式。"
         },
         "courseB_artist_loops7": {
@@ -2549,9 +2521,6 @@
           "courseB_artist_loops7_c": "迴圈應該是這樣做的：\n\n-   迴圈1\n\n-   右\n\n-   下\n\n-   迴圈2\n\n-   右\n\n-   上\n\n-   迴圈3\n\n-   左\n\n-   上\n\n-   迴圈4\n\n-   左\n\n-   下"
         },
         "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。",
-          "courseA_artist_loops7_b": "首先為一個波浪編寫代碼，然後重複繪製另外兩個波浪。",
-          "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 迴圈裡。",
           "courseB_artist_loops7_a": "這個挑戰用了 4 個迴圈，一個接著一個！",
           "courseB_artist_loops7_b": "請注意每個迴圈都將形成一個不同方向的樓梯模式。\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "迴圈應該是這樣做的：\n\n-   迴圈1\n\n-   右\n\n-   下\n\n-   迴圈2\n\n-   右\n\n-   上\n\n-   迴圈3\n\n-   左\n\n-   上\n\n-   迴圈4\n\n-   左\n\n-   下"
@@ -2569,9 +2538,6 @@
           "courseB_artist_loops8_b": "嘗試運行所給的程式，看看結果如何。"
         },
         "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "嘗試運行代碼來查看為你編寫的內容。",
-          "courseA_artist_loops8_b": "你將如何用我們提供給你的代碼來進行迴圈？",
-          "courseA_artist_loops8_c": "它做了什麼？\\\n它應該做什麼？\\\n這告訴你什麼？\\\\",
           "courseB_artist_loops8_a": "您需要重複這個模式幾次來製作梯子？",
           "courseB_artist_loops8_b": "嘗試運行所給的程式，看看結果如何。"
         },
@@ -2591,9 +2557,6 @@
           "courseB_artist_loops9_c": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。"
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "在你得到的代碼中添加另一個積木來繪製其餘的樓梯。",
-          "courseA_artist_loops9_b": "你應該把程式積木放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n迴圈裡。",
-          "courseA_artist_loops9_c": "如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。",
           "courseB_artist_loops9_a": "記住跳躍模塊可以用於在不畫線的情況下移動。",
           "courseB_artist_loops9_b": "您將需要使用W模塊來通過本關。",
           "courseB_artist_loops9_c": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。"
@@ -3458,10 +3421,6 @@
           "courseB_starWars_prog9_a": "不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。",
           "courseB_starWars_prog9_b": "有很多方法可以完成這個關卡。",
           "courseB_starWars_prog9_c": "用一個`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> 迴圈在這裡有幫助嗎？"
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "不清楚如何畫線？先將積木添加到 <xml><block type=\"when_run\"/></xml> 積木，看看會發生什麼。",
-          "courseA_artist_loops2_b": "使用這個積木 <xml><block type=\"simple_move_right\"/></xml> 來過關。"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "可用`設定角色 1 為 ??? image`積木將角色添加到舞臺。",
@@ -5563,6 +5522,35 @@
           "courseD_artist_ramp12_b": "嘗試將問題分為兩部分，並使用 2 個迴圈。",
           "courseD_artist_ramp12_c": "你可以使用`轉向`積木上的下拉式功能表查看所需的角度！"
         },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "只要點擊`運行`就可以馬上看到程式的結果！"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_a": "工具箱中的四個二進位圖案之一可以用來通過這個關卡！",
+          "courseD_artist_binary3_b": "不要害怕犯錯！即使你還不能解決關卡，也可以嘗試編寫二進位碼並運行代碼來查看結果。"
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "看看最上面一行的前三個正方形。你可以重複這三個步驟來得到整個圖形嗎？",
+          "courseD_artist_binary4_b": "不要害怕犯錯！即使你覺得還不能解決關卡，也可以嘗試編寫二進位碼並運行代碼來查看會發生什麼。"
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "首先嘗試運行代碼來查看必須使用的代碼。",
+          "courseD_artist_binary5_b": "只需要交換二個橫列位置，就可以做出笑臉圖案。",
+          "courseD_artist_binary5_c": "如果你在通過這個關卡時遇到困難，請嘗試將二進位字串寫在紙上並尋找規律。"
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "從左上方開始。讀了多少字串之後這個規律開始重複？",
+          "courseD_artist_binary6_b": "你可以一次構建一個二進位字串，然後繼續測試！"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "從左上方開始。讀了多少字串之後這個規律開始重複？",
+          "courseD_artist_binary7_b": "不要害怕犯錯！即使你覺得還不能解決關卡，也可以嘗試編寫二進位碼並運行代碼來查看會發生什麼。"
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "螺旋有時會令人困惑。在創建此設計時，請從你腦海中去掉每條水平線。",
+          "courseD_artist_binary8_b": "首先嘗試運行代碼來查看必須使用的代碼。",
+          "courseD_artist_binary8_c": "不要害怕犯錯！即使你還不能解決關卡，也可以嘗試編寫二進位碼並運行代碼來查看結果。"
+        },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "在嘗試獲取花蜜之前，你將需要使用`如果`積木來檢查雲朵下面是否有一朵花。"
         },
@@ -5797,7 +5785,7 @@
           "courseD_bee_conditionals_challenge1_b": "就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
           "courseD_bee_conditionals_challenge1_b": "就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
@@ -7919,7 +7907,7 @@
           "courseF_artist_for_challenge1_a": "`pen width`（筆跡寬度）是 1。而第一個正方形的邊長是 50 像素，每個正方形之間的邊長差了 50 像素。",
           "courseF_artist_for_challenge1_b": "畫筆的透明度固定都是 `counter`/2。",
           "courseF_artist_for_challenge1_c": "在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！",
-          "courseF_artist_for_challenge1_d": "\\*\\*解決方案：\n\n\\*\\* <xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_for_challenge1_d": "**解決方案：**\n\n![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)"
         },
         "courseF_artist_for_challenge1_2018": {
           "courseF_artist_for_challenge1_a": "`pen width`（筆跡寬度）是 1。而第一個正方形的邊長是 50 像素，每個正方形之間的邊長差了 50 像素。",
@@ -8483,7 +8471,7 @@
           "courseF_bee_for_challenge2_a": "看看此移動選項：\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "試著使用 2 個`計數`迴圈：一個用來往上爬然後採集花蜜，另一個則是往下爬然後釀造蜂蜜。",
           "courseF_bee_for_challenge2_c": "注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。\n\n其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。",
-          "courseF_bee_for_challenge2_d": "\\*\\*解決方案：\n\n\\*\\* <xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_bee_for_challenge2_d": "**解決方案：**\n\n![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)"
         },
         "courseF_bee_for_challenge2_2018": {
           "courseF_bee_for_challenge2_a": "看看此移動選項：\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
@@ -8549,7 +8537,7 @@
         },
         "courseF_bee_functions_challenge2": {
           "courseF_bee_functions_challenge2_a": "如果有一條向右的路徑，您應該進行以下操作：\n\n-   採集任何花蜜或釀造任何蜂蜜。\n-   向右轉向側徑。\n-   移至側徑的盡頭。\n-   向右轉。\n\n重複兩次以上操作，您就可以向後移動到主路徑。\n\n**如果要查看完整的解決方案，只需點選以獲取其他提示！**",
-          "courseF_bee_functions_challenge2_b": "\\*\\*解決方案：\n\n\\*\\* <xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                      <mutation name=\"move and check\"></mutation>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n  <mutation></mutation>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"check nectar or honey\"></mutation>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n  <mutation></mutation>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_whileNectarAmount\">\n        <title name=\"ARG1\">nectarRemaining</title>\n        <title name=\"OP\">&gt;</title>\n        <title name=\"ARG2\">0</title>\n        <statement name=\"DO\">\n          <block type=\"maze_nectar\"/>\n        </statement>\n        <next>\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
+          "courseF_bee_functions_challenge2_b": "\\*\\*解決方案：\n\n\\*\\* <xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                      <mutation name=\"move and check\"></mutation>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n  <mutation></mutation>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"check nectar or honey\"></mutation>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n  <mutation></mutation>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_whileNectarAmount\">\n        <title name=\"ARG1\">nectarRemaining</title>\n        <title name=\"OP\">></title>\n        <title name=\"ARG2\">0</title>\n        <statement name=\"DO\">\n          <block type=\"maze_nectar\"/>\n        </statement>\n        <next>\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">></title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "courseF_bee_fwp1": {
           "courseF_bee_fwp1_a": "使用「if」語句來確保只從花中採集花蜜。",

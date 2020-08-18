@@ -60,6 +60,7 @@ se:
   welcome_back: Bures boahtin ruovttoluotta, %{name}
   your_professional_learning_plan: Du oahppanplána
   see_your_learning_plan: Geahča iežat oahppanplána
+  unsubmit: Váldde ruovttoluotta sáddejumi
   previous_page: Ovddit siidu
   next_page: Boahtte siidu
   next_resource: Boahtte resursa
@@ -227,24 +228,231 @@ se:
     school_organization_name: Skuvlla/Organisašuvnna Namma
     school_organization_zip: Skuvlla/Organisašuvnna Poastakoda
   signin_form:
+    title: Dus lea juo konto? Logge sisa
     login: Epoasta
+    login_username: Epoasta dahje geavaheaddjenamma
     password: Čoavddasátni
+    remember: Muitte mu
+    submit: Logge sisa
+  signin:
+    try_heading: Háliidat go geahččalit kodet vaikko it leat loggejuvvon sisa?
+    try_hoc: Geahččal ovtta KodenDiimmu álggos
+    try_20hours: Geahččal du 20 diimmu láidehusa DihtorDiehtagii
+  signinsection:
+    welcome: Bures boahtin %{section_name}:ii
+    name: Vállje iežat nama
+    picture: Dál ozat iežat čiegus gova
+    words: Dál čálát iežat čiegus sániid
+    login: Logge sisa
+    invalid_login: Boasttu sisaloggen, geahččal vel oktii
+    pair_programming: Mus lea olmmái mu dihtoris
+    student_privacy_markdown: Oahpa eanet dan birra manne don it oainne iežat olles
+      nama [here](%{student_privacy_blog}).
   password:
     reset_form:
       title: Leat go vajálduhttán iežat čoavddasáni?
+      instructions: Čális iežat epoastačujuhusa mii gullá du kontoi vuolábeal ja mii
+        sáddet dutnje instrukšuvnnaid ruovttoluotta bidjat čoavddasáni.
+      email: Epoastačujuhus
+    reset_errors:
+      captcha_required: Deavddes CAPTCHA ruovttoluotta bidjat čoavddasáni.
+      invalid_email: Orro nu ahte leat ráhkadan konto boasttu epoastačujuhusain. Sáddes
+        epoasta support@code.org oažžun dihte čoavddasáni máhcaheami liŋkka.
+    change_form:
+      title: Rievdat iežat čoavddasáni
+      new_password: Ođđa čoavddasátni
+      confirm_password: Duođaš ođđa čoavddasáni
+      submit: Rievdat mu čoavddasáni
+  welcome_email:
+    subject: Searvva mu klássii (Code.org:s)
+    body: |
+      Deaddel liŋkka vuolábeal ráhkadan dihte konto dihtordiehtagiid neavvagiidda Code.org:s (gos mun lean du  "oahpaheaddji"):
+
+      %{link}
+
+      Neavvagat leat suohttasat, visuálalaččat movttiidahtti, ja oahpaha vuođđokonseapttaid dihtordiehtagis geavahettiin álkis, speallanlágan vásáhusaid. Oahpa kodema Bill Gates:as, Mark Zuckerberg:as, Angry Birds:as, ja Plants vs. Zombies:as! :-)
+
+      %{name}
+  parent_mailer:
+    student_associated_subject: Sisa loggen diehtu Code.org:ii
+    parent_email_added_subject: Bures boahtin Code.org:ii!
+  teacher_mailer:
+    new_teacher_subject: Bures boahtin Code.org:ii!
+    delete_teacher_subject: 'Code.org diehtu: Du konto lea sihkkojuvvon'
   section:
+    your_section:
+      one: 'Du sekšuvdna:'
+      other: 'Du sekšuvnnat:'
+    code_with_teacher: "%{section_code} %{teacher_name}:n"
+    confirm:
+      remove: Leat go sihkar ahte áiggut guođđit dán sekšuvnna?
+    default_name: Namahis Sekšuvdna
+    remove: "(sihko sekšuvnna)"
     type:
+      picture: Govva Čoavddasátni
       email: Epoasta
+  follower:
+    invite_sent: Bovdehus sáddejuvvon
+    added_teacher: "%{name} lea biddjon du oahpaheaddjin"
+    registered: Don leat registrerejuvvon %{section_name}:ii.
+    error:
+      signed_in: Logges olggos ovdal manat viidásit
+      username_not_found: Geavaheaddjinamma %{username} ii gávdno
+      username_in_use: "%{username} lea váldon juo, vállje eará geavaheaddjinama"
+      no_teacher: Ii gávdnon oktage gii lea loggejuvvon sisa '%{teacher_email_or_code}':in.
+        Siđa sin ráhkadit konto dáppe ja de geahččal lasihit sin fas
+      section_not_found: Ii gávdno sekšuvdna mas lea koda '%{section_code}'.
+      blank_code: Čális iežat sekšuvdna koda
+      cant_join_own_section: Ándagassii, don it sáhte searvat iežat sekšuvdnii.
+      provider_managed_section: Dán sekšuvnna hálddaša muhtin eará ja ii leat vejolaš
+        searvat dasa. Jeara iežat oahpaheaddjis lasihit du %{provider} bokte ja ođastit
+        sin sekšuvnna.
+    mail:
+      student_disassociated:
+        subject: 'Code.org diehtu: %{student_name} ii leat šat du oahppi.'
+  reports:
+    error:
+      access_denied: Dus ii leat beassanláhki dán olbmo statistihkkii
+  crud:
+    new_model: Ođđa %{model}
+    show: Čájet
+    edit: Rievdat
+    edit_model: Rievdat %{model}
+    update: Ođasmahte
+    destroy: Billis
+    back: Ruovttoluotta
+    confirm: Leat go sihkar?
+    created: "%{model} ráhkaduvvui."
+    updated: "%{model} ođasmahttojuvvui."
+    destroyed: "%{model} sihkkojuvvui."
+    access_denied: Dus ii leat beassanláhki dán %{model}:ii.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: Epoastačujuhus maid dieđihit ii heive dán
+          konto epoastačujuhussii
+        personal_login_created_email: Don leat ráhkadan persovnnalaš konto. Don sáhtát
+          dál logget sisa du kontoi du epoastačujuhusain ja čoavddasániin
+        personal_login_created_username: Don leat ráhkadan persovnnalaš konto. Don
+          sáhtát dál logget sisa du kontoi du geavaheaddjinamain (%{username})  ja
+          čoavddasániin
   nav:
+    header:
+      finished_hoc: Mun gergen!
+      sign_in_to_save: Logge sisa vurket ovdáneami
+      course_catalog: Kursa Kataloga
+      sections: Sekšuvnnat
+      report_bug: Dieđit váttisvuođa
+      teacher_community: Oahpaheaddjiservodat
+      educate_overview: Oahpaheaddjivárddus
+      educate_elementary: Mánáidskuvla
+      educate_middle: Nuoraidskuvla
+      educate_high: Joatkkaskuvla
+      educate_partner: Álgge bargat minguin
+      educate_beyond: Ovddos guvlui Code.org:in
+      educate_inspire: Movttiidahte Oahppi
+      educate_community: Neahttaservodat
+      educate_tools: Reaiddut ja Videoat
+      about_us: Min birra
+      about_leadership: Jođiheapmi
+      about_donors: Addit
+      about_partners: Doaibmaoasálaččat
+      about_team: Olles Joavku
+      about_news: Ođaslatnja
+      about_evaluation: Evalueren
+      about_jobs: Barggut
+      about_contact: Váldde minguin oktavuođa
+      about_faqs: Dábálaš jearaldagat / FAQs
+      learn: Oahpa
+      help_us: Veahket min
+      teach: Oahpat
+      about: Birra
     user:
+      district_dashboard: Guovllu Čállinbeavdi
+      label: Bures %{username}
+      stats: KodenStudio
+      settings: Kontohuksehus
+      logout: Logge olggos
+      signin: Logge sisa
+      signup: Ráhkat konto
+      already_registered: Ovdalaččas registrerejuvvon?
+      pair_programming: Ovttas prográmmeren
+      team: Joavku
+      driver: Loggejuvvon sisa
+      navigator: Doaibmaoasálaš
       artist: Dáiddár
       calc: Rehkenastte
       eval: Evaluere
       flappy: Flappy
+      makerlab: Ráhkadan Reaidokássa
+      minecraft_codebuilder: 'Minecraft: Kode Oktiičatnan'
       playlab: Speallan-lab
       spritelab: Sprite-lab
+    popup:
+      progress_for_user: "%{name} ovdáneapmi"
+      progress: Du ovdáneapmi
+      lines: 'Oktiibuot linjját kodas: %{lines}'
+      close: GIDDE
+      mastery: Konseaptat
+      puzzle_map: Dásit
+      prizes: Čoakke visot %{total_trophies} vuoitomearkkaid ja vuoitte bálkkašumiid!
+      prize_earned: Buot %{total_trophies} vuoitomearkkat čoggon. Bálkkašupmi vuiton!
+      prize_us_only: "(dušše Amerihká ohppiide)"
+      prizes_link: eanet dieđut
+  teacher:
+    answer: Vástit
+    for_teachers_only: Dušše Oahpaheddjiide
+    title:
+      one: 'Du oahpaheaddji:'
+      other: 'Du oahpaheaddjit:'
+    remove: "(sihko oahpaheaddji)"
+    confirm:
+      remove: Leat go sihkar ahte háliidat sihkkut dán oahpaheaddji?
+    students:
+      dashboard: Mana Oahpaheaddji Čállinbeavdái
+    user_not_found: Dát oahpaheaddji ii gávdno.
+    student_teacher_disassociated: Don leat guođđán sekšuvdna %{section_code} %{teacher_name}:in.
+    panel:
+      viewing_solution: Čájehit Čovdosa
+      try_it_yourself: Geahččal ieš
+      example: Ovdamearka Čoavddus
+      example_with_number: Ovdamearka Čoavddus %{solution_number}
+      submitted_on: 'Sáddejuvvon:'
+      last_updated: 'Maŋemus ođasmahtton:'
+      unsubmit: Váldde ruovttoluotta sáddejumi
+      worked_with: Bargan Fárrolaga
+      update_lock_settings: Ođasmahte lássenhuksehusaid dáppe.
+      clear_response: Sihko máhcaheami
   user:
+    email_confirm_needed: 'Epoastačujuhus ii leat duođaštuvvon:'
+    email_confirm_needed_required: 'Du epoastačujuhus %{email} ii leat duođaštuvvon:'
+    email_confirm_wrong_email: "(Boasttu epoastačujuhus?)"
+    email_resend_confirm: Ođđasit sáddet duođaštan instrukšuvnnaid
+    new_email_hint: "(dárkkis ahte dát epoastačujuhus sáhttá oažžut epoasttaid)"
+    new_password_hint: "(guođe guorosin jus it hálit rievdadit dán)"
+    current_password_hint: "(mii dárbbahit du dálá čoavddasáni duođaštan dihte du
+      rievdademiid)"
+    delete: Sihko Konto
+    delete_text: Jus sihkut iežat konto de dat sihkku visot dieđuid ja ovdánemiid
+      mat leat oktiičadnon dán kontoi.
+    delete_text_teacher_managed_note: Dus ii leat lohpi sihkkut dán konto go dan hálddaša
+      du oahpaheaddji. Oahpaheaddji ferte du sihkkut su sekšuvnnain ovdal go beasat
+      sihkkut iežat konto.
+    delete_text_teacher_note: 'Fuomáš: vaikko sihkut iežat konto de dat ii sihko du
+      ohppiid konttoid.'
+    delete_confirm: Leat go sihkar ahte háliidat sihkkut iežat konto?
+    deleted_user: sihkkon geavaheaddji
+    no_password_because_oauth: Ii čoavddasátni go don leat loggeme sisa goalmmat-oassebeali
+      lagideddjiin.
+    no_password_because_sponsored: 'Siđa iežat oahpaheaddji hálddašit du čoavddasáni. '
+    create_personal_login: Ráhkat persovnnalaš čoavddasáni sisaloggemii
+    create_personal_login_under_13_info: Jus háliidat joatkit geavahit iežat Code.org
+      konto váikko skuvlajahki lea nohkan, siđa iežat váhnema/oapmehačča veahkehit
+      du ráhkadit du iežat persovnnalaš sisaloggeme vuolábeal.
+    update_email: Ođasmahte
     parent_guardian_email_label: Váhnema/oapmehačča epoasta
+  home:
+    title: KodenStudio
   upsell:
     20-hour:
       body: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema vuođđodoahpagiid

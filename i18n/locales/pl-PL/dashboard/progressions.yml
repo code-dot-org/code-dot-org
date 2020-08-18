@@ -1,0 +1,122 @@
+pl:
+  data:
+    progressions:
+      '"If/Else" with the Bee': '"Jeżeli/w przeciwnym razie" z Pszczółką'
+      Accelerometer Events: Akcelerometr Zdarzeń
+      Adding Images: Dodawanie obrazów
+      Adding Screens: Dodawanie Ekranów
+      Animate Your Scene: Animuj swoją scenę
+      Artist Intro with JR Hildebrand: Wprowadzenie artysty z JR Hildebrandem
+      Artist Intro with JR Hildebrande: Wprowadzenie artysty z JR Hildebrandem
+      Artist Project: Projekt Artysty
+      'Artist: Variables': 'Artysta: Zmienne'
+      Attribution: Atrybucja
+      Basic Conditionals: Podstawowe Wyrażenia warunkowe
+      Binary Numbers: Liczby binarne
+      Board Input and Output: Wejście i Wyjście Płyty
+      Boolean Comparison: Porównanie Logiczne
+      Build a Screen: Zbuduj ekran
+      Building an App: Tworzenie aplikacji
+      CS Discoveries Post-course Survey: Ankieta po kursie Odkrycia Informatyki
+      Cake Defender: Obrońca Ciasta
+      Challenge: Wyzwanie
+      Challenge Levels: Poziomy Wyzwań
+      Challenges: Wyzwania
+      Change: Zmień
+      Checking for a Winner: Szukanie Zwycięzcy
+      Code Your Own Flappy Game: Zakoduj Swoją Grę z Flappym
+      Collector Game: Gra Kolekcjonerska
+      Collisions: Kolizje
+      Collisions in Games: Kolizje w Grach
+      Color LEDs: Kolorowe LED
+      Combining Projects: Łączenie projektów
+      'Conditionals: If Statements': 'Instrukcje Warunkowe: instrukcja "jeśli"'
+      'Conditionals: If and If/Else Statements': 'Instrukcje Warunkowe: instrukcja "jeśli/w przeciwnym razie"'
+      Create Your Own Animation: Utwórz własną animację
+      Create a Story: Utwórz Opowieść
+      Create your project: Utwórz swój projekt
+      Data Visualization: Wizualizacja Danych
+      De-bugging with the Step Button: Debugowanie za pomocą Przycisku Krok
+      Debugging: Debugowanie
+      Debugging with the Step Button: Debugowanie za pomocą Przycisku Krok
+      Demo Apps: Aplikacje Demonstracyjne
+      Design Mode: Tryb projektowania
+      Drawing: Rysowanie
+      Events: Zdarzenia
+      Events and Linking Screens: Zdarzenia i Ekrany z linkami
+      Events and Properties: Zdarzenia i Właściwości
+      Example projects: Przykłady projektów
+      Expanding Personal Website: Rozszerzanie Osobistej Witryny Internetowej
+      Expanding Your Website: Rozszerzanie Twojej Witryny Internetowej
+      Experiment with Web Lab: Eksperymentuj z Web Lab
+      Finish a Screen: Ukończ Ekran
+      Finish the Prototype: Ukończ Prototyp
+      Follow the Mouse: Podążaj za Myszą
+      Fonts and Style: Fonty i Styl
+      For Loops: Pętle dla (for)
+      Free Play: Czas na zabawę
+      Functions: Funkcje
+      Functions with Parameters: Funkcje z parametrami
+      Getting Properties: Właściwości getterów
+      Headings: Nagłówki
+      How to Make a Sprite: Jak zrobić Sprite
+      Images and Sounds: Obrazki i Dźwięki
+      Input Examples: Przykłady Wejść
+      Intro to For Loops: Wprowadzenie do Pętli "dla"
+      Intro to Sprites: Wprowadzenie do Duszków
+      Intro to Variables: Wprowadzenie do Zmiennych
+      Introducing Sprite Lab: Wprowadzenie laboratorium Sprite Lab
+      Introduction to Arrays: Wprowadzenie do tablic
+      Iteration and Parameters: Iteracja i Parametry
+      Keyboard Input: Wejście klawiatury
+      LED Apps: Aplikacje LED
+      Lesson Extras: Dodatki do Lekcji
+      Linking Screens: Łączenie ekranów
+      Lists: Listy
+      Loops with the Artist: Pętle z Artystą 
+      Making Scenes: Tworzenie Scen
+      Making Songs: Tworzenie Piosenek
+      Making Sounds: Tworzenie Dźwięków
+      Measures: Takty
+      More Input: Więcej danych
+      More Parameters: Więcej Parametrów
+      Motorcycle: Motocykl
+      Orientation: Orientacja
+      Pair Programming: Programowanie w parach
+      Programs that Repeat: Programy, które Powtarzają
+      Project - Background and Variables: Projekt - Tło i Zmienne
+      Project - Sprites and Interactions: Projekt - Duszki i Interakcje
+      Project Work: Praca Projektowa
+      Properties: Właściwości
+      RGB Exploration: Eksploracja RGB
+      Reading Sensors: Czytanie Czujników
+      Reflection: Refleksja
+      Repeat Blocks: Bloki Powtarzania
+      Repeat Blocks with BB-8: Bloki Powtarzania z BB-8
+      Repeat Blocks with the Artist: Bloki Powtarzania z Artystą
+      Repeat Unit Statements: Instrukcje Powtarzaj jednostkę
+      Repeat Until Statements: Instrukcje Powtarzaj aż
+      Run a simulation: Uruchom symulację
+      Sample Programs: Przykładowe Programy
+      Screen Design: Projekt Ekranu
+      Sensor Events: Zdarzenia Czujnika
+      Sensors to Colors: Czujniki do Kolorów
+      Setting Properties: Ustawianie Właściwości
+      Share Your App: Podziel się swoją aplikacją
+      Simple Circuits: Proste układy
+      Sprite Lab Project: Projekt Sprite Lab
+      The Artist in Code Studio: Artysta w Code Studio
+      The Harvester: Kombajn
+      User Interface: Interfejs użytkownika
+      Using HTML Tags: Stosując Tagi HTML
+      Using Random Numbers: Stosując Losowe Liczby
+      Using the LED: Stosując LED
+      Using the Repeat Block: Korzystanie z bloku powtarzania
+      Using the Switch: Stosując Przełącznik
+      Velocity: Prędkość
+      Video: Wideo
+      Warm Up: Rozgrzewka
+      Website Project: Projekt Strony internetowej
+      Wrap-up: Podsumowanie
+      Your Personal Website: Twoja Osobista Strona Internetowa
+      isTouching: isTouching

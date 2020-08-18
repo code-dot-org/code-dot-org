@@ -227,6 +227,10 @@ sq:
             '"right"': djathtas
             '"space"': hapësirë
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekondat
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -244,6 +248,15 @@ sq:
         options:
           UNIT:
             '"seconds"': sekondat
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

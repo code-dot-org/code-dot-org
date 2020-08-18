@@ -727,9 +727,6 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "Bu, duyana kadar ne tür bir ses çıkacağını bilmediğiniz durumlarda ''rastgele\" bir ses seçmenize izin verir!"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_1": "Bu bloklardan alet kutusunda yalnızca bir adet var. Onu nasıl kullanacaksın?"
-        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
         },
@@ -757,17 +754,8 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "Bu bloklardan alet kutusunda yalnızca bir adet var. Onu nasıl kullanacaksın?"
         },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
-        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Bu sayı araç kutusunda blok kalmadığını belirtir."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "Bu numara, son yanıtta bu bloğun yalnızca bir kez kullanılabileceği anlamına gelir."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_1": "Her ihtiyaç duyduğunuzda bir satırın üzerinden yeniden geçebileceğinizi biliyor muydunuz?"
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Araç kutusundaki yeni blokları görüyor musunuz? Merak etmeyin, sonraki kademede bunları nasıl kullanacağınızı göstereceğiz."
@@ -1070,11 +1058,11 @@
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin.",
-          "stone_block_2": "Gri kareler taştan yapılmış ve atılamazlar."
+          "stone_block_2": "Taştan yapılan gri bloklar atılamazlar."
         },
         "courseD_maze_ramp3_2018": {
           "courseC_maze_programming3_2": "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin.",
-          "stone_block_2": "Gri kareler taştan yapılmış ve atılamazlar."
+          "stone_block_2": "Taştan yapılan gri bloklar atılamazlar."
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin.",

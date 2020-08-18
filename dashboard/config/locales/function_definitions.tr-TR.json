@@ -1434,6 +1434,70 @@
             "name": "parça çiz"
           }
         },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "name": "çiz"
+          },
+          "draw bit": {
+            "name": "parça çiz"
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw bit": {
+            "name": "parça çiz"
+          },
+          "draw": {
+            "name": "çiz"
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw bit": {
+            "name": "parça çiz"
+          },
+          "draw": {
+            "name": "çiz"
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw bit": {
+            "name": "parça çiz"
+          },
+          "draw": {
+            "name": "çiz"
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw bit": {
+            "name": "parça çiz"
+          },
+          "draw": {
+            "name": "çiz"
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw bit": {
+            "name": "parça çiz"
+          },
+          "draw": {
+            "name": "çiz"
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "name": "çiz"
+          },
+          "draw bit": {
+            "name": "parça çiz"
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
+          "draw": {
+            "name": "çiz"
+          },
+          "draw bit": {
+            "name": "parça çiz"
+          }
+        },
         "courseE_Dogger_2": {
           "stop_everything": {
             "name": "herşeyi_durdur"
@@ -2575,7 +2639,7 @@
         },
         "courseF_bee_functions2": {
           "get only nectar": {
-            "name": "şu durumda nektar al"
+            "name": "sadece nektar al"
           }
         },
         "courseF_bee_functions3": {
@@ -2693,6 +2757,46 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "topla"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "name": "çiz"
+          },
+          "draw bit": {
+            "name": "parça çiz"
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "name": "çiz"
+          },
+          "draw bit": {
+            "name": "parça çiz"
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "name": "çiz"
+          },
+          "draw bit": {
+            "name": "parça çiz"
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "name": "çiz"
+          },
+          "draw bit": {
+            "name": "parça çiz"
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "name": "çiz"
+          },
+          "draw bit": {
+            "name": "parça çiz"
           }
         }
       }

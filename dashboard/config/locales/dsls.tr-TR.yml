@@ -2017,12 +2017,12 @@ tr-TR:
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
-        - text: 'Arı buluta gidecek ama bir şey yapmayacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
         - text: Bilmiyorum.
-          feedback: '"Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.'
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         questions:
         - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
             Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
@@ -2035,12 +2035,12 @@ tr-TR:
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
-        - text: 'Arı buluta gidecek ama bir şey yapmayacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
         - text: Bilmiyorum.
-          feedback: '"Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.'
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         questions:
         - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
             Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
@@ -2053,12 +2053,12 @@ tr-TR:
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
-        - text: 'Arı buluta gidecek ama bir şey yapmayacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
         - text: Bilmiyorum.
-          feedback: '"Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.'
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         questions:
         - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
             Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
@@ -2071,12 +2071,12 @@ tr-TR:
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
-        - text: 'Arı buluta gidecek ama bir şey yapmayacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
         - text: Bilmiyorum.
-          feedback: '"Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.'
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         questions:
         - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
             Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
@@ -2089,12 +2089,12 @@ tr-TR:
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
-        - text: 'Arı buluta gidecek ama bir şey yapmayacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
         - text: Bilmiyorum.
-          feedback: '"Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.'
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         questions:
         - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
             Çiçek varsa arı bir kez nektar almalı. Çiçek yoksa arı bir şey yapmamalı.
@@ -2116,7 +2116,7 @@ tr-TR:
         questions:
         - text: 'Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda sizce
             ne olacak? Unutmayın: Her bulutun ardında yalnızca *bir* petek veya *bir*
-            çiçek olarak.'
+            çiçek olacak.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - text: Arı her çiçekte nektar ve her petekte bal alır.
@@ -2134,7 +2134,7 @@ tr-TR:
         questions:
         - text: 'Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda sizce
             ne olacak? Unutmayın: Her bulutun ardında yalnızca *bir* petek veya *bir*
-            çiçek olarak.'
+            çiçek olacak.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
@@ -2811,85 +2811,86 @@ tr-TR:
           *değişen* değişkenlerle kod yazacaksınız.</h3>\n\n"
       courseF_multi_artist_for10_predict1:
         answers:
-        - text: Artist, oyun alanının bir tarafından diğerine doğru kalınlığı artan
+        - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
             düz bir çizgi çizecek.
-          feedback: Yanlış. Artist, "for" döngüsü yinelemelerinin arasında dönüyor.
-        - text: 'Artist, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+          feedback: Yanlış. Sanatçı, "for" döngüsü yinelemelerinin arasında dönüyor.
+        - text: 'Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
             gittikçe uzar ve incelir. '
-          feedback: Yanlış. "For" döngüsü her yinelendiğinde, Artist daha uzun ve
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
             daha kalın bir çizgi çizer.
-        - text: Artist, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+        - text: Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
             gittikçe uzar ve kalınlaşır.
           correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
-          feedback: Yanlış. "For" döngüsü her yinelendiğinde, Artist daha uzun ve
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
             daha kalın bir çizgi çizer.
         questions:
         - text: '"Çalıştır"a tıkladığınızda ne olacak?'
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - text: Artist, oyun alanının bir tarafından diğerine doğru kalınlığı artan
+        - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
             düz bir çizgi çizecek.
-          feedback: Yanlış. Artist, "for" döngüsü yinelemelerinin arasında dönüyor.
-        - text: 'Artist, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+          feedback: Yanlış. Sanatçı, "for" döngüsü yinelemelerinin arasında dönüyor.
+        - text: 'Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
             gittikçe uzar ve incelir. '
-          feedback: Yanlış. "For" döngüsü her yinelendiğinde, Artist daha uzun ve
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
             daha kalın bir çizgi çizer.
-        - text: Artist, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+        - text: Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
             gittikçe uzar ve kalınlaşır.
           correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
-          feedback: Yanlış. "For" döngüsü her yinelendiğinde, Artist daha uzun ve
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
             daha kalın bir çizgi çizer.
         questions:
         - text: '"Çalıştır"a tıkladığınızda ne olacak?'
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
-        - text: Artist, oyun alanının bir tarafından diğerine doğru kalınlığı artan
+        - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
             düz bir çizgi çizecek.
-          feedback: Yanlış. Artist, "for" döngüsü yinelemelerinin arasında dönüyor.
-        - text: 'Artist, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+          feedback: Yanlış. Sanatçı, "for" döngüsü yinelemelerinin arasında dönüyor.
+        - text: 'Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
             gittikçe uzar ve incelir. '
-          feedback: Yanlış. "For" döngüsü her yinelendiğinde, Artist daha uzun ve
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
             daha kalın bir çizgi çizer.
-        - text: Artist, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+        - text: Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
             gittikçe uzar ve kalınlaşır.
           correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
-          feedback: Yanlış. "For" döngüsü her yinelendiğinde, Artist daha uzun ve
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
             daha kalın bir çizgi çizer.
         questions:
         - text: '"Çalıştır"a tıkladığınızda ne olacak?'
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
-        - text: Artist, oyun alanının bir tarafından diğerine doğru kalınlığı artan
+        - text: Sanatçı, oyun alanının bir tarafından diğerine doğru kalınlığı artan
             düz bir çizgi çizecek.
-          feedback: Yanlış. Artist, "for" döngüsü yinelemelerinin arasında dönüyor.
-        - text: 'Artist, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+          feedback: Yanlış. Sanatçı, "for" döngüsü yinelemelerinin arasında dönüyor.
+        - text: 'Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
             gittikçe uzar ve incelir. '
-          feedback: Yanlış. "For" döngüsü her yinelendiğinde, Artist daha uzun ve
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
             daha kalın bir çizgi çizer.
-        - text: Artist, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
+        - text: Sanatçı, bir sarmal çizer ve "for" döngüsü her yinelendiğinde çizgi
             gittikçe uzar ve kalınlaşır.
           correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
-          feedback: Yanlış. "For" döngüsü her yinelendiğinde, Artist daha uzun ve
+          feedback: Yanlış. "For" döngüsü her yinelendiğinde, sanatçı daha uzun ve
             daha kalın bir çizgi çizer.
         questions:
         - text: '"Çalıştır"a tıkladığınızda ne olacak?'
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - text: Artist, iki farklı boyutta kutu çizmek için aynı fonksiyonu kullanacak.
+        - text: Sanatçı, iki farklı boyutta kutu çizmek için aynı fonksiyonu kullanacak.
           correct: true
           feedback: Doğru!
-        - text: Artist, iki farklı boyutta kutu çizmek için iki farklı fonksiyon kullanacak.
+        - text: Sanatçı, iki farklı boyutta kutu çizmek için iki farklı fonksiyon
+            kullanacak.
           feedback: Yanlış. Parametreler sayesinde, farklı sonuçlar elde eden tek
             bir fonksiyon kullanırsınız.
-        - text: Artist, aynı boyutta kutuyu iki kez çizmek için iki farklı fonksiyon
+        - text: Sanatçı, aynı boyutta kutuyu iki kez çizmek için iki farklı fonksiyon
             kullanacak.
           feedback: Yanlış. Parametreler sayesinde, farklı sonuçlar elde eden tek
             bir fonksiyon kullanırsınız.
@@ -2897,74 +2898,74 @@ tr-TR:
           feedback: Program, iki farklı boyutta kutu çizmesi için tek bir fonksiyondan
             faydalanmak için parametreleri kullanır.
         markdown: '"Bir kare çiz" fonksiyonuna parametreler ekledik. Fonksiyon tanımının
-          tamamını görmek için "düzenle" düğmesine tıklayın.'
+          tamamını görmek için mavi renkteki "düzenle" düğmesine tıklayın.'
         questions:
         - text: Bu programı çalıştırdığınızda ne olacak?
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - text: Artist, kenarları 50 piksel olan bir üçgen çizecek.
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
           correct: true
           feedback: Doğru!
-        - text: Artist, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
             olması gerekir.
-        - text: Artist, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
             gerekir.
         - text: Bilmiyorum.
           feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
-            kullanılıyor. Artist, kenarları 50 piksel olan bir üçgen çizecek.'
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
         questions:
         - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
             ne olacak?'
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - text: Artist, kenarları 50 piksel olan bir üçgen çizecek.
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
           correct: true
           feedback: Doğru!
-        - text: Artist, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
             olması gerekir.
-        - text: Artist, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
             gerekir.
         - text: Bilmiyorum.
           feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
-            kullanılıyor. Artist, kenarları 50 piksel olan bir üçgen çizecek.'
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
         questions:
         - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
             ne olacak?'
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - text: Artist, kenarları 50 piksel olan bir üçgen çizecek.
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
           correct: true
           feedback: Doğru!
-        - text: Artist, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
             olması gerekir.
-        - text: Artist, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
             gerekir.
         - text: Bilmiyorum.
           feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
-            kullanılıyor. Artist, kenarları 50 piksel olan bir üçgen çizecek.'
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
         questions:
         - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
             ne olacak?'
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
-        - text: Artist, kenarları 50 piksel olan bir üçgen çizecek.
+        - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
           correct: true
           feedback: Doğru!
-        - text: Artist, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
+        - text: Sanatçı, kenarları 3 piksel olan 50 kenarlı bir çokgen çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "tekrar" döngüsünde
             olması gerekir.
-        - text: Artist, 50 derecelik dönüşleri olan üç açık kenar çizecek.
+        - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
             gerekir.
         - text: Bilmiyorum.
           feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
-            kullanılıyor. Artist, kenarları 50 piksel olan bir üçgen çizecek.'
+            kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
         questions:
         - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
             ne olacak?'
@@ -2976,12 +2977,12 @@ tr-TR:
         - text: Arı, buluta gidip yalnızca altında çiçek varsa nektar almaya çalışır.
           correct: true
           feedback: Doğru!
-        - text: 'Arı buluta gidecek ama bir şey yapmayacak, ne olduğu fark etmeksizin. '
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.
+        - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
+            arının nektar almaya çalışmasını sağlar.
         - text: Bilmiyorum.
-          feedback: '"Çiçekteyse" bloğu, arının yalnızca bulutun altında çiçek varsa
-            nektar almaya çalışmasını sağlar.'
+          feedback: '"Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında çiçek
+            varsa nektar almaya çalışmasını sağlar.'
         markdown: 'Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
           Çiçek varsa arı "bir kez" nektar almalı. '
         questions:
@@ -2993,14 +2994,14 @@ tr-TR:
           correct: true
           feedback: Doğru!
         - text: Arı hem çiçeklerden hem de petekten nektar almaya çalışacak.
-          feedback: Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar almasını
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının her çiçekten nektar almasını
             ve çiçek yoksa (yani bir petekse) bal yapmasını sağlar.
         - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
-          feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
-            ve her petekte bal almasını sağlar.
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının her çiçekten nektar ve
+            her petekten bal almasını sağlar.
         - text: Bilmiyorum.
-          feedback: '"Çiçekteyse" bloğu, arının her çiçekte nektar almasını ve aksi
-            durumda bal yapmasını sağlar.'
+          feedback: '"Eğer çiçekte ise" bloğu, arının her çiçekten nektar almasını
+            ve aksi durumda bal yapmasını sağlar.'
         markdown: 'Bulutlar kimi zaman bir çiçeği kimi zaman da bir peteği saklar!
           Her durumda, her bir bulutun altında ya **bir** çiçek ya da **bir** petek
           olacaktır. '
@@ -3019,7 +3020,8 @@ tr-TR:
         - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
           feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
             sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
-        - text: 'Arı ilerleyecek ve çiçekteki nektardan daha fazlasını toplamaya çalışacak. '
+        - text: 'Arı ilerleyecek ve çiçeklerdeki nektardan daha fazlasını toplamaya
+            çalışacak. '
           feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
             sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
         questions:
@@ -3096,16 +3098,16 @@ tr-TR:
           correct: true
           feedback: 'Doğru. '
         - text: Korsan, "Tanıştığımıza memnun oldum." diyecek. Bu kadar.
-          feedback: Yanlış. Verilen ismi korsanın cümlesine "birleştir" bloğunun yerleştirdiğine
-            dikkat edin.
+          feedback: Yanlış. "Birleştir" bloğunun, verilen ismi korsanın cümlesine
+            eklediğine dikkat edin.
         - text: Korsan, "Ali." diyecek. Bu kadar.
-          feedback: Yanlış. Verilen ismi korsanın cümlesine "birleştir" bloğunun yerleştirdiğine
-            dikkat edin.
+          feedback: Yanlış. "Birleştir" bloğunun, verilen ismi korsanın cümlesine
+            eklediğine dikkat edin.
         - text: Bilmiyorum.
         markdown: "**Bu bulmaca \"sor\" bloğu denen yeni bir blok kullanıyor.**\n\n\"Sor\"
-          bloğu programı durdurur ve kullanıcının bir isim girmesini ister. \n\nKullanıcının
+          bloğu programı durdurur ve kullanıcının bir metin girmesini ister. \n\nKullanıcının
           girdiği metin, \"sor\" bloğunun sonunda gösterilen değişkene kaydedilir.
-          Bu durumda ise \"isim\" değişkeni."
+          Bu durumda değişken, \"isim\"dir."
         questions:
         - text: Kullanıcı "Ali" ismini girseydi ne olacaktı?
       coursee_prediction_artistfunction2:

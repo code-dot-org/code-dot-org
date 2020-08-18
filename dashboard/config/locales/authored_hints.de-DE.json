@@ -1252,8 +1252,8 @@
           "courseF_bee_functions_challenge2_b": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -1344,9 +1344,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Fahre langsam mit deinem Finger das Programm entlang um zu sehen, wo es schief läuft.",
-          "courseA_artist_loops3_b": "Du wirst einen solchen Baustein brauchen, um die Aufgabe lösen zu können:\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
-          "courseB_artist_loops2_b": "Versuche zunächst, den Code auszuführen, um zu sehen, wo der Künstler landet."
+          "courseA_artist_loops3_b": "Du wirst einen solchen Baustein brauchen, um die Aufgabe lösen zu können:\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
@@ -1362,10 +1360,7 @@
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
-          "courseA_artist_loops4_b": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> Schleife zu setzen.",
-          "courseB_artist_loops4_a": "Mit dem Spring-Block kannst du dich vorwärts bewegen, ohne dabei eine Linie zu ziehen.",
-          "courseB_artist_loops4_b": "Du musst innerhalb der Wiederholungsschleife einen Block hinzufügen, um dieses Rätsel zu lösen.",
-          "courseB_artist_loops4_c": "Vergiss nicht, die Häufigkeit der Wiederholungen der Schleife zu ändern."
+          "courseA_artist_loops4_b": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> Schleife zu setzen."
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "Zeige, was du über <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Blöcke gelernt hast, um diese Aufgabe zu lösen!",
@@ -1385,8 +1380,7 @@
         "courseA_artist_loops5_2020": {
           "courseA_artist_loops5_a": "Zeige, was du über <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Blöcke gelernt hast, um diese Aufgabe zu lösen!",
           "courseA_artist_loops5_b": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
-          "courseA_artist_loops5_c": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nSchleife zu setzen.",
-          "courseB_artist_loops5_a": "Ziehe eine <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 'wiederholen'-Schleife hervor und lege dann die anderen Blöcke hinein. Wie oft musst du dies wiederholen?"
+          "courseA_artist_loops5_c": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nSchleife zu setzen."
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "Du weißt nicht, wie du einen Hügel zeichnen kannst? Spiele eine wenig mit allen Blöcken, um zu sehen, was jeder einzelne zeichnet.",
@@ -1402,8 +1396,7 @@
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "Du weißt nicht, wie du einen Hügel zeichnen kannst? Spiele eine wenig mit allen Blöcken, um zu sehen, was jeder einzelne zeichnet.",
-          "courseA_artist_loops6_b": "Du brauchst 2 Blöcke in 2 verschiedene Richtungen um diese Aufgabe zu lösen.",
-          "courseB_artist_loops6_b": "Versuche, die Bewegungen auf ein Blatt Papier zu schreiben und dabei nach einem Muster zu suchen."
+          "courseA_artist_loops6_b": "Du brauchst 2 Blöcke in 2 verschiedene Richtungen um diese Aufgabe zu lösen."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.",
@@ -1423,10 +1416,7 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.",
           "courseA_artist_loops7_b": "Schreibe zuerst den Code für eine Welle und wiederhole das dann, um die anderen beiden Wellen zu zeichnen.",
-          "courseA_artist_loops7_c": "Denk daran, dass du mehr als einen Block in eine <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> Schleife setzen kannst.",
-          "courseB_artist_loops7_a": "In dieser Aufgabe werden **4** Schleifen verwendet, eine gleich nach der anderen!",
-          "courseB_artist_loops7_b": "Beachte, dass jede Schleife ein Treppenmuster bildet, das in eine andere Richtung führt. \n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "Die Schleifen sollten so verlaufen: \n\n-   Schleife 1 \n    -   Rechts \n    -   Abwärts \n\n-   Schleife 2 \n    -   Rechts \n    -   Aufwärts \n\n-   Schleife 3 \n    -   Links \n    -   Aufwärts - \n\nSchleife 4 \n\t\\- Links \n\t\\- Abwärts"
+          "courseA_artist_loops7_c": "Denk daran, dass du mehr als einen Block in eine <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> Schleife setzen kannst."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "Führe den Code aus, um zu sehen, was schon für dich geschrieben wurde.",
@@ -1446,9 +1436,7 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "Führe den Code aus, um zu sehen, was schon für dich geschrieben wurde.",
           "courseA_artist_loops8_b": "Wie würdest du in diesem Code am besten Schleifen verwenden?",
-          "courseA_artist_loops8_c": "Was macht der Code?\\\nWas soll der Code machen?\\\nWas sagt dir das?",
-          "courseB_artist_loops8_a": "Wie oft solltest du das Muster wiederholen, um die Leiter zu bauen?",
-          "courseB_artist_loops8_b": "Versuche, den Code auszuführen, den du bekommen hast, um zu sehen, was er bewirkt."
+          "courseA_artist_loops8_c": "Was macht der Code?\\\nWas soll der Code machen?\\\nWas sagt dir das?"
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "Füge noch einen Block zum Code hinzu, um die restlichen Stufen zu zeichnen.",
@@ -1468,10 +1456,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Füge noch einen Block zum Code hinzu, um die restlichen Stufen zu zeichnen.",
           "courseA_artist_loops9_b": "Der Block, den du hinzufügst, sollte in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n Schleife gesetzt werden.",
-          "courseA_artist_loops9_c": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann Mustern.",
-          "courseB_artist_loops9_a": "Denke daran, dass mit den Sprung-Blöcken Bewegungen möglich sind, bei denen keine Linien gezogen werden.",
-          "courseB_artist_loops9_b": "Du wirst den W-Block brauchen, um dieses Rätsel zu lösen.",
-          "courseB_artist_loops9_c": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster."
+          "courseA_artist_loops9_c": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann Mustern."
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "Blöcke wie dieser <xml>  <block type=\"simple_move_up_left\"/></xml> lassen deinen Künstler schräg gehen!",
@@ -2317,10 +2302,6 @@
           "courseA_playlab_events_challenge2_b": "Du kannst den Roboter piepsen lassen.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Du kannst das grantige Monster knurren lassen.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_a": "Denke daran, eine `wiederhole` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> Schleife für besseren Code zu verwenden!",
-          "courseB_artist_loops3_b": "Der Künstler muss sich nach Süden bewegen, um diese Linie zu ziehen."
-        },
         "courseB_Scrat_ramp1_2018": {
           "1": "Wenn Scrat nicht das tut, was du willst, vergewissere dich, dass beide Blöcke vollständig zusammengeklickt wurden und klicke dann wieder auf \"Ausführen\".",
           "2": "Hab keine Angst, einen Fehler zu machen! Probiere etwas aus, und wenn es nicht funktioniert, versuche etwas anderes!"
@@ -2391,8 +2372,6 @@
           "courseB_artist_loops2_b": "Versuche zunächst, den Code auszuführen, um zu sehen, wo der Künstler landet."
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "Fahre langsam mit deinem Finger das Programm entlang um zu sehen, wo es schief läuft.",
-          "courseA_artist_loops3_b": "Du wirst einen solchen Baustein brauchen, um die Aufgabe lösen zu können:\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
           "courseB_artist_loops2_b": "Versuche zunächst, den Code auszuführen, um zu sehen, wo der Künstler landet."
         },
@@ -2428,8 +2407,6 @@
           "courseB_artist_loops4_c": "Vergiss nicht, die Häufigkeit der Wiederholungen der Schleife zu ändern."
         },
         "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
-          "courseA_artist_loops4_b": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> Schleife zu setzen.",
           "courseB_artist_loops4_a": "Mit dem Spring-Block kannst du dich vorwärts bewegen, ohne dabei eine Linie zu ziehen.",
           "courseB_artist_loops4_b": "Du musst innerhalb der Wiederholungsschleife einen Block hinzufügen, um dieses Rätsel zu lösen.",
           "courseB_artist_loops4_c": "Vergiss nicht, die Häufigkeit der Wiederholungen der Schleife zu ändern."
@@ -2444,9 +2421,6 @@
           "courseB_artist_loops5_a": "Ziehe eine <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 'wiederholen'-Schleife hervor und lege dann die anderen Blöcke hinein. Wie oft musst du dies wiederholen?"
         },
         "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Zeige, was du über <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Blöcke gelernt hast, um diese Aufgabe zu lösen!",
-          "courseA_artist_loops5_b": "Wenn du die Schleife mehr als 4 mal wiederholen möchtest, kannst du die Zahl oben im Block ändern.",
-          "courseA_artist_loops5_c": "Da du nur einen <xml><block type=\"simple_move_right\"/></xml> benutzen darfst, versuche ihn in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nSchleife zu setzen.",
           "courseB_artist_loops5_a": "Ziehe eine <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 'wiederholen'-Schleife hervor und lege dann die anderen Blöcke hinein. Wie oft musst du dies wiederholen?"
         },
         "courseB_artist_loops6": {
@@ -2459,8 +2433,6 @@
           "courseB_artist_loops6_b": "Versuche, die Bewegungen auf ein Blatt Papier zu schreiben und dabei nach einem Muster zu suchen."
         },
         "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "Du weißt nicht, wie du einen Hügel zeichnen kannst? Spiele eine wenig mit allen Blöcken, um zu sehen, was jeder einzelne zeichnet.",
-          "courseA_artist_loops6_b": "Du brauchst 2 Blöcke in 2 verschiedene Richtungen um diese Aufgabe zu lösen.",
           "courseB_artist_loops6_b": "Versuche, die Bewegungen auf ein Blatt Papier zu schreiben und dabei nach einem Muster zu suchen."
         },
         "courseB_artist_loops7": {
@@ -2479,9 +2451,6 @@
           "courseB_artist_loops7_c": "Die Schleifen sollten so verlaufen: \n\n-   Schleife 1 \n    -   Rechts \n    -   Abwärts \n\n-   Schleife 2 \n    -   Rechts \n    -   Aufwärts \n\n-   Schleife 3 \n    -   Links \n    -   Aufwärts - \n\nSchleife 4 \n\t\\- Links \n\t\\- Abwärts"
         },
         "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster.",
-          "courseA_artist_loops7_b": "Schreibe zuerst den Code für eine Welle und wiederhole das dann, um die anderen beiden Wellen zu zeichnen.",
-          "courseA_artist_loops7_c": "Denk daran, dass du mehr als einen Block in eine <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> Schleife setzen kannst.",
           "courseB_artist_loops7_a": "In dieser Aufgabe werden **4** Schleifen verwendet, eine gleich nach der anderen!",
           "courseB_artist_loops7_b": "Beachte, dass jede Schleife ein Treppenmuster bildet, das in eine andere Richtung führt. \n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Die Schleifen sollten so verlaufen: \n\n-   Schleife 1 \n    -   Rechts \n    -   Abwärts \n\n-   Schleife 2 \n    -   Rechts \n    -   Aufwärts \n\n-   Schleife 3 \n    -   Links \n    -   Aufwärts - \n\nSchleife 4 \n\t\\- Links \n\t\\- Abwärts"
@@ -2499,9 +2468,6 @@
           "courseB_artist_loops8_b": "Versuche, den Code auszuführen, den du bekommen hast, um zu sehen, was er bewirkt."
         },
         "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Führe den Code aus, um zu sehen, was schon für dich geschrieben wurde.",
-          "courseA_artist_loops8_b": "Wie würdest du in diesem Code am besten Schleifen verwenden?",
-          "courseA_artist_loops8_c": "Was macht der Code?\\\nWas soll der Code machen?\\\nWas sagt dir das?",
           "courseB_artist_loops8_a": "Wie oft solltest du das Muster wiederholen, um die Leiter zu bauen?",
           "courseB_artist_loops8_b": "Versuche, den Code auszuführen, den du bekommen hast, um zu sehen, was er bewirkt."
         },
@@ -2521,9 +2487,6 @@
           "courseB_artist_loops9_c": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Füge noch einen Block zum Code hinzu, um die restlichen Stufen zu zeichnen.",
-          "courseA_artist_loops9_b": "Der Block, den du hinzufügst, sollte in die \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n Schleife gesetzt werden.",
-          "courseA_artist_loops9_c": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann Mustern.",
           "courseB_artist_loops9_a": "Denke daran, dass mit den Sprung-Blöcken Bewegungen möglich sind, bei denen keine Linien gezogen werden.",
           "courseB_artist_loops9_b": "Du wirst den W-Block brauchen, um dieses Rätsel zu lösen.",
           "courseB_artist_loops9_c": "Du weißt nicht, wohin du die Schleife setzen musst? Versuche den Code Schritt-für-Schritt zu schreiben und suche dann ein Muster."
@@ -2956,7 +2919,7 @@
         },
         "courseB_maze_seq5_2018": {
           "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
-          "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten um diese Aufgabe zu lösen!",
+          "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2019": {
@@ -2978,7 +2941,7 @@
         "courseB_maze_seq6_2018": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
           "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
-          "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen.",
+          "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2019": {
@@ -3042,7 +3005,7 @@
         "courseB_maze_seq9_2018": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
           "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
-          "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen.",
+          "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2019": {
@@ -3388,10 +3351,6 @@
           "courseB_starWars_prog9_a": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
           "courseB_starWars_prog9_b": "Es gibt viele Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_starWars_prog9_c": "Könnte eine `wiederhole` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> Schleife hier helfen?"
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "Du weißt nicht, wie man Linien zeichnet? Beginne damit, Blöcke zum <xml><block type=\"when_run\"/></xml> Block anzufügen um zu sehen, was passiert.",
-          "courseA_artist_loops2_b": "Benutze diesen <xml><block type=\"simple_move_right\"/></xml> Baustein um die Aufgabe zu lösen."
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Du kannst den Baustein `Figur 1 in Bild ??? einfügen` verwenden, um der Szene eine Figur hinzuzufügen.",
@@ -3968,163 +3927,163 @@
           "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋsammelnˋ-Bausteine brauchst!"
         },
         "courseC_collector_prog1": {
-          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, verwende einen <xml><block type=\"collector_collect\"/></xml> Baustein, um ihn aufzusammeln.",
+          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen <xml><block type=\"collector_collect\"/></xml> Block um ihn aufzuheben.",
           "courseC_collector_prog1_b": "Die einfachste Lösung wäre, einmal vorwärts zu gehen und den Schatz dann aufzuheben."
         },
         "courseC_collector_prog1_2018": {
-          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, verwende einen <xml><block type=\"collector_collect\"/></xml> Baustein, um ihn aufzusammeln.",
+          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen <xml><block type=\"collector_collect\"/></xml> Block um ihn aufzuheben.",
           "courseC_collector_prog1_b": "Die einfachste Lösung wäre, einmal vorwärts zu gehen und den Schatz dann aufzuheben."
         },
         "courseC_collector_prog1_2019": {
-          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, verwende einen <xml><block type=\"collector_collect\"/></xml> Baustein, um ihn aufzusammeln.",
+          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen <xml><block type=\"collector_collect\"/></xml> Block um ihn aufzuheben.",
           "courseC_collector_prog1_b": "Die einfachste Lösung wäre, einmal vorwärts zu gehen und den Schatz dann aufzuheben."
         },
         "courseC_collector_prog1_2020": {
-          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, verwende einen <xml><block type=\"collector_collect\"/></xml> Baustein, um ihn aufzusammeln.",
+          "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen <xml><block type=\"collector_collect\"/></xml> Block um ihn aufzuheben.",
           "courseC_collector_prog1_b": "Die einfachste Lösung wäre, einmal vorwärts zu gehen und den Schatz dann aufzuheben."
         },
         "courseC_collector_prog2": {
-          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Bausteine oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Baustein verwenden, um dein Programm zu verkürzen.",
+          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Blöcke benutzen oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Block um dein Programm kürzer zu machen.",
           "courseC_collector_prog2_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_collector_prog2_2018": {
-          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Bausteine oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Baustein verwenden, um dein Programm zu verkürzen.",
+          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Blöcke benutzen oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Block um dein Programm kürzer zu machen.",
           "courseC_collector_prog2_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_collector_prog2_2019": {
-          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Bausteine oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Baustein verwenden, um dein Programm zu verkürzen.",
+          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Blöcke benutzen oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Block um dein Programm kürzer zu machen.",
           "courseC_collector_prog2_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_collector_prog2_2020": {
-          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Bausteine oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Baustein verwenden, um dein Programm zu verkürzen.",
+          "courseC_collector_prog2_a": "Du kannst 4 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> Blöcke benutzen oder auch den <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Block um dein Programm kürzer zu machen.",
           "courseC_collector_prog2_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_collector_prog3": {
-          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Bausteine ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Baustein verbunden sind.",
+          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Blöcke ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Block verbunden sind.",
           "courseC_collector_prog3_b": "Versuche die Schaltfläche \"Schritt\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?",
           "courseC_collector_prog3_c": "Wenn du Probleme hast, diese Aufgabe zu lösen, schreibe alle Bewegungen auf ein Blatt Papier!"
         },
         "courseC_collector_prog3_2018": {
-          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Bausteine ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Baustein verbunden sind.",
+          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Blöcke ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Block verbunden sind.",
           "courseC_collector_prog3_b": "Versuche die Schaltfläche \"Schritt\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?",
           "courseC_collector_prog3_c": "Wenn du Probleme hast, diese Aufgabe zu lösen, schreibe alle Bewegungen auf ein Blatt Papier!"
         },
         "courseC_collector_prog3_2019": {
-          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Bausteine ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Baustein verbunden sind.",
+          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Blöcke ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Block verbunden sind.",
           "courseC_collector_prog3_b": "Versuche die Schaltfläche \"Schritt\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?",
           "courseC_collector_prog3_c": "Wenn du Probleme hast, diese Aufgabe zu lösen, schreibe alle Bewegungen auf ein Blatt Papier!"
         },
         "courseC_collector_prog3_2020": {
-          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Bausteine ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Baustein verbunden sind.",
+          "courseC_collector_prog3_a": "Das Programm wird nur diejenigen Blöcke ausführen, welche mit dem <xml><block type=\"when_run\"/></xml> Block verbunden sind.",
           "courseC_collector_prog3_b": "Versuche die Schaltfläche \"Schritt\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Siehst du, wo etwas nicht funktioniert?",
           "courseC_collector_prog3_c": "Wenn du Probleme hast, diese Aufgabe zu lösen, schreibe alle Bewegungen auf ein Blatt Papier!"
         },
         "courseC_collector_prog4": {
-          "courseC_collector_prog4_a": "Wenn du nicht mehr weiterkommst, schreibe alle Schritte auf ein Blatt Papier.",
+          "courseC_collector_prog4_a": "Wenn du nicht mehr weiter kommst, versuche einmal alle Schritte auf ein Blatt Papier zu schreiben.",
           "courseC_collector_prog4_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist.",
           "courseC_collector_prog4_c": "Versuche diesen Weg zu nehmen."
         },
         "courseC_collector_prog4_2018": {
-          "courseC_collector_prog4_a": "Wenn du nicht mehr weiterkommst, schreibe alle Schritte auf ein Blatt Papier.",
+          "courseC_collector_prog4_a": "Wenn du nicht mehr weiter kommst, versuche einmal alle Schritte auf ein Blatt Papier zu schreiben.",
           "courseC_collector_prog4_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist.",
           "courseC_collector_prog4_c": "Versuche diesen Weg zu nehmen."
         },
         "courseC_collector_prog4_2019": {
-          "courseC_collector_prog4_a": "Wenn du nicht mehr weiterkommst, schreibe alle Schritte auf ein Blatt Papier.",
+          "courseC_collector_prog4_a": "Wenn du nicht mehr weiter kommst, versuche einmal alle Schritte auf ein Blatt Papier zu schreiben.",
           "courseC_collector_prog4_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist.",
           "courseC_collector_prog4_c": "Versuche diesen Weg zu nehmen."
         },
         "courseC_collector_prog4_2020": {
-          "courseC_collector_prog4_a": "Wenn du nicht mehr weiterkommst, schreibe alle Schritte auf ein Blatt Papier.",
+          "courseC_collector_prog4_a": "Wenn du nicht mehr weiter kommst, versuche einmal alle Schritte auf ein Blatt Papier zu schreiben.",
           "courseC_collector_prog4_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist.",
           "courseC_collector_prog4_c": "Versuche diesen Weg zu nehmen."
         },
         "courseC_collector_prog5": {
-          "courseC_collector_prog5_a": "\"Funktioniert es beim ersten Schritt?\nFunktioniert es beim zweiten Schritt?\nWo funktioniert dein Programm nicht mehr?\"",
+          "courseC_collector_prog5_a": "\"Funktioniert es beim ersten Schritt?\nKlappt es beim zweiten Schritt?\nWo läuft etwas schief?\"",
           "courseC_collector_prog5_b": "Wenn du schon einen Fehler verbessert hast und das Programm trotzdem immer noch nicht funktioniert, verwende die oben genannten Schritte, um weitere Fehler zu entdecken.",
-          "courseC_collector_prog5_c": "Wenn du nicht mehr weiterkommst, schreibe alle Schritte auf ein Blatt Papier.",
+          "courseC_collector_prog5_c": "Wenn du nicht mehr weiter kommst, versuche einmal alle Schritte auf ein Blatt Papier zu schreiben.",
           "courseC_collector_prog5_d": "Folge diesem Weg, um die Schätze einzusammeln."
         },
         "courseC_collector_prog5_2018": {
-          "courseC_collector_prog5_a": "\"Funktioniert es beim ersten Schritt?\nFunktioniert es beim zweiten Schritt?\nWo funktioniert dein Programm nicht mehr?\"",
+          "courseC_collector_prog5_a": "\"Funktioniert es beim ersten Schritt?\nKlappt es beim zweiten Schritt?\nWo läuft etwas schief?\"",
           "courseC_collector_prog5_b": "Wenn du schon einen Fehler verbessert hast und das Programm trotzdem immer noch nicht funktioniert, verwende die oben genannten Schritte, um weitere Fehler zu entdecken.",
-          "courseC_collector_prog5_c": "Wenn du nicht mehr weiterkommst, schreibe alle Schritte auf ein Blatt Papier.",
+          "courseC_collector_prog5_c": "Wenn du nicht mehr weiter kommst, versuche einmal alle Schritte auf ein Blatt Papier zu schreiben.",
           "courseC_collector_prog5_d": "Folge diesem Weg, um die Schätze einzusammeln."
         },
         "courseC_collector_prog5_2019": {
-          "courseC_collector_prog5_a": "\"Funktioniert es beim ersten Schritt?\nFunktioniert es beim zweiten Schritt?\nWo funktioniert dein Programm nicht mehr?\"",
+          "courseC_collector_prog5_a": "\"Funktioniert es beim ersten Schritt?\nKlappt es beim zweiten Schritt?\nWo läuft etwas schief?\"",
           "courseC_collector_prog5_b": "Wenn du schon einen Fehler verbessert hast und das Programm trotzdem immer noch nicht funktioniert, verwende die oben genannten Schritte, um weitere Fehler zu entdecken.",
-          "courseC_collector_prog5_c": "Wenn du nicht mehr weiterkommst, schreibe alle Schritte auf ein Blatt Papier.",
+          "courseC_collector_prog5_c": "Wenn du nicht mehr weiter kommst, versuche einmal alle Schritte auf ein Blatt Papier zu schreiben.",
           "courseC_collector_prog5_d": "Folge diesem Weg, um die Schätze einzusammeln."
         },
         "courseC_collector_prog5_2020": {
-          "courseC_collector_prog5_a": "\"Funktioniert es beim ersten Schritt?\nFunktioniert es beim zweiten Schritt?\nWo funktioniert dein Programm nicht mehr?\"",
+          "courseC_collector_prog5_a": "\"Funktioniert es beim ersten Schritt?\nKlappt es beim zweiten Schritt?\nWo läuft etwas schief?\"",
           "courseC_collector_prog5_b": "Wenn du schon einen Fehler verbessert hast und das Programm trotzdem immer noch nicht funktioniert, verwende die oben genannten Schritte, um weitere Fehler zu entdecken.",
-          "courseC_collector_prog5_c": "Wenn du nicht mehr weiterkommst, schreibe alle Schritte auf ein Blatt Papier.",
+          "courseC_collector_prog5_c": "Wenn du nicht mehr weiter kommst, versuche einmal alle Schritte auf ein Blatt Papier zu schreiben.",
           "courseC_collector_prog5_d": "Folge diesem Weg, um die Schätze einzusammeln."
         },
         "courseC_collector_prog6": {
           "courseC_collector_prog6_a": "Findest du heraus, was falsch ist?\n\nVersuche einmal mit der \"Schritt\" Taste den Code Zeile für Zeile auszuführen, um die Fehler zu finden.",
-          "courseC_collector_prog6_b": "Du kommst nicht mehr weiter? Versuche diesen Weg zu nehmen, um die Schätze einzusammeln."
+          "courseC_collector_prog6_b": "Du kommst nicht mehr weiter? Versuche diesen Weg, um die Schätze einzusammeln!"
         },
         "courseC_collector_prog6_2018": {
           "courseC_collector_prog6_a": "Findest du heraus, was falsch ist?\n\nVersuche einmal mit der \"Schritt\" Taste den Code Zeile für Zeile auszuführen, um die Fehler zu finden.",
-          "courseC_collector_prog6_b": "Du kommst nicht mehr weiter? Versuche diesen Weg zu nehmen, um die Schätze einzusammeln."
+          "courseC_collector_prog6_b": "Du kommst nicht mehr weiter? Versuche diesen Weg, um die Schätze einzusammeln!"
         },
         "courseC_collector_prog6_2019": {
           "courseC_collector_prog6_a": "Findest du heraus, was falsch ist?\n\nVersuche einmal mit der \"Schritt\" Taste den Code Zeile für Zeile auszuführen, um die Fehler zu finden.",
-          "courseC_collector_prog6_b": "Du kommst nicht mehr weiter? Versuche diesen Weg zu nehmen, um die Schätze einzusammeln."
+          "courseC_collector_prog6_b": "Du kommst nicht mehr weiter? Versuche diesen Weg, um die Schätze einzusammeln!"
         },
         "courseC_collector_prog6_2020": {
           "courseC_collector_prog6_a": "Findest du heraus, was falsch ist?\n\nVersuche einmal mit der \"Schritt\" Taste den Code Zeile für Zeile auszuführen, um die Fehler zu finden.",
-          "courseC_collector_prog6_b": "Du kommst nicht mehr weiter? Versuche diesen Weg zu nehmen, um die Schätze einzusammeln."
+          "courseC_collector_prog6_b": "Du kommst nicht mehr weiter? Versuche diesen Weg, um die Schätze einzusammeln!"
         },
         "courseC_collector_prog7": {
-          "courseC_collector_prog7_a": "Du hast schon sehr viel großartigen Code in deinem Arbeitsbereich. Du musst nichts davon löschen, um die Aufgabe zu lösen. ",
-          "courseC_collector_prog7_b": "Der Baustein, den du brauchst, um die Abenteurerin in die richtige Richtung zu bewegen ist nicht dabei? Zieh einen Baustein aus der Werkzeugkiste heraus.",
+          "courseC_collector_prog7_a": "Es gibt schon jede Menge tollen Code im Arbeitsbereich! Du musst nichts davon löschen, um die Aufgabe zu lösen. ",
+          "courseC_collector_prog7_b": "Fehlt der Block, den du brauchst, um die Abenteurerin in die richtige Richtung zu bewegen? Zieh einen rüber aus der Werkzeugkiste!",
           "courseC_collector_prog7_c": "Du kannst den besten Weg, um alle Schätze einzusammeln, nicht erkennen? Versuche mal diesen!"
         },
         "courseC_collector_prog7_2018": {
-          "courseC_collector_prog7_a": "Du hast schon sehr viel großartigen Code in deinem Arbeitsbereich. Du musst nichts davon löschen, um die Aufgabe zu lösen. ",
-          "courseC_collector_prog7_b": "Der Baustein, den du brauchst, um die Abenteurerin in die richtige Richtung zu bewegen ist nicht dabei? Zieh einen Baustein aus der Werkzeugkiste heraus.",
+          "courseC_collector_prog7_a": "Es gibt schon jede Menge tollen Code im Arbeitsbereich! Du musst nichts davon löschen, um die Aufgabe zu lösen. ",
+          "courseC_collector_prog7_b": "Fehlt der Block, den du brauchst, um die Abenteurerin in die richtige Richtung zu bewegen? Zieh einen rüber aus der Werkzeugkiste!",
           "courseC_collector_prog7_c": "Du kannst den besten Weg, um alle Schätze einzusammeln, nicht erkennen? Versuche mal diesen!"
         },
         "courseC_collector_prog7_2019": {
-          "courseC_collector_prog7_a": "Du hast schon sehr viel großartigen Code in deinem Arbeitsbereich. Du musst nichts davon löschen, um die Aufgabe zu lösen. ",
-          "courseC_collector_prog7_b": "Der Baustein, den du brauchst, um die Abenteurerin in die richtige Richtung zu bewegen ist nicht dabei? Zieh einen Baustein aus der Werkzeugkiste heraus.",
+          "courseC_collector_prog7_a": "Es gibt schon jede Menge tollen Code im Arbeitsbereich! Du musst nichts davon löschen, um die Aufgabe zu lösen. ",
+          "courseC_collector_prog7_b": "Fehlt der Block, den du brauchst, um die Abenteurerin in die richtige Richtung zu bewegen? Zieh einen rüber aus der Werkzeugkiste!",
           "courseC_collector_prog7_c": "Du kannst den besten Weg, um alle Schätze einzusammeln, nicht erkennen? Versuche mal diesen!"
         },
         "courseC_collector_prog7_2020": {
-          "courseC_collector_prog7_a": "Du hast schon sehr viel großartigen Code in deinem Arbeitsbereich. Du musst nichts davon löschen, um die Aufgabe zu lösen. ",
-          "courseC_collector_prog7_b": "Der Baustein, den du brauchst, um die Abenteurerin in die richtige Richtung zu bewegen ist nicht dabei? Zieh einen Baustein aus der Werkzeugkiste heraus.",
+          "courseC_collector_prog7_a": "Es gibt schon jede Menge tollen Code im Arbeitsbereich! Du musst nichts davon löschen, um die Aufgabe zu lösen. ",
+          "courseC_collector_prog7_b": "Fehlt der Block, den du brauchst, um die Abenteurerin in die richtige Richtung zu bewegen? Zieh einen rüber aus der Werkzeugkiste!",
           "courseC_collector_prog7_c": "Du kannst den besten Weg, um alle Schätze einzusammeln, nicht erkennen? Versuche mal diesen!"
         },
         "courseC_collector_prog_challenge1": {
-          "courseC_collector_prog_challenge1_a": "Du kannst den 'sammeln\\`Baustein öfter verwenden, um die zusätzlichen Schätze einzusammeln."
+          "courseC_collector_prog_challenge1_a": "Du kannst den 'sammle' Block mehrfach verwenden, um die zusätzlichen Schätze einzusammeln!"
         },
         "courseC_collector_prog_challenge1_2018": {
-          "courseC_collector_prog_challenge1_a": "Du kannst den 'sammeln\\`Baustein öfter verwenden, um die zusätzlichen Schätze einzusammeln."
+          "courseC_collector_prog_challenge1_a": "Du kannst den 'sammle' Block mehrfach verwenden, um die zusätzlichen Schätze einzusammeln!"
         },
         "courseC_collector_prog_challenge1_2019": {
-          "courseC_collector_prog_challenge1_a": "Du kannst den 'sammeln\\`Baustein öfter verwenden, um die zusätzlichen Schätze einzusammeln."
+          "courseC_collector_prog_challenge1_a": "Du kannst den 'sammle' Block mehrfach verwenden, um die zusätzlichen Schätze einzusammeln!"
         },
         "courseC_collector_prog_challenge1_2020": {
-          "courseC_collector_prog_challenge1_a": "Du kannst den 'sammeln\\`Baustein öfter verwenden, um die zusätzlichen Schätze einzusammeln."
+          "courseC_collector_prog_challenge1_a": "Du kannst den 'sammle' Block mehrfach verwenden, um die zusätzlichen Schätze einzusammeln!"
         },
         "courseC_collector_prog_challenge2": {
-          "courseC_collector_prog_challenge1_a": "Du kannst mehr als einen 'sammeln\\` Baustein auf jedem Feld verwenden.",
+          "courseC_collector_prog_challenge1_a": "Du kannst mehr als einen 'sammle' Block auf jedem Feld verwenden.",
           "courseC_collector_prog_challenge1_b": "Hast du dich verlaufen? Versuche diesen Weg zu nehmen, um die Aufgabe zu lösen!"
         },
         "courseC_collector_prog_challenge2_2018": {
-          "courseC_collector_prog_challenge1_a": "Du kannst mehr als einen 'sammeln\\` Baustein auf jedem Feld verwenden.",
+          "courseC_collector_prog_challenge1_a": "Du kannst mehr als einen 'sammle' Block auf jedem Feld verwenden.",
           "courseC_collector_prog_challenge1_b": "Hast du dich verlaufen? Versuche diesen Weg zu nehmen, um die Aufgabe zu lösen!"
         },
         "courseC_collector_prog_challenge2_2019": {
-          "courseC_collector_prog_challenge1_a": "Du kannst mehr als einen 'sammeln\\` Baustein auf jedem Feld verwenden.",
+          "courseC_collector_prog_challenge1_a": "Du kannst mehr als einen 'sammle' Block auf jedem Feld verwenden.",
           "courseC_collector_prog_challenge1_b": "Hast du dich verlaufen? Versuche diesen Weg zu nehmen, um die Aufgabe zu lösen!"
         },
         "courseC_collector_prog_challenge2_2020": {
-          "courseC_collector_prog_challenge1_a": "Du kannst mehr als einen 'sammeln\\` Baustein auf jedem Feld verwenden.",
+          "courseC_collector_prog_challenge1_a": "Du kannst mehr als einen 'sammle' Block auf jedem Feld verwenden.",
           "courseC_collector_prog_challenge1_b": "Hast du dich verlaufen? Versuche diesen Weg zu nehmen, um die Aufgabe zu lösen!"
         },
         "courseC_flappy_events1": {
@@ -4583,19 +4542,19 @@
           "courseC_maze_debugging_challenge2_c": "Es gibt zwei verschiedene Wege, denen du folgen kannst, indem du dich einfach vorwärts bewegst und viermal abbiegst. Wenn du eine Möglichkeit findest, eine Schleife zu benutzen, gibt es sogar noch mehr Möglichkeiten! \n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
         "courseC_maze_loops_challenge1a": {
-          "courseC_maze_loops_challenge1_a": "Stell dir vor, dass dieser Weg in zwei verschiedene Teilstücke aufgeteilt ist. Jedes Teilstück hat ein Muster, das du wiederholen kannst.",
+          "courseC_maze_loops_challenge1_a": "Stell dir vor, der Weg besteht aus zwei verschiedenen Teilen! Jeder Teil hat ein Muster, das du wiederholen kannst.",
           "courseC_maze_loops_challenge1_b": "Kannst du dich daran erinnern, wie du Schleifen verwendet hast, um ein Treppenmuster zu wiederholen?"
         },
         "courseC_maze_loops_challenge1a_2018": {
-          "courseC_maze_loops_challenge1_a": "Stell dir vor, dass dieser Weg in zwei verschiedene Teilstücke aufgeteilt ist. Jedes Teilstück hat ein Muster, das du wiederholen kannst.",
+          "courseC_maze_loops_challenge1_a": "Stell dir vor, der Weg besteht aus zwei verschiedenen Teilen! Jeder Teil hat ein Muster, das du wiederholen kannst.",
           "courseC_maze_loops_challenge1_b": "Kannst du dich daran erinnern, wie du Schleifen verwendet hast, um ein Treppenmuster zu wiederholen?"
         },
         "courseC_maze_loops_challenge1a_2019": {
-          "courseC_maze_loops_challenge1_a": "Stell dir vor, dass dieser Weg in zwei verschiedene Teilstücke aufgeteilt ist. Jedes Teilstück hat ein Muster, das du wiederholen kannst.",
+          "courseC_maze_loops_challenge1_a": "Stell dir vor, der Weg besteht aus zwei verschiedenen Teilen! Jeder Teil hat ein Muster, das du wiederholen kannst.",
           "courseC_maze_loops_challenge1_b": "Kannst du dich daran erinnern, wie du Schleifen verwendet hast, um ein Treppenmuster zu wiederholen?"
         },
         "courseC_maze_loops_challenge1a_2020": {
-          "courseC_maze_loops_challenge1_a": "Stell dir vor, dass dieser Weg in zwei verschiedene Teilstücke aufgeteilt ist. Jedes Teilstück hat ein Muster, das du wiederholen kannst.",
+          "courseC_maze_loops_challenge1_a": "Stell dir vor, der Weg besteht aus zwei verschiedenen Teilen! Jeder Teil hat ein Muster, das du wiederholen kannst.",
           "courseC_maze_loops_challenge1_b": "Kannst du dich daran erinnern, wie du Schleifen verwendet hast, um ein Treppenmuster zu wiederholen?"
         },
         "courseC_maze_programming1": {
@@ -4719,131 +4678,131 @@
           "courseC_maze_programming7_b": "Wenn du Probleme hast, diese Aufgabe zu lösen, schreibe alle Bewegungen auf ein Blatt Papier!"
         },
         "courseC_maze_programming8": {
-          "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile zu prüfen!",
+          "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile prüfen!",
           "courseC_maze_programming8_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen! Dann siehst du, was passiert, auch wenn die Aufgabe noch nicht vollständig gelöst ist. "
         },
         "courseC_maze_programming8_2018": {
-          "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile zu prüfen!",
+          "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile prüfen!",
           "courseC_maze_programming8_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_maze_programming8_2019": {
-          "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile zu prüfen!",
+          "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile prüfen!",
           "courseC_maze_programming8_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_maze_programming8_2020": {
-          "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile zu prüfen!",
+          "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile prüfen!",
           "courseC_maze_programming8_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_maze_programming_challenge1": {
-          "courseC_maze_programming_challenge1_a": "Es gibt viele Möglichkeiten, zum Schwein zu kommen. Benutze deinen Finger, um einen Weg zu finden und ihn dann zu programmieren!"
+          "courseC_maze_programming_challenge1_a": "Es gibt viele Möglichkeiten, zum Schwein zu kommen. Benutze deinen Finger um einen Weg zu finden und dann programmiere ihn!"
         },
         "courseC_maze_programming_challenge1_2018": {
-          "courseC_maze_programming_challenge1_a": "Es gibt viele Möglichkeiten, zum Schwein zu kommen. Benutze deinen Finger, um einen Weg zu finden und ihn dann zu programmieren!"
+          "courseC_maze_programming_challenge1_a": "Es gibt viele Möglichkeiten, zum Schwein zu kommen. Benutze deinen Finger um einen Weg zu finden und dann programmiere ihn!"
         },
         "courseC_maze_programming_challenge1_2019": {
-          "courseC_maze_programming_challenge1_a": "Es gibt viele Möglichkeiten, zum Schwein zu kommen. Benutze deinen Finger, um einen Weg zu finden und ihn dann zu programmieren!"
+          "courseC_maze_programming_challenge1_a": "Es gibt viele Möglichkeiten, zum Schwein zu kommen. Benutze deinen Finger um einen Weg zu finden und dann programmiere ihn!"
         },
         "courseC_maze_programming_challenge1_2020": {
-          "courseC_maze_programming_challenge1_a": "Es gibt viele Möglichkeiten, zum Schwein zu kommen. Benutze deinen Finger, um einen Weg zu finden und ihn dann zu programmieren!"
+          "courseC_maze_programming_challenge1_a": "Es gibt viele Möglichkeiten, zum Schwein zu kommen. Benutze deinen Finger um einen Weg zu finden und dann programmiere ihn!"
         },
         "courseC_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_\"Pass sehr gut auf, dass ich mich in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!\"_",
-          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung erfordert nur 5 Bausteine, sie verwendet dabei jedoch diesen Baustein:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_maze_programming_challenge2_2018": {
           "courseC_maze_programming_challenge2_a": "_\"Pass sehr gut auf, dass ich mich in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!\"_",
-          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung erfordert nur 5 Bausteine, sie verwendet dabei jedoch diesen Baustein:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_maze_programming_challenge2_2019": {
           "courseC_maze_programming_challenge2_a": "_\"Pass sehr gut auf, dass ich mich in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!\"_",
-          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung erfordert nur 5 Bausteine, sie verwendet dabei jedoch diesen Baustein:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_maze_programming_challenge2_2020": {
           "courseC_maze_programming_challenge2_a": "_\"Pass sehr gut auf, dass ich mich in die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!\"_",
-          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung erfordert nur 5 Bausteine, sie verwendet dabei jedoch diesen Baustein:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "Die kürzeste Lösung braucht nur 5 Blöcke, aber dieser Block wird benötigt:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "BB-8 hebt den Metallschrott automatisch auf, wenn er darüber fährt.",
           "courseC_starWars_loops1_b": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
-          "courseC_starWars_loops1_c": "Du musst den Baustein 'vorwärts bewegen' 5 mal verwenden, um diese Aufgabe zu lösen."
+          "courseC_starWars_loops1_c": "Du musst den Block 'vorwärts bewegen' 5 mal verwenden um diese Aufgabe zu lösen."
         },
         "courseC_starWars_loops10": {
           "courseC_starWars_loops10_a": "Sieht dieses Muster nicht wie eine Riesentreppe aus? Schau, ob du das verwenden kannst, was du in den letzten Aufgaben gelernt hast, um alle Drehungen richtig hinzubekommen.",
-          "courseC_starWars_loops10_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**.",
+          "courseC_starWars_loops10_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**.",
           "courseC_starWars_loops10_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops10_2018": {
           "courseC_starWars_loops10_a": "Sieht dieses Muster nicht wie eine Riesentreppe aus? Schau, ob du das verwenden kannst, was du in den letzten Aufgaben gelernt hast, um alle Drehungen richtig hinzubekommen.",
-          "courseC_starWars_loops10_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**.",
+          "courseC_starWars_loops10_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**.",
           "courseC_starWars_loops10_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops10_2019": {
           "courseC_starWars_loops10_a": "Sieht dieses Muster nicht wie eine Riesentreppe aus? Schau, ob du das verwenden kannst, was du in den letzten Aufgaben gelernt hast, um alle Drehungen richtig hinzubekommen.",
-          "courseC_starWars_loops10_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**.",
+          "courseC_starWars_loops10_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**.",
           "courseC_starWars_loops10_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops10_2020": {
           "courseC_starWars_loops10_a": "Sieht dieses Muster nicht wie eine Riesentreppe aus? Schau, ob du das verwenden kannst, was du in den letzten Aufgaben gelernt hast, um alle Drehungen richtig hinzubekommen.",
-          "courseC_starWars_loops10_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**.",
+          "courseC_starWars_loops10_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**.",
           "courseC_starWars_loops10_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops1_2018": {
           "courseC_starWars_loops1_a": "BB-8 hebt den Metallschrott automatisch auf, wenn er darüber fährt.",
           "courseC_starWars_loops1_b": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
-          "courseC_starWars_loops1_c": "Du musst den Baustein 'vorwärts bewegen' 5 mal verwenden, um diese Aufgabe zu lösen."
+          "courseC_starWars_loops1_c": "Du musst den Block 'vorwärts bewegen' 5 mal verwenden um diese Aufgabe zu lösen."
         },
         "courseC_starWars_loops1_2019": {
           "courseC_starWars_loops1_a": "BB-8 hebt den Metallschrott automatisch auf, wenn er darüber fährt.",
           "courseC_starWars_loops1_b": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
-          "courseC_starWars_loops1_c": "Du musst den Baustein 'vorwärts bewegen' 5 mal verwenden, um diese Aufgabe zu lösen."
+          "courseC_starWars_loops1_c": "Du musst den Block 'vorwärts bewegen' 5 mal verwenden um diese Aufgabe zu lösen."
         },
         "courseC_starWars_loops1_2020": {
           "courseC_starWars_loops1_a": "BB-8 hebt den Metallschrott automatisch auf, wenn er darüber fährt.",
           "courseC_starWars_loops1_b": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast.",
-          "courseC_starWars_loops1_c": "Du musst den Baustein 'vorwärts bewegen' 5 mal verwenden, um diese Aufgabe zu lösen."
+          "courseC_starWars_loops1_c": "Du musst den Block 'vorwärts bewegen' 5 mal verwenden um diese Aufgabe zu lösen."
         },
         "courseC_starWars_loops2": {
-          "courseC_starWars_loops2_a": "Um Code zu wiederholen, ziehe eine 'wiederholen'-Schleife aus der Werkzeugkiste und setze dann den gewünschten Baustein hinein."
+          "courseC_starWars_loops2_a": "Um Code zu wiederholen, nimm zunächst eine 'wiederhole' Schleife und setze dann den gewünschten Block hinein!"
         },
         "courseC_starWars_loops2_2018": {
-          "courseC_starWars_loops2_a": "Um Code zu wiederholen, ziehe eine 'wiederholen'-Schleife aus der Werkzeugkiste und setze dann den gewünschten Baustein hinein."
+          "courseC_starWars_loops2_a": "Um Code zu wiederholen, nimm zunächst eine 'wiederhole' Schleife und setze dann den gewünschten Block hinein!"
         },
         "courseC_starWars_loops2_2019": {
-          "courseC_starWars_loops2_a": "Um Code zu wiederholen, ziehe eine 'wiederholen'-Schleife aus der Werkzeugkiste und setze dann den gewünschten Baustein hinein."
+          "courseC_starWars_loops2_a": "Um Code zu wiederholen, nimm zunächst eine 'wiederhole' Schleife und setze dann den gewünschten Block hinein!"
         },
         "courseC_starWars_loops2_2020": {
-          "courseC_starWars_loops2_a": "Um Code zu wiederholen, ziehe eine 'wiederholen'-Schleife aus der Werkzeugkiste und setze dann den gewünschten Baustein hinein."
+          "courseC_starWars_loops2_a": "Um Code zu wiederholen, nimm zunächst eine 'wiederhole' Schleife und setze dann den gewünschten Block hinein!"
         },
         "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2_a": "Um Code zu wiederholen, ziehe eine 'wiederholen'-Schleife aus der Werkzeugkiste und setze dann den gewünschten Baustein hinein."
+          "courseC_starWars_loops2_a": "Um Code zu wiederholen, nimm zunächst eine 'wiederhole' Schleife und setze dann den gewünschten Block hinein!"
         },
         "courseC_starWars_loops4": {
-          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im \\`drehen´ Baustein klickst, kannst du ihn in \"rechts drehen\" ändern.",
+          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im Drehen Block klickst, kannst du ihn auf \"rechts drehen\" ändern.",
           "courseC_starWars_loops4_a": "Benutze zwei `wiederhole` Bausteine.",
           "courseC_starWars_loops4_b": "Jede 'wiederholen'-Schleife enthält nur einen Befehl: 'vorwärts bewegen'."
         },
         "courseC_starWars_loops4_2018": {
-          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im \\`drehen´ Baustein klickst, kannst du ihn in \"rechts drehen\" ändern.",
+          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im Drehen Block klickst, kannst du ihn auf \"rechts drehen\" ändern.",
           "courseC_starWars_loops4_a": "Benutze zwei `wiederhole` Bausteine.",
           "courseC_starWars_loops4_b": "Jede 'wiederholen'-Schleife enthält nur einen Befehl: 'vorwärts bewegen'."
         },
         "courseC_starWars_loops4_2019": {
-          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im \\`drehen´ Baustein klickst, kannst du ihn in \"rechts drehen\" ändern.",
+          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im Drehen Block klickst, kannst du ihn auf \"rechts drehen\" ändern.",
           "courseC_starWars_loops4_a": "Benutze zwei `wiederhole` Bausteine.",
           "courseC_starWars_loops4_b": "Jede 'wiederholen'-Schleife enthält nur einen Befehl: 'vorwärts bewegen'."
         },
         "courseC_starWars_loops4_2020": {
-          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im \\`drehen´ Baustein klickst, kannst du ihn in \"rechts drehen\" ändern.",
+          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im Drehen Block klickst, kannst du ihn auf \"rechts drehen\" ändern.",
           "courseC_starWars_loops4_a": "Benutze zwei `wiederhole` Bausteine.",
           "courseC_starWars_loops4_b": "Jede 'wiederholen'-Schleife enthält nur einen Befehl: 'vorwärts bewegen'."
         },
         "courseC_starWars_loops4_copy": {
-          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im \\`drehen´ Baustein klickst, kannst du ihn in \"rechts drehen\" ändern.",
+          "courseC_starWars_loops4_c": "Wenn du auf den kleinen Pfeil neben \"links drehen\" im Drehen Block klickst, kannst du ihn auf \"rechts drehen\" ändern.",
           "courseC_starWars_loops4_a": "Benutze zwei `wiederhole` Bausteine.",
           "courseC_starWars_loops4_b": "Jede 'wiederholen'-Schleife enthält nur einen Befehl: 'vorwärts bewegen'."
         },
         "courseC_starWars_loops5": {
-          "courseC_starWars_loops5_b": "Um dich abwärts zu bewegen, musst du dich zuerst drehen und dann wieder vorwärts gehen.",
+          "courseC_starWars_loops5_b": "Um nach unten zu gehen, musst du dich zuerst in die Richtung drehen und dann wieder vorwärts gehen.",
           "courseC_starWars_loops5_a": "Die beste Lösung verwendet eine Drehung, dann ein einzelnes 'vorwärts bewegen', nochmal eine Drehung und dann eine Schleife."
         },
         "courseC_starWars_loops5_2018": {
@@ -4856,93 +4815,93 @@
           "courseC_starWars_loops5_a": "Die beste Lösung besteht aus einem einzigen \"bewege vorwärts\", dann einer Kurve und dann einer Schleife."
         },
         "courseC_starWars_loops5_copy": {
-          "courseC_starWars_loops5_b": "Um dich abwärts zu bewegen, musst du dich zuerst drehen und dann wieder vorwärts gehen.",
+          "courseC_starWars_loops5_b": "Um nach unten zu gehen, musst du dich zuerst in die Richtung drehen und dann wieder vorwärts gehen.",
           "courseC_starWars_loops5_a": "Die beste Lösung verwendet eine Drehung, dann ein einzelnes 'vorwärts bewegen', nochmal eine Drehung und dann eine Schleife."
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Schreibe alle Bewegungen auf ein Stück Papier und suche dann nach einem Muster.",
-          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**."
+          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**."
         },
         "courseC_starWars_loops6_2018": {
           "courseC_starWars_loops6_a": "Schreibe alle Bewegungen auf ein Stück Papier und suche dann nach einem Muster.",
-          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**."
+          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**."
         },
         "courseC_starWars_loops6_2019": {
           "courseC_starWars_loops6_a": "Schreibe alle Bewegungen auf ein Stück Papier und suche dann nach einem Muster.",
-          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**."
+          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**."
         },
         "courseC_starWars_loops6_2020": {
           "courseC_starWars_loops6_a": "Schreibe alle Bewegungen auf ein Stück Papier und suche dann nach einem Muster.",
-          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**."
+          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**."
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "Schreibe alle Bewegungen auf ein Stück Papier und suche dann nach einem Muster.",
-          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederholen'-Schleife in eine andere Schleife einfügen!\\\nSo etwas heißt dann **geschachtelte Schleife**."
+          "courseC_starWars_loops6_b": "Wenn du weniger Code verwenden möchtest, kannst du auch eine 'wiederhole'-Schleife in eine andere einfügen!\\\nSo etwas heißt dann **verschachtelte Schleife**."
         },
         "courseC_starWars_loops7": {
-          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einfachen Treppenstufe an. Bekommst du damit den ganzen Metallschrott?",
+          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einzelnen Treppenstufe an! Bekommst du so den ganzen Schrott?",
           "courseC_starWars_loops7_b": "Wenn du mit dieser Aufgabe Probleme hast, zeichne einfach alle Bewegungen auf ein Blatt Papier und suche dann ein Muster.",
           "courseC_starWars_loops7_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops7_2018": {
-          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einfachen Treppenstufe an. Bekommst du damit den ganzen Metallschrott?",
+          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einzelnen Treppenstufe an! Bekommst du so den ganzen Schrott?",
           "courseC_starWars_loops7_b": "Wenn du mit dieser Aufgabe Probleme hast, zeichne einfach alle Bewegungen auf ein Blatt Papier und suche dann ein Muster.",
           "courseC_starWars_loops7_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops7_2019": {
-          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einfachen Treppenstufe an. Bekommst du damit den ganzen Metallschrott?",
+          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einzelnen Treppenstufe an! Bekommst du so den ganzen Schrott?",
           "courseC_starWars_loops7_b": "Wenn du mit dieser Aufgabe Probleme hast, zeichne einfach alle Bewegungen auf ein Blatt Papier und suche dann ein Muster.",
           "courseC_starWars_loops7_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops7_2020": {
-          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einfachen Treppenstufe an. Bekommst du damit den ganzen Metallschrott?",
+          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einzelnen Treppenstufe an! Bekommst du so den ganzen Schrott?",
           "courseC_starWars_loops7_b": "Wenn du mit dieser Aufgabe Probleme hast, zeichne einfach alle Bewegungen auf ein Blatt Papier und suche dann ein Muster.",
           "courseC_starWars_loops7_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops7_copy": {
-          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einfachen Treppenstufe an. Bekommst du damit den ganzen Metallschrott?",
+          "courseC_starWars_loops7_a": "Dieses Muster sieht schwieriger aus, als es ist! Fang mit einer einzelnen Treppenstufe an! Bekommst du so den ganzen Schrott?",
           "courseC_starWars_loops7_b": "Wenn du mit dieser Aufgabe Probleme hast, zeichne einfach alle Bewegungen auf ein Blatt Papier und suche dann ein Muster.",
           "courseC_starWars_loops7_c": "Hab keine Angst, einen Fehler zu machen! Führe den Code aus, um zu sehen, was passiert, auch wenn du das Rätsel noch nicht gelöst hast."
         },
         "courseC_starWars_loops8": {
-          "course_starWars_loops8_a": "Versuche, das Problem in kleine Bestandteile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
-          "course_starWars_loops8_b": "Schau dir die erste Hälfte der Aufgabe so an, als wäre es eine Treppenstufenaufgabe. Wie hast du das vorhin gelöst?",
+          "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
+          "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
           "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_2018": {
-          "course_starWars_loops8_a": "Versuche, das Problem in kleine Bestandteile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
-          "course_starWars_loops8_b": "Schau dir die erste Hälfte der Aufgabe so an, als wäre es eine Treppenstufenaufgabe. Wie hast du das vorhin gelöst?",
+          "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
+          "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
           "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_2019": {
-          "course_starWars_loops8_a": "Versuche, das Problem in kleine Bestandteile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
-          "course_starWars_loops8_b": "Schau dir die erste Hälfte der Aufgabe so an, als wäre es eine Treppenstufenaufgabe. Wie hast du das vorhin gelöst?",
+          "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
+          "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
           "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_2020": {
-          "course_starWars_loops8_a": "Versuche, das Problem in kleine Bestandteile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
-          "course_starWars_loops8_b": "Schau dir die erste Hälfte der Aufgabe so an, als wäre es eine Treppenstufenaufgabe. Wie hast du das vorhin gelöst?",
+          "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
+          "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
           "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_copy": {
-          "course_starWars_loops8_a": "Versuche, das Problem in kleine Bestandteile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
-          "course_starWars_loops8_b": "Schau dir die erste Hälfte der Aufgabe so an, als wäre es eine Treppenstufenaufgabe. Wie hast du das vorhin gelöst?",
+          "course_starWars_loops8_a": "Versuche, das Problem in kleine Teile zu zerlegen. Lass dir Zeit. Du musst die Aufgabe nicht gleich beim ersten Versuch lösen!",
+          "course_starWars_loops8_b": "Denke bei der ersten Hälfte der Aufgabe an die Treppenstufen Aufgabe! Wie hast du das vorhin gelöst?",
           "course_starWars_loops8_c": "Schau dir diesen Pfad an.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops9": {
-          "course_starWars_loops9_b": "Du kannst mehr als einen Baustein in eine 'wiederholen'-Schleife einfügen.",
+          "course_starWars_loops9_b": "Du kannst mehr als einen Block in eine 'wiederholen' Schleife setzen.",
           "course_starWars_loops9_c": "Du musst dich nicht nach links drehen, um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2018": {
-          "course_starWars_loops9_b": "Du kannst mehr als einen Baustein in eine 'wiederholen'-Schleife einfügen.",
+          "course_starWars_loops9_b": "Du kannst mehr als einen Block in eine 'wiederholen' Schleife setzen.",
           "course_starWars_loops9_c": "Du musst dich nicht nach links drehen, um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2019": {
-          "course_starWars_loops9_b": "Du kannst mehr als einen Baustein in eine 'wiederholen'-Schleife einfügen.",
+          "course_starWars_loops9_b": "Du kannst mehr als einen Block in eine 'wiederholen' Schleife setzen.",
           "course_starWars_loops9_c": "Du musst dich nicht nach links drehen, um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2020": {
-          "course_starWars_loops9_b": "Du kannst mehr als einen Baustein in eine 'wiederholen'-Schleife einfügen.",
+          "course_starWars_loops9_b": "Du kannst mehr als einen Block in eine 'wiederholen' Schleife setzen.",
           "course_starWars_loops9_c": "Du musst dich nicht nach links drehen, um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseD_artist_1_2018": {
@@ -5493,6 +5452,35 @@
           "courseD_artist_ramp12_b": "Versuche, die Aufgabe in 2 Teile zu zerlegen und zwei Schleifen zu verwenden.",
           "courseD_artist_ramp12_c": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!"
         },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "Klicke einfach auf `Ausführen`, um den Ablauf dieses Programms zu sehen!"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_a": "Eines der vier binären Muster in der Werkzeugkiste ist die Lösung dieser Aufgabe!",
+          "courseD_artist_binary3_b": "Hab keine Angst, einen Fehler zu machen! Versuche, weitere Bausteine hinzuzufügen und den Code auszuführen, auch wenn du die Aufgabe noch nicht gelöst hast."
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "Schaue dir die ersten drei Quadrate in der oberen Reihe an. Könnte diese drei wiederholen, um das ganze Muster zu erhalten?",
+          "courseD_artist_binary4_b": "Hab keine Angst, einen Fehler zu machen! Versuche binären Code zu schreiben und auszuführen, um zu sehen, was passiert, auch wenn du der Meinung bist, dass die Aufgabe noch nicht gelöst ist."
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "Versuche zuerst, den Code auszuführen, um zu sehen, woran du arbeiten musst.",
+          "courseD_artist_binary5_b": "Du musst nur zwei Reihen vertauschen, um ein Lächeln zu zeichnen.",
+          "courseD_artist_binary5_c": "Wenn du Probleme hast, diese Aufgabe zu lösen, zeichne die binären Linien auf ein Blatt Papier und versuche, ein Muster zu finden."
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "Beginne oben links. Wie weit musst du lesen, bevor sich das Muster wiederholt?",
+          "courseD_artist_binary6_b": "Du kannst deine binäre Zeichenfolge nacheinander aufbauen und testen!"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "Beginne oben links. Wie weit musst du lesen, bevor sich das Muster wiederholt?",
+          "courseD_artist_binary7_b": "Hab keine Angst, einen Fehler zu machen! Versuche binären Code zu schreiben und auszuführen, um zu sehen, was passiert, auch wenn du der Meinung bist, dass die Aufgabe noch nicht gelöst ist."
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "Die Spirale kann manchmal verwirrend sein. Isoliere in deiner Vortsellung jede horizontale Linie, während du diese Zeichnung erstellst.",
+          "courseD_artist_binary8_b": "Versuche zuerst, den Code auszuführen, um zu sehen, woran du arbeiten musst.",
+          "courseD_artist_binary8_c": "Hab keine Angst, einen Fehler zu machen! Versuche, weitere Bausteine hinzuzufügen und den Code auszuführen, auch wenn du die Aufgabe noch nicht gelöst hast."
+        },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
@@ -5724,13 +5712,13 @@
           "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Warum funktioniert die erste Hälfte dieses Programms? Denk darüber nach, warum die Biene sich rückwärts bewegen muss. Wie viel Nektar sammelt die Biene jedes Mal, wenn sie sich über eine Blüte bewegt?",

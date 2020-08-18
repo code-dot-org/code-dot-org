@@ -53,8 +53,8 @@ delia.wu@codingmarch.com                                               |
 ilana@worldtechmakers.com                                       |
 | Ακτή Ελεφαντοστού                           | Africa Children Code                                              | M. Gnahoré Didier                  | http://www.africachildrencode.org   
 gnahore@africachildrencode.org                           |
-| Τσεχία                                      | Czechitas                                                         | Pavla Randakova                    | https://czechitas.cz   
-paja@czechitas.cz                                                     |
+| Τσεχία                                      | Czechitas                                                         | Lucie Jurystová                    | https://czechitas.cz   
+lucie@czechitas.cz                                                    |
 | Ισημερινός                                  | Progracademy                                                      | Angelica Rodriguez                 | http://www.progracademy.org   
 angelica.rodriguez@progracademy.org                            |
 | Αίγυπτος                                    | Q-STEAM Club                                                      | Tamer Ragab                        | http://q-steam.com   

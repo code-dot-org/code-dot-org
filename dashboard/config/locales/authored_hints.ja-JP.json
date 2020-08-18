@@ -1162,7 +1162,7 @@
         },
         "course1_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
         "course2_artist_nestedLoops_challenge1": {
@@ -1244,8 +1244,8 @@
           "courseF_bee_functions_challenge2_b": "**答え**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "まずは前にある2つの山から、2つジェムを集めてみよう。\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nこれらのブロックを使ってみましょう。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "次に道にそって宝石を集めます。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nさっき作ったプログラムに 次のブロックを加えます。\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "まずは前にある2つの山から、2つジェムを集めてみよう。\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nこれらのブロックを使ってみましょう。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "次に道にそって宝石を集めます。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nさっき作ったプログラムに 次のブロックを加えます。\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "最後に他の道にある たからものを 集めます。さらに 次のブロックを 加えます。\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "これが、答え。\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1336,9 +1336,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "ゆびで プログラムを ゆっくり なぞって、まちがいを さがしてください。",
-          "courseA_artist_loops3_b": "このブロックを つかってみよう。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "４かい いじょうくりかえしたい ときは、ブロックの うえにある すうじを かえます。",
-          "courseB_artist_loops2_b": "プログラムを実行（じっこう）して、アーティストが どこまで いくか みてみよう。"
+          "courseA_artist_loops3_b": "このブロックを つかってみよう。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "４かい いじょうくりかえしたい ときは、ブロックの うえにある すうじを かえます。",
@@ -1354,10 +1352,7 @@
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "４かい いじょうくりかえしたい ときは、ブロックの うえにある すうじを かえます。",
-          "courseA_artist_loops4_b": "<xml><block type=\"simple_move_right\"/></xml> を、 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> のなかに いれて ください。",
-          "courseB_artist_loops4_a": "ジャンプブロックをつかえば、線を ひかずに 前にすすむことが できます。",
-          "courseB_artist_loops4_b": "くりかえしの中に1つブロックを入れます。",
-          "courseB_artist_loops4_c": "くりかえしの回数を かえるのを わすれないで。"
+          "courseA_artist_loops4_b": "<xml><block type=\"simple_move_right\"/></xml> を、 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> のなかに いれて ください。"
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> をつかって パズルをクリアしよう！",
@@ -1377,8 +1372,7 @@
         "courseA_artist_loops5_2020": {
           "courseA_artist_loops5_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> をつかって パズルをクリアしよう！",
           "courseA_artist_loops5_b": "４かい いじょうくりかえしたい ときは、ブロックの うえにある すうじを かえます。",
-          "courseA_artist_loops5_c": "<xml><block type=\"simple_move_right\"/></xml> を<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> の中に入れよう。",
-          "courseB_artist_loops5_a": "`くりかえし`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> をとりだして、そのなかに ブロックを 入れよう。なんかい くりかえせば いいかな？"
+          "courseA_artist_loops5_c": "<xml><block type=\"simple_move_right\"/></xml> を<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> の中に入れよう。"
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "うまくいかないときは、ブロックを すこしだけ ひっつけて どんなふうにかけるか ためしてみよう。",
@@ -1394,8 +1388,7 @@
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "うまくいかないときは、ブロックを すこしだけ ひっつけて どんなふうにかけるか ためしてみよう。",
-          "courseA_artist_loops6_b": "ちがう ほうこうに うごくブロック を ２つ つかいます。",
-          "courseB_artist_loops6_b": "どのように うごけばよいか 紙に書いてみて、くりかえしの パターンを みつけよう。"
+          "courseA_artist_loops6_b": "ちがう ほうこうに うごくブロック を ２つ つかいます。"
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "ひとつ ひとつ せんを かいて くりかえしのパターンを みつけよう。",
@@ -1415,10 +1408,7 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "ひとつ ひとつ せんを かいて くりかえしのパターンを みつけよう。",
           "courseA_artist_loops7_b": "１つなみをかいたら、それを くりかえして のこりの ２つを かいてみよう。",
-          "courseA_artist_loops7_c": "<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> のなかに なみをかくブロックを いれます。",
-          "courseB_artist_loops7_a": "このチャレンジでは、**4つ**くりかしをつかいます。",
-          "courseB_artist_loops7_b": "ちゅうい すべてのくりかえしで ちがう ほうこうの かいだんを 作ります。\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "このようなくりかえしになります。\n\n-   くりかえし 1\n    -   東\n    -   南\n\n-   くりかえし 2\n    -   東\n    -   北\n\n-   くりかえし 3\n    -   西\n    -   北\n\n-   くりかえし 4\n    -   西\n    -   南"
+          "courseA_artist_loops7_c": "<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> のなかに なみをかくブロックを いれます。"
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "実行（じっこう）して どうなるか みてみよう。",
@@ -1438,9 +1428,7 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "実行（じっこう）して どうなるか みてみよう。",
           "courseA_artist_loops8_b": "コードをどのように かえればいいか かんがえてみよう",
-          "courseA_artist_loops8_c": "コードを実行（じっこう）して、どうなるかみてみよう。\nはじごをかんせいさせるには、あと なにを すればいいか かんがえてみよう。",
-          "courseB_artist_loops8_a": "はしごを作るのは、何回くりかえせばいいですか？",
-          "courseB_artist_loops8_b": "さいしょにプログラムを実行（じっこう）して、どうなるか見てみよう。"
+          "courseA_artist_loops8_c": "コードを実行（じっこう）して、どうなるかみてみよう。\nはじごをかんせいさせるには、あと なにを すればいいか かんがえてみよう。"
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "東にいくブロックの したに もうひとつ ブロックを ついかしてみよう。",
@@ -1460,10 +1448,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "東にいくブロックの したに もうひとつ ブロックを ついかしてみよう。",
           "courseA_artist_loops9_b": "ブロックを いれのは、<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> の なかだよ。",
-          "courseA_artist_loops9_c": "いっぽん いっぽん せんを かいて くりかえしのパターンを みつけよう。",
-          "courseB_artist_loops9_a": "ジャンプ ブロックを 使えば、線をひかずに すすむことが できます。",
-          "courseB_artist_loops9_b": "このパズルをクリアするには、西ブロックを使います。",
-          "courseB_artist_loops9_c": "ひとつ ひとつ せんを かいて くりかえしのパターンを みつけよう。"
+          "courseA_artist_loops9_c": "いっぽん いっぽん せんを かいて くりかえしのパターンを みつけよう。"
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "<xml>  <block type=\"simple_move_up_left\"/></xml> をつかうと ななめにすすむことができるよ！",
@@ -2278,27 +2263,23 @@
         },
         "courseA_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
         "courseA_playlab_events_challenge2_2018": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
         "courseA_playlab_events_challenge2_2019": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
         "courseA_playlab_events_challenge2_2020": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
-        },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_a": "`くりかえし` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> を つかえば、プログラムが みじかく できます。",
-          "courseB_artist_loops3_b": "線をかくために、アーティストを南に うごかしてください。"
         },
         "courseB_Scrat_ramp1_2018": {
           "1": "スクラットが うごかないときは、ブロックを ちゃんと ひっつけて、もう いっかい ”▶ 実行（じっこう）”を おしてみよう！",
@@ -2370,8 +2351,6 @@
           "courseB_artist_loops2_b": "プログラムを実行（じっこう）して、アーティストが どこまで いくか みてみよう。"
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "ゆびで プログラムを ゆっくり なぞって、まちがいを さがしてください。",
-          "courseA_artist_loops3_b": "このブロックを つかってみよう。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "４かい いじょうくりかえしたい ときは、ブロックの うえにある すうじを かえます。",
           "courseB_artist_loops2_b": "プログラムを実行（じっこう）して、アーティストが どこまで いくか みてみよう。"
         },
@@ -2407,8 +2386,6 @@
           "courseB_artist_loops4_c": "くりかえしの回数を かえるのを わすれないで。"
         },
         "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "４かい いじょうくりかえしたい ときは、ブロックの うえにある すうじを かえます。",
-          "courseA_artist_loops4_b": "<xml><block type=\"simple_move_right\"/></xml> を、 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> のなかに いれて ください。",
           "courseB_artist_loops4_a": "ジャンプブロックをつかえば、線を ひかずに 前にすすむことが できます。",
           "courseB_artist_loops4_b": "くりかえしの中に1つブロックを入れます。",
           "courseB_artist_loops4_c": "くりかえしの回数を かえるのを わすれないで。"
@@ -2423,9 +2400,6 @@
           "courseB_artist_loops5_a": "`くりかえし`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> をとりだして、そのなかに ブロックを 入れよう。なんかい くりかえせば いいかな？"
         },
         "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> をつかって パズルをクリアしよう！",
-          "courseA_artist_loops5_b": "４かい いじょうくりかえしたい ときは、ブロックの うえにある すうじを かえます。",
-          "courseA_artist_loops5_c": "<xml><block type=\"simple_move_right\"/></xml> を<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> の中に入れよう。",
           "courseB_artist_loops5_a": "`くりかえし`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> をとりだして、そのなかに ブロックを 入れよう。なんかい くりかえせば いいかな？"
         },
         "courseB_artist_loops6": {
@@ -2438,8 +2412,6 @@
           "courseB_artist_loops6_b": "どのように うごけばよいか 紙に書いてみて、くりかえしの パターンを みつけよう。"
         },
         "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "うまくいかないときは、ブロックを すこしだけ ひっつけて どんなふうにかけるか ためしてみよう。",
-          "courseA_artist_loops6_b": "ちがう ほうこうに うごくブロック を ２つ つかいます。",
           "courseB_artist_loops6_b": "どのように うごけばよいか 紙に書いてみて、くりかえしの パターンを みつけよう。"
         },
         "courseB_artist_loops7": {
@@ -2458,9 +2430,6 @@
           "courseB_artist_loops7_c": "このようなくりかえしになります。\n\n-   くりかえし 1\n    -   東\n    -   南\n\n-   くりかえし 2\n    -   東\n    -   北\n\n-   くりかえし 3\n    -   西\n    -   北\n\n-   くりかえし 4\n    -   西\n    -   南"
         },
         "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "ひとつ ひとつ せんを かいて くりかえしのパターンを みつけよう。",
-          "courseA_artist_loops7_b": "１つなみをかいたら、それを くりかえして のこりの ２つを かいてみよう。",
-          "courseA_artist_loops7_c": "<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> のなかに なみをかくブロックを いれます。",
           "courseB_artist_loops7_a": "このチャレンジでは、**4つ**くりかしをつかいます。",
           "courseB_artist_loops7_b": "ちゅうい すべてのくりかえしで ちがう ほうこうの かいだんを 作ります。\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "このようなくりかえしになります。\n\n-   くりかえし 1\n    -   東\n    -   南\n\n-   くりかえし 2\n    -   東\n    -   北\n\n-   くりかえし 3\n    -   西\n    -   北\n\n-   くりかえし 4\n    -   西\n    -   南"
@@ -2478,9 +2447,6 @@
           "courseB_artist_loops8_b": "さいしょにプログラムを実行（じっこう）して、どうなるか見てみよう。"
         },
         "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "実行（じっこう）して どうなるか みてみよう。",
-          "courseA_artist_loops8_b": "コードをどのように かえればいいか かんがえてみよう",
-          "courseA_artist_loops8_c": "コードを実行（じっこう）して、どうなるかみてみよう。\nはじごをかんせいさせるには、あと なにを すればいいか かんがえてみよう。",
           "courseB_artist_loops8_a": "はしごを作るのは、何回くりかえせばいいですか？",
           "courseB_artist_loops8_b": "さいしょにプログラムを実行（じっこう）して、どうなるか見てみよう。"
         },
@@ -2500,9 +2466,6 @@
           "courseB_artist_loops9_c": "ひとつ ひとつ せんを かいて くりかえしのパターンを みつけよう。"
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "東にいくブロックの したに もうひとつ ブロックを ついかしてみよう。",
-          "courseA_artist_loops9_b": "ブロックを いれのは、<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> の なかだよ。",
-          "courseA_artist_loops9_c": "いっぽん いっぽん せんを かいて くりかえしのパターンを みつけよう。",
           "courseB_artist_loops9_a": "ジャンプ ブロックを 使えば、線をひかずに すすむことが できます。",
           "courseB_artist_loops9_b": "このパズルをクリアするには、西ブロックを使います。",
           "courseB_artist_loops9_c": "ひとつ ひとつ せんを かいて くりかえしのパターンを みつけよう。"
@@ -3368,10 +3331,6 @@
           "courseB_starWars_prog9_b": "パズルをクリアするほうほうは、たくさんあります。",
           "courseB_starWars_prog9_c": "`くりかえし` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> を つかってみよう。"
         },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "どうやって せんを かくか わからない？ <xml><block type=\"when_run\"/></xml> ブロックに ブロックをくっつけて、ためしてみてください。",
-          "courseA_artist_loops2_b": "この <xml><block type=\"simple_move_right\"/></xml> ブロックを つかって、パズルをクリアします。"
-        },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "`セット キャラ 1 ??? の絵`で、キャラを追加することができます。",
           "courseE_playLab_scaffold1_b": "プログラムが開始したときにキャラが登場するよう `実行（じっこう）した時`の下に`セット キャラ`を追加しよう。",
@@ -3783,8 +3742,8 @@
           "courseC_artist_loopsPrePre1a_b": "50ピクセルの線を ひくには、\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "*\"<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> で、線をひくよ\"*",
-          "courseC_artist_prog2_b": "角を曲がるときは、 <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> を使います。"
+          "courseC_artist_prog2_a": "ブロックを使って僕に「100ピクセル前に進む」ことを教えて。そうすれば自動的に線を引いてあげるよ。",
+          "courseC_artist_prog2_b": "カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。"
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "*\"<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> で、線をひくよ\"*",
@@ -5472,6 +5431,35 @@
           "courseD_artist_ramp12_b": "２つのパートに分けて、それぞれで くりかえしを 使おう。",
           "courseD_artist_ramp12_c": "`まがる`のドロップダウンメニューで 曲がる角度を 指定できます。"
         },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "どんなふうに動くのか `実行（じっこう）`してみよう！"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_a": "ツールボックスにある4つのパターンの中から １つ えらんでね。",
+          "courseD_artist_binary3_b": "ミスをおそれないで！まちがってもいいから、0と1の文字列を書いて、どうなるか実行してみよう。"
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "一番上の行のさいしょの３マスを見て。もようを かんせい させるために、この３マスのパターンをくりかえすことができるかな？",
+          "courseD_artist_binary4_b": "ミスをおそれないで！まちがってもいいから、0と1の文字列を書いて、どうなるか実行してみよう。"
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "どこを かえればいいか 調べるために、プログラムを 実行してみよう。",
+          "courseD_artist_binary5_b": "２つの行を入れかえるだけで、ニコニコ顔になるよ。",
+          "courseD_artist_binary5_c": "わからなくなったら、紙に 0と1を 書いて どんなパターンになっているのか 見つけよう。"
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "左上からスタートします。くりかえしパターンは、何マスかな？",
+          "courseD_artist_binary6_b": "1文字書いては 実行して、うまくいくか ためしてみよう！"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "左上からスタートします。くりかえしパターンは、何マスかな？",
+          "courseD_artist_binary7_b": "ミスをおそれないで！まちがってもいいから、0と1の文字列を書いて、どうなるか実行してみよう。"
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "うずまきを かくのに、少し こんらん するかもしれません。このパターンをかくとしたら、１行１行どんなパターンにしますか。",
+          "courseD_artist_binary8_b": "どこを かえればいいか 調べるために、プログラムを 実行してみよう。",
+          "courseD_artist_binary8_c": "ミスをおそれないで！まちがってもいいから、0と1の文字列を書いて、どうなるか実行してみよう。"
+        },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "くもの下にあるのが、花かどうか`もし` を使って調べてみよう。"
         },
@@ -5700,16 +5688,16 @@
           "courseD_bee_conditionals_challenge1_b": "花がある場所、ハチの巣がある場所、何もないところがあるから、`もし やること/でなければ`をくりかえして、その場所が どうなっているのか 調べてね。"
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`もし 花で` と同じく、`以下の間 花のミツ > 0`は、花があるところで動くよ。花がなくなるまで動いて、花がなくなったら くりかえしを やめるよ。これをためしてみて。\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "灰色の部分のプログラムはどんな風に動くかな？ハチが後ろにすすむ理由を考えてみて。花の上と通ったらハチはいくつミツを集めますか？",
@@ -5990,8 +5978,8 @@
           "courseD_collector_debugging9_b": "１ステップ毎に動かして、思い通りに 動いているか たしかめよう。"
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "**2つ**のマスから**2つづつ**宝石を集めます\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n次のブロックを使おう。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "次に道にそって宝石を集めます。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nさっき作ったプログラムに 次のブロックを加えます。\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "**2つ**のマスから**2つづつ**宝石を集めます\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n次のブロックを使おう。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "次に道にそって宝石を集めます。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nさっき作ったプログラムに 次のブロックを加えます。\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "最後に他の道にある たからものを 集めます。さらに 次のブロックを 加えます。\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "これが、答え。\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -7828,7 +7816,7 @@
           "courseF_artist_for_challenge1_a": "ペンの太さは 1 です。\n一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。",
           "courseF_artist_for_challenge1_b": "ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。",
           "courseF_artist_for_challenge1_c": "四角形を一つ書いたら、後ろにジャンプします。",
-          "courseF_artist_for_challenge1_d": "**答え**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_for_challenge1_d": "答えは先生に聞いてくださいね。"
         },
         "courseF_artist_for_challenge1_2018": {
           "courseF_artist_for_challenge1_a": "ペンの太さは 1 です。\n一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。",
@@ -8392,7 +8380,7 @@
           "courseF_bee_for_challenge2_a": "まず、花のミツを全部あつめて、そのあと、ハチミツを作りながらもどって来ます。\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。 `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。",
           "courseF_bee_for_challenge2_c": "ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。 `counter` 変数を上手く使って、ハチミツを作ろう。",
-          "courseF_bee_for_challenge2_d": "**答え**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_bee_for_challenge2_d": "答えは先生に聞いてくださいね。"
         },
         "courseF_bee_for_challenge2_2018": {
           "courseF_bee_for_challenge2_a": "まず、花のミツを全部あつめて、そのあと、ハチミツを作りながらもどって来ます。\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",

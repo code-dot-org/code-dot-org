@@ -714,7 +714,7 @@
           "courseD_bee_conditionals_challenge1_a": "Poţi găsi un drum care trece pe la fiecare floare si fiecare fagure fără a lovi vreun copac? Cel mai bun drum este o spirala.\n\n**Poţi rezolva această problemă fără a te întoarce la stânga.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "La fel ca şi blocul \"dacă eşti la floare\", codul din interiorul unui bloc \"cât timp nectar > 0\" va rula doar dacă albina este la o floare. Diferenţa principală este a acest cod se va executa repetat până când nu mai este nectar. Încearcă acest model:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "La fel ca şi blocul \"dacă eşti la floare\", codul din interiorul unui bloc \"cât timp nectar > 0\" va rula doar dacă albina este la o floare. Diferenţa principală este a acest cod se va executa repetat până când nu mai este nectar. Încearcă acest model:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Codul original ar merge perfect - doar dacă ar fi o singură comoară in fiecare grămadă!"
@@ -782,13 +782,6 @@
         "course4_harvester_nested_loops_challenge1": {
           "courseD_harvester_nested_loops_challenge1_a": "Probabil ai folosit până acum o buclă pentru a crea un model in zig-zag. Dacă îţi aminteşti acel algoritm, poţi să îi faci niste modificări aici."
         },
-        "courseA_artist_loops4_2020": {
-          "courseB_artist_loops4_a": "Blocul de săritură vă permite să vă deplasați înainte fără a trasa o linie.",
-          "courseB_artist_loops4_c": "Nu uitați să schimbați numărul de repetări ale buclei."
-        },
-        "courseA_artist_loops6_2020": {
-          "courseB_artist_loops6_b": "Încercați să puneți mișcările pe o foaie de hârtie și să căutați un model."
-        },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "Nu reușiți să vă dați seama unde să puneți bucla? Încercați să scrieți codul pas cu pas și să căutați un model.",
           "courseA_artist_loops7_b": "Scrieți mai întâi codul pentru un singur val, apoi repetați pentru a desena celelalte două."
@@ -827,8 +820,7 @@
           "courseA_artist_loops9_c": "Dacă nu reușiți să vă dați seama unde să puneți bucla, încercați să vă scrieți codul pas cu pas și să căutați modele."
         },
         "courseA_artist_loops9_2020": {
-          "courseA_artist_loops9_c": "Dacă nu reușiți să vă dați seama unde să puneți bucla, încercați să vă scrieți codul pas cu pas și să căutați modele.",
-          "courseB_artist_loops9_c": "Nu reușiți să vă dați seama unde să puneți bucla? Încercați să scrieți codul pas cu pas și să căutați un model."
+          "courseA_artist_loops9_c": "Dacă nu reușiți să vă dați seama unde să puneți bucla, încercați să vă scrieți codul pas cu pas și să căutați modele."
         },
         "courseA_collector_loops2": {
           "courseA_collector_loops2_a": "Va trebui să vă deplasați înainte să puteți colecta orice comoară."
@@ -916,9 +908,6 @@
         "courseA_harvester_loops6_2020": {
           "courseA_harvester_loops6_a": "Dacă vă împotmoliți, încercați să scrieți pașii pe hârtie și să căutați modele repetate."
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_a": "Amintiți-vă să utilizați o buclă `repetă` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> pentru un cod mai bun!"
-        },
         "courseB_artist_loops3": {
           "courseB_artist_loops3_a": "Amintiți-vă să utilizați o buclă `repetă` pentru un cod mai bun!"
         },
@@ -959,13 +948,6 @@
         "courseB_artist_loops6_2020": {
           "courseB_artist_loops6_b": "Încercați să puneți mișcările pe o foaie de hârtie și să căutați un model."
         },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Nu reușiți să vă dați seama unde să puneți bucla? Încercați să scrieți codul pas cu pas și să căutați un model.",
-          "courseA_artist_loops7_b": "Scrieți mai întâi codul pentru un singur val, apoi repetați pentru a desena celelalte două."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Încercați să rulați codul pentru a vedea ce a fost scris pentru dvs."
-        },
         "courseB_artist_loops9": {
           "courseB_artist_loops9_c": "Nu reușiți să vă dați seama unde să puneți bucla? Încercați să scrieți codul pas cu pas și să căutați un model."
         },
@@ -976,7 +958,6 @@
           "courseB_artist_loops9_c": "Nu reușiți să vă dați seama unde să puneți bucla? Încercați să scrieți codul pas cu pas și să căutați un model."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_c": "Dacă nu reușiți să vă dați seama unde să puneți bucla, încercați să vă scrieți codul pas cu pas și să căutați modele.",
           "courseB_artist_loops9_c": "Nu reușiți să vă dați seama unde să puneți bucla? Încercați să scrieți codul pas cu pas și să căutați un model."
         },
         "courseB_collector_loops10": {

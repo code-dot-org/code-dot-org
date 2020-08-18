@@ -176,7 +176,7 @@
           "2-3_Maze_16_b": "Untuk menempatkan banyak blok ke dalam loop 'ulang', hanya tarik loop keluar menuju ruang kerja, kemudian tarik semua blok dari program awal itu.  Menghubungkan kembali semua ke blok 'ketika menjalankan' dan anda aman untuk pergi!"
         },
         "2-3 Maze 6": {
-          "2-3_Maze_6_a": "Ada dua cara untuk menyelesaikan puzzle ini!"
+          "2-3_Maze_6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!"
         },
         "2-3 Maze Loops 17": {
           "2-3_Maze_Loops_17_a": "Jika pola sulit untuk dilihat, cobalah semua pengkodean pertama dan lihat apakah ulang lagi dan lagi sebelum anda memasukkan loop.",
@@ -1174,12 +1174,12 @@
           "harvey_tictactoe": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain."
         },
         "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_left\"/></xml> akan membantu artis bergerak secara miring!",
+          "courseA_artist_loops_challenge2_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_left\"/></xml> akan membantu artis bergerak di lereng!",
           "courseA_artist_loops_challenge2_b": "Ketika kamu menyelesaikan satu rumah burung, `lompatlah` ke berikutnya!",
           "courseA_artist_loops_challenge2_c": "Kamu akan memerlukan BANYAK blok di dalam lingkaran untuk tantangan ini."
         },
         "course1_artist_loops_challenge4": {
-          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak secara miring!",
+          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak di lereng!",
           "courseB_artist_loops_challenge1_b": "Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!",
           "courseB_artist_loops_challenge1_c": "Anda akan perlu untuk `langkah` atau `jump` lebih beberapa garis yang sama dua kali. "
         },
@@ -1195,21 +1195,21 @@
         "course1_collector_loops_challenge4": {
           "courseB_collector_loops_challenge2_a": "Jika terjadi sesuatu kesalahan, jangan takut untuk memulai kembali. Jangan menyerah!",
           "courseB_collector_loops_challenge2_b": "Jika kamu ulangi pola ini, Laurel tidak akan menabrak dinding di dasar gua!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
-          "courseB_collector_loops_challenge2_c": "Coba gunakan sebuah blok 'repeat' untuk mengumpulkan tumpukan harta terakhir!",
+          "courseB_collector_loops_challenge2_c": "Coba gunakan sebuah `berulang` blok untuk mengumpulkan final tumpukan harta!",
           "courseB_collector_loops_challenge2_d": "Coba solusi ini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "course1_maze_debugging_challenge1": {
           "courseA_maze_seq_challenge1_a": "Sebagian jalur akan mengarah ke TNT, jika kamu bergerak terlalu jauh."
         },
         "course1_maze_debugging_challenge2": {
-          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan puzzle ini.",
+          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.",
           "courseB_maze_seq_challenge2_b": "Susun kembali bloknya dan ambil jalan tengahnya."
         },
         "course1_maze_seq_challenge1": {
           "courseA_maze_seq_challenge2_a": "Cobalah menghitung spasi dengan jari Anda. Ingatlah untuk tidak menghitung spasi di mana anda memulai!"
         },
         "course1_maze_seq_challenge2": {
-          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak akan berhasil saat ini.",
+          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak bekerja saat ini.",
           "courseB_maze_seq_challenge1_b": "Coba bergerak ke barat untuk memulai."
         },
         "course1_playlab_events_challenge1": {
@@ -1290,7 +1290,7 @@
           "courseF_bee_functions_challenge2_b": "**Solusi:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "Selanjutnya, kumpulkan sisa permatanya dalam barisan ini.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nTambah blok ini ke program Anda.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Selanjutnya, kumpulkan sisa permatanya dalam barisan ini.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nTambah blok ini ke program Anda.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Selanjutnya, kumpulkan sisa harta karunnya. Tambah blok ini ke program Anda.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Ini adalah solusi penuh untuk teka-teki ini.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1340,7 +1340,8 @@
         },
         "course4_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_a": "Mulai dengan memastikan Anda mengerti bagaimana fungsi ini _supposed_ bekerja. Selagi petani bergerak tiap jalan, dia hanya akan mencoba untuk mengumpulkan jagung. \n\nTambah persyaratan kondisional kepada fungsi untuk mengecek jagung, labu, dan selada.",
-          "courseF_bee_fwp_challenge2_d": "**Fungsi kamu akan terlihat seperti ini:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter2</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                <mutation name=\"pick row\">\n                  <arg name=\"length\"/>\n                </mutation>\n                <value name=\"ARG0\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter2</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n    </block></xml>"
+          "courseF_bee_fwp_challenge2_c": "**Here is what your function should look like:**\n\n<xml><block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title name=\"NAME\">pick row</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_turn\">\n        <title name=\"DIR\">turnLeft</title>\n        <next>\n          <block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"harvester_ifHasCrop\">\n                        <title name=\"LOC\">Corn</title>\n                        <statement name=\"DO\">\n                          <block type=\"harvester_corn\"/>\n                        </statement>\n                        <next>\n                          <block type=\"harvester_ifHasCrop\">\n                            <title name=\"LOC\">Pumpkin</title>\n                            <statement name=\"DO\">\n                              <block type=\"harvester_pumpkin\"/>\n                            </statement>\n                            <next>\n                              <block type=\"harvester_ifHasCrop\">\n                                <title name=\"LOC\">Lettuce</title>\n                                <statement name=\"DO\">\n                                  <block type=\"harvester_lettuce\"/>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">length</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>",
+          "courseF_bee_fwp_challenge2_d": "**Here is what your function should look like:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter2</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                <mutation name=\"pick row\">\n                  <arg name=\"length\"/>\n                </mutation>\n                <value name=\"ARG0\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter2</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n    </block></xml>"
         },
         "course4_collector_nested_loops_challenge2": {
           "courseD_bee_nested_loops_challenge2_a": "Jangan lupa bahwa anda bisa `repeat` satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` sebuah blok \\`repeat'!",
@@ -1384,9 +1385,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Lacak secara perlahan-lahan di dalam program dengan jari anda untuk melihat di mana terjadi kesalahan.",
-          "courseA_artist_loops3_b": "Anda lebih baik menggunakan blok seperti ini untuk memecahkan puzzle ini.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "Jika anda ingin loop untuk mengulang lebih dari 4 kali, anda dapat mengubah angka di atas blok.",
-          "courseB_artist_loops2_b": "Coba jalankan kode terlebih dahulu untuk melihat di mana artis berakhir."
+          "courseA_artist_loops3_b": "Anda lebih baik menggunakan blok seperti ini untuk memecahkan puzzle ini.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Jika anda ingin loop untuk mengulang lebih dari 4 kali, anda dapat mengubah angka di atas blok.",
@@ -1402,10 +1401,7 @@
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "Jika anda ingin loop untuk mengulang lebih dari 4 kali, anda dapat mengubah angka di atas blok.",
-          "courseA_artist_loops4_b": "Karena anda hanya bisa menggunakan satu blok <xml><block type=\"simple_move_right\"/></xml>\ncoba letakkan di dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> loop.",
-          "courseB_artist_loops4_a": "Blok melompat memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
-          "courseB_artist_loops4_b": "Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.",
-          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali loop repeat barulang."
+          "courseA_artist_loops4_b": "Karena anda hanya bisa menggunakan satu blok <xml><block type=\"simple_move_right\"/></xml>\ncoba letakkan di dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> loop."
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "Coba gunakan apa yang telah Anda pelajari tentang blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk menyelesaikan puzzle ini!",
@@ -1425,8 +1421,7 @@
         "courseA_artist_loops5_2020": {
           "courseA_artist_loops5_a": "Coba gunakan apa yang telah Anda pelajari tentang blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk menyelesaikan puzzle ini!",
           "courseA_artist_loops5_b": "Jika anda ingin loop untuk mengulang lebih dari 4 kali, anda dapat mengubah angka di atas blok.",
-          "courseA_artist_loops5_c": "Karena Anda hanya dapat menggunakan satu blok <xml><block type=\"simple_move_right\"/></xml>, coba letakkan ke dalam \n\nloop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.",
-          "courseB_artist_loops5_a": "Pindahkan keluar lingkaran `ulangi`, lalu letakkan blok lain yang Anda inginkan di dalamnya. Berapa kali Anda perlu mengulanginya?"
+          "courseA_artist_loops5_c": "Karena Anda hanya dapat menggunakan satu blok <xml><block type=\"simple_move_right\"/></xml>, coba letakkan ke dalam \n\nloop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "Tidak dapat menebak cara membuat bukit? Coba main-mainkan blok sebentar untuk melihat apa yang digambar masing-masing blok.",
@@ -1442,8 +1437,7 @@
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "Tidak dapat menebak cara membuat bukit? Coba main-mainkan blok sebentar untuk melihat apa yang digambar masing-masing blok.",
-          "courseA_artist_loops6_b": "Anda akan perlu 2 blok dalam 2 arah untuk memecahkan puzzle ini.",
-          "courseB_artist_loops6_b": "Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola."
+          "courseA_artist_loops6_b": "Anda akan perlu 2 blok dalam 2 arah untuk memecahkan puzzle ini."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "Tidak tahu di mana harus meletakkan loop? Coba tulis code langkah demi langkah dan cari sebuah pola.",
@@ -1463,10 +1457,7 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "Tidak tahu di mana harus meletakkan loop? Coba tulis code langkah demi langkah dan cari sebuah pola.",
           "courseA_artist_loops7_b": "Tuliskan code untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.",
-          "courseA_artist_loops7_c": "Ingat, Anda dapat meletakkan lebih dari satu blok ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>.",
-          "courseB_artist_loops7_a": "Tantangan ini menggunakan \\*\\* 4 \\*\\* loop, satu demi satu!",
-          "courseB_artist_loops7_b": "Perhatikan bahwa setiap loop membuat pola tangga menuju ke berbagai arah.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "Loopnya akan seperti ini:\n\n-   Loop 1\n    -   Kanan\n    -   Turun\n\n-   Loop 2\n    -   Kanan\n    -   Naik\n\n-   Loop 3\n    -   Kiri\n    -   Naik\n\n-   Loop 4\n    -   Kiri\n    -   Turun"
+          "courseA_artist_loops7_c": "Ingat, Anda dapat meletakkan lebih dari satu blok ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "Cobalah menjalankan code untuk melihat apa yang telah ditulis untuk anda.",
@@ -1486,9 +1477,7 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "Cobalah menjalankan code untuk melihat apa yang telah ditulis untuk anda.",
           "courseA_artist_loops8_b": "Bagaimana anda akan mengulang code yang telah diberikan kepada anda?",
-          "courseA_artist_loops8_c": "Apa tugas code?\\\nApa yang seharusnya dilakukan code?\\\nApa yang anda pahami dari tugas itu?",
-          "courseB_artist_loops8_a": "Berapa kali anda harus mengulangi pola untuk membuat tangga?",
-          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang diberikan kepada Anda, untuk melihat apa yang dilakukan kode tersebut."
+          "courseA_artist_loops8_c": "Apa tugas code?\\\nApa yang seharusnya dilakukan code?\\\nApa yang anda pahami dari tugas itu?"
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "Tambahkan sebuah blok pada code yang anda terima untuk menggambar sisa dari tangga tersebut.",
@@ -1508,10 +1497,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Tambahkan sebuah blok pada code yang anda terima untuk menggambar sisa dari tangga tersebut.",
           "courseA_artist_loops9_b": "Blok yang anda tambahkan harus masuk ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>",
-          "courseA_artist_loops9_c": "Jika anda tidak tahu di mana harus meletakkan loop, coba tulis code anda langkah demi langkah dan cari polanya.",
-          "courseB_artist_loops9_a": "Ingat bahwa blok melompat dapat digunakan untuk bergerak tanpa menggambar sebuah garis.",
-          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan puzzle ini.",
-          "courseB_artist_loops9_c": "Tidak tahu di mana harus meletakkan loop? Coba tulis code langkah demi langkah dan cari sebuah pola."
+          "courseA_artist_loops9_c": "Jika anda tidak tahu di mana harus meletakkan loop, coba tulis code anda langkah demi langkah dan cari polanya."
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "Blok seperti ini <xml>  <block type=\"simple_move_up_left\"/></xml> akan membantu artis bergerak miring!",
@@ -2344,10 +2330,6 @@
           "courseA_playlab_events_challenge2_b": "Anda dapat membuat robotnya berbunyi.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Anda dapat membuat monster pemarah menggeram.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_a": "Ingatlah untuk menggunakan lingkaran `ulangi` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> untuk kode yang lebih baik!",
-          "courseB_artist_loops3_b": "Artis itu ingin pindah ke Selatan untuk menggambar garis ini."
-        },
         "courseB_Scrat_ramp1_2018": {
           "1": "Jika Scrat tidak melakukan yang Anda inginkan, pastikan kedua blok telah sepenuhnya diklik bersama, lalu klik \"Jalankan\" lagi.",
           "2": "Jangan takut melakukan kesalahan! Cobalah sesuatu, dan jika tidak berhasil, coba sesuatu yang lain!"
@@ -2418,8 +2400,6 @@
           "courseB_artist_loops2_b": "Coba jalankan kode terlebih dahulu untuk melihat di mana artis berakhir."
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "Lacak secara perlahan-lahan di dalam program dengan jari anda untuk melihat di mana terjadi kesalahan.",
-          "courseA_artist_loops3_b": "Anda lebih baik menggunakan blok seperti ini untuk memecahkan puzzle ini.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "Jika anda ingin loop untuk mengulang lebih dari 4 kali, anda dapat mengubah angka di atas blok.",
           "courseB_artist_loops2_b": "Coba jalankan kode terlebih dahulu untuk melihat di mana artis berakhir."
         },
@@ -2428,7 +2408,7 @@
           "courseB_artist_loops3_b": "Artis itu ingin pindah ke Selatan untuk menggambar garis ini."
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_a": "Ingatlah untuk menggunakan lingkaran `ulangi` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> untuk kode yang lebih baik!",
+          "courseB_artist_loops3_a": "Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!",
           "courseB_artist_loops3_b": "Artis itu ingin pindah ke Selatan untuk menggambar garis ini."
         },
         "courseB_artist_loops3_2019": {
@@ -2440,40 +2420,35 @@
           "courseB_artist_loops3_b": "Artis itu ingin pindah ke Selatan untuk menggambar garis ini."
         },
         "courseB_artist_loops4": {
-          "courseB_artist_loops4_a": "Blok melompat memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
+          "courseB_artist_loops4_a": "Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
           "courseB_artist_loops4_b": "Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.",
-          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali loop repeat barulang."
+          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali pengulangan loop."
         },
         "courseB_artist_loops4_2018": {
-          "courseB_artist_loops4_a": "Blok melompat memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
+          "courseB_artist_loops4_a": "Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
           "courseB_artist_loops4_b": "Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.",
-          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali loop repeat barulang."
+          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali pengulangan loop."
         },
         "courseB_artist_loops4_2019": {
-          "courseB_artist_loops4_a": "Blok melompat memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
+          "courseB_artist_loops4_a": "Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
           "courseB_artist_loops4_b": "Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.",
-          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali loop repeat barulang."
+          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali pengulangan loop."
         },
         "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "Jika anda ingin loop untuk mengulang lebih dari 4 kali, anda dapat mengubah angka di atas blok.",
-          "courseA_artist_loops4_b": "Karena anda hanya bisa menggunakan satu blok <xml><block type=\"simple_move_right\"/></xml>\ncoba letakkan di dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> loop.",
-          "courseB_artist_loops4_a": "Blok melompat memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
+          "courseB_artist_loops4_a": "Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.",
           "courseB_artist_loops4_b": "Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.",
-          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali loop repeat barulang."
+          "courseB_artist_loops4_c": "Jangan lupa untuk mengubah berapa kali pengulangan loop."
         },
         "courseB_artist_loops5": {
-          "courseB_artist_loops5_a": "Tarik keluar sebuah loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
+          "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
         },
         "courseB_artist_loops5_2018": {
-          "courseB_artist_loops5_a": "Pindahkan keluar lingkaran `ulangi`, lalu letakkan blok lain yang Anda inginkan di dalamnya. Berapa kali Anda perlu mengulanginya?"
+          "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
         },
         "courseB_artist_loops5_2019": {
           "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
         },
         "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Coba gunakan apa yang telah Anda pelajari tentang blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk menyelesaikan puzzle ini!",
-          "courseA_artist_loops5_b": "Jika anda ingin loop untuk mengulang lebih dari 4 kali, anda dapat mengubah angka di atas blok.",
-          "courseA_artist_loops5_c": "Karena Anda hanya dapat menggunakan satu blok <xml><block type=\"simple_move_right\"/></xml>, coba letakkan ke dalam \n\nloop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>.",
           "courseB_artist_loops5_a": "Pindahkan keluar lingkaran `ulangi`, lalu letakkan blok lain yang Anda inginkan di dalamnya. Berapa kali Anda perlu mengulanginya?"
         },
         "courseB_artist_loops6": {
@@ -2486,110 +2461,99 @@
           "courseB_artist_loops6_b": "Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola."
         },
         "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "Tidak dapat menebak cara membuat bukit? Coba main-mainkan blok sebentar untuk melihat apa yang digambar masing-masing blok.",
-          "courseA_artist_loops6_b": "Anda akan perlu 2 blok dalam 2 arah untuk memecahkan puzzle ini.",
           "courseB_artist_loops6_b": "Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola."
         },
         "courseB_artist_loops7": {
-          "courseB_artist_loops7_a": "Tantangan ini menggunakan \\*\\* 4 \\*\\* loop, satu demi satu!",
+          "courseB_artist_loops7_a": "Tantangan ini menggunakan loop\\*\\* 4 \\*\\*, satu demi satu!",
           "courseB_artist_loops7_b": "Perhatikan bahwa setiap loop membuat pola tangga menuju ke berbagai arah.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Loopnya akan seperti ini:\n\n-   Loop 1\n    -   Kanan\n    -   Turun\n\n-   Loop 2\n    -   Kanan\n    -   Naik\n\n-   Loop 3\n    -   Kiri\n    -   Naik\n\n-   Loop 4\n    -   Kiri\n    -   Turun"
         },
         "courseB_artist_loops7_2018": {
-          "courseB_artist_loops7_a": "Tantangan ini menggunakan \\*\\* 4 \\*\\* loop, satu demi satu!",
+          "courseB_artist_loops7_a": "Tantangan ini menggunakan loop\\*\\* 4 \\*\\*, satu demi satu!",
           "courseB_artist_loops7_b": "Perhatikan bahwa setiap loop membuat pola tangga menuju ke berbagai arah.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Loopnya akan seperti ini:\n\n-   Loop 1\n    -   Kanan\n    -   Turun\n\n-   Loop 2\n    -   Kanan\n    -   Naik\n\n-   Loop 3\n    -   Kiri\n    -   Naik\n\n-   Loop 4\n    -   Kiri\n    -   Turun"
         },
         "courseB_artist_loops7_2019": {
-          "courseB_artist_loops7_a": "Tantangan ini menggunakan \\*\\* 4 \\*\\* loop, satu demi satu!",
+          "courseB_artist_loops7_a": "Tantangan ini menggunakan loop\\*\\* 4 \\*\\*, satu demi satu!",
           "courseB_artist_loops7_b": "Perhatikan bahwa setiap loop membuat pola tangga menuju ke berbagai arah.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Loopnya akan seperti ini:\n\n-   Loop 1\n    -   Kanan\n    -   Turun\n\n-   Loop 2\n    -   Kanan\n    -   Naik\n\n-   Loop 3\n    -   Kiri\n    -   Naik\n\n-   Loop 4\n    -   Kiri\n    -   Turun"
         },
         "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Tidak tahu di mana harus meletakkan loop? Coba tulis code langkah demi langkah dan cari sebuah pola.",
-          "courseA_artist_loops7_b": "Tuliskan code untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.",
-          "courseA_artist_loops7_c": "Ingat, Anda dapat meletakkan lebih dari satu blok ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>.",
-          "courseB_artist_loops7_a": "Tantangan ini menggunakan \\*\\* 4 \\*\\* loop, satu demi satu!",
+          "courseB_artist_loops7_a": "Tantangan ini menggunakan loop\\*\\* 4 \\*\\*, satu demi satu!",
           "courseB_artist_loops7_b": "Perhatikan bahwa setiap loop membuat pola tangga menuju ke berbagai arah.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Loopnya akan seperti ini:\n\n-   Loop 1\n    -   Kanan\n    -   Turun\n\n-   Loop 2\n    -   Kanan\n    -   Naik\n\n-   Loop 3\n    -   Kiri\n    -   Naik\n\n-   Loop 4\n    -   Kiri\n    -   Turun"
         },
         "courseB_artist_loops8": {
           "courseB_artist_loops8_a": "Berapa kali anda harus mengulangi pola untuk membuat tangga?",
-          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang diberikan kepada Anda, untuk melihat apa yang dilakukan kode tersebut."
+          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya."
         },
         "courseB_artist_loops8_2018": {
           "courseB_artist_loops8_a": "Berapa kali anda harus mengulangi pola untuk membuat tangga?",
-          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang diberikan kepada Anda, untuk melihat apa yang dilakukan kode tersebut."
+          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya."
         },
         "courseB_artist_loops8_2019": {
           "courseB_artist_loops8_a": "Berapa kali anda harus mengulangi pola untuk membuat tangga?",
-          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang diberikan kepada Anda, untuk melihat apa yang dilakukan kode tersebut."
+          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya."
         },
         "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Cobalah menjalankan code untuk melihat apa yang telah ditulis untuk anda.",
-          "courseA_artist_loops8_b": "Bagaimana anda akan mengulang code yang telah diberikan kepada anda?",
-          "courseA_artist_loops8_c": "Apa tugas code?\\\nApa yang seharusnya dilakukan code?\\\nApa yang anda pahami dari tugas itu?",
           "courseB_artist_loops8_a": "Berapa kali anda harus mengulangi pola untuk membuat tangga?",
-          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang diberikan kepada Anda, untuk melihat apa yang dilakukan kode tersebut."
+          "courseB_artist_loops8_b": "Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya."
         },
         "courseB_artist_loops9": {
-          "courseB_artist_loops9_a": "Ingat bahwa blok melompat dapat digunakan untuk bergerak tanpa menggambar sebuah garis.",
-          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan puzzle ini.",
+          "courseB_artist_loops9_a": "Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.",
+          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.",
           "courseB_artist_loops9_c": "Tidak tahu di mana harus meletakkan loop? Coba tulis code langkah demi langkah dan cari sebuah pola."
         },
         "courseB_artist_loops9_2018": {
-          "courseB_artist_loops9_a": "Ingat bahwa blok melompat dapat digunakan untuk bergerak tanpa menggambar sebuah garis.",
-          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan puzzle ini.",
+          "courseB_artist_loops9_a": "Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.",
+          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.",
           "courseB_artist_loops9_c": "Tidak tahu di mana harus meletakkan loop? Coba tulis code langkah demi langkah dan cari sebuah pola."
         },
         "courseB_artist_loops9_2019": {
-          "courseB_artist_loops9_a": "Ingat bahwa blok melompat dapat digunakan untuk bergerak tanpa menggambar sebuah garis.",
-          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan puzzle ini.",
+          "courseB_artist_loops9_a": "Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.",
+          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.",
           "courseB_artist_loops9_c": "Tidak tahu di mana harus meletakkan loop? Coba tulis code langkah demi langkah dan cari sebuah pola."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Tambahkan sebuah blok pada code yang anda terima untuk menggambar sisa dari tangga tersebut.",
-          "courseA_artist_loops9_b": "Blok yang anda tambahkan harus masuk ke dalam loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>",
-          "courseA_artist_loops9_c": "Jika anda tidak tahu di mana harus meletakkan loop, coba tulis code anda langkah demi langkah dan cari polanya.",
-          "courseB_artist_loops9_a": "Ingat bahwa blok melompat dapat digunakan untuk bergerak tanpa menggambar sebuah garis.",
-          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan puzzle ini.",
+          "courseB_artist_loops9_a": "Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.",
+          "courseB_artist_loops9_b": "Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.",
           "courseB_artist_loops9_c": "Tidak tahu di mana harus meletakkan loop? Coba tulis code langkah demi langkah dan cari sebuah pola."
         },
         "courseB_artist_loops_challenge1": {
-          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak secara miring!",
+          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak di lereng!",
           "courseB_artist_loops_challenge1_b": "Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!",
           "courseB_artist_loops_challenge1_c": "Anda akan perlu untuk `langkah` atau `jump` lebih beberapa garis yang sama dua kali. "
         },
         "courseB_artist_loops_challenge1_2018": {
-          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak secara miring!",
+          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak di lereng!",
           "courseB_artist_loops_challenge1_b": "Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!",
           "courseB_artist_loops_challenge1_c": "Anda akan perlu untuk `langkah` atau `jump` lebih beberapa garis yang sama dua kali. "
         },
         "courseB_artist_loops_challenge1_2019": {
-          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak secara miring!",
+          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak di lereng!",
           "courseB_artist_loops_challenge1_b": "Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!",
           "courseB_artist_loops_challenge1_c": "Anda akan perlu untuk `langkah` atau `jump` lebih beberapa garis yang sama dua kali. "
         },
         "courseB_artist_loops_challenge1_2020": {
-          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak secara miring!",
+          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak di lereng!",
           "courseB_artist_loops_challenge1_b": "Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!",
           "courseB_artist_loops_challenge1_c": "Anda akan perlu untuk `langkah` atau `jump` lebih beberapa garis yang sama dua kali. "
         },
         "courseB_artist_loops_challenge2": {
-          "courseB_artist_loops_challenge2_a": "Kode untuk menggambar sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan 'melompat' ke tempat berikutnya.",
-          "courseB_artist_loops_challenge2_b": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain, tanpa menggambar."
+          "courseB_artist_loops_challenge2_a": "Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.",
+          "courseB_artist_loops_challenge2_b": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain."
         },
         "courseB_artist_loops_challenge2_2018": {
-          "courseB_artist_loops_challenge2_a": "Kode untuk menggambar sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan 'melompat' ke tempat berikutnya.",
-          "courseB_artist_loops_challenge2_b": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain, tanpa menggambar."
+          "courseB_artist_loops_challenge2_a": "Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.",
+          "courseB_artist_loops_challenge2_b": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain."
         },
         "courseB_artist_loops_challenge2_2019": {
-          "courseB_artist_loops_challenge2_a": "Kode untuk menggambar sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan 'melompat' ke tempat berikutnya.",
-          "courseB_artist_loops_challenge2_b": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain, tanpa menggambar."
+          "courseB_artist_loops_challenge2_a": "Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.",
+          "courseB_artist_loops_challenge2_b": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain."
         },
         "courseB_artist_loops_challenge2_2020": {
-          "courseB_artist_loops_challenge2_a": "Kode untuk menggambar sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan 'melompat' ke tempat berikutnya.",
-          "courseB_artist_loops_challenge2_b": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain, tanpa menggambar."
+          "courseB_artist_loops_challenge2_a": "Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.",
+          "courseB_artist_loops_challenge2_b": "Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain."
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_a": "Blok <xml><block type=\"collector_collect_simplified\"/></xml> dapat digunakan untuk mengambil harta karun jika kamu berdiri di atasnya."
@@ -2637,19 +2601,19 @@
         },
         "courseB_collector_loops3": {
           "courseB_collector_prog3_a": "Coba gunakan blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> untuk mengumpulkan harta karun.",
-          "courseB_collector_prog3_b": "Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah loop repeat."
+          "courseB_collector_prog3_b": "Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran."
         },
         "courseB_collector_loops3_2018": {
           "courseB_collector_prog3_a": "Coba gunakan blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> untuk mengumpulkan harta karun.",
-          "courseB_collector_prog3_b": "Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah loop repeat."
+          "courseB_collector_prog3_b": "Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran."
         },
         "courseB_collector_loops3_2019": {
           "courseB_collector_prog3_a": "Coba gunakan blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> untuk mengumpulkan harta karun.",
-          "courseB_collector_prog3_b": "Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah loop repeat."
+          "courseB_collector_prog3_b": "Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran."
         },
         "courseB_collector_loops3_2020": {
           "courseB_collector_prog3_a": "Coba gunakan blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> untuk mengumpulkan harta karun.",
-          "courseB_collector_prog3_b": "Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah loop repeat."
+          "courseB_collector_prog3_b": "Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran."
         },
         "courseB_collector_loops4": {
           "courseB_collector_loops4_a": "Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.",
@@ -2659,7 +2623,7 @@
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_a": "Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.",
           "courseB_collector_loops4_b": "Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali loop nya berjalan.",
-          "courseB_collector_loops4_c": "Laurel perlu berjalan ke bawah dan mengumpulkan harta karun setelah menyelesaikan lingkaran `ulangi` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan `ulangi` lingkaran!"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.",
@@ -2690,70 +2654,70 @@
         "courseB_collector_loops6": {
           "courseB_collector_loops6_a": "Tidak tahu di mana hal-hal yang salah? Gunakan tombol \"step\" untuk menjalankan program anda satu blok setiap kalinya.",
           "courseB_collector_loops6_b": "Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada \"3\" dan memilih sebuah nomor yang berbeda.",
-          "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 loop `repeat` untuk memecahkan puzzle ini.",
-          "courseB_collector_loops6_d": "Jika Anda bingung, cobalah memecahkan puzzle ini menjadi 3 bagian."
+          "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 `ulangi` lopp untuk memecahkan ini teka-teki.",
+          "courseB_collector_loops6_d": "Jika kamu bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian."
         },
         "courseB_collector_loops6_2018": {
           "courseB_collector_loops6_a": "Tidak tahu di mana hal-hal yang salah? Gunakan tombol \"step\" untuk menjalankan program anda satu blok setiap kalinya.",
           "courseB_collector_loops6_b": "Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada \"3\" dan memilih sebuah nomor yang berbeda.",
-          "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 lingkaran `ulangi` untuk memecahkan teka-teki ini.",
-          "courseB_collector_loops6_d": "Jika Anda bingung, cobalah memecahkan puzzle ini menjadi 3 bagian."
+          "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 `ulangi` lopp untuk memecahkan ini teka-teki.",
+          "courseB_collector_loops6_d": "Jika kamu bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian."
         },
         "courseB_collector_loops6_2019": {
           "courseB_collector_loops6_a": "Tidak tahu di mana hal-hal yang salah? Gunakan tombol \"step\" untuk menjalankan program anda satu blok setiap kalinya.",
           "courseB_collector_loops6_b": "Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada \"3\" dan memilih sebuah nomor yang berbeda.",
           "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 `ulangi` lopp untuk memecahkan ini teka-teki.",
-          "courseB_collector_loops6_d": "Jika Anda bingung, cobalah memecahkan puzzle ini menjadi 3 bagian."
+          "courseB_collector_loops6_d": "Jika kamu bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian."
         },
         "courseB_collector_loops6_2020": {
           "courseB_collector_loops6_a": "Tidak tahu di mana hal-hal yang salah? Gunakan tombol \"step\" untuk menjalankan program anda satu blok setiap kalinya.",
           "courseB_collector_loops6_b": "Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada \"3\" dan memilih sebuah nomor yang berbeda.",
           "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 lingkaran `ulangi` untuk memecahkan teka-teki ini.",
-          "courseB_collector_loops6_d": "Jika Anda bingung, cobalah memecahkan puzzle ini menjadi 3 bagian."
+          "courseB_collector_loops6_d": "Jika kamu bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian."
         },
         "courseB_collector_loops7": {
-          "courseB_collector_loops7_a": "Jika anda mengalami kesulitan dengan puzzle ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.",
-          "courseB_collector_loops7_b": "Anda akan membutuhkan 3 loop repeat untuk memecahkan puzzle ini, dan jangan lupa harta tambahan di akhir!"
+          "courseB_collector_loops7_a": "Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.",
+          "courseB_collector_loops7_b": "Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!"
         },
         "courseB_collector_loops7_2018": {
-          "courseB_collector_loops7_a": "Jika anda mengalami kesulitan dengan puzzle ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.",
-          "courseB_collector_loops7_b": "Anda akan membutuhkan 3 loop repeat untuk memecahkan puzzle ini, dan jangan lupa harta tambahan di akhir!"
+          "courseB_collector_loops7_a": "Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.",
+          "courseB_collector_loops7_b": "Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!"
         },
         "courseB_collector_loops7_2019": {
-          "courseB_collector_loops7_a": "Jika anda mengalami kesulitan dengan puzzle ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.",
-          "courseB_collector_loops7_b": "Anda akan membutuhkan 3 loop repeat untuk memecahkan puzzle ini, dan jangan lupa harta tambahan di akhir!"
+          "courseB_collector_loops7_a": "Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.",
+          "courseB_collector_loops7_b": "Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!"
         },
         "courseB_collector_loops7_2020": {
-          "courseB_collector_loops7_a": "Jika anda mengalami kesulitan dengan puzzle ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.",
-          "courseB_collector_loops7_b": "Anda akan membutuhkan 3 loop repeat untuk memecahkan puzzle ini, dan jangan lupa harta tambahan di akhir!"
+          "courseB_collector_loops7_a": "Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.",
+          "courseB_collector_loops7_b": "Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!"
         },
         "courseB_collector_loops8": {
-          "courseB_collector_loops8_challenge_a": "Jika anda tidak tahu di mana harus meletakkan loop repeat, tuliskan kode langkah demi langkah dan cari sebuah pola."
+          "courseB_collector_loops8_challenge_a": "Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola."
         },
         "courseB_collector_loops8_2018": {
-          "courseB_collector_loops8_challenge_a": "Jika anda tidak tahu di mana harus meletakkan loop repeat, tuliskan kode langkah demi langkah dan cari sebuah pola."
+          "courseB_collector_loops8_challenge_a": "Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola."
         },
         "courseB_collector_loops8_2019": {
-          "courseB_collector_loops8_challenge_a": "Jika anda tidak tahu di mana harus meletakkan loop repeat, tuliskan kode langkah demi langkah dan cari sebuah pola."
+          "courseB_collector_loops8_challenge_a": "Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola."
         },
         "courseB_collector_loops8_2020": {
-          "courseB_collector_loops8_challenge_a": "Jika anda tidak tahu di mana harus meletakkan loop repeat, tuliskan kode langkah demi langkah dan cari sebuah pola."
+          "courseB_collector_loops8_challenge_a": "Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola."
         },
         "courseB_collector_loops9": {
           "courseB_collector_loops9_a": "Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.",
-          "courseB_collector_loops9_b": "Anda akan membutuhkan 3 loop repeat, satu demi satu, untuk solusi ini."
+          "courseB_collector_loops9_b": "Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini."
         },
         "courseB_collector_loops9_2018": {
           "courseB_collector_loops9_a": "Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.",
-          "courseB_collector_loops9_b": "Anda akan membutuhkan 3 loop repeat, satu demi satu, untuk solusi ini."
+          "courseB_collector_loops9_b": "Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini."
         },
         "courseB_collector_loops9_2019": {
           "courseB_collector_loops9_a": "Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.",
-          "courseB_collector_loops9_b": "Anda akan membutuhkan 3 loop repeat, satu demi satu, untuk solusi ini."
+          "courseB_collector_loops9_b": "Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini."
         },
         "courseB_collector_loops9_2020": {
           "courseB_collector_loops9_a": "Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.",
-          "courseB_collector_loops9_b": "Anda akan membutuhkan 3 loop repeat, satu demi satu, untuk solusi ini."
+          "courseB_collector_loops9_b": "Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini."
         },
         "courseB_collector_loops_challenge1": {
           "courseB_collector_loops_challenge1_b": "Mulai dengan looping perintah berikut:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
@@ -2778,7 +2742,7 @@
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_a": "Jika terjadi sesuatu kesalahan, jangan takut untuk memulai kembali. Jangan menyerah!",
           "courseB_collector_loops_challenge2_b": "Jika kamu ulangi pola ini, Laurel tidak akan menabrak dinding di dasar gua!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
-          "courseB_collector_loops_challenge2_c": "Coba gunakan sebuah blok 'repeat' untuk mengumpulkan tumpukan harta terakhir!",
+          "courseB_collector_loops_challenge2_c": "Coba gunakan sebuah `berulang` blok untuk mengumpulkan final tumpukan harta!",
           "courseB_collector_loops_challenge2_d": "Coba solusi ini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge2a": {
@@ -2845,7 +2809,7 @@
         },
         "courseB_iceage_loops3": {
           "courseB_iceage_loops3_a": "Gunakan blok baru ini! <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan keluar lingkaran `ulangi`\n\n, lalu letakkan blok yang Anda inginkan di dalamnya."
+          "courseB_iceage_loops3_b": "Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya."
         },
         "courseB_iceage_loops3_2019": {
           "courseB_iceage_loops3_a": "Gunakan blok baru ini!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
@@ -2952,72 +2916,72 @@
           "courseB_maze_seq1_b": "Pindahkan tiga panah keluar <xml><block type=\"maze_moveSouth\"/></xml> dan hubungkan ke blok <xml><block type=\"when_run\"/></xml> untuk membawa Scrat ke biji."
         },
         "courseB_maze_seq2": {
-          "courseB_maze_seq2_a": "Program ini kekurangan satu blok. Bisakah kamu mencari tahu yang mana?",
-          "courseB_maze_seq2_b": "Cobalah jalankan kode yang diberikan kepada Anda, untuk melihat apa yang perlu dilakukan burung selanjutnya."
+          "courseB_maze_seq2_a": "Program ini hilang satu blok. Bisakah kamu mencari tahu yang mana?",
+          "courseB_maze_seq2_b": "Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang perlu dilakukan burung selanjutnya."
         },
         "courseB_maze_seq3": {
           "courseB_maze_seq3_a": "Salah satu blok memindahkan burung ke arah yang salah. Dapatkah anda mencari tahu yang mana dan menggantinya dengan blok yang benar?",
-          "courseB_maze_seq3_b": "Coba gunakan tombol langkah untuk menemukan di mana kesalahan terjadi di dalam program Anda. Apakah kesalahan terjadi di langkah pertama? Kedua?",
+          "courseB_maze_seq3_b": "Coba gunakan tombol langkah untuk menemukan di mana program berjalan salah. Apakah ini langkah pertama? Kedua?",
           "courseB_maze_seq3_c": "Blok <xml><block type=\"maze_moveWest\"/></xml> sepertinya tidak menggerakkan burung ke arah yang benar."
         },
         "courseB_maze_seq4": {
-          "courseB_maze_seq4_a": "Cobalah menambahkan satu instruksi, satu demi satu, sampai anda tiba di babi.",
-          "courseB_maze_seq4_b": "Kamu akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan puzzle ini."
+          "courseB_maze_seq4_a": "Cobalah menambahkan satu instruksi pada satu waktu sampai anda tiba di babi.",
+          "courseB_maze_seq4_b": "Kamu akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan teka-teki ini."
         },
         "courseB_maze_seq4_2018": {
           "courseB_maze_seq4_a": "Cobalah menambahkan satu instruksi pada satu waktu sampai Anda menuju ke biji.",
-          "courseB_maze_seq4_b": "Kamu akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan puzzle ini."
+          "courseB_maze_seq4_b": "Kamu akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan teka-teki ini."
         },
         "courseB_maze_seq4_2019": {
           "courseB_maze_seq4_a": "Cobalah menambahkan satu instruksi pada satu waktu sampai Anda menuju ke biji.",
-          "courseB_maze_seq4_b": "Kamu akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan puzzle ini."
+          "courseB_maze_seq4_b": "Kamu akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan teka-teki ini."
         },
         "courseB_maze_seq4_2020": {
           "courseB_maze_seq4_a": "Cobalah menambahkan satu instruksi pada satu waktu sampai Anda menuju ke biji.",
-          "courseB_maze_seq4_b": "Kamu akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan puzzle ini."
+          "courseB_maze_seq4_b": "Kamu akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan teka-teki ini."
         },
         "courseB_maze_seq5": {
-          "courseB_maze_seq5_a": "Jika Anda terkendala, cobalah gambarkan jalurnya di sebuah kertas.",
+          "courseB_maze_seq5_a": "Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.",
           "courseB_maze_seq5_b": "Terdapat 2 cara untuk memecahkan teka-teki ini!",
           "courseB_maze_seq5_c": "Tidak yakin bagaimana cara menuju ke babi? Coba ini jalan."
         },
         "courseB_maze_seq5_2018": {
-          "courseB_maze_seq5_a": "Jika Anda terkendala, cobalah gambarkan jalurnya di sebuah kertas.",
+          "courseB_maze_seq5_a": "Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.",
           "courseB_maze_seq5_b": "Terdapat 2 cara untuk memecahkan teka-teki ini!",
           "courseB_maze_seq5_c": "Tidak yakin cara menuju ke biji? Coba jalan ini."
         },
         "courseB_maze_seq5_2019": {
-          "courseB_maze_seq5_a": "Jika Anda terkendala, cobalah gambarkan jalurnya di sebuah kertas.",
+          "courseB_maze_seq5_a": "Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.",
           "courseB_maze_seq5_b": "Terdapat 2 cara untuk memecahkan teka-teki ini!",
           "courseB_maze_seq5_c": "Tidak yakin cara menuju ke biji? Coba jalan ini."
         },
         "courseB_maze_seq5_2020": {
-          "courseB_maze_seq5_a": "Jika Anda terkendala, cobalah gambarkan jalurnya di sebuah kertas.",
+          "courseB_maze_seq5_a": "Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.",
           "courseB_maze_seq5_b": "Terdapat 2 cara untuk memecahkan teka-teki ini!",
           "courseB_maze_seq5_c": "Tidak yakin cara menuju ke biji? Coba jalan ini."
         },
         "courseB_maze_seq6": {
           "courseB_maze_seq6_a": "Kode akhir anda harus memiliki tiga blok gerakan.",
           "courseB_maze_seq6_b": "Jika Anda terkendala, cobalah memecahkan puzzle ini dalam dua bagian, satu menyamping dan satu ke atas dan ke bawah.",
-          "courseB_maze_seq5_c": "Ada dua cara untuk memecahkan puzzle ini.",
+          "courseB_maze_seq5_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq5_d": "Tidak yakin bagaimana cara menuju ke babi? Coba jalan ini!"
         },
         "courseB_maze_seq6_2018": {
           "courseB_maze_seq6_a": "Kode akhir anda harus memiliki tiga blok gerakan.",
           "courseB_maze_seq6_b": "Jika Anda terkendala, cobalah memecahkan puzzle ini dalam dua bagian, satu menyamping dan satu ke atas dan ke bawah.",
-          "courseB_maze_seq5_c": "Ada dua cara untuk memecahkan puzzle ini.",
+          "courseB_maze_seq5_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq5_d": "Tidak yakin cara menuju ke biji? Coba jalan ini!"
         },
         "courseB_maze_seq6_2019": {
           "courseB_maze_seq6_a": "Kode akhir anda harus memiliki tiga blok gerakan.",
           "courseB_maze_seq6_b": "Jika Anda terkendala, cobalah memecahkan puzzle ini dalam dua bagian, satu menyamping dan satu ke atas dan ke bawah.",
-          "courseB_maze_seq5_c": "Ada dua cara untuk memecahkan puzzle ini.",
+          "courseB_maze_seq5_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq5_d": "Tidak yakin cara menuju ke biji? Coba jalan ini!"
         },
         "courseB_maze_seq6_2020": {
           "courseB_maze_seq6_a": "Kode akhir anda harus memiliki tiga blok gerakan.",
           "courseB_maze_seq6_b": "Jika Anda terkendala, cobalah memecahkan puzzle ini dalam dua bagian, satu menyamping dan satu ke atas dan ke bawah.",
-          "courseB_maze_seq5_c": "Ada dua cara untuk memecahkan puzzle ini.",
+          "courseB_maze_seq5_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq5_d": "Tidak yakin cara menuju ke biji? Coba jalan ini!"
         },
         "courseB_maze_seq7": {
@@ -3041,79 +3005,79 @@
           "courseB_maze_seq7_c": "Tidak dapat menuju ke biji? Coba jalan ini!"
         },
         "courseB_maze_seq8": {
-          "courseB_maze_seq8_a": "Cobalah menambahkan satu demi satu blok, sampai anda memecahkan puzzle ini.",
-          "courseB_maze_seq8_b": "Ada dua cara untuk menyelesaikan puzzle ini!",
+          "courseB_maze_seq8_a": "Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.",
+          "courseB_maze_seq8_b": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseB_maze_seq8_c": "Tidak tahu pergi ke jalan yang mana? Coba jalan ini!"
         },
         "courseB_maze_seq8_2018": {
-          "courseB_maze_seq8_a": "Cobalah menambahkan satu demi satu blok, sampai anda memecahkan puzzle ini.",
+          "courseB_maze_seq8_a": "Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.",
           "courseB_maze_seq8_b": "Ada lebih dari satu cara untuk memecahkan teka-teki ini!",
           "courseB_maze_seq8_c": "Tidak tahu pergi ke jalan yang mana? Coba jalan ini!"
         },
         "courseB_maze_seq8_2019": {
-          "courseB_maze_seq8_a": "Cobalah menambahkan satu demi satu blok, sampai anda memecahkan puzzle ini.",
+          "courseB_maze_seq8_a": "Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.",
           "courseB_maze_seq8_b": "Ada lebih dari satu cara untuk memecahkan teka-teki ini!",
           "courseB_maze_seq8_c": "Tidak tahu pergi ke jalan yang mana? Coba jalan ini!"
         },
         "courseB_maze_seq8_2020": {
-          "courseB_maze_seq8_a": "Cobalah menambahkan satu demi satu blok, sampai anda memecahkan puzzle ini.",
+          "courseB_maze_seq8_a": "Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.",
           "courseB_maze_seq8_b": "Ada lebih dari satu cara untuk memecahkan teka-teki ini!",
           "courseB_maze_seq8_c": "Tidak tahu pergi ke jalan yang mana? Coba jalan ini!"
         },
         "courseB_maze_seq9": {
           "courseB_maze_seq9_a": "Coba tulis semua langkah di selembar kertas terlebih dahulu.",
           "courseB_maze_seq9_b": "Bangun program Anda satu blok pada satu waktu dan tes saat Anda membangunnya.",
-          "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan puzzle ini.",
+          "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq9_d": "Terjebak? Coba jalan ini!"
         },
         "courseB_maze_seq9_2018": {
           "courseB_maze_seq9_a": "Coba tulis semua langkah di selembar kertas terlebih dahulu.",
           "courseB_maze_seq9_b": "Bangun program Anda satu blok pada satu waktu dan tes saat Anda membangunnya.",
-          "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan puzzle ini.",
+          "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq9_d": "Terjebak? Coba jalan ini!"
         },
         "courseB_maze_seq9_2019": {
           "courseB_maze_seq9_a": "Coba tulis semua langkah di selembar kertas terlebih dahulu.",
           "courseB_maze_seq9_b": "Bangun program Anda satu blok pada satu waktu dan tes saat Anda membangunnya.",
-          "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan puzzle ini.",
+          "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq9_d": "Terjebak? Coba jalan ini!"
         },
         "courseB_maze_seq9_2020": {
           "courseB_maze_seq9_a": "Coba tulis semua langkah di selembar kertas terlebih dahulu.",
           "courseB_maze_seq9_b": "Bangun program Anda satu blok pada satu waktu dan tes saat Anda membangunnya.",
-          "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan puzzle ini.",
+          "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq9_d": "Terjebak? Coba jalan ini!"
         },
         "courseB_maze_seq_challenge1": {
-          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak akan berhasil saat ini.",
+          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak bekerja saat ini.",
           "courseB_maze_seq_challenge1_b": "Coba gunakan blok <xml><block type=\"maze_moveWest\"/></xml> untuk memulai."
         },
         "courseB_maze_seq_challenge1_2018": {
-          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak akan berhasil saat ini.",
+          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak bekerja saat ini.",
           "courseB_maze_seq_challenge1_b": "Coba gunakan blok <xml><block type=\"maze_moveWest\"/></xml> untuk memulai."
         },
         "courseB_maze_seq_challenge1_2019": {
-          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak akan berhasil saat ini.",
+          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak bekerja saat ini.",
           "courseB_maze_seq_challenge1_b": "Coba gunakan blok <xml><block type=\"maze_moveWest\"/></xml> untuk memulai."
         },
         "courseB_maze_seq_challenge1_2020": {
-          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak akan berhasil saat ini.",
+          "courseB_maze_seq_challenge1_a": "Jalan terpendek mungkin tidak bekerja saat ini.",
           "courseB_maze_seq_challenge1_b": "Coba gunakan blok <xml><block type=\"maze_moveWest\"/></xml> untuk memulai."
         },
         "courseB_maze_seq_challenge2": {
-          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan puzzle ini.",
+          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.",
           "courseB_maze_seq_challenge2_b": "Susun ulang balok dan ambil jalan pola tangga."
         },
         "courseB_maze_seq_challenge2_2018": {
-          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan puzzle ini.",
+          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.",
           "courseB_maze_seq_challenge2_b": "Susun ulang balok dan ambil jalan pola tangga."
         },
         "courseB_maze_seq_challenge2_2019": {
-          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan puzzle ini.",
+          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.",
           "courseB_maze_seq_challenge2_b": "Susun ulang balok dan ambil jalan pola tangga."
         },
         "courseB_maze_seq_challenge2_2020": {
-          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan puzzle ini.",
+          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.",
           "courseB_maze_seq_challenge2_b": "Susun ulang balok dan ambil jalan pola tangga."
         },
         "courseB_playlab_events2": {
@@ -3129,19 +3093,19 @@
           "courseB_playlab_events2_a": "Ini adalah blok agar Daisi mengucapkan sesuatu:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3": {
-          "courseB_playlab_events3_a": "Ini adalah blok yang harus kamu gunakan untuk menambahkan event:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_a": "Ini adalah blok yang harus kamu gunakan untuk menambahkan kejadian:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
           "courseB_playlab_events3_b": "Ini adalah blok yang kamu butuhkan untuk mengalihkan suasana hati Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2018": {
-          "courseB_playlab_events3_a": "Ini adalah blok yang harus kamu gunakan untuk menambahkan event:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_a": "Ini adalah blok yang harus kamu gunakan untuk menambahkan kejadian:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
           "courseB_playlab_events3_b": "Ini adalah blok yang kamu butuhkan untuk mengalihkan suasana hati Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2019": {
-          "courseB_playlab_events3_a": "Ini adalah blok yang harus kamu gunakan untuk menambahkan event:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_a": "Ini adalah blok yang harus kamu gunakan untuk menambahkan kejadian:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
           "courseB_playlab_events3_b": "Ini adalah blok yang kamu butuhkan untuk mengalihkan suasana hati Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2020": {
-          "courseB_playlab_events3_a": "Ini adalah blok yang harus kamu gunakan untuk menambahkan event:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_a": "Ini adalah blok yang harus kamu gunakan untuk menambahkan kejadian:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
           "courseB_playlab_events3_b": "Ini adalah blok yang kamu butuhkan untuk mengalihkan suasana hati Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4": {
@@ -3177,104 +3141,104 @@
           "courseB_playlab_events5_b": "Ini adalah blok yang membuat kstaria berlari menjauh. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events6": {
-          "courseB_playlab_events6_a": "Anda akan membutuhkan blok event ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_a": "Kamu akan membutuhkan blok kejadian ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
           "courseB_playlab_events6_b": "Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Sampai ke semua bendera yang lewat!"
         },
         "courseB_playlab_events6_2018": {
-          "courseB_playlab_events6_a": "Anda akan membutuhkan blok event ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_a": "Kamu akan membutuhkan blok kejadian ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
           "courseB_playlab_events6_b": "Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Sampai ke semua bendera yang lewat!"
         },
         "courseB_playlab_events6_2019": {
-          "courseB_playlab_events6_a": "Anda akan membutuhkan blok event ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_a": "Kamu akan membutuhkan blok kejadian ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
           "courseB_playlab_events6_b": "Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Sampai ke semua bendera yang lewat!"
         },
         "courseB_playlab_events6_2020": {
-          "courseB_playlab_events6_a": "Anda akan membutuhkan blok event ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_a": "Kamu akan membutuhkan blok kejadian ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
           "courseB_playlab_events6_b": "Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Sampai ke semua bendera yang lewat!"
         },
         "courseB_playlab_events7": {
-          "courseB_playlab_events7_a": "Ini adalah blok event yang akan kamu butuhkan:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_a": "Ini adalah blok kejadian yang akan kamu butuhkan:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_b": "Ini adalah blok yang kamu butuhkan untuk memutar suara.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "Ini adalah blok yang kamu butuhkan untuk membuat ksatria menghilang:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2018": {
-          "courseB_playlab_events7_a": "Ini adalah blok event yang akan kamu butuhkan:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_a": "Ini adalah blok kejadian yang akan kamu butuhkan:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_b": "Ini adalah blok yang kamu butuhkan untuk memutar suara.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "Ini adalah blok yang kamu butuhkan untuk membuat ksatria menghilang:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2019": {
-          "courseB_playlab_events7_a": "Ini adalah blok event yang akan kamu butuhkan:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_a": "Ini adalah blok kejadian yang akan kamu butuhkan:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_b": "Ini adalah blok yang kamu butuhkan untuk memutar suara.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "Ini adalah blok yang kamu butuhkan untuk membuat ksatria menghilang:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events7_2020": {
-          "courseB_playlab_events7_a": "Ini adalah blok event yang akan kamu butuhkan:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_a": "Ini adalah blok kejadian yang akan kamu butuhkan:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_b": "Ini adalah blok yang kamu butuhkan untuk memutar suara.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "Ini adalah blok yang kamu butuhkan untuk membuat ksatria menghilang:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1": {
           "courseB_playlab_events_challenge1_a": "Buat hewan lain bergerak ke bawah jika kamu menekan `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "Apa yang akan dikatakan semua orang jika balapan selesai? Buatlah mereka bicara dengan event ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_b": "Ubah kecepatan hewan dengan menggunakan blok ini:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "Apa yang akan dikatakan semua orang jika balapan selesai? Buat mereka bicara dengan kejadian ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2018": {
           "courseB_playlab_events_challenge1_a": "Buat hewan lain bergerak ke bawah jika kamu menekan `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "Apa yang akan dikatakan semua orang jika balapan selesai? Buatlah mereka bicara dengan event ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_b": "Ubah kecepatan hewan dengan menggunakan blok ini:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "Apa yang akan dikatakan semua orang jika balapan selesai? Buat mereka bicara dengan kejadian ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2019": {
           "courseB_playlab_events_challenge1_a": "Buat hewan lain bergerak ke bawah jika kamu menekan `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "Apa yang akan dikatakan semua orang jika balapan selesai? Buatlah mereka bicara dengan event ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_b": "Ubah kecepatan hewan dengan menggunakan blok ini:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "Apa yang akan dikatakan semua orang jika balapan selesai? Buat mereka bicara dengan kejadian ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2020": {
           "courseB_playlab_events_challenge1_a": "Buat hewan lain bergerak ke bawah jika kamu menekan `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "Apa yang akan dikatakan semua orang jika balapan selesai? Buatlah mereka bicara dengan event ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_b": "Ubah kecepatan hewan dengan menggunakan blok ini:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "Apa yang akan dikatakan semua orang jika balapan selesai? Buat mereka bicara dengan kejadian ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge2": {
-          "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Hewan tersebut juga harus kembali setelah satu atau dua detik!",
-          "courseB_playlab_events_challenge2_b": "Gunakan blok event lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Itu juga harus kembali setelah satu atau dua detik!",
+          "courseB_playlab_events_challenge2_b": "Gunakan blok kejadian lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nMengubah suasana hati binatang!"
+          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nUbah suasana hati hewan!"
         },
         "courseB_playlab_events_challenge2_2018": {
-          "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Hewan tersebut juga harus kembali setelah satu atau dua detik!",
-          "courseB_playlab_events_challenge2_b": "Gunakan blok event lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Itu juga harus kembali setelah satu atau dua detik!",
+          "courseB_playlab_events_challenge2_b": "Gunakan blok kejadian lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nMengubah suasana hati binatang!"
+          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nUbah suasana hati hewan!"
         },
         "courseB_playlab_events_challenge2_2019": {
-          "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Hewan tersebut juga harus kembali setelah satu atau dua detik!",
-          "courseB_playlab_events_challenge2_b": "Gunakan blok event lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Itu juga harus kembali setelah satu atau dua detik!",
+          "courseB_playlab_events_challenge2_b": "Gunakan blok kejadian lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nMengubah suasana hati binatang!"
+          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nUbah suasana hati hewan!"
         },
         "courseB_playlab_events_challenge2_2020": {
-          "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Hewan tersebut juga harus kembali setelah satu atau dua detik!",
-          "courseB_playlab_events_challenge2_b": "Gunakan blok event lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Itu juga harus kembali setelah satu atau dua detik!",
+          "courseB_playlab_events_challenge2_b": "Gunakan blok kejadian lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nMengubah suasana hati binatang!"
+          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nUbah suasana hati hewan!"
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "Coba tambahkan blok satu per satu, lalu klik \"Run\" untuk melihat apa yang terjadi.",
-          "courseB_starWars_prog1_b": "Anda perlu bergerak ke Timur untuk memecahkan puzzle ini. Sejauh mana kamu perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Kamu akan ingin bergerak ke Timur untuk memecahkan teka-teki ini. Sejauh mana kamu perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2018": {
           "courseB_starWars_prog1_a": "Coba tambahkan blok satu per satu, lalu klik \"Run\" untuk melihat apa yang terjadi.",
-          "courseB_starWars_prog1_b": "Anda perlu bergerak ke Timur untuk memecahkan puzzle ini. Sejauh mana kamu perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Kamu akan ingin bergerak ke Timur untuk memecahkan teka-teki ini. Sejauh mana kamu perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "Coba tambahkan blok satu per satu, lalu klik \"Run\" untuk melihat apa yang terjadi.",
-          "courseB_starWars_prog1_b": "Anda perlu bergerak ke Timur untuk memecahkan puzzle ini. Sejauh mana kamu perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Kamu akan ingin bergerak ke Timur untuk memecahkan teka-teki ini. Sejauh mana kamu perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "Coba tambahkan blok satu per satu, lalu klik \"Run\" untuk melihat apa yang terjadi.",
-          "courseB_starWars_prog1_b": "Anda perlu bergerak ke Timur untuk memecahkan puzzle ini. Sejauh mana kamu perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Kamu akan ingin bergerak ke Timur untuk memecahkan teka-teki ini. Sejauh mana kamu perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2": {
           "courseB_starWars_prog2_a": "Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain."
@@ -3289,136 +3253,132 @@
           "courseB_starWars_prog2_a": "Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain."
         },
         "courseB_starWars_prog3": {
-          "courseB_starWars_prog3_a": "Anda perlu bergerak 3 langkah untuk memecahkan puzzle ini.",
+          "courseB_starWars_prog3_a": "Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.",
           "courseB_starWars_prog3_b": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana."
         },
         "courseB_starWars_prog3_2018": {
-          "courseB_starWars_prog3_a": "Anda perlu bergerak 3 langkah untuk memecahkan puzzle ini.",
+          "courseB_starWars_prog3_a": "Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.",
           "courseB_starWars_prog3_b": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana."
         },
         "courseB_starWars_prog3_2019": {
-          "courseB_starWars_prog3_a": "Anda perlu bergerak 3 langkah untuk memecahkan puzzle ini.",
+          "courseB_starWars_prog3_a": "Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.",
           "courseB_starWars_prog3_b": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana."
         },
         "courseB_starWars_prog3_2020": {
-          "courseB_starWars_prog3_a": "Anda perlu bergerak 3 langkah untuk memecahkan puzzle ini.",
+          "courseB_starWars_prog3_a": "Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.",
           "courseB_starWars_prog3_b": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana."
         },
         "courseB_starWars_prog4": {
           "courseB_starWars_prog4_a": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.",
-          "courseB_starWars_prog4_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Coba gunakan blok `ulangi` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2018": {
           "courseB_starWars_prog4_a": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.",
-          "courseB_starWars_prog4_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Coba gunakan blok `ulangi` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2019": {
           "courseB_starWars_prog4_a": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.",
-          "courseB_starWars_prog4_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Coba gunakan blok `ulangi` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2020": {
           "courseB_starWars_prog4_a": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.",
-          "courseB_starWars_prog4_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Coba gunakan blok `ulangi` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5": {
-          "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti puzzle sebelumnya?",
-          "courseB_starWars_prog5_b": "BB-8 akan mengambil logam rongsokan saat ia melewatinya.",
+          "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
+          "courseB_starWars_prog5_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
           "courseB_starWars_prog5_c": "Lacak pola ini dengan jarimu. Hitung potongan logam saat kamu bergerak.",
           "courseB_starWars_prog5_da": "Lihat apa yang terjadi jika kamu menggunakan solusi yang sama dengan teka-teki anak tangga:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2018": {
-          "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti puzzle sebelumnya?",
-          "courseB_starWars_prog5_b": "BB-8 akan mengambil logam rongsokan saat ia melewatinya.",
+          "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
+          "courseB_starWars_prog5_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
           "courseB_starWars_prog5_c": "Lacak pola ini dengan jarimu. Hitung potongan logam saat kamu bergerak.",
           "courseB_starWars_prog5_da": "Lihat apa yang terjadi jika kamu menggunakan solusi yang sama dengan teka-teki anak tangga:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2019": {
-          "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti puzzle sebelumnya?",
-          "courseB_starWars_prog5_b": "BB-8 akan mengambil logam rongsokan saat ia melewatinya.",
+          "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
+          "courseB_starWars_prog5_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
           "courseB_starWars_prog5_c": "Lacak pola ini dengan jarimu. Hitung potongan logam saat kamu bergerak.",
           "courseB_starWars_prog5_da": "Lihat apa yang terjadi jika kamu menggunakan solusi yang sama dengan teka-teki anak tangga:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2020": {
-          "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti puzzle sebelumnya?",
-          "courseB_starWars_prog5_b": "BB-8 akan mengambil logam rongsokan saat ia melewatinya.",
+          "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
+          "courseB_starWars_prog5_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
           "courseB_starWars_prog5_c": "Lacak pola ini dengan jarimu. Hitung potongan logam saat kamu bergerak.",
           "courseB_starWars_prog5_da": "Lihat apa yang terjadi jika kamu menggunakan solusi yang sama dengan teka-teki anak tangga:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6": {
           "courseB_starWars_prog6_a": "Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!",
-          "courseB_starWars_prog6_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "Coba gunakan blok `ulangi` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2018": {
           "courseB_starWars_prog6_a": "Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!",
-          "courseB_starWars_prog6_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "Coba gunakan blok `ulangi` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2019": {
           "courseB_starWars_prog6_a": "Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!",
-          "courseB_starWars_prog6_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "Coba gunakan blok `ulangi` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2020": {
           "courseB_starWars_prog6_a": "Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!",
-          "courseB_starWars_prog6_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "Coba gunakan blok `ulangi` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7": {
-          "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti puzzle sebelumnya?",
-          "courseB_starWars_prog7_b": "BB-8 akan mengambil logam rongsokan saat ia melewatinya.",
+          "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
+          "courseB_starWars_prog7_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
           "courseB_starWars_prog7_c": "Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?"
         },
         "courseB_starWars_prog7_2018": {
-          "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti puzzle sebelumnya?",
-          "courseB_starWars_prog7_b": "BB-8 akan mengambil logam rongsokan saat ia melewatinya.",
+          "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
+          "courseB_starWars_prog7_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
           "courseB_starWars_prog7_c": "Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?"
         },
         "courseB_starWars_prog7_2019": {
-          "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti puzzle sebelumnya?",
-          "courseB_starWars_prog7_b": "BB-8 akan mengambil logam rongsokan saat ia melewatinya.",
+          "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
+          "courseB_starWars_prog7_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
           "courseB_starWars_prog7_c": "Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?"
         },
         "courseB_starWars_prog7_2020": {
-          "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti puzzle sebelumnya?",
-          "courseB_starWars_prog7_b": "BB-8 akan mengambil logam rongsokan saat ia melewatinya.",
+          "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
+          "courseB_starWars_prog7_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
           "courseB_starWars_prog7_c": "Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?"
         },
         "courseB_starWars_prog8": {
           "courseB_starWars_prog8_a": "Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.",
-          "courseB_starWars_prog8_b": "Coba gunakan blok `repeat` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Coba gunakan blok `ulangi` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2018": {
           "courseB_starWars_prog8_a": "Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.",
-          "courseB_starWars_prog8_b": "Coba gunakan blok `repeat` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Coba gunakan blok `ulangi` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2019": {
           "courseB_starWars_prog8_a": "Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.",
-          "courseB_starWars_prog8_b": "Coba gunakan blok `repeat` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Coba gunakan blok `ulangi` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
           "courseB_starWars_prog8_a": "Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.",
-          "courseB_starWars_prog8_b": "Coba gunakan blok `repeat` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Coba gunakan blok `ulangi` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.",
-          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan puzzle ini.",
-          "courseB_starWars_prog9_c": "Bisakah sebuah loop `repeat` membantu di sini?"
+          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan teka-teki ini.",
+          "courseB_starWars_prog9_c": "Bisakah sebuah loop `ulangi` membantu di sini?"
         },
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.",
-          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan puzzle ini.",
-          "courseB_starWars_prog9_c": "Dapatkah sebuah lingkaran `ulangi` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> membantu di sini?"
+          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan teka-teki ini.",
+          "courseB_starWars_prog9_c": "Bisakah sebuah loop `ulangi` membantu di sini?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.",
-          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan puzzle ini.",
+          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan teka-teki ini.",
           "courseB_starWars_prog9_c": "Bisakah sebuah loop `ulangi` membantu di sini?"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.",
-          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan puzzle ini.",
+          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan teka-teki ini.",
           "courseB_starWars_prog9_c": "Dapatkah sebuah lingkaran `ulangi` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> membantu di sini?"
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "Tidak tahu cara menggambar sebuah garis? Mulai melampirkan blok ke blok <block type=\"when_run\"/></xml> untuk melihat apa yang terjadi.",
-          "courseA_artist_loops2_b": "Gunakan blok ini <xml><block type=\"simple_move_right\"/></xml> untuk memecahkan puzzle ini."
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Blok `set actor 1 to ??? image` dapat digunakan untuk menambahkan aktor ke pentas.",
@@ -3831,8 +3791,8 @@
           "courseC_artist_loopsPrePre1a_b": "Untuk maju 50 pixel, gunakan blok ini:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "*\"Jika Anda menggunakan blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>,  saya akan menggambar satu garis.\"*",
-          "courseC_artist_prog2_b": "Kesulitan saat berputar di sudut? Gunakan blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "Jika Anda menggunakan blok agar saya 'bergerak maju dengan 100 pixel', saya akan menarik garis secara otomatis.",
+          "courseC_artist_prog2_b": "Kesulitan mengubah sudut? Gunakan blok 'belok kanan 90 derajat'."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "*\"Jika Anda menggunakan blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>,  saya akan menggambar satu garis.\"*",
@@ -4706,25 +4666,25 @@
           "courseC_maze_programming5_c": "Solusinya akan memiliki dua blok 'move forward`, belokan, dan dua blok' move forward` lagi."
         },
         "courseC_maze_programming6": {
-          "courseC_maze_programming6_a": "Ada dua cara untuk menyelesaikan puzzle ini!",
+          "courseC_maze_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseC_maze_programming6_b": "Ikuti jari anda dari burung ke babi, langkah mana yang anda ambil?",
           "courseC_maze_programming6_c": "Ingat Anda harus putar dulu, karena burung mulai dengan menghadapi sebuah dinding.",
           "courseC_maze_programming6_d": "Merasa terjebak? Lihatlah jalan ini!"
         },
         "courseC_maze_programming6_2018": {
-          "courseC_maze_programming6_a": "Ada dua cara untuk menyelesaikan puzzle ini!",
+          "courseC_maze_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseC_maze_programming6_b": "Ikuti jari anda dari burung ke babi, langkah mana yang anda ambil?",
           "courseC_maze_programming6_c": "Ingat Anda harus putar dulu, karena burung mulai dengan menghadapi sebuah dinding.",
           "courseC_maze_programming6_d": "Merasa terjebak? Lihatlah jalan ini!"
         },
         "courseC_maze_programming6_2019": {
-          "courseC_maze_programming6_a": "Ada dua cara untuk menyelesaikan puzzle ini!",
+          "courseC_maze_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseC_maze_programming6_b": "Ikuti jari anda dari burung ke babi, langkah mana yang anda ambil?",
           "courseC_maze_programming6_c": "Ingat Anda harus putar dulu, karena burung mulai dengan menghadapi sebuah dinding.",
           "courseC_maze_programming6_d": "Merasa terjebak? Lihatlah jalan ini!"
         },
         "courseC_maze_programming6_2020": {
-          "courseC_maze_programming6_a": "Ada dua cara untuk menyelesaikan puzzle ini!",
+          "courseC_maze_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseC_maze_programming6_b": "Ikuti jari anda dari burung ke babi, langkah mana yang anda ambil?",
           "courseC_maze_programming6_c": "Ingat Anda harus putar dulu, karena burung mulai dengan menghadapi sebuah dinding.",
           "courseC_maze_programming6_d": "Merasa terjebak? Lihatlah jalan ini!"
@@ -5444,19 +5404,19 @@
         },
         "courseD_artist_project3": {
           "courseD_artist_project3_a": "Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!",
-          "courseD_artist_project3_b": "Cobalah nested loops!\n\nGunakan kode yang Anda ciptakan untuk menggambar sebuah garis dari bentuk dan sarangkan bentuk itu di dalam loop lainnya. Di bawah, sebelum loop luar berakhir, tambahkan menambah blok yang akan membuat Elsa berputar.\n\n-   Coba 72 derajat jika Anda mengulang loop luar 5 kali\n-   Coba 60 derajat jika Anda mengulang loop luar 6 kali"
+          "courseD_artist_project3_b": "Cobalah nested loop!\n\nGunakan kode yang Anda ciptakan untuk menggambar sebuah garis dari bentuk dan sarangkan bentuk itu di dalam loop lainnya. Di bawah, sebelum loop luar berakhir, tambahkan menambah blok yang akan membuat Elsa berputar.\n\n-   Coba 72 derajat jika Anda mengulang loop luar 5 kali\n-   Coba 60 derajat jika Anda mengulang loop luar 6 kali"
         },
         "courseD_artist_project3_2018": {
           "courseD_artist_project3_a": "Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!",
-          "courseD_artist_project3_b": "Cobalah nested loops!\n\nGunakan kode yang Anda ciptakan untuk menggambar sebuah garis dari bentuk dan sarangkan bentuk itu di dalam loop lainnya. Di bawah, sebelum loop luar berakhir, tambahkan menambah blok yang akan membuat Elsa berputar.\n\n-   Coba 72 derajat jika Anda mengulang loop luar 5 kali\n-   Coba 60 derajat jika Anda mengulang loop luar 6 kali"
+          "courseD_artist_project3_b": "Cobalah nested loop!\n\nGunakan kode yang Anda ciptakan untuk menggambar sebuah garis dari bentuk dan sarangkan bentuk itu di dalam loop lainnya. Di bawah, sebelum loop luar berakhir, tambahkan menambah blok yang akan membuat Elsa berputar.\n\n-   Coba 72 derajat jika Anda mengulang loop luar 5 kali\n-   Coba 60 derajat jika Anda mengulang loop luar 6 kali"
         },
         "courseD_artist_project3_2019": {
           "courseD_artist_project3_a": "Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!",
-          "courseD_artist_project3_b": "Cobalah nested loops!\n\nGunakan kode yang Anda ciptakan untuk menggambar sebuah garis dari bentuk dan sarangkan bentuk itu di dalam loop lainnya. Di bawah, sebelum loop luar berakhir, tambahkan menambah blok yang akan membuat Elsa berputar.\n\n-   Coba 72 derajat jika Anda mengulang loop luar 5 kali\n-   Coba 60 derajat jika Anda mengulang loop luar 6 kali"
+          "courseD_artist_project3_b": "Cobalah nested loop!\n\nGunakan kode yang Anda ciptakan untuk menggambar sebuah garis dari bentuk dan sarangkan bentuk itu di dalam loop lainnya. Di bawah, sebelum loop luar berakhir, tambahkan menambah blok yang akan membuat Elsa berputar.\n\n-   Coba 72 derajat jika Anda mengulang loop luar 5 kali\n-   Coba 60 derajat jika Anda mengulang loop luar 6 kali"
         },
         "courseD_artist_project3_2020": {
           "courseD_artist_project3_a": "Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!",
-          "courseD_artist_project3_b": "Cobalah nested loops!\n\nGunakan kode yang Anda ciptakan untuk menggambar sebuah garis dari bentuk dan sarangkan bentuk itu di dalam loop lainnya. Di bawah, sebelum loop luar berakhir, tambahkan menambah blok yang akan membuat Elsa berputar.\n\n-   Coba 72 derajat jika Anda mengulang loop luar 5 kali\n-   Coba 60 derajat jika Anda mengulang loop luar 6 kali"
+          "courseD_artist_project3_b": "Cobalah nested loop!\n\nGunakan kode yang Anda ciptakan untuk menggambar sebuah garis dari bentuk dan sarangkan bentuk itu di dalam loop lainnya. Di bawah, sebelum loop luar berakhir, tambahkan menambah blok yang akan membuat Elsa berputar.\n\n-   Coba 72 derajat jika Anda mengulang loop luar 5 kali\n-   Coba 60 derajat jika Anda mengulang loop luar 6 kali"
         },
         "courseD_artist_project3a": {
           "courseD_artist_project3a_a": "Anda dapat memilih jumlah yang berbeda untuk memutar bentuk Anda! Bagaimana 18 kali dengan sebuah turn 20 derajat di antara?"
@@ -5519,6 +5479,35 @@
           "courseD_artist_ramp12_a": "Anda bisa menggambar persegi terlebih dahulu, lalu segitiga, atau melakukannya sebaliknya!",
           "courseD_artist_ramp12_b": "Cobalah pecahkan masalah ini menjadi 2 bagian, dan gunakan 2 loop.",
           "courseD_artist_ramp12_c": "Anda bisa menggunakan menu drop dwon pada blok `turn` untuk melihat sudut mana yang Anda butuhkan!"
+        },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "Cukup klik `Run` untuk melihat program ini berjalan!"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_a": "Salah satu dari empat pola binary di toolbox akan memecahkan puzzle ini!",
+          "courseD_artist_binary3_b": "Jangan takut membuat kesalahan! Cobalah menulis binary dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum memecahkan puzzle itu."
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "Lihatlah tiga kotak pertama di baris paling atas. Bisakah Anda mengulangi ketiganya untuk mendapatkan keseluruhan pola?",
+          "courseD_artist_binary4_b": "Jangan takut membuat kesalahan! Cobalah menulis binary dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika Anda merasa belum menyelesaikan puzzle ini."
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "Cobalah menjalankan kode terlebih dahulu untuk melihat apa yang harus Anda kerjakan.",
+          "courseD_artist_binary5_b": "Anda hanya perlu mengganti dua baris untuk membuat senyuman.",
+          "courseD_artist_binary5_c": "Jika anda mengalami kesulitan memecahkan puzzle ini, coba tuliskan baris biner di selembar kertas dan cari sebuah pola."
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "Mulailah dari kiri atas. Seberapa jauh anda harus membaca sebelum pola mulai terulang?",
+          "courseD_artist_binary6_b": "Anda dapat membangun string biner anda sedikit demi sedikit, dan teruslah menguji!"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "Mulailah dari kiri atas. Seberapa jauh anda harus membaca sebelum pola mulai terulang?",
+          "courseD_artist_binary7_b": "Jangan takut membuat kesalahan! Cobalah menulis binary dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika Anda merasa belum menyelesaikan puzzle ini."
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "Spiral terkadang membingungkan. Isolasikan setiap garis horizontal di pikiran anda saat anda membuat desain ini.",
+          "courseD_artist_binary8_b": "Cobalah menjalankan kode terlebih dahulu untuk melihat apa yang harus Anda kerjakan.",
+          "courseD_artist_binary8_c": "Jangan takut membuat kesalahan! Cobalah menulis binary dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum memecahkan puzzle itu."
         },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "Anda perlu menggunakan blok `if` untuk memeriksa apakah ada bunga dibawah awan sebelum anda mencoba untuk mendapatkan nektar."
@@ -5748,16 +5737,16 @@
           "courseD_bee_conditionals_challenge1_b": "Dalam hal teka-teki ini, setiap ruang bisa memiliki sebuah bunga, sebuah sisir madu, atau tidak. Itu berarti Anda bisa mengulangi kata kunci `if / else` Anda di setiap kotak."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Persis seperti blok `if at flower`, kode di dalam `while nectar > 0` hanya akan berjalan jika lebah ada di bunga. Perbedaannya adalah bahwa kode di dalam akan berjalan berulang-ulang sampai tidak ada nektar yang tersisa lagi.  Coba pola ini:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Persis seperti blok `if at flower`, kode di dalam `while nectar > 0` hanya akan berjalan jika lebah ada di bunga. Perbedaannya adalah bahwa kode di dalam akan berjalan berulang-ulang sampai tidak ada nektar yang tersisa lagi.  Coba pola ini:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Persis seperti blok `if at flower`, kode di dalam `while nectar > 0` hanya akan berjalan jika lebah ada di bunga. Perbedaannya adalah bahwa kode di dalam akan berjalan berulang-ulang sampai tidak ada nektar yang tersisa lagi.  Coba pola ini:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Persis seperti blok `if at flower`, kode di dalam `while nectar > 0` hanya akan berjalan jika lebah ada di bunga. Perbedaannya adalah bahwa kode di dalam akan berjalan berulang-ulang sampai tidak ada nektar yang tersisa lagi.  Coba pola ini:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Persis seperti blok `if at flower`, kode di dalam `while nectar > 0` hanya akan berjalan jika lebah ada di bunga. Perbedaannya adalah bahwa kode di dalam akan berjalan berulang-ulang sampai tidak ada nektar yang tersisa lagi.  Coba pola ini:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Persis seperti blok `if at flower`, kode di dalam `while nectar > 0` hanya akan berjalan jika lebah ada di bunga. Perbedaannya adalah bahwa kode di dalam akan berjalan berulang-ulang sampai tidak ada nektar yang tersisa lagi.  Coba pola ini:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Persis seperti blok `if at flower`, kode di dalam `while nectar > 0` hanya akan berjalan jika lebah ada di bunga. Perbedaannya adalah bahwa kode di dalam akan berjalan berulang-ulang sampai tidak ada nektar yang tersisa lagi.  Coba pola ini:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Persis seperti blok `if at flower`, kode di dalam `while nectar > 0` hanya akan berjalan jika lebah ada di bunga. Perbedaannya adalah bahwa kode di dalam akan berjalan berulang-ulang sampai tidak ada nektar yang tersisa lagi.  Coba pola ini:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Mengapa tidak yang pertama setengah dari program ini bekerja? Pikirkan mengapa lebah perlu bergerak mundur. Berapa banyak nektar yang lebah mengumpulkan setiap kali bergerak lebih sebuah bunga?",
@@ -6038,8 +6027,8 @@
           "courseD_collector_debugging9_b": "Temukan cara bagaimana anda bisa memecahkan puzzle itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat code yang sesuai dengan apa yang ada di pikiran anda."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Mulai dengan mengumpulkan hanya **two** permata dari setiap **two** tumpukan pertama.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nGunakan blok ini.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Selanjutnya, kumpulkan sisa permatanya dalam barisan ini.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nTambah blok ini ke program Anda.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Mulai dengan mengumpulkan hanya **two** permata dari setiap **two** tumpukan pertama.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nGunakan blok ini.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Selanjutnya, kumpulkan sisa permatanya dalam barisan ini.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nTambah blok ini ke program Anda.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Selanjutnya, kumpulkan sisa harta karunnya. Tambah blok ini ke program Anda.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Ini adalah solusi penuh untuk teka-teki ini.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -6761,7 +6750,7 @@
           "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu."
         },
         "courseD_maze_ramp6": {
-          "courseC_maze_programming6_a": "Ada dua cara untuk menyelesaikan puzzle ini!",
+          "courseC_maze_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseC_maze_programming6_b": "Burung mulai menghadap tembok, jadi jangan lupa menoleh sebelum bergerak.",
           "courseC_maze_programming6_c": "Ingat Anda dapat menulis satu potong kode sekali tempo, lalu jalankan untuk menebak tujuan sebelum pergi dari situ."
         },
@@ -6980,7 +6969,7 @@
           "courseC_maze_programming6a_a": "Gunakan sebuah loop `repeat` untuk membuat Scrat bergerak!"
         },
         "courseD_scrat_ramp7": {
-          "courseD_scrat_programming6_a": "Ada dua cara untuk menyelesaikan puzzle ini!",
+          "courseD_scrat_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseD_scrat_programming6_b": "Ingat untuk berbelok dulu sebelum bergerak, sejak Scrat menghadap ke arah yang salah.",
           "courseD_scrat_programming6_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu."
         },
@@ -8197,19 +8186,23 @@
         },
         "courseF_artist_variables_challenge2": {
           "courseF_artist_variables_challenge2_a": "Variabel sangat membantu Anda karena dapat menambahkan setiap kali melalui satu lingkaran. ",
-          "courseF_artist_variables_challenge2_c": "Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka."
+          "courseF_artist_variables_challenge2_c": "Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.",
+          "courseF_artist_variables_challenge2_d": "**Solution:**\n\n![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)"
         },
         "courseF_artist_variables_challenge2_2018": {
           "courseF_artist_variables_challenge2_a": "Variabel sangat membantu Anda karena dapat menambahkan setiap kali melalui satu lingkaran. ",
-          "courseF_artist_variables_challenge2_c": "Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka."
+          "courseF_artist_variables_challenge2_c": "Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.",
+          "courseF_artist_variables_challenge2_d": "**Solution:**\n\n![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)"
         },
         "courseF_artist_variables_challenge2_2019": {
           "courseF_artist_variables_challenge2_a": "Variabel sangat membantu Anda karena dapat menambahkan setiap kali melalui satu lingkaran. ",
-          "courseF_artist_variables_challenge2_c": "Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka."
+          "courseF_artist_variables_challenge2_c": "Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.",
+          "courseF_artist_variables_challenge2_d": "**Solution:**\n\n![Solution](https://images.code.org/1236e605d55d8cc9beafbca5425c8f75-image-1543523947735.png)"
         },
         "courseF_artist_variables_challenge2_2020": {
           "courseF_artist_variables_challenge2_a": "Variabel sangat membantu Anda karena dapat menambahkan setiap kali melalui satu lingkaran. ",
-          "courseF_artist_variables_challenge2_c": "Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka."
+          "courseF_artist_variables_challenge2_c": "Menggunakan sebuah variabel untuk sisi dan untuk panjang membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.",
+          "courseF_artist_variables_challenge2_d": "**Solution:**\n\n![Solution](https://images.code.org/1236e605d55d8cc9beafbca5425c8f75-image-1543523947735.png)"
         },
         "courseF_bee_conditionals10": {
           "courseF_bee_conditionals10_a": "Bayangkan jika ada awan di setiap tempat. Aoakah ini mempermudah kode Anda?",
@@ -8330,22 +8323,22 @@
           "courseF_bee_for4_c": "Pastikan untuk menggunakan variabel `counter` di dalam loop `repeat` nested untuk mendapatkan nektar yang cukup!"
         },
         "courseF_bee_for5": {
-          "courseF_bee_for5_a": "Kali ini, blok `move forward` Anda dan blok `get nectar` Anda akan perlu ditempatkan dalam loops `repeat` yang terpisah, keduanya di dalam loop `for` yang sama.",
+          "courseF_bee_for5_a": "Kali ini, blok `move forward` Anda dan blok `get nectar` Anda akan perlu ditempatkan dalam loop `repeat` yang terpisah, keduanya di dalam loop `for` yang sama.",
           "courseF_bee_for5_b": "Gunakan variabel `counter` dalam tiap loop agar lebah bergerak dengan jarak berbeda diantara tiap bunga.",
           "courseF_bee_for5_c": "Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu."
         },
         "courseF_bee_for5_2018": {
-          "courseF_bee_for5_a": "Kali ini, blok `move forward` Anda dan blok `get nectar` Anda akan perlu ditempatkan dalam loops `repeat` yang terpisah, keduanya di dalam loop `for` yang sama.",
+          "courseF_bee_for5_a": "Kali ini, blok `move forward` Anda dan blok `get nectar` Anda akan perlu ditempatkan dalam loop `repeat` yang terpisah, keduanya di dalam loop `for` yang sama.",
           "courseF_bee_for5_b": "Gunakan variabel `counter` dalam tiap loop agar lebah bergerak dengan jarak berbeda diantara tiap bunga.",
           "courseF_bee_for5_c": "Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu."
         },
         "courseF_bee_for5_2019": {
-          "courseF_bee_for5_a": "Kali ini, blok `move forward` Anda dan blok `get nectar` Anda akan perlu ditempatkan dalam loops `repeat` yang terpisah, keduanya di dalam loop `for` yang sama.",
+          "courseF_bee_for5_a": "Kali ini, blok `move forward` Anda dan blok `get nectar` Anda akan perlu ditempatkan dalam loop `repeat` yang terpisah, keduanya di dalam loop `for` yang sama.",
           "courseF_bee_for5_b": "Gunakan variabel `counter` dalam tiap loop agar lebah bergerak dengan jarak berbeda diantara tiap bunga.",
           "courseF_bee_for5_c": "Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu."
         },
         "courseF_bee_for5_2020": {
-          "courseF_bee_for5_a": "Kali ini, blok `move forward` Anda dan blok `get nectar` Anda akan perlu ditempatkan dalam loops `repeat` yang terpisah, keduanya di dalam loop `for` yang sama.",
+          "courseF_bee_for5_a": "Kali ini, blok `move forward` Anda dan blok `get nectar` Anda akan perlu ditempatkan dalam loop `repeat` yang terpisah, keduanya di dalam loop `for` yang sama.",
           "courseF_bee_for5_b": "Gunakan variabel `counter` dalam tiap loop agar lebah bergerak dengan jarak berbeda diantara tiap bunga.",
           "courseF_bee_for5_c": "Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu."
         },
@@ -8546,7 +8539,8 @@
         "courseF_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_a": "Mulai dengan memastikan Anda mengerti bagaimana fungsi ini _supposed_ bekerja. Selagi petani bergerak tiap jalan, dia hanya akan mencoba untuk mengumpulkan jagung. \n\nTambah persyaratan kondisional kepada fungsi untuk mengecek jagung, labu, dan selada.",
           "courseF_bee_fwp_challenge2_b": "Apakah Anda mulai kehabisan blok `move forward`?\nCoba menggunakan _second_ `for loop` kedua dalam program utamanya.",
-          "courseF_bee_fwp_challenge2_d": "**Fungsi kamu akan terlihat seperti ini:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter2</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                <mutation name=\"pick row\">\n                  <arg name=\"length\"/>\n                </mutation>\n                <value name=\"ARG0\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter2</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n    </block></xml>"
+          "courseF_bee_fwp_challenge2_c": "**Here is what your function should look like:**\n\n<xml><block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title name=\"NAME\">pick row</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_turn\">\n        <title name=\"DIR\">turnLeft</title>\n        <next>\n          <block type=\"controls_for\" inline=\"true\">\n            <title name=\"VAR\">counter</title>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">length</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"harvester_ifHasCrop\">\n                        <title name=\"LOC\">Corn</title>\n                        <statement name=\"DO\">\n                          <block type=\"harvester_corn\"/>\n                        </statement>\n                        <next>\n                          <block type=\"harvester_ifHasCrop\">\n                            <title name=\"LOC\">Pumpkin</title>\n                            <statement name=\"DO\">\n                              <block type=\"harvester_pumpkin\"/>\n                            </statement>\n                            <next>\n                              <block type=\"harvester_ifHasCrop\">\n                                <title name=\"LOC\">Lettuce</title>\n                                <statement name=\"DO\">\n                                  <block type=\"harvester_lettuce\"/>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">length</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>",
+          "courseF_bee_fwp_challenge2_d": "**Here is what your function should look like:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter2</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                <mutation name=\"pick row\">\n                  <arg name=\"length\"/>\n                </mutation>\n                <value name=\"ARG0\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter2</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n    </block></xml>"
         },
         "courseF_bee_variables_3_2018": {
           "courseF_beevariables_3a": "Untuk mengurangi satu variabel, Anda dapat menggunakan kode ini di program Anda:\n<xml><block type=\"variables_set\" inline=\"false\">\n                    <title name=\"VAR\">gather</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">gather</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">1</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block></xml>"

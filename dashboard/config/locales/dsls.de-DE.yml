@@ -3083,7 +3083,7 @@ de-DE:
         answers:
         - text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
-        - text: Der Künstler wird eine einzelne Linie zeichnen.
+        - text: Der Künstler zeichnet eine einzelne Linie.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Künstler zeichnet ein Quadrat.
           correct: true
@@ -3091,13 +3091,13 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
-        - text: Der Künstler wird eine einzelne Linie zeichnen.
+        - text: Der Künstler zeichnet eine einzelne Linie.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Zeichner zeichnet ein Quadrat.
           correct: true
@@ -3105,13 +3105,13 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
-        - text: Der Künstler wird eine einzelne Linie zeichnen.
+        - text: Der Künstler zeichnet eine einzelne Linie.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Zeichner zeichnet ein Quadrat.
           correct: true
@@ -3119,13 +3119,13 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
-        - text: Der Künstler wird eine einzelne Linie zeichnen.
+        - text: Der Künstler zeichnet eine einzelne Linie.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Zeichner zeichnet ein Quadrat.
           correct: true
@@ -3133,8 +3133,8 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -3213,11 +3213,11 @@ de-DE:
           feedback: Richtig!
         - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
             stoppen.
-          feedback: Falsch. Dass Scrat einen Schritt zu wenig macht, passiert erst,
-            nachdem er sich in die falsche Richtung gedreht hat.
+          feedback: Falsch. Scrat macht erst einen Schritt zu wenig, nachdem er sich
+            in die falsche Richtung gedreht hat.
         - text: Ich weiß es nicht.
-          feedback: 'Der erste Fehler ist, dass sich Scrat nach seiner letzten Drehung
-            in die falsche Richtung bewegt. '
+          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
+            die falsche Richtung geht. '
         questions:
         - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
             dieses Programm scheitern lässt? '
@@ -3231,14 +3231,14 @@ de-DE:
           feedback: Richtig!
         - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
             stoppen.
-          feedback: Falsch. Dass Scrat einen Schritt zu wenig macht, passiert erst,
-            nachdem er sich in die falsche Richtung gedreht hat.
+          feedback: Falsch. Scrat macht erst einen Schritt zu wenig, nachdem er sich
+            in die falsche Richtung gedreht hat.
         - text: Ich weiß es nicht.
-          feedback: 'Der erste Fehler ist, dass sich Scrat nach seiner letzten Drehung
-            in die falsche Richtung bewegt. '
+          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
+            die falsche Richtung geht. '
         questions:
-        - text: 'Schau dir den nachfolgenden Code genau an. Was ist der erste Fehler,
-            der dieses Programm falsch laufen lässt? '
+        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
+            dieses Programm scheitern lässt? '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
@@ -3249,14 +3249,14 @@ de-DE:
           feedback: Richtig!
         - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
             stoppen.
-          feedback: Falsch. Dass Scrat einen Schritt zu wenig macht, passiert erst,
-            nachdem er sich in die falsche Richtung gedreht hat.
+          feedback: Falsch. Scrat macht erst einen Schritt zu wenig, nachdem er sich
+            in die falsche Richtung gedreht hat.
         - text: Ich weiß es nicht.
-          feedback: 'Der erste Fehler ist, dass sich Scrat nach seiner letzten Drehung
-            in die falsche Richtung bewegt. '
+          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
+            die falsche Richtung geht. '
         questions:
-        - text: 'Schau dir den nachfolgenden Code genau an. Was ist der erste Fehler,
-            der dieses Programm falsch laufen lässt? '
+        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
+            dieses Programm scheitern lässt? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
@@ -3267,14 +3267,14 @@ de-DE:
           feedback: Richtig!
         - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
             stoppen.
-          feedback: Falsch. Dass Scrat einen Schritt zu wenig macht, passiert erst,
-            nachdem er sich in die falsche Richtung gedreht hat.
+          feedback: Falsch. Scrat macht erst einen Schritt zu wenig, nachdem er sich
+            in die falsche Richtung gedreht hat.
         - text: Ich weiß es nicht.
-          feedback: 'Der erste Fehler ist, dass sich Scrat nach seiner letzten Drehung
-            in die falsche Richtung bewegt. '
+          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
+            die falsche Richtung geht. '
         questions:
-        - text: 'Schau dir den nachfolgenden Code genau an. Was ist der erste Fehler,
-            der dieses Programm falsch laufen lässt? '
+        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
+            dieses Programm scheitern lässt? '
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
@@ -3282,7 +3282,7 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel läuft in das TNT.
+        - text: Der Vogel wird in das TNT laufen.
           feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
@@ -3296,7 +3296,7 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel läuft in das TNT.
+        - text: Der Vogel wird in das TNT laufen.
           feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
@@ -3310,7 +3310,7 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel läuft in das TNT.
+        - text: Der Vogel wird in das TNT laufen.
           feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
@@ -3324,7 +3324,7 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel läuft in das TNT.
+        - text: Der Vogel wird in das TNT laufen.
           feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
@@ -3334,67 +3334,59 @@ de-DE:
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
             einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
+          feedback: 'Der ‚wiederhole‘ Block wird BB-8 5 mal vorwärts bewegen. '
         questions:
-        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
             einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
+          feedback: 'Der ‚wiederhole‘ Block wird BB-8 5 mal vorwärts bewegen. '
         questions:
-        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
             einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
+          feedback: 'Der ‚wiederhole‘ Block wird BB-8 5 mal vorwärts bewegen. '
         questions:
-        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
-            bewegen.
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
             einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
+          feedback: 'Der ‚wiederhole‘ Block wird BB-8 5 mal vorwärts bewegen. '
         questions:
-        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict2:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
@@ -3404,15 +3396,15 @@ de-DE:
             gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_starWars_predict2_2018:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
@@ -3422,15 +3414,15 @@ de-DE:
             gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
@@ -3440,15 +3432,15 @@ de-DE:
             gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
@@ -3458,15 +3450,15 @@ de-DE:
             gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_EOC_2020:
         display_name: Projekt am Ende des Kurses
       courseD_external_binary1:
@@ -5759,76 +5751,81 @@ de-DE:
         content1: hier die Beschreibung
       csf_putting_a_stop_to_online_meanness:
         content1: hier die Beschreibung
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Meine Online-Nachbarschaft
+
+          ## Wie geht man sicher online?
       grade2_multi_collector_A_predict1:
         answers:
-        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
-          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
-            sind, und das verursacht einen Fehler.
-        - text: Laurel wird versuchen, Schätze an Stellen einzusammeln, wo keine sind,
-            und das verursacht einen Fehler.
+        - text: Laurel wird 4 Schätze einsammeln.
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+        - text: Laurel wird versuchen, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
           correct: true
           feedback: Richtig!
         - text: Laurel wird alle Schätze einsammeln.
-          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
-            sind, und das verursacht einen Fehler.
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
         - text: Ich weiß es nicht.
-          feedback: Laurel versucht, Schätze an Stellen einzusammeln, wo keine sind,
-            und das verursacht einen Fehler.
+          feedback: Laurel versucht, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
         questions:
-        - text: Schau dir den nachfolgenden Code genau an. Wenn dieser Code bis zum
-            Ende ausgeführt würde (wenn man Fehler nicht beachtet), wie viele Schätze
-            würde Laurel einsammeln?
+        - text: Schau dir den Code unten genau an. Wenn dieser Code bis zum Ende ausgeführt
+            würde (wenn man die Fehler nicht beachtet), wie viele Schätze würde Laurel
+            sammeln?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
-          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
-            sind, und das verursacht einen Fehler.
-        - text: Laurel wird versuchen, Schätze an Stellen einzusammeln, wo keine sind,
-            und das verursacht einen Fehler.
+        - text: Laurel wird 4 Schätze einsammeln.
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+        - text: Laurel wird versuchen, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
           correct: true
           feedback: Richtig!
         - text: Laurel wird alle Schätze einsammeln.
-          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
-            sind, und das verursacht einen Fehler.
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
         - text: Ich weiß es nicht.
-          feedback: Laurel versucht, Schätze an Stellen einzusammeln, wo keine sind,
-            und das verursacht einen Fehler.
+          feedback: Laurel versucht, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
-          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
-            sind, und das verursacht einen Fehler.
-        - text: Laurel wird versuchen, Schätze an Stellen einzusammeln, wo keine sind,
-            und das verursacht einen Fehler.
+        - text: Laurel wird 4 Schätze einsammeln.
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+        - text: Laurel wird versuchen, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
           correct: true
           feedback: Richtig!
         - text: Laurel wird alle Schätze einsammeln.
-          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
-            sind, und das verursacht einen Fehler.
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
         - text: Ich weiß es nicht.
-          feedback: Laurel versucht, Schätze an Stellen einzusammeln, wo keine sind,
-            und das verursacht einen Fehler.
+          feedback: Laurel versucht, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
-          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
-            sind, und das verursacht einen Fehler.
-        - text: Laurel wird versuchen, Schätze an Stellen einzusammeln, wo keine sind,
-            und das verursacht einen Fehler.
+        - text: Laurel wird 4 Schätze einsammeln.
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+        - text: Laurel wird versuchen, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
           correct: true
           feedback: Richtig!
         - text: Laurel wird alle Schätze einsammeln.
-          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
-            sind, und das verursacht einen Fehler.
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
         - text: Ich weiß es nicht.
-          feedback: Laurel versucht, Schätze an Stellen einzusammeln, wo keine sind,
-            und das verursacht einen Fehler.
+          feedback: Laurel versucht, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?

@@ -1113,7 +1113,7 @@
           "courseD_bee_conditionals_challenge1_b": "Энэ таавар дээр зай бүр цэцэг, сархинаг, эсвэл хоосон байж болно. Энэ нь та `хэрэв/үгүй` нөхцлөө квадрат болгонд давтаж болно гэсэн үг юм."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ хэлбэрийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ хэлбэрийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Үндсэн код гайхалтай сайн ажиллана - хавтан бүрт зөвхөн нэг эрдэнэс байсан бол!",
@@ -1172,8 +1172,8 @@
           "courseF_bee_functions_challenge2_b": "**Шийдэл:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Эхний хоёр хавтан бүрээс ХОЁР эрдэнэс цуглуулахад анхаарч эхлээрэй.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nЭдгээр блокуудыг ашиглаарай.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Дараа нь, энэ мөрөнд үлдсэн эрдэнэсийг цуглуулаарай.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nЭдгээр блокуудыг программдаа нэмээрэй.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Эхний хоёр хавтан бүрээс ХОЁР эрдэнэс цуглуулахад анхаарч эхлээрэй.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nЭдгээр блокуудыг ашиглаарай.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Дараа нь, энэ мөрөнд үлдсэн эрдэнэсийг цуглуулаарай.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nЭдгээр блокуудыг программдаа нэмээрэй.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Эцэст нь, үлдсэн эрдэнэсийг цуглуулаарай. Эдгээр блокуудыг программдаа нэмээрэй.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Энэхүү тааврын бүрэн шийдлийг энд оруулав.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1270,9 +1270,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Хаана алдаа байгааг харахын тулд хуруугаараа програм дундуур аажуухан гүйлгэж үзээрэй.",
-          "courseA_artist_loops3_b": "Энэ тааврыг шийдэхийн тулд та үүнтэй адил блок ашиглахыг хүсэж болно.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал, блокны дээд хэсэгт байгаа тоог өөрчилж болно.",
-          "courseB_artist_loops2_b": "Зураач хаана төгсөж байгааг харахын тулд кодыг эхлээд ажиллуулж үзээрэй."
+          "courseA_artist_loops3_b": "Энэ тааврыг шийдэхийн тулд та үүнтэй адил блок ашиглахыг хүсэж болно.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал, блокны дээд хэсэгт байгаа тоог өөрчилж болно.",
@@ -1288,10 +1286,7 @@
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал, блокны дээд хэсэгт байгаа тоог өөрчилж болно.",
-          "courseA_artist_loops4_b": "Та зөвхөн нэг <xml><block type=\"simple_move_right\"/></xml>-г ашиглах боломжтой тул\n\nблок, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> гогцооны дотор талд үүнийг оруулаарай.",
-          "courseB_artist_loops4_a": "Үсрэх блок нь шугам зурахгүйгээр урагшлах боломжийг танд олгоно.",
-          "courseB_artist_loops4_b": "Энэ тааврыг шийдэхийн тулд давтах гогцоон дотор блок нэмэх хэрэгтэй болно.",
-          "courseB_artist_loops4_c": "Гогцооны давтах удаагийн тоог өөрчлөхөө бүү мартаарай."
+          "courseA_artist_loops4_b": "Та зөвхөн нэг <xml><block type=\"simple_move_right\"/></xml>-г ашиглах боломжтой тул\n\nблок, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> гогцооны дотор талд үүнийг оруулаарай."
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "Энэ тааврыг дуусгахын тулд <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> блокуудын талаар олж мэдсэн зүйлээ ашиглаж үзээрэй!",
@@ -1327,8 +1322,7 @@
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "Толгод хэрхэн байрлуулахыг мэдэхгүй байна уу? Нэг нь юу зурж байгааг харахын тулд блокуудтай бага зэрэг тоглож үзээрэй.",
-          "courseA_artist_loops6_b": "Та энэхүү тааврыг бодохын тулд 2 чиглэлд 2 блок шаардлагатай болно.",
-          "courseB_artist_loops6_b": "Хөдөлгөөнийг цаасан дээр бичиж дүрсийг хайж үзээрэй."
+          "courseA_artist_loops6_b": "Та энэхүү тааврыг бодохын тулд 2 чиглэлд 2 блок шаардлагатай болно."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "Гогцоо хаана байрлуулахаа мэдэхгүй байна уу? Кодоо алхам алхамаар бичиж дүрсийг гаргаж үзээрэй.",
@@ -1348,10 +1342,7 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "Гогцоо хаана байрлуулахаа мэдэхгүй байна уу? Кодоо алхам алхамаар бичиж дүрсийг гаргаж үзээрэй.",
           "courseA_artist_loops7_b": "Эхлээд нэг долгионы кодыг бичээд, дараа нь нөгөө хоёрыг зурахын тулд үүнийг давтана уу.",
-          "courseA_artist_loops7_c": "Та <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> гогцоон дээр нэгээс илүү тооны блок байрлуулж болно гэдгийг санаарай.",
-          "courseB_artist_loops7_a": "Энэ сорилт нь **4** гогцоог ашиглах ба нэг нэгээр нь явуулна!",
-          "courseB_artist_loops7_b": "Гогцоо бүр нь өөр чиглэлд явдаг шатан дүрс хийдэг болохыг анзаараарай.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "Гогцоонууд дараахыг хийх ёстой.\n\n-   Гогцоо 1\n         \\- Баруун\n         \\- Доошоо\n\n-   Гогцоо 2\n         \\- Баруун\n         \\- Дээшээ\n\n-   Гогцоо 3\n         \\- Зүүн\n         \\- Дээшээ\n\n-   Гогцоо 4\n         \\- Зүүн\n         \\- Доошоо"
+          "courseA_artist_loops7_c": "Та <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> гогцоон дээр нэгээс илүү тооны блок байрлуулж болно гэдгийг санаарай."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "Танд зориулж юу бичигдсэнийг харахын тулд кодыг ажиллуулж үзээрэй.",
@@ -1371,9 +1362,7 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "Танд зориулж юу бичигдсэнийг харахын тулд кодыг ажиллуулж үзээрэй.",
           "courseA_artist_loops8_b": "Танд өгсөн кодыг хэрхэн холбох хүсэлтэй байна вэ?",
-          "courseA_artist_loops8_c": "Код юу хийдэг вэ?\\\nЭнэ нь юу хийх ёстой вэ?\\\nЭнэ юу гэсэн үг вэ?",
-          "courseB_artist_loops8_a": "Шат хийхдээ дүрсийг хэдэн удаа давтах ёстой вэ?",
-          "courseB_artist_loops8_b": "Танд өгсөн кодыг ажиллуулж юу хийж багааг хараарай."
+          "courseA_artist_loops8_c": "Код юу хийдэг вэ?\\\nЭнэ нь юу хийх ёстой вэ?\\\nЭнэ юу гэсэн үг вэ?"
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "Шатны үлдсэн хэсгийг зурахын тулд танд өгсөн код руу өөр блок нэмээрэй.",
@@ -1392,10 +1381,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Шатны үлдсэн хэсгийг зурахын тулд танд өгсөн код руу өөр блок нэмээрэй.",
           "courseA_artist_loops9_b": "Таны оруулсан блок дараахын дотор орох ёстой\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n гогцоо.",
-          "courseA_artist_loops9_c": "Гогцоо хаана байрлуулахаа мэдэхгүй байвал, кодоо алхам алхамаар бичиж дүрсийг хайж үзээрэй.",
-          "courseB_artist_loops9_a": "Үсрэх блокуудыг шугам зурахгүйгээр шилжүүлэхэд ашиглаж болно гэдгийг санаарай.",
-          "courseB_artist_loops9_b": "Та энэхүү тааврыг бодохын тулд W блокийг ашиглахыг хүсэж болно.",
-          "courseB_artist_loops9_c": "Гогцоо хаана байрлуулахаа мэдэхгүй байна уу? Кодоо алхам алхамаар бичиж дүрсийг гаргаж үзээрэй."
+          "courseA_artist_loops9_c": "Гогцоо хаана байрлуулахаа мэдэхгүй байвал, кодоо алхам алхамаар бичиж дүрсийг хайж үзээрэй."
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "Үүнтэй адил блокууд <xml>  <block type=\"simple_move_up_left\"/></xml> нь зураачийг налуугаар хөдөлгөх болно!",
@@ -1953,9 +1939,6 @@
           "courseA_playlab_events_challenge2_b": "Та роботыг дуугаруулж болно.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Та ууртай мангасыг архируулж чадна.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_b": "Зураач энэ мөрийг зурахын тулд Өмнөд рүү шилжихийг хүсэх болно."
-        },
         "courseB_artist_loops2": {
           "courseB_artist_loops2_a": "Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал, блокны дээд хэсэгт байгаа тоог өөрчилж болно.",
           "courseB_artist_loops2_b": "Зураач хаана төгсөж байгааг харахын тулд кодыг эхлээд ажиллуулж үзээрэй."
@@ -1969,8 +1952,6 @@
           "courseB_artist_loops2_b": "Зураач хаана төгсөж байгааг харахын тулд кодыг эхлээд ажиллуулж үзээрэй."
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "Хаана алдаа байгааг харахын тулд хуруугаараа програм дундуур аажуухан гүйлгэж үзээрэй.",
-          "courseA_artist_loops3_b": "Энэ тааврыг шийдэхийн тулд та үүнтэй адил блок ашиглахыг хүсэж болно.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал, блокны дээд хэсэгт байгаа тоог өөрчилж болно.",
           "courseB_artist_loops2_b": "Зураач хаана төгсөж байгааг харахын тулд кодыг эхлээд ажиллуулж үзээрэй."
         },
@@ -2003,19 +1984,12 @@
           "courseB_artist_loops4_c": "Гогцооны давтах удаагийн тоог өөрчлөхөө бүү мартаарай."
         },
         "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал, блокны дээд хэсэгт байгаа тоог өөрчилж болно.",
-          "courseA_artist_loops4_b": "Та зөвхөн нэг <xml><block type=\"simple_move_right\"/></xml>-г ашиглах боломжтой тул\n\nблок, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> гогцооны дотор талд үүнийг оруулаарай.",
           "courseB_artist_loops4_a": "Үсрэх блок нь шугам зурахгүйгээр урагшлах боломжийг танд олгоно.",
           "courseB_artist_loops4_b": "Энэ тааврыг шийдэхийн тулд давтах гогцоон дотор блок нэмэх хэрэгтэй болно.",
           "courseB_artist_loops4_c": "Гогцооны давтах удаагийн тоог өөрчлөхөө бүү мартаарай."
         },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_a": "`Давтах` гогцоог татаад, дараа нь бусад блокуудыг дотор нь оруулаарай. Та хэдэн удаа давтах шаардлагатай вэ?"
-        },
-        "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Энэ тааврыг дуусгахын тулд <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> блокуудын талаар олж мэдсэн зүйлээ ашиглаж үзээрэй!",
-          "courseA_artist_loops5_b": "Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал, блокны дээд хэсэгт байгаа тоог өөрчилж болно.",
-          "courseA_artist_loops5_c": "Та зөвхөн нэг <xml><block type=\"simple_move_right\"/></xml>-г ашиглах боломжтой тул блок, \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nгогцооны дотор талд үүнийг оруулаарай."
         },
         "courseB_artist_loops6": {
           "courseB_artist_loops6_b": "Хөдөлгөөнийг цаасан дээр бичиж дүрсийг хайж үзээрэй."
@@ -2027,8 +2001,6 @@
           "courseB_artist_loops6_b": "Хөдөлгөөнийг цаасан дээр бичиж дүрсийг хайж үзээрэй."
         },
         "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "Толгод хэрхэн байрлуулахыг мэдэхгүй байна уу? Нэг нь юу зурж байгааг харахын тулд блокуудтай бага зэрэг тоглож үзээрэй.",
-          "courseA_artist_loops6_b": "Та энэхүү тааврыг бодохын тулд 2 чиглэлд 2 блок шаардлагатай болно.",
           "courseB_artist_loops6_b": "Хөдөлгөөнийг цаасан дээр бичиж дүрсийг хайж үзээрэй."
         },
         "courseB_artist_loops7": {
@@ -2047,9 +2019,6 @@
           "courseB_artist_loops7_c": "Гогцоонууд дараахыг хийх ёстой.\n\n-   Гогцоо 1\n         \\- Баруун\n         \\- Доошоо\n\n-   Гогцоо 2\n         \\- Баруун\n         \\- Дээшээ\n\n-   Гогцоо 3\n         \\- Зүүн\n         \\- Дээшээ\n\n-   Гогцоо 4\n         \\- Зүүн\n         \\- Доошоо"
         },
         "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Гогцоо хаана байрлуулахаа мэдэхгүй байна уу? Кодоо алхам алхамаар бичиж дүрсийг гаргаж үзээрэй.",
-          "courseA_artist_loops7_b": "Эхлээд нэг долгионы кодыг бичээд, дараа нь нөгөө хоёрыг зурахын тулд үүнийг давтана уу.",
-          "courseA_artist_loops7_c": "Та <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> гогцоон дээр нэгээс илүү тооны блок байрлуулж болно гэдгийг санаарай.",
           "courseB_artist_loops7_a": "Энэ сорилт нь **4** гогцоог ашиглах ба нэг нэгээр нь явуулна!",
           "courseB_artist_loops7_b": "Гогцоо бүр нь өөр чиглэлд явдаг шатан дүрс хийдэг болохыг анзаараарай.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Гогцоонууд дараахыг хийх ёстой.\n\n-   Гогцоо 1\n         \\- Баруун\n         \\- Доошоо\n\n-   Гогцоо 2\n         \\- Баруун\n         \\- Дээшээ\n\n-   Гогцоо 3\n         \\- Зүүн\n         \\- Дээшээ\n\n-   Гогцоо 4\n         \\- Зүүн\n         \\- Доошоо"
@@ -2067,9 +2036,6 @@
           "courseB_artist_loops8_b": "Танд өгсөн кодыг ажиллуулж юу хийж багааг хараарай."
         },
         "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Танд зориулж юу бичигдсэнийг харахын тулд кодыг ажиллуулж үзээрэй.",
-          "courseA_artist_loops8_b": "Танд өгсөн кодыг хэрхэн холбох хүсэлтэй байна вэ?",
-          "courseA_artist_loops8_c": "Код юу хийдэг вэ?\\\nЭнэ нь юу хийх ёстой вэ?\\\nЭнэ юу гэсэн үг вэ?",
           "courseB_artist_loops8_a": "Шат хийхдээ дүрсийг хэдэн удаа давтах ёстой вэ?",
           "courseB_artist_loops8_b": "Танд өгсөн кодыг ажиллуулж юу хийж багааг хараарай."
         },
@@ -2089,9 +2055,6 @@
           "courseB_artist_loops9_c": "Гогцоо хаана байрлуулахаа мэдэхгүй байна уу? Кодоо алхам алхамаар бичиж дүрсийг гаргаж үзээрэй."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Шатны үлдсэн хэсгийг зурахын тулд танд өгсөн код руу өөр блок нэмээрэй.",
-          "courseA_artist_loops9_b": "Таны оруулсан блок дараахын дотор орох ёстой\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n гогцоо.",
-          "courseA_artist_loops9_c": "Гогцоо хаана байрлуулахаа мэдэхгүй байвал, кодоо алхам алхамаар бичиж дүрсийг хайж үзээрэй.",
           "courseB_artist_loops9_a": "Үсрэх блокуудыг шугам зурахгүйгээр шилжүүлэхэд ашиглаж болно гэдгийг санаарай.",
           "courseB_artist_loops9_b": "Та энэхүү тааврыг бодохын тулд W блокийг ашиглахыг хүсэж болно.",
           "courseB_artist_loops9_c": "Гогцоо хаана байрлуулахаа мэдэхгүй байна уу? Кодоо алхам алхамаар бичиж дүрсийг гаргаж үзээрэй."
@@ -2796,10 +2759,6 @@
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Алдаа гаргахаас бүү ай! Та тааврыг хараахан шийдээгүй байсан ч юу болохыг харахын тулд кодыг ажиллуулж үзээрэй.",
           "courseB_starWars_prog9_b": "Энэ тааврыг шийдвэрлэх олон арга бий."
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "Хэрхэн шугам зурахаа мэдэхгүй байна уу? Юу болж байгааг харахын тулд блокуудыг <xml><block type=\"when_run\"/></xml> руу холбож эхлээрэй.",
-          "courseA_artist_loops2_b": "Энэ тааврыг шийдэхийн тулд энэ блок <xml><block type=\"simple_move_right\"/></xml>-г ашиглаарай."
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "`Жүжигчин 1-г ??? зураг руу тохируулах` блок нь тайзан дээр жүжигчин нэмэхэд ашиглах боломжтой.",
@@ -4845,6 +4804,35 @@
           "courseD_artist_ramp12_b": "Бодлогоо 2 хэсэгт хувааж, 2 гогцоо ашиглаарай.",
           "courseD_artist_ramp12_c": "Та доош урсах цэсийг ашиглан \\`эргэх 'блок дээр дарж аль өнцөг танд хэрэгтэй болохыг олж мэдэх боломжтой!"
         },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "Үйлдэл дээрх миний программыг харахын тулд 'Ажиллуулах' товчийг дараарай!"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_a": "Хэрэгслийн хайрцаг дээрх дөрвөн хоёртын дүрсийн нэг нь энэ тааврыг шийдэх болно!",
+          "courseD_artist_binary3_b": "Алдаа гаргахаас бүү ай! Та тааврыг хараахан шийдээгүй байсан ч юу болохыг харахын тулд хоёртын код бичээд кодыг ажиллуулж үзнэ үү."
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "Дээд эгнээний эхний гурван квадратыг хараарай. Бүхэл бүтэн загварыг авахын тулд та эдгээр гурвыг давтаж чадах уу?",
+          "courseD_artist_binary4_b": "Алдаа гаргахаас бүү ай! Та тааврыг хараахан шийдээгүй байсан ч юу болохыг харахын тулд хоёртын код бичээд кодыг ажиллуулж үзнэ үү."
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "Юутай ажиллах шаардлагатайг харахын тулд кодыг эхлээд ажиллуулаарай.",
+          "courseD_artist_binary5_b": "Инээмсэглэхийн тулд та зөвхөн хоёр мөрийг сольж байх хэрэгтэй.",
+          "courseD_artist_binary5_c": "Танд энэ тааврыг шийдэхэд бэрхшээлтэй байгаа бол, хоёртын мөрийг цаасан дээр бичиж, дүрсийг хайж олоорой."
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "Зүүн дээд талаас нь эхлээрэй. Дүрс дахин давтагдахаас өмнө хэр ихийг уншсан байх ёстой вэ?",
+          "courseD_artist_binary6_b": "Та хоёртын мөрийг нэг зэрэг барьж, туршиж үзээрэй!"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "Зүүн дээд талаас нь эхлээрэй. Дүрс дахин давтагдахаас өмнө хэр ихийг уншсан байх ёстой вэ?",
+          "courseD_artist_binary7_b": "Алдаа гаргахаас бүү ай! Та тааврыг хараахан шийдээгүй байсан ч юу болохыг харахын тулд хоёртын код бичээд кодыг ажиллуулж үзнэ үү."
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "Спираль нь заримдаа төвөгтэй байж болдог. Энэ загварыг бий болгохдоо хэвтээ шугам бүрийг оюун ухаандаа тусгаарлаарай.",
+          "courseD_artist_binary8_b": "Юутай ажиллах шаардлагатайг харахын тулд кодыг эхлээд ажиллуулаарай.",
+          "courseD_artist_binary8_c": "Алдаа гаргахаас бүү ай! Та тааврыг хараахан шийдээгүй байсан ч юу болохыг харахын тулд хоёртын код бичээд кодыг ажиллуулж үзнэ үү."
+        },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "Таныг шүүс цуглуулахаас өмнө үүлний доор цэцэг байгаа эсэхийг шалгахын тулд `хэрэв` блок ашиглах хэрэгтэй болно."
         },
@@ -5070,13 +5058,13 @@
           "courseD_bee_conditionals_challenge1_b": "Энэ таавар дээр зай бүр цэцэг, сархинаг, эсвэл хоосон байж болно. Энэ нь та `хэрэв/үгүй` нөхцлөө квадрат болгонд давтаж болно гэсэн үг юм."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0 байхад' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ дүрсийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0 байхад' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ дүрсийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0 байхад' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ дүрсийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0 байхад' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ дүрсийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0 байхад' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ дүрсийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0 байхад' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ дүрсийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
           "courseD_bee_conditionals_challenge1_b": "'Хэрэв цэцгэн дээр' блокын адилаар, 'шүүс > 0 байхад' гэсэн доторх код нь зөгий цэцгэн дээр байх үед зөвхөн ажиллана. Доторх код нь шүүс үлдэхгүй болтол давтан ажиллах болно гэдэгт үндсэн ялгаа оршиж байна. Энэ дүрсийг туршаад үзээрэй:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
@@ -5258,8 +5246,8 @@
           "courseD_collector_debugging9_b": "Та тааврыг хэрхэн шийдэхээ олж мэдээд дараа нь алхам алхамаар кодоо толгойд байгаа мэдлэгтэйгээ тааруулж үзээрэй."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Эхний **хоёр** хавтан бүрээс **хоёр** эрдэнэс цуглуулж эхлээрэй.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nЭдгээр блокуудыг ашиглаарай.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Дараа нь, энэ мөрөнд үлдсэн эрдэнэсийг цуглуулаарай.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nЭдгээр блокуудыг программдаа нэмээрэй.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Эхний **хоёр** хавтан бүрээс **хоёр** эрдэнэс цуглуулж эхлээрэй.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nЭдгээр блокуудыг ашиглаарай.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Дараа нь, энэ мөрөнд үлдсэн эрдэнэсийг цуглуулаарай.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nЭдгээр блокуудыг программдаа нэмээрэй.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Эцэст нь, үлдсэн эрдэнэсийг цуглуулаарай. Эдгээр блокуудыг программдаа нэмээрэй.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Энэхүү тааврын бүрэн шийдлийг энд оруулав.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },

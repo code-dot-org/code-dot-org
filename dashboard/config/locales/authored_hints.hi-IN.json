@@ -677,9 +677,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "यह देखने के लिए अपनी उंगली के साथ धीरे-धीरे प्रोग्राम खोजें कि यह कहां गलत होता है।",
-          "courseA_artist_loops3_b": "इस पहेली को हल करने के लिए आप इस तरह के ब्लॉक का उपयोग करना चाहेंगे।\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
-          "courseB_artist_loops2_b": "पहले यह देखने के लिए कोड चलाने की कोशिश करें कि कलाकार कहां पहुंचता है।"
+          "courseA_artist_loops3_b": "इस पहेली को हल करने के लिए आप इस तरह के ब्लॉक का उपयोग करना चाहेंगे।\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
@@ -695,10 +693,7 @@
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
-          "courseA_artist_loops4_b": "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml>\n\nब्लॉक का उपयोग कर सकते हैं, इसे <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> लूप के अंदर रखने की कोशिश करें।",
-          "courseB_artist_loops4_a": "कूदना ब्लॉक आपको लाइन खींचे बिना आगे मूव करने देता है।",
-          "courseB_artist_loops4_b": "इस पहेली को हल करने के लिए आपको दोहराने वाले लूप के दर एक ब्लॉक जोड़ने की जरूरत होगी।",
-          "courseB_artist_loops4_c": "लूप के दोहराए जाने की संख्या को बदलना न भूलें।"
+          "courseA_artist_loops4_b": "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml>\n\nब्लॉक का उपयोग कर सकते हैं, इसे <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> लूप के अंदर रखने की कोशिश करें।"
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "इस पहेली को पूरा करने के लिए उसका उपयोग करने की कोशिश करें, जो आपने <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ब्लॉक्स के बारे में सीखा है!",
@@ -734,8 +729,7 @@
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "क्या आप पता नहीं लगा पा रहे हैं कि पहाड़ी कैसे बनानी है?  यह देखने के लिए ब्लॉक्स के साथ थोड़ा खेलने की कोशिश करें कि इनमें से प्रत्येक क्या चित्रित करता है।",
-          "courseA_artist_loops6_b": "इस पहेली को हल करने के लिए आपको 2 दिशाओं में 2 ब्लॉक्स की जरूरत होगी।",
-          "courseB_artist_loops6_b": "मूव्स को कागज़ पर लिखने की कोशिश करें और पैटर्न खोजें।"
+          "courseA_artist_loops6_b": "इस पहेली को हल करने के लिए आपको 2 दिशाओं में 2 ब्लॉक्स की जरूरत होगी।"
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।",
@@ -755,10 +749,7 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।",
           "courseA_artist_loops7_b": "पहले एक तरंग के लिए कोड लिखें, फिर अन्य दो को चित्रित करने के लिए उसे दोहराएं।",
-          "courseA_artist_loops7_c": "याद रखें कि आप <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> लूप में एक से अधिक ब्लॉक रख सकते हैं।",
-          "courseB_artist_loops7_a": "यह चुनौती **4** लूप्स का उपयोग करती है, दूसरे के तुरंत बाद एक!",
-          "courseB_artist_loops7_b": "देखें कि प्रत्येक लूप सीढ़ी का पैटर्न बनाता है, जो अलग दिशा में जाती है।\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "लूप्स ऐसा करेंगे:\n\n-   लूप 1\n\n    -   दाएं\n    -   नीचे\n\n-   लूप 2\n\n    -   दाएं\n    -   ऊपर\n\n-   लूप 3\n\n    -   बाएं\n    -   ऊपर\n\n-   लूप 4\n    -   बाएं\n    -   नीचे"
+          "courseA_artist_loops7_c": "याद रखें कि आप <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> लूप में एक से अधिक ब्लॉक रख सकते हैं।"
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "यह देखने के लिए कोड चलाने की कोशिश करें कि आपके लिए क्या लिखा गया है।",
@@ -778,9 +769,7 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "यह देखने के लिए कोड चलाने की कोशिश करें कि आपके लिए क्या लिखा गया है।",
           "courseA_artist_loops8_b": "आप उस कोड को कैसे लूप करेंगे, जो आपको दिया गया है?",
-          "courseA_artist_loops8_c": "कोड क्या करता है?\\\nयह क्या करने के लिए बनाया गया है?\\\nयह आपको क्या बताता है?",
-          "courseB_artist_loops8_a": "आप सीढ़ी बनाने के लिए पैटर्न को कितनी बार दोहराएंगे?",
-          "courseB_artist_loops8_b": "यह देखने के लिए आपको दिए कोड को चलाने की कोशिश करें कि यह क्या करता है।"
+          "courseA_artist_loops8_c": "कोड क्या करता है?\\\nयह क्या करने के लिए बनाया गया है?\\\nयह आपको क्या बताता है?"
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "बाकी सीढ़ियां चित्रित करने के लिए आपको दिए कोड में दूसरा ब्लॉक जोड़ें।",
@@ -799,10 +788,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "बाकी सीढ़ियां चित्रित करने के लिए आपको दिए कोड में दूसरा ब्लॉक जोड़ें।",
           "courseA_artist_loops9_b": "जो ब्लॉक आप जोड़ते हैं, वह \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\nलूप के अंदर जाना चाहिए।",
-          "courseA_artist_loops9_c": "यदि आप पता नहीं लगा पाते हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।",
-          "courseB_artist_loops9_a": "याद रखें कि कूदना ब्लॉक्स का उपयोग लाइन खींचे बिना मूव करने के लिए किया जा सकता है।",
-          "courseB_artist_loops9_b": "इस पहेली को हल करने के लिए आप W ब्लॉक का उपयोग करना चाहेंगे।",
-          "courseB_artist_loops9_c": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।"
+          "courseA_artist_loops9_c": "यदि आप पता नहीं लगा पाते हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।"
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "इस <xml>  <block type=\"simple_move_up_left\"/></xml> तरह के ब्लॉक्स से आपका कलाकार तिरछा मूव कर पाएगा!",
@@ -1339,9 +1325,6 @@
           "courseA_playlab_events_challenge2_b": "आप रोबोट से बीप की आवाज़ निकालने के लिए सक्रिय कर सकते हैं।\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "आप किसी भी गुस्सैल दैत्य को गुर्राने के लिए सक्रिय कर सकते हैं।\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_b": "कलाकार यह लाइन खींचने के लिए दक्षिण की ओर मूव करना चाहेगा।"
-        },
         "courseB_artist_loops2": {
           "courseB_artist_loops2_a": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
           "courseB_artist_loops2_b": "पहले यह देखने के लिए कोड चलाने की कोशिश करें कि कलाकार कहां पहुंचता है।"
@@ -1355,8 +1338,6 @@
           "courseB_artist_loops2_b": "पहले यह देखने के लिए कोड चलाने की कोशिश करें कि कलाकार कहां पहुंचता है।"
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "यह देखने के लिए अपनी उंगली के साथ धीरे-धीरे प्रोग्राम खोजें कि यह कहां गलत होता है।",
-          "courseA_artist_loops3_b": "इस पहेली को हल करने के लिए आप इस तरह के ब्लॉक का उपयोग करना चाहेंगे।\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
           "courseB_artist_loops2_b": "पहले यह देखने के लिए कोड चलाने की कोशिश करें कि कलाकार कहां पहुंचता है।"
         },
@@ -1389,19 +1370,12 @@
           "courseB_artist_loops4_c": "लूप के दोहराए जाने की संख्या को बदलना न भूलें।"
         },
         "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
-          "courseA_artist_loops4_b": "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml>\n\nब्लॉक का उपयोग कर सकते हैं, इसे <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> लूप के अंदर रखने की कोशिश करें।",
           "courseB_artist_loops4_a": "कूदना ब्लॉक आपको लाइन खींचे बिना आगे मूव करने देता है।",
           "courseB_artist_loops4_b": "इस पहेली को हल करने के लिए आपको दोहराने वाले लूप के दर एक ब्लॉक जोड़ने की जरूरत होगी।",
           "courseB_artist_loops4_c": "लूप के दोहराए जाने की संख्या को बदलना न भूलें।"
         },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_a": "`दोहराएं` लूप को खींचें, फिर अन्य ब्लॉक्स को इसके अंदर रखें। आपको कितनी बार दोहराने की जरूरत है?"
-        },
-        "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "इस पहेली को पूरा करने के लिए उसका उपयोग करने की कोशिश करें, जो आपने <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ब्लॉक्स के बारे में सीखा है!",
-          "courseA_artist_loops5_b": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
-          "courseA_artist_loops5_c": "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml> ब्लॉक का उपयोग कर सकते हैं, इसे \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nलूप के अंदर रखने की कोशिश करें।"
         },
         "courseB_artist_loops6": {
           "courseB_artist_loops6_b": "मूव्स को कागज़ पर लिखने की कोशिश करें और पैटर्न खोजें।"
@@ -1413,8 +1387,6 @@
           "courseB_artist_loops6_b": "मूव्स को कागज़ पर लिखने की कोशिश करें और पैटर्न खोजें।"
         },
         "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "क्या आप पता नहीं लगा पा रहे हैं कि पहाड़ी कैसे बनानी है?  यह देखने के लिए ब्लॉक्स के साथ थोड़ा खेलने की कोशिश करें कि इनमें से प्रत्येक क्या चित्रित करता है।",
-          "courseA_artist_loops6_b": "इस पहेली को हल करने के लिए आपको 2 दिशाओं में 2 ब्लॉक्स की जरूरत होगी।",
           "courseB_artist_loops6_b": "मूव्स को कागज़ पर लिखने की कोशिश करें और पैटर्न खोजें।"
         },
         "courseB_artist_loops7": {
@@ -1433,9 +1405,6 @@
           "courseB_artist_loops7_c": "लूप्स ऐसा करेंगे:\n\n-   लूप 1\n\n    -   दाएं\n    -   नीचे\n\n-   लूप 2\n\n    -   दाएं\n    -   ऊपर\n\n-   लूप 3\n\n    -   बाएं\n    -   ऊपर\n\n-   लूप 4\n    -   बाएं\n    -   नीचे"
         },
         "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।",
-          "courseA_artist_loops7_b": "पहले एक तरंग के लिए कोड लिखें, फिर अन्य दो को चित्रित करने के लिए उसे दोहराएं।",
-          "courseA_artist_loops7_c": "याद रखें कि आप <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> लूप में एक से अधिक ब्लॉक रख सकते हैं।",
           "courseB_artist_loops7_a": "यह चुनौती **4** लूप्स का उपयोग करती है, दूसरे के तुरंत बाद एक!",
           "courseB_artist_loops7_b": "देखें कि प्रत्येक लूप सीढ़ी का पैटर्न बनाता है, जो अलग दिशा में जाती है।\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "लूप्स ऐसा करेंगे:\n\n-   लूप 1\n\n    -   दाएं\n    -   नीचे\n\n-   लूप 2\n\n    -   दाएं\n    -   ऊपर\n\n-   लूप 3\n\n    -   बाएं\n    -   ऊपर\n\n-   लूप 4\n    -   बाएं\n    -   नीचे"
@@ -1453,9 +1422,6 @@
           "courseB_artist_loops8_b": "यह देखने के लिए आपको दिए कोड को चलाने की कोशिश करें कि यह क्या करता है।"
         },
         "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "यह देखने के लिए कोड चलाने की कोशिश करें कि आपके लिए क्या लिखा गया है।",
-          "courseA_artist_loops8_b": "आप उस कोड को कैसे लूप करेंगे, जो आपको दिया गया है?",
-          "courseA_artist_loops8_c": "कोड क्या करता है?\\\nयह क्या करने के लिए बनाया गया है?\\\nयह आपको क्या बताता है?",
           "courseB_artist_loops8_a": "आप सीढ़ी बनाने के लिए पैटर्न को कितनी बार दोहराएंगे?",
           "courseB_artist_loops8_b": "यह देखने के लिए आपको दिए कोड को चलाने की कोशिश करें कि यह क्या करता है।"
         },
@@ -1475,9 +1441,6 @@
           "courseB_artist_loops9_c": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।"
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "बाकी सीढ़ियां चित्रित करने के लिए आपको दिए कोड में दूसरा ब्लॉक जोड़ें।",
-          "courseA_artist_loops9_b": "जो ब्लॉक आप जोड़ते हैं, वह \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\nलूप के अंदर जाना चाहिए।",
-          "courseA_artist_loops9_c": "यदि आप पता नहीं लगा पाते हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।",
           "courseB_artist_loops9_a": "याद रखें कि कूदना ब्लॉक्स का उपयोग लाइन खींचे बिना मूव करने के लिए किया जा सकता है।",
           "courseB_artist_loops9_b": "इस पहेली को हल करने के लिए आप W ब्लॉक का उपयोग करना चाहेंगे।",
           "courseB_artist_loops9_c": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।"
@@ -2044,10 +2007,6 @@
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।",
           "courseB_starWars_prog9_b": "इस पहेली को हल करने के कई तरीके हैं।"
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "क्या आप पता नहीं लगा पा रहे हैं कि लाइन कैसे खींचनी है?  यह देखने के लिए <xml><block type=\"when_run\"/></xml> ब्लॉक में ब्लॉक्स जोड़ना शुरू करें कि क्या होता है।",
-          "courseA_artist_loops2_b": "इस पहेली को हल करने के लिए इस ब्लॉक <xml><block type=\"simple_move_right\"/></xml> का उपयोग करें।"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "`अभिनेता 1 को ??? चित्र पर सेट करें` ब्लॉक का उपयोग स्टेज पर अभिनेता जोड़ने के लिए किया जा सकता है।",
@@ -4037,6 +3996,35 @@
           "courseD_artist_ramp12_b": "समस्या को 2 भागों में बांटने और 2 लूप्स का उपयोग करने की कोशिश करें।",
           "courseD_artist_ramp12_c": "यह देखने के लिए आपको कौन-से कोण की जरूरत है, आप `मुड़ें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग कर सकते हैं!"
         },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "इस प्रोग्राम को क्रिया में देखने के लिए बस 'चलाएं' पर क्लिक करें!"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_a": "टूलबॉक्स में से चार युग्मक पैटर्नों में से एक इस पहेली को हल करेगा!",
+          "courseD_artist_binary3_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, युग्मक लिखने और कोड चलाने का प्रयास करें, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "ऊपरी पंक्ति में पहले तीन वर्गों को देखें। क्या आप पूरा पैटर्न प्राप्त करने के लिए इन तीनों को दोहरा सकते हैं?",
+          "courseD_artist_binary4_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, युग्मक लिखने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "पहले यह देखने के लिए कोड चलाने का प्रयास करें कि आपको किसके साथ काम करना होगा।",
+          "courseD_artist_binary5_b": "एक मुस्कुराहट बनाने के लिए आपको केवल दो पंक्तियों को बदलने की जरूरत है।",
+          "courseD_artist_binary5_c": "यदि आपको इस पहेली का पता लगाने में मुश्किल हो रही है, तो युग्मक लाइनों को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।"
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "ऊपर बाईं ओर से शुरुआत करें। पैटर्न द्वारा दोहराना शुरू करने से पहले आपको कितनी दूर तक पढ़ना होगा?",
+          "courseD_artist_binary6_b": "आप एक बार में अपनी थोड़ी सी युग्मक स्ट्रिंग बना सकते हैं और बार-बार इसका परीक्षण कर सकते हैं!"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "ऊपर बाईं ओर से शुरुआत करें। पैटर्न द्वारा दोहराना शुरू करने से पहले आपको कितनी दूर तक पढ़ना होगा?",
+          "courseD_artist_binary7_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, युग्मक लिखने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "घुमावदार कभी-कभार उलझन भरा हो सकता है। जब आप यह डिज़ाइन बनाएं तो अपने दिमाग में आने वाली हर क्षैतिज लाइन को अलग करें।",
+          "courseD_artist_binary8_b": "पहले यह देखने के लिए कोड चलाने का प्रयास करें कि आपको किसके साथ काम करना होगा।",
+          "courseD_artist_binary8_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, युग्मक लिखने और कोड चलाने का प्रयास करें, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "इससे पहले कि आप मधुरस प्राप्त करने का प्रयास करें, आपको यह देखने के लिए `इफ` ब्लॉक का उपयोग करने की जरूरत होगी कि क्या बादल के नीचे फूल है।"
         },
@@ -4256,16 +4244,16 @@
           "courseD_bee_conditionals_challenge1_b": "इस पहेली में, प्रत्येक स्थान के पास फूल, मधु का छत्ता हो सकता है या कुछ नहीं भी हो सकता है।  इसका अर्थ है कि आप प्रत्येक वर्ग में  अपने नियमबद्ध `इफ/एल्स` को दोहरा सकते हैं।"
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "इस प्रोग्राम का पहला आधा भाग क्या काम करता है? इस बारे में सोचें कि मधुमक्खी को पीछे की ओर मूव करने की जरूरत क्यों है। मधुमक्खी जब हर बार फूल की ओर मूव करती है तो कितना मधुरस एकत्र कर लेती है?"

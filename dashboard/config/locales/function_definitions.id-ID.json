@@ -114,17 +114,17 @@
         },
         "2-3 Artist Functions 11": {
           "draw a hexagon": {
-            "name": "menggambar segi enam"
+            "name": "gambar segi enam"
           }
         },
         "2-3 Artist Functions 11.5": {
           "draw a hexagon": {
-            "name": "menggambar segi enam"
+            "name": "gambar segi enam"
           }
         },
         "2-3 Artist Functions 12": {
           "draw a flower": {
-            "name": "menggambar bunga"
+            "name": "gambar bunga"
           }
         },
         "2-3 Artist Functions 2": {
@@ -144,7 +144,7 @@
         },
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
-            "name": "menggambar kristal salju"
+            "name": "gambar kristal salju"
           }
         },
         "2-3 Bee Functions 1": {
@@ -199,7 +199,7 @@
         },
         "4-5 Artist 3": {
           "draw a flower": {
-            "name": "menggambar bunga"
+            "name": "gambar bunga"
           }
         },
         "4-5 Artist 6": {
@@ -306,7 +306,7 @@
             "name": "lompat",
             "parameters": {
               "height": "tinggi",
-              "actor": "aktor"
+              "actor": "Pemain"
             }
           }
         },
@@ -318,21 +318,21 @@
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
-              "actor": "aktor"
+              "actor": "Pemain"
             }
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
-              "actor": "aktor"
+              "actor": "Pemain"
             }
           }
         },
         "Course 4 Play Lab Params 7": {
           "patrol": {
             "parameters": {
-              "actor": "aktor",
+              "actor": "Pemain",
               "speed": "kecepatan"
             }
           }
@@ -340,7 +340,7 @@
         "Course 4 Play Lab Params 8": {
           "patrol": {
             "parameters": {
-              "actor": "aktor",
+              "actor": "Pemain",
               "speed": "kecepatan"
             }
           }
@@ -364,7 +364,7 @@
         },
         "Course 4 SCF 1": {
           "draw a hexagon": {
-            "name": "menggambar segi enam"
+            "name": "gambar segi enam"
           }
         },
         "Course 4 SCF 1a": {
@@ -493,7 +493,7 @@
             "name": "buat sesuatu"
           },
           "draw a hexagon": {
-            "name": "menggambar segi enam",
+            "name": "gambar segi enam",
             "parameters": {
               "length": "panjang"
             }
@@ -542,7 +542,7 @@
         },
         "NEW Course 4 Artist Params 15": {
           "draw a star": {
-            "name": "menggambar bintang",
+            "name": "gambar bintang",
             "parameters": {
               "points": "poin",
               "length": "panjang"
@@ -617,7 +617,7 @@
             }
           },
           "draw a hexagon": {
-            "name": "menggambar segi enam",
+            "name": "gambar segi enam",
             "parameters": {
               "length": "panjang"
             }
@@ -672,19 +672,19 @@
             "name": "lompat",
             "parameters": {
               "height": "tinggi",
-              "actor": "aktor"
+              "actor": "Pemain"
             }
           },
           "patrol": {
             "parameters": {
-              "actor": "aktor",
+              "actor": "Pemain",
               "speed": "kecepatan"
             }
           }
         },
         "New Artist Project": {
           "draw a star": {
-            "name": "menggambar bintang",
+            "name": "gambar bintang",
             "parameters": {
               "points": "poin",
               "length": "panjang"
@@ -728,12 +728,12 @@
             "name": "lompat",
             "parameters": {
               "height": "tinggi",
-              "actor": "aktor"
+              "actor": "Pemain"
             }
           },
           "patrol": {
             "parameters": {
-              "actor": "aktor",
+              "actor": "Pemain",
               "speed": "kecepatan"
             }
           }
@@ -750,7 +750,7 @@
         },
         "Standalone_Artist_7": {
           "draw a flower": {
-            "name": "menggambar bunga"
+            "name": "gambar bunga"
           }
         },
         "Standalone_Artist_9": {
@@ -875,12 +875,12 @@
             "name": "buat sesuatu"
           },
           "draw a hexagon": {
-            "name": "menggambar segi enam"
+            "name": "gambar segi enam"
           }
         },
         "courseE_artist_concept1_2018": {
           "draw a hexagon": {
-            "name": "menggambar segi enam"
+            "name": "gambar segi enam"
           }
         },
         "courseE_artist_concept4": {
@@ -950,52 +950,52 @@
         },
         "courseE_artist_functions3_2018": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions3_2019": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions3_2020": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions4": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions4_copy": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions5": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions5_2018": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions5_2019": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions5_2020": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions5_copy": {
           "draw a star": {
-            "name": "menggambar bintang"
+            "name": "gambar bintang"
           }
         },
         "courseE_artist_functions7": {
@@ -1538,7 +1538,7 @@
         },
         "courseF_artist_fwp9": {
           "draw a star": {
-            "name": "menggambar bintang",
+            "name": "gambar bintang",
             "parameters": {
               "points": "poin",
               "length": "panjang"

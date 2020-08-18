@@ -227,6 +227,10 @@ lt:
             '"right"': dešinėn
             '"space"': kosmosas
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -248,6 +252,15 @@ lt:
         options:
           UNIT:
             '"seconds"': sekundes
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': aukštyn
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:

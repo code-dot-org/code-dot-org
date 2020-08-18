@@ -9,10 +9,10 @@
           "Bee_Cond_5_1a": "Fioletowe kwity mogą mieć 1 lub 0 nektaru, ale nie dowiesz się tego dopóki nie uruchomisz kodu!"
         },
         "4-5 Artist Patterns Free Play": {
-          "4-5_Artist_Patterns_Free_Play_1": "Wszystkie twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć gdzie wszystko się podziało!"
+          "4-5_Artist_Patterns_Free_Play_1": "Wszystkie Twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć, gdzie wszystko się podziało!"
         },
         "4-5 Bee Conditionals 2": {
-          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle."
+          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy KAŻDA chmurka ma KWIATEK. Plastrów miodu nie musisz sprawdzać w ogóle."
         },
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "Czy ekran stał się zielony? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
@@ -296,10 +296,10 @@
           "Function_intro_Ryan_1": "Ta niewielka instrukcja każe komputerowi wykonać ten WIELKI kawałek kodu z tak taką nazwą w obszarze roboczym."
         },
         "Geometric Sun": {
-          "4-5_Artist_Patterns_Free_Play_1": "Wszystkie twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć gdzie wszystko się podziało!"
+          "4-5_Artist_Patterns_Free_Play_1": "Wszystkie Twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć, gdzie wszystko się podziało!"
         },
         "Geometric Sun_2018": {
-          "4-5_Artist_Patterns_Free_Play_1": "Wszystkie twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć gdzie wszystko się podziało!"
+          "4-5_Artist_Patterns_Free_Play_1": "Wszystkie Twoje ulubione bloki są od teraz posegregowane w kategoriach. Kliknij na te słowa aby zobaczyć, gdzie wszystko się podziało!"
         },
         "Infinity_move_collide": {
           "Infinity_move_collide_callout": "Odtwórz dźwięk, kiedy wystąpi to zdarzenie."
@@ -394,7 +394,7 @@
           "courseF_bee_for4_1": "Tutaj znajdziesz tutaj pętlę `for`!"
         },
         "OPD-K5-projects-4": {
-          "courseE_playLab_scaffold3_1": "Przesuń aktora do tej flagi, aby przejść do następnego poziomu."
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Ułożyliśmy już kilka bloków na dobry początek"
@@ -490,7 +490,7 @@
           "courseF_bee_functions_challenge1_2": "Funkcja \"sprawdź nektar lub miód\" może zostać tu wykorzystana, jeśli ją zmienisz tak, by robiła miód wiele razy."
         },
         "course3_playLab_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Ten blok pozwala przesuwać postacie do innych części przestrzeni gry."
+          "courseC_PlayLab_events_challenge1_1": "Ten blok umożliwia przesuwanie postaci do innych części przestrzeni gry."
         },
         "course4_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "Przedłuż działanie programu dodając więcej kodu na dole.",
@@ -500,7 +500,7 @@
           "courseF_bee_fwp_challenge2_callout1": "Ta funkcja dobrze sobie poradzi z kukurydzą, ale co z innymi warzywami?"
         },
         "courseA_artist_loops4": {
-          "courseA_artist_loops4_1": "Ta liczba mówi ci, ilu takich bloków możesz użyć w tej łamigłówce."
+          "courseA_artist_loops4_1": "Ta liczba mówi Ci, ilu takich bloków możesz użyć w tej łamigłówce."
         },
         "courseA_artist_loops4_2018": {
           "courseA_artist_loops4_1": "Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce."
@@ -571,6 +571,15 @@
         "courseA_collector_preLoops6": {
           "courseA_collector_loops1_1": "Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać."
         },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "Kliknij żarówkę, gdy potrzebujesz wskazówki!"
         },
@@ -584,7 +593,7 @@
           "courseA_maze_seq1_1": "Kliknij żarówkę, gdy potrzebujesz wskazówki!"
         },
         "courseA_maze_seq2": {
-          "courseA_maze_seqA_callout1": "Użyj przycisku kroku, by przejść przez program krok po kroku. Pomoże ci to znaleźć błąd!"
+          "courseA_maze_seqA_callout1": "Użyj przycisku Krok, by przejść przez program krok po kroku. Pomoże ci to znaleźć błąd!"
         },
         "courseA_maze_seq4": {
           "made_of_stone": "Te bloki są zrobione z kamienia. Możesz je przesunąć, ale nie możesz ich usunąć!"
@@ -614,28 +623,46 @@
           "courseA_playLab_events5_1": "Kliknij tutaj, aby zmienić kierunek strzałki zdarzenia."
         },
         "courseA_playLab_events6": {
-          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowo wybrany\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
+          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowy\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
         },
         "courseA_playLab_events6_2018": {
-          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowo wybrany\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
+          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowy\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
         },
         "courseA_playLab_events6_2019": {
-          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowo wybrany\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
+          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowy\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
         },
         "courseA_playLab_events6_2020": {
-          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowo wybrany\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
+          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowy\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
         },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce."
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "W przyborniku znajduje się tylko jeden z tych bloków. Jak go użyjesz?"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "W przyborniku znajduje się tylko jeden z tych bloków. Jak go użyjesz?"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "W przyborniku znajduje się tylko jeden z tych bloków. Jak go użyjesz?"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "W przyborniku znajduje się tylko jeden z tych bloków. Jak go użyjesz?"
         },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Ta liczba znaczy, że w przyborniku nie ma więcej bloków tego typu."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "Ta liczba znaczy, że tylko jeden spośród bloków tego typu może być użyty w ostatecznej odpowiedzi."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_1": "Czy wiedziałeś, że można rysować z powrotem po linii, jeśli tego potrzebujesz?"
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać."
@@ -662,7 +689,7 @@
           "courseB_maze_seq1": "Kliknij żarówkę, gdy potrzebujesz wskazówki!"
         },
         "courseB_maze_seq2": {
-          "courseB_maze_seq2_callout1": "Użyj przycisku kroku, by przejść przez program krok po kroku. Pomoże ci to znaleźć błąd!"
+          "courseB_maze_seq2_callout1": "Użyj przycisku Krok, by przejść przez program krok po kroku. Pomoże ci to znaleźć błąd!"
         },
         "courseB_maze_seq3": {
           "courseB_maze_seq3_1": "Szare bloki są z kamienia i nie mogą być wyrzucane."
@@ -680,10 +707,10 @@
           "courseB_playlab_events6_a": "Użyj zielonej strzałki w dół, by zmieniać kierunki."
         },
         "courseC19_playLab_EOC3": {
-          "courseE_playLab_scaffold3_1": "Przesuń aktora do tej flagi, aby przejść do następnego poziomu."
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
         "courseC19_playLab_EOC3_2020": {
-          "courseE_playLab_scaffold3_1": "Przesuń aktora do tej flagi, aby przejść do następnego poziomu."
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
         "courseC_PlayLab_events8": {
           "courseC_PlayLab_events8_callout1": "Użyj tego bloku, gdy Waddles i Chomp się dotkną!"
@@ -698,16 +725,16 @@
           "courseC_PlayLab_events8_callout1": "Użyj tego bloku, gdy Waddles i Chomp się dotkną!"
         },
         "courseC_PlayLab_events_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Ten blok pozwala przesuwać postacie do innych części przestrzeni gry."
+          "courseC_PlayLab_events_challenge1_1": "Ten blok umożliwia przesuwanie postaci do innych części przestrzeni gry."
         },
         "courseC_PlayLab_events_challenge1_2018": {
-          "courseC_PlayLab_events_challenge1_1": "Ten blok pozwala przesuwać postacie do innych części przestrzeni gry."
+          "courseC_PlayLab_events_challenge1_1": "Ten blok umożliwia przesuwanie postaci do innych części przestrzeni gry."
         },
         "courseC_PlayLab_events_challenge1_2019": {
-          "courseC_PlayLab_events_challenge1_1": "Ten blok pozwala przesuwać postacie do innych części przestrzeni gry."
+          "courseC_PlayLab_events_challenge1_1": "Ten blok umożliwia przesuwanie postaci do innych części przestrzeni gry."
         },
         "courseC_PlayLab_events_challenge1_2020": {
-          "courseC_PlayLab_events_challenge1_1": "Ten blok pozwala przesuwać postacie do innych części przestrzeni gry."
+          "courseC_PlayLab_events_challenge1_1": "Ten blok umożliwia przesuwanie postaci do innych części przestrzeni gry."
         },
         "courseC_artist_loopsPrePre1a": {
           "courseC_artist_loopsPrePre1a_1": "Zacznij używając tego bloku do przesunięcia artysty na środek ekranu."
@@ -746,16 +773,16 @@
           "courseC_collector_prog7_1": "Możesz pobrać więcej bloków z przybornika, gdy ich potrzebujesz!"
         },
         "courseC_harvester_loops1": {
-          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni mówi, że cztery dynie są dostępne do zebrania."
+          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni oznacza, że dostępne są cztery dynie do zebrania."
         },
         "courseC_harvester_loops1_2018": {
-          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni mówi, że cztery dynie są dostępne do zebrania."
+          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni oznacza, że dostępne są cztery dynie do zebrania."
         },
         "courseC_harvester_loops1_2019": {
-          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni mówi, że cztery dynie są dostępne do zebrania."
+          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni oznacza, że dostępne są cztery dynie do zebrania."
         },
         "courseC_harvester_loops1_2020": {
-          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni mówi, że cztery dynie są dostępne do zebrania."
+          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni oznacza, że dostępne są cztery dynie do zebrania."
         },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "Szarych bloków nie można usunąć!"
@@ -772,17 +799,66 @@
         "courseC_maze_programming1": {
           "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
         },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
         "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
           "courseC_maze_programming3_3": "Te bloki są z kamienia i nie mogą być wyrzucone."
         },
         "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
           "courseC_maze_programming3_3": "Te bloki są z kamienia i nie mogą być wyrzucone."
         },
         "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
           "courseC_maze_programming3_3": "Te bloki są z kamienia i nie mogą być wyrzucone."
         },
         "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
           "courseC_maze_programming3_3": "Te bloki są z kamienia i nie mogą być wyrzucone."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseC_maze_programming5": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
         },
         "courseC_maze_programming7": {
           "courseC_maze_programming7_1": "To Twoja pierwsza trudniejsza łamigłówka! Mogą być trudne i wymagać kilku prób.\n",
@@ -801,51 +877,51 @@
           "courseC_maze_programming7_2": "Te bloki są z kamienia i nie mogą być wyrzucone."
         },
         "courseC_starWars_loops2": {
-          "courseC_starWars_loops2": "W tym zadaniu masz dostęp tylko do jednego z tych bloków. "
+          "courseC_starWars_loops2": "W tej łamigłówce masz dostęp tylko do jednego z tych bloków. "
         },
         "courseC_starWars_loops2_2018": {
-          "courseC_starWars_loops2": "W tym zadaniu masz dostęp tylko do jednego z tych bloków. "
+          "courseC_starWars_loops2": "W tej łamigłówce masz dostęp tylko do jednego z tych bloków. "
         },
         "courseC_starWars_loops2_2019": {
-          "courseC_starWars_loops2": "W tym zadaniu masz dostęp tylko do jednego z tych bloków. "
+          "courseC_starWars_loops2": "W tej łamigłówce masz dostęp tylko do jednego z tych bloków. "
         },
         "courseC_starWars_loops2_2020": {
-          "courseC_starWars_loops2": "W tym zadaniu masz dostęp tylko do jednego z tych bloków. "
+          "courseC_starWars_loops2": "W tej łamigłówce masz dostęp tylko do jednego z tych bloków. "
         },
         "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2": "W tym zadaniu masz dostęp tylko do jednego z tych bloków. "
+          "courseC_starWars_loops2": "W tej łamigłówce masz dostęp tylko do jednego z tych bloków. "
         },
         "courseD_artist_nestedLoops1a": {
-          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
+          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów, by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
         },
         "courseD_artist_nestedLoops1a_2018": {
-          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
+          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów, by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
         },
         "courseD_artist_nestedLoops1a_2019": {
-          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
+          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów, by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
         },
         "courseD_artist_nestedLoops1a_2020": {
-          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
+          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów, by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
         },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "Możesz zmienić ten numer.",
           "courseD_artist_ramp11_2": "Kliknij tutaj, aby wpisać liczby powtórzeń kodu."
         },
         "courseD_bee_conditionals2": {
-          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.",
+          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy KAŻDA chmurka ma KWIATEK. Plastrów miodu nie musisz sprawdzać w ogóle.",
           "4_5_Bee_Conditionals_2_2": "Potrzebujesz pomocy? Kliknij tutaj, aby obejrzeć WIDEO z podpowiedzią!"
         },
         "courseD_bee_conditionals2_2018": {
-          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle."
+          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy KAŻDA chmurka ma KWIATEK. Plastrów miodu nie musisz sprawdzać w ogóle."
         },
         "courseD_bee_conditionals2_2019": {
-          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle."
+          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy KAŻDA chmurka ma KWIATEK. Plastrów miodu nie musisz sprawdzać w ogóle."
         },
         "courseD_bee_conditionals2_2020": {
-          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle."
+          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy KAŻDA chmurka ma KWIATEK. Plastrów miodu nie musisz sprawdzać w ogóle."
         },
         "courseD_bee_conditionals2_copy": {
-          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.",
+          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy KAŻDA chmurka ma KWIATEK. Plastrów miodu nie musisz sprawdzać w ogóle.",
           "4_5_Bee_Conditionals_2_2": "Potrzebujesz pomocy? Kliknij tutaj, aby obejrzeć WIDEO z podpowiedzią!"
         },
         "courseD_bee_conditionals_challenge2": {
@@ -869,26 +945,117 @@
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "Użyj tego bloku, aby wziąć jeden kawałek skarbu.  "
         },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
         "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
           "stone_block_2": "Szare bloki są zrobione z kamienia i nie mogą być wyrzucane."
         },
         "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
           "stone_block_2": "Szare bloki są zrobione z kamienia i nie mogą być wyrzucane."
         },
         "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
           "stone_block_2": "Szare bloki nie mogą być wyrzucane."
         },
         "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
           "stone_block_2": "Szare bloki nie mogą być wyrzucane."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseD_maze_ramp5": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
         },
         "courseD_maze_ramp6": {
           "courseD_maze_ramp6_1": "Jakikolwiek kod tu wrzucisz, zostanie on powtórzony tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu."
         },
         "courseD_playLab_condFP": {
-          "courseD_playLab_condFP_1": "Uporządkowaliśmy bloki w kategorie, aby udostępnić Ci kod do grania! Kliknij tutaj, aby zobaczyć, dokąd to wszystko doprowadziło."
+          "courseD_playLab_condFP_1": "uporządkowaliśmy bloki w kategorie, aby udostępnić Ci więcej kodu do grania! Kliknij tutaj, aby zobaczyć, dokąd wszystko poszło."
         },
         "courseD_playLab_condFP_2018": {
-          "courseD_playLab_condFP_1": "Uporządkowaliśmy bloki w kategorie, aby udostępnić Ci kod do grania! Kliknij tutaj, aby zobaczyć, dokąd to wszystko doprowadziło."
+          "courseD_playLab_condFP_1": "uporządkowaliśmy bloki w kategorie, aby udostępnić Ci więcej kodu do grania! Kliknij tutaj, aby zobaczyć, dokąd wszystko poszło."
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseD_scrat_ramp5": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
         },
         "courseD_scrat_ramp6": {
           "courseD_maze_ramp6_1": "Jakikolwiek kod tu wrzucisz, zostanie on powtórzony tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu."
@@ -898,6 +1065,39 @@
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "To Twoja pierwsza trudniejsza łamigłówka! Mogą być trudne i wymagać kilku prób.\n"
+        },
+        "courseE_artist_functions1": {
+          "courseD_artist_functions1_1": "Zacznij używając tego bloku, aby pomóc utworzyć pierwszy kwadrat."
+        },
+        "courseE_artist_functions1_copy": {
+          "courseD_artist_functions1_1": "Zacznij używając tego bloku, aby pomóc utworzyć pierwszy kwadrat."
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
         },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "Przedłuż działanie programu dodając więcej kodu na dole.",
@@ -939,11 +1139,56 @@
           "courseE_artist_ramp8_1": "Możesz zmienić ten numer.",
           "courseE_artist_ramp8_2": "Kliknij tutaj, aby wpisać liczby powtórzeń kodu."
         },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
+        },
+        "courseE_farmer_functions13_2018": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions13_2019": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
         "courseE_playLab_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Ten blok pozwala przesuwać postacie do innych części przestrzeni gry."
+          "courseC_PlayLab_events_challenge1_1": "Ten blok umożliwia przesuwanie postaci do innych części przestrzeni gry."
         },
         "courseE_playLab_scaffold3": {
-          "courseE_playLab_scaffold3_1": "Przesuń aktora do tej flagi, aby przejść do następnego poziomu."
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
         "courseF_bee_conditionals2": {
           "courseF_bee_conditionals2_2": "Przybornik jest teraz w trybie kategorii. Wszystkie bloki, których potrzebujesz są pod tymi etykietami!"

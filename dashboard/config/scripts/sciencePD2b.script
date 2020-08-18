@@ -1,14 +1,14 @@
 professional_learning_course 'CS in Science Legacy'
 login_required true
 
-lesson 'Welcome!'
+lesson 'Welcome!', display_name: 'Welcome!'
 level 'sciPD2b intro'
 level 'PDECS tour'
 level 'PD check your progress'
 level 'sciPD2 timeline'
 level 'ECSPD PD details'
 
-lesson 'Review StarLogo Nova'
+lesson 'Review StarLogo Nova', display_name: 'Review StarLogo Nova'
 level 'sciPD2 StarLogoNova'
 level 'sciPD StarLogo intro 1'
 level 'sciPD StarLogo intro 2'
@@ -16,12 +16,12 @@ level 'sciPD StarLogo intro 3'
 level 'sciPD StarLogo intro 4'
 level 'sciencePD2b remixing'
 
-lesson 'Reviewing the Modules'
+lesson 'Reviewing the Modules', display_name: 'Reviewing the Modules'
 level 'sciPD2 mods'
 level 'sciPD2 remember'
 level 'sciPD2 challenge'
 
-lesson 'Advanced StarLogo Nova'
+lesson 'Advanced StarLogo Nova', display_name: 'Advanced StarLogo Nova'
 level 'sciPD2 SLN explore'
 level 'sciPD2 sliders'
 level 'sciPD breeds'
@@ -31,14 +31,15 @@ level 'sciPD2 color'
 level 'sciPD2 procedures'
 level 'sciPD2 conditionals'
 
-lesson 'Remixing Phases 1 and 2'
+lesson 'Remixing Phases 1 and 2', display_name: 'Remixing Phases 1 and 2'
 level 'sciPD2 remix1'
 
-lesson 'Thinking Ahead to Implementation'
+lesson 'Thinking Ahead to Implementation', display_name: 'Thinking Ahead to Implementation'
 level 'sciPD2 implement1'
 level 'sciPD2 implement2'
 
-lesson 'Wrap-Up'
+lesson 'Wrap-Up', display_name: 'Wrap-Up'
 level 'sciPD2 thanks'
 level 'sciPD2b reflection'
 level 'sciPD2b end'
+

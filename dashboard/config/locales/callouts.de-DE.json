@@ -811,9 +811,6 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "Hier kannst du einen 'zufälligen' Ton auswählen. Das heißt, du weißt nicht, welcher Ton es sein wird, bis du ihn hörst!"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_1": "Es gibt in der Werkzeugkiste nur einen dieser Blöcke. Wie wirst du ihn verwenden?"
-        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Wenn du alle Blöcke verbunden hast, drücke auf \"Ausführen\", um dein Programm zu starten."
         },
@@ -841,17 +838,8 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "Es gibt in der Werkzeugkiste nur einen dieser Blöcke. Wie wirst du ihn verwenden?"
         },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "Diese Zahl gibt an, wie viele dieser Blöcke in dieser Aufgabe verwendet werden können."
-        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Diese Zahl bedeutet, dass es in der Werkzeugkiste keine weiteren Blöcke dieser Sorte vorhanden sind."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "Diese Zahl bedeutet, dass du nur einen dieser Blöcke für die Lösung verwenden darfst."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_1": "Wusstest du, dass du über eine Linie nochmals darüber zeichnen kannst, wann immer es nötig ist?"
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Siehst du einige neue Blöcke in deiner Werkzeugkiste? Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen kannst."
@@ -962,16 +950,16 @@
           "courseC_collector_prog1_1": "Siehst du ein paar neue Blöcke in der Toolbox?  Keine Sorge, wir zeigen dir, wie du sie in einer anderen Lektion verwenden kannst."
         },
         "courseC_collector_prog7": {
-          "courseC_collector_prog7_1": "Du kannst dir mehr Bausteine aus der Werkzeugkiste holen, wenn du sie brauchst!"
+          "courseC_collector_prog7_1": "Du kannst dir mehr Blöcke aus der Werkzeugkiste holen, wenn du sie brauchst!"
         },
         "courseC_collector_prog7_2018": {
-          "courseC_collector_prog7_1": "Du kannst dir mehr Bausteine aus der Werkzeugkiste holen, wenn du sie brauchst!"
+          "courseC_collector_prog7_1": "Du kannst dir mehr Blöcke aus der Werkzeugkiste holen, wenn du sie brauchst!"
         },
         "courseC_collector_prog7_2019": {
-          "courseC_collector_prog7_1": "Du kannst dir mehr Bausteine aus der Werkzeugkiste holen, wenn du sie brauchst!"
+          "courseC_collector_prog7_1": "Du kannst dir mehr Blöcke aus der Werkzeugkiste holen, wenn du sie brauchst!"
         },
         "courseC_collector_prog7_2020": {
-          "courseC_collector_prog7_1": "Du kannst dir mehr Bausteine aus der Werkzeugkiste holen, wenn du sie brauchst!"
+          "courseC_collector_prog7_1": "Du kannst dir mehr Blöcke aus der Werkzeugkiste holen, wenn du sie brauchst!"
         },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "Die Zahl vier auf dem Kürbis sagt dir, dass es vier Kürbisse zu pflücken gibt."
@@ -1087,19 +1075,19 @@
           "courseC_maze_programming7_2": "Diese Blöcke sind aus Stein und können nicht weggeworfen werden."
         },
         "courseC_starWars_loops2": {
-          "courseC_starWars_loops2": "In dieser Aufgabe steht dir nur einer dieser Bausteine zur Verfügung."
+          "courseC_starWars_loops2": "In dieser Aufgabe hast du nur einen dieser Blöcke zur Verfügung."
         },
         "courseC_starWars_loops2_2018": {
-          "courseC_starWars_loops2": "In dieser Aufgabe steht dir nur einer dieser Bausteine zur Verfügung."
+          "courseC_starWars_loops2": "In dieser Aufgabe hast du nur einen dieser Blöcke zur Verfügung."
         },
         "courseC_starWars_loops2_2019": {
-          "courseC_starWars_loops2": "In dieser Aufgabe steht dir nur einer dieser Bausteine zur Verfügung."
+          "courseC_starWars_loops2": "In dieser Aufgabe hast du nur einen dieser Blöcke zur Verfügung."
         },
         "courseC_starWars_loops2_2020": {
-          "courseC_starWars_loops2": "In dieser Aufgabe steht dir nur einer dieser Bausteine zur Verfügung."
+          "courseC_starWars_loops2": "In dieser Aufgabe hast du nur einen dieser Blöcke zur Verfügung."
         },
         "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2": "In dieser Aufgabe steht dir nur einer dieser Bausteine zur Verfügung."
+          "courseC_starWars_loops2": "In dieser Aufgabe hast du nur einen dieser Blöcke zur Verfügung."
         },
         "courseD_artist_nestedLoops1a": {
           "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Wenn du willst, kannst du es dir mit diesem `zufällige Farben`-Baustein` leicht machen!"

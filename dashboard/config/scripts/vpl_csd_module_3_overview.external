@@ -1,0 +1,26 @@
+name 'VPL - CSD Module 3 Overview'
+editor_experiment ''
+display_name 'CSD Module 3 Overview'
+
+title 'CSD Module 3 Overview'
+markdown <<MARKDOWN
+# Module 3: CS Discoveries Virtual Professional Learning
+
+## Module 3 Overview
+
+Welcome to the asynchronous work for Module 3 for CS Discoveries!  
+
+The asynchronous work here will feed into the upcoming synchronous workshop of this module and help you understand the content and curriculum as you prepare to teach your own students. The asynchronous work for Module 3 takes ~90 minutes to complete.  Feel free to start and stop at your own pace.
+
+Module 3 introduces Unit 4 - The Design Process and builds on Modules 1 and 2 which focus on "The Role of the Teacher". Module 3 focuses on "The Role of the Student" and active learning in the classroom. As you progress through this asynchronous work, consider your role as the teacher in  facilitating active learning for your students. 
+
+**During this asynchronous work you will:**
+
+* Preview Unit 4 content which focuses on user centered software design
+* Become familiar with the Problem Solving Process for Design to solve complex problems
+* Support students in developing empathy for users
+* Reflect on the role of the student and active learning
+
+
+### Let's get started!
+MARKDOWN

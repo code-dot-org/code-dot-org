@@ -250,7 +250,15 @@
             "name": "zbierz 5 nektarów"
           }
         },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "wygrano grę"
+          }
+        },
         "Choose Your Own Adventure": {
+          "witch ending": {
+            "name": "Koniec z czarownicą"
+          },
           "story": {
             "name": "opowieść"
           },
@@ -511,6 +519,9 @@
           }
         },
         "Find the Wizard": {
+          "check guess": {
+            "name": "zaznacz zgadnij"
+          },
           "do something": {
             "name": "wykonaj coś"
           }
@@ -555,6 +566,7 @@
         },
         "Guess The Number": {
           "check guess": {
+            "name": "zaznacz zgadnij",
             "parameters": {
               "theGuess": "theGuess"
             }
@@ -1051,6 +1063,11 @@
             }
           }
         },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"proste\" rozwiązanie"
+          }
+        },
         "courseC_artist_prog3": {
           "draw flame": {
             "parameters": {
@@ -1398,6 +1415,62 @@
           }
         },
         "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
           "draw": {
             "parameters": {
               "binary": "binarny"
@@ -1783,9 +1856,24 @@
             "name": "wykonaj coś"
           }
         },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "miód nektar"
+          }
+        },
         "courseE_bee_functions1": {
           "do something": {
             "name": "wykonaj coś"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "przemieszczaj się i rób miód"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "przemieszczaj się i rób miód"
           }
         },
         "courseE_bee_functions2": {
@@ -1816,6 +1904,16 @@
         "courseE_bee_functions7": {
           "get 7 make 7": {
             "name": "zbierz 7 zrób 7"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "zbierz cały nektar"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "zbierz cały nektar"
           }
         },
         "courseE_bee_functions_challenge1": {
@@ -1849,6 +1947,57 @@
             "name": "wykonaj coś"
           }
         },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "nawiguj"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "sprawdź i zbierz"
+          },
+          "find pumpkin": {
+            "name": "znajdź dynię"
+          },
+          "wander path": {
+            "name": "idź ścieżką"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "kukurydza i dynia"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "kukurydza i dynia"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "kukurydza i dynia"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "kukurydza i dynia"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "kukurydza i dynia"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "nawiguj"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "nawiguj"
+          }
+        },
         "courseE_playLab_scaffold1": {
           "do something": {
             "name": "wykonaj coś"
@@ -1874,6 +2023,7 @@
             "name": "narysuj kwadrat"
           },
           "checker": {
+            "name": "szachownica",
             "parameters": {
               "size": "rozmiar",
               "color": "kolor"
@@ -1883,11 +2033,13 @@
             "name": "wykonaj coś"
           },
           "Make gingham": {
+            "name": "Utwórz gingham",
             "parameters": {
               "size": "rozmiar"
             }
           },
           "black outline": {
+            "name": "czarny kontur",
             "parameters": {
               "length": "długość"
             }
@@ -1896,11 +2048,13 @@
         "courseF_artist_fwp2": {
           "draw a square": {
             "name": "narysuj kwadrat",
+            "description": "narysuj kwadrat przy pomocy parametru długości",
             "parameters": {
               "length": "długość"
             }
           },
           "checker": {
+            "name": "szachownica",
             "parameters": {
               "size": "rozmiar",
               "color": "kolor"
@@ -1910,11 +2064,13 @@
             "name": "wykonaj coś"
           },
           "Make gingham": {
+            "name": "Utwórz gingham",
             "parameters": {
               "size": "rozmiar"
             }
           },
           "black outline": {
+            "name": "czarny kontur",
             "parameters": {
               "length": "długość"
             }
@@ -1923,6 +2079,7 @@
         "courseF_artist_fwp2_predict1": {
           "draw a square": {
             "name": "narysuj kwadrat",
+            "description": "narysuj kwadrat przy pomocy parametru długości",
             "parameters": {
               "length": "długość"
             }
@@ -1936,17 +2093,20 @@
             }
           },
           "draw a square2": {
+            "name": "narysuj kwadrat2",
             "parameters": {
               "size": "rozmiar"
             }
           },
           "filled square": {
+            "name": "wypełniony kwadrat",
             "parameters": {
               "size": "rozmiar",
               "color": "kolor"
             }
           },
           "black outline": {
+            "name": "czarny kontur",
             "parameters": {
               "length": "długość"
             }
@@ -2077,6 +2237,16 @@
             "name": "sprawdź nektar czy miód"
           }
         },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "zbierz tylko nektar"
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "produkuj tylko miód"
+          }
+        },
         "courseF_bee_functions3a": {
           "check nectar or honey": {
             "name": "sprawdź nektar czy miód"
@@ -2148,6 +2318,7 @@
         },
         "courseF_bee_fwp7": {
           "rowOfNectarOrHoney": {
+            "name": "wierszNektaruLubMiodu",
             "parameters": {
               "width": "szerokość"
             }
@@ -2155,6 +2326,7 @@
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
+            "name": "wierszNektaruLubMiodu",
             "parameters": {
               "width": "szerokość"
             }
@@ -2162,6 +2334,7 @@
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
+            "name": "wierszNektaruLubMiodu",
             "parameters": {
               "width": "szerokość"
             }
@@ -2209,6 +2382,41 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "zbierz"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "parameters": {
+              "binary": "binarny"
+            }
           }
         }
       }

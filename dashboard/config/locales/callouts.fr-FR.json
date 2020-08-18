@@ -301,6 +301,7 @@
           "snowflake_dropdown": "Utilise ce menu déroulant pour créer différents flocons de neige !"
         },
         "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Clique sur les catégories pour voir les blocs dans ta boîte à outils. Amener les blocs dans l'espace de travail les ajoute à ton programme.",
           "New Play Lab Project_callout2": "Clique sur \"Démarrer\" pour sauvegarder et Démarrer ton programme",
           "sign_in_to_save_project": "Vous souhaitez accéder à votre projet plus tard ? Connectez-vous pour enregistrer ce projet sur votre compte !"
         },
@@ -576,9 +577,6 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "Cela te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras tant que tu ne l'entendras pas!"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_1": "Il y a un seul de ces blocs dans la boîte à outils. Comment vas-tu l'utiliser ?"
-        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
         },
@@ -606,14 +604,8 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "Il y a un seul de ces blocs dans la boîte à outils. Comment vas-tu l'utiliser ?"
         },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_1": "Ce nombre t'indique combien de ces blocs tu peux utiliser dans ce puzzle."
-        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Ce nombre signifie qu'il n'y a plus aucun de ces blocs dans la boîte à outils."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "Ce nombre indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Y a-t-il de nouveaux blocs dans la boite à outils? Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard."

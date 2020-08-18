@@ -1208,7 +1208,7 @@
           "courseD_bee_conditionals_challenge1_b": "В этой головоломке на любом месте может быть цветок, сота или ничего.  Это означает, что условный блок (\"если/или же\") можно повторить у каждого квадратика."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Как и в блоке `если на цветке` код внутри `пока нектар > 0` будет выполняться только если пчёлка на цветке. Основное отличие в том, что код внутри будет повторяться пока не останется нектара. Попробуй этот пример:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Как и в блоке `если на цветке` код внутри `пока нектар > 0` будет выполняться только если пчёлка на цветке. Основное отличие в том, что код внутри будет повторяться пока не останется нектара. Попробуй этот пример:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Исходный код работает отлично - если в клетке всего одно сокровище!",
@@ -1341,9 +1341,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Проведи пальцем медленно по всей программе, чтобы понять, где происходит сбой.",
-          "courseA_artist_loops3_b": "Для решения этой головоломки потребуется следующий блок.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "Хочешь, чтобы действие повторилось более 4 раз – измени число, указанное на блоке.",
-          "courseB_artist_loops2_b": "Попробуй запустить сначала код, чтобы посмотреть, где в итоге окажется художник."
+          "courseA_artist_loops3_b": "Для решения этой головоломки потребуется следующий блок.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Хочешь, чтобы действие повторилось более 4 раз – измени число, указанное на блоке.",
@@ -1359,10 +1357,7 @@
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "Хочешь, чтобы действие повторилось более 4 раз – измени число, указанное на блоке.",
-          "courseA_artist_loops4_b": "Поскольку можно использовать лишь один блок <xml><block type=\"simple_move_right\"/></xml>,\n\nпопробуй вставить его в цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>.",
-          "courseB_artist_loops4_a": "Блок прыжка позволяет перемещаться вперед без рисования линии.",
-          "courseB_artist_loops4_b": "Тебе потребуется добавить блок внутрь цикла повтора, чтобы решить эту головолому.",
-          "courseB_artist_loops4_c": "Не забудь изменить количество раз повтора цикла."
+          "courseA_artist_loops4_b": "Поскольку можно использовать лишь один блок <xml><block type=\"simple_move_right\"/></xml>,\n\nпопробуй вставить его в цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>."
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "Используй то, что узнал о блоках <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, чтобы решить эту головоломку!",
@@ -1398,8 +1393,7 @@
         },
         "courseA_artist_loops6_2020": {
           "courseA_artist_loops6_a": "Не можешь догадаться, как сделать горку?  Поиграй немного с блоками, чтобы понять, что каждый из них рисует.",
-          "courseA_artist_loops6_b": "Для решения этой головоломки тебе потребуются 2 блока, перемещающих в 2 направлениях.",
-          "courseB_artist_loops6_b": "Попробуй записать движения на листе бумаги и найти схему."
+          "courseA_artist_loops6_b": "Для решения этой головоломки тебе потребуются 2 блока, перемещающих в 2 направлениях."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие.",
@@ -1419,10 +1413,7 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие.",
           "courseA_artist_loops7_b": "Сначала напиши код для одной волны, а затем повтори его, чтобы нарисовать две другие.",
-          "courseA_artist_loops7_c": "Помни, что в цикл [blockly block] можно вставить не один, а несколько блоков.",
-          "courseB_artist_loops7_a": "В этом задании используются **4** цикла, один сразу после другого!",
-          "courseB_artist_loops7_b": "Обрати внимание, что каждый цикл представляет собой схему лестницы с движением в другом направлении.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "Эти циклы должны делать следующее:\n\n-   Цикл 1\n    -   Направо\n    -   Вниз\n\n-   Цикл 2\n    -   Направо\n    -   Вверх\n\n-   Цикл 3\n    -   Налево\n    -   Вверх\n\n-   Цикл 4\n    -   Налево\n    -   Вниз"
+          "courseA_artist_loops7_c": "Помни, что в цикл [blockly block] можно вставить не один, а несколько блоков."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "Запусти код и посмотри, что для тебя написали.",
@@ -1442,9 +1433,7 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_a": "Запусти код и посмотри, что для тебя написали.",
           "courseA_artist_loops8_b": "Как бы ты зациклил код, который тебе дали?",
-          "courseA_artist_loops8_c": "Какие действия выполняет код?\\\nКакие действия он должен выполнять?\\\nО чем это тебе говорит?",
-          "courseB_artist_loops8_a": "Сколько раз тебе следует повторить эту схему, чтобы сделать лестницу?",
-          "courseB_artist_loops8_b": "Попробуй запустить код, который тебе дали, чтобы узнать его назначение."
+          "courseA_artist_loops8_c": "Какие действия выполняет код?\\\nКакие действия он должен выполнять?\\\nО чем это тебе говорит?"
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "Добавь к данному тебе коду еще один блок, чтобы нарисовать остальные ступени лестницы.",
@@ -1463,10 +1452,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Добавь к данному тебе коду еще один блок, чтобы нарисовать остальные ступени лестницы.",
           "courseA_artist_loops9_b": "Добавленный тобой блок должен оказаться внутри \n\nцикла\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>.",
-          "courseA_artist_loops9_c": "Не можешь догадаться, куда поместить цикл? Запиши все команды поочередно и найди повторяющиеся действия.",
-          "courseB_artist_loops9_a": "Помни, что блоки прыжка позволяет перемещаться без рисования линии.",
-          "courseB_artist_loops9_b": "Тебе потребуется использовать блок «запад» (налево) для решения этой головоломки.",
-          "courseB_artist_loops9_c": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие."
+          "courseA_artist_loops9_c": "Не можешь догадаться, куда поместить цикл? Запиши все команды поочередно и найди повторяющиеся действия."
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "Такие блоки, как этот блок <xml>  <block type=\"simple_move_up_left\"/></xml>, позволят художнику двигаться под углом!",
@@ -2001,9 +1987,6 @@
           "courseA_playlab_events_challenge2_b": "Можно заставить робота гудеть.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Можно заставить сердитого монстра рычать.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "courseA_video_loops1_2020": {
-          "courseB_artist_loops3_b": "Художнику потребуется переместиться на юг (вниз), чтобы нарисовать эту линию."
-        },
         "courseB_artist_loops2": {
           "courseB_artist_loops2_a": "Хочешь, чтобы действие повторилось более 4 раз – измени число, указанное на блоке.",
           "courseB_artist_loops2_b": "Попробуй запустить сначала код, чтобы посмотреть, где в итоге окажется художник."
@@ -2017,8 +2000,6 @@
           "courseB_artist_loops2_b": "Попробуй запустить сначала код, чтобы посмотреть, где в итоге окажется художник."
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "Проведи пальцем медленно по всей программе, чтобы понять, где происходит сбой.",
-          "courseA_artist_loops3_b": "Для решения этой головоломки потребуется следующий блок.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "Хочешь, чтобы действие повторилось более 4 раз – измени число, указанное на блоке.",
           "courseB_artist_loops2_b": "Попробуй запустить сначала код, чтобы посмотреть, где в итоге окажется художник."
         },
@@ -2051,19 +2032,12 @@
           "courseB_artist_loops4_c": "Не забудь изменить количество раз повтора цикла."
         },
         "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "Хочешь, чтобы действие повторилось более 4 раз – измени число, указанное на блоке.",
-          "courseA_artist_loops4_b": "Поскольку можно использовать лишь один блок <xml><block type=\"simple_move_right\"/></xml>,\n\nпопробуй вставить его в цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>.",
           "courseB_artist_loops4_a": "Блок прыжка позволяет перемещаться вперед без рисования линии.",
           "courseB_artist_loops4_b": "Тебе потребуется добавить блок внутрь цикла повтора, чтобы решить эту головолому.",
           "courseB_artist_loops4_c": "Не забудь изменить количество раз повтора цикла."
         },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_a": "Вытащи цикл «повторить», а затем помести в него другие блоки. Сколько повторов тебе потребуется?"
-        },
-        "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Используй то, что узнал о блоках <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, чтобы решить эту головоломку!",
-          "courseA_artist_loops5_b": "Хочешь, чтобы действие повторилось более 4 раз – измени число, указанное на блоке.",
-          "courseA_artist_loops5_c": "Поскольку можно использовать лишь один блок <xml><block type=\"simple_move_right\"/></xml>, попробуй вставить его в \n\nцикл \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseB_artist_loops6": {
           "courseB_artist_loops6_b": "Попробуй записать движения на листе бумаги и найти схему."
@@ -2075,8 +2049,6 @@
           "courseB_artist_loops6_b": "Попробуй записать движения на листе бумаги и найти схему."
         },
         "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "Не можешь догадаться, как сделать горку?  Поиграй немного с блоками, чтобы понять, что каждый из них рисует.",
-          "courseA_artist_loops6_b": "Для решения этой головоломки тебе потребуются 2 блока, перемещающих в 2 направлениях.",
           "courseB_artist_loops6_b": "Попробуй записать движения на листе бумаги и найти схему."
         },
         "courseB_artist_loops7": {
@@ -2095,9 +2067,6 @@
           "courseB_artist_loops7_c": "Эти циклы должны делать следующее:\n\n-   Цикл 1\n    -   Направо\n    -   Вниз\n\n-   Цикл 2\n    -   Направо\n    -   Вверх\n\n-   Цикл 3\n    -   Налево\n    -   Вверх\n\n-   Цикл 4\n    -   Налево\n    -   Вниз"
         },
         "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие.",
-          "courseA_artist_loops7_b": "Сначала напиши код для одной волны, а затем повтори его, чтобы нарисовать две другие.",
-          "courseA_artist_loops7_c": "Помни, что в цикл [blockly block] можно вставить не один, а несколько блоков.",
           "courseB_artist_loops7_a": "В этом задании используются **4** цикла, один сразу после другого!",
           "courseB_artist_loops7_b": "Обрати внимание, что каждый цикл представляет собой схему лестницы с движением в другом направлении.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Эти циклы должны делать следующее:\n\n-   Цикл 1\n    -   Направо\n    -   Вниз\n\n-   Цикл 2\n    -   Направо\n    -   Вверх\n\n-   Цикл 3\n    -   Налево\n    -   Вверх\n\n-   Цикл 4\n    -   Налево\n    -   Вниз"
@@ -2115,9 +2084,6 @@
           "courseB_artist_loops8_b": "Попробуй запустить код, который тебе дали, чтобы узнать его назначение."
         },
         "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Запусти код и посмотри, что для тебя написали.",
-          "courseA_artist_loops8_b": "Как бы ты зациклил код, который тебе дали?",
-          "courseA_artist_loops8_c": "Какие действия выполняет код?\\\nКакие действия он должен выполнять?\\\nО чем это тебе говорит?",
           "courseB_artist_loops8_a": "Сколько раз тебе следует повторить эту схему, чтобы сделать лестницу?",
           "courseB_artist_loops8_b": "Попробуй запустить код, который тебе дали, чтобы узнать его назначение."
         },
@@ -2137,9 +2103,6 @@
           "courseB_artist_loops9_c": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Добавь к данному тебе коду еще один блок, чтобы нарисовать остальные ступени лестницы.",
-          "courseA_artist_loops9_b": "Добавленный тобой блок должен оказаться внутри \n\nцикла\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>.",
-          "courseA_artist_loops9_c": "Не можешь догадаться, куда поместить цикл? Запиши все команды поочередно и найди повторяющиеся действия.",
           "courseB_artist_loops9_a": "Помни, что блоки прыжка позволяет перемещаться без рисования линии.",
           "courseB_artist_loops9_b": "Тебе потребуется использовать блок «запад» (налево) для решения этой головоломки.",
           "courseB_artist_loops9_c": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие."
@@ -2848,10 +2811,6 @@
           "courseB_starWars_prog9_a": "Не бойся допустить ошибку! Запусти код и посмотри, что получится, даже если не уверен, что уже решил головоломку.",
           "courseB_starWars_prog9_b": "Существует много способов решения этой головоломки."
         },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "Не можешь догадаться, как нарисовать линию?  Начни с того, чтобы присоединить блоки к блоку <xml><block type=\"when_run\"/></xml> и посмотри, что получится.",
-          "courseA_artist_loops2_b": "Используй блок <xml><block type=\"simple_move_right\"/></xml> для решения этой головоломки."
-        },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Для добавления персонажа на сцену можно использовать блок \"установить персонажа 1 на изображение ???\".",
           "courseE_playLab_scaffold1_b": "Помести блок \"установить персонажа\" под блок \"при выполнении\", чтобы заставить персонажа появиться в начале программы.",
@@ -3254,7 +3213,7 @@
         },
         "courseC_artist_prog2": {
           "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
-          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок \"повернуть направо на 90 градусов\"."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
@@ -4916,6 +4875,35 @@
           "courseD_artist_ramp12_b": "Попробуй разбить эту задачу на две и использовать 2 цикла.",
           "courseD_artist_ramp12_c": "Чтобы понять, какой угол тебе нужен, открой выпадающее меню на блоках \"повернуть\"!"
         },
+        "courseD_autorun_binary2_2019": {
+          "courseD_artist_binary2_a": "Просто нажми на \"Выполнить\", чтобы увидеть эту программу в действии!"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_a": "Один из четырех двоичных рисунков из набора инструментов помогут решить эту головоломку!",
+          "courseD_artist_binary3_b": "Не бойся допустить ошибку! Попробуй написать двоичный код и запустить программу, чтобы посмотреть, что получится, даже если не уверен, что уже решил головоломку."
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_a": "Посмотри на три первых квадратика в верхнем ряду. Смог бы ты повторить их, чтобы получить весь рисунок?",
+          "courseD_artist_binary4_b": "Не бойся допустить ошибку! Попробуй написать двоичный код и запустить программу, чтобы посмотреть, что получится, даже если не уверен, что уже решил головоломку."
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_a": "Попробуй сначала запустить программу, чтобы понять, с чем тебе придется работать.",
+          "courseD_artist_binary5_b": "Чтобы сделать улыбку, нужно поменять всего два ряда.",
+          "courseD_artist_binary5_c": "Возникли сложности с этой головоломкой? Запиши двоичные строки на листе бумаги и найди повторяющееся действие."
+        },
+        "courseD_autorun_binary6_2019": {
+          "courseD_artist_binary6_a": "Начни с левого верхнего угла. Сколько тебе придется прочитать, прежде чем рисунок начнет повторяться?",
+          "courseD_artist_binary6_b": "Можешь писать двоичную строку по частям и постоянно тестировать!"
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_a": "Начни с левого верхнего угла. Сколько тебе придется прочитать, прежде чем рисунок начнет повторяться?",
+          "courseD_artist_binary7_b": "Не бойся допустить ошибку! Попробуй написать двоичный код и запустить программу, чтобы посмотреть, что получится, даже если не уверен, что уже решил головоломку."
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_a": "Иногда, изображая спираль, можно запутаться. Будешь создавать этот рисунок – изолируй мысленно каждую горизонтальную линию.",
+          "courseD_artist_binary8_b": "Попробуй сначала запустить программу, чтобы понять, с чем тебе придется работать.",
+          "courseD_artist_binary8_c": "Не бойся допустить ошибку! Попробуй написать двоичный код и запустить программу, чтобы посмотреть, что получится, даже если не уверен, что уже решил головоломку."
+        },
         "courseD_bee_conditionals1_predict1": {
           "courseD_bee_conditionals1_a": "Тебе потребуется использовать блок \"если\", чтобы проверять, скрывается ли под облачком цветок, прежде, чем пытаться собирать нектар."
         },
@@ -5141,13 +5129,13 @@
           "courseD_bee_conditionals_challenge1_b": "В этой головоломке на любом месте может быть цветок, сота или ничего.  Это означает, что условный блок (\"если/или же\") можно повторить у каждого квадратика."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
           "courseD_bee_conditionals_challenge1_b": "Совсем как блоки \"если у цветка\", код внутри цикла \"пока нектар > 0\" будет выполняться только, если пчела находится у цветка. Разница состоит в том, что код внутри будет выполняться снова и снова, пока нектар не кончится.  Попробуй эту схему:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
@@ -5329,8 +5317,8 @@
           "courseD_collector_debugging9_b": "Догадайся, как решить эту задачу, а затем двигайся шаг за шагом, чтобы подогнать код под то, что у тебя в голове."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Начни с того, чтобы собрать всего **две** жемчужины из каждой из первых **двух** груд.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nИспользуй эти блоки.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Затем собери оставшиеся жемчужины в этом ряду.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nДобавь эти блоки к своей программе.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Начни с того, чтобы собрать всего **две** жемчужины из каждой из первых **двух** груд.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nИспользуй эти блоки.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Затем собери оставшиеся жемчужины в этом ряду.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nДобавь эти блоки к своей программе.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Наконец, собери остальные сокровища. Добавь эти блоки к своей программе.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Вот полное решение этой головоломки.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },

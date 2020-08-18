@@ -375,6 +375,7 @@ de:
       sections: Lerngruppen
       help_support: Hilfe und Support
       report_bug: Einen Fehler melden
+      report_abuse: Missbrauch melden
       teacher_community: Lehrer Community
       professional_learning: Professionelles Lernen
       documentation: Dokumentation
@@ -410,6 +411,7 @@ de:
       help_us: Helfen Sie uns
       teach: Unterrichten
       about: Über
+      legal: Privatsphäre und Rechtliches
       legal_privacy: Datenschutzerklärung
       legal_tos: AGBs
     user:

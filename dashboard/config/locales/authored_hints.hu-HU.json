@@ -191,9 +191,6 @@
         "2-3 Maze Loops 21": {
           "2-3_Maze_Loops_21_a": "Ha gondban vagy, hogy megtaláld a lépcsős mintát, próbáld az ujjaddal követni az útvonalat."
         },
-        "4-5 Artist 4": {
-          "4-5_Artist_4_a": "A teljes körben 360 fok van! \nPontosan ennyiszer kell ismételned ezt a kódot (mindig 1 fokot fordulsz), hogy egy kört készíts!"
-        },
         "4-5 Maze 10": {
           "4-5_Maze_10_a": "Ha nem érted, hogyan kell ciklusok használatával helyesen megoldani a feladványokat, akkor először próbáld meg a hosszabb utat, és keresd az ismétlődéseket.\n\nMelyik utasítások köré kellene raknod az `ismételd` blokkot, hogy a kódod rövidebb legyen?"
         },
@@ -608,7 +605,7 @@
           "courseD_bee_debugging_challenge1_c": "Miután a méh elért az oszlop aljára, ismételje ezeket a parancsokat: \n\n-   Ismételd 2 alkalommal:\n    -   Menj előre\n    -   Készíts 3 mézet \n-   Menj hátra"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Végül gyűjtd össze a maradék gyémántokat is a sorban. Add hozzá ezeket a blokkokat a programodhoz.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Itt a teljes megoldása ennek rejtvénynek.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -657,8 +654,7 @@
         },
         "courseA_artist_loops3_2020": {
           "courseA_artist_loops3_a": "Kövesd az ujjaddal a programot, hogy lásd, hol a hiba.",
-          "courseA_artist_loops3_b": "Ilyen blokkot használj, hogy megoldd ezt a feladványt.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
-          "courseB_artist_loops2_a": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején."
+          "courseA_artist_loops3_b": "Ilyen blokkot használj, hogy megoldd ezt a feladványt.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején.",
@@ -769,8 +765,7 @@
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Adj egy másik blokkot a megadott kódhoz, hogy megrajzold a lépcső folytatását.",
           "courseA_artist_loops9_b": "A blokk, amit megadsz, a\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n ciklus belsejébe kell, hogy kerüljön.",
-          "courseA_artist_loops9_c": "Ha nem tudod kitalálni, hogy hová tegyél ciklust, próbáld leírni a kódot lépésről lépésre és keress mintákat, ismétlődéseket.",
-          "courseB_artist_loops9_c": "Nem tudod kitalálni, hogy hová tegyél ciklust? Próbáld lépésről-lépésre megírni a kódot, és keress benne ismétlődést, mintát."
+          "courseA_artist_loops9_c": "Ha nem tudod kitalálni, hogy hová tegyél ciklust, próbáld leírni a kódot lépésről lépésre és keress mintákat, ismétlődéseket."
         },
         "courseA_artist_loops_challenge2a": {
           "courseA_artist_loops_challenge2_a": "<xml>  <block type=\"simple_move_up_left\"/></xml> - az ilyen blokkokkal a művész ferde vonalakat tud rajzolni!",
@@ -1308,32 +1303,7 @@
           "courseB_artist_loops2_a": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején."
         },
         "courseB_artist_loops2_2020": {
-          "courseA_artist_loops3_a": "Kövesd az ujjaddal a programot, hogy lásd, hol a hiba.",
-          "courseA_artist_loops3_b": "Ilyen blokkot használj, hogy megoldd ezt a feladványt.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)",
           "courseB_artist_loops2_a": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején."
-        },
-        "courseB_artist_loops4_2020": {
-          "courseA_artist_loops4_a": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején.",
-          "courseA_artist_loops4_b": "Mivel csak egy <xml><block type=\"simple_move_right\"/></xml> blokkot használhatsz, próbáld meg beletenni egy <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> ciklusba."
-        },
-        "courseB_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Használd azt, amit eddig tanultál a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokkokról, hogy megoldd ezt a feladványt!",
-          "courseA_artist_loops5_b": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején.",
-          "courseA_artist_loops5_c": "Mivel csak egy <xml><block type=\"simple_move_right\"/></xml> blokkot használhatsz, próbáld meg beletenni egy \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nciklusba."
-        },
-        "courseB_artist_loops6_2020": {
-          "courseA_artist_loops6_a": "Nem tudod, hogyan csinálj hegyet? Próbálj játszani a blokkokkal egy kicsit, és meglátod, hogy melyik mit rajzol.",
-          "courseA_artist_loops6_b": "Két blokkra van szükséged, ami két különböző irányba mutat - így tudod megoldani ezt a feladványt."
-        },
-        "courseB_artist_loops7_2020": {
-          "courseA_artist_loops7_a": "Nem tudod kitalálni, hogy hová tegyél ciklust? Próbáld lépésről-lépésre megírni a kódot, és keress benne ismétlődést, mintát.",
-          "courseA_artist_loops7_b": "Először egyetlen hullámhoz írj kódot, aztán ismételd meg, hogy kirajzolja a másik kettőt is.",
-          "courseA_artist_loops7_c": "Emlékezz rá, hogy egynél több blokkot is tehetsz egy <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> ciklusba."
-        },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_a": "Próbáld lefuttatni a kódot, hogy lásd, mit írtunk le eddig.",
-          "courseA_artist_loops8_b": "Hogyan tudnád ciklusba tenni a kódot, amit megadtunk neked?",
-          "courseA_artist_loops8_c": "Mit csinál a kód?\\\nMit kellene csinálnia?\\\nMit mondd ez a számodra?"
         },
         "courseB_artist_loops9": {
           "courseB_artist_loops9_c": "Nem tudod kitalálni, hogy hová tegyél ciklust? Próbáld lépésről-lépésre megírni a kódot, és keress benne ismétlődést, mintát."
@@ -1345,9 +1315,6 @@
           "courseB_artist_loops9_c": "Nem tudod kitalálni, hogy hová tegyél ciklust? Próbáld lépésről-lépésre megírni a kódot, és keress benne ismétlődést, mintát."
         },
         "courseB_artist_loops9_2020": {
-          "courseA_artist_loops9_a": "Adj egy másik blokkot a megadott kódhoz, hogy megrajzold a lépcső folytatását.",
-          "courseA_artist_loops9_b": "A blokk, amit megadsz, a\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n ciklus belsejébe kell, hogy kerüljön.",
-          "courseA_artist_loops9_c": "Ha nem tudod kitalálni, hogy hová tegyél ciklust, próbáld leírni a kódot lépésről lépésre és keress mintákat, ismétlődéseket.",
           "courseB_artist_loops9_c": "Nem tudod kitalálni, hogy hová tegyél ciklust? Próbáld lépésről-lépésre megírni a kódot, és keress benne ismétlődést, mintát."
         },
         "courseB_collector_loops2": {
@@ -1425,10 +1392,6 @@
         },
         "courseB_starWars_prog7_2020": {
           "courseB_starWars_prog7_b": "BB-8 felszedi a fémdarabot, amint fölé gördül."
-        },
-        "courseB_video_artistLoops_2020": {
-          "courseA_artist_loops2_a": "Nem jössz rá, hogyan rajzolj vonalat? Próbáld csatlakoztatni a blokkot a <xml><block type=\"when_run\"/></xml>  blokkhoz, és nézd meg, mi történik.",
-          "courseA_artist_loops2_b": "Használd a <xml><block type=\"simple_move_right\"/></xml> blokkot, hogy megoldd a feladványt."
         },
         "courseC_artist_loops1a": {
           "courseC_artist_loops1a_a": "Ez az első blokk, amire szükséged lesz:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
@@ -1627,8 +1590,8 @@
           "courseD_bee_debugging_challenge1_a": "Ennek a programnak miért csak az első fele működik? Gondolkodj el rajta, miért kell a méhnek hátrafelé mozognia. Mennyi nektárt gyűjt a méh, amikor a virághoz ér?"
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Kezdjük csak **két** gyémánt összegyűjtésével, az első **két** halomból, egymás után.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nHasználd ezeket a blokkokat.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Kezdjük csak **két** gyémánt összegyűjtésével, az első **két** halomból, egymás után.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nHasználd ezeket a blokkokat.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Végül gyűjtd össze a maradék gyémántokat is a sorban. Add hozzá ezeket a blokkokat a programodhoz.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Itt a teljes megoldása ennek rejtvénynek.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },

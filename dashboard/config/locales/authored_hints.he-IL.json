@@ -900,7 +900,7 @@
           "courseD_bee_conditionals_challenge1_a": "התוכלו למצוא את הדרך אשר מגיעה לכל פרח וחלת דבש בלי להתקע בעצים? הדרך הטובה ביותר היא ספירלה.\n\n**אתם יכולים לפתור את השלב בלי לפנות שמאלה כלל.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "הקוד המקורי יכול לעבוד נהדר - רק אם היה אוצר אחד בלבד בכל ערימה!"
@@ -1091,11 +1091,11 @@
         "courseB_Scrat_ramp3b_2019": {
           "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
-        "courseB_Scrat_ramp5a_2019": {
+        "courseB_Scrat_ramp5a_2018": {
           "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
-        "courseB_artist_loops8_2020": {
-          "courseA_artist_loops8_c": "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
+        "courseB_Scrat_ramp5a_2019": {
+          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge2a": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
@@ -1682,6 +1682,21 @@
         },
         "courseD_artist_nestedLoops3_2020": {
           "courseD_artist_nestedLoops3_a": "נסה להשתמש בבלוק \"קפוץ קדימה\" כדי לזוז מהפינה של אחד הריבועים אל המקום שבו הוא צריך להתחיל את הריבוע הבא. \n\nאם כל ריבוע שלך הוא בגובה 20 פיקסלים והריבועים נמצאים במרחק 20 פיקסלים אחד מן השני, כמה רחוק אתה צריך לקפוץ?"
+        },
+        "courseD_autorun_binary3_2019": {
+          "courseD_artist_binary3_b": "אל תפחד לטעות! נסה לכתוב קוד בינארי והרץ אותו כדי לראות מה קורה, גם אם עדיין לא פתרת את החידה."
+        },
+        "courseD_autorun_binary4_2019": {
+          "courseD_artist_binary4_b": "אל תפחד לטעות! נסה לכתוב קוד בינארי והרץ אותו כדי לראות מה קורה, גם אם אתה חושב שעדיין לא הצלחת לפתור את החידה."
+        },
+        "courseD_autorun_binary5_2019": {
+          "courseD_artist_binary5_b": "כדי ליצור חיוך, עליך רק להחליף בין 2 שורות."
+        },
+        "courseD_autorun_binary7_2019": {
+          "courseD_artist_binary7_b": "אל תפחד לטעות! נסה לכתוב קוד בינארי והרץ אותו כדי לראות מה קורה, גם אם אתה חושב שעדיין לא הצלחת לפתור את החידה."
+        },
+        "courseD_autorun_binary8_2019": {
+          "courseD_artist_binary8_c": "אל תפחד לטעות! נסה לכתוב קוד בינארי והרץ אותו כדי לראות מה קורה, גם אם עדיין לא פתרת את החידה."
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_b": "תוכל להשתמש בלולאת \"חזור\" או \"כל עוד דרך לפניך\" כדי לזוז בתוך המבוך הזה."
