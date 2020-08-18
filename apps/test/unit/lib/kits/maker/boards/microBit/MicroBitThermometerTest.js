@@ -2,7 +2,7 @@ import {MicrobitStubBoard} from '../makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
-import {sensor_channels} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
 describe('MicroBitThermometer', function() {
   let boardClient, thermometer;
@@ -25,7 +25,7 @@ describe('MicroBitThermometer', function() {
 
   it(`fahrenheit is calculated from celsius`, () => {
     // Seed the temp channel with celsius data
-    boardClient.analogChannel[sensor_channels.tempSensor] = 3;
+    boardClient.analogChannel[SENSOR_CHANNELS.tempSensor] = 3;
 
     expect(thermometer.celsius).to.equal(thermometer.C);
     expect(thermometer.celsius).to.equal(3);
@@ -40,11 +40,11 @@ describe('MicroBitThermometer', function() {
       let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
       thermometer.start();
       expect(startSpy).to.have.been.calledOnce;
-      expect(startSpy).to.have.been.calledWith(sensor_channels.tempSensor);
+      expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.tempSensor);
 
       thermometer.stop();
       expect(stopSpy).to.have.been.calledOnce;
-      expect(stopSpy).to.have.been.calledWith(sensor_channels.tempSensor);
+      expect(stopSpy).to.have.been.calledWith(SENSOR_CHANNELS.tempSensor);
     });
   });
 
@@ -65,7 +65,7 @@ describe('MicroBitThermometer', function() {
       boardClient.receivedAnalogUpdate();
 
       // Seed the temp channel with 'different' data
-      boardClient.analogChannel[sensor_channels.tempSensor] = 3;
+      boardClient.analogChannel[SENSOR_CHANNELS.tempSensor] = 3;
 
       boardClient.receivedAnalogUpdate();
       expect(emitSpy).to.have.been.calledWith('data');

@@ -1,6 +1,6 @@
 import {EventEmitter} from 'events';
 import {
-  sensor_channels,
+  SENSOR_CHANNELS,
   roundToHundredth,
   SAMPLE_RATE,
   MAX_SENSOR_BUFFER
@@ -23,7 +23,7 @@ export default class LightSensor extends EventEmitter {
     this.board.mb.addFirmataUpdateListener(() => {
       //Record current reading to keep finite historical buffer
       this.buffer[this.bufferIndex] = this.board.mb.analogChannel[
-        sensor_channels.lightSensor
+        SENSOR_CHANNELS.lightSensor
       ];
       this.bufferIndex++;
       // Modulo the index to loop to the beginning of the buffer when it exceeds array size
@@ -31,7 +31,7 @@ export default class LightSensor extends EventEmitter {
       // Only emit the data event when the value is above the threshold or the
       // previous reading was above the threshold
       if (
-        this.board.mb.analogChannel[sensor_channels.lightSensor] >=
+        this.board.mb.analogChannel[SENSOR_CHANNELS.lightSensor] >=
           this.state.threshold ||
         this.state.currentReading >= this.state.threshold
       ) {
@@ -40,14 +40,14 @@ export default class LightSensor extends EventEmitter {
         // If the light value has changed, trigger a change event
         if (
           this.state.currentReading !==
-          this.board.mb.analogChannel[sensor_channels.lightSensor]
+          this.board.mb.analogChannel[SENSOR_CHANNELS.lightSensor]
         ) {
           this.emit('change');
         }
       }
 
       this.state.currentReading = this.board.mb.analogChannel[
-        sensor_channels.lightSensor
+        SENSOR_CHANNELS.lightSensor
       ];
     });
     this.start();
@@ -56,7 +56,7 @@ export default class LightSensor extends EventEmitter {
       value: {
         get: function() {
           return calculateValueWithinRange(
-            this.board.mb.analogChannel[sensor_channels.lightSensor],
+            this.board.mb.analogChannel[SENSOR_CHANNELS.lightSensor],
             this.state.rangeMin,
             this.state.rangeMax
           );
@@ -75,11 +75,11 @@ export default class LightSensor extends EventEmitter {
 
   start() {
     this.board.mb.enableLightSensor(); // enable light sensor
-    this.board.mb.streamAnalogChannel(sensor_channels.lightSensor);
+    this.board.mb.streamAnalogChannel(SENSOR_CHANNELS.lightSensor);
   }
 
   stop() {
-    this.board.mb.stopStreamingAnalogChannel(sensor_channels.lightSensor); // disable light sensor
+    this.board.mb.stopStreamingAnalogChannel(SENSOR_CHANNELS.lightSensor); // disable light sensor
   }
 
   // Get the averaged value over the give range of ms, adjusted within specified range
