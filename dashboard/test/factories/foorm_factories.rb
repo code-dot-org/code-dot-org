@@ -13,6 +13,12 @@ FactoryGirl.define do
     answers '{}'
   end
 
+  factory :pd_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+    association :foorm_submission, factory: :basic_foorm_submission
+  end
+
   factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :pd_workshop, factory: :csd_summer_workshop
     association :user, factory: :teacher
