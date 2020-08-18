@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/chat_client'
-require 'cdo/only_one'
 require 'retryable'
 require src_dir 'forms'
 require src_dir 'abort_form_error'
@@ -96,4 +98,4 @@ def main
   system "#{deploy_dir('bin/cron', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end
 
-main if only_one_running?(__FILE__)
+main

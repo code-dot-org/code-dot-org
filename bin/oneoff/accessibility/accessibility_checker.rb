@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 require_relative '../../../deployment'
 require 'cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 require 'json'
 require 'cdo/chat_client'
 
@@ -46,4 +48,4 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+main

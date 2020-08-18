@@ -11,6 +11,7 @@ require 'cdo/crowdin/project'
 
 require 'fileutils'
 require 'json'
+require 'parallel'
 require 'tempfile'
 require 'yaml'
 
@@ -104,7 +105,7 @@ def find_malformed_links_images(locale, file_path)
 end
 
 def restore_redacted_files
-  total_locales = Languages.get_locale.count
+  locales = Languages.get_locale
   original_dir = "i18n/locales/original"
   original_files = Dir.glob("#{original_dir}/**/*.*").to_a
   if original_files.empty?
@@ -116,20 +117,20 @@ def restore_redacted_files
       corresponding sync-in.
     ERR
   end
-  Languages.get_locale.each_with_index do |prop, locale_index|
+
+  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+
+  Parallel.each(locales) do |prop|
     locale = prop[:locale_s]
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    puts "Restoring #{locale} (#{locale_index}/#{total_locales})"
     original_files.each do |original_path|
       relative_path = original_path.delete_prefix(original_dir)
       next unless file_changed?(locale, relative_path)
 
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
-
-      $stdout.flush
 
       if original_path.include? "course_content"
         restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
@@ -144,7 +145,9 @@ def restore_redacted_files
       end
       find_malformed_links_images(locale, translated_path)
     end
+    I18nScriptUtils.upload_malformed_restorations(locale)
   end
+  puts "Restoration finished!"
 end
 
 # Recursively run through the data received from crowdin, sanitizing it for
@@ -257,12 +260,12 @@ end
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
-  total_locales = Languages.get_locale.count
-  Languages.get_locale.each_with_index do |prop, i|
+  locales = Languages.get_locale
+  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+
+  Parallel.each(locales) do |prop|
     locale = prop[:locale_s]
     locale_dir = File.join("i18n/locales", locale)
-    puts "Distributing #{locale} (#{i}/#{total_locales})"
-    $stdout.flush
     next if locale == 'en-US'
     next unless File.directory?(locale_dir)
 

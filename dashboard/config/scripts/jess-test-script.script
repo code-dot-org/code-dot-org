@@ -2,7 +2,7 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/"], ["teacherForum", "https://forum.code.org/"], ["curriculumGuide", "https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview"], ["professionalLearning", "https://studio.code.org/my-professional-learning"]]
 
-lesson 'Module 1'
+lesson 'Module 1', display_name: 'Module 1'
 level 'OPL - CSD-PL AYWS1 Debugging Intro', progression: 'Module 1 Overview'
 level 'VPL - CSD - Module 1 Summer Review Overview', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
 level 'VPL-CSD 2020 Summer Review', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
@@ -20,7 +20,7 @@ level 'VPL-CSD Games variables practice_2020', progression: 'Debugging (~ 25 min
 level 'VPL - CSD Module 1 Debugging Reflection 2', progression: 'Debugging (~ 25 mins)'
 level 'VPL - CSD - Module 1 Wrap Up', progression: 'Module 1 Asynchronous Wrap Up (~ 10 mins)'
 
-lesson 'Module 2'
+lesson 'Module 2', display_name: 'Module 2'
 level 'VPL - CSD Module 2 Overview', progression: 'Module 2 Overview'
 level 'VPL - CSD - Module 1 - CI', progression: 'Lesson Investigation (~ 60 min)'
 level 'VPL - CSD: Introduction to the Draw Loop_2020', progression: 'Lesson Investigation (~ 60 min)'
@@ -39,21 +39,40 @@ level 'VPL - CSD U3 collisions car intro_2020', progression: 'Conclusions and Co
 level 'VPL - CSD U3 game intro_2018_2019_pilot_2020', progression: 'Conclusions and Connections (~ 20 mins)'
 level 'VPL - CSD - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~ 10 mins)'
 
-lesson 'Module 3'
+lesson 'Module 3', display_name: 'Module 3'
+level 'VPL - CSD Module 3 Overview', progression: 'Module 3 Overview'
+level 'VPL - CSD M3 Theme Introduction', progression: 'Theme Introduction (~5 mins)'
+level 'VPL - CSD - Module 3 - U4L1 Investigation', progression: 'Lesson Investigation (~30 mins)'
+level 'VPL - CSD - Module 3 - U4L1', progression: 'Lesson Investigation (~30 mins)'
+level 'VPL - CSD - Module 3 - Problem Solving Process Guide', progression: 'Reflection (~10 mins)'
+level 'VPL - CSD Module 3 Problem Solving Process', progression: 'Reflection (~10 mins)'
+level 'VPL - CSD - Module 3 - U4L2 Investigation', progression: 'Lesson Investigation (~30 mins)'
+level 'VPL - CSD - Module 3 - U4L2', progression: 'Lesson Investigation (~30 mins)'
+level 'VPL - CSD Module 3 U4L2 Reflection', progression: 'Reflection (~5 mins)'
+level 'VPL - CSD - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap Up (~10 mins)'
+
+lesson 'Module 4', display_name: 'Module 4'
+level 'VPL - CSD Module 4 Overview', progression: 'Module 4 Overview'
+level 'VPL - CSD - Module 4 - CI', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL CSD Module 4 U4L04 2020', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD Module 4 U4L4 Reflection', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL CSD Module 4 U4L08', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD Module 4 U4L8 Reflection', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL CSD Module 4 U4L12', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD Module 4 U4L12 Reflection', progression: 'Lesson Investigation (~60 mins)'
+level 'VPL - CSD - Module 4 - Conclusions and Connections', progression: 'Conclusions and Connections (~20 mins)'
+level 'VPL - CSD U4 Chapter 1 Project', progression: 'Conclusions and Connections (~20 mins)'
+level 'VPL - CSD - Module 4 Wrap Up', progression: 'Module 4 Asynchronous Wrap Up (~10 mins)'
+
+lesson 'Module 5', display_name: 'Module 5'
 level 'VirtualPLOverview'
 
-lesson 'Module 4'
+lesson 'Module 6', display_name: 'Module 6'
 level 'VirtualPLOverview'
 
-lesson 'Module 5'
+lesson 'Module 7', display_name: 'Module 7'
 level 'VirtualPLOverview'
 
-lesson 'Module 6'
-level 'VirtualPLOverview'
-
-lesson 'Module 7'
-level 'VirtualPLOverview'
-
-lesson 'Module 8'
+lesson 'Module 8', display_name: 'Module 8'
 level 'VirtualPLOverview'
 
