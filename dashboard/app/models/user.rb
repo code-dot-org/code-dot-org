@@ -1780,10 +1780,8 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
-      # TODO: Update user_level with the time spent once time_spent has been added to the user_levels table
-      # https://github.com/code-dot-org/code-dot-org/pull/31696/files
-      # total_time_spent = user_level.calculate_total_time_spent(time_spent)
-      # user_level.time_spent = total_time_spent if total_time_spent
+      total_time_spent = user_level.calculate_total_time_spent(time_spent)
+      user_level.time_spent = total_time_spent if total_time_spent
 
       user_level.atomic_save!
     end
