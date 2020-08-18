@@ -142,7 +142,8 @@ class UnitGroupTest < ActiveSupport::TestCase
               'title' => 'my-unit-group-title',
               'description_short' => 'short description',
               'description_student' => 'Student description here',
-              'description_teacher' => 'Teacher description here'
+              'description_teacher' => 'Teacher description here',
+              'version_title' => 'Version title',
             }
           }
         },
@@ -168,13 +169,14 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal [:name, :id, :title, :assignment_family_title,
                   :family_name, :version_year, :visible, :is_stable,
                   :pilot_experiment, :description_short, :description_student,
-                  :description_teacher, :scripts, :teacher_resources,
+                  :description_teacher, :version_title, :scripts, :teacher_resources,
                   :has_verified_resources, :versions, :show_assign_button], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
     assert_equal 'Student description here', summary[:description_student]
     assert_equal 'Teacher description here', summary[:description_teacher]
+    assert_equal 'Version title', summary[:version_title]
     assert_equal 2, summary[:scripts].length
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal false, summary[:has_verified_resources]

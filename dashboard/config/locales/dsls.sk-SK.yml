@@ -533,6 +533,28 @@ sk-SK:
           sa svojho plánu pre tvorbu aplikácie\n1. **Vyhodnoť a Uprav**\n   * Vymeňte
           si navzájom aplikácie a pomôžte ich vylepšiť\n1. **Prezentuj**\n   * Predveď
           svoj finálny produkt!"
+      Begin planning your project_2018_2019:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička| Mimozemský príbeh |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
+      Begin planning your project_2018_2019_2020:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička| Mimozemský príbeh |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
       BigEvent-Unplugged:
         markdown: |-
           Veľká udalosť
@@ -847,9 +869,9 @@ sk-SK:
           * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/) = Zavolaj funkciu
       CSD U3 Keypress Matching:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
           Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
@@ -859,9 +881,9 @@ sk-SK:
         title: 'Spájanie: odpovede na stlačenie kláves'
       CSD U3 Keypress Matching_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
           Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
@@ -871,9 +893,9 @@ sk-SK:
         title: 'Spájanie: odpovede na stlačenie kláves'
       CSD U3 Keypress Matching_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         content1: Spoj blok stlačenia klávesy s popisom, ktorý mu najviac zodpovedá.
           Ak tebou vybrané riešenie nebude správne, môžeš skúsiť znova.
         questions:
@@ -1695,11 +1717,27 @@ sk-SK:
         questions:
         - text: Ktoré slovo je vyhláskované?
         title: Vyber správnu odpoveď
+      OPD-K5-projects-1:
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Hladná veverička | Mimozemský príbeh|
+          |---|---|
+          |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")</a>|
+          | Skús ku hre pridať zvuky! | Skús ku príbehu pridať ďalšiu scénu! |
+
       PowerOfWords-Unplugged:
         markdown: |-
           # Sila slov
 
           Dnes sa naučíš, čo treba robiť, ak je niekto v online priestore nepríjemný.
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # Sila slov
+
+          ## Čo by sme mali spraviť, keď niekto na internete použije zlomyseľný, útočný, alebo nenávistný jazyk?
       Prepare for your presentation:
         markdown: |-
           # Prezentácia projektov
@@ -2142,6 +2180,50 @@ sk-SK:
         description: Práve si na poslednej úlohe kurzu D! Vyber si projekt, ktorý
           chceš vytvoriť.
         display_name: Záverečný projekt
+      courseD_external_binary1:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019_2020:
+        markdown: "<h1>Binárne obrázky</h1>\n \n<h3> Binárnosť znamená, že máme k
+          dispozícii len 2 možnosti. V našom prípade to je  <b>vypnutý (off)</b> a
+          <b>zapnutý (on)</b>.\n<br/>\nV týchto úlohách budeme používať číslo <b>0</b>
+          ako kód pre vypnutý  a číslo <b>1</b> ako kód pre zapnutý.\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>K dispozícii máš mriežku s pixelami, po ktorej sa môžeš
+          prechádzať. Obrázky nakreslíš \"zapnutím\" vybraných štvorcov</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -2153,6 +2235,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018:
@@ -2166,6 +2263,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -2179,6 +2291,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
@@ -2192,6 +2319,21 @@ sk-SK:
         - text: D
           correct: true
           feedback: Správne!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1:
@@ -2888,13 +3030,12 @@ sk-SK:
         markdown: |-
           # Príklady projektov
 
-          Práve ideš začať so svojím finálnym projektom. Ešte predtým ako začneš, dobre si poprezeraj príklady projektov.
+          A teraz si vytvoríš svoj záverečný projekt. Skôr, ako začneš si prehliadni niekoľko príkladov.
 
-
-          | Náhodná rýchlosť pri Odrážačke (Basketbal) | Množenie stromprúperov (Star Wars) |
+          | Náhodná rýchlosť s bounce (Basketbal) | Množenie Stormtrooperov (Star Wars) |
           |---|---|
           | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
-          | Lopta mení rýchlosť po každom odrazení! | Vyhni sa stormtrúperom lebo sa rozmnožia! |
+          | Lopta mení rýchlosť po každom odrazení! | Vyhni sa Stormtrooperom lebo sa rozmnožia! |
 
 
           | Panika na diskotéke (Tanečná Párty) | Scéna z pláže (Umelec) |
@@ -3018,29 +3159,63 @@ sk-SK:
         - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
-        markdown: |-
+        markdown: |
           # Príklady projektov
 
-          Práve sa ideš pustiť do svojho finálneho projektu. Predým ako začneš, prezri si niekoľko príkladov projektov.
+          A teraz si vytvoríš svoj záverečný projekt. Skôr, ako začneš si prehliadni niekoľko príkladov.
 
           ## Sprite Lab
 
-          | Tanec príšer (Sprite Lab) | Košíčková hra (Sprite Lab) |
+          | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
           |---|---|
           | [![Monster Dance(Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
           | Skús do tejto hry pridať text alebo skóre! | Skús do tejto hry pridať text alebo skóre! |
 
           ## Umelec
 
-          | Postup (Artist) | Kvetiny s funkciami (Arist) |
+          | Vzory (Umelec) | Kvetiny s funkciami (Umelec) |
           |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Zabav sa s vnorenými cyklami! | Zabav sa s funkciami! |
       courseE_project_exemplars_2019_2020:
         content1: Strana učebnice s obodovaním testu
+        markdown: "#  Príklady projektov \n\nA teraz si vytvoríš svoj záverečný projekt.
+          Skôr, ako začneš si prehliadni niekoľko príkladov. \n\n## Sprite Lab\n\n|
+          Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |\n|---|---|\n| [![Monster
+          Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png
+          \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view)
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          |\n| Skús ku hre pridať text alebo skóre! | Skús ku hre pridať text alebo
+          skóre! |\n\n## Umelec\n\n| Vzory (Artist) | Snehové vločky (Ľadové kráľovstvo)
+          |\n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          |\n| Zabav sa s vnorenými cyklami! | Zabav sa s funkciami! |\n"
       courseExpress_EOC_2020:
+        description: 'Si na poslednej úlohe Zrýchleného kurzu! Vyber si, aký projekt
+          vytvoríš. '
         display_name: Záverečný projekt
       courseExpress_project_exemplars_2019_2020:
         content1: Strana učebnice s obodovaním testu
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          | Panika na diskotéke (Tanečná párty) | Na pláži (Umelec) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Rozpáľ tanečníkov a roztoč to na tejto diskotéke! | Skús ku tejto scéne pridať viac farieb a pozadie! |
+
+          | Snehové vločky (Ľadové kráľovstvo) | Lietadlo (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Zabav sa s funkciami! | Skús ku hre pridať text, alebo skóre! |
+
       courseF_EOC_2020:
+        description: 'Sme na konci kurzu F! Vyber si, aký projekt vytvoríš. '
         display_name: Záverečný projekt
       courseF_bee_variables_8a_2018:
         answers:
@@ -3563,8 +3738,41 @@ sk-SK:
         - {}
       courseF_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
+        markdown: |+
+          # Príklady projektov
+
+          A teraz si vytvoríš svoj záverečný projekt. Začni prehliadkou niekoľkých príkladov.
+
+          ## Sprite Lab
+
+          | Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |
+          |---|---|
+          | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Skús ku hre pridať text, alebo skóre! | Skús ku hre pridať text, alebo skóre! |
+
+          ## Umelec
+
+          | Kvety (Umelec) | Špirála (Umelec) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Let's get creative with variables! | Let's get creative with For Loops! |
+
       courseF_project_exemplars_2019_2020:
         content1: Strana učebnice s obodovaním testu
+        markdown: "# Príklady projektov\n\nA teraz si vytvoríš svoj záverečný projekt.
+          Skôr, ako začneš si prehliadni niekoľko príkladov.\n\n## Sprite Lab\n\n|
+          Cupcake Game (Sprite Lab) | \tAirplane Game (Sprite Lab) |\n|---|---|\n|
+          [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Skús ku tejto hre pridať text, alebo skóre! | Skús ku tejto hre pridať
+          text, alebo skóre! |\n\n## Umelec\n\n| Flowers (Artist) | Spiral (Artist)
+          |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| Zabav s s premennými! | Zabav sa s cyklami \"for\"! |\n\n"
       coursee_prediction_artistfunction2:
         answers:
         - text: Umelec vyrieši túto úlohu správne.

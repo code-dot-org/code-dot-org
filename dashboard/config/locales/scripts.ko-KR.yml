@@ -2988,3 +2988,9 @@ ko:
           lesson_groups:
             lg_1:
               display_name: 콘텐츠
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: 과정 A
+            Course B:
+              name: 과정 B

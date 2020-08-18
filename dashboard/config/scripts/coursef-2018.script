@@ -1,5 +1,4 @@
 is_course true
-tts true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursef/standards/"]]
@@ -13,12 +12,13 @@ version_year '2018'
 is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
+tts true
 
 lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
-lesson 'Programming: My Robotic Friends'
+lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends'
 level 'courseB_unplugged_MRF_2018'
 
-lesson 'Sequence in Maze'
+lesson 'Sequence in Maze', display_name: 'Coding with Comments'
 level 'courseF_markdown_algorithms_intro'
 level 'courseD_video_ramp1_2018'
 level 'courseD_maze_ramp1_2018'
@@ -33,10 +33,10 @@ level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
 level 'courseF_markdown_algorithms_end'
 
-lesson 'Building a Foundation'
+lesson 'Building a Foundation', display_name: 'Building a Foundation'
 level 'BuildingAFoundation_2018'
 
-lesson 'Debugging with Scrat'
+lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat'
 level 'courseF_markdown_debugging_intro'
 level 'courseC_video_debugging_2018'
 level 'courseC_maze_debugging1_2018'
@@ -50,7 +50,7 @@ level 'courseC_maze_debugging8_predict1_2018'
 level 'courseC_maze_debugging9_2018'
 level 'courseF_markdown_debugging_end'
 
-lesson 'Programming in Artist'
+lesson 'Programming in Artist', display_name: 'Creating Art with Code'
 level 'courseC_video_artist_2018'
 level 'courseC_artist_prog1_2018'
 level 'courseC_artist_prog2_2018'
@@ -64,10 +64,10 @@ level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: My Loopy Robotic Friends'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF_2018'
 
-lesson 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Drawing Shapes with Loops'
 level 'courseF_markdown_loops_intro'
 level 'ramp_video_artistIntro_2018'
 level 'ramp_artist_loops1_2018'
@@ -82,7 +82,7 @@ level 'ramp_artist_loops8_2018', challenge: true
 level 'ramp_artist_loops9_2018'
 level 'courseF_markdown_loops_end'
 
-lesson 'Nested Loops in Bee/Zombie'
+lesson 'Nested Loops in Bee/Zombie', display_name: 'Nested Loops in Maze'
 level 'courseD_bee_nestedLoops1a_2018'
 level 'courseD_bee_nestedLoops1_2018'
 level 'courseF_markdown_nestedloops_intro'
@@ -99,7 +99,7 @@ level 'courseD_bee_nestedLoops9_2018'
 level 'courseD_bee_nestedLoops9_predict2_2018'
 level 'courseF_markdown_nestedloops_end'
 
-lesson 'Nested Loops with Frozen'
+lesson 'Nested Loops with Frozen', display_name: 'Nested Loops with Frozen'
 level 'courseD_artist_project1_2018'
 level 'courseD_artist_project2_2018'
 level 'courseD_artist_project3_2018'
@@ -110,10 +110,10 @@ level 'courseD_artist_project2a_2018'
 level 'courseD_artist_project3a_2018'
 level 'courseD_artist_project4a_2018'
 
-lesson 'Conditionals with Cards'
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards'
 level 'Conditionals_2018'
 
-lesson 'Conditionals in Farmer'
+lesson 'Conditionals in Farmer', display_name: 'Conditionals with the Farmer'
 level 'courseF_markdown_conditionals_intro'
 level 'courseD_video_whileIntro_2018'
 level 'courseE_farmer_ramp11a_2018'
@@ -129,7 +129,7 @@ level 'courseE_farmer_ramp12f_2018'
 level 'courseE_farmer_ramp12g_2018'
 level 'courseF_markdown_conditionals_end'
 
-lesson 'Functions in Minecraft'
+lesson 'Functions in Minecraft', display_name: 'Functions with Minecraft'
 level 'MC_HOC_2017_01_RETRY'
 level 'MC_HOC_2017_02_Cole'
 level 'MC_HOC_2017_03_Cole'
@@ -144,13 +144,13 @@ level 'MC_HOC_2017_Ali'
 level 'MC_HOC_2017_FP20x20'
 
 lesson_group 'csf_f_2', display_name: 'Course F Content'
-lesson 'The Power of Words'
+lesson 'The Power of Words', display_name: 'The Power of Words'
 level 'courseF_unplugged_powerOfWords_2018'
 
-lesson 'Envelope Variables'
+lesson 'Envelope Variables', display_name: 'Envelope Variables'
 level 'EnvelopeVariables_2018'
 
-lesson 'Variables as Constant in Artist'
+lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist'
 level 'grade5_artist_variables_triangles1_2018'
 level 'courseF_artist_variables2_2018'
 level 'courseF_markdown_variables_intro'
@@ -163,7 +163,7 @@ level 'courseF_artist_variables6_2018'
 level 'courseF_artist_variables6a_2018'
 level 'courseF_external_variableConstant_2018'
 
-lesson 'Variables that Change in Bee'
+lesson 'Variables that Change in Bee', display_name: 'Changing Variables with Bee'
 level 'courseF_bee_variables_1_2018'
 level 'courseF_bee_variables_2_2018'
 level 'courseF_bee_variables_3_2018'
@@ -173,7 +173,7 @@ level 'courseF_bee_variables_6_2018', challenge: true
 level 'courseF_bee_variables_7_2018'
 level 'courseF_bee_variables_8_2018'
 
-lesson 'Variables that Change in Artist'
+lesson 'Variables that Change in Artist', display_name: 'Changing Variables with Artist'
 level 'courseF_artist_variables7_2018'
 level 'courseF_artist_variables8_2018'
 level 'courseF_artist_variables9_2018'
@@ -183,10 +183,10 @@ level 'courseF_markdown_variables_end'
 bonus 'courseF_artist_variables_challenge1_2018'
 bonus 'courseF_artist_variables_challenge2_2018'
 
-lesson 'For Loop Fun'
+lesson 'For Loop Fun', display_name: 'For Loop Fun'
 level 'ForLoopFun_2018'
 
-lesson 'For Loops in Bee'
+lesson 'For Loops in Bee', display_name: 'For Loops with Bee'
 level 'courseF_bee_for1_2018'
 level 'courseF_bee_for2_2018'
 level 'courseF_markdown_forloops_intro'
@@ -204,7 +204,7 @@ level 'courseF_markdown_forloops_end'
 bonus 'courseF_bee_for_challenge1_2018'
 bonus 'courseF_bee_for_challenge2_2018'
 
-lesson 'For Loops in Artist'
+lesson 'For Loops in Artist', display_name: 'For Loops with Artist'
 level 'courseF_video_forArtist_2018'
 level 'courseF_artist_for1_2018'
 level 'courseF_artist_for2_2018'
@@ -220,7 +220,7 @@ level 'courseF_artist_for10_2018'
 bonus 'courseF_artist_for_challenge1_2018'
 bonus 'courseF_artist_for_challenge2_2018'
 
-lesson 'Learning Sprites with Sprite Lab'
+lesson 'Learning Sprites with Sprite Lab', display_name: 'Learning Sprite Lab'
 level 'CourseEF_video_IntroSpriteLab'
 level 'Fish Tank 1-validated'
 level 'Fish Tank 2-validated'
@@ -231,7 +231,7 @@ level 'Fish Tank 5-validated'
 level 'Fish Tank 6-validated'
 level 'Fish Tank 7-validated'
 
-lesson 'Alien Dance Party with Sprite Lab'
+lesson 'Alien Dance Party with Sprite Lab', display_name: 'Alien Dance Party'
 level 'Dance Party 1-validated'
 level 'Dance Party 2'
 level 'CDEF_video_SpritesInAction'
@@ -242,7 +242,7 @@ level 'Dance Party 6'
 level 'Dance Party 7'
 level 'Dance Party Freeplay'
 
-lesson 'Pet Giraffe with Sprite Lab'
+lesson 'Pet Giraffe with Sprite Lab', display_name: 'Pet Giraffe'
 level 'Virtual Pet 1'
 level 'Virtual Pet 2'
 level 'Virtual Pet 3'
@@ -252,21 +252,22 @@ level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-lesson 'Explore Project Ideas'
+lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas'
 level 'courseF_video_csMatters_2018', named: true
 level 'InspirationalArtwork_2018', named: true
 level 'courseF_project_1', named: true
 
-lesson 'The Design Process'
+lesson 'The Design Process', display_name: 'The Design Process'
 level 'Begin planning your project_2018', named: true
 
-lesson 'Build Your Project'
+lesson 'Build Your Project', display_name: 'Build Your Project'
 level 'Course F: Artist Project_2018', named: true
 level 'CourseF_Project_SpriteLab', named: true
 
-lesson 'Revise Your Project'
+lesson 'Revise Your Project', display_name: 'Revise Your Project'
 level 'Course F: Artist Project - Revise_2018', named: true
 level 'CourseF_Project_Revise_SpriteLab', named: true
 
-lesson 'Present Your Project'
+lesson 'Present Your Project', display_name: 'Present Your Project'
 level 'Prepare for your presentation_2018', named: true
+
