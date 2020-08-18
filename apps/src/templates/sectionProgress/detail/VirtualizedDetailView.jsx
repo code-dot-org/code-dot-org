@@ -6,11 +6,11 @@ import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/detai
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '../../../styleConstants';
 import {
-  scriptDataPropType,
   getColumnWidthsForDetailView,
   getLevels,
   setLessonOfInterest
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import color from '../../../util/color';
