@@ -2216,7 +2216,7 @@ pl:
             Intro to Problem Solving:
               name: Wstęp do rozwiązywania problemów
             The Problem Solving Process:
-              name: Proces Rozwiązywania Problemów
+              name: Proces rozwiązywania problemów
             Exploring Problem Solving:
               name: Odkrywanie rozwiązywania problemów
             What is a Computer?:
@@ -2507,7 +2507,7 @@ pl:
             Debugging in Maze:
               name: Debugowanie labiryntu
             Loops in Harvester:
-              name: Pętle w Żniwiarce
+              name: Pętle ze żniwiarką
         coursed-draft:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne
             dzieła, opowiadania i gry.
@@ -2986,7 +2986,7 @@ pl:
             Intro to Problem Solving:
               name: Wstęp do rozwiązywania problemów
             The Problem Solving Process:
-              name: Proces Rozwiązywania Problemów
+              name: Proces rozwiązywania problemów
             Exploring Problem Solving:
               name: Odkrywanie rozwiązywania problemów
             What is a Computer?:
@@ -3034,7 +3034,7 @@ pl:
             Intro to Problem Solving:
               name: Wstęp do rozwiązywania problemów
             The Problem Solving Process:
-              name: Proces Rozwiązywania Problemów
+              name: Proces rozwiązywania problemów
             Exploring Problem Solving:
               name: Odkrywanie rozwiązywania problemów
             What is a Computer?:
@@ -3202,7 +3202,7 @@ pl:
             Loops in Maze:
               name: Pętle w labiryncie
             Loops in Harvester:
-              name: Pętle w Żniwiarce
+              name: Pętle ze żniwiarką
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
             Loops in Artist:
@@ -4418,7 +4418,7 @@ pl:
             Intro to Problem Solving:
               name: Wstęp do rozwiązywania problemów
             The Problem Solving Process:
-              name: Proces Rozwiązywania Problemów
+              name: Proces rozwiązywania problemów
             Exploring Problem Solving:
               name: Odkrywanie rozwiązywania problemów
             What is a Computer?:
@@ -5061,7 +5061,7 @@ pl:
             Intro to Problem Solving:
               name: Wstęp do rozwiązywania problemów
             The Problem Solving Process:
-              name: Proces Rozwiązywania Problemów
+              name: Proces rozwiązywania problemów
             Exploring Problem Solving:
               name: Odkrywanie rozwiązywania problemów
             What is a Computer?:
@@ -5691,7 +5691,7 @@ pl:
             Intro to Problem Solving:
               name: Wstęp do rozwiązywania problemów
             The Problem Solving Process:
-              name: Proces Rozwiązywania Problemów
+              name: Proces rozwiązywania problemów
             Exploring Problem Solving:
               name: Odkrywanie rozwiązywania problemów
             What is a Computer?:
@@ -6123,7 +6123,7 @@ pl:
             Intro to Problem Solving:
               name: Wstęp do rozwiązywania problemów
             The Problem Solving Process:
-              name: Proces Rozwiązywania Problemów
+              name: Proces rozwiązywania problemów
             Exploring Problem Solving:
               name: Odkrywanie rozwiązywania problemów
             What is a Computer?:
@@ -7039,3 +7039,12 @@ pl:
             Module 8:
               name: Moduł 8
           title: Wirtualne Profesjonalne Kształcenie w zakresie Podstaw Informatyki
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kurs A
+            Course B:
+              name: Kurs B
+          lesson_groups:
+            lesson group:
+              display_name: wyświetl nazwisko

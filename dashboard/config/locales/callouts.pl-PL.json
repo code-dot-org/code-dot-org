@@ -396,6 +396,12 @@
         "OPD-K5-projects-4": {
           "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
+        "OPD-K5-variables-1": {
+          "grade5_artist_variables_triangles1_1": "Zauważ, że bloki korzystają teraz z nowego sposobu wpisywania liczb. Te bloki \"matematyczne\" może wyciągać i przemieszczać!"
+        },
+        "OPD-K5-variables-5": {
+          "courseF_artist_variables3_a": "Użyj go do ustawienia wartości \"długości\" zmiennej."
+        },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Ułożyliśmy już kilka bloków na dobry początek"
         },
@@ -1190,6 +1196,63 @@
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
         },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "Przybornik jest w trybie \"kategoria\", aby uczynić więcej miejsca dla Twojego kodu. Tutaj mieszkają pętle \"dla\"."
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "Przybornik jest w trybie \"kategoria\", aby uczynić więcej miejsca dla Twojego kodu. Tutaj mieszkają pętle \"dla\"."
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "Przybornik jest w trybie \"kategoria\", aby uczynić więcej miejsca dla Twojego kodu. Tutaj mieszkają pętle \"dla\"."
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "Przybornik jest w trybie \"kategoria\", aby uczynić więcej miejsca dla Twojego kodu. Tutaj mieszkają pętle \"dla\"."
+        },
+        "courseF_artist_fwp1": {
+          "courseF_artist_fwp1_1": "Kliknij przycisk \"edytuj\", aby aby zmienić kod w tej funkcji."
+        },
+        "courseF_artist_fwp4": {
+          "courseF_artist_fwp4_1": "W celu ukończenia swojego wielokąta, dopilnuj, abyś zawsze obracał się o 360 stopni ÷ po \"bokach\"."
+        },
+        "courseF_artist_fwp5": {
+          "courseF_artist_fwp5_1": "Znajdziesz tutaj funkcję wielokąta."
+        },
+        "courseF_artist_variables3": {
+          "courseF_artist_variables3_a": "Użyj go do ustawienia wartości \"długości\" zmiennej."
+        },
+        "courseF_artist_variables3_2018": {
+          "courseF_artist_variables3_a": "Użyj go do ustawienia wartości \"długości\" zmiennej."
+        },
+        "courseF_artist_variables3_2019": {
+          "courseF_artist_variables3_a": "Użyj go do ustawienia wartości \"długości\" zmiennej."
+        },
+        "courseF_artist_variables3_2020": {
+          "courseF_artist_variables3_a": "Użyj go do ustawienia wartości \"długości\" zmiennej."
+        },
+        "courseF_artist_variables6": {
+          "courseF_artist_variables6_1": "Zmienne mogą być pomocne, gdy musisz zmienić wiele kopii tej samej liczby."
+        },
+        "courseF_artist_variables6_2018": {
+          "courseF_artist_variables6_1": "Zmienne mogą być pomocne, gdy musisz zmienić wiele kopii tej samej liczby."
+        },
+        "courseF_artist_variables6_2019": {
+          "courseF_artist_variables6_1": "Zmienne mogą być pomocne, gdy musisz zmienić wiele kopii tej samej liczby."
+        },
+        "courseF_artist_variables6_2020": {
+          "courseF_artist_variables6_1": "Zmienne mogą być pomocne, gdy musisz zmienić wiele kopii tej samej liczby."
+        },
+        "courseF_artist_variables6a": {
+          "courseF_artist_variables6a_1": "Zmienne mogą być pomocne, gdy musisz zmienić wiele kopii tej samej liczby."
+        },
+        "courseF_artist_variables6a_2018": {
+          "courseF_artist_variables6a_1": "Zmienne mogą być pomocne, gdy musisz zmienić wiele kopii tej samej liczby."
+        },
+        "courseF_artist_variables6a_2019": {
+          "courseF_artist_variables6a_1": "Zmienne mogą być pomocne, gdy musisz zmienić wiele kopii tej samej liczby."
+        },
+        "courseF_artist_variables6a_2020": {
+          "courseF_artist_variables6a_1": "Zmienne mogą być pomocne, gdy musisz zmienić wiele kopii tej samej liczby."
+        },
         "courseF_bee_conditionals2": {
           "courseF_bee_conditionals2_2": "Przybornik jest teraz w trybie kategorii. Wszystkie bloki, których potrzebujesz są pod tymi etykietami!"
         },
@@ -1208,6 +1271,18 @@
         "courseF_bee_for4_2020": {
           "courseF_bee_for4_1": "Tutaj znajdziesz tutaj pętlę `for`!"
         },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "Znajdziesz tutaj blok \"matematyka\"."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "Znajdziesz tutaj blok \"matematyka\"."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "Znajdziesz tutaj blok \"matematyka\"."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "Znajdziesz tutaj blok \"matematyka\"."
+        },
         "courseF_bee_functions2": {
           "courseF_bee_functions2_1": "Ten blok woła funkcję. Kliknij ten przycisk \"edytuj\", by zobaczyć, co jest w środku!"
         },
@@ -1218,11 +1293,23 @@
           "courseF_bee_functions_challenge1_1": "Jaki kod powinieneś wstawić do tej funkcji?",
           "courseF_bee_functions_challenge1_2": "Funkcja \"sprawdź nektar lub miód\" może zostać tu wykorzystana, jeśli ją zmienisz tak, by robiła miód wiele razy."
         },
+        "courseF_bee_fwp1": {
+          "courseF_bee_fwp1_1": "Tutaj znajdziesz instrukcje \"jeśli\"."
+        },
         "courseF_bee_fwp2": {
           "courseF_bee_fwp2_a": "Tutaj znajduje się blok, który woła twoją funkcję."
         },
+        "courseF_bee_fwp3": {
+          "courseF_bee_fwp3_1": "Ta sama funkcja może być użyta przy szukaniu pustych miejsc, jak również chmurek."
+        },
+        "courseF_bee_fwp4": {
+          "courseF_bee_fwp4_1": "Naciśnij przycisk \"edytuj\", aby dodać parametr w swojej funkcji."
+        },
         "courseF_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "Ta funkcja dobrze sobie poradzi z kukurydzą, ale co z innymi warzywami?"
+        },
+        "courseF_playlab_variables1a": {
+          "courseF_playlab_variables1a_1": "Przybornik podzielono na kategorie, aby ułatwić znajdowanie potrzebnych Ci bloków."
         },
         "courseF_playlab_variables5c": {
           "courseF_playlab_variables5c_1": "Tutaj znajdziesz swój blok zmiennej."
@@ -1273,6 +1360,18 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Użyj rozwijanego menu, aby zastąpić \"???\" przez liczbę"
+        },
+        "grade5_artist_variables_triangles1": {
+          "grade5_artist_variables_triangles1_1": "Zauważ, że bloki korzystają teraz z nowego sposobu wpisywania liczb. Te bloki \"matematyczne\" może wyciągać i przemieszczać!"
+        },
+        "grade5_artist_variables_triangles1_2018": {
+          "grade5_artist_variables_triangles1_1": "Zauważ, że bloki korzystają teraz z nowego sposobu wpisywania liczb. Te bloki \"matematyczne\" może wyciągać i przemieszczać!"
+        },
+        "grade5_artist_variables_triangles1_2019": {
+          "grade5_artist_variables_triangles1_1": "Zauważ, że bloki korzystają teraz z nowego sposobu wpisywania liczb. Te bloki \"matematyczne\" może wyciągać i przemieszczać!"
+        },
+        "grade5_artist_variables_triangles1_2020": {
+          "grade5_artist_variables_triangles1_1": "Zauważ, że bloki korzystają teraz z nowego sposobu wpisywania liczb. Te bloki \"matematyczne\" może wyciągać i przemieszczać!"
         }
       }
     }
