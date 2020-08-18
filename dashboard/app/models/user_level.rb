@@ -111,7 +111,7 @@ class UserLevel < ActiveRecord::Base
 
   def calculate_total_time_spent(additional_time)
     existing_time_spent = time_spent ? time_spent : 0
-    additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
+    additional_time && additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
   end
 
   def submitted_or_resubmitted?
