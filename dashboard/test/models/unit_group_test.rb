@@ -194,6 +194,44 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_nil summary[:scripts][0]['stageDescriptions']
   end
 
+  test 'summarize with numbered units' do
+    unit_group = create :unit_group, name: 'my-unit-group'
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'script1'))
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'course' => {
+          'name' => {
+            'my-unit-group' => {
+              'title' => 'my-unit-group-title',
+            }
+          }
+        },
+        'script' => {
+          'name' => {
+            'script1' => {
+              'title' => 'script1-title'
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    summary = unit_group.summarize
+    assert_equal 'script1-title', summary[:scripts].first['title']
+    assert_equal 'script1-title', summary[:scripts].first[:title]
+
+    unit_group.has_numbered_units = true
+    unit_group.save!
+    summary = unit_group.summarize
+    assert_equal 'Unit 1 - script1-title', summary[:scripts].first['title']
+    assert_equal 'Unit 1 - script1-title', summary[:scripts].first[:title]
+  end
+
   test 'summarize_version' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', visible: true, is_stable: true)
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', visible: true, is_stable: true)
