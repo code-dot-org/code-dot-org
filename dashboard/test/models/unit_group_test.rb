@@ -181,7 +181,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal false, summary[:has_verified_resources]
 
-    # spot check that we have fields that show up in Script.summarize(false) and summarize_i18n(false)
+    # spot check that we have fields that show up in Script.summarize(false)
     assert_equal 'script1', summary[:scripts][0][:name]
     assert_equal 'script1-description', summary[:scripts][0]['description']
 
