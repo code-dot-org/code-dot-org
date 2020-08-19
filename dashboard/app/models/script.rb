@@ -1483,9 +1483,9 @@ class Script < ActiveRecord::Base
 
   def supported_locale_names
     locales = supported_locales || []
-    locales = locales.map {|l| Script.locale_native_name_map[l] || l}
-    locales += ['English']
-    locales.sort.uniq
+    locales += ['en-US']
+    locales = locales.sort
+    locales.map {|l| Script.locale_native_name_map[l] || l}.uniq
   end
 
   def self.locale_native_name_map
