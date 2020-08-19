@@ -203,7 +203,7 @@ pl:
     student_terms_markdown: Adresy e-mail nie są przechowywane w postaci, która pozwalałaby
       nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili
       od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się
-      w naszej [Polityce prywatności](%{privacy_policy_url}).
+      w naszej [Polityce prywatności](http://code.org/privacy).
     additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
     user_type_button: Zaktualizuj typ konta
     user_type_label: Typ konta
