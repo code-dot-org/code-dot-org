@@ -3,7 +3,8 @@ import {
   SENSOR_CHANNELS,
   roundToHundredth,
   SAMPLE_INTERVAL,
-  MAX_SENSOR_BUFFER_LENGTH
+  MAX_SENSOR_BUFFER_LENGTH,
+  MAX_LIGHT_SENSOR_VALUE
 } from './MicroBitConstants';
 
 export default class LightSensor extends EventEmitter {
@@ -57,7 +58,7 @@ export default class LightSensor extends EventEmitter {
     Object.defineProperties(this, {
       value: {
         get: function() {
-          return calculateValueWithinRange(
+          return scaleWithinRange(
             this.board.mb.analogChannel[SENSOR_CHANNELS.lightSensor],
             this.state.rangeMin,
             this.state.rangeMax
@@ -100,7 +101,7 @@ export default class LightSensor extends EventEmitter {
           this.buffer.length;
         sum += this.buffer[index];
       }
-      return calculateValueWithinRange(
+      return scaleWithinRange(
         sum / indicesRange,
         this.state.rangeMin,
         this.state.rangeMax
@@ -116,7 +117,10 @@ export default class LightSensor extends EventEmitter {
   }
 }
 
-function calculateValueWithinRange(value, min, max) {
-  let ratio = value / 255;
+// Students can specify a min and max range for the data to scale within.
+// This function calculates where a reading from the sensor between 0 and 255
+// falls within the min and max range.
+function scaleWithinRange(value, min, max) {
+  let ratio = value / MAX_LIGHT_SENSOR_VALUE;
   return roundToHundredth(min + ratio * (max - min));
 }
