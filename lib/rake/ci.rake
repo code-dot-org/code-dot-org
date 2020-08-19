@@ -33,7 +33,7 @@ namespace :ci do
         RakeUtils.bundle_exec 'berks', 'apply', rack_env
 
         ChatClient.log 'Applying <b>chef</b> profile...'
-        RakeUtils.sudo '/opt/chef/bin/chef-client --chef-license accept-silent'
+        RakeUtils.sudo Cdo::CloudFormation::CdoApp::CHEF_CLIENT_BIN
       end
     end
   end
@@ -118,7 +118,7 @@ end
 # Returns true if upgrade succeeded, false if failed.
 def upgrade_frontend(name, hostname)
   ChatClient.log "Upgrading <b>#{name}</b> (#{hostname})..."
-  command = 'sudo /opt/chef/bin/chef-client --chef-license accept-silent'
+  command = "sudo #{Cdo::CloudFormation::CdoApp::CHEF_CLIENT_BIN}"
   log_path = aws_dir "deploy-#{name}.log"
   begin
     RakeUtils.system "ssh -i ~/.ssh/deploy-id_rsa #{hostname} '#{command} 2>&1' >> #{log_path}"
