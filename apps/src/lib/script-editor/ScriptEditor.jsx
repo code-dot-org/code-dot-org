@@ -15,6 +15,8 @@ import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux'
 import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from './LessonExtrasEditor';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   input: {
@@ -30,6 +32,12 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
   }
 };
 
@@ -82,7 +90,8 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella
+      curriculumUmbrella: this.props.curriculumUmbrella,
+      description: this.props.i18nData.description
     };
   }
 
@@ -114,6 +123,10 @@ export default class ScriptEditor extends React.Component {
         e.preventDefault();
       }
     }
+  };
+
+  handleDescriptionChange = event => {
+    this.setState({description: event.target.value});
   };
 
   render() {
@@ -157,10 +170,20 @@ export default class ScriptEditor extends React.Component {
           Description
           <textarea
             name="description"
-            defaultValue={this.props.i18nData.description}
+            defaultValue={this.state.description}
             rows={5}
             style={styles.input}
+            onChange={this.handleDescriptionChange}
           />
+          <div style={{marginLeft: 10}}>
+            <div style={{marginBottom: 5}}>Preview:</div>
+            <div style={styles.box}>
+              <SafeMarkdown
+                openExternalLinksInNewTab={true}
+                markdown={this.state.description}
+              />
+            </div>
+          </div>
         </label>
         <h2>Basic Settings</h2>
         <label>
