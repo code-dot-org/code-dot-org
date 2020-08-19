@@ -1,0 +1,26 @@
+name 'VPL - CSD - Module 4 - CI2'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Lesson 4:  User Interfaces  
+
+
+
+## Investigation Goals
+
+**Understand how prototypes can be used to quickly test ideas and assumptions**
+
+## Investigation Tasks
+
+* Review the vocabulary (prototype and user interface)
+
+* Skim the content in the activity guide to visualize the activity the students will complete in this lesson
+
+
+
+
+
+
+MARKDOWN
