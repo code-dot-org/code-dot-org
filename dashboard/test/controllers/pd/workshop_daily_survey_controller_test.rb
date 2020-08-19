@@ -45,6 +45,7 @@ module Pd
     test 'daily summer workshop survey returns 404 for days outside of range 0-4' do
       setup_summer_workshop
       sign_in @enrolled_summer_teacher
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       get '/pd/workshop_survey/day/-1'
       assert_response :not_found
 
@@ -58,18 +59,8 @@ module Pd
       get '/pd/workshop_daily_survey/day/0'
       assert_response :not_found
 
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       get '/pd/workshop_daily_survey/day/5'
-      assert_response :not_found
-    end
-
-    test 'daily academic year workshop survey results 404 for days outside of 1' do
-      setup_academic_year_workshop
-      sign_in @enrolled_academic_year_teacher
-
-      get '/pd/workshop_survey/day/0'
-      assert_response :not_found
-
-      get '/pd/workshop_survey/day/2'
       assert_response :not_found
     end
 
@@ -111,10 +102,11 @@ module Pd
       assert_response :success
     end
 
-    test 'post-workshop foorm survey displays foorm when enrolled' do
+    test 'post-workshop foorm survey displays foorm when enrolled and attended' do
       setup_summer_workshop
 
       sign_in @enrolled_summer_teacher
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       get '/pd/workshop_post_survey'
       assert_template :new_general_foorm
       assert_response :success
@@ -149,6 +141,7 @@ module Pd
     test 'daily workshop survey displays closed message when session attendance is closed' do
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(false)
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
@@ -158,7 +151,6 @@ module Pd
 
     test 'daily workshop survey displays no attendance message when session is open but not attended' do
       setup_summer_workshop
-      Session.any_instance.expects(:open_for_attendance?).returns(true)
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
@@ -178,6 +170,7 @@ module Pd
       Session.any_instance.expects(:open_for_attendance?).returns(false)
 
       sign_in @enrolled_summer_teacher
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       get '/pd/workshop_daily_survey/day/1'
       assert_response :success
       assert_closed
@@ -185,7 +178,6 @@ module Pd
 
     test 'daily workshop foorm survey displays no attendance message when session is open but not attended' do
       setup_summer_workshop
-      Session.any_instance.expects(:open_for_attendance?).returns(true)
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_daily_survey/day/1'
@@ -204,37 +196,6 @@ module Pd
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
       assert_template :new_general_foorm
-    end
-
-    test 'academic year workshop with open session attendance displays embedded Jotform' do
-      setup_academic_year_workshop
-      Session.any_instance.expects(:open_for_attendance?).returns(true)
-      create :pd_attendance, session: @academic_year_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: @academic_year_enrollment
-
-      submit_redirect = general_submit_redirect(day: 1, user: @enrolled_academic_year_teacher, workshop: @academic_year_workshop)
-      assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
-
-      WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).with(
-        FAKE_ACADEMIC_YEAR_IDS[0],
-        {
-          environment: 'test',
-          userId: @enrolled_academic_year_teacher.id,
-          workshopId: @academic_year_workshop.id,
-          day: 1,
-          formId: FAKE_ACADEMIC_YEAR_IDS[0],
-          sessionId: @academic_year_workshop.sessions[0].id,
-          userName: @enrolled_academic_year_teacher.name,
-          userEmail: @enrolled_academic_year_teacher.email,
-          workshopCourse: COURSE_CSP,
-          workshopSubject: SUBJECT_CSP_WORKSHOP_1,
-          regionalPartnerName: @regional_partner.name,
-          submitRedirect: submit_redirect
-        }
-      )
-
-      sign_in @enrolled_academic_year_teacher
-      get '/pd/workshop_survey/day/1'
-      assert_response :success
     end
 
     test 'enrollment code override is used when fetching the workshop for a user' do
@@ -288,26 +249,6 @@ module Pd
       new_record = Pd::WorkshopDailySurvey.last
       assert new_record.placeholder?
       assert_equal @summer_workshop, new_record.pd_workshop
-      assert_equal 1, new_record.day
-    end
-
-    test 'academic year workshop submit redirect creates placeholder and redirects to the first facilitator form' do
-      setup_academic_year_workshop
-      sign_in @enrolled_academic_year_teacher
-
-      assert_creates Pd::WorkshopDailySurvey do
-        params = general_submit_redirect_params(day: 1, user: @enrolled_academic_year_teacher, workshop: @academic_year_workshop).merge(
-          submission_id: FAKE_SUBMISSION_ID,
-        )
-
-        post '/pd/workshop_survey/submit', params: params
-
-        assert_redirected_to action: :new_facilitator, session_id: @academic_year_workshop.sessions[0].id, facilitator_index: 0
-      end
-
-      new_record = Pd::WorkshopDailySurvey.last
-      assert new_record.placeholder?
-      assert_equal @academic_year_workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
     end
 
@@ -441,93 +382,6 @@ module Pd
       assert_equal @facilitators[1], new_record.facilitator
     end
 
-    test 'facilitator specific submit for 2-day academic redirects to thanks for day 1' do
-      setup_two_day_academic_year_workshop
-      sign_in @enrolled_two_day_academic_year_teacher
-
-      assert_creates Pd::WorkshopFacilitatorDailySurvey do
-        post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(
-            day: 1,
-            user: @enrolled_two_day_academic_year_teacher,
-            workshop: @two_day_academic_year_workshop,
-            facilitator_index: 1
-          ).deep_merge(
-            submission_id: FAKE_SUBMISSION_ID,
-            key: {
-              userId: @enrolled_two_day_academic_year_teacher.id,
-              sessionId: @two_day_academic_year_workshop.sessions[0].id
-            }
-          )
-
-        assert_redirected_to action: :thanks
-      end
-
-      new_record = Pd::WorkshopFacilitatorDailySurvey.last
-      assert new_record.placeholder?
-      assert_equal @two_day_academic_year_workshop, new_record.pd_workshop
-      assert_equal 1, new_record.day
-      assert_equal @facilitators[1], new_record.facilitator
-    end
-
-    test 'facilitator specific submit for 2-day academic redirects to post for day 2' do
-      setup_two_day_academic_year_workshop
-      sign_in @enrolled_two_day_academic_year_teacher
-
-      assert_creates Pd::WorkshopFacilitatorDailySurvey do
-        post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(
-            day: 2,
-            user: @enrolled_two_day_academic_year_teacher,
-            workshop: @two_day_academic_year_workshop,
-            facilitator_index: 1
-          ).deep_merge(
-            submission_id: FAKE_SUBMISSION_ID,
-            key: {
-              userId: @enrolled_two_day_academic_year_teacher.id,
-              sessionId: @two_day_academic_year_workshop.sessions[1].id
-            }
-          )
-
-        assert_redirected_to action: :new_post, enrollment_code: @two_day_academic_year_enrollment.code
-      end
-
-      new_record = Pd::WorkshopFacilitatorDailySurvey.last
-      assert new_record.placeholder?
-      assert_equal @two_day_academic_year_workshop, new_record.pd_workshop
-      assert_equal 2, new_record.day
-      assert_equal @facilitators[1], new_record.facilitator
-    end
-
-    test 'facilitator specific submit for 1-day academic redirects to post for day 1' do
-      setup_academic_year_workshop
-      sign_in @enrolled_academic_year_teacher
-
-      assert_creates Pd::WorkshopFacilitatorDailySurvey do
-        post '/pd/workshop_survey/facilitators/submit',
-          params: facilitator_submit_redirect_params(
-            day: 1,
-            user: @enrolled_academic_year_teacher,
-            workshop: @academic_year_workshop,
-            facilitator_index: 1
-          ).deep_merge(
-            submission_id: FAKE_SUBMISSION_ID,
-            key: {
-              userId: @enrolled_academic_year_teacher.id,
-              sessionId: @academic_year_workshop.sessions[0].id
-            }
-          )
-
-        assert_redirected_to action: :new_post, enrollment_code: @academic_year_enrollment.code
-      end
-
-      new_record = Pd::WorkshopFacilitatorDailySurvey.last
-      assert new_record.placeholder?
-      assert_equal @academic_year_workshop, new_record.pd_workshop
-      assert_equal 1, new_record.day
-      assert_equal @facilitators[1], new_record.facilitator
-    end
-
     test 'post workshop survey without a valid enrollment code renders invalid enrollment code' do
       setup_summer_workshop
       sign_in @enrolled_summer_teacher
@@ -565,48 +419,52 @@ module Pd
       assert_template :invalid_enrollment_code
     end
 
-    test 'post workshop for summer submit redirect creates a placeholder and redirects to thanks' do
-      setup_summer_workshop
-      sign_in @enrolled_summer_teacher
+    test 'csf101 workshop with attended teacher sees foorm survey' do
+      setup_csf101_workshop
+      sign_in @enrolled_csf101_teacher
 
-      assert_creates Pd::WorkshopDailySurvey do
-        post '/pd/workshop_survey/submit',
-          params: general_submit_redirect_params(day: 5).merge(
-            submission_id: FAKE_SUBMISSION_ID,
-          )
+      create :pd_attendance, session: @csf101_workshop.sessions[0], teacher: @enrolled_csf101_teacher, enrollment: @csf101_enrollment
 
-        assert_redirected_to action: :new_facilitator, session_id: @summer_workshop.sessions[4].id, facilitator_index: 0
-      end
-
-      new_record = Pd::WorkshopDailySurvey.last
-      assert new_record.placeholder?
-      assert_equal @summer_workshop, new_record.pd_workshop
-      assert_equal 5, new_record.day
+      get '/pd/workshop_survey/csf/post101'
+      assert_response :success
+      assert_template :new_general_foorm
     end
 
-    test 'post workshop submit redirects to thanks academic year workshops' do
-      setup_academic_year_workshop
-      sign_in @enrolled_academic_year_teacher
+    test 'csf101 workshop with not attended teacher sees no_attendance' do
+      setup_csf101_workshop
+      sign_in @enrolled_csf101_teacher
 
-      assert_creates Pd::WorkshopDailySurvey do
-        params = general_submit_redirect_params(
-          day: 1,
-          user: @enrolled_academic_year_teacher,
-          workshop: @academic_year_workshop,
-          enrollment_code: @academic_year_enrollment.code
-        ).merge submission_id: FAKE_SUBMISSION_ID
+      get '/pd/workshop_survey/csf/post101'
+      assert_response :success
+      assert_no_attendance
+    end
 
-        params[:key][:formId] = FAKE_ACADEMIC_YEAR_IDS[1]
-        post '/pd/workshop_survey/submit', params: params
+    test 'csf101 workshop with invalid enrollment code sees invalid enrollment code message' do
+      setup_csf101_workshop
+      sign_in @enrolled_csf101_teacher
 
-        assert_redirected_to action: :thanks
-      end
+      get '/pd/workshop_survey/csf/post101/invalid_code'
+      assert_response :success
+      assert_template :invalid_enrollment_code
+    end
 
-      new_record = Pd::WorkshopDailySurvey.last
-      assert new_record.placeholder?
-      assert_equal @academic_year_workshop, new_record.pd_workshop
-      assert_equal 1, new_record.day
-      assert_equal FAKE_ACADEMIC_YEAR_IDS[1], new_record.form_id
+    test 'csf101 workshop with valid enrollment code sees survey' do
+      setup_csf101_workshop
+      sign_in @enrolled_csf101_teacher
+      create :pd_attendance, session: @csf101_workshop.sessions[0], teacher: @enrolled_csf101_teacher, enrollment: @csf101_enrollment
+
+      get "/pd/workshop_survey/csf/post101/#{@csf101_enrollment.code}"
+      assert_response :success
+      assert_template :new_general_foorm
+    end
+
+    test 'csf101 workshop with valid enrollment code but no attendance sees no_attendance' do
+      setup_csf101_workshop
+      sign_in @enrolled_csf101_teacher
+
+      get "/pd/workshop_survey/csf/post101/#{@csf101_enrollment.code}"
+      assert_response :success
+      assert_no_attendance
     end
 
     test 'csf pre201 survey: unauthenticated teacher is redirected to sign-in' do
@@ -1064,7 +922,7 @@ module Pd
       post_survey_links = %w(/pd/AYW1/post/in_person /pd/AYW1/post/module/1 /pd/AYW1/post/module/2 /pd/AYW1/post/module/1_2)
       post_survey_links.each do |link|
         get link
-        assert_response :success
+        assert_response :success, "expected success for teacher with no attendance for link #{link}"
         assert_no_attendance
       end
     end
@@ -1149,6 +1007,17 @@ module Pd
         :ended,
         regional_partner: @regional_partner,
         num_facilitators: 2
+    end
+
+    def setup_csf101_workshop
+      @regional_partner = create :regional_partner
+      @csf101_workshop = create :csf_intro_workshop,
+        regional_partner: @regional_partner,
+        num_facilitators: 2
+
+      @csf101_enrollment = create :pd_enrollment, :from_user, workshop: @csf101_workshop
+      @enrolled_csf101_teacher = @csf101_enrollment.user
+      @facilitators = @csf101_workshop.facilitators.order(:name, :id)
     end
 
     def unenrolled_teacher
