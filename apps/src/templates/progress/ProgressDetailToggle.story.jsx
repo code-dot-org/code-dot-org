@@ -21,16 +21,16 @@ export default storybook => {
     progress: {
       lessonGroups: [
         {
-          displayName: 'cat1',
+          display_name: 'cat1',
           id: 1,
           description: 'This is a description',
-          bigQuestions: ['What?']
+          big_questions: ['What?']
         },
         {
-          displayName: 'cat2',
+          display_name: 'cat2',
           id: 2,
           description: 'This is another description',
-          bigQuestions: ['Why?']
+          big_questions: ['Why?']
         }
       ],
       stages: [

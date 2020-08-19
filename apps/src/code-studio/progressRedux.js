@@ -685,8 +685,10 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
       lessonLevels = lessonLevels.filter(level => !level.bonus);
     }
 
-    byGroup[group].lessons.push(lessonAtIndex);
-    byGroup[group].levels.push(lessonLevels);
+    if (byGroup[group]) {
+      byGroup[group].lessons.push(lessonAtIndex);
+      byGroup[group].levels.push(lessonLevels);
+    }
   });
 
   // Peer reviews get their own group, but these levels/lesson are stored
