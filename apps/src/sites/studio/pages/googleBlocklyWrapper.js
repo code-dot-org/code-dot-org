@@ -92,6 +92,24 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
 
+  // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
+  // because the alias name is not the same as the underlying property name.
+  Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
+    get: function() {
+      return this.blockly_.mainWorkspace;
+    }
+  });
+  Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
+    get: function() {
+      return this.blockly_.mainWorkspace;
+    }
+  });
+  Object.defineProperty(blocklyWrapper, 'SVG_NS', {
+    get: function() {
+      return this.blockly_.utils.dom.SVG_NS;
+    }
+  });
+
   blocklyWrapper.wrapSettableProperty('assetUrl');
   blocklyWrapper.wrapSettableProperty('behaviorEditor');
   blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
@@ -121,6 +139,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
     createReadOnlyBlockSpace: () => {} // TODO
   };
 
+  // CDO Blockly titles are equivalent to Google Blockly fields.
+  blocklyWrapper.Block.prototype.getTitles = function() {
+    let fields = [];
+    this.inputList.forEach(input => {
+      input.fieldRow.forEach(field => {
+        fields.push(field);
+      });
+    });
+    return fields;
+  };
   blocklyWrapper.Block.prototype.getTitleValue =
     blocklyWrapper.Block.prototype.getFieldValue;
 
@@ -129,47 +157,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // allow us to keep our colors the same
   blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
     return this.setColour(h);
-  };
-
-  blocklyWrapper.Input.prototype.appendTitle = function(a, b) {
-    return this.appendField(a, b);
-  };
-
-  Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
-    get: function() {
-      return this.blockly_.mainWorkspace;
-    }
-  });
-  Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
-    get: function() {
-      return this.blockly_.mainWorkspace;
-    }
-  });
-  Object.defineProperty(blocklyWrapper, 'SVG_NS', {
-    get: function() {
-      return this.blockly_.utils.dom.SVG_NS;
-    }
-  });
-
-  blocklyWrapper.Xml = {
-    ...blocklyWrapper.Xml,
-    domToBlockSpace: blocklyWrapper.Xml.domToWorkspace,
-    blockSpaceToDom: blocklyWrapper.Xml.workspaceToDom
-  };
-
-  blocklyWrapper.Workspace.prototype.getToolboxWidth = function() {
-    return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
-  };
-  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
-  blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
-    blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
-  blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
-  blocklyWrapper.Workspace.prototype.setEnableToolbox = () => {}; // TODO
-  blocklyWrapper.Workspace.prototype.blockSpaceEditor = {
-    blockLimits: {
-      blockLimitExceeded: () => false, // TODO
-      getLimit: () => {} // TODO
-    }
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
@@ -193,15 +180,29 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return code.join('\n');
   };
 
-  // CDO Blockly titles are equivalent to Google Blockly fields.
-  blocklyWrapper.Block.prototype.getTitles = function() {
-    let fields = [];
-    this.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        fields.push(field);
-      });
-    });
-    return fields;
+  blocklyWrapper.Input.prototype.appendTitle = function(a, b) {
+    return this.appendField(a, b);
+  };
+
+  blocklyWrapper.Workspace.prototype.getToolboxWidth = function() {
+    return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
+  };
+  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
+  blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
+    blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
+  blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
+  blocklyWrapper.Workspace.prototype.setEnableToolbox = () => {}; // TODO
+  blocklyWrapper.Workspace.prototype.blockSpaceEditor = {
+    blockLimits: {
+      blockLimitExceeded: () => false, // TODO
+      getLimit: () => {} // TODO
+    }
+  };
+
+  blocklyWrapper.Xml = {
+    ...blocklyWrapper.Xml,
+    domToBlockSpace: blocklyWrapper.Xml.domToWorkspace,
+    blockSpaceToDom: blocklyWrapper.Xml.workspaceToDom
   };
 
   return blocklyWrapper;
