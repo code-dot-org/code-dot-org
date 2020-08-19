@@ -15,4 +15,5 @@
 #
 
 class CourseOffering < ApplicationRecord
+  has_many :course_versions
 end
