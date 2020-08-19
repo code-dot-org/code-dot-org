@@ -227,7 +227,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'script1-title', summary[:scripts].first[:title]
 
     summary = script.summarize
-    assert_nil summary['title']
+    assert_equal 'script1-title', summary['title']
     assert_equal 'script1-title', summary[:title]
 
     unit_group.has_numbered_units = true
@@ -238,7 +238,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'Unit 1 - script1-title', summary[:scripts].first[:title]
 
     summary = script.summarize
-    assert_nil summary['title']
+    assert_equal 'Unit 1 - script1-title', summary['title']
     assert_equal 'Unit 1 - script1-title', summary[:title]
   end
 
