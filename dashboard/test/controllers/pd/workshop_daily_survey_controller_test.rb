@@ -1029,6 +1029,77 @@ module Pd
       assert_select 'h1', text: 'Thank you for submitting today’s survey.'
     end
 
+    test 'AYW1 pre-survey link shows foorm survey' do
+      setup_academic_year_workshop
+      sign_in @enrolled_academic_year_teacher
+
+      pre_survey_links = %w(/pd/AYW1/pre /pd/AYW1/pre/module/1 /pd/AYW1/pre/module/2)
+      pre_survey_links.each do |link|
+        get link
+        assert_response :success
+        assert_template :new_general_foorm
+      end
+    end
+
+    test 'AYW1 post-survey link shows foorm survey for attended teacher' do
+      setup_academic_year_workshop
+      sign_in @enrolled_academic_year_teacher
+      create :pd_attendance,
+        session: @academic_year_workshop.sessions[0],
+        teacher: @enrolled_academic_year_teacher,
+        enrollment: @academic_year_enrollment
+
+      post_survey_links = %w(/pd/AYW1/post/in_person /pd/AYW1/post/module/1 /pd/AYW1/post/module/2 /pd/AYW1/post/module/1_2)
+      post_survey_links.each do |link|
+        get link
+        assert_response :success
+        assert_template :new_general_foorm
+      end
+    end
+
+    test 'AYW1 post-survey link shows no attendance for teacher with no attendance' do
+      setup_academic_year_workshop
+      sign_in @enrolled_academic_year_teacher
+
+      post_survey_links = %w(/pd/AYW1/post/in_person /pd/AYW1/post/module/1 /pd/AYW1/post/module/2 /pd/AYW1/post/module/1_2)
+      post_survey_links.each do |link|
+        get link
+        assert_response :success
+        assert_no_attendance
+      end
+    end
+
+    test 'AYW1_2 pre-survey link shows foorm survey' do
+      setup_two_day_academic_year_workshop
+      sign_in @enrolled_two_day_academic_year_teacher
+
+      get '/pd/AYW1_2/pre'
+      assert_response :success
+      assert_template :new_general_foorm
+    end
+
+    test 'AYW1_2 post-survey link shows foorm survey for attended teacher' do
+      setup_two_day_academic_year_workshop
+      sign_in @enrolled_two_day_academic_year_teacher
+
+      create :pd_attendance,
+        session: @two_day_academic_year_workshop.sessions[0],
+        teacher: @enrolled_two_day_academic_year_teacher,
+        enrollment: @two_day_academic_year_enrollment
+      get '/pd/AYW1_2/post/in_person'
+      assert_response :success
+      assert_template :new_general_foorm
+    end
+
+    test 'User cannot access AYW survey if they are not enrolled' do
+      setup_two_day_academic_year_workshop
+      sign_in @enrolled_two_day_academic_year_teacher
+
+      # two day workshop enrollee should not be able to load 1 day survey
+      get '/pd/AYW1/pre'
+      assert_not_enrolled
+    end
+
     private
 
     def setup_summer_workshop
