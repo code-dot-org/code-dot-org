@@ -196,7 +196,8 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test 'summarize with numbered units' do
     unit_group = create :unit_group, name: 'my-unit-group'
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'script1'))
+    script = create(:script, name: 'script1')
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: script)
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -225,11 +226,20 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'script1-title', summary[:scripts].first['title']
     assert_equal 'script1-title', summary[:scripts].first[:title]
 
+    summary = script.summarize
+    assert_nil summary['title']
+    assert_equal 'script1-title', summary[:title]
+
     unit_group.has_numbered_units = true
     unit_group.save!
+
     summary = unit_group.summarize
     assert_equal 'Unit 1 - script1-title', summary[:scripts].first['title']
     assert_equal 'Unit 1 - script1-title', summary[:scripts].first[:title]
+
+    summary = script.summarize
+    assert_nil summary['title']
+    assert_equal 'Unit 1 - script1-title', summary[:title]
   end
 
   test 'summarize_version' do
