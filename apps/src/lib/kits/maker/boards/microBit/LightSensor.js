@@ -85,13 +85,13 @@ export default class LightSensor extends EventEmitter {
     this.board.mb.stopStreamingAnalogChannel(SENSOR_CHANNELS.lightSensor); // disable light sensor
   }
 
-  // Get the averaged value over the give range of ms, adjusted within specified range
+  // Get the averaged value over the given ms, adjusted within the range, if specified
   // TODO: Handle if the range is outside of 50 (before first sample) or 3000 (longer than our buffer).
   // Currently returns null if range is outside of acceptable values
-  getAveragedValue(range) {
-    if (range >= SAMPLE_INTERVAL && range <= MAX_SENSOR_BUFFER_LENGTH) {
+  getAveragedValue(ms) {
+    if (ms >= SAMPLE_INTERVAL && ms <= MAX_SENSOR_BUFFER_LENGTH) {
       // Divide ms range by sample rate of sensor
-      let indicesRange = Math.ceil(range / SAMPLE_INTERVAL);
+      let indicesRange = Math.ceil(ms / SAMPLE_INTERVAL);
       let sum = 0;
       for (let i = 0; i < indicesRange; i++) {
         // currentBufferWriteIndex points to the next spot to write, so first historical
