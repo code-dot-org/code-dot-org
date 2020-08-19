@@ -15,11 +15,6 @@ module SchoolInfoInterstitialHelper
       return false if days_since_interstitial_seen < 7
     end
 
-    # We skip validation as some of our users (particularly teachers) do not pass our own
-    # validations (often because they are missing an email).
-    user.last_seen_school_info_interstitial = DateTime.now
-    user.save(validate: false)
-
     return true
   end
 
@@ -44,14 +39,13 @@ module SchoolInfoInterstitialHelper
     check_last_seen_school_info_interstitial = user.last_seen_school_info_interstitial&.to_datetime.nil? ||
       user.last_seen_school_info_interstitial.to_datetime < 7.days.ago
 
-    show_dialog = check_last_seen_school_info_interstitial && check_last_confirmation_date && check_school_type
+    check_last_seen_school_info_interstitial && check_last_confirmation_date && check_school_type
+  end
 
-    if show_dialog
-      # Check to ensure last seen school info interstitial is saved.
-      user.last_seen_school_info_interstitial = DateTime.now
-      user.save(validate: false)
-    end
-
-    show_dialog
+  def self.update_last_seen_timestamp(user)
+    # We skip validation as some of our users (particularly teachers) do not pass our own
+    # validations (often because they are missing an email).
+    user.last_seen_school_info_interstitial = DateTime.now
+    user.save(validate: false)
   end
 end
