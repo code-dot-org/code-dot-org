@@ -1196,6 +1196,35 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report Stage 1']['description_teacher']
   end
 
+  test "update_i18n with new lesson display name" do
+    # This simulates us doing a seed after adding new lessons to multiple of
+    # our script files. Doing so should update our object with the new lesson
+    # names (which we would then persist to sripts.en.yml)
+    original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
+
+    course3_yml = {'lessons' => {'course3' => {'name' => 'course3'}}}
+
+    lessons_i18n = {
+      'course3' => course3_yml,
+    }
+
+    # updated represents what will get written to scripts.en.yml
+    updated = Script.update_i18n(original_yml, lessons_i18n)
+
+    assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
+
+    course3_yml = {'lessons' => {'course3' => {'name' => 'course3-changed'}}}
+
+    lessons_i18n = {
+      'course3' => course3_yml,
+    }
+
+    # updated represents what will get written to scripts.en.yml
+    updated = Script.update_i18n(original_yml, lessons_i18n)
+
+    assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
+  end
+
   test '!text_to_speech_enabled? by default' do
     refute create(:script).text_to_speech_enabled?
   end
@@ -2035,13 +2064,11 @@ endvariants
     assert_equal 'Expect all lesson groups to have display names. The following lesson group does not have a display name: content1', raise.message
   end
 
-  test 'raises error if lesson group key already exists and try to change the display name' do
+  test 'raises error if a lesson key is given without a display_name' do
     l1 = create :level
-    script = create :script, name: "lesson-group-test-script"
-    create :lesson_group, key: 'content1', script: script
     dsl = <<-SCRIPT
-      lesson_group 'content1', display_name: 'not content'
-      lesson 'Lesson1', display_name: 'Lesson1'
+      lesson_group 'content1', display_name: 'Lesson Group 1'
+      lesson 'Lesson1'
       level '#{l1.name}'
 
     SCRIPT
@@ -2052,7 +2079,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Expect key and display name to match. The Lesson Group with key: content1 has display_name: Content', raise.message
+    assert_equal 'Expect all lessons to have display names. The following lesson does not have a display name: Lesson1', raise.message
   end
 
   test 'raises error if some lessons have lesson groups and some do not' do
@@ -2351,6 +2378,63 @@ endvariants
       )
     end
     assert_equal 'Lessons must have at least one level in them.  Lesson: Lesson1.', raise.message
+  end
+
+  test 'raise error if try to change key of lesson in stable and i18n script' do
+    ScriptConstants.stubs(:i18n?).with('coursea-2017').returns(true)
+
+    new_dsl = <<-SCRIPT
+      lesson 'Debugging: Unspotted Bugs 1', display_name: 'Debugging: Unspotted Bugs'
+      level 'courseB_video_Unspotted'
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'coursea-2017'},
+        ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    assert_equal 'Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: Debugging: Unspotted Bugs 1', raise.message
+  end
+
+  test 'raise error if try to add lesson in stable and i18n script' do
+    ScriptConstants.stubs(:i18n?).with('coursea-2017').returns(true)
+
+    l1 = create :level
+
+    new_dsl = <<-SCRIPT
+      lesson 'new-lesson', display_name: 'New Lesson'
+      level '#{l1.name}'
+
+      lesson 'Debugging: Unspotted Bugs 1', display_name: 'Debugging: Unspotted Bugs'
+      level 'courseB_video_Unspotted'
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'coursea-2017'},
+        ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    assert_equal 'Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: new-lesson', raise.message
+  end
+
+  test 'raise error if try to add new lesson group in stable and i18n script' do
+    ScriptConstants.stubs(:i18n?).with('coursea-2017').returns(true)
+
+    new_dsl = <<-SCRIPT
+      lesson_group 'lg', display_name: 'Lesson Group'
+      lesson 'Debugging: Unspotted Bugs 1', display_name: 'Debugging: Unspotted Bugs'
+      level 'courseB_video_Unspotted'
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'coursea-2017'},
+        ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
+      )
+    end
+    assert_equal 'Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: lg', raise.message
   end
 
   test 'all_descendant_levels returns nested levels of all types' do
