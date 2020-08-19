@@ -108,7 +108,12 @@
       %b= "#{t('user.parent_guardian_email_label')}:"
       %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
       (
-      %a#add-parent-email-link{href: '#'}= t('user.update_email')
+      %a#add-parent-email-link{href: '#', role: 'button', 'aria-label' => t('user.update_parent_email_aria_label')}
+        = t('user.update_email')
+      - if current_user.parent_email&.present?
+        = t('or')
+        %a#remove-parent-email-link{href: '', role: 'button', 'aria-label' => t('user.remove_parent_email_aria_label')}
+          = t('user.remove_parent_email_label')
       )
     %p= t('user.only_one_parent_email_supported_warning')
 
@@ -214,6 +219,12 @@
     = f.hidden_field :parent_email
     = f.hidden_field :parent_email_preference_opt_in
     = f.hidden_field :parent_email_preference_source, value: EmailPreference::PARENT_EMAIL_CHANGE
+  = form_for(resource,
+      as: resource_name,
+      :url => registration_path(resource_name),
+      html: { id: 'remove-parent-email-form', :method => :put },
+    ) do |f|
+    = f.hidden_field :parent_email, value: nil
 
 :ruby
   script_data = {
