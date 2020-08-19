@@ -3,7 +3,7 @@ import {
   SENSOR_CHANNELS,
   roundToHundredth,
   SAMPLE_INTERVAL,
-  MAX_SENSOR_BUFFER
+  MAX_SENSOR_BUFFER_LENGTH
 } from './MicroBitConstants';
 
 export default class LightSensor extends EventEmitter {
@@ -16,12 +16,12 @@ export default class LightSensor extends EventEmitter {
       currentReading: 0
     };
     // Track 3 seconds of historical data over which we can average sensor readings
-    this.buffer = new Float32Array(MAX_SENSOR_BUFFER / SAMPLE_INTERVAL);
+    this.buffer = new Float32Array(MAX_SENSOR_BUFFER_LENGTH / SAMPLE_INTERVAL);
     this.bufferIndex = 0;
 
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
-      //Record current reading to keep finite historical buffer
+      // Record current reading to keep finite historical buffer.
       this.buffer[this.bufferIndex] = this.board.mb.analogChannel[
         SENSOR_CHANNELS.lightSensor
       ];
@@ -86,7 +86,7 @@ export default class LightSensor extends EventEmitter {
   // TODO: Handle if the range is outside of 50 (before first sample) or 3000 (longer than our buffer).
   // Currently returns null if range is outside of acceptable values
   getAveragedValue(range) {
-    if (range >= SAMPLE_INTERVAL && range <= MAX_SENSOR_BUFFER) {
+    if (range >= SAMPLE_INTERVAL && range <= MAX_SENSOR_BUFFER_LENGTH) {
       // Divide ms range by sample rate of sensor
       let indicesRange = Math.ceil(range / SAMPLE_INTERVAL);
       let sum = 0;
