@@ -306,7 +306,7 @@ class Pd::Workshop < ActiveRecord::Base
   # @param [User] teacher
   # @return [Pd::Workshop, nil]
   def self.by_enrollment_code(enrollment_code, teacher)
-    enrollment = Enrollment.find_by(code: enrollment_code, user: teacher)
+    enrollment = Pd::Enrollment.find_by(code: enrollment_code, user: teacher)
     enrollment && enrollment.workshop
   end
 

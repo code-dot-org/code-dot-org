@@ -18,11 +18,13 @@ module Pd
     # The JotForm survey, on submit, will redirect to the new_facilitator route (see below)
     # for the relevant session id.
     # The pre-workshop survey, which has no session id, will redirect to thanks.
-    # TODO: Do not show AYW surveys for 2020 onwards
+    # This will redirect to new foorm surveys if the teacher is enrolled in a summer workshop,
+    # or show the JotForm survey if the teacher is enrolled in a CSP Workshop for Returning Teachers.
+    # Otherwise it will show a not enrolled message.
     def new_general
       # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
       day = params[:day].to_i
-      should_have_attended = day == 0
+      should_have_attended = day != 0
       # only summer workshops and CSP for returning teachers are supported by this URL
       workshop = get_workshop_by_enrollment_or_course_and_subject(
         enrollment_code: params[:enrollmentCode],
@@ -99,16 +101,20 @@ module Pd
     #
     # If survey has been already completed for the given day will redirect to thanks page.
     def new_daily_foorm
+      day = params[:day].to_i
+      if day <= 0
+        return render_404
+      end
+
       workshop = get_workshop_by_enrollment_or_course_and_subject(
         enrollment_code: params[:enrollmentCode],
         course: [COURSE_CSD, COURSE_CSP],
         subject: [SUBJECT_SUMMER_WORKSHOP, SUBJECT_CSP_FOR_RETURNING_TEACHERS],
         should_have_attended: true
       )
+      return unless workshop
 
-      day = params[:day].to_i
-
-      if day == 0 || workshop.sessions.size <= day
+      if workshop.sessions.size <= day
         return render_404
       end
 
@@ -143,13 +149,15 @@ module Pd
       # We may be redirecting from our legacy route which uses enrollment_code
       enrollment_code = params[:enrollmentCode] || params[:enrollment_code]
       # want to check attendance for any survey except the pre-survey (day 0)
-      should_have_attended = day == 0
+      should_have_attended = day != 0
       workshop = get_workshop_by_enrollment_or_course_and_subject(
         enrollment_code: enrollment_code,
         course: [COURSE_CSD, COURSE_CSP],
         subject: subject,
         should_have_attended: should_have_attended
       )
+
+      return unless workshop
 
       agenda = params[:agenda] || nil
 
@@ -404,15 +412,15 @@ module Pd
 
     # Pre survey controller for academic year workshops
     def new_ayw_pre
-      ayw_helper(PRE_SURVEY_CONFIG_PATHS, should_have_attended: false, day: 0)
+      ayw_helper(PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
     def new_ayw_daily
-      ayw_helper(DAILY_SURVEY_CONFIG_PATHS, should_have_attended: false, day: params[:day])
+      ayw_helper(DAILY_SURVEY_CONFIG_PATHS, day: params[:day])
     end
 
     def new_ayw_post
-      ayw_helper(POST_SURVEY_CONFIG_PATHS, should_have_attended: true, day: nil)
+      ayw_helper(POST_SURVEY_CONFIG_PATHS, day: nil)
     end
 
     protected
