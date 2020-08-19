@@ -93,13 +93,17 @@ export default class LightSensor extends EventEmitter {
       // Divide ms range by sample rate of sensor
       let indicesRange = Math.ceil(ms / SAMPLE_INTERVAL);
       let sum = 0;
-      for (let i = 0; i < indicesRange; i++) {
-        // currentBufferWriteIndex points to the next spot to write, so first historical
-        // data value is at (currentBufferWriteIndex - 1)
-        let index =
-          (this.buffer.length + (this.currentBufferWriteIndex - (i + 1))) %
-          this.buffer.length;
-        sum += this.buffer[index];
+      let startIndex = this.currentBufferWriteIndex - indicesRange;
+      // currentBufferWriteIndex points to the next spot to write, so historical
+      // data starts at (currentBufferWriteIndex - 1)
+      for (
+        let index = startIndex;
+        index < this.currentBufferWriteIndex;
+        index++
+      ) {
+        // Because index might be negative, use modulo to loop circular buffer.
+        let sumIndex = (index + this.buffer.length) % this.buffer.length;
+        sum += this.buffer[sumIndex];
       }
       return scaleWithinRange(
         sum / indicesRange,
