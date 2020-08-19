@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200812225058) do
+ActiveRecord::Schema.define(version: 20200819092459) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -330,6 +330,15 @@ ActiveRecord::Schema.define(version: 20200812225058) do
     t.text     "contained_level_text",     limit: 65535
     t.index ["contained_level_id"], name: "index_contained_levels_on_contained_level_id", using: :btree
     t.index ["level_group_level_id"], name: "index_contained_levels_on_level_group_level_id", using: :btree
+  end
+
+  create_table "course_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "key",                        null: false
+    t.string   "display_name",               null: false
+    t.text     "properties",   limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["key"], name: "index_course_offerings_on_key", unique: true, using: :btree
   end
 
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
