@@ -1,7 +1,13 @@
+/**
+ * Wrapper class for https://github.com/google/blockly
+ * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
+ * by allowing us to unify the APIs so that we can switch out the underlying Blockly
+ * object without affecting apps code.
+ * This wrapper will contain all of our customizations to Google Blockly.
+ * See also ./cdoBlocklyWrapper.js
+ */
 const BlocklyWrapper = function(blocklyInstance) {
   this.blockly_ = blocklyInstance;
-  this.Msg = blocklyInstance.Msg;
-  this.inject = this.blockly_.inject;
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
       get: function() {
@@ -85,7 +91,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
-  blocklyWrapper.wrapReadOnlyProperty('Xml');
 
   blocklyWrapper.wrapSettableProperty('assetUrl');
   blocklyWrapper.wrapSettableProperty('behaviorEditor');
@@ -98,24 +103,30 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
+  blocklyWrapper.wrapSettableProperty('Xml');
 
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
   };
   blocklyWrapper.findEmptyContainerBlock = function() {}; // TODO
-  blocklyWrapper.BlockSpace = {};
-  blocklyWrapper.BlockSpace.EVENTS = {};
-  blocklyWrapper.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED =
-    'mainBlockSpaceCreated';
-  blocklyWrapper.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED = 'blocksImported';
-  blocklyWrapper.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
-  blocklyWrapper.BlockSpace.EVENTS.BLOCK_SPACE_SCROLLED = 'blockSpaceScrolled';
-  blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED = 'runButtonClicked';
-  blocklyWrapper.BlockSpace.onMainBlockSpaceCreated = () => {}; // TODO
-  blocklyWrapper.BlockSpace.createReadOnlyBlockSpace = () => {}; // TODO
+  blocklyWrapper.BlockSpace = {
+    EVENTS: {
+      MAIN_BLOCK_SPACE_CREATED: 'mainBlockSpaceCreated',
+      EVENT_BLOCKS_IMPORTED: 'blocksImported',
+      BLOCK_SPACE_CHANGE: 'blockSpaceChange',
+      BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
+      RUN_BUTTON_CLICKED: 'runButtonClicked'
+    },
+    onMainBlockSpaceCreated: () => {}, // TODO
+    createReadOnlyBlockSpace: () => {} // TODO
+  };
 
   blocklyWrapper.Block.prototype.getTitleValue =
     blocklyWrapper.Block.prototype.getFieldValue;
+
+  // Google Blockly only allows you to set the hue, not saturation or value.
+  // TODO: determine if this will work for us, or if there's a workaround to
+  // allow us to keep our colors the same
   blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
     return this.setColour(h);
   };
@@ -140,12 +151,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
+  blocklyWrapper.Xml = {
+    ...blocklyWrapper.Xml,
+    domToBlockSpace: blocklyWrapper.Xml.domToWorkspace,
+    blockSpaceToDom: blocklyWrapper.Xml.workspaceToDom
+  };
+
   blocklyWrapper.Workspace.prototype.getToolboxWidth = function() {
     return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
   };
-
-  blocklyWrapper.Xml.domToBlockSpace = blocklyWrapper.Xml.domToWorkspace;
-  blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
   blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
   blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
     blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
@@ -157,6 +171,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
       getLimit: () => {} // TODO
     }
   };
+
+  // This function was a custom addition in CDO Blockly, so we need to add it here
+  // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
@@ -175,6 +192,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     });
     return code.join('\n');
   };
+
+  // CDO Blockly titles are equivalent to Google Blockly fields.
   blocklyWrapper.Block.prototype.getTitles = function() {
     let fields = [];
     this.inputList.forEach(input => {
