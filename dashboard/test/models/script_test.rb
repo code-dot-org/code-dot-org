@@ -2177,6 +2177,33 @@ endvariants
     assert_equal 'required', script.lessons[0].lesson_group.key
   end
 
+  test 'can add description and big questions for lesson group' do
+    l = create :level
+    dsl = <<-SCRIPT
+      lesson_group 'lg-1', display_name: 'Lesson Group'
+      lesson_group_description 'This is a description'
+      lesson_group_question 'What is the first question?'
+      lesson_group_question 'What is the second question?'
+      lesson 'Lesson1', display_name: 'Lesson 1'
+      level '#{l.name}'
+
+      lesson_group 'lg-2', display_name: 'Lesson Group 2'
+      lesson_group_description 'Second Description'
+      lesson_group_question 'Hi?'
+      lesson_group_question 'Hello?'
+      lesson 'Lesson2', display_name: 'Lesson 2'
+      level '#{l.name}'
+    SCRIPT
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+    )
+    assert_equal 'This is a description', script.lesson_groups[0].description
+    assert_equal ['What is the first question?', 'What is the second question?'], script.lesson_groups[0].big_questions
+    assert_equal 'Second Description', script.lesson_groups[1].description
+    assert_equal ['Hi?', 'Hello?'], script.lesson_groups[1].big_questions
+  end
+
   test 'can change the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
