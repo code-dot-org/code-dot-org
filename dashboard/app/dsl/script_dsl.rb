@@ -285,8 +285,8 @@ class ScriptDSL < BaseDSL
     @lesson_groups.each do |lesson_group|
       if lesson_group[:key]
         i18n_lesson_group_strings[lesson_group[:key]] = {}
-        lesson_group.select {|k, _| [:display_name, :description, :big_questions].include?(k)}.each do |k, v|
-          i18n_lesson_group_strings[lesson_group[:key]][k.to_s] = v unless v.nil_or_empty?
+        lesson_group.select {|k, v| [:display_name, :description, :big_questions].include?(k) && !v.nil_or_empty?}.each do |k, v|
+          i18n_lesson_group_strings[lesson_group[:key]][k.to_s] = v
         end
       end
       lesson_group[:lessons].each do |lesson|

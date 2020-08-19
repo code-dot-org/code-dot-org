@@ -1058,6 +1058,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend"
         },
+        "courseF_extras_sim": {
+          "wandering 2": "Wanderung 2",
+          "wandering 1": "Wanderung 1"
+        },
         "courseF_project_1": {
           "flying south and loop": "nach dem Süden fliegend und Schleife",
           "drive south and loop": "nach dem Süden fahrend und Schleife",

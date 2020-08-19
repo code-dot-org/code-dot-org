@@ -974,7 +974,10 @@
             }
           },
           "draw a circle": {
-            "name": "nakresli kružnicu"
+            "name": "nakresli kružnicu",
+            "parameters": {
+              "radius": "polomer"
+            }
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",
@@ -1124,7 +1127,10 @@
             }
           },
           "draw a circle": {
-            "name": "nakresli kružnicu"
+            "name": "nakresli kružnicu",
+            "parameters": {
+              "radius": "polomer"
+            }
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",
@@ -3133,7 +3139,10 @@
             }
           },
           "draw a circle": {
-            "name": "nakresli kružnicu"
+            "name": "nakresli kružnicu",
+            "parameters": {
+              "radius": "polomer"
+            }
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",

@@ -21749,3 +21749,9 @@ ar:
           lessons:
             Module 1:
               name: الوحدة 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: الدورة A
+            Course B:
+              name: الدورة B
