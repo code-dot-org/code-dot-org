@@ -175,14 +175,12 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
             onChange={this.handleDescriptionChange}
           />
-          <div style={{marginLeft: 10}}>
-            <div style={{marginBottom: 5}}>Preview:</div>
-            <div style={styles.box}>
-              <SafeMarkdown
-                openExternalLinksInNewTab={true}
-                markdown={this.state.description}
-              />
-            </div>
+          <div style={{marginBottom: 5}}>Preview:</div>
+          <div style={styles.box}>
+            <SafeMarkdown
+              openExternalLinksInNewTab={true}
+              markdown={this.state.description}
+            />
           </div>
         </label>
         <h2>Basic Settings</h2>
