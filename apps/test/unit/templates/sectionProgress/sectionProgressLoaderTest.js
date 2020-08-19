@@ -33,10 +33,10 @@ const serverProgressResponse = {
     100: {},
     101: {
       2000: {status: 'locked'},
-      2001: {status: 'perfect', result: 30, paired: true}
+      2001: {status: 'perfect', result: 30, paired: true, time_spent: 12345}
     },
     102: {
-      2000: {status: 'perfect', result: 100}
+      2000: {status: 'perfect', result: 100, time_spent: 6789}
     }
   }
 };
@@ -82,6 +82,18 @@ const fullExpectedResult = {
       },
       102: {
         2000: 100
+      }
+    }
+  },
+  studentLevelTimeSpentByScript: {
+    123: {
+      100: {},
+      101: {
+        2000: undefined,
+        2001: 12345
+      },
+      102: {
+        2000: 6789
       }
     }
   },
@@ -200,6 +212,7 @@ describe('sectionProgressLoader.loadScript', () => {
         },
         studentLevelPairingByScript: {0: {}},
         studentLevelProgressByScript: {0: {}},
+        studentLevelTimeSpentByScript: {0: {}},
         studentTimestampsByScript: {0: {}}
       };
 
