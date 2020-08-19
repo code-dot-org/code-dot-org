@@ -40,6 +40,8 @@ export const SAMPLE_INTERVAL = 50;
 // Max number of milliseconds for which we store historical data
 export const MAX_SENSOR_BUFFER_LENGTH = 3000;
 
+export const MAX_LIGHT_SENSOR_VALUE = 255;
+
 const BUTTON_EVENTS = ['down', 'up'];
 const SENSOR_EVENTS = ['change', 'data'];
 
