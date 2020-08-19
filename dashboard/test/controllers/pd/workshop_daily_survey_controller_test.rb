@@ -1049,8 +1049,8 @@ module Pd
         teacher: @enrolled_academic_year_teacher,
         enrollment: @academic_year_enrollment
 
-      pre_survey_links = %w(/pd/AYW1/post/in_person /pd/AYW1/post/module/1 /pd/AYW1/post/module/2 /pd/AYW1/pre/module/1_2)
-      pre_survey_links.each do |link|
+      post_survey_links = %w(/pd/AYW1/post/in_person /pd/AYW1/post/module/1 /pd/AYW1/post/module/2 /pd/AYW1/post/module/1_2)
+      post_survey_links.each do |link|
         get link
         assert_response :success
         assert_template :new_general_foorm
@@ -1061,8 +1061,8 @@ module Pd
       setup_academic_year_workshop
       sign_in @enrolled_academic_year_teacher
 
-      pre_survey_links = %w(/pd/AYW1/post/in_person /pd/AYW1/post/module/1 /pd/AYW1/post/module/2 /pd/AYW1/post/module/1_2)
-      pre_survey_links.each do |link|
+      post_survey_links = %w(/pd/AYW1/post/in_person /pd/AYW1/post/module/1 /pd/AYW1/post/module/2 /pd/AYW1/post/module/1_2)
+      post_survey_links.each do |link|
         get link
         assert_response :success
         assert_no_attendance
@@ -1091,7 +1091,7 @@ module Pd
       assert_template :new_general_foorm
     end
 
-    test 'invalid AYW survey links show appropriate errors' do
+    test 'User cannot access AYW survey if they are not enrolled' do
       setup_two_day_academic_year_workshop
       sign_in @enrolled_two_day_academic_year_teacher
 

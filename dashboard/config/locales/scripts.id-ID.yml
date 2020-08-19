@@ -24034,3 +24034,9 @@ id:
           lessons:
             Module 1:
               name: Modul 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kursus A
+            Course B:
+              name: Kursus B

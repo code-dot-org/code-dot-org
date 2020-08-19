@@ -18290,3 +18290,9 @@ fil:
                 estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang
                 mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring
                 aabot kahit saan hanggang sa 3-5 na oras ng klase.
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kursong A
+            Course B:
+              name: Kursong B

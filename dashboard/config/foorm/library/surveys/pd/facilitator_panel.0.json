@@ -12,13 +12,14 @@
    {
      "type": "paneldynamic",
      "name": "facilitators",
+     "title": "Facilitators",
      "allowAddPanel": false,
      "allowRemovePanel": false,
      "templateElements": [
       {
        "type": "html",
        "name": "facilitator_name_heading",
-       "html": "<p>Below please leave feedback for <strong>{panel.facilitator_name}</strong></p>" 
+       "html": "<p>Below please leave feedback for <strong>{panel.facilitator_name}</strong></p>"
      },
      {
        "type": "matrix",
