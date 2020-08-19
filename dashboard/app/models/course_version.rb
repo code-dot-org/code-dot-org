@@ -20,6 +20,8 @@
 #
 
 class CourseVersion < ApplicationRecord
+  belongs_to :course_offering
+
   # "Interface" for content_root:
   #
   # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
