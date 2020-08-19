@@ -22,10 +22,17 @@ module Pd
     def new_general
       # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
       day = params[:day].to_i
-      workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+      should_have_attended = day == 0
+      # only summer workshops and CSP for returning teachers are supported by this URL
+      workshop = get_workshop_by_enrollment_or_course_and_subject(
+        enrollment_code: params[:enrollmentCode],
+        course: [COURSE_CSD, COURSE_CSP],
+        subject: [SUBJECT_SUMMER_WORKSHOP, SUBJECT_CSP_FOR_RETURNING_TEACHERS],
+        should_have_attended: should_have_attended
+      )
 
-      # Do nothing if there is no enrollment.
-      return unless validate_enrolled(workshop, params[:enrollmentCode])
+      # Do nothing if there is no workshop.
+      return unless workshop
 
       # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
       # have saved.
@@ -92,10 +99,12 @@ module Pd
     #
     # If survey has been already completed for the given day will redirect to thanks page.
     def new_daily_foorm
-      workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
-      unless validate_enrolled(workshop, params[:enrollmentCode])
-        return
-      end
+      workshop = get_workshop_by_enrollment_or_course_and_subject(
+        enrollment_code: params[:enrollmentCode],
+        course: [COURSE_CSD, COURSE_CSP],
+        subject: [SUBJECT_SUMMER_WORKSHOP, SUBJECT_CSP_FOR_RETURNING_TEACHERS],
+        should_have_attended: true
+      )
 
       day = params[:day].to_i
 
@@ -118,7 +127,7 @@ module Pd
     #
     # If the pre-survey has been already completed, will redirect to thanks page.
     def new_pre_foorm
-      new_general_foorm(PRE_SURVEY_CONFIG_PATHS, day: 0)
+      new_general_foorm(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
     # General post-workshop survey using foorm system.
@@ -127,21 +136,28 @@ module Pd
     #
     # If the post-survey has been already completed, will redirect to thanks page.
     def new_post_foorm
-      new_general_foorm(POST_SURVEY_CONFIG_PATHS, day: nil)
+      new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
     end
 
-    def new_general_foorm(survey_names, day:)
+    def new_general_foorm(survey_names:, day:, subject: FOORM_GENERAL_SURVEY_SUBJECTS)
       # We may be redirecting from our legacy route which uses enrollment_code
       enrollment_code = params[:enrollmentCode] || params[:enrollment_code]
-      workshop = day == 0 ?
-                   get_workshop_for_pre_survey(enrollment_code, current_user) :
-                   get_workshop_for_new_general(enrollment_code, current_user)
-      unless validate_enrolled(workshop, enrollment_code)
-        return
-      end
+      # want to check attendance for any survey except the pre-survey (day 0)
+      should_have_attended = day == 0
+      workshop = get_workshop_by_enrollment_or_course_and_subject(
+        enrollment_code: enrollment_code,
+        course: [COURSE_CSD, COURSE_CSP],
+        subject: subject,
+        should_have_attended: should_have_attended
+      )
+
+      agenda = params[:agenda] || nil
+
+      # remove / from agenda url so module/1 => module1
+      agenda.tr!("/", "") if agenda
 
       survey_name = survey_names[workshop.subject]
-      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: day)
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: day, workshop_agenda: agenda)
     end
 
     # POST /pd/workshop_survey/submit
@@ -247,8 +263,8 @@ module Pd
     # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
     # GET /pd/workshop_survey/post/:enrollment_code
     def new_post
-      workshop = get_workshop_by_enrollment(params[:enrollment_code], current_user)
-      return render :invalid_enrollment_code unless workshop
+      workshop = get_workshop_by_enrollment(enrollment_code: params[:enrollment_code], should_have_attended: true)
+      return unless workshop
 
       # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
       # have saved.
@@ -316,11 +332,13 @@ module Pd
     # GET workshop_survey/foorm/csf/pre201
     def new_csf_pre201_foorm
       # Find the closest CSF 201 workshop the current user enrolled in.
-      workshop = Pd::Workshop.
-        where(course: COURSE_CSF, subject: SUBJECT_CSF_201).
-        enrolled_in_by(current_user).nearest
+      workshop = get_workshop_by_course_and_subject(
+        course: COURSE_CSF,
+        subject: SUBJECT_CSF_201,
+        should_have_attended: false
+      )
 
-      return render :not_enrolled unless workshop
+      return unless workshop
       return render :too_late unless workshop.state != STATE_ENDED
 
       survey_name = PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201]
@@ -333,10 +351,10 @@ module Pd
     def new_csf_post101
       # Use enrollment_code to find a specific workshop
       # or search all CSF101 workshops the current user is enrolled in.
-      attended_workshop = get_workshop_by_enrollment_or_course(
-        params[:enrollment_code],
-        COURSE_CSF,
-        SUBJECT_CSF_101
+      attended_workshop = get_workshop_by_enrollment_or_course_and_subject(
+        enrollment_code: params[:enrollment_code],
+        course: COURSE_CSF,
+        subject: SUBJECT_CSF_101
       )
       return unless attended_workshop
 
@@ -352,10 +370,10 @@ module Pd
     def new_csf_post201
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user is enrolled in and attended.
-      attended_workshop = get_workshop_by_enrollment_or_course(
-        params[:enrollment_code],
-        COURSE_CSF,
-        SUBJECT_CSF_201
+      attended_workshop = get_workshop_by_enrollment_or_course_and_subject(
+        enrollment_code: params[:enrollment_code],
+        course: COURSE_CSF,
+        subject: SUBJECT_CSF_201
       )
       return unless attended_workshop
 
@@ -369,10 +387,10 @@ module Pd
     def new_csf_post201_foorm
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user is enrolled in and attended.
-      attended_workshop = get_workshop_by_enrollment_or_course(
-        params[:enrollment_code],
-        COURSE_CSF,
-        SUBJECT_CSF_201
+      attended_workshop = get_workshop_by_enrollment_or_course_and_subject(
+        enrollment_code: params[:enrollment_code],
+        course: COURSE_CSF,
+        subject: SUBJECT_CSF_201
       )
       return unless attended_workshop
 
@@ -413,38 +431,51 @@ module Pd
     # course and subject. If they have none, render not enrolled. If they have any and should_have_attended is false,
     # return the most recent workshop. If should_have_attended is true, return the most recent workshop the user has
     # attended, or render no attendance if the user has not attended any workshops.
-    def get_workshop_by_enrollment_or_course(enrollment_code, course, subject, should_have_attended=true)
-      workshop_to_return = nil
+    def get_workshop_by_enrollment_or_course_and_subject(enrollment_code:, course:, subject:, should_have_attended: true)
       if enrollment_code
-        workshop = get_workshop_by_enrollment(params[:enrollment_code], current_user)
-        unless workshop
-          render :invalid_enrollment_code
-          return false
-        end
-        workshop_to_return = workshop if !should_have_attended || workshop.user_attended?(current_user)
+        return get_workshop_by_enrollment(enrollment_code: enrollment_code, should_have_attended: should_have_attended)
       else
-        enrolled_workshops = Workshop.
-          where(course: course, subject: subject).
-          enrolled_in_by(current_user)
+        return get_workshop_by_course_and_subject(course: course, subject: subject, should_have_attended: should_have_attended)
+      end
+    end
 
-        if enrolled_workshops.blank?
-          render :not_enrolled
-          return false
-        end
+    def get_workshop_by_enrollment(enrollment_code:, should_have_attended:)
+      workshop = Workshop.by_enrollment_code(enrollment_code, current_user)
 
-        workshop_to_return = should_have_attended ?
-           enrolled_workshops.with_nearest_attendance_by(current_user) :
-           enrolled_workshops.nearest
+      unless workshop
+        render :invalid_enrollment_code
+        return false
+      end
+      if !should_have_attended || workshop.user_attended?(current_user)
+        return workshop
+      else
+        render :no_attendance
+        return false
+      end
+    end
+
+    def get_workshop_by_course_and_subject(course:, subject:, should_have_attended:)
+      enrolled_workshops = Workshop.
+        where(course: course, subject: subject).
+        enrolled_in_by(current_user)
+
+      if enrolled_workshops.blank?
+        render :not_enrolled
+        return false
       end
 
+      workshop = should_have_attended ?
+                   enrolled_workshops.with_nearest_attendance_by(current_user) :
+                   enrolled_workshops.nearest
+
       # If workshop_to_return is nil here and we haven't already returned, it means there was no attendance
-      unless workshop_to_return
+      unless workshop
         render :no_attendance
         return false
       end
 
       # otherwise return the workshop
-      workshop_to_return
+      workshop
     end
 
     def response_exists_general?(key_params)
@@ -544,25 +575,12 @@ module Pd
       render :new_general
     end
 
-    def ayw_helper(survey_map, should_have_attended:, day:)
+    def ayw_helper(survey_names, day:)
       # get workshop (based on url/user)
       workshop_subject = ACADEMIC_YEAR_WORKSHOPS[params[:workshop_subject]]
       return render_404 unless workshop_subject
-      workshop = get_workshop_by_enrollment_or_course(
-        nil,
-        [COURSE_CSD, COURSE_CSP],
-        workshop_subject,
-        should_have_attended
-      )
-      return unless workshop
 
-      survey_name = survey_map[workshop_subject]
-      agenda = params[:agenda] || nil
-
-      # remove / from agenda url so module/1 => module1
-      agenda.tr!("/", "") if agenda
-
-      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: day, workshop_agenda: agenda)
+      new_general_foorm(survey_names: survey_names, day: day, subject: workshop_subject)
     end
 
     def render_survey_foorm(survey_name:, workshop:, session:, day:, workshop_agenda: nil)
@@ -608,39 +626,6 @@ module Pd
       end
     end
 
-    # Either get workshop for the given enrollment_code or look up
-    # the nearest workshop the user attended or was enrolled in, in that priority
-    # order.
-    def get_workshop_for_new_general(enrollment_code, current_user)
-      if enrollment_code
-        get_workshop_by_enrollment(enrollment_code, current_user)
-      else
-        Workshop.
-          where(course: [COURSE_CSD, COURSE_CSP]).
-          where.not(subject: SUBJECT_FIT).
-          nearest_attended_or_enrolled_in_by(current_user)
-      end
-    end
-
-    # Pre surveys should be filled out by a teacher without attendance so
-    # look up nearest workshop that the current_user is enrolled in if
-    # enrollment_code is not given.
-    def get_workshop_for_pre_survey(enrollment_code, current_user)
-      if enrollment_code
-        get_workshop_by_enrollment(enrollment_code, current_user)
-      else
-        Workshop.
-          where(course: [COURSE_CSD, COURSE_CSP]).
-          where.not(subject: SUBJECT_FIT).
-          nearest_enrolled_in_by(current_user)
-      end
-    end
-
-    def get_workshop_by_enrollment(enrollment_code, current_user)
-      enrollment = Pd::Enrollment.find_by(code: enrollment_code, user: current_user)
-      enrollment && enrollment.workshop
-    end
-
     def get_session_for_workshop_and_day(workshop, day)
       day > 0 ? workshop.sessions[day - 1] : nil
     end
@@ -663,18 +648,6 @@ module Pd
       if day > 0
         session = get_session_for_workshop_and_day(workshop, day)
         return validate_session_for_survey(session, workshop, day)
-      end
-      return true
-    end
-
-    def validate_enrolled(workshop, enrollment_code = nil)
-      if !workshop && enrollment_code
-        render :invalid_enrollment_code
-        return false
-      end
-      unless workshop
-        render :not_enrolled
-        return false
       end
       return true
     end

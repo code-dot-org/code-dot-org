@@ -298,6 +298,18 @@ class Pd::Workshop < ActiveRecord::Base
     current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
   end
 
+  # Find the enrollment for the given enrollment code and teacher,
+  # and return the workshop associated with that enrollment or nil.
+  # enrollment_code is unique but by including teacher we can ensure the
+  # expected user is trying to access the workshop.
+  # @param [String] enrollment_code
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.by_enrollment_code(enrollment_code, teacher)
+    enrollment = Enrollment.find_by(code: enrollment_code, user: teacher)
+    enrollment && enrollment.workshop
+  end
+
   # Find the workshop with the closest session to today
   # enrolled in by the given teacher.
   # @param [User] teacher
