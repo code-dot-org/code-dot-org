@@ -3638,7 +3638,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-blockly@^3.20200625.2:
+blockly@3.20200625.2:
   version "3.20200625.2"
   resolved "https://registry.yarnpkg.com/blockly/-/blockly-3.20200625.2.tgz#266b6c3078aad460afc7e831e6e8f7616073d314"
   integrity sha512-+0aUynP4kAFjg+m9uSyctWB+KwT3/BDmqy4Fm7vwWq7cuMtgIsqqA8VGb6INVpFx9WZUXSZ5enFAco6CM85bpA==
