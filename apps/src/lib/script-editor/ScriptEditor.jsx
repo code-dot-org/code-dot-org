@@ -23,7 +23,8 @@ const styles = {
     padding: '4px 6px',
     color: '#555',
     border: '1px solid #ccc',
-    borderRadius: 4
+    borderRadius: 4,
+    margin: 0
   },
   checkbox: {
     margin: '0 0 0 7px'
@@ -129,6 +130,15 @@ export default class ScriptEditor extends React.Component {
             name="title"
             defaultValue={this.props.i18nData.title}
             style={styles.input}
+          />
+        </label>
+        <label>
+          Unit URL (Slug)
+          <input
+            type="text"
+            value={this.props.name}
+            style={styles.input}
+            disabled={true}
           />
         </label>
         <label>
