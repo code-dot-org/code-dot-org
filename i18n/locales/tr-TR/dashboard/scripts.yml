@@ -3656,6 +3656,8 @@ tr:
               name: Ortalamanın Ekranını Kaldır
             Debugging in Maze:
               name: Labirentte Hata Ayıklama
+            Loops in Harvester:
+              name: Hasatçıdaki Döngüler
         coursed-draft:
           title: 'CS Temelleri: Ders D'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
@@ -4932,6 +4934,8 @@ tr:
               name: 'Döngüler: Loopy Başlarken'
             Loops in Maze:
               name: Labirentte Döngüler
+            Loops in Harvester:
+              name: Hasatçıdaki Döngüler
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Build a Flappy Game:
@@ -5778,6 +5782,8 @@ tr:
               name: Sanatçı- Döngüler
             Nested Loops in Bee:
               name: Arı -içiçe döngüler
+            Loops in Ice Age:
+              name: Buz Devrindeki Döngüler
         csp3-a:
           title: CSP Ünitesi 3 - Alt Gruplar A Grubu
           description: Bu birim, Alt Gruplar A Grubu'ndaki öğrenciler için bilgisayar programlamanın temel kavramlarını tanıtır.
@@ -6828,6 +6834,8 @@ tr:
               name: İkili Sistemle Resimler
             Artist Binary:
               name: Sanaçtı İkili Taban
+            Loops in Ice Age:
+              name: Buz Devrindeki Döngüler
             Nested Loops in Frozen:
               name: Frozen'da İç İçe Döngüler
             Graph Paper Programming:
@@ -8000,6 +8008,8 @@ tr:
               name: Sıçrama Olayları
               description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!
               description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.
+            Loops in Ice Age:
+              name: Buz Devrindeki Döngüler
             Loops in Artist:
               name: Sanatçıların Döngüleri
             Nested Loops in Bee:
@@ -8411,6 +8421,8 @@ tr:
               name: Rey ve BB-8 ile programlama
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Ice Age:
+              name: Buz Devrindeki Döngüler
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Loops in Artist:
@@ -9542,6 +9554,8 @@ tr:
               name: Labirentte Programlama
             Programming with Rey and BB-8:
               name: Rey ve BB-8 ile programlama
+            Loops in Ice Age:
+              name: Buz Devrindeki Döngüler
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
         dlp19-csd-mod-fit:
@@ -10409,6 +10423,8 @@ tr:
               name: Star Wars oyunu oluştur
               description_student: Bu derste kendi Star Wars oyununu kurarken gücünü hissedin.
               description_teacher: Bu derste öğrenciler, olayları kullanarak çevrimiçi olarak paylaşabilecekleri bir oyun yapacaklar. R2-D2 ve diğer Star Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
+            Loops in Ice Age:
+              name: Buz Devrindeki Döngüler
             Loops in Artist:
               name: Sanatçıların Döngüleri
             Nested Loops in Bee:
@@ -10631,6 +10647,8 @@ tr:
               name: Rey ve BB-8 ile programlama
             Spelling Bee:
               name: Heceleme Yarışması
+            Loops in Ice Age:
+              name: Buz Devrindeki Döngüler
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Ocean Scene with Loops:
@@ -10739,6 +10757,8 @@ tr:
           lessons:
             new stage:
               name: yeni kademe
+            Tools:
+              name: Araçlar
             Debugging:
               name: Hata Ayıklama (Debugging)
         csd2-virtual:
@@ -11041,3 +11061,9 @@ tr:
           lesson_groups:
             lg_1:
               display_name: İçerik
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kurs A
+            Course B:
+              name: Kurs B

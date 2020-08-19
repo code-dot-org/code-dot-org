@@ -1,6 +1,6 @@
 hideable_lessons true
 
-lesson 'Introduction'
+lesson 'Introduction', display_name: 'Introduction'
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -17,3 +17,4 @@ level 'courseD_artist_ramp11'
 level 'courseD_artist_ramp12'
 level 'courseD_farmer_ramp13'
 level 'courseD_farmer_ramp14', assessment: true
+

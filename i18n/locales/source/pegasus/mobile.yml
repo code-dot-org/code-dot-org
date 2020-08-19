@@ -1718,5 +1718,5 @@
   homepage_slot_text_link_do_hoc: "Do an Hour of Code"
   homepage_slot_text_link_express_course: "Try an Express Course"
   page_not_available_title: "Page Not Available"
-  page_not_available_description: "We're sorry, the page you requested is no longer available at this address. If you still need access, please email <a href='mailto:support@code.org'>support@code.org</a>."
+  page_not_available_description: "We're sorry, the page you requested is no longer available at this address. If you still need access, please email [support@code.org](%{support_email_link})."
   page_not_available_button: "Return home"

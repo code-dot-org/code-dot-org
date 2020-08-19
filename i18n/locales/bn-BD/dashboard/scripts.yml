@@ -1612,3 +1612,9 @@ bn:
               name: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: কোর্স A
+            Course B:
+              name: কোর্স B

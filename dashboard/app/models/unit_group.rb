@@ -294,6 +294,7 @@ class UnitGroup < ApplicationRecord
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
+      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
         include_stages = false
         script.summarize(include_stages, user).merge!(script.summarize_i18n(include_stages))

@@ -2884,3 +2884,9 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kurs A
+            Course B:
+              name: Kurs B
