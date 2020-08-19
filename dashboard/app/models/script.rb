@@ -1483,9 +1483,17 @@ class Script < ActiveRecord::Base
 
   def supported_locale_names
     locales = supported_locales || []
-    locales = locales.map {|l| Script.locale_english_name_map[l] || l}
-    locales += ['English']
-    locales.sort.uniq
+    locales += ['en-US']
+    locales = locales.sort
+    locales.map {|l| Script.locale_native_name_map[l] || l}.uniq
+  end
+
+  def self.locale_native_name_map
+    @@locale_native_name_map ||=
+      PEGASUS_DB[:cdo_languages].
+        select(:locale_s, :native_name_s).
+        map {|row| [row[:locale_s], row[:native_name_s]]}.
+        to_h
   end
 
   def self.locale_english_name_map
