@@ -15,19 +15,21 @@ export default class LightSensor extends EventEmitter {
       rangeMax: 255,
       currentReading: 0
     };
-    // Track 3 seconds of historical data over which we can average sensor readings
+    // Track 3 seconds of historical data in a circular buffer over which
+    // we can average sensor readings
     this.buffer = new Float32Array(MAX_SENSOR_BUFFER_LENGTH / SAMPLE_INTERVAL);
-    this.bufferIndex = 0;
+    this.currentBufferWriteIndex = 0;
 
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
       // Record current reading to keep finite historical buffer.
-      this.buffer[this.bufferIndex] = this.board.mb.analogChannel[
+      this.buffer[this.currentBufferWriteIndex] = this.board.mb.analogChannel[
         SENSOR_CHANNELS.lightSensor
       ];
-      this.bufferIndex++;
+      this.currentBufferWriteIndex++;
       // Modulo the index to loop to the beginning of the buffer when it exceeds array size
-      this.bufferIndex = this.bufferIndex % this.buffer.length;
+      this.currentBufferWriteIndex =
+        this.currentBufferWriteIndex % this.buffer.length;
       // Only emit the data event when the value is above the threshold or the
       // previous reading was above the threshold
       if (
@@ -91,10 +93,10 @@ export default class LightSensor extends EventEmitter {
       let indicesRange = Math.ceil(range / SAMPLE_INTERVAL);
       let sum = 0;
       for (let i = 0; i < indicesRange; i++) {
-        // bufferIndex points to the next spot to write, so first historical
-        // data value is at (bufferIndex - 1)
+        // currentBufferWriteIndex points to the next spot to write, so first historical
+        // data value is at (currentBufferWriteIndex - 1)
         let index =
-          (this.buffer.length + (this.bufferIndex - (i + 1))) %
+          (this.buffer.length + (this.currentBufferWriteIndex - (i + 1))) %
           this.buffer.length;
         sum += this.buffer[index];
       }
