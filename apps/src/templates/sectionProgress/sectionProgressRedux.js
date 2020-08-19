@@ -38,6 +38,7 @@ const initialState = {
   studentLevelProgressByScript: {},
   studentLevelPairingByScript: {},
   studentTimestampsByScript: {},
+  studentLevelTimeSpentByScript: {},
   levelsByLessonByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: true
@@ -102,8 +103,12 @@ export default function sectionProgress(state = initialState, action) {
         ...action.data.studentLevelPairingByScript
       },
       studentTimestampsByScript: {
-        ...state.studentTimestampsByScript, // double check that this line should be here... it wasn't before the refactor
+        ...state.studentTimestampsByScript,
         ...action.data.studentTimestampsByScript
+      },
+      studentLevelTimeSpentByScript: {
+        ...state.studentLevelTimeSpentByScript,
+        ...action.data.studentLevelTimeSpentByScript
       }
     };
   }
