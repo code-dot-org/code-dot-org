@@ -49,5 +49,8 @@ module Pd
       "AYW3_4" => SUBJECT_WORKSHOP_3_4,
       "kickoff" => SUBJECT_VIRTUAL_KICKOFF
     }
+
+    # Subjects that use the general survey urls and are in Foorm
+    FOORM_GENERAL_SURVEY_SUBJECTS = [SUBJECT_SUMMER_WORKSHOP]
   end
 end
