@@ -695,6 +695,12 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
   if (state.peerReviewLessonInfo) {
     byGroup[state.peerReviewLessonInfo.lesson_group_display_name] = {
       group: state.peerReviewLessonInfo.lesson_group_display_name,
+      lessonGroup: {
+        id: null, //Peer reviews do not have descriptions or big questions so they won't need an id to track clicks
+        displayName: state.peerReviewLessonInfo.lesson_group_display_name,
+        description: null,
+        bigQuestions: null
+      },
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
