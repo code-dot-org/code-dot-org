@@ -19,6 +19,9 @@
 - elsif SchoolInfoInterstitialHelper.show?(current_user) || @force_school_info_interstitial
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
 
+- if ThankDonorsInterstitialHelper.show?(current_user, request)
+  = render partial: 'layouts/thank_donors_interstitial'
+
 - if current_user
   = render partial: 'home/homepage'
 

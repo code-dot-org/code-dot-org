@@ -1,0 +1,1336 @@
+{
+ "pages": [
+  {
+   "name": "page 1",
+   "elements": [
+    {
+     "type": "html",
+     "name": "pre_survey_preamble",
+     "html": "<h2>{workshop_course} Workshop Pre-Survey</h2>\n<p><strong>Welcome back!</strong></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about 5 minutes to complete. </p>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
+    },
+    {
+     "type": "radiogroup",
+     "name": "planning_to_attend",
+     "title": " Are you planning to attend this upcoming workshop?",
+     "choices": [
+      {
+       "value": "yes",
+       "text": "Yes"
+      },
+      {
+       "value": "no",
+       "text": "No"
+      },
+      {
+       "value": "unsure",
+       "text": "Unsure / Don't Know Yet"
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "name": "csp_most_recent_unit_panel",
+     "elements": [
+      {
+       "type": "dropdown",
+       "name": "csp_unit",
+       "visibleIf": "{workshop_course} = 'CS Principles'",
+       "title": "Which unit from CS Principles contains the lesson you most recently taught?",
+       "choices": [
+        {
+         "value": "unit_1",
+         "text": "Unit 1 - Digital Information"
+        },
+        {
+         "value": "unit_2",
+         "text": "Unit 2 - The Internet"
+        },
+        {
+         "value": "unit_3",
+         "text": "Unit 3 - Intro to App Design"
+        },
+        {
+         "value": "unit_4",
+         "text": "Unit 4 - Variables, Conditionals, and Functions"
+        },
+        {
+         "value": "unit_5",
+         "text": "Unit 5 - Lists, Loops, and Traversals"
+        },
+        {
+         "value": "unit_6",
+         "text": "Unit 6 - Algorithms"
+        },
+        {
+         "value": "unit_7",
+         "text": "Unit 7 - Parameters, Return, and Libraries"
+        },
+        {
+         "value": "unit_8",
+         "text": "Unit 8 - Create PT Prep"
+        },
+        {
+         "value": "unit_9",
+         "text": "Unit 9 - Data"
+        },
+        {
+         "value": "unit_10",
+         "text": "Unit 10 - Cybersecurity and Global Impacts"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csd_unit",
+       "visibleIf": "{workshop_course} = 'CS Discoveries'",
+       "title": "In which unit from CS Discoveries is the lesson you most recently taught?",
+       "choices": [
+        {
+         "value": "unit_1",
+         "text": "Unit 1 - Problem Solving and Computing"
+        },
+        {
+         "value": "unit_2",
+         "text": "Unit 2 - Web Development"
+        },
+        {
+         "value": "unit_3",
+         "text": "Unit 3 - Interactive Animations and Games"
+        },
+        {
+         "value": "unit_4",
+         "text": "Unit 4 - The Design Process"
+        },
+        {
+         "value": "unit_5",
+         "text": "Unit 5 - Data and Society"
+        },
+        {
+         "value": "unit_6",
+         "text": "Unit 6 - Physical Computing"
+        }
+       ]
+      }
+     ],
+     "title": "In order for us to plan for your workshop, it's helpful to know which lesson from {workshop_course} you've MOST RECENTLY TAUGHT (or will have taught) just prior to attending."
+    },
+    {
+     "type": "panel",
+     "name": "csp_most_recent_lesson_panel",
+     "elements": [
+      {
+       "type": "dropdown",
+       "name": "csp_unit_1_lessons",
+       "visibleIf": "{csp_unit} = 'unit_1'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Welcome_to_CSP",
+         "text": "1. Welcome to CSP"
+        },
+        {
+         "value": "2_Representing_Information",
+         "text": "2. Representing Information"
+        },
+        {
+         "value": "3_Circle_Square_Patterns",
+         "text": "3. Circle Square Patterns"
+        },
+        {
+         "value": "4_Binary_Numbers",
+         "text": "4. Binary Numbers"
+        },
+        {
+         "value": "5_Overflow_and_Rounding",
+         "text": "5. Overflow and Rounding"
+        },
+        {
+         "value": "6_Representing_Text",
+         "text": "6. Representing Text"
+        },
+        {
+         "value": "7_Black_and_White_Images",
+         "text": "7. Black and White Images"
+        },
+        {
+         "value": "8_Color_Images",
+         "text": "8. Color Images"
+        },
+        {
+         "value": "9_Lossless_Compression",
+         "text": "9. Lossless Compression"
+        },
+        {
+         "value": "10_Lossy_Compression",
+         "text": "10. Lossy Compression"
+        },
+        {
+         "value": "11_Intellectual_Property",
+         "text": "11. Intellectual Property"
+        },
+        {
+         "value": "12_Project_-_Digital_Information_Dilemmas_Part_1",
+         "text": "12. Project - Digital Information Dilemmas Part 1"
+        },
+        {
+         "value": "13_Project_-_Digital_Information_Dilemmas_Part_2",
+         "text": "13. Project - Digital Information Dilemmas Part 2"
+        },
+        {
+         "value": "15_Lesson_14:_Assessment_Day",
+         "text": "15. Lesson 14: Assessment Day"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_2_lessons",
+       "visibleIf": "{csp_unit} = 'unit_2'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Welcome_to_the_Internet",
+         "text": "1. Welcome to the Internet"
+        },
+        {
+         "value": "2_Building_a_Network",
+         "text": "2. Building a Network"
+        },
+        {
+         "value": "3_The_Need_for_Addressing",
+         "text": "3. The Need for Addressing"
+        },
+        {
+         "value": "4_Routers_and_Redundancy",
+         "text": "4. Routers and Redundancy"
+        },
+        {
+         "value": "5_Packets",
+         "text": "5. Packets"
+        },
+        {
+         "value": "6_DNS_and_HTTP",
+         "text": "6. DNS and HTTP"
+        },
+        {
+         "value": "7_Project_-_Internet_Dilemmas_Part_1",
+         "text": "7. Project - Internet Dilemmas Part 1"
+        },
+        {
+         "value": "8_Project_-_Internet_Dilemmas_Part_2",
+         "text": "8. Project - Internet Dilemmas Part 2"
+        },
+        {
+         "value": "9_Lesson_9:_Assessment_Day",
+         "text": "9. Lesson 9: Assessment Day"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_3_lessons",
+       "visibleIf": "{csp_unit} = 'unit_3'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Introduction_to_Apps",
+         "text": "1. Introduction to Apps"
+        },
+        {
+         "value": "2_Introduction_to_Design_Mode",
+         "text": "2. Introduction to Design Mode"
+        },
+        {
+         "value": "3_Project_-_Designing_an_App_Part_1",
+         "text": "3. Project - Designing an App Part 1"
+        },
+        {
+         "value": "4_Project_-_Designing_an_App_Part_2",
+         "text": "4. Project - Designing an App Part 2"
+        },
+        {
+         "value": "5_The_Need_for_Programming_Languages",
+         "text": "5. The Need for Programming Languages"
+        },
+        {
+         "value": "6_Intro_to_Programming",
+         "text": "6. Intro to Programming"
+        },
+        {
+         "value": "7_Debugging",
+         "text": "7. Debugging"
+        },
+        {
+         "value": "8_Project_-_Designing_an_App_Part_3",
+         "text": "8. Project - Designing an App Part 3"
+        },
+        {
+         "value": "9_Project_-_Designing_an_App_Part_4",
+         "text": "9. Project - Designing an App Part 4"
+        },
+        {
+         "value": "10_Project_-_Designing_an_App_Part_5",
+         "text": "10. Project - Designing an App Part 5"
+        },
+        {
+         "value": "11_Lesson_11:_Assessment_Day",
+         "text": "11. Lesson 11: Assessment Day"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_4_lessons",
+       "visibleIf": "{csp_unit} = 'unit_4'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Variables_Explore",
+         "text": "1. Variables Explore"
+        },
+        {
+         "value": "2_Variables_Investigate",
+         "text": "2. Variables Investigate"
+        },
+        {
+         "value": "3_Variables_Practice",
+         "text": "3. Variables Practice"
+        },
+        {
+         "value": "4_Variables_Make",
+         "text": "4. Variables Make"
+        },
+        {
+         "value": "5_Conditionals_Explore",
+         "text": "5. Conditionals Explore"
+        },
+        {
+         "value": "6_Conditionals_Investigate",
+         "text": "6. Conditionals Investigate"
+        },
+        {
+         "value": "7_Conditionals_Practice",
+         "text": "7. Conditionals Practice"
+        },
+        {
+         "value": "8_Conditional_Make",
+         "text": "8. Conditional Make"
+        },
+        {
+         "value": "9_Functions_Explore_/_Investigate",
+         "text": "9. Functions Explore / Investigate"
+        },
+        {
+         "value": "10_Functions_Practice",
+         "text": "10. Functions Practice"
+        },
+        {
+         "value": "11_Functions_Make",
+         "text": "11. Functions Make"
+        },
+        {
+         "value": "12_Project_-_Decision_Maker_App_Part_1",
+         "text": "12. Project - Decision Maker App Part 1"
+        },
+        {
+         "value": "13_Project_-_Decision_Maker_App_Part_2",
+         "text": "13. Project - Decision Maker App Part 2"
+        },
+        {
+         "value": "14_Project_-_Decision_Maker_App_Part_3",
+         "text": "14. Project - Decision Maker App Part 3"
+        },
+        {
+         "value": "15_Lesson_15:_Assessment_Day",
+         "text": "15. Lesson 15: Assessment Day"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_5_lessons",
+       "visibleIf": "{csp_unit} = 'unit_5'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Lists_Explore",
+         "text": "1. Lists Explore"
+        },
+        {
+         "value": "2_Lists_Investigate",
+         "text": "2. Lists Investigate"
+        },
+        {
+         "value": "3_Lists_Practice",
+         "text": "3. Lists Practice"
+        },
+        {
+         "value": "4_Lists_Make",
+         "text": "4. Lists Make"
+        },
+        {
+         "value": "5_Loops_Explore",
+         "text": "5. Loops Explore"
+        },
+        {
+         "value": "6_Loops_Investigate",
+         "text": "6. Loops Investigate"
+        },
+        {
+         "value": "7_Loops_Practice",
+         "text": "7. Loops Practice"
+        },
+        {
+         "value": "8_Loops_Make",
+         "text": "8. Loops Make"
+        },
+        {
+         "value": "9_Traversals_Explore",
+         "text": "9. Traversals Explore"
+        },
+        {
+         "value": "10_Traversals_Investigate",
+         "text": "10. Traversals Investigate"
+        },
+        {
+         "value": "11_Traversals_Practice",
+         "text": "11. Traversals Practice"
+        },
+        {
+         "value": "12_Traversals_Make",
+         "text": "12. Traversals Make"
+        },
+        {
+         "value": "13_Semester_Hackathon_Part_1",
+         "text": "13. Semester Hackathon Part 1"
+        },
+        {
+         "value": "14_Semester_Hackathon_Part_2",
+         "text": "14. Semester Hackathon Part 2"
+        },
+        {
+         "value": "15_Semester_Hackathon_Part_3",
+         "text": "15. Semester Hackathon Part 3"
+        },
+        {
+         "value": "16_Semester_Hackathon_Part_4",
+         "text": "16. Semester Hackathon Part 4"
+        },
+        {
+         "value": "17_Semester_Hackathon_Part_5",
+         "text": "17. Semester Hackathon Part 5"
+        },
+        {
+         "value": "18_Lesson_18:_Assessment_Day",
+         "text": "18. Lesson 18: Assessment Day"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_6_lessons",
+       "visibleIf": "{csp_unit} = 'unit_6'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Algorithms_Solve_Problems",
+         "text": "1. Algorithms Solve Problems"
+        },
+        {
+         "value": "2_Algorithm_Efficiency",
+         "text": "2. Algorithm Efficiency"
+        },
+        {
+         "value": "3_Unreasonable_Time",
+         "text": "3. Unreasonable Time"
+        },
+        {
+         "value": "4_The_Limits_of_Algorithms",
+         "text": "4. The Limits of Algorithms"
+        },
+        {
+         "value": "5_Parallel_and_Distributed_Algorithms",
+         "text": "5. Parallel and Distributed Algorithms"
+        },
+        {
+         "value": "6_Lesson_6:_Assessment_Day",
+         "text": "6. Lesson 6: Assessment Day"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_7_lessons",
+       "visibleIf": "{csp_unit} = 'unit_7'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Parameters_and_Return_Explore",
+         "text": "1. Parameters and Return Explore"
+        },
+        {
+         "value": "2_Parameters_and_Return_Investigate",
+         "text": "2. Parameters and Return Investigate"
+        },
+        {
+         "value": "3_Parameters_and_Return_Practice",
+         "text": "3. Parameters and Return Practice"
+        },
+        {
+         "value": "4_Parameters_and_Return_Make",
+         "text": "4. Parameters and Return Make"
+        },
+        {
+         "value": "5_Libraries_Explore",
+         "text": "5. Libraries Explore"
+        },
+        {
+         "value": "6_Libraries_Investigate",
+         "text": "6. Libraries Investigate"
+        },
+        {
+         "value": "7_Libraries_Practice",
+         "text": "7. Libraries Practice"
+        },
+        {
+         "value": "8_Project_-_Make_a_Library_Part_1",
+         "text": "8. Project - Make a Library Part 1"
+        },
+        {
+         "value": "9_Project_-_Make_a_Library_Part_2",
+         "text": "9. Project - Make a Library Part 2"
+        },
+        {
+         "value": "10_Project_-_Make_a_Library_Part_3",
+         "text": "10. Project - Make a Library Part 3"
+        },
+        {
+         "value": "11_Lesson_11:_Assessment_Day",
+         "text": "11. Lesson 11: Assessment Day"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_8_lessons",
+       "visibleIf": "{csp_unit} = 'unit_8'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Create_PT_-_Review_the_Task",
+         "text": "1. Create PT - Review the Task"
+        },
+        {
+         "value": "2_Create_PT_-_Make_a_Plan",
+         "text": "2. Create PT - Make a Plan"
+        },
+        {
+         "value": "3_Create_PT_-_Complete_the_Task",
+         "text": "3. Create PT - Complete the Task"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_9_lessons",
+       "visibleIf": "{csp_unit} = 'unit_9'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Learning_From_Data",
+         "text": "1. Learning From Data"
+        },
+        {
+         "value": "2_Exploring_One_Column",
+         "text": "2. Exploring One Column"
+        },
+        {
+         "value": "3_Filtering_and_Cleaning_Data",
+         "text": "3. Filtering and Cleaning Data"
+        },
+        {
+         "value": "4_Exploring_Two_Columns",
+         "text": "4. Exploring Two Columns"
+        },
+        {
+         "value": "5_Big_Data,_Crowdsourcing,_and_Machine_Learning",
+         "text": "5. Big Data, Crowdsourcing, and Machine Learning"
+        },
+        {
+         "value": "6_Machine_Learning_and_Bias",
+         "text": "6. Machine Learning and Bias"
+        },
+        {
+         "value": "7_Project_-_Tell_a_Data_Story_-_Part_1",
+         "text": "7. Project - Tell a Data Story - Part 1"
+        },
+        {
+         "value": "8_Project_-_Tell_a_Data_Story_-_Part_2",
+         "text": "8. Project - Tell a Data Story - Part 2"
+        },
+        {
+         "value": "9_Lesson_9:_Assessment_Day",
+         "text": "9. Lesson 9: Assessment Day"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csp_unit_10_lessons",
+       "visibleIf": "{csp_unit} = 'unit_10'",
+       "title": "Which lesson from {csp_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Project_-_Innovation_Simulation_Part_1",
+         "text": "1. Project - Innovation Simulation Part 1"
+        },
+        {
+         "value": "2_Project_-_Innovation_Simulation_Part_2",
+         "text": "2. Project - Innovation Simulation Part 2"
+        },
+        {
+         "value": "3_Data_Policies_and_Privacy",
+         "text": "3. Data Policies and Privacy"
+        },
+        {
+         "value": "4_The_Value_of_Privacy",
+         "text": "4. The Value of Privacy"
+        },
+        {
+         "value": "5_Project_-_Innovation_Simulation_Part_3",
+         "text": "5. Project - Innovation Simulation Part 3"
+        },
+        {
+         "value": "6_Security_Risks_Part_1",
+         "text": "6. Security Risks Part 1"
+        },
+        {
+         "value": "7_Security_Risks_Part_2",
+         "text": "7. Security Risks Part 2"
+        },
+        {
+         "value": "8_Project:_Innovation_Simulation_Part_4",
+         "text": "8. Project: Innovation Simulation Part 4"
+        },
+        {
+         "value": "9_Protecting_Data_Part_1",
+         "text": "9. Protecting Data Part 1"
+        },
+        {
+         "value": "10_Protecting_Data_Part_2",
+         "text": "10. Protecting Data Part 2"
+        },
+        {
+         "value": "11_Project:_Innovation_Simulation_Part_5",
+         "text": "11. Project: Innovation Simulation Part 5"
+        },
+        {
+         "value": "12_Project:_Innovation_Simulation_Part_6",
+         "text": "12. Project: Innovation Simulation Part 6"
+        },
+        {
+         "value": "13_Project:_Innovation_Simulation_Part_7",
+         "text": "13. Project: Innovation Simulation Part 7"
+        },
+        {
+         "value": "14_Lesson_14:_unit_Assessment_Day",
+         "text": "14. Lesson 14: Unit Assessment Day"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "name": "csd_most_recent_lesson_panel",
+     "elements": [
+      {
+       "type": "dropdown",
+       "name": "csd_unit_1_lessons",
+       "visibleIf": "{csd_unit} = 'unit_1'",
+       "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Intro_to_Problem_Solving",
+         "text": "1. Intro to Problem Solving"
+        },
+        {
+         "value": "1_CS_Discoveries_Pre-survey",
+         "text": "1. CS Discoveries Pre-survey"
+        },
+        {
+         "value": "2_The_Problem_Solving_Process",
+         "text": "2. The Problem Solving Process"
+        },
+        {
+         "value": "3_Exploring_Problem_Solving",
+         "text": "3. Exploring Problem Solving"
+        },
+        {
+         "value": "4_What_is_a_Computer?",
+         "text": "4. What is a Computer?"
+        },
+        {
+         "value": "5_Input_and_Output",
+         "text": "5. Input and Output"
+        },
+        {
+         "value": "6_Processing",
+         "text": "6. Processing"
+        },
+        {
+         "value": "7_Storage",
+         "text": "7. Storage"
+        },
+        {
+         "value": "8_Project_-_Propose_an_App",
+         "text": "8. Project - Propose an App"
+        },
+        {
+         "value": "9_Intro_to_Problem_Solving_-_Newspaper_Table_(Alternate_Lesson_1)",
+         "text": "9. Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)"
+        },
+        {
+         "value": "10_Post-Project_Test",
+         "text": "10. Post-Project Test"
+        },
+        {
+         "value": "10_Intro_to_Problem_Solving_-_Spaghetti_Bridge_(Alternate_Lesson_1)",
+         "text": "10. Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)"
+        },
+        {
+         "value": "11_Intro_to_Problem_Solving_-_Paper_Tower_(Alternate_Lesson_1)",
+         "text": "11. Intro to Problem Solving - Paper Tower (Alternate Lesson 1)"
+        },
+        {
+         "value": "12_Exploring_Problem_Solving_-_Animals_Theme_(Alternate_Lesson_3)",
+         "text": "12. Exploring Problem Solving - Animals Theme (Alternate Lesson 3)"
+        },
+        {
+         "value": "13_Exploring_Problem_Solving_-_Games_Theme_(Alternate_Lesson_3)",
+         "text": "13. Exploring Problem Solving - Games Theme (Alternate Lesson 3)"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csd_unit_2_lessons",
+       "visibleIf": "{csd_unit} = 'unit_2'",
+       "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Exploring_Web_Pages",
+         "text": "1. Exploring Web Pages"
+        },
+        {
+         "value": "2_Intro_to_HTML",
+         "text": "2. Intro to HTML"
+        },
+        {
+         "value": "3_Headings",
+         "text": "3. Headings"
+        },
+        {
+         "value": "4_Mini-Project:_HTML_Web_Page",
+         "text": "4. Mini-Project: HTML Web Page"
+        },
+        {
+         "value": "5_Digital_Footprint",
+         "text": "5. Digital Footprint"
+        },
+        {
+         "value": "6_Styling_Text_with_CSS",
+         "text": "6. Styling Text with CSS"
+        },
+        {
+         "value": "7_Mini-Project:_Your_Personal_Style",
+         "text": "7. Mini-Project: Your Personal Style"
+        },
+        {
+         "value": "8_Intellectual_Property",
+         "text": "8. Intellectual Property"
+        },
+        {
+         "value": "9_Using_Images",
+         "text": "9. Using Images"
+        },
+        {
+         "value": "10_Websites_for_Expression",
+         "text": "10. Websites for Expression"
+        },
+        {
+         "value": "11_Styling_Elements_with_CSS",
+         "text": "11. Styling Elements with CSS"
+        },
+        {
+         "value": "12_Your_Web_Page_-_Prepare",
+         "text": "12. Your Web Page - Prepare"
+        },
+        {
+         "value": "13_Project_-_Personal_Web_Page",
+         "text": "13. Project - Personal Web Page"
+        },
+        {
+         "value": "14_Websites_for_a_Purpose",
+         "text": "14. Websites for a Purpose"
+        },
+        {
+         "value": "15_Team_Problem_Solving",
+         "text": "15. Team Problem Solving"
+        },
+        {
+         "value": "16_Sources_and_Research",
+         "text": "16. Sources and Research"
+        },
+        {
+         "value": "17_CSS_Classes",
+         "text": "17. CSS Classes"
+        },
+        {
+         "value": "18_Planning_a_Multi-page_Website",
+         "text": "18. Planning a Multi-page Website"
+        },
+        {
+         "value": "19_Linking_Pages",
+         "text": "19. Linking Pages"
+        },
+        {
+         "value": "20_Project_-_Website_for_a_Purpose",
+         "text": "20. Project - Website for a Purpose"
+        },
+        {
+         "value": "21_Peer_Review_and_Final_Touches",
+         "text": "21. Peer Review and Final Touches"
+        },
+        {
+         "value": "22_Post-Project_Test",
+         "text": "22. Post-Project Test"
+        },
+        {
+         "value": "23_CS_Discoveries_Post_Course_survey",
+         "text": "23. CS Discoveries Post Course survey"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csd_unit_3_lessons",
+       "visibleIf": "{csd_unit} = 'unit_3'",
+       "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Programming_for_Entertainment",
+         "text": "1. Programming for Entertainment"
+        },
+        {
+         "value": "2_Plotting_Shapes",
+         "text": "2. Plotting Shapes"
+        },
+        {
+         "value": "3_Drawing_in_Game_Lab",
+         "text": "3. Drawing in Game Lab"
+        },
+        {
+         "value": "4_Shapes_and_Parameters",
+         "text": "4. Shapes and Parameters"
+        },
+        {
+         "value": "5_Variables",
+         "text": "5. Variables"
+        },
+        {
+         "value": "6_Random_Numbers",
+         "text": "6. Random Numbers"
+        },
+        {
+         "value": "7_Sprites",
+         "text": "7. Sprites"
+        },
+        {
+         "value": "8_Sprite_Properties",
+         "text": "8. Sprite Properties"
+        },
+        {
+         "value": "9_Text",
+         "text": "9. Text"
+        },
+        {
+         "value": "10_Mini-Project:_Captioned_Scenes",
+         "text": "10. Mini-Project: Captioned Scenes"
+        },
+        {
+         "value": "11_The_Draw_Loop",
+         "text": "11. The Draw Loop"
+        },
+        {
+         "value": "12_Sprite_Movement",
+         "text": "12. Sprite Movement"
+        },
+        {
+         "value": "13_Mini-Project:_Animation",
+         "text": "13. Mini-Project: Animation"
+        },
+        {
+         "value": "14_Conditionals",
+         "text": "14. Conditionals"
+        },
+        {
+         "value": "15_Keyboard_Input",
+         "text": "15. Keyboard Input"
+        },
+        {
+         "value": "16_Mouse_Input",
+         "text": "16. Mouse Input"
+        },
+        {
+         "value": "17_Project_-_Interactive_Card",
+         "text": "17. Project - Interactive Card"
+        },
+        {
+         "value": "18_Velocity",
+         "text": "18. Velocity"
+        },
+        {
+         "value": "19_Collision_Detection",
+         "text": "19. Collision Detection"
+        },
+        {
+         "value": "20_Mini-Project:_Side_Scroller",
+         "text": "20. Mini-Project: Side Scroller"
+        },
+        {
+         "value": "21_Complex_Sprite_Movement",
+         "text": "21. Complex Sprite Movement"
+        },
+        {
+         "value": "22_Collisions",
+         "text": "22. Collisions"
+        },
+        {
+         "value": "23_Mini-Project:_Flyer_Game",
+         "text": "23. Mini-Project: Flyer Game"
+        },
+        {
+         "value": "24_Functions",
+         "text": "24. Functions"
+        },
+        {
+         "value": "25_The_Game_Design_Process",
+         "text": "25. The Game Design Process"
+        },
+        {
+         "value": "26_Using_the_Game_Design_Process",
+         "text": "26. Using the Game Design Process"
+        },
+        {
+         "value": "27_Project_-_Design_a_Game",
+         "text": "27. Project - Design a Game"
+        },
+        {
+         "value": "28_Post-Project_Test",
+         "text": "28. Post-Project Test"
+        },
+        {
+         "value": "29_CS_Discoveries_Post_Course_survey",
+         "text": "29. CS Discoveries Post Course survey"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csd_unit_4_lessons",
+       "visibleIf": "{csd_unit} = 'unit_4'",
+       "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Analysis_of_Design",
+         "text": "1. Analysis of Design"
+        },
+        {
+         "value": "2_Understanding_Your_User",
+         "text": "2. Understanding Your User"
+        },
+        {
+         "value": "3_User-Centered_Design_Micro_Activity",
+         "text": "3. User-Centered Design Micro Activity"
+        },
+        {
+         "value": "4_User_Interfaces",
+         "text": "4. User Interfaces"
+        },
+        {
+         "value": "5_Feedback_and_Testing",
+         "text": "5. Feedback and Testing"
+        },
+        {
+         "value": "6_Identifying_User_Needs",
+         "text": "6. Identifying User Needs"
+        },
+        {
+         "value": "7_Project_-_Paper_Prototype",
+         "text": "7. Project - Paper Prototype"
+        },
+        {
+         "value": "8_Designing_Apps_for_Good",
+         "text": "8. Designing Apps for Good"
+        },
+        {
+         "value": "9_Market_Research",
+         "text": "9. Market Research"
+        },
+        {
+         "value": "10_Paper_Prototypes",
+         "text": "10. Paper Prototypes"
+        },
+        {
+         "value": "11_Prototype_Testing",
+         "text": "11. Prototype Testing"
+        },
+        {
+         "value": "12_Digital_Design",
+         "text": "12. Digital Design"
+        },
+        {
+         "value": "13_Linking_Screens",
+         "text": "13. Linking Screens"
+        },
+        {
+         "value": "14_Testing_the_App",
+         "text": "14. Testing the App"
+        },
+        {
+         "value": "15_Improving_and_Iterating",
+         "text": "15. Improving and Iterating"
+        },
+        {
+         "value": "16_Project_-_App_Presentation",
+         "text": "16. Project - App Presentation"
+        },
+        {
+         "value": "17_Post-Project_Test",
+         "text": "17. Post-Project Test"
+        },
+        {
+         "value": "18_CS_Discoveries_Post_Course_survey",
+         "text": "18. CS Discoveries Post Course survey"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csd_unit_5_lessons",
+       "visibleIf": "{csd_unit} = 'unit_5'",
+       "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Representation_Matters",
+         "text": "1. Representation Matters"
+        },
+        {
+         "value": "2_Patterns_and_Representation",
+         "text": "2. Patterns and Representation"
+        },
+        {
+         "value": "3_ASCII_and_Binary_Representation",
+         "text": "3. ASCII and Binary Representation"
+        },
+        {
+         "value": "4_Representing_Images",
+         "text": "4. Representing Images"
+        },
+        {
+         "value": "5_Representing_Numbers",
+         "text": "5. Representing Numbers"
+        },
+        {
+         "value": "6_Keeping_Data_Secret",
+         "text": "6. Keeping Data Secret"
+        },
+        {
+         "value": "7_Combining_Representations",
+         "text": "7. Combining Representations"
+        },
+        {
+         "value": "8_Project_-_Create_a_Representation",
+         "text": "8. Project - Create a Representation"
+        },
+        {
+         "value": "9_Problem_Solving_and_Data",
+         "text": "9. Problem Solving and Data"
+        },
+        {
+         "value": "10_Problem_Solving_with_Big_Data",
+         "text": "10. Problem Solving with Big Data"
+        },
+        {
+         "value": "11_Structuring_Data",
+         "text": "11. Structuring Data"
+        },
+        {
+         "value": "12_Making_Decisions_with_Data",
+         "text": "12. Making Decisions with Data"
+        },
+        {
+         "value": "13_Interpreting_Data",
+         "text": "13. Interpreting Data"
+        },
+        {
+         "value": "14_Automating_Data_Decisions",
+         "text": "14. Automating Data Decisions"
+        },
+        {
+         "value": "15_Project_-_Make_a_Recommendation",
+         "text": "15. Project - Make a Recommendation"
+        },
+        {
+         "value": "16_Post-Project_Test",
+         "text": "16. Post-Project Test"
+        },
+        {
+         "value": "17_CS_Discoveries_Post_Course_survey",
+         "text": "17. CS Discoveries Post Course survey"
+        }
+       ]
+      },
+      {
+       "type": "dropdown",
+       "name": "csd_unit_6_lessons",
+       "visibleIf": "{csd_unit} = 'unit_6'",
+       "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
+       "choices": [
+        {
+         "value": "1_Innovations_in_Computing",
+         "text": "1. Innovations in Computing"
+        },
+        {
+         "value": "2_Designing_Screens_with_Code",
+         "text": "2. Designing Screens with Code"
+        },
+        {
+         "value": "3_The_Circuit_Playground",
+         "text": "3. The Circuit Playground"
+        },
+        {
+         "value": "4_Input_Unplugged",
+         "text": "4. Input Unplugged"
+        },
+        {
+         "value": "5_Board_Events",
+         "text": "5. Board Events"
+        },
+        {
+         "value": "6_Getting_Properties",
+         "text": "6. Getting Properties"
+        },
+        {
+         "value": "7_Analog_Input",
+         "text": "7. Analog Input"
+        },
+        {
+         "value": "8_The_Program_Design_Process",
+         "text": "8. The Program Design Process"
+        },
+        {
+         "value": "9_Project:_Make_a_Game",
+         "text": "9. Project: Make a Game"
+        },
+        {
+         "value": "10_Arrays_and_Color_LEDs",
+         "text": "10. Arrays and Color LEDs"
+        },
+        {
+         "value": "11_Making_Music",
+         "text": "11. Making Music"
+        },
+        {
+         "value": "12_Arrays_and_For_Loops",
+         "text": "12. Arrays and For Loops"
+        },
+        {
+         "value": "13_Accelerometer",
+         "text": "13. Accelerometer"
+        },
+        {
+         "value": "14_Functions_with_Parameters",
+         "text": "14. Functions with Parameters"
+        },
+        {
+         "value": "15_Circuits_and_Physical_Prototypes",
+         "text": "15. Circuits and Physical Prototypes"
+        },
+        {
+         "value": "16_Project:_Prototype_an_Innovation",
+         "text": "16. Project: Prototype an Innovation"
+        },
+        {
+         "value": "17_Post-Project_Test",
+         "text": "17. Post-Project Test"
+        },
+        {
+         "value": "18_CS_Discoveries_Post_Course_survey",
+         "text": "18. CS Discoveries Post Course survey"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "comment",
+     "name": "questions_coming_in",
+     "title": " What questions are on your mind leading into this workshop? What topics do you hope to discuss during the workshop?"
+    },
+    {
+     "type": "radiogroup",
+     "name": "completed_async",
+     "visibleIf": "{is_virtual} = 'true'",
+     "title": "Have you completed the asynchronous work for this workshop?",
+     "choices": [
+      {
+       "value": "yes",
+       "text": "Yes"
+      },
+      {
+       "value": "no",
+       "text": "No"
+      },
+      {
+       "value": "not_yet_but_will",
+       "text": "Not yet, but I wil!"
+      },
+      {
+       "value": "not_sure",
+       "text": "What asynchronous work?"
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "name": "csd_plans",
+     "elements": [
+      {
+       "type": "radiogroup",
+       "name": "course_length",
+       "title": "Currently, my plan is to teach CS Discoveries as...",
+       "choices": [
+        {
+         "value": "full",
+         "text": "A full year course (units 1-6 over a full academic year)"
+        },
+        {
+         "value": "half",
+         "text": "A semester course (some number of units over a semester)"
+        },
+        {
+         "value": "quarter_or_less",
+         "text": "A quarter or less (a few units)"
+        }
+       ],
+       "hasOther": true
+      },
+      {
+       "type": "checkbox",
+       "name": "csd_which_units",
+       "title": "Currently, my plan is to teach the following units as part of my course.",
+       "description": "Check all that apply.",
+       "choices": [
+        {
+         "value": "unit_1",
+         "text": "Unit 1 - Problem Solving"
+        },
+        {
+         "value": "unit_2",
+         "text": "Unit 2 - Web Development"
+        },
+        {
+         "value": "unit_3",
+         "text": "Unit 3 - Interactive Animations and Games"
+        },
+        {
+         "value": "unit_4",
+         "text": "Unit 4 - The Design Process"
+        },
+        {
+         "value": "unit_5",
+         "text": "Unit 5 - Data and Society"
+        },
+        {
+         "value": "unit_6",
+         "text": "Unit 6 - Physical Computing"
+        },
+        {
+         "value": "not_sure",
+         "text": "Unsure / on the fence about some units"
+        },
+        {
+         "value": "other",
+         "text": "Other course content (not from Code.org)"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{workshop_course} = 'CS Discoveries'",
+     "title": "Your plans for teaching CS Discoveries",
+     "description": "We recognize that plans change all the time. We're interested in knowing, at this point in time, what your plans are for teaching CS Discoveries.  "
+    },
+    {
+     "type": "radiogroup",
+     "name": "teaching_environment",
+     "title": " During the next month, what is the primary teaching environment in which you expect to engage with this curriculum?",
+     "choices": [
+      {
+       "value": "in_person_normal",
+       "text": "In-person with no restrictions"
+      },
+      {
+       "value": "in_person_socially_distant",
+       "text": "In-person in a socially distanced classroom"
+      },
+      {
+       "value": "hybrid",
+       "text": "Hybrid: A mix of in-person and remote"
+      },
+      {
+       "value": "virtual_synchronous",
+       "text": "Completely remote WITH synchronous meetings "
+      },
+      {
+       "value": "virtual_asynchronous",
+       "text": "Completely remote WITHOUT synchronous meetings"
+      },
+      {
+       "value": "unsure",
+       "text": "Unsure"
+      }
+     ],
+     "hasOther": true
+    },
+    {
+     "type": "radiogroup",
+     "name": "same_teaching_evironment_as_last_time",
+     "title": " Is that teaching environment the same in which you have been teaching since your last Code.org workshop? ",
+     "choices": [
+      {
+       "value": "yes",
+       "text": "Yes"
+      },
+      {
+       "value": "no",
+       "text": "No"
+      }
+     ],
+     "hasOther": true
+    },
+    {
+     "type": "comment",
+     "name": "other_info_teaching_env",
+     "title": "Is there any other information you would like to share about your teaching environment that can help us understand your situation?"
+    },
+    {
+     "type": "html",
+     "name": "thank_you",
+     "html": "<h2>Thank You</h2>\n<p>We're looking forward to seeing you at the workshop!</p>"
+    }
+   ]
+  }
+ ]
+}
