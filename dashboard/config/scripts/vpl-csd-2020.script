@@ -40,3 +40,21 @@ level 'VPL - CSD U3 collisions car intro_2020', progression: 'Conclusions and Co
 level 'VPL - CSD U3 game intro_2018_2019_pilot_2020', progression: 'Conclusions and Connections (~ 20 mins)'
 level 'VPL - CSD - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~ 10 mins)'
 
+lesson 'Module 3', display_name: 'Module 3'
+level 'VirtualPLComingSoon-CSD', progression: 'Overview'
+
+lesson 'Module 4', display_name: 'Module 4'
+level 'VirtualPLComingSoon-CSD', progression: 'Overview'
+
+lesson 'Module 5', display_name: 'Module 5'
+level 'VirtualPLComingSoon-CSD', progression: 'Overview'
+
+lesson 'Module 6', display_name: 'Module 6'
+level 'VirtualPLComingSoon-CSD', progression: 'Overview'
+
+lesson 'Module 7', display_name: 'Module 7'
+level 'VirtualPLComingSoon-CSD', progression: 'Overview'
+
+lesson 'Module 8', display_name: 'Module 8'
+level 'VirtualPLComingSoon-CSD', progression: 'Overview'
+
