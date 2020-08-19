@@ -2177,6 +2177,33 @@ endvariants
     assert_equal 'required', script.lessons[0].lesson_group.key
   end
 
+  test 'can add description and big questions for lesson group' do
+    l = create :level
+    dsl = <<-SCRIPT
+      lesson_group 'lg-1', display_name: 'Lesson Group'
+      lesson_group_description 'This is a description'
+      lesson_group_question 'What is the first question?'
+      lesson_group_question 'What is the second question?'
+      lesson 'Lesson1', display_name: 'Lesson 1'
+      level '#{l.name}'
+
+      lesson_group 'lg-2', display_name: 'Lesson Group 2'
+      lesson_group_description 'Second Description'
+      lesson_group_question 'Hi?'
+      lesson_group_question 'Hello?'
+      lesson 'Lesson2', display_name: 'Lesson 2'
+      level '#{l.name}'
+    SCRIPT
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+    )
+    assert_equal 'This is a description', script.lesson_groups[0].description
+    assert_equal ['What is the first question?', 'What is the second question?'], script.lesson_groups[0].big_questions
+    assert_equal 'Second Description', script.lesson_groups[1].description
+    assert_equal ['Hi?', 'Hello?'], script.lesson_groups[1].big_questions
+  end
+
   test 'can change the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
@@ -2385,6 +2412,36 @@ endvariants
     actual_levels = script.all_descendant_levels
     assert_equal expected_levels.compact.map(&:name), actual_levels.compact.map(&:name)
     assert_equal expected_levels, actual_levels
+  end
+
+  test 'accessing lessons through lesson groups is same as directly from script' do
+    l1 = create :level
+    l2 = create :level
+    l3 = create :level
+    l4 = create :level
+    dsl = <<-SCRIPT
+      lesson_group 'content', display_name: 'Content'
+      lesson 'Lesson1', display_name: 'Lesson1'
+      level '#{l1.name}'
+      lesson 'Lesson2', display_name: 'Lesson2'
+      level '#{l2.name}'
+      level '#{l3.name}'
+      lesson_group 'content2', display_name: 'Content'
+      lesson 'Lesson3', display_name: 'Lesson3'
+      level '#{l4.name}'
+    SCRIPT
+
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+    )
+
+    assert_equal script.lesson_groups[0].lessons[0], script.lessons[0]
+    assert_equal script.lesson_groups[0].lessons[0].absolute_position, 1
+    assert_equal script.lesson_groups[0].lessons[1], script.lessons[1]
+    assert_equal script.lesson_groups[0].lessons[1].absolute_position, 2
+    assert_equal script.lesson_groups[1].lessons[0], script.lessons[2]
+    assert_equal script.lesson_groups[1].lessons[0].absolute_position, 3
   end
 
   private
