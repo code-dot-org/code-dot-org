@@ -27,6 +27,7 @@ const defaultProps = {
   scriptNames: ['CSP Unit 1', 'CSP Unit 2'],
   teacherResources: [],
   hasVerifiedResources: false,
+  hasNumberedUnits: false,
   courseFamilies: ['CSP', 'CSD', 'CSF'],
   versionYearOptions: ['2017', '2018', '2019']
 };
