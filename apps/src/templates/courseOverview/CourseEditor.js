@@ -5,6 +5,9 @@ import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import color from '@cdo/apps/util/color';
+import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
 
 const styles = {
   input: {
@@ -20,6 +23,12 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
   }
 };
 
@@ -27,6 +36,7 @@ export default class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    versionTitle: PropTypes.string,
     familyName: PropTypes.string,
     versionYear: PropTypes.string,
     visible: PropTypes.bool.isRequired,
@@ -43,15 +53,31 @@ export default class CourseEditor extends Component {
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      descriptionStudent: this.props.descriptionStudent,
+      descriptionTeacher: this.props.descriptionTeacher
+    };
+  }
+
+  handleTeacherDescriptionChange = event => {
+    this.setState({descriptionTeacher: event.target.value});
+  };
+
+  handleStudentDescriptionChange = event => {
+    this.setState({descriptionStudent: event.target.value});
+  };
+
   render() {
     const {
       name,
       title,
+      versionTitle,
       familyName,
       versionYear,
       descriptionShort,
-      descriptionStudent,
-      descriptionTeacher,
       scriptsInCourse,
       scriptNames,
       teacherResources,
@@ -80,7 +106,10 @@ export default class CourseEditor extends Component {
           />
         </label>
         <label>
-          Short Description (used in course cards on homepage)
+          Short Description
+          <HelpTip>
+            <p>used in course cards on homepage</p>
+          </HelpTip>
           <textarea
             name="description_short"
             defaultValue={descriptionShort}
@@ -92,34 +121,57 @@ export default class CourseEditor extends Component {
           Student Description
           <textarea
             name="description_student"
-            defaultValue={descriptionStudent}
+            defaultValue={this.state.descriptionStudent}
             rows={5}
             style={styles.input}
+            onChange={this.handleStudentDescriptionChange}
           />
+          <MarkdownPreview markdown={this.state.descriptionStudent} />
         </label>
         <label>
           Teacher Description
           <textarea
             name="description_teacher"
-            defaultValue={descriptionTeacher}
+            defaultValue={this.state.descriptionTeacher}
             rows={5}
+            style={styles.input}
+            onChange={this.handleTeacherDescriptionChange}
+          />
+          <MarkdownPreview markdown={this.state.descriptionTeacher} />
+        </label>
+        <label>
+          Version Year Display Name
+          <HelpTip>
+            <p>
+              Controls the text which represents this course in the "version
+              year dropdown" in the top right of the course overview page. This
+              will only be visible if a version year is selected below.
+            </p>
+          </HelpTip>
+          <input
+            type="text"
+            defaultValue={versionTitle}
+            placeholder="e.g. '19-'20"
+            name="version_title"
             style={styles.input}
           />
         </label>
         <h2>Basic settings</h2>
         <label>
           Verified Resources
+          <HelpTip>
+            <p>
+              Check if this course has resources (such as lockable lessons and
+              answer keys) for verified teachers, and we want to notify
+              non-verified teachers that this is the case.
+            </p>
+          </HelpTip>
           <input
             name="has_verified_resources"
             type="checkbox"
             defaultChecked={this.props.hasVerifiedResources}
             style={styles.checkbox}
           />
-          <p>
-            Check if this course has resources (such as lockable lessons and
-            answer keys) for verified teachers, and we want to notify
-            non-verified teachers that this is the case.
-          </p>
         </label>
         <h2>Publishing settings</h2>
         <label>
