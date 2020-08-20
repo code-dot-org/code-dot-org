@@ -40,7 +40,7 @@ class CourseVersion < ApplicationRecord
   #
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
   # Therefore, it does not contain "is_course true". so this method will not create a CourseVersion object for it.
-  def self.add_course_version(content_root)
+  def self.add_course_version(course_offering, content_root)
     # If content_root is not designated as the content root of a CourseVersion (in its .script or .course file),
     # delete its associated CourseVersion object if it exists. This handles the case where a .script or .course file
     # had "is_course true" at one point, and then later "is_course true" is removed.
@@ -52,15 +52,11 @@ class CourseVersion < ApplicationRecord
       return nil
     end
 
-    raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
     raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
 
-    # TODO: Once the Course model is added, change this to just be version_year, since then the
-    # unique index will be on (course_id, key).
-    key = "#{content_root.family_name}-#{content_root.version_year}"
-
     course_version = CourseVersion.find_or_create_by(
-      key: key,
+      course_offering: course_offering,
+      key: content_root.version_year,
       display_name: content_root.version_year,
       content_root: content_root,
     )
