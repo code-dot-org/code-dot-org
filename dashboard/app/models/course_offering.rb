@@ -23,7 +23,9 @@ class CourseOffering < ApplicationRecord
     # had "is_course true" at one point, and then later "is_course true" is removed.
     unless content_root.is_course?
       if content_root.course_version
+        existing_offering = content_root.course_version.course_offering
         content_root.course_version.destroy
+        existing_offering.destroy if existing_offering.course_versions.empty?
         content_root.reload
       end
       return nil
