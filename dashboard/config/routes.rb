@@ -532,6 +532,14 @@ Dashboard::Application.routes.draw do
     post 'post_course_survey/submit', to: 'post_course_survey#submit'
     get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
 
+    # Academic year workshops
+    get '/:workshop_subject/pre/(*agenda)', to: 'workshop_daily_survey#new_ayw_pre',
+        constraints: {agenda: /module\/[0-9_]+/}
+    get '/:workshop_subject/day/:day', to: 'workshop_daily_survey#new_ayw_daily',
+        constraints: {day: /\d/}
+    get '/:workshop_subject/post/(*agenda)', to: 'workshop_daily_survey#new_ayw_post',
+        constraints: {agenda: /(module\/[0-9_]+)|(in_person)/}
+
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
