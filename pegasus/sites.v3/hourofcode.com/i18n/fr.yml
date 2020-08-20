@@ -186,8 +186,10 @@ fr:
   hourofcode_homepage_hoc2018_header_line2: 'Âge : de 4 à 104 ans.'
   hoc2018_tutorial_mchoc_description: Utilise des blocs de code pour accompagner Alex
     ou Steve dans leur aventures au sein de cet univers Minecraft.
-  codeorg_homepage_hoc2019_dance_heading: Essayez la nouvelle <span class="highlight-word">Fête&nbsp;dansante!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Essaies la nouvelle <span class="highlight-word">Soirée&nbsp;Dansante
+    !</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Essaies la nouvelle **Soirée&nbsp;Dansante
+    !**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -485,8 +487,9 @@ fr:
   signup_host_an_hour: Acceuillez une Heure
   signup_match_volunteer: Aidez-moi à trouver un ingénieur local afin d'inspirer mes
     élèves
-  signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
-    local opportunities, or other computer science news?
+  signup_email_preference_opt_in: Pouvons-nous vous envoyer des e-mails d’information
+    sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
+    le domaine informatique ?
   signup_email_preference_privacy: "(Consulter notre politique de confidentialité)"
   signup_email_preference_yes: Oui
   signup_email_preference_no: Non
@@ -2826,9 +2829,9 @@ fr:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
+  tutorial_dance2019_longdescription: Code une Soirée Dansante à partager avec tes
+    amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, et 34 autres !
   tutorial_danceparty_longdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !
@@ -9587,3 +9590,4 @@ fr:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

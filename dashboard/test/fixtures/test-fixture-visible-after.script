@@ -1,2 +1,2 @@
-lesson 'lesson 1', visible_after: '2020-04-01 08:00:00 -0700'
+lesson 'lesson 1', display_name: 'lesson 1', visible_after: '2020-04-01 08:00:00 -0700'
 level 'Level 1'

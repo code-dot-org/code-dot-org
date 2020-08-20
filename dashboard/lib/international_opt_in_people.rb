@@ -10,6 +10,7 @@ module InternationalOptInPeople
     "Rodrigo Fabrega",
     "Weena Naowaprateep",
     "Beth Zigmont & Hana Zimmerman Karl",
+    "María Cristina Charters",
     I18n.t('pd.international_opt_in.facilitator_not_listed'),
     I18n.t('pd.international_opt_in.facilitator_not_applicable')
   ].freeze

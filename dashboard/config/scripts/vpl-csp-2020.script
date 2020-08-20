@@ -1,7 +1,8 @@
 hideable_lessons true
 student_detail_progress_view true
+pilot_experiment '20-21-virtual-AYW-CSP'
 
-lesson 'Module 1'
+lesson 'Module 1', display_name: 'Module 1'
 level 'CSP-PL AYWS1 Workshop Overview', progression: 'Module 1 Overview (~5 minutes)'
 level 'CSP Module 1 Unit 3 Context', progression: 'Wrapping up Unit 3 (~20 minutes)'
 level 'CSP - Unit 4 tasks overview', progression: 'Unit 4 Overview (~30 minutes)'
@@ -11,4 +12,42 @@ level 'CSP Module 1 Unit 4 Reflection', progression: 'Unit 4 Overview (~30 minut
 level 'CSP Module 1 EIPM Reflection', progression: 'Introducing EIPM (~25 minutes)'
 level 'CSP Module 1 EIPM goes virtual', progression: 'Introducing EIPM (~25 minutes)'
 level 'CSP - Module 1 Wrap Up', progression: 'Module 1 Asynchronous Wrap Up (~10 minutes)'
+
+lesson 'Module 2', display_name: 'Module 2'
+level 'CSP-PL AYWS2 Workshop Overview', progression: 'Module 2 Overview (~5 minutes)'
+level 'CSP - Variables Practice overview', progression: 'Variables Practice (~35 minutes)'
+level 'CSP-PL - U4 L03 Variables numbers practice 1', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables numbers practice 4', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables operator practice 1', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables operator practice 3', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables operator practice 2', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables operator practice 5', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL8 - U4 L03 Variables operator practice 6', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL9 - U4 L03 Variable Scope: Local vs. Global', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - Practice Reflection', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - Variables Make overview', progression: 'Variables Make (~30 minutes)'
+level 'CSP - PL U4 L04 Variables Make Project_2020', progression: 'Variables Make (~30 minutes)'
+level 'CSP - PL - U4 L04 Variables Make Project Submit_2020', progression: 'Variables Make (~30 minutes)'
+level 'CSP - PL - Make Reflection', progression: 'Variables Make (~30 minutes)'
+level 'CSP-PL - Unit 4 Wrap-up', progression: 'Collaborative and Independent Work (~10 minutes)'
+level 'CSP - PL - Collaboration Reflection', progression: 'Collaborative and Independent Work (~10 minutes)'
+level 'CSP - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~10 minutes)'
+
+lesson 'Module 3', display_name: 'Module 3'
+level 'VirtualPLComingSoon', progression: 'Overview'
+
+lesson 'Module 4', display_name: 'Module 4'
+level 'VirtualPLComingSoon', progression: 'Overview'
+
+lesson 'Module 5', display_name: 'Module 5'
+level 'VirtualPLComingSoon', progression: 'Overview'
+
+lesson 'Module 6', display_name: 'Module 6'
+level 'VirtualPLComingSoon', progression: 'Overview'
+
+lesson 'Module 7', display_name: 'Module 7'
+level 'VirtualPLComingSoon', progression: 'Overview'
+
+lesson 'Module 8', display_name: 'Module 8'
+level 'VirtualPLComingSoon', progression: 'Overview'
 

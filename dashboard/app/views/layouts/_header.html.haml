@@ -72,9 +72,9 @@
       .header_left
         .header_logo
           - if current_user
-            = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
+            = link_to(image_tag('logo.svg'), '/home', {id: "logo_home_link"})
           - else
-            = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
+            = link_to(image_tag('logo.svg'), CDO.code_org_url, {id: "logo_home_link"})
 
       .header_middle{dir: locale_dir}
         - if should_show_progress || level
@@ -92,14 +92,6 @@
         = render file: Rails.root.join('..', 'shared', 'haml', 'help_button.haml'), locals: hamburger_options
         = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
   }
-
-- if request.path == "/home"
-  #header-banner{class: "header-banner-short", style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
-- elsif request.path == "/courses"
-  #header-banner.header-banner-courses{class: user_type ? "header-banner-short" : "", style: "background-image: url(\"/shared/images/banners/#{@header_banner_image_filename}.jpg\")"}
-
-- if ["/projects", "/projects/public", "/projects/libraries"].include? request.path
-  #header-banner.header-banner-short{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
 
 :ruby
   if should_show_progress

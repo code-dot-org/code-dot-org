@@ -12,6 +12,7 @@
 #  relative_position :integer          not null
 #  properties        :text(65535)
 #  lesson_group_id   :integer
+#  key               :string(255)
 #
 # Indexes
 #
@@ -47,7 +48,8 @@ class Lesson < ActiveRecord::Base
   # by a non-lockable lesson, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of :name, scope: :script_id
+  #validates_uniqueness_of :name, scope: :script_id TODO: Add this back after we have moved over to new key/name systems for lesson
+  validates_uniqueness_of :key, scope: :script_id
 
   include CodespanOnlyMarkdownHelper
 
@@ -55,15 +57,17 @@ class Lesson < ActiveRecord::Base
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
 
-      lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
+      lesson = script.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
-          name: raw_lesson[:name],
+          key: raw_lesson[:key],
           script: script
-        ) do |s|
-          s.relative_position = 0 # will be updated below, but cant be null
+        ) do |l|
+          l.name = "" # will be updated below, but cant be null
+          l.relative_position = 0 # will be updated below, but cant be null
         end
 
       lesson.assign_attributes(
+        name: raw_lesson[:name],
         absolute_position: (counters.lesson_position += 1),
         lesson_group: lesson_group,
         lockable: !!raw_lesson[:lockable],
@@ -147,7 +151,7 @@ class Lesson < ActiveRecord::Base
 
   def localized_name
     if script.lessons.many?
-      I18n.t "data.script.name.#{script.name}.lessons.#{name}.name"
+      I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
@@ -193,8 +197,8 @@ class Lesson < ActiveRecord::Base
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         levels: cached_levels.map {|l| l.summarize(false)},
-        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{name}.description_student", default: '')),
-        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{name}.description_teacher", default: '')),
+        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
+        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: display_as_unplugged
       }
 
@@ -234,7 +238,7 @@ class Lesson < ActiveRecord::Base
   def summarize_for_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
-    summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{name}.name")
+    summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{key}.name")
     summary.freeze
   end
 

@@ -1,0 +1,150 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "embed": "false",
+    "short_instructions": "When your pet gets to their toy, they get excited! Use the \"when touches\" block to detect when your pet gets to their toy.\r\n\r\nWhen that happens, use the \"remove behavior\" block to make them stop walking, and the \"add behavior\" block to make them have a dance party!",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "false",
+    "parent_level_id": 11967,
+    "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction addBehaviorWithArgument(sprite, behavior, target) {\r\n  addBehavior(sprite, behavior.bind(target), behavior.name);\r\n}\r\n\r\nfunction removeBehaviorSimple(sprite, behavior) {\r\n  removeBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction jitter(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.scale = 1 + (randomNumber(-1, 1) / 50);\r\n  }\r\n  behavior.name='jitter';\r\n  return behavior;\r\n}\r\nfunction wander(sprite) {\r\n  var behavior = function(sprite) {\r\n    if (!sprite.xoff) {\r\n      sprite.xoff = randomNumber(0, 1000);\r\n      sprite.yoff = randomNumber(0, 1000);\r\n    }\r\n    sprite.x = map(noise(sprite.xoff + World.frameCount / 100), 0, 1, 0, World.width);\r\n    sprite.y = map(noise(sprite.yoff + World.frameCount / 100), 0, 1, 0, World.height);\r\n  }\r\n  behavior.name='wander';\r\n  return behavior;\r\n}\r\n\r\nfunction moveTowards(sprite) {\r\n  var behavior = function (sprite) {\r\n    if (sprite.x < this.x) {\r\n      sprite.x += 2;\r\n    } else if (sprite.x > this.x) {\r\n      sprite.x -= 2;\r\n    }\r\n    \r\n    if (sprite.y < this.y) {\r\n      sprite.y += 2;\r\n    } else if (sprite.y > this.y) {\r\n      sprite.y -= 2;\r\n    }\r\n  }\r\n  behavior.name = \"moveTowards\"\r\n  return behavior;\r\n}\r\n\r\nfunction runUp(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveUp();\r\n  }\r\n  behavior.name = 'runUp';\r\n  return behavior;\r\n}\r\n\r\nfunction runDown(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveDown();\r\n  }\r\n  behavior.name = 'runDown';\r\n  return behavior;\r\n}\r\n\r\nfunction runLeft(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveLeft();\r\n  }\r\n  behavior.name = 'runLeft';\r\n  return behavior;\r\n}\r\n\r\nfunction runRight(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveRight();\r\n  }\r\n  behavior.name = 'runRight';\r\n  return behavior;\r\n}\r\n\r\nfunction danceParty(sprite) {\r\n  var behavior = function(sprite) {\r\n    if (World.frameCount % 10 === 0) {\r\n      sprite.rotation += randomNumber(-5, 5);\r\n    }\r\n    if (World.frameCount % 20 === 0) {\r\n      sprite.scale = 1 + (randomNumber(-1, 1) / 10);\r\n    }\r\n  }\r\n  behavior.name = 'danceParty';\r\n  return behavior;\r\n}\r\n",
+    "custom_blocks": "[\n  {\n    \"func\": \"addBehaviorWithArgument\",\n    \"blockText\": \"add behavior {BEHAVIOR} towards {TARGET} to {SPRITE}\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      },\n      {\n        \"name\": \"BEHAVIOR\",\n        \"type\": \"Behavior\"\n      },\n      {\n        \"name\": \"TARGET\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"moveTowards\",\n    \"blockText\": \"moveTowards\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"danceParty\",\n    \"blockText\": \"danceParty\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"jitter\",\n    \"blockText\": \"jitter\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"wander\",\n    \"blockText\": \"wander\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  }\n]\n",
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-27 21:38:57 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-27 21:42:52 +0000\",\"changed\":[],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-27 21:43:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:10:58 +0000\",\"changed\":[],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:11:55 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:13:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:15:53 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:16:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:17:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:18:07 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:29:09 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"custom_helper_library\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:29:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:30:57 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:31:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:32:22 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:33:52 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:37:21 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:38:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:40:58 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:43:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 18:44:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 19:08:03 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"custom_helper_library\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 19:08:19 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-03-28 19:25:28 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="sprite_variables_set" inline="false">
+              <title name="VAR">myPet</title>
+              <value name="VALUE">
+                <block type="gamelab_makeNewSprite" inline="true">
+                  <title name="ANIMATION">"dog"</title>
+                  <value name="X">
+                    <block type="math_number">
+                      <title name="NUM">300</title>
+                    </block>
+                  </value>
+                  <value name="Y">
+                    <block type="math_number">
+                      <title name="NUM">300</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="sprite_variables_set" inline="false">
+                  <title name="VAR">toy</title>
+                  <value name="VALUE">
+                    <block type="gamelab_makeNewSprite" inline="true">
+                      <title name="ANIMATION">"bone"</title>
+                      <value name="X">
+                        <block type="math_number">
+                          <title name="NUM">50</title>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="math_number">
+                          <title name="NUM">50</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorWithArgument" inline="true">
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_moveTowards"/>
+                      </value>
+                      <value name="TARGET">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">toy</title>
+                        </block>
+                      </value>
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">myPet</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_makeNewSprite" inline="true">
+          <title name="ANIMATION">"ball"</title>
+          <value name="X">
+            <block type="math_number">
+              <title name="NUM">20</title>
+            </block>
+          </value>
+          <value name="Y">
+            <block type="math_number">
+              <title name="NUM">20</title>
+            </block>
+          </value>
+        </block>
+        <block type="sprite_variables_get">
+          <title name="VAR">myPet</title>
+        </block>
+        <block type="sprite_variables_get">
+          <title name="VAR">toy</title>
+        </block>
+        <block type="sprite_variables_set" inline="false">
+          <title name="VAR">toy</title>
+        </block>
+        <block type="gamelab_whenTouching" inline="true"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

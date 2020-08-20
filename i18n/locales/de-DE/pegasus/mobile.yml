@@ -14,7 +14,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen</a>'
   csedweek_banner_teachers_text: "Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen"
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal genutzt</h3>"
-  try_hoc_num_served: "<h1>Veruche eine</h1><h2>Hour of Code</h2><h3>%{num} mal genutzt</h3>"
+  try_hoc_num_served: "<h1>Versuche eine</h1><h2>Hour of Code</h2><h3>%{num} die angeboten wird</h3>"
   try_hoc_num_served_markdown: |-
     # Veruche eine
 
@@ -209,12 +209,12 @@
   continue_learning_header: "￼Erweitern Sie Ihr Wissen"
   continue_learning_body: "Es gibt unzählige Optionen. Du kannst online lernen, an einer örtlichen Schule oder in einem Feriencamp."
   learn_code_studio: "Probieren Sie Code.org's Kurse"
-  learn_next_level: "Weiter zum nächsten Level"
+  learn_next_level: "Weiter zum nächsten Code Studio Kurs"
   learn_online: "Probiere andere Kurse online"
   learn_classes: "Finde Kurse in deiner Nähe."
   learn_back_to_minecraft: "Lerne mehr mit Minecraft"
   hoc_is_here: 'Die #HourOfCode kommt wieder: Dezember 5-11. https://youtu.be/KsOIlDT145A.'
-  just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - Finde mehr heraus! @codeorg'
+  just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - schau mal vorbei! @codeorg'
   just_did_course1: "Ich habe gerade Kurs 1 beendet - schau dir das an! @codeorg"
   just_did_course2: "Ich habe gerade Kurs 2 beendet - schau dir das an! @codeorg"
   just_did_course3: "Ich habe gerade Kurs 3 beendet - schau dir das an! @codeorg"
@@ -252,7 +252,7 @@
   stats_student_markdown: '"Ich wusste, dass dies eine **einmalige** Chance war." - Mariana Alzate, 5. Klasse'
   stats_michael_markdown: '"Ich habe meine Schüler **noch nie** so begeistert beim Lernen gesehen." - Frank Martinez, Lehrer'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> kennenlernen"
-  studiobar_title_nolink: "Entdecke das Code Studio"
+  studiobar_title_nolink: "Entdecke Code.org-Kurse"
   studiobar_elementary_title: "Grundkurse"
   studiobar_elementary_body: "Unsere drei neuen Kurse für Grundschüler"
   studiobar_dance_title: "Tanzparty"
@@ -1450,6 +1450,8 @@
   header_teacher_community: "Lehrer Community"
   header_help_support: 'Hilfe und Support '
   header_report_bug: "Einen Fehler melden"
+  header_report_abuse: "Missbrauch melden"
+  header_legal: "Privatsphäre und Rechtliches"
   header_legal_privacy: "Datenschutzerklärung"
   header_legal_tos: "AGBs"
   header_tutorials: "Einführungen"
@@ -1663,3 +1665,4 @@
   homepage_slot_text_link_code_break: "Mache eine Programmierpause"
   homepage_slot_text_link_do_hoc: "Probiere die Hour of Code aus (deutsch \"Stunde des Codes\")"
   homepage_slot_text_link_express_course: "Versuche einen Express-Kurs"
+  page_not_available_button: "Zurück zur Homepage"

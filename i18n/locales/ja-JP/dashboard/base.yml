@@ -330,6 +330,7 @@ ja:
       algebra_game: '代数'
       applab: 'アプリ ラボ'
       artist: 'アーティスト'
+      artist_k1: "アーティスト (就学前)\n"
       basketball: 'バスケットボール'
       bounce: 'バウンド'
       dance: 'ダンスパーティー'
@@ -342,8 +343,11 @@ ja:
       infinity: 'インフィニティ'
       makerlab: "Makerツールキット\n"
       minecraft_adventurer: 'Minecraftアドベンチャー'
+      minecraft_aquatic: "マインクラフト アクアティック\n"
       minecraft_designer: 'マインクラフト'
+      minecraft_hero: "マインクラフト ヒーロー\n"
       playlab: 'プレイラボ'
+      playlab_k1: "プレイラボ (就学前)\n"
       sports: 'スポーツ'
       starwars: 'スター・ウォーズ'
       starwarsblocks: 'スター ・ ウォーズ (ブロック)'
@@ -421,6 +425,7 @@ ja:
     parent_guardian_email_label: "親/保護者Eメール"
     none: "設定なし"
     only_one_parent_email_supported_warning: "注：現在、学生アカウント1件につきサポートできるのは1名の親/保護者のメールアドレスのみです。"
+    encrypted: "暗号化済み\n"
   user_level:
     completed: '完了'
     tried: '試してみました'

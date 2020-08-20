@@ -1,0 +1,3280 @@
+{
+  "ar-SA": {
+    "data": {
+      "function_definitions": {
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "تفاصيل"
+          },
+          "draw eyebrow": {
+            "name": "ارسم حاجب العين"
+          },
+          "draw pupil": {
+            "name": "ارسم التلميذ"
+          }
+        },
+        "2-3 Artist 3.4": {
+          "draw a circle": {
+            "name": "رسم دائرة"
+          },
+          "draw a car": {
+            "name": "ارسم سيارة"
+          }
+        },
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "name": "ارسم_مستطيل",
+            "parameters": {
+              "width": "العرض",
+              "height": "الارتفاع"
+            }
+          }
+        },
+        "2-3 Artist Debugging 10": {
+          "draw square": {
+            "name": "ارسم مربع",
+            "parameters": {
+              "width": "العرض",
+              "height": "الارتفاع"
+            }
+          },
+          "jump to controller top left": {
+            "name": "الانتقال إلى وحدة التحكم لأعلى اليسار"
+          },
+          "jump to middle": {
+            "name": "اقفز إلى الوسط"
+          },
+          "draw a circle": {
+            "name": "رسم دائرة"
+          },
+          "draw a button": {
+            "name": "ارسم زر"
+          },
+          "draw cord": {
+            "name": "ارسم حبل"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw left leg": {
+            "name": "ارسم الرجل اليسرى"
+          },
+          "draw right leg": {
+            "name": "ارسم الرجل اليمنى"
+          },
+          "draw body and arms": {
+            "name": "ارسم جسم وذراعين"
+          },
+          "draw a head": {
+            "name": "ارسم رأس"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw right leg": {
+            "name": "ارسم الرجل اليمنى"
+          },
+          "draw sitting stick figure": {
+            "name": "ارسم شكل عصا جالسة"
+          },
+          "draw head": {
+            "name": "ارسم رأس"
+          },
+          "draw arms": {
+            "name": "ارسم ذراعين"
+          },
+          "jump to neck": {
+            "name": "اقفز إلى الرقبة"
+          },
+          "draw left leg": {
+            "name": "ارسم الرجل اليسرى"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw O": {
+            "name": "ارسم حرف O"
+          },
+          "draw D": {
+            "name": "ارسم حرف D"
+          },
+          "draw E": {
+            "name": "ارسم حرف E"
+          }
+        },
+        "2-3 Artist Functions 10": {
+          "big gear": {
+            "name": "معدات كبيرة"
+          },
+          "small gear": {
+            "name": "معدات صغيرة"
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "رسم شكل سداسي"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "رسم شكل سداسي"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "رسم زهرة"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "رسم ندفة الثلج"
+          }
+        },
+        "2-3 Bee Functions 1": {
+          "get 2 nectar": {
+            "name": "احصل على ٢ من الرحيق"
+          }
+        },
+        "2-3 Bee Functions 10": {
+          "collect purple nectar": {
+            "name": "اجمع الرحيق الأرجواني"
+          }
+        },
+        "2-3 Bee Functions 2": {
+          "get 5": {
+            "name": "احصل على ٥"
+          }
+        },
+        "2-3 Bee Functions 4": {
+          "move and get nectar": {
+            "name": "انتقل واحصل على رحيق"
+          }
+        },
+        "2-3 Bee Functions 5": {
+          "move and get 4": {
+            "name": "تحرك واحصل على ٤"
+          }
+        },
+        "2-3 Bee Functions 6": {
+          "move and get 4": {
+            "name": "تحرك واحصل على ٤"
+          }
+        },
+        "2-3 Bee Functions 8": {
+          "get 7 nectar make 7 honey": {
+            "name": "احصل على ٧ من الرحيق واصنع ٧ من العسل"
+          }
+        },
+        "2-3 Bee Functions 9": {
+          "get 7 make 7": {
+            "name": "احصل على ٧ اصنع ٧"
+          }
+        },
+        "2-3 Bee Functions Assessment 1": {
+          "get 7": {
+            "name": "احصل على ٧"
+          }
+        },
+        "2-3 Bee Functions Assessment 2": {
+          "move and get 3": {
+            "name": "تحرك واحصل على ٣"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "رسم زهرة"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "رسم شجرة"
+          }
+        },
+        "4-5 Artist 7": {
+          "draw triangle": {
+            "name": "ارسم مثلث"
+          },
+          "draw a circle": {
+            "name": "رسم دائرة"
+          },
+          "draw a car": {
+            "name": "ارسم سيارة"
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "ارسم دائرة"
+          },
+          "draw goal": {
+            "name": "ارسم هدفاً"
+          }
+        },
+        "4-5 Bee Conditionals 7": {
+          "check purple flower": {
+            "name": "تحقق من الزهور الأرجوانية"
+          }
+        },
+        "4-5 Bee Conditionals 8": {
+          "check flower make honey": {
+            "name": "تحقق من الزهرة واصنع العسل"
+          }
+        },
+        "4-5 Bee Conditionals Assessment 1": {
+          "get nectar or make honey": {
+            "name": "احصل على الرحيق أو اصنع العسل"
+          }
+        },
+        "4-5 Bee Debugging 7": {
+          "make 3 honey": {
+            "name": "اصنع ٣ من العسل"
+          }
+        },
+        "4-5 Bee Debugging 8": {
+          "get 5 nectar": {
+            "name": "احصل على ٥ من الرحيق"
+          }
+        },
+        "4-5 Bee Debugging 9": {
+          "make all honey": {
+            "name": "اصنع كل العسل"
+          }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "قد فاز أحد باللعبة"
+          }
+        },
+        "Choose Your Own Adventure": {
+          "witch ending": {
+            "name": "نهاية الساحرة"
+          },
+          "story": {
+            "name": "قصة"
+          },
+          "starting path": {
+            "name": "طريق البداية"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          }
+        },
+        "Course 4 Bee Params 1": {
+          "get 3 nectar": {
+            "name": "احصل على ٣ من الرحيق"
+          }
+        },
+        "Course 4 Bee Params 2": {
+          "get 3 nectar": {
+            "name": "احصل على ٣ من الرحيق"
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "name": "احصل على ٣ من الرحيق"
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "name": "احصل على ٣ من الرحيق"
+          }
+        },
+        "Course 4 Bee Params 5": {
+          "get 5 nectar": {
+            "name": "احصل على ٥ من الرحيق"
+          }
+        },
+        "Course 4 Bee Params 6": {
+          "get 5 nectar": {
+            "name": "احصل على ٥ من الرحيق"
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "name": "احصل على العديد من الرحيق"
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "name": "احصل على الرحيق اصنع العسل",
+            "parameters": {
+              "honey": "العسل"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "قفز"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "level_up": {
+            "name": "مستوى_أعلى"
+          },
+          "score_points": {
+            "name": "سجل_نقاط",
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "قفز"
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "name": "قفز",
+            "parameters": {
+              "height": "الارتفاع",
+              "actor": "الممثل"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 4": {
+          "patrol": {
+            "name": "دورية"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "name": "دورية",
+            "parameters": {
+              "actor": "الممثل"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "name": "دورية",
+            "parameters": {
+              "actor": "الممثل"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "name": "دورية",
+            "parameters": {
+              "actor": "الممثل",
+              "speed": "السرعة"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "name": "دورية",
+            "parameters": {
+              "actor": "الممثل",
+              "speed": "السرعة"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "name": "سجل_نقاط",
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "تعيين النتيجة"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "تعيين النتيجة"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "رسم شكل سداسي"
+          },
+          "draw a line of hexagons": {
+            "name": "ارسم خط من الأشكال السداسية"
+          },
+          "shift down/forward": {
+            "name": "الانتقال إلى الأسفل/إلى الأمام"
+          },
+          "shift down/backward": {
+            "name": "الانتقال إلى الأسفل/إلى الخلف"
+          },
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": "الحصول على الرحيق",
+            "parameters": {
+              "counter": "العداد"
+            }
+          }
+        },
+        "Course 4 SCF 2": {
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          },
+          "draw octagons": {
+            "name": "ارسم أشكال ثمانية"
+          },
+          "draw an octagon": {
+            "name": "ارسم شكل ثماني"
+          },
+          "shift down": {
+            "name": "إزاحة إلى الأسفل"
+          }
+        },
+        "Course 4 SCF 3": {
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw an octagon": {
+            "name": "ارسم شكل ثماني",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "Course E: Play Lab Project": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "Find the Wizard": {
+          "check guess": {
+            "name": "تحقق من تخمين"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "FoodFight": {
+          "level_up": {
+            "name": "مستوى_أعلى"
+          },
+          "score_points": {
+            "name": "سجل_نقاط",
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "ابن جسراً"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "ابن جسراً"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "ابن جسراً"
+          }
+        },
+        "Geometric Sun": {
+          "draw a door": {
+            "name": "ارسم باب"
+          },
+          "draw grass": {
+            "name": "ارسم عشب"
+          },
+          "draw windows": {
+            "name": "ارسم نوافذ"
+          },
+          "rectangle": {
+            "name": "مستطيل"
+          },
+          "sun": {
+            "name": "شمس"
+          },
+          "diamond": {
+            "name": "ماسة"
+          },
+          "window": {
+            "name": "نافذة"
+          },
+          "draw a house": {
+            "name": "رسم منزل"
+          },
+          "triangle": {
+            "name": "مثلث"
+          },
+          "square": {
+            "name": "مربع"
+          }
+        },
+        "Geometric Sun_2018": {
+          "draw a door": {
+            "name": "ارسم باب"
+          },
+          "draw grass": {
+            "name": "ارسم عشب"
+          },
+          "draw windows": {
+            "name": "ارسم نوافذ"
+          },
+          "rectangle": {
+            "name": "مستطيل"
+          },
+          "sun": {
+            "name": "شمس"
+          },
+          "diamond": {
+            "name": "ماسة"
+          },
+          "window": {
+            "name": "نافذة"
+          },
+          "draw a house": {
+            "name": "رسم منزل"
+          },
+          "triangle": {
+            "name": "مثلث"
+          },
+          "square": {
+            "name": "مربع"
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "تحقق من تخمين"
+          }
+        },
+        "InspirationalArtwork": {
+          "n-sided shape": {
+            "name": "شكل بحواف -n",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a loop": {
+            "name": "ارسم حلقة",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw spiral circle": {
+            "name": "قم برسم دائرة حلزونية",
+            "parameters": {
+              "size": "الحجم"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "name": "ارسم حلقة",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "n-sided shape": {
+            "name": "شكل بحواف -n"
+          },
+          "draw spiral circle": {
+            "name": "قم برسم دائرة حلزونية",
+            "parameters": {
+              "size": "الحجم"
+            }
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "طريق سالك"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "طريق سالك"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "طريق سالك"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "أصلح المسار الطويل"
+          },
+          "fix short path": {
+            "name": "أصلح المسار القصير"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "أصلح المسار الطويل"
+          },
+          "fix short path": {
+            "name": "أصلح المسار القصير"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "أصلح المسار الطويل"
+          },
+          "fix short path": {
+            "name": "أصلح المسار القصير"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "ابن جسراً قصير"
+          },
+          "build long bridge": {
+            "name": "ابن جسراً طويل"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "ابن جسراً قصير"
+          },
+          "build long bridge": {
+            "name": "ابن جسراً طويل"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "ابن جسراً قصير"
+          },
+          "build long bridge": {
+            "name": "ابن جسراً طويل"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "الدالة 1"
+          },
+          "function 2": {
+            "name": "الدالة 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "الدالة 1"
+          },
+          "function 2": {
+            "name": "الدالة 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "الدالة 1"
+          },
+          "function 2": {
+            "name": "الدالة 2"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw a square 40": {
+            "name": "ارسم مربع ٤٠"
+          },
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "رسم مثلث"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "رسم مربع"
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "رسم مربع"
+          },
+          "Draw a triangle": {
+            "name": "ارسم مثلث"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw a hexagon": {
+            "name": "رسم شكل سداسي",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "draw a polygon": {
+            "name": "ارسم مضلع",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "do something": {
+            "name": "القيام بشيء ما",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "name": "ارسم مضلع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "name": "ارسم مضلع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "name": "ارسم مضلع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "name": "قم برسم حافة حلزونية",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a star": {
+            "name": "رسم نجمة",
+            "parameters": {
+              "points": "نقاط",
+              "length": "الطول"
+            }
+          },
+          "draw a circle": {
+            "name": "رسم دائرة"
+          },
+          "draw a pinwheel": {
+            "name": "ارسم دولاب الهواء",
+            "parameters": {
+              "length": "الطول",
+              "repeat": "كرر"
+            }
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a shape": {
+            "name": "ارسم شكل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a house": {
+            "name": "رسم منزل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "description": "رسم مثلث"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "رسم مثلث"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "name": "ارسم مثلث بطول",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a hexagon": {
+            "name": "رسم شكل سداسي",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a sqaure": {
+            "name": "ارسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "name": "ارسم مثلث بطول",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "name": "ارسم مضلع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "name": "قفز",
+            "parameters": {
+              "height": "الارتفاع",
+              "actor": "الممثل"
+            }
+          },
+          "patrol": {
+            "name": "دورية",
+            "parameters": {
+              "actor": "الممثل",
+              "speed": "السرعة"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a star": {
+            "name": "رسم نجمة",
+            "parameters": {
+              "points": "نقاط",
+              "length": "الطول"
+            }
+          },
+          "draw a circle": {
+            "name": "رسم دائرة"
+          },
+          "draw a pinwheel": {
+            "name": "ارسم دولاب الهواء",
+            "parameters": {
+              "length": "الطول",
+              "repeat": "كرر"
+            }
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a shape": {
+            "name": "ارسم شكل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a house": {
+            "name": "رسم منزل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "الدالة 1"
+          },
+          "function 2": {
+            "name": "الدالة 2"
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "قفز",
+            "parameters": {
+              "height": "الارتفاع",
+              "actor": "الممثل"
+            }
+          },
+          "patrol": {
+            "name": "دورية",
+            "parameters": {
+              "actor": "الممثل",
+              "speed": "السرعة"
+            }
+          }
+        },
+        "Robot Doodle": {
+          "draw head": {
+            "name": "ارسم رأس"
+          }
+        },
+        "Robot Doodle_2018": {
+          "draw head": {
+            "name": "ارسم رأس"
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "رسم زهرة"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "ارسم شكل"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "حل \"بسيط\""
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "حل محتمل"
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "get 3 nectar or honey": {
+            "name": "احصل على ٣ من الرحيق أو عسل"
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "move and collect": {
+            "name": "تحرك واجمع"
+          }
+        },
+        "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+            "name": "تحقق من الرحيق أو العسل"
+          },
+          "row of nectar": {
+            "name": "صف من الرحيق"
+          },
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق"
+          }
+        },
+        "course3_bee_functions_challenge4": {
+          "check nectar or honey": {
+            "name": "تحقق من الرحيق أو العسل"
+          },
+          "row of nectar": {
+            "name": "صف من الرحيق"
+          },
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق"
+          },
+          "move and check": {
+            "name": "تحرك وتأكد"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "win game": {
+            "name": "الفوز باللعبة"
+          },
+          "lose game": {
+            "name": "الخسارة باللعبة"
+          },
+          "keep playing": {
+            "name": "استمر باللعب"
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "course4_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "ارسم دولاب الهواء"
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "draw background": {
+            "name": "ارسم خلفية",
+            "parameters": {
+              "color": "لون"
+            }
+          },
+          "draw a polygon": {
+            "name": "ارسم مضلع"
+          },
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "انتقل واحصل على الرحيق مع العداد"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "اختر سطر",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "اختر سطر",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "حل \"بسيط\""
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "حل محتمل"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "حل محتمل"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "حل محتمل"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "حل محتمل"
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "name": "ارسم شعلة",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "ارسم نار"
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "name": "ارسم شعلة",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "ارسم نار"
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "name": "ارسم شعلة",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "ارسم نار"
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "name": "ارسم شعلة",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "ارسم نار"
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "الداعم"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "الداعم"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "الداعم"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "الداعم"
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw bit": {
+            "name": "ارسم بت"
+          },
+          "draw": {
+            "name": "تعادل"
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "courseE_Dogger_2": {
+          "stop_everything": {
+            "name": "توقف_كل_شيء"
+          },
+          "lose": {
+            "name": "اخسر"
+          }
+        },
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw a hexagon": {
+            "name": "رسم شكل سداسي"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "رسم شكل سداسي"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "رسم مربع"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw a plane of squares": {
+            "name": "ارسم سطح من المربعات"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a square": {
+            "name": "رسم مربع"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw a plane of squares": {
+            "name": "ارسم سطح من المربعات"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "ارسم دولاب الهواء"
+          }
+        },
+        "courseE_artist_concept_challenge2_2018": {
+          "draw pinwheel": {
+            "name": "ارسم دولاب الهواء"
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw hexagon": {
+            "name": "ارسم شكل سداسي"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خط من الأشكال السداسية"
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw hexagon": {
+            "name": "ارسم شكل سداسي"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خط من الأشكال السداسية"
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw hexagon": {
+            "name": "ارسم شكل سداسي"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خط من الأشكال السداسية"
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw hexagon": {
+            "name": "ارسم شكل سداسي"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خط من الأشكال السداسية"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a window": {
+            "name": "ارسم نافذة"
+          },
+          "draw a house": {
+            "name": "رسم منزل"
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a window": {
+            "name": "ارسم نافذة"
+          },
+          "draw a house": {
+            "name": "رسم منزل"
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": "ارسم نافذة"
+          }
+        },
+        "courseE_artist_functions7_2020": {
+          "draw a window": {
+            "name": "ارسم نافذة"
+          },
+          "draw a house": {
+            "name": "رسم منزل"
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "draw a square": {
+            "name": "رسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "draw a square": {
+            "name": "رسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "draw a square": {
+            "name": "رسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw triangle": {
+            "name": "ارسم مثلث"
+          },
+          "draw line of triangles": {
+            "name": "ارسم سطر من المثلثات"
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw triangle": {
+            "name": "ارسم مثلث"
+          },
+          "draw line of triangles": {
+            "name": "ارسم سطر من المثلثات"
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw triangle": {
+            "name": "ارسم مثلث"
+          },
+          "draw line of triangles": {
+            "name": "ارسم سطر من المثلثات"
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw triangle": {
+            "name": "ارسم مثلث"
+          },
+          "draw line of triangles": {
+            "name": "ارسم سطر من المثلثات"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw hexagon": {
+            "name": "ارسم شكل سداسي"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خط من الأشكال السداسية"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw hexagon": {
+            "name": "ارسم شكل سداسي"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خط من الأشكال السداسية"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw hexagon": {
+            "name": "ارسم شكل سداسي"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خط من الأشكال السداسية"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربع"
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "my design": {
+            "name": "تصميمي"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "draw line of polygons": {
+            "name": "ارسم خط من المضلعات"
+          },
+          "draw polygon": {
+            "name": "ارسم مضلع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "draw line of polygons": {
+            "name": "ارسم خط من المضلعات"
+          },
+          "draw polygon": {
+            "name": "ارسم مضلع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "draw line of polygons": {
+            "name": "ارسم خط من المضلعات"
+          },
+          "draw polygon": {
+            "name": "ارسم مضلع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "draw line of polygons": {
+            "name": "ارسم خط من المضلعات"
+          },
+          "draw polygon": {
+            "name": "ارسم مضلع"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "رحيق العسل"
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "تحرك واصنع عسل"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "تحرك واصنع عسل"
+          }
+        },
+        "courseE_bee_functions2": {
+          "get 2 nectar": {
+            "name": "احصل على ٢ من الرحيق"
+          }
+        },
+        "courseE_bee_functions3": {
+          "get 5": {
+            "name": "احصل على ٥"
+          }
+        },
+        "courseE_bee_functions4": {
+          "move and get nectar": {
+            "name": "انتقل واحصل على رحيق"
+          }
+        },
+        "courseE_bee_functions5": {
+          "move and get 4": {
+            "name": "تحرك واحصل على ٤"
+          }
+        },
+        "courseE_bee_functions6": {
+          "get 7 nectar make 7 honey": {
+            "name": "احصل على ٧ من الرحيق واصنع ٧ من العسل"
+          }
+        },
+        "courseE_bee_functions7": {
+          "get 7 make 7": {
+            "name": "احصل على ٧ اصنع ٧"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "اجمع كل الرحيق"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "احصل على كل الرحيق"
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "get 3 nectar or honey": {
+            "name": "احصل على ٣ من الرحيق أو عسل"
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "move and collect": {
+            "name": "تحرك واجمع"
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "get pumpkin": {
+            "name": "احصل على يقطين"
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
+            "name": "احصل على يقطين"
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "تصفَح"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "قم بالفحص والالتقاط"
+          },
+          "find pumpkin": {
+            "name": "اعثر على القرع"
+          },
+          "wander path": {
+            "name": "تجول في المسار"
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "ذرة وقرع"
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "ذرة وقرع"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "ذرة وقرع"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "ذرة وقرع"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "ذرة وقرع"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "تصفَح"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "تصفَح"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "win game": {
+            "name": "الفوز باللعبة"
+          },
+          "lose game": {
+            "name": "الخسارة باللعبة"
+          },
+          "keep playing": {
+            "name": "استمر باللعب"
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "draw a square": {
+            "name": "رسم مربع"
+          },
+          "checker": {
+            "name": "فاحص",
+            "parameters": {
+              "size": "الحجم",
+              "color": "لون"
+            }
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "Make gingham": {
+            "name": "إنشاء نسيج مخطط",
+            "parameters": {
+              "size": "الحجم"
+            }
+          },
+          "black outline": {
+            "name": "مخطط تفصيلي أسود",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_artist_fwp2": {
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "checker": {
+            "name": "فاحص",
+            "parameters": {
+              "size": "الحجم",
+              "color": "لون"
+            }
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "Make gingham": {
+            "name": "إنشاء نسيج مخطط",
+            "parameters": {
+              "size": "الحجم"
+            }
+          },
+          "black outline": {
+            "name": "مخطط تفصيلي أسود",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a square2": {
+            "name": "رسم المربع2",
+            "parameters": {
+              "size": "الحجم"
+            }
+          },
+          "filled square": {
+            "name": "مربع معبأ",
+            "parameters": {
+              "size": "الحجم",
+              "color": "لون"
+            }
+          },
+          "black outline": {
+            "name": "مخطط تفصيلي أسود",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "name": "ارسم مضلع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "name": "ارسم مضلع",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "name": "قم برسم حافة حلزونية",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "name": "قم برسم حافة حلزونية",
+            "parameters": {
+              "length": "الطول",
+              "min": "على الاقل "
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "name": "قم برسم حافة حلزونية",
+            "parameters": {
+              "length": "الطول",
+              "min": "على الاقل "
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a star": {
+            "name": "رسم نجمة",
+            "parameters": {
+              "points": "نقاط",
+              "length": "الطول"
+            }
+          },
+          "draw a circle": {
+            "name": "رسم دائرة"
+          },
+          "draw a pinwheel": {
+            "name": "ارسم دولاب الهواء",
+            "parameters": {
+              "length": "الطول",
+              "repeat": "كرر"
+            }
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a shape": {
+            "name": "ارسم شكل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a house": {
+            "name": "رسم منزل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a spiral edge": {
+            "name": "قم برسم حافة حلزونية",
+            "parameters": {
+              "length": "الطول",
+              "min": "على الاقل "
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "draw background": {
+            "name": "ارسم خلفية",
+            "parameters": {
+              "color": "لون"
+            }
+          },
+          "draw a polygon": {
+            "name": "ارسم مضلع"
+          },
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "draw a square 20": {
+            "name": "ارسم مربع ٢٠"
+          },
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "draw an octagon": {
+            "name": "ارسم شكل ثماني",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_bee_conditionals2": {
+          "move and check": {
+            "name": "تحرك وتأكد"
+          },
+          "check nectar or honey": {
+            "name": "تحقق من الرحيق أو العسل"
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "انتقل واحصل على الرحيق مع العداد"
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": "انتقل واحصل على الرحيق مع العداد"
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": "انتقل واحصل على الرحيق مع العداد"
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": "انتقل واحصل على الرحيق مع العداد"
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "احصل على رحيق العسل فقط"
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "صنع العسل فقط"
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": "تحقق من الرحيق أو العسل"
+          }
+        },
+        "courseF_bee_functions4": {
+          "move and check": {
+            "name": "تحرك وتأكد"
+          },
+          "check nectar or honey": {
+            "name": "تحقق من الرحيق أو العسل"
+          }
+        },
+        "courseF_bee_functions5a": {
+          "move and check": {
+            "name": "تحرك وتأكد"
+          },
+          "check nectar or honey": {
+            "name": "تحقق من الرحيق أو العسل"
+          }
+        },
+        "courseF_bee_functions6": {
+          "get nectar make honey": {
+            "name": "احصل على الرحيق اصنع العسل"
+          }
+        },
+        "courseF_bee_functions7": {
+          "get nectar make honey": {
+            "name": "احصل على الرحيق اصنع العسل"
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "القيام بشيء ما"
+          },
+          "get nectar make honey": {
+            "name": "احصل على الرحيق اصنع العسل"
+          }
+        },
+        "courseF_bee_functionsPre7": {
+          "get nectar make honey": {
+            "name": "احصل على الرحيق اصنع العسل"
+          }
+        },
+        "courseF_bee_functions_challenge1": {
+          "row of nectar": {
+            "name": "صف من الرحيق"
+          },
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق"
+          },
+          "check nectar or honey": {
+            "name": "تحقق من الرحيق أو العسل"
+          }
+        },
+        "courseF_bee_functions_challenge2": {
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق"
+          },
+          "move and check": {
+            "name": "تحرك وتأكد"
+          },
+          "check nectar or honey": {
+            "name": "تحقق من الرحيق أو العسل"
+          }
+        },
+        "courseF_bee_fwp2": {
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق"
+          }
+        },
+        "courseF_bee_fwp3": {
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق"
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق",
+            "parameters": {
+              "width": "العرض"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "name": "سطر_من_الرحيق",
+            "parameters": {
+              "width": "العرض"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "العرض"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "العرض"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "العرض"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "اختر سطر",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "اختر سطر",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+            "name": "جمع الصف"
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "اجمع"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "اجمع"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "اجمع"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "اجمع"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "اجمع"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "اجمع"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "name": "تعادل"
+          },
+          "draw bit": {
+            "name": "ارسم بت"
+          }
+        }
+      }
+    }
+  }
+}

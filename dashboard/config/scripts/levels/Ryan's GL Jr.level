@@ -1,0 +1,82 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "gamelab",
+    "edit_code": "false",
+    "show_debug_watch": "true",
+    "use_helper_lib": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "hide_animation_mode": true,
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "custom_helper_library": "function spinClockwise(sprite) {\r\n  sprite.rotation+=6;\r\n}",
+    "custom_blocks": "[\n  {\n    \"func\": \"spinClockwise\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ],\n    \"blockText\": \"spin {SPRITE} clockwise\"\n  }\n]\n",
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-13 19:41:32 +0000\",\"changed\":[\"notes\",\"show_d_pad\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:42:45 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:43:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:45:22 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:46:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-13 19:47:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-29 17:05:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Predefined">
+          <block type="when_run"/>
+          <block type="sprite_variables_set" inline="false">
+            <title name="VAR">doggo</title>
+          </block>
+          <block type="gamelab_makeNewSprite" inline="true">
+            <title name="ANIMATION">"dog"</title>
+          </block>
+          <block type="gamelab_whenUpArrow"/>
+          <block type="math_number">
+            <title name="NUM">200</title>
+          </block>
+          <block type="sprite_variables_get">
+            <title name="VAR">doggo</title>
+          </block>
+          <block type="gamelab_whileRightArrow"/>
+          <block type="variables_set" inline="false">
+            <title name="VAR">doggo</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">doggo</title>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

@@ -1059,3 +1059,5 @@ it:
     text: "**Sei un genitore o tutore?** Collega la tua email a questo account per rimanere aggiornato sui progressi e sui progetti di tuo figlio!"
     link_your_email: "Collega la tua email"
     not_now: "Non ora"
+  behaviors:
+    this_sprite: "questo personaggio"

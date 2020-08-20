@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-08-14T18:33:49.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Your turn to try it out\r\n\r\n## A classroom scenario\r\nBelow is a scenario from a CS Principles classroom.  Students are working on the Unit 3 project where they create an app to teach their peers about a topic that is important to them.  Mariah and Ashlee are partners and decided to create an app that educates people about food deserts.  You overhear them having the conversation below. \r\n\r\n> **Mariah:**  I think we are going to need a lot of screens if we want to talk about food deserts in the top 10 cities in our state in our app.  It is going to be a lot of work.\r\n> \r\n> **Ashlee:**  I think we might be able to use just 4 screens.  We can use one \"information screen\" to show different facts about different cities and change the elements on the screen each time depending on what option the user picks.\r\n> \r\n> **Mariah:** Do you think that will be better?\r\n> \r\n> **Ashlee:**  Yeah, because then we will have less screens.\r\n> \r\n> **Mariah:** But won’t we have a lot more code to make that work? \r\n> \r\n> **Ashlee:**  That’s a good point, let’s try it out with two of our different options and see what it looks like.  Do you want to try making the two different screens and I will try making the one “information” screen that changes.\r\n\r\n\r\n## Reflect\r\nChoose one of the students in this scenario can you give public, specific, and intellectual feedback to.  What are the actual words you would use give this feedback?\r\n\r\n**Tip:** It might be helpful to use one of these sentence frames for giving feedback: \r\n* “_____ just shared an important contribution...”\r\n* “_____, it was really important when you… because…”\r\n* “_____, it really helped your partner when you… because… “\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24396
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:55:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2020-07-10 00:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 00:38:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 14:21:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 14:44:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-16 13:35:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-07-16 13:36:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-07-23 15:19:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-13 15:37:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-13 15:40:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-14 18:17:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-14 18:24:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-14 18:50:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]"
+}]]></config>
+</FreeResponse>

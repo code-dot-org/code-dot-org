@@ -7,11 +7,12 @@
 # anonymize or delete email addresses submitted by Petitioners who were between the ages of 13 and 16 because
 # our Contact Rollups process does not currently have any functionality to delete emails from Pardot that were deleted
 # in our database, but it does comply with GDPR by opting out those email addresses.
+require_relative '../../../lib/cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require File.expand_path('../../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 load pegasus_dir('helpers.rb')
-require 'cdo/only_one'
 
 # Twenty minutes.
 MAX_EXECUTION_TIME = 1_200_000
@@ -48,4 +49,4 @@ def main
   CDO.log.info "Finished Opt Out of Petition Emails Under 16"
 end
 
-main if only_one_running?(__FILE__)
+main

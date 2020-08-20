@@ -162,6 +162,10 @@ my:
           CONDITION:
             '"when"': အချိန်
             '"while"': စဉ်တွင်
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"x"': "×"
       gamelab_keyPressed:
         options:
           CONDITION:
