@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {TestResults} from '@cdo/apps/constants';
 import {getStore} from '../redux';
-import {mergeProgress} from '../progressRedux';
+import {clearProgress, mergeProgress} from '../progressRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
@@ -51,7 +51,15 @@ const SHARE_IMAGE_NAME = '_share_image.png';
  * @param {Object<number, TestResult>} serverProgress Mapping from levelId to TestResult
  */
 function mergeProgressData(scriptName, serverProgress) {
+  if (!serverProgress) {
+    return;
+  }
   const store = getStore();
+
+  // The server returned progress. This is the source of truth.
+  // Note: Changes to the progressRedux also update the sessionStorage,
+  // so this will clear and update the sessionStorage too.
+  store.dispatch(clearProgress());
   store.dispatch(mergeProgress(serverProgress));
 
   Object.keys(serverProgress).forEach(levelId => {
@@ -392,8 +400,7 @@ function loadAppAsync(appOptions) {
         appOptions.disableSocialShare = data.disableSocialShare;
 
         // Merge progress from server (loaded via AJAX)
-        const serverProgress = data.progress || {};
-        mergeProgressData(appOptions.scriptName, serverProgress);
+        mergeProgressData(appOptions.scriptName, data.progress);
 
         if (!lastAttemptLoaded) {
           if (data.lastAttempt) {
@@ -435,6 +442,11 @@ function loadAppAsync(appOptions) {
         }
 
         const store = getStore();
+
+        // Note: We aren't guaranteed that currentUser.signInState will have been set at this point.
+        // It gets set on document.ready. However, it is highly unlikely that the server will return
+        // a response before document.ready is triggered. So far, this hasn't caused problems, so not
+        // worrying about this for now.
         const signInState = store.getState().currentUser.signInState;
         if (signInState === SignInState.SignedIn) {
           progress.showDisabledBubblesAlert();
