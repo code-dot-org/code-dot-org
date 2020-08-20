@@ -3,7 +3,7 @@ import {
   SENSOR_CHANNELS,
   roundToHundredth,
   SAMPLE_INTERVAL,
-  MAX_SENSOR_BUFFER_LENGTH,
+  MAX_SENSOR_BUFFER_DURATION,
   MAX_LIGHT_SENSOR_VALUE
 } from './MicroBitConstants';
 import {apiValidateTypeAndRange} from '../../../../util/javascriptMode';
@@ -19,7 +19,9 @@ export default class LightSensor extends EventEmitter {
     };
     // Track 3 seconds of historical data in a circular buffer over which
     // we can average sensor readings
-    this.buffer = new Float32Array(MAX_SENSOR_BUFFER_LENGTH / SAMPLE_INTERVAL);
+    this.buffer = new Float32Array(
+      MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
+    );
     this.currentBufferWriteIndex = 0;
 
     this.board = board;
