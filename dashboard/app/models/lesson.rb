@@ -56,6 +56,8 @@ class Lesson < ActiveRecord::Base
   def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
+      Lesson.prevent_blank_display_name(raw_lesson)
+      Lesson.prevent_changing_stable_i18n_key(script, raw_lesson)
 
       lesson = script.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
@@ -82,6 +84,19 @@ class Lesson < ActiveRecord::Base
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
 
       lesson
+    end
+  end
+
+  def self.prevent_changing_stable_i18n_key(script, raw_lesson)
+    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
+
+      raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
+    end
+  end
+
+  def self.prevent_blank_display_name(raw_lesson)
+    if raw_lesson[:name].blank?
+      raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
     end
   end
 

@@ -109,6 +109,11 @@ class UserLevel < ActiveRecord::Base
     driver? || navigator?
   end
 
+  def calculate_total_time_spent(additional_time)
+    existing_time_spent = time_spent ? time_spent : 0
+    additional_time && additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
+  end
+
   def submitted_or_resubmitted?
     submitted_changed?(to: true) || (submitted? && level_source_id_changed?)
   end
