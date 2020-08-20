@@ -332,7 +332,7 @@ ActiveRecord::Schema.define(version: 20200819093633) do
     t.index ["level_group_level_id"], name: "index_contained_levels_on_level_group_level_id", using: :btree
   end
 
-  create_table "course_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+  create_table "course_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "key",                        null: false
     t.string   "display_name",               null: false
     t.text     "properties",   limit: 65535
