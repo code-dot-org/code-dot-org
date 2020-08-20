@@ -6,8 +6,8 @@ import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
 
 const styles = {
   input: {
@@ -126,13 +126,7 @@ export default class CourseEditor extends Component {
             style={styles.input}
             onChange={this.handleStudentDescriptionChange}
           />
-          <div style={{marginBottom: 5}}>Preview:</div>
-          <div style={styles.box}>
-            <SafeMarkdown
-              openExternalLinksInNewTab={true}
-              markdown={this.state.descriptionStudent}
-            />
-          </div>
+          <MarkdownPreview markdown={this.state.descriptionStudent} />
         </label>
         <label>
           Teacher Description
@@ -143,13 +137,7 @@ export default class CourseEditor extends Component {
             style={styles.input}
             onChange={this.handleTeacherDescriptionChange}
           />
-          <div style={{marginBottom: 5}}>Preview:</div>
-          <div style={styles.box}>
-            <SafeMarkdown
-              openExternalLinksInNewTab={true}
-              markdown={this.state.descriptionTeacher}
-            />
-          </div>
+          <MarkdownPreview markdown={this.state.descriptionTeacher} />
         </label>
         <label>
           Version Year Display Name
