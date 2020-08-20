@@ -14,22 +14,18 @@ class Foorm::Submission < ActiveRecord::Base
   has_one :metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
   belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 
-  def parsed_answers
-    JSON.parse answers
-  end
-
   # Returns an array of hashes, each having two keys -- :question and :answer.
   # The questions and answers are in human readable formats.
   def formatted_answers
     question_answer_pairs = []
 
-    a = parsed_answers
+    parsed_answers = JSON.parse(answers)
 
     # parsed_questions comes from the survey, and as a result will generate
     # blank entries for questions that a respondent did not answer.
     form.parsed_questions[:general][form.key].each do |question_id, question_details|
       choices = question_details[:choices]
-      response_to_question = a[question_id]
+      response_to_question = parsed_answers[question_id]
 
       # Place to store the formatted question and answer
       # we'll export to a CSV.
@@ -75,5 +71,24 @@ class Foorm::Submission < ActiveRecord::Base
     end
 
     question_answer_pairs
+  end
+
+  def formatted_metadata
+    [].tap do |formatted_metadata|
+      formatted_metadata << {
+        question: 'user_id',
+        answer: metadata&.user&.id
+      }
+
+      formatted_metadata << {
+        question: 'pd_workshop_id',
+        answer: metadata&.pd_workshop&.id
+      }
+
+      formatted_metadata << {
+        question: 'pd_session_id',
+        answer: metadata&.pd_session&.id
+      }
+    end
   end
 end

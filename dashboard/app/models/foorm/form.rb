@@ -100,23 +100,8 @@ class Foorm::Form < ActiveRecord::Base
 
     submissions.each do |submission|
       formatted_submission = submission.formatted_answers
+      formatted_submission.concat submission.formatted_metadata
 
-      formatted_submission << {
-        question: 'user_id',
-        answer: submission.metadata&.user&.id
-      }
-
-      formatted_submission << {
-        question: 'pd_workshop_id',
-        answer: submission.metadata&.pd_workshop&.id
-      }
-
-      formatted_submission << {
-        question: 'pd_session_id',
-        answer: submission.metadata&.pd_session&.id
-      }
-
-      puts formatted_submission
       formatted_submissions << formatted_submission
     end
 
