@@ -6,6 +6,7 @@ import {
   MAX_SENSOR_BUFFER_LENGTH,
   MAX_LIGHT_SENSOR_VALUE
 } from './MicroBitConstants';
+import {apiValidateTypeAndRange} from '../../../../util/javascriptMode';
 
 export default class LightSensor extends EventEmitter {
   constructor(board) {
@@ -85,34 +86,40 @@ export default class LightSensor extends EventEmitter {
     this.board.mb.stopStreamingAnalogChannel(SENSOR_CHANNELS.lightSensor); // disable light sensor
   }
 
-  // Get the averaged value over the given ms, adjusted within the range, if specified
-  // TODO: Handle if the range is outside of 50 (before first sample) or 3000 (longer than our buffer).
-  // Currently returns null if range is outside of acceptable values
+  // Get the averaged value over the given ms, adjusted within the range, if specified.
+  // If ms is outside of 50 and 3000 range, prints a warning to debug console.
   getAveragedValue(ms) {
-    if (ms >= SAMPLE_INTERVAL && ms <= MAX_SENSOR_BUFFER_LENGTH) {
-      // Divide ms range by sample rate of sensor
-      let indicesRange = Math.ceil(ms / SAMPLE_INTERVAL);
-      let sum = 0;
-      let startIndex = this.currentBufferWriteIndex - indicesRange;
-      // currentBufferWriteIndex points to the next spot to write, so historical
-      // data starts at (currentBufferWriteIndex - 1)
-      for (
-        let index = startIndex;
-        index < this.currentBufferWriteIndex;
-        index++
-      ) {
-        // Because index might be negative, use modulo to loop circular buffer.
-        let sumIndex = (index + this.buffer.length) % this.buffer.length;
-        sum += this.buffer[sumIndex];
-      }
-      return scaleWithinRange(
-        sum / indicesRange,
-        this.state.rangeMin,
-        this.state.rangeMax
-      );
-    } else {
-      return null;
+    let opts = {ms};
+    apiValidateTypeAndRange(
+      opts,
+      'lightSensor.getAveragedValue',
+      'ms',
+      opts.ms,
+      'number',
+      50,
+      3000
+    );
+
+    // Divide ms range by sample rate of sensor
+    let indicesRange = Math.ceil(ms / SAMPLE_INTERVAL);
+    let sum = 0;
+    let startIndex = this.currentBufferWriteIndex - indicesRange;
+    // currentBufferWriteIndex points to the next spot to write, so historical
+    // data starts at (currentBufferWriteIndex - 1)
+    for (
+      let index = startIndex;
+      index < this.currentBufferWriteIndex;
+      index++
+    ) {
+      // Because index might be negative, use modulo to loop circular buffer.
+      let sumIndex = (index + this.buffer.length) % this.buffer.length;
+      sum += this.buffer[sumIndex];
     }
+    return scaleWithinRange(
+      sum / indicesRange,
+      this.state.rangeMin,
+      this.state.rangeMax
+    );
   }
 
   setRange(min, max) {
