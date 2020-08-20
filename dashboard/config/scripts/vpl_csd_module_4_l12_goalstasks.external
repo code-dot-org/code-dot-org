@@ -1,0 +1,32 @@
+name 'VPL - CSD - Module 4 - L12 GoalsTasks'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Lesson 12:  Digital Design  
+
+
+
+## Investigation Goals
+
+**Become familiar with the Design Mode features within App Lab with a specific focus on available resources for future reference**
+
+## Investigation Tasks
+
+* Watch Video: CS Discoveries: App Lab - Design Mode
+
+* Complete levels 3-6
+
+    * Read the information within the "Helps & Tips" tab starting in level 3 (and builds on in level 6) for students to 		reference throughout the unit
+
+Optional: Complete levels 7-9
+
+**Click "Continue" to begin investigation tasks.**
+
+
+
+
+
+
+MARKDOWN

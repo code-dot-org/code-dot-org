@@ -1,7 +1,12 @@
+/**
+ * Wrapper class for https://github.com/code-dot-org/blockly
+ * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
+ * by allowing us to unify the APIs so that we can switch out the underlying Blockly
+ * object without affecting apps code.
+ * See also ./googleBlocklyWrapper.js
+ */
 const BlocklyWrapper = function(blocklyInstance) {
   this.blockly_ = blocklyInstance;
-  this.Msg = this.blockly_.Msg;
-  this.inject = this.blockly_.inject;
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
       get: function() {
@@ -101,6 +106,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
+
+  blocklyWrapper.getGenerator = function() {
+    return blocklyWrapper.Generator.get('JavaScript');
+  };
 
   return blocklyWrapper;
 }

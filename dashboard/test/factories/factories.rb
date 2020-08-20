@@ -3,6 +3,11 @@ require 'cdo/activity_constants'
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
+  factory :course_offering do
+    sequence(:key) {|n| "bogus-course-offering-#{n}"}
+    sequence(:display_name) {|n| "bogus-course-offering-#{n}"}
+  end
+
   factory :course_version do
     sequence(:key) {|n| "202#{n - 1}"}
     sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}

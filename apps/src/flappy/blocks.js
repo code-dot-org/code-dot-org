@@ -34,7 +34,7 @@ exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
-  var generator = blockly.Generator.get('JavaScript');
+  var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
   blockly.Blocks.flappy_whenClick = {
