@@ -15,25 +15,23 @@ export default class LightSensor extends EventEmitter {
       threshold: 128,
       rangeMin: 0,
       rangeMax: 255,
-      currentReading: 0
+      currentReading: 0,
+      // Track 3 seconds of historical data in a circular buffer over which
+      // we can average sensor readings
+      buffer: new Float32Array(MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL),
+      currentBufferWriteIndex: 0
     };
-    // Track 3 seconds of historical data in a circular buffer over which
-    // we can average sensor readings
-    this.buffer = new Float32Array(
-      MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
-    );
-    this.currentBufferWriteIndex = 0;
 
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
       // Record current reading to keep finite historical buffer.
-      this.buffer[this.currentBufferWriteIndex] = this.board.mb.analogChannel[
-        SENSOR_CHANNELS.lightSensor
-      ];
-      this.currentBufferWriteIndex++;
+      this.state.buffer[
+        this.state.currentBufferWriteIndex
+      ] = this.board.mb.analogChannel[SENSOR_CHANNELS.lightSensor];
+      this.state.currentBufferWriteIndex++;
       // Modulo the index to loop to the beginning of the buffer when it exceeds array size
-      this.currentBufferWriteIndex =
-        this.currentBufferWriteIndex % this.buffer.length;
+      this.state.currentBufferWriteIndex =
+        this.state.currentBufferWriteIndex % this.state.buffer.length;
       // Only emit the data event when the value is above the threshold or the
       // previous reading was above the threshold
       if (
@@ -88,6 +86,18 @@ export default class LightSensor extends EventEmitter {
     this.board.mb.stopStreamingAnalogChannel(SENSOR_CHANNELS.lightSensor); // disable light sensor
   }
 
+  // Reset the state to initial values between runs
+  reset() {
+    this.state = {
+      threshold: 128,
+      rangeMin: 0,
+      rangeMax: 255,
+      currentReading: 0,
+      currentBufferWriteIndex: 0
+    };
+    this.state.buffer.fill(0);
+  }
+
   // Get the averaged value over the given ms, adjusted within the range, if specified.
   // If ms is outside of 50 and 3000 range, prints a warning to debug console.
   getAveragedValue(ms) {
@@ -105,17 +115,18 @@ export default class LightSensor extends EventEmitter {
     // Divide ms range by sample rate of sensor
     let indicesRange = Math.ceil(ms / SAMPLE_INTERVAL);
     let sum = 0;
-    let startIndex = this.currentBufferWriteIndex - indicesRange;
+    let startIndex = this.state.currentBufferWriteIndex - indicesRange;
     // currentBufferWriteIndex points to the next spot to write, so historical
     // data starts at (currentBufferWriteIndex - 1)
     for (
       let index = startIndex;
-      index < this.currentBufferWriteIndex;
+      index < this.state.currentBufferWriteIndex;
       index++
     ) {
       // Because index might be negative, use modulo to loop circular buffer.
-      let sumIndex = (index + this.buffer.length) % this.buffer.length;
-      sum += this.buffer[sumIndex];
+      let sumIndex =
+        (index + this.state.buffer.length) % this.state.buffer.length;
+      sum += this.state.buffer[sumIndex];
     }
     return scaleWithinRange(
       sum / indicesRange,

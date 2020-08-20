@@ -8,7 +8,6 @@ import MicroBitThermometer from './MicroBitThermometer';
 import Compass from './Compass';
 import LightSensor from './LightSensor';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
-import {MAX_SENSOR_BUFFER_DURATION, SAMPLE_INTERVAL} from './MicroBitConstants';
 
 /**
  * Initializes a set of components for the currently
@@ -65,17 +64,8 @@ export function cleanupMicroBitComponents(
   }
 
   if (components.lightSensor) {
-    components.lightSensor.state = {
-      threshold: 128,
-      rangeMin: 0,
-      rangeMax: 255,
-      currentReading: 0
-    };
-    components.lightSensor.buffer = new Float32Array(
-      MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
-    );
-    components.lightSensor.currentBufferWriteIndex = 0;
     components.lightSensor.stop();
+    components.lightSensor.reset();
   }
 
   dynamicComponents.forEach(component => {
