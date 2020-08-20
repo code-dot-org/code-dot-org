@@ -19,8 +19,10 @@ const defaultProps = {
   visible: false,
   isStable: false,
   descriptionShort: 'Desc here',
-  descriptionStudent: 'Desc here',
-  descriptionTeacher: 'Desc here',
+  descriptionStudent:
+    '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
+  descriptionTeacher:
+    '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   scriptsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
   scriptNames: ['CSP Unit 1', 'CSP Unit 2'],
   teacherResources: [],
@@ -54,6 +56,46 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('CourseScriptsEditor').length, 1);
     assert.equal(wrapper.find('ResourcesEditor').length, 1);
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
+  });
+
+  it('has correct markdown for preview of course teacher and student description', () => {
+    const wrapper = createWrapper({});
+    expect(wrapper.find('SafeMarkdown').length).to.equal(2);
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(0)
+        .prop('markdown')
+    ).to.equal(
+      '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
+    );
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(1)
+        .prop('markdown')
+    ).to.equal(
+      '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
+    );
+
+    wrapper
+      .find('textarea[name="description_student"]')
+      .simulate('change', {target: {value: '## Title 1'}});
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(0)
+        .prop('markdown')
+    ).to.equal('## Title 1');
+    wrapper
+      .find('textarea[name="description_teacher"]')
+      .simulate('change', {target: {value: '## Title 2'}});
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(1)
+        .prop('markdown')
+    ).to.equal('## Title 2');
   });
 
   describe('VisibleInTeacherDashboard', () => {
