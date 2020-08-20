@@ -51,6 +51,6 @@ module Pd
     }
 
     # Subjects that use the general survey urls and are in Foorm
-    FOORM_GENERAL_SURVEY_SUBJECTS = [SUBJECT_SUMMER_WORKSHOP]
+    FOORM_GENERAL_SURVEY_SUBJECTS = [SUBJECT_SUMMER_WORKSHOP, SUBJECT_CSP_FOR_RETURNING_TEACHERS]
   end
 end
