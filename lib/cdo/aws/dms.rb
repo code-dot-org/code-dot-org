@@ -38,10 +38,7 @@ module Cdo
             'rule-action': 'include'
           }
 
-          # Add transformation rule to prefix target table name with '_import_', so we import each production MySQL
-          # table to a staging Redshift table, which is later swapped into the target table when the FULL LOAD is
-          # complete.
-          unless properties && properties['skip_staging_table']
+          if properties && properties['rename']
             rules << {
               'rule-type': 'transformation',
               'rule-action': 'add-prefix',
@@ -53,6 +50,27 @@ module Cdo
               'value': RedshiftImport::TEMP_TABLE_PREFIX
             }
           end
+
+          # Add transformation rule to prefix target table name with '_import_', so we import each production MySQL
+          # table to a staging Redshift table, which is later swapped into the target table when the FULL LOAD is
+          # complete.
+
+          # Optionally, the configuration file can specify a new target table name.
+          target_table_name = properties['rename'] ? properties['rename'] : table
+
+          # Optionally, the configuration file can specify that no temp/staging prefix should be used.
+          prefix = properties['skip_staging_table'] ? '' : RedshiftImport::TEMP_TABLE_PREFIX
+
+          rules << {
+            'rule-type': 'transformation',
+            'rule-action': 'rename',
+            'rule-target': 'table',
+            'object-locator': {
+              'schema-name': schema,
+              'table-name': table,
+            },
+            'value': prefix + target_table_name
+          }
 
           # Remove specified columns using transformation rule.
           properties &&
