@@ -60,10 +60,10 @@ describe('CourseEditor', () => {
 
   it('has correct markdown for preview of course teacher and student description', () => {
     const wrapper = createWrapper({});
-    expect(wrapper.find('SafeMarkdown').length).to.equal(2);
+    expect(wrapper.find('MarkdownPreview').length).to.equal(2);
     expect(
       wrapper
-        .find('SafeMarkdown')
+        .find('MarkdownPreview')
         .at(0)
         .prop('markdown')
     ).to.equal(
@@ -71,7 +71,7 @@ describe('CourseEditor', () => {
     );
     expect(
       wrapper
-        .find('SafeMarkdown')
+        .find('MarkdownPreview')
         .at(1)
         .prop('markdown')
     ).to.equal(
@@ -83,7 +83,7 @@ describe('CourseEditor', () => {
       .simulate('change', {target: {value: '## Title 1'}});
     expect(
       wrapper
-        .find('SafeMarkdown')
+        .find('MarkdownPreview')
         .at(0)
         .prop('markdown')
     ).to.equal('## Title 1');
@@ -92,7 +92,7 @@ describe('CourseEditor', () => {
       .simulate('change', {target: {value: '## Title 2'}});
     expect(
       wrapper
-        .find('SafeMarkdown')
+        .find('MarkdownPreview')
         .at(1)
         .prop('markdown')
     ).to.equal('## Title 2');
