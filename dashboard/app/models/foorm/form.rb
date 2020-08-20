@@ -95,65 +95,11 @@ class Foorm::Form < ActiveRecord::Base
   # received for that Form. It includes the content of the form submitted
   # by a user, as well as some additional metadata about the context
   # in which the form was submitted (eg, workshop ID, user ID).
-  def submissions_to_csv
+  def submissions_to_csv(file_path)
     formatted_submissions = []
 
     submissions.each do |submission|
-      formatted_submission = []
-
-      # This comes from the submission, where a respondent may or may not
-      # have answered all questions.
-      parsed_answers = JSON.parse(submission.answers)
-
-      # parsed_questions comes from the survey, and as a result will generate
-      # blank entries for questions that a respondent did not answer.
-      parsed_questions[:general][key].each do |question_id, question_details|
-        puts question_id
-        puts question_details
-
-        question_answer_pair = {}
-
-        if question_details[:type] == 'matrix'
-          section_preamble = question_details[:title]
-          matrix_questions_full_text = question_details[:rows]
-          # Maybe pull out parsed_answers[question_id] into it's own thing
-          parsed_answers[question_id]&.each do |matrix_question_id, answer|
-            question_full_text = "#{section_preamble} >> #{matrix_questions_full_text[matrix_question_id]}"
-            question_answer_pair = {
-              question: question_full_text,
-              answer: question_details[:columns][answer]
-            }
-
-            formatted_submission << question_answer_pair
-          end
-        elsif question_details[:type] == 'text'
-          question_answer_pair = {
-            question: question_details[:title],
-            answer: parsed_answers[question_id]
-          }
-
-          formatted_submission << question_answer_pair
-        elsif question_details[:type] == 'singleSelect'
-          question_answer_pair = {
-            question: question_details[:title],
-            answer: question_details[:choices][parsed_answers[question_id]]
-          }
-
-          formatted_submission << question_answer_pair
-        elsif question_details[:type] == 'multiSelect'
-          puts parsed_answers[question_id]
-          question_answer_pair = {
-            question: question_details[:title],
-            answer: parsed_answers[question_id]&.map {|selected| question_details[:choices][selected]}&.join(', ')
-          }
-
-          puts question_answer_pair
-        elsif question_details[:type] == 'scale'
-          puts 'SCALE'
-        else
-          'TBD'
-        end
-      end
+      formatted_submission = submission.formatted_answers
 
       formatted_submission << {
         question: 'user_id',
@@ -170,10 +116,13 @@ class Foorm::Form < ActiveRecord::Base
         answer: submission.metadata&.pd_session&.id
       }
 
+      puts formatted_submission
       formatted_submissions << formatted_submission
     end
 
-    CSV.open("/Users/benjaminbrooks/data.csv", "wb") do |csv|
+    CSV.open(file_path, "wb") do |csv|
+      break if formatted_submissions.empty?
+
       csv << formatted_submissions.first.map {|question_answer_pair| question_answer_pair[:question]}
       formatted_submissions.each do |submission|
         csv << submission.map {|question_answer_pair| question_answer_pair[:answer]}
