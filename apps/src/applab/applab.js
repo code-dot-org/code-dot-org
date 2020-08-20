@@ -85,6 +85,7 @@ import {
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
 
 /**
  * Create a namespace for the application.
@@ -695,7 +696,7 @@ Applab.init = function(config) {
       makerToolkit.dropletConfig
     );
 
-    if (config.level.makerlabEnabled === 'microbit') {
+    if (config.level.makerlabEnabled === MB_API) {
       config.dropletConfig = utils.deepMergeConcatArrays(
         config.dropletConfig,
         makerToolkit.configMicrobit

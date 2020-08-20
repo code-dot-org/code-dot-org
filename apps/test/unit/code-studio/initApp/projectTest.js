@@ -7,6 +7,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
 import msg from '@cdo/locale';
+import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 describe('project.js', () => {
   let sourceHandler;
@@ -662,11 +663,11 @@ describe('project.js', () => {
     it('performs a save with maker set to circuitPlayground enabled if it was disabled', () => {
       sourceHandler.getMakerAPIsEnabled.returns(false);
       project.init(sourceHandler);
-      return project.setMakerEnabled('circuitPlayground').then(() => {
+      return project.setMakerEnabled(CP_API).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
         expect(
           project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled
-        ).to.equal('circuitPlayground');
+        ).to.equal(CP_API);
       });
     });
 

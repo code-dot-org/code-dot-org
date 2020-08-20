@@ -9,6 +9,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
 import NameFailureError from '../NameFailureError';
+import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -297,7 +298,7 @@ var projects = (module.exports = {
   /**
    * Whether this project's source has the micro:bit or Circuit Playground Maker APIs enabled.
    * Deprecated values: false/true.
-   * Updated values: 'circuitPlayground', 'microBit', or null.
+   * Updated values: 'circuitPlayground', 'microbit', or null.
    * Deprecated value {false} maps to updated value {null}.
    * Deprecated value {true} maps to updated value {circuitPlayground}.
    * @returns {string}
@@ -1872,7 +1873,7 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
-    currentSources.makerAPIsEnabled = 'circuitPlayground';
+    currentSources.makerAPIsEnabled = CP_API;
     updateQueryParam('enableMaker', undefined, true);
   }
 
@@ -1892,7 +1893,7 @@ function setMakerAPIsStatusFromQueryParams() {
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
-    currentSources.makerAPIsEnabled = 'circuitPlayground';
+    currentSources.makerAPIsEnabled = CP_API;
   }
 }
 
