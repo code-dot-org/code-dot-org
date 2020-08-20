@@ -73,11 +73,6 @@ describe('LightSensor', function() {
   });
 
   describe(`getAveragedValue`, () => {
-    it(`returns null if the requested range is outside of bounds`, () => {
-      expect(lightSensor.getAveragedValue(4)).to.equal(null);
-      expect(lightSensor.getAveragedValue(50000)).to.equal(null);
-    });
-
     it(`returns average of values in buffer`, () => {
       lightSensor.buffer = new Float32Array(
         MAX_SENSOR_BUFFER_LENGTH / SAMPLE_INTERVAL
@@ -86,13 +81,13 @@ describe('LightSensor', function() {
         lightSensor.buffer[i] = i;
       }
 
-      lightSensor.bufferIndex = 20;
+      lightSensor.currentBufferWriteIndex = 20;
       expect(lightSensor.getAveragedValue(1000)).to.equal(9.5);
 
-      lightSensor.bufferIndex = 0;
+      lightSensor.currentBufferWriteIndex = 0;
       expect(lightSensor.getAveragedValue(3000)).to.equal(29.5);
 
-      lightSensor.bufferIndex = 1;
+      lightSensor.currentBufferWriteIndex = 1;
       expect(lightSensor.getAveragedValue(50)).to.equal(0);
     });
 

@@ -74,7 +74,7 @@ export function cleanupMicroBitComponents(
     components.lightSensor.buffer = new Float32Array(
       MAX_SENSOR_BUFFER_LENGTH / SAMPLE_INTERVAL
     );
-    components.lightSensor.bufferIndex = 0;
+    components.lightSensor.currentBufferWriteIndex = 0;
     components.lightSensor.stop();
   }
 
