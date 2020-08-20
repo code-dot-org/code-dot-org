@@ -1351,7 +1351,7 @@ id-ID:
   hoc-encryption_name: Enkripsi sederhana
   text-compression_name: kompresi Teks
   applab_name: Laboratorium Aplikasi
-  gamelab_name: Laboratorium Game
+  gamelab_name: Game Lab
   basketball_name: Buat sebuah permainan basket
   sports_name: Kode permainan olahraga Anda
   applab_gradelevel: Usia 13+
@@ -2217,7 +2217,7 @@ id-ID:
   user_header_create: 'Buat '
   user_header_applab: 'Aplikasi Lab '
   user_header_artist: 'Artis '
-  user_header_gamelab: Laboratorium Game
+  user_header_gamelab: Game Lab
   user_header_playlab: Play Lab/Lab Permainan
   user_header_dance: Pesta Tari
   user_header_spritelab: Sprite Lab
@@ -2284,8 +2284,8 @@ id-ID:
   aquatic_name: 'Minecraft: Perjalanan Air'
   account_sign_up_email_opt_in: Dapat kami email Anda tentang pembaruan kursus kami,
     peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)
-  account_sign_up_child_accept_terms: Saya mengkonfirmasi bahwa saya telah saya orang
-    tua atau wali hukum izin untuk menggunakan layanan Code.org.
+  account_sign_up_child_accept_terms: Saya mengonfirmasi bahwa saya telah menerima
+    izin dari orang tua atau wali saya untuk menggunakan layanan Code.org.
   hoc_overview_dance_title: Pesta Tari
   hoc_overview_dance_subtitle: Kodekan Pesta Tari untuk dibagikan ke teman-teman Anda.
     Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 orang
@@ -2426,7 +2426,7 @@ id-ID:
   hoc2018_dance_teacher_resources_tile2_title: Pesta tari dicabut
   hoc2018_dance_teacher_resources_tile2_description: Tidak perlu komputer! Belajar
     konsep koding untuk koreografi pesta dansa bersama.
-  hoc2018_dance_teacher_resources_tile2_button: Kegiatan tanpa komputer
+  hoc2018_dance_teacher_resources_tile2_button: Aktivitas Offline
   hoc2018_dance_featured_student_creations_title: Kreasi siswa ditampilkan
   hoc2018_dance_videos_section_heading: Terinspirasi
   hoc2018_dance_video_title_what_is_creativity: Apa kreatifitas itu?
@@ -2507,3 +2507,4 @@ id-ID:
   homepage_slot_text_link_code_break: Ambil Code Break
   homepage_slot_text_link_do_hoc: Adakan Hour of Code
   homepage_slot_text_link_express_course: Coba Kursus Kilat
+  page_not_available_button: Pulang ke rumah

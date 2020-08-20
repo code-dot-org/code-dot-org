@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/chat_client'
-require 'cdo/only_one'
 require 'retryable'
 require src_dir 'forms'
 require src_dir 'abort_form_error'
@@ -71,4 +73,4 @@ def main
   process_existing_batch_of_forms
 end
 
-main if only_one_running?(__FILE__)
+main

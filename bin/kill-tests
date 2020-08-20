@@ -4,8 +4,10 @@
 # currently running.
 
 require_relative '../deployment'
-require 'cdo/chat_client'
 require 'cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require 'cdo/chat_client'
 
 SUCCESS_MSG = 'successfully killed all tests'.freeze
 FAIL_MSG = 'failed to kill all tests'.freeze
@@ -62,4 +64,4 @@ def main
   print_and_chat msg
 end
 
-main if only_one_running?(__FILE__)
+main

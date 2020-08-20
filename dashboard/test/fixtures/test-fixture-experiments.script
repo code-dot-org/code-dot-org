@@ -1,4 +1,4 @@
-lesson 'lesson1'
+lesson 'lesson1', display_name: 'lesson1'
 variants
   level 'Level 1', active: true, experiments: ["control"]
   level 'Level 2',  experiments: ["hypothesis"]

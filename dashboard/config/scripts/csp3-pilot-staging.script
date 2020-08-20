@@ -1,7 +1,7 @@
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson 'Introduction to Apps'
+lesson 'Introduction to Apps', display_name: 'Introduction to Apps'
 level 'CSP U3 Water Conservation Sample App', progression: 'App Exploration'
 level 'CSP U3 Bird Quiz App', progression: 'App Exploration'
 level 'CSP U3 Hamilton Township App', progression: 'App Exploration'
@@ -15,7 +15,7 @@ level 'CSP U3 Four Square App Investigation', progression: 'App Investigation'
 level 'CSP U3 Monarch Butterfly App Investigation', progression: 'App Investigation'
 level 'CSP U3 L1 Input Output Matching', progression: 'Check For Understanding'
 
-lesson 'Introduction to Design Mode'
+lesson 'Introduction to Design Mode', display_name: 'Introduction to Design Mode'
 level 'CSP U3 Hamilton Township Design Mode', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Design Mode Themes', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Design Mode Colors', progression: 'Design Mode Exploration'
@@ -24,24 +24,24 @@ level 'CSP U3 L2 Design Mode Icons', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Design Mode ids', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Copy an App', progression: 'Copy an App'
 
-lesson 'Project - Designing an App Part 1'
+lesson 'Project - Designing an App Part 1', display_name: 'Project - Designing an App Part 1'
 level 'CSP U3 L3 Check Your Understanding', progression: 'Check For Understanding'
 
-lesson 'Project - Designing an App Part 2'
+lesson 'Project - Designing an App Part 2', display_name: 'Project - Designing an App Part 2'
 level 'CSP U3 Bird Quiz Storyboard', progression: 'Sample Prototype'
 level 'CSP U3 L4 Design Screens', progression: 'Build Your Screens'
 
-lesson 'The Need for Programming Languages'
+lesson 'The Need for Programming Languages', display_name: 'The Need for Programming Languages'
 level 'Temporary Need for Programming Languages SFLP CSP3 Pilot', progression: 'Lesson Overview'
 
-lesson 'Programs Investigate'
+lesson 'Programs Investigate', display_name: 'Programs Investigate'
 level 'U3 Program Investigate Sequential 1', progression: 'Code Investigation'
 level 'U3 Program Investigate Sequential 2', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 1', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 2', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 3', progression: 'Code Investigation'
 
-lesson 'Programs Practice'
+lesson 'Programs Practice', display_name: 'Programs Practice'
 level 'U3 Program Practice Pt 1', progression: 'Debugging'
 level 'U3 Program Practice Pt 2', progression: 'Debugging'
 level 'U3 Program Practice Pt 3', progression: 'Debugging'
@@ -50,12 +50,13 @@ level 'U3 Program Practice Pt 5', progression: 'Debugging'
 level 'U3 Program Practice Pt 6', progression: 'Debugging'
 level 'U3 Program Practice Pt 8', progression: 'Debugging'
 
-lesson 'Project - Designing an App Part 3'
+lesson 'Project - Designing an App Part 3', display_name: 'Project - Designing an App Part 3'
 level 'U3 L08 Pair Programming Video', progression: 'Pair Programming'
 level 'CSP U3 L4 Add Code', progression: 'Add Code'
 
-lesson 'Project - Designing an App Part 4'
+lesson 'Project - Designing an App Part 4', display_name: 'Project - Designing an App Part 4'
 level 'CSP U3 L9 Add More Code', progression: 'Add More Code'
 
-lesson 'Project: Share Your App'
+lesson 'Project: Share Your App', display_name: 'Project: Share Your App'
 level 'CSP U3 L10 Submit App', progression: 'Submit Your App'
+

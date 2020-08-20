@@ -1,0 +1,18 @@
+lesson_group 'lesson group', display_name: 'display name'
+lesson 'Course A', display_name: 'Course A'
+level 'courseB_maze_seq10_predict1_2018'
+level 'courseB_maze_seq1_predict1_2018'
+level 'courseA_collector_loops3_predict1'
+level 'courseA_collector_loops11_predict2'
+level 'courseA_artist_loops11_predict2'
+
+lesson 'Course B', display_name: 'Course B'
+level 'courseA_maze_seq2_predict1'
+level 'courseA_maze_seq12_predict2'
+level 'courseB_collector_loops3_predict1'
+level 'courseB_artist_loops8_predict1'
+
+lesson 'Course E/F', display_name: 'Course E/F'
+level 'teacherSandboxFish'
+level 'Swimming Fish Teacher Sandbox'
+
