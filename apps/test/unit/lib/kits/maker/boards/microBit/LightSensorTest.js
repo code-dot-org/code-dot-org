@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
 import {
   SENSOR_CHANNELS,
-  MAX_SENSOR_BUFFER_LENGTH,
+  MAX_SENSOR_BUFFER_DURATION,
   SAMPLE_INTERVAL
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
@@ -75,7 +75,7 @@ describe('LightSensor', function() {
   describe(`getAveragedValue`, () => {
     it(`returns average of values in buffer`, () => {
       lightSensor.buffer = new Float32Array(
-        MAX_SENSOR_BUFFER_LENGTH / SAMPLE_INTERVAL
+        MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
       );
       for (let i = 0; i < lightSensor.buffer.length; i++) {
         lightSensor.buffer[i] = i;
@@ -95,7 +95,7 @@ describe('LightSensor', function() {
       lightSensor.setRange(10, 110);
 
       lightSensor.buffer = new Float32Array(
-        MAX_SENSOR_BUFFER_LENGTH / SAMPLE_INTERVAL
+        MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
       );
       for (let i = 0; i < lightSensor.buffer.length; i++) {
         lightSensor.buffer[i] = 5;

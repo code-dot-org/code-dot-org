@@ -38,7 +38,7 @@ export const MB_SENSOR_VARS = [
 export const SAMPLE_INTERVAL = 50;
 
 // Max number of milliseconds for which we store historical data
-export const MAX_SENSOR_BUFFER_LENGTH = 3000;
+export const MAX_SENSOR_BUFFER_DURATION = 3000;
 
 export const MAX_LIGHT_SENSOR_VALUE = 255;
 
