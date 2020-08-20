@@ -15,8 +15,10 @@
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   = render partial: 'layouts/terms_interstitial'
 - elsif SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user) || @force_school_info_confirmation_dialog
+  - SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
   = render partial: 'layouts/school_info_confirmation_dialog'
 - elsif SchoolInfoInterstitialHelper.show?(current_user) || @force_school_info_interstitial
+  - SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
 
 - if ThankDonorsInterstitialHelper.show?(current_user, request)
