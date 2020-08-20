@@ -11,85 +11,16 @@ module Pd
     # Require login
     authorize_resource class: 'Pd::Enrollment'
 
-    # General workshop daily survey.
+    # General workshop daily survey for CSP and CSD, non-academic year workshops.
     # GET '/pd/workshop_survey/day/:day'
-    # Where day 0 is the pre-workshop survey, and days 1-5 are the 1st through 5th sessions (index 0-4)
-    #
-    # The JotForm survey, on submit, will redirect to the new_facilitator route (see below)
-    # for the relevant session id.
-    # The pre-workshop survey, which has no session id, will redirect to thanks.
-    # This will redirect to new foorm surveys if the teacher is enrolled in a summer workshop,
-    # or show the JotForm survey if the teacher is enrolled in a CSP Workshop for Returning Teachers.
-    # Otherwise it will show a not enrolled message.
+    # Will render new_pre_foorm if day == 0, new_daily_foorm otherwise
     def new_general
-      # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
+      # If workshop is n days long, Accept days 0 -> [n - 1]. Day n should use the post survey
       day = params[:day].to_i
-      should_have_attended = day != 0
-      # only summer workshops and CSP for returning teachers are supported by this URL
-      workshop = get_workshop_by_enrollment_or_course_and_subject(
-        enrollment_code: params[:enrollmentCode],
-        course: [COURSE_CSD, COURSE_CSP],
-        subject: [SUBJECT_SUMMER_WORKSHOP, SUBJECT_CSP_FOR_RETURNING_TEACHERS],
-        should_have_attended: should_have_attended
-      )
-
-      # Do nothing if there is no workshop.
-      return unless workshop
-
-      # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
-      # have saved.
-      if workshop.local_summer?
-        if day == 0
-          return new_pre_foorm
-        else
-          return new_daily_foorm
-        end
-      end
-
-      # Beyond here is for a non-Foorm survey.
-
-      unless validate_new_general_parameters(workshop)
-        return
-      end
-
-      session = get_session_for_workshop_and_day(workshop, day)
-
-      @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, day
-
-      # Pass these params to the form and to the submit redirect to identify unique responses
-      key_params = {
-        environment: Rails.env,
-        userId: current_user.id,
-        workshopId: workshop.id,
-        day: day,
-        formId: @form_id,
-        sessionId: session&.id
-      }
-
-      return redirect_general(key_params) if response_exists_general?(key_params)
-
-      @form_params = key_params.merge(
-        userName: current_user.name,
-        userEmail: current_user.email,
-        workshopCourse: workshop.course,
-        workshopSubject: workshop.subject,
-        regionalPartnerName: workshop.regional_partner&.name,
-        submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
-      )
-
-      return if experimental_redirect! @form_id, @form_params
-
-      if CDO.newrelic_logging
-        NewRelic::Agent.record_custom_event(
-          "RenderJotFormView",
-          {
-            route: "GET /pd/workshop_survey/day/#{day}",
-            form_id: @form_id,
-            workshop_course: workshop.course,
-            workshop_subject: workshop.subject,
-            regional_partner_name: workshop.regional_partner&.name,
-          }
-        )
+      if day == 0
+        return new_pre_foorm
+      else
+        return new_daily_foorm
       end
     end
 
@@ -270,54 +201,9 @@ module Pd
     # Post workshop survey. This one will be emailed and displayed in the my PL page,
     # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
     # GET /pd/workshop_survey/post/:enrollment_code
+    # This will direct to new_post_foorm
     def new_post
-      workshop = get_workshop_by_enrollment(enrollment_code: params[:enrollment_code], should_have_attended: true)
-      return unless workshop
-
-      # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
-      # have saved.
-      if workshop.local_summer?
-        return new_post_foorm
-      end
-
-      session = workshop.sessions.last
-      session_count = workshop.last_valid_day
-      return render_404 unless session
-
-      begin
-        @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, POST_WORKSHOP_FORM_KEY
-      rescue
-        @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, session_count
-      end
-
-      return redirect_to :pd_workshop_survey_thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop, form_id: @form_id)
-
-      # Pass these params to the form and to the submit redirect to identify unique responses
-      key_params = {
-        environment: Rails.env,
-        userId: current_user.id,
-        workshopId: workshop.id,
-        day: session_count,
-        formId: @form_id,
-        sessionId: session&.id,
-        enrollmentCode: params[:enrollment_code]
-      }
-
-      return redirect_post(key_params) if response_exists_general?(key_params)
-
-      @form_params = key_params.merge(
-        userName: current_user.name,
-        userEmail: current_user.email,
-        workshopCourse: workshop.course,
-        workshopSubject: workshop.subject,
-        regionalPartnerName: workshop.regional_partner&.name,
-        submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
-      )
-
-      return if experimental_redirect! @form_id, @form_params
-
-      # Same view as the general daily survey
-      render :new_general
+      return new_post_foorm
     end
 
     # Display CSF201 (Deep Dive) pre-workshop survey.
@@ -636,28 +522,6 @@ module Pd
 
     def get_session_for_workshop_and_day(workshop, day)
       day > 0 ? workshop.sessions[day - 1] : nil
-    end
-
-    def validate_new_general_parameters(workshop)
-      # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
-      day = params[:day].to_i
-      if day < 0
-        render_404
-        return false
-      end
-
-      # There's no pre-workshop survey for academic year workshops and
-      # there's no post workshop survey for summer workshops
-      if (day == 0 && !workshop.summer?) || (day == 5 && workshop.summer?)
-        render_404
-        return false
-      end
-
-      if day > 0
-        session = get_session_for_workshop_and_day(workshop, day)
-        return validate_session_for_survey(session, workshop, day)
-      end
-      return true
     end
 
     def validate_session_for_survey(session, workshop, day)
