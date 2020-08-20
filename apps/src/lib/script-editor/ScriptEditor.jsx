@@ -15,8 +15,8 @@ import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux'
 import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from './LessonExtrasEditor';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
 
 const styles = {
   input: {
@@ -185,13 +185,7 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
             onChange={this.handleDescriptionChange}
           />
-          <div style={{marginBottom: 5}}>Preview:</div>
-          <div style={styles.box}>
-            <SafeMarkdown
-              openExternalLinksInNewTab={true}
-              markdown={this.state.description}
-            />
-          </div>
+          <MarkdownPreview markdown={this.state.description} />
         </label>
         <h2>Basic Settings</h2>
         <label>
