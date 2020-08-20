@@ -83,6 +83,13 @@ class FilesApiTestBase < Minitest::Test
     end
   end
 
+  # The Project History feature only returns S3 Object Versions if the time gap since the last saved version is longer
+  # than a typical student session length. Pause for the length of a user session so that the new version saved will
+  # be returned in the project history.
+  def start_new_student_session
+    sleep BucketHelper::USER_SESSION_LENGTH + 1.second if VCR.current_cassette.recording?
+  end
+
   def assert_fileinfo_equal(expected, actual)
     assert_equal(Hash, actual.class)
     assert_equal(expected['filename'], actual['filename'])

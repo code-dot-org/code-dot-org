@@ -43,7 +43,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_source_versions
-    # Upload a source file.
+    # Create a source file.
     filename = MAIN_JSON
     file_data = '{"someData":"abc 123"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
@@ -51,9 +51,9 @@ class SourcesTest < FilesApiTestBase
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
-    # Overwrite it.
+    # Start a new student session and save a new version.
     new_file_data = '{"someData":"def 456"}'
-    sleep BucketHelper::USER_SESSION_LENGTH + 1.second if VCR.current_cassette.recording?
+    start_new_student_session
     @api.put_object(filename, new_file_data, file_headers)
     assert successful?
 
