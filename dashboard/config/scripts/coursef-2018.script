@@ -1,3 +1,4 @@
+is_course true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursef/standards/"]]
