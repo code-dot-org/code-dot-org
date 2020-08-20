@@ -91,6 +91,9 @@
         "Course E: Artist Project": "مشروع فنان الدورة هـ",
         "Course E: Artist Project_2018": "مشروع فنان الدورة هـ",
         "Course E: Artist Project_2019": "مشروع فنان الدورة هـ",
+        "Course F: Artist Project - Revise_2018": "راجِع مشروع الرسام",
+        "Course F: Artist Project_2018": "مشروع الرسام في الدورة التدريبية و",
+        "Course F: Artist Project_2019": "مشروع الرسام في الدورة التدريبية و",
         "CourseD_Dance_2020_bonus1": "للخلف وللأمام",
         "CourseD_Dance_2020_bonus3": "الانضمام إلى تشكيل",
         "CourseEF_video_IntroSpriteLab": "هذا مختبر العفريت",
@@ -99,9 +102,14 @@
         "CourseEF_video_MakeSprite": "كيف تصنع \"سبرايت\"",
         "CourseEF_video_MakeSprite_2019": "كيف تصنع \"سبرايت\"",
         "CourseEF_video_MakeSprite_2020": "كيف تصنع \"سبرايت\"",
+        "CourseE_Project_SpriteLab": "مشروع Sprite Lab في الدورة التدريبية هـ",
+        "CourseE_Project_SpriteLab_2019": "مشروع Sprite Lab في الدورة التدريبية هـ",
         "CourseF_Oceans_Video_Machine_Learning": "فيديو: التعلم الآلي",
         "CourseF_Oceans_Video_Societal_Implications": "فيديو: الآثار الاجتماعية المترتبة",
         "CourseF_Oceans_Video_Training_Data": "فيديو: بيانات التدريب",
+        "CourseF_Project_Revise_SpriteLab": "راجِع مشروع Sprite Lab",
+        "CourseF_Project_SpriteLab": "مشروع Sprite Lab في الدورة التدريبية و",
+        "CourseF_Project_SpriteLab_2019": "مشروع Sprite Lab في الدورة التدريبية و",
         "Dance_Party_extras_alternate_2019": "للخلف وللأمام",
         "Dance_Party_extras_battle": "فرق الرقص",
         "Dance_Party_extras_battle_2019": "فرق الرقص",
@@ -116,6 +124,7 @@
         "Dance_Party_extras_speed_2019": "التسريع والإبطاء",
         "Dance_Party_extras_visible": "أين ذهبوا؟",
         "Dance_Party_extras_visible_2019": "أين ذهبوا؟",
+        "InspirationalArtwork_2018": "الإلهام!",
         "MC_HOC_2017_01_RETRY": "المسكن",
         "MC_HOC_2017_01_RETRY_2019": "المسكن",
         "MC_HOC_2017_01_RETRY_2020": "المسكن",
@@ -167,7 +176,12 @@
         "courseF_artist_for1_2018": "بالنسبة للتشغيل الحر للحلقات (بداية)",
         "courseF_artist_for1_2019": "بالنسبة للتشغيل الحر للحلقات (بداية)",
         "courseF_artist_for1_2020": "بالنسبة للتشغيل الحر للحلقات (بداية)",
-        "courseF_video_csMatters": "نهاية مشروعات الدورة"
+        "courseF_project_1": "عينة من مشاريع Sprite Lab",
+        "courseF_video_csMatters": "نهاية مشروعات الدورة",
+        "courseF_video_csMatters_2018": "فيديو: أهمية علوم الكمبيوتر",
+        "scrat_loops_C-F_video": "فيديو الحلقات البرمجية في العصر الجليدي",
+        "scrat_loops_C-F_video_2019": "فيديو الحلقات البرمجية في العصر الجليدي",
+        "scrat_loops_C-F_video_2020": "فيديو الحلقات البرمجية في العصر الجليدي"
       }
     }
   }

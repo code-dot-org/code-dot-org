@@ -56,6 +56,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       result: 'true',
       testResult: '100',
       time: '1000',
+      timeSinceLastMilestone: '2000',
       app: 'test',
       program: '<hey>'
     }
@@ -157,6 +158,26 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone, params: params
     assert_response :success
+  end
+
+  test "milestone updates existing user_level with time_spent" do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
+    params = @milestone_params
+    params[:script_level_id] = @script_level.id
+
+    user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script, time_spent: 1000)
+
+    assert_does_not_create(UserLevel) do
+      post :milestone, params: @milestone_params
+    end
+
+    assert_response :success
+    user_level.reload
+    assert_equal 3000, user_level.time_spent
   end
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
@@ -896,7 +917,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2'; level 'Level 3'",
+      "lesson 'Milestone Stage 1', display_name: 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2', display_name: 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
     script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
@@ -1000,6 +1021,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     existing_navigator_user_level.reload
     assert_equal 100, existing_navigator_user_level.best_result
+    assert_equal 2000, existing_navigator_user_level.time_spent
 
     assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
   end
@@ -1021,6 +1043,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     existing_driver_user_level.reload
     assert_equal 100, existing_driver_user_level.best_result
+    assert_equal 2000, existing_driver_user_level.time_spent
 
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end

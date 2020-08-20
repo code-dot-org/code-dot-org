@@ -4811,3 +4811,9 @@ ru:
           lesson_groups:
             lg_1:
               display_name: Содержимое
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Курс A
+            Course B:
+              name: Курс B
