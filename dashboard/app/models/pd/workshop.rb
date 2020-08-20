@@ -884,9 +884,15 @@ class Pd::Workshop < ActiveRecord::Base
 
   def last_valid_day
     last_day = sessions.size
-    unless VALID_DAYS[CATEGORY_MAP[subject]].include? last_day
+
+    # If we don't have Jotform survey constants set up for this workshop,
+    # return the session size to avoid erroring out in the next step.
+    return last_day if VALID_DAYS[CATEGORY_MAP[subject]].nil?
+
+    unless VALID_DAYS[CATEGORY_MAP[subject]].include?(last_day)
       last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
     end
+
     last_day
   end
 

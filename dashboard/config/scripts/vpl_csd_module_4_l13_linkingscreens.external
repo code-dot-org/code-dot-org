@@ -1,0 +1,13 @@
+name 'VPL - CSD - Module 4 - L13 LInkingScreens'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Lesson 13:  Linking Screens  
+
+
+Chapter 2, Lesson 13 has student teams merge all of their separate screens into a single app.  The "Help & Tips" tab throughout the lesson contains additional information for the process of merging screens into a single app.  This is also an opportunity to help students develop the skill of referencing resources.
+
+![](https://images.code.org/ff7e9c9390be76c169d8e7b770d8a533-image-1597875966538.png)
+MARKDOWN

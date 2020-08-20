@@ -2,21 +2,26 @@
 #
 # Table name: course_versions
 #
-#  id                :integer          not null, primary key
-#  key               :string(255)      not null
-#  display_name      :string(255)      not null
-#  properties        :text(65535)
-#  content_root_type :string(255)      not null
-#  content_root_id   :integer          not null
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
+#  id                 :integer          not null, primary key
+#  key                :string(255)      not null
+#  display_name       :string(255)      not null
+#  properties         :text(65535)
+#  content_root_type  :string(255)      not null
+#  content_root_id    :integer          not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  course_offering_id :integer
 #
 # Indexes
 #
 #  index_course_versions_on_content_root_type_and_content_root_id  (content_root_type,content_root_id)
+#  index_course_versions_on_course_offering_id                     (course_offering_id)
+#  index_course_versions_on_course_offering_id_and_key             (course_offering_id,key) UNIQUE
 #
 
 class CourseVersion < ApplicationRecord
+  belongs_to :course_offering
+
   # "Interface" for content_root:
   #
   # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.

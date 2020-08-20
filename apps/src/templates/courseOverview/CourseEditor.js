@@ -6,6 +6,8 @@ import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import color from '@cdo/apps/util/color';
+import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
 
 const styles = {
   input: {
@@ -21,6 +23,12 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
   }
 };
 
@@ -45,6 +53,23 @@ export default class CourseEditor extends Component {
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      descriptionStudent: this.props.descriptionStudent,
+      descriptionTeacher: this.props.descriptionTeacher
+    };
+  }
+
+  handleTeacherDescriptionChange = event => {
+    this.setState({descriptionTeacher: event.target.value});
+  };
+
+  handleStudentDescriptionChange = event => {
+    this.setState({descriptionStudent: event.target.value});
+  };
+
   render() {
     const {
       name,
@@ -53,8 +78,6 @@ export default class CourseEditor extends Component {
       familyName,
       versionYear,
       descriptionShort,
-      descriptionStudent,
-      descriptionTeacher,
       scriptsInCourse,
       scriptNames,
       teacherResources,
@@ -98,19 +121,23 @@ export default class CourseEditor extends Component {
           Student Description
           <textarea
             name="description_student"
-            defaultValue={descriptionStudent}
+            defaultValue={this.state.descriptionStudent}
             rows={5}
             style={styles.input}
+            onChange={this.handleStudentDescriptionChange}
           />
+          <MarkdownPreview markdown={this.state.descriptionStudent} />
         </label>
         <label>
           Teacher Description
           <textarea
             name="description_teacher"
-            defaultValue={descriptionTeacher}
+            defaultValue={this.state.descriptionTeacher}
             rows={5}
             style={styles.input}
+            onChange={this.handleTeacherDescriptionChange}
           />
+          <MarkdownPreview markdown={this.state.descriptionTeacher} />
         </label>
         <label>
           Version Year Display Name
