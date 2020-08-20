@@ -81,9 +81,18 @@ class ScriptDSL < BaseDSL
       @lesson_groups << {
         key: key,
         display_name: properties[:display_name],
+        big_questions: [],
         lessons: []
       }.compact
     end
+  end
+
+  def lesson_group_description(description)
+    @lesson_groups.last[:description] = description
+  end
+
+  def lesson_group_question(question)
+    @lesson_groups.last[:big_questions] << question
   end
 
   def lesson(key, properties = {})
@@ -275,7 +284,10 @@ class ScriptDSL < BaseDSL
     i18n_lesson_group_strings = {}
     @lesson_groups.each do |lesson_group|
       if lesson_group[:key]
-        i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+        i18n_lesson_group_strings[lesson_group[:key]] = {}
+        lesson_group.select {|k, v| [:display_name, :description, :big_questions].include?(k) && !v.nil_or_empty?}.each do |k, v|
+          i18n_lesson_group_strings[lesson_group[:key]][k.to_s] = v
+        end
       end
       lesson_group[:lessons].each do |lesson|
         i18n_lesson_strings[lesson[:key]] = {'name' => lesson[:name]}
@@ -349,6 +361,11 @@ class ScriptDSL < BaseDSL
         t = "lesson_group '#{escape(lesson_group.key)}'"
         t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
+        s << "lesson_group_description '#{escape(lesson_group.description)}'" if lesson_group.description
+        lesson_group.big_questions&.each do |big_question|
+          s << "lesson_group_question '#{escape(big_question)}'"
+        end
+
       end
       lesson_group.lessons.each do |lesson|
         s << serialize_lesson(lesson)

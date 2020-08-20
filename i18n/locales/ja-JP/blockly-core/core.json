@@ -177,7 +177,7 @@
     "LOGIC_BOOLEAN_FALSE": "false",
     "LOGIC_BOOLEAN_HELPURL": "",
     "LOGIC_BOOLEAN_TOOLTIP": "真または偽を返します。",
-    "LOGIC_BOOLEAN_TRUE": "true",
+    "LOGIC_BOOLEAN_TRUE": "true\n",
     "LOGIC_COMPARE_HELPURL": "",
     "LOGIC_COMPARE_TOOLTIP_EQ": "もし両方がお互いに等しく入力した場合は true を返します。",
     "LOGIC_COMPARE_TOOLTIP_GT": "最初の入力が 2 番目の入力よりも大きい場合は true を返します。",

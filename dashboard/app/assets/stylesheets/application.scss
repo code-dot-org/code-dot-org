@@ -3528,3 +3528,30 @@ h2.danger {
     display: none;
   }
 }
+
+.immersive-reader-button {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  float: right;
+  margin-top: 1px !important;
+  height: 16px !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+
+  html[dir=rtl] & {
+    float: left;
+  }
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
+    position: relative;
+    z-index: 1000;
+  }
+
+  img {
+    filter: grayscale(1);
+  }
+}

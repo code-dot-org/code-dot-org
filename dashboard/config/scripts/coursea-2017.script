@@ -1,3 +1,4 @@
+is_course true
 hidden false
 hideable_lessons true
 lesson_extras_available true
@@ -9,7 +10,7 @@ new_name 'coursea-2017'
 family_name 'coursea'
 version_year '2017'
 is_stable true
-supported_locales ["ar-SA", "es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "pt-BR", "zh-CN", "zh-TW"]
+supported_locales ["ar-SA", "cs-CZ", "es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "pt-BR", "sk-SK", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 

@@ -1,3 +1,4 @@
+is_course true
 hidden false
 hideable_lessons true
 lesson_extras_available true
@@ -9,7 +10,7 @@ new_name 'pre-express-2017'
 family_name 'pre-express'
 version_year '2017'
 is_stable true
-supported_locales ["es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "ja-JP", "pt-BR", "sk-SK", "zh-CN"]
+supported_locales ["cs-CZ", "es-ES", "es-MX", "fr-FR", "hi-IN", "it-IT", "ja-JP", "pt-BR", "sk-SK", "zh-CN"]
 curriculum_umbrella 'CSF'
 tts true
 
