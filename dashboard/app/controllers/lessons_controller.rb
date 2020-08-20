@@ -10,4 +10,19 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit
   def edit
   end
+
+  # PATCH/PUT /lessons/1
+  def update
+    @lesson.update!(lesson_params)
+
+    redirect_to lesson_path(id: @lesson.id)
+  end
+
+  private
+
+  def lesson_params
+    # for now, only allow editing of fields that cannot be edited on the
+    # script edit page.
+    params[:lesson].permit(:overview)
+  end
 end

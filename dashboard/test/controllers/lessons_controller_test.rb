@@ -45,4 +45,23 @@ class LessonsControllerTest < ActionController::TestCase
     assert_response :ok
     assert(@response.body.include?("Editing #{@lesson.name}"))
   end
+
+  # only levelbuilders can update
+  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect
+  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :redirect
+
+  test 'update lesson' do
+    sign_in @levelbuilder
+
+    put :update, params: {
+      id: @lesson.id,
+      lesson: {overview: 'new overview'}
+    }
+
+    assert_redirected_to "/lessons/#{@lesson.id}"
+    @lesson.reload
+    assert_equal 'new overview', @lesson.overview
+  end
 end
