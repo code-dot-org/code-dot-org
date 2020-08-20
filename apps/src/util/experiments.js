@@ -30,7 +30,6 @@ experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
 experiments.TEXT_TO_SPEECH_BLOCK = 'text-to-speech-block';
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.IMMERSIVE_READER = 'immersive-reader';
-experiments.GOOGLE_BLOCKLY = 'googleBlockly';
 /**
  * Get our query string. Provided as a method so that tests can mock this.
  */
