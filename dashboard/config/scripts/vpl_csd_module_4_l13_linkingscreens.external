@@ -4,29 +4,10 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Lesson 12:  Digital Design  
+#Lesson 13:  Linking Screens  
 
 
+Chapter 2, Lesson 13 has student teams merge all of their separate screens into a single app.  The "Help & Tips" tab throughout the lesson contains additional information for the process of merging screens into a single app.  This is also an opportunity to help students develop the skill of referencing resources.
 
-## Investigation Goals
-
-**Become familiar with the Design Mode features within App Lab with a specific focus on available resources for future reference**
-
-## Investigation Tasks
-
-* Watch Video: CS Discoveries: App Lab - Design Mode
-
-* Complete levels 3-6
-
-    * Read the information within the "Helps & Tips" tab starting in level 3 (and builds on in level 6) for students to 		reference throughout the unit
-
-Optional: Complete levels 7-9
-
-**Click "Continue" to begin investigation tasks.**
-
-
-
-
-
-
+![](https://images.code.org/ff7e9c9390be76c169d8e7b770d8a533-image-1597875966538.png)
 MARKDOWN
