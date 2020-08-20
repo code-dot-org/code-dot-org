@@ -9,6 +9,10 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1/edit
   def edit
+    @lesson_data = {
+      id: @lesson.id,
+      overview: @lesson.overview
+    }
   end
 
   # PATCH/PUT /lessons/1
