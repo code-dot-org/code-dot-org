@@ -108,11 +108,11 @@
       %b= "#{t('user.parent_guardian_email_label')}:"
       %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
       (
-      %a#add-parent-email-link{href: '#', role: 'button', 'aria-label' => t('user.update_parent_email_aria_label')}
+      %a#add-parent-email-link{href: '#', role: 'button'}
         = t('user.update_email')
       - if current_user.parent_email&.present?
         = t('or')
-        %a#remove-parent-email-link{href: '', role: 'button', 'aria-label' => t('user.remove_parent_email_aria_label')}
+        %a#remove-parent-email-link{href: '', role: 'button'}
           = t('user.remove_parent_email_label')
       )
     %p= t('user.only_one_parent_email_supported_warning')
