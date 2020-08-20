@@ -37,6 +37,7 @@ export function loadScript(scriptId, sectionId) {
   let sectionProgress = {
     studentLevelProgressByScript: {},
     studentTimestampsByScript: {},
+    studentLevelTimeSpentByScript: {},
     studentLevelPairingByScript: {},
     scriptDataByScript: {}
   };
@@ -95,6 +96,13 @@ export function loadScript(scriptId, sectionId) {
           [scriptId]: {
             ...sectionProgress.studentTimestampsByScript,
             ...processStudentTimestamps(data.student_timestamps)
+          }
+        };
+
+        sectionProgress.studentLevelTimeSpentByScript = {
+          [scriptId]: {
+            ...sectionProgress.studentLevelTimeSpentByScript,
+            ...getInfoByStudentByLevel(data.students, level => level.time_spent)
           }
         };
 
@@ -158,6 +166,8 @@ function postProcessDataByScript(scriptData) {
 function postProcessLevelsByLesson(scriptId, progress) {
   const studentLevelProgress =
     progress.studentLevelProgressByScript[scriptId] || {};
+  const studentTimeSpent =
+    progress.studentLevelTimeSpentByScript[scriptId] || {};
   const pairing = progress.studentLevelPairingByScript[scriptId];
   const scriptData = progress.scriptDataByScript[scriptId];
   let levelsByLessonByStudent = {};
@@ -165,6 +175,7 @@ function postProcessLevelsByLesson(scriptId, progress) {
     levelsByLessonByStudent[studentId] = levelsByLesson({
       stages: scriptData.stages,
       levelProgress: studentLevelProgress[studentId],
+      levelTimeSpent: studentTimeSpent[studentId],
       levelPairing: pairing[studentId],
       currentLevelId: null
     });
