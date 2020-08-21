@@ -43,6 +43,7 @@ class UnitGroup < ApplicationRecord
   serialized_attrs %w(
     teacher_resources
     has_verified_resources
+    has_numbered_units
     family_name
     version_year
     is_stable
@@ -296,11 +297,12 @@ class UnitGroup < ApplicationRecord
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
-        include_stages = false
-        script.summarize(include_stages, user).merge!(script.summarize_i18n(include_stages))
+        include_lessons = false
+        script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
+      has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
       show_assign_button: assignable?(user)
     }
