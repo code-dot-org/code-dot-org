@@ -18,14 +18,27 @@ describe('LessonGroup', () => {
     expect(wrapper.find('h2')).to.have.lengthOf(1);
     expect(wrapper.contains('Lesson Group Name')).to.equal(true);
 
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
-    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
-      'This is an awesome Lesson Group.'
-    );
+    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(3);
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(0)
+        .props().markdown
+    ).to.equal('This is an awesome Lesson Group.');
 
     expect(wrapper.find('li')).to.have.lengthOf(2);
-    expect(wrapper.contains('Who?')).to.equal(true);
-    expect(wrapper.contains('What?')).to.equal(true);
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(1)
+        .props().markdown
+    ).to.equal('Who?');
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(2)
+        .props().markdown
+    ).to.equal('What?');
 
     expect(wrapper.find('Button')).to.have.lengthOf(1);
   });
