@@ -101,6 +101,23 @@ class CourseOfferingTest < ActiveSupport::TestCase
       assert_nil CourseOffering.find_by(key: old_offering_key)
     end
 
+    test "add_course_version deletes CourseVersion but not CourseOffering if is_course is changed to false for #{content_root_type} but other versions remain" do
+      offering = course_offering_with_versions(2, "with_#{content_root_type}".to_sym)
+      content_root = offering.course_versions.first.content_root
+      old_offering_key = offering.key
+      old_version_year = offering.course_versions.first.key
+
+      content_root.family_name = content_root.version_year = nil
+      content_root.is_course = false if content_root_type == :unit
+      content_root.save
+      offering = CourseOffering.add_course_offering(content_root)
+
+      assert_nil offering
+      assert_nil content_root.course_version
+      assert_nil CourseVersion.find_by(key: old_version_year)
+      assert_equal 1, CourseOffering.find_by(key: old_offering_key).course_versions.length # old CourseOffering should have 1 version left
+    end
+
     test "add_course_offering does nothing if is_course is false for #{content_root_type}" do
       num_course_offerings = CourseOffering.count
       num_course_versions = CourseVersion.count
