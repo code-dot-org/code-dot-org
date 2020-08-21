@@ -5,6 +5,10 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
+    @lesson_data = {
+      title: @lesson.localized_title,
+      overview: @lesson.overview,
+    }
   end
 
   # GET /lessons/1/edit
