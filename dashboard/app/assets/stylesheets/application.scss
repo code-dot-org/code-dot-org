@@ -3529,6 +3529,12 @@ h2.danger {
   }
 }
 
+#add-parent-email {
+  #remove-parent-email-link {
+    color: $red;
+  }
+}
+
 .immersive-reader-button {
   /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
   background-color: $lightest_purple !important;

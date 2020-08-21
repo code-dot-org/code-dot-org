@@ -368,9 +368,9 @@ class RegistrationsController < Devise::RegistrationsController
         format.html do
           set_flash_message :notice, flash_message_kind, {username: user.username}
           begin
-            redirect_back fallback_location: after_update_path_for(user)
+            redirect_back fallback_location: edit_registration_path(current_user)
           rescue ActionController::RedirectBackError
-            redirect_to after_update_path_for(user)
+            redirect_to edit_registration_path(user)
           end
         end
         format.any {head :no_content}
