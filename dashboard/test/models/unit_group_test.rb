@@ -223,22 +223,18 @@ class UnitGroupTest < ActiveSupport::TestCase
     I18n.backend.store_translations test_locale, custom_i18n
 
     summary = unit_group.summarize
-    assert_equal 'script1-title', summary[:scripts].first['title']
     assert_equal 'script1-title', summary[:scripts].first[:title]
 
     summary = script.summarize
-    assert_equal 'script1-title', summary['title']
     assert_equal 'script1-title', summary[:title]
 
     unit_group.has_numbered_units = true
     unit_group.save!
 
     summary = unit_group.summarize
-    assert_equal 'Unit 1 - script1-title', summary[:scripts].first['title']
     assert_equal 'Unit 1 - script1-title', summary[:scripts].first[:title]
 
     summary = script.summarize
-    assert_equal 'Unit 1 - script1-title', summary['title']
     assert_equal 'Unit 1 - script1-title', summary[:title]
   end
 
