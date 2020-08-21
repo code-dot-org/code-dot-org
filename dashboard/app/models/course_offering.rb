@@ -34,8 +34,13 @@ class CourseOffering < ApplicationRecord
     raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
     raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
 
+    original_offering = content_root.course_version&.course_offering
     offering = CourseOffering.find_or_create_by(key: content_root.family_name, display_name: content_root.family_name)
     CourseVersion.add_course_version(offering, content_root)
+
+    # If changes to content_root's family name and/or version year have resulted in its previous CourseOffering having no versions,
+    # destroy the old CourseOffering.
+    original_offering&.destroy if original_offering != offering && original_offering&.course_versions&.empty?
 
     # TODO: add relevant properties from content root to course_version
 
