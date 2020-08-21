@@ -244,7 +244,7 @@ module Pd
     # GET /pd/workshop_survey/csf/post101(/:enrollment_code)
     def new_csf_post101
       # Use enrollment_code to find a specific workshop
-      # or search all CSF101 workshops the current user is enrolled in.
+      # or search all CSF101 workshops the current user is enrolled in and attended.
       attended_workshop = get_workshop_by_enrollment_or_course_and_subject(
         enrollment_code: params[:enrollment_code],
         course: COURSE_CSF,
@@ -298,15 +298,15 @@ module Pd
 
     # Pre survey controller for academic year workshops
     def new_ayw_pre
-      ayw_helper(PRE_SURVEY_CONFIG_PATHS, day: 0)
+      ayw_helper(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
     def new_ayw_daily
-      ayw_helper(DAILY_SURVEY_CONFIG_PATHS, day: params[:day])
+      ayw_helper(survey_names: DAILY_SURVEY_CONFIG_PATHS, day: params[:day])
     end
 
     def new_ayw_post
-      ayw_helper(POST_SURVEY_CONFIG_PATHS, day: nil)
+      ayw_helper(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
     end
 
     protected
@@ -469,7 +469,7 @@ module Pd
       render :new_general
     end
 
-    def ayw_helper(survey_names, day:)
+    def ayw_helper(survey_names:, day:)
       # get workshop (based on url/user)
       workshop_subject = ACADEMIC_YEAR_WORKSHOPS[params[:workshop_subject]]
       return render_404 unless workshop_subject
