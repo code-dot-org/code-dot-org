@@ -1,6 +1,6 @@
 /* global Text */
 
-var experiments = require('@cdo/apps/util/experiments');
+var constants = require('@cdo/apps/constants');
 var xml = require('./xml');
 var msg = require('@cdo/locale');
 var _ = require('lodash');
@@ -227,13 +227,13 @@ export function elementsEquivalent(expected, given) {
   var expectedTag = expected.tagName.toLowerCase();
   var givenTag = given.tagName.toLowerCase();
   // Google's Blockly has slightly different tag names, but our validation code
-  // expects all the tag names to be consistent with our Blockly. This mapping
+  // expects all the tag names to be consistent with CDO Blockly. This mapping
   // ensures we will validate correctly in both versions of Blockly.
   var equivalentTagNamesMap = {
     field: 'title'
   };
   if (expectedTag !== givenTag) {
-    if (experiments.isEnabled(experiments.GOOGLE_BLOCKLY)) {
+    if (Blockly.version === constants.BlocklyVersion.GOOGLE) {
       if (expectedTag !== equivalentTagNamesMap[givenTag]) {
         return false;
       }
