@@ -5,9 +5,7 @@ import LessonDescriptions from './LessonDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -472,7 +470,6 @@ export default class ScriptEditor extends React.Component {
           <ResourcesEditor
             inputStyle={styles.input}
             resources={this.props.teacherResources}
-            maxResources={Object.keys(ResourceType).length}
           />
         </div>
         <h2>Professional Learning Settings</h2>

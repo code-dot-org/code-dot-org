@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -246,7 +244,6 @@ export default class CourseEditor extends Component {
           <ResourcesEditor
             inputStyle={styles.input}
             resources={teacherResources}
-            maxResources={Object.keys(ResourceType).length}
           />
         </div>
       </div>
