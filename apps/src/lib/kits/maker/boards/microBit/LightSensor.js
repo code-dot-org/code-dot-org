@@ -93,7 +93,9 @@ export default class LightSensor extends EventEmitter {
       currentReading: 0,
       currentBufferWriteIndex: 0
     };
-    this.state.buffer.fill(0);
+    if (this.state.buffer) {
+      this.state.buffer.fill(0);
+    }
   }
 
   // Get the averaged value over the given ms, adjusted within the range, if specified.
