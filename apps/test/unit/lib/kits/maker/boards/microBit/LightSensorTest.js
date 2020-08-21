@@ -74,32 +74,37 @@ describe('LightSensor', function() {
 
   describe(`getAveragedValue`, () => {
     it(`returns average of values in buffer`, () => {
-      lightSensor.buffer = new Float32Array(
+      lightSensor.state.buffer = new Float32Array(
         MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
       );
-      for (let i = 0; i < lightSensor.buffer.length; i++) {
-        lightSensor.buffer[i] = i;
+      for (let i = 0; i < lightSensor.state.buffer.length; i++) {
+        lightSensor.state.buffer[i] = i;
       }
 
-      lightSensor.currentBufferWriteIndex = 20;
+      lightSensor.state.currentBufferWriteIndex = 20;
       expect(lightSensor.getAveragedValue(1000)).to.equal(9.5);
 
-      lightSensor.currentBufferWriteIndex = 0;
+      lightSensor.state.currentBufferWriteIndex = 3001;
       expect(lightSensor.getAveragedValue(3000)).to.equal(29.5);
 
-      lightSensor.currentBufferWriteIndex = 1;
+      lightSensor.state.currentBufferWriteIndex = 1;
       expect(lightSensor.getAveragedValue(50)).to.equal(0);
+
+      lightSensor.state.currentBufferWriteIndex = 20;
+      expect(lightSensor.getAveragedValue(3000)).to.equal(9.5);
     });
 
     it(`returns average of values in buffer within the set range`, () => {
       lightSensor.setRange(10, 110);
 
-      lightSensor.buffer = new Float32Array(
+      lightSensor.state.buffer = new Float32Array(
         MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
       );
-      for (let i = 0; i < lightSensor.buffer.length; i++) {
-        lightSensor.buffer[i] = 5;
+      for (let i = 0; i < lightSensor.state.buffer.length; i++) {
+        lightSensor.state.buffer[i] = 5;
       }
+
+      lightSensor.state.currentBufferWriteIndex = 20;
       expect(lightSensor.getAveragedValue(800)).to.equal(11.96);
     });
   });
