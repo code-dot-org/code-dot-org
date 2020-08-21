@@ -3,15 +3,13 @@ import React, {Component} from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import ResourceType, {
-  resourceShape,
-  stringForType
+  resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import Button from '@cdo/apps/templates/Button';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const styles = {
   input: {
@@ -251,16 +249,7 @@ export default class CourseEditor extends Component {
             resources={teacherResources}
             maxResources={Object.keys(ResourceType).length}
             renderPreview={resources => (
-              <DropdownButton
-                text="Teacher resources"
-                color={Button.ButtonColor.blue}
-              >
-                {resources.map(({type, link}, index) => (
-                  <a key={index} href={link}>
-                    {stringForType[type]}
-                  </a>
-                ))}
-              </DropdownButton>
+              <TeacherResourcesDropdown resources={resources} />
             )}
           />
         </div>

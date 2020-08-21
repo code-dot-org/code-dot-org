@@ -5,11 +5,8 @@ import LessonDescriptions from './LessonDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import Button from '@cdo/apps/templates/Button';
 import ResourceType, {
-  resourceShape,
-  stringForType
+  resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
@@ -17,6 +14,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from './LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
 import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const styles = {
   input: {
@@ -477,16 +475,7 @@ export default class ScriptEditor extends React.Component {
             resources={this.props.teacherResources}
             maxResources={Object.keys(ResourceType).length}
             renderPreview={resources => (
-              <DropdownButton
-                text="Teacher resources"
-                color={Button.ButtonColor.blue}
-              >
-                {resources.map(({type, link}, index) => (
-                  <a key={index} href={link}>
-                    {stringForType[type]}
-                  </a>
-                ))}
-              </DropdownButton>
+              <TeacherResourcesDropdown resources={resources} />
             )}
           />
         </div>
