@@ -87,7 +87,8 @@ class UnitGroup < ApplicationRecord
     unit_group.properties = hash['properties']
     unit_group.save!
 
-    CourseVersion.add_course_version(unit_group)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
