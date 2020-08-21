@@ -12,6 +12,29 @@ class LessonsControllerTest < ActionController::TestCase
       properties: {overview: 'lesson overview'}
     )
 
+    @script_title = 'Script Display Name'
+    @lesson_name = 'Lesson Display Name'
+
+    custom_i18n = {
+      'data' => {
+        'script' => {
+          'name' => {
+            @lesson.script.name => {
+              'title' => @script_title,
+              'lessons' => {
+                @lesson.name => {
+                  'name' => @lesson_name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations 'en-US', custom_i18n
+    assert_equal @script_title, @lesson.script.localized_title
+
     @update_params = {
       id: @lesson.id,
       overview: 'new overview'
@@ -27,11 +50,14 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
 
   test 'show lesson' do
+    # a bit weird, but this is what happens when there is only one lesson.
+    assert_equal @script_title, @lesson.localized_name
+
     get :show, params: {
       id: @lesson.id
     }
     assert_response :ok
-    assert(@response.body.include?(@lesson.name))
+    assert(@response.body.include?(@script_title))
     assert(@response.body.include?(@lesson.overview))
   end
 
