@@ -183,7 +183,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     # spot check that we have fields that show up in Script.summarize(false)
     assert_equal 'script1', summary[:scripts][0][:name]
-    assert_equal 'script1-description', summary[:scripts][0]['description']
+    assert_equal 'script1-description', summary[:scripts][0][:description]
 
     assert_equal 1, summary[:versions].length
     assert_equal 'my-unit-group', summary[:versions].first[:name]
@@ -191,7 +191,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     # make sure we dont have stage info
     assert_nil summary[:scripts][0][:stages]
-    assert_nil summary[:scripts][0]['stageDescriptions']
+    assert_nil summary[:scripts][0][:stageDescriptions]
   end
 
   test 'summarize with numbered units' do
