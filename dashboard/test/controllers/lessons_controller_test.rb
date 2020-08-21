@@ -12,6 +12,13 @@ class LessonsControllerTest < ActionController::TestCase
       properties: {overview: 'lesson overview'}
     )
 
+    @update_params = {
+      id: @lesson.id,
+      lesson: {
+        overview: 'new overview'
+      }
+    }
+
     @levelbuilder = create :levelbuilder
   end
 
@@ -47,18 +54,15 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   # only levelbuilders can update
-  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect
-  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :redirect
+  test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect
+  test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
+  test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :redirect
 
   test 'update lesson' do
     sign_in @levelbuilder
 
-    put :update, params: {
-      id: @lesson.id,
-      lesson: {overview: 'new overview'}
-    }
+    put :update, params: @update_params
 
     assert_redirected_to "/lessons/#{@lesson.id}"
     @lesson.reload
