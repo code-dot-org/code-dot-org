@@ -27,6 +27,7 @@ const defaultProps = {
   scriptNames: ['CSP Unit 1', 'CSP Unit 2'],
   teacherResources: [],
   hasVerifiedResources: false,
+  hasNumberedUnits: false,
   courseFamilies: ['CSP', 'CSD', 'CSF'],
   versionYearOptions: ['2017', '2018', '2019']
 };
@@ -55,7 +56,7 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('textarea').length, 3);
     assert.equal(wrapper.find('CourseScriptsEditor').length, 1);
     assert.equal(wrapper.find('ResourcesEditor').length, 1);
-    assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
+    assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
   });
 
   it('has correct markdown for preview of course teacher and student description', () => {

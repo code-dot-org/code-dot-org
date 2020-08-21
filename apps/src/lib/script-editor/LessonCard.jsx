@@ -204,6 +204,10 @@ export class UnconnectedLessonCard extends Component {
     this.setState({levelPosToRemove: null});
   };
 
+  handleEditLessonDetails = () => {
+    window.open(`/lessons/${this.props.lesson.id}/edit`, '_blank');
+  };
+
   handleEditLessonGroup = () => {
     this.setState({
       editingLessonGroup: true
@@ -317,6 +321,15 @@ export class UnconnectedLessonCard extends Component {
               >
                 <i style={{marginRight: 7}} className="fa fa-plus-circle" />
                 Add Level
+              </button>
+              <button
+                onMouseDown={this.handleEditLessonDetails}
+                className="btn"
+                style={styles.addLevel}
+                type="button"
+              >
+                <i style={{marginRight: 7}} className="fa fa-pencil" />
+                Edit Lesson Details
               </button>
               {this.props.lessonGroupsCount > 1 && (
                 <button

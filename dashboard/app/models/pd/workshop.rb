@@ -830,7 +830,7 @@ class Pd::Workshop < ActiveRecord::Base
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
     pre_survey_course.default_scripts.map do |script|
-      unit_name = script.localized_title
+      unit_name = script.title_for_display
       stage_names = script.lessons.where(lockable: false).pluck(:name)
       lesson_names = stage_names.each_with_index.map do |stage_name, i|
         "Lesson #{i + 1}: #{stage_name}"
@@ -872,9 +872,15 @@ class Pd::Workshop < ActiveRecord::Base
 
   def last_valid_day
     last_day = sessions.size
-    unless VALID_DAYS[CATEGORY_MAP[subject]].include? last_day
+
+    # If we don't have Jotform survey constants set up for this workshop,
+    # return the session size to avoid erroring out in the next step.
+    return last_day if VALID_DAYS[CATEGORY_MAP[subject]].nil?
+
+    unless VALID_DAYS[CATEGORY_MAP[subject]].include?(last_day)
       last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
     end
+
     last_day
   end
 

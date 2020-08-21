@@ -40,6 +40,7 @@ class Lesson < ActiveRecord::Base
   self.table_name = 'stages'
 
   serialized_attrs %w(
+    overview
     visible_after
   )
 
@@ -160,7 +161,7 @@ class Lesson < ActiveRecord::Base
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
     else # script only has one lesson, use the script name
-      script.localized_title
+      script.title_for_display
     end
   end
 
