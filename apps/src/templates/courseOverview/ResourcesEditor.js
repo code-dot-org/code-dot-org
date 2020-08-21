@@ -33,9 +33,7 @@ const defaultLinks = {
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
-    maxResources: PropTypes.number.isRequired,
-    renderPreview: PropTypes.func.isRequired
+    resources: PropTypes.arrayOf(resourceShape).isRequired
   };
 
   constructor(props) {
@@ -43,7 +41,7 @@ export default class ResourcesEditor extends Component {
 
     const resources = [...props.resources];
     // add empty entries to get to max
-    while (resources.length < props.maxResources) {
+    while (resources.length < Object.keys(ResourceType).length) {
       resources.push({type: '', link: ''});
     }
 
