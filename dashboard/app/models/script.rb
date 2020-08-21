@@ -988,7 +988,8 @@ class Script < ActiveRecord::Base
     new_properties = {
       is_stable: false,
       tts: false,
-      script_announcements: nil
+      script_announcements: nil,
+      is_course: false
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
