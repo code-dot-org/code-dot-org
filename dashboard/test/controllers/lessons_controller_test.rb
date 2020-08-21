@@ -38,7 +38,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   # only levelbuilders can edit
-  test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect
+  test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
@@ -54,7 +54,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   # only levelbuilders can update
-  test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect
+  test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :redirect
