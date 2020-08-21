@@ -23,6 +23,7 @@ export default function initPage(scriptEditorData) {
       lessons: lesson_group.lessons
         .filter(lesson => lesson.id)
         .map(lesson => ({
+          id: lesson.id,
           position: lesson.position,
           relativePosition: lesson.relative_position,
           lockable: lesson.lockable,

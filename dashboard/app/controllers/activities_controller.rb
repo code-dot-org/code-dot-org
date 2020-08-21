@@ -178,7 +178,8 @@ class ActivitiesController < ApplicationController
       @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
     if @script_level
-      time_since_last_milestone = [params[:timeSinceLastMilestone].to_i, MAX_INT_MILESTONE].min
+      # convert milliseconds to seconds
+      time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_MILESTONE].min
       @user_level, @new_level_completed = User.track_level_progress(
         user_id: current_user.id,
         level_id: @level.id,
