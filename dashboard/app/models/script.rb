@@ -944,7 +944,7 @@ class Script < ActiveRecord::Base
 
     script.generate_plc_objects
 
-    CourseVersion.add_course_version(script)
+    CourseOffering.add_course_offering(script)
 
     script
   end
