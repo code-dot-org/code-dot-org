@@ -1246,7 +1246,7 @@ class Script < ActiveRecord::Base
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
-    }.with_indifferent_access
+    }
 
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
@@ -1312,11 +1312,11 @@ class Script < ActiveRecord::Base
 
   def summarize_i18n_for_edit(include_lessons=true)
     data = %w(title description description_short description_audience).map do |key|
-      [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
+      [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
     if include_lessons
-      data['stageDescriptions'] = lessons.map do |lesson|
+      data[:stageDescriptions] = lessons.map do |lesson|
         {
           key: lesson.key,
           name: lesson.name,
@@ -1330,7 +1330,7 @@ class Script < ActiveRecord::Base
 
   def summarize_i18n_for_display(include_lessons=true)
     data = summarize_i18n_for_edit(include_lessons)
-    data['title'] = localized_title
+    data[:title] = localized_title
     data
   end
 
