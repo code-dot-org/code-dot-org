@@ -1,0 +1,10 @@
+%h1= @lesson.name
+
+%p= @lesson.overview
+
+- if can? :edit, @lesson
+  = render layout: 'shared/extra_links' do
+    %strong= @lesson.name
+    %ul
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to "Edit", edit_lesson_path({id: @lesson.id})
