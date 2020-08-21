@@ -11,8 +11,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal course_offering, version2.course_offering
   end
 
-  # One "integration test" of seeding from DSL creating a CourseVersion for a Script with is_course true.
-  # Other cases are covered by directly testing add_course_version below.
+  # "Integration tests" of on seeding from .script and .course files.
+  # Other cases are covered by directly testing add_course_offering below.
   test "Script.setup creates CourseOffering and CourseVersion if is_course is true" do
     script_file = File.join(self.class.fixture_path, 'test-script-course-version.script')
     scripts, _ = Script.setup([script_file])
@@ -23,6 +23,16 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal [CourseVersion.find_by(key: '1234')], offering.course_versions
   end
 
+  test "UnitGroup.load_from_path creates CourseOffering and CourseVersion if is_course is true" do
+    course_file = File.join(self.class.fixture_path, 'test-course-offering.course')
+    unit_group = UnitGroup.load_from_path(course_file)
+
+    offering = unit_group.course_version.course_offering
+    assert_equal 'xyz', offering.key
+    assert_equal [CourseVersion.find_by(key: '1234')], offering.course_versions
+  end
+
+  # "Unit tests", parameterized so they test both types of content roots (Scripts and UnitGroups).
   [:unit, :unit_group].each do |content_root_type|
     test "add_course_offering creates CourseOffering and CourseVersion for #{content_root_type}" do
       family_name = 'csz'
