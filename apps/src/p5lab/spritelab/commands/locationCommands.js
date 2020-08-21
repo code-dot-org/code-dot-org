@@ -12,7 +12,12 @@ export const commands = {
       South: location => ({x: location.x, y: location.y + distance}),
       West: location => ({x: location.x - distance, y: location.y})
     };
-    if (!location || !location.x || !location.y || !dirs[direction]) {
+    if (
+      location === undefined ||
+      location.x === undefined ||
+      location.y === undefined ||
+      !dirs[direction]
+    ) {
       return;
     }
     return dirs[direction](location);
