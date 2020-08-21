@@ -25,6 +25,8 @@ class LessonsController < ApplicationController
   private
 
   def lesson_params
+    return head :bad_request unless params[:lesson]
+
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
     params[:lesson].permit(:overview)
