@@ -196,8 +196,10 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test 'summarize with numbered units' do
     unit_group = create :unit_group, name: 'my-unit-group'
-    script = create(:script, name: 'script1')
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: script)
+    script1 = create(:script, name: 'script1')
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: script1)
+    script2 = create(:script, name: 'script2')
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: script2)
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -214,22 +216,31 @@ class UnitGroupTest < ActiveSupport::TestCase
           'name' => {
             'script1' => {
               'title' => 'script1-title'
+            },
+            'script2' => {
+              'title' => 'script2-title'
             }
-          }
-        }
+          },
+        },
       }
     }
 
     I18n.backend.store_translations test_locale, custom_i18n
 
     assert_equal 'script1-title', unit_group.summarize[:scripts].first[:title]
-    assert_equal 'script1-title', script.summarize[:title]
+    assert_equal 'script1-title', script1.summarize[:title]
+
+    assert_equal 'script2-title', unit_group.summarize[:scripts].last[:title]
+    assert_equal 'script2-title', script2.summarize[:title]
 
     unit_group.has_numbered_units = true
     unit_group.save!
 
     assert_equal 'Unit 1 - script1-title', unit_group.summarize[:scripts].first[:title]
-    assert_equal 'Unit 1 - script1-title', script.summarize[:title]
+    assert_equal 'Unit 1 - script1-title', script1.summarize[:title]
+
+    assert_equal 'Unit 2 - script2-title', unit_group.summarize[:scripts].last[:title]
+    assert_equal 'Unit 2 - script2-title', script2.summarize[:title]
   end
 
   test 'summarize_version' do
