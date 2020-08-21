@@ -718,6 +718,7 @@ describe('entry tests', () => {
     // The blockly dependency is huge, so we currently control when it is
     // loaded explicitly via script tags rather than via normal imports.
     blockly: './src/sites/studio/pages/blockly.js',
+    googleblockly: './src/sites/studio/pages/googleblockly.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
