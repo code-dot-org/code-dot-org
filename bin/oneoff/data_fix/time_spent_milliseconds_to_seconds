@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+# The time_spent field in the user_levels table has been
+# recording time in milliseconds. This will cause time_spent
+# to max out at ~25 days. Instead we want to record time in
+# seconds. This will cause time_spent to max out at ~68 years
+#
+# Relevant entries include:
+# SELECT *
+# FROM user_levels
+# WHERE time_spent IS NOT NULL
+#   AND time_spent > 0;
+#
+# time_spent should be transformed as such
+# (time_spent.to_f/1000).ceil.to_i
+
+UserLevel.where("time_spent > ?", 0).where.not(time_spent: nil).each do |user_level|
+  user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
+  user_level.save!
+end
