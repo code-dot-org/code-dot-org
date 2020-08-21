@@ -221,12 +221,6 @@
    "name": "module1_page",
    "elements": [
     {
-     "type": "html",
-     "name": "comment_module1",
-     "title": "comment",
-     "html": "<p style='background-color: yellow'>Showing module 1 as example. NEED TO re-add logic to show only if module1 == true.  <pre>'visibleIf': '{module1}='true''</pre>"
-    },
-    {
      "type": "panel",
      "name": "module_1_panel",
      "elements": [
