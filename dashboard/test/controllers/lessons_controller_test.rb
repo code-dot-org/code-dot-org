@@ -14,9 +14,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     @update_params = {
       id: @lesson.id,
-      lesson: {
-        overview: 'new overview'
-      }
+      overview: 'new overview'
     }
 
     @levelbuilder = create :levelbuilder
@@ -50,7 +48,6 @@ class LessonsControllerTest < ActionController::TestCase
       id: @lesson.id
     }
     assert_response :ok
-    assert(@response.body.include?("Editing #{@lesson.name}"))
   end
 
   # only levelbuilders can update
