@@ -1,7 +1,13 @@
+/**
+ * Wrapper class for https://github.com/google/blockly
+ * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
+ * by allowing us to unify the APIs so that we can switch out the underlying Blockly
+ * object without affecting apps code.
+ * This wrapper will contain all of our customizations to Google Blockly.
+ * See also ./cdoBlocklyWrapper.js
+ */
 const BlocklyWrapper = function(blocklyInstance) {
   this.blockly_ = blocklyInstance;
-  this.Msg = blocklyInstance.Msg;
-  this.inject = this.blockly_.inject;
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
       get: function() {
@@ -85,46 +91,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
-  blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.wrapSettableProperty('assetUrl');
-  blocklyWrapper.wrapSettableProperty('behaviorEditor');
-  blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
-  blocklyWrapper.wrapSettableProperty('BUMP_UNCONNECTED');
-  blocklyWrapper.wrapSettableProperty('HSV_SATURATION');
-  blocklyWrapper.wrapSettableProperty('JavaScript');
-  blocklyWrapper.wrapSettableProperty('readOnly');
-  blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
-  blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
-  blocklyWrapper.wrapSettableProperty('typeHints');
-  blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
-
-  blocklyWrapper.getGenerator = function() {
-    return this.JavaScript;
-  };
-  blocklyWrapper.findEmptyContainerBlock = function() {}; // TODO
-  blocklyWrapper.BlockSpace = {};
-  blocklyWrapper.BlockSpace.EVENTS = {};
-  blocklyWrapper.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED =
-    'mainBlockSpaceCreated';
-  blocklyWrapper.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED = 'blocksImported';
-  blocklyWrapper.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
-  blocklyWrapper.BlockSpace.EVENTS.BLOCK_SPACE_SCROLLED = 'blockSpaceScrolled';
-  blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED = 'runButtonClicked';
-  blocklyWrapper.BlockSpace.onMainBlockSpaceCreated = () => {}; // TODO
-  blocklyWrapper.BlockSpace.createReadOnlyBlockSpace = () => {}; // TODO
-
-  blocklyWrapper.Block.prototype.isUserVisible = () => false; // TODO
-  blocklyWrapper.Block.prototype.getTitleValue =
-    blocklyWrapper.Block.prototype.getFieldValue;
-  blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
-    return this.setColour(h);
-  };
-
-  blocklyWrapper.Input.prototype.appendTitle = function(a, b) {
-    return this.appendField(a, b);
-  };
-
+  // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
+  // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function() {
       return this.blockly_.mainWorkspace;
@@ -141,31 +110,57 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
-  blocklyWrapper.Workspace.prototype.getToolboxWidth = function() {
-    return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
+  blocklyWrapper.wrapSettableProperty('assetUrl');
+  blocklyWrapper.wrapSettableProperty('behaviorEditor');
+  blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
+  blocklyWrapper.wrapSettableProperty('BUMP_UNCONNECTED');
+  blocklyWrapper.wrapSettableProperty('HSV_SATURATION');
+  blocklyWrapper.wrapSettableProperty('JavaScript');
+  blocklyWrapper.wrapSettableProperty('readOnly');
+  blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
+  blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
+  blocklyWrapper.wrapSettableProperty('typeHints');
+  blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
+  blocklyWrapper.wrapSettableProperty('Xml');
+
+  blocklyWrapper.getGenerator = function() {
+    return this.JavaScript;
+  };
+  blocklyWrapper.findEmptyContainerBlock = function() {}; // TODO
+  blocklyWrapper.BlockSpace = {
+    EVENTS: {
+      MAIN_BLOCK_SPACE_CREATED: 'mainBlockSpaceCreated',
+      EVENT_BLOCKS_IMPORTED: 'blocksImported',
+      BLOCK_SPACE_CHANGE: 'blockSpaceChange',
+      BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
+      RUN_BUTTON_CLICKED: 'runButtonClicked'
+    },
+    onMainBlockSpaceCreated: () => {}, // TODO
+    createReadOnlyBlockSpace: () => {} // TODO
   };
 
-  blocklyWrapper.Xml.domToBlockSpace = blocklyWrapper.Xml.domToWorkspace;
-  blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
-  blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
-  blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
-    const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
-    if (ignoreChildBlocks) {
-      Blockly.Xml.deleteNext(blockXml);
-    }
-    return blockXml;
+  // CDO Blockly titles are equivalent to Google Blockly fields.
+  blocklyWrapper.Block.prototype.getTitles = function() {
+    let fields = [];
+    this.inputList.forEach(input => {
+      input.fieldRow.forEach(field => {
+        fields.push(field);
+      });
+    });
+    return fields;
   };
-  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
-  blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
-    blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
-  blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
-  blocklyWrapper.Workspace.prototype.setEnableToolbox = () => {}; // TODO
-  blocklyWrapper.Workspace.prototype.blockSpaceEditor = {
-    blockLimits: {
-      blockLimitExceeded: () => false, // TODO
-      getLimit: () => {} // TODO
-    }
+  blocklyWrapper.Block.prototype.getTitleValue =
+    blocklyWrapper.Block.prototype.getFieldValue;
+  blocklyWrapper.Block.prototype.isUserVisible = () => false; // TODO
+  // Google Blockly only allows you to set the hue, not saturation or value.
+  // TODO: determine if this will work for us, or if there's a workaround to
+  // allow us to keep our colors the same
+  blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
+    return this.setColour(h);
   };
+
+  // This function was a custom addition in CDO Blockly, so we need to add it here
+  // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
@@ -184,14 +179,38 @@ function initializeBlocklyWrapper(blocklyInstance) {
     });
     return code.join('\n');
   };
-  blocklyWrapper.Block.prototype.getTitles = function() {
-    let fields = [];
-    this.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        fields.push(field);
-      });
-    });
-    return fields;
+
+  blocklyWrapper.Input.prototype.appendTitle = function(a, b) {
+    return this.appendField(a, b);
+  };
+
+  blocklyWrapper.Workspace.prototype.getToolboxWidth = function() {
+    return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
+  };
+  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
+  blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
+    blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
+  blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
+  blocklyWrapper.Workspace.prototype.setEnableToolbox = () => {}; // TODO
+  blocklyWrapper.Workspace.prototype.blockSpaceEditor = {
+    blockLimits: {
+      blockLimitExceeded: () => false, // TODO
+      getLimit: () => {} // TODO
+    }
+  };
+  blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
+  blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
+    const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
+    if (ignoreChildBlocks) {
+      Blockly.Xml.deleteNext(blockXml);
+    }
+    return blockXml;
+  };
+
+  blocklyWrapper.Xml = {
+    ...blocklyWrapper.Xml,
+    domToBlockSpace: blocklyWrapper.Xml.domToWorkspace,
+    blockSpaceToDom: blocklyWrapper.Xml.workspaceToDom
   };
 
   return blocklyWrapper;

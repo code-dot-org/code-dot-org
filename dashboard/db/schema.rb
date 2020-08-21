@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200803211022) do
+ActiveRecord::Schema.define(version: 20200819093633) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -332,6 +332,15 @@ ActiveRecord::Schema.define(version: 20200803211022) do
     t.index ["level_group_level_id"], name: "index_contained_levels_on_level_group_level_id", using: :btree
   end
 
+  create_table "course_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "key",                        null: false
+    t.string   "display_name",               null: false
+    t.text     "properties",   limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["key"], name: "index_course_offerings_on_key", unique: true, using: :btree
+  end
+
   create_table "course_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "course_id",         null: false
     t.integer "script_id",         null: false
@@ -344,14 +353,17 @@ ActiveRecord::Schema.define(version: 20200803211022) do
   end
 
   create_table "course_versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "key",                             null: false
-    t.string   "display_name",                    null: false
-    t.text     "properties",        limit: 65535
-    t.string   "content_root_type",               null: false
-    t.integer  "content_root_id",                 null: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.string   "key",                              null: false
+    t.string   "display_name",                     null: false
+    t.text     "properties",         limit: 65535
+    t.string   "content_root_type",                null: false
+    t.integer  "content_root_id",                  null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "course_offering_id"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id", using: :btree
+    t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true, using: :btree
+    t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id", using: :btree
   end
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1048,6 +1060,7 @@ ActiveRecord::Schema.define(version: 20200803211022) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "facilitator_id"
+    t.string   "workshop_agenda"
     t.index ["foorm_submission_id"], name: "index_workshop_survey_foorm_submissions_on_foorm_id", unique: true, using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_session_id", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_workshop_id", using: :btree

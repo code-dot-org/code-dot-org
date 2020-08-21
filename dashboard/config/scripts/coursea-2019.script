@@ -1,3 +1,4 @@
+is_course true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursea/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
@@ -14,11 +15,11 @@ curriculum_umbrella 'CSF'
 tts true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Going Places Safely'
+lesson 'Going Places Safely', display_name: 'Going Places Safely'
 level 'GoingPlacesSafely-unplugged'
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
-lesson 'Learn to Drag and Drop'
+lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop'
 skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:1', progression: 'Practice'
@@ -56,10 +57,10 @@ skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12', progression: 'Practice'
 
-lesson 'Programming: Happy Maps'
+lesson 'Programming: Happy Maps', display_name: 'Happy Maps'
 level 'HappyMaps-Unplugged'
 
-lesson 'Sequencing with Scrat'
+lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat'
 level 'courseAB_video_NewIntro_2019', progression: 'Maze Intro: Programming with Blocks'
 level 'courseB_Scrat_ramp1_2019', progression: 'Practice'
 level 'courseB_Scrat_ramp2_2019', progression: 'Practice'
@@ -68,7 +69,7 @@ level 'courseB_Scrat_ramp3b_2019', progression: 'Practice'
 level 'courseB_Scrat_ramp4a_2019', progression: 'Practice'
 level 'courseB_Scrat_ramp5a_2019', progression: 'Practice'
 
-lesson 'Programming in Ice Age'
+lesson 'Programming in Ice Age', display_name: 'Programming with Scrat'
 level 'elementary_video_pairProgramming_2019', progression: 'Pair Programming'
 level 'courseB_maze_seq1_2019', progression: 'Practice'
 level 'courseB_maze_seq4_2019', progression: 'Practice'
@@ -84,7 +85,7 @@ level 'courseB_maze_seq12_2019', progression: 'Practice'
 bonus 'courseB_maze_seq_challenge1_2019'
 bonus 'courseB_maze_seq_challenge2_2019'
 
-lesson 'Programming with Rey and BB-8'
+lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8'
 level 'bb8_skinOverview_K-1_video_2019', progression: 'Programming with Rey and BB-8'
 level 'courseB_starWars_prog1_2019', progression: 'Practice'
 level 'courseB_starWars_prog2_2019', progression: 'Practice'
@@ -99,10 +100,10 @@ level 'courseB_starWars_prog10_2019', progression: 'Practice'
 level 'courseB_starWars_prog11_2019', progression: 'Practice'
 
 lesson_group 'csf_loops', display_name: 'Loops'
-lesson 'Loops: Happy Loops'
+lesson 'Loops: Happy Loops', display_name: 'Happy Loops'
 level 'HappyLoops-Unplugged'
 
-lesson 'Loops in Ice Age'
+lesson 'Loops in Ice Age', display_name: 'Loops with Scrat'
 level 'courseB_iceage_loops1_2019', progression: 'Practice'
 level 'courseB_iceage_loops2_2019', progression: 'Practice'
 level 'courseB_iceage_loops_video_2019', progression: 'Ice Age Loops'
@@ -116,7 +117,7 @@ level 'courseB_iceage_loops10_2019', progression: 'Challenge', challenge: true
 level 'courseB_iceage_loops11_2019', progression: 'Practice'
 level 'courseB_iceage_loops12_2019', progression: 'Practice'
 
-lesson 'Loops in Collector'
+lesson 'Loops in Collector', display_name: 'Loops with Laurel'
 level 'courseAB_video_collector_2019', progression: 'The Collector'
 level 'courseA_collector_loops1_2019', progression: 'Practice'
 level 'courseA_collector_loops2_2019', progression: 'Practice'
@@ -134,7 +135,7 @@ level 'courseA_collector_loops12_2019', progression: 'Practice'
 bonus 'courseA_collector_loops_challenge2kp_2019'
 bonus 'courseA_collector_loops_challenge1_2019'
 
-lesson 'Ocean Scene with Loops'
+lesson 'Ocean Scene with Loops', display_name: 'Ocean Scene with Loops'
 level 'courseB_video_ArtistIntro_2019', progression: 'The Artist in Code Studio'
 level 'courseA_artist_loops1_2019', progression: 'Practice'
 level 'courseA_artist_loops2_2019', progression: 'Practice'
@@ -153,10 +154,10 @@ bonus 'courseA_artist_loops_challenge2a_2019'
 bonus 'courseA_artist_loops_challenge1_2019'
 
 lesson_group 'csf_events', display_name: 'Events'
-lesson 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'The Big Event Jr.'
 level 'BigEvent-Unplugged'
 
-lesson 'Events in Play Lab'
+lesson 'Events in Play Lab', display_name: 'On the Move with Events'
 level 'courseA_video_events_2019', progression: 'Create a Story'
 level 'courseA_playLab_events1_2019', progression: 'Free Play'
 level 'courseA_playLab_events2_2019', progression: 'Practice'

@@ -811,8 +811,8 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "OPD-K5-events-3": {
-          "courseC_flappy_events2_a": "Der Baustein, den du hinzufügen musst, heißt `Geschwindigkeit einstellen`. ",
-          "courseC_flappy_events2_b": "Verbinde den `Geschwindigkeit bestimmen` Baustein mit dem `wenn ausführen` Baustein, um diese Aufgabe zu lösen."
+          "courseC_flappy_events2_a": "Der Block, den du hinzufügen musst, heißt `Stelle Geschwindigkeit ein`. ",
+          "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "OPD-K5-events-4": {
           "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
@@ -1197,7 +1197,7 @@
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Der Originalcode würde gut funktionieren - wenn es nur einen Schatz in jedem Stapel gäbe!",
-          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋsammelnˋ-Bausteine brauchst!"
+          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋSammelnˋ Blöcke brauchst!"
         },
         "course2_collector_prog_challenge1": {
           "courseC_collector_prog_challenge1_a": "Du kannst den Befehl `sammle` öfter verwenden, um den zusätzlichen Schatz zu sammeln."
@@ -3593,20 +3593,20 @@
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_artist_loop1": {
-          "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Baustein darüber.",
-          "courseC_artist_loop1_b": "Das ist der Baustein, den du benötigst, um ein Muster zu bestimmen:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\n Wähle irgendein Muster, das dir gefällt!"
+          "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
+          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!"
         },
         "courseC_artist_loop1_2018": {
-          "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Baustein darüber.",
-          "courseC_artist_loop1_b": "Das ist der Baustein, den du benötigst, um ein Muster zu bestimmen:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\n Wähle irgendein Muster, das dir gefällt!"
+          "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
+          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!"
         },
         "courseC_artist_loop1_2019": {
-          "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Baustein darüber.",
-          "courseC_artist_loop1_b": "Das ist der Baustein, den du benötigst, um ein Muster zu bestimmen:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\n Wähle irgendein Muster, das dir gefällt!"
+          "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
+          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!"
         },
         "courseC_artist_loop1_2020": {
-          "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Baustein darüber.",
-          "courseC_artist_loop1_b": "Das ist der Baustein, den du benötigst, um ein Muster zu bestimmen:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\n Wähle irgendein Muster, das dir gefällt!"
+          "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
+          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!"
         },
         "courseC_artist_loops1a": {
           "courseC_artist_loops1a_a": "Das ist der erste Block, den du dafür brauchst:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
@@ -3719,36 +3719,36 @@
           "courseC_artist_loops6a_a": "Um ein Muster wie das oben zu erstellen, springe zwischen den einzelnen Stickern um weniger als 75 Pixel vorwärts."
         },
         "courseC_artist_loops7a": {
-          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl deiner Drehungen mit der Anzahl der Wiederholungen. Ist das Ergebnis 360? Überprüfe die vorgeschlagenen Drehungen, um zu sehen, ob es so funktionieren kann!"
+          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
         },
         "courseC_artist_loops7a_2018": {
-          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl deiner Drehungen mit der Anzahl der Wiederholungen. Ist das Ergebnis 360? Überprüfe die vorgeschlagenen Drehungen, um zu sehen, ob es so funktionieren kann!"
+          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
         },
         "courseC_artist_loops7a_2019": {
-          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl deiner Drehungen mit der Anzahl der Wiederholungen. Ist das Ergebnis 360? Überprüfe die vorgeschlagenen Drehungen, um zu sehen, ob es so funktionieren kann!"
+          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
         },
         "courseC_artist_loops7a_2020": {
-          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl deiner Drehungen mit der Anzahl der Wiederholungen. Ist das Ergebnis 360? Überprüfe die vorgeschlagenen Drehungen, um zu sehen, ob es so funktionieren kann!"
+          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
         },
         "courseC_artist_loopsPre1a": {
           "courseC_artist_loopsPre1a_a": "Denke daran, den `drehen`-Baustein in die Schleife einzufügen.",
-          "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Bausteine enthalten: `auf 200 um 200 nach unten springen`, `um 50 Pixel vorwärts bewegen` und `um 60 Grad nach rechts drehen`."
+          "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Blöcke enthalten: `springe zu 200 um 200 nach unten`, `vorwärts bewegen um 50 Pixel` und `nach rechts drehen um 60 Grad`."
         },
         "courseC_artist_loopsPre1a_2018": {
           "courseC_artist_loopsPre1a_a": "Denke daran, den `drehen`-Baustein in die Schleife einzufügen.",
-          "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Bausteine enthalten: `auf 200 um 200 nach unten springen`, `um 50 Pixel vorwärts bewegen` und `um 60 Grad nach rechts drehen`."
+          "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Blöcke enthalten: `springe zu 200 um 200 nach unten`, `vorwärts bewegen um 50 Pixel` und `nach rechts drehen um 60 Grad`."
         },
         "courseC_artist_loopsPre1a_2019": {
           "courseC_artist_loopsPre1a_a": "Denke daran, den `drehen`-Baustein in die Schleife einzufügen.",
-          "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Bausteine enthalten: `auf 200 um 200 nach unten springen`, `um 50 Pixel vorwärts bewegen` und `um 60 Grad nach rechts drehen`."
+          "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Blöcke enthalten: `springe zu 200 um 200 nach unten`, `vorwärts bewegen um 50 Pixel` und `nach rechts drehen um 60 Grad`."
         },
         "courseC_artist_loopsPre1a_2020": {
           "courseC_artist_loopsPre1a_a": "Denke daran, den `drehen`-Baustein in die Schleife einzufügen.",
-          "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Bausteine enthalten: `auf 200 um 200 nach unten springen`, `um 50 Pixel vorwärts bewegen` und `um 60 Grad nach rechts drehen`."
+          "courseC_artist_loopsPre1a_b": "Deine `wiederholen`-Schleife sollte 3 Blöcke enthalten: `springe zu 200 um 200 nach unten`, `vorwärts bewegen um 50 Pixel` und `nach rechts drehen um 60 Grad`."
         },
         "courseC_artist_loopsPrePre1a": {
           "courseC_artist_loopsPrePre1a_a": "Den ersten Baustein, den du brauchen wirst, ist:\n\n![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)",
-          "courseC_artist_loopsPrePre1a_b": "Verwende diesen Baustein, um dich 50 Pixel vorwärts zu bewegen:\n\n![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)"
+          "courseC_artist_loopsPrePre1a_b": "Um 50 Pixel vorwärts zu gehen, benutze diesen Block:\n\n![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)"
         },
         "courseC_artist_loopsPrePre1a_2018": {
           "courseC_artist_loopsPrePre1a_a": "Der erste Baustein, den du brauchst, ist:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
@@ -3915,16 +3915,16 @@
           "courseC_artist_prog_challenge2_b": "Nachdem du die zweite Linie gezogen hast, drehe dich nach rechts, bevor du die dritte Linie ziehst."
         },
         "courseC_collector_loops_challenge2": {
-          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋsammelnˋ-Bausteine brauchst!"
+          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋSammelnˋ Blöcke brauchst!"
         },
         "courseC_collector_loops_challenge2_2018": {
-          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋsammelnˋ-Bausteine brauchst!"
+          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋSammelnˋ Blöcke brauchst!"
         },
         "courseC_collector_loops_challenge2_2019": {
-          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋsammelnˋ-Bausteine brauchst!"
+          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋSammelnˋ Blöcke brauchst!"
         },
         "courseC_collector_loops_challenge2_2020": {
-          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋsammelnˋ-Bausteine brauchst!"
+          "courseC_maze_loops_challenge2_b": "Verwende Schleifen, damit du nicht zu viele ˋSammelnˋ Blöcke brauchst!"
         },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_a": "Wenn du auf einem Feld stehst, wo ein Schatz liegt, dann benutze einen <xml><block type=\"collector_collect\"/></xml> Block um ihn aufzuheben.",
@@ -4099,20 +4099,20 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events2": {
-          "courseC_flappy_events2_a": "Der Baustein, den du hinzufügen musst, heißt `Geschwindigkeit einstellen`. ",
-          "courseC_flappy_events2_b": "Verbinde den `Geschwindigkeit bestimmen` Baustein mit dem `wenn ausführen` Baustein, um diese Aufgabe zu lösen."
+          "courseC_flappy_events2_a": "Der Block, den du hinzufügen musst, heißt `Stelle Geschwindigkeit ein`. ",
+          "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events2_2018": {
-          "courseC_flappy_events2_a": "Der Baustein, den du hinzufügen musst, heißt `Geschwindigkeit einstellen`. ",
-          "courseC_flappy_events2_b": "Verbinde den `Geschwindigkeit bestimmen` Baustein mit dem `wenn ausführen` Baustein, um diese Aufgabe zu lösen."
+          "courseC_flappy_events2_a": "Der Block, den du hinzufügen musst, heißt `Stelle Geschwindigkeit ein`. ",
+          "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events2_2019": {
-          "courseC_flappy_events2_a": "Der Baustein, den du hinzufügen musst, heißt `Geschwindigkeit einstellen`. ",
-          "courseC_flappy_events2_b": "Verbinde den `Geschwindigkeit bestimmen` Baustein mit dem `wenn ausführen` Baustein, um diese Aufgabe zu lösen."
+          "courseC_flappy_events2_a": "Der Block, den du hinzufügen musst, heißt `Stelle Geschwindigkeit ein`. ",
+          "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events2_2020": {
-          "courseC_flappy_events2_a": "Der Baustein, den du hinzufügen musst, heißt `Geschwindigkeit einstellen`. ",
-          "courseC_flappy_events2_b": "Verbinde den `Geschwindigkeit bestimmen` Baustein mit dem `wenn ausführen` Baustein, um diese Aufgabe zu lösen."
+          "courseC_flappy_events2_a": "Der Block, den du hinzufügen musst, heißt `Stelle Geschwindigkeit ein`. ",
+          "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events3": {
           "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."

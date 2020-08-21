@@ -1,0 +1,15 @@
+name 'CSP - Module 3 Wrap Up'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 3 asynchronous work wrap-up
+
+## Next steps
+
+1. Return to your cohort's shared slide deck for Module 3. You can access this through your Digital Digest.
+2. Follow the directions in the shared slide deck to finish final reflections or tasks for this module.
+3. Join us for the Module 3 synchronous workshop. The date and time of the next call can be found in the Digital Digest.
+
+MARKDOWN

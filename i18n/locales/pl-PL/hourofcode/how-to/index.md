@@ -66,7 +66,7 @@ Poproś [ lokalnego wolontariusza]({{ urls/volunteer_local }}), aby zainspirowa�
 Pokaż inspirujący film:
 
 - W oryginalnym wideo Code.org występują Bill Gates, Mark Zuckerberg i gwiazda NBA Chris Bosh. (Do wyboru są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) oraz [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Znajdź więcej inspirujących [zasobów]({{ urls/inspire }}) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
@@ -82,7 +82,7 @@ Skieruj uczniów na zadania
 
 Kiedy Twoi uczniowie napotkają trudności, możesz powiedzieć:
 
-- "Nie wiem. Sprawdźmy to razem."
+- "Nie wiem. Wyjaśnijmy to razem."
 - "Technologia nie zawsze działa w sposób, jaki chcemy."
 - "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
 
@@ -102,7 +102,7 @@ A co zrobić, jeśli któryś z uczniów skończy wcześniej?
 - [Wydrukuj certyfikaty]({{ urls/certificates }}) dla swoich uczniów.
 - [Wydrukuj naklejki "I did an Hour of Code!"]({{ urls/promote_stickers }}) dla swoich uczniów.
 - [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twojej szkoły.
-- Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
+- Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
 * * *
 

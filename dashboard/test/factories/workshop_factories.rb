@@ -158,6 +158,7 @@ FactoryGirl.define do
       on_map false         # Never on the map
       funded               # More than half are funded
       num_facilitators 2   # Most have 2 facilitators
+      suppress_email true  # As of 2020-2021 school year, all AYW should suppress reminder emails.
 
       # Some specific academic year workshops are usually two days instead of one.
       # Add a trait making it easy to specify that we're testing a two-day workshop.

@@ -16337,3 +16337,9 @@ zh-TW:
           lessons:
             Module 1:
               name: 模組 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: 課程 A
+            Course B:
+              name: 課程 B

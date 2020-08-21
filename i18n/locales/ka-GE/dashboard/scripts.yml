@@ -7594,3 +7594,9 @@ ka:
           lesson_groups:
             lg_1:
               display_name: შიგთავსი
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: კურსი A
+            Course B:
+              name: კურსი B
