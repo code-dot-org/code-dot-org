@@ -1,3 +1,4 @@
+import {BlocklyVersion} from '@cdo/apps/constants';
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -7,6 +8,7 @@
  * See also ./cdoBlocklyWrapper.js
  */
 const BlocklyWrapper = function(blocklyInstance) {
+  this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
@@ -151,7 +153,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
   blocklyWrapper.Block.prototype.getTitleValue =
     blocklyWrapper.Block.prototype.getFieldValue;
-
+  blocklyWrapper.Block.prototype.isUserVisible = () => false; // TODO
   // Google Blockly only allows you to set the hue, not saturation or value.
   // TODO: determine if this will work for us, or if there's a workaround to
   // allow us to keep our colors the same
@@ -197,6 +199,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
       blockLimitExceeded: () => false, // TODO
       getLimit: () => {} // TODO
     }
+  };
+
+  // Aliasing Google's blockToDom() so that we can override it, but still be able
+  // to call Google's blockToDom() in the override function.
+  blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
+  blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
+    const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
+    if (ignoreChildBlocks) {
+      Blockly.Xml.deleteNext(blockXml);
+    }
+    return blockXml;
   };
 
   blocklyWrapper.Xml = {
