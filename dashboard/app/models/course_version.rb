@@ -62,11 +62,7 @@ class CourseVersion < ApplicationRecord
     )
 
     # Delete old CourseVersion if the key has been changed to something else
-    if course_version != content_root.course_version
-      original_course_offering = content_root.course_version.course_offering
-      content_root.course_version.destroy
-      original_course_offering.destroy if original_course_offering.course_versions.empty?
-    end
+    content_root.course_version&.destroy if course_version != content_root.course_version
     content_root.course_version = course_version
 
     # TODO: add relevant properties from content root to course_version
