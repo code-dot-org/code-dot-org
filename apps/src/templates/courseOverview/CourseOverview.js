@@ -29,6 +29,7 @@ import AssignmentVersionSelector, {
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import SafeMarkdown from '../SafeMarkdown';
 
 const styles = {
   main: {
@@ -222,11 +223,15 @@ class CourseOverview extends Component {
             />
           )}
         </div>
-        <div style={styles.description}>
-          {viewAs === ViewType.Student
-            ? descriptionStudent
-            : descriptionTeacher}
-        </div>
+        <SafeMarkdown
+          style={styles.description}
+          openExternalLinksInNewTab={true}
+          markdown={
+            viewAs === ViewType.Student
+              ? descriptionStudent
+              : descriptionTeacher
+          }
+        />
         {showNotification && <VerifiedResourcesNotification />}
         {isTeacher && (
           <div>

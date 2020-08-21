@@ -15,6 +15,8 @@ import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux'
 import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from './LessonExtrasEditor';
+import color from '@cdo/apps/util/color';
+import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
 
 const styles = {
   input: {
@@ -23,13 +25,20 @@ const styles = {
     padding: '4px 6px',
     color: '#555',
     border: '1px solid #ccc',
-    borderRadius: 4
+    borderRadius: 4,
+    margin: 0
   },
   checkbox: {
     margin: '0 0 0 7px'
   },
   dropdown: {
     margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
   }
 };
 
@@ -82,7 +91,8 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      curriculumUmbrella: this.props.curriculumUmbrella
+      curriculumUmbrella: this.props.curriculumUmbrella,
+      description: this.props.i18nData.description
     };
   }
 
@@ -116,6 +126,10 @@ export default class ScriptEditor extends React.Component {
     }
   };
 
+  handleDescriptionChange = event => {
+    this.setState({description: event.target.value});
+  };
+
   render() {
     const {betaWarning} = this.props;
     const textAreaRows = this.props.lessonLevelData
@@ -129,6 +143,15 @@ export default class ScriptEditor extends React.Component {
             name="title"
             defaultValue={this.props.i18nData.title}
             style={styles.input}
+          />
+        </label>
+        <label>
+          Unit URL (Slug)
+          <input
+            type="text"
+            value={this.props.name}
+            style={styles.input}
+            disabled={true}
           />
         </label>
         <label>
@@ -157,10 +180,12 @@ export default class ScriptEditor extends React.Component {
           Description
           <textarea
             name="description"
-            defaultValue={this.props.i18nData.description}
+            defaultValue={this.state.description}
             rows={5}
             style={styles.input}
+            onChange={this.handleDescriptionChange}
           />
+          <MarkdownPreview markdown={this.state.description} />
         </label>
         <h2>Basic Settings</h2>
         <label>
