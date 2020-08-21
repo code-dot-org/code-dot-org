@@ -40,6 +40,7 @@ class Lesson < ActiveRecord::Base
   self.table_name = 'stages'
 
   serialized_attrs %w(
+    overview
     visible_after
   )
 
