@@ -66,19 +66,13 @@ class LessonGroup < ApplicationRecord
       else
         LessonGroup.prevent_changing_plc_display_name(raw_lesson_group)
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
-
-        new_lesson_group = false
+        LessonGroup.prevent_changing_stable_i18n_key(script, raw_lesson_group)
 
         lesson_group = LessonGroup.find_or_create_by(
           key: raw_lesson_group[:key],
           script: script,
           user_facing: true
-        ) do
-          # if you got in here, this is a new lesson_group
-          new_lesson_group = true
-        end
-
-        LessonGroup.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
+        )
 
         lesson_group.assign_attributes(
           position: lesson_group_position += 1,
@@ -101,6 +95,12 @@ class LessonGroup < ApplicationRecord
     end
   end
 
+  def self.prevent_changing_stable_i18n_key(script, raw_lesson_group)
+    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lesson_groups.#{raw_lesson_group[:key]}").include?('translation missing:')
+      raise "Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: #{raw_lesson_group[:key]}"
+    end
+  end
+
   def self.prevent_blank_display_name(raw_lesson_group)
     if raw_lesson_group[:display_name].blank?
       raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
@@ -112,12 +112,6 @@ class LessonGroup < ApplicationRecord
       if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
         raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
       end
-    end
-  end
-
-  def self.prevent_changing_display_name_for_existing_key(new_lesson_group, raw_lesson_group, lesson_group)
-    if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-      raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
     end
   end
 
