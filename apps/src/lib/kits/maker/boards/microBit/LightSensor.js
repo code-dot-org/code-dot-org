@@ -14,7 +14,7 @@ export default class LightSensor extends EventEmitter {
     this.state = {
       threshold: 128,
       rangeMin: 0,
-      rangeMax: 255,
+      rangeMax: MAX_LIGHT_SENSOR_VALUE,
       currentReading: 0,
       // Track 3 seconds of historical data in a circular buffer over which
       // we can average sensor readings
@@ -89,7 +89,7 @@ export default class LightSensor extends EventEmitter {
     this.state = {
       threshold: 128,
       rangeMin: 0,
-      rangeMax: 255,
+      rangeMax: MAX_LIGHT_SENSOR_VALUE,
       currentReading: 0,
       currentBufferWriteIndex: 0
     };
@@ -106,8 +106,8 @@ export default class LightSensor extends EventEmitter {
       'ms',
       opts.ms,
       'number',
-      50,
-      3000
+      SAMPLE_INTERVAL,
+      MAX_SENSOR_BUFFER_DURATION
     );
 
     // Divide ms range by sample rate of sensor
