@@ -1,12 +1,7 @@
-%h1= "Editing #{@lesson.name}"
+%script{src: webpack_asset_path('js/lessons/edit.js'),
+        data: {lesson: @lesson_data.to_json}}
 
--# TODO(dave): change this into a react form before adding any more fields.
 = form_for @lesson, {url: lesson_path(id: @lesson.id)} do |f|
-  .field
-    = f.label :overview
-    = f.text_area :overview, class: 'input-xxlarge'
-
-  .actions
-    = f.submit 'Save and publish your completed work', {:class => 'publishLevel', :style => "background-color: #f0c14b; margin-bottom: 10px"}
+  #edit-container
 
 = link_to t('crud.show'), @lesson
