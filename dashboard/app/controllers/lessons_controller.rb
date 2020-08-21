@@ -11,7 +11,8 @@ class LessonsController < ApplicationController
   def edit
     @lesson_data = {
       id: @lesson.id,
-      overview: @lesson.overview
+      name: @lesson.name,
+      overview: @lesson.overview,
     }
   end
 
@@ -25,10 +26,8 @@ class LessonsController < ApplicationController
   private
 
   def lesson_params
-    return head :bad_request unless params[:lesson]
-
     # for now, only allow editing of fields that cannot be edited on the
     # script edit page.
-    params[:lesson].permit(:overview)
+    params.permit(:overview)
   end
 end
