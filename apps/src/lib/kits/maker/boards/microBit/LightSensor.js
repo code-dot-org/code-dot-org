@@ -25,13 +25,11 @@ export default class LightSensor extends EventEmitter {
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
       // Record current reading to keep finite historical buffer.
+      // Modulo the index to loop to the beginning of the buffer when it exceeds array size.
       this.state.buffer[
-        this.state.currentBufferWriteIndex
+        this.state.currentBufferWriteIndex % this.state.buffer.length
       ] = this.board.mb.analogChannel[SENSOR_CHANNELS.lightSensor];
       this.state.currentBufferWriteIndex++;
-      // Modulo the index to loop to the beginning of the buffer when it exceeds array size
-      this.state.currentBufferWriteIndex =
-        this.state.currentBufferWriteIndex % this.state.buffer.length;
       // Only emit the data event when the value is above the threshold or the
       // previous reading was above the threshold
       if (
@@ -113,16 +111,20 @@ export default class LightSensor extends EventEmitter {
     );
 
     // Divide ms range by sample rate of sensor
-    let indicesRange = Math.ceil(ms / SAMPLE_INTERVAL);
+    let requestedRange = Math.ceil(ms / SAMPLE_INTERVAL);
+    let indicesRange = requestedRange;
+    // User requested average over greater range than is recorded, so average over all
+    // recorded data.
+    if (requestedRange >= this.state.currentBufferWriteIndex) {
+      indicesRange = this.state.currentBufferWriteIndex;
+    }
+    let endIndex =
+      this.state.currentBufferWriteIndex % this.state.buffer.length;
+    let startIndex = endIndex - indicesRange;
+    // (currentBufferWriteIndex % buffer.length) points to the next spot to write, so historical
+    // data starts at ((currentBufferWriteIndex % buffer.length) - 1)
     let sum = 0;
-    let startIndex = this.state.currentBufferWriteIndex - indicesRange;
-    // currentBufferWriteIndex points to the next spot to write, so historical
-    // data starts at (currentBufferWriteIndex - 1)
-    for (
-      let index = startIndex;
-      index < this.state.currentBufferWriteIndex;
-      index++
-    ) {
+    for (let index = startIndex; index < endIndex; index++) {
       // Because index might be negative, use modulo to loop circular buffer.
       let sumIndex =
         (index + this.state.buffer.length) % this.state.buffer.length;
