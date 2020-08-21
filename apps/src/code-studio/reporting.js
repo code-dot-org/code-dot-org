@@ -145,6 +145,9 @@ function validateReport(report) {
       case 'time':
         validateType('time', value, 'number');
         break;
+      case 'timeSinceLastMilestone':
+        validateType('timeSinceLastMilestone', value, 'number');
+        break;
       case 'lines':
         validateType('lines', value, 'number');
         break;
@@ -192,6 +195,8 @@ function validateReport(report) {
  * @property {number} serverLevelId - ??
  * @property {?} submitted - ??
  * @property {?} time - ??
+ * @property {number} timeSinceLastMilestone- The time since navigating to this page or since the last
+ * milestone was recorded, whichever is more recent. It is used to calculated time spent on a level.
  * @property {?} attempt - ??
  * @property {?} image - ??
  * @property {boolean} pass - true if the attempt is passing.
@@ -226,6 +231,7 @@ reporting.sendReport = function(report) {
     'testResult',
     'submitted',
     'time',
+    'timeSinceLastMilestone',
     'lines',
     'attempt',
     'image'

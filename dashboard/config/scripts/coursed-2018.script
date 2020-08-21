@@ -1,4 +1,4 @@
-tts true
+is_course true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursed/standards/"]]
@@ -10,11 +10,12 @@ version_year '2018'
 is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
+tts true
 
-lesson 'Algorithms: Graph Paper Programming'
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
 
-lesson 'Introduction to Online Puzzles'
+lesson 'Introduction to Online Puzzles', display_name: 'Introduction to Online Puzzles'
 level 'courseD_video_ramp1_2018'
 level 'courseD_maze_ramp1_2018'
 level 'courseD_maze_ramp2_2018'
@@ -26,10 +27,10 @@ level 'courseD_maze_ramp5b_2018', challenge: true
 level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
 
-lesson 'Relay Programming'
+lesson 'Relay Programming', display_name: 'Relay Programming'
 level 'RelayProgramming_2018'
 
-lesson 'Debugging in Collector'
+lesson 'Debugging in Collector', display_name: 'Debugging with Laurel'
 level 'courseD_video_debugging_2018'
 level 'courseD_collector_debugging1a_2018'
 level 'courseD_collector_debugging2a_2018'
@@ -40,7 +41,7 @@ level 'courseD_collector_debugging6a_2018', challenge: true
 level 'courseD_collector_debugging8a_2018'
 level 'courseD_collector_debugging9a_2018'
 
-lesson 'Events in Bounce'
+lesson 'Events in Bounce', display_name: 'Events in Bounce'
 level 'courseD_bounce_events1s_2018'
 level 'courseD_bounce_events2s_2018'
 level 'courseD_bounce_events5s_2018'
@@ -50,7 +51,7 @@ level 'courseD_bounce_events10s_2018'
 level 'courseD_bounce_events11s_2018'
 level 'courseD_bounce_events12s_2018'
 
-lesson 'Loops in Ice Age'
+lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age'
 level 'courseD_iceage_loops1'
 level 'courseD_iceage_loops2'
 level 'scrat_loops_C-F_video'
@@ -64,7 +65,7 @@ level 'courseD_iceage_loops10', challenge: true
 level 'courseD_iceage_loops11'
 level 'courseD_iceage_loops12'
 
-lesson 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Drawing Shapes with Loops'
 level 'ramp_video_artistIntro_2018'
 level 'ramp_artist_loops1_2018'
 level 'ramp_artist_loops2_2018'
@@ -77,7 +78,7 @@ level 'ramp_artist_loops7_2018'
 level 'ramp_artist_loops8_2018', challenge: true
 level 'ramp_artist_loops9_2018'
 
-lesson 'Nested Loops in Bee'
+lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Maze'
 level 'courseD_bee_nestedLoops1a_2018'
 level 'courseD_bee_nestedLoops1_2018'
 level 'courseD_video_nestedLoops_2018'
@@ -94,7 +95,7 @@ level 'courseD_bee_nestedLoops9_predict2_2018'
 bonus 'courseD_harvester_nested_loops_challenge1_2018'
 bonus 'courseD_collector_nested_loops_challenge2_2018'
 
-lesson 'Nested Loops in Artist'
+lesson 'Nested Loops in Artist', display_name: 'Fancy Shapes using Nested Loops'
 level 'courseD_artist_nestedLoops1_2018'
 level 'courseD_artist_nestedLoops1a_2018'
 level 'courseD_video_nestedLoopsArtist_2018'
@@ -111,7 +112,7 @@ level 'courseD_artist_nestedLoopsFP_2018'
 bonus 'courseD_artist_nestedLoops_challenge1_2018'
 bonus 'courseD_artist_nestedLoops_challenge2_2018'
 
-lesson 'Nested Loops in Frozen'
+lesson 'Nested Loops in Frozen', display_name: 'Snowflakes with Anna and Elsa'
 level 'courseD_artist_1_2018'
 level 'courseD_artist_2_2018'
 level 'courseD_artist_3_2018'
@@ -119,7 +120,7 @@ level 'courseD_artist_4_2018'
 level 'courseD_artist_5_2018'
 level 'courseD_artist_6_2018'
 
-lesson 'While Loops in Farmer'
+lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer'
 level 'courseD_farmer_while1_2018'
 level 'courseD_farmer_while2_2018'
 level 'courseD_farmer_while3_2018'
@@ -135,7 +136,7 @@ level 'courseD_farmer_while10_2018'
 level 'courseD_farmer_while10_predict2_2018'
 bonus 'courseD_farmer_while_challenge1_2018'
 
-lesson 'Until Loops in Maze'
+lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze'
 level 'courseD_maze_until1_2018'
 level 'courseD_video_repeatUntil_2018'
 level 'courseD_maze_until2_predict1_2018'
@@ -148,10 +149,10 @@ level 'courseD_maze_until9_2018', challenge: true
 level 'courseD_maze_until10_2018'
 level 'courseD_maze_until10_predict2_2018'
 
-lesson 'Conditionals with Cards'
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards'
 level 'Conditionals_2018'
 
-lesson 'Conditionals in Bee'
+lesson 'Conditionals in Bee', display_name: 'If/Else with Bee'
 level 'courseD_bee_conditionalsVid1_2018'
 level 'courseD_bee_conditionals1_predict1_2018'
 level 'courseD_bee_conditionals2_2018'
@@ -168,7 +169,7 @@ level 'courseD_bee_conditionals10_2018'
 bonus 'courseD_bee_conditionals_challenge1_2018'
 bonus 'courseD_bee_conditionals_challenge2_2018'
 
-lesson 'Conditionals & Loops in Harvester'
+lesson 'Conditionals & Loops in Harvester', display_name: 'Harvesting with Conditionals'
 level 'harvester_skinOverview_video'
 level 'courseD_farmer_condLoops1_2018'
 level 'courseD_farmer_condLoops2_2018'
@@ -183,10 +184,10 @@ level 'courseD_farmer_condLoops9_predict1_2018'
 bonus 'courseD_farmer_condLoops_challenge1_2018'
 bonus 'courseD_farmer_condLoops_challenge2_2018'
 
-lesson 'Digital Citizenship'
+lesson 'Digital Citizenship', display_name: 'Digital Citizenship'
 level 'courseD_unplugged_digitalCitizenship_2018'
 
-lesson 'Build a Play Lab Game'
+lesson 'Build a Play Lab Game', display_name: 'Ninjas vs. Pirates Game'
 level 'courseD_playLab_cond1_2018'
 level 'courseD_playLab_cond2_2018'
 level 'courseD_playLab_cond3_2018'
@@ -197,10 +198,10 @@ level 'courseD_playLab_cond6_2018'
 level 'courseD_playLab_cond6a_2018'
 level 'courseD_playLab_condFP_2018'
 
-lesson 'Unplugged: Binary'
+lesson 'Unplugged: Binary', display_name: 'Binary Images'
 level 'BinaryImages_2018'
 
-lesson 'Artist Binary'
+lesson 'Artist Binary', display_name: 'Binary Images with Artist'
 level 'courseD_external_binary1_2018'
 level 'courseD_artist_binary1_2018'
 level 'courseD_artist_binary2_2018'
@@ -214,3 +215,4 @@ level 'courseD_artist_binary8_predict1_2018'
 level 'courseD_artist_binaryFP_2018'
 bonus 'courseD_artist_binary_challenge1_2018'
 bonus 'courseD_artist_binary_challenge2_2018'
+

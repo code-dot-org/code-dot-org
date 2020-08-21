@@ -149,10 +149,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'exit_survey_url falls back to last valid day' do
-    csd_workshop = create :workshop,
+    csd_workshop = create :csd_academic_year_workshop,
       :ended,
-      course: Pd::Workshop::COURSE_CSD,
-      subject: SUBJECT_CSD_WORKSHOP_4,
       num_sessions: 2
     csd_enrollment = create :pd_enrollment, workshop: csd_workshop
 
