@@ -6,53 +6,6 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     setup_script_cache
   end
 
-  test 'course overview page' do
-    student = create :student
-
-    unit_group = create :unit_group, name: 'my-unit-group', properties: {has_numbered_units: true}
-    script = create :script, name: 'my-unit'
-    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
-
-    unit_group = UnitGroup.get_from_cache(unit_group.name)
-
-    test_locale = :"te-ST"
-    I18n.locale = test_locale
-    custom_i18n = {
-      'data' => {
-        'course' => {
-          'name' => {
-            'my-unit-group' => {
-              'title' => 'My Unit Group',
-            }
-          }
-        },
-        'script' => {
-          'name' => {
-            'my-unit' => {
-              'title' => 'My Unit'
-            }
-          }
-        }
-      }
-    }
-    I18n.backend.store_translations test_locale, custom_i18n
-
-    summary = nil
-    assert_cached_queries(0) do
-      summary = unit_group.summarize
-    end
-    assert_equal 'Unit 1 - My Unit', summary[:scripts].first[:title]
-
-    assert_cached_queries(5) do
-      unit_group.summarize(student)
-    end
-
-    sign_in student
-    assert_cached_queries(11) do
-      get course_path(unit_group)
-    end
-  end
-
   test "script level show" do
     student = create :student
     sign_in student
