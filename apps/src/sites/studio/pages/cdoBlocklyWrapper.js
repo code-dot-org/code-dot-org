@@ -1,3 +1,4 @@
+import {BlocklyVersion} from '@cdo/apps/constants';
 /**
  * Wrapper class for https://github.com/code-dot-org/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -6,6 +7,7 @@
  * See also ./googleBlocklyWrapper.js
  */
 const BlocklyWrapper = function(blocklyInstance) {
+  this.version = BlocklyVersion.CDO;
   this.blockly_ = blocklyInstance;
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
