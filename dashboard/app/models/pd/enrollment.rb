@@ -153,7 +153,7 @@ class Pd::Enrollment < ActiveRecord::Base
     end
   end
 
-  # Filters a list of enrollments for survey completion, for the workshop types we want to know about
+  # Filters a list of enrollments for survey completion, for the workshop types we are able to filter for
   # survey completion: CSD/CSP Summer, CSP Workshop for Returning Teachers, CSF Intro/Deep Dive, Counselor
   # and Admin. We will always return [] for Academic year workshops as we want facilitators to handle those surveys.
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
@@ -175,6 +175,7 @@ class Pd::Enrollment < ActiveRecord::Base
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)
     end
 
+    # Admin and Counselor still use Pegasus form
     pegasus_enrollments, _ = other_enrollments.partition do |enrollment|
       enrollment.workshop.course == COURSE_ADMIN || enrollment.workshop.course == COURSE_COUNSELOR
     end
@@ -384,8 +385,8 @@ class Pd::Enrollment < ActiveRecord::Base
     end
 
     filtered_ids = select_completed ?
-                     ids_with_processed_surveys + ids_with_unprocessed_surveys :
-                     ids_without_processed_surveys - ids_with_unprocessed_surveys
+                   ids_with_processed_surveys + ids_with_unprocessed_surveys :
+                   ids_without_processed_surveys - ids_with_unprocessed_surveys
 
     enrollments.select {|e| filtered_ids.include? e.id}
   end
