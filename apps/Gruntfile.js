@@ -575,6 +575,7 @@ describe('entry tests', () => {
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
     'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
+    'lessons/show': './src/sites/studio/pages/lessons/show.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
