@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import ResourceType, {stringForType, resourceShape} from './resourceType';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const styles = {
   box: {
@@ -106,7 +107,9 @@ export default class ResourcesEditor extends Component {
         <div style={styles.box}>
           <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
-          {this.props.renderPreview(resources.filter(x => !!x.type))}
+          <TeacherResourcesDropdown
+            resources={resources.filter(x => !!x.type)}
+          />
         </div>
       </div>
     );

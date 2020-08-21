@@ -9,7 +9,6 @@ import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotEx
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const styles = {
   input: {
@@ -248,9 +247,6 @@ export default class CourseEditor extends Component {
             inputStyle={styles.input}
             resources={teacherResources}
             maxResources={Object.keys(ResourceType).length}
-            renderPreview={resources => (
-              <TeacherResourcesDropdown resources={resources} />
-            )}
           />
         </div>
       </div>
