@@ -19,8 +19,8 @@ class CourseOffering < ApplicationRecord
 
   def self.add_course_offering(content_root)
     # If content_root is not designated as the content root of a CourseVersion (in its .script or .course file),
-    # delete its associated CourseVersion object if it exists. This handles the case where a .script or .course file
-    # had "is_course true" at one point, and then later "is_course true" is removed.
+    # delete its associated CourseVersion object if it exists, and then the CourseOffering object if it has no versions remaining.
+    # This handles the case where a .script or .course file had "is_course true" at one point, and then later "is_course true" is removed.
     unless content_root.is_course?
       if content_root.course_version
         existing_offering = content_root.course_version.course_offering
