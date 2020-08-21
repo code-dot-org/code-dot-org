@@ -2,12 +2,16 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
-import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape} from './resourceType';
+import ResourceType, {
+  resourceShape,
+  stringForType
+} from '@cdo/apps/templates/courseOverview/resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   input: {
@@ -239,20 +243,24 @@ export default class CourseEditor extends Component {
         <div>
           <h2>Teacher Resources</h2>
           <div>
-            Select up to three Teacher Resources buttons you'd like to have show
-            up on the top of the course overview page
+            Select the Teacher Resources buttons you'd like to have show up on
+            the top of the course overview page
           </div>
           <ResourcesEditor
             inputStyle={styles.input}
             resources={teacherResources}
-            maxResources={3}
+            maxResources={Object.keys(ResourceType).length}
             renderPreview={resources => (
-              <CourseOverviewTopRow
-                sectionsForDropdown={[]}
-                id={-1}
-                resources={resources}
-                showAssignButton={false}
-              />
+              <DropdownButton
+                text="Teacher resources"
+                color={Button.ButtonColor.blue}
+              >
+                {resources.map(({type, link}, index) => (
+                  <a key={index} href={link}>
+                    {stringForType[type]}
+                  </a>
+                ))}
+              </DropdownButton>
             )}
           />
         </div>
