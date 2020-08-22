@@ -2,24 +2,24 @@
 #
 # Table name: sections
 #
-#  id                :integer          not null, primary key
-#  user_id           :integer          not null
-#  name              :string(255)
-#  created_at        :datetime
-#  updated_at        :datetime
-#  code              :string(255)
-#  script_id         :integer
-#  course_id         :integer
-#  grade             :string(255)
-#  login_type        :string(255)      default("email"), not null
-#  deleted_at        :datetime
-#  stage_extras      :boolean          default(FALSE), not null
-#  section_type      :string(255)
-#  first_activity_at :datetime
-#  pairing_allowed   :boolean          default(TRUE), not null
-#  sharing_disabled  :boolean          default(FALSE), not null
-#  hidden            :boolean          default(FALSE), not null
-#  autoplay_enabled  :boolean          default(FALSE), not null
+#  id                   :integer          not null, primary key
+#  user_id              :integer          not null
+#  name                 :string(255)
+#  created_at           :datetime
+#  updated_at           :datetime
+#  code                 :string(255)
+#  script_id            :integer
+#  course_id            :integer
+#  grade                :string(255)
+#  login_type           :string(255)      default("email"), not null
+#  deleted_at           :datetime
+#  stage_extras         :boolean          default(FALSE), not null
+#  section_type         :string(255)
+#  first_activity_at    :datetime
+#  pairing_allowed      :boolean          default(TRUE), not null
+#  sharing_disabled     :boolean          default(FALSE), not null
+#  hidden               :boolean          default(FALSE), not null
+#  tts_autoplay_enabled :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -256,7 +256,7 @@ class Section < ActiveRecord::Base
       code: code,
       lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,
-      autoplay_enabled: autoplay_enabled,
+      tts_autoplay_enabled: tts_autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
       course_id: course_id,
