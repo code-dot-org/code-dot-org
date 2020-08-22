@@ -2,7 +2,7 @@ hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
+teacher_resources [["Lesson Plans", "https://curriculum.code.org/csp/unit5"], ["Teacher Forum", "https://forum.code.org/c/csp5"], ["Vocabulary", "https://curriculum.code.org/csp/unit5/vocab/"], ["Code Introduced", "https://curriculum.code.org/csp/unit5/code/"], ["Standard Mappings", "https://curriculum.code.org/csp/unit5/standards/"], ["Professional Learning", "https://studio.code.org/s/csp5-support"]]
 has_verified_resources true
 has_lesson_plan true
 new_name 'csp5-2017'

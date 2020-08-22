@@ -2,7 +2,7 @@ hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp/csp-create/standards/"]]
+teacher_resources [["Lesson Plans", "https://curriculum.code.org/csp/csp-create/"], ["Teacher Forum", "https://forum.code.org/c/csp/ap-prep"], ["Standard Mappings", "https://curriculum.code.org/csp/csp-create/standards/"]]
 has_verified_resources true
 has_lesson_plan true
 new_name 'csp-create-2017'

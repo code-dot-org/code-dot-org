@@ -14,11 +14,11 @@
   "properties": {
     "teacher_resources": [
       [
-        "curriculum",
+        "Curriculum",
         "https://curriculum.code.org/csp-18"
       ],
       [
-        "teacherForum",
+        "Teacher Forum",
         "https://forum.code.org/c/csp"
       ]
     ],

@@ -2,7 +2,7 @@ hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp-19/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit4/standards/"], ["professionalLearning", "https://code.org/educate/professional-learning/middle-high"]]
+teacher_resources [["Lesson Plans", "https://curriculum.code.org/csp-19/unit4/"], ["Teacher Forum", "https://forum.code.org/c/csp4"], ["Vocabulary", "https://curriculum.code.org/csp-19/unit4/vocab/"], ["Standard Mappings", "https://curriculum.code.org/csp-19/unit4/standards/"], ["Professional Learning", "https://code.org/educate/professional-learning/middle-high"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit4/{LESSON}'

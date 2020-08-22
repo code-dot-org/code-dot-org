@@ -26,15 +26,15 @@
   "properties": {
     "teacher_resources": [
       [
-        "curriculum",
+        "Curriculum",
         "https://curriculum.code.org/csp/"
       ],
       [
-        "teacherForum",
+        "Teacher Forum",
         "http://forum.code.org/c/csp"
       ],
       [
-        "professionalLearning",
+        "Professional Learning",
         "https://studio.code.org/courses/CSP%20Support"
       ]
     ],

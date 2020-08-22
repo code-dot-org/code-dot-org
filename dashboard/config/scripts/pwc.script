@@ -1,4 +1,4 @@
-teacher_resources [["lessonPlans", "https://curriculum.code.org/pwc/ayp"]]
+teacher_resources [["Lesson Plans", "https://curriculum.code.org/pwc/ayp"]]
 
 lesson 'Personal Innovations', display_name: 'Personal Innovations'
 level 'pwc_problemsolving', named: true

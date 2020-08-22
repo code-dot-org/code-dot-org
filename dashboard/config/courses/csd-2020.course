@@ -11,11 +11,11 @@
   "properties": {
     "teacher_resources": [
       [
-        "curriculum",
+        "Curriculum",
         "https://curriculum.code.org/csd-20/"
       ],
       [
-        "teacherForum",
+        "Teacher Forum",
         "https://forum.code.org/c/csd"
       ]
     ],
