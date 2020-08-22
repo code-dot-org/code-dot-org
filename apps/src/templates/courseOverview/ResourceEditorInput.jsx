@@ -14,11 +14,13 @@ export default class ResourceEditorInput extends Component {
   };
 
   render() {
-    const {id,
+    const {
+      id,
       resource,
       inputStyle,
       handleChangeType,
-      handleChangeLink} = this.props;
+      handleChangeLink
+    } = this.props;
 
     return (
       <div style={{marginTop: 8}}>
