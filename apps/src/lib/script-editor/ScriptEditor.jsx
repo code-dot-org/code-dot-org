@@ -5,12 +5,7 @@ import LessonDescriptions from './LessonDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import Button from '@cdo/apps/templates/Button';
-import ResourceType, {
-  resourceShape,
-  stringForType
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -475,19 +470,6 @@ export default class ScriptEditor extends React.Component {
           <ResourcesEditor
             inputStyle={styles.input}
             resources={this.props.teacherResources}
-            maxResources={Object.keys(ResourceType).length}
-            renderPreview={resources => (
-              <DropdownButton
-                text="Teacher resources"
-                color={Button.ButtonColor.blue}
-              >
-                {resources.map(({type, link}, index) => (
-                  <a key={index} href={link}>
-                    {stringForType[type]}
-                  </a>
-                ))}
-              </DropdownButton>
-            )}
           />
         </div>
         <h2>Professional Learning Settings</h2>
