@@ -170,7 +170,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :family_name, :version_year, :visible, :is_stable,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources,
-                  :has_verified_resources, :versions, :show_assign_button], summary.keys
+                  :has_verified_resources, :has_numbered_units, :versions, :show_assign_button], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -181,9 +181,9 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal false, summary[:has_verified_resources]
 
-    # spot check that we have fields that show up in Script.summarize(false) and summarize_i18n(false)
+    # spot check that we have fields that show up in Script.summarize(false)
     assert_equal 'script1', summary[:scripts][0][:name]
-    assert_equal 'script1-description', summary[:scripts][0]['description']
+    assert_equal 'script1-description', summary[:scripts][0][:description]
 
     assert_equal 1, summary[:versions].length
     assert_equal 'my-unit-group', summary[:versions].first[:name]
@@ -191,7 +191,56 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     # make sure we dont have stage info
     assert_nil summary[:scripts][0][:stages]
-    assert_nil summary[:scripts][0]['stageDescriptions']
+    assert_nil summary[:scripts][0][:stageDescriptions]
+  end
+
+  test 'summarize with numbered units' do
+    unit_group = create :unit_group, name: 'my-unit-group'
+    script1 = create(:script, name: 'script1')
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: script1)
+    script2 = create(:script, name: 'script2')
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: script2)
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'course' => {
+          'name' => {
+            'my-unit-group' => {
+              'title' => 'my-unit-group-title',
+            }
+          }
+        },
+        'script' => {
+          'name' => {
+            'script1' => {
+              'title' => 'script1-title'
+            },
+            'script2' => {
+              'title' => 'script2-title'
+            }
+          },
+        },
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_equal 'script1-title', unit_group.summarize[:scripts].first[:title]
+    assert_equal 'script1-title', script1.summarize[:title]
+
+    assert_equal 'script2-title', unit_group.summarize[:scripts].last[:title]
+    assert_equal 'script2-title', script2.summarize[:title]
+
+    unit_group.has_numbered_units = true
+    unit_group.save!
+
+    assert_equal 'Unit 1 - script1-title', unit_group.summarize[:scripts].first[:title]
+    assert_equal 'Unit 1 - script1-title', script1.summarize[:title]
+
+    assert_equal 'Unit 2 - script2-title', unit_group.summarize[:scripts].last[:title]
+    assert_equal 'Unit 2 - script2-title', script2.summarize[:title]
   end
 
   test 'summarize_version' do
