@@ -48,6 +48,7 @@ export default class CourseEditor extends Component {
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
@@ -169,6 +170,21 @@ export default class CourseEditor extends Component {
             name="has_verified_resources"
             type="checkbox"
             defaultChecked={this.props.hasVerifiedResources}
+            style={styles.checkbox}
+          />
+        </label>
+        <label>
+          Unit Numbering
+          <HelpTip>
+            <p>
+              Automatically provide numbers in unit names in the order listed
+              below.
+            </p>
+          </HelpTip>
+          <input
+            name="has_numbered_units"
+            type="checkbox"
+            defaultChecked={this.props.hasNumberedUnits}
             style={styles.checkbox}
           />
         </label>
