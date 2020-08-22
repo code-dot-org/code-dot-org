@@ -1,6 +1,7 @@
-%h1= @lesson.name
+%script{src: webpack_asset_path('js/lessons/show.js'),
+        data: {lesson: @lesson_data.to_json}}
 
-%p= @lesson.overview
+#show-container
 
 - if can? :edit, @lesson
   = render layout: 'shared/extra_links' do
