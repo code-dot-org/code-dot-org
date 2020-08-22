@@ -217,7 +217,8 @@ class ScriptsController < ApplicationController
       :description_audience,
       :description_short,
       :description,
-      :stage_descriptions
+      :stage_descriptions,
+      resourceTypes: []
     ).to_h
   end
 

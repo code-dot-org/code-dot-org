@@ -113,7 +113,8 @@ class CoursesController < ApplicationController
       :description_short,
       :description_student,
       :description_teacher,
-      :version_title
+      :version_title,
+      resourceTypes: []
     ).to_h
   end
 
