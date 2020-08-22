@@ -2,7 +2,6 @@ import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
   inputStyle: {},
@@ -30,11 +29,11 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
+        resources={[{type: 'Curriculum', link: '/foo'}]}
       />
     );
     assert.deepEqual(wrapper.state('resources'), [
-      {type: ResourceType.curriculum, link: '/foo'},
+      {type: 'Curriculum', link: '/foo'},
       {type: '', link: ''},
       {type: '', link: ''},
       {type: '', link: ''},
@@ -51,7 +50,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
+        resources={[{type: 'Curriculum', link: '/foo'}]}
       />
     );
     assert.strictEqual(wrapper.find('Resource').length, 2);
@@ -61,12 +60,12 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
+        resources={[{type: 'Curriculum', link: '/foo'}]}
       />
     );
     const fakeEvent = {
       target: {
-        value: ResourceType.vocabulary
+        value: 'Vocabulary'
       }
     };
     wrapper.instance().handleChangeType(fakeEvent, 1);
@@ -77,12 +76,12 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
+        resources={[{type: 'Curriculum', link: '/foo'}]}
       />
     );
     const fakeEvent = {
       target: {
-        value: ResourceType.curriculum
+        value: 'Curriculum'
       }
     };
     wrapper.instance().handleChangeType(fakeEvent, 1);

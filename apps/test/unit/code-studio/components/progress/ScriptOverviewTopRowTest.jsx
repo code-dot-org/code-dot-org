@@ -11,7 +11,6 @@ import {
 } from '@cdo/apps/code-studio/components/progress/ScriptOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
@@ -138,11 +137,11 @@ describe('ScriptOverviewTopRow', () => {
         viewAs={ViewType.Teacher}
         resources={[
           {
-            type: ResourceType.curriculum,
+            type: 'Curriculum',
             link: 'https://example.com/a'
           },
           {
-            type: ResourceType.vocabulary,
+            type: 'Vocabulary',
             link: 'https://example.com/b'
           }
         ]}
@@ -153,11 +152,11 @@ describe('ScriptOverviewTopRow', () => {
         <TeacherResourcesDropdown
           resources={[
             {
-              type: ResourceType.curriculum,
+              type: 'Curriculum',
               link: 'https://example.com/a'
             },
             {
-              type: ResourceType.vocabulary,
+              type: 'Vocabulary',
               link: 'https://example.com/b'
             }
           ]}

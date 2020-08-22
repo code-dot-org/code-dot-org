@@ -1,7 +1,6 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
@@ -13,11 +12,11 @@ describe('TeacherResourcesDropdown', () => {
       <TeacherResourcesDropdown
         resources={[
           {
-            type: ResourceType.curriculum,
+            type: 'Curriculum',
             link: 'https://example.com/a'
           },
           {
-            type: ResourceType.vocabulary,
+            type: 'Vocabulary',
             link: 'https://example.com/b'
           }
         ]}

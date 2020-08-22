@@ -3,10 +3,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import {
-  stringForType,
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   dropdown: {
@@ -30,7 +27,7 @@ export default class TeacherResourcesDropdown extends React.Component {
         >
           {resources.map(({type, link}, index) => (
             <a key={index} href={link} target="_blank">
-              {stringForType[type]}
+              {type}
             </a>
           ))}
         </DropdownButton>

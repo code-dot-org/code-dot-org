@@ -2,7 +2,6 @@ import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
   sectionsForDropdown: [],
@@ -10,15 +9,15 @@ const defaultProps = {
   title: 'Computer Science Principles',
   resources: [
     {
-      type: ResourceType.curriculum,
+      type: 'Curriculum',
       link: '/link/to/curriculum'
     },
     {
-      type: ResourceType.professionalLearning,
+      type: 'Professional Learning',
       link: '/link/to/professional/learning'
     },
     {
-      type: ResourceType.teacherForum,
+      type: 'Teacher Forum',
       link: 'https://forum.code.org/'
     }
   ],
@@ -36,7 +35,7 @@ describe('CourseOverviewTopRow', () => {
     assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
     assert.equal(
       wrapper.find('TeacherResourcesDropdown').props().resources[0].type,
-      ResourceType.curriculum
+      'Curriculum'
     );
     assert.equal(
       wrapper.find('TeacherResourcesDropdown').props().resources[0].link,
@@ -44,7 +43,7 @@ describe('CourseOverviewTopRow', () => {
     );
     assert.equal(
       wrapper.find('TeacherResourcesDropdown').props().resources[1].type,
-      ResourceType.professionalLearning
+      'Professional Learning'
     );
     assert.equal(
       wrapper.find('TeacherResourcesDropdown').props().resources[1].link,
@@ -52,7 +51,7 @@ describe('CourseOverviewTopRow', () => {
     );
     assert.equal(
       wrapper.find('TeacherResourcesDropdown').props().resources[2].type,
-      ResourceType.teacherForum
+      'Teacher Forum'
     );
     assert.equal(
       wrapper.find('TeacherResourcesDropdown').props().resources[2].link,
