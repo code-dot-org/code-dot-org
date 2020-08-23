@@ -17,32 +17,31 @@
 class CourseOffering < ApplicationRecord
   has_many :course_versions
 
+  # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
+  # potential content root, i.e. a Script or UnitGroup.
+  #
+  # Examples:
+  #
+  # coursea-2019.script represents the content root for Course A, Version 2019.
+  # Therefore, it should contain "is_course true", which will cause this method to create the
+  # corresponding CourseOffering and CourseVersion objects.
+  #
+  # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
+  # Therefore, it does not contain "is_course true". so this method will not create any new objects.
+  #
+  # This method will also delete CourseOfferings and/or CourseVersions that were previously associated with
+  # the content_root, if appropriate. See CourseVersion#add_course_version for details.
   def self.add_course_offering(content_root)
-    # If content_root is not designated as the content root of a CourseVersion (in its .script or .course file),
-    # delete its associated CourseVersion object if it exists, and then the CourseOffering object if it has no versions remaining.
-    # This handles the case where a .script or .course file had "is_course true" at one point, and then later "is_course true" is removed.
-    unless content_root.is_course?
-      if content_root.course_version
-        existing_offering = content_root.course_version.course_offering
-        content_root.course_version.destroy
-        existing_offering.destroy if existing_offering.course_versions.empty?
-        content_root.reload
-      end
-      return nil
+    if content_root.is_course?
+      raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
+      raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
+
+      offering = CourseOffering.find_or_create_by!(key: content_root.family_name, display_name: content_root.family_name)
+    else
+      offering = nil
     end
 
-    raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
-    raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
-
-    original_offering = content_root.course_version&.course_offering
-    offering = CourseOffering.find_or_create_by(key: content_root.family_name, display_name: content_root.family_name)
     CourseVersion.add_course_version(offering, content_root)
-
-    # If changes to content_root's family name and/or version year have resulted in its previous CourseOffering having no versions,
-    # destroy the old CourseOffering.
-    original_offering&.destroy if original_offering != offering && original_offering&.course_versions&.empty?
-
-    # TODO: add relevant properties from content root to course_version
 
     offering
   end

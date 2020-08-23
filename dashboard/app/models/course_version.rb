@@ -41,32 +41,34 @@ class CourseVersion < ApplicationRecord
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
   # Therefore, it does not contain "is_course true". so this method will not create a CourseVersion object for it.
   def self.add_course_version(course_offering, content_root)
-    # If content_root is not designated as the content root of a CourseVersion (in its .script or .course file),
-    # delete its associated CourseVersion object if it exists. This handles the case where a .script or .course file
-    # had "is_course true" at one point, and then later "is_course true" is removed.
-    unless content_root.is_course?
-      if content_root.course_version
-        content_root.course_version.destroy
-        content_root.reload
-      end
-      return nil
+    if content_root.is_course?
+      raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
+
+      course_version = CourseVersion.find_or_create_by!(
+        course_offering: course_offering,
+        key: content_root.version_year,
+        display_name: content_root.version_year,
+        content_root: content_root,
+      )
+    else
+      course_version = nil
     end
 
-    raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
-
-    course_version = CourseVersion.find_or_create_by(
-      course_offering: course_offering,
-      key: content_root.version_year,
-      display_name: content_root.version_year,
-      content_root: content_root,
-    )
-
-    # Delete old CourseVersion if the key has been changed to something else
-    content_root.course_version&.destroy if course_version != content_root.course_version
+    # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
+    #   - family_name or version_year was changed
+    #   - is_course? changed from true to false, such as if "is_course true" was removed from a .script file, or
+    #     family_name or version_year was removed from a .course file.
+    content_root.course_version.destroy_and_destroy_parent_if_empty if content_root.course_version != course_version
     content_root.course_version = course_version
 
     # TODO: add relevant properties from content root to course_version
 
     course_version
+  end
+
+  # Destroys this CourseVersion. Then, if its parent CourseOffering now has no CourseVersions, destroy it too.
+  def destroy_and_destroy_parent_if_empty
+    destroy!
+    course_offering.destroy if course_offering.course_versions.empty?
   end
 end
