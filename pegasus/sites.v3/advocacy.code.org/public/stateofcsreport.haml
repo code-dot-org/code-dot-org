@@ -1,6 +1,7 @@
 ---
 title: 2020 State of CS Report
 theme: responsive
+layout: none
 ---
 
 =inline_css 'interactive-map.css'
@@ -8,16 +9,16 @@ theme: responsive
 
 
 
-.container{style: "background-color: #F5F5F5; text-align: center"}
+.container_responsive{style: "background-color: #F5F5F5; text-align: center"}
   .col-33
-    %img.center{src: "/images/fit-100/CodeLogo.png"}
+    %img.center{src: "/images/fit-100/CodeLogo.png", style: "padding: 10px"}
   .col-33
-    %img.center{src: "/images/fit-100/CSTALogo.png"}
+    %img.center{src: "/images/fit-100/CSTALogo.png", style: "padding: 10px; padding-top: 15px"}
   .col-33
-    %img.center{src: "/images/fit-100/ECEPLogo.jpg"}
+    %img.center{src: "/images/fit-100/ECEPLogo.jpg", style: "padding: 10px"}
+  .clear
 
-
-.container
+.container_responsive
   .col{style: "text-align: center"}
     %h1
       2020 State of Computer Science Education:
@@ -25,15 +26,15 @@ theme: responsive
       Illuminating Disparities
     %p
       One sentence describing the report
-    %a{href: "/2019_state_of_cs.pdf", target: "_blank"}
-      %button Download PDF
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
+      %button{style: "background-color: black; color: white; border-color: black"} Download PDF
     %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
-      %button Order Report
-
+      %button{style: "background-color: white; color: black; border-color: black"} Order Report
+  .clear
 
 %br
 
-.container{style: "background-color: #F5F5F5; text-align: center"}
+.container_responsive{style: "background-color: #F5F5F5; text-align: center; padding: 10px"}
   .col-100
     %h4
       State Summaries
@@ -41,78 +42,88 @@ theme: responsive
       One sentence describing the images below and the state summaries
   .col-33
     %img.center{src: "/images/fit-300/StatePage.png"}
-    %p
+    %p{style: "margin-bottom: 20px"}
       Sentence describing the State Page
   .col-33
     %img.center{src: "/images/fit-300/SchoolsTeaching.png"}
-    %p
+    %p{style: "margin-bottom: 20px"}
       Sentence describing the State Page
   .col-33
     %img.center{src: "/images/fit-300/AccessParticipation.png"}
-    %p
+    %p{style: "margin-bottom: 20px"}
       Sentence describing the State Page
+  .clear
 
 %br
 
-.container
-  .col-66
-    %p
-      Providing all Rhode Island students with computer science education is essential for our economic development and ensures that our students have the skills necessary to compete for high wage, high demand careers.”
-  .col-33
-    %img.center{src: "/images/fit-200/Raimondo.png", style: "border-radius: 50%"}
+.container_responsive
+  .col-66{style: "margin-top: 60px;"}
+    %p{style: "font-style: italic; font-family: 'Gotham 5r', sans-serif; font-size: 16px; line-height: 1.5em; text-align: center"}
+      "Providing all Rhode Island students with computer science education is essential for our economic development and ensures that our students have the skills necessary to compete for high wage, high demand careers."
+  .col-33{style: "text-align: center"}
+    %img{src: "/images/fit-200/Raimondo.png", style: "border-radius: 50%"}
     %p
       Governor Gina Raimondo (D-RI)
+  .clear
 
 %br
 
-.container{style: "background-color: #F5F5F5"}
-  .col-50{style: "background-color: white"}
+.container_responsive{style: "background-color: #F5F5F5"}
+  .col-50{style: "background-color: white; text-align: center"}
     %img{src: "/images/fit-450/AccessReport.png"}
-  .col-50{style: "padding-left: 10%; padding-top: 10%"}
+  .col-50{style: "padding: 10%"}
     %h4
       Access to Computer Science
     %p
       Sentence describing Access Report
+  .clear
 
-.container{style: "background-color: #F5F5F5"}
-  .col-50{style: "padding-left: 10%; padding-top: 10%"}
+%br
+
+.container_responsive{style: "background-color: #F5F5F5"}
+  .col-50{style: "padding: 10%"}
     %h4
       Policy Maps
     %p
       Sentence describing Policy Maps
-  .col-50{style: "background-color: white"}
+  .col-50{style: "background-color: white; text-align: center"}
     %img{src: "/images/fit-450/AccessReport.png"}
+  .clear
 
-.container{style: "background-color: #F5F5F5"}
-  .col-50{style: "background-color: white"}
+%br
+
+.container_responsive{style: "background-color: #F5F5F5"}
+  .col-50{style: "background-color: white; text-align: center"}
     %img{src: "/images/fit-450/9Policies.png"}
-  .col-50{style: "padding-left: 10%; padding-top: 10%"}
+  .col-50{style: "padding: 10%"}
     %h4
       9 Policies
     %p
       Sentence describing 9 Policies
+  .clear
 
 %br
 
-.container
+.container_responsive
   .col-50
     %h4
       Get your State of CS Report
     %p
       Choose a digital PDF or order a physical copy today!
-  .col-50
-    %a{href: "/2019_state_of_cs.pdf", target: "_blank"}
-      %button Download PDF
+  .col-50{style: "text-align: center"}
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
+      %button{style: "background-color: black; color: white; border-color: black"} Download PDF
     %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
-      %button Order Report
+      %button{style: "background-color: white; color: black; border-color: black"} Order Report
+  .clear
 
 %br
 
-.container
+.container_responsive
   .col-100{style: "text-align: center"}
     %h4
       CC BY NC 4.0
     %p
       Sentence explaining usage rights of the report
+  .clear
 
-  
