@@ -7,6 +7,7 @@ import AddLevelDialog from './AddLevelDialog';
 const activity = {
   key: 'activity-1',
   displayName: 'Main Activity',
+  time: 20,
   activitySections: [
     {
       type: 'description',
