@@ -806,7 +806,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def pre_survey?
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    # CSP for returning teachers does not have a pre-survey. Academic year workshops have multiple pre-survey options,
+    # so we do not show any to teachers ourselves.
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 
