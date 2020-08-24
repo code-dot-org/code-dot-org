@@ -50,7 +50,7 @@
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
-      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'sync_dropbox')
+      cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'sync_dropbox')
       cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
