@@ -114,14 +114,16 @@ export default class LightSensor extends EventEmitter {
 
     // Divide ms range by sample rate of sensor
     let requestedRange = Math.ceil(ms / SAMPLE_INTERVAL);
-    let indicesRange = requestedRange;
+    let indicesRange;
     // User requested average over greater range than is recorded, so average over all
     // recorded data.
     if (requestedRange >= this.state.currentBufferWriteIndex) {
       indicesRange = this.state.currentBufferWriteIndex;
+    } else {
+      indicesRange = requestedRange;
     }
-    let endIndex =
-      this.state.currentBufferWriteIndex % this.state.buffer.length;
+
+    let endIndex = this.state.currentBufferWriteIndex;
     let startIndex = endIndex - indicesRange;
     // (currentBufferWriteIndex % buffer.length) points to the next spot to write, so historical
     // data starts at ((currentBufferWriteIndex % buffer.length) - 1)
