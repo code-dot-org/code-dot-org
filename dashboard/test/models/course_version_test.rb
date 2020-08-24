@@ -57,4 +57,32 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_nil script.course_version
     assert_nil CourseVersion.find_by(course_offering: offering, key: '2050')
   end
+
+  test "destroy_and_destroy_parent_if_empty destroys version and offering for offering with one version" do
+    course_version = create :course_version, :with_course_offering
+    offering = course_version.course_offering
+
+    course_version.destroy_and_destroy_parent_if_empty
+    assert_nil CourseVersion.find_by(course_offering: offering, key: course_version.key)
+    assert_nil CourseOffering.find_by(id: offering.id)
+  end
+
+  test "destroy_and_destroy_parent_if_empty destroys version only for offering with multiple versions" do
+    course_version = create :course_version, :with_course_offering
+    offering = course_version.course_offering
+    create :course_version, course_offering: offering
+
+    course_version.destroy_and_destroy_parent_if_empty
+    assert_nil CourseVersion.find_by(course_offering: offering, key: course_version.key)
+    assert_equal offering, CourseOffering.find_by(id: offering.id)
+  end
+
+  test "destroy_and_destroy_parent_if_empty destroys version for version with no offering" do
+    # This case shouldn't occur normally, but may exist temporarily because the CourseOffering model was added after CourseVersion.
+    course_version = create :course_version
+    assert_nil course_version.course_offering
+
+    course_version.destroy_and_destroy_parent_if_empty
+    assert_nil CourseVersion.find_by(course_offering: nil, key: course_version.key)
+  end
 end
