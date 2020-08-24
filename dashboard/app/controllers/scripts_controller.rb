@@ -109,7 +109,7 @@ class ScriptsController < ApplicationController
     @script_data = {
       script: @script ? @script.summarize_for_edit : {},
       has_course: @script&.unit_groups&.any?,
-      i18n: @script ? @script.summarize_i18n : {},
+      i18n: @script ? @script.summarize_i18n_for_edit : {},
       beta: beta,
       betaWarning: beta_warning,
       levelKeyList: beta && Level.key_list,

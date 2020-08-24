@@ -18,7 +18,11 @@ FactoryGirl.define do
     end
 
     trait :with_unit do
-      association(:content_root, factory: :script)
+      association(:content_root, factory: :script, is_course: true)
+    end
+
+    trait :with_course_offering do
+      association :course_offering
     end
   end
 
@@ -677,7 +681,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script do
+  factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
 
     factory :csf_script do
