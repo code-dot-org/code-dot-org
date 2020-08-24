@@ -334,7 +334,7 @@ module Pd
     end
 
     def get_workshop_by_enrollment(enrollment_code:, should_have_attended:)
-      workshop = Workshop.by_enrollment_code(enrollment_code, current_user)
+      workshop = Pd::Enrollment.find_by(code: enrollment_code, user: current_user)&.workshop
 
       unless workshop
         render :invalid_enrollment_code
