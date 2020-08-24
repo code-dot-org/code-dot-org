@@ -385,8 +385,8 @@ class Pd::Enrollment < ActiveRecord::Base
     end
 
     filtered_ids = select_completed ?
-                   ids_with_processed_surveys + ids_with_unprocessed_surveys :
-                   ids_without_processed_surveys - ids_with_unprocessed_surveys
+                     ids_with_processed_surveys + ids_with_unprocessed_surveys :
+                     ids_without_processed_surveys - ids_with_unprocessed_surveys
 
     enrollments.select {|e| filtered_ids.include? e.id}
   end
