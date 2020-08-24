@@ -123,13 +123,15 @@ export default class LightSensor extends EventEmitter {
       indicesRange = requestedRange;
     }
 
-    let endIndex = this.state.currentBufferWriteIndex;
+    // currentBufferWriteIndex points to the next spot to write, so historical
+    // data starts at currentBufferWriteIndex - 1
+    let endIndex = this.state.currentBufferWriteIndex - 1;
     let startIndex = endIndex - indicesRange;
-    // (currentBufferWriteIndex % buffer.length) points to the next spot to write, so historical
-    // data starts at ((currentBufferWriteIndex % buffer.length) - 1)
+
     let sum = 0;
-    for (let index = startIndex; index < endIndex; index++) {
-      // Because index might be negative, use modulo to loop circular buffer.
+    for (let index = startIndex; index <= endIndex; index++) {
+      // Because index might be negative or higher than buffer.length, use
+      // modulo to loop circular buffer.
       let sumIndex =
         (index + this.state.buffer.length) % this.state.buffer.length;
       sum += this.state.buffer[sumIndex];
