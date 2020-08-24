@@ -69,6 +69,6 @@ class CourseVersion < ApplicationRecord
   # Destroys this CourseVersion. Then, if its parent CourseOffering now has no CourseVersions, destroy it too.
   def destroy_and_destroy_parent_if_empty
     destroy!
-    course_offering.destroy if course_offering.course_versions.empty?
+    course_offering.destroy if course_offering && course_offering.course_versions.empty?
   end
 end
