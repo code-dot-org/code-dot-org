@@ -221,7 +221,7 @@ class Pd::Enrollment < ActiveRecord::Base
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
-    # any othr non-academic year workshop uses foorm. We don't automatically provide survey urls for AYW
+    # any other non-academic year workshop uses foorm. We don't automatically provide survey urls for AYW
     elsif !ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(workshop.subject)
       CDO.studio_url "/pd/workshop_post_survey?enrollmentCode=#{code}", CDO.default_scheme
     end
