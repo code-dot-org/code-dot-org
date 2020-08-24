@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
-import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape} from './resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -49,6 +48,7 @@ export default class CourseEditor extends Component {
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
@@ -173,6 +173,21 @@ export default class CourseEditor extends Component {
             style={styles.checkbox}
           />
         </label>
+        <label>
+          Unit Numbering
+          <HelpTip>
+            <p>
+              Automatically provide numbers in unit names in the order listed
+              below.
+            </p>
+          </HelpTip>
+          <input
+            name="has_numbered_units"
+            type="checkbox"
+            defaultChecked={this.props.hasNumberedUnits}
+            style={styles.checkbox}
+          />
+        </label>
         <h2>Publishing settings</h2>
         <label>
           Family Name
@@ -239,21 +254,12 @@ export default class CourseEditor extends Component {
         <div>
           <h2>Teacher Resources</h2>
           <div>
-            Select up to three Teacher Resources buttons you'd like to have show
-            up on the top of the course overview page
+            Select the Teacher Resources buttons you'd like to have show up on
+            the top of the course overview page
           </div>
           <ResourcesEditor
             inputStyle={styles.input}
             resources={teacherResources}
-            maxResources={3}
-            renderPreview={resources => (
-              <CourseOverviewTopRow
-                sectionsForDropdown={[]}
-                id={-1}
-                resources={resources}
-                showAssignButton={false}
-              />
-            )}
           />
         </div>
       </div>

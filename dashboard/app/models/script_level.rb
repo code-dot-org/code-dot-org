@@ -503,7 +503,7 @@ class ScriptLevel < ActiveRecord::Base
       lessonNum: lesson_num,
       levelNum: position,
       linkToLevel: path,
-      unitName: lesson.script.localized_title
+      unitName: lesson.script.title_for_display
     }
   end
 
