@@ -10,7 +10,16 @@ const activity = {
   activitySections: [
     {
       type: 'description',
+      key: 'section-3',
+      isRemarks: true,
+      text:
+        'Today we are going to be looking at some sample apps to explore their purpose and function.',
+      tips: []
+    },
+    {
+      type: 'description',
       key: 'section-1',
+      isRemarks: false,
       text: 'In this activity you will be learning about making activities.',
       tips: [
         {
@@ -78,6 +87,7 @@ const activity = {
     {
       type: 'description',
       key: 'section-2',
+      isRemarks: false,
       text:
         '**Prompt:** With a partner, discuss the following and note down in your journal:\n - How does the user interact with the app?\n - What is the overall purpose of this app?\n - Who is the target audience?\n\n**Share Out:** As a class, discuss student answers to the discussion questions.',
       tips: [

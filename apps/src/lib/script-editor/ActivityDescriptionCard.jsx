@@ -6,6 +6,9 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {tipTypes} from '@cdo/apps/code-studio/components/LessonTip';
 
 const styles = {
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
   lessonCard: {
     fontSize: 18,
     background: 'white',
@@ -19,6 +22,10 @@ const styles = {
   lessonCardHeader: {
     color: '#5b6770',
     marginBottom: 15
+  },
+  lessonLockable: {
+    fontSize: 13,
+    marginTop: 3
   },
   input: {
     width: '100%'
@@ -55,9 +62,24 @@ export default class ActivityDescriptionCard extends Component {
               console.log('Remove Activity Description Card');
             }}
           />
+          <label style={styles.lessonLockable}>
+            Remarks
+            <input
+              checked={this.props.activitySection.isRemarks}
+              onChange={() => {
+                console.log('Click checkbox');
+              }}
+              type="checkbox"
+              style={styles.checkbox}
+            />
+          </label>
         </div>
         <textarea
           defaultValue={this.props.activitySection.text}
+          rows={Math.max(
+            this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
+            2
+          )}
           style={styles.input}
         />
         <div style={styles.bottomControls}>
