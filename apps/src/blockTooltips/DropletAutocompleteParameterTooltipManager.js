@@ -90,7 +90,14 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
     return;
   }
 
-  if (editor.completer && this.showParamDropdowns) {
+  if (
+    editor.completer &&
+    this.showParamDropdowns &&
+    changeEvent.command.name !== 'golineup' &&
+    changeEvent.command.name !== 'golinedown' &&
+    changeEvent.command.name !== 'gotoleft' &&
+    changeEvent.command.name !== 'gotoright'
+  ) {
     this.showParamDropdownIfNeeded_(editor, currentParameterInfo);
   }
 
