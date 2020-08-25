@@ -12,16 +12,7 @@ describe('ResourcesEditor', () => {
   it('adds empty resources if passed none', () => {
     const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
     assert.deepEqual(wrapper.state('resources'), [
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''}
+      {type: '', link: '/link/to/resource'}
     ]);
   });
 
@@ -34,15 +25,7 @@ describe('ResourcesEditor', () => {
     );
     assert.deepEqual(wrapper.state('resources'), [
       {type: 'Curriculum', link: '/foo'},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''}
+      {type: '', link: '/link/to/resource'}
     ]);
   });
 
@@ -53,7 +36,7 @@ describe('ResourcesEditor', () => {
         resources={[{type: 'Curriculum', link: '/foo'}]}
       />
     );
-    assert.strictEqual(wrapper.find('Resource').length, 2);
+    assert.strictEqual(wrapper.find('ResourceEditorInput').length, 2);
   });
 
   it('adds an additional Resource when providing one with a value', () => {
@@ -69,7 +52,7 @@ describe('ResourcesEditor', () => {
       }
     };
     wrapper.instance().handleChangeType(fakeEvent, 1);
-    assert.strictEqual(wrapper.find('Resource').length, 3);
+    assert.strictEqual(wrapper.find('ResourceEditorInput').length, 3);
   });
 
   it('shows an error if you duplicate resource types', () => {
@@ -92,12 +75,10 @@ describe('ResourcesEditor', () => {
   });
 
   describe('Resource', () => {
-    it('has a type selector and a link input', () => {
+    it('has a type input and a link input', () => {
       const wrapper = mount(<ResourcesEditor {...defaultProps} />);
-      const resource = wrapper.find('Resource').at(0);
-      assert.equal(resource.find('select').length, 1);
-      assert.equal(resource.find('option').length, 11);
-      assert.equal(resource.find('input').length, 1);
+      const resource = wrapper.find('ResourceEditorInput').at(0);
+      assert.equal(resource.find('input').length, 2);
     });
   });
 });

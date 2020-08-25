@@ -40,9 +40,6 @@ export default class ResourcesEditor extends Component {
     const oldResources = this.state.resources;
     const newResources = _.cloneDeep(oldResources);
     const type = event.target.value;
-    if (type && this.state.resources[this.state.resources.length - 1].type) {
-      newResources.push({type: '', link: '/link/to/resource'});
-    }
     newResources[index].type = type;
 
     let errorString = '';
@@ -51,7 +48,16 @@ export default class ResourcesEditor extends Component {
       errorString = 'Your resource types contains a duplicate';
     }
 
-    this.setState({resources: newResources, errorString});
+    this.setState({resources: newResources, errorString}, this.addNewResource);
+  };
+
+  addNewResource = () => {
+    if (this.state.resources[this.state.resources.length - 1].type) {
+      const oldResources = this.state.resources;
+      const newResources = _.cloneDeep(oldResources);
+      newResources.push({type: '', link: '/link/to/resource'});
+      this.setState({resources: newResources});
+    }
   };
 
   handleChangeLink = (event, index) => {
