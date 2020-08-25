@@ -21,12 +21,14 @@ require_relative '../../../dashboard/config/environment'
 
 slice = 0
 
-UserLevel.where.not(time_spent: nil).where("time_spent > ?", 0).find_in_batches(start: 93_221_000, finish: 2_811_329_000, batch_size: 5000) do |user_level_slice|
+UserLevel.find_in_batches(start: 93_221_000, finish: 2_811_329_000, batch_size: 5000) do |user_level_slice|
   puts "PROCESSING: slice #{slice} with starting id #{user_level_slice.first.id}."
   ActiveRecord::Base.transaction do
     user_level_slice.each do |user_level|
-      user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
-      user_level.save!
+      if user_level.time_spent && user_level.time_spent > 0
+        user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
+        user_level.save!
+      end
     end
   end
   puts "PROCESSED: slice: #{slice}."
