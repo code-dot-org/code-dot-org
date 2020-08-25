@@ -55,11 +55,6 @@
    "title": "Module 1 Feedback",
   "visibleIf": "{workshop_agenda}='module1' or {workshop_agenda}='module1_2'",
    "elements": [
-    {"type":"html",
-      "title":"comment",
-      "name":"comment_module1",
-      "html":"<p style='background-color: yellow'>Showing module 1 as example. NEED TO re-add logic to show only if module1 == true.  <pre>'visibleIf': '{module1}='true''</pre>"
-    },
     {
       "type":"library_item",
       "library_name":"surveys/pd/ayw_module_1",

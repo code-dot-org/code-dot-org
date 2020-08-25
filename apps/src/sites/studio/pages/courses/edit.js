@@ -37,6 +37,7 @@ function showCourseEditor() {
         hasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
+        hasNumberedUnits={courseEditorData.course_summary.has_numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
       />

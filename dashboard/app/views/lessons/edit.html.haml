@@ -1,0 +1,7 @@
+%script{src: webpack_asset_path('js/lessons/edit.js'),
+        data: {lesson: @lesson_data.to_json}}
+
+= form_for @lesson, {url: lesson_path(id: @lesson.id)} do |f|
+  #edit-container
+
+= link_to t('crud.show'), @lesson
