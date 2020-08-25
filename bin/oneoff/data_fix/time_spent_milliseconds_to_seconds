@@ -16,7 +16,19 @@ require_relative '../../../dashboard/config/environment'
 # time_spent should be transformed as such
 # (time_spent.to_f/1000).ceil.to_i
 
-UserLevel.where("time_spent > ?", 0).where.not(time_spent: nil).each do |user_level|
-  user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
-  user_level.save!
+# upper limit: 2811329000;
+# lower limit:   93221000;
+
+slice = 0
+
+UserLevel.where.not(time_spent: nil).where("time_spent > ?", 0).find_in_batches(start: 93_221_000, finish: 2_811_329_000, batch_size: 5000) do |user_level_slice|
+  puts "PROCESSING: slice #{slice} with starting id #{user_level_slice.first.id}."
+  ActiveRecord::Base.transaction do
+    user_level_slice.each do |user_level|
+      user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
+      user_level.save!
+    end
+  end
+  puts "PROCESSED: slice: #{slice}."
+  slice += 1
 end
