@@ -31,6 +31,9 @@ const styles = {
   },
   input: {
     width: '100%'
+  },
+  title: {
+    marginRight: 5
   }
 };
 
@@ -44,16 +47,19 @@ export default class ProgressionCard extends Component {
     return (
       <div style={styles.lessonCard}>
         <div style={styles.lessonCardHeader}>
-          <span>Progression: {progression.displayName}</span>
-          <OrderControls
-            name={this.props.progression.key}
-            move={() => {
-              console.log('Move Progression Card');
-            }}
-            remove={() => {
-              console.log('Remove Progression Card');
-            }}
-          />
+          <label>
+            <span style={styles.title}>Progression:</span>
+            <input defaultValue={progression.displayName} />
+            <OrderControls
+              name={this.props.progression.key}
+              move={() => {
+                console.log('Move Progression Card');
+              }}
+              remove={() => {
+                console.log('Remove Progression Card');
+              }}
+            />
+          </label>
         </div>
         <textarea defaultValue={progression.text} style={styles.input} />
         {progression.levels.map(level => (

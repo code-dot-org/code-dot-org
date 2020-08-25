@@ -30,6 +30,7 @@ export default class PreviewActivityDialog extends Component {
         useUpdatedStyles
         style={styles.dialog}
       >
+        <h2>Preview Activity</h2>
         <Activity activity={this.props.activity} />
         <DialogFooter rightAlign>
           <Button

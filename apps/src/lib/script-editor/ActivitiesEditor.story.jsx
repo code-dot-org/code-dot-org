@@ -12,7 +12,9 @@ const activity = {
     {
       type: 'description',
       key: 'section-3',
+      title: 'Making programs',
       isRemarks: true,
+      slide: false,
       text:
         'Today we are going to be looking at some sample apps to explore their purpose and function.',
       tips: []
@@ -20,7 +22,9 @@ const activity = {
     {
       type: 'description',
       key: 'section-1',
+      title: null,
       isRemarks: false,
+      slide: true,
       text: 'In this activity you will be learning about making activities.',
       tips: [
         {
@@ -62,7 +66,7 @@ const activity = {
         },
         {
           status: 'not started',
-          url: '/link/to/leve',
+          url: '/link/to/level',
           icon: 'fa-desktop',
           name: 'Level 1',
           isUnplugged: false,
@@ -88,7 +92,9 @@ const activity = {
     {
       type: 'description',
       key: 'section-2',
+      title: 'Discussion',
       isRemarks: false,
+      slide: false,
       text:
         '**Prompt:** With a partner, discuss the following and note down in your journal:\n - How does the user interact with the app?\n - What is the overall purpose of this app?\n - Who is the target audience?\n\n**Share Out:** As a class, discuss student answers to the discussion questions.',
       tips: [

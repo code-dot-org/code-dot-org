@@ -22,7 +22,8 @@ const styles = {
     width: '40%'
   },
   remarksHeader: {
-    marginLeft: 5
+    marginLeft: 5,
+    fontStyle: 'italic'
   }
 };
 
@@ -36,6 +37,7 @@ export default class ActivitySection extends Component {
 
     return (
       <div>
+        {section.type === 'description' && <h4>{section.title}</h4>}
         {section.isRemarks && (
           <div>
             <h4>
@@ -51,6 +53,9 @@ export default class ActivitySection extends Component {
           }}
         >
           <div style={styles.tipIcons}>
+            {section.slide && (
+              <FontAwesome key={`tipIcon-slide`} icon="list-alt" />
+            )}
             {section.tips.map((tip, index) => {
               return (
                 <FontAwesome

@@ -1,6 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitySection from '@cdo/apps/code-studio/components/ActivitySection';
+import color from '@cdo/apps/util/color';
+
+const styles = {
+  activityHeader: {
+    color: color.purple
+  }
+};
 
 export default class Activity extends Component {
   static propTypes = {
@@ -12,8 +19,9 @@ export default class Activity extends Component {
 
     return (
       <div>
-        <h2>{activity.displayName}</h2>
-        <h4>{`${activity.time} minutes`}</h4>
+        <h2 style={styles.activityHeader}>{`${activity.displayName} (${
+          activity.time
+        } minutes)`}</h2>
         {activity.activitySections.map(item => {
           return <ActivitySection key={item.key} section={item} />;
         })}

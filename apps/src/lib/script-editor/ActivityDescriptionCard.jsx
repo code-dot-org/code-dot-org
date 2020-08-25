@@ -23,9 +23,10 @@ const styles = {
     color: '#5b6770',
     marginBottom: 15
   },
-  lessonLockable: {
+  labelAndCheckbox: {
     fontSize: 13,
-    marginTop: 3
+    marginTop: 3,
+    marginRight: 10
   },
   input: {
     width: '100%'
@@ -41,6 +42,13 @@ const styles = {
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     margin: '0 5px 0 0'
+  },
+  checkboxes: {
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  title: {
+    marginRight: 5
   }
 };
 
@@ -53,26 +61,43 @@ export default class ActivityDescriptionCard extends Component {
     return (
       <div style={styles.lessonCard}>
         <div style={styles.lessonCardHeader}>
-          <OrderControls
-            name={this.props.activitySection.text}
-            move={() => {
-              console.log('Move Activity Description Card');
-            }}
-            remove={() => {
-              console.log('Remove Activity Description Card');
-            }}
-          />
-          <label style={styles.lessonLockable}>
-            Remarks
-            <input
-              checked={this.props.activitySection.isRemarks}
-              onChange={() => {
-                console.log('Click checkbox');
+          <label>
+            <span style={styles.title}>Title:</span>
+            <input defaultValue={this.props.activitySection.title} />
+            <OrderControls
+              name={this.props.activitySection.title}
+              move={() => {
+                console.log('Move Activity Description Card');
               }}
-              type="checkbox"
-              style={styles.checkbox}
+              remove={() => {
+                console.log('Remove Activity Description Card');
+              }}
             />
           </label>
+          <div style={styles.checkboxes}>
+            <label style={styles.labelAndCheckbox}>
+              Remarks
+              <input
+                checked={this.props.activitySection.isRemarks}
+                onChange={() => {
+                  console.log('Click checkbox');
+                }}
+                type="checkbox"
+                style={styles.checkbox}
+              />
+            </label>
+            <label style={styles.labelAndCheckbox}>
+              Slides
+              <input
+                checked={this.props.activitySection.slide}
+                onChange={() => {
+                  console.log('Click checkbox');
+                }}
+                type="checkbox"
+                style={styles.checkbox}
+              />
+            </label>
+          </div>
         </div>
         <textarea
           defaultValue={this.props.activitySection.text}

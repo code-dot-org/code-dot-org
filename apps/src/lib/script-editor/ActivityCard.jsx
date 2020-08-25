@@ -13,7 +13,10 @@ const styles = {
     background: color.cyan,
     borderTopLeftRadius: borderRadius,
     borderTopRightRadius: borderRadius,
-    padding: 10
+    padding: 10,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   groupBody: {
     background: color.lightest_cyan,
@@ -30,15 +33,19 @@ const styles = {
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
   },
-  addLevel: {
-    fontSize: 14,
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
-  },
   button: {
     marginLeft: 10
+  },
+  label: {
+    fontSize: 20,
+    marginRight: 5
+  },
+  input: {
+    marginRight: 10
+  },
+  labelAndInput: {
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 
@@ -53,19 +60,17 @@ export default class ActivityCard extends Component {
     return (
       <div>
         <div style={styles.groupHeader}>
-          {`Activity: ${activity.key}: "${activity.displayName}"`}
-          <span style={styles.button}>
-            <button
-              onMouseDown={() => {
-                console.log('Preview Activity');
-              }}
-              className="btn"
-              style={styles.addLevel}
-              type="button"
-            >
-              Preview
-            </button>
-          </span>
+          <label style={styles.labelAndInput}>
+            <span style={styles.label}>{`Activity:`}</span>
+            <input defaultValue={activity.displayName} style={styles.input} />
+          </label>
+          <label style={styles.labelAndInput}>
+            <span style={styles.label}>{`Time (mins):`}</span>
+            <input
+              defaultValue={activity.time}
+              style={{...styles.input, ...{width: 50}}}
+            />
+          </label>
           <OrderControls
             name={activity.key || '(none)'}
             move={() => {
@@ -115,6 +120,17 @@ export default class ActivityCard extends Component {
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
             Add Progression
+          </button>
+          <button
+            onMouseDown={() => {
+              console.log('Preview Activity');
+            }}
+            className="btn"
+            style={styles.addLesson}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-eye" />
+            Preview
           </button>
         </div>
       </div>
