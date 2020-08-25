@@ -2,7 +2,7 @@
 title: 保護者用の手引き
 ---
 
-# How to do an Hour of Code with your child
+# お子さんと一緒にHour of Codeを学習する方法
 
 Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
 
