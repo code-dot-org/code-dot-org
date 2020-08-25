@@ -157,9 +157,13 @@ class ScriptLevel < ActiveRecord::Base
     !has_another_level_to_go_to?
   end
 
-  def next_level_or_redirect_path_for_user(user, extras_lesson=nil)
-    if bubble_choice?
-      # Redirect user back to the BubbleChoice activity page.
+  def next_level_or_redirect_path_for_user(
+    user,
+    extras_lesson=nil,
+    bubble_choice_parent=false
+  )
+    if bubble_choice? && !bubble_choice_parent
+      # Redirect user back to the BubbleChoice activity page from sublevels.
       level_to_follow = self
     elsif valid_progression_level?(user)
       # if we're coming from an unplugged level, it's ok to continue to unplugged
@@ -503,7 +507,7 @@ class ScriptLevel < ActiveRecord::Base
       lessonNum: lesson_num,
       levelNum: position,
       linkToLevel: path,
-      unitName: lesson.script.localized_title
+      unitName: lesson.script.title_for_display
     }
   end
 

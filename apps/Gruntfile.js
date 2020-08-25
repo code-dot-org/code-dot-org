@@ -574,6 +574,8 @@ describe('entry tests', () => {
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
+    'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
+    'lessons/show': './src/sites/studio/pages/lessons/show.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -716,6 +718,7 @@ describe('entry tests', () => {
     // The blockly dependency is huge, so we currently control when it is
     // loaded explicitly via script tags rather than via normal imports.
     blockly: './src/sites/studio/pages/blockly.js',
+    googleblockly: './src/sites/studio/pages/googleblockly.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the

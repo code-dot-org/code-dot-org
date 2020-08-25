@@ -298,18 +298,6 @@ class Pd::Workshop < ActiveRecord::Base
     current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
   end
 
-  # Find the enrollment for the given enrollment code and teacher,
-  # and return the workshop associated with that enrollment or nil.
-  # enrollment_code is unique but by including teacher we can ensure the
-  # expected user is trying to access the workshop.
-  # @param [String] enrollment_code
-  # @param [User] teacher
-  # @return [Pd::Workshop, nil]
-  def self.by_enrollment_code(enrollment_code, teacher)
-    enrollment = Pd::Enrollment.find_by(code: enrollment_code, user: teacher)
-    enrollment && enrollment.workshop
-  end
-
   # Find the workshop with the closest session to today
   # enrolled in by the given teacher.
   # @param [User] teacher
@@ -818,7 +806,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def pre_survey?
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    # CSP for returning teachers does not have a pre-survey. Academic year workshops have multiple pre-survey options,
+    # so we do not show any to teachers ourselves.
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 
@@ -842,7 +832,7 @@ class Pd::Workshop < ActiveRecord::Base
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
     pre_survey_course.default_scripts.map do |script|
-      unit_name = script.localized_title
+      unit_name = script.title_for_display
       stage_names = script.lessons.where(lockable: false).pluck(:name)
       lesson_names = stage_names.each_with_index.map do |stage_name, i|
         "Lesson #{i + 1}: #{stage_name}"

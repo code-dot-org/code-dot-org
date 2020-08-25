@@ -6,15 +6,20 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
   inputStyle: {},
-  resources: [],
-  maxResources: 3,
-  renderPreview: resources => null
+  resources: []
 };
 
 describe('ResourcesEditor', () => {
   it('adds empty resources if passed none', () => {
     const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
     assert.deepEqual(wrapper.state('resources'), [
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
       {type: '', link: ''},
       {type: '', link: ''},
       {type: '', link: ''}
@@ -30,6 +35,13 @@ describe('ResourcesEditor', () => {
     );
     assert.deepEqual(wrapper.state('resources'), [
       {type: ResourceType.curriculum, link: '/foo'},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
+      {type: '', link: ''},
       {type: '', link: ''},
       {type: '', link: ''}
     ]);

@@ -112,6 +112,7 @@ Updated guidance for hosting 2020 Summer Workshops is now available!
 
 ### Academic Year Workshop Specific
 
+- [2020-21 Academic Year Workshop Procecss Doc](https://docs.google.com/document/d/1P2PMYhmvYxShWRIdzEbGmLrXoGdaVzJs0qrvOIeDqF4/edit?userstoinvite=jessica.salva%40medb.org&ts=5f3ee441&actionButton=1)
 - [2020-21 Guidelines for Scheduling Academic Year Workshops](https://docs.google.com/document/d/1l4z2dGxT24KFI09lSLJDILRz9qXOTierRcdZ1922BLs/edit#)
 - [Guidance for Adapting AYW1 for Returning CS Principles Teachers](https://docs.google.com/document/d/1DjkSGl8hozaJx_s8_ikb8jU1-CkXia7U2b4QsnsXm6o/edit)
 
