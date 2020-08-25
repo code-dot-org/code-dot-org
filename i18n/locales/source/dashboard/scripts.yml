@@ -167,6 +167,7 @@ en:
           lessons:
             Play Lab:
               name: Play Lab
+          description_audience: ''
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
