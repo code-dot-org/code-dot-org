@@ -27,7 +27,7 @@ UserLevel.find_in_batches(start: 93_221_000, finish: 2_811_329_000, batch_size: 
     user_level_slice.each do |user_level|
       if user_level.time_spent && user_level.time_spent > 0
         user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
-        user_level.save!
+        user_level.save(touch: false, validate: false)
       end
     end
   end
