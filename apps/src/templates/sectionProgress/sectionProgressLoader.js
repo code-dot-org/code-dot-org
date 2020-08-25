@@ -87,28 +87,28 @@ export function loadScript(scriptId, sectionId) {
       .then(data => {
         sectionProgress.studentLevelProgressByScript = {
           [scriptId]: {
-            ...sectionProgress.studentLevelProgressByScript,
+            ...sectionProgress.studentLevelProgressByScript[scriptId],
             ...getInfoByStudentByLevel(data.students, getLevelResult)
           }
         };
 
         sectionProgress.studentTimestampsByScript = {
           [scriptId]: {
-            ...sectionProgress.studentTimestampsByScript,
+            ...sectionProgress.studentTimestampsByScript[scriptId],
             ...processStudentTimestamps(data.student_timestamps)
           }
         };
 
         sectionProgress.studentLevelTimeSpentByScript = {
           [scriptId]: {
-            ...sectionProgress.studentLevelTimeSpentByScript,
+            ...sectionProgress.studentLevelTimeSpentByScript[scriptId],
             ...getInfoByStudentByLevel(data.students, level => level.time_spent)
           }
         };
 
         sectionProgress.studentLevelPairingByScript = {
           [scriptId]: {
-            ...sectionProgress.studentLevelPairingByScript,
+            ...sectionProgress.studentLevelPairingByScript[scriptId],
             ...processStudentPairing(data.students)
           }
         };
