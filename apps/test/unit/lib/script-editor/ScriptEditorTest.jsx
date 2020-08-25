@@ -23,10 +23,10 @@ describe('ScriptEditor', () => {
   describe('Script Editor', () => {
     it('has the correct number of each editor field type', () => {
       const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
-      expect(wrapper.find('input').length).to.equal(22);
+      expect(wrapper.find('input').length).to.equal(23);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
       expect(wrapper.find('textarea').length).to.equal(2);
-      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('select').length).to.equal(4);
     });
 
     it('has correct markdown for preview of unit description', () => {
