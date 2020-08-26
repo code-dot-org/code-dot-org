@@ -158,7 +158,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     if @workshop.local_summer?
       @survey_url = CDO.studio_url "/pd/misc_survey/facilitator_post", CDO.default_scheme
     else
-      survey_params = "survey_data[workshop_course]=#{workshop.course}&survey_data[workshop_subject]=#{workshop.subject}"
+      survey_params = "survey_data[workshop_course]=#{workshop.course}&survey_data[workshop_subject]=#{workshop.subject}"\
+                      "&survey_data[workshop_id]=#{workshop.id}"
       @survey_url = CDO.studio_url "form/facilitator_post_survey?#{survey_params}", CDO.default_scheme
     end
 
