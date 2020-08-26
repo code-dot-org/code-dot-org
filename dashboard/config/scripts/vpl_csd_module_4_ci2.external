@@ -4,20 +4,25 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Lesson 4:  User Interfaces  
+#Unit 4 - Lesson 4:  User Interfaces  
+**Estimated time: 20 minutes**
 
 
 
 
 ## Investigation Goals
 
-**Understand how prototypes can be used to quickly test ideas and assumptions**
+**Identify how students engage in iteration and decomposition within the Problem Solving Process**
 
 ## Investigation Tasks
 
-* Review the vocabulary (prototype and user interface)
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit4/4/" target="_blank">Lesson 4: User Interfaces</a>
 
-* Skim the content in the activity guide to visualize the activity the students will complete in this lesson
+* Become familiar with the concepts of iteration and decomposition
+
+* Skim the content in the activity guides to visualize the activity the students will complete in this lesson
+
+
 
 
 
