@@ -52,6 +52,16 @@ const styles = {
     borderBottomRightRadius: borderRadius,
     cursor: 'pointer'
   },
+  edit: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: 'white',
+    background: color.teal,
+    border: '1px solid #00adbc',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
+    cursor: 'pointer'
+  },
   levelArea: {
     display: 'flex',
     flexDirection: 'row',
@@ -113,6 +123,14 @@ export default class LevelToken2 extends Component {
             </span>
           </span>
         </span>
+        <div
+          style={styles.edit}
+          onMouseDown={() => {
+            console.log('Edit Level');
+          }}
+        >
+          <i className="fa fa-pencil" />
+        </div>
         <div
           style={styles.remove}
           onMouseDown={() => {
