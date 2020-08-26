@@ -229,7 +229,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     # the way we set up workshops for mailers means they won't have an id.
     # We want to test that this mailer can extract the workshop id correctly--find
     # an unused id and assign it to this workshop.
-    highest_workshop_id = Pd::Workshop.last.id
+    highest_workshop_id = Pd::Workshop.last&.id || 0
     mail :facilitator_post_workshop,
       Pd::Workshop::COURSE_CSD,
       Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
