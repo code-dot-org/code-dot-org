@@ -24,8 +24,9 @@ UserLevel.find_each(start: 93_221_000, finish: 2_811_329_000, batch_size: 5000).
     puts "Starting transform of user_level with id #{user_level.id}"
   end
   if user_level.time_spent && user_level.time_spent > 0
-    user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
-    user_level.save(touch: false, validate: false)
+    new_time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
+    # update without validation, callbacks, or changes to updated_at
+    user_level.update_columns(time_spent: new_time_spent)
   end
 rescue Exception => e
   puts "Error with user_level #{user_level.id}. Skipping and continuing. Error message: #{e.message}"
