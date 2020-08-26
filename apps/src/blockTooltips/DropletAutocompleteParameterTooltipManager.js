@@ -90,9 +90,8 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
     return;
   }
 
-  // we check the command name to make sure that we aren't opening the param dropdown
-  // when users are navigating through the code with arrow keys.
-  // Otherwise the cursor could get stuck in the dropdown
+  // We check the command name to make sure that we aren't opening the param dropdown when users are navigating through the code with arrow keys.
+  // Otherwise, the cursor could get stuck in the dropdown.
   if (
     editor.completer &&
     this.showParamDropdowns &&
