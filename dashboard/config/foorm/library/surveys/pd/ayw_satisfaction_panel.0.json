@@ -60,6 +60,7 @@
        "type": "comment",
        "name": "what_supported",
        "title": "What supported your learning the most today and why?",
+        "maxLength": 4000,
        "cols": 60,
        "rows": 2
      },
@@ -67,6 +68,7 @@
        "type": "comment",
        "name": "what_detracted",
        "title": "What detracted from your learning today and why?",
+        "maxLength": 4000,
        "cols": 60,
        "rows": 2
      },
@@ -74,6 +76,7 @@
        "type": "comment",
        "name": "discuss_tomorrow",
        "title": "What is one thing you hope to discuss or learn more about the next time we meet?",
+       "maxLength": 4000,
        "cols": 60,
        "rows": 2
      }
