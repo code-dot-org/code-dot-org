@@ -25,7 +25,7 @@
   {
     "name": "Firefox",
     "browserName": "firefox",
-    "version": "79.0",
+    "browserVersion": "79.0",
     "platform": "Windows 10",
     "w3c": true
   },
