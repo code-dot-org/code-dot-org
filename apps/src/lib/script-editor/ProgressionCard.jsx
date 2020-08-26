@@ -99,7 +99,7 @@ export default class ProgressionCard extends Component {
           {this.props.progression.tips.length > 0 && (
             <span style={styles.icons}>
               {this.props.progression.tips.map(tip => {
-                <TipWithTooltip tip={tip} key={tip.markdown} />;
+                return <TipWithTooltip tip={tip} key={tip.markdown} />;
               })}
             </span>
           )}

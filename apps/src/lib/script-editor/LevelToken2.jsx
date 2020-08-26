@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import color from '../../util/color';
 import {borderRadius, levelTokenMargin} from './constants';
 import {levelShape} from './shapes';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
 const styles = {
   levelToken: {
@@ -37,7 +38,6 @@ const styles = {
     padding: '3px 5px',
     lineHeight: '12px',
     borderRadius: 5,
-    float: 'right',
     marginLeft: 3
   },
   remove: {
@@ -51,6 +51,20 @@ const styles = {
     borderTopRightRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
     cursor: 'pointer'
+  },
+  levelArea: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  titleAndBubble: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  levelTitle: {
+    marginLeft: 5
   }
 };
 
@@ -74,21 +88,30 @@ export default class LevelToken2 extends Component {
           <i className="fa fa-arrows-v" />
         </div>
         <span style={styles.levelTokenName}>
-          {this.props.level.displayName}
-          {this.props.level.ids.length > 1 && (
-            <span style={styles.tag}>
-              {this.props.level.ids.length} variants
+          <span style={styles.levelArea}>
+            <span style={styles.titleAndBubble}>
+              <ProgressBubble hideToolTips={true} level={this.props.level} />
+              <span style={styles.levelTitle}>
+                {this.props.level.displayName}
+              </span>
             </span>
-          )}
-          {this.props.level.challenge && (
-            <span style={styles.tag}>challenge</span>
-          )}
-          {/* progression supercedes named, so only show the named tag
-              when the level is behaving like a named level. */}
-          {this.props.level.named && <span style={styles.tag}>named</span>}
-          {this.props.level.assessment && (
-            <span style={styles.tag}>assessment</span>
-          )}
+            <span>
+              {this.props.level.ids.length > 1 && (
+                <span style={styles.tag}>
+                  {this.props.level.ids.length} variants
+                </span>
+              )}
+              {this.props.level.challenge && (
+                <span style={styles.tag}>challenge</span>
+              )}
+              {/* progression supercedes named, so only show the named tag
+                  when the level is behaving like a named level. */}
+              {this.props.level.named && <span style={styles.tag}>named</span>}
+              {this.props.level.assessment && (
+                <span style={styles.tag}>assessment</span>
+              )}
+            </span>
+          </span>
         </span>
         <div
           style={styles.remove}

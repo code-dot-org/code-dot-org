@@ -49,7 +49,7 @@ const activity = {
           isUnplugged: false,
           levelNumber: 1,
           isCurrentLevel: false,
-          isConceptLevel: false,
+          isConceptLevel: true,
           sublevels: [],
           position: 1,
           activeId: 5,
@@ -111,8 +111,37 @@ const activity = {
   ]
 };
 
+const defaultActivity = {
+  key: 'activity-1',
+  displayName: '',
+  time: null,
+  activitySections: [
+    {
+      type: 'description',
+      key: 'section-1',
+      title: null,
+      isRemarks: false,
+      slide: false,
+      text: '',
+      tips: []
+    },
+    {
+      type: 'progression',
+      tips: [],
+      key: 'progression-1',
+      displayName: '',
+      text: '',
+      levels: []
+    }
+  ]
+};
+
 export default storybook => {
   storybook.storiesOf('ActivitiesEditor', module).addStoryTable([
+    {
+      name: 'New Lesson - Activities Editor',
+      story: () => <ActivitiesEditor activities={[defaultActivity]} />
+    },
     {
       name: 'ActivitiesEditor',
       story: () => <ActivitiesEditor activities={[activity]} />

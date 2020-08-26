@@ -123,7 +123,7 @@ export default class ActivityDescriptionCard extends Component {
           {this.props.activitySection.tips.length > 0 && (
             <span>
               {this.props.activitySection.tips.map(tip => {
-                <TipWithTooltip tip={tip} key={tip.markdown} />;
+                return <TipWithTooltip tip={tip} key={tip.markdown} />;
               })}
             </span>
           )}
