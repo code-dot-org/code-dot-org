@@ -1,0 +1,15 @@
+{
+  "name": "playlab",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

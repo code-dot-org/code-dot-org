@@ -1,0 +1,15 @@
+{
+  "name": "gamelab-hackathon",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Middle_School_Hackathon",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

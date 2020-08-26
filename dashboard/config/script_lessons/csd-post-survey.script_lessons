@@ -1,0 +1,15 @@
+{
+  "name": "csd-post-survey",
+  "lesson_groups": [
+    {
+      "key": "csd_survey",
+      "lessons": [
+        {
+          "key": "CSD post-course survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

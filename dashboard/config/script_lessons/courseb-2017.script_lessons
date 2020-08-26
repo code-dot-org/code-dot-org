@@ -1,0 +1,75 @@
+{
+  "name": "courseb-2017",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Debugging: Unspotted Bugs",
+          "properties": {
+          }
+        },
+        {
+          "key": "Persistence & Frustration: Stevie and the Marbles",
+          "properties": {
+          }
+        },
+        {
+          "key": "Real-life Algorithms: Plant a Seed",
+          "properties": {
+          }
+        },
+        {
+          "key": "Learn to Drag and Drop",
+          "properties": {
+          }
+        },
+        {
+          "key": "Your Digital Footprint",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming: My Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming with Rey and BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: My Loopy Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

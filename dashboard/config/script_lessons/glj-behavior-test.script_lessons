@@ -1,0 +1,15 @@
+{
+  "name": "glj-behavior-test",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Cats and Dogs",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

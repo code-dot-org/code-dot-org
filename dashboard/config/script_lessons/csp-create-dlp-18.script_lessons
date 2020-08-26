@@ -1,0 +1,25 @@
+{
+  "name": "csp-create-dlp-18",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Deeper Learning Overview",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Complete Create Deeper Learning Reflections",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

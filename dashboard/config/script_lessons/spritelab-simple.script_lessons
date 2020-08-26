@@ -1,0 +1,25 @@
+{
+  "name": "spritelab-simple",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Fish Tank - Creating Sprites",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alien Dance Party - Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Virtual Pet - Interactions",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

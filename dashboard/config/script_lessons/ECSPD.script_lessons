@@ -1,0 +1,40 @@
+{
+  "name": "ECSPD",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction to PD",
+          "properties": {
+          }
+        },
+        {
+          "key": "What is ECS?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Impact of Computer Science",
+          "properties": {
+          }
+        },
+        {
+          "key": "Growth Mindset",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Strategies",
+          "properties": {
+          }
+        },
+        {
+          "key": "Preparing for in-person PD",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

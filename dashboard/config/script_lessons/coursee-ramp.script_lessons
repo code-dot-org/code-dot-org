@@ -1,0 +1,25 @@
+{
+  "name": "coursee-ramp",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Real Life Algorithms: Dice Race",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

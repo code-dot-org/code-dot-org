@@ -1,0 +1,105 @@
+{
+  "name": "coursee-draft",
+  "lesson_groups": [
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Algorithms: Dice Race",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Private and Personal Information",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Star Wars Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions: Songwriting",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Determine the Concept",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Play Lab Game",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "Explore Project Ideas",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Present Your Project",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "extra_course_content",
+      "lessons": [
+        {
+          "key": "Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "Crowdsourcing",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

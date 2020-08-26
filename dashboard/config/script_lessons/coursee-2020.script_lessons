@@ -1,0 +1,135 @@
+{
+  "name": "coursee-2020",
+  "lesson_groups": [
+    {
+      "key": "ramp_up",
+      "lessons": [
+        {
+          "key": "Sequencing in the Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming and Loops with the Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Minecraft: Voyage Aquatic",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_sprites",
+      "lessons": [
+        {
+          "key": "Simon Says",
+          "properties": {
+          }
+        },
+        {
+          "key": "Learning Sprites with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alien Dance Party with Sprite Lab",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_digcit",
+      "lessons": [
+        {
+          "key": "Private and Personal Information",
+          "properties": {
+          }
+        },
+        {
+          "key": "About Me",
+          "properties": {
+          }
+        },
+        {
+          "key": "Digital Sharing",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_nested_loops",
+      "lessons": [
+        {
+          "key": "Nested Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Frozen",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_functions",
+      "lessons": [
+        {
+          "key": "Functions: Songwriting",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_impacts",
+      "lessons": [
+        {
+          "key": "Designing for Accessibility",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "End of Course Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

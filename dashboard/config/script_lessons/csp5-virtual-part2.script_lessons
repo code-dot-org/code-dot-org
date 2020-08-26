@@ -1,0 +1,70 @@
+{
+  "name": "csp5-virtual-part2",
+  "lesson_groups": [
+    {
+      "key": "csp5_1",
+      "lessons": [
+        {
+          "key": "Unit 5 Assessment 2",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp5_2",
+      "lessons": [
+        {
+          "key": "While Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops and Simulations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Arrays",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building an App: Image Scroller",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Assessment 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Processing Arrays",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Return Values",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building an App: Canvas Painter",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Assessment 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Assessment 5 - AP Pseudocode Practice Questions",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

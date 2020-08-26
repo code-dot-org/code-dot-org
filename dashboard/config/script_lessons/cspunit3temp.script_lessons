@@ -1,0 +1,50 @@
+{
+  "name": "cspunit3temp",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "While Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops and Simulations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Arrays",
+          "properties": {
+          }
+        },
+        {
+          "key": "Image Scroller with Key Events",
+          "properties": {
+          }
+        },
+        {
+          "key": "Processing Arrays",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Return Values",
+          "properties": {
+          }
+        },
+        {
+          "key": "Canvas and Arrays in Apps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT: Create",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

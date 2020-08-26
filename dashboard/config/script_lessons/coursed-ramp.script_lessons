@@ -1,0 +1,15 @@
+{
+  "name": "coursed-ramp",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

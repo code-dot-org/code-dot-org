@@ -1,0 +1,55 @@
+{
+  "name": "pwc",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Personal Innovations",
+          "properties": {
+          }
+        },
+        {
+          "key": "What is a Computer?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Problem Solving with Big Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming - Hour of Code",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Webpages",
+          "properties": {
+          }
+        },
+        {
+          "key": "User Interfaces",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to App Lab (13+)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Simple Encryption",
+          "properties": {
+          }
+        },
+        {
+          "key": "Smart Clothing Design",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "csd1-old",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Intro to Problem Solving",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Problem Solving Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Exploring Problem Solving",
+          "properties": {
+          }
+        },
+        {
+          "key": "What is a Computer?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Representing Information",
+          "properties": {
+          }
+        },
+        {
+          "key": "Processing with Bits",
+          "properties": {
+          }
+        },
+        {
+          "key": "Human vs Computer Processing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Processing with Apps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Apps and Problem Solving",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

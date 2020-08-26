@@ -1,0 +1,150 @@
+{
+  "name": "cspunit4draft",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Finding Trends with Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Good and Bad Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Check Your Assumptions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Making Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discover a Data Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Cleaning Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Summary Tables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rapid Research - Data Innovations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Why Make Apps?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Javascript Objects",
+          "properties": {
+          }
+        },
+        {
+          "key": "Permanent Data Storage",
+          "properties": {
+          }
+        },
+        {
+          "key": "Reading Records",
+          "properties": {
+          }
+        },
+        {
+          "key": "Search Terms",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unique IDs, Delete and Update Records",
+          "properties": {
+          }
+        },
+        {
+          "key": "Import, Export, and Visualize Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Interpreting Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "How is Data Collected?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using Data in the Real World",
+          "properties": {
+          }
+        },
+        {
+          "key": "Web Requests and APIs",
+          "properties": {
+          }
+        },
+        {
+          "key": "Data, Security, and Privacy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Privacy vs Utility",
+          "properties": {
+          }
+        },
+        {
+          "key": "Privacy in a Digital World",
+          "properties": {
+          }
+        },
+        {
+          "key": "Compiling Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Designing Data Collection",
+          "properties": {
+          }
+        },
+        {
+          "key": "Designing for Your User",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice Create PT: Data App",
+          "properties": {
+          }
+        },
+        {
+          "key": "What Data Can Tell Us",
+          "properties": {
+          }
+        },
+        {
+          "key": "Permanent Data Storage and Clicker Completion",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "csd2-projects-temp",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "HTML  Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSS Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

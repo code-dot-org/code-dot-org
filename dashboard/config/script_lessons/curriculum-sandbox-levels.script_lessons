@@ -1,0 +1,25 @@
+{
+  "name": "curriculum-sandbox-levels",
+  "lesson_groups": [
+    {
+      "key": "lesson group",
+      "lessons": [
+        {
+          "key": "Course A",
+          "properties": {
+          }
+        },
+        {
+          "key": "Course B",
+          "properties": {
+          }
+        },
+        {
+          "key": "Course E/F",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

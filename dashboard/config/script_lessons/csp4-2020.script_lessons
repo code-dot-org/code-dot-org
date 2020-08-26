@@ -1,0 +1,100 @@
+{
+  "name": "csp4-2020",
+  "lesson_groups": [
+    {
+      "key": "csp_variables",
+      "lessons": [
+        {
+          "key": "Variables Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables Make",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_conditionals",
+      "lessons": [
+        {
+          "key": "Conditionals Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditional Make",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_functions",
+      "lessons": [
+        {
+          "key": "Functions Explore / Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions Make",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_project",
+      "lessons": [
+        {
+          "key": "Project - Decision Maker App Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Decision Maker App Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Decision Maker App Part 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 15: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

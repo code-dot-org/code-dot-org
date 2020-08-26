@@ -1,0 +1,100 @@
+{
+  "name": "course1",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Happy Maps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Move it, Move it",
+          "properties": {
+          }
+        },
+        {
+          "key": "Jigsaw: Learn to drag and drop",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze: Sequence",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze: Debugging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Real-life Algorithms: Plant a Seed",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Sequence",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Sequence",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building a Foundation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Shapes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Spelling Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Getting Loopy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze: Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Studio: Create a Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Going Places Safely",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Loops",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

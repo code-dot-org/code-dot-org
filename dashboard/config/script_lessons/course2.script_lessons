@@ -1,0 +1,105 @@
+{
+  "name": "course2",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Graph Paper Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Real-life Algorithms: Paper Planes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze: Sequence",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Sequence",
+          "properties": {
+          }
+        },
+        {
+          "key": "Getting Loopy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze: Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Relay programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Debugging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Debugging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Binary Bracelets",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Flappy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Studio: Create a Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Your Digital Footprint",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Nested Loops",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "csp-create-2017",
+  "lesson_groups": [
+    {
+      "key": "csp_ap_3",
+      "lessons": [
+        {
+          "key": "Create PT Prep - Reviewing the Task",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT Prep - Making a Plan",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT - Complete the Task",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "csp2-2018",
+  "lesson_groups": [
+    {
+      "key": "csp2_1_2018",
+      "lessons": [
+        {
+          "key": "Bytes and File Sizes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding B&W Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding Color Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lossy vs Lossless Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rapid Research - Format Showdown",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspAssessment",
+      "lessons": [
+        {
+          "key": "Unit 2 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

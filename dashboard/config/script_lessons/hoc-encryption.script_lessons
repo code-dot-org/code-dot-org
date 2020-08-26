@@ -1,0 +1,15 @@
+{
+  "name": "hoc-encryption",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Simple Encryption",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

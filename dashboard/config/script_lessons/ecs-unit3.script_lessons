@@ -1,0 +1,40 @@
+{
+  "name": "ecs-unit3",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to Unit 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Strategies",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 3 Day-by-Day",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 3 Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Close & Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

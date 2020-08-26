@@ -1,0 +1,25 @@
+{
+  "name": "sciencePD3",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome Back!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mystery Model",
+          "properties": {
+          }
+        },
+        {
+          "key": "Decode and Share",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "science-PD2",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Review StarLogo Nova",
+          "properties": {
+          }
+        },
+        {
+          "key": "Reviewing the Modules",
+          "properties": {
+          }
+        },
+        {
+          "key": "Advanced StarLogo Nova",
+          "properties": {
+          }
+        },
+        {
+          "key": "Remixing Phases 1 and 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Thinking Ahead to Implementation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap-Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

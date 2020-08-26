@@ -1,0 +1,85 @@
+{
+  "name": "teachercon",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Introduction to Teachercon",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Lesson 1,4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 1,6",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 1,9",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 1,10",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 1,11",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 2,2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 2,3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 2,10",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "practice",
+      "lessons": [
+        {
+          "key": "Group Work and Peer Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Balancing Teachers and Tools",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discovery Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Measuring Student Learning",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

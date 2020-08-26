@@ -1,0 +1,60 @@
+{
+  "name": "netsim",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Overview and Setup Instructions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Peer to Peer - Sending Bits on a Shared Wire",
+          "properties": {
+          }
+        },
+        {
+          "key": "Peer to Peer - Sending Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Peer to Peer - Sending Ascii",
+          "properties": {
+          }
+        },
+        {
+          "key": "Broadcasting messages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Routers and addresses",
+          "properties": {
+          }
+        },
+        {
+          "key": "Packets and Reliability",
+          "properties": {
+          }
+        },
+        {
+          "key": "Manual DNS",
+          "properties": {
+          }
+        },
+        {
+          "key": "Automatic DNS node",
+          "properties": {
+          }
+        },
+        {
+          "key": "Internet Simulator Freeplay",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

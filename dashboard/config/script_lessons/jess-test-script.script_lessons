@@ -1,0 +1,50 @@
+{
+  "name": "jess-test-script",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Module 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Module 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Module 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Module 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Module 5",
+          "properties": {
+          }
+        },
+        {
+          "key": "Module 6",
+          "properties": {
+          }
+        },
+        {
+          "key": "Module 7",
+          "properties": {
+          }
+        },
+        {
+          "key": "Module 8",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

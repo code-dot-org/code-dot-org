@@ -1,0 +1,40 @@
+{
+  "name": "novice-view",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "CSP Tuesday",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSP Wednesday",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSP Thursday",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSD Tuesday",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSD Wednesday",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSD Thursday",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

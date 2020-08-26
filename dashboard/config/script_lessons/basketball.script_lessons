@@ -1,0 +1,15 @@
+{
+  "name": "basketball",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Bounce",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

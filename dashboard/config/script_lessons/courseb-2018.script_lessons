@@ -1,0 +1,75 @@
+{
+  "name": "courseb-2018",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Move It, Move It",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequencing with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Your Digital Footprint",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming: My Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Ice Age",
+          "properties": {
+          }
+        },
+        {
+          "key": "Copyright and Creativity",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming with Rey and BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: My Loopy Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Ice Age",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

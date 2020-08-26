@@ -1,0 +1,30 @@
+{
+  "name": "coursef-ramp",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Algorithms: Tangrams",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Ice Age Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals and Functions in Bee",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "csp9-pilot",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Learning From Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Exploring One Column",
+          "properties": {
+          }
+        },
+        {
+          "key": "Filtering and Cleaning Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Exploring Two Columns",
+          "properties": {
+          }
+        },
+        {
+          "key": "Big Data, Crowdsourcing, and Machine Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Machine Learning and Bias",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Tell a Data Story - Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Tell a Data Story - Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 9: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

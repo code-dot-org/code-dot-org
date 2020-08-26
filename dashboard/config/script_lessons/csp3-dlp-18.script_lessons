@@ -1,0 +1,25 @@
+{
+  "name": "csp3-dlp-18",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Deeper Learning Overview",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Complete Unit 3 Deeper Learning Reflections",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

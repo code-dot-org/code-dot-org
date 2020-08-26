@@ -1,0 +1,45 @@
+{
+  "name": "cspfacilitator",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Pixelation Widget",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text Compression Widget",
+          "properties": {
+          }
+        },
+        {
+          "key": "Internet Simulator",
+          "properties": {
+          }
+        },
+        {
+          "key": "App Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Broadcast Lesson",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text Compression Lesson",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "public-key-cryptography",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Public Key Crypto Widgets",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

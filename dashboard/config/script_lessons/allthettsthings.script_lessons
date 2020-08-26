@@ -1,0 +1,15 @@
+{
+  "name": "allthettsthings",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "TTS",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

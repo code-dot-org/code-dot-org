@@ -1,0 +1,80 @@
+{
+  "name": "algebraPD2a",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Evaluation Blocks",
+          "properties": {
+          }
+        },
+        {
+          "key": "Strings and Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Defining Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Big Game - Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rocket-Height",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Recipe",
+          "properties": {
+          }
+        },
+        {
+          "key": "Big Game - Animation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Booleans",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sam the Bat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Big Game - Booleans",
+          "properties": {
+          }
+        },
+        {
+          "key": "Luigi's Pizza",
+          "properties": {
+          }
+        },
+        {
+          "key": "Big Game - Player Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Big Game - Collision Detection",
+          "properties": {
+          }
+        },
+        {
+          "key": "Free Play",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "aws-demo",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "new stage",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

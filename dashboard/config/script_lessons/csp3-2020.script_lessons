@@ -1,0 +1,65 @@
+{
+  "name": "csp3-2020",
+  "lesson_groups": [
+    {
+      "key": "csp_unit3_2020",
+      "lessons": [
+        {
+          "key": "Introduction to Apps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Design Mode",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for Programming Languages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 5",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 11: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

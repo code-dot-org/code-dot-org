@@ -1,0 +1,15 @@
+{
+  "name": "cspunit1-tools",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "netsim",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

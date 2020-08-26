@@ -1,0 +1,65 @@
+{
+  "name": "CSPPD3-Unit3",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 3 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 1 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 2 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 3 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 4 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 5 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice Performance Task",
+          "properties": {
+          }
+        },
+        {
+          "key": "Challenge Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complete the Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Share out and Submit",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

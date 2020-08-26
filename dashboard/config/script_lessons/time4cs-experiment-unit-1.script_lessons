@@ -1,0 +1,105 @@
+{
+  "name": "time4cs-experiment-unit-1",
+  "lesson_groups": [
+    {
+      "key": "csf_sequencing",
+      "lessons": [
+        {
+          "key": "Sequencing in Maze",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_loops",
+      "lessons": [
+        {
+          "key": "Programming and Loops with the Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_conditionals",
+      "lessons": [
+        {
+          "key": "Conditionals in Minecraft: Voyage Aquatic",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_events",
+      "lessons": [
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_sprites",
+      "lessons": [
+        {
+          "key": "Simon Says",
+          "properties": {
+          }
+        },
+        {
+          "key": "Learning Sprites with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alien Dance Party with Sprite Lab",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_digcit",
+      "lessons": [
+        {
+          "key": "Private and Personal Information",
+          "properties": {
+          }
+        },
+        {
+          "key": "About Me",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_impacts",
+      "lessons": [
+        {
+          "key": "Access Ability",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "ramp_up",
+      "lessons": [
+        {
+          "key": "Conditionals Review",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

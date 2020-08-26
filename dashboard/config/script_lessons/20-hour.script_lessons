@@ -1,0 +1,110 @@
+{
+  "name": "20-hour",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction to Computer Science",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Computational Thinking",
+          "properties": {
+          }
+        },
+        {
+          "key": "Graph Paper Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithms",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Artist 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Artist 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Song Writing",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Farmer 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Abstraction",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Artist 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Relay Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Farmer 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Artist 5",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap-up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "dlp19-csp-mod-w3",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Deeper Learning Overview",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Step 1: Develop Understanding",
+          "properties": {
+          }
+        },
+        {
+          "key": "Step 2: Demonstrate Understanding",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

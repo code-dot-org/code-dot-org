@@ -1,0 +1,40 @@
+{
+  "name": "csp-pre-survey",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Anonymous student pre-survey",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1 Chapter 1 Assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "NEW Unit 1 Chapter 1 Assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 3 Chapter 1 Assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 4 Chapter 1 Assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Anonymous student survey: Taking the AP exam",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

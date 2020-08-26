@@ -1,0 +1,135 @@
+{
+  "name": "csd3-1819draft",
+  "lesson_groups": [
+    {
+      "key": "csd3_1",
+      "lessons": [
+        {
+          "key": "Programming for Entertainment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Plotting Shapes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Drawing in Game Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Shapes and Randomization",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprites",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Draw Loop",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Counter Pattern Unplugged",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprite Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Booleans Unplugged",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Keyboard Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Other Forms of Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Interactive Card",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd3_2",
+      "lessons": [
+        {
+          "key": "Velocity",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collision Detection",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complex Sprite Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collisions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Game Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using the Game Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Design a Game",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Discoveries End of Semester Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

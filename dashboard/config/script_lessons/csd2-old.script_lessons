@@ -1,0 +1,90 @@
+{
+  "name": "csd2-old",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Quality Websites",
+          "properties": {
+          }
+        },
+        {
+          "key": "Website Design",
+          "properties": {
+          }
+        },
+        {
+          "key": "Describing Web pages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text on the Web",
+          "properties": {
+          }
+        },
+        {
+          "key": "Images in HTML",
+          "properties": {
+          }
+        },
+        {
+          "key": "Clean Code and Debugging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Styling Text with CSS",
+          "properties": {
+          }
+        },
+        {
+          "key": "Styling Elements with CSS",
+          "properties": {
+          }
+        },
+        {
+          "key": "Multi-Page Websites",
+          "properties": {
+          }
+        },
+        {
+          "key": "Classes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Peer Review",
+          "properties": {
+          }
+        },
+        {
+          "key": "Digital Footprint",
+          "properties": {
+          }
+        },
+        {
+          "key": "Publishing a Website",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sources and Search Engines",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intellectual Property",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Personal Portfolio Website",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

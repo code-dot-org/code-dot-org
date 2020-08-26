@@ -1,0 +1,45 @@
+{
+  "name": "CSP-Unit3-Support",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Unit 3 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 1 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 2 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 3 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 4 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chunk 5 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice Performance Task",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

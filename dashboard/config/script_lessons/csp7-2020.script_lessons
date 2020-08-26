@@ -1,0 +1,70 @@
+{
+  "name": "csp7-2020",
+  "lesson_groups": [
+    {
+      "key": "csp_parameters_return_values",
+      "lessons": [
+        {
+          "key": "Parameters and Return Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Parameters and Return Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Parameters and Return Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Parameters and Return Make",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_libraries",
+      "lessons": [
+        {
+          "key": "Libraries Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Libraries Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Libraries Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Make a Library Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Make a Library Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Make a Library Part 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 11: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "algebraPD3",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Course Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Computer Science Pedagogy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Dashboard",
+          "properties": {
+          }
+        },
+        {
+          "key": "Evaluation Blocks",
+          "properties": {
+          }
+        },
+        {
+          "key": "Strings and Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Recipe",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Big Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

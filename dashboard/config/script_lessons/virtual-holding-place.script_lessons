@@ -1,0 +1,60 @@
+{
+  "name": "virtual-holding-place",
+  "lesson_groups": [
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Example Projects",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd3_2",
+      "lessons": [
+        {
+          "key": "Velocity",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collision Detection",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complex Sprite Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collisions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Game Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using the Game Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Design a Game",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

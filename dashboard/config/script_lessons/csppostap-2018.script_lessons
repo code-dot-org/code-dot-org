@@ -1,0 +1,110 @@
+{
+  "name": "csppostap-2018",
+  "lesson_groups": [
+    {
+      "key": "csp_postap_1",
+      "lessons": [
+        {
+          "key": "Intro to Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Good and Bad Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Making Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discover a Data Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Cleaning Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Summary Tables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Tell a Data Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chapter 1 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_postap_2",
+      "lessons": [
+        {
+          "key": "Creating Javascript Objects",
+          "properties": {
+          }
+        },
+        {
+          "key": "Permanent Data Storage",
+          "properties": {
+          }
+        },
+        {
+          "key": "Reading Records",
+          "properties": {
+          }
+        },
+        {
+          "key": "Deleting Records",
+          "properties": {
+          }
+        },
+        {
+          "key": "Updating Records",
+          "properties": {
+          }
+        },
+        {
+          "key": "Importing and Exporting Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Visualizing Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sample Apps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Final Project",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Principles Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

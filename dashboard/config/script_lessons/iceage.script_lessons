@@ -1,0 +1,15 @@
+{
+  "name": "iceage",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Ice Age Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

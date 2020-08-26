@@ -1,0 +1,70 @@
+{
+  "name": "csp-online-test",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Unit 5 Overview",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Event Driven Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables and Strings",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals and Boolean Logic",
+          "properties": {
+          }
+        },
+        {
+          "key": "While Loops and Introduction to Arrays",
+          "properties": {
+          }
+        },
+        {
+          "key": "Processing Arrays and Functions with Return Values",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "practice",
+      "lessons": [
+        {
+          "key": "Group Work and Peer Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Balancing Teachers and Tools",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discovery Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Measuring Student Learning",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

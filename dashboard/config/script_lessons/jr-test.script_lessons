@@ -1,0 +1,45 @@
+{
+  "name": "jr-test",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Using Behaviors",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using Forever Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Virtual Pet - Behaviors",
+          "properties": {
+          }
+        },
+        {
+          "key": "Virtual Pet - Forever",
+          "properties": {
+          }
+        },
+        {
+          "key": "Fish Tank",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alien Dance Party - Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Virtual Pet - Interactions",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

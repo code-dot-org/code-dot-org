@@ -1,0 +1,25 @@
+{
+  "name": "csp-march-virtual",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Saturday Session Resources",
+          "properties": {
+          }
+        },
+        {
+          "key": "Getting Familiar with Traversals EIPM",
+          "properties": {
+          }
+        },
+        {
+          "key": "Comparing Make Lessons",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

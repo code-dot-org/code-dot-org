@@ -1,0 +1,40 @@
+{
+  "name": "algebraPD2",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching with Puzzles",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching with the Design Recipe",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Recipe",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Dashboard",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson Prep",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

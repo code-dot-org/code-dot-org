@@ -1,0 +1,75 @@
+{
+  "name": "pre-express-2020",
+  "lesson_groups": [
+    {
+      "key": "csf_sequencing",
+      "lessons": [
+        {
+          "key": "Learn to Drag and Drop",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequencing with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in with Angry Birds",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming with Rey and BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Harvester",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_loops",
+      "lessons": [
+        {
+          "key": "Loops with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops with Laurel",
+          "properties": {
+          }
+        },
+        {
+          "key": "Ocean Scene with Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Drawing Gardens with Loops",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_events",
+      "lessons": [
+        {
+          "key": "On the Move with Events",
+          "properties": {
+          }
+        },
+        {
+          "key": "A Royal Battle with Events",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

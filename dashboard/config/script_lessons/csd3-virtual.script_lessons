@@ -1,0 +1,100 @@
+{
+  "name": "csd3-virtual",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Drawing in Game Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Shapes and Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Random Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprites",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprite Properties",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Draw Loop",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprite Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Keyboard Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mouse Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Velocity",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collision Detection",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complex Sprite Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collisions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Design a Game",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

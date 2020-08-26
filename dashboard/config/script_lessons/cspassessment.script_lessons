@@ -1,0 +1,20 @@
+{
+  "name": "cspassessment",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "RQB Questions test",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

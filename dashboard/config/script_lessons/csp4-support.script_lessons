@@ -1,0 +1,60 @@
+{
+  "name": "csp4-support",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Unit 4 Overview",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Lessons 1 - 4: Data in the Real World",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 8 - 9: Practice PT",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "practice",
+      "lessons": [
+        {
+          "key": "Group Work and Peer Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Balancing Teachers and Tools",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discovery Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Measuring Student Learning",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

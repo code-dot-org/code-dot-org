@@ -1,0 +1,100 @@
+{
+  "name": "csd5-2017",
+  "lesson_groups": [
+    {
+      "key": "csd5_1",
+      "lessons": [
+        {
+          "key": "Representation Matters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Patterns and Representation",
+          "properties": {
+          }
+        },
+        {
+          "key": "ASCII and Binary Representation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Representing Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Representing Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Keeping Data Secret",
+          "properties": {
+          }
+        },
+        {
+          "key": "Combining Representations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Create a Representation",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd5_2",
+      "lessons": [
+        {
+          "key": "Problem Solving and Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Problem Solving with Big Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Structuring Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Making Decisions with Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Interpreting Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Automating Data Decisions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Solve a Data Problem",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd_survey",
+      "lessons": [
+        {
+          "key": "CSD Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

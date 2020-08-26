@@ -1,0 +1,50 @@
+{
+  "name": "CSPPD2",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Welcome to the Course!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson Chunk 1- Sending Binary Messages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson Chunk 2- Encoding and Sending Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson Chunk 3- Encoding and Sending Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson Chunk 4- Compressing and Storing Information",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap Up and Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "minecraft",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Minecraft Hour of Code Designer",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

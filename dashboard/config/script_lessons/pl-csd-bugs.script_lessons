@@ -1,0 +1,15 @@
+{
+  "name": "pl-csd-bugs",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "CSD Workshop 1 Bugs",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

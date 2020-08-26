@@ -1,0 +1,40 @@
+{
+  "name": "csp6-2020",
+  "lesson_groups": [
+    {
+      "key": "csp_unit6_2020",
+      "lessons": [
+        {
+          "key": "Algorithms Solve Problems",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithm Efficiency",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unreasonable Time",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Limits of Algorithms",
+          "properties": {
+          }
+        },
+        {
+          "key": "Parallel and Distributed Algorithms",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 6: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

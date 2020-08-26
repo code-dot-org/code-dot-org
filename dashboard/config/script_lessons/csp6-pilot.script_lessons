@@ -1,0 +1,55 @@
+{
+  "name": "csp6-pilot",
+  "lesson_groups": [
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Algorithms Solve Problems",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithm Efficiency",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unreasonable Time",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Limits of Algorithms",
+          "properties": {
+          }
+        },
+        {
+          "key": "Parallel and Distributed Algorithms",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 6: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Unit 6 STUDENT Survey",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 6 TEACHER Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

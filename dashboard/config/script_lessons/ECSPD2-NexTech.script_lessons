@@ -1,0 +1,60 @@
+{
+  "name": "ECSPD2-NexTech",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1, Days 1-2 What Is a Computer?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1, Days 3-4 Buying a Computer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1, Days 5-7 Searching and Web 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1, Days 8-9 Impact of Computers and Communication",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1, Day 10 Telling a Story with Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1, Day 11-14 Data Modeling and Design",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1, Day 15-16 Computer Programs and Following Directions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1, Day 17-19 What Is Intelligence?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap-up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

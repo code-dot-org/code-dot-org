@@ -1,0 +1,80 @@
+{
+  "name": "csp4-2018",
+  "lesson_groups": [
+    {
+      "key": "csp4_1_2018",
+      "lessons": [
+        {
+          "key": "What is Big Data?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Finding Trends with Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Check Your Assumptions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rapid Research - Data Innovations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Identifying People with Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Cost of Free",
+          "properties": {
+          }
+        },
+        {
+          "key": "Simple Encryption",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encryption with Keys and Passwords",
+          "properties": {
+          }
+        },
+        {
+          "key": "Public Key Crypto",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rapid Research - Cybercrime",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspAssessment",
+      "lessons": [
+        {
+          "key": "Unit 4 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Principles Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "dani-june-2020-test",
+  "lesson_groups": [
+    {
+      "key": "lesson group",
+      "lessons": [
+        {
+          "key": "new lesson",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "lg_1",
+      "lessons": [
+        {
+          "key": "lesson 2",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Principles Pre-survey",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cs_lg",
+      "lessons": [
+        {
+          "key": "Buttons and Events",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

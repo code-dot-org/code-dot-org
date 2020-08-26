@@ -1,0 +1,70 @@
+{
+  "name": "allthesurveys",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "CSP post course survey 2019 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSD post course survey 2019 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSP pre survey 2017 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSD pre survey 2017 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSD/P pulse check survey 2017",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSD mid and post survey 2017 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSP mid and post survey 2017 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSP post survey 2018 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSD post survey 2018 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSP pre survey 2018 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSP mid survey 2018 staging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Place for testing crazy stuff",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

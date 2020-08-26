@@ -1,0 +1,110 @@
+{
+  "name": "cspunit2",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "The Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for Addressing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Invent an Addressing Protocol",
+          "properties": {
+          }
+        },
+        {
+          "key": "Routers and Redundancy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Packets and Making a Reliable Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithms Detour - Minimum Spanning Tree",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithms Detour - Shortest Path",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithms Detour - How Routers Learn",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for DNS",
+          "properties": {
+          }
+        },
+        {
+          "key": "DNS in the Real World",
+          "properties": {
+          }
+        },
+        {
+          "key": "HTTP and Abstraction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT - The Internet and Society",
+          "properties": {
+          }
+        },
+        {
+          "key": "Tell Me a Secret - Encrypting Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "Cracking the Code",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encryption Algorithms",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithms Detour - Hard Problems TSP",
+          "properties": {
+          }
+        },
+        {
+          "key": "One Way Functions - Ice Cream Vans",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alice and Bob and Asymmetric Keys",
+          "properties": {
+          }
+        },
+        {
+          "key": "Public Key Crypto",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT - Cybersecurity Innovations",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

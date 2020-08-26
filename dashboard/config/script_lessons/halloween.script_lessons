@@ -1,0 +1,15 @@
+{
+  "name": "halloween",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Halloween Artist",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

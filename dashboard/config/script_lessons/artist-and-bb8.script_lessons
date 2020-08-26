@@ -1,0 +1,70 @@
+{
+  "name": "artist-and-bb8",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Programming with BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops with BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "C9 Artist Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "D7 to Laurel",
+          "properties": {
+          }
+        },
+        {
+          "key": "D6 Frozen Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "F5 Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "F7 add Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "D13 no If/While",
+          "properties": {
+          }
+        },
+        {
+          "key": "Ice Age Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "NewBounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "F PlayLab Variables",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

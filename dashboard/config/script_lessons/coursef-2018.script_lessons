@@ -1,0 +1,160 @@
+{
+  "name": "coursef-2018",
+  "lesson_groups": [
+    {
+      "key": "csf_f_1",
+      "lessons": [
+        {
+          "key": "Programming: My Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequence in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building a Foundation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: My Loopy Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Bee/Zombie",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops with Frozen",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals with Cards",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Minecraft",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_f_2",
+      "lessons": [
+        {
+          "key": "The Power of Words",
+          "properties": {
+          }
+        },
+        {
+          "key": "Envelope Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables as Constant in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables that Change in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables that Change in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loop Fun",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Learning Sprites with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alien Dance Party with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Pet Giraffe with Sprite Lab",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "Explore Project Ideas",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Revise Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Present Your Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "name": "csd3-old",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Drawing in Game Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Draw Loop and Randomization",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables Unplugged",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables and Animation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprites and Properties",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprites and Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Booleans and Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals and Keyboard Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complex Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Interactive Card",
+          "properties": {
+          }
+        },
+        {
+          "key": "Velocity",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collision Detection",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complex Sprite Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collisions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Game Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using the Game Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Design a Game",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

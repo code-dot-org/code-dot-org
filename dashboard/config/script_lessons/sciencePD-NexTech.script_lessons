@@ -1,0 +1,70 @@
+{
+  "name": "sciencePD-NexTech",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction to PD",
+          "properties": {
+          }
+        },
+        {
+          "key": "What to Expect",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Complex Adaptive Systems",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Computational Science",
+          "properties": {
+          }
+        },
+        {
+          "key": "Agent Based Modeling of Complex Adaptive Systems",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using Computer Models in Science",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using Models in the Classroom",
+          "properties": {
+          }
+        },
+        {
+          "key": "Dispositions and Classroom Culture",
+          "properties": {
+          }
+        },
+        {
+          "key": "Computational Thinking And The Framework For K-12 Science Education",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to StarLogo Nova",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Tutorial",
+          "properties": {
+          }
+        },
+        {
+          "key": "Post-Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

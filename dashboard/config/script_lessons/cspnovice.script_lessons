@@ -1,0 +1,40 @@
+{
+  "name": "cspnovice",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Welcome",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Tuesday",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wednesday",
+          "properties": {
+          }
+        },
+        {
+          "key": "Thursday",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

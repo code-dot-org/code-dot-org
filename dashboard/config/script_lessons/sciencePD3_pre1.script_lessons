@@ -1,0 +1,25 @@
+{
+  "name": "sciencePD3_pre1",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome Back!",
+          "properties": {
+          }
+        },
+        {
+          "key": "The TLO",
+          "properties": {
+          }
+        },
+        {
+          "key": "Prep With Your Modules",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "csd-tests",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Computers and Problem Solving",
+          "properties": {
+          }
+        },
+        {
+          "key": "Web Development",
+          "properties": {
+          }
+        },
+        {
+          "key": "Interactive Animations and Games",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

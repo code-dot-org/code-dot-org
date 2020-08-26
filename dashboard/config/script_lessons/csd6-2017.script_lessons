@@ -1,0 +1,105 @@
+{
+  "name": "csd6-2017",
+  "lesson_groups": [
+    {
+      "key": "csd6_1",
+      "lessons": [
+        {
+          "key": "Innovations in Computing_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Designing Screens with Code_",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Circuit Playground_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Input Unplugged_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Board Events_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Getting Properties_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Analog Input_",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Program Design Process_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Make a Game__",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd6_2",
+      "lessons": [
+        {
+          "key": "Arrays and Color LEDs__",
+          "properties": {
+          }
+        },
+        {
+          "key": "Making Music_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Arrays and For Loops_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Accelerometer_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Parameters_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Circuits and Physical Prototypes_",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Prototype an Innovation_",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd_survey",
+      "lessons": [
+        {
+          "key": "CSD Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

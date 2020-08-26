@@ -1,0 +1,65 @@
+{
+  "name": "csppostap-2017",
+  "lesson_groups": [
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Creating Javascript Objects",
+          "properties": {
+          }
+        },
+        {
+          "key": "Permanent Data Storage",
+          "properties": {
+          }
+        },
+        {
+          "key": "Reading Records",
+          "properties": {
+          }
+        },
+        {
+          "key": "Deleting Records",
+          "properties": {
+          }
+        },
+        {
+          "key": "Updating Records",
+          "properties": {
+          }
+        },
+        {
+          "key": "Importing and Exporting Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Visualizing Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sample Apps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Final Project",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

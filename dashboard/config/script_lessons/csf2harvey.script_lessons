@@ -1,0 +1,25 @@
+{
+  "name": "csf2harvey",
+  "lesson_groups": [
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "Snowflakes",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Binary",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "name": "csd6-old",
+  "lesson_groups": [
+    {
+      "key": "csd6_1",
+      "lessons": [
+        {
+          "key": "Computing Innovations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Input Unplugged",
+          "properties": {
+          }
+        },
+        {
+          "key": "Event Types",
+          "properties": {
+          }
+        },
+        {
+          "key": "Getters and Setters",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Circuit Playground",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lists",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lights",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lists and For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Timed Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Board Output",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd6_2",
+      "lessons": [
+        {
+          "key": "Physical Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Analog Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sensor Applications",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Prototype an Innovation",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "name": "coursed-2018",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Algorithms: Graph Paper Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Online Puzzles",
+          "properties": {
+          }
+        },
+        {
+          "key": "Relay Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Bounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Ice Age",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Frozen",
+          "properties": {
+          }
+        },
+        {
+          "key": "While Loops in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Until Loops in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals with Cards",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals & Loops in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Digital Citizenship",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Play Lab Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Binary",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist Binary",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

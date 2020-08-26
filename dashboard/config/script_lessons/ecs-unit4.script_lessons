@@ -1,0 +1,40 @@
+{
+  "name": "ecs-unit4",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to Unit 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Strategies",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 4 Day-by-Day",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 4 Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Close & Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

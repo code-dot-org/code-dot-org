@@ -1,0 +1,80 @@
+{
+  "name": "csp10-pilot",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Project - Innovation Simulation Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Innovation Simulation Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Data Policies and Privacy",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Value of Privacy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Innovation Simulation Part 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Security Risks Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Security Risks Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Innovation Simulation Part 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Protecting Data Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Protecting Data Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Innovation Simulation Part 5",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Innovation Simulation Part 6",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Innovation Simulation Part 7",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 14: Unit Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

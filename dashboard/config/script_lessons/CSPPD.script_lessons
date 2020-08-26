@@ -1,0 +1,45 @@
+{
+  "name": "CSPPD",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction to PD",
+          "properties": {
+          }
+        },
+        {
+          "key": "What is CSP?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Exploring CSP Instructional Materials",
+          "properties": {
+          }
+        },
+        {
+          "key": "Impact of Computer Science",
+          "properties": {
+          }
+        },
+        {
+          "key": "Growth Mindset",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Strategies",
+          "properties": {
+          }
+        },
+        {
+          "key": "Preparing for in-person PD",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "name": "coursec-2017",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Building a Foundation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Real-life Algorithms: Paper Planes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: Getting Loopy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops with Rey and BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Flappy Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Screen Out the Mean",
+          "properties": {
+          }
+        },
+        {
+          "key": "Binary Bracelets",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

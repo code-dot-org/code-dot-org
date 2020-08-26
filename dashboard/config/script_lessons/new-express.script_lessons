@@ -1,0 +1,195 @@
+{
+  "name": "new-express",
+  "lesson_groups": [
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Algorithms: Graph Paper Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building a Foundation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: My Loopy Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist (UPDATED!)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops Project in Frozen",
+          "properties": {
+          }
+        },
+        {
+          "key": "How it Works: The Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "Common Sense Education: Digital Citizenship",
+          "properties": {
+          }
+        },
+        {
+          "key": "Common Sense Education: Screen Out the Mean",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Star Wars",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events with Flappy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Bounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals: Conditionals with Cards",
+          "properties": {
+          }
+        },
+        {
+          "key": "While Loops in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditional Loops in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals & Loops in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables: Envelope Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables in Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops: For Loop Fun",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions: Songwriting with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Parameters in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Parameters in Bee",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "Explore Project Ideas",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Revise Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Present Your Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

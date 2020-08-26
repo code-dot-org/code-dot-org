@@ -1,0 +1,60 @@
+{
+  "name": "csd1-pilot",
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Discoveries Pre-survey",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd1_1",
+      "lessons": [
+        {
+          "key": "Intro to Problem Solving",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Problem Solving Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Exploring Problem Solving",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd1_2",
+      "lessons": [
+        {
+          "key": "What is a Computer?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Input and Output",
+          "properties": {
+          }
+        },
+        {
+          "key": "Processing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Apps and Storage",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

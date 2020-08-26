@@ -1,0 +1,90 @@
+{
+  "name": "coursed-draft",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithms: Graph Paper Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Bounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Algorithms: Relay Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "While Loops in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals with Cards",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals & Loops in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals & Loops in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Digital Citizenship",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Play Lab Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Binary",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist Binary",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

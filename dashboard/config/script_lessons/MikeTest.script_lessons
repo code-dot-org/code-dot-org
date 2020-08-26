@@ -1,0 +1,30 @@
+{
+  "name": "MikeTest",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Sample Stage",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "The same thing with named levels",
+          "properties": {
+          }
+        },
+        {
+          "key": "You are a coding STAR",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

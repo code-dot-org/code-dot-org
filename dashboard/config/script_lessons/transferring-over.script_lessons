@@ -1,0 +1,35 @@
+{
+  "name": "transferring-over",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "20-hr Stage 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "20-hr Stage 9",
+          "properties": {
+          }
+        },
+        {
+          "key": "Course 2 Stage 17",
+          "properties": {
+          }
+        },
+        {
+          "key": "Course 3 Stage 16",
+          "properties": {
+          }
+        },
+        {
+          "key": "Course 3 Stage 17",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "csp2-pilot",
+  "lesson_groups": [
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Welcome to the Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building a Network",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for Addressing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Routers and Redundancy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Packets",
+          "properties": {
+          }
+        },
+        {
+          "key": "DNS and HTTP",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Internet Dilemmas Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Internet Dilemmas Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 9: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Unit 2 STUDENT Survey",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 2 TEACHER Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

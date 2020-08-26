@@ -1,0 +1,30 @@
+{
+  "name": "events",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Bounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "Studio",
+          "properties": {
+          }
+        },
+        {
+          "key": "Calc",
+          "properties": {
+          }
+        },
+        {
+          "key": "Eval",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "csp5-virtual",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Intro to App Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Buttons and Events",
+          "properties": {
+          }
+        },
+        {
+          "key": "Multi-screen Apps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building an App: Clicker Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "If-Statements",
+          "properties": {
+          }
+        },
+        {
+          "key": "User Input and Strings",
+          "properties": {
+          }
+        },
+        {
+          "key": "Boolean Expressions and \"If\" Statements",
+          "properties": {
+          }
+        },
+        {
+          "key": "\"if-else-if\" and Conditional Logic",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building an App: Color Sleuth",
+          "properties": {
+          }
+        },
+        {
+          "key": "Keep Going!",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

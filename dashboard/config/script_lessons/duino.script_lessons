@@ -1,0 +1,30 @@
+{
+  "name": "duino",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Basic Circuits",
+          "properties": {
+          }
+        },
+        {
+          "key": "Blinky Lights",
+          "properties": {
+          }
+        },
+        {
+          "key": "Making Music",
+          "properties": {
+          }
+        },
+        {
+          "key": "JunkBot",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

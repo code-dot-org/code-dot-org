@@ -1,0 +1,25 @@
+{
+  "name": "new-stages-sept-2017",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequences with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Testing Template",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "algebrademo",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Evaluation Blocks",
+          "properties": {
+          }
+        },
+        {
+          "key": "Making Pictures",
+          "properties": {
+          }
+        },
+        {
+          "key": "Defining Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Defining Simple Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Recipe",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

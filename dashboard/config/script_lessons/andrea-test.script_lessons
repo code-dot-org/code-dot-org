@@ -1,0 +1,35 @@
+{
+  "name": "andrea-test",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Deeper Learning Overview",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "part 3",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

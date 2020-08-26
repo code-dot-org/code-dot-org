@@ -1,0 +1,115 @@
+{
+  "name": "course3",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Computational Thinking",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functional Suncatchers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze: Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Songwriting",
+          "properties": {
+          }
+        },
+        {
+          "key": "Dice Race",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Nested Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Farmer: While Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Nested Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Debugging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "Studio: Create a Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Studio: Create a Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "Crowdsourcing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Digital Citizenship",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Patterns",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "pixelation",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Black & White Pixelation Tutorial",
+          "properties": {
+          }
+        },
+        {
+          "key": "Black & White Pixelation Freeplay",
+          "properties": {
+          }
+        },
+        {
+          "key": "Color Pixelation Tutorial",
+          "properties": {
+          }
+        },
+        {
+          "key": "Color Pixelation Examples",
+          "properties": {
+          }
+        },
+        {
+          "key": "Color Pixelation Freeplay",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

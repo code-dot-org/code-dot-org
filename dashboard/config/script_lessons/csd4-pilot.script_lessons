@@ -1,0 +1,40 @@
+{
+  "name": "csd4-pilot",
+  "lesson_groups": [
+    {
+      "key": "csd1_2",
+      "lessons": [
+        {
+          "key": "What is a Computer?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Input and Output",
+          "properties": {
+          }
+        },
+        {
+          "key": "Processing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Apps and Storage",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Propose an App",
+          "properties": {
+          }
+        },
+        {
+          "key": "Post-Project Test",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

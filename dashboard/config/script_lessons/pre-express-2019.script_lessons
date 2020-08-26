@@ -1,0 +1,80 @@
+{
+  "name": "pre-express-2019",
+  "lesson_groups": [
+    {
+      "key": "csf_sequencing",
+      "lessons": [
+        {
+          "key": "Learn to Drag and Drop",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequencing with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming with Rey and BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Spelling Bee",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_loops",
+      "lessons": [
+        {
+          "key": "Loops in Ice Age",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Ocean Scene with Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_events",
+      "lessons": [
+        {
+          "key": "Tell a Story in Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Make a Game in Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

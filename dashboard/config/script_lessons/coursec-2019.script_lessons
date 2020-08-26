@@ -1,0 +1,130 @@
+{
+  "name": "coursec-2019",
+  "lesson_groups": [
+    {
+      "key": "csf_digcit",
+      "lessons": [
+        {
+          "key": "Screen Out the Mean",
+          "properties": {
+          }
+        },
+        {
+          "key": "Powerful Passwords",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_sequencing",
+      "lessons": [
+        {
+          "key": "Programming: My Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_binary",
+      "lessons": [
+        {
+          "key": "Binary Bracelets",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_loops",
+      "lessons": [
+        {
+          "key": "Loops: My Loopy Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops with Rey and BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Looking Ahead",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sticker Art with Loops",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_events",
+      "lessons": [
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Flappy Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_data",
+      "lessons": [
+        {
+          "key": "Picturing Data",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "End of Course Project: Create a Play Lab Game",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

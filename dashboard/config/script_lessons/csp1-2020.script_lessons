@@ -1,0 +1,90 @@
+{
+  "name": "csp1-2020",
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Principles Pre-survey",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_unit1_2020",
+      "lessons": [
+        {
+          "key": "Welcome to CSP",
+          "properties": {
+          }
+        },
+        {
+          "key": "Representing Information",
+          "properties": {
+          }
+        },
+        {
+          "key": "Circle Square Patterns",
+          "properties": {
+          }
+        },
+        {
+          "key": "Binary Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Overflow and Rounding",
+          "properties": {
+          }
+        },
+        {
+          "key": "Representing Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "Black and White Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Color Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lossless Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lossy Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intellectual Property",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Digital Information Dilemmas Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Digital Information Dilemmas Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 14: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

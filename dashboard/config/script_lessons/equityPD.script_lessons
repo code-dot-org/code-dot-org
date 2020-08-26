@@ -1,0 +1,20 @@
+{
+  "name": "equityPD",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Necessary Background",
+          "properties": {
+          }
+        },
+        {
+          "key": "Equity PD",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "peru-2019",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Debugging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: My Loopy Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Frozen",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Star Wars",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

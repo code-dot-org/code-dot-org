@@ -1,0 +1,15 @@
+{
+  "name": "gamelab-demo",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Simple Sprite Movement",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

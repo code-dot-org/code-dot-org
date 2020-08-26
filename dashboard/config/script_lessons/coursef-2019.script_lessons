@@ -1,0 +1,145 @@
+{
+  "name": "coursef-2019",
+  "lesson_groups": [
+    {
+      "key": "ramp_up",
+      "lessons": [
+        {
+          "key": "Functions in Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "Learning Sprites with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops with the Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in the Maze",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_variables",
+      "lessons": [
+        {
+          "key": "Envelope Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables as Constant in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables that Change in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables that Change in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_data",
+      "lessons": [
+        {
+          "key": "Simulating Experiments",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_for_loops",
+      "lessons": [
+        {
+          "key": "For Loop Fun",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_internet",
+      "lessons": [
+        {
+          "key": "Internet",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_sprites",
+      "lessons": [
+        {
+          "key": "Editing Behaviors",
+          "properties": {
+          }
+        },
+        {
+          "key": "Virtual Pet",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_digcit",
+      "lessons": [
+        {
+          "key": "The Power of Words",
+          "properties": {
+          }
+        },
+        {
+          "key": "Crowdsourcing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Digital Sharing",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "End of Course Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

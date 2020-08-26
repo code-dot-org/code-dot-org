@@ -1,0 +1,15 @@
+{
+  "name": "csp3-a",
+  "lesson_groups": [
+    {
+      "key": "csp3_1",
+      "lessons": [
+        {
+          "key": "CSP3A: Using Simple Commands",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

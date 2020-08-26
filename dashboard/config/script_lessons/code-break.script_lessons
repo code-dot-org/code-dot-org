@@ -1,0 +1,74 @@
+{
+  "name": "code-break",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Episode 1 - Algorithms with Hill Harper",
+          "properties": {
+          }
+        },
+        {
+          "key": "Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott",
+          "properties": {
+          }
+        },
+        {
+          "key": "Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner",
+          "properties": {
+            "visible_after": "2020-04-08 08:00:00 -0700"
+          }
+        },
+        {
+          "key": "Episode 4 - Digital Information with Mike Krieger & Alice Keeler",
+          "properties": {
+            "visible_after": "2020-04-15 08:00:00 -0700"
+          }
+        },
+        {
+          "key": "Episode 5 - Simulations & Data with Bill Gates",
+          "properties": {
+            "visible_after": "2020-04-22 08:00:00 -0700"
+          }
+        },
+        {
+          "key": "The Internet with Keegan-Michael Key & Vint Cerf",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals with Sal Khan & Flo Vaughn",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables with Yara Shahidi & Fuzzy Khosrowshahi",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events with Macklemore & Scott Forstall",
+          "properties": {
+          }
+        },
+        {
+          "key": "AI with Kat Graham & Kate Park",
+          "properties": {
+            "visible_after": "2020-05-27 08:00:00 -0700"
+          }
+        },
+        {
+          "key": "Abstraction with Susan Wojcicki & China Anne McClain",
+          "properties": {
+          }
+        },
+        {
+          "key": "Hardware with Aloe Blacc, Bret Taylor, & Paola Mejia",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

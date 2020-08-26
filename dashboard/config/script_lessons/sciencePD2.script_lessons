@@ -1,0 +1,45 @@
+{
+  "name": "sciencePD2",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Review StarLogo Nova",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Breeds in Starlogo Nova",
+          "properties": {
+          }
+        },
+        {
+          "key": "Revisiting Agent Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Epidemic Model Extensions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Thinking Ahead to Implementation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap-Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

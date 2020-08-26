@@ -1,0 +1,40 @@
+{
+  "name": "ECSPD3-Unit2",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to Unit 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Strategies",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson Overviews",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 2 Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Close & Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

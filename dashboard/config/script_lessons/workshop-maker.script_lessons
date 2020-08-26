@@ -1,0 +1,30 @@
+{
+  "name": "workshop-maker",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "App Lab Basics",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Circuit Playground",
+          "properties": {
+          }
+        },
+        {
+          "key": "Physical Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Analog Input",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

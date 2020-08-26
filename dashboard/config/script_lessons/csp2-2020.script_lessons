@@ -1,0 +1,55 @@
+{
+  "name": "csp2-2020",
+  "lesson_groups": [
+    {
+      "key": "csp_unit2_2020",
+      "lessons": [
+        {
+          "key": "Welcome to the Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building a Network",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for Addressing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Routers and Redundancy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Packets",
+          "properties": {
+          }
+        },
+        {
+          "key": "DNS and HTTP",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Internet Dilemmas Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Internet Dilemmas Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 9: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

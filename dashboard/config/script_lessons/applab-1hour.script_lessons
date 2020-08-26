@@ -1,0 +1,15 @@
+{
+  "name": "applab-1hour",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Room Escape",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

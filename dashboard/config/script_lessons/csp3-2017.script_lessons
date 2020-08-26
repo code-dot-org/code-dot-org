@@ -1,0 +1,80 @@
+{
+  "name": "csp3-2017",
+  "lesson_groups": [
+    {
+      "key": "csp3_1",
+      "lessons": [
+        {
+          "key": "The Need For Programming Languages",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for Algorithms",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creativity in Algorithms",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using Simple Commands",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions and Top-Down Design",
+          "properties": {
+          }
+        },
+        {
+          "key": "APIs and Function Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating functions with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Looping and Random Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT - Design a Digital Scene",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspAssessment",
+      "lessons": [
+        {
+          "key": "Unit 3 Chapter 1 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

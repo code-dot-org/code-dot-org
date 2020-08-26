@@ -1,0 +1,165 @@
+{
+  "name": "csd3-2020",
+  "lesson_groups": [
+    {
+      "key": "csd3_1",
+      "lessons": [
+        {
+          "key": "Programming for Entertainment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Plotting Shapes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Drawing in Game Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Shapes and Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Random Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprites",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprite Properties",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mini-Project: Captioned Scenes",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Draw Loop",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprite Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mini-Project: Animation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Keyboard Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mouse Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Interactive Card",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd3_2",
+      "lessons": [
+        {
+          "key": "Velocity",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collision Detection",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mini-Project: Side Scroller",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complex Sprite Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collisions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mini-Project: Flyer Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Game Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using the Game Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Design a Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Post-Project Test",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Discoveries Post Course survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "k5concepts",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Events",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "While Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Binary",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

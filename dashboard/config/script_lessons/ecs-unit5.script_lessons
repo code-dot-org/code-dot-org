@@ -1,0 +1,35 @@
+{
+  "name": "ecs-unit5",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 lessons",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Close & Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

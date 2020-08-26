@@ -1,0 +1,25 @@
+{
+  "name": "csd6-dlp",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Deeper Learning Overview",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Complete Unit 6 Deeper Learning Reflections",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

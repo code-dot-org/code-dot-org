@@ -1,0 +1,35 @@
+{
+  "name": "sciencepd5",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Earth Science Challenges",
+          "properties": {
+          }
+        },
+        {
+          "key": "Life Science Challenges",
+          "properties": {
+          }
+        },
+        {
+          "key": "Physical Science Challenges",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap-Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "sciencepd4",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Revisiting Complex Adaptive Systems",
+          "properties": {
+          }
+        },
+        {
+          "key": "Thinking About Implementation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap-Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

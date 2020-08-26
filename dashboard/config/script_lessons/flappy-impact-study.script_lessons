@@ -1,0 +1,25 @@
+{
+  "name": "flappy-impact-study",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Pre Hour of Code Survey",
+          "properties": {
+          }
+        },
+        {
+          "key": "Flappy Code",
+          "properties": {
+          }
+        },
+        {
+          "key": "Post Hour of Code Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

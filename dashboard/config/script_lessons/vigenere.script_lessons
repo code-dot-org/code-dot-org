@@ -1,0 +1,15 @@
+{
+  "name": "vigenere",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Vigenere",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

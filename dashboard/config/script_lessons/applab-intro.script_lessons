@@ -1,0 +1,15 @@
+{
+  "name": "applab-intro",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Intro to App Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

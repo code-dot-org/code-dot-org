@@ -1,0 +1,15 @@
+{
+  "name": "starwarsblocks",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Hour of Code 2015",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

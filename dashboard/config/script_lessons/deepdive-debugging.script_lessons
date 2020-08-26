@@ -1,0 +1,20 @@
+{
+  "name": "deepdive-debugging",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Debugging for AB Educators",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging for CDEF Educators",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

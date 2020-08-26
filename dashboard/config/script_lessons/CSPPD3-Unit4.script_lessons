@@ -1,0 +1,50 @@
+{
+  "name": "CSPPD3-Unit4",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 4 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chapter 1 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chapter 2 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice Performance Tasks",
+          "properties": {
+          }
+        },
+        {
+          "key": "Challenge Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complete the Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Share out and Submit",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

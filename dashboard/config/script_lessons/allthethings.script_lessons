@@ -1,0 +1,230 @@
+{
+  "name": "allthethings",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Jigsaw",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "PlayLab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Flappy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "Multi",
+          "properties": {
+          }
+        },
+        {
+          "key": "Multi2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Match",
+          "properties": {
+          }
+        },
+        {
+          "key": "TextMatch",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSinA",
+          "properties": {
+          }
+        },
+        {
+          "key": "Netsim",
+          "properties": {
+          }
+        },
+        {
+          "key": "Odometer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Pixelation",
+          "properties": {
+          }
+        },
+        {
+          "key": "AppLab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Gamelab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Online PD",
+          "properties": {
+          }
+        },
+        {
+          "key": "Markdown Details",
+          "properties": {
+          }
+        },
+        {
+          "key": "Studio",
+          "properties": {
+          }
+        },
+        {
+          "key": "Multi page assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Star wars",
+          "properties": {
+          }
+        },
+        {
+          "key": "Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rich long assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Free Response",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sample PLC Assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Swapped Levels",
+          "properties": {
+          }
+        },
+        {
+          "key": "Anonymous student survey",
+          "properties": {
+          }
+        },
+        {
+          "key": "Anonymous student survey 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Public Key Cryptography",
+          "properties": {
+          }
+        },
+        {
+          "key": "Web Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Single page assessment",
+          "properties": {
+          }
+        },
+        {
+          "key": "Standalone video",
+          "properties": {
+          }
+        },
+        {
+          "key": "Curriculum Reference",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Dance Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mini Rubric",
+          "properties": {
+          }
+        },
+        {
+          "key": "Pluralsight Test",
+          "properties": {
+          }
+        },
+        {
+          "key": "Externals Optionally Displayed as Unplugged",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bubble Choice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Contained Levels",
+          "properties": {
+          }
+        },
+        {
+          "key": "ML Fish",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

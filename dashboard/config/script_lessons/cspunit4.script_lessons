@@ -1,0 +1,80 @@
+{
+  "name": "cspunit4",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Intro to Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Finding Trends with Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Check Your Assumptions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Good and Bad Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Making Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discover a Data Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Cleaning Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Summary Tables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT - Tell a Data Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "What is Big Data?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rapid Research - Data Innovations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Identifying People with Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Cost of Free",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT - Propose an Innovation",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "algebraPD3a",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Updates - Tweaks and Polish",
+          "properties": {
+          }
+        },
+        {
+          "key": "Updates - The Big Game and Projects",
+          "properties": {
+          }
+        },
+        {
+          "key": "Updates - The Design Recipe",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson Prep",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

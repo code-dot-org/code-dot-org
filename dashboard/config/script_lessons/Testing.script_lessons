@@ -1,0 +1,15 @@
+{
+  "name": "Testing",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Testing",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

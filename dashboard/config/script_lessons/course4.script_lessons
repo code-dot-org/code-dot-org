@@ -1,0 +1,120 @@
+{
+  "name": "course4",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Unplugged: Tangrams",
+          "properties": {
+          }
+        },
+        {
+          "key": "Maze and Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Envelope Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Madlibs",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: For Loop Fun",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Songwriting with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Functions with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: Functions with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Functions with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Binary",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist Binary",
+          "properties": {
+          }
+        },
+        {
+          "key": "Super Challenge - Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Super Challenge - For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Super Challenge - Functions and Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Extreme Challenge - Comprehensive",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

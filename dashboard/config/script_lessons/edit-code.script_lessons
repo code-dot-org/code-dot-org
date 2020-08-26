@@ -1,0 +1,35 @@
+{
+  "name": "edit-code",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "The Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Applab",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Hoc2015 Blockly",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "csp3-virtual",
+  "lesson_groups": [
+    {
+      "key": "csp3_1_2018",
+      "lessons": [
+        {
+          "key": "Using Simple Commands",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "APIs and Function Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating functions with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Looping and Random Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Make your own Digital Scene",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

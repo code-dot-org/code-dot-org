@@ -1,0 +1,165 @@
+{
+  "name": "coursef-2017",
+  "lesson_groups": [
+    {
+      "key": "csf_f_1",
+      "lessons": [
+        {
+          "key": "Programming: My Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequence in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building a Foundation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: My Loopy Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Bee/Zombie",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops with Frozen",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_f_2",
+      "lessons": [
+        {
+          "key": "Algorithms: Tangrams",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Power of Words",
+          "properties": {
+          }
+        },
+        {
+          "key": "Ice Age Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "Envelope Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables in Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loop Fun",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Songwriting with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Parameters in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Parameters in Bee",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "Explore Project Ideas",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Revise Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Present Your Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

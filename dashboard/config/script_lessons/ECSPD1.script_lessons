@@ -1,0 +1,35 @@
+{
+  "name": "ECSPD1",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome to Phase 1!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Background and Context",
+          "properties": {
+          }
+        },
+        {
+          "key": "ECS Curriculum",
+          "properties": {
+          }
+        },
+        {
+          "key": "Classroom and workshop style ",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

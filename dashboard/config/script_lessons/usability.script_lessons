@@ -1,0 +1,35 @@
+{
+  "name": "usability",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Intro",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions and Functions with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Binary",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

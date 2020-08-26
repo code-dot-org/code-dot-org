@@ -1,0 +1,230 @@
+{
+  "name": "time4csdemo",
+  "lesson_groups": [
+    {
+      "key": "ramp_up",
+      "lessons": [
+        {
+          "key": "Programming: My Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequence in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building a Foundation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: My Loopy Robotic Friends",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Bee/Zombie",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops with Frozen",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_sprites",
+      "lessons": [
+        {
+          "key": "Learning Sprites with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alien Dance Party with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Pet Giraffe with Sprite Lab",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "time4cs_c1",
+      "lessons": [
+        {
+          "key": "Introduction to the Problem",
+          "properties": {
+          }
+        },
+        {
+          "key": "Crowdsourcing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Everglades Habitats",
+          "properties": {
+          }
+        },
+        {
+          "key": "Reviewing Projects",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "time4cs_c2",
+      "lessons": [
+        {
+          "key": "Food Chains",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals with Cards",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alligator Holes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Sprite Lab",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "time4cs_c3",
+      "lessons": [
+        {
+          "key": "Invasive Species",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Flappy Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Star Wars Game",
+          "properties": {
+          }
+        },
+        {
+          "key": "I am in Big Trouble",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Sprite Lab",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "time4cs_c4",
+      "lessons": [
+        {
+          "key": "Fishy Business",
+          "properties": {
+          }
+        },
+        {
+          "key": "Broadcast a Message",
+          "properties": {
+          }
+        },
+        {
+          "key": "Pythons & Mammals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Broadcast in Scratch",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "time4cs_c5",
+      "lessons": [
+        {
+          "key": "Current Solutions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions: Songwriting",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Determine the Concept",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Sprite Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

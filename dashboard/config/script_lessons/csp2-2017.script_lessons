@@ -1,0 +1,110 @@
+{
+  "name": "csp2-2017",
+  "lesson_groups": [
+    {
+      "key": "csp2_1",
+      "lessons": [
+        {
+          "key": "Bytes and File Sizes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding B&W Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding Color Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lossy Compression and File Formats",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT - Encode an Experience",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 2 Chapter 1 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp2_2",
+      "lessons": [
+        {
+          "key": "Intro to Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Finding Trends with Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Check Your Assumptions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Good and Bad Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Making Data Visualizations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discover a Data Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Cleaning Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Summary Tables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT - Tell a Data Story",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 2 Chapter 2 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "CSPLessonSamples",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Lesson 14",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 15",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "workshop-gamelab",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprites",
+          "properties": {
+          }
+        },
+        {
+          "key": "Input",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Interactive Card",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

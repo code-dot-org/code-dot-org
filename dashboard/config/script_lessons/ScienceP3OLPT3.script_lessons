@@ -1,0 +1,30 @@
+{
+  "name": "ScienceP3OLPT3",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome!",
+          "properties": {
+          }
+        },
+        {
+          "key": "Assessing Computer Models",
+          "properties": {
+          }
+        },
+        {
+          "key": "(optional) Refresh your connection to Complex Adaptive Systems",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap-Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

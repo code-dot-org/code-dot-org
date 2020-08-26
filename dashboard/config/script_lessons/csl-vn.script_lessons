@@ -1,0 +1,50 @@
+{
+  "name": "csl-vn",
+  "lesson_groups": [
+    {
+      "key": "csf_sequencing",
+      "lessons": [
+        {
+          "key": "Sequencing with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming with Rey and BB-8",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_loops",
+      "lessons": [
+        {
+          "key": "Loops in Ice Age",
+          "properties": {
+          }
+        },
+        {
+          "key": "Ocean Scene with Loops",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_events",
+      "lessons": [
+        {
+          "key": "Tell a Story in Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

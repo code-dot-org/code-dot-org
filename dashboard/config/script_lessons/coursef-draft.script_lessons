@@ -1,0 +1,110 @@
+{
+  "name": "coursef-draft",
+  "lesson_groups": [
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Algorithms: Tangrams",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Power of Words",
+          "properties": {
+          }
+        },
+        {
+          "key": "Ice Age Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Envelope Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables in Play Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loop Fun",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Songwriting with Parameters",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals and Functions in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Parameters in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions with Parameters in Bee",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "Explore Project Ideas",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Design Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Revise Your Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Presentation Your Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

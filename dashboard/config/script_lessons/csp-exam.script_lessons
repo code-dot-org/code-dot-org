@@ -1,0 +1,65 @@
+{
+  "name": "csp-exam",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Unit 1 Assessment 1 - Binary and Ascii ",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Assessment 4 - List Algorithms, Functions with Return Values",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

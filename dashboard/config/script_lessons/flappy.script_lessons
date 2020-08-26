@@ -1,0 +1,15 @@
+{
+  "name": "flappy",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Flappy Code",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

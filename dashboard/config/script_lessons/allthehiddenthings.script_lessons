@@ -1,0 +1,20 @@
+{
+  "name": "allthehiddenthings",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Game Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Contained Levels",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "csp2-support",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Unit 2 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "AP Preparation and Support",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Lessons 1 - 2: Bytes, File Sizes, and Text Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 3 - 4 : Encoding Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 7 - 10: Interpreting Visual Data",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 11 - 15: Communicating with Visualizations",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "practice",
+      "lessons": [
+        {
+          "key": "Group Work and Peer Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Balancing Teachers and Tools",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discovery Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Measuring Student Learning",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

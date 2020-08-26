@@ -1,0 +1,80 @@
+{
+  "name": "time4cs-control-unit-2",
+  "lesson_groups": [
+    {
+      "key": "csf_digcit",
+      "lessons": [
+        {
+          "key": "Crowdsourcing",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_conditionals",
+      "lessons": [
+        {
+          "key": "Conditionals with Cards",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_nested_loops",
+      "lessons": [
+        {
+          "key": "Nested Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Frozen",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_functions",
+      "lessons": [
+        {
+          "key": "Functions: Songwriting",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "End of Course Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

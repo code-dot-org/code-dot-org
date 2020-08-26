@@ -1,0 +1,15 @@
+{
+  "name": "hourofcode",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Maze",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

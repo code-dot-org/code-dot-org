@@ -1,0 +1,15 @@
+{
+  "name": "sports",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Sports",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

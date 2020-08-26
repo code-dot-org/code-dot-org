@@ -1,0 +1,120 @@
+{
+  "name": "csp6-pilot-staging",
+  "lesson_groups": [
+    {
+      "key": "csp_variables",
+      "lessons": [
+        {
+          "key": "Variables Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables Make",
+          "properties": {
+          }
+        },
+        {
+          "key": "Student Survey (Variables)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Surveys (Variables)",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_conditionals",
+      "lessons": [
+        {
+          "key": "Conditionals Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditional Make",
+          "properties": {
+          }
+        },
+        {
+          "key": "Student Survey (Conditionals)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Surveys (Conditionals)",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_functions",
+      "lessons": [
+        {
+          "key": "Functions Explore / Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions Make",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_project",
+      "lessons": [
+        {
+          "key": "Practice PT Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT Part 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 4 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

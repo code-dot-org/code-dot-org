@@ -1,0 +1,25 @@
+{
+  "name": "removed19",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Debugging: Unspotted Bugs",
+          "properties": {
+          }
+        },
+        {
+          "key": "Persistence & Frustration: Stevie and the Big Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Real-life Algorithms: Plant a Seed",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "pluralsight",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Pluralsight LevelGroup",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

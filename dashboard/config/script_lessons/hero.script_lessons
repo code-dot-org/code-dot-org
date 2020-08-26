@@ -1,0 +1,15 @@
+{
+  "name": "hero",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Minecraft Hour of Code",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

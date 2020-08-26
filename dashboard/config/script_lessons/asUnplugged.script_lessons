@@ -1,0 +1,55 @@
+{
+  "name": "asUnplugged",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Happy Maps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Move it, Move it",
+          "properties": {
+          }
+        },
+        {
+          "key": "Real-life Algorithms: Plant a Seed",
+          "properties": {
+          }
+        },
+        {
+          "key": "Graph Paper Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Building a Foundation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Getting Loopy",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Binary Bracelets",
+          "properties": {
+          }
+        },
+        {
+          "key": "Songwriting",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

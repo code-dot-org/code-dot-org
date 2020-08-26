@@ -1,0 +1,135 @@
+{
+  "name": "csp5-pilot-staging",
+  "lesson_groups": [
+    {
+      "key": "csp_lists",
+      "lessons": [
+        {
+          "key": "Lists Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lists Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lists Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lists Make",
+          "properties": {
+          }
+        },
+        {
+          "key": "Student Survey (Lists)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Survey (Lists)",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_loops",
+      "lessons": [
+        {
+          "key": "Loops Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops Investigate and Practice",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_traversals",
+      "lessons": [
+        {
+          "key": "Traversals Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Traversals Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Traversals Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Traversals Make",
+          "properties": {
+          }
+        },
+        {
+          "key": "Student Survey (Traversals)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Survey (Traversals)",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_project",
+      "lessons": [
+        {
+          "key": "Mini PT",
+          "properties": {
+          }
+        },
+        {
+          "key": "Student Survey (Mini PT)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Mini Assessment",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_libraries",
+      "lessons": [
+        {
+          "key": "Libraries Explore",
+          "properties": {
+          }
+        },
+        {
+          "key": "Libraries Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Student Survey (Libraries)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Survey (Libraries)",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

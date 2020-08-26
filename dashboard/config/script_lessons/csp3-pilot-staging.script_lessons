@@ -1,0 +1,60 @@
+{
+  "name": "csp3-pilot-staging",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction to Apps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Design Mode",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for Programming Languages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programs Investigate",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programs Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project: Share Your App",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

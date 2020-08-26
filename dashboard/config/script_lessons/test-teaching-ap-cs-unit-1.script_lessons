@@ -1,0 +1,55 @@
+{
+  "name": "test-teaching-ap-cs-unit-1",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "test Unit 1 required reading",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "test Unit 1 content module Alpha",
+          "properties": {
+          }
+        },
+        {
+          "key": "test Unit 1 content module Bravo",
+          "properties": {
+          }
+        },
+        {
+          "key": "test Unit 1 content module Charlie",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "practice",
+      "lessons": [
+        {
+          "key": "test Unit 1 practice module Delta",
+          "properties": {
+          }
+        },
+        {
+          "key": "test Unit 1 practice module Echo",
+          "properties": {
+          }
+        },
+        {
+          "key": "test Unit 1 practice module Foxtrot",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

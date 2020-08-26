@@ -1,0 +1,65 @@
+{
+  "name": "AlgebraB",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Unplugged: Video Games and Coordinate Planes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: Defining Variables (Big Game)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: Animation (Big Game)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Booleans",
+          "properties": {
+          }
+        },
+        {
+          "key": "Eval: Boolean Operators",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: Booleans",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: Boolean (Big Game)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Conditionals and Piecewise Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Eval: Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Collision Detection and the Distance Formula",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: Collision Detection (Big Game)",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

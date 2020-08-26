@@ -1,0 +1,45 @@
+{
+  "name": "CSPPD3-Unit5",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Explore PT Breakdown",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT Breakdown",
+          "properties": {
+          }
+        },
+        {
+          "key": "Challenge Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complete the Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Share out and Submit",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "algebraPD3b",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Support - Lessons 1-3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Support - Lessons 4-7",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Support - Lessons 8-12",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Support - Lessons 13-16",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teaching Support - Lessons 17-20",
+          "properties": {
+          }
+        },
+        {
+          "key": "Close and Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cspunit1-support-test",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Unit 1 Overview",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

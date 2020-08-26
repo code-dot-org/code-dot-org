@@ -1,0 +1,25 @@
+{
+  "name": "sconyers",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Digital Design",
+          "properties": {
+          }
+        },
+        {
+          "key": "Linking Screens",
+          "properties": {
+          }
+        },
+        {
+          "key": "Test Lesson",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "algPDmiami",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Evaluation Blocks",
+          "properties": {
+          }
+        },
+        {
+          "key": "Strings and Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rocket-Height",
+          "properties": {
+          }
+        },
+        {
+          "key": "Design Recipe Practice",
+          "properties": {
+          }
+        },
+        {
+          "key": "Your Game - Animation",
+          "properties": {
+          }
+        },
+        {
+          "key": "Booleans",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sam the Bat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Your Game - Booleans",
+          "properties": {
+          }
+        },
+        {
+          "key": "Luigi's Pizza",
+          "properties": {
+          }
+        },
+        {
+          "key": "Your Game - Player Movement",
+          "properties": {
+          }
+        },
+        {
+          "key": "Your Game - Collision Detection",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

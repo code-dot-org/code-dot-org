@@ -1,0 +1,20 @@
+{
+  "name": "denny-science-8",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Collision Detector: Designing Screens",
+          "properties": {
+          }
+        },
+        {
+          "key": "Collision Detector: Processing with Events",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

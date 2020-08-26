@@ -1,0 +1,20 @@
+{
+  "name": "csd-sample-online",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "What is a Computer? - sample progression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Problem Solving Process - sample activities",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

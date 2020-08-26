@@ -1,0 +1,15 @@
+{
+  "name": "petgame",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "pet game",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

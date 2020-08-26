@@ -1,0 +1,130 @@
+{
+  "name": "coursed-2019",
+  "lesson_groups": [
+    {
+      "key": "csf_sequencing",
+      "lessons": [
+        {
+          "key": "Algorithms: Graph Paper Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Online Puzzles",
+          "properties": {
+          }
+        },
+        {
+          "key": "Relay Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging in Collector",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_events",
+      "lessons": [
+        {
+          "key": "Events in Bounce",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build a Star Wars Game",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_loops",
+      "lessons": [
+        {
+          "key": "Loops in Ice Age",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Bee",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_conditionals",
+      "lessons": [
+        {
+          "key": "Conditionals with Cards",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "While Loops in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Until Loops in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals & Loops in Harvester",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_binary",
+      "lessons": [
+        {
+          "key": "Unplugged: Binary",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist Binary",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_digcit",
+      "lessons": [
+        {
+          "key": "Digital Citizenship",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "end_of_course_project",
+      "lessons": [
+        {
+          "key": "Dance Party",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "fit2019-apprentice",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Apprentice Reflection Overview",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Day 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Day 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Day 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Day 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

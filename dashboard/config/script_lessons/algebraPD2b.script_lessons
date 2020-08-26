@@ -1,0 +1,70 @@
+{
+  "name": "algebraPD2b",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Course Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Best Practices for Teaching Computer Science",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Dashboard",
+          "properties": {
+          }
+        },
+        {
+          "key": "Evaluation Blocks",
+          "properties": {
+          }
+        },
+        {
+          "key": "Strings and Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Writing Contracts",
+          "properties": {
+          }
+        },
+        {
+          "key": "Defining Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Defining Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Rocket-Height",
+          "properties": {
+          }
+        },
+        {
+          "key": "Booleans",
+          "properties": {
+          }
+        },
+        {
+          "key": "Eval: Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

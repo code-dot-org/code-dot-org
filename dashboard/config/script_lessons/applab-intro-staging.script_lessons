@@ -1,0 +1,50 @@
+{
+  "name": "applab-intro-staging",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Intro to AppLab - Choose Your Own Adventure",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to AppLab - Choose Your Own Adventure 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to AppLab - Your First App",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to AppLab - Your First App 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to AppLab - Your First App 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to AppLab - Your First App 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to AppLab - Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to App Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

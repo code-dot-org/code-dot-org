@@ -1,0 +1,15 @@
+{
+  "name": "rbo-reference",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "reference",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

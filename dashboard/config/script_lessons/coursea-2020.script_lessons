@@ -1,0 +1,85 @@
+{
+  "name": "coursea-2020",
+  "lesson_groups": [
+    {
+      "key": "csf_digcit",
+      "lessons": [
+        {
+          "key": "Safety in My Online Neighborhood",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_sequencing",
+      "lessons": [
+        {
+          "key": "Learn to Drag and Drop",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming: Happy Maps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequencing with Scrat",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Ice Age",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming with Rey and BB-8",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_loops",
+      "lessons": [
+        {
+          "key": "Loops: Happy Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Ice Age",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Ocean Scene with Loops",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_events",
+      "lessons": [
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

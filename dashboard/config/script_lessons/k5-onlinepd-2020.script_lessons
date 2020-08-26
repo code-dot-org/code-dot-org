@@ -1,0 +1,90 @@
+{
+  "name": "k5-onlinepd-2020",
+  "lesson_groups": [
+    {
+      "key": "k5_getting_started_1",
+      "lessons": [
+        {
+          "key": "Welcome to \"Teaching Computer Science Fundamentals\"",
+          "properties": {
+          }
+        },
+        {
+          "key": "Understanding the Computer Science Fundamentals Courses",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "k5_basic_concepts_1",
+      "lessons": [
+        {
+          "key": "Sequencing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "End of Course projects",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "k5_diving_deeper_1",
+      "lessons": [
+        {
+          "key": "Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sprite Lab",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "k5_next_steps_1",
+      "lessons": [
+        {
+          "key": "Reviewing your reflections",
+          "properties": {
+          }
+        },
+        {
+          "key": "Next steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

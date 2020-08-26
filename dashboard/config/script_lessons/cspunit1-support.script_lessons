@@ -1,0 +1,60 @@
+{
+  "name": "cspunit1-support",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Intro to the Unit",
+          "properties": {
+          }
+        },
+        {
+          "key": "Chapter Overviews",
+          "properties": {
+          }
+        },
+        {
+          "key": "Tool Talk: Intro to Netsim",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Sending Binary Messages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding and Sending Numbers",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "practice",
+      "lessons": [
+        {
+          "key": "Supporting Peer Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Running a Constructive Classroom",
+          "properties": {
+          }
+        },
+        {
+          "key": "Strategies for Student Writing",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "csd-videos",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Problem Solving and Computers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Web Development",
+          "properties": {
+          }
+        },
+        {
+          "key": "Games and Animations",
+          "properties": {
+          }
+        },
+        {
+          "key": "User Centered Design",
+          "properties": {
+          }
+        },
+        {
+          "key": "Data and Society",
+          "properties": {
+          }
+        },
+        {
+          "key": "Physical Computing",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

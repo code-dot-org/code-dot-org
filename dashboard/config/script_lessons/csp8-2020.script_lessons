@@ -1,0 +1,25 @@
+{
+  "name": "csp8-2020",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Create PT - Review the Task",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT - Make a Plan",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT - Complete the Task",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

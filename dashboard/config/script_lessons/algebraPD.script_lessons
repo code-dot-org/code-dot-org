@@ -1,0 +1,40 @@
+{
+  "name": "algebraPD",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction to PD",
+          "properties": {
+          }
+        },
+        {
+          "key": "Course Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Why Computer Science belongs in Algebra",
+          "properties": {
+          }
+        },
+        {
+          "key": "Evaluation Blocks",
+          "properties": {
+          }
+        },
+        {
+          "key": "Teacher Dashboard",
+          "properties": {
+          }
+        },
+        {
+          "key": "Preparing for in-person PD",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

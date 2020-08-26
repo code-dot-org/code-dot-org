@@ -1,0 +1,55 @@
+{
+  "name": "Course4pre",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Maze: Sequence",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Sequence",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Nested Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Farmer: While Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Nested Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Artist: Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bee: Debugging",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

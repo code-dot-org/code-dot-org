@@ -1,0 +1,30 @@
+{
+  "name": "applab-2hour",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Digital Design",
+          "properties": {
+          }
+        },
+        {
+          "key": "Event Driven Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Basic App Functionality",
+          "properties": {
+          }
+        },
+        {
+          "key": "Getters and Setters",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "csdgraveyard",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction to Styling with CSS",
+          "properties": {
+          }
+        },
+        {
+          "key": "External Style Sheets",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

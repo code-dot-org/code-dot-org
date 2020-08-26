@@ -1,0 +1,15 @@
+{
+  "name": "artist",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Artist",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

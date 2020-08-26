@@ -1,0 +1,15 @@
+{
+  "name": "CodeStudioPuzzleChallenge",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Puzzles",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

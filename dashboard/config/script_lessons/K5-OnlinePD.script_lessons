@@ -1,0 +1,65 @@
+{
+  "name": "K5-OnlinePD",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Computer Science Fundamentals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Looking Ahead",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mastering the Basics: Sequencing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mastering the Basics: Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mastering the Basics: Conditionals",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mastering the Basics: Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mastering the Basics: Events",
+          "properties": {
+          }
+        },
+        {
+          "key": "Best Practices for Teaching Computer Science",
+          "properties": {
+          }
+        },
+        {
+          "key": "Planning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

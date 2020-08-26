@@ -1,0 +1,45 @@
+{
+  "name": "cspoptional",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Unit 1 - Sending Bits in the Real World",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1 - Encoding Numbers in the Real World",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1 - Algorithms Detour - Shortest Path",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1 - How Routers Learn",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

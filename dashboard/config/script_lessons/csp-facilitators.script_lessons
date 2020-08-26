@@ -1,0 +1,25 @@
+{
+  "name": "csp-facilitators",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Introduction to Text Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Turtle Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Events",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

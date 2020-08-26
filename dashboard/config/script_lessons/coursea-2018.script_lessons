@@ -1,0 +1,80 @@
+{
+  "name": "coursea-2018",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Debugging: Unspotted Bugs",
+          "properties": {
+          }
+        },
+        {
+          "key": "Persistence & Frustration: Stevie and the Big Project",
+          "properties": {
+          }
+        },
+        {
+          "key": "Real-life Algorithms: Plant a Seed",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sequencing in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming: Happy Maps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Going Places Safely",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops: Happy Loops",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events: The Big Event",
+          "properties": {
+          }
+        },
+        {
+          "key": "Events in Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

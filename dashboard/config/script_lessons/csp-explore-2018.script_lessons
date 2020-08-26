@@ -1,0 +1,35 @@
+{
+  "name": "csp-explore-2018",
+  "lesson_groups": [
+    {
+      "key": "csp_ap_2",
+      "lessons": [
+        {
+          "key": "Explore PT Prep - Reviewing the Task",
+          "properties": {
+          }
+        },
+        {
+          "key": "Explore PT - Making a Plan",
+          "properties": {
+          }
+        },
+        {
+          "key": "Explore PT - Complete the Task",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Principles Post-Course Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

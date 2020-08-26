@@ -1,0 +1,115 @@
+{
+  "name": "csd4-2020",
+  "lesson_groups": [
+    {
+      "key": "csd4_1",
+      "lessons": [
+        {
+          "key": "Analysis of Design",
+          "properties": {
+          }
+        },
+        {
+          "key": "Understanding Your User",
+          "properties": {
+          }
+        },
+        {
+          "key": "User-Centered Design Micro Activity",
+          "properties": {
+          }
+        },
+        {
+          "key": "User Interfaces",
+          "properties": {
+          }
+        },
+        {
+          "key": "Feedback and Testing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Identifying User Needs",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Paper Prototype",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd4_2",
+      "lessons": [
+        {
+          "key": "Designing Apps for Good",
+          "properties": {
+          }
+        },
+        {
+          "key": "Market Research",
+          "properties": {
+          }
+        },
+        {
+          "key": "Paper Prototypes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Prototype Testing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Digital Design",
+          "properties": {
+          }
+        },
+        {
+          "key": "Linking Screens",
+          "properties": {
+          }
+        },
+        {
+          "key": "Testing the App",
+          "properties": {
+          }
+        },
+        {
+          "key": "Improving and Iterating",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - App Presentation",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd5_2",
+      "lessons": [
+        {
+          "key": "Post-Project Test",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Discoveries Post Course survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "csd-test-saving-state",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "What is a Computer?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Problem Solving Process",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "name": "csp3-pilot",
+  "lesson_groups": [
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Introduction to Apps",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Design Mode",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 1",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 2",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for Programming Languages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to Programming",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 3",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 4",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Designing an App Part 5",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 11: Assessment Day",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Unit 3 STUDENT Survey",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 3 TEACHER Survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

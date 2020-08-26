@@ -1,0 +1,15 @@
+{
+  "name": "step",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Step",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "name": "csp1-2018",
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Principles Pre-survey",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp1_1",
+      "lessons": [
+        {
+          "key": "Personal Innovations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Binary Messages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Binary Messages with the Internet Simulator",
+          "properties": {
+          }
+        },
+        {
+          "key": "Number Systems",
+          "properties": {
+          }
+        },
+        {
+          "key": "Binary Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1 Chapter 1 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp1_2",
+      "lessons": [
+        {
+          "key": "The Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for Addressing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Routers and Redundancy",
+          "properties": {
+          }
+        },
+        {
+          "key": "Packets and Making a Reliable Internet",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Need for DNS",
+          "properties": {
+          }
+        },
+        {
+          "key": "HTTP and Abstraction",
+          "properties": {
+          }
+        },
+        {
+          "key": "Practice PT - The Internet and Society",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 1 Chapter 2 Assessment",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

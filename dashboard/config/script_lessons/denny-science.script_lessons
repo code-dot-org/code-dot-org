@@ -1,0 +1,20 @@
+{
+  "name": "denny-science",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Earthquake Detector: Designing Screens",
+          "properties": {
+          }
+        },
+        {
+          "key": "Earthquake Detector: Processing with Events",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

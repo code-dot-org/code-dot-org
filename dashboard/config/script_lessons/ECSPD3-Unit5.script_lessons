@@ -1,0 +1,40 @@
+{
+  "name": "ECSPD3-Unit5",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unit 5 lessons",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to the Unit 5 Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Complete the Challenge",
+          "properties": {
+          }
+        },
+        {
+          "key": "Share out and Submit",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

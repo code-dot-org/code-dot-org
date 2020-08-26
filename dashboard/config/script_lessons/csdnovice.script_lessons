@@ -1,0 +1,35 @@
+{
+  "name": "csdnovice",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Welcome",
+          "properties": {
+          }
+        },
+        {
+          "key": "Tuesday",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wednesday",
+          "properties": {
+          }
+        },
+        {
+          "key": "Thursday",
+          "properties": {
+          }
+        },
+        {
+          "key": "Wrap Up",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

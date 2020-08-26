@@ -1,0 +1,60 @@
+{
+  "name": "AlgebraA",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Calc: Evaluation Blocks",
+          "properties": {
+          }
+        },
+        {
+          "key": "Eval: Strings and Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Contracts",
+          "properties": {
+          }
+        },
+        {
+          "key": "Eval: Writing Contracts",
+          "properties": {
+          }
+        },
+        {
+          "key": "Calc: Defining Variables",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: Fast Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Eval: Defining Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Unplugged: The Design Recipe",
+          "properties": {
+          }
+        },
+        {
+          "key": "Eval: Functions",
+          "properties": {
+          }
+        },
+        {
+          "key": "Play Lab: Defining Functions",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

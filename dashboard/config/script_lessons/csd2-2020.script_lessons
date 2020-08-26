@@ -1,0 +1,135 @@
+{
+  "name": "csd2-2020",
+  "lesson_groups": [
+    {
+      "key": "csd2_1v2",
+      "lessons": [
+        {
+          "key": "Exploring Web Pages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to HTML",
+          "properties": {
+          }
+        },
+        {
+          "key": "Headings",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mini-Project: HTML Web Page",
+          "properties": {
+          }
+        },
+        {
+          "key": "Digital Footprint",
+          "properties": {
+          }
+        },
+        {
+          "key": "Styling Text with CSS",
+          "properties": {
+          }
+        },
+        {
+          "key": "Mini-Project: Your Personal Style",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intellectual Property",
+          "properties": {
+          }
+        },
+        {
+          "key": "Using Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Websites for Expression ",
+          "properties": {
+          }
+        },
+        {
+          "key": "Styling Elements with CSS",
+          "properties": {
+          }
+        },
+        {
+          "key": "Your Web Page - Prepare",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Personal Web Page",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd2_2v2",
+      "lessons": [
+        {
+          "key": "Websites for a Purpose",
+          "properties": {
+          }
+        },
+        {
+          "key": "Team Problem Solving",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sources and Research",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSS Classes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Planning a Multi-page Website",
+          "properties": {
+          }
+        },
+        {
+          "key": "Linking Pages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Website for a Purpose",
+          "properties": {
+          }
+        },
+        {
+          "key": "Peer Review and Final Touches",
+          "properties": {
+          }
+        },
+        {
+          "key": "Post-Project Test",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Discoveries Post Course survey",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

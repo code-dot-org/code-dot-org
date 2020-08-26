@@ -1,0 +1,185 @@
+{
+  "name": "express-2019",
+  "lesson_groups": [
+    {
+      "key": "csf_warmup",
+      "lessons": [
+        {
+          "key": "Dance Party",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_sequencing",
+      "lessons": [
+        {
+          "key": "Programming in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Debugging in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Collector",
+          "properties": {
+          }
+        },
+        {
+          "key": "Programming in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_loops",
+      "lessons": [
+        {
+          "key": "Loops with Rey and BB-8",
+          "properties": {
+          }
+        },
+        {
+          "key": "Loops in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Nested Loops in Frozen",
+          "properties": {
+          }
+        },
+        {
+          "key": "Concept Practice with Minecraft ",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_conditionals",
+      "lessons": [
+        {
+          "key": "Conditionals in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "While Loops in Farmer",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals in Minecraft: Voyage Aquatic",
+          "properties": {
+          }
+        },
+        {
+          "key": "Until Loops in Maze",
+          "properties": {
+          }
+        },
+        {
+          "key": "Conditionals & Loops in Harvester",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_functions",
+      "lessons": [
+        {
+          "key": "Functions in Minecraft",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Harvester",
+          "properties": {
+          }
+        },
+        {
+          "key": "Functions in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_variables",
+      "lessons": [
+        {
+          "key": "Variables as Constant in Artist",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables that Change in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "Variables that Change in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_for_loops",
+      "lessons": [
+        {
+          "key": "For Loops in Bee",
+          "properties": {
+          }
+        },
+        {
+          "key": "For Loops in Artist",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csf_sprites",
+      "lessons": [
+        {
+          "key": "Learning Sprites with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Alien Dance Party with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Editing Behaviors",
+          "properties": {
+          }
+        },
+        {
+          "key": "Virtual Pet with Sprite Lab",
+          "properties": {
+          }
+        },
+        {
+          "key": "Build A Project",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

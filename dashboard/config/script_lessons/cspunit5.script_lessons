@@ -1,0 +1,30 @@
+{
+  "name": "cspunit5",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Explore PT Prep",
+          "properties": {
+          }
+        },
+        {
+          "key": "Explore PT",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT Prep",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "gumball",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Gumball Play Lab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

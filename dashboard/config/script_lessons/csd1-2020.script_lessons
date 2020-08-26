@@ -1,0 +1,100 @@
+{
+  "name": "csd1-2020",
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "lessons": [
+        {
+          "key": "CS Discoveries Pre-survey",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd1_1",
+      "lessons": [
+        {
+          "key": "Intro to Problem Solving",
+          "properties": {
+          }
+        },
+        {
+          "key": "The Problem Solving Process",
+          "properties": {
+          }
+        },
+        {
+          "key": "Exploring Problem Solving",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd1_2",
+      "lessons": [
+        {
+          "key": "What is a Computer?",
+          "properties": {
+          }
+        },
+        {
+          "key": "Input and Output",
+          "properties": {
+          }
+        },
+        {
+          "key": "Processing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Storage",
+          "properties": {
+          }
+        },
+        {
+          "key": "Project - Propose an App",
+          "properties": {
+          }
+        },
+        {
+          "key": "Post-Project Test",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csd1_3",
+      "lessons": [
+        {
+          "key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+          "properties": {
+          }
+        },
+        {
+          "key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

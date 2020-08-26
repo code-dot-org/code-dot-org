@@ -1,0 +1,40 @@
+{
+  "name": "subgoals-assessment-staging",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "all assessment items as standalone assessment levels",
+          "properties": {
+          }
+        },
+        {
+          "key": "submittable if last assessment item",
+          "properties": {
+          }
+        },
+        {
+          "key": "dummy",
+          "properties": {
+          }
+        },
+        {
+          "key": "assessment sandwiched between app lab levels",
+          "properties": {
+          }
+        },
+        {
+          "key": "all assessment items clustered in levelgroup as a single \"test\"",
+          "properties": {
+          }
+        },
+        {
+          "key": "CSP 3 updates staging ground",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

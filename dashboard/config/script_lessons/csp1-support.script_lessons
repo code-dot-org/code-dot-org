@@ -1,0 +1,80 @@
+{
+  "name": "csp1-support",
+  "lesson_groups": [
+    {
+      "key": "required",
+      "lessons": [
+        {
+          "key": "Unit 1 Overview",
+          "properties": {
+          }
+        },
+        {
+          "key": "AP Preparation and Support",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "content",
+      "lessons": [
+        {
+          "key": "Lessons 2 - 3: Binary Messages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 4 - 6: Encoding and Sending Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 7: Encoding and Sending Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lesson 9: Internet Addressing",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lessons 12 - 13: Abstraction on the Internet",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "practice",
+      "lessons": [
+        {
+          "key": "Group Work and Peer Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Balancing Teachers and Tools",
+          "properties": {
+          }
+        },
+        {
+          "key": "Discovery Learning",
+          "properties": {
+          }
+        },
+        {
+          "key": "Measuring Student Learning",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

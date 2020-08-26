@@ -1,0 +1,20 @@
+{
+  "name": "csd-bugs",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Game Lab Bugs",
+          "properties": {
+          }
+        },
+        {
+          "key": "Immovable Crab",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

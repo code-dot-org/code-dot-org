@@ -1,0 +1,95 @@
+{
+  "name": "cspunit1",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Personal Innovations",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Binary Messages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Complex Messages",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Binary Messages with the Internet Simulator",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Bits in the Real World",
+          "properties": {
+          }
+        },
+        {
+          "key": "Number Systems",
+          "properties": {
+          }
+        },
+        {
+          "key": "Binary Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Numbers",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding Numbers in the Real World",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding and Sending Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "Sending Formatted Text",
+          "properties": {
+          }
+        },
+        {
+          "key": "Bytes and File Sizes",
+          "properties": {
+          }
+        },
+        {
+          "key": "Text Compression",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding B&W Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encoding Color Images",
+          "properties": {
+          }
+        },
+        {
+          "key": "Lossy Compression and File Formats",
+          "properties": {
+          }
+        },
+        {
+          "key": "Encode a Complex Thing",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

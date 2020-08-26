@@ -1,0 +1,55 @@
+{
+  "name": "csp-ap",
+  "lesson_groups": [
+    {
+      "key": "csp_ap_1",
+      "lessons": [
+        {
+          "key": "Tech Setup - Your AP Digital Portfolio and Other Tools",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_ap_3",
+      "lessons": [
+        {
+          "key": "Create PT Prep - Reviewing the Task",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT Prep - Making a Plan",
+          "properties": {
+          }
+        },
+        {
+          "key": "Create PT - Complete the Task",
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "key": "csp_ap_2",
+      "lessons": [
+        {
+          "key": "Explore PT Prep - Reviewing the Task",
+          "properties": {
+          }
+        },
+        {
+          "key": "Explore PT - Making a Plan",
+          "properties": {
+          }
+        },
+        {
+          "key": "Explore PT - Complete the Task",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}

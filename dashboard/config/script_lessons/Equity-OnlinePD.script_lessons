@@ -1,0 +1,30 @@
+{
+  "name": "Equity-OnlinePD",
+  "lesson_groups": [
+    {
+      "key": "",
+      "lessons": [
+        {
+          "key": "Getting Started",
+          "properties": {
+          }
+        },
+        {
+          "key": "Introduction to Equity",
+          "properties": {
+          }
+        },
+        {
+          "key": "Creating Equitable Learning Environments",
+          "properties": {
+          }
+        },
+        {
+          "key": "Next Steps",
+          "properties": {
+          }
+        }
+      ]
+    }
+  ]
+}
