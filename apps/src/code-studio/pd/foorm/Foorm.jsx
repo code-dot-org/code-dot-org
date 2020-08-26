@@ -138,6 +138,8 @@ export default class Foorm extends React.Component {
           css={this.customCss}
           requiredText={'(Required)'}
           showCompletedPage={false}
+          maxTextLength={4000}
+          maxOthersLength={4000}
         />
         {this.state.statusMessage && (
           <div style={styles.statusMessage}>
