@@ -19,18 +19,11 @@ require_relative '../../../dashboard/config/environment'
 # upper limit: 2811329000;
 # lower limit:   93221000;
 
-slice = 0
-
-UserLevel.find_in_batches(start: 93_221_000, finish: 2_811_329_000, batch_size: 5000) do |user_level_slice|
-  puts "PROCESSING: slice #{slice} with starting id #{user_level_slice.first.id}."
-  ActiveRecord::Base.transaction do
-    user_level_slice.each do |user_level|
-      if user_level.time_spent && user_level.time_spent > 0
-        user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
-        user_level.save(touch: false, validate: false)
-      end
-    end
+UserLevel.find_each(start: 93_221_000, finish: 2_811_329_000, batch_size: 5000) do |user_level|
+  if user_level.time_spent && user_level.time_spent > 0
+    user_level.time_spent = (user_level.time_spent.to_f / 1000).ceil.to_i
+    user_level.save(touch: false, validate: false)
   end
-  puts "PROCESSED: slice: #{slice}."
-  slice += 1
+rescue Exception => e
+  puts "Error with user_level #{user_level.id}. Skipping and continuing. Error message: #{e.message}"
 end
