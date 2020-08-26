@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {borderRadius} from './constants';
 import OrderControls from './OrderControls';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {tipTypes} from '@cdo/apps/code-studio/components/LessonTip';
+import TipWithTooltip from './TipWithTooltip';
 
 const styles = {
   checkbox: {
@@ -122,18 +121,9 @@ export default class ActivityDescriptionCard extends Component {
             </button>
           </span>
           {this.props.activitySection.tips.length > 0 && (
-            <span style={styles.icons}>
+            <span>
               {this.props.activitySection.tips.map(tip => {
-                return (
-                  <FontAwesome
-                    key={tip.markdown}
-                    icon={tipTypes[tip.type].icon}
-                    style={{color: tipTypes[tip.type].color, padding: '2px'}}
-                    onClick={() => {
-                      console.log('Open tip editor');
-                    }}
-                  />
-                );
+                <TipWithTooltip tip={tip} key={tip.markdown} />;
               })}
             </span>
           )}

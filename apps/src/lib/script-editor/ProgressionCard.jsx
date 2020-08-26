@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {borderRadius} from './constants';
 import OrderControls from './OrderControls';
 import LevelToken2 from './LevelToken2';
+import TipWithTooltip from './TipWithTooltip';
 
 const styles = {
   lessonCard: {
@@ -95,6 +96,13 @@ export default class ProgressionCard extends Component {
               Add Level
             </button>
           </span>
+          {this.props.progression.tips.length > 0 && (
+            <span style={styles.icons}>
+              {this.props.progression.tips.map(tip => {
+                <TipWithTooltip tip={tip} key={tip.markdown} />;
+              })}
+            </span>
+          )}
         </div>
       </div>
     );

@@ -1,0 +1,42 @@
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import LessonTip, {tipTypes} from '@cdo/apps/code-studio/components/LessonTip';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
+
+export default class TipWithTooltip extends Component {
+  static propTypes = {
+    tip: PropTypes.object
+  };
+
+  render() {
+    const {tip} = this.props;
+    const tooltipId = _.uniqueId();
+    return (
+      <span>
+        <span data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+          <FontAwesome
+            icon={tipTypes[tip.type].icon}
+            style={{color: tipTypes[tip.type].color, padding: '2px'}}
+            onClick={() => {
+              console.log('Open tip editor');
+            }}
+            onMouseOver={() => {
+              console.log('Show tool tip');
+            }}
+          />
+        </span>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+          disable={false}
+        >
+          <LessonTip tip={tip} />
+        </ReactTooltip>
+      </span>
+    );
+  }
+}
