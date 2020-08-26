@@ -24,6 +24,7 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
+require 'script_lessons_serializer'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
@@ -1627,5 +1628,11 @@ class Script < ActiveRecord::Base
   def all_descendant_levels
     sublevels = levels.map(&:all_descendant_levels).flatten
     levels + sublevels
+  end
+
+  def serialize_script_lessons
+    # include: '**' allows serialization of associations recursively for any number of levels.
+    # https://github.com/rails-api/active_model_serializers/issues/968#issuecomment-557513403s
+    ScriptLessons::ScriptSerializer.new(self).as_json(include: '**')
   end
 end
