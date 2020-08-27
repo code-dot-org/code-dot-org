@@ -3,7 +3,9 @@ class ExternalDSL < ContentDSL
     @hash = {href: '', options: {skip_dialog: true}}
   end
 
-  def associated_blocks(text) @hash[:associated_blocks] = text end
+  def associated_blocks(text)
+    @hash[:associated_blocks] = text
+  end
 
   # @override
   def self.i18n_fields
