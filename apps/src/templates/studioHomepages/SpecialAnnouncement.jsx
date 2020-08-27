@@ -21,17 +21,21 @@ export default class SpecialAnnouncement extends Component {
     const {isEnglish, isTeacher} = this.props;
     const headingText = isEnglish
       ? isTeacher
-        ? i18n.teacherAnnouncementSpecial2020Heading()
+        ? i18n.teacherAnnouncementSpecialFall2020Heading()
         : i18n.studentAnnouncementSpecial2020Heading()
       : i18n.intlAnnouncementSpecial2020Heading();
     const descriptionText = isEnglish
       ? isTeacher
-        ? i18n.teacherAnnouncementSpecial2020Body()
+        ? i18n.teacherAnnouncementSpecialFall2020Body()
         : i18n.studentAnnouncementSpecial2020Body()
       : i18n.intlAnnouncementSpecial2020Body();
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special2020'
       : 'student_homepage_announcement_special2020';
+    const url =
+      isTeacher && isEnglish
+        ? pegasus('/alternative-classrooms')
+        : pegasus('/athome');
 
     return (
       <TwoColumnActionBlock
@@ -43,7 +47,7 @@ export default class SpecialAnnouncement extends Component {
         buttons={[
           {
             id: buttonId,
-            url: pegasus('/athome'),
+            url: url,
             text: i18n.studentAnnouncementSpecial2020Button()
           }
         ]}
