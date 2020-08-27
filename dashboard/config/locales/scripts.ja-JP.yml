@@ -3016,6 +3016,12 @@ ja:
           lessons:
             Creating Functions:
               name: 関数の作成
+        jess-test-script:
+          lessons:
+            Tools:
+              name: 'Tools
+
+'
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3116,3 +3122,9 @@ ja:
           lesson_groups:
             lg_1:
               display_name: 内容
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: コース A
+            Course B:
+              name: コース B

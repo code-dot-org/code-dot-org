@@ -1,0 +1,32 @@
+name 'VPL - CSD - Module 4 - CI2'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 4 - Lesson 4:  User Interfaces  
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goals
+
+**Identify how students engage in iteration and decomposition within the Problem Solving Process**
+
+## Investigation Tasks
+
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit4/4/" target="_blank">Lesson 4: User Interfaces</a>
+
+* Become familiar with the concepts of iteration and decomposition
+
+* Skim the content in the activity guides to visualize the activity the students will complete in this lesson
+
+
+
+
+
+
+
+
+MARKDOWN

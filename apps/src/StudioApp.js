@@ -176,6 +176,13 @@ class StudioApp extends EventEmitter {
     this.initTime = undefined;
 
     /**
+     * The time the last milestone was recorded. Used for recording the time a
+     * student has spent on a level.
+     * @type {?number}
+     */
+    this.milestoneStartTime = undefined;
+
+    /**
      * If true, we don't show blockspace. Used when viewing shared levels
      */
     this.hideSource = false;
@@ -383,6 +390,7 @@ StudioApp.prototype.init = function(config) {
 
   // Record time at initialization.
   this.initTime = new Date().getTime();
+  this.milestoneStartTime = new Date().getTime();
 
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
@@ -1767,13 +1775,19 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
  * @param {MilestoneReport} options
  */
 StudioApp.prototype.report = function(options) {
+  const currentTime = new Date().getTime();
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
-    time: new Date().getTime() - this.initTime,
+    time: currentTime - this.initTime,
+    timeSinceLastMilestone: currentTime - this.milestoneStartTime,
     attempt: this.attempts,
     lines: this.feedback_.getNumBlocksUsed()
   });
+
+  // After we log the reported time we should update the start time of the milestone
+  // otherwise if we don't leave the page we are compounding the total time
+  this.milestoneStartTime = currentTime;
 
   this.lastTestResult = options.testResult;
 

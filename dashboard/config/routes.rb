@@ -309,6 +309,8 @@ Dashboard::Application.routes.draw do
   resources :courses, param: 'course_name'
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
 
+  resources :lessons, only: [:show, :edit, :update]
+
   get '/beta', to: redirect('/')
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
@@ -531,6 +533,14 @@ Dashboard::Application.routes.draw do
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
     post 'post_course_survey/submit', to: 'post_course_survey#submit'
     get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
+
+    # Academic year workshops
+    get '/:workshop_subject/pre/(*agenda)', to: 'workshop_daily_survey#new_ayw_pre',
+        constraints: {agenda: /module\/[0-9_]+/}
+    get '/:workshop_subject/day/:day', to: 'workshop_daily_survey#new_ayw_daily',
+        constraints: {day: /\d/}
+    get '/:workshop_subject/post/(*agenda)', to: 'workshop_daily_survey#new_ayw_post',
+        constraints: {agenda: /(module\/[0-9_]+)|(in_person)/}
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'

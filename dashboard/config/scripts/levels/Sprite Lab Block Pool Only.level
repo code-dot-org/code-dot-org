@@ -1,0 +1,553 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-06-23T19:34:38.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "block_pool": "gamelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-05 19:54:56 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-05 20:58:02 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"disable_param_editing\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-05 22:06:35 +0000\",\"changed\":[\"use_default_sprites\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-06 21:03:47 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-08 03:10:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-08 03:10:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-08 03:20:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-08 03:26:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-08 15:42:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="gamelab_createNewSprite" inline="false">
+              <title name="NAME">infection</title>
+              <title name="COSTUME">"pig"</title>
+              <value name="LOCATION">
+                <block type="gamelab_randomLocation"/>
+              </value>
+              <next>
+                <block type="gamelab_setProp" inline="true">
+                  <title name="PROPERTY">"scale"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">infection</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_number">
+                      <title name="NUM">25</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setProp" inline="true">
+                      <title name="PROPERTY">"tint"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">infection</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="colour_picker">
+                          <title name="COLOUR">#ff0000</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setProp" inline="true">
+                          <title name="PROPERTY">"direction"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_variables_get">
+                              <title name="VAR">infection</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_random_int" inline="true">
+                              <value name="FROM">
+                                <block type="math_number">
+                                  <title name="NUM">0</title>
+                                </block>
+                              </value>
+                              <value name="TO">
+                                <block type="math_number">
+                                  <title name="NUM">359</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_addBehaviorSimple" inline="true">
+                              <value name="SPRITE">
+                                <block type="sprite_variables_get">
+                                  <title name="VAR">infection</title>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <title name="VAR">wandering slowly</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="controls_repeat_ext" inline="true">
+                                  <value name="TIMES">
+                                    <block type="math_number">
+                                      <title name="NUM">25</title>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="gamelab_createNewSprite" inline="false">
+                                      <title name="NAME">healthy</title>
+                                      <title name="COSTUME">"pig"</title>
+                                      <value name="LOCATION">
+                                        <block type="gamelab_randomLocation"/>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_setProp" inline="true">
+                                          <title name="PROPERTY">"scale"</title>
+                                          <value name="SPRITE">
+                                            <block type="sprite_variables_get">
+                                              <title name="VAR">healthy</title>
+                                            </block>
+                                          </value>
+                                          <value name="VAL">
+                                            <block type="math_number">
+                                              <title name="NUM">25</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="gamelab_setProp" inline="true">
+                                              <title name="PROPERTY">"tint"</title>
+                                              <value name="SPRITE">
+                                                <block type="sprite_variables_get">
+                                                  <title name="VAR">healthy</title>
+                                                </block>
+                                              </value>
+                                              <value name="VAL">
+                                                <block type="colour_picker">
+                                                  <title name="COLOUR">#3333ff</title>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_setProp" inline="true">
+                                                  <title name="PROPERTY">"direction"</title>
+                                                  <value name="SPRITE">
+                                                    <block type="sprite_variables_get">
+                                                      <title name="VAR">healthy</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="VAL">
+                                                    <block type="math_random_int" inline="true">
+                                                      <value name="FROM">
+                                                        <block type="math_number">
+                                                          <title name="NUM">0</title>
+                                                        </block>
+                                                      </value>
+                                                      <value name="TO">
+                                                        <block type="math_number">
+                                                          <title name="NUM">359</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="gamelab_addBehaviorSimple" inline="true">
+                                                      <value name="SPRITE">
+                                                        <block type="sprite_variables_get">
+                                                          <title name="VAR">healthy</title>
+                                                        </block>
+                                                      </value>
+                                                      <value name="BEHAVIOR">
+                                                        <block type="gamelab_behavior_get">
+                                                          <title name="VAR">wandering quickly</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenTouching" inline="true">
+          <value name="SPRITE1">
+            <block type="gamelab_spritesWhere" inline="false">
+              <title name="PROPERTY">"tint"</title>
+              <value name="VALUE">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ff0000</title>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_spritesWhere" inline="false">
+              <title name="PROPERTY">"tint"</title>
+              <value name="VALUE">
+                <block type="colour_picker">
+                  <title name="COLOUR">#3333ff</title>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_setProp" inline="true">
+              <title name="PROPERTY">"tint"</title>
+              <value name="SPRITE">
+                <block type="gamelab_secondTouched"/>
+              </value>
+              <value name="VAL">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ff0000</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_removeBehaviorSimple" inline="true">
+                  <value name="SPRITE">
+                    <block type="gamelab_secondTouched"/>
+                  </value>
+                  <value name="BEHAVIOR">
+                    <block type="gamelab_behavior_get">
+                      <title name="VAR">wandering quickly</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple" inline="true">
+                      <value name="SPRITE">
+                        <block type="gamelab_secondTouched"/>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_behavior_get">
+                          <title name="VAR">wandering slowly</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_console.log" inline="false">
+                          <value name="MESSAGE">
+                            <block type="text">
+                              <title name="TEXT">Infected</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="behavior_definition" editable="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+          </mutation>
+          <title name="NAME">wandering quickly</title>
+          <statement name="STACK">
+            <block type="controls_if" inline="false">
+              <value name="IF0">
+                <block type="logic_compare" inline="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="math_random_int" inline="true">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_changePropBy" inline="true">
+                  <title name="PROPERTY">"direction"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int" inline="true">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">-25</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward" inline="true">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" inline="false">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges" inline="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace" inline="false">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" inline="true">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int" inline="true">
+                                  <value name="FROM">
+                                    <block type="math_number">
+                                      <title name="NUM">135</title>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number">
+                                      <title name="NUM">225</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" editable="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <arg name="speed" type="Number"/>
+          </mutation>
+          <title name="NAME">wandering slowly</title>
+          <statement name="STACK">
+            <block type="controls_if" inline="false">
+              <value name="IF0">
+                <block type="logic_compare" inline="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="math_random_int" inline="true">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_changePropBy" inline="true">
+                  <title name="PROPERTY">"direction"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int" inline="true">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">-25</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward" inline="true">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" inline="false">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges" inline="true">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace" inline="false">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" inline="true">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int" inline="true">
+                                  <value name="FROM">
+                                    <block type="math_number">
+                                      <title name="NUM">135</title>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number">
+                                      <title name="NUM">225</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" editable="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+          </mutation>
+          <title name="NAME">spinning</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" inline="true">
+              <title name="PROPERTY">"rotation"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">2</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</GamelabJr>

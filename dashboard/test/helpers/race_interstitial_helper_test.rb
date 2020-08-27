@@ -32,6 +32,15 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     refute RaceInterstitialHelper.show?(@user)
   end
 
+  test 'do not show race interstitial to user if we do not have sign in information' do
+    SignIn.find_by(
+      user_id: @user.id,
+      sign_in_count: 1
+    ).delete
+
+    refute RaceInterstitialHelper.show?(@user)
+  end
+
   test 'do not show race interstitial to user accounts who signed in for the first time less than a week ago' do
     sign_in = SignIn.find_by(
       user_id: @user.id,

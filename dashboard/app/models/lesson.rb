@@ -40,6 +40,7 @@ class Lesson < ActiveRecord::Base
   self.table_name = 'stages'
 
   serialized_attrs %w(
+    overview
     visible_after
   )
 
@@ -48,23 +49,28 @@ class Lesson < ActiveRecord::Base
   # by a non-lockable lesson, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of :name, scope: :script_id
+  #validates_uniqueness_of :name, scope: :script_id TODO: Add this back after we have moved over to new key/name systems for lesson
+  validates_uniqueness_of :key, scope: :script_id
 
   include CodespanOnlyMarkdownHelper
 
   def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_empty_lesson(raw_lesson)
+      Lesson.prevent_blank_display_name(raw_lesson)
+      Lesson.prevent_changing_stable_i18n_key(script, raw_lesson)
 
-      lesson = script.lessons.detect {|s| s.name == raw_lesson[:name]} ||
+      lesson = script.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
-          name: raw_lesson[:name],
+          key: raw_lesson[:key],
           script: script
-        ) do |s|
-          s.relative_position = 0 # will be updated below, but cant be null
+        ) do |l|
+          l.name = "" # will be updated below, but cant be null
+          l.relative_position = 0 # will be updated below, but cant be null
         end
 
       lesson.assign_attributes(
+        name: raw_lesson[:name],
         absolute_position: (counters.lesson_position += 1),
         lesson_group: lesson_group,
         lockable: !!raw_lesson[:lockable],
@@ -79,6 +85,19 @@ class Lesson < ActiveRecord::Base
       Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
 
       lesson
+    end
+  end
+
+  def self.prevent_changing_stable_i18n_key(script, raw_lesson)
+    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
+
+      raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
+    end
+  end
+
+  def self.prevent_blank_display_name(raw_lesson)
+    if raw_lesson[:name].blank?
+      raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
     end
   end
 
@@ -142,13 +161,13 @@ class Lesson < ActiveRecord::Base
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
     else # script only has one lesson, use the script name
-      script.localized_title
+      script.title_for_display
     end
   end
 
   def localized_name
     if script.lessons.many?
-      I18n.t "data.script.name.#{script.name}.lessons.#{name}.name"
+      I18n.t "data.script.name.#{script.name}.lessons.#{key}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
@@ -194,8 +213,8 @@ class Lesson < ActiveRecord::Base
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         levels: cached_levels.map {|l| l.summarize(false)},
-        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{name}.description_student", default: '')),
-        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{name}.description_teacher", default: '')),
+        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
+        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: display_as_unplugged
       }
 
@@ -235,7 +254,7 @@ class Lesson < ActiveRecord::Base
   def summarize_for_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
-    summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{name}.name")
+    summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{key}.name")
     summary.freeze
   end
 

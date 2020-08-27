@@ -1,0 +1,28 @@
+name 'CSP - Asynch3 - Feedback in CI'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# What this looks like in practice
+
+## Using feedback as a tool to boost academic status
+When we as teachers intervene to recognize the contributions of an individual student in the class, we have the opportunity to boost the academic status of that student.  Ultimately, this gives us the ability to influence the sense of belonging in the classroom.
+
+Now that we have broadened and labeled these skills and abilities that students bring to the classroom, we can use this insight to influence students’ academic status in the classroom by providing public and specific feedback to students about their learning and learning process.  
+
+To do this we should provide feedback that is **public** (not just to the individual student), **specific**, and focused on **intellectual contributions**.
+
+## Qualities of influential feedback
+Let’s break down why each of those aspects of the feedback is important: 
+
+* **Public:** Feedback can change students’ expectations of themselves, but also other students’ expectations of them. Being public also communicates your expectations and values in the classroom. 
+* **Specific:** You want to communicate the things you value, being specific will help students understand what actions you want them to repeat. “That’s a great idea!” doesn’t explain what was great about the idea. 
+* **Intellectual:** Giving feedback to a student about how they are nice, friendly, cooperative, etc. is useful, but it doesn’t change their conception of themselves as computer science students. If we’re going to change what it means to be “smart” in computer science, we have to highlight how actions helped move learning forward. 
+
+Note: These qualities come from the work done by the <a href="https://www.mathagency.org/status-mindset-resources" target="blank">MIAC Network</a> and researchers working with <a href="https://complexinstruction.stanford.edu/" target="blank">Complex Instruction</a>.  This has been adapted for computer science classrooms in this module. 
+
+## Are you ready to try it out?!  
+In the next level, you will have a chance to think about how you can put your academic-status-influencing skills to use!
+
+MARKDOWN

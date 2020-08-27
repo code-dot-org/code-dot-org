@@ -14468,6 +14468,8 @@ fr:
           lessons:
             new stage:
               name: nouvelle phase
+            Tools:
+              name: Outils
             Debugging:
               name: Le Débogage
             Module 1:
@@ -14831,3 +14833,9 @@ fr:
           lessons:
             Module 1:
               name: Module 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Cours A
+            Course B:
+              name: Cours B

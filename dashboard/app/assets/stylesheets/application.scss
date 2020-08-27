@@ -139,7 +139,7 @@ img.video_thumbnail {
 
 .header-wrapper {
   padding-top: 0;
-  min-height: 60px;
+  min-height: 50px;
   position: relative;
   user-select: none;
 
@@ -345,20 +345,69 @@ img.video_thumbnail {
 }
 
 #header-banner {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 320px;
-  z-index: -1000;
-  background-position: 90% 10%;
   background-size: cover;
+  background-position: 90% 30%;
+  display: flex;
+  justify-content: center;
 
-  &.header-banner-short {
-    height: 180px;
+  .bannerContent {
+    max-width: 60%;
   }
 
-  &.header-banner-courses {
-    background-position: 75% 10%;
+  /*
+    The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
+    banner needs to be flipped horizontally so the background image empty space is on the right.
+   */
+  html[dir=rtl] & {
+    transform: scaleX(-1);
+    /*
+      Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
+      layout is not backwards
+     */
+    .bannerContentContainer {
+      transform: scaleX(-1);
+    }
+  }
+
+  #projects-page & {
+    margin-bottom: 16px;
+  }
+}
+
+#header-banner-overflow {
+  margin: 16px;
+}
+
+#header-banner, #header-banner-overflow {
+  .children {
+    margin-top: 16px;
+  }
+}
+
+.bannerContentContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 16px;
+}
+#courses-container {
+  #header-banner {
+    background-position: 75% 40%;
+  }
+
+  .announcements {
+    margin-top: 16px;
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+
+    .content {
+      width: 100%;
+      margin: 0 16px;
+    }
   }
 }
 
@@ -719,6 +768,7 @@ $small-footer-standard-width: 400px;
 .full_container {
   padding: 0 25px 25px 25px;
 }
+
 body.embedded_iframe {
   .full_container {
     padding-left: 0;
@@ -728,7 +778,6 @@ body.embedded_iframe {
 .responsive_full_container {
   padding: 0 10px 10px 10px;
 }
-
 
 $default-modal-width: 640px;
 
@@ -2311,7 +2360,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: auto;
+  margin: 25px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
@@ -3207,6 +3256,10 @@ code {
   }
 }
 
+.breadcrumb-header {
+  margin-top: 10px;
+}
+
 #survey-submission-thankyou {
   color: $purple;
   font-size: 18px;
@@ -3473,5 +3526,38 @@ h2.danger {
   /* mobile */
   @media screen and (min-width: 0px) and (max-width: 970px) {
     display: none;
+  }
+}
+
+#add-parent-email {
+  #remove-parent-email-link {
+    color: $red;
+  }
+}
+
+.immersive-reader-button {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  float: right;
+  margin-top: 1px !important;
+  height: 16px !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+
+  html[dir=rtl] & {
+    float: left;
+  }
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
+    position: relative;
+    z-index: 1000;
+  }
+
+  img {
+    filter: grayscale(1);
   }
 }

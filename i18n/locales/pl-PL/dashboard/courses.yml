@@ -4,13 +4,47 @@ pl:
     course:
       name:
         csp-2017:
+          assignment_family_title: Zasady informatyki
+          title: Zasady informatyki ('17-'18)
+          version_title: "'17-'18"
+          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu liderów w dziedzinie informatyki oraz przyciągania i angażowania tych osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu liderów w dziedzinie informatyki oraz przyciągania i angażowania tych osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
           description_short: Poznaj podstawowe pojęcia informatyczne.
+        csd-2017:
+          assignment_family_title: Odkrycia Informatyczne
+          title: Odkrycia Informatyczne (:17-'18)
+          version_title: "'17-'18"
+          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji, rozwiązywania problemów i rozrywki.
+          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji, rozwiązywania problemów i rozrywki.
+          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności tworzenia autentycznych artefaktów.
         allthethingscourse:
           title: allthethingscourse
           description_short: To jest kurs dla allthethings
           description_student: Ten kurs jest dla allthethings i ma dłuższe objaśnienie dla uczniów
           description_teacher: Ten kurs jest dla allthethings i ma dłuższe objaśnienie dla nauczycieli
+        csd-2018:
+          assignment_family_title: Odkrycia Informatyczne
+          title: Odkrycia Informatyczne ('18-'19)
+          version_title: "'18-'19"
+          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności tworzenia autentycznych artefaktów.
+          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji, rozwiązywania problemów i rozrywki.
+          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji, rozwiązywania problemów i rozrywki.
         csp-2018:
+          assignment_family_title: Zasady informatyki
+          title: Zasady informatyki ('18-'19)
+          version_title: "'18-'19"
           description_short: Poznaj podstawowe pojęcia informatyczne.
+          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu liderów w dziedzinie informatyki oraz przyciągania i angażowania tych osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu liderów w dziedzinie informatyki oraz przyciągania i angażowania tych osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
         csp-2019:
+          title: Zasady informatyki ('19-'20)
+          version_title: "'19-'20"
           description_short: Poznaj podstawowe pojęcia informatyczne.
+          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu liderów w dziedzinie informatyki oraz przyciągania i angażowania tych osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu liderów w dziedzinie informatyki oraz przyciągania i angażowania tych osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+        csd-2019:
+          title: Odkrycia Informatyczne ('19-'20)
+          version_title: "'19-'20"
+          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności tworzenia autentycznych artefaktów.
+          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji, rozwiązywania problemów i rozrywki.
+          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji, rozwiązywania problemów i rozrywki.
