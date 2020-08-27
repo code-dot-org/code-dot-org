@@ -2113,7 +2113,7 @@ ru-RU:
     будьте готовы к тому, что функциональность может быть нарушена.
   flappy_shortcode: взмах крыльев
   header_home: Домой
-  header_my_dashboard: Моя доска
+  header_my_dashboard: Моя Доска
   header_courses: курсы
   header_course_catalog: Каталог курсов
   header_project_gallery: Проекты
@@ -2176,7 +2176,7 @@ ru-RU:
   user_header_view_all: Смотреть все проекты...
   user_header_view_project_gallery: Смотреть галерею проектов
   user_header_view_my_projects: Показать мои проекты
-  view_all_sections: Показать все классы
+  view_all_sections: Показать все разделы
   view_section: Смотреть раздел
   view_named_section: Смотреть %{section_name}
   privacy_doc_explanation: Нажмите здесь для ознакомления с нашим документом о конфиденциальности,
@@ -2355,7 +2355,7 @@ ru-RU:
   hoc2018_mc_teacher_guide: Посмотреть руководство для учителей
   hoc2018_mc_minecraft_education: Обучение Minecraft
   hoc2018_mc_continue_learning: Продолжаем учиться вместе с Minecraft.
-  hoc2018_mc_go_to_mc_education: Перейти к обучению в Minecraft
+  hoc2018_mc_go_to_mc_education: Перейти к обучению Minecraft
   hoc2018_mc_short_description: Используй свою креативность и навыки решения проблем
     для поиска сокровищ и исследования подводных миров с помощью программирования.
   hoc2018_mc_short_description_shorter: Используй свою креативность и навыки решения
