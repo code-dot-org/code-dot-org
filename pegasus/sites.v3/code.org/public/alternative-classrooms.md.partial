@@ -23,9 +23,9 @@ social:
 
 <ul>
 <li><a href="https://docs.google.com/document/d/1g8loG0Lj1LLg3yAiKPIn82vXyaMTznRkIjQsIzt_LoM/edit?usp=sharing" target="_blank">Overview: Modifications for Common Teaching Practices</a></li>
-<li><a href="https://forum.code.org/t/modifications-for-virtual-and-socially-distanced-classrooms-csf/33082" target="_blank">Modifications for CSF</a></li>
-<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms-csd/33007" target="_blank">Modifications for CSD</a></li>
-<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005" target="_blank">Modifications for CSP</a></li>
+<li><a href="https://forum.code.org/t/modifications-for-virtual-and-socially-distanced-classrooms-csf/33082" target="_blank">Modifications for CS Fundamentals</a></li>
+<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms-csd/33007" target="_blank">Modifications for CS Discoveries</a></li>
+<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005" target="_blank">Modifications for CS Principles</a></li>
 </ul>
 
 </div>
@@ -38,7 +38,7 @@ We also highly recommend you watch the recorded webinar for a walkthrough of the
 
 <div class="col-60">
 {{ alt_classrooms_vid }}
-<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available only for CSP, and will be released for CSD in early September. To access the full video, <a href=
+<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available only for CS Principles, and will be released for CS Discoveries in early September. To access the full video, <a href=
 https://code.zoom.us/rec/play/vpN8JLivrjk3GoeTuQSDA_5_W9Toev6shyVPr6dfmByzAHMLN1v3N-MWYuG8VL58QfLYAPsIFFbnn54k?autoplay=true" target="_blank">click here</a>.</i>
 </div>
 
@@ -135,7 +135,7 @@ Click each question to expand and see the answers. Don’t see your question ans
 		<br>
 	</li>
 	<li>
-		<strong>Help & Tips</strong> (CSD and CSP only): The “Help & Tips” Tab (next to the Instructions area on a level) is available on many CSD and CSP levels and contains quick links to concept documentation and instructional videos.
+		<strong>Help & Tips</strong> (CS Discoveries and CS Principles only): The “Help & Tips” Tab (next to the Instructions area on a level) is available on many CS Discoveries and CS Principles levels and contains quick links to concept documentation and instructional videos.
 		<br>
 		<img src="/images/fit-351/athome/help_tips.png" alt="Help & Tips location in top navigation menu">
 		<br>
