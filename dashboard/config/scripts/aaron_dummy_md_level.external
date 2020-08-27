@@ -1,7 +1,6 @@
 name 'Aaron Dummy md level'
 title 'Aaron Dummy md level'
 description 'description here'
-associated_blocks 'studio'
 
 markdown <<MARKDOWN
 <xml><block type="gamelab_allSpritesWithAnimation" block-text="the sprite picker block"><title name="ANIMATION">"tumbleweed"</title></block></xml>
@@ -19,8 +18,4 @@ Set the background: <xml>
   <block type="studio_setBackground">
     <title name="VALUE">random</title>
   </block></xml>
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-
 MARKDOWN
