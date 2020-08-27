@@ -126,7 +126,7 @@ export default class LightSensor extends EventEmitter {
     // currentBufferWriteIndex points to the next spot to write, so historical
     // data starts at currentBufferWriteIndex - 1
     let endIndex = this.state.currentBufferWriteIndex - 1;
-    let startIndex = endIndex - indicesRange;
+    let startIndex = this.state.currentBufferWriteIndex - indicesRange;
 
     let sum = 0;
     for (let index = startIndex; index <= endIndex; index++) {
