@@ -373,10 +373,17 @@ pl:
       sections: Sekcje
       help_support: Pomoc i wsparcie
       report_bug: Zgłosić problem
+      report_abuse: Zgłoś nadużycie
       teacher_community: Społeczność nauczycieli
       professional_learning: Kształcenia Profesjonalne
       documentation: Dokumentacja
       tutorials: Samouczki
+      app_lab_documentation: Dokumentacja "App Lab"
+      app_lab_tutorials: Samouczki "App Lab"
+      game_lab_documentation: Dokumentacja "Game Lab"
+      game_lab_tutorials: Samouczki "Game Lab"
+      sprite_lab_documentation: Dokumentacja "Sprite Lab"
+      sprite_lab_tutorials: Samouczki "Sprite Lab"
       educate_overview: Przegląd edukatora
       educate_elementary: Szkoła podstawowa
       educate_middle: Gimnazjum
@@ -613,6 +620,8 @@ pl:
     no_primary_course: Wypróbuj kurs w Code Studio
     choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
     print_certificate: Drukuj Certyfikat
+  certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci
+    sponsorowania Twojej nauki."
   move_students:
     new_section_dne: Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź
       kod innej sekcji.
@@ -989,6 +998,19 @@ pl:
       mogą być niedostępne dla Twoich uczniów przed zaakceptowaniem zaktualizowanych
       postanowień.
     review_terms: Wyświetl zaktualizowane Warunki korzystania
+  donor_interstitial:
+    title: Twoje bezpłatne kursy CS są możliwe dzięki ...
+    subtitle: 'Chcielibyśmy podziękować hojnym darczyńcom, których wsparcie umożliwiło
+      sukces Code.org. Dążymy do tego, aby Code.org było bezpłatne dla szkół i uczniów
+      na całym świecie, dzięki nieustającej hojności naszych [darczyńców] (%{donors_url})!
+
+'
+    local_supporters: Lokalni zwolennicy
+    global_supporters: Globalni zwolennicy
+    support_codeorg_1: Każdy dolar przekazany Code.org daje szansę większej liczbie
+      uczniów.
+    support_codeorg_2: "[Przekaż darowiznę teraz] (%{donate_url}), aby wesprzeć Code.org."
+    get_started: Zacznij korzystać z Code.org
   school_info_interstitial:
     title: Chcemy przybliżyć Informatykę każdemu uczniowi - pomóż nam śledzić nasze
       postępy!
@@ -1357,6 +1379,8 @@ pl:
     true: Tak
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
+  page_not_found_description: Strona, której szukasz, nie istnieje pod tym adresem.
+    Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną.
   page_not_found_button: Powrót do strony domowej
   copy: Kopia/Kopiuj
   maker:

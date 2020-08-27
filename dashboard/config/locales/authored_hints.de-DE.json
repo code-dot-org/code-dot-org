@@ -815,13 +815,13 @@
           "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "OPD-K5-events-4": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "OPD-K5-events-5": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "OPD-K5-events-6": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "OPD-K5-forloops-1": {
           "courseF_bee_for1_a": "Zieh einen violetten Nummernblock in das leere Feld der ‚Wiederholen\\`-Schleife, um zu bestimmen, wie oft er wiederholt werden soll.",
@@ -3677,16 +3677,16 @@
           "courseC_artist_loops4a_b": "Dein Programm sollte so aussehen!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5a": {
-          "courseC_artist_loops5a_a": "Benutze die Drop-Down-Menüs auf den \\`Sticker zeichnen'-Bausteinen, um Deine Bilder zu ändern."
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5a_2018": {
-          "courseC_artist_loops5a_a": "Benutze die Drop-Down-Menüs auf den \\`Sticker zeichnen'-Bausteinen, um Deine Bilder zu ändern."
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5a_2019": {
-          "courseC_artist_loops5a_a": "Benutze die Drop-Down-Menüs auf den \\`Sticker zeichnen'-Bausteinen, um Deine Bilder zu ändern."
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5a_2020": {
-          "courseC_artist_loops5a_a": "Benutze die Drop-Down-Menüs auf den \\`Sticker zeichnen'-Bausteinen, um Deine Bilder zu ändern."
+          "courseC_artist_loops5a_a": "Verwende die Drop-Down-Menüs auf den \\`Sticker zeichnen' Blöcken, um die Bilder zu ändern!"
         },
         "courseC_artist_loops5b": {
           "courseC_artist_loops5b_a": "Verwende diesen Block, um das Muster deiner Linien zu bestimmen:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
@@ -4115,40 +4115,40 @@
           "courseC_flappy_events2_b": "Verbinde den `Stelle Geschwindigkeit ein` Block mit dem `wenn Ausführen` Block, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events3": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "courseC_flappy_events3_2018": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "courseC_flappy_events3_2019": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "courseC_flappy_events3_2020": {
-          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe, ob deine Bausteine mit den richtigen Ereignissen im Arbeitsbereich verbunden sind."
+          "courseC_flappy_events3_a": "Wenn etwas nicht richtig funktioniert, überprüfe im Arbeitsbereich, ob deine Blöcke mit den richtigen Ereignissen verbunden sind!"
         },
         "courseC_flappy_events4": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events4_2018": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events4_2019": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events4_2020": {
-          "courseC_flappy_events4_a": "Verbinde den `Spiel endet`-Baustein mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen."
+          "courseC_flappy_events4_a": "Verbinde den `Spiel beenden` Block mit `wenn ein Hindernis getroffen wird`, um diese Aufgabe zu lösen!"
         },
         "courseC_flappy_events5": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events5_2018": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events5_2019": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events5_2020": {
-          "courseC_flappy_events5_a": "Du musst den `Punkt machen`-Baustein verwenden, um diesen Level zu bestehen."
+          "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events6": {
           "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."

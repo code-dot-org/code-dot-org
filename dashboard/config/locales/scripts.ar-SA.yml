@@ -745,6 +745,8 @@ ar:
               name: استخدام المتغيرات في التطبيقات
             While Loops:
               name: حلقات بينما
+            Creating Functions with Parameters:
+              name: إنشاء دوال باستخدام المعلمات
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
