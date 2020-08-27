@@ -149,11 +149,11 @@ state-facts: true
           only
           = format_integer_with_commas(state_info[:ap_hispanic_i])
           - if state_info[:ap_hispanic_i] == 1
-            exam was taken by Hispanic or Latino students
+            exam was taken by Hispanic/Latino/Latina students
           - else
-            exams were taken by Hispanic or Latino students
+            exams were taken by Hispanic/Latino/Latina students
         - else
-          no exams were taken by Hispanic or Latino students;
+          no exams were taken by Hispanic/Latino/Latina students;
         - if state_info[:ap_hispanic_i] != 0
           = precede "(" do
             = format_integer_with_commas(state_info[:ap_csa_hispanic_i])
@@ -164,11 +164,11 @@ state-facts: true
           only
           = format_integer_with_commas(state_info[:ap_black_i])
           - if state_info[:ap_black_i] == 1
-            exam was taken by Black students
+            exam was taken by Black/African American students
           - else
-            exams were taken by Black students
+            exams were taken by Black/African American students
         - else
-          no exams were taken by Black students;
+          no exams were taken by Black/African American students;
         - if state_info[:ap_black_i] != 0
           = precede "(" do
             = format_integer_with_commas(state_info[:ap_csa_black_i])
@@ -179,11 +179,11 @@ state-facts: true
           only
           = format_integer_with_commas(state_info[:ap_native_american_i])
           - if state_info[:ap_native_american_i] == 1
-            exam was taken by American Indian or Alaska Native students
+            exam was taken by Native American/Alaskan students
           - else
-            exams were taken by American Indian or Alaska Native students
+            exams were taken by Native American/Alaskan students
         - else
-          no exams were taken by American Indian or Alaska Native students;
+          no exams were taken by Native American/Alaskan students;
         - if state_info[:ap_native_american_i] != 0
           = precede "(" do
             = state_info[:ap_csa_native_american_i]
@@ -194,11 +194,11 @@ state-facts: true
           only
           = format_integer_with_commas(state_info[:ap_hawaiian_i])
           - if state_info[:ap_hawaiian_i] == 1
-            exam was taken by Native Hawaiian or Pacific Islander students
+            exam was taken by Native Hawaiian/Pacific Islander students
           - else
-            exams were taken by Native Hawaiian or Pacific Islander students
+            exams were taken by Native Hawaiian/Pacific Islander students
         - else
-          no exams were taken by Native Hawaiian or Pacific Islander students.
+          no exams were taken by Native Hawaiian/Pacific Islander students.
         - if state_info[:ap_hawaiian_i] != 0
           = precede "(" do
             = state_info[:ap_csa_hawaiian_i]
@@ -387,7 +387,7 @@ state-facts: true
           %li
             = succeed "%" do
               = state_info[:urm_codeorg_i]
-            are underrepresented minority students (Black/African American, Hispanic/Latino, American Indian, or Hawaiian)
+            are students from marginalized racial and ethnic groups underrepresented in computer science (Black/African American, Hispanic/Latino/Latina, Native American/Alaskan, or Native Hawaiian/Pacific Islander)
       %li
         - if state_info[:professional_learning_partners_t] == 'none' && state_info[:num_affiliates_i] == 0
           Code.org has
@@ -612,7 +612,7 @@ state-facts: true
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            allow computer science to count for a core graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation from underrepresented minorities. Find out how other states allow computer science to count towards graduation at
+            allow computer science to count for a core graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation by students from marginalized racial and ethnic groups underrepresented in computer science. Find out how other states allow computer science to count towards graduation at
             = succeed "." do
               %a{href: "http://bit.ly/9policies"} http://bit.ly/9policies
         - elsif state_info[:cs_counts_t] == 'Other'
@@ -654,5 +654,5 @@ state-facts: true
       = succeed "." do
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
-      %p Launched in 2013, Code.org® is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+      %p Launched in 2013, Code.org® is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented youth. Our vision is that every student in every school should have the opportunity to learn computer science.
     %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup and Google research study Education Trends in the State of Computer Science in U.S. K-12 Schools for parent demand, the 2018 Computer Science Access Report for schools that offer computer science, and Code.org for its own courses, professional learning programs, and participation data.
