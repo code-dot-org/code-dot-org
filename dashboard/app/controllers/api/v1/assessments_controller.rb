@@ -24,7 +24,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # GET '/dashboardapi/assessments'
   def index
     # Only authorized teachers have access to locked question and answer data.
-    render status: :forbidden unless current_user.authorized_teacher?
+    render status: :forbidden unless current_user && current_user.authorized_teacher?
 
     assessment_script_levels = @script.get_assessment_script_levels
 
