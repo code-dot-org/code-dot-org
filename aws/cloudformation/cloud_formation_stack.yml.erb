@@ -464,6 +464,8 @@ Resources:
     Properties:
       Description: !Sub "Custom Chef attributes for ${AWS::StackName} CloudFormation stack"
       Name: !Sub "CfnStack/${AWS::StackName}/chef"
+      # Update this secret manually after the stack is created to customize Chef configuration.
+      # The value should never be changed in the stack itself, since it would clobber all other changes.
       SecretString: '{}'
 Outputs:
   DashboardURL:
