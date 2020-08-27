@@ -178,6 +178,8 @@ class ActivitiesController < ApplicationController
       @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
     if @script_level
+      # convert milliseconds to seconds
+      time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_MILESTONE].min
       @user_level, @new_level_completed = User.track_level_progress(
         user_id: current_user.id,
         level_id: @level.id,
@@ -186,6 +188,7 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == 'true',
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
+        time_spent: time_since_last_milestone
       )
 
       is_sublevel = !@script_level.levels.include?(@level)
@@ -204,7 +207,8 @@ class ActivitiesController < ApplicationController
           submitted: false,
           level_source_id: nil,
           pairing_user_ids: pairing_user_ids,
-          )
+          time_spent: time_since_last_milestone
+        )
       end
 
       # Make sure we don't log when @script_level is a multi-page assessment

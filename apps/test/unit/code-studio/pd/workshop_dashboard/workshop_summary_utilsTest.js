@@ -26,6 +26,14 @@ describe('Workshop Summary Utils', () => {
       useFoormSurvey('Workshop for Returning Teachers', new Date('2020-06-01')),
       'CSP for returning teachers uses Foorm'
     );
+    assert(
+      useFoormSurvey('Academic Year Workshop 1', new Date('2020-09-01')),
+      'Academic Year Workshops for use Foorm'
+    );
+    assert(
+      !useFoormSurvey('Workshop 1: Unit 3', new Date('2019-09-01')),
+      'Legacy Academic Year Workshops do not use Foorm'
+    );
   });
 
   it('shouldShowSurveyResults returns correct result', () => {

@@ -315,6 +315,7 @@ module LevelsHelper
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
+        use_google_blockly: view_options[:useGoogleBlockly],
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,

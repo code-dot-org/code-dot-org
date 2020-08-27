@@ -490,6 +490,7 @@ en:
     for_parents_and_guardians: "For Parents and Guardians"
     link_a_parent_email: "Link a parent/guardian email address to this account to stay updated on your child’s progress and projects. You will also be able to use this email address for password recovery."
     parent_guardian_email_label: "Parent/guardian email"
+    remove_parent_email_label: "Remove"
     none: "None"
     only_one_parent_email_supported_warning: "Note: we are only able to support one parent/guardian email address per student account at this time."
     encrypted: "encrypted"
@@ -809,6 +810,14 @@ en:
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     reminder_desc_markdown: We have updated our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}). Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.
     review_terms: "Review updated terms"
+  donor_interstitial:
+    title: "Your free CS courses are made possible by..."
+    subtitle: "We’d like to thank the generous donors whose support has made Code.org’s success possible. We are committed to keeping Code.org free for schools and students, globally, thanks to the continued generosity of our [donors](%{donors_url})!"
+    local_supporters: "Local Supporters"
+    global_supporters: "Global Supporters"
+    support_codeorg_1: "Every dollar given to Code.org brings opportunity to more students."
+    support_codeorg_2: "[Donate now](%{donate_url}) to support Code.org."
+    get_started: "Get started on Code.org"
   school_info_interstitial:
     title: "We want to bring Computer Science to every student - help us track our progress!"
     message: "Please enter your school information below."
@@ -1152,3 +1161,6 @@ en:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
     not_now: "Not now"
+  behaviors:
+    this_sprite: "this sprite"
+  unit_prefix: "Unit %{n}"

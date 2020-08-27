@@ -512,8 +512,12 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
     'layouts/_school_info_interstitial':
       './src/sites/studio/pages/layouts/_school_info_interstitial.js',
+    'layouts/_small_footer':
+      './src/sites/studio/pages/layouts/_small_footer.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_thank_donors_interstitial':
+      './src/sites/studio/pages/layouts/_thank_donors_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -570,6 +574,8 @@ describe('entry tests', () => {
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
+    'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
+    'lessons/show': './src/sites/studio/pages/lessons/show.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -712,6 +718,7 @@ describe('entry tests', () => {
     // The blockly dependency is huge, so we currently control when it is
     // loaded explicitly via script tags rather than via normal imports.
     blockly: './src/sites/studio/pages/blockly.js',
+    googleblockly: './src/sites/studio/pages/googleblockly.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
@@ -1127,7 +1134,7 @@ describe('entry tests', () => {
           '/*' +
           item +
           '*/ ' +
-          'module.exports = window.blockly.' +
+          'module.exports = window.locales.' +
           localeType +
           ';';
         fs.writeFileSync(path.join(current, item + '.js'), localeString);

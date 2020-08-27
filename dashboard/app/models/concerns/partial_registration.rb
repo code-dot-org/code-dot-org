@@ -7,62 +7,54 @@ require 'cdo/shared_cache'
 module PartialRegistration
   extend ActiveSupport::Concern
 
-  USER_ATTRIBUTES_SESSION_KEY = 'devise.user_attributes'
-  OAUTH_PARAMS_TO_STRIP = %w(oauth_token oauth_refresh_token)
+  SESSION_KEY = 'partial_registration'
 
   module ClassMethods
-    def new_from_partial_registration(session)
+    def new_from_partial_registration(session, &block)
       raise 'No partial registration was in progress' unless PartialRegistration.in_progress? session
-      new(session[USER_ATTRIBUTES_SESSION_KEY]) do |user|
-        cache = CDO.shared_cache
-        OAUTH_PARAMS_TO_STRIP.each do |param|
-          next if user.send(param)
-          # Grab the oauth token from memcached if it's there
-          cache_key = PartialRegistration.cache_key(param, user)
-          user.send("#{param}=", cache.read(cache_key)) if cache
-        end
-        yield user if block_given?
-      end
+      cache_key = session[SESSION_KEY]
+      json = CDO.shared_cache.read(cache_key)
+      attributes = JSON.parse(json)
+      new(attributes, &block)
     end
   end
 
   def self.in_progress?(session)
-    !!session[USER_ATTRIBUTES_SESSION_KEY]
+    session[SESSION_KEY] && CDO.shared_cache.exist?(session[SESSION_KEY])
   end
 
   def self.persist_attributes(session, user)
-    user = user.dup
-    # Because some oauth tokens are quite large, we strip them from the session
-    # variables and pass them through via the cache instead - they are pulled out again
-    # in new_from_partial_registration
-    cache = CDO.shared_cache
-    if cache
-      OAUTH_PARAMS_TO_STRIP.each do |param|
-        param_value = user.attributes['properties'].delete(param)
-        cache_key = PartialRegistration.cache_key(param, user)
-        cache.write(cache_key, param_value)
-      end
-    end
-    session[USER_ATTRIBUTES_SESSION_KEY] = user.attributes
+    # Push the potential user's attributes into our application cache.
+    cache_key = PartialRegistration.cache_key(user)
+    CDO.shared_cache.write(cache_key, user.attributes.compact.to_json)
+
+    # Put the cache key into the session, to
+    # 1. track that a partial registration is in progress
+    # 2. retrieve the attributes later when we're ready to persist the user
+    session[SESSION_KEY] = cache_key
+  end
+
+  def self.delete(session)
+    # On production, it's unsafe to delete(nil) from the cache, so check that
+    # we actually have a partial registration before we try to clear it.
+    return unless in_progress? session
+    CDO.shared_cache.delete(session[SESSION_KEY])
+    session.delete(SESSION_KEY)
   end
 
   def self.get_provider(session)
-    in_progress?(session) ? session[USER_ATTRIBUTES_SESSION_KEY]['provider'] : nil
+    # Extract the provider name from the cache key to avoid actually
+    # interacting with the cache or doing deserialization.
+    # Assumption: Provider names will not contain hyphens
+    cache_key = session[SESSION_KEY]
+    /^([^-]+)-.+-partial-sso$/.match(cache_key)&.captures&.first
   end
 
-  def self.cancel(session)
-    provider = get_provider(session) || 'email'
-    SignUpTracking.log_cancel_finish_sign_up(session, provider)
-    SignUpTracking.end_sign_up_tracking(session)
-    session.delete(USER_ATTRIBUTES_SESSION_KEY)
-    session
-  end
-
-  def self.cache_key(param_name, user)
+  def self.cache_key(user)
     if user.uid.present?
-      "#{user.provider}-#{user.uid}-#{param_name}"
+      "#{user.provider}-#{user.uid}-partial-sso"
     else
-      "#{User.hash_email(user.email)}-#{param_name}"
+      "#{User.hash_email(user.email)}-partial-email"
     end
   end
 end

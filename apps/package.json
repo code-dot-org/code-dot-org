@@ -28,7 +28,6 @@
     "start:gamelab": "DEV=1 grunt dev --app=gamelab;",
     "start:craft": "DEV=1 grunt dev --app=craft --watch-notify;",
     "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server .",
-    "build:stats": "node ./script/build-stats.js",
     "prestorybook": "curl -o build/package/css/application.css http://localhost-studio.code.org:3000/assets/application.css || curl -o build/package/css/application.css https://code-dot-org.github.io/cdo-styleguide/css/application.css",
     "storybook": "start-storybook -p 9001 -s build/package/,../dashboard/public,../",
     "storybook:deploy": "./script/deploy-storybook.sh"
@@ -49,7 +48,7 @@
     "@babel/preset-react": "^7.0.0",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "3.5.26",
+    "@code-dot-org/blockly": "3.5.29",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "1.0.1",
@@ -219,6 +218,8 @@
   },
   "dependencies": {
     "@code-dot-org/js-interpreter": "1.3.13",
+    "@microsoft/immersive-reader-sdk": "^1.1.0",
+    "blockly": "3.20200625.2",
     "crypto-js": "^3.1.9-1",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "filesaver.js": "0.2.0",

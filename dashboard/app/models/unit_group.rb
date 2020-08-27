@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: courses
+# Table name: unit_groups
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
@@ -10,13 +10,12 @@
 #
 # Indexes
 #
-#  index_courses_on_name  (name)
+#  index_unit_groups_on_name  (name)
 #
+
 require 'cdo/script_constants'
 
 class UnitGroup < ApplicationRecord
-  self.table_name = 'courses'
-
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
@@ -44,6 +43,7 @@ class UnitGroup < ApplicationRecord
   serialized_attrs %w(
     teacher_resources
     has_verified_resources
+    has_numbered_units
     family_name
     version_year
     is_stable
@@ -87,6 +87,9 @@ class UnitGroup < ApplicationRecord
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
     unit_group.properties = hash['properties']
     unit_group.save!
+
+    CourseOffering.add_course_offering(unit_group)
+    unit_group
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -269,7 +272,7 @@ class UnitGroup < ApplicationRecord
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
-    valid_courses.any? {|course| course.id == course_id.to_i}
+    valid_courses.any? {|unit_group| unit_group.id == course_id.to_i}
   end
 
   # @param user [User]
@@ -295,12 +298,14 @@ class UnitGroup < ApplicationRecord
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
+      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
-        include_stages = false
-        script.summarize(include_stages, user).merge!(script.summarize_i18n(include_stages))
+        include_lessons = false
+        script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
+      has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
       show_assign_button: assignable?(user)
     }
@@ -535,9 +540,9 @@ class UnitGroup < ApplicationRecord
 
   def self.course_cache_from_db
     {}.tap do |cache|
-      UnitGroup.with_associated_models.find_each do |course|
-        cache[course.name] = course
-        cache[course.id.to_s] = course
+      UnitGroup.with_associated_models.find_each do |unit_group|
+        cache[unit_group.name] = unit_group
+        cache[unit_group.id.to_s] = unit_group
       end
     end
   end
@@ -611,4 +616,10 @@ class UnitGroup < ApplicationRecord
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_courses.any? {|unit_group| unit_group.has_pilot_experiment?(user)}
   end
+
+  # rubocop:disable Naming/PredicateName
+  def is_course?
+    return !!family_name && !!version_year
+  end
+  # rubocop:enable Naming/PredicateName
 end

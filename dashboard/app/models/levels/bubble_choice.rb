@@ -63,13 +63,19 @@ class BubbleChoice < DSLDefined
     i.present? ? i + 1 : nil
   end
 
+  # @override
+  def all_child_levels
+    sublevels
+  end
+
   # Summarizes the level.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
   # previous/next levels, and script will be included in the summary.
   # @param [Integer] user_id. Optional. If provided, the "perfect" field will be calculated
   # in the sublevel summary.
   # @return [Hash]
-  def summarize(script_level: nil, user_id: nil)
+  def summarize(script_level: nil, user: nil)
+    user_id = user ? user.id : nil
     summary = {
       display_name: display_name,
       description: description,
@@ -81,12 +87,12 @@ class BubbleChoice < DSLDefined
 
     if script_level
       previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
-      next_level_url = script_level.next_level ? build_script_level_url(script_level.next_level) : nil
+      redirect_url = script_level.next_level_or_redirect_path_for_user(user, nil, true)
 
       summary.merge!(
         {
           previous_level_url: previous_level_url,
-          next_level_url: next_level_url,
+          redirect_url: redirect_url,
           script_url: script_url(script_level.script)
         }
       )

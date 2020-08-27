@@ -79,7 +79,7 @@ If you create an activity or tutorial that is designed for special needs student
 
 The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
 
-- Anybody can learn computer science - regardless of age, gender, or race. 
+- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
 - Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
 - Encourage students to create something unique that can be shared with parents/friends or online. 
 
@@ -120,6 +120,7 @@ What you’ll need:
 	* 1 hour only
 	* 1 hour with follow-on course
 	* 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 	
 #### Additional things you’ll need when submitting Lesson Plans
 
@@ -171,7 +172,7 @@ A diverse committee of computer science educators will rank submissions based on
 The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
 
 - High production quality
-- Promote learning by all demographic groups (esp. under-represented groups)
+- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
 - Educational (teaches computer science concepts well)
 - Fun and engaging
 - Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)

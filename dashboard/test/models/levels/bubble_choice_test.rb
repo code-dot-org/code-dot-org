@@ -110,15 +110,14 @@ DSL
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     assert_nil summary[:previous_level_url]
-    assert_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
 
     @script_level.stubs(:previous_level).returns(create(:script_level))
-    @script_level.stubs(:next_level).returns(create(:script_level))
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     refute_nil summary[:previous_level_url]
-    refute_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
   end
 
@@ -250,5 +249,12 @@ DSL
 
     expected_names = %w(sublevel_1_copy sublevel_2_copy sublevel_3_copy)
     assert_equal expected_names, bubble_choice_copy.sublevels.map(&:name)
+  end
+
+  test 'all_descendant_levels includes template levels of sublevels' do
+    template = create :artist, name: 'template'
+    artist = create :artist, name: 'artist', properties: {project_template_level_name: template.name}
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', sublevels: [artist]
+    assert_equal [artist.name, template.name], bubble_choice.all_descendant_levels.map(&:name)
   end
 end
