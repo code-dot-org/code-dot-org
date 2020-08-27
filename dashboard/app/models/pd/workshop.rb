@@ -72,9 +72,6 @@ class Pd::Workshop < ActiveRecord::Base
     # subject-specific suppression of reminder emails. This is functionally
     # extremely similar (identical?) to the logic currently implemented
     # by this serialized attribute.
-    # See also WorkshopMailer.check_should_send, which suppresses ALL email
-    # for workshops with a virtual subject (note, this is different than the
-    # virtual serialized attribute)
     'suppress_email'
   ]
 
@@ -431,11 +428,9 @@ class Pd::Workshop < ActiveRecord::Base
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
-  # Note that this is one of (at least) three mechanisms we use to suppress
-  # email in various cases -- see the serialized attribute 'suppress_email' and
-  # WorkshopMailer.check_should_send, which suppresses ALL email
-  # for workshops with a virtual subject (note, this is different than the
-  # virtual serialized attribute)
+  # Note that this is one of (at least) two mechanisms we use to suppress
+  # email in various cases -- see the serialized attribute 'suppress_email'
+  # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
   def suppress_reminders?
     [
@@ -806,7 +801,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def pre_survey?
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    # CSP for returning teachers does not have a pre-survey. Academic year workshops have multiple pre-survey options,
+    # so we do not show any to teachers ourselves.
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 
@@ -830,7 +827,7 @@ class Pd::Workshop < ActiveRecord::Base
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
     pre_survey_course.default_scripts.map do |script|
-      unit_name = script.localized_title
+      unit_name = script.title_for_display
       stage_names = script.lessons.where(lockable: false).pluck(:name)
       lesson_names = stage_names.each_with_index.map do |stage_name, i|
         "Lesson #{i + 1}: #{stage_name}"
@@ -872,9 +869,15 @@ class Pd::Workshop < ActiveRecord::Base
 
   def last_valid_day
     last_day = sessions.size
-    unless VALID_DAYS[CATEGORY_MAP[subject]].include? last_day
+
+    # If we don't have Jotform survey constants set up for this workshop,
+    # return the session size to avoid erroring out in the next step.
+    return last_day if VALID_DAYS[CATEGORY_MAP[subject]].nil?
+
+    unless VALID_DAYS[CATEGORY_MAP[subject]].include?(last_day)
       last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
     end
+
     last_day
   end
 

@@ -4,7 +4,7 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-# Introducing the Concept of Lists in CS Principles
+# Introducing the concept of lists in CS Principles
 **Goals:** The purpose of this section is to understand how the concept of a list is presented to students in the Code.org curriculum. *(Estimated time: ~55 minutes.)*
 
 ## Context
@@ -15,10 +15,10 @@ As you do these activities, consider how the content connects between units and 
 
 ## Do this: 
 
-1. Read the unit landing page for [Unit 4](https://curriculum.code.org/csp-20/unit4/). This will help you understand what experiences students will have leaving Unit 4 and entering into Unit 5.
-2. Read the unit landing page for [Unit 5](https://curriculum.code.org/csp-20/unit5/). This will give you context for the lessons you will see over the course of the next two modules.
-3. Read the [U5L1 - Lists Explore lesson plan](https://curriculum.code.org/csp-20/unit5/1/).  As you read the lesson plan, match the lesson plan with the slides for the lesson.
-4. Watch the [U5L1 - Lists Explore video]().  This is found under the “Lesson Modifications” in the lesson plan. We recommend using the [digital manipulatives](https://docs.google.com/presentation/d/1i4f64rzZlaL_OxaNtXgfWcdp4hFcWXgsUvBClhTsHyM/edit?usp=sharing) to get a better feel for how students will engage in the concept of a list. (See the note below about the purpose behind this video). 
+1. Read the unit landing page for <a href="https://curriculum.code.org/csp-20/unit4/" target="blank">Unit 4</a>. This will help you understand what experiences students will have leaving Unit 4 and entering into Unit 5.
+2. Read the unit landing page for <a href="https://curriculum.code.org/csp-20/unit5/" target="blank">Unit 5</a>. This will give you context for the lessons you will see over the course of the next two modules.
+3. Read the <a href="https://curriculum.code.org/csp-20/unit5/1/" target="blank">U5L1 - Lists Explore lesson plan</a>.  As you read the lesson plan, match the lesson plan with the slides for the lesson.
+4. Watch the <a href="code.org" target="blank">U5L1 - Lists Explore video</a>[]().  This is found under the “Lesson Modifications” in the lesson plan. We recommend using the <a href="https://docs.google.com/presentation/d/1i4f64rzZlaL_OxaNtXgfWcdp4hFcWXgsUvBClhTsHyM/edit?usp=sharing" target="blank">digital manipulatives</a> to get a better feel for how students will engage in the concept of a list. (See the note below about the purpose behind this video). 
 5. When finished with the above tasks, complete the two following reflections in this module.
 
 *Note: This video is included as a “Lesson Modification” for teachers who are unable to teach in person.  If you are able to teach in-person or in a virtual synchronous environment, we do not recommend showing the video to students but rather having students engage with the content in a hands-on way as described in the original lesson plan.*

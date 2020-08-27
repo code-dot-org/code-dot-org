@@ -2360,7 +2360,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: auto;
+  margin: 25px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
@@ -3418,6 +3418,10 @@ h2.danger {
   text-align: center;
 }
 
+.foorm-adjust-dropdown-height {
+  height: calc(2em + 10px) !important;
+}
+
 #parent-email-banner {
   position: fixed;
   bottom: 0;
@@ -3526,6 +3530,12 @@ h2.danger {
   /* mobile */
   @media screen and (min-width: 0px) and (max-width: 970px) {
     display: none;
+  }
+}
+
+#add-parent-email {
+  #remove-parent-email-link {
+    color: $red;
   }
 }
 

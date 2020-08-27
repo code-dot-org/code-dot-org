@@ -691,7 +691,7 @@ class Script < ActiveRecord::Base
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
       where("properties -> '$.version_year' >= '2019'").
-      map {|script| [script.localized_title, script.name]}
+      map {|script| [script.title_for_display, script.name]}
   end
 
   def has_standards_associations?
@@ -944,7 +944,7 @@ class Script < ActiveRecord::Base
 
     script.generate_plc_objects
 
-    CourseVersion.add_course_version(script)
+    CourseOffering.add_course_offering(script)
 
     script
   end
@@ -988,7 +988,8 @@ class Script < ActiveRecord::Base
     new_properties = {
       is_stable: false,
       tts: false,
-      script_announcements: nil
+      script_announcements: nil,
+      is_course: false
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
@@ -1207,7 +1208,7 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
-      title: localized_title,
+      title: title_for_display,
       description: localized_description,
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
@@ -1310,13 +1311,13 @@ class Script < ActiveRecord::Base
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
   end
 
-  def summarize_i18n(include_lessons=true)
+  def summarize_i18n_for_edit(include_lessons=true)
     data = %w(title description description_short description_audience).map do |key|
-      [key.camelize(:lower), I18n.t("data.script.name.#{name}.#{key}", default: '')]
+      [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
     if include_lessons
-      data['stageDescriptions'] = lessons.map do |lesson|
+      data[:stageDescriptions] = lessons.map do |lesson|
         {
           key: lesson.key,
           name: lesson.name,
@@ -1325,6 +1326,12 @@ class Script < ActiveRecord::Base
         }
       end
     end
+    data
+  end
+
+  def summarize_i18n_for_display(include_lessons=true)
+    data = summarize_i18n_for_edit(include_lessons)
+    data[:title] = title_for_display
     data
   end
 
@@ -1364,8 +1371,18 @@ class Script < ActiveRecord::Base
     I18n.t "data.script.name.#{name}.title"
   end
 
+  def title_for_display
+    title = localized_title
+    has_prefix = unit_group&.has_numbered_units
+    return title unless has_prefix
+
+    position = unit_group_units&.first&.position
+    prefix = I18n.t "unit_prefix", n: position
+    "#{prefix} - #{title}"
+  end
+
   def localized_assignment_family_title
-    I18n.t("data.script.name.#{name}.assignment_family_title", default: localized_title)
+    I18n.t("data.script.name.#{name}.assignment_family_title", default: title_for_display)
   end
 
   def localized_description

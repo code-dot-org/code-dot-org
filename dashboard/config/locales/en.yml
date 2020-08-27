@@ -490,6 +490,7 @@ en:
     for_parents_and_guardians: "For Parents and Guardians"
     link_a_parent_email: "Link a parent/guardian email address to this account to stay updated on your child’s progress and projects. You will also be able to use this email address for password recovery."
     parent_guardian_email_label: "Parent/guardian email"
+    remove_parent_email_label: "Remove"
     none: "None"
     only_one_parent_email_supported_warning: "Note: we are only able to support one parent/guardian email address per student account at this time."
     encrypted: "encrypted"
@@ -1162,3 +1163,4 @@ en:
     not_now: "Not now"
   behaviors:
     this_sprite: "this sprite"
+  unit_prefix: "Unit %{n}"

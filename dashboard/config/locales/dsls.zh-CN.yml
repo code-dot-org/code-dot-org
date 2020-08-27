@@ -75,6 +75,14 @@ zh-CN:
         questions:
         - text: 根据游戏规则，哪一组卡片的得分是正确的？
         title: 选择题
+        teacher_markdown: |-
+          ##老师们：
+
+          学生们也许会误解如何做，而这里是一个很好的改正的机会。假如学生认为这里**没有**正确的答案，他们也许有一个对条件语的误解。
+
+          这是一个能帮忙解释的视频：
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -5125,6 +5133,15 @@ zh-CN:
 
           ### 接下来就要试试了！
 
+        teacher_markdown: "#### 事实：\n\n这节课有很多要学，但是许多关于事件是如何在应用实验室中运行是对于这节课是完全不需要的，假如学生对编程在应用实验室中完成的，在这些重点上要清楚：\n\n*没有“画”永久循环\n*`onEvent()`（当事件发生时）模块需要：\n
+          \   *元素标识\n    *一个事件（如“······被点击”或“鼠标在······”）\n    *程序在某事件发生时（这种句子叫做匿名函数，由绿色模块表示）\n
+          \   *在`onEvent()`（当事件发生时）中的程序会在任何时间运行，只要驱动性的事件发生。\n\n####与游戏实验室对比：\n\n在游戏实验室中，我们会用以下方式检测按钮是否被点击并反应：\n\n
+          \   function draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t//
+          Do something\n       \t}\n    }\n\n在应用实验室中,我们会用本方式检测假如一个按钮是否被点击并做什么作为反应：\n\n
+          \   onEvent(\"button\", \"click\", function () {\n    \t// Do something\n
+          \   });\n\n在应用实验室示例中，函数是另一种在onEvent（当事件发生时）函数的成分，只是成分必须是函数本身。我们可以另外建立一个函数然后这样写：\n\n
+          \   function doSomething() {\n    \t// Do something\n    }\n    \n    onEvent(\"button\",
+          \"click\", doSomething);\n\n\n在第二个示例中，注意我们有给予函数`doSomething`（做什么）到`onEvent`（当事件发生时）函数，我们不加入闭合符带后面。这是因为我们没有设定函数作为物品。"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # 远离网络欺凌
@@ -7339,10 +7356,33 @@ zh-CN:
         title: 计算机科学发现快速问卷！
       csf_be_a_super_digital_citizen:
         content1: 描述
+        markdown: |-
+          # 超级电子公民
+
+          ## 我们应该在有网络霸凌时怎么做？
       csf_password_power-up:
         content1: 描述
+        markdown: |-
+          # 加强你的密码
+          ## 密码小窍门：
+
+          *使用你记得住的**短语**。
+          *只有**家长**能知道你的密码。
+          *绝对不能使用你的**私人资料**作为密码。
+          *密码必须要是**八字节**长。
+          *在密码中用字母，数字和**符号**。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: 描述
+        markdown: |
+          # STOP 意思
+
+          ## 假如有人在网上对你不友好，你应该怎么做？
+          ***S**离开（Step away）
+          ***T**告诉可信的成年人 （Tell a trusted adult）
+          ***O**
+          ***P**暂停然后在网上想   (Pause and thing online
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           我的网上邻居
@@ -7403,3 +7443,16 @@ zh-CN:
         markdown: "# 在电脑实验室中表现\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\n前往教学计划\n</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
           btn-large btn-primary next-stage submitButton\">继续</a>\n"
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # 个人资料和隐私
+
+          ## 你可以在网上分享什么信息？
+      courseD_EOC_2020:
+        description: 你已经完成了课程D！点击以创建项目。
+      courseE_EOC_2020:
+        description: 你已经完成了课程E！点击以创建项目。
+      csf_digital_trails:
+        markdown: |-
+          # 顺着电子线索
+          ##什么东西是可以在你的电子足迹
