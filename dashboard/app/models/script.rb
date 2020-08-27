@@ -808,14 +808,6 @@ class Script < ActiveRecord::Base
     levels.each(&:tts_update)
   end
 
-  def hint_prompt_enabled?
-    [
-      Script::COURSE2_NAME,
-      Script::COURSE3_NAME,
-      Script::COURSE4_NAME
-    ].include?(name)
-  end
-
   def hide_solutions?
     name == 'algebra'
   end
