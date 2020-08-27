@@ -1238,7 +1238,7 @@
          "value": "something_other",
          "text": "A different model, not listed above"
         }
-       ],
+       ]
       },
       {
        "type": "checkbox",
@@ -1318,7 +1318,7 @@
        "value": "something_other",
        "text": "A teaching environment not listed above"
       }
-     ],
+     ]
     },
     {
      "type": "radiogroup",
