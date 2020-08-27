@@ -64,7 +64,10 @@ export default class ActivityDescriptionCard extends Component {
             <span style={styles.title}>Title:</span>
             <input defaultValue={this.props.activitySection.title} />
             <OrderControls
-              name={this.props.activitySection.title}
+              name={
+                this.props.activitySection.title ||
+                this.props.activitySection.key
+              }
               move={() => {
                 console.log('Move Activity Description Card');
               }}

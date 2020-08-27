@@ -5,6 +5,7 @@ import {borderRadius} from './constants';
 import OrderControls from './OrderControls';
 import ActivityDescriptionCard from './ActivityDescriptionCard';
 import ProgressionCard from './ProgressionCard';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   groupHeader: {
@@ -44,6 +45,7 @@ const styles = {
     marginRight: 10
   },
   labelAndInput: {
+    marginLeft: 5,
     display: 'flex',
     alignItems: 'center'
   }
@@ -54,12 +56,28 @@ export default class ActivityCard extends Component {
     activity: PropTypes.object.isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      collapsed: false
+    };
+  }
+
   render() {
     const {activity} = this.props;
 
     return (
       <div>
         <div style={styles.groupHeader}>
+          <FontAwesome
+            icon={this.state.collapsed ? 'expand' : 'compress'}
+            onClick={() => {
+              this.setState({
+                collapsed: !this.state.collapsed
+              });
+            }}
+          />
           <label style={styles.labelAndInput}>
             <span style={styles.label}>{`Activity:`}</span>
             <input defaultValue={activity.displayName} style={styles.input} />
@@ -81,7 +99,7 @@ export default class ActivityCard extends Component {
             }}
           />
         </div>
-        <div style={styles.groupBody}>
+        <div style={styles.groupBody} hidden={this.state.collapsed}>
           {activity.activitySections.map((block, index) => {
             if (block.type === 'description') {
               return (

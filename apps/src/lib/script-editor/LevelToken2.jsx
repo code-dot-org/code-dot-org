@@ -100,7 +100,11 @@ export default class LevelToken2 extends Component {
         <span style={styles.levelTokenName}>
           <span style={styles.levelArea}>
             <span style={styles.titleAndBubble}>
-              <ProgressBubble hideToolTips={true} level={this.props.level} />
+              <ProgressBubble
+                hideToolTips={true}
+                level={this.props.level}
+                disabled={false}
+              />
               <span style={styles.levelTitle}>
                 {this.props.level.displayName}
               </span>

@@ -181,6 +181,7 @@ export default storybook => {
           handleConfirm={() => {
             console.log('Close Dialog');
           }}
+          currentLevels={activity.activitySections[2].levels}
         />
       )
     }

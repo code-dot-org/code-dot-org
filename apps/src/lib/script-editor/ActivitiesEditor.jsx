@@ -4,7 +4,7 @@ import Activities from './Activities';
 
 export default class ActivitiesEditor extends Component {
   static propTypes = {
-    activities: PropTypes.object
+    activities: PropTypes.array
   };
 
   render() {
