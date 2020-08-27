@@ -88,6 +88,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
     const showGoogleClassroomButton =
       section &&
+      userProviders &&
       section.loginType === OAuthSectionTypes.google_classroom &&
       userProviders.includes(OAuthProviders.google);
     const courseId =
