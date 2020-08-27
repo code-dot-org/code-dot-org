@@ -135,10 +135,11 @@ OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENV
 sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s -- $OPTIONS"
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=<%=daemon ? 'SUCCESS' : 'FAILURE'%>
 
-# Bash script that invokes chef-client with fetched config attributes and provided run-list.
-CHEF_CLIENT_BIN=<%=CHEF_CLIENT_BIN%>
-cat <<SH > $CHEF_CLIENT_BIN
+CHEF_CDO_APP=<%=CdoApp::CHEF_BIN%>
+cat <<SH > $CHEF_CDO_APP
 #!/bin/bash
+# Provisions the Code.org application using Chef.
+# Invokes chef-client with fetched config attributes and provided run-list.
 CHEF_CONFIG=\$(mktemp)
 aws secretsmanager get-secret-value \\
   --region $REGION \\
@@ -153,9 +154,9 @@ aws secretsmanager get-secret-value \\
   --json-attributes \$CHEF_CONFIG
 rm -f "\$CHEF_CONFIG"
 SH
-chmod +x $CHEF_CLIENT_BIN
+chmod +x $CHEF_CDO_APP
 # Run chef-client as root with SUDO_USER set to `ubuntu`.
-sudo -u ubuntu bash -c "sudo $CHEF_CLIENT_BIN"
+sudo -u ubuntu bash -c "sudo $CHEF_CDO_APP"
 
 <% unless daemon -%>
 # Workaround for version-controlled files modified by seed.
