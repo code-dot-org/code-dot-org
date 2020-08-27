@@ -9013,7 +9013,8 @@ mr:
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: सर्व आधुनिक ब्राउझर्स, अॅन्ड्रोइड टॅब्लेट,
+    आयपॅड, अॅन्ड्रोइड फोन, आयफोन
   tutorial_bananatales_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
