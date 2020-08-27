@@ -1636,9 +1636,14 @@ class Script < ActiveRecord::Base
     ScriptLessons::ScriptSerializer.new(self).as_json(include: '**')
   end
 
+  def self.update_lessons_from_seed_files(filenames)
+    lessons_to_import = filenames.map {|filename| Script.lessons_to_import_from_seed_file(filename)}.flatten
+    Lesson.import! lessons_to_import, on_duplicate_key_update: :all
+  end
+
   LessonFullKey = Struct.new(:key, :lesson_group_key)
 
-  def self.update_lessons_from_seed_file(filename)
+  def self.lessons_to_import_from_seed_file(filename)
     script_lessons_hash = JSON.parse(File.read(filename))
 
     # We take some care here to minimize the number of SQL queries required.
@@ -1669,6 +1674,6 @@ class Script < ActiveRecord::Base
       end
     end
 
-    Lesson.import lessons_to_import, on_duplicate_key_update: :all
+    lessons_to_import
   end
 end
