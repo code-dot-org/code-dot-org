@@ -110,15 +110,14 @@ DSL
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     assert_nil summary[:previous_level_url]
-    assert_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
 
     @script_level.stubs(:previous_level).returns(create(:script_level))
-    @script_level.stubs(:next_level).returns(create(:script_level))
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     refute_nil summary[:previous_level_url]
-    refute_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
   end
 

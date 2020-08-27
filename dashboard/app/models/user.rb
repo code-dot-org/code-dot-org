@@ -1780,8 +1780,9 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
-      total_time_spent = user_level.calculate_total_time_spent(time_spent)
-      user_level.time_spent = total_time_spent if total_time_spent
+      # Temporarily disabling while we convert current records from milliseconds to seconds
+      # total_time_spent = user_level.calculate_total_time_spent(time_spent)
+      # user_level.time_spent = total_time_spent if total_time_spent
 
       user_level.atomic_save!
     end
