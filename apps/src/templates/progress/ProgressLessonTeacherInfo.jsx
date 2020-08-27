@@ -14,9 +14,15 @@ import {
   toggleHiddenStage,
   isStageHiddenForSection
 } from '@cdo/apps/code-studio/hiddenStageRedux';
+import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {
+  OAuthSectionTypes,
+  OAuthProviders
+} from '@cdo/apps/lib/ui/accounts/constants';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import GoogleClassroomShareButton from './GoogleClassroomShareButton';
 
 const styles = {
   buttonContainer: {
@@ -34,9 +40,11 @@ const styles = {
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
+    shareUrl: PropTypes.string.isRequired,
 
     // redux provided
-    sectionId: PropTypes.string,
+    section: sectionShape,
+    userProviders: PropTypes.arrayOf(PropTypes.string),
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -45,7 +53,8 @@ class ProgressLessonTeacherInfo extends React.Component {
   };
 
   onClickHiddenToggle = value => {
-    const {scriptName, sectionId, lesson, toggleHiddenStage} = this.props;
+    const {scriptName, section, lesson, toggleHiddenStage} = this.props;
+    const sectionId = section.id.toString();
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
     firehoseClient.putRecord({
       study: 'hidden-lessons',
@@ -62,18 +71,38 @@ class ProgressLessonTeacherInfo extends React.Component {
 
   render() {
     const {
-      sectionId,
+      section,
+      userProviders,
       scriptAllowsHiddenStages,
       hiddenStageState,
       hasNoSections,
-      lesson
+      lesson,
+      shareUrl
     } = this.props;
 
+    const sectionId = (section && section.id.toString()) || '';
     const showHiddenForSectionToggle =
-      sectionId && scriptAllowsHiddenStages && !hasNoSections;
+      section && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden =
       scriptAllowsHiddenStages &&
       isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
+    const showGoogleClassroomButton =
+      section &&
+      section.loginType === OAuthSectionTypes.google_classroom &&
+      userProviders.includes(OAuthProviders.google);
+    const courseId =
+      (showGoogleClassroomButton &&
+        section.code &&
+        parseInt(section.code.substring(2))) ||
+      null;
+    const shouldRender =
+      lesson.lesson_plan_html_url ||
+      (lesson.lockable && !hasNoSections) ||
+      showHiddenForSectionToggle ||
+      showGoogleClassroomButton;
+    if (!shouldRender) {
+      return null;
+    }
 
     return (
       <TeacherInfoBox>
@@ -97,6 +126,16 @@ class ProgressLessonTeacherInfo extends React.Component {
             onChange={this.onClickHiddenToggle}
           />
         )}
+        {showGoogleClassroomButton && (
+          <div style={{...styles.buttonContainer, marginBottom: 5}}>
+            <GoogleClassroomShareButton
+              buttonId={`gc-button-${lesson.id}`}
+              url={shareUrl}
+              title={lesson.name}
+              courseid={courseId}
+            />
+          </div>
+        )}
       </TeacherInfoBox>
     );
   }
@@ -106,7 +145,9 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId.toString(),
+    section:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId],
+    userProviders: state.currentUser.providers,
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,
