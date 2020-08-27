@@ -151,7 +151,21 @@ progress.renderCourseProgress = function(scriptData) {
   );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
+
   if (scriptData.sections) {
+    // If we have a selected section, merge it with the minimal data in the
+    // `sections` array before storing in redux
+    if (scriptData.section) {
+      const idx = scriptData.sections.findIndex(
+        section => section.id === scriptData.section.id
+      );
+      if (idx >= 0) {
+        scriptData.sections[idx] = {
+          ...scriptData.sections[idx],
+          ...scriptData.section
+        };
+      }
+    }
     store.dispatch(setSections(scriptData.sections));
   }
 
