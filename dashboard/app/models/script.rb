@@ -808,6 +808,10 @@ class Script < ActiveRecord::Base
     levels.each(&:tts_update)
   end
 
+  def hint_prompt_enabled?
+    csf?
+  end
+
   def hide_solutions?
     name == 'algebra'
   end
