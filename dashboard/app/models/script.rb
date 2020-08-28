@@ -1681,6 +1681,52 @@ class Script < ActiveRecord::Base
     lessons_to_import
   end
 
+  def self.walk_tree(json_hash, model_obj, steps)
+    steps = steps.clone
+    next_step = steps.shift
+
+    excludes = ([next_step&.hash_key] + (next_step&.excludes || [])).compact # TODO: make this readable
+    model_obj.assign_attributes(json_hash.except(*excludes))
+
+    return unless next_step&.hash_key
+
+    next_model_obj = model_obj.send(next_step.hash_key)
+
+    if next_model_obj.respond_to? :each
+      match_on =
+        if next_step.match_on.is_a? String
+          lambda {|h, o| h[next_step.match_on] == o.send(next_step.match_on)}
+        else
+          next_step.match_on
+        end
+
+      json_hash[next_step.hash_key].each do |h|
+        walk_tree(h, next_model_obj.select {|o| match_on.call(h, o)}.first, steps)
+      end
+    else
+      walk_tree(json_hash[next_step], next_model_obj, steps)
+    end
+
+    model_obj
+  end
+
+  Step = Struct.new(:hash_key, :match_on, :excludes)
+
+  def self.seed_from_json_file(filename)
+    script_hash = JSON.parse(File.read(filename))
+
+    # TODO: needs to handle cases where objects don't already exist
+    script = Script.find_by(name: script_hash['name'])
+    steps = [
+      Step.new('lesson_groups', 'key'),
+      Step.new('lessons', 'key'),
+      Step.new('script_levels', lambda {|h, o| h['level_names'] == o.levels.map(&:name)}),
+      Step.new(nil, nil, ['level_names'])
+    ]
+
+    walk_tree(script_hash, script, steps)
+  end
+
   def serialize_seeding_json
     # include: '**' allows serialization of associations recursively for any number of levels.
     # https://github.com/rails-api/active_model_serializers/issues/968#issuecomment-557513403s
