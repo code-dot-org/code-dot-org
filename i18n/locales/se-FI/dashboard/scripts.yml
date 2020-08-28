@@ -15,6 +15,7 @@ se:
         csp_2019_category_name: CS Prinsihpat ('19-'20)
         cspexams_category_name: CS Prinsihpat Praktihkalaš Teasta
         csp17_category_name: CS Prinsihpat ('17-'18)
+        full_course_category_name: Ollislaš Kurssat
         research_studies_category_name: Dutkanoahppu
       name:
         course1:
@@ -614,6 +615,8 @@ se:
               name: Geavat Eaŋkilis Komándduid
             Using Variables in Apps:
               name: Geavat Variábeliid App:in
+            Creating Functions with Parameters:
+              name: Ráhkat Funkšuvnnaid Paramehteriiguin
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -2009,6 +2012,12 @@ se:
               name: Oassálaste longitudinala oahpus!
         CSDU3-Draft:
           lessons:
+            Collisions:
+              name: Oktiibeaškkeheamit
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
             Sprite Movement Methods:
               name: Sprite Lihkastan Vuogit
             Platform Jumper:
@@ -2043,6 +2052,10 @@ se:
               name: Geavahit Modeallaid Klássalanjas
             What to Expect:
               name: Maid sáhttá vuordit
+        TEMP CSD Unit 3:
+          lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
         CSF_Secret_Sample:
           description_audience: Ahki 8-18
           lessons:
@@ -2244,10 +2257,46 @@ se:
               name: App:a Teasten
             Planning for Improvements:
               name: Plánet Buoridemiid
+            App Presentation Prep:
+              name: App:a Ovdanbuktin Ráhkkaneami
+        CSDU1-Draft:
+          lessons:
+            Exploring Apps:
+              name: Suokkardala App:aid
+            Processing Information:
+              name: Gieđahala Dieđuid
         CSDU2-Draft:
           lessons:
+            Describing Webpages:
+              name: Čilge Neahttasiidduid birra
+            Designing Code for Computers:
+              name: Designe Koda Dihtorii
+            Images on the Web:
+              name: Govat Interneahtas
+            'Personal Website: Finalizing Site':
+              name: 'Persovnnalaš Neahttasiidu: Válbmet Siiddu'
+            'Personal Website: Connecting Pages':
+              name: 'Persovnnalaš Neahttasiidu: Čatnat Siidduid'
+            Classes and External Style Sheets:
+              name: Klássat ja Eksterna StiilaÁrkkat
+            Box Model and Page Layout:
+              name: BoksaModealla ja SiidoLayout:a
+            'Personal Website: Midway Check':
+              name: 'Persovnnalaš Neahttasiidu: Gaskamuddu iskkan'
+            Introduction to HTML:
+              name: Láidehus HTML:ai
+            Headers and Lists:
+              name: Bajilčállagat ja Listtut
+            Designing Web Pages:
+              name: Designe NeahttaSiidduid
+            Holding:
+              name: Rádju
+            Usability and Accessibility:
+              name: Áddehahtti ja Beasatlašvuohta
             Peer Review:
               name: Eará Oahppi Árvvoštallan
+            Describing Web Pages:
+              name: Čilge Neahttasiidduid birra
         CSF_Secret_Sample_Story:
           lessons:
             Sample Stage:
@@ -2256,6 +2305,10 @@ se:
           lessons:
             Sample Stage:
               name: GeahččalanDássi
+            The same thing with named levels:
+              name: Seammá ášši mas leat nammaduvvon dásit
+            You are a coding STAR:
+              name: Don leat koden NÁSTI
         artistExemplar:
           description_audience: Ahki 8-18
         teachercon:
@@ -2264,38 +2317,119 @@ se:
               display_name: Sisdoallu
             practice:
               display_name: OahpahanHárjehallamat
+          lessons:
+            Balancing Teachers and Tools:
+              name: Dássádallat Oahpaheddjiid ja Reaidduid
+            Discovery Learning:
+              name: Fuomášuhttin Oahppan
+            Group Work and Peer Learning:
+              name: Joavkobargu ja Oahppit ohppet ohppiin
+            Introduction to Teachercon:
+              name: Láidehus Teachercon:ii
+            Lesson 1,10:
+              name: 'Lekšuvdna 1.10: Routerat ja Badjelmearri'
+            Lesson 1,11:
+              name: 'Lekšuvdna 1.11: Páhkat ja Ráhkadit Luohtehahtti Interneahta'
+            Lesson 1,4:
+              name: 'Lekšuvdna 1.4: Nummar Vuogádagat (Jorba Golmmačiegat Njealječiegat)'
+            Lesson 1,6:
+              name: 'Lekšuvdna 1.6: Sádde Nummariid'
+            Lesson 1,9:
+              name: 'Lekšuvdna 1.9: Interneahta Čujuhusat (Soahtefanas)'
+            Lesson 2,10:
+              name: 'Lekšuvdna 2.10: Buorit ja Fuones Data Visuáliseremat'
+            Lesson 2,2:
+              name: 'Lekšuvdna 2.2: Teaksta Komprešuvdna'
+            Lesson 2,3:
+              name: 'Lekšuvdna 2.3: Čáhppes ja Vilges Pikselašuvdna'
+            Measuring Student Learning:
+              name: Mihtit Ohppiid Oahppama
         kinderTest:
           lessons:
             'Bee: Conditionals':
               name: 'Uvlu: Eavttut'
+            Kindergarten Stage 1:
+              name: Mánáidgárdi Dássi 1
         gradeKinder:
           lessons:
+            Being Safe Online:
+              name: Leat Oadjebas Neahtas
             Events:
               name: Dáhpáhusaid
             Events Unplugged:
               name: Dáhpáhusat Neahtahaga
+            Fuzz Fiesta:
+              name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
               name: 'Bihttáspeallu: Oahpa movt geassit ja luoitit'
+            Loops Intro:
+              name: Láidehus Mohkiide
             Loops Unplugged:
               name: Mohkit Neahtahaga
+            Persistence & Frustration:
+              name: Gillilvuohta ja Fuolastupmi
+            Programming Unplugged:
+              name: Programmeret Neahtahaga
+            Sequences & Algorithms:
+              name: Sekveanssat ja Algoritmmat
             'Real-life Algorithms: Plant a Seed':
               name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            'Programming Unplugged: Happy Maps':
+              name: 'Programmeret Neahtahaga: Movttegis Kárttat'
         grade4:
           lessons:
+            'Bee: Determine the Concept':
+              name: 'Uvlu: Mearrit Konseaptta'
+            'Bee: Functions (Course 3)':
+              name: 'Uvlu: Funkšuvnnat (Kursa 3)'
+            Build a Star Wars Game!:
+              name: Ráhkat Náste Soahti Spealu!
             Digital Citizenship:
               name: Digitála Stáhtaborgárvuohta
+            Explore project ideas:
+              name: Suokkardala prošeaktaideaid
+            'Farmer: Functions (New)':
+              name: 'Boanda: Funkšuvnnat (Ođđa)'
+            Final Project - Presentation Day:
+              name: Loahppa Prošeakta - Ovdanbuktin Beaivi
+            'Final Project - Unplugged: Design Process':
+              name: 'Loahppa Prošeakta - Neahtahaga: Designe Proseassa'
+            'Final Project - Work Day: Build Project Online':
+              name: 'Loahppa Prošeakta - BargoBeaivi: Ráhkat Prošeavtta Neahtas'
+            More Programming with Scratch:
+              name: Programmere Eanet Scratch:ain
+            'New Artist: Functions':
+              name: 'Ođđa Dáiddár: Funkšuvnnat '
+            Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
+              name: Bildaduvvon Prošeakta Dássi (Mohkit, Dáhpáhusat, Eavttut, Funkšuvnnat)
             Songwriting:
               name: Lávlagiid čállit
+            'Unplugged: Funky Functions':
+              name: 'Neahtahaga: Funky Funkšuvnnat'
         grade1:
           lessons:
+            Being Safe Online:
+              name: Leat Oadjebas Neahtas
             Events:
               name: Dáhpáhusaid
             Events Unplugged:
               name: Dáhpáhusat Neahtahaga
             'Jigsaw: Learn to drag and drop':
               name: 'Bihttáspeallu: Oahpa movt geassit ja luoitit'
+            Loops Intro:
+              name: Láidehus Mohkiide
             Loops Unplugged:
               name: Mohkit Neahtahaga
+            More Computer Science:
+              name: Eanet DihtorDieđa
+            Persistence & Frustration:
+              name: Gillilvuohta ja Fuolastupmi
+            Programming Unplugged:
+              name: Programmeret Neahtahaga
+            Sequences & Algorithms:
+              name: Sekveanssat ja Algoritmmat
+            'Events Unplugged: The Big Event':
+              name: 'Dáhpáhusat Neahtahaga: Stuora Dáhpáhus'
         grade5:
           lessons:
             'Artist: For Loops':
@@ -2310,8 +2444,20 @@ se:
               name: 'Uvlu: Funkšuvnnat main leat paramehterat'
             Digital Citizenship:
               name: Digitála Stáhtaborgárvuohta
+            Explore project ideas:
+              name: Suokkardala prošeaktaideaid
+            Final Project - Presentation Day:
+              name: Loahppa Prošeakta - Ovdanbuktin Beaivi
+            Final Project - Review/Revise Day:
+              name: Loahppa Prošeakta - Čađaheapmi/Revideret Beaivi
+            'Final Project - Unplugged: Design Process':
+              name: 'Loahppa Prošeakta - Neahtahaga: Designe Proseassa'
+            'Final Project - Work Day: Build Project Online':
+              name: 'Loahppa Prošeakta - BargoBeaivi: Ráhkat Prošeavtta Neahtas'
             'Play Lab: Variables':
               name: 'Speallan-lab: Variábelat'
+            Try programming with Khan Academy:
+              name: Geahččal programmeret Khan Akademiijain
             'Unplugged: Envelope Variables':
               name: 'Neahtahaga: Konvoluhtta Variábelat'
             'Unplugged: For Loop Fun':
@@ -2396,6 +2542,8 @@ se:
               name: Unit 5 Várddus
             Unit 5 lessons:
               name: Unit 5 Lekšuvnnat
+            Unit 5 Challenge:
+              name: Unit 5 Hástalus
             Close & Next Steps:
               name: Gidde & Boahttevaš Lávkkit
         ecs-unit6:
@@ -2416,23 +2564,94 @@ se:
               name: Gidde & Boahttevaš Lávkkit
         grade3:
           lessons:
+            " Bee: Conditionals":
+              name: "Uvlu: Eavttut"
             'Artist: Nested Loops':
               name: 'Dáiddár: Mohkit Mohkiin'
+            Build a Game:
+              name: Hukse Spealu
+            Farmer Conditional with Cards:
+              name: Boanda Eavttut Koarttaiguin
+            Farmer Debug Relay Programming:
+              name: Boanda Vihkeohcan Relea Programmeren
+            Farmer Graph Paper Programming:
+              name: Boanda Gráfa Bábir Programmeren
+            Farmer Impacts of Computing:
+              name: Boanda Konsekveansat Diehtogieđahallamiin
             'Farmer: While Loops':
               name: 'Boanda: Geardduhit-mohkiid'
+            'Maze: Conditionals with Loops':
+              name: 'Labyrinta: Eavttut Mohkiiguin'
+            'Maze: Nested Loops':
+              name: 'Labyrinta : Mohkit Mohkiin'
+            More Programming with CS4FN:
+              name: Eambbo Programmeren CS4FN:in
+            Robot Running the Farm:
+              name: Robohta Jođiha Dálu
+            Unplugged Conditionals with Loops:
+              name: Neahtahaga Eavttut Mohkiiguin
         alltheplcthings:
           lesson_groups:
             content:
               display_name: Sisdoallu
             practice:
               display_name: OahpahanHárjehallamat
+          lessons:
+            Balancing Teachers and Tools:
+              name: Dássádallat Oahpaheddjiid ja Reaidduid
+            Group Work and Peer Learning:
+              name: Joavkobargu ja Oahppit ohppet ohppiin
+            Introduction to Teachercon:
+              name: Láidehus Teachercon:ii
+            Lesson 1,10:
+              name: Lekšuvdna 1,10
+            Lesson 1,11:
+              name: Lekšuvdna 1,11
+            Lesson 1,4:
+              name: Lekšuvdna 1,4
+            Lesson 1,6:
+              name: Lekšuvdna 1,6
+            Lesson 1,9:
+              name: Lekšuvdna 1,9
+            Lesson 2,10:
+              name: Lekšuvdna 2,10
+            Lesson 2,2:
+              name: Lekšuvdna 2,2
+            Lesson 2,3:
+              name: Lekšuvdna 2,3
+            Test stage with bubbles:
+              name: Teasta dássi bulljarasaiguin
         csd3-2017:
+          title: CSD Unit 3 - Animašuvnnat ja Spealut ('17-'18)
+          description_short: Programmeren
           lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
             cspSurvey:
               display_name: Iskkadeapmi
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
+              description_student: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, klássa galgá ráhkadit neahttaveršuvnna govas maid sii leat designen ovddit lekšuvnnas.
+              description_teacher: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, oahppit galget máhttit programmeret govaid dego dakkáriid maid sii ráhkadedje tevdnenreaidduin ovddit lekšuvnnas.
+            Velocity:
+              description_student: Maŋŋil oanehis čađaheami movt dat vuosteminsttar geavahuvvo lihkahallat sprite:id, klássa introduserejuvvo iešvuođaide mii bidjá njuolgut leahtu ja jorahanleahtu . Go geavahit dáid ođđa iešvuođaid iešguđetge ladje, sii huksejit máhtu maid dárbbahit go galget ráhkadit vuđolaš siidobláđen-spealu.
+              description_teacher: Maŋŋil oanehis čađaheami movt dat vuosteminsttar geavahuvvo lihkahallat sprite:id ovddit lekšuvnnas, oahppit introduserejuvvojit iešvuođaide mii njuolgut bidjá leahtu ja jorahanleahtu . Go geavahit dáid ođđa iešvuođaid iešguđetge ládje, sii huksejit máhtu maid dárbbahit go galget ráhkadit vuđolaš siidobláđen-spealu.
+            Collision Detection:
+              description_student: Klássa oahppá oktiibeaškkeheami birra dihtoris. Guovttis ja guovttis suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Klássa dalle geavaha leaGuoskame() blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
+              description_teacher: Oahppit ohppet oktiibeaškkeheami birra dihtoris. Barggadettin guovttis ja guovttis, sii suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Sii dalle geavahit `leaGuoskame()` blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+              description_student: 'Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.'
+              description_teacher: Oahppit ohppet movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid. Ovdamearkka dihte oahppit ohppet movt simuleret deaddofámu,  bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin Code Studio ovdáneamis oahppit galget kombineret dáid lihkastagaid nu ahte animerejit ja kontrollerejit ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid. Oahppit movttiidahttojuvvojit loahppa dásiin ráhkadit iežaset lasáhusaid spellui.
+            Collisions:
+              name: Oktiibeaškkeheamit
+              description_student: Klássa programmere sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, klássa juogada ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (beaškkehit, duvdit, bánccardit ja bánccarditEret).
+              description_teacher: Oahppit programmerejit sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, oahppit juogadit ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (`beaškkehit`, `duvdit`, `bánccardit` ja `bánccarditEret`).
             'Project: Build a Game':
               name: 'Prošeakta: Hukse Spealu'
             Sprites:
@@ -2484,6 +2703,14 @@ se:
           lessons:
             Unit 1 Overview:
               name: Unit 1 Várddus
+            Group Work and Peer Learning:
+              name: Joavkobargu ja Oahppit ohppet ohppiin
+            Balancing Teachers and Tools:
+              name: Dássádallat Oahpaheddjiid ja Reaidduid
+            Discovery Learning:
+              name: Fuomášuhttin Oahppan
+            Measuring Student Learning:
+              name: Mihtit Ohppiid Oahppama
             Unit 2 Overview:
               name: Unit 2 Várddus
             Unit 3 Overview:
@@ -2499,6 +2726,14 @@ se:
           lessons:
             Unit 1 Overview:
               name: Unit 1 Várddus
+            Group Work and Peer Learning:
+              name: Joavkobargu ja Oahppit ohppet ohppiin
+            Balancing Teachers and Tools:
+              name: Dássádallat Oahpaheddjiid ja Reaidduid
+            Discovery Learning:
+              name: Fuomášuhttin Oahppan
+            Measuring Student Learning:
+              name: Mihtit Ohppiid Oahppama
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -2508,8 +2743,14 @@ se:
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
           lessons:
+            Images on the Web:
+              name: Govat Interneahtas
             Peer Review:
               name: Eará Oahppi Árvvoštallan
+            Box Model and Page Layout:
+              name: BoksaModealla ja SiidoLayout:a
+            'Personal Website: Finalizing Site':
+              name: 'Persovnnalaš Neahttasiidu: Válbmet Siiddu'
         csp2-support:
           lesson_groups:
             content:
@@ -2519,6 +2760,14 @@ se:
           lessons:
             Unit 2 Overview:
               name: Unit 2 Várddus
+            Group Work and Peer Learning:
+              name: Joavkobargu ja Oahppit ohppet ohppiin
+            Balancing Teachers and Tools:
+              name: Dássádallat Oahpaheddjiid ja Reaidduid
+            Discovery Learning:
+              name: Fuomášuhttin Oahppan
+            Measuring Student Learning:
+              name: Mihtit Ohppiid Oahppama
         csd4-2017:
           lesson_groups:
             csd_survey:
@@ -2545,10 +2794,18 @@ se:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+            Being Safe Online:
+              name: Leat Oadjebas Neahtas
+            Fuzz Fiesta:
+              name: Fuzz Fiesta
             Going Places Safely:
               name: Mannat Sihkkaris Sajiide 
         courseb-draft:
           lessons:
+            Being Safe Online:
+              name: Leat Oadjebas Neahtas
+            More Computer Science:
+              name: Eanet DihtorDieđa
             'Real-life Algorithms: Plant a Seed':
               name: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
             Your Digital Footprint:
@@ -2565,6 +2822,8 @@ se:
               name: Hukset Vuođu
         coursed-draft:
           lessons:
+            More Programming with CS4FN:
+              name: Eambbo Programmeren CS4FN:in
             Digital Citizenship:
               name: Digitála Stáhtaborgárvuohta
             'Unplugged: Binary':
@@ -2578,6 +2837,8 @@ se:
           lessons:
             Digital Citizenship:
               name: Digitála Stáhtaborgárvuohta
+            More Programming with Scratch:
+              name: Programmere Eanet Scratch:ain
             Private and Personal Information:
               name: Priváhta ja Persovnnlaš Dieđut
             Internet:
@@ -2595,6 +2856,8 @@ se:
               name: Konvoluhtta Variábelat
             For Loop Fun:
               name: Suohttasat Mohkiid váste
+            Try programming with Khan Academy:
+              name: Geahččal programmeret Khan Akademiijain
             Ice Age Play Lab:
               name: Jiekŋaáiggi Speallan-lab
         classic-hoc-impact-study:
@@ -2656,6 +2919,14 @@ se:
           lessons:
             Unit 3 Overview:
               name: Unit 3 Várddus
+            Group Work and Peer Learning:
+              name: Joavkobargu ja Oahppit ohppet ohppiin
+            Balancing Teachers and Tools:
+              name: Dássádallat Oahpaheddjiid ja Reaidduid
+            Discovery Learning:
+              name: Fuomášuhttin Oahppan
+            Measuring Student Learning:
+              name: Mihtit Ohppiid Oahppama
         csp4-support:
           lesson_groups:
             content:
@@ -2665,6 +2936,14 @@ se:
           lessons:
             Unit 3 Overview:
               name: Unit 3 Várddus
+            Group Work and Peer Learning:
+              name: Joavkobargu ja Oahppit ohppet ohppiin
+            Balancing Teachers and Tools:
+              name: Dássádallat Oahpaheddjiid ja Reaidduid
+            Discovery Learning:
+              name: Fuomášuhttin Oahppan
+            Measuring Student Learning:
+              name: Mihtit Ohppiid Oahppama
             Unit 4 Overview:
               name: Unit 4 Várddus
         sciencepd4:
@@ -2712,6 +2991,14 @@ se:
           lessons:
             Unit 5 Overview:
               name: Unit 5 Várddus
+            Group Work and Peer Learning:
+              name: Joavkobargu ja Oahppit ohppet ohppiin
+            Balancing Teachers and Tools:
+              name: Dássádallat Oahpaheddjiid ja Reaidduid
+            Discovery Learning:
+              name: Fuomášuhttin Oahppan
+            Measuring Student Learning:
+              name: Mihtit Ohppiid Oahppama
         csppostap-2017:
           description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
           lesson_groups:
@@ -2765,16 +3052,40 @@ se:
               name: Ráhkat Musihka
         csd3-draft:
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
             Sprites:
               name: Sprite:at
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              name: Oktiibeaškkeheamit
         csd5-2017:
           lesson_groups:
             csd_survey:
               display_name: Maŋŋil Kurssa Iskkadeapmi
+        csd3-old:
+          lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              name: Oktiibeaškkeheamit
+        csd2-draft:
+          lessons:
+            Headers and Lists:
+              name: Bajilčállagat ja Listtut
         csd3-chapters:
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
             Sprites:
               name: Sprite:at
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              name: Oktiibeaškkeheamit
         coursef-ramp:
           lessons:
             Ice Age Play Lab:
@@ -2785,6 +3096,10 @@ se:
               name: CSP Studeanta Maŋŋil Iskkadeami Čielggadeapmi
             Participate in a longitudinal study!:
               name: Oassálaste longitudinala oahpus!
+        fmscsd3preview:
+          lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
         csppostsurvey:
           lessons:
             Participate in a longitudinal study!:
@@ -3115,18 +3430,50 @@ se:
               name: Suohttasat Mohkiid váste
         csd3-1819draft:
           lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
             Sprites:
               name: Sprite:at
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              name: Oktiibeaškkeheamit
         csd3-2018:
           lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
+              description_student: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, klássa galgá ráhkadit neahttaveršuvnna govas maid sii leat designen ovddit lekšuvnnas.
+              description_teacher: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, oahppit galget máhttit programmeret govaid dego dakkáriid maid sii ráhkadedje tevdnenreaidduin ovddit lekšuvnnas.
             Sprites:
               name: Sprite:at
+            Velocity:
+              description_student: Maŋŋil oanehis čađaheami movt dat vuosteminsttar geavahuvvo lihkahallat sprite:id, klássa introduserejuvvo iešvuođaide mii bidjá njuolgut leahtu ja jorahanleahtu . Go geavahit dáid ođđa iešvuođaid iešguđetge ladje, sii huksejit máhtu maid dárbbahit go galget ráhkadit vuđolaš siidobláđen-spealu.
+              description_teacher: Maŋŋil oanehis čađaheami movt dat vuosteminsttar geavahuvvo lihkahallat sprite:id ovddit lekšuvnnas, oahppit introduserejuvvojit iešvuođaide mii njuolgut bidjá leahtu ja jorahanleahtu . Go geavahit dáid ođđa iešvuođaid iešguđetge ládje, sii huksejit máhtu maid dárbbahit go galget ráhkadit vuđolaš siidobláđen-spealu.
+            Collision Detection:
+              description_student: Klássa oahppá oktiibeaškkeheami birra dihtoris. Guovttis ja guovttis suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Klássa dalle geavaha leaGuoskame() blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
+              description_teacher: Oahppit ohppet oktiibeaškkeheami birra dihtoris. Barggadettin guovttis ja guovttis, sii suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Sii dalle geavahit `leaGuoskame()` blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+              description_student: 'Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.'
+              description_teacher: Oahppit ohppet movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid. Ovdamearkka dihte oahppit ohppet movt simuleret deaddofámu,  bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin Code Studio ovdáneamis oahppit galget kombineret dáid lihkastagaid nu ahte animerejit ja kontrollerejit ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid. Oahppit movttiidahttojuvvojit loahppa dásiin ráhkadit iežaset lasáhusaid spellui.
+            Collisions:
+              name: Oktiibeaškkeheamit
+              description_student: Klássa programmere sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, klássa juogada ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (beaškkehit, duvdit, bánccardit ja bánccarditEret).
+              description_teacher: Oahppit programmerejit sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, oahppit juogadit ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (`beaškkehit`, `duvdit`, `bánccardit` ja `bánccarditEret`).
         csd2-2018:
           lesson_groups:
             cspSurvey:
@@ -3746,11 +4093,33 @@ se:
               display_name: Iskkadeapmi
         csd3-2019:
           lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
+              description_student: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, klássa galgá ráhkadit neahttaveršuvnna govas maid sii leat designen ovddit lekšuvnnas.
+              description_teacher: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, oahppit galget máhttit programmeret govaid dego dakkáriid maid sii ráhkadedje tevdnenreaidduin ovddit lekšuvnnas.
             Sprites:
               name: Sprite:at
+            Velocity:
+              description_student: Maŋŋil oanehis čađaheami movt dat vuosteminsttar geavahuvvo lihkahallat sprite:id, klássa introduserejuvvo iešvuođaide mii bidjá njuolgut leahtu ja jorahanleahtu . Go geavahit dáid ođđa iešvuođaid iešguđetge ladje, sii huksejit máhtu maid dárbbahit go galget ráhkadit vuđolaš siidobláđen-spealu.
+              description_teacher: Maŋŋil oanehis čađaheami movt dat vuosteminsttar geavahuvvo lihkahallat sprite:id ovddit lekšuvnnas, oahppit introduserejuvvojit iešvuođaide mii njuolgut bidjá leahtu ja jorahanleahtu . Go geavahit dáid ođđa iešvuođaid iešguđetge ládje, sii huksejit máhtu maid dárbbahit go galget ráhkadit vuđolaš siidobláđen-spealu.
+            Collision Detection:
+              description_student: Klássa oahppá oktiibeaškkeheami birra dihtoris. Guovttis ja guovttis suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Klássa dalle geavaha leaGuoskame() blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
+              description_teacher: Oahppit ohppet oktiibeaškkeheami birra dihtoris. Barggadettin guovttis ja guovttis, sii suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Sii dalle geavahit `leaGuoskame()` blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+              description_student: 'Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.'
+              description_teacher: Oahppit ohppet movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid. Ovdamearkka dihte oahppit ohppet movt simuleret deaddofámu,  bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin Code Studio ovdáneamis oahppit galget kombineret dáid lihkastagaid nu ahte animerejit ja kontrollerejit ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid. Oahppit movttiidahttojuvvojit loahppa dásiin ráhkadit iežaset lasáhusaid spellui.
+            Collisions:
+              name: Oktiibeaškkeheamit
+              description_student: Klássa programmere sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, klássa juogada ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (beaškkehit, duvdit, bánccardit ja bánccarditEret).
+              description_teacher: Oahppit programmerejit sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, oahppit juogadit ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (`beaškkehit`, `duvdit`, `bánccardit` ja `bánccarditEret`).
         csd4-2019:
           lesson_groups:
             cspSurvey:
@@ -4037,11 +4406,33 @@ se:
               display_name: Iskkadeapmi
         csd3-pilot:
           lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
+              description_student: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, klássa galgá ráhkadit neahttaveršuvnna govas maid sii leat designen ovddit lekšuvnnas.
+              description_teacher: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, oahppit galget máhttit programmeret govaid dego dakkáriid maid sii ráhkadedje tevdnenreaidduin ovddit lekšuvnnas.
             Sprites:
               name: Sprite:at
+            Velocity:
+              description_student: Maŋŋil oanehis čađaheami movt dat vuosteminsttar geavahuvvo lihkahallat sprite:id, klássa introduserejuvvo iešvuođaide mii bidjá njuolgut leahtu ja jorahanleahtu . Go geavahit dáid ođđa iešvuođaid iešguđetge ladje, sii huksejit máhtu maid dárbbahit go galget ráhkadit vuđolaš siidobláđen-spealu.
+              description_teacher: Maŋŋil oanehis čađaheami movt dat vuosteminsttar geavahuvvo lihkahallat sprite:id ovddit lekšuvnnas, oahppit introduserejuvvojit iešvuođaide mii njuolgut bidjá leahtu ja jorahanleahtu . Go geavahit dáid ođđa iešvuođaid iešguđetge ládje, sii huksejit máhtu maid dárbbahit go galget ráhkadit vuđolaš siidobláđen-spealu.
+            Collision Detection:
+              description_student: Klássa oahppá oktiibeaškkeheami birra dihtoris. Guovttis ja guovttis suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Klássa dalle geavaha leaGuoskame() blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
+              description_teacher: Oahppit ohppet oktiibeaškkeheami birra dihtoris. Barggadettin guovttis ja guovttis, sii suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Sii dalle geavahit `leaGuoskame()` blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+              description_student: 'Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.'
+              description_teacher: Oahppit ohppet movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid. Ovdamearkka dihte oahppit ohppet movt simuleret deaddofámu,  bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin Code Studio ovdáneamis oahppit galget kombineret dáid lihkastagaid nu ahte animerejit ja kontrollerejit ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid. Oahppit movttiidahttojuvvojit loahppa dásiin ráhkadit iežaset lasáhusaid spellui.
+            Collisions:
+              name: Oktiibeaškkeheamit
+              description_student: Klássa programmere sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, klássa juogada ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (beaškkehit, duvdit, bánccardit ja bánccarditEret).
+              description_teacher: Oahppit programmerejit sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, oahppit juogadit ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (`beaškkehit`, `duvdit`, `bánccardit` ja `bánccarditEret`).
         csp3-pilot:
           lesson_groups:
             content:
@@ -4210,9 +4601,19 @@ se:
               name: Ráhkat Musihka
         csd3-2020:
           lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
             cspSurvey:
               display_name: Iskkadeapmi
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              name: Oktiibeaškkeheamit
             Sprites:
               name: Sprite:at
         coursea-2020:
@@ -4401,6 +4802,13 @@ se:
           lesson_groups:
             content:
               display_name: Sisdoallu
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+          lessons:
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              name: Oktiibeaškkeheamit
         code-break:
           lessons:
             Events:
@@ -4456,8 +4864,14 @@ se:
               display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
         csd3-virtual:
           lessons:
+            Drawing in Game Lab:
+              name: Tevdnet SpeallanLáb:as
             Sprites:
               name: Sprite:at
+            Complex Sprite Movement:
+              name: Kompleaksa Sprite Lihkastagat
+            Collisions:
+              name: Oktiibeaškkeheamit
           lesson_groups:
             csd3_1:
               display_name: Sisdoallu

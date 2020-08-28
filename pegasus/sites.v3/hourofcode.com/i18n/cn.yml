@@ -7113,7 +7113,7 @@ cn:
   tutorial_googlehero_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_codestersbball_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_scratchcartoon_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
-  tutorial_codemonkeyjr_string_platforms: 安卓平板电脑，iPad，Android 手机 iPhone
+  tutorial_codemonkeyjr_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad，安卓手机，iPhone
   tutorial_bananatales_string_platforms: 所有高版本浏览器
   tutorial_scratchtales_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
