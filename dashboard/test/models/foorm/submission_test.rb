@@ -12,12 +12,7 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     submission = build :csf_intro_post_foorm_submission, :answers_low
     answers = submission.formatted_answers
 
-    assert answers.include?(
-      {
-        question: "How much do you agree or disagree with the following statements about the workshop overall? >> I feel more prepared to teach the material covered in this workshop than before I came.",
-        answer: "Strongly Disagree"
-      }
-    )
+    assert_equal 'Strongly Disagree', answers['overall_success-more_prepared']
   end
 
   test 'format comment question works correctly' do
@@ -25,12 +20,7 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     submission = build :csf_intro_post_foorm_submission, :answers_low
     answers = submission.formatted_answers
 
-    assert answers.include?(
-      {
-        question: "What supported your learning the most today and why?",
-        answer: "lots"
-      }
-    )
+    assert_equal 'lots', answers['supported']
   end
 
   test 'format single select question works correctly' do
@@ -38,11 +28,6 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     submission = build :csf_intro_post_foorm_submission, :answers_low
     answers = submission.formatted_answers
 
-    assert answers.include?(
-      {
-        question: "I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
-        answer: "No, I do not give the workshop organizer my permission."
-      }
-    )
+    assert_equal 'No, I do not give the workshop organizer my permission.', answers['permission']
   end
 end
