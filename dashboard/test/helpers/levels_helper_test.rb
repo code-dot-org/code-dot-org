@@ -803,4 +803,36 @@ class LevelsHelperTest < ActionView::TestCase
       "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
       "</div>"
   end
+
+  test 'sets hint prompt attempts threshold in options for level in csf script' do
+    @script = create :csf_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    @level.hint_prompt_attempts_threshold = 6
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_equal level_options[:hintPromptAttemptsThreshold], @level.hint_prompt_attempts_threshold
+  end
+
+  test 'does not set hint prompt attempts threshold in options if unavailable' do
+    @script = create :csf_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_nil level_options[:hintPromptAttemptsThreshold]
+  end
+
+  test 'does not set hint prompt attempts threshold in options for level in csp script' do
+    @script = create :csp_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    @level.hint_prompt_attempts_threshold = 6
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_nil level_options[:hintPromptAttemptsThreshold]
+  end
 end
