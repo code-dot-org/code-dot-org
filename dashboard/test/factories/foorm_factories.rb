@@ -5,12 +5,57 @@ FactoryGirl.define do
     sequence(:name) {|n| "FormName#{n}"}
     version 0
     questions '{}'
+
+    trait :with_multi_select_question do
+      questions '{
+        "pages":[
+          {
+            "name":"page_1",
+            "elements":[
+              {
+                "type":"checkbox",
+                "name":"not_members_spice_girls",
+                "title":"Which of the following are NOT names of members of the Spice Girls?",
+                "choices":[
+                  {
+                    "value":"sporty",
+                    "text":"Sporty"
+                  },
+                  {
+                    "value":"radical",
+                    "text":"Radical"
+                  },
+                  {
+                    "value":"spicy",
+                    "text":"Spicy"
+                  },
+                  {
+                    "value":"posh",
+                    "text":"Posh"
+                  },
+                  {
+                    "value":"ginger",
+                    "text":"Ginger"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }'
+    end
   end
 
   factory :basic_foorm_submission, class: 'Foorm::Submission' do
     form_name "surveys/pd/sample"
     foorm_submission_metadata
     answers '{}'
+
+    trait :with_multi_select_answer do
+      answers '{
+        "not_members_spice_girls": ["radical", "spicy"]
+      }'
+    end
   end
 
   factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do

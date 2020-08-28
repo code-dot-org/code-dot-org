@@ -30,4 +30,14 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
 
     assert_equal 'No, I do not give the workshop organizer my permission.', answers['permission']
   end
+
+  test 'format multi select question works correctly' do
+    form = create :foorm_form, :with_multi_select_question
+    submission = build :basic_foorm_submission,
+      :with_multi_select_answer,
+      form_name: form.name
+    answers = submission.formatted_answers
+
+    assert_equal 'Radical, Spicy', answers['not_members_spice_girls']
+  end
 end
