@@ -103,7 +103,7 @@ export default class LevelToken2 extends Component {
               <ProgressBubble
                 hideToolTips={true}
                 level={this.props.level}
-                disabled={false}
+                disabled={true}
               />
               <span style={styles.levelTitle}>
                 {this.props.level.displayName}
@@ -129,8 +129,9 @@ export default class LevelToken2 extends Component {
         </span>
         <div
           style={styles.edit}
-          onMouseDown={() => {
-            console.log('Edit Level');
+          onClick={() => {
+            const win = window.open(this.props.level.url, '_blank');
+            win.focus();
           }}
         >
           <i className="fa fa-pencil" />

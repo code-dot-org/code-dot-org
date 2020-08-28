@@ -44,7 +44,7 @@ const activity = {
       levels: [
         {
           status: 'not started',
-          url: '/link/to/level',
+          url: 'https://levelbuilder-studio.code.org/levels/598/edit',
           name: 'Level 1',
           icon: 'fa-desktop',
           isUnplugged: false,
@@ -67,7 +67,7 @@ const activity = {
         },
         {
           status: 'not started',
-          url: '/link/to/level',
+          url: 'https://levelbuilder-studio.code.org/levels/598/edit',
           icon: 'fa-desktop',
           name: 'Level 1',
           isUnplugged: false,
