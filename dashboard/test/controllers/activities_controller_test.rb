@@ -56,7 +56,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       result: 'true',
       testResult: '100',
       time: '1000',
-      timeSinceLastMilestone: '20',
+      timeSinceLastMilestone: '20000',
       app: 'test',
       program: '<hey>'
     }
