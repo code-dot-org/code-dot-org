@@ -45,10 +45,6 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "code_functions": {
       "drawSprites": null,
       "var sprite = createSprite": null,
@@ -74,12 +70,20 @@
       "draw": null,
       "x": null,
       "y": null,
-      "rotation": null
-    }
+      "rotation": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null
+    },
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-03-30 16:36:08 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-08-25 16:18:49 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2020-03-30 16:36:08 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-08-25 16:18:49 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2020-08-28 15:45:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
