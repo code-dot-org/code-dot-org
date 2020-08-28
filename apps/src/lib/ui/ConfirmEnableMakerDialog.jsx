@@ -39,18 +39,28 @@ export class ConfirmEnableMakerDialog extends Component {
     handleCancel: PropTypes.func.isRequired
   };
 
+  state = {
+    microBitExperimentEnabled: false
+  };
+
+  componentDidMount() {
+    this.setState({
+      microBitExperimentEnabled: experiments.isEnabled('microbit')
+    });
+  }
+
   render() {
     return (
       <Dialog
         isOpen={this.props.isOpen}
-        confirmText={experiments.isEnabled('microbit') ? null : msg.enable()}
+        confirmText={this.state.microBitExperimentEnabled ? null : msg.enable()}
         onConfirm={
-          experiments.isEnabled('microbit')
+          this.state.microBitExperimentEnabled
             ? null
             : () => this.props.handleConfirm('circuitPlayground')
         }
         onCancel={
-          experiments.isEnabled('microbit') ? null : this.props.handleCancel
+          this.state.microBitExperimentEnabled ? null : this.props.handleCancel
         }
         handleClose={this.props.handleCancel}
       >
@@ -62,14 +72,14 @@ export class ConfirmEnableMakerDialog extends Component {
               {msg.enableMakerDialogSetupPageLinkText()}
             </a>
           </div>
-          {experiments.isEnabled('microbit') ? (
+          {this.state.microBitExperimentEnabled ? (
             <div style={style.warning}>{msg.enableMakerDialogWarning()}</div>
           ) : (
             <div style={style.warning}>
               {msg.enableMakerDialogWarningOnlyCP()}
             </div>
           )}
-          {experiments.isEnabled('microbit') && (
+          {this.state.microBitExperimentEnabled && (
             <Footer key="footer">
               <div style={style.footerButtons}>
                 <Cancel onClick={this.props.handleCancel} />
