@@ -91,6 +91,10 @@ class Foorm::Form < ActiveRecord::Base
     return questions
   end
 
+  def self.get_matrix_question_id(parent_question_id, sub_question_id)
+    parent_question_id + '-' + sub_question_id
+  end
+
   # For a given Form, this method will produce a CSV of all responses
   # received for that Form. It includes the content of the form submitted
   # by a user, as well as some additional metadata about the context
@@ -113,6 +117,24 @@ class Foorm::Form < ActiveRecord::Base
         csv << submission.map {|question_answer_pair| question_answer_pair[:answer]}
       end
     end
+  end
+
+  def readable_questions
+    questions = {}
+
+    parsed_questions[:general][key].each do |question_id, question_details|
+      if question_details[:type] == 'matrix'
+        matrix_questions = question_details[:rows]
+        matrix_questions.each do |matrix_question_id, matrix_question_text|
+          key = self.class.get_matrix_question_id(question_id, matrix_question_id)
+          questions[key] = question_details[:title] + ' >> ' + matrix_question_text
+        end
+      else
+        questions[question_id] = question_details[:title]
+      end
+    end
+
+    questions
   end
 
   def parsed_questions
