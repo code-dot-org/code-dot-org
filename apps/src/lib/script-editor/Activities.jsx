@@ -4,15 +4,17 @@ import ActivityCard from './ActivityCard';
 
 export default class Activities extends Component {
   static propTypes = {
-    activity: PropTypes.object.isRequired
+    activities: PropTypes.array.isRequired
   };
 
   render() {
-    const {activity} = this.props;
+    const {activities} = this.props;
 
     return (
       <div>
-        <ActivityCard activity={activity} />
+        {activities.map(activity => {
+          return <ActivityCard activity={activity} key={activity.key} />;
+        })}
       </div>
     );
   }

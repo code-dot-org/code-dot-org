@@ -3,6 +3,7 @@ import ActivitiesEditor from './ActivitiesEditor';
 import EditTipDialog from './EditTipDialog';
 import PreviewActivityDialog from './PreviewActivityDialog';
 import AddLevelDialog from './AddLevelDialog';
+import ActivityCard from './ActivityCard';
 
 const activity = {
   key: 'activity-1',
@@ -112,7 +113,7 @@ const activity = {
 };
 
 const defaultActivity = {
-  key: 'activity-1',
+  key: 'activity-2',
   displayName: '',
   time: null,
   activitySections: [
@@ -136,15 +137,21 @@ const defaultActivity = {
   ]
 };
 
+const activities = [activity, defaultActivity];
+
 export default storybook => {
   storybook.storiesOf('ActivitiesEditor', module).addStoryTable([
     {
-      name: 'New Lesson - Activities Editor',
+      name: 'New Lesson',
       story: () => <ActivitiesEditor activities={[defaultActivity]} />
     },
     {
       name: 'ActivitiesEditor',
-      story: () => <ActivitiesEditor activities={[activity]} />
+      story: () => <ActivitiesEditor activities={activities} />
+    },
+    {
+      name: 'ActivityCard',
+      story: () => <ActivityCard activity={activity} />
     },
     {
       name: 'EditTipDialog',

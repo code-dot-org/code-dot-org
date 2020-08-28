@@ -69,7 +69,12 @@ export default class ActivityCard extends Component {
 
     return (
       <div>
-        <div style={styles.groupHeader}>
+        <div
+          style={{
+            ...styles.groupHeader,
+            ...(this.state.collapsed && {marginBottom: 10})
+          }}
+        >
           <FontAwesome
             icon={this.state.collapsed ? 'expand' : 'compress'}
             onClick={() => {

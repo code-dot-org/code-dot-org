@@ -12,7 +12,7 @@ export default class ActivitiesEditor extends Component {
 
     return (
       <div>
-        <Activities activity={activities[0]} />
+        <Activities activities={activities} />
       </div>
     );
   }
