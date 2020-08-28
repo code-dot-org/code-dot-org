@@ -4,6 +4,7 @@ import EditTipDialog from './EditTipDialog';
 import PreviewActivityDialog from './PreviewActivityDialog';
 import AddLevelDialog from './AddLevelDialog';
 import ActivityCard from './ActivityCard';
+import AddResourceDialog from './AddResourceDialog';
 
 const activity = {
   key: 'activity-1',
@@ -189,6 +190,17 @@ export default storybook => {
             console.log('Close Dialog');
           }}
           currentLevels={activity.activitySections[2].levels}
+        />
+      )
+    },
+    {
+      name: 'AddResourceDialog',
+      story: () => (
+        <AddResourceDialog
+          isOpen={true}
+          handleConfirm={() => {
+            console.log('Close Dialog');
+          }}
         />
       )
     }

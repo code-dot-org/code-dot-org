@@ -21,7 +21,9 @@ const styles = {
     marginBottom: 15
   },
   bottomControls: {
-    height: 30
+    height: 30,
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   addLevel: {
     fontSize: 14,
@@ -82,8 +84,6 @@ export default class ProgressionCard extends Component {
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
               Add Tip
             </button>
-          </span>
-          <span>
             <button
               onMouseDown={() => {
                 console.log('Add Level');
@@ -94,6 +94,17 @@ export default class ProgressionCard extends Component {
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
               Add Level
+            </button>
+            <button
+              onMouseDown={() => {
+                console.log('Add Resource Link');
+              }}
+              className="btn"
+              style={styles.addLevel}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Resource Link
             </button>
           </span>
           {this.props.progression.tips.length > 0 && (

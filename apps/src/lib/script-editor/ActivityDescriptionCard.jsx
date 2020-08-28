@@ -42,12 +42,22 @@ const styles = {
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     margin: '0 5px 0 0'
   },
+  checkboxesAndButtons: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
   checkboxes: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   title: {
     marginRight: 5
+  },
+  markdownButtons: {
+    fontSize: 10
   }
 };
 
@@ -76,29 +86,31 @@ export default class ActivityDescriptionCard extends Component {
               }}
             />
           </label>
-          <div style={styles.checkboxes}>
-            <label style={styles.labelAndCheckbox}>
-              Remarks
-              <input
-                checked={this.props.activitySection.isRemarks}
-                onChange={() => {
-                  console.log('Click checkbox');
-                }}
-                type="checkbox"
-                style={styles.checkbox}
-              />
-            </label>
-            <label style={styles.labelAndCheckbox}>
-              Slides
-              <input
-                checked={this.props.activitySection.slide}
-                onChange={() => {
-                  console.log('Click checkbox');
-                }}
-                type="checkbox"
-                style={styles.checkbox}
-              />
-            </label>
+          <div style={styles.checkboxesAndButtons}>
+            <span style={styles.checkboxes}>
+              <label style={styles.labelAndCheckbox}>
+                Remarks
+                <input
+                  checked={this.props.activitySection.isRemarks}
+                  onChange={() => {
+                    console.log('Click checkbox');
+                  }}
+                  type="checkbox"
+                  style={styles.checkbox}
+                />
+              </label>
+              <label style={styles.labelAndCheckbox}>
+                Slides
+                <input
+                  checked={this.props.activitySection.slide}
+                  onChange={() => {
+                    console.log('Click checkbox');
+                  }}
+                  type="checkbox"
+                  style={styles.checkbox}
+                />
+              </label>
+            </span>
           </div>
         </div>
         <textarea
@@ -121,6 +133,17 @@ export default class ActivityDescriptionCard extends Component {
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
               Add Tip
+            </button>
+            <button
+              onMouseDown={() => {
+                console.log('Add Resource Link');
+              }}
+              className="btn"
+              style={styles.addLevel}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Resource Link
             </button>
           </span>
           {this.props.activitySection.tips.length > 0 && (
