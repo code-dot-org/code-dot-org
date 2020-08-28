@@ -23,7 +23,7 @@
         {
          "type": "html",
          "name": "survey_preamble_header_and_text",
-         "html": "<h2>{workshop_course} Academic Year Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed a Code.org {workshop_course} Academic Year workshop!</strong></p>\n<p>This survey asks questions about your experience today and the workshop as a whole.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about <strong>10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+         "html": "<h2>{workshop_course} Academic Year Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed a Code.org {workshop_course} Academic Year Workshop!</strong></p>\n<p>This survey asks questions about your experience today.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take <strong>less than 10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
        },
        {
          "type": "html",
@@ -33,7 +33,7 @@
        {
         "type": "html",
         "name": "workshop_experience_header",
-        "html": "<p><strong><span style=\"font-size: 14pt;\">Your {workshop_course} Workshop Experience</span></strong></p>"
+        "html": "<h2>Your {workshop_course} Workshop Experience</h2>"
        },
        {
         "type": "matrix",

@@ -153,24 +153,17 @@ function createStore(reducer, initialState) {
       }
     });
 
-    // window.devToolsExtension is a Redux middleware function that must be
-    //   included to attach to the Redux DevTools Chrome extension.
-    // If it's not present then the extension isn't available, and we use
-    //   a no-op identity function instead.
-    // see https://github.com/zalmoxisus/redux-devtools-extension
-    var devTools = window.devToolsExtension
-      ? window.devToolsExtension()
-      : function(f) {
-          return f;
-        };
+    // load with dev tools extension, if present
+    // https://github.com/zalmoxisus/redux-devtools-extension#12-advanced-store-setup
+    const composeEnhancers =
+      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+        trace: true
+      }) || redux.compose;
 
     return redux.createStore(
       reducer,
       initialState,
-      redux.compose(
-        redux.applyMiddleware(reduxThunk, reduxLogger),
-        devTools
-      )
+      composeEnhancers(redux.applyMiddleware(reduxThunk, reduxLogger))
     );
   }
 
