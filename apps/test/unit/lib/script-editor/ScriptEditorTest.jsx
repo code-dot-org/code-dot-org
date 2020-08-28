@@ -8,7 +8,9 @@ describe('ScriptEditor', () => {
     announcements: [],
     curriculumUmbrella: 'CSF',
     i18nData: {
-      stageDescriptions: []
+      stageDescriptions: [],
+      description:
+        '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     },
     isLevelbuilder: true,
     locales: [],
@@ -21,10 +23,25 @@ describe('ScriptEditor', () => {
   describe('Script Editor', () => {
     it('has the correct number of each editor field type', () => {
       const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
-      expect(wrapper.find('input').length).to.equal(21);
+      expect(wrapper.find('input').length).to.equal(22);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
       expect(wrapper.find('textarea').length).to.equal(2);
       expect(wrapper.find('select').length).to.equal(5);
+    });
+
+    it('has correct markdown for preview of unit description', () => {
+      const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
+      expect(wrapper.find('MarkdownPreview').length).to.equal(1);
+      expect(wrapper.find('MarkdownPreview').prop('markdown')).to.equal(
+        '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+      );
+
+      wrapper
+        .find('textarea[name="description"]')
+        .simulate('change', {target: {value: '## Title'}});
+      expect(wrapper.find('MarkdownPreview').prop('markdown')).to.equal(
+        '## Title'
+      );
     });
   });
 

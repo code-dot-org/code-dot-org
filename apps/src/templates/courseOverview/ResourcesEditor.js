@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import ResourceType, {stringForType, resourceShape} from './resourceType';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const styles = {
   box: {
@@ -32,9 +33,7 @@ const defaultLinks = {
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
-    maxResources: PropTypes.number.isRequired,
-    renderPreview: PropTypes.func.isRequired
+    resources: PropTypes.arrayOf(resourceShape).isRequired
   };
 
   constructor(props) {
@@ -42,7 +41,7 @@ export default class ResourcesEditor extends Component {
 
     const resources = [...props.resources];
     // add empty entries to get to max
-    while (resources.length < props.maxResources) {
+    while (resources.length < Object.keys(ResourceType).length) {
       resources.push({type: '', link: ''});
     }
 
@@ -106,7 +105,9 @@ export default class ResourcesEditor extends Component {
         <div style={styles.box}>
           <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
-          {this.props.renderPreview(resources.filter(x => !!x.type))}
+          <TeacherResourcesDropdown
+            resources={resources.filter(x => !!x.type)}
+          />
         </div>
       </div>
     );

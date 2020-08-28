@@ -500,108 +500,9 @@
     }
   },
   "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/2": {
-    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun.",
-    "long_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/4": {
-    "short_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
-    "long_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
-    "authored_hints": {
-      "courseB_artist_loops2_a": "If you want the loop to repeat more than 4 times, you can change the number at the top of the block.",
-      "courseB_artist_loops2_b": "Try running the code first to see where the artist ends up."
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/5": {
-    "short_instructions": "Help the artist draw a line 7 times to make a garden wall.",
-    "long_instructions": "Help the artist draw a line 7 times to make a garden wall.",
-    "authored_hints": {
-      "courseB_artist_loops3_a": "Remember to use a `repeat` [blockly block][0] loop for better code!",
-      "courseB_artist_loops3_b": "The artist will want to move South to draw this line."
-    },
-    "callouts": {
-      "courseB_artist_loops3_1": "There is only one of these blocks in the toolbox.  How will you use it?"
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/6": {
-    "short_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
-    "long_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground.",
-    "authored_hints": {
-      "courseB_artist_loops4_a": "The jump block lets you move forward without drawing a line.",
-      "courseB_artist_loops4_b": "You will need to add a block inside of the repeat loop to solve this puzzle.",
-      "courseB_artist_loops4_c": "Don't forget to change the number of times the loop repeats."
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/7": {
-    "short_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
-    "long_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
-    "authored_hints": {
-      "courseB_artist_loops5_a": "Drag out a `repeat` [blockly block][0] loop, then put the other blocks inside of it. How many times do you need to repeat?"
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/8": {
-    "short_instructions": "Climb the vine and see where it goes?",
-    "long_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
-    "authored_hints": {
-      "courseB_artist_loops6_b": "Try writing the moves down on a piece of paper and look for a pattern."
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/9": {
-    "short_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
-    "long_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
-    "authored_hints": {
-      "courseB_artist_loops7_a": "This challenge uses **4** loops, one right after another!",
-      "courseB_artist_loops7_b": "Notice that every loop makes a stair pattern that goes a different direction.\n\n[][0]",
-      "courseB_artist_loops7_c": "The loops should do this:\n\n-   Loop 1\n    -   Right\n    -   Down\n\n-   Loop 2\n    -   Right\n    -   Up\n\n-   Loop 3\n    -   Left\n    -   Up\n\n-   Loop 4\n    -   Left\n    -   Down"
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/10": {
-    "short_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
-    "long_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
-    "authored_hints": {
-      "courseB_artist_loops8_a": "How many times should you repeat the pattern to make the ladder?",
-      "courseB_artist_loops8_b": "Try running the code you're given to see what it does."
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/11": {
-    "short_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
-    "long_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
-    "authored_hints": {
-      "courseB_artist_loops9_a": "Remember that jump blocks can be used to move without drawing a line.",
-      "courseB_artist_loops9_b": "You will want to use the W block to solve this puzzle.",
-      "courseB_artist_loops9_c": "Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern."
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/12": {
-    "short_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
-    "long_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]",
-    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.\n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/extras?level_name=courseB_artist_loops_challenge1_2020": {
-    "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
-    "long_instructions": "_\"It's time to toss the dice! Can you help me draw these?\"_",
-    "authored_hints": {
-      "courseB_artist_loops_challenge1_a": "Blocks like this: [blockly block][0] will let your artist move at a slant!",
-      "courseB_artist_loops_challenge1_b": "When you finish one of the dice, `jump` to the next!",
-      "courseB_artist_loops_challenge1_c": "You will need to `move` or `jump` over some of the same lines twice. "
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/8/extras?level_name=courseB_artist_loops_challenge2_2020": {
-    "short_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
-    "long_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
-    "authored_hints": {
-      "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
-      "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
-    },
-    "function_definitions": {
-      "potential solution": {
-        "name": "potential solution"
-      }
-    }
-  },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/2": {
     "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/3": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/3": {
     "short_instructions": "Help the artist draw this line two times forward.",
     "long_instructions": "Help the artist draw this line two times forward.\n\n[][0]",
     "authored_hints": {
@@ -609,7 +510,7 @@
       "courseA_artist_loops2_b": "Use this block [blockly block][0] to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/4": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/4": {
     "short_instructions": "Draw a line forward five times.",
     "long_instructions": "Our artist is trying to draw a line five times, but can't get it right. Can you help?\n\n[expandable][0]",
     "authored_hints": {
@@ -617,7 +518,7 @@
       "courseA_artist_loops3_b": "You will want to use a block like this to solve this puzzle.\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/6": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/6": {
     "short_instructions": "Now, use a `repeat` loop to draw this line five times!",
     "long_instructions": "Now, use a [blockly block][0] loop to draw this line five times!\n\n[][1]",
     "authored_hints": {
@@ -628,7 +529,7 @@
       "courseA_artist_loops4_1": "This number tells you how many of these blocks you can use in this puzzle."
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/7": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/7": {
     "short_instructions": "Draw a line seven steps long. This will become our horizon.",
     "long_instructions": "## Draw a line seven steps long. This will become our horizon.\n\n[expandable][0]",
     "authored_hints": {
@@ -637,7 +538,7 @@
       "courseA_artist_loops5_c": "Since you can only use one [blockly block][0] block, try putting it inside of the \n\n[blockly block][1]\n\nloop."
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/8": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/8": {
     "short_instructions": "Let's put a nice hill in the back.",
     "long_instructions": "## Let's put a nice hill in the back.\n\n[expandable][0]",
     "authored_hints": {
@@ -645,7 +546,7 @@
       "courseA_artist_loops6_b": "You will need 2 blocks in 2 directions to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/9": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/9": {
     "short_instructions": "Use the `repeat` loop to add waves to the water.",
     "long_instructions": "Use the [blockly block][0] loop to add waves to the water.\n\n[expandable][1]",
     "authored_hints": {
@@ -657,7 +558,7 @@
       "courseA_artist_loops7_1": "This number means that only one of this kind of block can be used in the final answer."
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/10": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/10": {
     "short_instructions": "We need a ladder up to the boat.",
     "long_instructions": "## We need a ladder up to the boat.\n\n[expandable][0]",
     "authored_hints": {
@@ -669,7 +570,7 @@
       "courseA_artist_loops8_1": "Did you know that you can draw back over a line whenever you need to?"
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/11": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/11": {
     "short_instructions": "Challenge: Fix the stairs.",
     "long_instructions": "## **Challenge:** The stairs down to the dock are broken.  Help me fix them.\n\n[expandable][0]",
     "authored_hints": {
@@ -678,20 +579,20 @@
       "courseA_artist_loops9_c": "If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns."
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/12": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/12": {
     "short_instructions": "Help me put down stones so I don't fall in!",
     "long_instructions": "## Time to head back to land. Help me put down stones so I don't fall in!\n\n[expandable][0]"
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/13": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/13": {
     "short_instructions": "Help me build steps to watch the ship sail away.",
     "long_instructions": "## Help me build steps to watch the ship sail away.\n\n[expandable][0]"
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/14": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/puzzle/14": {
     "short_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.",
     "long_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]",
     "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.\n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/extras?level_name=courseA_artist_loops_challenge2a_2020": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/extras?level_name=courseA_artist_loops_challenge2a_2020": {
     "short_instructions": "_\"Help me get these three tents set up!\"_",
     "long_instructions": "_\"Help me get the camp site ready!\"_\n\nUse the blocks in the toolbox to draw these three tents.",
     "authored_hints": {
@@ -700,10 +601,109 @@
       "courseA_artist_loops_challenge2_c": "All of your blocks will need to be inside of a loop to finish this puzzle."
     }
   },
-  "https://studio.code.org/s/pre-express-2020/stage/9/extras?level_name=courseA_artist_loops_challenge1_2020": {
+  "https://studio.code.org/s/pre-express-2020/stage/8/extras?level_name=courseA_artist_loops_challenge1_2020": {
     "short_instructions": "Can you draw a house? Make it look just the way you like it!",
     "long_instructions": "You can use a loop to draw many lines in a row.\n\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!\n\nHere are some ideas:\n\n[][0]",
     "teacher_markdown": "This lesson extra is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/2": {
+    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun.",
+    "long_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/4": {
+    "short_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
+    "long_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
+    "authored_hints": {
+      "courseB_artist_loops2_a": "If you want the loop to repeat more than 4 times, you can change the number at the top of the block.",
+      "courseB_artist_loops2_b": "Try running the code first to see where the artist ends up."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/5": {
+    "short_instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "long_instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "authored_hints": {
+      "courseB_artist_loops3_a": "Remember to use a `repeat` [blockly block][0] loop for better code!",
+      "courseB_artist_loops3_b": "The artist will want to move South to draw this line."
+    },
+    "callouts": {
+      "courseB_artist_loops3_1": "There is only one of these blocks in the toolbox.  How will you use it?"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/6": {
+    "short_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
+    "long_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground.",
+    "authored_hints": {
+      "courseB_artist_loops4_a": "The jump block lets you move forward without drawing a line.",
+      "courseB_artist_loops4_b": "You will need to add a block inside of the repeat loop to solve this puzzle.",
+      "courseB_artist_loops4_c": "Don't forget to change the number of times the loop repeats."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/7": {
+    "short_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
+    "long_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
+    "authored_hints": {
+      "courseB_artist_loops5_a": "Drag out a `repeat` [blockly block][0] loop, then put the other blocks inside of it. How many times do you need to repeat?"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/8": {
+    "short_instructions": "Climb the vine and see where it goes?",
+    "long_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
+    "authored_hints": {
+      "courseB_artist_loops6_b": "Try writing the moves down on a piece of paper and look for a pattern."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/9": {
+    "short_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
+    "long_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
+    "authored_hints": {
+      "courseB_artist_loops7_a": "This challenge uses **4** loops, one right after another!",
+      "courseB_artist_loops7_b": "Notice that every loop makes a stair pattern that goes a different direction.\n\n[][0]",
+      "courseB_artist_loops7_c": "The loops should do this:\n\n-   Loop 1\n    -   Right\n    -   Down\n\n-   Loop 2\n    -   Right\n    -   Up\n\n-   Loop 3\n    -   Left\n    -   Up\n\n-   Loop 4\n    -   Left\n    -   Down"
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/10": {
+    "short_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
+    "long_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
+    "authored_hints": {
+      "courseB_artist_loops8_a": "How many times should you repeat the pattern to make the ladder?",
+      "courseB_artist_loops8_b": "Try running the code you're given to see what it does."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/11": {
+    "short_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
+    "long_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
+    "authored_hints": {
+      "courseB_artist_loops9_a": "Remember that jump blocks can be used to move without drawing a line.",
+      "courseB_artist_loops9_b": "You will want to use the W block to solve this puzzle.",
+      "courseB_artist_loops9_c": "Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern."
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/puzzle/12": {
+    "short_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
+    "long_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.\n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/extras?level_name=courseB_artist_loops_challenge1_2020": {
+    "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
+    "long_instructions": "_\"It's time to toss the dice! Can you help me draw these?\"_",
+    "authored_hints": {
+      "courseB_artist_loops_challenge1_a": "Blocks like this: [blockly block][0] will let your artist move at a slant!",
+      "courseB_artist_loops_challenge1_b": "When you finish one of the dice, `jump` to the next!",
+      "courseB_artist_loops_challenge1_c": "You will need to `move` or `jump` over some of the same lines twice. "
+    }
+  },
+  "https://studio.code.org/s/pre-express-2020/stage/9/extras?level_name=courseB_artist_loops_challenge2_2020": {
+    "short_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
+    "long_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
+    "authored_hints": {
+      "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
+      "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
+    },
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
+    }
   },
   "https://studio.code.org/s/pre-express-2020/stage/10/puzzle/1": {
     "short_instructions": "Need a better playlab/events combo"

@@ -3,17 +3,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {
-  stringForType,
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -104,18 +101,7 @@ class ScriptOverviewTopRow extends React.Component {
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
           resources.length > 0 && (
-            <div style={styles.dropdown}>
-              <DropdownButton
-                text={i18n.teacherResources()}
-                color={Button.ButtonColor.blue}
-              >
-                {resources.map(({type, link}, index) => (
-                  <a key={index} href={link} target="_blank">
-                    {stringForType[type]}
-                  </a>
-                ))}
-              </DropdownButton>
-            </div>
+            <TeacherResourcesDropdown resources={resources} />
           )}
         {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <SectionAssigner

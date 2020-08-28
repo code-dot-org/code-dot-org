@@ -1,7 +1,7 @@
 login_required true
 pilot_experiment 'denny-science-piloters'
 
-lesson 'Earthquake Detector: Designing Screens'
+lesson 'Earthquake Detector: Designing Screens', display_name: 'Earthquake Detector: Designing Screens'
 level 'CSD mini design mode video'
 level 'Design Mode Map'
 level 'Science earthquake 1'
@@ -9,10 +9,11 @@ level 'Science earthquake text'
 level 'Science earthquake images'
 level 'Science earthquake reflect'
 
-lesson 'Earthquake Detector: Processing with Events'
+lesson 'Earthquake Detector: Processing with Events', display_name: 'Earthquake Detector: Processing with Events'
 level 'Science change screen map'
 level 'Science board event map'
 level 'Science Circuit Playground Test'
 level 'Science event demo'
 level 'Science event accel'
 level 'Science event test'
+
