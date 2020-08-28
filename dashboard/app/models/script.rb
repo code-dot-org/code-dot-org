@@ -25,6 +25,7 @@
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
 require 'script_lessons_serializer'
+require 'script_seed_serializer'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
@@ -1678,5 +1679,11 @@ class Script < ActiveRecord::Base
     end
 
     lessons_to_import
+  end
+
+  def serialize_seeding_json
+    # include: '**' allows serialization of associations recursively for any number of levels.
+    # https://github.com/rails-api/active_model_serializers/issues/968#issuecomment-557513403s
+    ScriptSeed::ScriptSerializer.new(self).as_json(include: '**')
   end
 end
