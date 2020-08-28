@@ -104,7 +104,7 @@ class Foorm::Form < ActiveRecord::Base
 
     submissions.each do |submission|
       formatted_submission = submission.formatted_answers
-      formatted_submission.concat submission.formatted_metadata
+      formatted_submission.merge! submission.formatted_metadata
 
       formatted_submissions << formatted_submission
     end
@@ -112,9 +112,14 @@ class Foorm::Form < ActiveRecord::Base
     CSV.open(file_path, "wb") do |csv|
       break if formatted_submissions.empty?
 
-      csv << formatted_submissions.first.map {|question_answer_pair| question_answer_pair[:question]}
+      headers = readable_questions
+      headers_with_config_variables = formatted_submissions.first.keys.map do |question_id|
+        headers[question_id] || question_id
+      end
+
+      csv << headers_with_config_variables
       formatted_submissions.each do |submission|
-        csv << submission.map {|question_answer_pair| question_answer_pair[:answer]}
+        csv << submission.values_at(*headers_with_config_variables)
       end
     end
   end
