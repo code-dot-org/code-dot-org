@@ -5,7 +5,8 @@ import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
 import {
   SENSOR_CHANNELS,
   MAX_SENSOR_BUFFER_DURATION,
-  SAMPLE_INTERVAL
+  SAMPLE_INTERVAL,
+  MAX_LIGHT_SENSOR_VALUE
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
 describe('LightSensor', function() {
@@ -37,8 +38,10 @@ describe('LightSensor', function() {
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(0);
 
-      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 255;
-      expect(lightSensor.value).to.equal(255);
+      boardClient.analogChannel[
+        SENSOR_CHANNELS.lightSensor
+      ] = MAX_LIGHT_SENSOR_VALUE;
+      expect(lightSensor.value).to.equal(MAX_LIGHT_SENSOR_VALUE);
 
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;
       expect(lightSensor.value).to.equal(123);
@@ -50,7 +53,9 @@ describe('LightSensor', function() {
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(10);
 
-      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 255;
+      boardClient.analogChannel[
+        SENSOR_CHANNELS.lightSensor
+      ] = MAX_LIGHT_SENSOR_VALUE;
       expect(lightSensor.value).to.equal(110);
 
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;
@@ -81,17 +86,31 @@ describe('LightSensor', function() {
         lightSensor.state.buffer[i] = i;
       }
 
+      // Test the average of the first second of data
       lightSensor.state.currentBufferWriteIndex = 20;
       expect(lightSensor.getAveragedValue(1000)).to.equal(9.5);
 
-      lightSensor.state.currentBufferWriteIndex = 3001;
-      expect(lightSensor.getAveragedValue(3000)).to.equal(29.5);
+      // Test that the full buffer can be averaged
+      lightSensor.state.currentBufferWriteIndex =
+        MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL + 1;
+      expect(lightSensor.getAveragedValue(MAX_SENSOR_BUFFER_DURATION)).to.equal(
+        29.5
+      );
 
+      // Test that one index can be averaged
       lightSensor.state.currentBufferWriteIndex = 1;
-      expect(lightSensor.getAveragedValue(50)).to.equal(0);
+      expect(lightSensor.getAveragedValue(SAMPLE_INTERVAL)).to.equal(0);
 
+      // Test the circular behavior of the buffer
+      lightSensor.state.currentBufferWriteIndex =
+        MAX_SENSOR_BUFFER_DURATION + 10;
+      expect(lightSensor.getAveragedValue(750)).to.equal(22);
+
+      // Test the average if the requested duration is longer than what has been recorded
       lightSensor.state.currentBufferWriteIndex = 20;
-      expect(lightSensor.getAveragedValue(3000)).to.equal(9.5);
+      expect(lightSensor.getAveragedValue(MAX_SENSOR_BUFFER_DURATION)).to.equal(
+        9.5
+      );
     });
 
     it(`returns average of values in buffer within the set range`, () => {
