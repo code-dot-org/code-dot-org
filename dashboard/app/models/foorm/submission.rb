@@ -74,7 +74,7 @@ class Foorm::Submission < ActiveRecord::Base
           question_answer_pairs[question_id] = choices[answer]
         when 'multiSelect'
           choices = question_details[:choices]
-          question_answer_pairs[question_id] = answer&.map {|selected| choices[selected]}&.join(', ')
+          question_answer_pairs[question_id] = answer.map {|selected| choices[selected]}.sort.join(', ')
         end
       end
     end
