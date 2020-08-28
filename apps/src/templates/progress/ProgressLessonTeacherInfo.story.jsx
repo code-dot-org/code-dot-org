@@ -15,8 +15,14 @@ import {
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {setHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
 import teacherSections, {
-  setSections
+  setSections,
+  selectSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {setUserProviders} from '@cdo/apps/templates/currentUserRedux';
+import {
+  OAuthSectionTypes,
+  OAuthProviders
+} from '@cdo/apps/lib/ui/accounts/constants';
 
 const lockableStage = {
   id: 123,
@@ -50,7 +56,11 @@ const nonLockableNoLessonPlan = {
   lockable: false
 };
 
-const createStore = ({preload = false, allowHidden = true} = {}) => {
+const createStore = ({
+  preload = false,
+  allowHidden = true,
+  showGoogleButton = false
+} = {}) => {
   registerReducers({teacherSections});
   const store = createStoreWithReducers();
   const stages = [
@@ -79,8 +89,24 @@ const createStore = ({preload = false, allowHidden = true} = {}) => {
   if (!preload) {
     const sections = {
       '11': {
-        section_id: 11,
-        section_name: 'test_section',
+        id: 11,
+        name: 'non-google section',
+        lesson_extras: true,
+        pairing_allowed: true,
+        studentCount: 4,
+        code: 'TQGSJR',
+        providerManaged: false,
+        stages: {}
+      },
+      '12': {
+        id: 12,
+        name: 'google section',
+        lesson_extras: true,
+        pairing_allowed: true,
+        studentCount: 4,
+        code: 'G-149414657094',
+        providerManaged: true,
+        login_type: OAuthSectionTypes.google_classroom,
         stages: {}
       }
     };
@@ -90,16 +116,18 @@ const createStore = ({preload = false, allowHidden = true} = {}) => {
         name: `student${id}`,
         readonly_answers: false
       }));
+      sections[12].stages[stage.id] = [0, 1, 2].map(id => ({
+        locked: true,
+        name: `student${id}`,
+        readonly_answers: false
+      }));
     });
-    store.dispatch(
-      setSections([
-        {
-          id: sections[11].section_id,
-          name: sections[11].section_name
-        }
-      ])
-    );
+    store.dispatch(setSections([sections[11], sections[12]]));
     store.dispatch(setSectionLockStatus(sections));
+    const providers = showGoogleButton ? [OAuthProviders.google] : ['email'];
+    store.dispatch(setUserProviders(providers));
+    const section = showGoogleButton ? '12' : '11';
+    store.dispatch(selectSection(section));
   }
   return store;
 };
@@ -114,7 +142,7 @@ export default storybook => {
     .storiesOf('Progress/ProgressLessonTeacherInfo', module)
     .addStoryTable([
       {
-        name: 'loading',
+        name: 'loading (with google, without google)',
         story: () => {
           const store = createStore({preload: true});
           const state = store.getState();
@@ -123,6 +151,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
+                  shareUrl="code.org"
                 />
               </div>
             </Provider>
@@ -130,7 +159,8 @@ export default storybook => {
         }
       },
       {
-        name: 'hideable allowed, lockable lesson with no lesson plan',
+        name:
+          'hideable allowed, lockable lesson with no lesson plan, without google',
         story: () => {
           const store = createStore();
           const state = store.getState();
@@ -139,15 +169,36 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
+                  shareUrl="code.org"
                 />
               </div>
             </Provider>
           );
         }
       },
-
       {
-        name: 'hideable allowed, lockable lesson with lesson plan',
+        name:
+          'hideable allowed, lockable lesson with no lesson plan, with google',
+        description:
+          'google share button requires google section and google oath',
+        story: () => {
+          const store = createStore({showGoogleButton: true});
+          const state = store.getState();
+          return (
+            <Provider store={store}>
+              <div style={style}>
+                <ProgressLessonTeacherInfo
+                  lesson={lessons(state.progress)[0]}
+                  shareUrl="code.org"
+                />
+              </div>
+            </Provider>
+          );
+        }
+      },
+      {
+        name:
+          'hideable allowed, lockable lesson with lesson plan, without google',
         story: () => {
           const store = createStore();
           const state = store.getState();
@@ -156,15 +207,35 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
+                  shareUrl="code.org"
                 />
               </div>
             </Provider>
           );
         }
       },
-
       {
-        name: 'hideable allowed, nonlockable lesson with lesson plan',
+        name: 'hideable allowed, lockable lesson with lesson plan, with google',
+        description:
+          'google share button requires google section and google oath',
+        story: () => {
+          const store = createStore({showGoogleButton: true});
+          const state = store.getState();
+          return (
+            <Provider store={store}>
+              <div style={style}>
+                <ProgressLessonTeacherInfo
+                  lesson={lessons(state.progress)[2]}
+                  shareUrl="code.org"
+                />
+              </div>
+            </Provider>
+          );
+        }
+      },
+      {
+        name:
+          'hideable allowed, nonlockable lesson with lesson plan, without google',
         story: () => {
           const store = createStore();
           const state = store.getState();
@@ -173,16 +244,37 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[1]}
+                  shareUrl="code.org"
                 />
               </div>
             </Provider>
           );
         }
       },
-
       {
-        name: 'hideable not allowed, nonlockable lesson with no lesson plan',
-        description: 'shouldnt render anything',
+        name:
+          'hideable allowed, nonlockable lesson with lesson plan, with google',
+        description:
+          'google share button requires google section and google oath',
+        story: () => {
+          const store = createStore({showGoogleButton: true});
+          const state = store.getState();
+          return (
+            <Provider store={store}>
+              <div style={style}>
+                <ProgressLessonTeacherInfo
+                  lesson={lessons(state.progress)[1]}
+                  shareUrl="code.org"
+                />
+              </div>
+            </Provider>
+          );
+        }
+      },
+      {
+        name:
+          'hideable not allowed, nonlockable lesson with no lesson plan, without google',
+        description: "shouldn't render anything",
         story: () => {
           const store = createStore({allowHidden: false});
           const state = store.getState();
@@ -191,6 +283,30 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[3]}
+                  shareUrl="code.org"
+                />
+              </div>
+            </Provider>
+          );
+        }
+      },
+      {
+        name:
+          'hideable not allowed, nonlockable lesson with no lesson plan, with google',
+        description:
+          'google share button requires google section and google oath',
+        story: () => {
+          const store = createStore({
+            allowHidden: false,
+            showGoogleButton: true
+          });
+          const state = store.getState();
+          return (
+            <Provider store={store}>
+              <div style={style}>
+                <ProgressLessonTeacherInfo
+                  lesson={lessons(state.progress)[3]}
+                  shareUrl="code.org"
                 />
               </div>
             </Provider>
