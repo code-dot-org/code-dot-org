@@ -9034,8 +9034,8 @@ kk:
     iPad
   tutorial_scratchcartoon_string_platforms: Барлық заманауи браузерлер, Android плашеті,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android планшеті, iPad, Android телефоны,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Барлық заманауи браузерлер, Android плашеті,
+    iPad, Android телефоны, iPhone
   tutorial_bananatales_string_platforms: Барлық заманауи браузерлер
   tutorial_scratchtales_string_platforms: Барлық заманауи браузерлер, Android плашеті,
     iPad
@@ -9414,3 +9414,4 @@ kk:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

@@ -14,11 +14,24 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje CSEdWeek</a>'
   csedweek_banner_teachers_text: "Jesteś nauczycielem informatyki? Zobacz inne propozycje CSEdWeek"
   n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
+  try_hoc_num_served: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>%{num} zrobione</h3>"
+  try_hoc_num_served_markdown: |-
+    # Wypróbuj
+
+    ##Godzinę Kodowania
+
+    ###%{num} zrobione #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Każdy może się uczyć."
   learn_now: "Rozpocznij naukę teraz"
   petition_message: "Każdy uczeń w każdej szkole powinien móc uczyć się informatyki"
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do # innych.'
+  petition_sign_message_num: "Jeśli zgadzasz się, wpisz swoje imię i nazwisko. Przyłącz się do naszej listy mailingowej z %{num} innymi."
   petition_join_others: 'Dołącz do # innych'
+  petition_join_others_num: "Dołącz do %{num} innych"
   name: "Imię/Nazwisko"
   email: "Adres e-mail"
   zipcode: "Kod pocztowy lub kraj"
@@ -29,6 +42,7 @@
   og_title_soon: "Zbliża się Godzina Kodowania"
   og_title_here: "Oto Godzina Kodowania!"
   og_description: "Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się informatyki."
+  og_description_celeb: "Wypróbuj nowe samouczki, wygraj chat wideo z celebrytą dla siebie lub dla swojej klasy!"
   csedweek_og_title: "Zbliża się Godzina Kodowania"
   csedweek_og_description: "Informatyka jest podstawą w kształceniu każdego ucznia."
   csedweek_og_description_soon: "Godzina Kodowania nadchodzi 3-9 grudnia 2018, Informatyka jest podstawą w kształceniu każdego ucznia."
@@ -42,6 +56,7 @@
   hoc2014_support: "Udziel wsparcia &#x25BE;"
   hoc2014_whatishoc: "Czym jest Godzina Kodowania?"
   csedweek_map_header: "Wydarzenia #CSEdWeek / Godziny Kodowania na całym świecie"
+  csedweek_map_header_num: "%{num} Wydarzenia #CSEdWeek / Godziny Kodowania na całym świecie"
   csedweek_map_signup: "Zarejestruj swoje wydarzenie"
   csedweek_map_search_placeholder: "Szukaj wydarzeń Godziny Kodowania"
   csedweek_map_search_search: "Szukaj"
@@ -144,13 +159,21 @@
   enter_valid_email: "Podaj poprawny adres e-mail"
   get_a_certificate_message: "Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>kontynuować naukę poza Godziną Kodowania</a>"
   get_a_certificate_message_after: "Kliknij na świadectwie, aby je pobrać lub wydrukować. Dalej, kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną Kodowania</a>."
+  get_a_certificate_message_after_markdown: "Kliknij w świadectwo, aby je pobrać lub wydrukować. Teraz nie przerywaj realizacji naszych [innych kursów] (http://studio.code.org) lub zobacz więcej opcji aby [Uczyć się poza Godziną Kodowania) (/uczyć/poza)."
   thanks_for_submitting: "Dziękujemy za przesłanie!"
   if_you_enjoyed: "Jeśli spodobała Ci się nauka, to zaproś znajomych, aby też spróbowali!  Chcemy, aby cały świat się uczył."
   personalize_certificate: "Spersonalizuj swój certyfikat"
+  print_batch_certificates: "Drukuj zapas świadectw."
   print_certificates: "Drukuj certyfikaty"
+  certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci sponsorowania Twojej nauki."
+  print_ice_art_from_frozen: "Drukuj lodowe dzieło sztuki z samouczków Frozen."
+  want_a_blank_certificate_template: "Czy chcesz pusty szablon świadectwa, aby wpisać do niego imiona i nazwiska swoich uczniów?"
+  landscape_recommended_certificates: "Zaleca się wybór **orientacji poziomej**, gdy drukujesz świadectwa."
   print_one_here_certificates: "Wypisz jeden tutaj."
+  enter_certificate_names: "Wpisz nie więcej niż 30 imion i nazwisk, **jedno na wiersz**. Zostanie wygenerowana nadająca się do druku strona ze spersonalizowanymi świadectwami %{script_name}."
   share_achievement: "Podziel się swoim osiągnięciem"
   beyond_hour_message: "Kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną Kodowania</a>."
+  beyond_hour_message_markdown: "Nie przerywaj realizacji naszych [innych kursów] (http://studio.code.org) lub zobacz więcej opcji aby [Uczyć się poza Godziną Kodowania) (/uczyć/poza)."
   leaderboards_for_hoc: "Liderzy Godziny Programowania (Hour of Code)."
   support_url: "http://support.Code.org/"
   country: "Kraj"
@@ -204,6 +227,7 @@
   just_did_coursef: "Właśnie skończyłem Kurs F - sprawdź to! @codeorg"
   just_did_accelerated: "Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg"
   just_did_hoc_donor: 'Właśnie ukończyłem #HourOfCode - sprawdź to! (Dzięki %{donor_twitter} za wspieranie @codeorg)'
+  just_did_course_donor: "Właśnie ukończyłem  %{course} - sprawdź to! Dzięki %{donor_twitter} za wspieranie @codeorg%"
   twitter_teach_cs: "9 na 10 osób zgadza się, że szkoły powinny uczyć informatyki. http://youtu.be/nKIu9yen5nc. Odwiedź https://code.org/."
   twitter_cs_foundational: "Informatyka jest podstawą w nauce każdego ucznia. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Ucz się Hour of Code"
@@ -224,6 +248,9 @@
   stats_nina: '"Każdy dzień przynosił takie same wyniki &mdash; 100% zaangażowania." - Nina Nichols Peery, nauczycielka'
   stats_student: '"Taka szansa zdarza się <b>tylko raz w życiu</b> ."- Mariana Alzate, uczennica 5 klasy'
   stats_michael: '"<b>Nigdy</b> nie widziałem moich uczniów tak podekscytowanych nauką." - Frank Martinez, nauczyciel'
+  stats_nina_markdown: '"Każdego dnia uzyskiwaliśmy takie same rezultaty - 100% zaangażowania."-Nina Nichols Peery, nauczyciel'
+  stats_student_markdown: '"Wiedziałam, że to była **jedyna taka szansa w życiu**."- Mariana Alzate, uczennica 5 klasy'
+  stats_michael_markdown: '"**Nigdy, przenigdy** nie widziałem swoich uczniów tak przejętych nauką." - Frank Martinez, nauczyciel'
   studiobar_title: "Wykorzystaj <a href='http://studio.code.org'> Studio Kodowania</a>"
   studiobar_title_nolink: "Poznaj Kursy Code.org"
   studiobar_elementary_title: "Kursy podstawowe"
@@ -245,6 +272,9 @@
   homepage_stats_students: "amerykańskich studentów ma konta na Code.org"
   homepage_stats_female: "naszych studentów to kobiety"
   homepage_stats_teachers: "nauczyciele korzystają z Code.org"
+  homepage_stats_hourofcodde: "uczniów z całego świata wypróbowało \"Godzinę kodowania\""
+  homepage_stats_policy: "stanów zmieniło regulamin, aby wspierać informatykę"
+  homepage_stats_title: "Zmieniamy świat."
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla"
   homepage_hero_text_susan: |-
     &ldquo;Jeśli potrafisz zmienić technologię, potrafisz zmienić świat.&rdquo;
@@ -392,7 +422,9 @@
   class_submission_level_vocational: "Zawodowy"
   class_submission_languages_other: "Inne języki"
   videos_more: "Więcej <a href='%{inspiring_videos_playlist}'> inspirujących filmów</a> pokazujących modele ról i gwiazdy"
+  videos_more_markdown: "Więcej [inspirujących filmów] (%{inspiring_videos_playlist}) przedstawiających osoby, które mogą być wzorem dla innych oraz celebrytów"
   careers_page_more: "Więcej <a href='%{careers_url}' target='_blank'> inspirujących filmów</a>, w których występują specjaliści z obszarów technologii"
+  careers_page_more_markdown: "Więcej  [inspirujących filmów](%{careers_url}) , w których występują specjaliści z dziedzin technologii"
   playlab_choose_theme: "Wybierz własny motyw Play Lab"
   playlab_classic_title: "Klasyczny"
   playlab_gumball_title: "Niesamowity świat Gumball"
@@ -498,9 +530,13 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} nauczycieli potrzebuje wolontariuszy. <br>%{num_volunteers} zarejestrowanych wolontariuszy. Dołącz do nich."
   volunteer_engineer_submission_intro_background: "Godzina Kodowania jest globalną inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia Edukacji Informatycznej w dniach 7-13 grudnia."
   volunteer_engineer_submission_intro_recruit: 'Nauczyciele byliby szczęśliwi mając kogoś <span style="font-family: ''Gotham 7r'', sans-serif;">, pasjonata edukacji informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> uczniów opowiadając o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu).'
+  volunteer_engineer_submission_intro_recruit_markdown: "Nauczyciele byliby szczęśliwi mając kogoś , **pasjonata edukacji informatycznej**, kto mógłby pomóc w klasie, lub kogoś, kto potrafi  **zainspirować** uczniów opowiadając o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu)."
   volunteer_engineer_submission_intro_guide: "Dowiedz się tutaj więcej o naszym <a href=\"%{volunteer_guide}\"> programie dla wolontariuszy</a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Dowiedz się tutaj więcej o naszym  [programie dla wolontariuszy](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Podaj następujące informacje, jeśli jesteś studentem informatyki lub profesjonalnym programistą. Pola oznaczone <span class=\"form-required-field\"> *</span> są wymagane."
+  volunteer_engineer_submission_intro_signup_markdown: "Podaj następujące informacje, jeśli jesteś studentem informatyki lub profesjonalnym programistą. Musisz mieć ukończone 18 lat i zgłosić się jako wolontariusz. Należy mieć na uwadze, że wszystkie pola, które wypełnisz w tej części będą dostępne publicznie dla każdego, kto będzie oglądał [mapę wolontariuszy](/wolontariusz/miejscowy). Pola oznaczone _ * _ są wymagane."
   volunteer_engineer_submission_intro_links: "Czy jesteś nauczycielem poszukującym wolontariusza? Odszukaj wolontariusza w okolicy na naszej <a href=\"%{volunteer_local}\"> mapie wolontariuszy</a>."
+  volunteer_engineer_submission_intro_links_markdown: "Czy jesteś nauczycielem poszukującym wolontariuszy? Odszukaj wolontariusza w okolicy na naszej  ]mapie wolontariuszy](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Uaktualnij informacje o sobie"
   volunteer_engineer_submission_header_shared: "Informacje udostępniane nauczycielom na mapie wolontariuszy"
   volunteer_engineer_submission_field_name: "Nazwa"
@@ -534,6 +570,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Oświadczam, że mam co najmniej 18 lat."
   volunteer_engineer_submission_submit: "Wyślij"
   volunteer_engineer_submission_thankyou: "Dziękujemy! Twoje dane wolontariusza zostały pomyślnie przesłany. Nauczyciele będą używać <a href=\"%{url}\"> tej mapy</a> do wyszukiwania i kontaktu z wolontariuszami takimi, jak Ty. Twoje dane zostaną wyświetlone na mapie w ciągu 48 godzin."
+  volunteer_engineer_submission_thankyou_markdown: "Dziękujemy! Podanie Twoich danych wolontariusza powiodło się. Nauczyciele będą używać [tej mapy](%{url}) do wyszukiwania i kontaktu z wolontariuszami takimi, jak Ty. Twoje dane zostaną poprawnie wyświetlone na mapie w ciągu 48 godzin."
   volunteer_engineer_submission_commitment_uncertain: "Niepewny"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 godzina tygodniowo"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 godziny tygodniowo"
@@ -729,8 +766,10 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Ekspresowy kurs dla dzieci, które nie umieją czytać: '
   dashboard_express: 'Szybki Kurs: '
   dashboard_unplugged: "Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj tych lekcji bez komputera</a> w klasie."
+  dashboard_unplugged_markdown: "Jeżeli nie macie dostępu do komputerów, [wypróbujcie tych lekcji bez komputerów (%{unplugged_url}) w klasie."
   dashboard_tools: 'Narzędzia: '
   dashboard_curriculum: "Program nauczania"
   dashboard_curriculum_overview: "Streszczenie programu (curriculum) dla K-5"
@@ -750,6 +789,7 @@
   dashboard_curriculum_csp: 'Podstawy informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
   dashboard_curriculum_csd: 'Odkrycia Informatyczne: '
+  dashboard_curriculum_apcsa: 'Informatyka AP w programie Java:'
   dashboard_grade_k: "K"
   dashboard_grade_other: "Inni/inne"
   dashboard_login_word: "Słowo"
@@ -827,6 +867,7 @@
   carousel_heading_beyond_languages: "Poznaj inne języki programowania"
   carousel_heading_apps_games: "Utwórz własną aplikację lub grę"
   carousel_heading_university: "Uniwersyteckie kursy online"
+  carousel_heading_online_university: "Uniwersyteckie kursy dostępne online"
   carousel_heading_webpages: "Naucz się tworzyć strony internetowe"
   carousel_heading_robots: "Naucz się programować roboty i inne urządzenia"
   carousel_heading_ide: "Platformy popularne wśród nauczycieli"
@@ -922,9 +963,13 @@
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
   express-2018_name: Szybki Kurs (2018)
+  pre-express-2018_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2018)
+  pre-express-2019_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2019)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
   csd2_name: 'Rodział 2: Web Development'
+  csd3_name: 'Dział 3: Animacje i gry'
   accelerated_name: "Przyspieszony kurs"
+  pre-express_name: Ekspresowy kurs dla dzieci, które nie umieją czytać
   20-hour_name: Przyspieszony kurs
   algebra_name: "Pełny kurs Informatyka w algebrze"
   AlgebraA_name: "Informatyka w Kursie A Algebry"
@@ -1381,7 +1426,7 @@
   sphero_beyond_longdescription: "Obojętne, czy jesteś pedagogiem czy rodzicem, lekcje z SPRK są kursem programowania robotów dla dzieci, rozwijającym ich umiejętności matematyczne i przyrodnicze."
   compatibility_hide_this_warning: "Ukryj to ostrzeżenie"
   compatibility_unsupported_browser: "Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może nie działać właściwie."
-  compatibility_unsupported_browser_markdown: "Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może nie działać właściwie."
+  compatibility_unsupported_browser_markdown: "Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić przeglądarkę do [jednej z obsługiwanych przez nas przeglądarek](%{supported_browsers_url}). Możesz wyświetlić stronę, ale może nie działać właściwie."
   flappy_shortcode: "pofruń"
   header_home: "Strona główna"
   header_my_dashboard: "Mój pulpit"
@@ -1418,15 +1463,22 @@
   header_teacher_community: "Społeczność nauczycieli"
   header_help_support: 'Pomoc i wsparcie '
   header_report_bug: "Zgłoś błąd"
+  header_report_abuse: "Zgłoś nadużycie"
   header_legal: "Prywatność i legalność"
   header_legal_privacy: "Polityka prywatności"
   header_legal_tos: "Regulamin"
   header_tutorials: "Samouczki"
+  app_lab_documentation: "Dokumentacja \"App Lab\""
+  app_lab_tutorials: "Samouczki \"App Lab\""
+  game_lab_documentation: "Dokumentacja \"Game Lab\""
+  game_lab_tutorials: "Samouczki \"Game Lab\""
+  sprite_lab_documentation: "Dokumentacja \"Sprite Lab\""
+  sprite_lab_tutorials: "Samouczki \"Sprite Lab\""
   header_documentation: "Dokumentacja"
   user_header_label: "Witaj %{username}"
   user_header_team: "Zespół"
   user_header_my_projects: "Moje projekty"
-  user_header_settings: "Moje konto"
+  user_header_settings: "Ustawienia konta"
   user_header_logout: "Wyloguj się"
   user_header_signin: "Zaloguj się"
   user_header_create: 'Twórz '
@@ -1482,6 +1534,7 @@
   hoc_overview_dance_2019_subtitle: "Koduj Potańcówkę, aby podzielić się ze znajomymi. Występują: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj i 34 innych!"
   hoc_overview_title: "Aktywności Godziny Kodowania z Code.org"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\"> Godzina Kodowania (Hour of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45 językach."
+  hoc_overview_subtitle_markdown: "(https://hourofcode.com\"> Godzina Kodowania (Hour of Code) to globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45 językach."
   hoc_overview_partner_activities_title: "Więcej aktywności od naszych partnerów"
   hoc_overview_partner_activities_body: "Strona Godziny Kodowania zawiera ponad 500 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie."
   hoc_overview_partner_activities_link: "Zobacz aktywności"
@@ -1582,6 +1635,7 @@
   hoc2018_dance_view_creativity_video_playlist: "Czym jest kreatywność? Obejrzyj pełną serię (5 minut)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "W partnerstwie z: "
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* to kompleksowy program \"od dzieciństwa do kariery\", który inspiruje, kształci i szkoli dzieci i młodzież o niskich dochodach i innych przeciwnościach, aby kontynuowały rozwój kariery w dziedzinie informatyki. <a href='%{amazon_future_engineer_link}' target='_blank'> Dowiedz się więcej </a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* to kompleksowy program \"od dzieciństwa do kariery\", który inspiruje, kształci i szkoli dzieci i młodzież z rodzin o niskich dochodach i pokrzywdzonych w inny sposób, aby kontynuowały zdobywanie zawodu w dziedzinie informatyki. {Więcej informacji](%{amazon_future_engineer_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Dowiedz się więcej o programie Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "O programie Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Dowiedz się o programie od przedszkola do kariery firmy Amazon, aby zwiększyć dostęp do edukacji informatycznej. Znajdź informacje o tym, jak wziąć udział w naszych obozach letnich, lekcjach informatyki w szkołach średnich, stypendiach i stażach."
@@ -1610,6 +1664,7 @@
   hoc2018_dance_video4: "Potańcówka - Gratulacje"
   page_not_found_title: "Strona nie została znaleziona"
   page_not_found_header: '404: Strona nie została znaleziona'
+  page_not_found_description: "Strona, której szukasz, nie istnieje pod tym adresem. Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną."
   page_not_found_button: "Powrót do strony domowej"
   hoc2018_mc_with_microsoft: "W partnerstwie z: "
   hoc2018_mc_thank_microsoft: "Dziękujemy Microsoft za wspieranie naszej wizji i misji, aby zapewnić, że każde dziecko ma możliwość nauki informatyki i umiejętności, by odnieść sukces w XXI wieku."
@@ -1618,3 +1673,11 @@
   hoc2019_mc_mee_description2: "Uzyskaj dostęp do bezpłatnych zasobów, w tym: planu lekcji, filmów, programu informatyki i szkoleń dla nauczycieli."
   hoc2019_mc_more_coding_resources: "Więcej zasobów do kodowania"
   hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link}) z ostatniego roku."
+  homepage_slot_text_title_at_home: "Ucz się"
+  homepage_slot_text_blurb_at_home: "Dzięki tym materiałom to jest proste"
+  homepage_slot_text_link_code_break: "Weź Code Brake"
+  homepage_slot_text_link_do_hoc: "Wykonaj Godzinę Kodowania"
+  homepage_slot_text_link_express_course: "Wypróbuj kurs ekspresowy"
+  page_not_available_title: "Strona niedostępna"
+  page_not_available_description: "Przepraszamy, ta strona nie jest już dostępna pod tym adresem. Jeśli nadal potrzebujesz dostępu, wyślij e-mail <a href='mailto:support@code.org'>support@code.org</a>."
+  page_not_available_button: "Powrót do strony domowej"

@@ -448,6 +448,8 @@ ko:
               name: 매개변수가 있는 함수 만들기
             While Loops:
               name: '~인 동안 반복'
+            Creating Functions with Parameters:
+              name: 매개변수가 있는 함수 만들기
         algebraPD3:
           lessons:
             Course Overview:
@@ -2961,3 +2963,9 @@ ko:
           lesson_groups:
             lg_1:
               display_name: 콘텐츠
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: 과정 A
+            Course B:
+              name: 과정 B

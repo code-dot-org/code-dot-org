@@ -407,7 +407,7 @@
           "get nectar": {
             "name": "собрать нектар",
             "parameters": {
-              "counter": "счётчик"
+              "counter": "счетчик"
             }
           }
         },

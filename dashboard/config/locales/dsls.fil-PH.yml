@@ -1877,6 +1877,12 @@ fil-PH:
         - {}
         questions:
         - {}
+      csd-pre-survey-2017-levelgroup:
+        markdown: "Ang klase ay igugrupo upang gumawa ng bangkang yari sa aluminum.
+          Kailangan nilang idisenyo ito upang makapaglaman ng pinakamaraming barya
+          na mailalagay rito nang hindi ito lulubog. \nMatapos ang leksyon, magbibigay
+          ng kepleksyon ang bawat grupo ayon sa kanilang eksperiensya sa nagdaang
+          gawain at maiugnay ito sa mga susunod na takdang gawain. "
       grade2_multi_collector_A_predict1:
         answers:
         - {}

@@ -3,6 +3,11 @@ require 'cdo/activity_constants'
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
+  factory :course_offering do
+    sequence(:key) {|n| "bogus-course-offering-#{n}"}
+    sequence(:display_name) {|n| "bogus-course-offering-#{n}"}
+  end
+
   factory :course_version do
     sequence(:key) {|n| "202#{n - 1}"}
     sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
@@ -13,7 +18,11 @@ FactoryGirl.define do
     end
 
     trait :with_unit do
-      association(:content_root, factory: :script)
+      association(:content_root, factory: :script, is_course: true)
+    end
+
+    trait :with_course_offering do
+      association :course_offering
     end
   end
 
@@ -672,7 +681,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script do
+  factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
 
     factory :csf_script do
@@ -768,6 +777,7 @@ FactoryGirl.define do
 
   factory :lesson do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
+    sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     script
 
     absolute_position do |lesson|

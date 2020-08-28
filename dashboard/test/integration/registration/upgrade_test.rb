@@ -48,7 +48,7 @@ module RegistrationsControllerTests
       patch '/users/upgrade', params: {
         user: user_params
       }
-      assert_redirected_to '/'
+      assert_redirected_to '/users/edit'
 
       student_without_password.reload
       assert_equal User.hash_email(NEW_EMAIL), student_without_password.hashed_email
@@ -70,7 +70,7 @@ module RegistrationsControllerTests
       patch '/users/upgrade', params: {
         user: user_params
       }
-      assert_redirected_to '/'
+      assert_redirected_to '/users/edit'
 
       student_without_password.reload
       assert_equal User.hash_email(NEW_EMAIL), student_without_password.hashed_email
@@ -96,7 +96,7 @@ module RegistrationsControllerTests
       patch '/users/upgrade', params: {
         user: user_params
       }
-      assert_redirected_to '/'
+      assert_redirected_to '/users/edit'
 
       student_without_password.reload
       assert_equal parent_email, student_without_password.parent_email

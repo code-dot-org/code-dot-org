@@ -46,6 +46,7 @@
   "jump": "zıpla",
   "jumpBackward": "geriye atla",
   "jumpForward": "İleri atla",
+  "jumpToOverDown": "%2'den %1'e zıpla",
   "jumpToPosition": "%1 konumuna zıpla",
   "jumpByDirection": "%1'i %2 piksel hareket ettir",
   "jumpTooltip": "Sanatçıyı, hiç iz bırakmadan taşır.",

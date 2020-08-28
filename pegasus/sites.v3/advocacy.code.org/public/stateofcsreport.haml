@@ -1,74 +1,166 @@
 ---
-theme: responsive_wide
-layout: wide
-social:
-  "og:title": "Advocate for computer science education"
-  "og:description": "Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of the K-12 education."
-  "twitter:site": "@codeorg"
-  "twitter:title": "Advocate for computer science education"
-  "twitter:description": "Learn about our local policy and access resources to support computer science in our state."
-  "twitter:url": "https://advocacy.code.org/"
-video_player: false
+title: 2020 State of CS Report
+theme: responsive
+layout: none
 ---
 
--# Put advocacy.css after other CSS files so that it can override them.
 =inline_css 'interactive-map.css'
-=inline_css 'advocacy-home.css'
+=inline_css 'advocacy-stateofcsreport.css'
 
-- banner_body = capture_haml do
-  Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of K-12 education.
 
-  .learn-more
-    %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf"), target: '_blank'}
-      %button.header-button
-        Learn more
 
-#homepage
+.container_responsive{style: "background-color: #F5F5F5; text-align: center"}
+  .col-33
+    %img{src: "/images/fit-100/CodeLogo.png", style: "padding: 10px"}
+  .col-33
+    %img{src: "/images/fit-100/CSTALogo.png", style: "padding: 10px; padding-top: 15px"}
+  .col-33
+    %img{src: "/images/fit-100/ECEPLogo.jpg", style: "padding: 10px"}
+  .clear
 
-  #fullwidth.banner-container
-    .banner
-      .banner-shade
-        .container_responsive
-          %h1 Advocate for computer science education
-          .desktop-feature
-            = banner_body
+.container_responsive
+  .col{style: "text-align: center"}
+    %h1
+      2020 State of Computer Science Education:
+      %br
+      Illuminating Disparities
+    %p
+      One sentence describing the report
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
+      %button{style: "background-color: black; color: white; border-color: black"} Download PDF
+    %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
+      %button{style: "background-color: white; color: black; border-color: black"} Order Report
+  .clear
 
-    = view :header
+%br
 
-  .container_responsive
-    .non-banner.mobile-feature
-      = banner_body
+.container_responsive{style: "background-color: #F5F5F5; text-align: center; padding: 10px"}
+  .col-100
+    %h4
+      State Summaries
+    %p
+      One sentence describing the images below and the state summaries
+  .col-33
+    %img.center{src: "/images/fit-300/StatePage.png"}
+    %p{style: "margin-bottom: 20px"}
+      Sentence describing the State Page
+  .col-33
+    %img.center{src: "/images/fit-300/SchoolsTeaching.png"}
+    %p{style: "margin-bottom: 20px"}
+      Sentence describing the State Page
+  .col-33
+    %img.center{src: "/images/fit-300/AccessParticipation.png"}
+    %p{style: "margin-bottom: 20px"}
+      Sentence describing the State Page
+  .clear
 
-    = view :forum_banner
+%br
 
-    %h2.tablet-feature See what’s happening in your state
-    %h3.centered
-      Click the map below for state-specific data on the computer science landscape
-    -state ||= nil
-    = view :interactive_map, use_url: false, advocacy_variation: true
+.container_responsive
+  .col-50{style: "text-align:center; padding: 10px"}
+    %img{src: "/images/fit-200/Raimondo.png", style: "border-radius: 50%"}
+    %p
+      Governor Gina Raimondo (D-RI)
+    %p{style: "font-style: italic; font-family: 'Gotham 5r', sans-serif; font-size: 14px; line-height: 1.5em; text-align: center"}
+      "Providing all Rhode Island students with computer science education is essential for our economic development and ensures that our students have the skills necessary to compete for high wage, high demand careers."
+  .col-50{style: "text-align:center; padding: 10px"}
+    %img{src: "/images/fit-200/Reynolds.png", style: "border-radius: 50%"}
+    %p
+      Governor Kim Reynolds (R-IA)
+    %p{style: "font-style: italic; font-family: 'Gotham 5r', sans-serif; font-size: 14px; line-height: 1.5em; text-align: center"}
+      "Computer  Science has quickly moved from a narrative elective to a basic skill that every student needs."
+  .clear
 
-    .clear{style: "clear:both"}
+%br
 
-    %h2
-      Drive the change in your state
 
-    =inline_css 'homepage.css'
 
-    #audienceblocks
-      - blocks = AdvocacySite.get_blocks(request)
-      - blocks.each do |block|
-        .block
-          - if block[:type] == "block"
-            = view :homepage_quarterslot_links, entry: block, desktop_column_width: 50, layout_class: 'quarterslot-links-large'
 
-    .clear
 
-    .coalition
-      %h3.left Get your State of CS report
-      %h4.left 
-        Choose a digital PDF or order a physical copy today
-      %a{href: "https://go.pardot.com/l/153401/2018-04-13/kspz3t", target: "_blank"}
-        %button.left Download PDF
-      &nbsp;&nbsp;
-      %a{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
-        %button.left Order Report
+/Option 1 (alternating picture and text)
+
+/ .container_responsive
+/   .col-66{style: "margin-top: 60px;"}
+/     %p{style: "font-style: italic; font-family: 'Gotham 5r', sans-serif; font-size: 16px; line-height: 1.5em; text-align: center"}
+/       "Providing all Rhode Island students with computer science education is essential for our economic development and ensures that our students have the skills necessary to compete for high wage, high demand careers."
+/   .col-33{style: "text-align: center"}
+/     %img{src: "/images/fit-200/Raimondo.png", style: "border-radius: 50%"}
+/     %p
+/     %br
+/       Governor Gina Raimondo (D-RI)
+/   .clear
+
+/ %br
+
+/ .container_responsive
+/   .col-33{style: "text-align: center"}
+/     %img{src: "/images/fit-200/Reynolds.png", style: "border-radius: 50%"}
+/     %p
+/     %br
+/       Governor Kim Reynolds (R-IA)
+/   .col-66{style: "margin-top: 60px;"}
+/     %p{style: "font-style: italic; font-family: 'Gotham 5r', sans-serif; font-size: 16px; line-height: 1.5em; text-align: center"}
+/       "Computer  Science has quickly moved from a narrative elective to a basic skill that every student needs."
+/   .clear
+
+%br
+
+.container_responsive{style: "background-color: #F5F5F5"}
+  .col-50{style: "background-color: white; text-align: center"}
+    %img{src: "/images/fit-450/AccessReport.png"}
+  .col-50{style: "padding: 10%"}
+    %h4
+      Access to Computer Science
+    %p
+      Sentence describing Access Report
+  .clear
+
+%br
+
+.container_responsive{style: "background-color: #F5F5F5"}
+  .col-50{style: "padding: 10%"}
+    %h4
+      Policy Maps
+    %p
+      Sentence describing Policy Maps
+  .col-50{style: "background-color: white; text-align: center"}
+    %img{src: "/images/fit-450/AccessReport.png"}
+  .clear
+
+%br
+
+.container_responsive{style: "background-color: #F5F5F5"}
+  .col-50{style: "background-color: white; text-align: center"}
+    %img{src: "/images/fit-450/9Policies.png"}
+  .col-50{style: "padding: 10%"}
+    %h4
+      9 Policies
+    %p
+      Sentence describing 9 Policies
+  .clear
+
+%br
+
+.container_responsive
+  .col-50
+    %h4
+      Get your State of CS Report
+    %p
+      Choose a digital PDF or order a physical copy today!
+  .col-50{style: "text-align: center"}
+    %a{href: "/2019_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
+      %button{style: "background-color: black; color: white; border-color: black"} Download PDF
+    %a{href: "https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z", target: "_blank"}
+      %button{style: "background-color: white; color: black; border-color: black"} Order Report
+  .clear
+
+%br
+
+.container_responsive
+  .col-100{style: "text-align: center; padding: 10px"}
+    %h4
+      CC BY NC 4.0
+    %p
+      Sentence explaining usage rights of the report
+  .clear
+

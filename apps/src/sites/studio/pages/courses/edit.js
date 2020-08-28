@@ -20,6 +20,7 @@ function showCourseEditor() {
       <CourseEditor
         name={courseEditorData.course_summary.name}
         title={courseEditorData.course_summary.title}
+        versionTitle={courseEditorData.course_summary.version_title}
         familyName={courseEditorData.course_summary.family_name}
         versionYear={courseEditorData.course_summary.version_year}
         visible={courseEditorData.course_summary.visible}
@@ -36,6 +37,7 @@ function showCourseEditor() {
         hasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
+        hasNumberedUnits={courseEditorData.course_summary.has_numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
       />

@@ -9015,7 +9015,8 @@ sk:
     iPad
   tutorial_scratchcartoon_string_platforms: Všetky moderné prehliadače, Android tablet,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android telefón, iPhone
+  tutorial_codemonkeyjr_string_platforms: Všetky moderné prehliadače, Android tablet,
+    iPad, Android telefón, iPhone
   tutorial_bananatales_string_platforms: Všetky moderné prehliadače
   tutorial_scratchtales_string_platforms: Všetky moderné prehliadače, Android tablet,
     iPad
@@ -9393,3 +9394,4 @@ sk:
   some: Niektoré
   all: Všetky
   dont_know: Neviem
+  language_label: Language

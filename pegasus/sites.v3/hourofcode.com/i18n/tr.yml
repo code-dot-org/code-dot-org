@@ -9185,7 +9185,8 @@ tr:
     Ipad
   tutorial_scratchcartoon_string_platforms: Bütün modern tarayıcılar, Android tablet,
     Ipad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android telefon, iPhone
+  tutorial_codemonkeyjr_string_platforms: Tüm modern tarayıcılar, Android tablet,
+    iPad, Android telefon, iPhone
   tutorial_bananatales_string_platforms: Bütün modern tarayıcılar
   tutorial_scratchtales_string_platforms: Bütün modern tarayıcılar, Android tablet,
     Ipad
@@ -9565,3 +9566,4 @@ tr:
   some: Biraz
   all: Hepsi
   dont_know: Bilmiyorum
+  language_label: Language

@@ -45,7 +45,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     stubs(:current_user).returns(nil)
     script = Script.find_by_name(Script::COURSE4_NAME)
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
-    assert_equal 'Lesson 3: ' + I18n.t("data.script.name.#{script.name}.lessons.#{script_level.lesson.name}.name"), script_level.lesson.summarize[:title]
+    assert_equal 'Lesson 3: ' + I18n.t("data.script.name.#{script.name}.lessons.#{script_level.lesson.key}.name"), script_level.lesson.summarize[:title]
   end
 
   test 'show stage position in header for default script' do

@@ -112,7 +112,7 @@ Access the best of Google’s training and tools to grow your skills and career.
 Master industry-recognized Microsoft technologies at your own pace with free modules, tutorials, and learning paths designed to prepare you for [Microsoft certifications](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ### [Pluralsight One](https://www.pluralsightone.org/product/education/code-org-redemption-3m)
-Pluralsight offers Code.org students the opportunity to continue their CS learning journey with free access to additional CS courses for a limited time.
+Pluralsight offers Code.org students the opportunity to continue their CS learning journey with free access to additional CS courses through their teacher for a limited time.
 
 ### [Riot Games](https://www.riotgames.com/en/urf-academy)
 Riot Games’ Game Design curriculum is an entry-level course that teaches high school students the fundamental elements of game design using a framework and interactive workshops created by professional game designers. Course includes 6 modules containing 14 lessons.

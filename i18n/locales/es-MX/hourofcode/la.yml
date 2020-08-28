@@ -5,30 +5,30 @@ la:
   language: Inglés
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: 4 dic.
+  campaign_date_start_short: 7 Dic.
   campaign_date_start_long: 4 de diciembre
   campaign_date_short: 4-10 dic.
   campaign_date_full: Del 4 al 10 de diciembre
   campaign_date_year: '2017'
   campaign_date_full_year: Del 4 al 10 de diciembre de 2017
   latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_start_long: Octubre 1
+  latam_campaign_date_short: Oct. 1 - Dic. 18
+  latam_campaign_date_full: Octubre 1 - Diciembre 18
   latam_campaign_date_year: '2017'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  latam_campaign_date_full_year: Octubre 1, 2020 - Diciembre 18, 2020
   europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
+  europe_campaign_date_start_long: Octubre 10
   europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  europe_campaign_date_full: Octubre 10-25
   europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: October 10-25, 2020
+  europe_campaign_date_full_year: Octubre 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
+  africa_campaign_date_start_long: Octubre 1
   africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  africa_campaign_date_full: Octubre 1-31
   africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_full_year: Octubre 1-31, 2020
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -9609,8 +9609,8 @@ la:
     Android, iPad
   tutorial_scratchcartoon_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
-  tutorial_codemonkeyjr_string_platforms: Tablets Android, iPad, teléfonos Android,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Todos los navegadores modernos, tableta
+    Android, iPad, teléfono Android, iPhone
   tutorial_bananatales_string_platforms: Todos los navegadores modernos
   tutorial_scratchtales_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
@@ -9995,3 +9995,4 @@ la:
   some: Algunos
   all: Todos
   dont_know: No sé
+  language_label: Idioma

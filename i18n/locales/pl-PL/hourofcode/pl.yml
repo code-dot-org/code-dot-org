@@ -9193,8 +9193,8 @@ pl:
     z systemem Android, iPad
   tutorial_scratchcartoon_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
-  tutorial_codemonkeyjr_string_platforms: Tablet z systemem Android, iPad, telefon
-    z systemem Android, iPhone
+  tutorial_codemonkeyjr_string_platforms: Wszystkie nowoczesne przeglądarki, tablet
+    z systemem Android, iPad, telefon z systemem Android, iPhone
   tutorial_bananatales_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_scratchtales_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
@@ -9575,3 +9575,4 @@ pl:
   some: Niektóre
   all: Wszystkie
   dont_know: Nie wiem
+  language_label: Language

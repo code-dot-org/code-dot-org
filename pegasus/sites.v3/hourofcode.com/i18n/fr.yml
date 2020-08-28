@@ -487,8 +487,9 @@ fr:
   signup_host_an_hour: Acceuillez une Heure
   signup_match_volunteer: Aidez-moi à trouver un ingénieur local afin d'inspirer mes
     élèves
-  signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
-    local opportunities, or other computer science news?
+  signup_email_preference_opt_in: Pouvons-nous vous envoyer des e-mails d’information
+    sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
+    le domaine informatique ?
   signup_email_preference_privacy: "(Consulter notre politique de confidentialité)"
   signup_email_preference_yes: Oui
   signup_email_preference_no: Non
@@ -9203,7 +9204,8 @@ fr:
     Android, iPad
   tutorial_scratchcartoon_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Tous les navigateurs actuels, tablette Android,
+    iPad, téléphone Android, iPhone
   tutorial_bananatales_string_platforms: Tous les navigateurs actuels
   tutorial_scratchtales_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
@@ -9589,3 +9591,4 @@ fr:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

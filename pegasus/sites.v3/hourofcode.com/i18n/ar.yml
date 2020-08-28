@@ -8943,8 +8943,8 @@ ar:
     التي تعمل بنظام أندرويد، أجهزة آيباد
   tutorial_scratchcartoon_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
     التي تعمل بنظام أندرويد، أجهزة آيباد
-  tutorial_codemonkeyjr_string_platforms: الأجهزة اللوحية التي تعمل بنظام أندرويد،
-    أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_codemonkeyjr_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
   tutorial_bananatales_string_platforms: جميع المتصفحات الحديثة
   tutorial_scratchtales_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
     التي تعمل بنظام أندرويد، أجهزة آيباد
@@ -9342,3 +9342,4 @@ ar:
   some: البعض
   all: الكل
   dont_know: لا أعرف
+  language_label: Language

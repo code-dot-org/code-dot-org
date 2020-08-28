@@ -1,4 +1,4 @@
-tts true
+is_course true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursec/standards/"]]
@@ -12,11 +12,12 @@ version_year '2018'
 is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
+tts true
 
-lesson 'Building a Foundation'
+lesson 'Building a Foundation', display_name: 'Building a Foundation'
 level 'BuildingAFoundation_2018'
 
-lesson 'Programming in Maze'
+lesson 'Programming in Maze', display_name: 'Programming with Angry Birds'
 level 'courseC_video_maze_2018'
 level 'courseC_maze_programming1_2018'
 level 'courseC_maze_programming2_2018'
@@ -31,7 +32,7 @@ level 'courseC_maze_programming9_2018'
 bonus 'courseC_maze_programming_challenge1_2018'
 bonus 'courseC_maze_programming_challenge2_2018'
 
-lesson 'Debugging in Maze'
+lesson 'Debugging in Maze', display_name: 'Debugging in Maze'
 level 'courseC_video_debugging_2018'
 level 'courseC_maze_debugging1_2018'
 level 'courseC_maze_debugging2_2018'
@@ -45,10 +46,10 @@ level 'courseC_maze_debugging9_2018'
 bonus 'courseC_maze_debugging_challenge1_2018'
 bonus 'courseC_maze_debugging_challenge2_2018'
 
-lesson 'Real-life Algorithms: Paper Planes'
+lesson 'Real-life Algorithms: Paper Planes', display_name: 'Paper Planes'
 level 'PaperPlanes_2018'
 
-lesson 'Programming in Collector'
+lesson 'Programming in Collector', display_name: 'Collecting Treasure with Laurel'
 level 'courseC_video_collector_2018'
 level 'courseC_collector_prog1_2018'
 level 'courseC_collector_prog2_2018'
@@ -65,7 +66,7 @@ level 'grade2_collector_10_2018'
 bonus 'courseC_collector_prog_challenge1_2018'
 bonus 'courseC_collector_prog_challenge2_2018'
 
-lesson 'Programming in Artist'
+lesson 'Programming in Artist', display_name: 'Creating Art with Code'
 level 'courseC_video_artist_2018'
 level 'courseC_artist_prog1_2018'
 level 'courseC_artist_prog2_2018'
@@ -79,10 +80,10 @@ level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: Getting Loopy'
+lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy'
 level 'GettingLoopy_2018'
 
-lesson 'Loops with Rey and BB-8'
+lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8'
 level 'bb8_skinOverview_C-F_video'
 level 'courseC_starWars_loops1_2018'
 level 'courseC_starWars_loops1_predict1_2018'
@@ -100,7 +101,7 @@ level 'courseC_starWars_loops11_2018'
 bonus 'courseC_maze_loops_challenge1a_2018'
 bonus 'courseC_collector_loops_challenge2_2018'
 
-lesson 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Sticker Art with Loops'
 level 'courseC_artist_loopsPrePre1a_2018'
 level 'courseC_artist_loopsPre1a_2018'
 level 'courseC_artist_loop1_2018'
@@ -114,7 +115,7 @@ level 'courseC_artist_loops6a_2018'
 level 'courseC_artist_loops7a_2018'
 level 'courseC_artist_loops8a_2018'
 
-lesson 'Loops in Harvester'
+lesson 'Loops in Harvester', display_name: 'Harvesting Crops with Loops'
 level 'harvester_skinOverview_video'
 level 'courseC_harvester_loops1_2018'
 level 'courseC_harvester_loops2_2018'
@@ -131,10 +132,10 @@ level 'courseC_harvester_loops11_predict1_2018'
 bonus 'courseC_harvester_loops_challenge1a_2018'
 bonus 'courseC_harvester_loops_challenge2_2018'
 
-lesson 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'The Big Event'
 level 'BigEvent_2018'
 
-lesson 'Build a Flappy Game'
+lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game'
 level 'courseC_video_flappyIntro_2018'
 level 'courseC_flappy_events1_2018'
 level 'courseC_flappy_events2_2018'
@@ -147,10 +148,10 @@ level 'courseC_flappy_events8_2018'
 level 'courseC_flappy_events9_2018'
 level 'courseC_flappy_events10_2018'
 
-lesson 'Screen Out the Mean'
+lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean'
 level 'courseC_Unplugged_ScreenOutTheMean_2018'
 
-lesson 'Events in Play Lab'
+lesson 'Events in Play Lab', display_name: 'Chase Game with Events'
 level 'courseC_PlayLab_events1_2018'
 level 'courseC_PlayLab_events2_2018'
 level 'courseC_PlayLab_events3_2018'
@@ -164,7 +165,7 @@ level 'courseC_PlayLab_eventsA_2018'
 level 'courseC_PlayLab_eventsFP_2018'
 bonus 'courseC_PlayLab_events_challenge1_2018'
 
-lesson 'Looking Ahead'
+lesson 'Looking Ahead', display_name: 'Looking Ahead with Minecraft'
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'
@@ -180,5 +181,6 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-lesson 'Binary Bracelets'
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets'
 level 'BinaryBracelets_2018'
+

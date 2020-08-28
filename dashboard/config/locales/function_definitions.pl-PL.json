@@ -520,7 +520,7 @@
         },
         "Find the Wizard": {
           "check guess": {
-            "name": "zaznacz \"Zgadnij\""
+            "name": "zaznacz zgadnij"
           },
           "do something": {
             "name": "wykonaj coś"
@@ -566,7 +566,7 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "zaznacz \"Zgadnij\"",
+            "name": "zaznacz zgadnij",
             "parameters": {
               "theGuess": "theGuess"
             }
@@ -2033,7 +2033,7 @@
             "name": "wykonaj coś"
           },
           "Make gingham": {
-            "name": "Utwórz kratkę",
+            "name": "Utwórz gingham",
             "parameters": {
               "size": "rozmiar"
             }
@@ -2064,7 +2064,7 @@
             "name": "wykonaj coś"
           },
           "Make gingham": {
-            "name": "Utwórz kratkę",
+            "name": "Utwórz gingham",
             "parameters": {
               "size": "rozmiar"
             }

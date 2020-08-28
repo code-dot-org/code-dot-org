@@ -400,6 +400,7 @@ tr:
         csp_applab_functions: Fonksiyonlara Giriş
         csp_applab_functions_parameters: Fonksiyon parametreleri
         csp_applab_loops: Döngüler
+        csp_cs_is_changing_everything: Bilgisayar Bilimi, Her Şeyi Değiştiriyor.
         csp_textcompression: Metin sıkıştırma bileşeni
         csp_textcompression_new: Metin sıkıştırma bileşeni
         starwars_intro: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Giriş'
@@ -458,25 +459,94 @@ tr:
         applab_intro_designmode: App Lab - tasarım modu
         applab_intro_share: App Lab - Uygulamanı paylaş
         csd_applab_arrays: Dizilere Giriş
+        CSF_skinOverview_Harvester: Hasatçı
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: BB-8 ile Döngüler
+        CSF_harvester_skinOverview_K-1: Hasatçı
+        CSF_harvester_loops_K1: Hasatçıdaki Döngüler
+        CSF_scrat_loops_K1: Buz Devrindeki Döngüler
+        CSF_scrat_loops_CF: Buz Devrindeki Döngüler
+        CSF_if_allskins: Eğer Bloğu
+        CSF_ifelse_allskins: Eğer/Değilse Bloğu Kullanılıyor
+        CSF_ifelseifelse_allskins: Eğer/Değilseeğer/Değilse Blokları Kullanılıyor
         CSF_loops_AB: Döngüler
+        csd_gamelab_booleans: Boolean İfadeleri
+        csd_gamelab_conditional_statements: Koşullu İfadeler
+        csd_gamelab_if_else: Eğer/Değilse İfadeleri
+        CSF_SpriteLabIntro_CDEF: Bu Hareketli Nesne Laboratuvarıdır. 
+        CSF_Spritelab_MakeSprite_CDEF: Hareketli Nesne Laboratuvarında bir Hareketli Nesne Nasıl Oluşturulur
+        CDEF_Video_SpritesInAction: Eylem halindeki Hareketli Nesneler
+        CSF_SpriteLab_SpritesInAction_CDEF: Eylem halindeki Hareketli Nesneler
+        CSF_StarWars_ProjectIntro: Star Wars Projesine Giriş
+        mc_2018_intro: 'Minecraft: Su Yolculuğuna Giriş'
+        MC_2018_loops: 'Minecraft: Şuraya Kadar Su Yolculuğunu Tekrarla'
+        mc_2018_conditionals: 'Minecraft: Su Yolculuğu Koşulları'
+        mc_2018_closing: 'Minecraft: Su Yolculuğu Tebrikler'
         hoc_dance_warmup: Dans Partisi - Isınma
         hoc_dance_events: Dans Kutlaması - Etkinlikler
         hoc_dance_properties: Dans Kutlaması - Özellikler
         hoc_dance_congrats: Dans Partisi - Parti Başlıyor!
         c_and_c_digital_sharing: Dijital Paylaşım
+        teaching_csf_how_it_works: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Ders Nasıl İşler'
+        elem_pd_2: İlkokul Bilgisayar Bilimi - Kişisel Gelişim videosu 2/2
+        what_is_cs: Bilgisayar bilimi nedir?
+        repeat_block: Tekrarla Bloğunun kullanılması
+        lesson_planning: Ders Planlanması
+        opd_closing: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Kapanış & Sonraki Adımlar'
+        why_unplugged_lessons: '"Bağlantısız" olma'
+        writing_first_program: Birinc bilgisayar programınızın yazılması
+        conditionals_with_cards: Eylem halindeki Bağlantısız Ders -Kartlarla Koşullar
+        songwriting_with_functions: Eylem halindeki Bağlantısız Ders -Fonksiyonlar ile şarkı yazma
+        what_is_an_event: Bir etkinlik nedir?
+        teaching_cs_pair_programming: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Eşli Programlama'
+        teaching_problem_solving: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Problem Çözmenin Öğretilmesi'
+        csd_applab_designmode: 'Bilgisayar Bilimi Keşifleri: Uygulama Laboratuvarı - Tasarım Modu'
         csd_pair_programming: Eşli Programlama
+        csd_gamelab_functions: Fonksiyonların Çağrılması ve Tanımlanması
         csd_applab_parameters: Fonksiyon parametreleri
+        csd_applab_loops: Uygulama Laboratuvarındaki Döngüler
         csd_problem_solving_process: Problem çözme süreci
+        CSF_Going_Places_Safely: Online Mahallem
+        CSF_SpriteLab_Intro_v2: Hareketli Nesne Laboratuvarı Tanıtımı
         CSF_Spritelab_MakeSprite_v2: Nesne Oluşturma
+        CSF_SpriteLab_SpritesInAction_v2: Eylem halindeki Hareketli Nesneler
         csd_debugging: Hata Ayıklama (Debugging)
+        csd_applab_designmode_short: Uygulama Laboratuvarı Tasarım Modu
+        csp-pd-welcome: Aileye Hoşgeldiniz!
+        CSF-Teaching-Problem-Solving: CSF Problem Çözme Öğretimi
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Veri bloğu
+        u7-libraries-explanation: 'Uygulama Laboratuvarı: Kendi Bloklarınızı Yapın - Kütüphaneler Nasıl Kullanılır'
+        how-to-k5-workshops: 'Code.org''un Bilgisayar Bilimi Temelleri: Çocuk Test Edildi, Öğretmen Onaylandı'
+        why-should-teach-unplugged-activities: 'SSS: "Bağlantısız" aktiviteleri neden öğretmeliyim?'
+        cs-principles-intro-to-objects: 'Bilgisayar Bilimi İlkeleri: Nesnelere Giriş'
+        oceans_machine_learning: Makine Öğrenimi
+        oceans_training_data: Eğitim Verileri
+        oceans_societal_implications: Toplumsal Çıkarımlar
         hoc_dance_congrats_2019: Dans Partisi 2019 - Parti Başlıyor!
         hoc_dance_warmup_2019: Dans Partisi 2019 - Isınma
         hoc_dance_events_2019: Dans Partisi 2019 - Etkinlikler
         hoc_dance_measures_2019: Dans Partisi 2019 - Ölçütler
         hoc_dance_properties_2019: Dans Partisi 2019 - Özellikler
+        csd_what_computers_do: Bilgisayarlar Ne Yapar?
+        csf_my_online_neighborhood_2020: Online Mahallem
+        csf_follow_the_digital_trail: Dijital İzi Takip Edin
         csf_private_and_personal_information: Özel ve Kişisel Bilgiler
         csd_what_computers_are: Bilgisayar nedir?
+        codebreak_e01: 'Kod Kırma 1.0: Hill Harper ile Algoritmalar'
+        codebreak_e02: 'Kod Kırma 2.0: Mark Cuban ve Lyndsey Scott ile Prototipler'
+        codebreak_e03: 'Kod Kırma 3.0: Ashton Kutcher ve Mia Gil Epner ile Şifreleme'
+        codebreak_e04: Kod Kırma 4.0 Mike Krieger ve Alice Keeler ile Dijital Bilgiler
+        codebreak_e05: 'Kod Kırma 5.0: Bill Gates ile Simülasyonlar & Veriler'
+        csd_how_teamwork_works: Takım çalışması Nasıl İşler
+        csd_teamwork_and_disagreement: Takım çalışması - Anlaşmazlıkla Başa Çıkma
+        codebreak_e06: 'Kod Kırma 6.0: Keegan-Michael Scott & Vint Cerf ile İnternet'
+        codebreak_e07: 'Kod Kırma 7.0: Sal Khan ve Flo Vaughn ile Koşullar'
+        codebreak_e08: 'Kod Kırma 8.0: Yara Shahidi ve Fuzzy Khosrowshahi ile Değişkenler'
+        codebreak_e09: 'Kod Kırma 9.0: Macklemore & Scott Forstall ile Etkinlikler'
+        codebreak_e10: 'Kod Kırma 10.0: Kat Graham ve Kate Park ile Yapay Zeka'
+        codebreak_e11: 'Kod Kırma 11.0: Susan Wojcicki ve China Anne McClain ile Soyut Düşünme'
+        codebreak_e12: 'Kod Kırma 12.0: Aloe Blacc, Bret Taylor, & Paula Mejia ile Donanım'
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

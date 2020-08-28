@@ -284,7 +284,7 @@ ru:
             Intro:
               name: Введение
             Variables:
-              name: переменные
+              name: Переменные
         algebra:
           title: Информатика в алгебре
           description: Изучайте функциональное программирование, используя алгебру
@@ -478,12 +478,12 @@ ru:
             Jigsaw:
               name: Головоломки
         step:
-          title: шаг
+          title: Шаг
           description: Пошаговое обучение
           description_short: Пошаговое обучение
           lessons:
             Step:
-              name: шаг
+              name: Шаг
         Hour of Code:
           title: Час кода 2013
           description: Постигай азы программирования с персонажами Angry Birds и Plants
@@ -622,6 +622,8 @@ ru:
               name: Использование переменных в приложениях
             While Loops:
               name: Циклы «пока»
+            Creating Functions with Parameters:
+              name: Создание функций с параметрами
         algebraPD3:
           lessons:
             Course Overview:
@@ -1525,7 +1527,7 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: переменные
+              name: Переменные
             Conditionals:
               name: Условные команды
         grade2:
@@ -1557,7 +1559,7 @@ ru:
             Nested Loops:
               name: Вложенные циклы
             Variables:
-              name: переменные
+              name: Переменные
             While Loops:
               name: Циклы «пока»
         algebrapdnext:
@@ -1990,7 +1992,7 @@ ru:
           description_short: Анимация и игры
           lessons:
             Variables:
-              name: переменные
+              name: Переменные
             Plotting Shapes:
               name: Рисование фигур
             Conditionals:
@@ -2037,7 +2039,7 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: переменные
+              name: Переменные
             Conditionals:
               name: Условные команды
             Velocity:
@@ -2682,7 +2684,7 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: переменные
+              name: Переменные
             Conditionals:
               name: Условные команды
             Velocity:
@@ -2704,7 +2706,7 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: переменные
+              name: Переменные
             Conditionals:
               name: Условные команды
             Velocity:
@@ -3332,7 +3334,7 @@ ru:
         cspplayground:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -3350,7 +3352,7 @@ ru:
             ramp_up:
               display_name: Продвинуться
             csf_variables:
-              display_name: переменные
+              display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
             csf_internet:
@@ -3502,7 +3504,7 @@ ru:
             csf_functions:
               display_name: функции
             csf_variables:
-              display_name: переменные
+              display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
           lessons:
@@ -3696,7 +3698,7 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: переменные
+              name: Переменные
             Conditionals:
               name: Условные команды
             Velocity:
@@ -3753,7 +3755,7 @@ ru:
         csp4-pilot:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -3926,7 +3928,7 @@ ru:
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -3937,7 +3939,7 @@ ru:
           title: 'Урок 2: Интернет'
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -3951,7 +3953,7 @@ ru:
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -3973,7 +3975,7 @@ ru:
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -3992,7 +3994,7 @@ ru:
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -4002,7 +4004,7 @@ ru:
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -4012,7 +4014,7 @@ ru:
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -4089,7 +4091,7 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: переменные
+              name: Переменные
             Conditionals:
               name: Условные команды
             Velocity:
@@ -4260,7 +4262,7 @@ ru:
             Sprite Lab:
               name: Лаборатория Спрайтов
             Variables:
-              name: переменные
+              name: Переменные
             For Loops:
               name: Циклы с параметром
         dance-extras-2019:
@@ -4269,7 +4271,7 @@ ru:
         csp4-preview:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -4379,7 +4381,7 @@ ru:
         csp4-2020:
           lesson_groups:
             csp_variables:
-              display_name: переменные
+              display_name: Переменные
             csp_conditionals:
               display_name: Условные команды
             csp_functions:
@@ -4479,7 +4481,7 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: переменные
+              name: Переменные
             Random Numbers:
               name: Случайные числа
             Conditionals:
@@ -4654,7 +4656,7 @@ ru:
             csf_digcit:
               display_name: Цифровое гражданство
             csf_variables:
-              display_name: переменные
+              display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
           lessons:
@@ -4697,7 +4699,7 @@ ru:
             csf_functions:
               display_name: функции
             csf_variables:
-              display_name: переменные
+              display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
           lessons:
@@ -4809,7 +4811,7 @@ ru:
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
             Variables:
-              name: переменные
+              name: Переменные
         virtual-holding-place:
           lesson_groups:
             content:
@@ -4858,7 +4860,7 @@ ru:
             Functions:
               name: функции
             Variables:
-              name: переменные
+              name: Переменные
             For Loops:
               name: Циклы с параметром
             Sprite Lab:
@@ -4884,7 +4886,7 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: переменные
+              name: Переменные
             Random Numbers:
               name: Случайные числа
             Text:
@@ -4932,3 +4934,9 @@ ru:
           lesson_groups:
             lg_1:
               display_name: Содержимое
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Курс A
+            Course B:
+              name: Курс B

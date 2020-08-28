@@ -2507,3 +2507,7 @@ id-ID:
   homepage_slot_text_link_code_break: Ambil Code Break
   homepage_slot_text_link_do_hoc: Adakan Hour of Code
   homepage_slot_text_link_express_course: Coba Kursus Kilat
+  page_not_available_title: Halaman Tidak Tersedia
+  page_not_available_description: Mohon maaf, halaman yang Anda minta tidak lagi tersedia
+    di alamat ini. Jika Anda masih membutuhkan akses, silakan kirim email ke [support@code.org](%{support_email_link}).
+  page_not_available_button: Pulang ke rumah

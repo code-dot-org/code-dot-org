@@ -760,6 +760,8 @@ pt:
               name: Usando Variáveis em Apps
             While Loops:
               name: Laços enquanto
+            Creating Functions with Parameters:
+              name: Criação de funções com parâmetros
         algebraPD3:
           title: DP - Fase 3
           description: Ensine álgebra com programação funcional com base em blocos
@@ -15034,3 +15036,9 @@ pt:
           lessons:
             Module 1:
               name: Módulo 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Curso A
+            Course B:
+              name: Curso B

@@ -168,6 +168,9 @@
         "InspirationalArtwork": {
           "InspirationalArtwork_1": "جرب استخدام المربع البرمجي \"تعليق\" الجديد أسفل هذه التسيمة لكي تترك تعليق بنفسك داخل البرنامج الخاص بك!"
         },
+        "InspirationalArtwork_2018": {
+          "InspirationalArtwork_1": "حاول استخدام المربع البرمجي `تعليق` أسفل هذا الملصق لتترك لنفسك ملاحظان داخل برنامجك!"
+        },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "عند الانتهاء من كتابة البرنامج، اضغط زر \"تشغيل\" لتتمكّن من تجريب برنامجك!"
         },
@@ -326,6 +329,40 @@
         "Virtual Pet 2_2020": {
           "": "انقر هنا!"
         },
+        "behaviors 1": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "behaviors 3a": {
+          "behavior_callout": "لماذا لا يعمل هذا السلوك مع النجمة الوسطى؟",
+          "star2_callout": "احذف هذا المربع البرمجي الخاص بالزيّ، واستخدِم المربع البرمجي \"this sprite\" بدلاً منه.",
+          "this_sprite_callout": "استبدِل بالمربع البرمجي الخاص بالزيّ هذا المربع البرمجي."
+        },
+        "behaviors 3a_2020": {
+          "behavior_callout": "لماذا لا يعمل هذا السلوك مع النجمة الوسطى؟",
+          "star2_callout": "احذف هذا المربع البرمجي الخاص بالزيّ، واستخدِم المربع البرمجي \"this sprite\" بدلاً منه.",
+          "this_sprite_callout": "استبدِل بالمربع البرمجي الخاص بالزيّ هذا المربع البرمجي."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "behaviors 5": {
+          "behaviors_edit": "أضِف مربعًا برمجيًا لهذا السلوك."
+        },
+        "behaviors 5_2020": {
+          "behaviors_edit": "أضِف مربعًا برمجيًا لهذا السلوك."
+        },
+        "behaviors free play": {
+          "behaviors_edit": "أضِف مربعًا برمجيًا لهذا السلوك."
+        },
+        "behaviors free play_2020": {
+          "behaviors_edit": "أضِف مربعًا برمجيًا لهذا السلوك."
+        },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
         },
@@ -392,6 +429,12 @@
         },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_1": "هل ترى كتل جديدة في مربع الأدوات؟ لا تشغل بالك، سوف ترى كيف تستخدمها لاحقًا في المرحلة.\n"
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "استخدِم هذا المربع البرمجي لتجميع الكنز."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "استخدِم هذا المربع البرمجي لتجميع الكنز."
         },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "هذا الرقم يخبرك كم من هذه المربعات البرمجية يمكنك استخدامها في هذا اللغز.\n"
@@ -515,6 +558,15 @@
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "هل ترى كتل جديدة في مربع الأدوات؟ لا تشغل بالك، سوف ترى كيف تستخدمها لاحقًا في المرحلة.\n"
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "استخدِم هذا المربع البرمجي لتجميع الكنز."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "استخدِم هذا المربع البرمجي لتجميع الكنز."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "استخدِم هذا المربع البرمجي لتجميع الكنز."
         },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
@@ -805,6 +857,15 @@
         },
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "استخدم هذا المربع البرمجي لجمع قطعة واحدة من الكنز."
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام المربع البرمجي `بينما الطريق إلى الأمام` لحل هذا اللغز."
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام المربع البرمجي `بينما الطريق إلى الأمام` لحل هذا اللغز."
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام المربع البرمجي `بينما الطريق إلى الأمام` لحل هذا اللغز."
         },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها."
@@ -1189,6 +1250,15 @@
         },
         "courseF_playlab_variables7c": {
           "courseF_playlab_variables7c_1": "ابحث عن المربع البرمجي \"اسأل\" هنا!"
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "بعد تحريك جميع المربعات البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "بعد تحريك جميع المربعات البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "بعد تحريك جميع المربعات البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
         },
         "express_maze_debugging9_2019": {
           "express_maze_debugging9_2019_1": "اسحب البلوكات من صندوق الأدوات إلى مساحة العمل الخاصة بك."

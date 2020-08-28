@@ -9016,7 +9016,8 @@ hu:
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Minden modern böngésző, Android tablet,
+    iPad, Android telefon, iPhone
   tutorial_bananatales_string_platforms: Minden modern böngésző
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -9394,3 +9395,4 @@ hu:
   some: Néhány
   all: Összes
   dont_know: Nem tudom
+  language_label: Language

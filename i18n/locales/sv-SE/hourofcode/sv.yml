@@ -9019,7 +9019,8 @@ sv:
     iPad
   tutorial_scratchcartoon_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
   tutorial_bananatales_string_platforms: Alla moderna webbläsare
   tutorial_scratchtales_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
@@ -9398,3 +9399,4 @@ sv:
   some: Några
   all: Alla
   dont_know: Jag vet inte
+  language_label: Language

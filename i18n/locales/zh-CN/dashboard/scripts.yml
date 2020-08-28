@@ -714,6 +714,8 @@ zh-CN:
               name: 在应用中使用变量
             While Loops:
               name: 当循环
+            Creating Functions with Parameters:
+              name: 创建带参数的函数
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -14524,6 +14526,8 @@ zh-CN:
           lessons:
             new stage:
               name: 新的阶段
+            Tools:
+              name: 工具
             Debugging:
               name: 调试
             Module 1:
@@ -14887,3 +14891,9 @@ zh-CN:
           lessons:
             Module 1:
               name: 模块 1
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: 课程 A
+            Course B:
+              name: 课程 B

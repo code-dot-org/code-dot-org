@@ -1,7 +1,8 @@
-lesson 'Game Lab'
+lesson 'Game Lab', display_name: 'Game Lab'
 level 'allthethings_U3 - Simple Drawing - Rectangle Width and Height'
 
-lesson 'Contained Levels'
+lesson 'Contained Levels', display_name: 'Contained Levels'
 level 'Test GameLab Predictive'
 level 'Test Contained Multi'
 level 'PS predictive Applab level test'
+

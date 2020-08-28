@@ -552,21 +552,25 @@ es-MX:
         hoc_dance_events_2019: 'Fiesta de baile 2019: Eventos'
         hoc_dance_measures_2019: 'Fiesta de baile 2019: Medidas'
         hoc_dance_properties_2019: 'Fiesta de baile 2019: Propiedades'
-        csd_what_computers_do: '¿Qué hacen los ordenadores?'
+        csd_what_computers_do: '¿Que Hacen las Computadoras?'
         csf_my_online_neighborhood_2020: Mi barrio en línea
-        csf_follow_the_digital_trail: Sigue el rastro digital
+        csf_follow_the_digital_trail: Sigue el Rastro Digital
         csf_private_and_personal_information: Información privada y personal
         csd_what_computers_are: '¿Qué es una computadora?'
         codebreak_e01: 'Code Break 1.0: Algoritmos con Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototipos con Mark Cuban y Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Cifrado con Ashton Kutcher y Mia Gil Epner'
-        codebreak_e04: Code Break 4.0 Información digital con Mike Krieger y Alice Keeler
-        codebreak_e05: 'Code Break 5.0: Simulaciones y datos con Bill Gates'
-        csd_how_teamwork_works: Cómo funciona el trabajo en equipo
-        csd_teamwork_and_disagreement: 'Trabajo en equipo: cómo afrontar la falta de consenso'
-        codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott & Vint Cerf'
+        codebreak_e04: Code Break 4.0 Información Digital con Mike Krieger y Alice Keeler
+        codebreak_e05: 'Code Break 5.0: Simulaciones y Datos con Bill Gates'
+        csd_how_teamwork_works: Cómo Funciona el Trabajo en Equipo
+        csd_teamwork_and_disagreement: 'Trabajo en equipo: cómo afrontar los desacuerdos'
+        codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott y Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Condicionales con Sal Khan y Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variables con Yara Shahidi y Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Eventos con Macklemore y Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: Inteligencia Artificial con Kat Graham y Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstracción con Susan Wojcicki y China Anne McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor y Paula Mejia'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

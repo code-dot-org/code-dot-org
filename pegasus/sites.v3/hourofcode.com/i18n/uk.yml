@@ -8996,8 +8996,8 @@ uk:
     iPad
   tutorial_scratchcartoon_string_platforms: Всі сучасні браузери, планшет Android,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Планшет Android, iPad, телефон Android,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Усі сучасні браузери, планшет на базі Android,
+    iPad, телефон на базі Android, iPhone
   tutorial_bananatales_string_platforms: Усі сучасні браузери
   tutorial_scratchtales_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -9370,3 +9370,4 @@ uk:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language

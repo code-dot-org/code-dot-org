@@ -9064,8 +9064,8 @@ et:
     tahvelarvuti, iPad
   tutorial_scratchcartoon_string_platforms: Kõik tänapäevased veebilehitsejad, Android
     tahvelarvuti, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tahvelarvuti, iPad, Android telefon,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Kõik tänapäevased veebilehitsejad, Android
+    tahvelarvuti, Android telefon, iPad, iPhone
   tutorial_bananatales_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_scratchtales_string_platforms: Kõik tänapäevased veebilehitsejad, Android
     tahvelarvuti, iPad
@@ -9447,3 +9447,4 @@ et:
   some: Mõned
   all: Kõik
   dont_know: Ma ei tea
+  language_label: Language

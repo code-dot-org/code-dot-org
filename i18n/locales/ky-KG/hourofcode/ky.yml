@@ -9096,8 +9096,8 @@ ky:
     iPad
   tutorial_scratchcartoon_string_platforms: Бардык жаңы браузерлер, Android планшети,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android планшети, iPad, Android телефону,
-    iPhone
+  tutorial_codemonkeyjr_string_platforms: Бардык жаңы браузерлер, Android планшети,
+    iPad, Android телефону, iPhone
   tutorial_bananatales_string_platforms: Бардык жаңы браузерлер
   tutorial_scratchtales_string_platforms: Бардык жаңы браузерлер, Android планшети,
     iPad
@@ -9476,3 +9476,4 @@ ky:
   some: Айрым
   all: Баары
   dont_know: Мен билбейм
+  language_label: Language

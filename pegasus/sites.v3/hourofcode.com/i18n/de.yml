@@ -9087,7 +9087,8 @@ de:
     iPad
   tutorial_scratchcartoon_string_platforms: Alle modernen Browser, Android-Tablet,
     iPad
-  tutorial_codemonkeyjr_string_platforms: Android-Tablet, iPhone, iPad, Android-Handy
+  tutorial_codemonkeyjr_string_platforms: Alle modernen Browser, Android-Tablet, iPad,
+    Android-Handy, iPhone
   tutorial_bananatales_string_platforms: Alle modernen Browser
   tutorial_scratchtales_string_platforms: Alle modernen Browser, Android-Tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -9460,3 +9461,4 @@ de:
   some: Some
   all: All
   dont_know: I don't know
+  language_label: Language
