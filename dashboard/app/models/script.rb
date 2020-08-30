@@ -1055,6 +1055,9 @@ class Script < ActiveRecord::Base
   # Update strings and serialize changes to .script file
   def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
+    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
+    #update i18n data for teacher resources
+    metadata_i18n[:teacher_resource_types] = teacher_resources.map {|resource| resource[0]}
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
@@ -1077,7 +1080,6 @@ class Script < ActiveRecord::Base
       errors.add(:base, e.to_s)
       return false
     end
-    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
       if Rails.application.config.levelbuilder_mode
         # write script to file
