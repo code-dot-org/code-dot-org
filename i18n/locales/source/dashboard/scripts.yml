@@ -167,6 +167,7 @@ en:
           lessons:
             Play Lab:
               name: Play Lab
+          description_audience: ''
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -827,6 +828,8 @@ en:
               name: Using Variables in Apps
             While Loops:
               name: While Loops
+            Creating Functions with Parameters:
+              name: Creating Functions with Parameters
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1324,6 +1327,8 @@ en:
               name: Welcome!
             Wrap-up:
               name: Wrap-up
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Unit 1, Days 1-2 What Is a Computer?
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1472,6 +1477,9 @@ en:
               name: Welcome!
             Wrap-up:
               name: Wrap-up
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Unit 1, Days 1-2 What Is a Computer?
+          description_audience: ''
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1502,6 +1510,9 @@ en:
               name: Welcome!
             Wrap-up:
               name: Wrap-up
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Unit 1, Days 1-2 What Is a Computer?
+          description_audience: ''
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
@@ -1946,6 +1957,7 @@ en:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+          description_audience: ''
         starwars:
           title: 'Star Wars: Building a Galaxy With Code (Javascript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -3341,6 +3353,8 @@ en:
               name: Welcome!
             Wrap-up:
               name: Wrap-up
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Unit 1, Days 1-2 What Is a Computer?
         ecs-unit2:
           title: ECS Unit 2
           description: 'Unit 2: Problem Solving'
@@ -18154,6 +18168,18 @@ en:
               name: Module 1
             Module 2:
               name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 7:
+              name: Module 7
+            Module 8:
+              name: Module 8
           lesson_groups: {}
           title: CS Discoveries Virtual Professional Learning 2020 - 21
           description_audience: ''

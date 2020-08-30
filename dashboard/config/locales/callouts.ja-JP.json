@@ -592,7 +592,7 @@
           "courseB_maze_seq2_callout1": "ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！"
         },
         "courseB_maze_seq3": {
-          "courseB_maze_seq3_1": "灰色のブロックは、消すことができません。"
+          "courseB_maze_seq3_1": "灰色のブロックは、消すことができません。\n"
         },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "やじるしのほうこう は、ドロップダウンで かわります。"

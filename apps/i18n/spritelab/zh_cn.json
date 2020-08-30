@@ -1,4 +1,10 @@
 {
+  "clicked": "已点击 ",
+  "clickedSprite": "点击精灵图",
+  "subject": "物品",
+  "subjectSprite": "精灵主体",
+  "object": "对象 ",
+  "objectSprite": "精灵对象",
   "errorLoadingAnimation": "看起来我们在加载动画“animationname”时遇到问题。请确保您有良好的互联网连接，然后尝试重新加载页面。如果此问题仍然存在，则有可能此动画已损坏。在这种情况下，您可能需要通过删除动画来继续。",
   "reinfFeedbackMsg": "你已经完成！请点击“继续”进入下一关",
   "shareGame": "分享你的游戏：",

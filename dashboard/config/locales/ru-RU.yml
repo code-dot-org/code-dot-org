@@ -308,7 +308,7 @@ ru:
       picture: Графический пароль
       word: Тайные слова
       email: Электронная почта
-      google_classroom: Google Classroom
+      google_classroom: Google-класс
       clever: Аккаунт Clever
   follower:
     invite_sent: Приглашение отправлено
@@ -433,18 +433,18 @@ ru:
       flappy: Порхающий код
       frozen: Холодное сердце
       gamelab: Лаборатория игр
-      gamelab_jr: Игровая Лаборатория (бета)
+      gamelab_jr: Лаборатория игр (бета)
       gumball: Удивительный мир Гамбола
       iceage: Ледниковый период
       infinity: Бесконечность
       makerlab: Maker Toolkit
       minecraft_adventurer: Приключение c Minecraft
-      minecraft_aquatic: Майнкрафт Под Водой
+      minecraft_aquatic: Minecraft под водой
       minecraft_codebuilder: 'Майнкрафт: Кодовое соединение'
       minecraft_designer: Minecraft
-      minecraft_hero: Майнкрафт Герой
+      minecraft_hero: Герой Minecraft
       playlab: Лаборатория игр
-      playlab_k1: Play Lab (Дошкольники)
+      playlab_k1: Лаборатория игр (для дошкольников)
       scratch: Scratch
       spritelab: Лаборатория Спрайтов
       starwars: Звездные войны
@@ -931,7 +931,7 @@ ru:
     bonus_level: Дополнительный уровень
   dialog:
     ok: Продолжить
-    startover_title: Вы уверены, что хотите начать заново?
+    startover_title: Ты уверен(-а), что хочешь начать заново?
     startover_body: Все добавленные или измененные данные будут удалены, а головоломка
       начнется с начала.
     startover_ok: Начать заново
@@ -1217,9 +1217,9 @@ ru:
       email_alternate: Дополнительный адрес электронной почты
       gender: Гендерная принадлежность
       school_name: Название школы
-      school_city: Город твоей Школы
+      school_city: Город, где находится школа
       school_country: Страна твоей школы
-      colombian_school_city: Город твоей Школы
+      colombian_school_city: Город, где находится школа
       colombian_school_name: Название школы
       ages: Какие возраста вы обучали в этом году?
       subjects: Каким предметам вы обучали в этом году?

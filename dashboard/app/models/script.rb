@@ -810,11 +810,7 @@ class Script < ActiveRecord::Base
   end
 
   def hint_prompt_enabled?
-    [
-      Script::COURSE2_NAME,
-      Script::COURSE3_NAME,
-      Script::COURSE4_NAME
-    ].include?(name)
+    csf?
   end
 
   def hide_solutions?
@@ -944,7 +940,7 @@ class Script < ActiveRecord::Base
 
     script.generate_plc_objects
 
-    CourseVersion.add_course_version(script)
+    CourseOffering.add_course_offering(script)
 
     script
   end
@@ -988,7 +984,8 @@ class Script < ActiveRecord::Base
     new_properties = {
       is_stable: false,
       tts: false,
-      script_announcements: nil
+      script_announcements: nil,
+      is_course: false
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix

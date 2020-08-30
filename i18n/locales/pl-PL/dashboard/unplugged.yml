@@ -254,10 +254,15 @@ pl:
         desc: 'Jedną z najwspanialszych struktur w informatyce jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami, które można wielokrotnie używać wewnątrz większych programów. Ta lekcja pomoże uczniom intuicyjnie zrozumieć, dlaczego połączenie fragmentów kodu w funkcje jest tak dobrą praktyką.  '
       swipeRightPassThrough:
         title: Sesja Scenariuszy Rekrutacyjnych
+        desc: "# Zajęcia poświęcone scenariuszom rekrutacji\\r\n\\r\n## Przeciągnij w prawo w kierunku informatyki [\\r\nPodczas tych zajęć będziemy korzystać z narzędzia o nazwie \"Przeciągnij w prawo w kierunku informatyki\", które zostało pracowano przez naszych partnerów w MIT. W ramach narzędzia \"Przeciągnij w prawo w kierunku informatyki\" będziesz czytać opisy niektórych uczniów i rozważać konkretne stwierdzania, które mogą być użyte do przekonania ucznia lub uczennicy do zapisania się na kurs \"Podstaw informatyki\". \\r\n\\r\n### Jak to działa\\r\nW trakcie gry w grę \"Przeciągnij w prawo w kierunku informatyki\" zobaczysz serię cytatów, które możesz powiedzieć każdemu uczniowi. Będziesz przeciągał w prawo na cytaty, które Twoim zdaniem byłyby w stanie skutecznie przekonać uczniów, aby zapisali się na kurs i przeciągał w lewo na stwierdzenia, które Twoim zdaniem nie byłyby skuteczne. W trakcie sesji będziemy omawiać w grupie swoje przemyślenia dotyczące rodzajów stwierdzeń, które najbardziej skutecznie przekonują ucznia do zapisania się do Studia Kodowania i będziesz mieć okazję zobaczyć, jak inni ludzie na Twoim warsztacie przeciągnęli kursor na każdy z argumentów. \\r\n\\r\n\\r\nGdy poniżej klikniesz \"Kontynuuj\", wyślemy Cię do gry i przejdziesz po adresie e-mail Code.org, przy pomocy którego się zalogowałeś."
       swipeRightPassThrough-test123:
         title: Sesja Scenariuszy Rekrutacyjnych
+        desc: "# Zajęcia poświęcone scenariuszom rekrutacji\\r\n\\r\n## Przeciągnij w prawo w kierunku informatyki [\\r\nPodczas tych zajęć będziemy korzystać z narzędzia o nazwie \"Przeciągnij w prawo w kierunku informatyki\", które zostało pracowano przez naszych partnerów w MIT. W ramach narzędzia \"Przeciągnij w prawo w kierunku informatyki\" będziesz czytać opisy niektórych uczniów i rozważać konkretne stwierdzania, które mogą być użyte do przekonania ucznia lub uczennicy do zapisania się na kurs \"Podstaw informatyki\". \\r\n\\r\n### Jak to działa\\r\nW trakcie gry w grę \"Przeciągnij w prawo w kierunku informatyki\" zobaczysz serię cytatów, które możesz powiedzieć każdemu uczniowi. Będziesz przeciągał w prawo na cytaty, które Twoim zdaniem byłyby w stanie skutecznie przekonać uczniów, aby zapisali się na kurs i przeciągał w lewo na stwierdzenia, które Twoim zdaniem nie byłyby skuteczne. W trakcie sesji będziemy omawiać w grupie swoje przemyślenia dotyczące rodzajów stwierdzeń, które najbardziej skutecznie przekonują ucznia do zapisania się do Studia Kodowania i będziesz mieć okazję zobaczyć, jak inni ludzie na Twoim warsztacie przeciągnęli kursor na każdy z argumentów. \\r\n\\r\n\\r\nGdy poniżej klikniesz \"Kontynuuj\", wyślemy Cię do gry i przejdziesz po adresie e-mail Code.org, przy pomocy którego się zalogowałeś."
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Moi przyjaciele wśród robotów
+        desc: Ucz się programowania pisząc kod dla Twoich przyjaciół!
       PlantASeed_2018:
         title: 'Algorytmy z życia wzięte: sadź nasiona'
         desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym życiu, posługując się przykładem sadzenia nasion. Koncentruje się również na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają algorytmy.
@@ -302,24 +307,62 @@ pl:
         desc: Uczniowie tworzą bransoletki jako binarne reprezentacje pierwszej litery swoich nazwiska. Dowiadują się przy tym, że dane mogą być reprezentowane i przechowywane na wiele sposobów.
       MoveItMoveIt_2018:
         title: Przenieść go, przenieść go
+      courseB_unplugged_CnC_2018:
+        title: Tworzenie i uczciwa gra są świetne.
+        desc: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki" przez zespół w "Prawach autorskich i kreatywności", istnieje, aby pomagać uczniom zrozumieć proces twórczy udostępniania i inspiracji. Wraz z tym pojawia się promowanie twórczego wyrazu i potrzebę uczciwości w pracy twórczej.
+      courseE_unplugged_CnC_2018:
+        title: Udostępnianie cyfrowe
+        desc: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki" przez zespół w "Prawach autorskich i kreatywności", istnieje, aby pomagać uczniom zrozumieć istotę wyzwań i korzyści wynikających z poszanowania praw własności i praw autorskich, w szczególności w środowiskach cyfrowych. Uczniowie powinni być zachęcani do przestrzegania praw artystów jako istotnego elementu bycia etycznym obywatelem cyfrowym.
       RelayProgramming_2018:
         title: Sztafeta programowania
+        desc: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie podzielą się na zespoły i będą pracować razem nad pisaniem programu po jednej instrukcji.
       courseB_unplugged_MRF_2019:
         title: Moi przyjaciele wśród robotów
+        desc: Ucz się programowania pisząc kod dla Twoich przyjaciół!
+      BuildingAFoundation_2019:
+        title: 'brak tłumaczenia: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'brak tłumaczenia: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Moi zapętleni robotyczni przyjaciele
       Conditionals_2019:
         title: Zdania z warunkami
         desc: 'Aby dowiedzieć się o instrukcjach warunkowych, uczniowie grają w karty i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'
+      courseF_unplugged_powerOfWords_2019:
+        title: 'brak tłumaczenia: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'brak tłumaczenia: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'brak tłumaczenia: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'brak tłumaczenia: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'brak tłumaczenia: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'brak tłumaczenia: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programowanie na papierze milimetrowym
         desc: Uczniowie piszą algorytm (zestaw instrukcji) korzystając ze zbioru wcześniej zdefiniowanych poleceń, aby kierować innymi uczniami przy odtworzeniu rysunku.
       RelayProgramming_2018_2019:
         title: Sztafeta programowania
+        desc: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie podzielą się na zespoły i będą pracować razem nad pisaniem programu po jednej instrukcji.
       courseD_unplugged_digitalCitizenship_2019:
         title: Aktywność unplugged (bez komputera)
         desc: Dzisiaj dowiesz się, co to znaczy być Cyfrowym Obywatelem.
       BinaryImages_2019:
         title: Binarne obrazy (Binary Images)
         desc: Chociaż wiele osób sądzi, że binarne są tylko zera i jedynki, w naszych poprzednich kursach uczniowie mogli się dowiedzieć, że informacja może być reprezentowana na różne binarne sposoby.  Na tej lekcji to pojęcie jest rozwijane jeszcze dalej i ilustrowane jest, jak komputer może przechowywać bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.
+      courseE_unplugged_privateInformation_2019:
+        title: Informacje prywatne i osobowe
+        desc: Ta lekcja, opracowana przez Common Sense Education, jest poświęcona różnicy pomiędzy informacjami, które są bezpieczne do udostępniania online a informacjami, które takie nie są.
+      SongwritingParameters_2019:
+        title: 'brak tłumaczenia: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'brak tłumaczenia: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Udostępnianie cyfrowe
+        desc: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki" przez zespół w "Prawach autorskich i kreatywności", istnieje, aby pomagać uczniom zrozumieć istotę wyzwań i korzyści wynikających z poszanowania praw własności i praw autorskich, w szczególności w środowiskach cyfrowych. Uczniowie powinni być zachęcani do przestrzegania praw artystów jako istotnego elementu bycia etycznym obywatelem cyfrowym.
+      Internet_2019:
+        title: 'brak tłumaczenia: en-US.data.unplugged.Internet_2018.title'
+        desc: 'brak tłumaczenia: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'brak tłumaczenia: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'brak tłumaczenia: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Poznając pętle
         desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania, z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie są proszeni o powtarzanie jej.
@@ -335,6 +378,8 @@ pl:
       PaperPlanes_2019:
         title: 'Rzeczywiste algorytmy: Papierowe samoloty'
         desc: Ta lekcja jest poświęcona sposobom wykorzystania algorytmów w naszym codziennym życiu, w szczególności przy tworzeniu papierowych samolotów. Uwaga jest skupiona na znaczeniu algorytmów w informatyce.
+      test-uid-passthrough:
+        desc: "# Zajęcia poświęcone scenariuszom rekrutacji\\r\n\\r\n## Przeciągnij w prawo, aby wejść do Studia Kodowania [\\r\nPodczas tych zajęć będziemy korzystać z narzędzia o nazwie \"Przeciągnij w prawo, aby wejść do Studia Kodowania\", które zostało pracowano przez naszych partnerów w MIT. W ramach narzędzia \"Przeciągnij w prawo w kierunku informatyki\" będziesz czytać opisy niektórych uczniów i rozważać konkretne stwierdzania, które mogą być użyte do przekonania ucznia lub uczennicy do zapisania się na kurs \"Podstaw informatyki\". \\r\n\\r\n##Jak to działa\\r\nW trakcie gry w grę \"Przeciągnij w prawo w kierunku informatyki\" zobaczysz serię cytatów, które możesz powiedzieć każdemu uczniowi. Będziesz przeciągał w prawo na cytaty, które Twoim zdaniem byłyby w stanie skutecznie przekonać tego konkretnego ucznia, aby zapisali się na kurs i przeciągał w lewo na stwierdzenia, które Twoim zdaniem nie byłyby skuteczne. W trakcie sesji będziemy omawiać w grupie swoje przemyślenia dotyczące rodzajów stwierdzeń, które najbardziej skutecznie przekonują ucznia do zapisania się na informatykę i będziesz mieć okazję zobaczyć, jak inni ludzie na Twoim warsztacie przeciągnęli kursor na każdy z argumentów. .\\r\n<br><br><br><br>\\r\n\\r\n<span style=\"display:none\">submitButton next-stage</span>\\r\n\\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\"> Kliknij tutaj, aby zagrać w \"Przeciągnij w prawo w kierunku informatyki!</a>\\r\n\\r"
       PlantASeed_2019:
         title: 'Algorytmy z życia wzięte: sadź nasiona'
         desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym życiu, posługując się przykładem sadzenia nasion. Koncentruje się również na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają algorytmy.
@@ -352,8 +397,27 @@ pl:
       DigitalFootprint_2019:
         title: Twój cyfrowy ślad
         desc: Nauczycieli przedstawia uczniom, że umieszczenie informacji o sobie online tworzy cyfrowy ślad lub "szlak", co może mieć konsekwencje.
+      courseB_unplugged_CnC_2019:
+        title: Tworzenie i uczciwa gra są świetne.
+        desc: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki" przez zespół w "Prawach autorskich i kreatywności", istnieje, aby pomagać uczniom zrozumieć proces twórczy udostępniania i inspiracji. Wraz z tym pojawia się promowanie twórczego wyrazu i potrzebę uczciwości w pracy twórczej.
+      GraphingData_2019:
+        title: Przedstawianie danych
+        desc: Na tej lekcji uczniowie będą zbierać dane w ramach projektu "Play Lab" lub scenariusza z prawdziwego życia i korzystać z niego, aby tworzyć prognozy.
+      courseE_unplugged_accessAbility_2019:
+        title: Możliwość dostępu
+        desc: Ucz się o dostępności i wartości empatii za pomocą burzy mózgów i projektowania dostępnych rozwiązań na aplikacje hipotetyczne.
+      courseE_simon_says_2019:
+        title: Simon mówi
+        desc: "Zagraj w grę i pomyśl jakie komendy są potrzebne, aby uzyskać właściwe wyniki.\\r\n\\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Bardzo skuteczne hasła
+        desc: Zagłębiaj przyczyny używania haseł przez ludzi, poznawaj korzyści stosowania haseł i odkrywaj strategie tworzenia i utrzymywania mocnych, bezpiecznych haseł.
       timeforcs_demo_crowdsourcing:
         title: Praca w grupie (Crowdsourcing)
+        desc: '_uwaga Josha: w przeciwieństwie do pierwszej lekcji sformatowałem tę jako typową lekcję bez komputera._'
       timeforcs_demo_conditionals:
         title: Zdania z warunkami
         desc: 'Aby dowiedzieć się o instrukcjach warunkowych, uczniowie grają w karty i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'
+      TheRightApp_2019:
+        title: Odpowiednia aplikacja
+        desc: "* W tych dniach każdy korzysta z komputera, w szczególności ze smartfonów. \\r\n* Aplikacje na telefon komórkowy lub \"aplikacje\" pomagają ludziom robić takie rzeczy jak rozmowa z przyjaciółmi, słuchanie muzyki, robienie zakupów lub chodzić po internecie.\\r\n* To jest ważne dla programistów, aby zrozumieć potrzeby innych i projektować aplikacje mając je na uwadze!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
