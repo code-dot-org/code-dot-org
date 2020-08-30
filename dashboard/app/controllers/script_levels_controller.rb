@@ -440,9 +440,13 @@ class ScriptLevelsController < ApplicationController
   end
 
   def present_level
+    puts "present_level"
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @game = @level.game
     @stage ||= @script_level.lesson
+
+    puts @game.inspect
+    puts @stage.inspect
 
     load_level_source
 
@@ -463,6 +467,8 @@ class ScriptLevelsController < ApplicationController
       script_level_id: @script_level.id,
       level_id: @level.id
     )
+
+    puts @callback.inspect
 
     # for level groups, @level and @callback point to the parent level, so we
     # generate a url which can be used to report sublevel progress (after
@@ -495,6 +501,9 @@ class ScriptLevelsController < ApplicationController
       success: milestone_response(script_level: @script_level, level: @level, solved?: true),
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
+
+    puts @fallback_response.inspect
+
     render 'levels/show', formats: [:html]
   end
 
