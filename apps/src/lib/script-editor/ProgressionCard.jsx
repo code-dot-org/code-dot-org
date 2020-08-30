@@ -75,17 +75,6 @@ export default class ProgressionCard extends Component {
           <span>
             <button
               onMouseDown={() => {
-                console.log('Add Tip');
-              }}
-              className="btn"
-              style={styles.addLevel}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Tip
-            </button>
-            <button
-              onMouseDown={() => {
                 console.log('Add Level');
               }}
               className="btn"
@@ -94,6 +83,17 @@ export default class ProgressionCard extends Component {
             >
               <i style={{marginRight: 7}} className="fa fa-plus-circle" />
               Add Level
+            </button>
+            <button
+              onMouseDown={() => {
+                console.log('Add Tip');
+              }}
+              className="btn"
+              style={styles.addLevel}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Tip
             </button>
             <button
               onMouseDown={() => {
