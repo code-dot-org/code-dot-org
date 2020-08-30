@@ -54,7 +54,6 @@ namespace :build do
         unless rack_env?(:production)
           schema_cache_file = dashboard_dir('db/schema_cache.dump')
           RakeUtils.rake 'db:schema:cache:dump'
-          RakeUtils.rake 'db:round_trip_schema_cache'
           if GitUtils.file_changed_from_git?(schema_cache_file)
             # Staging is responsible for committing the authoritative schema cache dump.
             if rack_env?(:staging)

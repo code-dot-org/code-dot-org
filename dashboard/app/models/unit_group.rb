@@ -87,6 +87,9 @@ class UnitGroup < ApplicationRecord
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
     unit_group.properties = hash['properties']
     unit_group.save!
+
+    CourseOffering.add_course_offering(unit_group)
+    unit_group
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -613,4 +616,10 @@ class UnitGroup < ApplicationRecord
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_courses.any? {|unit_group| unit_group.has_pilot_experiment?(user)}
   end
+
+  # rubocop:disable Naming/PredicateName
+  def is_course?
+    return !!family_name && !!version_year
+  end
+  # rubocop:enable Naming/PredicateName
 end
