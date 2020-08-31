@@ -4,6 +4,7 @@ import {
   setVerified,
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setCurrentUserId} from '@cdo/apps/templates/currentUserRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import plcHeaderReducer, {
@@ -40,6 +41,10 @@ function initPage() {
 
   if (scriptData.is_verified_teacher) {
     store.dispatch(setVerified());
+  }
+
+  if (scriptData.user_id) {
+    store.dispatch(setCurrentUserId(scriptData.user_id));
   }
 
   if (scriptData.script_announcements) {
