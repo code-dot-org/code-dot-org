@@ -49,10 +49,7 @@ import {
   NOTIFICATION_ALERT_TYPE
 } from './constants';
 import {assets as assetsApi} from './clientApi';
-import {
-  configCircuitPlayground,
-  configMicrobit
-} from './lib/kits/maker/dropletConfig';
+import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
@@ -2324,13 +2321,10 @@ StudioApp.prototype.handleEditCode_ = function(config) {
   }
 
   // Remove maker API blocks from palette, unless maker APIs are enabled.
-  if (!project.getMakerAPIs()) {
+  if (!project.useMakerAPIs()) {
     // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
-      configCircuitPlayground.blocks.forEach(block => {
-        delete config.level.codeFunctions[block.func];
-      });
-      configMicrobit.blocks.forEach(block => {
+      makerDropletBlocks.forEach(block => {
         delete config.level.codeFunctions[block.func];
       });
     }
