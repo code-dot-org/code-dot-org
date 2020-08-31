@@ -85,6 +85,7 @@ import {
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
 
 /**
  * Create a namespace for the application.
@@ -689,15 +690,31 @@ Applab.init = function(config) {
 
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
+
     config.dropletConfig = utils.deepMergeConcatArrays(
       config.dropletConfig,
       makerToolkit.dropletConfig
     );
+
+    if (config.level.makerlabEnabled === MB_API) {
+      config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        makerToolkit.configMicrobit
+      );
+    } else {
+      config.dropletConfig = utils.deepMergeConcatArrays(
+        config.dropletConfig,
+        makerToolkit.configCircuitPlayground
+      );
+    }
   } else {
-    // Push gray, no-autocomplete versions of maker blocks for display purposes.
-    const disabledMakerDropletConfig = makeDisabledConfig(
-      makerToolkit.dropletConfig
+    const makerConfig = utils.deepMergeConcatArrays(
+      makerToolkit.dropletConfig,
+      makerToolkit.configCircuitPlayground
     );
+
+    // Push gray, no-autocomplete versions of maker blocks for display purposes.
+    const disabledMakerDropletConfig = makeDisabledConfig(makerConfig);
     config.dropletConfig = utils.deepMergeConcatArrays(
       config.dropletConfig,
       disabledMakerDropletConfig
