@@ -1059,7 +1059,7 @@ en:
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_isKeyPressed:
-        text: is {KEY} pressed
+        text: "{KEY} is pressed"
         options:
           KEY:
             '"up"': up
