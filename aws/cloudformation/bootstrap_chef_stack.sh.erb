@@ -20,6 +20,9 @@ export AWS_METADATA_SERVICE_TIMEOUT=30
 export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 
 <% if environment == :adhoc -%>
+<%   if options[:start_inactive_instance] -%>
+# <%= Time.now %> - trigger an EC2-instance restart by changing user-data contents.
+<%   end -%>
 # Redirect copy of stdout/stderr to a log file for later auditing.
 LOG=<%=TailLogs::LOG_NAME%>
 exec >> >(tee -i $LOG)
