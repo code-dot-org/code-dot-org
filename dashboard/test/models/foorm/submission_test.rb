@@ -7,7 +7,7 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     assert_equal expected_answers, submission.answers
   end
 
-  test 'format matrix question works correctly' do
+  test 'formatted_answers formats matrix question response as expected' do
     create :foorm_form_csf_intro_post_survey
     submission = build :csf_intro_post_foorm_submission, :answers_low
     answers = submission.formatted_answers
@@ -15,7 +15,7 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     assert_equal 'Strongly Disagree', answers['overall_success-more_prepared']
   end
 
-  test 'format comment question works correctly' do
+  test 'formatted_answers formats comment question response as expected' do
     create :foorm_form_csf_intro_post_survey
     submission = build :csf_intro_post_foorm_submission, :answers_low
     answers = submission.formatted_answers
@@ -23,7 +23,7 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     assert_equal 'lots', answers['supported']
   end
 
-  test 'format single select question works correctly' do
+  test 'formatted_answers formats single select question response as expected' do
     create :foorm_form_csf_intro_post_survey
     submission = build :csf_intro_post_foorm_submission, :answers_low
     answers = submission.formatted_answers
@@ -31,7 +31,7 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     assert_equal 'No, I do not give the workshop organizer my permission.', answers['permission']
   end
 
-  test 'format multi select question works correctly' do
+  test 'formatted_answers formats multi select question response as expected' do
     form = create :foorm_form, :with_multi_select_question
     submission = build :basic_foorm_submission,
       :with_multi_select_answer,
@@ -39,5 +39,21 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     answers = submission.formatted_answers
 
     assert_equal 'Radical, Spicy', answers['not_members_spice_girls']
+  end
+
+  test 'formatted_answers formats submission with workshop metadata as expected' do
+    create :foorm_form_csf_intro_post_survey
+    workshop_form_submission_metadata = create :csf_intro_post_workshop_submission, :answers_low
+    answers = workshop_form_submission_metadata.foorm_submission.formatted_answers
+
+    workshop_metadata_keys = ['user_id', 'pd_workshop_id', 'pd_session_id']
+
+    assert (workshop_metadata_keys - answers.keys).empty?,
+      <<~MISSING_KEYS_MESSAGE
+        Expected formatted_answers keys to contain workshop metadata keys:
+          #{workshop_metadata_keys}
+        Found:
+          #{answers.keys}
+      MISSING_KEYS_MESSAGE
   end
 end
