@@ -172,12 +172,33 @@ class ActivitiesControllerTest < ActionController::TestCase
     user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script, time_spent: 30)
 
     assert_does_not_create(UserLevel) do
-      post :milestone, params: @milestone_params
+      post :milestone, params: params
     end
 
     assert_response :success
     user_level.reload
     assert_equal 50, user_level.time_spent
+  end
+
+  test "milestone records a maximum time_spent of one hour" do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
+    params = @milestone_params.dup
+    params[:script_level_id] = @script_level.id
+    params[:timeSinceLastMilestone] = 4_000_000
+
+    user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
+
+    assert_does_not_create(UserLevel) do
+      post :milestone, params: params
+    end
+
+    assert_response :success
+    user_level.reload
+    assert_equal 3600, user_level.time_spent
   end
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
