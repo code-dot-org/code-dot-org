@@ -9,7 +9,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
 import NameFailureError from '../NameFailureError';
-import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -105,7 +104,7 @@ let thumbnailPngBlob = null;
 var currentSources = {
   source: null,
   html: null,
-  makerAPIsEnabled: null,
+  makerAPIsEnabled: false,
   animations: null,
   selectedSong: null
 };
@@ -296,14 +295,10 @@ var projects = (module.exports = {
   },
 
   /**
-   * Whether this project's source has the micro:bit or Circuit Playground Maker APIs enabled.
-   * Deprecated values: false/true.
-   * Updated values: 'circuitPlayground', 'microbit', or null.
-   * Deprecated value {false} maps to updated value {null}.
-   * Deprecated value {true} maps to updated value {circuitPlayground}.
-   * @returns {string}
+   * Whether this project's source has Maker APIs enabled.
+   * @returns {boolean}
    */
-  getMakerAPIs() {
+  useMakerAPIs() {
     return currentSources.makerAPIsEnabled;
   },
 
@@ -671,7 +666,7 @@ var projects = (module.exports = {
 
       setMakerAPIsStatusFromLevel();
       setMakerAPIsStatusFromQueryParams();
-      if (this.getMakerAPIs()) {
+      if (currentSources.makerAPIsEnabled) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
@@ -1218,17 +1213,17 @@ var projects = (module.exports = {
   },
 
   /**
-   * Save the project with the maker API state set, then reload the page
+   * Save the project with the maker API state toggled, then reload the page
    * so that the toolbox gets re-initialized.
    * @returns {Promise} (mostly useful for tests)
    */
-  setMakerEnabled(apisEnabled) {
+  toggleMakerEnabled() {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
-            makerAPIsEnabled: apisEnabled
+            makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
           },
           () => {
             resolve();
@@ -1873,12 +1868,12 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
-    currentSources.makerAPIsEnabled = CP_API;
+    currentSources.makerAPIsEnabled = true;
     updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
-    currentSources.makerAPIsEnabled = null;
+    currentSources.makerAPIsEnabled = false;
     updateQueryParam('disableMaker', undefined, true);
   }
 }
@@ -1888,12 +1883,10 @@ function setMakerAPIsStatusFromQueryParams() {
  * This is the case with New Maker Lab Project.level, and projects created
  * based off of that template (/p/makerlab), done prior to maker API support
  * within applab.
- *
- * Note: for backwards compatibility, levels with makerLabEnabled default to circuitPlayground
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
-    currentSources.makerAPIsEnabled = CP_API;
+    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
   }
 }
 
