@@ -6,6 +6,7 @@ require 'json'
 require 'yaml'
 require 'erb'
 require 'digest'
+require 'highline'
 
 module AWS
   # Manages configuration and deployment of AWS CloudFormation stacks.
@@ -47,48 +48,18 @@ module AWS
     end
 
     # Validates that the template is valid CloudFormation syntax.
-    # Does not check validity of the resource properties, just the base syntax.
-    # First prints the JSON-formatted template (if verbose), then either raises an error (if invalid)
-    # or prints the template description (if valid) and stack changes (if it already exists).
+    # First prints the rendered template (if `verbose`), then either raises an error (if invalid)
+    # or prints the pending stack-resource changes.
     def validate
       stack.dry_run = true
-      template = stack.render
-      if options[:verbose]
-        log.info template.lines.map.with_index(1) {|line, i| format("[%3d] %s", i, line)}.join
-      end
-      template_info = string_or_url(template)
-      log.info cfn.validate_template(template_info).description
-      stack_options = stack_options(template)
-      params = stack_options[:parameters].reject {|x| x[:parameter_value].nil?}
-      log.info "Parameters:\n#{params.map {|p| "#{p[:parameter_key]}: #{p[:parameter_value]}"}.join("\n")}" unless params.empty?
-
-      if stack_exists?
-        validate_changes(stack_options, "#{stack_name}-#{Digest::MD5.hexdigest(template)}")
-      end
+      change_stack
     end
 
-    # Creates a new stack, or updates an existing stack if it already exists.
+    # Creates a new stack or updates an existing stack if it already exists.
+    # Pending stack-resource changes will be displayed pending confirmation before proceeding.
+    # If `quiet` is set create/update will proceed without input.
     def create_or_update
-      $stdout.sync = true
-      template = stack.render
-      action = stack_exists? ? :update : :create
-      log.info "#{action} stack: #{stack_name}..."
-      stack_options = stack_options(template)
-      if File.file?(options[:policy])
-        stack_policy = JSON.pretty_generate(YAML.load(stack.render(filename: options[:policy])))
-        stack_options[:stack_policy_body] = stack_policy
-        stack_options[:stack_policy_during_update_body] = stack_policy if action == :update
-      end
-      stack_options[:on_failure] = 'DO_NOTHING' if action == :create
-
-      stack_action(action, stack_options)
-
-      unless options[:quiet]
-        log.info 'Outputs:'
-        cfn.describe_stacks(stack_name: @stack_id).stacks.first.outputs.each do |output|
-          log.info "#{output.output_key}: #{output.output_value}"
-        end
-      end
+      change_stack
     end
 
     # Deletes a stack if it already exists.
@@ -103,13 +74,29 @@ module AWS
 
     private
 
+    # @return [Aws::CloudFormation::Client]
     def cfn
       @cfn ||= Aws::CloudFormation::Client.new
     end
 
-    # Log potential changes to an existing stack using a temporary change set.
-    def validate_changes(stack_options, name)
-      log.info "Listing changes to existing stack `#{stack_name}`:"
+    def change_stack
+      template = stack.render
+      if options[:verbose]
+        log.info template.lines.map.with_index(1) {|line, i| format("[%3d] %s", i, line)}.join
+      end
+      stack_options = change_set_options(template)
+      params = stack_options[:parameters].reject {|x| x[:parameter_value].nil?}
+      unless options[:quiet] || params.empty?
+        log.info "Parameters:\n#{params.map {|p| "#{p[:parameter_key]}: #{p[:parameter_value]}"}.join("\n")}"
+      end
+
+      prepare_changes(stack_options, "#{stack_name}-#{Digest::MD5.hexdigest(template)}")
+    end
+
+    # Prepare changes to a stack using a Change Set.
+    def prepare_changes(stack_options, name)
+      action = stack_options[:change_set_type].downcase.to_sym
+      log.info "Pending #{action} for stack `#{stack_name}`:" unless options[:quiet]
       change_set_id = cfn.create_change_set(
         stack_options.merge(change_set_name: name)
       ).id
@@ -118,10 +105,7 @@ module AWS
         change_set = {changes: []}
         loop do
           sleep 1
-          change_set = cfn.describe_change_set(
-            change_set_name: change_set_id,
-            stack_name: stack_name
-          )
+          change_set = cfn.describe_change_set(change_set_name: change_set_id)
           break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
         end
         change_set.changes.each do |change|
@@ -129,15 +113,42 @@ module AWS
           str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
           str += " Replacement: #{c.replacement}" if %w(True Conditional).include?(c.replacement)
           str += " (#{c.details.map {|d| d.target.name}.join(', ')})" if c.details.any?
-          log.info str
+          log.info str unless options[:quiet]
         end
-        log.info 'No changes' if change_set.changes.empty?
-
+        if change_set.changes.empty?
+          log.info 'No changes'
+        elsif !stack.dry_run
+          if options[:quiet] || HighLine.new.agree("Proceed? [y/n]", true)
+            apply_changes(stack_options, change_set_id, action)
+          end
+        end
       ensure
-        cfn.delete_change_set(
-          change_set_name: change_set_id,
-          stack_name: stack_name
-        )
+        begin
+          cfn.delete_change_set(change_set_name: change_set_id)
+        rescue Aws::CloudFormation::Errors::InvalidChangeSetStatus
+          # Change set can't be deleted if it's already been executed.
+        end
+      end
+    end
+
+    def apply_changes(stack_options, change_set_id, action)
+      # Change Set does not support `on_failure` or `stack_policy` options
+      # which are useful for stack creation, so apply create action directly.
+      if action == :create
+        log.info "#{action} stack: #{stack_name}..."
+        stack_options.delete(:change_set_type)
+        if File.file?(options[:policy])
+          stack_policy = JSON.pretty_generate(YAML.load(stack.render(filename: options[:policy])))
+          stack_options[:stack_policy_body] = stack_policy
+          stack_options[:stack_policy_during_update_body] = stack_policy if action == :update
+        end
+        stack_options[:on_failure] = 'DO_NOTHING' if action == :create
+
+        stack_action(action, stack_options)
+      else
+        cfn.execute_change_set(change_set_name: change_set_id)
+        start = Time.now
+        wait_for_stack(action) {tail_events(start)}
       end
     end
 
@@ -176,7 +187,6 @@ module AWS
         else
           # Required parameter value not found in environment, existing stack or default.
           # Ask for input directly.
-          require 'highline'
           param[:parameter_value] = stack.dry_run ?
             '!Required' :
             HighLine.new.ask("Enter value for Parameter #{key}:", String)
@@ -197,7 +207,7 @@ module AWS
     end
 
     def stack_options(template)
-      base_options.merge(string_or_url(template)).merge(
+      @stack_options ||= base_options.merge(string_or_url(template)).merge(
         parameters: parameters(template),
         tags: stack.tags,
         capabilities: %w[
@@ -205,6 +215,28 @@ module AWS
           CAPABILITY_NAMED_IAM
         ]
       )
+    end
+
+    # Sets options specific to the CreateChangeSet operation.
+    def change_set_options(template)
+      opts = stack_options(template)
+      if (imports = options[:import_resources]&.split(','))
+        opts[:change_set_type] = 'IMPORT'
+        summaries = cfn.get_template_summary(string_or_url(template)).resource_identifier_summaries
+        opts[:resources_to_import] = imports.map do |import|
+          logical_id, resource_id = import.split(':')
+          summary = summaries.find {|r| r.logical_resource_ids.include?(logical_id)}
+          {
+            resource_type: summary.resource_type,
+            logical_resource_id: logical_id,
+            resource_identifier: {summary.resource_identifiers.first => resource_id}
+          }
+        end
+        log.info "Resources to import:\n#{opts[:resources_to_import].join("\n")}"
+      else
+        opts[:change_set_type] = stack_exists? ? 'UPDATE' : 'CREATE'
+      end
+      opts
     end
 
     def stack_action(method, stack_options)
@@ -227,14 +259,16 @@ module AWS
 
     # Only way to determine whether a given stack exists using the Ruby API.
     def stack_exists?
-      !!@stack_resource ||= begin
-        cfn.describe_stacks(stack_name: stack_name).stacks.first.tap do |stack|
-          @stack_id = stack.stack_id
+      @stack_resource ||=
+        begin
+          cfn.describe_stacks(stack_name: stack_name).stacks.first.tap do |stack|
+            @stack_id = stack.stack_id
+          end
+        rescue Aws::CloudFormation::Errors::ValidationError => e
+          raise e unless e.message == "Stack with id #{stack_name} does not exist"
+          false
         end
-      rescue Aws::CloudFormation::Errors::ValidationError => e
-        raise e unless e.message == "Stack with id #{stack_name} does not exist"
-        false
-      end
+      @stack_resource && !%w(REVIEW_IN_PROGRESS DELETE_COMPLETE).include?(@stack_resource.stack_status)
     end
 
     # Prints the latest CloudFormation stack events.
@@ -277,7 +311,17 @@ module AWS
         raise "\nError on #{action}."
       end
       yield rescue nil
-      log.info "\nStack #{action} complete." unless options[:quiet]
+      unless options[:quiet]
+        log.info "\nStack #{action} complete."
+        unless action == 'delete'
+          log.info 'Outputs:'
+          cfn.describe_stacks(stack_name: @stack_id).stacks.first.outputs.each do |output|
+            log.info "#{output.output_key}: #{output.output_value}"
+          end
+        end
+
+      end
+
       log.info "Don't forget to remove AWS resources by running `rake adhoc:delete` after you're done testing your instance!" if action == :create
     end
   end
