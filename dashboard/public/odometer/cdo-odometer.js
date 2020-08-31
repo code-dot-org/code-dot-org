@@ -60,7 +60,7 @@ function Odometer(config) {
 
   // Change the radix and update the odometer.
   this.changeRadix = function(newRadix) {
-    if (typeof newRadix === 'number' && newRadix >=2 && newRadix <= 36) {
+    if (typeof newRadix === 'number' && newRadix >= 2 && newRadix <= 36) {
       config.radix = newRadix;
       last = null;  
     }
