@@ -43,7 +43,7 @@ Now that you have some tutorials in mind, it may be helpful to try these activit
 <h3>More than one child at home?</h3>
 Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. 他們也將瞭解到電腦科學是需社交與合作的。
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. 他們也將瞭解到計算機科學是需要社交與合作的。
 
 <h3>Get the kids excited! </h3>
 This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
