@@ -20,7 +20,8 @@ import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
-import experiments from '@cdo/apps/util/experiments';
+import project from '../../../code-studio/initApp/project';
+import {MB_API} from './boards/microBit/MicroBitConstants';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
@@ -161,7 +162,7 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    if (experiments.isEnabled(experiments.MICROBIT)) {
+    if (project.getMakerAPIs() === MB_API) {
       //TODO - break out the applicable parts of findPortWithViableDevice
       return findPortWithViableDevice().then(() => new MicroBitBoard());
     } else {
