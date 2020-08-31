@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../Button';
+import i18n from '@cdo/locale';
 
 // https://developers.google.com/classroom/brand
 const styles = {
@@ -88,7 +89,7 @@ class GoogleClassroomShareButton extends React.Component {
     return (
       <span style={styles.container}>
         <span id={this.props.buttonId} />
-        <span style={styles.label}>Google Classroom</span>
+        <span style={styles.label}>{i18n.loginTypeGoogleClassroom()}</span>
       </span>
     );
   }
