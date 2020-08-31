@@ -39,6 +39,9 @@ export default class GoogleClassroomShareButton extends React.Component {
     super(props);
     this.onButtonResize = this.onButtonResize.bind(this);
     this.resizeObserver = new ResizeObserver(this.onButtonResize);
+
+    this.onShareStart = this.onShareStart.bind(this);
+    this.onShareComplete = this.onShareComplete.bind(this);
   }
 
   buttonRef = null;
@@ -49,11 +52,27 @@ export default class GoogleClassroomShareButton extends React.Component {
   componentDidMount() {
     this.renderButton();
     this.resizeObserver.observe(this.buttonRef);
+
+    // Use unique callback names since we're adding to the global namespace
+    window[this.onShareStartName()] = this.onShareStart;
+    window[this.onShareCompleteName()] = this.onShareComplete;
   }
 
   onButtonResize() {
     this.setState({buttonRendered: true});
     this.resizeObserver.disconnect();
+  }
+
+  onShareStartName = () => 'onShareStart_' + this.props.buttonId;
+
+  onShareCompleteName = () => 'onShareComplete_' + this.props.buttonId;
+
+  onShareStart() {
+    console.log('on share start: ' + this.props.title);
+  }
+
+  onShareComplete() {
+    console.log('on share complete: ' + this.props.title);
   }
 
   // https://developers.google.com/classroom/guides/sharebutton
@@ -64,7 +83,9 @@ export default class GoogleClassroomShareButton extends React.Component {
       itemtype: this.props.itemtype,
       title: this.props.title,
       size: this.props.height,
-      courseid: this.props.courseid
+      courseid: this.props.courseid,
+      onsharestart: `${this.onShareStartName()}`,
+      onsharecomplete: `${this.onShareCompleteName()}`
     });
   }
 
