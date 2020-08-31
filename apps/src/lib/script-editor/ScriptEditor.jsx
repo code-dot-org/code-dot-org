@@ -79,7 +79,8 @@ export default class ScriptEditor extends React.Component {
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
     tts: PropTypes.bool,
-    hasCourse: PropTypes.bool
+    hasCourse: PropTypes.bool,
+    isCourse: PropTypes.bool
   };
 
   constructor(props) {
@@ -394,6 +395,22 @@ export default class ScriptEditor extends React.Component {
               visible={!this.props.hidden}
               pilotExperiment={this.props.pilotExperiment}
             />
+            <label>
+              Is a CourseOffering
+              <input
+                name="is_course"
+                type="checkbox"
+                defaultChecked={this.props.isCourse}
+                style={styles.checkbox}
+              />
+              <HelpTip>
+                <p>
+                  (Still in development) If checked, indicates that this Unit
+                  represents a standalone CourseOffering. Examples of such Units
+                  include CourseA-F.
+                </p>
+              </HelpTip>
+            </label>
           </div>
         )}
 
