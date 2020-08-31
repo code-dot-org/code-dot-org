@@ -164,7 +164,8 @@ class Pd::Enrollment < ActiveRecord::Base
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
         enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
 
-    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion
+    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
+    # CSF Deep Dive after 9/1 also uses Foorm
     foorm_enrollments, other_enrollments = enrollments.partition do |enrollment|
       (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
@@ -176,8 +177,8 @@ class Pd::Enrollment < ActiveRecord::Base
       enrollment.workshop.course == COURSE_ADMIN || enrollment.workshop.course == COURSE_COUNSELOR
     end
 
-    # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer
-    # and CSF Intro (surveys would be too out of date), teachercon (deprecated), or any academic year workshop
+    # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
+    # CSF Intro, and CSF Deep Dive (surveys would be too out of date), teachercon (deprecated), or any academic year workshop
     # (there are multiple post-survey options, therefore the facilitators must provide a link themselves).
     (
       filter_for_pegasus_survey_completion(pegasus_enrollments, select_completed) +
