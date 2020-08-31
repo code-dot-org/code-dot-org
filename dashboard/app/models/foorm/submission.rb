@@ -11,7 +11,9 @@
 #
 
 class Foorm::Submission < ActiveRecord::Base
-  has_one :metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
+  has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
+  has_one :misc_survey, foreign_key: :foorm_submission_id
+
   belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 
   SURVEY_CONFIG_KEYS = %w(
@@ -79,14 +81,16 @@ class Foorm::Submission < ActiveRecord::Base
       end
     end
 
-    question_answer_pairs
+    question_answer_pairs.merge! formatted_workshop_metadata
   end
 
-  def formatted_metadata
+  def formatted_workshop_metadata
+    return {} if workshop_metadata.nil?
+
     {
-      'user_id' => metadata&.user&.id,
-      'pd_workshop_id' => metadata&.pd_workshop&.id,
-      'pd_session_id' => metadata&.pd_session&.id
+      'user_id' => workshop_metadata.user&.id,
+      'pd_workshop_id' => workshop_metadata.pd_workshop&.id,
+      'pd_session_id' => workshop_metadata.pd_session&.id
     }
   end
 end

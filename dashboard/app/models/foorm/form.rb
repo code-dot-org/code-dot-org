@@ -100,14 +100,7 @@ class Foorm::Form < ActiveRecord::Base
   # by a user, as well as some additional metadata about the context
   # in which the form was submitted (eg, workshop ID, user ID).
   def submissions_to_csv(file_path)
-    formatted_submissions = []
-
-    submissions.each do |submission|
-      formatted_submission = submission.formatted_answers
-      formatted_submission.merge! submission.formatted_metadata
-
-      formatted_submissions << formatted_submission
-    end
+    formatted_submissions = submissions.map(&:formatted_answers)
 
     CSV.open(file_path, "wb") do |csv|
       break if formatted_submissions.empty?
@@ -119,6 +112,10 @@ class Foorm::Form < ActiveRecord::Base
         csv << submission.values_at(*headers.keys)
       end
     end
+  end
+
+  def parsed_questions
+    Pd::Foorm::FoormParser.parse_forms([self])
   end
 
   def readable_questions
