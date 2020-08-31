@@ -9,4 +9,22 @@ class Foorm::FormTest < ActiveSupport::TestCase
     assert_equal JSON.parse(form2.questions), questions
     assert_equal form2.version, version
   end
+
+  test 'merge_form_questions_and_config_variables works with no config variables' do
+    form = create :foorm_form_summer_post_survey
+    submission = create :daily_workshop_day_5_foorm_submission, :answers_high_with_survey_config_variables
+
+    expected_keys = form.readable_questions.keys | submission.formatted_answers.keys
+
+    assert_equal expected_keys,
+      form.merge_form_questions_and_config_variables(submission.formatted_answers).keys
+  end
+
+  test 'merge_form_questions_and_config_variables works with config variables' do
+    form = create :foorm_form_summer_post_survey
+    submission = create :daily_workshop_day_5_foorm_submission, :answers_high
+
+    assert_equal form.readable_questions.keys,
+      form.merge_form_questions_and_config_variables(submission.formatted_answers).keys
+  end
 end
