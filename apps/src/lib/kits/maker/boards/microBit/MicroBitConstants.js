@@ -9,6 +9,8 @@ export const sensor_channels = {
 };
 export const EXTERNAL_PINS = [0, 1, 2];
 
+export const MB_API = 'microbit';
+
 export function roundToHundredth(rawValue) {
   return Math.floor(rawValue * 100) / 100;
 }
