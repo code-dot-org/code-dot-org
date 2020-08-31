@@ -430,11 +430,7 @@ class ApiController < ApplicationController
       user_level = current_user.last_attempt(level, script)
       level_source = user_level.try(:level_source).try(:data)
 
-      response[:progress] = current_user.
-        user_levels.
-        by_stage(stage).
-        pluck(:level_id, :best_result).
-        to_h
+      response[:progress] = summarize_user_progress(script, current_user)[:levels]
 
       if user_level
         response[:lastAttempt] = {

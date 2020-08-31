@@ -33,6 +33,7 @@ import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
+import _ from 'lodash';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -60,7 +61,13 @@ function mergeProgressData(scriptName, serverProgress) {
   // Note: Changes to the progressRedux also update the sessionStorage,
   // so this will clear and update the sessionStorage too.
   store.dispatch(clearProgress());
-  store.dispatch(mergeProgress(serverProgress));
+  store.dispatch(
+    mergeProgress(
+      _.mapValues(serverProgress, level =>
+        level.submitted ? TestResults.SUBMITTED_RESULT : level.result
+      )
+    )
+  );
 
   Object.keys(serverProgress).forEach(levelId => {
     // Write down new progress in sessionStorage
