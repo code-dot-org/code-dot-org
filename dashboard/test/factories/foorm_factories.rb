@@ -75,6 +75,7 @@ FactoryGirl.define do
   factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
     form_name "surveys/pd/summer_workshop_post_survey_test"
     foorm_submission_metadata
+    answers '{}'
 
     trait :answers_low do
       answers '{
@@ -128,6 +129,26 @@ FactoryGirl.define do
        "two_things_liked": "things",
        "permission_promotional": "yes_with_name"
       }'
+    end
+
+    trait :answers_high_with_survey_config_variables do
+      answers_high
+
+      after(:build) do |submission|
+        survey_config_answers = '{
+          "workshop_course":"CS Principles",
+          "workshop_subject":"5-day Summer",
+          "regional_partner_name":"",
+          "is_virtual":"true",
+          "num_facilitators":"0",
+          "day":"0",
+          "is_friday_institute":"false"
+        }'
+
+        parsed_answers = JSON.parse(submission.answers)
+        parsed_answers.merge! JSON.parse(survey_config_answers)
+        submission.answers = parsed_answers.to_json
+      end
     end
   end
 
