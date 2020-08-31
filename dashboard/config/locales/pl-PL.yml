@@ -566,6 +566,7 @@ pl:
       na bieżąco z postępami i projektami Twojego dziecka. Będziesz także mógł używać
       tego adresu e-mail do odzyskiwania hasła.
     parent_guardian_email_label: Adres e-mail rodzica/opiekuna
+    remove_parent_email_label: Usuń
     none: Żaden
     only_one_parent_email_supported_warning: 'Uwaga: w tej chwili możemy uwzględnić
       tylko jeden adres e-mail rodzica/opiekuna na konto ucznia.'
@@ -1404,3 +1405,4 @@ pl:
     not_now: Nie teraz
   behaviors:
     this_sprite: ten duszek
+  unit_prefix: Jednostka %{n}
