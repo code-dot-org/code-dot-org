@@ -708,9 +708,16 @@ Applab.init = function(config) {
       );
     }
   } else {
+    // Combine all maker blocks for both CP and MB since all maker blocks, regardless
+    // of board type, should be disabled in this branch
+    let allBoardsConfig = utils.deepMergeConcatArrays(
+      makerToolkit.configCircuitPlayground,
+      makerToolkit.configMicrobit
+    );
+
     const makerConfig = utils.deepMergeConcatArrays(
       makerToolkit.dropletConfig,
-      makerToolkit.configCircuitPlayground
+      allBoardsConfig
     );
 
     // Push gray, no-autocomplete versions of maker blocks for display purposes.
