@@ -103,7 +103,7 @@ describe('LightSensor', function() {
 
       // Test the circular behavior of the buffer
       lightSensor.state.currentBufferWriteIndex =
-        MAX_SENSOR_BUFFER_DURATION + 10;
+        MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL + 10;
       expect(lightSensor.getAveragedValue(750)).to.equal(22);
 
       // Test the average if the requested duration is longer than what has been recorded
