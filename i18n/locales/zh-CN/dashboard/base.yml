@@ -475,6 +475,7 @@ zh-CN:
     for_parents_and_guardians: "针对家长和监护人"
     link_a_parent_email: "将一位父母/监护人的电子邮箱地址链接到此帐户，以便随时了解你孩子的进度和项目。你还可以使用此电子邮箱地址恢复密码。"
     parent_guardian_email_label: "父母/监护人电子邮箱"
+    remove_parent_email_label: "移除"
     none: "没有"
     only_one_parent_email_supported_warning: "注：目前，针对每个学生帐户我们仅支持添加一个父母/监护人电子邮箱地址。"
     encrypted: "已加密"
@@ -1097,3 +1098,4 @@ zh-CN:
     not_now: "以后再说"
   behaviors:
     this_sprite: "这个精灵"
+  unit_prefix: "单位%{n}"
