@@ -41,6 +41,7 @@ class ProgressLessonTeacherInfo extends React.Component {
 
     // redux provided
     section: sectionShape,
+    userId: PropTypes.number,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -57,13 +58,19 @@ class ProgressLessonTeacherInfo extends React.Component {
       study: 'hidden-lessons',
       study_group: 'v0',
       event: value,
-      data_json: JSON.stringify({
-        script_name: scriptName,
-        section_id: sectionId,
-        lesson_id: lesson.id,
-        lesson_name: lesson.name
-      })
+      data_json: JSON.stringify(this.firehoseData())
     });
+  };
+
+  firehoseData = () => {
+    const {userId, scriptName, section, lesson} = this.props;
+    return {
+      user_id: userId,
+      script_name: scriptName,
+      section_id: section.id,
+      lesson_id: lesson.id,
+      lesson_name: lesson.name
+    };
   };
 
   render() {
@@ -127,6 +134,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               url={levelUrl}
               title={lesson.name}
               courseid={courseId}
+              analyticsData={this.firehoseData()}
             />
           </div>
         )}
@@ -141,6 +149,7 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
+    userId: state.currentUser.userId,
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,
