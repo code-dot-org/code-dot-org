@@ -410,6 +410,9 @@ Resources:
 <% if daemon -%>
   <%=daemon%>:
     Type: AWS::EC2::Instance
+<% if @daemon_instance_id -%>
+    DeletionPolicy: Retain
+<% end -%>
     CreationPolicy:
       ResourceSignal:
         Timeout: PT2H
