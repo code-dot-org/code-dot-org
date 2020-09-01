@@ -38,6 +38,7 @@ const initialState = {
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
   stages: null,
+  lessonGroups: null,
   scriptId: null,
   scriptName: null,
   scriptTitle: null,
@@ -76,6 +77,7 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: processedStages(stages, action.professionalLearningCourse),
+      lessonGroups: action.lessonGroups,
       peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
@@ -365,6 +367,7 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  lessonGroups,
   peerReviewLessonInfo,
   scriptId,
   scriptName,
@@ -379,6 +382,7 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  lessonGroups,
   peerReviewLessonInfo,
   scriptId,
   scriptName,
@@ -660,6 +664,19 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
 
   const allLevels = levelsByLesson(state);
 
+  state.lessonGroups.forEach(lessonGroup => {
+    byGroup[lessonGroup.display_name] = {
+      lessonGroup: {
+        id: lessonGroup.id,
+        displayName: lessonGroup.display_name,
+        description: lessonGroup.description,
+        bigQuestions: lessonGroup.big_questions
+      },
+      lessons: [],
+      levels: []
+    };
+  });
+
   state.stages.forEach((lesson, index) => {
     const group = lesson.lesson_group_display_name;
     const lessonAtIndex = lessonFromStageAtIndex(state, index);
@@ -668,14 +685,10 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
       lessonLevels = lessonLevels.filter(level => !level.bonus);
     }
 
-    byGroup[group] = byGroup[group] || {
-      group,
-      lessons: [],
-      levels: []
-    };
-
-    byGroup[group].lessons.push(lessonAtIndex);
-    byGroup[group].levels.push(lessonLevels);
+    if (byGroup[group]) {
+      byGroup[group].lessons.push(lessonAtIndex);
+      byGroup[group].levels.push(lessonLevels);
+    }
   });
 
   // Peer reviews get their own group, but these levels/lesson are stored
@@ -684,6 +697,12 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
   if (state.peerReviewLessonInfo) {
     byGroup[state.peerReviewLessonInfo.lesson_group_display_name] = {
       group: state.peerReviewLessonInfo.lesson_group_display_name,
+      lessonGroup: {
+        id: null, //Peer reviews do not have descriptions or big questions so they won't need an id to track clicks
+        displayName: state.peerReviewLessonInfo.lesson_group_display_name,
+        description: null,
+        bigQuestions: null
+      },
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
