@@ -74,6 +74,10 @@ module Cdo::CloudFormation
           'staging' => 'i-02e6cdc765421ab34',
           'levelbuilder' => 'i-0907b146f7e6503f6'
         }[stack_name]
+        # These stacks will have their EC2 resource imported before the next CI stack update.
+        if %w(staging test levelbuilder).include?(stack_name)
+          @daemon = 'Daemon'
+        end
       else
         @daemon = 'Daemon'
       end
