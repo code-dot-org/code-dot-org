@@ -29,7 +29,7 @@ export default class CourseOverviewTopRow extends Component {
     return (
       <div style={styles.main}>
         {resources.length > 0 && (
-          <TeacherResourcesDropdown resources={resources} />
+          <TeacherResourcesDropdown resources={resources} courseId={id} />
         )}
         <SectionAssigner
           sections={sectionsForDropdown}
