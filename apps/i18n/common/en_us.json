@@ -1783,6 +1783,7 @@
   "updateFirmwareExplanation": "This board is not using the most up-to-date version of the firmware. ",
   "updateFirmwareExplanationClassic": "For best results, please update the firmware by clicking on the button below.",
   "updateFirmwareExplanationExpress": "For best results, please update the firmware by clicking on the button below and following the instructions on the Adafruit website.",
+  "updating": "updating",
   "updateLibraryConfirmation": "Are you sure you want to update {libraryName}?",
   "updateUnpluggedLessonProgress": "Update unplugged lesson progress",
   "updateUnpluggedLessonProgressSubHeading": "Make sure your report accurately reflects the unplugged lessons* your class has worked on.",
