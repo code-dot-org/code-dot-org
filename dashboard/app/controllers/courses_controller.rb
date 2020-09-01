@@ -94,7 +94,7 @@ class CoursesController < ApplicationController
     unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
     #update i18n data for teacher resources
     copy_i18n_params = i18n_params.deep_dup
-    copy_i18n_params["teacher_resource_types"] = unit_group.teacher_resources.map {|resource| resource[0]}
+    copy_i18n_params["teacher_resource_types"] = unit_group.teacher_resources.map {|resource| resource[0]} if unit_group.teacher_resources
 
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], copy_i18n_params)
     # Convert checkbox values from a string ("on") to a boolean.

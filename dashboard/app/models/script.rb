@@ -1057,7 +1057,7 @@ class Script < ActiveRecord::Base
     script_name = script_params[:name]
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     #update i18n data for teacher resources
-    metadata_i18n[:teacher_resource_types] = teacher_resources.map {|resource| resource[0]}
+    metadata_i18n[:teacher_resource_types] = teacher_resources.map {|resource| resource[0]} if teacher_resources
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
