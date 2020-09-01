@@ -25,59 +25,53 @@ export default class TeacherResourcesDropdown extends React.Component {
   };
 
   handleDropdownClick = () => {
+    let data_json = {};
+    let study_group = '';
     if (this.props.courseId) {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-resources',
-          study_group: 'course',
-          event: 'click-dropdown',
-          data_json: JSON.stringify({
-            courseId: this.props.courseId
-          })
-        },
-        {includeUserId: true}
-      );
+      study_group = 'course';
+      data_json = {
+        courseId: this.props.courseId
+      };
     } else if (this.props.unitId) {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-resources',
-          study_group: 'unit',
-          event: 'click-dropdown',
-          data_json: JSON.stringify({
-            unitId: this.props.unitId
-          })
-        },
-        {includeUserId: true}
-      );
+      study_group = 'unit';
+      data_json = {
+        unitId: this.props.unitId
+      };
     }
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-resources',
+        study_group: study_group,
+        event: 'click-dropdown',
+        data_json: JSON.stringify(data_json)
+      },
+      {includeUserId: true}
+    );
   };
 
   handleItemClick = () => {
+    let data_json = {};
+    let study_group = '';
     if (this.props.courseId) {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-resources',
-          study_group: 'course',
-          event: 'click-resource',
-          data_json: JSON.stringify({
-            courseId: this.props.courseId
-          })
-        },
-        {includeUserId: true}
-      );
+      study_group = 'course';
+      data_json = {
+        courseId: this.props.courseId
+      };
     } else if (this.props.unitId) {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-resources',
-          study_group: 'unit',
-          event: 'click-resource',
-          data_json: JSON.stringify({
-            unitId: this.props.unitId
-          })
-        },
-        {includeUserId: true}
-      );
+      study_group = 'unit';
+      data_json = {
+        unitId: this.props.unitId
+      };
     }
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-resources',
+        study_group: study_group,
+        event: 'click-resource',
+        data_json: JSON.stringify(data_json)
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
