@@ -34,6 +34,16 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10
+  },
+  saveButtonBackground: {
+    margin: 0,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: color.charcoal,
+    height: 50,
+    width: '100%',
+    zIndex: 900
   }
 };
 
@@ -526,14 +536,16 @@ export default class ScriptEditor extends React.Component {
             />
           </div>
         )}
-        <button
-          className="btn btn-primary"
-          type="submit"
-          style={{margin: 0}}
-          onClick={this.presubmit}
-        >
-          Save Changes
-        </button>
+        <div style={styles.saveButtonBackground}>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={{margin: 10}}
+            onClick={this.presubmit}
+          >
+            Save Changes
+          </button>
+        </div>
       </div>
     );
   }
