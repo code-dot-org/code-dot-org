@@ -64,8 +64,6 @@ module Cdo::CloudFormation
       stack_name << "-#{branch}" if stack_name == 'adhoc'
       raise "Stack name must not include 'dashboard'" if stack_name.include?('dashboard')
 
-      check_branch!
-
       # Don't provision daemon where manually-provisioned daemon instances already exist.
       # Track Instance ID of manually-provisioned daemon instances that already exist and can't be referenced dynamically
       # TODO import manually-provisioned instances into cloudformation stacks.
@@ -76,6 +74,10 @@ module Cdo::CloudFormation
           'staging' => 'i-02e6cdc765421ab34',
           'levelbuilder' => 'i-0907b146f7e6503f6'
         }[stack_name]
+        # These stacks will have their EC2 resource imported before the next CI stack update.
+        if %w(staging test levelbuilder).include?(stack_name)
+          @daemon = 'Daemon'
+        end
       else
         @daemon = 'Daemon'
       end
@@ -87,7 +89,13 @@ module Cdo::CloudFormation
       tags.push(key: 'owner', value: Aws::STS::Client.new.get_caller_identity.arn) if rack_env?(:adhoc)
     end
 
+    def render(*)
+      check_branch!
+      super
+    end
+
     def check_branch!
+      return if dry_run
       if rack_env?(:adhoc) && RakeUtils.git_branch == branch
         # Current branch is the one we're deploying to the adhoc server,
         # so check whether it's up-to-date with the remote before we get any further.
