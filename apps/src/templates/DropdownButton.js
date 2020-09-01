@@ -50,6 +50,7 @@ class DropdownButton extends Component {
     text: PropTypes.string.isRequired,
     color: PropTypes.oneOf(Object.values(Button.ButtonColor)).isRequired,
     size: PropTypes.string,
+    onClick: PropTypes.func,
     children: props => {
       React.Children.map(props.children, child => {
         if (child.type !== 'a') {
@@ -95,6 +96,7 @@ class DropdownButton extends Component {
       this.collapseDropdown();
     } else {
       this.expandDropdown();
+      this.props.onClick();
     }
   };
 

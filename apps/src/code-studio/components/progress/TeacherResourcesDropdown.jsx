@@ -24,6 +24,34 @@ export default class TeacherResourcesDropdown extends React.Component {
     unitId: PropTypes.number
   };
 
+  handleDropdownClick = () => {
+    if (this.props.courseId) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-resources',
+          study_group: 'course',
+          event: 'click-dropdown',
+          data_json: JSON.stringify({
+            courseId: this.props.courseId
+          })
+        },
+        {includeUserId: true}
+      );
+    } else if (this.props.unitId) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-resources',
+          study_group: 'unit',
+          event: 'click-dropdown',
+          data_json: JSON.stringify({
+            unitId: this.props.unitId
+          })
+        },
+        {includeUserId: true}
+      );
+    }
+  };
+
   handleItemClick = () => {
     if (this.props.courseId) {
       firehoseClient.putRecord(
@@ -60,6 +88,7 @@ export default class TeacherResourcesDropdown extends React.Component {
         <DropdownButton
           text={i18n.teacherResources()}
           color={Button.ButtonColor.blue}
+          onClick={this.handleDropdownClick}
         >
           {resources.map(({type, link}, index) => (
             <a
