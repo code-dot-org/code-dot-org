@@ -1681,30 +1681,33 @@ class Script < ActiveRecord::Base
     lessons_to_import
   end
 
-  def self.walk_tree(json_hash, model_obj, steps)
+  def self.walk_tree(json_hash, model_obj, parent_scope, steps)
     steps = steps.clone
     next_step = steps.shift
 
     excludes = ([next_step&.hash_key] + (next_step&.excludes || [])).compact # TODO: make this readable
-    model_obj.assign_attributes(json_hash.except(*excludes))
+    attributes = json_hash.except(*excludes)
+
+    if model_obj
+      model_obj.assign_attributes(attributes)
+    else
+      model_obj = parent_scope.new(attributes)
+    end
 
     return unless next_step&.hash_key
 
-    next_model_obj = model_obj.send(next_step.hash_key)
+    next_parent_scope = model_obj.send(next_step.hash_key)
 
-    if next_model_obj.respond_to? :each
-      match_on =
-        if next_step.match_on.is_a? String
-          lambda {|h, o| h[next_step.match_on] == o.send(next_step.match_on)}
-        else
-          next_step.match_on
-        end
-
-      json_hash[next_step.hash_key].each do |h|
-        walk_tree(h, next_model_obj.select {|o| match_on.call(h, o)}.first, steps)
+    match_on =
+      if next_step.match_on.is_a? String
+        lambda {|h, o| h[next_step.match_on] == o.send(next_step.match_on)}
+      else
+        next_step.match_on
       end
-    else
-      walk_tree(json_hash[next_step], next_model_obj, steps)
+
+    json_hash[next_step.hash_key].each do |h|
+      next_model_obj = next_parent_scope.select {|o| match_on.call(h, o)}.first
+      walk_tree(h, next_model_obj, next_parent_scope, steps)
     end
 
     model_obj
@@ -1724,7 +1727,8 @@ class Script < ActiveRecord::Base
       Step.new(nil, nil, ['level_names'])
     ]
 
-    walk_tree(script_hash, script, steps)
+    script = walk_tree(script_hash, script, Script, steps)
+    script
   end
 
   def serialize_seeding_json
