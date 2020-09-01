@@ -22,7 +22,7 @@ class Foorm::Submission < ActiveRecord::Base
     regional_partner_name
     is_virtual
     is_friday_institute
-    agenda
+    workshop_agenda
     num_facilitators
     day
   )

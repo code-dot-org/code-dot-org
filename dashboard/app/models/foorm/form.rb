@@ -105,7 +105,17 @@ class Foorm::Form < ActiveRecord::Base
     CSV.open(file_path, "wb") do |csv|
       break if formatted_submissions.empty?
 
-      headers = merge_form_questions_and_config_variables(formatted_submissions.last)
+      # Submissions containing answers to facilitator-specific questions
+      # don't have survey config stored in them.
+      submission_with_survey_config = submissions.
+        select {|submission| submission.workshop_metadata&.facilitator_id.nil?}&.
+        last&.
+        formatted_answers
+
+      headers = submission_with_survey_config.nil? ?
+        readable_questions :
+        merge_form_questions_and_config_variables(submission_with_survey_config)
+
       csv << headers.values
 
       formatted_submissions.each do |submission|
@@ -142,7 +152,7 @@ class Foorm::Form < ActiveRecord::Base
   def merge_form_questions_and_config_variables(submission)
     headers = readable_questions
 
-    # Get config variables by finding keys in the first form submission
+    # Get config variables by finding keys in the provided form submission
     # that aren't in the form itself.
     # The header is the same as the key for these items (eg, workshop_subject).
     config_variable_question_ids = submission.keys.reject do |question_id|
