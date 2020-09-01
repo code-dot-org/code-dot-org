@@ -90,6 +90,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
+  blocklyWrapper.wrapReadOnlyProperty('utils');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
@@ -155,10 +156,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getFieldValue;
   blocklyWrapper.Block.prototype.isUserVisible = () => false; // TODO
   // Google Blockly only allows you to set the hue, not saturation or value.
-  // TODO: determine if this will work for us, or if there's a workaround to
-  // allow us to keep our colors the same
+  // However, they also allow you to specify the color in #RRGGBB format, so we can
+  // just map our HSV value to hex using their util function.
   blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
-    return this.setColour(h);
+    return this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
