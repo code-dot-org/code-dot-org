@@ -809,6 +809,8 @@ es:
               name: Uso de variables en aplicaciones
             While Loops:
               name: Bucles Mientras
+            Creating Functions with Parameters:
+              name: Creación de funciones con parámetros
         algebraPD3:
           lessons:
             Computer Science Pedagogy:

@@ -742,6 +742,8 @@ zh-TW:
               name: 在 App 中使用變數
             While Loops:
               name: 當…迴圈
+            Creating Functions with Parameters:
+              name: 建立帶參數（Parameter）的函式
         algebraPD3:
           title: 階段 3 PD
           lessons:

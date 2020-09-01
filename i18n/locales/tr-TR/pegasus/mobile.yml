@@ -902,8 +902,20 @@
   coursee_name: "Kurs E"
   coursef-draft_name: Kurs F
   coursef_name: "Kurs F"
+  coursea-2018_name: Ders A (2018)
+  courseb-2018_name: Kurs B (2018)
+  coursec-2018_name: Kurs C (2018)
   coursed-2018_name: Yeni Kurs D Senaryosu
+  coursee-2018_name: Kurs E (2018)
+  coursef-2018_name: Kurs F (2018)
+  coursea-2019_name: Kurs A (2019)
+  courseb-2019_name: Kurs B (2019)
+  coursec-2019_name: Kurs C (2019)
+  coursed-2019_name: Kurs D (2019)
+  coursee-2019_name: Kurs E (2019)
+  coursef-2019_name: Kurs F (2019)
   express-2018_name: Hızlı Kurs
+  express-2019_name: Hızlı Kurs (2019)
   accelerated_name: "Hızlandırılmış Kurs"
   express_name: "Hızlı Kurs"
   pre-express_name: Okuma Bilmeyenler için Hızlı Kurs
@@ -917,6 +929,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Yıldız savaşları (blok)"
   hoc-encryption_name: Basit şifreleme
+  text-compression_name: Metin Sıkıştırma
   applab_name: "App Laboratuvarı"
   gamelab_name: "Oyun Laboratuvarı"
   basketball_name: "Basketbol oyunu kodla"
@@ -1427,6 +1440,7 @@
   reset_student_password_email: "Eğer öğrenciniz (Google, Facebook, Microsoft veya Clever hesabı ile oturum açmak yerine) kendi eposta adresi ve şifresini kullanarak bir Code.org hesabı oluşturduysa, şubenin \"Öğrencileri Yönet\" sekmesine giderek ve \"Şifre\" sütunu altındaki \"Şifreyi sıfırla\" butonuna basarak öğrencinin şifresini sıfırlayabilirsiniz."
   syncing_students: "Öğrencilerinizi senkronize etme"
   google_sign_in_instruct: 'Oradan, "Google Hesabı ile Oturum Aç" seçeneğini seçmeliler:'
+  hero_name: 'Minecraft: Kahramanın Yolculuğu'
   applab-intro_name: Uygulama Laboratuvarı Giriş
   applab_tile_start_tutorial: "Başlayın"
   applab_tile_teacher_guide: "Öğretmen kılavuzunu görüntüle"

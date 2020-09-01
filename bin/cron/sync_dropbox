@@ -33,7 +33,7 @@ FOLDERS = {
 }.freeze
 
 INTERVAL_SECONDS = 5
-TOTAL_SECONDS = 60 - INTERVAL_SECONDS
+TOTAL_SECONDS = 55 - INTERVAL_SECONDS
 
 logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', '/home/ubuntu/dropbox_sync_error_log.csv')
 logger.load # load errors from most recent sync
