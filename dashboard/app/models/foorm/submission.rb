@@ -16,22 +16,11 @@ class Foorm::Submission < ActiveRecord::Base
 
   belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 
-  SURVEY_CONFIG_KEYS = %w(
-    workshop_course
-    workshop_subject
-    regional_partner_name
-    is_virtual
-    is_friday_institute
-    workshop_agenda
-    num_facilitators
-    day
-  )
-
   # Returns a hash similar to a submission's answer, with the following changes:
   #   - flattens matrix questions
   #   - returns readable answer, instead of a key representing a user's answer.
   def formatted_answers
-    question_answer_pairs = {}
+    question_answer_pairs = formatted_workshop_metadata
 
     # Example of what parsed_answers looks like.
     # Note that matrix questions (eg, how_much_barrier_to_teaching_cs)
@@ -56,9 +45,7 @@ class Foorm::Submission < ActiveRecord::Base
     general_parsed_questions = form.parsed_questions[:general][form.key]
 
     parsed_answers.each do |question_id, answer|
-      if SURVEY_CONFIG_KEYS.include? question_id
-        question_answer_pairs[question_id] = answer
-      elsif general_parsed_questions.keys.include? question_id
+      if general_parsed_questions.keys.include? question_id
         question_details = general_parsed_questions[question_id]
 
         case question_details[:type]
@@ -78,10 +65,15 @@ class Foorm::Submission < ActiveRecord::Base
           choices = question_details[:choices]
           question_answer_pairs[question_id] = answer.map {|selected| choices[selected]}.sort.join(', ')
         end
+      else
+        # For any questions in the submission that aren't in the form,
+        # include them in the formatted submission with as-is.
+        # Main use cases are survey config variables (eg, workshop_course).
+        question_answer_pairs[question_id] = answer
       end
     end
 
-    question_answer_pairs.merge! formatted_workshop_metadata
+    question_answer_pairs
   end
 
   def formatted_workshop_metadata

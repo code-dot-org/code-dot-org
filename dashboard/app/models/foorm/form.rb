@@ -147,21 +147,19 @@ class Foorm::Form < ActiveRecord::Base
   end
 
   # Takes the questions in the survey (readable_questions)
-  # and adds in entries for metadata (eg, workshop_subject)
+  # and adds in entries for information
+  # like survey configuration variables (eg, workshop_subject)
+  # and workshop metadata (eg, pd_worskhop_id)
   # that appears in the form submission, but not the form itself.
   def merge_form_questions_and_config_variables(submission)
     headers = readable_questions
 
-    # Get config variables by finding keys in the provided form submission
-    # that aren't in the form itself.
-    # The header is the same as the key for these items (eg, workshop_subject).
-    config_variable_question_ids = submission.keys.reject do |question_id|
+    config_and_metadata_question_ids = submission.keys.reject do |question_id|
       headers.keys.include? question_id
     end
-    return headers if config_variable_question_ids.empty?
+    return headers if config_and_metadata_question_ids.empty?
 
-    config_variable_headers = Hash[config_variable_question_ids.map {|question_id| [question_id, question_id]}]
-
-    headers.merge! config_variable_headers
+    config_and_metadata_headers = Hash[config_and_metadata_question_ids.map {|question_id| [question_id, question_id]}]
+    config_and_metadata_headers.merge! headers
   end
 end
