@@ -17,6 +17,7 @@ namespace :adhoc do
       log: CDO.log,
       verbose: ENV['VERBOSE'],
       quiet: ENV['QUIET'],
+      import_resources: ENV['IMPORT_RESOURCES'],
     )
   end
 
