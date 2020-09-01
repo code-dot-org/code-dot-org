@@ -13,11 +13,11 @@ export default function localeWithI18nStringTracker(locale, source) {
     return locale;
   }
 
-  let localeWithTracker = {};
+  const localeWithTracker = {};
   // Iterates each function in the given locale object and creates a wrapper function.
   Object.keys(locale).forEach(function(stringKey, index) {
     localeWithTracker[stringKey] = function(d) {
-      let value = locale[stringKey](d);
+      const value = locale[stringKey](d);
       log(stringKey, source);
       return value;
     };
