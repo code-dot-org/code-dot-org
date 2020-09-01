@@ -280,6 +280,8 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def anonymous?
+    return false if level.nil? || level.properties.nil?
+
     return level.properties["anonymous"] == "true"
   end
 
