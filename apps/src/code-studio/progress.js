@@ -288,8 +288,10 @@ function initializeStoreWithProgress(
   // Determine if we are viewing student progress.
   var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
-  // Merge in progress saved on the client, unless we are viewing student's work.
-  if (!isViewingStudentAnswer) {
+  // Merge in progress saved on the client, unless we are viewing student
+  // work or are logged in.
+  const useDbProgress = store.getState().progress.shouldUseDbProgress;
+  if (!(isViewingStudentAnswer || useDbProgress)) {
     store.dispatch(
       mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
     );
@@ -302,13 +304,16 @@ function initializeStoreWithProgress(
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));
 
-  // Progress from the server should be written down locally, unless we're a teacher
-  // viewing a student's work.
+  // Write progress locally unless we're a teacher viewing student work
   if (!isViewingStudentAnswer) {
     let lastProgress;
     store.subscribe(() => {
-      const nextProgress = store.getState().progress.levelProgress;
-      if (nextProgress !== lastProgress) {
+      const progressState = store.getState().progress;
+      const nextProgress = progressState.levelProgress;
+      const shouldUseDbProgress = progressState.shouldUseDbProgress;
+
+      // skip if user is logged in or progress hasn't changed
+      if (!(shouldUseDbProgress || nextProgress === lastProgress)) {
         lastProgress = nextProgress;
         clientState.batchTrackProgress(scriptData.name, nextProgress);
       }
