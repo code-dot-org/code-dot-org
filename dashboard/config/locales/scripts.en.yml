@@ -2314,6 +2314,12 @@ en:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
               name: Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csp2-2017:
           title: CSP Unit 2 - Digital Information ('17-'18)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2371,6 +2377,12 @@ en:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
               name: Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming ('17-'18)
           description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r\n\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2424,6 +2436,13 @@ en:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
               name: Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Code Introduced
+          - Standard Mappings
+          - Professional Learning
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy ('17-'18)
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r\n\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2475,6 +2494,12 @@ en:
               name: Post-Course Survey
             Student Post-Course Survey:
               name: Student Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csp5-2017:
           title: CSP Unit 5 - Building Apps ('17-'18)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2594,6 +2619,13 @@ en:
               name: Boolean Expressions and "if" Statements
             Post-Course Survey:
               name: Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Code Introduced
+          - Standard Mappings
+          - Professional Learning
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -3667,6 +3699,12 @@ en:
               name: CS Discoveries End of Semester Survey
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3861,6 +3899,11 @@ en:
               name: CS Discoveries Pre-survey
             CS Discoveries Rapid Survey:
               name: CS Discoveries Rapid Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -4114,6 +4157,12 @@ en:
               description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -4260,6 +4309,12 @@ en:
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         minecraft:
           title: Minecraft Hour of Code Designer
           description_audience: ''
@@ -5324,6 +5379,12 @@ en:
               description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
@@ -5467,6 +5528,11 @@ en:
               description_teacher: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6803,6 +6869,13 @@ en:
               name: CSP Mid-course survey
             Please complete the CSP Mid-course survey:
               name: Please complete the CSP Mid-course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Code Introduced
+          - Standard Mappings
+          - Professional Learning
         csd4-draft:
           title: CSD Unit 4 Revisions Draft
           description_audience: ''
@@ -7474,6 +7547,8 @@ en:
               name: Smart Clothing Design
             Intro to App Lab (13+):
               name: Intro to App Lab (13+)
+          teacher_resource_types:
+          - Lesson Plans
         allthesurveys:
           title: All the surveys
           description_audience: ''
@@ -7589,6 +7664,10 @@ en:
               name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
               name: Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Standard Mappings
         csp-create-2017:
           title: Create - AP Performance Task Prep ('17-'18)
           description_audience: ''
@@ -7610,6 +7689,10 @@ en:
               name: Create PT - Complete the Task
             Post-Course Survey:
               name: Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Standard Mappings
         csp3-reovery:
           title: 'csp3 under the sea student work recovery '
           description_audience: ''
@@ -8063,6 +8146,12 @@ en:
               description_teacher: ''
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd2-2018:
           title: CSD Unit 2 - Web Development ('18-'19)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
@@ -8134,6 +8223,12 @@ en:
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         coursea-2018:
           title: Course A (2018)
           assignment_family_title: Course A
@@ -8200,6 +8295,11 @@ en:
               name: Sequencing with Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie and the Big Project
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         express-2018:
           title: Express Course
           assignment_family_title: Express Course
@@ -8422,6 +8522,11 @@ en:
               name: Relay Programming
             Graph Paper Programming:
               name: Graph Paper Programming
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Course B
@@ -8492,6 +8597,11 @@ en:
               name: Move It, Move It
             Copyright and Creativity:
               name: It's Great to Create and Play Fair
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         coursed-2018:
           title: Course D (2018)
           assignment_family_title: Course D
@@ -8590,6 +8700,11 @@ en:
               name: Nested Loops in Bees
             Nested Loops in Maze:
               name: Nested Loops in Maze
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         jr-test:
           title: ''
           description_audience: ''
@@ -8763,6 +8878,11 @@ en:
               description_teacher: ''
             Looking Ahead:
               name: Looking Ahead with Minecraft
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csd6-2018:
           title: CSD Unit 6 - Physical Computing ('18-'19)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -8874,6 +8994,12 @@ en:
               name: 'Project: Prototype an Innovation'
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         coursee-2018:
           title: Course E (2018)
           assignment_family_title: Course E
@@ -9011,6 +9137,11 @@ en:
               name: Pet Giraffe
             Copyright and Creativity:
               name: Digital Sharing
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         coursef-2018:
           title: Course F (2018)
           assignment_family_title: Course F
@@ -9161,6 +9292,11 @@ en:
               name: Functions with Minecraft
             Conditionals in Farmer:
               name: Conditionals with the Farmer
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csp1-2018:
           title: CSP Unit 1 - The Internet ('18-'19)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -9244,6 +9380,12 @@ en:
               description_teacher: ''
             Sending Text:
               name: Sending Text
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csd1-2018:
           title: CSD Unit 1 - Problem Solving ('18-'19)
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -9301,6 +9443,11 @@ en:
               name: Apps and Storage
               description_student: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. The class evaluates various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
               description_teacher: 'This lesson reviews the input, output, storage, and processing aspects of a computer in a context that is relevant and familiar to students: apps. In pairs, students evaluate smartphone applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the processing that turns those inputs into the desired output, and what information they would want to store for later. The class concludes with a discussion that connects the lesson to apps students are more familiar with. '
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csd4-2018:
           title: CSD Unit 4 - The Design Process ('18-'19)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -9380,6 +9527,12 @@ en:
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd5-2018:
           title: CSD Unit 5 - Data and Society ('18-'19)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -9455,6 +9608,11 @@ en:
               description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csp2-2018:
           title: CSP Unit 2 - Digital Information ('18-'19)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -9542,6 +9700,12 @@ en:
               name: Lossy vs Lossless Compression
             Unit 2 Assessment:
               name: Unit 2 Assessment
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming ('18-'19)
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9609,6 +9773,13 @@ en:
               name: Mid-Year Survey
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Code Introduced
+          - Standard Mappings
+          - Professional Learning
         csp-explore-2018:
           title: Explore - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -9636,6 +9807,10 @@ en:
               name: Mid-Year Survey
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Standard Mappings
         csp-create-2018:
           title: Create - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -9661,6 +9836,10 @@ en:
               description_teacher: ''
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Standard Mappings
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy ('18-'19)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -9728,6 +9907,12 @@ en:
               name: Mid-Year Survey
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csp5-2018:
           title: CSP Unit 5 - Building Apps ('18-'19)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9841,6 +10026,13 @@ en:
               name: Mid-Year Survey
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Code Introduced
+          - Standard Mappings
+          - Professional Learning
         csppostap-2018:
           title: Post AP - Data Tools ('18-'19)
           description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
@@ -10798,6 +10990,12 @@ en:
               name: Simulating Experiments
               description_student: Run simulations on the computer and experiment by changing variables.
               description_teacher: By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         dance-low:
           title: Dance Party (Low Bandwidth)
           description_audience: ''
@@ -10912,6 +11110,12 @@ en:
               name: Dance Party
               description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
               description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         coursee-2019:
           title: Course E (2019)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -11097,6 +11301,12 @@ en:
               name: Designing for Accessibility
             Songwriting:
               name: Songwriting
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         express-2019:
           title: Express Course (2019)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -11318,6 +11528,11 @@ en:
               name: 'Conditionals in Minecraft: Voyage Aquatic'
             Concept Practice with Minecraft:
               name: Concept Practice with Minecraft
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -11369,6 +11584,11 @@ en:
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
             Post-Project Test:
               name: Post-Project Test
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         andrea-test:
           title: andrea-test
           description_audience: 6-12 Facilitators-in-Training
@@ -11534,6 +11754,12 @@ en:
               name: Picturing Data
               description_student: Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.
               description_teacher: Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         csp-mid-survey:
           title: CSP Student Mid-year Survey
           description_audience: CSP Students
@@ -11635,6 +11861,12 @@ en:
               name: Sequencing with Scrat
               description_student: Program Scrat to reach the acorn.
               description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         courseb-2019:
           title: Course B (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -11728,6 +11960,12 @@ en:
               name: Sequencing with Angry Birds
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
               description_teacher: Using characters from Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         pre-express-2019:
           title: Pre-reader Express (2019)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -11911,6 +12149,12 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd3-2019:
           title: CSD Unit 3 - Animations and Games ('19-'20)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -12025,6 +12269,12 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd4-2019:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -12108,6 +12358,12 @@ en:
               name: CS Discoveries Post Course survey
             Post-Project Test:
               name: Post-Project Test
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd5-2019:
           title: CSD Unit 5 - Data and Society ('19-'20)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -12185,6 +12441,11 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csd6-2019:
           title: CSD Unit 6 - Physical Computing ('19-'20)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -12266,6 +12527,12 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csp4-pilot:
           title: CSP Unit 4 Pilot - Variables, Conditionals, and Functions
           description_audience: ''
@@ -12440,6 +12707,12 @@ en:
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csp2-2019:
           title: CSP Unit 2 - Digital Information ('19-'20)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -12483,6 +12756,12 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csp3-2019:
           title: CSP Unit 3 - Intro to Programming ('19-'20)
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -12546,6 +12825,13 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Code Introduced
+          - Standard Mappings
+          - Professional Learning
         csp4-2019:
           title: CSP Unit 4 - Big Data and Privacy ('19-'20)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -12613,6 +12899,12 @@ en:
               name: 'Optional: Data Questions'
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Professional Learning
         csp5-2019:
           title: CSP Unit 5 - Building Apps ('19-'20)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -12720,6 +13012,13 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Code Introduced
+          - Standard Mappings
+          - Professional Learning
         csp-explore-2019:
           title: Explore - AP Performance Task Prep ('19-'20)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -12749,6 +13048,10 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Standard Mappings
         csp-create-2019:
           title: Create - AP Performance Task Prep ('19-'20)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -12774,6 +13077,10 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Standard Mappings
         csppostap-2019:
           title: Post AP - Data Tools ('19-'20)
           description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
@@ -13992,6 +14299,11 @@ en:
               name: Post-Project Test
               description_student: ''
               description_teacher: ''
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csd2-pilot:
           title: CSD Unit 2 - Web Development (Pilot Version)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
@@ -14101,6 +14413,9 @@ en:
               name: Peer Review and Final Touches
             Project - Website for a Purpose:
               name: Project - Website for a Purpose
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
         csd3-pilot:
           title: CSD Unit 3 - Animations and Games (Pilot Version)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -14227,6 +14542,12 @@ en:
               name: Text and Captioned Scenes
             Sprite Properties:
               name: Sprite Properties
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd-bugs:
           title: Example of Bugs for CSD Teachers
           description_audience: ''
@@ -15393,6 +15714,9 @@ en:
               name: Project - Decision Maker App Part 3
             'Lesson 15: Assessment Day':
               name: 'Lesson 15: Assessment Day'
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp5-2020:
           title: CSP Unit 5 - Lists, Loops, and Traversals ('20-'21)
           description_audience: ''
@@ -15448,6 +15772,9 @@ en:
               name: Unit 5 STUDENT Survey
             Unit 5 TEACHER Survey:
               name: Unit 5 TEACHER Survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp7-2020:
           title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
           description_audience: ''
@@ -15489,6 +15816,9 @@ en:
               name: Variables Make Demo
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csd2-projects-temp:
           title: CSD Web Projects - TEMP
           description_audience: ''
@@ -15656,6 +15986,9 @@ en:
               name: Linking Pages
             Using Images:
               name: Using Images
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
         csd1-2020:
           title: CSD Unit 1 - Problem Solving and Computing ('20-'21)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -15787,6 +16120,11 @@ en:
               description_teacher: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a maze, organizing a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day."
             Storage:
               name: Storage
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csd4-2020:
           title: CSD Unit 4 - The Design Process ('20-'21)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -15874,6 +16212,12 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd5-2020:
           title: CSD Unit 5 - Data and Society ('20-'21)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -15957,6 +16301,11 @@ en:
               description_teacher: ''
             Project - Make a Recommendation:
               name: Project - Make a Recommendation
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csd6-2020:
           title: CSD Unit 6 - Physical Computing ('20-'21)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -16042,6 +16391,12 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         csd3-2020:
           title: CSD Unit 3 - Interactive Animations and Games ('20-'21)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -16202,6 +16557,12 @@ en:
               description_teacher: "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games.  After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio."
             Sprites:
               name: Sprites
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Code Introduced
         moneppo-1:
           lesson_groups: {}
           lessons: {}
@@ -16277,6 +16638,12 @@ en:
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 The power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         courseb-2020:
           title: Course B (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -16351,6 +16718,12 @@ en:
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 Does what you do online always stay online? Students learn that the information they share online leaves a digital footprint or "trail." Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         coursec-2020:
           title: Course C (2020)
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -16462,6 +16835,12 @@ en:
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 Stronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         coursed-2020:
           title: Course D (2020)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
@@ -16570,6 +16949,12 @@ en:
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         coursee-2020:
           title: Course E (2020)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -16676,6 +17061,12 @@ en:
               name: Designing for Accessibility
               description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
               description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         coursef-2020:
           title: Course F (2020)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -16786,6 +17177,12 @@ en:
               name: AI for Oceans
               description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
               description_teacher: "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n"
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
+          - Curriculum Guide
         express-2020:
           title: Express Course (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -16971,6 +17368,11 @@ en:
               name: Alien Dance Party
             Behaviors in Sprite Lab:
               name: Behaviors in Sprite Lab
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         pre-express-2020:
           title: Pre-reader Express (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -17044,6 +17446,11 @@ en:
               name: On the Move with Events
             A Royal Battle with Events:
               name: A Royal Battle with Events
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Vocabulary
+          - Standard Mappings
         csp1-2020:
           title: CSP Unit 1 - Digital Information ('20-'21)
           description_audience: ''
@@ -17087,6 +17494,9 @@ en:
               name: 'Lesson 14: Assessment Day'
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp2-2020:
           title: CSP Unit 2 - The Internet ('20-'21)
           description_audience: ''
@@ -17116,6 +17526,9 @@ en:
               name: Project - Internet Dilemmas Part 2
             'Lesson 9: Assessment Day':
               name: 'Lesson 9: Assessment Day'
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp3-2020:
           title: CSP Unit 3 - Intro to App Design ('20-'21)
           description_audience: ''
@@ -17149,6 +17562,9 @@ en:
               name: Project - Designing an App Part 5
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp6-2020:
           title: CSP Unit 6 - Algorithms ('20-'21)
           description_audience: ''
@@ -17172,6 +17588,9 @@ en:
               name: Parallel and Distributed Algorithms
             'Lesson 6: Assessment Day':
               name: 'Lesson 6: Assessment Day'
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp8-2020:
           title: CSP Unit 8 - Create PT Prep ('20-'21)
           description_audience: ''
@@ -17187,6 +17606,9 @@ en:
               name: Create PT - Make a Plan
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp9-2020:
           title: CSP Unit 9 - Data ('20-'21)
           description_audience: ''
@@ -17216,6 +17638,9 @@ en:
               name: Project - Tell a Data Story - Part 2
             'Lesson 9: Assessment Day':
               name: 'Lesson 9: Assessment Day'
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp10-2020:
           title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
           description_audience: ''
@@ -17261,6 +17686,9 @@ en:
               name: 'Project: Innovation Simulation Part 7'
             'Lesson 14: Unit Assessment Day':
               name: 'Lesson 14: Unit Assessment Day'
+          teacher_resource_types:
+          - Lesson Plans
+          - Standard Mappings
         csp-march-virtual:
           title: CS Principles 20-21 Curriculum Training for Facilitators
           description_audience: CS Principles Facilitators
@@ -17396,6 +17824,11 @@ en:
               name: Module 8
             Module 7:
               name: Module 7
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Curriculum Guide
+          - Professional Learning
         csd2-virtual:
           title: Self Paced Introduction to Web Lab
           description: You’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet.
@@ -18107,6 +18540,8 @@ en:
               display_name: Content
             cspSurvey:
               display_name: Content
+          teacher_resource_types:
+          - Teacher Forum
         ui-test-script-in-course-2017:
           lessons:
             Lesson:
@@ -18185,6 +18620,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          teacher_resource_types:
+          - Lesson Plans
+          - Teacher Forum
+          - Curriculum Guide
+          - Professional Learning
         vpl-csp-2020:
           lessons:
             Module 1:
