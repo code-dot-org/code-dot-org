@@ -85,12 +85,12 @@ class SettingsCog extends Component {
       this.showConfirmation();
     } else {
       // Disable without confirmation is okay.
-      project.toggleMakerEnabled();
+      project.setMakerEnabled(null);
     }
   };
 
-  confirmEnableMaker = () => {
-    project.toggleMakerEnabled();
+  confirmEnableMaker = apiEnabled => {
+    project.setMakerEnabled(apiEnabled);
     this.hideConfirmation();
   };
 
