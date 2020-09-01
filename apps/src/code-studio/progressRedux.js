@@ -10,6 +10,7 @@ import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
+import clientState from './clientState';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -27,6 +28,8 @@ const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
+const USE_DB_PROGRESS = 'progress/USE_DB_PROGRESS';
+const OVERWRITE_PROGRESS = 'progress/OVERWRITE_PROGRESS';
 
 const PEER_REVIEW_ID = -1;
 
@@ -58,7 +61,8 @@ const initialState = {
   studentDefaultsSummaryView: true,
   isSummaryView: true,
   hasFullProgress: false,
-  stageExtrasEnabled: false
+  stageExtrasEnabled: false,
+  shouldUseDbProgress: false
 };
 
 /**
@@ -90,10 +94,24 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === USE_DB_PROGRESS) {
+    return {
+      ...state,
+      shouldUseDbProgress: true
+    };
+  }
+
   if (action.type === CLEAR_PROGRESS) {
     return {
       ...state,
       levelProgress: initialState.levelProgress
+    };
+  }
+
+  if (action.type === OVERWRITE_PROGRESS) {
+    return {
+      ...state,
+      levelProgress: action.levelProgress
     };
   }
 
@@ -397,8 +415,18 @@ export const clearProgress = () => ({
   type: CLEAR_PROGRESS
 });
 
+export const useDbProgress = () => {
+  clientState.clearProgress();
+  return {type: USE_DB_PROGRESS};
+};
+
 export const mergeProgress = levelProgress => ({
   type: MERGE_PROGRESS,
+  levelProgress
+});
+
+export const overwriteProgress = levelProgress => ({
+  type: OVERWRITE_PROGRESS,
   levelProgress
 });
 
