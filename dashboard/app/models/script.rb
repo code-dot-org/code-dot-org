@@ -1245,6 +1245,9 @@ class Script < ActiveRecord::Base
       tts: tts?,
     }
 
+    #TODO: lessons should be summarized through lesson groups in the future
+    summary[:lessonGroups] = lesson_groups.map {|lesson_group| lesson_group.summarize(include_lessons, user, include_bonus_levels)}
+
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
