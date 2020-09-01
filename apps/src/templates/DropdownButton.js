@@ -96,7 +96,9 @@ class DropdownButton extends Component {
       this.collapseDropdown();
     } else {
       this.expandDropdown();
-      this.props.onClick();
+      if (this.props.onClick) {
+        this.props.onClick();
+      }
     }
   };
 
