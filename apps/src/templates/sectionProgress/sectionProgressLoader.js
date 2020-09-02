@@ -3,7 +3,9 @@ import {
   startLoadingProgress,
   setCurrentView,
   finishLoadingProgress,
-  addDataByScript
+  addDataByScript,
+  startRefreshingProgress,
+  finishRefreshingProgress
 } from './sectionProgressRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {
@@ -26,12 +28,16 @@ export function loadScript(scriptId, sectionId) {
   // Don't load data if it's already stored in redux.
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
-  if (
+  if (state.isRefreshingProgress || state.isLoadingProgress) {
+    return;
+  } else if (
     state.studentLevelProgressByScript[scriptId] &&
     state.scriptDataByScript[scriptId] &&
     state.currentView !== ViewType.STANDARDS
   ) {
-    return;
+    getStore().dispatch(startRefreshingProgress());
+  } else {
+    getStore().dispatch(startLoadingProgress());
   }
 
   let sectionProgress = {
@@ -43,7 +49,6 @@ export function loadScript(scriptId, sectionId) {
   };
 
   // Get the script data
-  getStore().dispatch(startLoadingProgress());
   const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
     credentials: 'include'
   })
@@ -127,6 +132,7 @@ export function loadScript(scriptId, sectionId) {
     );
     getStore().dispatch(addDataByScript(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
+    getStore().dispatch(finishRefreshingProgress());
   });
 }
 
