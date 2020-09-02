@@ -4911,7 +4911,7 @@ pl:
               name: Wprowadzenie do puzzli online
             Relay Programming:
               name: Sztafeta programowania
-              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie podzielą się na zespoły i będą pracować razem nad pisaniem programu po jednej instrukcji.
+              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie podzielą się na zespoły i będą pracować razem nad pisaniem programu, po jednej instrukcji.
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
             Nested Loops in Bee:
@@ -6404,7 +6404,7 @@ pl:
               name: Wprowadzenie do puzzli online
             Relay Programming:
               name: Sztafeta programowania
-              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie podzielą się na zespoły i będą pracować razem nad pisaniem programu po jednej instrukcji.
+              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie podzielą się na zespoły i będą pracować razem nad pisaniem programu, po jednej instrukcji.
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
             Nested Loops in Bee:
