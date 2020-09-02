@@ -2,11 +2,14 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Motion, spring} from 'react-motion';
-import color from '../../util/color';
-import {borderRadius, levelTokenMargin} from './constants';
-import LevelTokenDetails from './LevelTokenDetails';
-import {toggleExpand} from './editorRedux';
-import {levelShape} from './shapes';
+import color from '@cdo/apps/util/color';
+import {
+  borderRadius,
+  levelTokenMargin
+} from '@cdo/apps/lib/levelbuilder/constants';
+import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
+import {toggleExpand} from '@cdo/apps/lib/levelbuilder/editorRedux';
+import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   levelToken: {

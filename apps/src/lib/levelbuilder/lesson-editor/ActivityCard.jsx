@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import color from '../../util/color';
-import {borderRadius} from './constants';
-import OrderControls from './OrderControls';
-import ActivityDescriptionCard from './ActivityDescriptionCard';
-import ProgressionCard from './ProgressionCard';
+import color from '@cdo/apps/util/color';
+import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
+import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
+import ActivityDescriptionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityDescriptionCard';
+import ProgressionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgressionCard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {

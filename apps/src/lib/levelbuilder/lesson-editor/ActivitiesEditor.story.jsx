@@ -1,9 +1,9 @@
 import React from 'react';
-import ActivitiesEditor from './ActivitiesEditor';
-import EditTipDialog from './EditTipDialog';
-import AddLevelDialog from './AddLevelDialog';
-import ActivityCard from './ActivityCard';
-import AddResourceDialog from './AddResourceDialog';
+import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
+import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
+import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
+import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
+import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 
 const activity = {
   key: 'activity-1',

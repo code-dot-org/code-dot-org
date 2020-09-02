@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import TipWithTooltip from './TipWithTooltip';
-import AddLevelDialog from './AddLevelDialog';
-import AddResourceDialog from './AddResourceDialog';
-import EditTipDialog from './EditTipDialog';
+import TipWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/TipWithTooltip';
+import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
+import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
+import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 
 const styles = {
   bottomControls: {

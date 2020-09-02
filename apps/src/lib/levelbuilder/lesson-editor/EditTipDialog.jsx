@@ -69,7 +69,10 @@ export default class EditTipDialog extends Component {
           >
             {Object.values(tipTypes).map((tip, index) => {
               return (
-                <option value={Object.keys(tipTypes)[index]}>
+                <option
+                  value={Object.keys(tipTypes)[index]}
+                  key={`tip-${index}`}
+                >
                   {tip.displayName}
                 </option>
               );

@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
-import color from '../../util/color';
-import {borderRadius, levelTokenMargin} from './constants';
-import {levelShape} from './shapes';
+import color from '@cdo/apps/util/color';
+import {
+  borderRadius,
+  levelTokenMargin
+} from '@cdo/apps/lib/levelbuilder/constants';
+import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import LevelTokenDetails2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails2';
 
 const styles = {
   levelToken: {
@@ -86,6 +90,18 @@ export default class LevelToken2 extends Component {
     level: levelShape.isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      expand: false
+    };
+  }
+
+  toggleExpand = () => {
+    this.setState({expand: !this.state.expand});
+  };
+
   render() {
     return (
       <div style={styles.levelToken}>
@@ -97,7 +113,7 @@ export default class LevelToken2 extends Component {
         >
           <i className="fa fa-arrows-v" />
         </div>
-        <span style={styles.levelTokenName}>
+        <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
           <span style={styles.levelArea}>
             <span style={styles.titleAndBubble}>
               <ProgressBubble
@@ -144,6 +160,7 @@ export default class LevelToken2 extends Component {
         >
           <i className="fa fa-times" />
         </div>
+        {this.state.expand && <LevelTokenDetails2 level={this.props.level} />}
       </div>
     );
   }

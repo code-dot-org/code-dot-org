@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import ActivityCard from './ActivityCard';
+import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
 import Activity from '@cdo/apps/code-studio/components/Activity';
 
 const styles = {

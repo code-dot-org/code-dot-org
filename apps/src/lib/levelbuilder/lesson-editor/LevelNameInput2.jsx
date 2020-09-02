@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   levelSelect: {
@@ -25,10 +25,9 @@ const styles = {
   }
 };
 
-export default class LevelNameInput extends Component {
+export default class LevelNameInput2 extends Component {
   static propTypes = {
     onSelectLevel: PropTypes.func.isRequired,
-    levelNameToIdMap: PropTypes.objectOf(PropTypes.number).isRequired,
     initialLevelName: PropTypes.string
   };
 
@@ -42,15 +41,11 @@ export default class LevelNameInput extends Component {
 
   handleLevelNameChange = levelName => {
     this.setState({levelName});
-    const levelId = this.props.levelNameToIdMap[levelName];
-    if (levelId) {
-      this.props.onSelectLevel(levelId);
-    }
   };
 
   render() {
     const {levelName} = this.state;
-    const isValid = !!this.props.levelNameToIdMap[levelName];
+    const isValid = true;
     return (
       <span style={styles.levelSelect}>
         <input

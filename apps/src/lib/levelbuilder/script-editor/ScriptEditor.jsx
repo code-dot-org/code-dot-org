@@ -11,7 +11,7 @@ import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from './LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
-import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
+import MarkdownPreview from '@cdo/apps/lib/levelbuilder/script-editor/MarkdownPreview';
 
 const styles = {
   input: {

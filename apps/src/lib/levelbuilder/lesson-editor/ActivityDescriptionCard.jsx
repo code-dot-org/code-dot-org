@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {borderRadius} from './constants';
-import OrderControls from './OrderControls';
+import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
+import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import ActivitySectionCardButtons from './ActivitySectionCardButtons';
 
 const styles = {

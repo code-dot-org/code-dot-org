@@ -4,11 +4,11 @@ import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
-import LevelToken2 from './LevelToken2';
+import LevelToken2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken2';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import AddLevelTable from './AddLevelTable';
-import AddLevelFilters from './AddLevelFilters';
-import CreateNewLevelInputs from './CreateNewLevelInputs';
+import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
+import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
+import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
 
 const styles = {
   dialog: {
