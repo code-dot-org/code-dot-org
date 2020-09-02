@@ -5,23 +5,11 @@ module Pd
   class WorkshopDailySurveyControllerTest < ActionDispatch::IntegrationTest
     include WorkshopConstants
     include WorkshopSurveyConstants
+    include WorkshopSurveyFoormConstants
 
-    # Array of ids for days 0 (pre) and 1 - 5
-    FAKE_FACILITATOR_FORM_ID = 123459
     FAKE_SUBMISSION_ID = 987654
-    FAKE_CSF_201_FORM_IDS = [201903, 201904].freeze
-    FAKE_JOTFORM_FORMS = {
-      csf: {
-        pre201: FAKE_CSF_201_FORM_IDS[0],
-        post201: FAKE_CSF_201_FORM_IDS[1],
-        facilitator: FAKE_FACILITATOR_FORM_ID
-      }
-    }.deep_stringify_keys
 
     self.use_transactional_test_case = true
-    setup do
-      CDO.stubs(:jotform_forms).returns(FAKE_JOTFORM_FORMS)
-    end
 
     test 'daily summer workshop survey returns 404 for days outside of range 0-4' do
       setup_summer_workshop
@@ -289,76 +277,14 @@ module Pd
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
 
-      actual_form_id = nil
-      actual_form_params = nil
-      WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).
-        with do |id, params|
-          actual_form_id = id
-          actual_form_params = params
-          true
-        end
-
       sign_in teacher
       get '/pd/workshop_survey/csf/pre201'
 
       assert_response :success
-      assert_equal csf_pre201_params[:formId], actual_form_id
-      assert_equal teacher.id, actual_form_params[:userId]
-      assert_equal @csf201_not_started_workshop.id, actual_form_params[:workshopId]
-      assert_equal csf_pre201_params[:day], actual_form_params[:day]
-    end
+      assert_template :new_general_foorm
 
-    test 'csf pre201 survey: reports survey render to New Relic' do
-      setup_csf201_not_started_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
-
-      CDO.stubs(:newrelic_logging).returns(true)
-      NewRelic::Agent.expects(:record_custom_event).with(
-        'RenderJotFormView',
-        {
-          route: 'GET /pd/workshop_survey/csf/pre201',
-          form_id: csf_pre201_params[:formId],
-          workshop_course: COURSE_CSF,
-          workshop_subject: SUBJECT_CSF_201,
-          regional_partner_name: @regional_partner.name
-        }
-      )
-
-      sign_in teacher
-      get '/pd/workshop_survey/csf/pre201'
-
-      assert_response :success
-    end
-
-    test 'csf pre201 survey: submission creates a placeholder record and redirects teacher to thanks' do
-      setup_csf201_not_started_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
-
-      search_params = {
-        user_id: teacher.id,
-        pd_workshop_id: @csf201_not_started_workshop.id,
-        day: csf_pre201_params[:day],
-        form_id: csf_pre201_params[:formId],
-        submission_id: FAKE_SUBMISSION_ID
-      }
-
-      key_params = csf_pre201_params.merge(
-        userId: teacher.id,
-        workshopId: @csf201_not_started_workshop.id
-      )
-
-      refute WorkshopDailySurvey.response_exists?(search_params)
-
-      sign_in teacher
-      post '/pd/workshop_survey/submit',
-        params: {key: key_params}.merge(submission_id: FAKE_SUBMISSION_ID)
-
-      assert WorkshopDailySurvey.response_exists?(
-        search_params.merge(submission_id: FAKE_SUBMISSION_ID)
-      )
-      assert_redirected_to action: 'thanks'
+      submit_params = prop('submitParams')
+      assert_equal @csf201_not_started_workshop.id, submit_params['pd_workshop_id']
     end
 
     test 'csf pre201 survey: teacher already submitted survey does not gets survey again' do
@@ -366,20 +292,25 @@ module Pd
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
 
-      WorkshopDailySurvey.create_placeholder!(
-        user_id: teacher.id,
-        pd_workshop_id: @csf201_not_started_workshop.id,
-        day: csf_pre201_params[:day],
-        form_id: csf_pre201_params[:formId],
-        submission_id: FAKE_SUBMISSION_ID
+      _, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201])
+      ::Foorm::Submission.create(
+        id: FAKE_SUBMISSION_ID,
+        form_name: PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201],
+        form_version: latest_version,
+        answers: {}
       )
 
-      WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).never
+      WorkshopSurveyFoormSubmission.create(
+        foorm_submission_id: FAKE_SUBMISSION_ID,
+        user_id: teacher.id,
+        pd_workshop_id: @csf201_not_started_workshop.id,
+        day: 0
+      )
 
       sign_in teacher
       get '/pd/workshop_survey/csf/pre201'
 
-      assert_redirected_to action: 'thanks'
+      assert_thanks
     end
 
     test 'csf post201 survey: redirect to sign-in page if teacher did not authenticate' do
@@ -428,25 +359,13 @@ module Pd
       enrollment = create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       create :pd_attendance, session: session, teacher: teacher
 
-      actual_form_id = nil
-      actual_form_params = nil
-      WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).
-        with do |id, params|
-          actual_form_id = id
-          actual_form_params = params
-          true
-        end
-
       sign_in teacher
       get "/pd/workshop_survey/csf/post201/#{enrollment.code}"
 
       assert_response :success
-      assert_equal csf_post201_params[:formId], actual_form_id
-      assert_equal teacher.id, actual_form_params[:userId]
-      assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
-      assert_equal csf_post201_params[:day], actual_form_params[:day]
-      assert_equal session.id, actual_form_params[:sessionId]
-      refute nil, actual_form_params[:submitRedirect]
+      assert_template :new_general_foorm
+      submit_params = prop('submitParams')
+      assert_equal @csf201_in_progress_workshop.id, submit_params['pd_workshop_id']
     end
 
     test 'csf post201 survey: show survey if attended teacher does not have enrollment code' do
@@ -456,218 +375,13 @@ module Pd
       create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
       create :pd_attendance, session: session, teacher: teacher
 
-      actual_form_id = nil
-      actual_form_params = nil
-      WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).
-        with do |id, params|
-          actual_form_id = id
-          actual_form_params = params
-          true
-        end
-
       sign_in teacher
       get '/pd/workshop_survey/csf/post201'
 
       assert_response :success
-      assert_equal csf_post201_params[:formId], actual_form_id
-      assert_equal teacher.id, actual_form_params[:userId]
-      assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
-      assert_equal csf_post201_params[:day], actual_form_params[:day]
-      assert_equal session.id, actual_form_params[:sessionId]
-      refute nil, actual_form_params[:submitRedirect]
-    end
-
-    test 'csf post201 survey: report survey rendering to New Relic' do
-      setup_csf201_in_progress_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
-
-      CDO.stubs(:newrelic_logging).returns(true)
-      NewRelic::Agent.expects(:record_custom_event).with(
-        'RenderJotFormView',
-        {
-          route: 'GET /pd/workshop_survey/csf/post201',
-          form_id: csf_post201_params[:formId],
-          workshop_course: COURSE_CSF,
-          workshop_subject: SUBJECT_CSF_201,
-          regional_partner_name: @regional_partner.name
-        }
-      )
-
-      sign_in teacher
-      get '/pd/workshop_survey/csf/post201'
-
-      assert_response :success
-    end
-
-    test 'csf post201 survey: create placeholder and redirect to 1st facilitator survey on submission' do
-      setup_csf201_in_progress_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
-      create :pd_attendance, session: session, teacher: teacher
-
-      first_facilitator_index = 0
-
-      search_params = {
-        user_id: teacher.id,
-        pd_workshop_id: @csf201_in_progress_workshop.id,
-        day: csf_post201_params[:day],
-        form_id: csf_post201_params[:formId]
-      }
-
-      key_params = csf_post201_params.merge(
-        userId: teacher.id,
-        workshopId: @csf201_in_progress_workshop.id,
-        sessionId: session.id
-        )
-
-      refute WorkshopDailySurvey.response_exists?(search_params)
-
-      sign_in teacher
-      post '/pd/workshop_survey/submit',
-        params: {key: key_params}.merge(submission_id: FAKE_SUBMISSION_ID)
-
-      assert WorkshopDailySurvey.response_exists?(
-        search_params.merge(submission_id: FAKE_SUBMISSION_ID)
-      )
-
-      assert_redirected_to action: :new_facilitator,
-        session_id: session.id, facilitator_index: first_facilitator_index
-    end
-
-    test 'csf facilitator survey: show 1st facilitator survey to attended teacher' do
-      setup_csf201_in_progress_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
-      create :pd_attendance, session: session, teacher: teacher
-
-      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
-      first_facilitator_index = 0
-
-      actual_form_id = nil
-      actual_form_params = nil
-      WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).
-        with do |id, params|
-          actual_form_id = id
-          actual_form_params = params
-          true
-        end
-
-      sign_in teacher
-      get "/pd/workshop_survey/facilitators/#{session.id}/#{first_facilitator_index}"
-
-      assert_response :success
-      assert_equal FAKE_FACILITATOR_FORM_ID, actual_form_id
-      assert_equal teacher.id, actual_form_params[:userId]
-      assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
-      assert_equal csf_post201_params[:day], actual_form_params[:day]
-      assert_equal session.id, actual_form_params[:sessionId]
-      assert_equal first_facilitator.id, actual_form_params[:facilitatorId]
-      assert_equal first_facilitator_index, actual_form_params[:facilitatorIndex]
-      refute nil, actual_form_params[:submitRedirect]
-    end
-
-    test 'csf facilitator survey: creates placeholder and redirects to 2nd facilitator survey on submission' do
-      setup_csf201_in_progress_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
-      create :pd_attendance, session: session, teacher: teacher
-
-      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
-      first_facilitator_index = 0
-
-      search_params = {
-        user_id: teacher.id,
-        pd_session_id: session.id,
-        facilitator_id: first_facilitator.id,
-        form_id: FAKE_FACILITATOR_FORM_ID
-      }
-
-      refute WorkshopFacilitatorDailySurvey.response_exists?(search_params)
-
-      key_params = {
-        environment: Rails.env,
-        userId: teacher.id,
-        day: csf_post201_params[:day],
-        sessionId: session.id,
-        facilitatorId: first_facilitator.id,
-        facilitatorIndex: first_facilitator_index,
-        formId: FAKE_FACILITATOR_FORM_ID
-      }
-
-      # Submit survey for the 1st facilitator
-      sign_in teacher
-      post '/pd/workshop_survey/facilitators/submit',
-        params: {key: key_params}.merge(submission_id: FAKE_SUBMISSION_ID)
-
-      # Verify placeholder created
-      assert WorkshopFacilitatorDailySurvey.response_exists?(
-        search_params.merge(submission_id: FAKE_SUBMISSION_ID)
-      )
-
-      # Verify redirection
-      assert_redirected_to action: :new_facilitator,
-        session_id: session.id, facilitator_index: first_facilitator_index + 1
-    end
-
-    test 'csf facilitator survey: redirect to 2nd facilitator survey if response exists for 1st one' do
-      setup_csf201_in_progress_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
-      create :pd_attendance, session: session, teacher: teacher
-
-      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
-      first_facilitator_index = 0
-
-      WorkshopFacilitatorDailySurvey.create_placeholder!(
-        user_id: teacher.id,
-        day: csf_post201_params[:day],
-        pd_session_id: session.id,
-        facilitator_id: first_facilitator.id,
-        form_id: FAKE_FACILITATOR_FORM_ID,
-        submission_id: FAKE_SUBMISSION_ID
-      )
-
-      WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).never
-
-      sign_in teacher
-      get "/pd/workshop_survey/facilitators/#{session.id}/#{first_facilitator_index}"
-
-      assert_redirected_to action: :new_facilitator,
-        session_id: session.id, facilitator_index: first_facilitator_index + 1
-    end
-
-    test 'csf facilitator survey: show thanks page if response exists for all facilitators' do
-      setup_csf201_in_progress_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      session = @csf201_in_progress_workshop.sessions.first
-      create :pd_attendance, session: session, teacher: teacher
-
-      first_facilitator_index = 0
-      @csf201_in_progress_workshop.facilitators.order(:name, :id).each_with_index do |facilitator, index|
-        WorkshopFacilitatorDailySurvey.create_placeholder!(
-          user_id: teacher.id,
-          day: csf_post201_params[:day],
-          pd_session_id: session.id,
-          facilitator_id: facilitator.id,
-          form_id: FAKE_FACILITATOR_FORM_ID,
-          submission_id: FAKE_SUBMISSION_ID + index
-        )
-      end
-
-      sign_in teacher
-      get "/pd/workshop_survey/facilitators/#{session.id}/#{first_facilitator_index}"
-
-      # This only works if there are exactly 2 facilitators
-      follow_redirect!
-
-      assert_redirected_to action: 'thanks'
+      assert_template :new_general_foorm
+      submit_params = prop('submitParams')
+      assert_equal @csf201_in_progress_workshop.id, submit_params['pd_workshop_id']
     end
 
     test 'thanks displays thanks message' do
@@ -841,22 +555,6 @@ module Pd
 
     def assert_redirected_to_sign_in
       assert_match %r{users/sign_in.*redirected}, response.body
-    end
-
-    def csf_pre201_params
-      {
-        environment: Rails.env,
-        day: CSF_SURVEY_INDEXES[PRE_DEEPDIVE_SURVEY],
-        formId: CDO.jotform_forms[CSF_CATEGORY][PRE_DEEPDIVE_SURVEY]
-      }
-    end
-
-    def csf_post201_params
-      {
-        environment: Rails.env,
-        day: CSF_SURVEY_INDEXES[POST_DEEPDIVE_SURVEY],
-        formId: CDO.jotform_forms[CSF_CATEGORY][POST_DEEPDIVE_SURVEY]
-      }
     end
   end
 end

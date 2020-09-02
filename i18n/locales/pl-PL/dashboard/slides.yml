@@ -400,6 +400,7 @@ pl:
       2:
         text: "Szedłem przez każdą część krok po kroku i zrozumiałem, gdzie był mój błąd. Nie kładłem rąk na belce poprawnie. Więc spróbowałem inne salto w tył na belce z mojej nowej pozycji rąk i mam to. Bardzo się ucieszyłem, że zdebugowałem moje salto w tył."
       3:
+        text: "Aby zdobyć wiedzę na temat debugowania, zaczniemy od zestawu bloków już na scenie. Zauważycie, że te bloki nie doprowadzą Was do celu. Musimy zdebugować rozwiązanie i naprawić je. Co poszło nie tak?  Zauważysz, że powinieneś był iść o jedną przecznicę dalej na zachód."
       4:
         text: "Naprawmy to dodając inny zachodni bloki uderz go by sprawdzić czy dobrze to zrobiłeś. Yay, masz to!"
     C1_maze_intro_sequencing:
@@ -413,7 +414,7 @@ pl:
       2:
         text: "Na przykład, jeśli chciałbym każdemu na Facebooku złożyć życzenia urodzinowe wysyłając mu e-mail, napisanie tych wszystkich e-maili mogłoby zająć więcej niż wiek. Ale przy pomocy zaledwie kilku linii kodu mogę sprawić, że system wyśle e-mail z życzeniami do każdej osoby na Facebooku."
       3:
-        text: "Aby przenieść ptaka do świni na tym poziomie... zamiast przeciągać do obszaru roboczego trzy bloki \"północ\", użyjesz bloku \"powtarzaj\". Przeciągnij blok \"powtarzaj\" do obszaru roboczego i wpisz liczbę 3. Następnie przeciągnij blok \"przesuń się na północ\" do bloku \"powtarzaj\" i kliknij \"Uruchom\", aby sprawdzić, czy zrobiłeś to dobrze. Gratulacje, udało się!"
+        text: "Aby przenieść ptaka do świni na tym poziomie... zamiast przeciągać do obszaru roboczego trzy bloki \"północ\", użyjesz bloku \"powtórz\". Przeciągnij blok \"powtórz\" do obszaru roboczego i wpisz liczbę 3. Następnie przeciągnij blok \"przesuń się na północ\" do bloku \"powtórz\" i kliknij \"Uruchom\", aby sprawdzić, czy zrobiłeś to dobrze. Gratulacje, udało się!"
     C1_moveitmoveit_unplugged:
       1:
         text: "Ta lekcja nazywa się przesuń to, przesuń to. Napiszemy wspólnie program, aby przemieścić naszych przyjaciół od początku z różą wiatrów do celu uśmiechniętej buzi."
@@ -478,35 +479,114 @@ pl:
       3:
         text: "W tym przykładzie, twoim celem jest przesunięcie ptaka, aby złapać świnię. A teraz będziemy mieć możliwość użyć bloku repetycyjnego, aby zrobić to z łatwością. Możesz to zrobić albo dając komputerowi komendę \"przesuń się naprzód\" pięć razy, by przesunąć ptaka w kierunku świni o jeden krok za każdym razem, albo możesz kazać komputerowi przesunąć raz, a potem kazać powtórzyć to pięć razy - efekt będzie taki sam."
       4:
+        text: "W tym celu przeciągasz komendę swojego ruchu do przodu, a następnie wstawiasz ją do bloku powtarzania. Możesz w niego kliknąć i powiedzieć, ile razy należy powtórzyć blok, aby przekazać mu informację, o ile kroków chcesz się przemieścić do przodu."
       5:
+        text: "Jeszcze jedno - możesz wprowadzić tyle komend, ile chcesz do bloku powtarzania. Zatem w tym przykładzie mówimy dajesz mu polecenie, aby przemieścił się w przód i skręcił w lewo, co zrobi pięć razy. Dobrej zabawy!"
     C2_artist_intro:
       1:
+        text: "Nie zakwalifikowałbyś się do wyścigu, gdybyś nie miał ludzi biegłych w dziedzinie informatyki ze względu na ilość danych zbieranych przez samochody i konieczności posiadania możliwości przyciągnięcia osób, które potrafią pisać programy, aby wymyślić sposób dalszego wymyślania sposobu budowania wyników."
       2:
         text: "W tym zadaniu zostaniesz artystą, który używa ołówka, by narysować rożne kształty. Gdziekolwiek twój artysta pójdzie narysuje linię za sobą."
       3:
+        text: "W celu poruszania się po płótnie, będziesz używać bloku przejścia do przodu. Tutaj blok przejścia do przodu powoduje przejście do przodu o 100 pikseli. Co się dzieje po wciśnięciu \"Uruchom\"? Artysta przechodzi do przodu o określoną ilość, a ta ilość wynosi 100 pikseli. Piksele są zasadniczo bardzo małymi kwadratami na ekranie Twojego komputera."
       4:
+        text: "Inny blok, który mamy w tej łamigłówce, powoduje obrót o 90 stopni. A gdy go przeciągamy powoduje on obrót naszego artysty o określoną ilość. Możesz zatem pobawić się stopniem, w jakim artysta jest w stanie się obrócić. To jest obrót o 90 stopni."
       5:
+        text: "A to jest obrót o 120 stopni. Należy pamiętać, że możesz zmieniać te wartości klikając strzałki obok liczb oznaczających pikseli i stopni. Rysuj ze swoim artystą!"
+    C2_bee_conditionals:
+      1:
+        text: "To jest blok warunkowy. Stanowi, że JEŚLI jest nektar lub miód o wartości mniejszej niż, równej lub większej od liczby, WÓWCZAS należy coś zrobić."
+      2:
+        text: "To jest przydatne, gdy nie wiemy, ile nektaru lub miodu należy zebrać, ponieważ widzimy, że są opatrzone znakiem zapytania."
+      3:
+        text: "W tym przykładzie stwierdzimy, że JEŚLI we fioletowym kwiatku jest nektar w ilości większej od 0, zbierz nektar. W ten sposób nakazuje się naszej pszczółce, aby zbierała nektar jeśli jest. Ta-da!"
     C2_binary_bracelets:
       1:
+        text: "To jest lekcja poświęcona bransoletkom binarnym. Będziemy kodować nasze inicjały na bransoletce, którą możemy nosić i pokazywać wszystkim naszym znajomym!"
       2:
+        text: "Binarność jest sposobem przedstawiania informacji z wykorzystaniem tylko dwóch opcji. Czasem ludzie myślą o tym, jedynie w wymiarze jedynek lub zer. Ty możesz jednak przedstawiać binarność jako połączenia opcji włączonej i wyłączonej, w górę i w dół, w środku i na zewnątrz lub wszelkich innych zbiorów przeciwieństw."
       3:
         text: "Cześć,  jestem Orion i programuje roboty tutaj w Play-im. Wszystkie komputery i mózgi robotów na swoim fundamentalnym poziomie to małe bramki elektroniczne. Kiedy bramka jest otwarta prąd elektryczny może przez nią przejść i na odwrót gdy bramka jest zamknięta prąd nie może przez nią przechodzić."
       4:
+        text: "Przykładem binarności zastosowanej w robocie są jego oczy. Oczami robota są światła LED, w trybie \"włączone\" lub \"wyłączone\". Tworzą pewnego rodzaju układ binarny. Możemy używać świateł tak, by przedstawiały liczby binarne. Jeśli mamy zbiór robotów, możemy powiedzieć, że pierwszy robot jest na 1. miejscu, drugi robot jest na 2. miejscu, trzeci robot jest na 4. miejscu i tak dalej. W taki sposób przedstawia się liczby binarne. Roboty będą to wykonywać swoimi binarnymi oczami i odliczaćdla Ciebie. "
     C2_conditionals_with_cards:
       1:
+        text: "Ta lekcja nosi nazwę instrukcji warunkowych w przypadku kart. Codziennie podejmujemy decyzje na podstawie tego, co widzimy i słyszymy."
       2:
         text: "Chcę wyjść do parku lecz najpierw muszę zdecydować na podstawie pogody czy powinienem wziąć parasolkę czy też nie. Więc wyglądam zza okno. Jeśli jest pochmurnie to muszę wziąć moją parasolkę. Jeśli jednak jest ładna pogoda to wezmę moje okulary przeciwsłoneczne. Myślę jednak, że lepszym wyborem będzie parasolka. To co widzę i słyszę definiuje to co wezmę ze sobą do parku."
       3:
+        text: "Instrukcje warunkowe również używa się w grach. Dzisiaj będziemy ćwiczyć używanie instrukcji warunkowych w grze w karty.  W ramach tej gry wyciągnięta przeze mnie karta determinuje czynność, którą mają wykonać moi przyjaciele. Jeśli wyciągnę \"siódemkę\", wszyscy klaszczą. W przeciwnym razie, wszyscy mówią: \"Oooooo\". No to próbujemy! \"Oooo\" \"Wiwat\"."
       4:
+        text: "Założę się, że jesteś w stanie tworzyć gry, które pozwalają w jeszcze większym stopniu bawić się instrukcjami warunkowymi. Wypróbujmy to! Dzięki instrukcjom warunkowym komputery sprawiają wrażenie inteligentnych.  Program komputerowy, który uwzględnia instrukcje warunkowe, jest w stanie reagować na użytkownika i zmienić swój profil działania."
       5:
+        text: "Pomyśl o swojej ulubionej grze wideo. Czy w ramach pewnych akcji zbierasz więcej punktów niż w innych? Dzieje się tak dzięki temu, że komputer korzysta z instrukcji warunkowych. W ten sposób podejmuje on decyzje. Powiedzmy, że jeśli trafisz do celu zdobywasz dziesięć punktów. W przeciwnym wypadku tracisz trzy. Znając zasadę działania instrukcji warunkowych jesteś w stanie tworzyć emocjonujące gry wszelkiego rodzaju."
+    C2_artist_debugging:
+      1:
+        text: "Tutaj mamy kilka bloków w naszym obszarze roboczym. Ale coś tu nie gra."
+      2:
+        text: "Przeprowadźmy debugowanie tego kodu zwalniając tempo i obserwując to przechodząc każdy blok krok-po-kroku."
+      3:
+        text: "Oj, mamy tu problem! Wąsy kota mają 75 pikseli długości, nie 25."
+    C2_bee_debugging:
+      1:
+        text: "Czy słyszałeś kiedykolwiek o debugowaniu programu? W ten sposób stwierdza się, co nie działa. W toku debugowania kodu identyfikuje się i usuwa błędy."
+      2:
+        text: "Tutaj mamy już kilka bloków w naszym obszarze roboczym. Teraz zamierzamy użyć przycisk \"krok', aby przejść przez bloki, krok po kroku, aby przekonać się, czy jest to właściwe rozwiązanie i gdzie może pojawić się potrzeba ich naprawienia."
+      3:
+        text: "Chyba tutaj mamy problem! Przydałby się jeszcze jeden blok \"idź do przodu\". Przycisk \"krok\" pomaga nam przeprowadzić debugowanie naszego problemu identyfikując miejsce występowania problemu i będziemy mogli go naprawić."
+    C2_digital_footprint:
+      1:
+        text: "Głowa w czapce, wzrokiem wodzisz, rozum \"łapie\" o co chodzi. Zoo w głowie teraz masz, głową z kumplem się witasz. Myśl, gdy w świecie online bywasz, by co Twoje, innym nie pokazywać, wiedzieć, jak tam bezpiecznym być, chwilami własnym życiem online żyć. Czasem całym sobą się zatrzymaj,\npomyśl o tym wszystkim. Od dużego palca stóp, aż po nosa czubek. Wstrzymaj bieg, myśl online, można to polubić!\n"
+      2:
+        text: "Sercem w przyszłość mądry wzrastaj, serce zdrowego nada blasku. Sercem wybierz walentynkę, serca ciepłem ją ogarnij. \nZ mapą serca online chodź, mądrością, empatią ozdabiaj swój krok. By przyjaciołom szacunek okazywać, uczciwy bądź i miły, gdy w Internecie bywasz. Czasem całym sobą się zatrzymaj,\npomyśl o tym wszystkim. Od dużego palca stóp, aż po nosa czubek. Wstrzymaj bieg, myśl online, można to polubić!\n"
+      3:
+        text: "Ramionami zwierzaki przytulaj i przed deszczem dobrze się chroń zakładaj szalone ubrania i po świecie wyobraźni hulaj! W świecie online ręce ważne są, oderwij je od klawiatury, równowagi ducha czas, z tyłu zostaw technologie, drzewo do wspinaczki znajdź.  Czasem całym sobą się zatrzymaj, pomyśl o tym wszystkim. Od dużego palca stóp, aż po nosa czubek.\nWstrzymaj bieg, myśl online, można to polubić! \n"
+      4:
+        text: "Wybór rzeczy do jedzenia, które intuicja zmienia, intuicją szukasz radości, co wybucha, niczym gaz w coca-coli. Niech intuicja prowadzi Cię online, sygnalizując każdy zagrożenia znak. Niech krok przed Tobą zawsze się rwie i Cię ostrzega, kiedy jest źle.  Czasem całym sobą się zatrzymaj, pomyśl o tym wszystkim.  Od dużego palca stóp, aż po nosa czubek.\nWstrzymaj bieg, myśl online, można to polubić!\n"
+      5:
+        text: "Głowa to myślenie! W sercu są uczucia! Ręce - równowaga! Online - intuicja przede wszystkim! Biegaj i kop nogami, przemierzaj kilometry różnymi drogami, tańcz po sąsiednich ulicach, nie przejmuj się brudnymi skarpetkami! Nogi niech Cię online niosą, twardo konfrontację z silniejszymi uniosą! Wyprostowany, przyglądaj się temu, co w górze,\nszanując te stworzenia, co małe i duże.  \n"
+      6:
+        text: "Czasem całym sobą się zatrzymaj,\npomyśl o tym wszystkim.  Od dużego palca stóp, aż po nosa czubek. Wstrzymaj bieg, myśl online, można to polubić! Głowa to myślenie! W sercu są uczucia! Ręce - równowaga! Online - intuicja przede wszystkim! Stój mocno na ziemi! Czasem całym sobą się zatrzymaj, pomyśl o tym wszystkim.  Od dużego palca stóp, aż po nosa czubek. Wstrzymaj bieg, myśl online! \n"
+    C2_digital_footprint_v2:
+      1:
+        text: "Z każdym swoim wejściem do Internetu zostawiasz ślad, który można znaleźć, skopiować, udostępnić, nadać, a przy tym jest trwały. Jaki rodzaj śladu cyfrowego zostawiasz? Jaki rodzaj śladu cyfrowego chcesz zostawić?"
+    C2_graph_paper:
+      1:
+        text: "Ta lekcja nosi tytuł \"Programowanie w formie wykresów na papierze\" i w całości dotyczy algorytmów. Dzisiaj nauczymy się zapisywać programy, które pokazują sobie jak odtwarzać proste biało-czarne obrazki, używając jedynie strzałek rysowanych ręcznie."
+      2:
+        text: "Algorytm stanowi wykaz instrukcji do wykonania zadania. Będziemy postępować zgodnie z instrukcjami, jak zrobić miskę. Algorytmy są zdecydowanie pomocne, gdy potrzebujesz kogoś innego, aby zrozumieć, jak coś zrobić."
+      3:
+        text: "Jeśli piszesz algorytm dla komputera, trzeba go podzielić na malutkie kroczki. Zatem należy ukończyć ten wiersz i przejść do kolejnego, następnie do kolejnego, aż skończysz."
+      4:
+        text: "Używam algorytmów w swojej pracy. Gdy zapiszę wszystkie kroki, jestem w stanie odtworzyć ten sam fragment ponownie, lub mogę nauczyć kogoś innego, by to zrobił. Włóż szkło do pieca, aby elementy się stopiły i postępuj zgodnie z dalszymi instrukcjami, jak zrobić miskę. Algorytmy dają mapę drogową, dzięki której możesz coś wykonać."
+    C2_artist_loops:
+      1:
+        text: "Tutaj będziemy używać bloku \"powtórz\", aby pomóc nam zapisać kroki przy projektowaniu naszego artysty. Mamy pewne bloki na naszej scenie, ale służą nam one tylko do tego, by wystartować."
+      2:
+        text: "W celu zapętlenia tych bloków cztery razy, aby narysować cały kwadrat, wyciągamy blok \"powtórz\" i włóż do niego bloki \"idź do przodu\" i \"skręć w prawo\". Po wciśnięciu \"uruchom\", artysta będzie powtarzać te kroki cztery razy, aby ukończyć kwadrat."
     C2_bee_loops:
       1:
         text: "Pętla to powtarzanie działań. Czas na przegląd ula. Wyciągam ramkę i odkładam ją z powrotem. Powtarzam tą samą czynność wiele razy. To właśnie zapętlenie, wykonywanie tych samych czynności wielokrotnie."
       2:
+        text: "To jest blok \"powtórz'. TO co włożysz do bloku \"powtórz\" te czynności tyle razy, ile mu każesz. Na przykład, na tym poziomie, zamiast wyciągać \"idź do przodu\" i \"zbierz nektar\" trzy razy, zamierzmy każdą wyciągnąć raz i powtórzyć czynność trzy razy. To wszystko ułatwiło!"
+    C2_maze_intro:
+      1:
+        text: "Zwykle w programowaniu chodzi o tekst, ale my użyjemy Blockly, w którym używa się wizualne bloki, które przyciągasz i upuszczasz, aby pisać programy. Pod pozorem tworzenia kodu. Na początek będziemy budować kod dla programu, który pomoże tej postaci Angry Bird przejść przez labirynt, aby dojść do złej świnki, która kradnie im jajka."
+      2:
+        text: "Blockly jest podzielony na trzy główne części. Po lewej stronie labiryntu ptaka będzie uruchomiony Twój program. Instrukcje dla każdego poziomu zapisano pod labiryntem. Miejsce na środku jest przybornikiem, a każdy z tych bloków jest komendą, którą ptak jest w stanie zrozumieć. Białe miejsce po prawej stronie to obszar roboczy, gdzie będziemy budować nasz program."
+      3:
+        text: "Co się stanie jeśli przeciągniesz blok \"przemieść\" do obszaru roboczego i naciśnij \"Uruchom\"? Ptak przemieszcza się do przodu o jedną rubrykę na siatce. A co będzie jeśli ja chcę, aby ptak coś zrobił po przemieszczeniu się o jedną rubrykę? Mogę dodać kolejny blok do naszego programu."
+      4:
+        text: "Wybiorę blok \"skręć w prawo\" i będę przeciągać go pod dowolny blok \"przemieść\" dopóki nie żółta strzałka. Następnie upuszczę blok i oba bloki połączą się ze sobą. Gdy znów naciśniemy przycisk \"Uruchom\", ptak polecenia ułożone w obszarze roboczym, zaczynając od góry i posuwając się w dół. "
+      5:
+        text: "Jeśli kiedykolwiek będziesz chciał usunąć blok, po prostu zdejmij go ze stosu i przesuń do kosza na śmieci. Po naciśnięciu \"Uruchom\", zawsze możesz nacisnąć przycisk \"resetuj\", aby doprowadzić ptaka z powrotem na strat. Teraz przyprowadźmy te świnki!"
     C2_paper_airplanes:
       1:
+        text: "Ta lekcja nosi nazwę \"Algorytmy w prawdziwym życiu\". Algorytmy opisują rzeczy, które ludzie wykonują codziennie. Przepisy na ciasteczka i instrukcje jak zbudować domek dla ptaków stanowią przykłady algorytmy w prawdziwym życiu\"."
       2:
+        text: "Dzisiaj będziemy robić, tworzyć i testować algorytm robienia samolotu z papieru. Niemniej najpierw musimy podzielić duży projekt na łatwe do realizacji małe kroki. W celu zrobienia samolotu z papieru musimy zdecydować, jakie działania należy wykonać oraz w jakiej kolejności je ustawić."
       3:
+        text: "Będziesz tworzyć algorytm najpierw wycinając obrazki. Potem wybierzesz 6 obrazków przedstawiających kroki potrzebne do zrobienia samolotu z papieru i ułożysz je we właściwej kolejności. Gdy już wszystko będzie w porządku, zamienisz się algorytmami z innym zespołem uczniów, aby wypróbować algorytm pod kątem tego, czy działa. Dobrze zaprojektowany algorytm ma super istotne znaczenie przy robieniu najlepszych samolotów z papieru."
       4:
         text: "Kiedy chcemy zrobić czekoladę, jest wiele etapów tego procesu, a każdy etap składa się ze zbioru mniejszych kroków, ponadto jest wiele różnych przepisów lub algorytmów, w zależności od tego, jak chcemy, żeby czekolada smakowała. Każdy krok jest ważny, nawet te malutkie, a więc bez jednego kroku reszta nie może być wykonana. Tworzenie algorytmów, które inni mogą zrozumieć, jest naprawdę ważne. Dlatego każdy krok musi być zapisany w ten sposób, żeby wynik był taki sam niezależnie od tego, kto dany krok wykona."
     C2_playlab_createstory:
@@ -514,20 +594,152 @@ pl:
         text: "Do tej pory tworzyliście animację lub historyjkę, która za każdym razem działa tak samo. Teraz możecie utworzyć interaktywną grę, w którą możecie zagrać."
       2:
         text: "Tam są bloki \"kiedy strzałka\" i \"przenieś postać\". Możesz umieścić te bloki razem, aby poruszać postaciami za pomocą klawiszy strzałek."
+    C2_relay_programming:
+      1:
+        text: "Dzisiaj będziemy realizować programowanie sztafetowe. Wiąże się to z programowaniem w warunkach presji i debugowania pomyłek, które czasem zdarzają się, gdy pracujemy szybko lub w zespołach. Użyjemy programowania wykresów na papierze i biegów sztafetowych, aby symulować dotrzymania terminu realizacji."
+      2:
+        text: "W trakcie programowania sztafetowego zespoły będą się ścigać, aby ukończyć program wykresu na papierze. Musisz sprawdzić pracę kolegi z zespołu lub zdebugować ją, wyeliminować jeśli jest gdzieś pomyłka, dodać swoją strzałkę oraz dobiec z powrotem i otagować swojego kolegę z zespołu."
+      3:
+        text: "Programiści w dużym stopniu korzystają z debugowania, aby wyszukiwać i eliminować problemy występujące w ich algorytmach lub w kodzie. Istnieje wiele sposobów debugowania problemów. Jednym z najprostszych sposobem jest przemieszczenie się krok po kroku aż stwierdzimy, że coś jest nie tak, a następnie to naprawimy."
+      4:
+        text: "Próbowałam wykonać przejście do tyłu na rękach, ale cały czas spadałam. Przeszłam przez każdy fragment, krok po kroku, i uświadomiłam sobie, gdzie leżał błąd. Trener pokazał mi, że nie układam poprawnie dłoni na równoważni Spróbowałam zatem wykonać jeszcze jedno przejście do tyłu na rękach na równoważni wykorzystując nowe ułożenie rąk i udało się! Bardzo się ucieszyłam, że debugowałam moją ewolucję. Doszliśmy do tego! Debugowanie  polega na wynajdywaniu i eliminowanie problemów. Super, świetna robota!"
     C2_zuck_repeat_loop:
       1:
         text: "Jeden z tych komputerów jest dobry w powtarzaniu komend. Jako osoba możesz się naprawdę zmęczyć, jeśli trzeba samemu robić te same rzeczy kilka razy. Ale komputer może robić to samo miliony, a nawet miliardy razy i się nie zmęczyć trzeba więc posiadać tę zdolność."
       2:
+        text: "Na przykład jeśli chciałbym złożyć wszystkim życzenia urodzinowe na Facebooku wysyłając im e-maila, napisanie do nich wszystkich mogłoby mi zabrać ponad sto lat. Przy pomocy kilku linijek kodu możemy sprawić, że system wyśle e-mail do każdej osoby na Facebooku z życzeniami urodzinowymi. Do tego właśnie służą pętle i z tego względu są cenne oraz stanowią coś, co świetnie robią komputery."
       3:
+        text: "W tym przykładzie Twoim celem będzie przemieszczenie ptaka do świnki. Teraz zamierzamy użyć bloku \"powtórz\", aby mieć możliwość zrobienia tego w bardzo prosty sposób. Taki efekt można uzyskać wydając komputerowi komendę \"idź do przodu\" pięć razy w celu przesunięcia ptaka za każdym razem o jeden krok bliżej świnki ."
       4:
+        text: "Lub możesz po prostu powiedzieć komputerowi, aby wykonać komendę \"idź do przodu\" jeden raz, a następnie powiedz mu \"powtórz\" 5 razy, a on wykona to samo. W tym celu przeciągasz komendę \"idź do przodu\", a następnie wstawiasz ją do bloku \"powtórz\". Możesz w niego kliknąć i powiedzieć, ile razy należy powtórzyć blok, aby przekazać mu informację, o ile kroków chcesz się przemieścić do przodu."
       5:
+        text: "Teraz jeszcze jedno - możesz wprowadzić tyle komend, ile chcesz do bloku \"powtórz\". Zatem w tym przykładzie dajesz mu polecenie, aby przemieścił się w przód i skręcił w lewo, co zrobi pięć razy. Dobra robota i dobrej zabawy!"
+    C3_artist_functions:
+      1:
+        text: "Jednym z wspaniałych aspektów programowania komputerowego jest to, że po nauczeniu komputera jak wykonywać czynność, może tę funkcję znowu przywołać. Nadajesz jej nazwę, a następnie możesz ją wywoływać. To przypomina ubogacanie języka."
+      2:
+        text: "Przy pomocy budowanego przez nas programu uczymy się, jak przeciągać kwadrat przemieszczając go i obracając cztery razy. Możemy wziąć tę funkcję, nadać jej nazwę, przeciągnąć kwadrat tak  że zawsze, gdy chcemy to zrobić, po prostu przeciągamy kwadrat, a on wróci i aktywuje tę funkcję, ten kod. Zostanie to zrobione za nas. Dodaliśmy tę koncepcję do naszego języka programowania."
     C3_artist_intro:
       1:
+        text: "Nie zakwalifikowałbyś się do wyścigu, gdybyś nie miał ludzi biegłych w dziedzinie informatyki ze względu na ilość danych zbieranych przez samochody i konieczności posiadania możliwości przyciągnięcia osób, które potrafią pisać programy, aby wymyślić sposób dalszego wymyślania sposobu budowania wyników."
       2:
         text: "W tym zadaniu zostaniesz artystą, który używa ołówka, by narysować rożne kształty. Gdziekolwiek twój artysta pójdzie narysuje linię za sobą."
       3:
+        text: "W celu poruszania się po płótnie, będziesz używać bloku przejścia do przodu. Tutaj blok przejścia do przodu powoduje przejście do przodu o 100 pikseli. Co się dzieje po wciśnięciu \"Uruchom\"? Artysta przechodzi do przodu o określoną ilość, a ta ilość wynosi 100 pikseli. Piksele są zasadniczo bardzo małymi kwadratami na ekranie Twojego komputera."
       4:
+        text: "Inny blok, który mamy w tej łamigłówce, powoduje obrót o 90 stopni. A gdy go przeciągamy powoduje on obrót naszego artysty o określoną ilość. Możesz zatem pobawić się stopniem, w jakim artysta jest w stanie się obrócić. To jest obrót o 90 stopni."
       5:
+        text: "A to jest obrót o 120 stopni. Należy pamiętać, że możesz zmieniać te wartości klikając strzałki obok liczb oznaczających pikseli i stopni. Rysuj ze swoim artystą!"
+    C3_artist_nested_loops:
+      1:
+        text: "Wstawienie pętli do środka innej pętli nazywamy pętlą zagnieżdżoną. Na przykład tutaj przekazano nam kod, który pozwala narysować jeden trójką o bokach o długości 100 pikseli z wykorzystaniem bloku powtarzanego wielokrotnie ustawionego na trzy, raz dla każdego boku trójkąta."
+      2:
+        text: "Natomiast my chcemy narysować sześć trójkątów. W tym cellu zamierzamy wziąć tę pętlę i umieścić ją w innym bloku powtarzanym wielokrotnie. Całkiem nieźle!"
+    C3_bee_conditionals:
+      1:
+        text: "To jest blok warunkowy. Stanowi, że JEŚLI jest nektar lub miód o wartości mniejszej niż, równej lub większej od liczby, WÓWCZAS należy coś zrobić."
+      2:
+        text: "To jest przydatne, gdy nie wiemy, ile nektaru lub miodu należy zebrać, ponieważ widzimy, że są opatrzone znakiem zapytania."
+      3:
+        text: "W tym przykładzie stwierdzimy, że JEŚLI we fioletowym kwiatku jest nektar w ilości większej od 0, zbierz nektar. W ten sposób nakazuje się naszej pszczółce, aby zbierała nektar jeśli jest. Ta-da!"
+    C3_bee_debugging:
+      1:
+        text: "Czy słyszałeś kiedykolwiek o debugowaniu programu? W ten sposób stwierdza się, co nie działa. W toku debugowania kodu identyfikuje się i usuwa błędy."
+      2:
+        text: "Tutaj mamy już kilka bloków w naszym obszarze roboczym. Teraz zamierzamy użyć przycisk \"krok', aby przejść przez bloki, krok po kroku, aby przekonać się, czy jest to właściwe rozwiązanie i gdzie może pojawić się potrzeba ich naprawienia."
+      3:
+        text: "Chyba tutaj mamy problem! Przydałby się jeszcze jeden blok \"idź do przodu\". Przycisk \"krok\" pomaga nam przeprowadzić debugowanie naszego problemu identyfikując miejsce występowania problemu i będziemy mogli go naprawić."
+    C3_bee_functions:
+      1:
+        text: "Jedną z najważniejszych idei w informatyce jest definiowanie nowych poleceń dla komputera, dodawanie nowych słów do języka komputerowego. Większość języków programowania zawiera około  słów i poleceń. I naprawdę, sztuką i magią jest definiowanie własnych nowych słów i poleceń złożonych z tych podstawowych bloków."
+      2:
+        text: "Robimy to cały czas w sporcie. Na przykład w koszykówce - zaczynamy od nauki dryblowania, wykonywania dwutaktu, zebrania. Gdy opanujemy elementy zupełnie podstawowe, uczymy się nowych ruchów i łączymy ze sobą te klocki w \"pick and roll\" lub \"give and go\". Potem można przejść do bardziej złożonych ruchów. A gdy już się ich nauczysz i nadasz im nazwę, wszyscy w drużynie dowiedzą się, jak to robić."
+      3:
+        text: "Podobnie, jeśli już nauczyliście komputer pewnego działania przy użyciu sekwencji tych poleceń, to możecie nadać temu działaniu swoją nazwę tak, aby później łatwiej było je wykonać ponownie. W ten sposób definiujemy funkcję, jako własne polecenie z nazwą. Teraz użyjemy funkcji, aby pomóc pszczółce."
+      4:
+        text: "W tym przykładzie nasza funkcja nazywa się \"zbierz 2 nektary\", ten zielony blok właśnie tutaj. Wiemy, za co odpowiada blok \"zbierz 2 nektary\" patrząc na tę szarą rubrykę, która jest definicją funkcji. Patrzymy do środka, \"zbierz 2 nektary\" będzie polegać na zebraniu nektaru i zebraniu kolejnego nektaru. Zawsze należy zaglądać do zawartości szarej rubryki tak, aby wiedzieć, za co odpowiadają te zielone bloki funkcji."
+    C3_bee_nested_loops:
+      1:
+        text: "Teraz będziemy używać zagnieżdżonych pętli w przypadku pszczółki. Otrzymujemy ten sam kod początkowy, który mówi pszczółce, aby przemieściła się do przodu i zebrała nektar trzy razy, a następnie skręciła w prawo. Weźmy cały fragment kodu i zagnieźdźmy we wnętrzu innego bloku \"powtórz\" i ustaw na trzykrotną powtórkę. Gotowe!"
+    C3_bounce:
+      1:
+        text: "Ty będziesz tworzył swoją własną grę w odbijanie, którą będziesz mógł udostępnić swoim znajomym! Ale fajnie!"
+      2:
+        text: "Aby rozpocząć, musimy połączyć sterowniki paletki do klawiszy ze strzałkami na swojej klawiaturze."
+      3:
+        text: "Możemy to zrobić przez łączenie bloku \"kiedy strzałka w lewo\" to bloku \"idź w lewo\", a bloku \"kiedy strzałka w prawo\" do bloku \"idź w prawo\". Wypróbuj i w jednej chwili będziesz programować swoją własną grę w programowanie!"
+    C3_computational_thinking:
+      1:
+        text: "To jest lekcja myślenia komputacyjnego. Czasami nauka może być trudna, prawda? Na początku może to naprawdę namieszać w głowie, a czasami nie ma nikogo, kto nauczy Cię zasad, więc trzeba je będzie sobie wypracować na własną rękę."
+      2:
+        text: "Dobre jest to, że, gdy znasz kilka trików jak myśleć, udoskonalisz swoją umiejętność wymyślania czegoś samodzielnie. Te triki sprowadzają się do jedynego w swoim rodzaju sposobu przyglądania się problemom i rozwiązywaniu ich. Na tej lekcji poznasz cztery tricki i poćwiczysz je w praktyce z przyjaciółki, aby wymyślić reguły gry."
+      3:
+        text: "Dzieląc duży problem na mniejsze elementy, używasz mózgu do rozłożenia dużego problemu. Po rozłożeniu dużego problemu na kilka mniejszych problemów, możemy przejść do naszego kolejnego tricku, który nosi nazwę dopasowania wzorca."
+      4:
+        text: "Wówczas poszukujemy podobieństw między rzeczami. Po znalezieniu rzeczy, które są takie same, mogę wymyślić, co jest inne. Usuwanie tych różnic nazywa się abstrahowaniem."
+      5:
+        text: "Po dojściu do tego, jakie są kroki prowadzące do rozwiązania problemu, mogę ułożyć te kroki w określonym porządku zwanym algorytmem tak, aby każdy mógł wykorzystać moje polecenia do rozwiązania problemu. Będziemy używać tych czterech kroków do wymyślenia, jak prowadzić grę bez reguł. Pod koniec gry będziesz w stanie grać w coś, co wygląda jak to!"
+    C3_crowdsourcing:
+      1:
+        text: "Ta lekcja nazywa się crodsourcing. Na tej lekcji będziemy korzystać z talii kart, aby nauczyć się, jak znacznie prostsze może być zrobienie pewnych rzeczy w grupach zamiast podejmowania prób zrobienie tego samodzielnie. Zatem zbierz grupę przyjaciół i zrób coś fantastycznego. Crowdsourcing polega na pozyskiwaniu pomocy od większej grupy ludzi, aby skończyć coś szybciej."
+      2:
+        text: "W informatyce korzystamy z crowdsourcingu przez cały czas. Tysiące amatorów i profesjonalistów łączy swoje komputery, aby wyszukiwać miliardy informacji. Poszukiwanie informacji takich jak kolejna liczba pierwsza Mersenne'a lub nawet potencjalnej komunikacji z życiem pozaziemskim."
+      3:
+        text: "Gdy oglądasz film, każda jego sekunda składa się z 24 indywidualnych obrazków, które nazywamy kadrami. Każdy z tych obrazków musi być utworzony i opracowany i połączony z pozostałymi w całość. Ja i mój zespół jesteśmy projektantami oprogramowania. Współpracujemy, aby utworzyć część oprogramowania, która tworzy obrazek, tworzy ostateczną wersję widoczną na ekranie. Jest to narzędzie, którego artyści i inni projektanci mogą używać w ramach pracy zespołowej oraz ich procedury, aby móc tworzyć obrazki, które chcą mieć na ekranie."
+      4:
+        text: "Na przykład w filmie \"Gdzie jest Nemo\", gdy Crush i Squirt wraz ze wszystkimi przyjaciółmi mkną Prądem Wschodnioaustralijskim. Widać obrazy przepływającej wody, widać kolory na skorupie żółwia, widać boki ryb. Wszystkie te rzeczy generuje się matematycznie oraz przy pomocy programów komputerowych, które piszemy, które możemy przekazać artyście, a oni je przyjmują do utworzenia tego ostatecznego obrazu i jego modyfikacji oraz sprawiają, że wygląda on pięknie i wesoło."
+    C3_dice_race:
+      1:
+        text: "Ta lekcja nosi tytuł: \"Wyścig kostek\". Prawie wszyscy lubią gry komputerowe. Czy zastanawiałeś się kiedyś, jak programiści komputerowi przekształcają grę w program? Pierwszy krok przy tworzeniu gier komputerowych oraz rozwiązywanie dowolnego problemu wymaga przemyślenia i planowania. "
+      2:
+        text: "Krok polegający na przemyśleniu rozwiązania problemu prowadzi do utworzenia algorytmu będącego planem krok-po-kroku na potrzeby rozwiązania problemu lub ukończenia zadania. W tej lekcji będziesz tworzyć algorytm dla gry w \"Wyścig kostek\". Potem poprosisz swoich znajomych o wypróbowanie Waszego planu, aby przekonać się, czy są w stanie wykonać kroki w ramach rozgrywania gry. Gdy programista nabędzie pewności, że kroki są poprawne, czas na przełożenie algorytmu w program w języku zrozumiałym dla komputera."
+      3:
+        text: "Prawie wszystko, co robimy każdego dnia, wymaga algorytmu, wykazu kroków, które możesz wykonać, aby ukończyć zadanie. Pomyśl o przygotowywaniu się do szkoły lub planowaniu miłego dnia ze znajomymi lub przygotowywaniu czegoś do jedzenia. Celem ukończenia któregokolwiek z tych zadań musisz je podzielić na mniejsze kroki, a czasem kroki muszą być w określonym porządku."
+      4:
+        text: "Pomyśl o robieniu kanapki. Nie ma znaczenia, który składnik wyjmiesz z szafki jako pierwszy. Nie można natomiast rozsmarować masła orzechowego przed otworzeniem słoika. Komputery potrzebują algorytmów i programów, które pokazują im jak robić nawet najprostsze rzeczy, które jesteśmy w stanie robić nawet o nich nie myśląc."
+      5:
+        text: "Algorytm jest myśleniem o tym, co musi się wydarzyć, a program składa się z rzeczywistych poleceń udzielanych komputerami, aby czynność została wykonana. Algorytm należy przełożyć na program, zanim komputer będzie w stanie go uruchomić. Dzielenie zadania na kroki zwane algorytmem jest czasem trudne. Ale podobnie jak w przypadku każdej nowej umiejętności ćwiczenie czyni to łatwiejszym."
+    C3_farmer_while:
+      1:
+        text: "Natomiast pętle stanowią zagadnienie stosunkowo podobne do czynności dnia codziennego. Wyobraź sobie, że myjesz samochód, szorujesz, aż go wyczyścisz. Jeśli nie jest czysty, szorujesz dalej. Przez cały czas dokonujesz oceny tego aspektu."
+      2:
+        text: "Mamy coś nowego, co pomoże Twojej farmerce. Nosi nazwę bloku \"dopóki\". Zasada jego działania jest dość prosta. Dopóki instrukcja na górze jest zgodna z prawdą, wykonuj jakąś czynność. Na przykład dopóki jest stos zbierz jeden ładunek siana. No dalej, wypróbuj to w przypadku Twojej farmerki."
+    C3_functional_suncatchers:
+      1:
+        text: "Ta lekcja nosi tytuł: \"Funkcjonalni łapacze słońca\". Będziesz tworzyć  tych pięknych łapaczy słońca używając funkcji. Jest kilka kroków tworzenia jednego z takich łapaczy słońca. Niektóre z tych kroków będzie trzeba powtarzać wiele razy."
+      2:
+        text: "Pierwszym krokiem upraszczania procesu tworzenia łapacza słońca jest wymyślenie, co musimy powtarzać bez końca. Możemy zgrupować te kroki w to, co nazywamy funkcją."
+      3:
+        text: "To utworzenia pięknego łapacza słońca potrzeba więcej niż precyzyjne kroki. Czasem chcemy być kreatywni i zmienić kolor używanych przez nas koralików. Możemy uczynić każdy łapacz słońca niepowtarzalnym jeśli będziemy używać różnych kolorów koralików."
+      4:
+        text: "Twój łapacz słońca będzie niepowtarzalnie Twój, jeśli nauczysz się myśleć o koralikach jako o zmiennych, co stanowi słowo oznaczające coś, co \"trzyma\" miejsce dla informacji, które mogą zmienić. Baw się dobrze tworząc piękne łapacze słońca korzystając z funkcji i zmiennych!"
+    C3_internet:
+      1:
+        text: "Ta lekcja poświęcona jest w całości Internetowi. Internet stanowi miejsce wielkiego ruchu, przypomina ulicę o dużym natężeniu ruchu. Wiadomości niczym samochody mkną obok, aby dotrzeć do miejsca przeznaczenia. Bardzo szybko przemieszczają się po internecie."
+      2:
+        text: "Odegranie ról działania internetu pomoże Ci zrozumieć, co się dzieje, gdy korzystasz z internetu. Dowiesz się jak wiadomości przechodzą z Twojego komputera na przyjazną stronę lub od znajomego do skrzynki poczty przychodzącej. Podobnie jak w przypadku dróg o dużym natężeniu ruchu, gdzie znajomość okolicy oraz umiejętność czytania znaków ułatwia przejazd, podróżowanie przez Internet nie jest tak skomplikowane, gdy wiemy co dzieje się w kuluarach."
+      3:
+        text: "Wysyłanie wiadomości w internecie przypina nieco wysyłanie wiadomości mailem, ale występuje trochę różnic. Jestem tutaj w Google.com. Adres IP tej strony internetowej jest tą liczbą. Możesz postrzegać adres IP jako adres zwrotny w mailu. Wyobraźmy sobie, że chcę wysłać wiadomość w mailu do kogoś w tamtym biurze. Czy widzisz adres URL i IP na tych drzwiach? Napisałem wiadomość i nacisnąłem \"wyślij\"."
+      4:
+        text: "W przeciwieństwie do klasycznych usług pocztowych pierwszą rzeczą, jaka się dzieje, jest to, że Internet dzieli wiadomość na mniejsze części tak, aby można je było łatwo wysłać. Te małe części nazywa się pakietami. Każdy pakiet tej wiadomości dostarcza się do miejsca przeznaczenia jednocześnie. Te pakiety łączy się ze sobą we właściwym porządku tak, aby odbiorca mógł poprawnie odczytać wiadomość. Oczywiście jest wiele rzeczy, których trzeba się dowiedzieć na temat działania Internetu, ale to jest świetnym startem. Jesteś na dobrej drodze do tego by stać się ogarniętym użytkownikiem Internetu! Upewnij się, czy na pewno powiedziałeś swojej rodzinie i znajomym czego się nauczyłeś!"
+      5:
+        text: "Nazywam się Amanda Camp. Jestem inżynierem oprogramowania w Google. Pracuję z zespołem ds. serwera \"backend\", na którym przechowuje się profile i kontakty. W naszej pracy w dużym zakresie zastanawiamy się nad sposobem, w jaki można wysyłać kontakty na inne urządzenia takie jak telefon. Wiele osób ma mnóstwo kontaktów, powiedzmy 1000 kontaktów, a my nie chcemy wysłać wszystkich tych kontaktów jednocześnie na Twój telefon ponieważ rozmiar jest zbyt duży jak na wiadomość. Podobnie do sposobu, w jaki Internet dzieli duże wiadomości na pakiety, korzystamy z koncepcji o nazwie \"stronicowanie\" [ang. paging], gdzie można wysłać jednocześnie 100 kontaktów telefonicznych jednocześnie i umożliwić Twojemu telefonowi udzielenie nam odpowiedzi i złożenie prośby o kolejnych 100."
+      6:
+        text: "Najbardziej niesamowitą rzeczą dotyczącą oprogramowania jest fakt, że może on wpływać na cały świat. O programie dowiedziałam się po raz pierwszy, gdy miałam dziewiętnaście lat. Byłam w college'u chyba na pierwszym lub drugim roku. Pamiętam, że pierwszym programem, jaki napisałam, było coś, co konwertowało stopnie Celsiusa na stopnie Fahernheita. Lubię programowanie ponieważ lubię pomagać ludziom. Mogę pisać programy na Google, które pomagają ludziom na całym świecie, co jest bardzo stymulujące i ciekawe."
+    C3_maze_conditionals:
+      1:
+        text: "Ludzie codziennie podejmują decyzje. Na przykład, zanim wyjdzie się na zewnątrz, dysponuje się instrukcją \"jeśli\", który stanowi, że jeśli pada, muszę zabrać kurtkę. Komputery są niesamowite, gdy już sformułuje się tego rodzaju instrukcje, tak, że będzie można skutecznie realizować te rzeczy i do tego w niewiarygodnym tempie. Program komputerowy zasadza się w niewielkiej części na matematyce oraz pewnych instrukcjach \"jeśli\" tam, gdzie podejmuje się decyzje."
+      2:
+        text: "Blok \"jeśli\" pomaga zombie w podjęciu decyzji. Coś sprawdza. Na przykład użyjmy bloku, który stanowi \"jeśli jest ścieżka po lewej stronie\", wstawmy w jego środek komendę \"skręć w lewo\". Wydajemy zombie polecenie sprawdzenia otoczenia, zobaczenia, czy jest droga po lewej stronie, a jeśli tak jest, wykonaj taki skręt."
+      3:
+        text: "Następnie używamy bloku \"idź do przodu\" wewnątrz tego bloku \"powtórz\", aby szedł przed siebie tak długo, jak będzie chciał iść do przodu. Potem, gdy pojawi się zakręt, jeśli blok to nakazuje, wykona skręt w lewo. Widać, że jeśli to robimy, jeśli wykonamy skręt w lewo, a w innym wypadku, będziemy przemieszczać się w przód, osiągniemy nasz cel. "
+      4:
+        text: "Stanowi to przykład korzystania z instrukcji \"jeśli\", stanowiącej w rzeczywistości koncepcję fundamentalną w programowaniu komputerowym. Jedną z pierwszych rzeczy jakich się nauczyłem w zakresie sposobu pisania programu, umożliwiającego rozgrywanie gry \"kółko i krzyżyk\". Miałem instrukcję \"jeśli\", aby przekazać informację: \"Dobrze, jeśli druga osoba wygrywa\" idź dalej i zablokuj to miejsce. Bawcie się dobrze w ramach nauki sposobu używania instrukcji \"jeśli\", to jest koncepcja kluczowa."
+    C3_maze_level_4:
+      1:
+        text: "W tym przykładzie Twoim celem będzie przemieszczenie zombie do słonecznika. Możemy użyć pięciu bloków \"idź do przodu\" lub możemy powiedzieć komputerowi, aby przeszedł do przodu i pięciokrotnie powtórzył użycie jednego bloku \"powtórz\"."
+      2:
+        text: "W ten sposób oszczędza się czas i ułatwia sprawę. Wystarczy wstawić blok \"idź do przodu\" do środka bloku \"powtórz\" i używać. Naciśnij \"uruchom\", a zombie pójdzie do przodu pięć razy w kierunku pysznego słonecznika."
     C3_playlab_create_game:
       1:
         text: "Do tej pory tworzyliście animację lub historyjkę, która za każdym razem działa tak samo. Teraz możecie utworzyć interaktywną grę, w którą możecie zagrać."
@@ -537,15 +749,199 @@ pl:
       1:
         text: "Ta lekcja dotyczy tworzenia muzyki. Tworzenie muzyki jest trochę podobne do tworzenia programu komputerowego. Zapisane znaki i słowa mówią piosenkarzowi co ma robić. Niektórych fragmentów piosenki można użyć kilka razy."
       2:
+        text: "Nazywamy to refrenem. W programie komputerowym części programu, które postarzają się, nazywamy funkcjami. Czytając słowa piosenki i pojawia się słowo \"refren\", czy śpiewasz słowo \"refren\"? Nie, patrzysz na górę strony, aby zobaczyć, jakie słowa tworzą refren."
       3:
+        text: "W tej lekcji będziemy się uczyć piosenki zatytułowanej \"Króliczek Fu-Fu\". Piosenka obejmuje refren, który śpiewa się kilka razy. Funkcja jest fragmentem kodu, który będzie się przywoływać i używać wielokrotnie je powtarzając. To ułatwia program i zwiększa jego skuteczność, tak, aby nie trzeba było zapisywać kroków swojej funkcji z wielokrotnymi powtórzeniami. Wystarczy zapisać je raz!"
+    C4_bee_conditional:
+      1:
+        text: "To jest blok warunkowy. Stanowi on, że jeśli jesteś przy kwiatku lub plastrze miodu, zrób coś. Przydaje się to, gdy nie wiemy ile miodu lu nektaru należy zebrać, co tutaj jest zaznaczone znakiem zapytania."
+      2:
+        text: "W tym przykładzie zamierzamy powiedzieć, że jeśli to jest kwiatek, zbierz cały nektar, a następnie użyj jeszcze jednego, aby powiedzieć, że jeśli to jest plaster miodu, rób miód. Ta-da!"
+    C4_conditionals:
+      1:
+        text: "Mamy do dyspozycji nowy blok zwany blokiem \"jeśli/ w przeciwnym razie\". Jest to instrukcja warunkowa podobnie jak blok \"jeśli\", którego używałeś już w poprzednich łamigłówkach. Natomiast teraz, jest nowy element w części dolnej, który stanowi: \"w przeciwnym razie\". Blok \"jeśli/ w przeciwnym razie\" umożliwia pszczółce podejmowanie decyzji pomiędzy dwoma zbiorami działań. Jeśli pszczółka jest przy kwiatku, pszczółka będzie wykonywać zbiór działań wstawionych w pierwszej części, gdzie stanowi \"rób\". Jeśli pszczółka nie jest przy kwiatku, pszczółka będzie wykonywać zbiór działań, które wstawiasz do otworu, który stanowi \"w przeciwnym wypadku\"."
+      2:
+        text: "Instrukcje \"jeśli\" stanowią, w jaki sposób komputery mogą podejmować decyzje. Ludzie ustanawiają warunki dla komputera, stanowiące, że jeśli komputer konfrontuje się z określoną sytuacją, rób to. W przeciwnym razie, co oznacza po prostu \"jeśli nie\", rób co innego. Górna część bloku \"jeśli/ w przeciwnym razie\" stanowi: \"jeśli przy kwiatku\".  Ale górna część naszego blok może stanowić inne rzeczy takie jak: \"jeśli nektar równa się 2\" lub \"jeśli przed Tobą jest ścieżka\", nasz blok będzie się zachowywać tak samo. Że jeśli instrukcja w górnej części oddaje stan faktyczny, dojdzie do pierwszego zestawu działań. Ale jeśli instrukcja w górnej części jest niezgodna ze stanem faktycznym, dojdzie do wykonania drugiego zestawu działań."
+    C4_for_loops:
+      1:
+        text: "Gdy używasz bloku \"powtórz\", aby zapętlić swój kod, skąd komputer wie, kiedy wykonał już wystarczającą ilość powtórzeń? Blok \"powtórz\" ukrywa, tak naprawdę, bardziej wyszukany fragment kodu zwany pętlą, która liczy od wartości początkowej do wartości końcowej o konkretny przyrost."
+      2:
+        text: "Na przykład, blok \"powtórz\" trzy razy odlicza od 1 do 3 o 1. Za każdym razem, gdy liczy, uruchamia kod wewnątrz pętli. Pętla \"dla\" wie, ile razy się uruchomiła poprzez użycie zmienną licznika, która jest ustawiona na wartość początkową na początku pętli i dodaje się przyrost za każdym uruchomieniem pętli. Gdy tylko zmienna licznika osiąga wartość wyższą od wartości końcowej, pętla przestaje działać."
+      3:
+        text: "Korzyścią używania prawdziwej pętli \"dla\" zamiast bloku \"powtórz\" jest to, że możesz rzeczywiście zobaczyć zmienną licznika i użyć jej w pętli. Na przykład jeśli mam szereg kwiatów, a w pierwszym z nich znajduje się jeden nektar, w drugim są dwa nektary, a w trzecim try, mogą użyć pętli, aby nakazać pszczółce, aby za każdym razem zebrała nektary \"licznika\", którego wartość będzie wynosić jeden na pierwszym kwiatku, dwa na drugim kwiatku i trzy na trzecim kwiatku."
+      4:
+        text: "Również w pętli \"dla\", możesz zwiększać licznik o liczbę inną jeden za każdym razem. Możesz potencjalnie odliczyć o 2, 4, a nawet liczbę, która za każdym razem będzie się zmieniać."
+    C4_for_loops_bee:
+      1:
+        text: "Gdy używasz bloku \"powtórz\", aby zapętlić swój kod, skąd komputer wie, kiedy wykonał już wystarczającą ilość powtórzeń? Blok \"powtórz\" ukrywa, tak naprawdę, bardziej wyszukany fragment kodu zwany pętlą, która liczy od wartości początkowej do wartości końcowej o konkretny przyrost."
+      2:
+        text: "Na przykład, blok \"powtórz\" trzy razy odlicza od 1 do 3 o 1. Za każdym razem, gdy liczy, uruchamia kod wewnątrz pętli. Pętla \"dla\" wie, ile razy się uruchomiła poprzez użycie zmienną licznika, która jest ustawiona na wartość początkową na początku pętli i dodaje się przyrost za każdym uruchomieniem pętli. Gdy tylko zmienna licznika osiąga wartość wyższą od wartości końcowej, pętla przestaje działać."
+      3:
+        text: "Korzyścią używania prawdziwej pętli \"dla\" zamiast bloku \"powtórz\" jest to, że możesz rzeczywiście zobaczyć zmienną licznika i użyć jej w pętli. Na przykład jeśli mam szereg kwiatów, a w pierwszym z nich znajduje się jeden nektar, w drugim są dwa nektary, a w trzecim try, mogą użyć pętli, aby nakazać pszczółce, aby za każdym razem zebrała nektary \"licznika\", którego wartość będzie wynosić jeden na pierwszym kwiatku, dwa na drugim kwiatku i trzy na trzecim kwiatku."
+      4:
+        text: "Również w pętli \"dla\", możesz zwiększać licznik o liczbę inną jeden za każdym razem. Możesz potencjalnie odliczyć o 2, 4, a nawet liczbę, która za każdym razem będzie się zmieniać."
+    C4_for_loops_no_bee:
+      1:
+        text: "Gdy używasz bloku \"powtórz\", aby zapętlić swój kod, skąd komputer wie, kiedy wykonał już wystarczającą ilość powtórzeń? Blok \"powtórz\" ukrywa, tak naprawdę, bardziej wyszukany fragment kodu zwany pętlą, która liczy od wartości początkowej do wartości końcowej o konkretny przyrost."
+      2:
+        text: "Na przykład, blok \"powtórz\" trzy razy odlicza od 1 do 3 o 1. Za każdym razem, gdy liczy, uruchamia kod wewnątrz pętli. Pętla \"dla\" wie, ile razy się uruchomiła poprzez użycie zmienną licznika, która jest ustawiona na wartość początkową na początku pętli i dodaje się przyrost za każdym uruchomieniem pętli. Gdy tylko zmienna licznika osiąga wartość wyższą od wartości końcowej, pętla przestaje działać. Korzyścią wynikającą z użycia prawdziwej pętli \"dla\", zamiast bloku \"powtórz\" jest to, że można rzeczywiście zobaczyć zmienną licznika i użyć jej w swojej pętli."
+    C4_function_create:
+      1:
+        text: "Jeśli już wyedytujesz bloki funkcji, czas utworzyć nowy blok funkcyjny \"od zera\". To jest bardzo proste. Zobaczysz, że w przyborniku znajduje się kategoria zwana funkcjami. Jeśli w to klikniesz, zobaczysz pomarańczowy przycisk o nazwie \"utwórz funkcję\". Kliknięcie w niego wywoła edytora funkcji, którego właśnie użyłeś, do edytowania bloków funkcji."
+      2:
+        text: "Podobnie jak wcześniej zacząłeś nazywać swoją funkcję, zapisując opis tego, co funkcja miała robić. Na przykład ma rysować kwadrat lub rysować trójkąt, a później przeciągnąć bloki z przybornika do białego miejsca poniżej. Pamiętaj, aby przeciągać te bloki do wewnątrz zielonego bloku otulającego dla funkcji."
+      3:
+        text: "Gdy skończyć, kliknij \"zapisz\" i wyjdź. To zaprowadzi Cię z powrotem do obszaru roboczego głównej łamigłówki. Nowa, utworzona przez Ciebie funkcja, pokaże się jako zielony blok w kategorii funkcji w swoim przyborniku. Przeciągnij i opuść do głównego obszaru roboczego i używaj go jak dowolnego innego bloku, aby rozwiązać łamigłówkę."
+    C4_function_edit:
+      1:
+        text: "Jednym z wspaniałych aspektów programowania komputerowego jest to, że po nauczeniu komputera jak wykonywać czynność, może tę funkcję znowu przywołać. Nadajesz jej nazwę, a następnie możesz ją wywoływać. To przypomina ubogacanie języka."
+      2:
+        text: "W programie, który zbudowaliśmy, nauczyliśmy się jak narysować kwadrat przy pomocy przemieszczania i obracania cztery razy. Możemy wziąć taką funkcję i nadać jej nazwę, narysować kwadrat tak, aby za każdym razem, gdy chcemy to zrobić, mówimy po prostu: \"narysuj kwadrat\", a to powróci i wzbudzi tę funkcję, ten kod i zrobi to dla nas. Dodamy tę koncepcję do naszego języka programowania."
+      3:
+        text: "W tej łamigłówce utworzyliśmy już dla Ciebie funkcję: \"rysuj kwadrat\". Zobaczycie to w przyborniku jako zielony blok. Ty musisz tylko napisać taki sam kod, jak napisałeś wcześniej, aby narysować kwadrat i wstawić go do funkcji. W tym celu kliknij opcję edytuj w zielonym bloku \"rysuj kwadrat\". To otworzy edytor funkcji. Edytor funkcji składa się z trzech części. Miejsca, w którym nazywasz swoją funkcję. To pojawi się na zielonym bloku przed tą funkcją. Następnie napisz krótki opis tego, co funkcja ma robić."
+      4:
+        text: "W tym przypadku ma rysować kwadraty. Biały obszar poniżej jest obszarem roboczym i funkcjonuje na takiej samej zasadzie, jak przestrzeń robocza, której już używałeś. Przeciągaj i opuść bloki z przybornika do tego obszaru roboczego. Pamiętaj, aby wstawić bloki, które tworzą kwadrat w środku zielonego bloku otulającego dla tej funkcji. Gdy skończysz kliknij \"zapisz\" i wyjdź. To zaprowadzi Cię z powrotem do głównego obszaru roboczego łamigłówki. Teraz możesz użyć bloku funkcji \"rysuj kwadrat\" tak jak każdego innego bloku do rozwiązania tej łamigłówki."
+    C4_function_parameters:
+      1:
+        text: "Przedstawiam funkcję, która rysuje kwadrat o bokach o długości 50 pikseli. Świetnie, ale co jeśli zechcę narysować kwadrat o boku o długości 50 pikseli, a inny kwadrat of bokach 100 pikseli? Nie powinniśmy być zmuszani do zrobienia dwóch odrębnych funkcji, które wykonują prawie tę samą czynność. Zamiast tego możemy użyć jednej funkcji z parametrem."
+      2:
+        text: "Parametry pozwalają nam przenieść wartości do funkcji, która jest używana jako zmienna wewnątrz funkcji. Spróbujmy dodawać parametr wywołany jakby do tej funkcji tak, abyśmy mogli używać jej do tworzenia kwadratów różnych rozmiarów. W edytorze funkcji można edytować nazwę i opis tak, jak wcześniej, ale teraz możesz też dodać parametr. Napisz nazwę swojego parametru w miejscu i kliknij \"Dodaj parametr\". W ten sposób zostanie utworzony czerwony blok o nazwie parametru, który właśnie utworzyłeś. Teraz możemy zastąpić blok \"przemieść o 100\" parametrem \"Długość\" tak, że przemieści o \"Długość\"."
+      3:
+        text: "Kliknij zapisz i zamknij i wyciągnij  swój nowy blok \"utwórz kwadrat\" z kategorii funkcji w przyborniku. Zauważysz, że jest puste miejsce obok długości, ponieważ funkcja chce wiedzieć, jaką wartość powinien mieć parametr \"Długość\". Przeciągnij numer bloku z kategorii Matematyka i umieść to w tym miejscu. Zobacz jak można użyć tej funkcji wiele razy o różne długości, aby tworzyć kwadraty o różnych rozmiarach? Wypróbuj sam!"
+    C4_intro:
+      1:
+        text: "Zwykle w programowaniu chodzi o tekst, ale my użyjemy Blockly, w którym używa się wizualne bloki, które przyciągasz i upuszczasz, aby pisać programy. Pod pozorem tworzenia kodu. Na początek będziemy budować kod dla programu, który pomoże tej postaci Angry Bird przejść przez labirynt, aby dojść do złej świnki, która kradnie im jajka."
+      2:
+        text: "Blockly jest podzielony na trzy główne części. Po lewej stronie labiryntu ptaka będzie uruchomiony Twój program. Instrukcje dla każdego poziomu zapisano pod labiryntem. Miejsce na środku jest przybornikiem, a każdy z tych bloków jest komendą, którą ptak jest w stanie zrozumieć. Białe miejsce po prawej stronie to obszar roboczy, gdzie będziemy budować nasz program."
+      3:
+        text: "Co się stanie jeśli przeciągniesz blok \"przemieść\" do obszaru roboczego i naciśnij \"uruchom\"? Ptak przemieszcza się do przodu o jedną rubrykę na siatce. A co będzie jeśli ja chcę, aby ptak coś zrobił po przemieszczeniu się o jedną rubrykę? Mogę dodać kolejny blok do naszego programu."
+      4:
+        text: "Wybiorę blok \"skręć w prawo\" i będę przeciągać go pod dowolny blok \"przemieść\" dopóki nie żółta strzałka. Następnie upuszczę blok i oba bloki połączą się ze sobą. Gdy znów naciśniemy przycisk uruchom\", ptak polecenia ułożone w obszarze roboczym, zaczynając od góry i posuwając się w dół. "
+      5:
+        text: "Jeśli kiedykolwiek będziesz chciał usunąć blok, po prostu zdejmij go ze stosu i przesuń do kosza na śmieci. Po naciśnięciu \"Uruchom\", zawsze możesz nacisnąć przycisk \"resetuj\", aby doprowadzić ptaka z powrotem na strat. Teraz przyprowadźmy te świnki!"
+    C4_math_artist:
+      1:
+        text: "Jeśli chcę narysować prostokąt o wysokości 50 pikseli i szerokości stanowiącej dwukrotność wysokości, w jaki sposób zaprojektowałabym komputer, aby był w stanie to wykonać? Cóż, mogłabym powiedzieć artyście, aby poszedł w górę o pięćdziesiąt, skręcił w prawo, potem przeszedł o 100 i przemieścił całość dwukrotnie. A wówczas, stosuję zasady matematyki na potrzeby komputera."
+      2:
+        text: "Wykonanie mnożenia liczby pięćdziesiąt raz dwa w głowie nie stanowi znaczącej trudności, ale komputery świetnie się sprawdzają na polu matematyki, zatem zawsze, gdy jest to możliwe, ten aspekt należy pozostawiać właśnie im. Jeśli właśnie użyłabym zamiast tego zmiennej o nazwie wysokość, mogłabym bez problemu zmienić wysokość na pięćdziesiąt, a następnie zmienić swój algorytm, aby powiedzieć artyście, aby przeszedł do góry o wartość wysokości, skręcił w prawo, a następnie przemieścił się o długość razy 2, co daje nam prostokąt, którego szerokość stanowi dwukrotność szerokości."
+    C4_unplugged_algorithms:
+      1:
+        text: "Ta lekcja nosi nazwę \"Algorytmów z tangramami\". Tangram jest łamigłówką o siedmiu elementach które można złożyć razem, aby tworzyć inne kształty. Będziesz używać algorytmu, aby wyjaśnić swojemu partnerowi, jak złożyć tę łamigłówkę."
+      2:
+        text: "Algorytm jest tylko wykazem kroków, które można wykonać, aby wykonać zadanie. Używamy ich codziennie do rzeczy takich jak listy zakupów czy przepisy. Jeśli Twój algorytm będzie zbyt uproszczony, jest wiele sposobów jego interpretacji i osoba, która będzie go realizować może nie uzyskać dokładnie tego wyniku, który chciałeś osiągnąć. Jeśli chcesz mieć pewność, że każdy dojdzie do dokładnie tego samego efektu, to Twój algorytm musi być szczegółowy i bardzo konkretny."
+      3:
+        text: "Dzisiaj korzystam z algorytmu, aby namalować obrazek. Chciałem spróbować namalować kilka wilków, ale nie jestem zbyt dobrym malarzem. Na szczęście dla osób podobnych do mnie, farby są numerowane. Mamy czterdzieści kolorów oznaczonych małymi literkami i liczbami, dzięki którym wiesz, którego koloru należy użyć do której części. Malując według liczb wiem dokładnie, jakiego koloru należy użyć i w którym miejscu."
+      4:
+        text: "Jest bardzo dokładny i jestem w stanie wykonywać instrukcje i obraz wyjdzie świetnie. Ten algorytm jest świetny. Jeśli instrukcje nie byłyby wystarczająco dokładane, moje wilki nie wyszłyby tak dobrze. Gdy rzeczywiście chcesz, aby coś wyszło tak, jak sobie zaplanowałeś, najlepiej jest zachować precyzję w wymiarze ekstremalnym!"
+    C4_unplugged_binary:
+      1:
+        text: "W każdym zespole, osoba wydająca instrukcję, czyli osoba, która trzyma papier, musi ustalić, co będzie symbolem \"wyłączenia\", a co będzie symbolem \"włączenia\". W ujęciu binarnym jest to rodzaj dwuliterowego alfabetu. Tak, jakby A i B tworzyło cały alfabet, ale dysponujesz tylko 0 i 1."
+      2:
+        text: "Najbardziej popularnym sposobem ujęcia binarnego jest instrukcja \"jeśli\". Klasyka programowania. Program działa i jeśli uznaje, że jakiś warunek jest spełniony, wówczas robisz to. A jeśli nie jest spełniony, nie robisz tego. A co, jeśli chcesz zrobić może coś nieco bardziej skomplikowanego. Zamiast instrukcji \"jeśli\", chcesz zajmować się w pracy obrazem lub dźwiękiem w komputerze."
+      3:
+        text: "Komputer zna tylko ujęcie binarne, z wyjątkiem obrazu. On nie jest binarny, nie składa się tylko z jedynek i zer, więc co z tym zrobić? Tutaj mamy przykład: Masz ten piękny obraz. Obraz jest zasadniczo rodzajem informacji. Wszystkie informacje można zakodować w trybie binarnym w sposób taki czy inny, a Ty musisz dojść do tego, jak to zrobić. "
+      4:
+        text: "Wyobrażasz sobie, że nałożymy siatkę na tę pandę i zdecydujemy  czy kratka jest bardziej czarna czy bardziej biała. I w taki sposób będziemy je kolorować. Teraz każda komórka na siatce jest czarna lub biała, a następnie stwierdzimy, że czarne pola mają symbol zero (cyfra binarna), a białe pola mają symbol jeden, drugiej cyfry binarnej. Ostatecznie zostajemy z pulą jedynek i zer. W taki sposób przedstawiamy obraz w ujęciu binarnym. "
+    C4_unplugged_forloops:
+      1:
+        text: "Ta lekcja nosi nazwę \"Zabawa z pętlą <<dla>>\". W ramach tej lekcji będziemy korzystać z wiersza liczb, aby zagrać w grę w kości. Każdy gracz rzuci kostką trzy razy, aby przyporządkować wartość początkową, wartość końcową oraz naszą przerwę. W trakcie każdej kolejki otaczamy kółkiem naszą wartość początkową oraz każdą wartość będącą taką samą liczbą kroków do przodu, jak wartość naszego przyrostu. Przestajemy otaczać kółkiem, gdy dotrzemy do naszej wartości zatrzymania. Osoba, która uzyska najwyższy wynik, wygrywa!"
+      2:
+        text: "Pętle \"dla\" mogą być przydatne w wielu miejscach, a jeśli miałbyś zostać meteorologiem, korzystałbyś z pętli \"dla\" przez cały czas. Witam, mam na imię Becky. Pracuję w EverPower Renewables na stanowisku meteorologa wiatrów. Prognozuję prędkości wiatrów dla obszaru Columbia River George, w którym spółka posiada farmy wiatrowe."
+      3:
+        text: "Staramy się zrozumieć, jaka ilość wiatru wystąpi na tym obszarze tak, że możemy dowiedzieć się, ile wyprodukuje się energii. Podajemy te informacje osobom prowadzącym obrót energią w czasie rzeczywistym. Kupują one i sprzedają energię na podstawie podawanych przez nas informacji, ile będzie tam energii, aby mieć pewność utrzymania sieci energetycznej w stanie równowagi, a w ten sposób maksymalnie zwiększyć ilość energii, która pochodzi z naszych farm."
+      4:
+        text: "Tutaj, w Portland, mamy siedzibę w krajowym centrum kontroli dla EverPower Renewables i właśnie tutaj spływają informacje ze wszystkich farm w całym kraju. Obecnie nawet najpotężniejsze komputery nie są w stanie przeprowadzić symulacji atmosfery wszędzie. W modelach prognozowania komputerowego występuje coś, co nazywamy siatką. Każdy punkt siatki oznacza szerokość i długość geograficzną. Musimy wyliczyć parametry fizyczne i spróbować ustalić prędkość wiatru, temperaturę, ciśnienie i tym podobne rzeczy."
+      5:
+        text: "Z uwagi na fakt, że siatki te są dość duże, a my wykonujemy sporą część naszej pracy w wielu tych punktach, które zapętlamy miliony razy. Wszystko co robię, wykorzystam na potrzeby pętli. Tutaj, mamy na przykład, pętlę \"dla\". Gdy prognozuje się wiatr, występuje tyle różnych parametrów, które bierze się pod uwagę, że człowiek nie byłby w stanie usiąść i wykonać tych wszystkich obliczeń. Jest tyle różnych aspektów w zakresie tego, co wpływa na to, co się dzieje z wiatrem, że potrzebujemy modela komputerowego, aby to prognozować."
+    C4_unplugged_madlibs:
+      1:
+        text: "Na tej lekcji będziemy bawić się wypełnianiem pustych historii. Masz szablon, który możesz wypełnić, aby utworzyć podobne historie, które cechuje wiele zabawnych różnic."
+      2:
+        text: "Na tej lekcji dowiedzieliśmy się również jak zrobić abstrakcyjny szablon na podstawie dwóch opowieści, które właśnie stworzyliśmy. Abstrahowanie jest sztuką usuwania różnic i danych szczegółowych, pozwalająca zobaczyć, jak jedno rozwiązanie może się sprawdzić przy wielu różnych problemach. Bardzo przydaje się w informatyce, ponieważ umożliwia nam tworzenie funkcji, które mogą się przydać w wielu różnych sytuacjach."
+    C4_unplugged_parameters:
+      1:
+        text: "Ta lekcja nosi tytuł: \"Pisanie piosenki z parametrami\". Tutaj będziemy pisać pewne piosenki. Czasem refren nieco się różni, za każdym razem, gdy go śpiewamy. Pamiętasz \"Stary Donald farmę miał\"? Dla każdego zwierzaka refren jest nieco inny. \"A na tej farmie krowę miał e-i-e-i-o\". Niewielka zmiana w każdym refrenie można przedstawić z wykorzystaniem tego, co nazywamy parametrami."
+      2:
+        text: "Czasami funkcji potrzebny jest parametr. Parametr jest dodatkową informacją, którą można przekazać funkcji, aby dostosować ją pod kątem potrzeb szczególnych. Gdy przygotowujesz deser lodowy \"sundae\" z kolegami, używasz procesu podobnego do parametrów w programie komputerowym. "
+      3:
+        text: "Podstawa z lodów waniliowych może być taka sama w każdym deserze, ale gdy pytasz znajomych, na które polewy mają ochotę, możesz uzyskać wiele różnych informacji. Polewa jest nazwą funkcji, ale każdy rodzaj polewy jest parametrem. Funkcje i parametry współpracują ze sobą w celu stworzenia świetnych programów komputerowych, a także wspaniałych deserów lodowych \"sundae\"."
+    C4_unplugged_variables:
+      1:
+        text: "Ta lekcja jest zatytułowana: \"Zmienne w kopertach\". Będziemy się uczyć, jak budować zdania, gdy brakuje nam informacji. Większość z nas zna już koncepcję wypełniania pustki. Robimy to, gdy podpisujemy się na naszych pracach domowych. Czasem trzeba uzupełnić więcej niż jedno słowo, a w takim przypadku, nadajemy tej pustce etykietę, zatem wiemy, gdzie która informacja ma trafić."
+      2:
+        text: "Zmienne są symbolami zastępczymi za informacje, które mogą ulegać zmianie. Dzięki wprowadzaniu zmiennej za brakujące informacje możemy kontynuować pracę w zakresie, w którym ją w danym momencie realizujemy i pozwolić komuś innemu wypełnić brakujące informacje później. W oprogramowaniu korzystamy ze zmiennych w ogromnym stopniu. Używamy zmiennych jako symboli zastępczych za imię i nazwisko, adres e--mail, a nawet nazwę użytkownika. W ten sposób możemy poinformować program, gdzie pojawią się te informacje szczegółowe po wpisaniu ich przed użytkownika. W naszej pracy używamy zmiennych przez cały czas."
+      3:
+        text: "W dowolnym momencie musimy zachowywać informację na później, używamy zmiennej. Powiedzmy, że musimy policzyć liczbę razy, gdy użytkownik puścił \"tweeta\". Za każdym razem, gdy użytkownik puszcza \"tweeta\", dodamy jeden do liczby i za każdym razem, gdy użytkownik usuwa \"tweeta\", obniżamy tę liczbę o jeden. Za każdym razem, gdy chcemy się dowiedzieć ile razy użytkownik puścił \"tweeta\", wystarczy popatrzeć na tę zmienną."
+    C4_variables_artist:
+      1:
+        text: "Zmienna jest pojemnikiem, w którym możesz przechowywać wartość. Gdy używasz zmiennej w algorytmie, otwiera kontener i patrzy do środka w poszukiwaniu wartości. To pozwala Ci pisać lepsze algorytmy, które zachowują się inaczej, w zależności od wartości przechowywanej w zmiennej."
+      2:
+        text: "Na przykład, jeśli chcesz napisać algorytm, aby powiedzieć swojemu młodszemu bratu: \"Wszystkiego najlepszego z okazji 10. urodzin!\" - świetnie, ale jeśli będę miała go użyjesz w kolejnym roku, chciałabym, aby brzmiał: \"Wszystkiego najlepszego z okazji 11. urodzin!\" Mogłabym utworzyć zmienną o nazwie wiek, aby przechowywać wiek mojego brata i napisać algorytm: \"Wszystkiego najlepszego z okazji \"wiek\" urodzin. Z uwagi na fakt, że zmienna może ulegać zmianie co roku mogę aktualizować zmienną \"wiek\", aby była równa \"wiekowi\" plus 1."
+      3:
+        text: "W tej łamigłówce zamierzamy użyć zmienną, która będzie określać długość kreski rysowanej przez naszego artystę. Później w naszym kodzie blok \"idź do przodu\" będzie spoglądał na tę zmienną długości, aby przekonać się, na jaką wartość ją ustawiłaś."
+    C4_variables_playlab:
+      1:
+        text: "Zmienna jest pojemnikiem, w którym możesz przechowywać wartość. Gdy używasz tej zmiennej w algorytmie, otwiera kontener i patrzy do środka w poszukiwaniu wartości. To pozwala Ci pisać lepsze algorytmy, które zachowują się inaczej, w zależności od wartości przechowywanej w zmiennej."
+      2:
+        text: "Teraz wypróbujesz playlab, gdzie dostajesz różne gry i możesz zmieniać wartości zmiennych takich jak prędkość, wysokość, punktację, aby zmienić grę. Nie będziesz musiał zmieniać algorytmu gry, aby zmienić sposób, w jaki się w nią gra, tylko zmienną. "
+      3:
+        text: "W mojej pracy na rzecz spółki Kindle lub X-ray w zakresie książek, stosujemy zmienne na wiele różnych sposobów. Jednym ze sposobów, w jaki można używać zmiennej jest przechowywani numerów strony książki. Użytkownik może zwiększać i zmniejszać rozmiar czcionki na stronie. Na podstawie wielkości czcionki, liczba stron w książce może ulegać zmianie. Możemy ją dostosować przechowując liczbę stron w zmiennej. "
+    infinity_playlab_events:
+      1:
+        text: "Teraz mamy zamiar dowiedzieć się o czymś, co każdy programista gier używa na co dzień. Są to zdarzenia. Zdarzenie informuje program, by nasłuchiwał, czy coś się dzieje, a gdy się to dzieje, to program wykonuje odpowiednią akcję. Do przykładów zdarzeń należy słuchanie kliknięcia myszy, przycisku strzałki lub dotknięcie ekranu."
+      2:
+        text: "Tutaj mamy zamiar spowodować, by Baymax poszedł do góry, aby dotknąć Hiro  oraz poszedł w dół, aby dotknąć Rapunzel, gdy gracz korzysta z klawiszy strzałek w górę/ w dół oraz przycisków w górę/ w dół. Użyjemy bloku \"gdy strzałka w górę\" i dołączamy do niego blok \"przemieść postać w górę\", zatem, gdy gracz naciska przycisk klawisz \"strzałka w górę\", uruchomione jest wszystko, co jest dołączone do bloku \"gdy strzałka w górę\". To samo zrobimy, by przemieścić Baymaxa w dół. Krok po kroku interaktywny charakter Twojej gry wzrasta."
+    infinity_playlab_intro:
+      1:
+        text: "W której klasie jesteś? Drugiej. Dziesiątej klasie. Pierwszej klasie. Byłem w pierwszej klasie, gdy nauczyłem się programować. Pierwszy komputer dostałem, gdy byłem w szóstej klasie. Fascynuje mnie możliwość wyciągania ludzi z problemów. Można siebie wyrazić, można budować rzeczy na podstawie koncepcji."
+      2:
+        text: "Informatyka stanowi podstawę wielu rzeczy, które studenci wyższych uczelni oraz specjaliści będą robić przez kolejnych dwadzieścia lub trzydzieści lat. Lubię programować, ponieważ lubię pomagać ludziom. Mam okazję budować coś, co ułatwi życie innych ludzi. Uważam, że to stanowi rzecz najbliższą supermocy. Rozpoczęcie jest częścią najważniejszą. Sam jestem debiutantem i chcę, abyście uczyli się ze mną."
+      3:
+        text: "Nazywam się John Vechey i jestem jednym z współzałożycieli PopCap Games. Tworzymy gry takie jak: Plants vs. Zombies, Bejeweled i Peggle. Ważnym aspektem gier jest to, że nie chodzi o to, jak idealny jest Twój kod, ani o to jak doskonała jest Twoja grafika, ale o to, jakie wrażenia budzą i jak duży poziom rozrywki niosą ze sobą. To uczucie można poczuć tylko wypróbowując  je, robiąc je, ucząc się i dostosowując oraz dokonując iteracji swoich własnych umiejętności tworzenia gier."
+      4:
+        text: "Czy masz ulubioną grę komputerową? Dzisiaj wykonamy kolejny krok w kierunku tworzenia gier taki, którego używamy w Play Lab. Dobre gry cechuje fabuła, a w każdej fabule są postaci. Postaci wykonują czynności takie, jak: mówienie, przemieszczanie się czy wchodzenie ze sobą w interakcje. Może nawet zdobywać punkty zgodnie z regułami gry. Dzisiaj będziemy się uczyć, jak robić te wszystkie rzeczy, jedną po drugiej, za pośrednictwem bohaterów Disney'a takich jak: Anna, Elsa, Hiro, Baymax czy Roszpunka. Będziemy budować od podstaw grę, którą można udostępniać i w którą można grać na telefonie. "
+      5:
+        text: "Twój ekran jest podzielony na trzy główne części. Po lewej stronie znajduje się obszar gry, gdzie będzie uruchomiony Twój program. Instrukcje dla każdego poziomu zapisano poniżej. Miejsce na środku jest przybornikiem, a każdy z tych bloków jest fragmentem kodu. Białe miejsce po prawej stronie zwana jest obszarem roboczym, gdzie będziemy budować nasz program."
+      6:
+        text: "Na początek będziesz musiał połączyć swoje bloki z blokiem \"po uruchomieniu\". Można e sobą łączyć wiele bloków łącząc je ze sobą przez przeciągnięcie ich aż zobaczycie żółty kontur, aż się połączą. W tej pierwszej łamigłówce, Hiro jest postacią 1, a Baymax jest postacią 2.  Musimy przemieścić Hiro, aby dotarł do Baymaxa poprzez przyciągnięcie bloku \"przejdź w prawo\" oraz łącząc go z blokiem \"po uruchomieniu\". Jeśli masz swoje bloki do dyspozycji, naciśnij przycisk \"Uruchom\", aby zobaczyć, co zaprogramowałeś."
+      7:
+        text: "Zacznijcie i na końcu będziecie umieć utworzyć własną grę z różnego rodzaju postaciami, które mogą wchodzić w interakcje, zdobywają punkty, rzucają mikrobotami, wiśniami, patelniami, iskrami i lodem, a nawet znikają. To wszystko zależy od Ciebie!"
+    infinity_playlab_repeat_forever:
+      1:
+        text: "Czy wyobrażasz sobie, że musiałbyś powtarzać coś bez końca? Jest nadzieja, że nigdy nie będziesz musiał, ponieważ komputery naprawdę dobrze sobie radzą z powtarzającymi się rzeczami. Jest nią blok \"powtarzaj bez końca\". Wszystko, o jest w tym bloku będzie się w tej grze działo bez końca."
+      2:
+        text: "Jeśli zatem chcemy, aby postać powtarzała wykonywanie jakieś czynności bez końca, a gracz nie będzie musiał niczego robić, wstawimy te bloki do bloku \"powtarzaj bez końca\". W kolejnej łamigłówce za cel obieramy pomoc Annie w chodzeniu w górę i w dół bez końca. Nauczenie się, w jaki sposób komendy powtarzania zaoszczędzą nam mnóstwo czasu później, gdy będziesz budować swoją własną grę."
     tutorial_puzzle_challenge:
       1:
+        text: "Kim chcesz być, gdy dorośniesz, Oliwio? Astronautką. Czy wiesz kim jest programista? Hmmm, nie. Hmmm, czekaj, co? Tak naprawdę do nie wiem, jak to wyjaśnić, programowanie komputerowe jest dość proste. Jest to zestaw poleceń takich jak przepis, trzeba je wykonywać krok-po-kroku, aby uzyskać efekt końcowy, jakiego się chce. "
       2:
+        text: "Mogę zmienić liczbę pikseli, długość kreski, używając z tego menu rozwijanego. Powtórz, jak długie to było? Można zobaczyć instrukcje ponownie jeszcze raz patrząc pod przycisk \"uruchom\". Tutaj użyłam blok \"idź do przodu\" i ja mam zamiar wybrać 100 pikseli. Mogę wykreślić blok przeciągając go do przybornika lub do kosza. Wstawmy go z powrotem."
       3:
+        text: "Uruchom kod naciskając \"uruchom\". Cóż, nie zadziałało! Nacisnę reset i wymyślę, co poszło nie tak. Możesz wypróbować łamigłówkę dowolną ilość razy, a także pomijać łamigłówki i wracać do nich później. Staraj się działać najlepiej, jak potrafisz i nie poddawaj się. Dodajmy jeszcze jeden ruch do przodu. Nie zadziałała. Mogę wstawić blok pomiędzy inne bloki. "
       4:
+        text: "Weźmy blok \"skręć\" i umieść go pomiędzy blokami \"idź do przodu\". Skręć w lewo o 45 stopni. Uruchom to jeszcze raz. Zresetuj, uruchom, świetnie! Tutaj mamy kolejną łamigłówkę. Czasami dostajesz kod startowy. Tutaj muszę dodać odpowiednie długości i stopnie. "
       5:
+        text: "Może się zdarzyć tak, że przypadkowo usuniesz kod startowy do kosza? Możesz nacisnąć \"wyczyść łamigłówkę\" i zacznij od nowa. Zamierzam przeciągnąć ten blok liczbowy na obszary innej wartości pikseli. Wybierz 100 dla pikseli, 45 dla stopni i ponownie 100 dla pikseli. Świetnie! Tutaj mamy pszczółkę \"Studia kodowania\". Muszę ją zaprowadzić do każdego kwiatka i zebrać nektar."
       6:
         text: "Pierwszy kwiatek jest oddalony o trzy bloki, więc potrzebuję 3 kroków do przodu. 1, 2, 3. Potem zebrać nektar i jeszcze raz zebrać nektar. Cóż, to nie zadziałało! Umieszczę jeszcze jeden krok do przodu pomiędzy zbieraniem nektarów i uruchomię jeszcze raz. Hurra, to działa! Właśnie nauczyłeś się jak używać zagadek z artystą i pszczółką w Studio Kodowania. Powodzenia w rozwiązywaniu zagadek w Studio Kodowania."
+    unplug1:
+      1:
+        text: "Kim chcesz być, gdy dorośniesz, Oliwio? Oooo - astronautką. Czy przypadkiem wiesz kim jest programista? Taaaak, a raczej nie. Hmmm, czekaj, co? Tak naprawdę do nie wiem, jak to wyjaśnić. Programowanie komputerowe jest dość proste. Jest to zestaw poleceń takich jak przepis. Trzeba je wykonywać krok-po-kroku, aby uzyskać efekt końcowy, jakiego się chce. "
+      2:
+        text: "Informatyka stanowi sposób oddziaływania na świat. Może to być muzyka, mogą to być gry, wykryć ktoś jest z kimś powiązany, czy nie. Wyszukaj, no wiesz, znajomych innych ludzi. Można zrobić mnóstwo różnych, szalonych rzeczy, które tak naprawdę ratują życie. Wydaje mi się, że każdy z Was musi się przejechać. Mnie przypomina to pędzel. Wydaje mi się, że dobre programowanie nie różni się aż tak bardzo od dobrej sztuki."
+      3:
+        text: "Gdy trochę nauczyłem się programować, pusta ściana zamieniła się w szereg drzwi. Otwierasz je, a za nimi, oczywiście, jest korytarz pełen drzwi. Programowanie jest fajne i łatwe. Możesz zrobić wszystko, co podszepnie Ci głowa. W końcu zaczynasz otwierać tyle drzwi, że wpada światło. Dla mnie gotowy program przypomina budowlę wypełnioną światłem. Oświetlone są wszystkie kąty. Możesz się kontaktować i współdziałać z taką liczbą osób nie może się równać z niczym, co już widziałeś na świecie."
+      4:
+        text: "Nasza pierwsza lekcja w ramach tej serii poświęcona jest w całości temu, na czym polega informatyka, czym zajmują się informatycy i w jaki sposób możesz zwiększyć swoje odpowiedzialne podejście do korzystania z technologii. Te zajęcia są bardzo ważne i w znacznym stopniu wypełnione tekstem. Na zakończenie, zajmij się bardzo spersonalizowanym  kodowaniem, wykorzystując swoje inicjały. To jest bardzo przyjemne zajęcie. Bardzo wzmacnia poczucie pewności siebie, ponieważ binarność stanowi jeden z tych aspektów, które sprawiają wrażenie kwestii bardzo technicznych, ale gdy już zrozumiesz o co chodzi, przypomina to posługiwanie się tajnym językiem. "
+    unplug2:
+      1:
+        text: "W zamierzeniu lekcja poświęcona myśleniu komputacyjnemu ma nauczyć Cię, jak podjąć duży problem i podzielić go na kilka prostszych problemów. Celem tych zajęć jest zapisanie zestawu pleceń, które ktoś ma wykonać, aby narysować jednego z potworów ujętych w planie lekcji."
+      2:
+        text: "Uczniowie podzielą się na grupy, aby pisać instrukcje, a następnie zamienią się z inną grupą, która będzie musiała narysować potwora. Grupy będą pisać instrukcje korzystając z czterech kroków myślenia komputacyjnego: dekompozycji, lokalizacji wzroca, abstrahowania i algorytmów."
+      3:
+        text: "Pierwsza grupa dokona dekompozycji zadania, które oznacza tworzenie planu gry. Jej członkowie będą poszukiwać wzorców pomiędzy potworami w katalogu. Kiedy wynajdą różnice pomiędzy potworami, będą abstrahować lub usuwać te detale Na przykład jeden z potworów w katalogu ma oczy \"vegitasa\", a drugi oczy \"spritema\". Ale oba mają oczy, zatem możemy napisać zdanie, że potwór ma puste oczy."
+      4:
+        text: "Zatem uczniowie będą w stanie zapisać zestaw instrukcji, zwane algorytmem, w których tworzy się listę części potworów z pustkami w miejscach, w których powinien być określony styl. Jest to zestaw instrukcji, który przekazują innym uczniom, aby odtworzyć ich swojego własnego potwora. "
     starwars_intro:
       1:
         text: "Witam, jestem Kathleen Kennedy i jestem producentem filmu Star Wars: Przebudzenie Mocy (The Force Awakens). Dzisiaj będziecie pracować z jedną z naszych gwiazd, BB-8. BB-8 jest kulistym droidem. Cokolwiek robi i każdy jego ruch jest sterowany programem komputerowym. Informatyka ma wpływ na przemysł, od marketingu po ochronę zdrowia, na filmy. W rzeczywistości, setki inżynierów pracowało, aby powstał film taki, jak The Force Awakens."
@@ -805,6 +1201,28 @@ pl:
         text: "A może coś jeszcze?"
       7:
         text: "Na końcu samouczka możesz udostępnić link do swojego dzieła znajomym. Rozwiń swoją wyobraźnię i baw się dobrze!"
+    lesson_planning:
+      1:
+      2:
+      3:
+        image: 'notes/lesson_planning_3.png'
+        text: "1. Wypróbuj użycie układu curriculum tworzącego spiralę. Wprowadź koncepcję raz, a następnie do niej powróć."
+      4:
+        image: 'notes/lesson_planning_4.png'
+        text: "2. Stwórz połączone doświadczenie edukacyjne łącząc lekcje online z lekcjami bez komputera."
+      5:
+        image: 'notes/lesson_planning_5.png'
+        text: "3. Podziel swoje curriculum na mniejsze części."
+      6:
+        image: 'notes/lesson_planning_6.png'
+        text: "4. Upewnij się, że dostosowujesz miejscowe standardy oraz umiejętności zapewniające gotowość do pójścia na wyższą uczelnię i karierę."
+    opd_closing:
+      1:
+        image: 'notes/opd_closing_1.png'
+        text: "Gratulujemy! Przeszedłeś kurs internetowy \"Nauka podstaw informatyki\". Teraz jesteś już częścią rozrastającej się społeczności nauczycieli przygotowujących swoich uczniów do przyszłości."
+      2:
+        image: 'notes/opd_closing_2.png'
+        text: "Sprawdź te zasoby jeśli potrzebujesz więcej wsparcia: 1. forum.code.org 2. @teachcode on Twitter 3. studio.code.org "
     hoc_dance_warmup_2019:
       1:
         text: "Godzina Kodowania | Potańcówka: Rozgrzewka"

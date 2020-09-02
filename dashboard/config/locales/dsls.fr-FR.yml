@@ -1903,7 +1903,7 @@ fr-FR:
 '
       courseC_multi_artist_prog6_predict1:
         answers:
-        - text: L'artiste dessinera un triamgle avec 3 côté égaux.
+        - text: L'artiste dessinera un triangle avec 3 côté égaux.
           feedback: Incorrect. L'artiste a dessiné un carré.
         - text: L'artiste dessinera une seule ligne.
           feedback: Incorrect. L'artiste a dessiné un carré.
@@ -1917,7 +1917,7 @@ fr-FR:
             tu cliqueras sur "Démarrer"?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - text: L'artiste dessinera un triamgle avec 3 côté égaux.
+        - text: L'artiste dessinera un triangle avec 3 côté égaux.
           feedback: Incorrect. L'artiste a dessiné un carré.
         - text: L'artiste dessinera une seule ligne.
           feedback: Incorrect. L'artiste a dessiné un carré.
@@ -1931,7 +1931,7 @@ fr-FR:
             tu cliqueras sur "Démarrer"?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - text: L'artiste dessinera un triamgle avec 3 côté égaux.
+        - text: L'artiste dessinera un triangle avec 3 côté égaux.
           feedback: Incorrect. L'artiste a dessiné un carré.
         - text: L'artiste dessinera une seule ligne.
           feedback: Incorrect. L'artiste a dessiné un carré.
@@ -1945,7 +1945,7 @@ fr-FR:
             tu cliqueras sur "Démarrer"?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - text: L'artiste dessinera un triamgle avec 3 côté égaux.
+        - text: L'artiste dessinera un triangle avec 3 côté égaux.
           feedback: Incorrect. L'artiste a dessiné un carré.
         - text: L'artiste dessinera une seule ligne.
           feedback: Incorrect. L'artiste a dessiné un carré.
@@ -1961,70 +1961,70 @@ fr-FR:
         answers:
         - text: '4'
           feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois égal 12!
+            3 boucles. 4 fois 3 égal 12!
         - text: '12'
           correct: true
           feedback: Correct!
         - text: '15'
           feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois égal 12!
+            3 boucles. 4 fois 3 égal 12!
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
-            4 fois égal 12!
+            4 fois 3 égal 12!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera après avoir cliqué sur "Démarrer" ?
+            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
           feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois égal 12!
+            3 boucles. 4 fois 3 égal 12!
         - text: '12'
           correct: true
           feedback: Correct!
         - text: '15'
           feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois égal 12!
+            3 boucles. 4 fois 3 égal 12!
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
-            4 fois égal 12!
+            4 fois 3 égal 12!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera après avoir cliqué sur "Démarrer" ?
+            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
           feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois égal 12!
+            3 boucles. 4 fois 3 égal 12!
         - text: '12'
           correct: true
           feedback: Correct!
         - text: '15'
           feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois égal 12!
+            3 boucles. 4 fois 3 égal 12!
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
-            4 fois égal 12!
+            4 fois 3 égal 12!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera après avoir cliqué sur "Démarrer" ?
+            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
           feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois égal 12!
+            3 boucles. 4 fois 3 égal 12!
         - text: '12'
           correct: true
           feedback: Correct!
         - text: '15'
           feedback: Incorrect. Le fermier ramassera 4 citrouilles dans chacune des
-            3 boucles. 4 fois égal 12!
+            3 boucles. 4 fois 3 égal 12!
         - text: Je ne sais pas.
           feedback: Le fermier ramassera 4 citrouilles dans chacune des 3 boucles.
-            4 fois égal 12!
+            4 fois 3 égal 12!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera après avoir cliqué sur "Démarrer" ?
+            fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Le programme n'échouera pas. Scrat va atteindre le gland.
@@ -2032,7 +2032,7 @@ fr-FR:
         - text: Scrat prendra le mauvais chemin après son dernier virage.
           correct: true
           feedback: Correct!
-        - text: Scrat ne fera pas assez de pas et s'arrêtera juste avant le gland.
+        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
           feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
@@ -2047,7 +2047,7 @@ fr-FR:
         - text: Scrat prendra le mauvais chemin après son dernier virage.
           correct: true
           feedback: Correct!
-        - text: Scrat ne fera pas assez de pas et s'arrêtera juste avant le gland.
+        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
           feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
@@ -2062,7 +2062,7 @@ fr-FR:
         - text: Scrat prendra le mauvais chemin après son dernier virage.
           correct: true
           feedback: Correct!
-        - text: Scrat ne fera pas assez de pas et s'arrêtera juste avant le gland.
+        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
           feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
@@ -2077,7 +2077,7 @@ fr-FR:
         - text: Scrat prendra le mauvais chemin après son dernier virage.
           correct: true
           feedback: Correct!
-        - text: Scrat ne fera pas assez de pas et s'arrêtera juste avant le gland.
+        - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
           feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
@@ -2092,7 +2092,7 @@ fr-FR:
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau va foncer dans les explosifs.
+        - text: L'oiseau va rentrer dans les explosifs.
           feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
@@ -2106,7 +2106,7 @@ fr-FR:
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau va foncer dans les explosifs.
+        - text: L'oiseau va rentrer dans les explosifs.
           feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
@@ -2120,7 +2120,7 @@ fr-FR:
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau va foncer dans les explosifs.
+        - text: L'oiseau va rentrer dans les explosifs.
           feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
@@ -2134,7 +2134,7 @@ fr-FR:
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau va foncer dans les explosifs.
+        - text: L'oiseau va rentrer dans les explosifs.
           feedback: Incorrect. Ce code amène parfaitement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
@@ -2153,7 +2153,7 @@ fr-FR:
         - text: Je ne sais pas
           feedback: Le bloc `Répéter` fera avancer BB-8 5 fois.
         questions:
-        - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
+        - text: Que penses-tu qu'il se passera lorsque tu appuieras sur "Démarrer"?
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 ne bougera pas.
@@ -2166,7 +2166,7 @@ fr-FR:
         - text: Je ne sais pas
           feedback: Le bloc `Répéter` fera avancer BB-8 5 fois.
         questions:
-        - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
+        - text: Que penses-tu qu'il se passera lorsque tu appuieras sur "Démarrer"?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 ne bougera pas.
@@ -2179,7 +2179,7 @@ fr-FR:
         - text: Je ne sais pas
           feedback: Le bloc `Répéter` fera avancer BB-8 5 fois.
         questions:
-        - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
+        - text: Que penses-tu qu'il se passera lorsque tu appuieras sur "Démarrer"?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 ne bougera pas.
@@ -2192,13 +2192,13 @@ fr-FR:
         - text: Je ne sais pas
           feedback: Le bloc `Répéter` fera avancer BB-8 5 fois.
         questions:
-        - text: Que penses-tu qu'il se passera lorsque tu appuieras dur "Démarrer"?
+        - text: Que penses-tu qu'il se passera lorsque tu appuieras sur "Démarrer"?
       courseC_multi_starWars_predict2:
         answers:
-        - text: BB-8 va voyager trop loin dans la première boucle.
+        - text: BB-8 va se déplacer trop loin dans la première boucle.
           feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
-        - text: BB-8 ne voyagera pas assez loin dans la première boucle pour pouvoir
+        - text: BB-8 ne se déplacera pas assez loin dans la première boucle pour pouvoir
             ramasser toute la ferraille.
           correct: true
           feedback: Correct!
@@ -2207,16 +2207,16 @@ fr-FR:
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
         - text: Je ne sais pas.
           feedback: La première boucle laisse BB-8 avancer seulement de 2 pas, alors
-            qu; il a besoin d'avancer de 3 pas.
+            qu'il a besoin d'avancer de 3 pas.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - text: BB-8 va voyager trop loin dans la première boucle.
+        - text: BB-8 va se déplacer trop loin dans la première boucle.
           feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
-        - text: BB-8 ne voyagera pas assez loin dans la première boucle pour pouvoir
+        - text: BB-8 ne se déplacera pas assez loin dans la première boucle pour pouvoir
             ramasser toute la ferraille.
           correct: true
           feedback: Correct!
@@ -2225,16 +2225,16 @@ fr-FR:
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
         - text: Je ne sais pas.
           feedback: La première boucle laisse BB-8 avancer seulement de 2 pas, alors
-            qu; il a besoin d'avancer de 3 pas.
+            qu'il a besoin d'avancer de 3 pas.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - text: BB-8 va voyager trop loin dans la première boucle.
+        - text: BB-8 va se déplacer trop loin dans la première boucle.
           feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
-        - text: BB-8 ne voyagera pas assez loin dans la première boucle pour pouvoir
+        - text: BB-8 ne se déplacera pas assez loin dans la première boucle pour pouvoir
             ramasser toute la ferraille.
           correct: true
           feedback: Correct!
@@ -2243,16 +2243,16 @@ fr-FR:
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
         - text: Je ne sais pas.
           feedback: La première boucle laisse BB-8 avancer seulement de 2 pas, alors
-            qu; il a besoin d'avancer de 3 pas.
+            qu'il a besoin d'avancer de 3 pas.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - text: BB-8 va voyager trop loin dans la première boucle.
+        - text: BB-8 va se déplacer trop loin dans la première boucle.
           feedback: Incorrect. La première boucle laisse seulement BB-8 avancer de
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
-        - text: BB-8 ne voyagera pas assez loin dans la première boucle pour pouvoir
+        - text: BB-8 ne se déplacera pas assez loin dans la première boucle pour pouvoir
             ramasser toute la ferraille.
           correct: true
           feedback: Correct!
@@ -2261,7 +2261,7 @@ fr-FR:
             2 pas, alors qu'il a besoin d'avancer de 3 pas.
         - text: Je ne sais pas.
           feedback: La première boucle laisse BB-8 avancer seulement de 2 pas, alors
-            qu; il a besoin d'avancer de 3 pas.
+            qu'il a besoin d'avancer de 3 pas.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -2330,14 +2330,14 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         - text: Je ne sais pas.
-          feedback: The inner loop makes a pentagon, and the outer loop repeats it
-            4 times in a circle.
+          feedback: L'intérieur de la boucle fait un pentagone, et l'extérieur le
+            répète 4 fois dans un cercle.
         markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
           width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
           src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
@@ -2353,14 +2353,14 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         - text: Je ne sais pas.
-          feedback: The inner loop makes a pentagon, and the outer loop repeats it
-            4 times in a circle.
+          feedback: L'intérieur de la boucle fait un pentagone, et l'extérieur le
+            répète 4 fois dans un cercle.
         markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
           width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
           src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
@@ -2376,14 +2376,14 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         - text: Je ne sais pas.
-          feedback: The inner loop makes a pentagon, and the outer loop repeats it
-            4 times in a circle.
+          feedback: L'intérieur de la boucle fait un pentagone, et l'extérieur le
+            répète 4 fois dans un cercle.
         markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
           width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
           src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
@@ -2399,14 +2399,14 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: B
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         - text: C
-          feedback: Incorrect. L'intérieur de la boucle fait un pentagon, et l'extérieur
+          feedback: Incorrect. L'intérieur de la boucle fait un pentagone, et l'extérieur
             le répète 4 fois dans un cercle.
         - text: Je ne sais pas.
-          feedback: The inner loop makes a pentagon, and the outer loop repeats it
-            4 times in a circle.
+          feedback: L'intérieur de la boucle fait un pentagone, et l'extérieur le
+            répète 4 fois dans un cercle.
         markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
           width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
           src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
@@ -2419,20 +2419,20 @@ fr-FR:
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qu’il se passe. '
+            de ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            seulement de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
             du nectar s'il y a une fleur dessous.
           correct: true
           feedback: Correct!
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qui se passe. '
+            de ce qui se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
-            le nectar si une fleur est sous le nuage.
+            le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
             S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
@@ -2442,20 +2442,20 @@ fr-FR:
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qu’il se passe. '
+            de ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            seulement de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
             du nectar s'il y a une fleur dessous.
           correct: true
           feedback: Correct!
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qui se passe. '
+            de ce qui se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
-            le nectar si une fleur est sous le nuage.
+            le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
             S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
@@ -2465,20 +2465,20 @@ fr-FR:
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qu’il se passe. '
+            de ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            seulement de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
             du nectar s'il y a une fleur dessous.
           correct: true
           feedback: Correct!
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qui se passe. '
+            de ce qui se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
-            le nectar si une fleur est sous le nuage.
+            le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
             S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
@@ -2488,20 +2488,20 @@ fr-FR:
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qu’il se passe. '
+            de ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            seulement de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
             du nectar s'il y a une fleur dessous.
           correct: true
           feedback: Correct!
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qui se passe. '
+            de ce qui se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
-            le nectar si une fleur est sous le nuage.
+            le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
             S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
@@ -2511,20 +2511,20 @@ fr-FR:
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qu’il se passe. '
+            de ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            seulement de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
             du nectar s'il y a une fleur dessous.
           correct: true
           feedback: Correct!
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qui se passe. '
+            de ce qui se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
-            le nectar si une fleur est sous le nuage.
+            le nectar seulement si il y a une fleur sous le nuage.
         questions:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
             S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
@@ -2534,56 +2534,54 @@ fr-FR:
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
-            nid d'abeilles.
+            rayon de miel.
           correct: true
           feedback: Correct!
-        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des rayons
+            de miel.
           feedback: Incorrect. Le bloc `Si à la fleur` laisse l’abeille ramasser le
-            nectar sur chaque fleur et le miel à chaque nid d'abeilles.
-        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
-            d'abeilles.
-          feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
-            nectar à chaque fleur et le miel à chaque nid d'abeilles..
+            nectar sur chaque fleur et le miel à chaque rayon de miel.
+        - text: L'abeille essaiera d'obtenir du miel des fleurs et des rayons de miel.
+          feedback: Incorrect. Incorrect. Le bloc `Si à la fleur` laisse l'abeille
+            ramasser le nectar à chaque fleur et le miel à chaque rayon de miel..
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
-            chaque fleur et le miel à chaque nid d'abeilles.
+            chaque fleur et le miel à chaque rayon de miel.
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
             après avoir cliqué sur "Démarrer" ? Souviens toi : il y aura toujours
-            seulement pour une abeille *un* nid d''abeilles ou *une* fleur derrière
-            chaque nuage.'
+            seulement *un* rayon de miel ou *une* fleur derrière chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
-            nid d'abeilles.
+            rayon de miel.
           correct: true
           feedback: Correct!
-        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des rayons
+            de miel.
           feedback: Incorrect. Le bloc `Si à la fleur` laisse l’abeille ramasser le
-            nectar sur chaque fleur et le miel à chaque nid d'abeilles.
-        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
-            d'abeilles.
-          feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
-            nectar à chaque fleur et le miel à chaque nid d'abeilles..
+            nectar sur chaque fleur et le miel à chaque rayon de miel.
+        - text: L'abeille essaiera d'obtenir du miel des fleurs et des rayons de miel.
+          feedback: Incorrect. Incorrect. Le bloc `Si à la fleur` laisse l'abeille
+            ramasser le nectar à chaque fleur et le miel à chaque rayon de miel..
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
-            chaque fleur et le miel à chaque nid d'abeilles.
+            chaque fleur et le miel à chaque rayon de miel.
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
             après avoir cliqué sur "Démarrer" ? Souviens toi : il y aura toujours
-            seulement pour une abeille *un* nid d''abeilles ou *une* fleur derrière
-            chaque nuage.'
+            seulement *un* rayon de miel ou *une* fleur derrière chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - text: L'abeille obtiendra du nectar à chaque fleur et fabriquera du miel
             à chaque rayon de miel.
           correct: true
           feedback: Correct!
-        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des rayons
+            de miel.
           feedback: 'Faux. Avec le bloc "si à la fleur", l''abeille ramasse du nectar
             à chaque fleur et fabrique du miel à chaque rayon de miel. '
-        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
-            d'abeilles.
+        - text: L'abeille essaiera d'obtenir du miel des fleurs et des rayons de miel.
           feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
             du nectar à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: Je ne sais pas.
@@ -2599,11 +2597,11 @@ fr-FR:
             à chaque rayon de miel.
           correct: true
           feedback: Correct!
-        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des rayons
+            de miel.
           feedback: 'Faux. Avec le bloc "si à la fleur", l''abeille ramasse du nectar
             à chaque fleur et fabrique du miel à chaque rayon de miel. '
-        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
-            d'abeilles.
+        - text: L'abeille essaiera d'obtenir du miel des fleurs et des rayons de miel.
           feedback: 'Faux. Faux. Avec le bloc "si à la fleur", l''abeille ramasse
             du nectar à chaque fleur et fabrique du miel à chaque rayon de miel. '
         - text: Je ne sais pas.
@@ -2615,68 +2613,68 @@ fr-FR:
             rayon de miel ou qu''*une* fleur derrière chaque nuage.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - text: L'abeille avancera et prendra le nectar seulement une fois.
-          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+        - text: L'abeille avancera et prendra du nectar seulement une fois.
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         - text: L'abeille prendra 2 unités de nectar.
-          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         - text: L' abeille prendra tout le nectar.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
-          feedback: L' abeille répéte la boucle qui fait avancer et collecter le nectar,
+          feedback: L'abeille répète la boucle qui la fait avancer et prendre le nectar,
             lui permettant ainsi de terminer le puzzle.
         questions:
         - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
             se passer lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - text: L'abeille avancera et prendra le nectar seulement une fois.
-          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+        - text: L'abeille avancera et prendra du nectar seulement une fois.
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         - text: L'abeille prendra 2 unités de nectar.
-          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         - text: L' abeille prendra tout le nectar.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
-          feedback: L' abeille répéte la boucle qui fait avancer et collecter le nectar,
+          feedback: L'abeille répète la boucle qui la fait avancer et prendre le nectar,
             lui permettant ainsi de terminer le puzzle.
         questions:
         - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
             se passer lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - text: L'abeille avancera et prendra le nectar seulement une fois.
-          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+        - text: L'abeille avancera et prendra du nectar seulement une fois.
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         - text: L'abeille prendra 2 unités de nectar.
-          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         - text: L' abeille prendra tout le nectar.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
-          feedback: L' abeille répéte la boucle qui fait avancer et collecter le nectar,
+          feedback: L'abeille répète la boucle qui la fait avancer et prendre le nectar,
             lui permettant ainsi de terminer le puzzle.
         questions:
         - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
             se passer lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - text: L'abeille avancera et prendra le nectar seulement une fois.
-          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+        - text: L'abeille avancera et prendra du nectar seulement une fois.
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         - text: L'abeille prendra 2 unités de nectar.
-          feedback: Incorrect. L'abeille répéte la boucle qui fait avancer et collecter
+          feedback: Incorrect. L'abeille répète la boucle qui la fait avancer et prendre
             le nectar, lui permettant ainsi de terminer le puzzle.
         - text: L' abeille prendra tout le nectar.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
-          feedback: L' abeille répéte la boucle qui fait avancer et collecter le nectar,
+          feedback: L'abeille répète la boucle qui la fait avancer et prendre le nectar,
             lui permettant ainsi de terminer le puzzle.
         questions:
         - text: Regarde attentivement les boucles imbriquées ci-dessous. Que va-t-il
@@ -2684,107 +2682,107 @@ fr-FR:
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
-          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+          feedback: Incorrect. L' abeille ramasse 2 nectars dans une boucle avancer,
             puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
             qui se répète 2 fois. 4 fois 2 égal 8!
         - text: '8'
           correct: true
           feedback: Correct!
         - text: '12'
-          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+          feedback: Incorrect. L' abeille ramasse 2 nectars dans une boucle avancer,
             puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
             qui se répète 2 fois. 4 fois 2 égal 8!
         - text: Je ne sais pas.
-          feedback: L' abeille collecte 2 nectars dans une boucle avancer, puis 2
-            nectars dans une boucle descend. Tout cela dans une autre boucle qui se
-            répète 2 fois. 4 fois 2 égal 8!
+          feedback: L' abeille ramasse 2 nectars dans une boucle avancer, puis 2 nectars
+            dans une boucle descendre. Tout cela dans une autre boucle qui se répète
+            2 fois. 4 fois 2 égal 8!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
-            produira lorsque tu cliqueras sur "Démarrer"?
+            produira-t-elle lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
-          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+          feedback: Incorrect. L' abeille ramasse 2 nectars dans une boucle avancer,
             puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
             qui se répète 2 fois. 4 fois 2 égal 8!
         - text: '8'
           correct: true
           feedback: Correct!
         - text: '12'
-          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+          feedback: Incorrect. L' abeille ramasse 2 nectars dans une boucle avancer,
             puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
             qui se répète 2 fois. 4 fois 2 égal 8!
         - text: Je ne sais pas.
-          feedback: L' abeille collecte 2 nectars dans une boucle avancer, puis 2
-            nectars dans une boucle descend. Tout cela dans une autre boucle qui se
-            répète 2 fois. 4 fois 2 égal 8!
+          feedback: L' abeille ramasse 2 nectars dans une boucle avancer, puis 2 nectars
+            dans une boucle descendre. Tout cela dans une autre boucle qui se répète
+            2 fois. 4 fois 2 égal 8!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
-            produira lorsque tu cliqueras sur "Démarrer"?
+            produira-t-elle lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
-          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+          feedback: Incorrect. L' abeille ramasse 2 nectars dans une boucle avancer,
             puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
             qui se répète 2 fois. 4 fois 2 égal 8!
         - text: '8'
           correct: true
           feedback: Correct!
         - text: '12'
-          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+          feedback: Incorrect. L' abeille ramasse 2 nectars dans une boucle avancer,
             puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
             qui se répète 2 fois. 4 fois 2 égal 8!
         - text: Je ne sais pas.
-          feedback: L' abeille collecte 2 nectars dans une boucle avancer, puis 2
-            nectars dans une boucle descend. Tout cela dans une autre boucle qui se
-            répète 2 fois. 4 fois 2 égal 8!
+          feedback: L' abeille ramasse 2 nectars dans une boucle avancer, puis 2 nectars
+            dans une boucle descendre. Tout cela dans une autre boucle qui se répète
+            2 fois. 4 fois 2 égal 8!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
-            produira lorsque tu cliqueras sur "Démarrer"?
+            produira-t-elle lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
-          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+          feedback: Incorrect. L' abeille ramasse 2 nectars dans une boucle avancer,
             puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
             qui se répète 2 fois. 4 fois 2 égal 8!
         - text: '8'
           correct: true
           feedback: Correct!
         - text: '12'
-          feedback: Incorrect. L' abeille collecte 2 nectars dans une boucle avancer,
+          feedback: Incorrect. L' abeille ramasse 2 nectars dans une boucle avancer,
             puis 2 nectars dans une boucle descend. Tout cela dans une autre boucle
             qui se répète 2 fois. 4 fois 2 égal 8!
         - text: Je ne sais pas.
-          feedback: L' abeille collecte 2 nectars dans une boucle avancer, puis 2
-            nectars dans une boucle descend. Tout cela dans une autre boucle qui se
-            répète 2 fois. 4 fois 2 égal 8!
+          feedback: L' abeille ramasse 2 nectars dans une boucle avancer, puis 2 nectars
+            dans une boucle descendre. Tout cela dans une autre boucle qui se répète
+            2 fois. 4 fois 2 égal 8!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de miel l'abeille
-            produira lorsque tu cliqueras sur "Démarrer"?
+            produira-t-elle lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_collector_debugging10_predict1:
         answers:
         - text: Laurel tournera dans la mauvaise direction en faisant un carré.
           feedback: Incorrect. C'était partiellement correct, mais la boucle ne tourne
-            pas assez longtemps pour pouvoir ramasser tous les trésors.
-        - text: 'La boucle ne tourne pas assez longtemps pour Laurel pour ramasser
-            tous les trésors. '
+            pas assez longtemps pour pouvoir ramasser tous les diamants.
+        - text: 'La boucle ne tourne pas assez longtemps pour que Laurel puisse ramasser
+            tous les diamants. '
           feedback: Incorrect. C'était partiellement correct, mais l'abeille tourne
             aussi du mauvais côté lorsqu'elle essaie de faire un carré.
         - text: Laurel tourne dans le mauvais sens *et* la boucle ne tourne pas assez
-            longtemps pour que Laurel ramasse tous les trésors.
+            longtemps pour que Laurel ramasse tous les diamants.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Laurel tourne dans le mauvais sens *et* la boucle ne tourne pas
-            assez longtemps pour que Laurel ramasse tous les trésors.
+            assez longtemps pour que Laurel ramasse tous les diamants.
         questions:
         - text: 'Regarde attentivement le code ci-dessous. Pourquoi Laurel ne ramassera
-            pas tous les trésors lorsque tu appuieras sur "Démarrer"? Attention :
-            C’est une question délicate, fais attention d''avoir bien lu toutes les
-            options avant de répondre !'
+            pas tous les diamants lorsque tu appuieras sur "Démarrer"? Attention:
+            Cette une question délicate, fais attention d''avoir bien lu toutes les
+            options avant de répondre!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - text: Le ceuilleur  ramassera toutes les plantes.
+        - text: Le moissonneur ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code pour ramasser la citrouille.
         - text: Le cueilleur ne ramassera aucune des plantes avec le chemin qu'il
             prend.
@@ -2795,7 +2793,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
-          feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
+          feedback: Le code verra le moissonneur répéter le motif des marches d'escalier
             et ramasser autant de salades et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
         markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
@@ -2805,7 +2803,7 @@ fr-FR:
             sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - text: Le ceuilleur  ramassera toutes les plantes.
+        - text: Le moissonneur ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
         - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
             prend.
@@ -2826,7 +2824,7 @@ fr-FR:
             sur "Démarrer" ?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - text: Le ceuilleur  ramassera toutes les plantes.
+        - text: Le moissonneur ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
         - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
             prend.
@@ -2847,7 +2845,7 @@ fr-FR:
             sur "Démarrer" ?
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
-        - text: Le ceuilleur  ramassera toutes les plantes.
+        - text: Le moissonneur ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
         - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
             prend.
@@ -2868,24 +2866,24 @@ fr-FR:
             sur "Démarrer" ?
       courseD_multi_farmer_ramp13:
         answers:
-        - text: Le fermier marchera jusq'au bout du chemin et recoltera la citrouille.
-          feedback: Incorrect. Le bloc `Récolte citrouille` est à l'intérieur de la
-            boucle, donc le fermieressaiera de ramasser la citrouille à chaque étape,
-            au lieu de le faire seulement à la fin.
+        - text: Le fermier marchera jusqu'au bout du chemin et récoltera la citrouille.
+          feedback: Incorrect. Le bloc `Récolter la citrouille` est à l'intérieur
+            de la boucle, donc le fermier essaiera de ramasser la citrouille à chaque
+            étape, au lieu de le faire seulement à la fin.
         - text: Le fermier essaiera de ramasser les citrouilles à chaque pas, mais
             ne parviendra jamais jusqu'à la citrouille.
           correct: true
           feedback: Correct!
         - text: Le fermier marchera de 4 pas, puis essaiera de ramasser une citrouille.
-          feedback: Incorrect. Le bloc `Récolte citrouille` est à l'intérieur de la
-            boucle, donc le fermieressaiera de ramasser la citrouille à chaque étape,
-            au lieu de le faire seulement à la fin.
+          feedback: Incorrect. Le bloc `Récolter la citrouille` est à l'intérieur
+            de la boucle, donc le fermier essaiera de ramasser la citrouille à chaque
+            étape, au lieu de le faire seulement à la fin.
         - text: Je ne sais pas.
-          feedback: Le bloc `Récolte citrouille` est à l'intérieur de la boucle, donc
-            le fermieressaiera de ramasser la citrouille à chaque étape, au lieu de
-            le faire seulement à la fin.
+          feedback: Le bloc `Récolter la citrouille` est à l'intérieur de la boucle,
+            donc le fermier essaiera de ramasser la citrouille à chaque étape, au
+            lieu de le faire seulement à la fin.
         markdown: |+
-          Voici un nouveau type de puzzle qui utilise des blocs similaires à ce que tu as déjà vu. Essaie de dire ce qu’il va se passer quand tu exécuteras le code ci-dessous.
+          Voici un nouveau type de puzzle qui utilise des blocs similaires à ce que tu as déjà vu. Essaie de prédire ce qu’il va se passer quand tu exécuteras le code ci-dessous.
 
 
         questions:
@@ -2893,78 +2891,78 @@ fr-FR:
       courseD_multi_farmer_while10_predict2:
         answers:
         - text: Rien. Ce code ne laissera que le sol du niveau.
-          feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
+          feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         - text: Ce code laissera le tas intact.
           correct: true
           feedback: Correct!
         - text: Ce code laissera les trous intacts.
-          feedback: Incorrect. La boucle `Tant que` génèra des boucles de n'importe
+          feedback: Incorrect. La boucle `Tant que` générera des boucles de n'importe
             quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
         - text: Je ne sais pas.
-          feedback: La boucle `Tant que` génèra des boucles de n'importe quelle taille,
-            mais il n'y a pas de code pour enlever la saleté du tas.
+          feedback: La boucle `Tant que` générera des boucles de n'importe quelle
+            taille, mais il n'y a pas de code pour enlever la saleté du tas.
         questions:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - text: Rien. Ce code ne laissera qu’un terrain plat.
-          feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
+          feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         - text: Ce code laissera le tas intact.
           correct: true
           feedback: Correct!
         - text: Ce code laissera les trous intacts.
-          feedback: Incorrect. La boucle `Tant que` génèra des boucles de n'importe
+          feedback: Incorrect. La boucle `Tant que` générera des boucles de n'importe
             quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
         - text: Je ne sais pas.
-          feedback: La boucle `Tant que` génèra des boucles de n'importe quelle taille,
-            mais il n'y a pas de code pour enlever la saleté du tas.
+          feedback: La boucle `Tant que` générera des boucles de n'importe quelle
+            taille, mais il n'y a pas de code pour enlever la saleté du tas.
         questions:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - text: Rien. Ce code ne laissera qu’un terrain plat.
-          feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
+          feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         - text: Ce code laissera le tas intact.
           correct: true
           feedback: Correct!
         - text: Ce code laissera les trous intacts.
-          feedback: Incorrect. La boucle `Tant que` génèra des boucles de n'importe
+          feedback: Incorrect. La boucle `Tant que` générera des boucles de n'importe
             quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
         - text: Je ne sais pas.
-          feedback: La boucle `Tant que` génèra des boucles de n'importe quelle taille,
-            mais il n'y a pas de code pour enlever la saleté du tas.
+          feedback: La boucle `Tant que` générera des boucles de n'importe quelle
+            taille, mais il n'y a pas de code pour enlever la saleté du tas.
         questions:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - text: Rien. Ce code ne laissera qu’un terrain plat.
-          feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
+          feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         - text: Ce code laissera le tas intact.
           correct: true
           feedback: Correct!
         - text: Ce code laissera les trous intacts.
-          feedback: Incorrect. La boucle `Tant que` génèra des boucles de n'importe
+          feedback: Incorrect. La boucle `Tant que` générera des boucles de n'importe
             quelle taille, mais il n'y a pas de code pour enlever la saleté du tas.
         - text: Je ne sais pas.
-          feedback: La boucle `Tant que` génèra des boucles de n'importe quelle taille,
-            mais il n'y a pas de code pour enlever la saleté du tas.
+          feedback: La boucle `Tant que` générera des boucles de n'importe quelle
+            taille, mais il n'y a pas de code pour enlever la saleté du tas.
         questions:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: Rien ne se passera.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
-            tas, puis s'arrêtera dès que le tas sera terminé
+            tas, puis s'arrêtera dès que le tas aura disparu.
         - text: Le fermier n'arrêtera jamais d'enlever la saleté.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
-            tas, puis s'arrêtera dès que le tas sera terminé
+            tas, puis s'arrêtera dès que le tas aura disparu.
         - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
-            dès que le tas sera terminé.
+            dès que le tas aura disparu.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
-            dès que le tas sera terminé
+            dès que le tas aura disparu.
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
@@ -2972,17 +2970,17 @@ fr-FR:
         answers:
         - text: Rien ne se passera.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
-            tas, puis s'arrêtera dès que le tas sera terminé
+            tas, puis s'arrêtera dès que le tas aura disparu.
         - text: Le fermier n'arrêtera jamais d'enlever la saleté.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
-            tas, puis s'arrêtera dès que le tas sera terminé
+            tas, puis s'arrêtera dès que le tas aura disparu.
         - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
-            dès que le tas sera terminé.
+            dès que le tas aura disparu.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
-            dès que le tas sera terminé
+            dès que le tas aura disparu.
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer"?
@@ -2990,17 +2988,17 @@ fr-FR:
         answers:
         - text: Rien ne se passera.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
-            tas, puis s'arrêtera dès que le tas sera terminé
+            tas, puis s'arrêtera dès que le tas aura disparu.
         - text: Le fermier n'arrêtera jamais d'enlever la saleté.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
-            tas, puis s'arrêtera dès que le tas sera terminé
+            tas, puis s'arrêtera dès que le tas aura disparu.
         - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
-            dès que le tas sera terminé.
+            dès que le tas aura disparu.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
-            dès que le tas sera terminé
+            dès que le tas aura disparu.
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer"?
@@ -3008,17 +3006,17 @@ fr-FR:
         answers:
         - text: Rien ne se passera.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
-            tas, puis s'arrêtera dès que le tas sera terminé
+            tas, puis s'arrêtera dès que le tas aura disparu.
         - text: Le fermier n'arrêtera jamais d'enlever la saleté.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
-            tas, puis s'arrêtera dès que le tas sera terminé
+            tas, puis s'arrêtera dès que le tas aura disparu.
         - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
-            dès que le tas sera terminé.
+            dès que le tas aura disparu.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
-            dès que le tas sera terminé
+            dès que le tas aura disparu.
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer"?
@@ -3031,8 +3029,8 @@ fr-FR:
           feedback: Incorrect. Dans ce code, il cherche à tourner à droite *avant*
             de regarder s'il peut passer tout droit. C'est à cause de ça que le puzzle
             échoue.
-        - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
-            sans jamais s'arrêter de tourner.
+        - text: Le zombie va tourner à droite sur le premier chemin et tourner en
+            rond à l'infini.
           feedback: Incorrect. Le zombie cherche seulement à tourner à droite ou un
             chemin droit. Il ne cherche jamais à tourner à gauche, donc il se fait
             bloquer immédiatement.
@@ -3051,8 +3049,8 @@ fr-FR:
         - text: Le zombie va arriver jusqu'au tournesol.
           feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
             et venir, pour toujours.
-        - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
-            sans jamais s'arrêter de tourner.
+        - text: Le zombie va tourner à droite sur le premier chemin et tourner en
+            rond à l'infini.
           feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
             et venir, pour toujours.
         - text: Je ne sais pas.
@@ -3070,8 +3068,8 @@ fr-FR:
         - text: Le zombie va arriver jusqu'au tournesol.
           feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
             et venir, pour toujours.
-        - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
-            sans jamais s'arrêter de tourner.
+        - text: Le zombie va tourner à droite sur le premier chemin et tourner en
+            rond à l'infini.
           feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
             et venir, pour toujours.
         - text: Je ne sais pas.
@@ -3089,8 +3087,8 @@ fr-FR:
         - text: Le zombie va arriver jusqu'au tournesol.
           feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
             et venir, pour toujours.
-        - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
-            sans jamais s'arrêter de tourner.
+        - text: Le zombie va tourner à droite sur le premier chemin et tourner en
+            rond à l'infini.
           feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
             et venir, pour toujours.
         - text: Je ne sais pas.
@@ -3108,13 +3106,13 @@ fr-FR:
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau avance et percute la TNT.
+        - text: L'oiseau avance et rentre dans le TNT.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
             sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
             le cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
+            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -3127,13 +3125,13 @@ fr-FR:
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau avance et percute la TNT.
+        - text: L'oiseau avance et rentre dans le TNT.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
             sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
             le cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
+            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -3146,13 +3144,13 @@ fr-FR:
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau avance et percute la TNT.
+        - text: L'oiseau avance et rentre dans le TNT.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
             sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
             le cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
+            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -3165,13 +3163,13 @@ fr-FR:
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
-        - text: L'oiseau avance et percute la TNT.
+        - text: L'oiseau avance et rentre dans le TNT.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
             sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
             le cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
-            à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
+            à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre le cochon!.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -3684,11 +3682,11 @@ fr-FR:
           \  ### __Boucles Imbriquées__ - Une boucle dans une boucle\n"
       courseF_markdown_nestedloops_intro:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Dans cette leçon...** ### T'es-tu jamais demandé ce qui se
-          passerait si tu mettais une boucle *dans une autre boucle* ?   ### Ça risque
-          de te rendre fou !   ### Si une boucle normale sert à répéter des motifs,
-          à quoi penses-tu qu'une boucle à l'intérieur d'une autre boucle pourrait
-          servir ? Réfléchissons !---## **Blocs à Connaître**![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
+        markdown: "# **Dans cette leçon...** \n\n### T'es-tu jamais demandé ce qui
+          se passerait si tu mettais une boucle *dans une autre boucle* ?   \n\n###
+          Ça risque de te rendre fou !   \n\n### Si une boucle normale sert à répéter
+          des motifs, à quoi penses-tu qu'une boucle à l'intérieur d'une autre boucle
+          pourrait servir ? Réfléchissons !\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
       courseF_markdown_variables_end:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Tu viens d'apprendre les « variables » !**### Pour utiliser
@@ -3909,20 +3907,20 @@ fr-FR:
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qu’il se passe. '
+            de ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            seulement de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
             du nectar s'il y a une fleur dessous.
           correct: true
           feedback: Correct!
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
-            ce qui se passe. '
+            de ce qui se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
-            de ramasser le nectar si une fleur est sous le nuage.
+            de ramasser le nectar seulement si il y a une fleur sous le nuage.
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
-            le nectar si une fleur est sous le nuage.
+            le nectar seulement si il y a une fleur sous le nuage.
         markdown: "The cloud is blocking the view. There could be a flower under this
           cloud. If there is a flower, the bee will need to collect nectar **once**.
           \n"
@@ -3936,12 +3934,12 @@ fr-FR:
             miel.
           correct: true
           feedback: Correct!
-        - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
+        - text: L'abeille essaiera de ramasser le nectar des fleurs et des rayons
+            de miel.
           feedback: Incorrect. Le bloc `si à la fleur` laisse l'abeille ramasser le
             nectar à chaque fleur et faire du miel s'il n'y a pas de fleur (donc du
             coup un nid d'abeilles).
-        - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
-            d'abeilles.
+        - text: L'abeille essaiera d'obtenir du miel des fleurs et des rayons de miel.
           feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
             nectar à chaque fleur et le miel à chaque nid d'abeilles.
         - text: Je ne sais pas.
@@ -4176,74 +4174,74 @@ fr-FR:
         content1: description ici
       grade2_multi_collector_A_predict1:
         answers:
-        - text: Laurel ramassera 4 trésortrésors avec ce code.
-          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
-            en a pas et cela a provoquer une erreur.
-        - text: Laurel essaiera de ramasser des trésortrésors où il n'y en a pas et
-            cela provoque une erreur.
+        - text: Laurel ramassera 4 diamants avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
+        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
+            provoque une erreur.
           correct: true
           feedback: Correct!
-        - text: Laurel ramassera tous les trésors.
-          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
-            en a pas et cela a provoquer une erreur.
+        - text: Laurel ramassera tous les diamants.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
         - text: Je ne sais pas.
-          feedback: Laurel essaie de ramasser des trésortrésors où il n'y en a pas
-            et cela a provoqué une erreur.
+          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
+            a provoqué une erreur.
         questions:
-        - text: Regarde attentivement le code ci-dessous. Si le code devaient aller
-            jusqu`à la fin (en ignorant les erreurs). combien de trésortrésors Laurel
-            aurait elle ramassée?
+        - text: Regarde attentivement le code ci-dessous. Si le code devait aller
+            jusqu'à la fin (en ignorant les erreurs). combien de diamants Laurel aurait
+            elle ramassée?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - text: Laurel ramassera 4 trésortrésors avec ce code.
-          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
-            en a pas et cela a provoquer une erreur.
-        - text: Laurel essaiera de ramasser des trésortrésors où il n'y en a pas et
-            cela provoque une erreur.
+        - text: Laurel ramassera 4 diamants avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
+        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
+            provoque une erreur.
           correct: true
           feedback: Correct!
-        - text: Laurel ramassera tous les trésors.
-          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
-            en a pas et cela a provoquer une erreur.
+        - text: Laurel ramassera tous les diamants.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
         - text: Je ne sais pas.
-          feedback: Laurel essaie de ramasser des trésortrésors où il n'y en a pas
-            et cela a provoqué une erreur.
+          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
+            a provoqué une erreur.
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
             le programme sera lancé?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - text: Laurel ramassera 4 trésortrésors avec ce code.
-          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
-            en a pas et cela a provoquer une erreur.
-        - text: Laurel essaiera de ramasser des trésortrésors où il n'y en a pas et
-            cela provoque une erreur.
+        - text: Laurel ramassera 4 diamants avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
+        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
+            provoque une erreur.
           correct: true
           feedback: Correct!
-        - text: Laurel ramassera tous les trésors.
-          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
-            en a pas et cela a provoquer une erreur.
+        - text: Laurel ramassera tous les diamants.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
         - text: Je ne sais pas.
-          feedback: Laurel essaie de ramasser des trésortrésors où il n'y en a pas
-            et cela a provoqué une erreur.
+          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
+            a provoqué une erreur.
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
             le programme sera lancé?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - text: Laurel ramassera 4 trésortrésors avec ce code.
-          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
-            en a pas et cela a provoquer une erreur.
-        - text: Laurel essaiera de ramasser des trésortrésors où il n'y en a pas et
-            cela provoque une erreur.
+        - text: Laurel ramassera 4 diamants avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
+        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
+            provoque une erreur.
           correct: true
           feedback: Correct!
-        - text: Laurel ramassera tous les trésors.
-          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
-            en a pas et cela a provoquer une erreur.
+        - text: Laurel ramassera tous les diamants.
+          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
+            a pas et cela provoque une erreur.
         - text: Je ne sais pas.
-          feedback: Laurel essaie de ramasser des trésortrésors où il n'y en a pas
-            et cela a provoqué une erreur.
+          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
+            a provoqué une erreur.
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
             le programme sera lancé?

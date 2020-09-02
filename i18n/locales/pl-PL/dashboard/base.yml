@@ -161,7 +161,7 @@ pl:
     student_consent: "Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie Code.org."
     agree_us_website: "Zgadzam się na korzystanie ze strony, której siedziba znajduje się w Stanach Zjednoczonych."
     my_data_to_us: "Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych."
-    student_terms_markdown: "Adresy e-mail nie są przechowywane w postaci, która pozwalałaby nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się w naszej [Polityce prywatności](%{privacy_policy_url})."
+    student_terms_markdown: "Adresy e-mail nie są przechowywane w postaci, która pozwalałaby nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się w naszej [Polityce prywatności](http://code.org/privacy)."
     additional_information: "Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować."
     user_type_button: "Zaktualizuj typ konta"
     user_type_label: "Typ konta"
@@ -313,10 +313,17 @@ pl:
       sections: "Sekcje"
       help_support: "Pomoc i wsparcie"
       report_bug: "Zgłosić problem"
+      report_abuse: "Zgłoś nadużycie"
       teacher_community: "Społeczność nauczycieli"
       professional_learning: "Kształcenia Profesjonalne"
       documentation: "Dokumentacja"
       tutorials: "Samouczki"
+      app_lab_documentation: "Dokumentacja \"App Lab\""
+      app_lab_tutorials: "Samouczki \"App Lab\""
+      game_lab_documentation: "Dokumentacja \"Game Lab\""
+      game_lab_tutorials: "Samouczki \"Game Lab\""
+      sprite_lab_documentation: "Dokumentacja \"Sprite Lab\""
+      sprite_lab_tutorials: "Samouczki \"Sprite Lab\""
       educate_overview: "Przegląd edukatora"
       educate_elementary: "Szkoła podstawowa"
       educate_middle: "Gimnazjum"
@@ -470,6 +477,7 @@ pl:
     for_parents_and_guardians: "Dla rodziców i opiekunów"
     link_a_parent_email: "Połącz adres e-mail rodzica/opiekuna z tym kontem, aby być na bieżąco z postępami i projektami Twojego dziecka. Będziesz także mógł używać tego adresu e-mail do odzyskiwania hasła."
     parent_guardian_email_label: "Adres e-mail rodzica/opiekuna"
+    remove_parent_email_label: "Usuń"
     none: "Żaden"
     only_one_parent_email_supported_warning: "Uwaga: w tej chwili możemy uwzględnić tylko jeden adres e-mail rodzica/opiekuna na konto ucznia."
     encrypted: "zaszyfrowane"
@@ -512,6 +520,7 @@ pl:
     no_primary_course: "Wypróbuj kurs w Code Studio"
     choose_next_course: "Wypróbuj jeden z poniższych kursów w Code Studio"
     print_certificate: "Drukuj Certyfikat"
+  certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci sponsorowania Twojej nauki."
   move_students:
     new_section_dne: "Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź kod innej sekcji."
     section_code_cant_be_current_section: "Bieżąca sekcja nie może być taka sama, jak nowa sekcja."
@@ -784,6 +793,14 @@ pl:
     reminder_desc: 'Zaktualizowaliśmy nasze <a href="%{tos_url}" target="_blank"> Warunki użytkowania</a> i <a href="%{privacy_url}" target="_blank"> Politykę prywatności</a>. Prosimy przeczytać je uważnie przed ich zaakceptowaniem. Należy zauważyć, że nasze narzędzia do nauki języka JavaScript mogą być niedostępny dla Twoich uczniów przed zaakceptowaniem zaktualizowanych postanowień.'
     reminder_desc_markdown: Zaktualizowaliśmy nasze [Warunki użytkowania](%{tos_url}) i [Politykę prywatności](%{privacy_url}). Prosimy przeczytać je uważnie przed ich zaakceptowaniem. Należy zauważyć, że nasze narzędzia do nauki języka JavaScript mogą być niedostępne dla Twoich uczniów przed zaakceptowaniem zaktualizowanych postanowień.
     review_terms: "Wyświetl zaktualizowane Warunki korzystania"
+  donor_interstitial:
+    title: "Twoje bezpłatne kursy CS są możliwe dzięki ..."
+    subtitle: "Chcielibyśmy podziękować hojnym darczyńcom, których wsparcie umożliwiło sukces Code.org. Dążymy do tego, aby Code.org było bezpłatne dla szkół i uczniów na całym świecie, dzięki nieustającej hojności naszych [darczyńców] (%{donors_url})!\n"
+    local_supporters: "Lokalni zwolennicy"
+    global_supporters: "Globalni zwolennicy"
+    support_codeorg_1: "Każdy dolar przekazany Code.org daje szansę większej liczbie uczniów."
+    support_codeorg_2: "[Przekaż darowiznę teraz] (%{donate_url}), aby wesprzeć Code.org."
+    get_started: "Zacznij korzystać z Code.org"
   school_info_interstitial:
     title: "Chcemy przybliżyć Informatykę każdemu uczniowi - pomóż nam śledzić nasze postępy!"
     message: "Prosimy o wprowadzenie poniżej danych swojej szkoły."
@@ -1066,6 +1083,7 @@ pl:
     yes: 'Tak'
   page_not_found_title: "Strona nie została znaleziona"
   page_not_found_header: '404: Strona nie została znaleziona'
+  page_not_found_description: "Strona, której szukasz, nie istnieje pod tym adresem. Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną."
   page_not_found_button: "Powrót do strony domowej"
   copy: 'Kopia/Kopiuj'
   maker:
@@ -1083,3 +1101,4 @@ pl:
     not_now: "Nie teraz"
   behaviors:
     this_sprite: "ten duszek"
+  unit_prefix: "Jednostka %{n}"

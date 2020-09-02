@@ -190,6 +190,8 @@ ar:
   codeorg_homepage_special2020_body2: الاطلاع على مصادر التعلم المقترحة لدينا.
   codeorg_homepage_special2020_body: المدرسة مغلقة؟ تعلَّم في المنزل. خُذ استراحة
     لتعلم البرمجة، أو اطلع على المصادر التعليمية المناسبة للطلاب وأولياء الأمور والمعلمين.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: ابدأ الآن
   codeorg_homepage_code_break_body: خُذ استراحة لتعلم البرمجة! جرعتك الأسبوعية من
     الإلهام والمشاركة وعلوم الحاسوب.
@@ -8943,8 +8945,8 @@ ar:
     التي تعمل بنظام أندرويد، أجهزة آيباد
   tutorial_scratchcartoon_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
     التي تعمل بنظام أندرويد، أجهزة آيباد
-  tutorial_codemonkeyjr_string_platforms: الأجهزة اللوحية التي تعمل بنظام أندرويد،
-    أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_codemonkeyjr_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
   tutorial_bananatales_string_platforms: جميع المتصفحات الحديثة
   tutorial_scratchtales_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
     التي تعمل بنظام أندرويد، أجهزة آيباد

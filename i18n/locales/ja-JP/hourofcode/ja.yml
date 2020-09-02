@@ -188,6 +188,8 @@ ja:
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -762,7 +764,7 @@ ja:
   title_stats: 推薦と統計
   title_partners: パートナー
   title_resources: 資料
-  title_past_posters: Past Hour of Code Posters
+  title_past_posters: 過去に使われたHour of Codeのポスター
   title_signup_thanks: Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
   title_tutorial_guidelines: 活動のガイドライン
   title_whole_school: 全校での参加
@@ -8565,7 +8567,7 @@ ja:
   tutorial_googlehero_string_platforms: モダンブラウザ、 Androidタブレット、iPad
   tutorial_codestersbball_string_platforms: モダンブラウザ、 Androidタブレット、iPad
   tutorial_scratchcartoon_string_platforms: モダンブラウザ、 Androidタブレット、iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: 全ての最新ブラウザ、Androidタブレット、iPad、Android携帯、iPhone
   tutorial_bananatales_string_platforms: 最新ブラウザ
   tutorial_scratchtales_string_platforms: モダンブラウザ、 Androidタブレット、iPad
   tutorial_msemoji_string_platforms: Chrome, Safari

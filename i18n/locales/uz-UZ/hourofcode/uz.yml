@@ -1,33 +1,33 @@
 ---
 uz:
-  site_name: HOUR of CODE
-  hour_of_code: Hour of Code
-  language: English
-  front_title: Join the largest learning event in history, %{campaign_date}
-  coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 7
-  campaign_date_start_long: December 7
+  site_name: Dasturlash soati
+  hour_of_code: Dasturlash soati
+  language: Ingliz
+  front_title: 'Tarixdagi eng katta o‘quv tadbiriga qo‘shiling: %{campaign_date}'
+  coming_soon: Tez kunda
+  campaign_date_start_short: 7-dekabr
+  campaign_date_start_long: 7-dekabr
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
-  campaign_date_year: '2020'
+  campaign_date_year: 2020-yil
   campaign_date_full_year: December 7-13, 2020
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 18
   latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2020'
+  latam_campaign_date_year: 2020-yil
   latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: October 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2020'
+  europe_campaign_date_year: 2020-yil
   europe_campaign_date_full_year: October 10-25, 2020
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2020'
+  africa_campaign_date_year: 2020-yil
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2019_header: Learn computer science. Change the world.
   hoc2019_header_line1_mobile: Learn computer science.
@@ -36,7 +36,7 @@ uz:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Dasturlash soati yaqinlashmoqda!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
@@ -190,6 +190,8 @@ uz:
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -198,7 +200,7 @@ uz:
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
   cookie_banner_accept: I agree
-  front_header_banner: Join the largest learning event in history, %{campaign_date}
+  front_header_banner: 'Tarixdagi eng katta o‘quv tadbiriga qo‘shiling: %{campaign_date}'
   front_intro_default: The Hour of Code is a global movement reaching tens of millions
     of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event.
     One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages
@@ -5152,7 +5154,7 @@ uz:
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
-  tutorial_chibitronics_language: English
+  tutorial_chibitronics_language: Ingliz
   tutorial_athlete_language: English, French, Spanish, Italian, Portuguese (Brazil)
   tutorial_moana_language: English, Arabic, Chinese (Simplified), Chinese (Traditional)
     Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean,
@@ -5657,9 +5659,9 @@ uz:
   tutorial_bcpy2_language: English only
   tutorial_bcjs1_language: English only
   tutorial_bcjs2_language: English only
-  tutorial_3dbearmars_language: English
-  tutorial_alexaskill_language: English
-  tutorial_bitsboxyak_language: English
+  tutorial_3dbearmars_language: Ingliz
+  tutorial_alexaskill_language: Ingliz
+  tutorial_bitsboxyak_language: Ingliz
   tutorial_blockscadbargraphs_language: Chinese (Simplified), English, French, German,
     Japanese, Norwegian (Bokmål), Serbian (Cyrillic), Spanish (Spain), Swedish
   tutorial_blockscadbirdhouses_language: Chinese (Simplified), English, French, German,
@@ -5674,106 +5676,106 @@ uz:
     Slovenian, Spanish, Swedish
   tutorial_blockscadsugar_language: Chinese, Dutch, English, French, Japanese, Norwegian,
     Slovenian, Spanish, Swedish
-  tutorial_bsgridlight_language: English
-  tutorial_bpartscratch_language: English
-  tutorial_bpartvid_language: English
-  tutorial_bpenglishscratch_language: English
-  tutorial_bpenglishvid_language: English
-  tutorial_bphealthscratch_language: English
-  tutorial_bphealthvid_language: English
-  tutorial_bpmathscratch_language: English
-  tutorial_bpmathvid_language: English
-  tutorial_bpmlkscratch_language: English
-  tutorial_bpmlkvid_language: English
-  tutorial_bpsafetyscratch_language: English
-  tutorial_bpsafetyvid_language: English
-  tutorial_bpsciencescratch_language: English
-  tutorial_bpsciencevid_language: English
-  tutorial_bptechscratch_language: English
-  tutorial_bptechvid_language: English
-  tutorial_caflags_language: English
-  tutorial_matariki_language: English
-  tutorial_carestaurant_language: English
-  tutorial_casea_language: English
-  tutorial_cashield_language: English
-  tutorial_ccwslimer_language: English
+  tutorial_bsgridlight_language: Ingliz
+  tutorial_bpartscratch_language: Ingliz
+  tutorial_bpartvid_language: Ingliz
+  tutorial_bpenglishscratch_language: Ingliz
+  tutorial_bpenglishvid_language: Ingliz
+  tutorial_bphealthscratch_language: Ingliz
+  tutorial_bphealthvid_language: Ingliz
+  tutorial_bpmathscratch_language: Ingliz
+  tutorial_bpmathvid_language: Ingliz
+  tutorial_bpmlkscratch_language: Ingliz
+  tutorial_bpmlkvid_language: Ingliz
+  tutorial_bpsafetyscratch_language: Ingliz
+  tutorial_bpsafetyvid_language: Ingliz
+  tutorial_bpsciencescratch_language: Ingliz
+  tutorial_bpsciencevid_language: Ingliz
+  tutorial_bptechscratch_language: Ingliz
+  tutorial_bptechvid_language: Ingliz
+  tutorial_caflags_language: Ingliz
+  tutorial_matariki_language: Ingliz
+  tutorial_carestaurant_language: Ingliz
+  tutorial_casea_language: Ingliz
+  tutorial_cashield_language: Ingliz
+  tutorial_ccwslimer_language: Ingliz
   tutorial_codinggalaxy_language: Chinese, English
   tutorial_boatrace_language: Arabic, Chinese (Simplified), Czech, Danish, Dutch,
     French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish,
     Romanian, Serbian (Cyrillic), Spanish, Ukrainian
-  tutorial_ccplay_language: English
-  tutorial_grinch_language: English
-  tutorial_codehsart_language: English
-  tutorial_codehsbitcoin_language: English
-  tutorial_codehsblockchain_language: English
-  tutorial_codehscipher_language: English
-  tutorial_codehscollision_language: English
-  tutorial_codehsmath_language: English
-  tutorial_codehsmusic_language: English
-  tutorial_codehssports_language: English
-  tutorial_codemojipizza_language: English
-  tutorial_moonlander_language: English
-  tutorial_sushicards_language: English
+  tutorial_ccplay_language: Ingliz
+  tutorial_grinch_language: Ingliz
+  tutorial_codehsart_language: Ingliz
+  tutorial_codehsbitcoin_language: Ingliz
+  tutorial_codehsblockchain_language: Ingliz
+  tutorial_codehscipher_language: Ingliz
+  tutorial_codehscollision_language: Ingliz
+  tutorial_codehsmath_language: Ingliz
+  tutorial_codehsmusic_language: Ingliz
+  tutorial_codehssports_language: Ingliz
+  tutorial_codemojipizza_language: Ingliz
+  tutorial_moonlander_language: Ingliz
+  tutorial_sushicards_language: Ingliz
   tutorial_codesparkcreate_language: Chinese, English, French, German, Italian, Japanese,
     Korean, Malay, Portuguese (Brazil), Spanish, Swedish, Thai
-  tutorial_hardvsoft_language: English
+  tutorial_hardvsoft_language: Ingliz
   tutorial_codestersecard_language: Chinese, English, Spanish
   tutorial_codesterslogo_language: Chinese, English, Spanish
   tutorial_codesterstshirt_language: Chinese, English, Spanish
   tutorial_codewards_language: English, French, Russian, Spanish, Turkish
   tutorial_olympics_language: English, French, Russian, Spanish
-  tutorial_codinismhero_language: English
+  tutorial_codinismhero_language: Ingliz
   tutorial_discovery_language: English, Spanish (Mexico)
   tutorial_csfirstname_language: English, Spanish (Mexico)
   tutorial_obstaclecourse_language: Chinese, English, French, German, Italian, Spanish
-  tutorial_edisonmove_language: English
-  tutorial_edisonspider_language: English
-  tutorial_edisonspotlight_language: English
-  tutorial_firiapython_language: English
-  tutorial_gamefrootsquid_language: English
-  tutorial_duckpiano_language: English
-  tutorial_gpsound_language: English
-  tutorial_groklearningpython_language: English
-  tutorial_htmltimetravel_language: English
-  tutorial_hp_flappy_language: English
-  tutorial_appytappin_language: English
-  tutorial_icipher_language: English
-  tutorial_iguess_language: English
-  tutorial_imake_language: English
-  tutorial_imorse_language: English
-  tutorial_kanohp_language: English
+  tutorial_edisonmove_language: Ingliz
+  tutorial_edisonspider_language: Ingliz
+  tutorial_edisonspotlight_language: Ingliz
+  tutorial_firiapython_language: Ingliz
+  tutorial_gamefrootsquid_language: Ingliz
+  tutorial_duckpiano_language: Ingliz
+  tutorial_gpsound_language: Ingliz
+  tutorial_groklearningpython_language: Ingliz
+  tutorial_htmltimetravel_language: Ingliz
+  tutorial_hp_flappy_language: Ingliz
+  tutorial_appytappin_language: Ingliz
+  tutorial_icipher_language: Ingliz
+  tutorial_iguess_language: Ingliz
+  tutorial_imake_language: Ingliz
+  tutorial_imorse_language: Ingliz
+  tutorial_kanohp_language: Ingliz
   tutorial_khanwebpages_language: English, Italian, Polish, Portuguese, Serbian, Spanish
-  tutorial_kibobowl_language: English
-  tutorial_kibodance_language: English
-  tutorial_buildcharacters_language: English
-  tutorial_designgames_language: English
-  tutorial_makelevels_language: English
-  tutorial_wizard_language: English
-  tutorial_mbscratchcards_language: English
-  tutorial_mbswiftplaygrounds_language: English
-  tutorial_mbbuttons_language: English
-  tutorial_meteor_language: English
-  tutorial_ballbounce_language: English
-  tutorial_mitcodi_language: English
-  tutorial_mitdoodle_language: English
-  tutorial_talktome_language: English
-  tutorial_mobilecspmap_language: English
-  tutorial_ozorandom_language: English
-  tutorial_ozotroll_language: English
-  tutorial_peblioart_language: English
+  tutorial_kibobowl_language: Ingliz
+  tutorial_kibodance_language: Ingliz
+  tutorial_buildcharacters_language: Ingliz
+  tutorial_designgames_language: Ingliz
+  tutorial_makelevels_language: Ingliz
+  tutorial_wizard_language: Ingliz
+  tutorial_mbscratchcards_language: Ingliz
+  tutorial_mbswiftplaygrounds_language: Ingliz
+  tutorial_mbbuttons_language: Ingliz
+  tutorial_meteor_language: Ingliz
+  tutorial_ballbounce_language: Ingliz
+  tutorial_mitcodi_language: Ingliz
+  tutorial_mitdoodle_language: Ingliz
+  tutorial_talktome_language: Ingliz
+  tutorial_mobilecspmap_language: Ingliz
+  tutorial_ozorandom_language: Ingliz
+  tutorial_ozotroll_language: Ingliz
+  tutorial_peblioart_language: Ingliz
   tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
     Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
-  tutorial_rgart_language: English
-  tutorial_rgengineer_language: English
-  tutorial_rgmath_language: English
-  tutorial_rgscience_language: English
-  tutorial_rgtech_language: English
-  tutorial_robotmagic3d_language: English
-  tutorial_robotmagicflappy_language: English
+  tutorial_rgart_language: Ingliz
+  tutorial_rgengineer_language: Ingliz
+  tutorial_rgmath_language: Ingliz
+  tutorial_rgscience_language: Ingliz
+  tutorial_rgtech_language: Ingliz
+  tutorial_robotmagic3d_language: Ingliz
+  tutorial_robotmagicflappy_language: Ingliz
   tutorial_scratchadventure_language: English, Spanish
   tutorial_scratchtalk_language: English, Spanish
-  tutorial_scratchjrstory_language: English
-  tutorial_scratchjrtwinkle_language: English
+  tutorial_scratchjrstory_language: Ingliz
+  tutorial_scratchjrtwinkle_language: Ingliz
   tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
     Italian, Japanese, Korean, Norwegian, Spanish, Swedish
   tutorial_spherocommunity_language: Arabic, Chinese, English, French, German, Hebrew,
@@ -5796,39 +5798,39 @@ uz:
     Italian, Japanese, Korean, Norwegian, Spanish, Swedish
   tutorial_spheroraptor_language: Arabic, Chinese, English, French, German, Hebrew,
     Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_stempiday_language: English
-  tutorial_stemplanetoids_language: English
-  tutorial_stempong_language: English
-  tutorial_algobot_language: English
-  tutorial_thunkableapps_language: English
+  tutorial_stempiday_language: Ingliz
+  tutorial_stemplanetoids_language: Ingliz
+  tutorial_stempong_language: Ingliz
+  tutorial_algobot_language: Ingliz
+  tutorial_thunkableapps_language: Ingliz
   tutorial_toxicodedot_language: English, French, German, Indonesian, Italian, Portuguese,
     Romanian, Spanish, Turkish
-  tutorial_gcactions_language: English
-  tutorial_gccomparators_language: English
-  tutorial_gcconditions_language: English
+  tutorial_gcactions_language: Ingliz
+  tutorial_gccomparators_language: Ingliz
+  tutorial_gcconditions_language: Ingliz
   tutorial_gccreate_language: English, French
-  tutorial_gcevents_language: English
-  tutorial_gcloops_language: English
-  tutorial_gcvariables_language: English
-  tutorial_beanything_language: English
-  tutorial_change_language: English
-  tutorial_cooking_language: English
-  tutorial_crystal_language: English
-  tutorial_landscape_language: English
-  tutorial_pets_language: English
-  tutorial_petvet_language: English
-  tutorial_superhero_language: English
-  tutorial_vidcodeplastic_language: English
-  tutorial_vidcodetypeface_language: English
-  tutorial_washustorm_language: English
-  tutorial_activitypackets_language: English
-  tutorial_googlerookie_language: English
-  tutorial_tommyturtle_language: English
+  tutorial_gcevents_language: Ingliz
+  tutorial_gcloops_language: Ingliz
+  tutorial_gcvariables_language: Ingliz
+  tutorial_beanything_language: Ingliz
+  tutorial_change_language: Ingliz
+  tutorial_cooking_language: Ingliz
+  tutorial_crystal_language: Ingliz
+  tutorial_landscape_language: Ingliz
+  tutorial_pets_language: Ingliz
+  tutorial_petvet_language: Ingliz
+  tutorial_superhero_language: Ingliz
+  tutorial_vidcodeplastic_language: Ingliz
+  tutorial_vidcodetypeface_language: Ingliz
+  tutorial_washustorm_language: Ingliz
+  tutorial_activitypackets_language: Ingliz
+  tutorial_googlerookie_language: Ingliz
+  tutorial_tommyturtle_language: Ingliz
   tutorial_mazyad_language: Arabic, English
-  tutorial_gamemaker_language: English
+  tutorial_gamemaker_language: Ingliz
   tutorial_duckrace_language: English, German
-  tutorial_allcancodeapps_language: English
-  tutorial_n2y_language: English
+  tutorial_allcancodeapps_language: Ingliz
+  tutorial_n2y_language: Ingliz
   tutorial_dance2019_string_detail_grades: Grades 2+
   tutorial_danceparty_string_detail_grades: Grades 2+
   tutorial_chibitronics_string_detail_grades: Grades 2-5
@@ -8792,101 +8794,101 @@ uz:
     coding! Learn about AI, machine learning, training data, and bias, while exploring
     ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: English, Spanish
-  tutorial_codesterspsa_language: English
+  tutorial_codesterspsa_language: Ingliz
   tutorial_googlehero_language: English, Spanish
-  tutorial_codestersbball_language: English
+  tutorial_codestersbball_language: Ingliz
   tutorial_scratchcartoon_language: English, Spanish
-  tutorial_codemonkeyjr_language: English
-  tutorial_bananatales_language: English
+  tutorial_codemonkeyjr_language: Ingliz
+  tutorial_bananatales_language: Ingliz
   tutorial_scratchtales_language: English, Spanish
-  tutorial_msemoji_language: English
-  tutorial_cacolor_language: English
+  tutorial_msemoji_language: Ingliz
+  tutorial_cacolor_language: Ingliz
   tutorial_kodablebeach_language: English, Other
-  tutorial_tynkeren_language: English
-  tutorial_tynkerjavapro_language: English
-  tutorial_grasshopperhack_language: English
+  tutorial_tynkeren_language: Ingliz
+  tutorial_tynkerjavapro_language: Ingliz
+  tutorial_grasshopperhack_language: Ingliz
   tutorial_pbskids_language: English, Spanish
-  tutorial_nclabdata_language: English
-  tutorial_grasshopperphoto_language: English
-  tutorial_tynkerpyland_language: English
+  tutorial_nclabdata_language: Ingliz
+  tutorial_grasshopperphoto_language: Ingliz
+  tutorial_tynkerpyland_language: Ingliz
   tutorial_codeitimages_language: English, German
-  tutorial_hyperpadenemy_language: English
-  tutorial_tynkerpro_language: English
-  tutorial_trashtag_language: English
-  tutorial_casiege_language: English
-  tutorial_thunkableyeet_language: English
-  tutorial_vidcodedeal_language: English
-  tutorial_codehsgeno_language: English
-  tutorial_hyperpadpong_language: English
-  tutorial_tynkerland_language: English
-  tutorial_trinketgirl_language: English
-  tutorial_rpimosquito_language: English
-  tutorial_tynkermars_language: English
+  tutorial_hyperpadenemy_language: Ingliz
+  tutorial_tynkerpro_language: Ingliz
+  tutorial_trashtag_language: Ingliz
+  tutorial_casiege_language: Ingliz
+  tutorial_thunkableyeet_language: Ingliz
+  tutorial_vidcodedeal_language: Ingliz
+  tutorial_codehsgeno_language: Ingliz
+  tutorial_hyperpadpong_language: Ingliz
+  tutorial_tynkerland_language: Ingliz
+  tutorial_trinketgirl_language: Ingliz
+  tutorial_rpimosquito_language: Ingliz
+  tutorial_tynkermars_language: Ingliz
   tutorial_cityx_language: Chinese (Traditional), English
-  tutorial_vidcodemap_language: English
-  tutorial_robotmagicfarm_language: English
-  tutorial_codehstriangle_language: English
-  tutorial_ttwhitehouse_language: English
-  tutorial_modulo_language: English
-  tutorial_codingtown_language: English
-  tutorial_kanoart_language: English
-  tutorial_dragonscript_language: English
-  tutorial_uwcloud_language: English
-  tutorial_htmlmuffin_language: English
-  tutorial_microsoftpizza_language: English
-  tutorial_stemc_blckhole_language: English
-  tutorial_careconfigure_language: English
-  tutorial_rpiscratch_language: English
+  tutorial_vidcodemap_language: Ingliz
+  tutorial_robotmagicfarm_language: Ingliz
+  tutorial_codehstriangle_language: Ingliz
+  tutorial_ttwhitehouse_language: Ingliz
+  tutorial_modulo_language: Ingliz
+  tutorial_codingtown_language: Ingliz
+  tutorial_kanoart_language: Ingliz
+  tutorial_dragonscript_language: Ingliz
+  tutorial_uwcloud_language: Ingliz
+  tutorial_htmlmuffin_language: Ingliz
+  tutorial_microsoftpizza_language: Ingliz
+  tutorial_stemc_blckhole_language: Ingliz
+  tutorial_careconfigure_language: Ingliz
+  tutorial_rpiscratch_language: Ingliz
   tutorial_ozaria_language: English, Spanish
-  tutorial_ttovum_language: English
-  tutorial_ttpassage_language: English
-  tutorial_tynkerhtmlen_language: English
-  tutorial_ttfrog_language: English
-  tutorial_codemojijava_language: English
-  tutorial_ccfirewall_language: English
-  tutorial_htmljs_language: English
-  tutorial_ttaqueducts_language: English
-  tutorial_vtgame_language: English
-  tutorial_baroborav_language: English
-  tutorial_baroboobstacle_language: English
-  tutorial_pbstorytelling_language: English
-  tutorial_kibosnow_language: English
-  tutorial_kibohappy_language: English
-  tutorial_rubylove_language: English
-  tutorial_spherosmiles_language: English
-  tutorial_spherobaby_language: English
-  tutorial_toxarchitect_language: English
-  tutorial_idodge_language: English
-  tutorial_firiacodebot_language: English
-  tutorial_modlighthouse_language: English
-  tutorial_spherogreen_language: English
-  tutorial_ozopopstar_language: English
-  tutorial_eddesign_language: English
-  tutorial_edshapeup_language: English
-  tutorial_ozocolor_language: English
-  tutorial_kcjanimals_language: English
-  tutorial_icomputeeggs_language: English
-  tutorial_rootunplugged_language: English
-  tutorial_rgtreasure_language: English
-  tutorial_peblioportraits_language: English
-  tutorial_rootcodebreak_language: English
-  tutorial_microbit14_language: English
-  tutorial_barobomoon_language: English
-  tutorial_eddog_language: English
-  tutorial_microbit15_language: English
-  tutorial_unity_language: English
-  tutorial_blockscadtarget_language: English
-  tutorial_tcadicicles_language: English
-  tutorial_blockscadscale_language: English
-  tutorial_tcadloops_language: English
-  tutorial_phidgets_language: English
-  tutorial_kcjmerry_language: English
-  tutorial_modvariables_language: English
-  tutorial_codestersmicro_language: English
-  tutorial_codestersdata_language: English
-  tutorial_ikodexmas_language: English
-  tutorial_rpisensehat_language: English
-  tutorial_modtraits_language: English
+  tutorial_ttovum_language: Ingliz
+  tutorial_ttpassage_language: Ingliz
+  tutorial_tynkerhtmlen_language: Ingliz
+  tutorial_ttfrog_language: Ingliz
+  tutorial_codemojijava_language: Ingliz
+  tutorial_ccfirewall_language: Ingliz
+  tutorial_htmljs_language: Ingliz
+  tutorial_ttaqueducts_language: Ingliz
+  tutorial_vtgame_language: Ingliz
+  tutorial_baroborav_language: Ingliz
+  tutorial_baroboobstacle_language: Ingliz
+  tutorial_pbstorytelling_language: Ingliz
+  tutorial_kibosnow_language: Ingliz
+  tutorial_kibohappy_language: Ingliz
+  tutorial_rubylove_language: Ingliz
+  tutorial_spherosmiles_language: Ingliz
+  tutorial_spherobaby_language: Ingliz
+  tutorial_toxarchitect_language: Ingliz
+  tutorial_idodge_language: Ingliz
+  tutorial_firiacodebot_language: Ingliz
+  tutorial_modlighthouse_language: Ingliz
+  tutorial_spherogreen_language: Ingliz
+  tutorial_ozopopstar_language: Ingliz
+  tutorial_eddesign_language: Ingliz
+  tutorial_edshapeup_language: Ingliz
+  tutorial_ozocolor_language: Ingliz
+  tutorial_kcjanimals_language: Ingliz
+  tutorial_icomputeeggs_language: Ingliz
+  tutorial_rootunplugged_language: Ingliz
+  tutorial_rgtreasure_language: Ingliz
+  tutorial_peblioportraits_language: Ingliz
+  tutorial_rootcodebreak_language: Ingliz
+  tutorial_microbit14_language: Ingliz
+  tutorial_barobomoon_language: Ingliz
+  tutorial_eddog_language: Ingliz
+  tutorial_microbit15_language: Ingliz
+  tutorial_unity_language: Ingliz
+  tutorial_blockscadtarget_language: Ingliz
+  tutorial_tcadicicles_language: Ingliz
+  tutorial_blockscadscale_language: Ingliz
+  tutorial_tcadloops_language: Ingliz
+  tutorial_phidgets_language: Ingliz
+  tutorial_kcjmerry_language: Ingliz
+  tutorial_modvariables_language: Ingliz
+  tutorial_codestersmicro_language: Ingliz
+  tutorial_codestersdata_language: Ingliz
+  tutorial_ikodexmas_language: Ingliz
+  tutorial_rpisensehat_language: Ingliz
+  tutorial_modtraits_language: Ingliz
   tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
     Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
     French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
@@ -9000,7 +9002,8 @@ uz:
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: All modern browsers, Android tablet, iPad,
+    Android phone, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -9266,7 +9269,7 @@ uz:
   tutorial_ccfirewall_string_detail_programming_languages: Blocks
   tutorial_htmljs_string_detail_programming_languages: JavaScript
   tutorial_ttaqueducts_string_detail_programming_languages: JavaScript, CoffeeScript
-  tutorial_vtgame_string_detail_programming_languages: English
+  tutorial_vtgame_string_detail_programming_languages: Ingliz
   tutorial_baroborav_string_detail_programming_languages: Blocks, C/C++
   tutorial_baroboobstacle_string_detail_programming_languages: Blocks, C/C++
   tutorial_pbstorytelling_string_detail_programming_languages: Twine (Harlowe variant)

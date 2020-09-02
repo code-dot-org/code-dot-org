@@ -181,9 +181,9 @@
         "CSD U3 Random Number Map Level": "Случайные числа",
         "CSD U3 Random Number Map Level_2018": "Случайные числа",
         "CSD U3 Random Number Map Level_2019": "Случайные числа",
-        "CSD U3 Variables Map": "переменные",
-        "CSD U3 Variables Map_2018": "переменные",
-        "CSD U3 Variables Map_2019": "переменные",
+        "CSD U3 Variables Map": "Переменные",
+        "CSD U3 Variables Map_2018": "Переменные",
+        "CSD U3 Variables Map_2019": "Переменные",
         "CSD U3 collisions build isTouching": "Обнаружение столкновений",
         "CSD U3 collisions build isTouching_2018": "Обнаружение столкновений",
         "CSD U3 collisions build isTouching_2019": "Обнаружение столкновений",
@@ -471,7 +471,17 @@
         "courseF_artist_for1_2020": "Свободная практика с циклами for (начало)",
         "courseF_video_csMatters": "Конец проектов курса",
         "csd-pre-survey-2017-levelgroup_2018": "Обзор урока",
-        "csd-pre-survey-levelgroup_2019": "Обзор урока"
+        "csd-pre-survey-levelgroup_2019": "Обзор урока",
+        "Course F: Artist Project - Revise_2018": "Отредактируй проект в среде Художника",
+        "Course F: Artist Project_2018": "Курс Е: проект в среде Художника",
+        "Course F: Artist Project_2019": "Курс Е: проект в среде Художника",
+        "CourseF_Project_Revise_SpriteLab": "Отредактируй проект в Лаборатории спрайтов",
+        "CourseF_Project_SpriteLab": "Курс Е: проект в Лаборатории спрайтов",
+        "CourseF_Project_SpriteLab_2019": "Курс Е: проект в Лаборатории спрайтов",
+        "courseF_project_1": "Пример проекта в Лаборатории спрайтов",
+        "scrat_loops_C-F_video": "Циклы в видео \"Ледниковый период\"",
+        "scrat_loops_C-F_video_2019": "Циклы в видео \"Ледниковый период\"",
+        "scrat_loops_C-F_video_2020": "Циклы в видео \"Ледниковый период\""
       }
     }
   }

@@ -161,6 +161,7 @@ ro:
           lessons:
             Play Lab:
               name: Laborator de Joacă
+          description_audience: '[șir gol]'
         artist:
           title: Artist
           description: Desenează poze şi proiecte mişto cu Artistul!
@@ -687,6 +688,8 @@ ro:
               name: Utilizarea variabilelor în aplicații
             While Loops:
               name: Repetiții While
+            Creating Functions with Parameters:
+              name: Crearea funcțiilor cu parametri
         algebraPD3:
           description_audience: '[șir gol]'
           lessons:
@@ -1044,6 +1047,7 @@ ro:
               name: Bine ai venit!
             Wrap-up:
               name: Încheiere
+          description_audience: '[șir gol]'
         ECSPD2-NexTech:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -1058,6 +1062,7 @@ ro:
               name: Bine ai venit!
             Wrap-up:
               name: Încheiere
+          description_audience: '[șir gol]'
         CSPPD2:
           lessons:
             Wrap Up and Next Steps:
@@ -1191,6 +1196,7 @@ ro:
           lessons:
             Gumball Play Lab:
               name: Laboratorul Joaca Gumball
+          description_audience: '[șir gol]'
         starwars:
           title: 'Star Wars: Programarea unei galaxii'
           description: Învață să programezi droizi si creează-ți propriul joc Star Wars într-o galaxie foarte îndepărtată.
