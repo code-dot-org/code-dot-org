@@ -12,12 +12,23 @@
       }
     ]
   },
-
   {
    "name":"satisfaction_page",
    "title": "Workshop Satisfaction",
    "elements":
    [
+     {
+       "type":"library_item",
+       "library_name":"surveys/pd/workshop_elements",
+       "library_version": 0,
+       "name":"overall_success"
+     },
+     {
+       "type":"library_item",
+       "library_name":"surveys/pd/workshop_elements",
+       "library_version": 0,
+       "name":"teacher_engagement"
+     },
      {
       "type":"library_item",
       "library_name":"surveys/pd/ayw_satisfaction_panel",
