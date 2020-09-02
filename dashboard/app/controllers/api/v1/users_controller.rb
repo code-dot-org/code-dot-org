@@ -60,7 +60,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # GET /api/v1/users/<user_id>/school_donor_name
   def get_school_donor_name
-    render json: "\"#{@user.school_donor_name}\""
+    render json: @user.school_donor_name.nil? ? 'null' : "\"#{@user.school_donor_name}\""
   end
 
   # POST /api/v1/users/<user_id>/using_text_mode
