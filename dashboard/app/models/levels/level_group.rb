@@ -74,11 +74,11 @@ class LevelGroup < DSLDefined
     attr_reader :levels_offset
 
     def levels
-      levels_and_texts&.reject {|l| l.is_a?(External)}
+      levels_and_texts.reject {|l| l.is_a?(External)}
     end
 
     def texts
-      levels_and_texts&.select {|l| l.is_a?(External)}
+      levels_and_texts.select {|l| l.is_a?(External)}
     end
   end
 
@@ -110,7 +110,7 @@ class LevelGroup < DSLDefined
       levels_and_texts = all_levels_and_texts[levels_and_texts_offset..(levels_and_texts_offset + page_size - 1)]
       page_object = LevelGroupPage.new(page_number, levels_and_texts_offset, levels_and_texts, levels_offset)
       levels_and_texts_offset += page_size
-      levels_offset += page_object.levels.length if page_object.levels
+      levels_offset += page_object.levels.length
       page_object
     end
   end
