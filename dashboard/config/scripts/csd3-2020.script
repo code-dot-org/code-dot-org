@@ -2,6 +2,7 @@ hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-20/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit3/code/"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
@@ -11,7 +12,6 @@ curriculum_umbrella 'CSD'
 tts true
 
 lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
-lesson_group_description 'This is a description'
 lesson 'Programming for Entertainment', display_name: 'Programming for Entertainment'
 level 'CSD U3L01 TFMD_2020', progression: 'Lesson Overview'
 level 'CSD U3 Entertainment_2018_2019_pilot_2020', progression: 'Exploring CS in Entertainment'
