@@ -12,6 +12,6 @@ class Api::V1::Pd::WorkshopOrganizersController < ApplicationController
     organizers = User.joins(:permissions).where(
       user_permissions: {permission: [UserPermission::WORKSHOP_ORGANIZER, UserPermission::PROGRAM_MANAGER]}
     )
-    render json: organizers, each_serializer: Api::V1::Pd::WorkshopOrganizerSerializer
+    render json: organizers, each_serializer: Api::V1::Pd::WorkshopOrganizerSerializer, adapter: :attributes
   end
 end
