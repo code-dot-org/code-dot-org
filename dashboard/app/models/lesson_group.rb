@@ -132,8 +132,8 @@ class LessonGroup < ApplicationRecord
     I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions", default: nil)
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
-    summary = {
+  def summarize
+    {
       id: id,
       key: key,
       display_name: localized_display_name,
@@ -142,17 +142,10 @@ class LessonGroup < ApplicationRecord
       user_facing: user_facing,
       position: position
     }
-
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-
-    summary
   end
 
   def summarize_for_edit
-    include_lessons = false
-    summary = summarize(include_lessons)
+    summary = summarize
     summary[:lessons] = lessons.map(&:summarize_for_edit)
     summary
   end
