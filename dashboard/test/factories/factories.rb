@@ -72,7 +72,7 @@ FactoryGirl.define do
 
   factory :user do
     birthday Time.zone.today - 21.years
-    email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
+    email {("#{user_type}_#{SecureRandom.uuid}@code.org")}
     password "00secret"
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
