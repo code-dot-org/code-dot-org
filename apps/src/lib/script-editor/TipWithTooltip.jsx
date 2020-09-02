@@ -7,7 +7,8 @@ import _ from 'lodash';
 
 export default class TipWithTooltip extends Component {
   static propTypes = {
-    tip: PropTypes.object
+    tip: PropTypes.object,
+    onClick: PropTypes.func
   };
 
   render() {
@@ -19,9 +20,7 @@ export default class TipWithTooltip extends Component {
           <FontAwesome
             icon={tipTypes[tip.type].icon}
             style={{color: tipTypes[tip.type].color, padding: '2px'}}
-            onClick={() => {
-              console.log('Open tip editor');
-            }}
+            onClick={this.props.onClick}
             onMouseOver={() => {
               console.log('Show tool tip');
             }}

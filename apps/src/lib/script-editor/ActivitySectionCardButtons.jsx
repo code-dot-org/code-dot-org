@@ -97,7 +97,13 @@ export default class ActivitySectionCardButtons extends Component {
           {this.props.activitySection.tips.length > 0 && (
             <span>
               {this.props.activitySection.tips.map(tip => {
-                return <TipWithTooltip tip={tip} key={tip.markdown} />;
+                return (
+                  <TipWithTooltip
+                    tip={tip}
+                    key={tip.markdown}
+                    onClick={this.handleOpenAddTip}
+                  />
+                );
               })}
             </span>
           )}

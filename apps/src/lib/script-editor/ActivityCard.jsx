@@ -144,17 +144,6 @@ export default class ActivityCard extends Component {
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
             Add Progression
           </button>
-          <button
-            onMouseDown={() => {
-              console.log('Preview Activity');
-            }}
-            className="btn"
-            style={styles.addLesson}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-eye" />
-            Preview
-          </button>
         </div>
       </div>
     );
