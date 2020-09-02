@@ -1533,12 +1533,18 @@ class ScriptTest < ActiveSupport::TestCase
     # Validate lessons. We've already done some validation of level contents, so
     # this time just validate their names.
     assert_equal 2, script_copy.lessons.count
+
     lesson1 = script_copy.lessons.first
-    lesson2 = script_copy.lessons.last
+    assert_equal 'lesson1', lesson1.key
+    assert_equal 'Lesson One', lesson1.name
     assert_equal(
       'Level 1_copy,Level 2_copy,Level 3_copy',
       lesson1.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
+
+    lesson2 = script_copy.lessons.last
+    assert_equal 'lesson2', lesson2.key
+    assert_equal 'Lesson Two', lesson2.name
     assert_equal(
       'Level 4_copy,Level 5_copy',
       lesson2.script_levels.map(&:levels).flatten.map(&:name).join(',')
