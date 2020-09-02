@@ -21,13 +21,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   # GET /api/v1/pd/workshops/1/enrollments
   def index
-    response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
-
     respond_to do |format|
       format.json do
-        render json: response
+        render json: @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer, adapter: :attributes
       end
       format.csv do
+        response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
         send_as_csv_attachment response, 'workshop_enrollments.csv'
       end
     end
@@ -38,7 +37,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     @workshop = Pd::Workshop.find_by_id params[:workshop_id]
     if @workshop.nil?
       return render json: {submission_status: RESPONSE_MESSAGES[:NOT_FOUND]},
-        status: 404
+        status: 404, adapter: nil
     end
 
     enrollment_email = params[:email]
@@ -71,7 +70,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
           account_exists: enrollment.resolve_user.present?,
           sign_up_url: url_for('/users/sign_up'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
-        }
+        }, adapter: nil
       else
         render_unsuccessful RESPONSE_MESSAGES[:ERROR]
       end
@@ -81,8 +80,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   # POST /api/v1/pd/enrollment/:enrollment_id/scholarship_info
   def update_scholarship_info
     @enrollment.update_scholarship_status(params[:scholarship_status])
-    serialized_enrollment = Api::V1::Pd::WorkshopEnrollmentSerializer.new(@enrollment).attributes
-    render json: serialized_enrollment
+    render json: @enrollment, serializer: Api::V1::Pd::WorkshopEnrollmentSerializer, adapter: :attributes
   end
 
   # DELETE /api/v1/pd/workshops/1/enrollments/1
@@ -159,7 +157,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   def render_unsuccessful(error_message, options={})
     render json: options.merge({workshop_enrollment_status: error_message}),
-      status: 400
+      status: 400, adapter: nil
   end
 
   def workshop_closed?
