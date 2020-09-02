@@ -356,3 +356,5 @@ gem 'require_all', require: false
 gem 'dotiw'
 
 gem 'datapackage'
+
+gem 'yard'

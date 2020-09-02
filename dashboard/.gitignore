@@ -24,3 +24,6 @@
 
 /public/code-studio-package
 /public/apps-package
+
+.yardoc
+doc

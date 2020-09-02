@@ -16,6 +16,14 @@
 #  index_lesson_groups_on_script_id_and_key  (script_id,key) UNIQUE
 #
 
+# An ordered group of Lessons. For example, on https://studio.code.org/s/coursea-2020, "Digital Citizenship"
+# and "Sequencing" are LessonGroups. Sometimes also known as a `Chapter`.
+#
+# Every Unit (Script) has at least one LessonGroup. However, for some units, the LessonGroup is a non-user-facing
+# default LessonGroup which is hidden in the UI. For example, see http://studio.code.org/s/20-hour
+#
+# @attr [String] display_name - The user-facing name of this LessonGroup; only used for display purposes.
+# @attr [String] description - A description for this LessonGroup.
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 

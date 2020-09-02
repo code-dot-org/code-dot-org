@@ -885,6 +885,7 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
     xxhash (0.4.0)
+    yard (0.9.25)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
 
@@ -1066,6 +1067,7 @@ DEPENDENCIES
   webdrivers (~> 3.0)
   webmock
   xxhash
+  yard
   youtube-dl.rb
 
 RUBY VERSION
