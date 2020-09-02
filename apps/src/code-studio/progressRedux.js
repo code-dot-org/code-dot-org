@@ -304,7 +304,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
   // If we have a userId, we can clear any progress in redux and request all progress
   // from the server.
   if (userId) {
-    dispatch({type: CLEAR_PROGRESS});
+    dispatch(clearProgress());
   }
 
   return $.ajax({
@@ -391,6 +391,10 @@ export const initProgress = ({
   betaTitle,
   courseId,
   isFullProgress
+});
+
+export const clearProgress = () => ({
+  type: CLEAR_PROGRESS
 });
 
 export const mergeProgress = levelProgress => ({
