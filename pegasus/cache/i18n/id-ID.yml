@@ -23,7 +23,7 @@ id-ID:
   csedweek_banner_teachers_text: Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek
     yang lain
   n_have_learned_an_hoc: "<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>"
-  try_hoc_num_served: "<h1>Coba</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served: "<h1>Coba</h1><h2>Hour of Code</h2><h3>%{num} disajikan</h3>"
   try_hoc_num_served_markdown: |-
     # Coba
 
@@ -678,9 +678,9 @@ id-ID:
   video_title_my_name_is_aracely: Nama saya Aracely
   video_1min: 1 menit
   video_2min: 2 menit
-  video_3min: 3 min
-  video_5min: 5 min
-  speak_another_language: Berbicara bahasa lain?
+  video_3min: 3 menit
+  video_5min: 5 menit
+  speak_another_language: Berbicara dengan bahasa lain?
   help_translate: Bantuk kami menerjemahkan.
   no_internet: Tidak ada koneksi Internet?
   download_offline: Versi unduh secara offline.
@@ -938,7 +938,7 @@ id-ID:
   dashboard_navigation_section_teacher_progress: Kemajuan studi Anda
   dashboard_navigation_section_lesson_plans: Rencana pelajaran dan sumber daya
   dashboard_navigation_section_community: Bantuan dan komunitas
-  dashboard_navigation_section_pd: Pengembangan profesional
+  dashboard_navigation_section_pd: Pengembangan Profesional
   dashboard_navigation_section_speakers: Ilmu Komputer <br/> Pembicara Tamu
   dashboard_navigation_all_sections: Akun dan perkembangan siswa
   dashboard_navigation_view_progress: Perkembangan
@@ -969,7 +969,7 @@ id-ID:
     kelas menengah dan kelas atas, Anda bisa melihat kiriman mereka untuk membuka
     respon teks berakhir dengan pertanyaan memilih kursus yang di tugaskan dari penurunan
     diatas.
-  dashboard_sections_new_section: Kelompok baru
+  dashboard_sections_new_section: Bagian baru
   dashboard_sections_new_google_section: Bagian impor dari ruang kelas Google
   dashboard_sections_jumbotron_instruction: Buatlah kelompok baru dan tambahkan murid
     di dalamnya. Kelompok dapat membagi murid-murid menjadi kelompok yang lebih kecil
@@ -1012,7 +1012,7 @@ id-ID:
     saat ini dan seperti bagian baru
   dashboard_sections_no_move: Tidak, Saya tidak ingin memindahkan siswa hanya untuk
     berada di bagian baru.
-  dashboard_sections_move_students: Siswa pindahan
+  dashboard_sections_move_students: Pindahkan siswa
   dashboard_sections_assign_hoc_script_desc: Berpartisipasi dalam Jam kode?
   dashboard_sections_assign_hoc_script_msg: Silahkan dicatat bahwa kami tidak akan
     dapat untuk menyimpan kemajuan dalam kursus 3- 11 Desember karena banyaknya lalu
@@ -1123,7 +1123,7 @@ id-ID:
   dashboard_correctness_unsubmitted: Tidak terkirim
   dashboard_correctness_correct: Benar
   dashboard_correctness_incorrect: Salah
-  dashboard_submission_submitted: Dikirim
+  dashboard_submission_submitted: Terkirim
   dashboard_submission_in_progress: Sedang berlangsung
   dashboard_status: Status
   dashboard_multi_correct: "# pilihan ganda yang benar"
@@ -1133,7 +1133,7 @@ id-ID:
   stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun
     lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013
-  dashboard_teacher: Pelajar
+  dashboard_teacher: Guru
   dashboard_student: Siswa
   dashboard_sections_email_question: Apakah semua murid memiliki alamat email yang
     berlaku?
@@ -2372,8 +2372,8 @@ id-ID:
     video inspiratif</a> menampilkan beberapa ahli di bidang teknologi
   hoc2018_mc_video_1min: 1 menit
   hoc2018_mc_video_2min: 2 menit
-  hoc2018_mc_video_3min: 3 min
-  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_3min: 3 menit
+  hoc2018_mc_video_5min: 5 menit
   hoc2018_mc_video_title_steph_curry: Hour of Code bersama Steph Curry
   hoc2018_mc_video_title_sports: Dorong dirimu. Setiap orang bisa belajar.
   hoc2018_mc_video_title_cs_is_everything: Ilmu Komputer sedang Mengubah Segalanya

@@ -1,5 +1,5 @@
 ---
-title: Porady
+title: How-to Guide for Hour of Code
 layout: wide
 nav: how_to_nav
 ---
@@ -8,23 +8,43 @@ nav: how_to_nav
 
 # Jak zorganizować Godzinę Kodowania
 
-### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli szukasz dodatkowych rąk do pomocy, znajdź [lokalnego wolontariusza]({{ urls/volunteer_local }}), aby pomógł przeprowadzić Ci Godzinę Kodowania w Twojej klasie.
+### Join the movement and introduce your students to computer science with these steps.
 
-### Zobacz nasz [przewodnik uczestnictwa, jeśli nadal masz pytania]({{ localized_files/participation_guide }}).
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Zobacz nasz <a href="{{ localized_files/participation_guide }}"</a>przewodnik uczestnictwa, jeśli nadal masz pytania.
+
+An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+- [1. Watch the Hour of Code how-to video](#how-to-video)
+- [2. Explore activities and tutorials](#explore-activities)
+- [3. Create your plan for the day](#create-your-plan)
+- [Promuj swoją Godzinę Kodowania](#promote-your-hour)
+- [More ways to support the Hour of Code](#support-hour-of-code)
 
 * * *
 
-## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+* * *
+
+<a id="explore-activities"></a>
+
+## 2. Explore activities and tutorials
 
 Oferujemy wiele zabawy, [ samouczki dla uczniów ]({{ urls/learn }}) dla wszystkich grup wiekowych i poziomów zaawansowania. Uczniowie często wypróbowują samouczki, choć wiele zajęć obejmuje plany lekcji dla nauczycieli, którzy poprowadzą dyskusję lub rozszerzą działania. 
 
 Przeglądaj zajęcia i zdecyduj z wyprzedzeniem, czy chcesz wybrać jeden samouczek dla wszystkich swoich uczniów, czy też pozwolić każdemu dziecku wybrać własny.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Create your plan for the day
 
 ### Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
@@ -33,11 +53,15 @@ Przeglądaj zajęcia i zdecyduj z wyprzedzeniem, czy chcesz wybrać jeden samouc
 - Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samouczek, który wybrałeś, działa najlepiej z dźwiękiem.
 - Nie masz wystarczają liczbę urządzeń? Wykorzystaj [programowanie w parach](https://www.youtube.com/watch?v=vgkahOzFH2Q). Gdy uczniowie pracują w parach, to pomagają sobie nawzajem i mniej potrzebują pomocy nauczyciela. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Wybierz dzień i godzinę
 
 Ludzie na całym świecie przyłączają się do obchodów Godziny Kodowania podczas Tygodnia Edukacji Informatycznej (9-13 grudnia), kiedy zostaną opublikowane najnowsze samouczki i zajęcia. Ale możesz przeprowadzić Godzinę Kodowania w każdy dzień roku! 
+
+* * *
+
+<a id="promote-your-hour"></a>
 
 ## 4. Promote your Hour of Code
 
@@ -59,6 +83,10 @@ Doprowadź to tego wydarzenia udostępniając [ inspirujące filmy](/promote/res
 
 Dowiedz się więcej o plakatach, filmach, naklejkach i innych sposobach [ promowania wydarzenia ](/promote/resources#posters) w Twojej społeczności.
 
+* * *
+
+<a id="promote-your-hour"></a>
+
 ## 5. Start your Hour of Code Strong
 
 Po nadejściu Godziny Kodowania upewnij się, że dobrze rozpoczniesz swoje wydarzenie dzięki niektórym z tych narzędzi i wskazówek.
@@ -75,6 +103,8 @@ It’s okay if both you and your students are brand new to computer science. Her
 - Wyjaśnij, jak technologia wpływa na nasze życie, używając przykładów, które zainteresują zarówno chłopców, jak i dziewczęta (opowiedz o ratowaniu życia, pomaganiu ludziom, łączeniu ludzi itp.).
 - Wymieńcie wspólnie rzeczy, które używają kodu w życiu codziennym.
 - Wskazówki, jak zainteresować dziewczęta informatyką, zobacz [tutaj]({{ urls/girls }}).
+
+* * *
 
 ## 6. Get Coding!
 
@@ -93,11 +123,13 @@ A co zrobić, jeśli któryś z uczniów skończy wcześniej?
 - Uczniowie mogą zobaczyć wszystkie samouczki i [ spróbować innej aktywności w Godzinie Kodowania]({{ urls/learn }}).
 - Albo poproś uczniów, którzy skończyli wcześniej, by pomogli innym, którzy mają trudności.
 
+* * *
+
 ## 7. Celebrate your Students' Success
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
