@@ -100,15 +100,16 @@ class Foorm::Form < ActiveRecord::Base
   # by a user, as well as some additional metadata about the context
   # in which the form was submitted (eg, workshop ID, user ID).
   def submissions_to_csv(file_path)
-    formatted_submissions = submissions.map(&:formatted_answers)
+    filtered_submissions = submissions.
+      reject {|submission| submission.workshop_metadata&.facilitator_specific?}
 
     CSV.open(file_path, "wb") do |csv|
-      break if formatted_submissions.empty?
+      break if filtered_submissions.empty?
 
       # Submissions containing answers to facilitator-specific questions
       # don't have survey config stored in them.
       submission_with_survey_config = submissions.
-        select {|submission| submission.workshop_metadata&.facilitator_id.nil?}&.
+        reject {|submission| submission.workshop_metadata&.facilitator_specific?}&.
         last&.
         formatted_answers
 
@@ -117,9 +118,14 @@ class Foorm::Form < ActiveRecord::Base
         merge_form_questions_and_config_variables(submission_with_survey_config)
 
       csv << headers.values
+      filtered_submissions.each do |submission|
+        answers = submission.formatted_answers
 
-      formatted_submissions.each do |submission|
-        csv << submission.values_at(*headers.keys)
+        submission.associated_facilitator_submissions.each do |facilitator_response|
+          break if facilitator_response.nil?
+          answers.merge! facilitator_response.formatted_answers
+        end
+        csv << answers.values_at(*headers.keys)
       end
     end
   end
@@ -131,15 +137,20 @@ class Foorm::Form < ActiveRecord::Base
   def readable_questions
     questions = {}
 
-    parsed_questions[:general][key].each do |question_id, question_details|
-      if question_details[:type] == 'matrix'
-        matrix_questions = question_details[:rows]
-        matrix_questions.each do |matrix_question_id, matrix_question_text|
-          key = self.class.get_matrix_question_id(question_id, matrix_question_id)
-          questions[key] = question_details[:title] + ' >> ' + matrix_question_text
+    # Currently, the keys here are :general and :facilitator.
+    parsed_questions.each do |questions_section, questions_content|
+      questions[questions_section] = {}
+
+      questions_content[key].each do |question_id, question_details|
+        if question_details[:type] == 'matrix'
+          matrix_questions = question_details[:rows]
+          matrix_questions.each do |matrix_question_id, matrix_question_text|
+            key = self.class.get_matrix_question_id(question_id, matrix_question_id)
+            questions[questions_section][key] = question_details[:title] + ' >> ' + matrix_question_text
+          end
+        else
+          questions[questions_section][question_id] = question_details[:title]
         end
-      else
-        questions[question_id] = question_details[:title]
       end
     end
 
@@ -152,7 +163,7 @@ class Foorm::Form < ActiveRecord::Base
   # and workshop metadata (eg, pd_worskhop_id)
   # that appears in the form submission, but not the form itself.
   def merge_form_questions_and_config_variables(submission)
-    headers = readable_questions
+    headers = readable_questions[:general].merge readable_questions[:facilitator]
 
     config_and_metadata_question_ids = submission.keys.reject do |question_id|
       headers.keys.include? question_id
