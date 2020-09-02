@@ -35,6 +35,19 @@ export const commands = {
     }
   },
 
+  setBackgroundImageAs(img) {
+    let location = {x: 200, y: 200};
+    let animation = img;
+    var sprite = this.createSprite(location.x, location.y, 400, 400);
+    sprite.direction = 0;
+    sprite.baseScale = 1;
+    coreLibrary.addSprite(sprite, undefined);
+    sprite.setAnimation(animation);
+    sprite.depth = 0;
+    sprite.height = 400;
+    sprite.width = Math.max(400, sprite.width);
+  },
+
   showTitleScreen(title, subtitle) {
     coreLibrary.title = title || '';
     coreLibrary.subtitle = subtitle || '';
