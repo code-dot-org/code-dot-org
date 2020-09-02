@@ -10,7 +10,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
   def index
     regional_partners = (current_user.facilitator? || current_user.workshop_admin?) ? RegionalPartner.all : current_user.regional_partners
 
-    render json: regional_partners.order(:name).map {|partner| {id: partner.id, name: partner.name}}
+    render json: regional_partners.order(:name).map {|partner| {id: partner.id, name: partner.name}}, adapter: nil
   end
 
   # GET /api/v1/regional_partners/capacity?role=:role&regional_partner_value=:regional_partner
@@ -41,7 +41,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
     partner = RegionalPartner.find_by_id(partner_id)
 
     if partner
-      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer, adapter: :attributes
     else
       render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
     end
@@ -56,7 +56,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
     result = nil
 
     if partner
-      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer, adapter: :attributes
       result = 'partner-found'
     elsif state
       render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
