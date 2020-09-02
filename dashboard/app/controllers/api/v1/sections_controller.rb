@@ -18,7 +18,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # GET /api/v1/sections
   # Get the set of sections owned by the current user
   def index
-    render json: current_user.sections.map(&:summarize)
+    render json: current_user.sections.map(&:summarize), adapter: nil
   end
 
   # GET /api/v1/sections/<id>
@@ -153,7 +153,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Get the set of sections that the current user is enrolled in.
   def membership
     return head :forbidden unless current_user
-    render json: current_user.sections_as_student, each_serializer: Api::V1::SectionNameAndIdSerializer
+    render json: current_user.sections_as_student, each_serializer: Api::V1::SectionNameAndIdSerializer, adapter: :attributes
   end
 
   # GET /api/v1/sections/valid_scripts
