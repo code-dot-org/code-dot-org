@@ -58,6 +58,10 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
     !submissions.empty?
   end
 
+  def facilitator_specific?
+    !facilitator_id.nil?
+  end
+
   private
 
   def day_for_workshop

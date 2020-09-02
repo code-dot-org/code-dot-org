@@ -43,10 +43,31 @@ class Foorm::Submission < ActiveRecord::Base
     # (for non-free response questions).
     # See FoormParser for the how this is structured.
     general_parsed_questions = form.parsed_questions[:general][form.key]
+    facilitator_parsed_questions = form.parsed_questions[:facilitator][form.key]
 
     parsed_answers.each do |question_id, answer|
       if general_parsed_questions.keys.include? question_id
         question_details = general_parsed_questions[question_id]
+
+        case question_details[:type]
+        when 'matrix'
+          choices = question_details[:columns]
+
+          answer.each do |matrix_question_id, matrix_question_answer|
+            key = Foorm::Form.get_matrix_question_id(question_id, matrix_question_id)
+            question_answer_pairs[key] = choices[matrix_question_answer]
+          end
+        when 'scale', 'text'
+          question_answer_pairs[question_id] = answer
+        when 'singleSelect'
+          choices = question_details[:choices]
+          question_answer_pairs[question_id] = choices[answer]
+        when 'multiSelect'
+          choices = question_details[:choices]
+          question_answer_pairs[question_id] = answer.map {|selected| choices[selected]}.sort.join(', ')
+        end
+      elsif facilitator_parsed_questions.keys.include? question_id
+        question_details = facilitator_parsed_questions[question_id]
 
         case question_details[:type]
         when 'matrix'
@@ -84,5 +105,25 @@ class Foorm::Submission < ActiveRecord::Base
       'pd_workshop_id' => workshop_metadata.pd_workshop&.id,
       'pd_session_id' => workshop_metadata.pd_session&.id
     }
+  end
+
+  def associated_facilitator_submissions
+    # Return blank array if this is a facilitator-specific response,
+    # we have no workshop metadata,
+    # or we have no user associated with the workshop metadata.
+    return [] if workshop_metadata.facilitator_specific? || workshop_metadata&.user.nil?
+
+    associated_submission_metadatas = workshop_metadata.
+      class.
+      where(user: workshop_metadata.user).
+      select do |associated_submission_metadata|
+        associated_submission_metadata.facilitator_specific? &&
+        associated_submission_metadata[:created_at].between?(
+          workshop_metadata[:created_at] - 1.minute,
+          workshop_metadata[:created_at] + 1.minute
+        )
+      end
+
+    associated_submission_metadatas.map(&:foorm_submission)
   end
 end
