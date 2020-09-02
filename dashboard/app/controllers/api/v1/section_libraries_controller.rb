@@ -11,7 +11,7 @@ class Api::V1::SectionLibrariesController < Api::V1::JsonApiController
       authorize! :list_projects, section
       libraries += ProjectsList.fetch_section_libraries(section)
     end
-    render json: libraries.uniq
+    render json: libraries.uniq, adapter: nil
   end
 
   private
