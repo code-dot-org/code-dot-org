@@ -8,29 +8,51 @@ import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../animationListModule';
 import {changeInterfaceMode} from '../actions';
-import {Goal, show} from '../AnimationPicker/animationPickerModule';
+import {
+  Goal,
+  show,
+  showBackground
+} from '../AnimationPicker/animationPickerModule';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-
-function sprites() {
+function animations(backgrounds) {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
     return [['sprites missing', 'null']];
   }
-  return animationList.orderedKeys.map(key => {
-    const animation = animationList.propsByKey[key];
-    if (animation.sourceUrl) {
-      return [animation.sourceUrl, `"${animation.name}"`];
-    } else {
-      const url = animationSourceUrl(
-        key,
-        animation,
-        getStore().getState().pageConstants.channelId
-      );
-      return [url, `"${animation.name}"`];
-    }
-  });
+  return animationList.orderedKeys
+    .filter(key => {
+      const animation = animationList.propsByKey[key];
+      if (backgrounds) {
+        return (
+          animation.categories && animation.categories.includes('backgrounds')
+        );
+      } else {
+        return !(
+          animation.categories && animation.categories.includes('backgrounds')
+        );
+      }
+    })
+    .map(key => {
+      const animation = animationList.propsByKey[key];
+      if (animation.sourceUrl) {
+        return [animation.sourceUrl, `"${animation.name}"`];
+      } else {
+        const url = animationSourceUrl(
+          key,
+          animation,
+          getStore().getState().pageConstants.channelId
+        );
+        return [url, `"${animation.name}"`];
+      }
+    });
+}
+function sprites() {
+  return animations(false);
+}
+function backgroundList() {
+  return animations(true);
 }
 
 // This color palette is limited to colors which have different hues, therefore
@@ -177,7 +199,7 @@ const customInputTypes = {
           {
             text: i18n.more(),
             action: () => {
-              getStore().dispatch(show(Goal.NEW_ANIMATION));
+              getStore().dispatch(show(Goal.NEW_ANIMATION, true));
             }
           }
         ];
@@ -186,6 +208,33 @@ const customInputTypes = {
         .appendTitle(inputConfig.label)
         .appendTitle(
           new Blockly.FieldImageDropdown(sprites, 32, 32, buttons),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
+    }
+  },
+  backgroundPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      let buttons;
+      if (
+        getStore().getState().pageConstants &&
+        getStore().getState().pageConstants.showAnimationMode
+      ) {
+        buttons = [
+          {
+            text: i18n.more(),
+            action: () => {
+              getStore().dispatch(showBackground(Goal.NEW_ANIMATION));
+            }
+          }
+        ];
+      }
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(
+          new Blockly.FieldImageDropdown(backgroundList, 40, 40, buttons),
           inputConfig.name
         );
     },
