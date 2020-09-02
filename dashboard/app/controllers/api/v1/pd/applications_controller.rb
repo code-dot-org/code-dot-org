@@ -63,12 +63,8 @@ module Api::V1::Pd
 
       respond_to do |format|
         format.json do
-          serialized_applications = prefetch_and_serialize(
-            applications,
-            role: role,
-            serializer: ApplicationQuickViewSerializer
-          )
-          render json: serialized_applications
+          prefetched_applications = prefetch(applications, role: role)
+          render json: prefetched_applications, each_serializer: ApplicationQuickViewSerializer, adapter: :attributes
         end
         format.csv do
           csv_text = get_csv_text applications, role
@@ -97,13 +93,8 @@ module Api::V1::Pd
 
       respond_to do |format|
         format.json do
-          serialized_applications = prefetch_and_serialize(
-            applications,
-            role: role,
-            serializer: serializer,
-            scope: {user: current_user}
-          )
-          render json: serialized_applications
+          prefetched_applications = prefetch(applications, role: role)
+          render json: prefetched_applications, each_serializer: serializer, scope: {user: current_user}, adapter: :attributes
         end
         format.csv do
           csv_text = get_csv_text applications, role
@@ -191,7 +182,7 @@ module Api::V1::Pd
       @application.log_summer_workshop_change(current_user) if summer_workshop_changed
       @application.update_lock_change_log(current_user) if lock_changed
 
-      render json: @application, serializer: ApplicationSerializer
+      render json: @application, serializer: ApplicationSerializer, adapter: :attributes
     end
 
     # DELETE /api/v1/pd/applications/1
@@ -209,8 +200,7 @@ module Api::V1::Pd
         user: user
       )
 
-      serialized_applications = filtered_applications.map {|a| ApplicationSearchSerializer.new(a).attributes}
-      render json: serialized_applications
+      render json: filtered_applications, each_serializer: ApplicationSearchSerializer, adapter: :attributes
     end
 
     private
@@ -314,6 +304,7 @@ module Api::V1::Pd
     def prefetch(applications, role: nil)
       type = TYPES_BY_ROLE[role.try(&:to_sym)]
       type.prefetch_associated_models applications
+      applications
     end
   end
 end
