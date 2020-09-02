@@ -152,7 +152,7 @@ id:
             Songwriting:
               name: Menulis lagu
             'Studio: Create a Game':
-              name: 'Studio: Membuat Permainan'
+              name: 'Play Lab: Membuat Permainan'
             'Studio: Create a Story':
               name: 'Studio: Membuat Cerita'
         playlab:
