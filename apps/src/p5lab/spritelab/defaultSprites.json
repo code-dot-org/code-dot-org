@@ -53,7 +53,16 @@
     "9a39f1aa-2b4a-4587-ba2a-36f4df582f99",
     "84e4e25b-ab5c-43fe-8c54-d0a2d89787d4",
     "a39e6a03-6995-48d8-be2d-d666cfa358f4",
-    "2dc1905c-3851-4590-b4a7-52167d05c64a"
+    "2dc1905c-3851-4590-b4a7-52167d05c64a",
+    "category_backgrounds/background_cave",
+    "category_backgrounds/background_court",
+    "category_backgrounds/background_desert",
+    "category_backgrounds/background_grid",
+    "category_backgrounds/background_rainbow",
+    "category_backgrounds/background_santa",
+    "category_backgrounds/background_scifi",
+    "category_backgrounds/background_space",
+    "category_backgrounds/background_underwater"
   ],
   "propsByKey": {
     "77fcb37e-e837-4230-abe5-c38ffe39dc3f": {
@@ -703,6 +712,195 @@
       "looping": true,
       "frameDelay": 2,
       "version": "RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ"
+    },
+    "category_backgrounds/background_cave": {
+      "name": "cave",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:32 UTC",
+      "pngLastModified": "2020-01-29 19:47:59 UTC",
+      "version": "noi6SU.ST7VfqHGoH6ijJX1cNwdcFcZM",
+      "sourceUrl": "/api/v1/animation-library/gamelab/noi6SU.ST7VfqHGoH6ijJX1cNwdcFcZM/category_backgrounds/background_cave.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    "category_backgrounds/background_court": {
+      "name": "court",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:32 UTC",
+      "pngLastModified": "2020-01-29 19:48:00 UTC",
+      "version": "jdVV0fyG164aj2Z2zCJe3iVoKAhZIMyA",
+      "sourceUrl": "/api/v1/animation-library/gamelab/jdVV0fyG164aj2Z2zCJe3iVoKAhZIMyA/category_backgrounds/background_court.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_desert": {
+      "name": "desert",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:32 UTC",
+      "pngLastModified": "2020-01-29 19:47:59 UTC",
+      "version": "Y5bHlbzNzWJrwyznXBnHJZttfThNmval",
+      "sourceUrl": "/api/v1/animation-library/gamelab/Y5bHlbzNzWJrwyznXBnHJZttfThNmval/category_backgrounds/background_desert.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_grid": {
+      "name": "grid",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:32 UTC",
+      "pngLastModified": "2020-01-29 19:47:59 UTC",
+      "version": "dhIW7kGVjbRYWFDXIc4aj8gfDFyYXf77",
+      "sourceUrl": "/api/v1/animation-library/gamelab/dhIW7kGVjbRYWFDXIc4aj8gfDFyYXf77/category_backgrounds/background_grid.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_rainbow": {
+      "name": "rainbow",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:32 UTC",
+      "pngLastModified": "2020-01-29 19:47:59 UTC",
+      "version": "oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd",
+      "sourceUrl": "/api/v1/animation-library/gamelab/oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd/category_backgrounds/background_rainbow.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_santa": {
+      "name": "santa",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:33 UTC",
+      "pngLastModified": "2020-01-29 19:47:59 UTC",
+      "version": "GeDUtGGrRf0BnCzfSwNnqTCYyJzrECcN",
+      "sourceUrl": "/api/v1/animation-library/gamelab/GeDUtGGrRf0BnCzfSwNnqTCYyJzrECcN/category_backgrounds/background_santa.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    "category_backgrounds/background_scifi": {
+      "name": "sci_fi",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:33 UTC",
+      "pngLastModified": "2020-01-29 19:48:00 UTC",
+      "version": "6R1r6_thyaqHGORcm3JlEVMzjsWX0mFI",
+      "sourceUrl": "/api/v1/animation-library/gamelab/6R1r6_thyaqHGORcm3JlEVMzjsWX0mFI/category_backgrounds/background_scifi.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
+    },
+    "category_backgrounds/background_space": {
+      "name": "space",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:33 UTC",
+      "pngLastModified": "2020-01-29 19:48:00 UTC",
+      "version": "qsn8Ge4D.d1mkoTRq2qUV3lrSTiKn_IH",
+      "sourceUrl": "/api/v1/animation-library/gamelab/qsn8Ge4D.d1mkoTRq2qUV3lrSTiKn_IH/category_backgrounds/background_space.png",
+      "sourceSize": {
+        "x": 800,
+        "y": 800
+      }
+    },
+    "category_backgrounds/background_underwater": {
+      "name": "underwater",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 400,
+        "y": 400
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "backgrounds"
+      ],
+      "jsonLastModified": "2020-07-16 22:27:33 UTC",
+      "pngLastModified": "2020-01-29 19:48:00 UTC",
+      "version": "XN..6b7PQhL5yW3FILYOJpCswKVh.x95",
+      "sourceUrl": "/api/v1/animation-library/gamelab/XN..6b7PQhL5yW3FILYOJpCswKVh.x95/category_backgrounds/background_underwater.png",
+      "sourceSize": {
+        "x": 400,
+        "y": 400
+      }
     }
   }
 }

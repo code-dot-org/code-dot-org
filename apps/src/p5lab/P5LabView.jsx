@@ -57,11 +57,18 @@ class P5LabView extends React.Component {
     this.props.onMount();
     const locale = window.appOptions.locale;
     const app = this.props.spriteLab ? 'spritelab' : 'gamelab';
-    fetch(`/api/v1/animation-library/manifest/${app}/${locale}`)
-      .then(response => response.json())
-      .then(libraryManifest => {
-        this.setState({libraryManifest});
+    // temporarily pull from local env for testing purposes
+    if (app === 'spritelab') {
+      this.setState({
+        libraryManifest: require('./customSpritelabCostumeLibrary.json')
       });
+    } else {
+      fetch(`/api/v1/animation-library/manifest/${app}/${locale}`)
+        .then(response => response.json())
+        .then(libraryManifest => {
+          this.setState({libraryManifest});
+        });
+    }
   }
 
   renderCodeMode() {
