@@ -64,7 +64,7 @@ module Api::V1::Pd
       respond_to do |format|
         format.json do
           prefetched_applications = prefetch(applications, role: role)
-          render json: prefetched_applications, each_serializer: ApplicationQuickViewSerializer, adapter: :attributes
+          render json: prefetched_applications, each_serializer: ApplicationQuickViewSerializer
         end
         format.csv do
           csv_text = get_csv_text applications, role
@@ -94,7 +94,7 @@ module Api::V1::Pd
       respond_to do |format|
         format.json do
           prefetched_applications = prefetch(applications, role: role)
-          render json: prefetched_applications, each_serializer: serializer, scope: {user: current_user}, adapter: :attributes
+          render json: prefetched_applications, each_serializer: serializer, scope: {user: current_user}
         end
         format.csv do
           csv_text = get_csv_text applications, role
@@ -182,7 +182,7 @@ module Api::V1::Pd
       @application.log_summer_workshop_change(current_user) if summer_workshop_changed
       @application.update_lock_change_log(current_user) if lock_changed
 
-      render json: @application, serializer: ApplicationSerializer, adapter: :attributes
+      render json: @application, serializer: ApplicationSerializer
     end
 
     # DELETE /api/v1/pd/applications/1
@@ -200,7 +200,7 @@ module Api::V1::Pd
         user: user
       )
 
-      render json: filtered_applications, each_serializer: ApplicationSearchSerializer, adapter: :attributes
+      render json: filtered_applications, each_serializer: ApplicationSearchSerializer
     end
 
     private

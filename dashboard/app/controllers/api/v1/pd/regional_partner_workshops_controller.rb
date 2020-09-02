@@ -24,8 +24,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
     else
       render json: partner,
              serializer: Api::V1::Pd::RegionalPartnerWorkshopsSerializer,
-             scope: {course: @course, subject: @subject},
-             adapter: :attributes
+             scope: {course: @course, subject: @subject}
     end
   end
 
@@ -33,8 +32,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
   def index
     render json: @partners,
            each_serializer: Api::V1::Pd::RegionalPartnerWorkshopsSerializer,
-           scope: {course: @course, subject: @subject},
-           adapter: :attributes
+           scope: {course: @course, subject: @subject}
   end
 
   private

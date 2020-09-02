@@ -23,7 +23,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def index
     respond_to do |format|
       format.json do
-        render json: @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer, adapter: :attributes
+        render json: @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
       end
       format.csv do
         response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
@@ -80,7 +80,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   # POST /api/v1/pd/enrollment/:enrollment_id/scholarship_info
   def update_scholarship_info
     @enrollment.update_scholarship_status(params[:scholarship_status])
-    render json: @enrollment, serializer: Api::V1::Pd::WorkshopEnrollmentSerializer, adapter: :attributes
+    render json: @enrollment, serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
   end
 
   # DELETE /api/v1/pd/workshops/1/enrollments/1

@@ -160,7 +160,7 @@ class ScriptLevelsController < ApplicationController
 
     stage_ids = current_user ? current_user.get_hidden_stage_ids(params[:script_id]) : []
 
-    render json: stage_ids.map(&:to_s), adapter: nil
+    render json: stage_ids.map(&:to_s)
   end
 
   # toggles whether or not a stage is hidden for a section
@@ -186,7 +186,7 @@ class ScriptLevelsController < ApplicationController
       section.toggle_hidden_script(script, should_hide)
     end
 
-    render json: [], adapter: nil
+    render json: []
   end
 
   def stage_extras
