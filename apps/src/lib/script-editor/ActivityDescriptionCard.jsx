@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {borderRadius} from './constants';
 import OrderControls from './OrderControls';
-import TipWithTooltip from './TipWithTooltip';
+import ActivitySectionCardButtons from './ActivitySectionCardButtons';
 
 const styles = {
   checkbox: {
@@ -55,9 +55,6 @@ const styles = {
   },
   title: {
     marginRight: 5
-  },
-  markdownButtons: {
-    fontSize: 10
   }
 };
 
@@ -121,39 +118,9 @@ export default class ActivityDescriptionCard extends Component {
           )}
           style={styles.input}
         />
-        <div style={styles.bottomControls}>
-          <span>
-            <button
-              onMouseDown={() => {
-                console.log('Add Tip');
-              }}
-              className="btn"
-              style={styles.addLevel}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Tip
-            </button>
-            <button
-              onMouseDown={() => {
-                console.log('Add Resource Link');
-              }}
-              className="btn"
-              style={styles.addLevel}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Resource Link
-            </button>
-          </span>
-          {this.props.activitySection.tips.length > 0 && (
-            <span>
-              {this.props.activitySection.tips.map(tip => {
-                return <TipWithTooltip tip={tip} key={tip.markdown} />;
-              })}
-            </span>
-          )}
-        </div>
+        <ActivitySectionCardButtons
+          activitySection={this.props.activitySection}
+        />
       </div>
     );
   }

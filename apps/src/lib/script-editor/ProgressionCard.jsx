@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {borderRadius} from './constants';
 import OrderControls from './OrderControls';
 import LevelToken2 from './LevelToken2';
-import TipWithTooltip from './TipWithTooltip';
+import ActivitySectionCardButtons from './ActivitySectionCardButtons';
 
 const styles = {
   lessonCard: {
@@ -71,50 +71,7 @@ export default class ProgressionCard extends Component {
             level={level}
           />
         ))}
-        <div style={styles.bottomControls}>
-          <span>
-            <button
-              onMouseDown={() => {
-                console.log('Add Level');
-              }}
-              className="btn"
-              style={styles.addLevel}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Level
-            </button>
-            <button
-              onMouseDown={() => {
-                console.log('Add Tip');
-              }}
-              className="btn"
-              style={styles.addLevel}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Tip
-            </button>
-            <button
-              onMouseDown={() => {
-                console.log('Add Resource Link');
-              }}
-              className="btn"
-              style={styles.addLevel}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Resource Link
-            </button>
-          </span>
-          {this.props.progression.tips.length > 0 && (
-            <span style={styles.icons}>
-              {this.props.progression.tips.map(tip => {
-                return <TipWithTooltip tip={tip} key={tip.markdown} />;
-              })}
-            </span>
-          )}
-        </div>
+        <ActivitySectionCardButtons activitySection={this.props.progression} />
       </div>
     );
   }
