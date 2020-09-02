@@ -20,54 +20,40 @@ export default class TeacherResourcesDropdown extends React.Component {
     resources: PropTypes.arrayOf(resourceShape).isRequired,
 
     //For firehose
-    courseId: PropTypes.number,
+    unitGroupId: PropTypes.number,
     unitId: PropTypes.number
   };
 
   handleDropdownClick = () => {
-    let data_json = {};
-    let study_group = '';
-    if (this.props.courseId) {
-      study_group = 'course';
-      data_json = {
-        courseId: this.props.courseId
-      };
+    if (this.props.unitGroupId) {
+      this.recordFirehose('unit-group', 'click-dropdown', {
+        unitGroupId: this.props.unitGroupId
+      });
     } else if (this.props.unitId) {
-      study_group = 'unit';
-      data_json = {
+      this.recordFirehose('unit', 'click-dropdown', {
         unitId: this.props.unitId
-      };
+      });
     }
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-resources',
-        study_group: study_group,
-        event: 'click-dropdown',
-        data_json: JSON.stringify(data_json)
-      },
-      {includeUserId: true}
-    );
   };
 
   handleItemClick = () => {
-    let data_json = {};
-    let study_group = '';
-    if (this.props.courseId) {
-      study_group = 'course';
-      data_json = {
-        courseId: this.props.courseId
-      };
+    if (this.props.unitGroupId) {
+      this.recordFirehose('unit-group', 'click-resource', {
+        unitGroupId: this.props.unitGroupId
+      });
     } else if (this.props.unitId) {
-      study_group = 'unit';
-      data_json = {
+      this.recordFirehose('unit', 'click-resource', {
         unitId: this.props.unitId
-      };
+      });
     }
+  };
+
+  recordFirehose = (study_group, event, data_json) => {
     firehoseClient.putRecord(
       {
         study: 'teacher-resources',
         study_group: study_group,
-        event: 'click-resource',
+        event: event,
         data_json: JSON.stringify(data_json)
       },
       {includeUserId: true}
