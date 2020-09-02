@@ -17,7 +17,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     if @feedback.nil?
       head :no_content
     else
-      render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+      render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer, adapter: :attributes
     end
   end
 
@@ -32,7 +32,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       level_id: params.require(:level_id)
     ).latest_per_teacher
 
-    render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
+    render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer, adapter: :attributes
   end
 
   # Determine how many not yet seen feedback entries from any verified teacher
@@ -49,14 +49,15 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       User.find(feedback.teacher_id).authorized_teacher?
     end
 
-    render json: @all_unseen_feedbacks.count, each_serializer: Api::V1::TeacherFeedbackSerializer
+    # TODO: is it ok to use the text/plain content type here? We're not actually returning JSON.
+    render text: @all_unseen_feedbacks.count, content_type: 'text/plain'
   end
 
   # POST /teacher_feedbacks
   def create
     @teacher_feedback.teacher_id = current_user.id
     if @teacher_feedback.save
-      render json: @teacher_feedback, serializer: Api::V1::TeacherFeedbackSerializer, status: :created
+      render json: @teacher_feedback, serializer: Api::V1::TeacherFeedbackSerializer, status: :created, adapter: :attributes
     else
       head :bad_request
     end
