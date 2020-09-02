@@ -76,6 +76,7 @@ progress.showDisabledBubblesAlert = function() {
  */
 progress.generateStageProgress = function(
   scriptData,
+  lessonGroupData,
   stageData,
   progressData,
   currentLevelId,
@@ -93,6 +94,7 @@ progress.generateStageProgress = function(
     store,
     {
       name,
+      lessonGroups: lessonGroupData,
       lessons: [stageData],
       disablePostMilestone,
       age_13_required,
@@ -267,6 +269,7 @@ function initializeStoreWithProgress(
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
       stages: scriptData.lessons,
+      lessonGroups: scriptData.lessonGroups,
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,

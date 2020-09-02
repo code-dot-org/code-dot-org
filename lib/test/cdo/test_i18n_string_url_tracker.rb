@@ -46,20 +46,27 @@ class TestI18nStringUrlTracker < Minitest::Test
   def test_log_given_no_string_key_should_not_call_firehose
     unstub_firehose
     FirehoseClient.instance.expects(:put_record).never
-    test_record = {string_key: nil, url: 'http://some.url.com/'}
-    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url])
+    test_record = {string_key: nil, url: 'http://some.url.com/', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
   end
 
   def test_log_given_no_url_should_not_call_firehose
     unstub_firehose
     FirehoseClient.instance.expects(:put_record).never
-    test_record = {string_key: 'string.key', url: nil}
-    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url])
+    test_record = {string_key: 'string.key', url: nil, source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+  end
+
+  def test_log_given_no_source_should_not_call_firehose
+    unstub_firehose
+    FirehoseClient.instance.expects(:put_record).never
+    test_record = {string_key: 'string.key', url: 'http://some.url.com/', source: nil}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
   end
 
   def test_log_given_data_should_call_firehose
-    test_record = {string_key: 'string.key', url: 'http://some.url.com/'}
-    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url])
+    test_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     assert_equal(:i18n, @firehose_stream)
     assert_equal(@firehose_record, test_record)
   end
@@ -69,7 +76,7 @@ class TestI18nStringUrlTracker < Minitest::Test
     unstub_dcdo
     stub_dcdo(false)
     FirehoseClient.instance.expects(:put_record).never
-    test_record = {string_key: 'string.key', url: 'http://some.url.com/'}
-    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url])
+    test_record = {string_key: 'string.key', url: 'http://some.url.com/', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
   end
 end

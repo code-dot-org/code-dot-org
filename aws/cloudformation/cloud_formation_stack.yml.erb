@@ -28,6 +28,7 @@ Resources:
             Action: 'secretsmanager:GetSecretValue'
             Resource:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
+              - !Ref ChefConfig
 <% if database -%>
               - !Ref DatabaseSecret
 <% end -%>
@@ -280,6 +281,11 @@ Resources:
                 Action:
                   - 'cloudformation:UpdateStack'
                   - 'cloudformation:DescribeStacks'
+                  - 'cloudformation:CreateChangeSet'
+                  - 'cloudformation:DescribeChangeSet'
+                  - 'cloudformation:ExecuteChangeSet'
+                  - 'cloudformation:DeleteChangeSet'
+                  - 'cloudformation:GetTemplateSummary'
                 Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
               - Effect: Allow
                 Action: iam:PassRole
@@ -404,6 +410,9 @@ Resources:
 <% if daemon -%>
   <%=daemon%>:
     Type: AWS::EC2::Instance
+<% if @daemon_instance_id -%>
+    DeletionPolicy: Retain
+<% end -%>
     CreationPolicy:
       ResourceSignal:
         Timeout: PT2H
@@ -458,6 +467,14 @@ Resources:
 <% if database-%>
 <%=  component 'database'%>
 <% end -%>
+  ChefConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Custom Chef attributes for ${AWS::StackName} CloudFormation stack"
+      Name: !Sub "CfnStack/${AWS::StackName}/chef"
+      # Update this secret manually after the stack is created to customize Chef configuration.
+      # The value should never be changed in the stack itself, since it would clobber all other changes.
+      SecretString: '{}'
 Outputs:
   DashboardURL:
     Value: "https://<%=studio_subdomain%>"
