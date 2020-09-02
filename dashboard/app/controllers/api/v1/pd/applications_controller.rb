@@ -294,13 +294,6 @@ module Api::V1::Pd
       {registered_workshop: false}
     end
 
-    def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
-      prefetch applications, role: role
-      applications.map do |application|
-        serializer.new(application, scope: scope).attributes
-      end
-    end
-
     def prefetch(applications, role: nil)
       type = TYPES_BY_ROLE[role.try(&:to_sym)]
       type.prefetch_associated_models applications
