@@ -494,7 +494,7 @@ class ApiController < ApplicationController
       end.compact
     end.flatten
 
-    render json: data
+    render json: data, adapter: nil
   end
 
   # GET /dashboardapi/sign_cookies
