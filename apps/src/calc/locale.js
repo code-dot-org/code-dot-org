@@ -1,4 +1,8 @@
 // locale for calc
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
-module.exports = safeLoadLocale('calc_locale');
+import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
+
+let locale = safeLoadLocale('calc_locale');
+locale = localeWithI18nStringTracker(locale, 'calc_locale');
+module.exports = locale;

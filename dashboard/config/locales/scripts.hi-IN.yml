@@ -744,6 +744,8 @@ hi:
               name: ऐप्स में वेरिएबल्स का उपयोग करना
             While Loops:
               name: व्हाइल लूप्स
+            Creating Functions with Parameters:
+              name: मापदंडों के साथ फंक्शन बनाना
         algebraPD3:
           lessons:
             Computer Science Pedagogy:

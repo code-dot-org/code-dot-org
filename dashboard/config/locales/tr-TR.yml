@@ -822,6 +822,7 @@ tr:
       body: Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı
         seçin.
     text-compression:
+      title: Metin Sıkıştırma
       body: Bu derste, öğrenciler metin sıkıştırma aracı ile metinler yerine semboller
         kullanarak sıkıştır.
     unplugged:

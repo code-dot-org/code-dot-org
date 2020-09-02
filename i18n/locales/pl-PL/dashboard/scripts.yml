@@ -620,6 +620,8 @@ pl:
               name: Używanie zmiennych w aplikacjach
             While Loops:
               name: Pętle Dopóki (While)
+            Creating Functions with Parameters:
+              name: Tworzenie funkcji z parametrami
         algebraPD3:
           lessons:
             Course Overview:
@@ -910,6 +912,8 @@ pl:
               name: Witamy!
             Wrap-up:
               name: Podsumowanie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: "Jednostka 1, dni 1-2 \nCo to jest komputer?"
         algebraPD2:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -978,6 +982,8 @@ pl:
               name: Witamy!
             Wrap-up:
               name: Podsumowanie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: "Jednostka 1, dni 1-2 \nCo to jest komputer?"
         ECSPD2-NexTech:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -1002,6 +1008,8 @@ pl:
               name: Witamy!
             Wrap-up:
               name: Podsumowanie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: "Jednostka 1, dni 1-2 \nCo to jest komputer?"
         CSPPD2:
           lessons:
             Getting Started:
@@ -1942,6 +1950,8 @@ pl:
               name: Witamy!
             Wrap-up:
               name: Podsumowanie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: "Jednostka 1, dni 1-2 \nCo to jest komputer?"
         ecs-unit2:
           lessons:
             Getting Started:
@@ -2519,6 +2529,8 @@ pl:
               name: Odkrywanie pomysłów na projekt
             More Programming with Scratch:
               name: Więcej programowania z językiem Scratch
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3546,6 +3558,8 @@ pl:
               name: Zagnieżdżające się  pętle
             Conditionals:
               name: Zdania z warunkami
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
             Functions in Bee:
               name: Funkcje w pszczole
             Functions in Farmer:
@@ -3652,6 +3666,8 @@ pl:
               name: Pętle z Artystą
             Conditionals:
               name: Zdania z warunkami
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
             Functions in Bee:
               name: Funkcje w pszczole
             Functions in Farmer:
@@ -3852,6 +3868,8 @@ pl:
               name: Wstęp
             Conditionals:
               name: Zdania z warunkami
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
             Functions in Bee:
               name: Funkcje w pszczole
             Functions in Farmer:
@@ -4151,6 +4169,8 @@ pl:
               name: Programowanie w labiryncie
             Move It, Move It:
               name: Przenieść go, przenieść go
+            Copyright and Creativity:
+              name: Tworzenie i uczciwa gra są świetne.
         coursed-2018:
           assignment_family_title: Kurs D
           description_audience: 'Wiek 7-11'
@@ -4248,10 +4268,14 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            'Loops: My Loopy Robotic Friends':
+              name: Moi zapętleni robotyczni przyjaciele
             Nested Loops:
               name: Zagnieżdżone pętle w labiryncie
             Introduction:
               name: Wstęp
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
             'Functions: Songwriting':
               name: Pisanie piosenek
             Functions in Bee:
@@ -4266,6 +4290,8 @@ pl:
               name: Warunkowe z kartami
             Minecraft Hour of Code:
               name: Godzina Kodowania z Minecraft
+            Copyright and Creativity:
+              name: Udostępnianie cyfrowe
         coursef-2018:
           assignment_family_title: Kurs F
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -4282,6 +4308,8 @@ pl:
               name: Sekwencje w labiryncie
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
+            'Loops: My Loopy Robotic Friends':
+              name: Moi zapętleni robotyczni przyjaciele
             Nested Loops in Bee/Zombie:
               name: Zagnieżdżone pętle w labiryncie
             Introduction:
@@ -4741,6 +4769,8 @@ pl:
               name: Przenieść go, przenieść go
             Your Digital Footprint:
               name: Twój cyfrowy ślad
+            Copyright and Creativity:
+              name: Tworzenie i uczciwa gra są świetne.
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie i Duży Projekt (the Big Project)
         fit-test:
@@ -4854,6 +4884,9 @@ pl:
               name: Internet
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+            Digital Sharing:
+              name: Udostępnianie cyfrowe
+              description_teacher: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki" przez zespół w "Prawach autorskich i kreatywności", istnieje, aby pomagać uczniom zrozumieć istotę wyzwań i korzyści wynikających z poszanowania praw własności i praw autorskich, w szczególności w środowiskach cyfrowych. Uczniowie powinni być zachęcani do przestrzegania praw artystów jako istotnego elementu bycia etycznym obywatelem cyfrowym.
         dance-low:
           lessons:
             Dance Party:
@@ -4878,6 +4911,7 @@ pl:
               name: Wprowadzenie do puzzli online
             Relay Programming:
               name: Sztafeta programowania
+              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie podzielą się na zespoły i będą pracować razem nad pisaniem programu po jednej instrukcji.
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
             Nested Loops in Bee:
@@ -4914,6 +4948,8 @@ pl:
               name: Zagnieżdżające się  pętle
             Conditionals with Cards:
               name: Warunkowe z kartami
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
             'Functions: Songwriting':
               name: Pisanie piosenek
             Alien Dance Party with Sprite Lab:
@@ -4928,6 +4964,10 @@ pl:
               name: Zagnieżdżone pętle w labiryncie
             Programming and Loops with the Artist:
               name: Pętle z artystą 
+            Digital Sharing:
+              name: Udostępnianie cyfrowe
+            Simon Says:
+              name: Simon mówi
             Songwriting:
               name: Pisanie piosenek
         express-2019:
@@ -5062,6 +5102,10 @@ pl:
               name: Binarne bransoletki
             'End of Course Project: Create a Play Lab Game':
               name: 'Projekt na koniec kursu: Utwórz grę Play Lab'
+            Powerful Passwords:
+              name: Bardzo skuteczne hasła
+            Picturing Data:
+              name: Przedstawianie danych
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -5109,6 +5153,8 @@ pl:
               name: Pętle w Epoce Lodowcowej
             'Loops: Getting Loopy':
               name: Poznając pętle
+            The Right App:
+              name: Odpowiednia aplikacja
             Programming in Maze:
               name: Programowanie w labiryncie
         pre-express-2019:
@@ -5922,8 +5968,14 @@ pl:
           lessons:
             Conditionals:
               name: Zdania z warunkami
+            Simon Says:
+              name: Simon mówi
             Alien Dance Party with Sprite Lab:
               name: Wydarzenia z Sprite Lab
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
+            Access Ability:
+              name: Możliwość dostępu
             Drawing with Loops:
               name: Pętle z artystą 
         time4cs-control-unit-2:
@@ -5960,8 +6012,14 @@ pl:
           lessons:
             Conditionals:
               name: Zdania z warunkami
+            Simon Says:
+              name: Simon mówi
             Alien Dance Party with Sprite Lab:
               name: Wydarzenia z Sprite Lab
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
+            Access Ability:
+              name: Możliwość dostępu
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -5975,8 +6033,14 @@ pl:
           lessons:
             Conditionals:
               name: Zdania z warunkami
+            Simon Says:
+              name: Simon mówi
             Alien Dance Party with Sprite Lab:
               name: Wydarzenia z Sprite Lab
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
+            Access Ability:
+              name: Możliwość dostępu
         csp7-pilot:
           lesson_groups:
             required:
@@ -6281,6 +6345,8 @@ pl:
               name: Programowanie w labiryncie
             'Loops: Getting Loopy':
               name: Poznając pętle
+            The Right App:
+              name: Odpowiednia aplikacja
             Digital Trails:
               name: Cyfrowe szlaki
         coursec-2020:
@@ -6296,6 +6362,8 @@ pl:
             csf_events:
               display_name: Zdarzenia
           lessons:
+            Powerful Passwords:
+              name: Bardzo skuteczne hasła
             Programming in Maze:
               name: Programowanie w labiryncie
             Debugging in Maze:
@@ -6310,6 +6378,8 @@ pl:
               name: Wielkie wydarzenie
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
+            Picturing Data:
+              name: Przedstawianie danych
             Putting a STOP to Online Meanness:
               name: Stawianie STOP świństwom online
             Password Power-Up:
@@ -6334,6 +6404,7 @@ pl:
               name: Wprowadzenie do puzzli online
             Relay Programming:
               name: Sztafeta programowania
+              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie podzielą się na zespoły i będą pracować razem nad pisaniem programu po jednej instrukcji.
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
             Nested Loops in Bee:
@@ -6364,12 +6435,19 @@ pl:
           lessons:
             Programming and Loops with the Artist:
               name: Pętle z artystą 
+            Simon Says:
+              name: Simon mówi
             Alien Dance Party with Sprite Lab:
               name: Wydarzenia z Sprite Lab
+            Private and Personal Information:
+              name: Informacje prywatne i osobowe
             Nested Loops in Bee:
               name: Zagnieżdżone pętle w labiryncie
             'Functions: Songwriting':
               name: Pisanie piosenek
+            Digital Sharing:
+              name: Udostępnianie cyfrowe
+              description_teacher: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki" przez zespół w "Prawach autorskich i kreatywności", istnieje, aby pomagać uczniom zrozumieć istotę wyzwań i korzyści wynikających z poszanowania praw własności i praw autorskich, w szczególności w środowiskach cyfrowych. Uczniowie powinni być zachęcani do przestrzegania praw artystów jako istotnego elementu bycia etycznym obywatelem cyfrowym.
         coursef-2020:
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
           description_audience: 'Wiek 9-13'
@@ -6403,6 +6481,9 @@ pl:
               name: Moc Słów
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+            Digital Sharing:
+              name: Udostępnianie cyfrowe
+              description_teacher: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki" przez zespół w "Prawach autorskich i kreatywności", istnieje, aby pomagać uczniom zrozumieć istotę wyzwań i korzyści wynikających z poszanowania praw własności i praw autorskich, w szczególności w środowiskach cyfrowych. Uczniowie powinni być zachęcani do przestrzegania praw artystów jako istotnego elementu bycia etycznym obywatelem cyfrowym.
         express-2020:
           description_audience: 'W wieku 9-18'
           lesson_groups:
@@ -6925,6 +7006,18 @@ pl:
           lessons:
             Module 2:
               name: Moduł 2
+            Module 3:
+              name: Moduł 3
+            Module 4:
+              name: Moduł 4
+            Module 5:
+              name: Moduł 5
+            Module 6:
+              name: Moduł 6
+            Module 7:
+              name: Moduł 7
+            Module 8:
+              name: Moduł 8
           title: Wirtualne Profesjonalne Kształcenie w zakresie Odkrywania Informatyki w latach 2020-2021
         vpl-csp-2020:
           lessons:
@@ -6949,6 +7042,8 @@ pl:
               name: Kurs A
             Course B:
               name: Kurs B
+            Course E/F:
+              name: Kurs E/F
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko

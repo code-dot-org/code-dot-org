@@ -106,6 +106,23 @@ export default class CourseEditor extends Component {
           />
         </label>
         <label>
+          Version Year Display Name
+          <HelpTip>
+            <p>
+              Controls the text which represents this course in the "version
+              year dropdown" in the top right of the course overview page. This
+              will only be visible if a version year is selected below.
+            </p>
+          </HelpTip>
+          <input
+            type="text"
+            defaultValue={versionTitle}
+            placeholder="e.g. '19-'20"
+            name="version_title"
+            style={styles.input}
+          />
+        </label>
+        <label>
           Short Description
           <HelpTip>
             <p>used in course cards on homepage</p>
@@ -138,23 +155,6 @@ export default class CourseEditor extends Component {
             onChange={this.handleTeacherDescriptionChange}
           />
           <MarkdownPreview markdown={this.state.descriptionTeacher} />
-        </label>
-        <label>
-          Version Year Display Name
-          <HelpTip>
-            <p>
-              Controls the text which represents this course in the "version
-              year dropdown" in the top right of the course overview page. This
-              will only be visible if a version year is selected below.
-            </p>
-          </HelpTip>
-          <input
-            type="text"
-            defaultValue={versionTitle}
-            placeholder="e.g. '19-'20"
-            name="version_title"
-            style={styles.input}
-          />
         </label>
         <h2>Basic settings</h2>
         <label>
@@ -238,6 +238,17 @@ export default class CourseEditor extends Component {
             recommended version.
           </p>
         </label>
+        <div>
+          <h2>Teacher Resources</h2>
+          <div>
+            Select the Teacher Resources buttons you'd like to have show up on
+            the top of the course overview page
+          </div>
+          <ResourcesEditor
+            inputStyle={styles.input}
+            resources={teacherResources}
+          />
+        </div>
         <h2>Units</h2>
         <label>
           <div>
@@ -251,17 +262,6 @@ export default class CourseEditor extends Component {
             scriptNames={scriptNames}
           />
         </label>
-        <div>
-          <h2>Teacher Resources</h2>
-          <div>
-            Select the Teacher Resources buttons you'd like to have show up on
-            the top of the course overview page
-          </div>
-          <ResourcesEditor
-            inputStyle={styles.input}
-            resources={teacherResources}
-          />
-        </div>
       </div>
     );
   }

@@ -724,6 +724,8 @@ de:
               name: Variablen in Apps verwenden
             While Loops:
               name: Solange-Schleifen
+            Creating Functions with Parameters:
+              name: Funktionen mit Parametern erstellen
         algebraPD3:
           lessons:
             Computer Science Pedagogy:

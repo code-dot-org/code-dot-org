@@ -3269,3 +3269,11 @@ tr-TR:
           \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nDers planına git\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Devam Et</a>\n"
+      courseD_EOC_2020:
+        display_name: Ders Projesinin Sonu
+      courseE_EOC_2020:
+        display_name: Ders Projesinin Sonu
+      courseExpress_EOC_2020:
+        display_name: Ders Projesinin Sonu
+      courseF_EOC_2020:
+        display_name: Ders Projesinin Sonu

@@ -70,7 +70,11 @@
             "name": "画右腿"
           },
           "draw body and arms": {
-            "name": "绘制身体和手臂"
+            "name": "绘制身体和手臂",
+            "parameters": {
+              "armlength": "臂长",
+              "bodylength": "身长"
+            }
           },
           "draw a head": {
             "name": "画一个头"
@@ -690,13 +694,15 @@
           "n-sided shape": {
             "name": "n边形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           },
           "draw a loop": {
             "name": "画一个循环",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           },
           "draw spiral circle": {
@@ -710,7 +716,8 @@
           "draw a loop": {
             "name": "画一个循环",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           },
           "n-sided shape": {
@@ -917,13 +924,15 @@
           "draw a polygon": {
             "name": "画一个多边形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           },
           "do something": {
             "name": "做点什么",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -931,7 +940,8 @@
           "draw a polygon": {
             "name": "画一个多边形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -939,7 +949,8 @@
           "draw a polygon": {
             "name": "画一个多边形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -947,7 +958,8 @@
           "draw a polygon": {
             "name": "画一个多边形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -955,7 +967,8 @@
           "draw a spiral edge": {
             "name": "画一条螺旋边",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -965,16 +978,22 @@
             "parameters": {
               "points": "分数",
               "length": "长度"
-            }
+            },
+            "description": "用所给予的点和指定长度的边画一个星星"
           },
           "draw a circle": {
-            "name": "画一个圆圈"
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "画一个风车",
             "parameters": {
               "length": "长度",
-              "repeat": "重复"
+              "repeat": "重复",
+              "sides": "边"
             }
           },
           "draw a triangle": {
@@ -986,7 +1005,8 @@
           "draw a shape": {
             "name": "画一个图形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           },
           "draw a house": {
@@ -998,7 +1018,8 @@
           "draw a square": {
             "name": "画一个正方形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -1089,7 +1110,8 @@
           "draw a polygon": {
             "name": "画一个多边形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -1099,7 +1121,8 @@
             "parameters": {
               "height": "高度",
               "actor": "角色"
-            }
+            },
+            "description": "添加演员的参数到跳跃模块"
           },
           "patrol": {
             "name": "巡逻",
@@ -1115,16 +1138,22 @@
             "parameters": {
               "points": "分数",
               "length": "长度"
-            }
+            },
+            "description": "用所给予的点和指定长度的边画一个星星"
           },
           "draw a circle": {
-            "name": "画一个圆圈"
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "画一个风车",
             "parameters": {
               "length": "长度",
-              "repeat": "重复"
+              "repeat": "重复",
+              "sides": "边"
             }
           },
           "draw a triangle": {
@@ -1136,7 +1165,8 @@
           "draw a shape": {
             "name": "画一个图形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           },
           "draw a house": {
@@ -1166,14 +1196,16 @@
             "parameters": {
               "height": "高度",
               "actor": "角色"
-            }
+            },
+            "description": "添加演员的参数到跳跃模块"
           },
           "patrol": {
             "name": "巡逻",
             "parameters": {
               "actor": "角色",
               "speed": "速度"
-            }
+            },
+            "description": "一个含有演员和速度的巡航模块"
           }
         },
         "Robot Doodle": {
@@ -1328,7 +1360,10 @@
             }
           },
           "draw a polygon": {
-            "name": "画一个多边形"
+            "name": "画一个多边形",
+            "parameters": {
+              "sides": "边"
+            }
           },
           "draw a square 20": {
             "name": "画一个边长 20 的正方形"
@@ -3080,7 +3115,8 @@
           "draw a polygon": {
             "name": "画一个多边形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -3088,7 +3124,8 @@
           "draw a polygon": {
             "name": "画一个多边形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -3096,7 +3133,8 @@
           "draw a spiral edge": {
             "name": "画一条螺旋边",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           }
         },
@@ -3105,7 +3143,8 @@
             "name": "画一条螺旋边",
             "parameters": {
               "length": "长度",
-              "min": "最小"
+              "min": "最小",
+              "sides": "边"
             }
           }
         },
@@ -3114,7 +3153,8 @@
             "name": "画一条螺旋边",
             "parameters": {
               "length": "长度",
-              "min": "最小"
+              "min": "最小",
+              "sides": "边"
             }
           }
         },
@@ -3124,16 +3164,22 @@
             "parameters": {
               "points": "分数",
               "length": "长度"
-            }
+            },
+            "description": "用所给予的点和指定长度的边画一个星星"
           },
           "draw a circle": {
-            "name": "画一个圆圈"
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "画一个风车",
             "parameters": {
               "length": "长度",
-              "repeat": "重复"
+              "repeat": "重复",
+              "sides": "边"
             }
           },
           "draw a triangle": {
@@ -3145,7 +3191,8 @@
           "draw a shape": {
             "name": "画一个图形",
             "parameters": {
-              "length": "长度"
+              "length": "长度",
+              "sides": "边"
             }
           },
           "draw a house": {
@@ -3164,7 +3211,8 @@
             "name": "画一条螺旋边",
             "parameters": {
               "length": "长度",
-              "min": "最小"
+              "min": "最小",
+              "sides": "边"
             }
           }
         },
@@ -3176,7 +3224,10 @@
             }
           },
           "draw a polygon": {
-            "name": "画一个多边形"
+            "name": "画一个多边形",
+            "parameters": {
+              "sides": "边"
+            }
           },
           "draw a square 20": {
             "name": "画一个边长 20 的正方形"

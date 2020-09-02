@@ -810,11 +810,7 @@ class Script < ActiveRecord::Base
   end
 
   def hint_prompt_enabled?
-    [
-      Script::COURSE2_NAME,
-      Script::COURSE3_NAME,
-      Script::COURSE4_NAME
-    ].include?(name)
+    csf?
   end
 
   def hide_solutions?
@@ -1248,6 +1244,9 @@ class Script < ActiveRecord::Base
       hasStandards: has_standards_associations?,
       tts: tts?,
     }
+
+    #TODO: lessons should be summarized through lesson groups in the future
+    summary[:lessonGroups] = lesson_groups.map {|lesson_group| lesson_group.summarize(include_lessons, user, include_bonus_levels)}
 
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
