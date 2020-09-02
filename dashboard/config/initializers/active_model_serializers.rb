@@ -14,4 +14,5 @@
 #class ActiveModel::ErrorsSerializer < HashSerializer; end
 
 #ActiveModel::Serializer.config.adapter = :Json
-ActiveModel::Serializer.config.adapter = nil
+#ActiveModel::Serializer.config.adapter = nil
+ActiveModel::Serializer.config.adapter = :attributes
