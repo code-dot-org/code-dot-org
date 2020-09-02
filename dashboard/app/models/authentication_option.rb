@@ -33,7 +33,8 @@ class AuthenticationOption < ApplicationRecord
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
 
   validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
-  validate :cred_type_and_auth_id_must_be_unique
+
+  validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at]}
 
   after_create :set_primary_contact_info
 
@@ -182,16 +183,5 @@ class AuthenticationOption < ApplicationRecord
     if other && other != user
       errors.add :email, I18n.t('errors.messages.taken')
     end
-  end
-
-  private def cred_type_and_auth_id_must_be_unique
-    # skip the db lookup if possible
-    return if authentication_id.blank? || deleted_at.present?
-
-    # note that here we are deliberately not querying deleted AOs
-    others = AuthenticationOption.
-      where(credential_type: credential_type, authentication_id: authentication_id).
-      where('id != ?', id)
-    errors.add(:credential_type, I18n.t('errors.messages.taken')) unless others.empty?
   end
 end
