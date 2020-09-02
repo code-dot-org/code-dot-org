@@ -6,6 +6,7 @@ import {
   WarningLabel,
   UnconnectedAnimationPickerBody as AnimationPickerBody
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
+import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 
@@ -82,6 +83,33 @@ describe('AnimationPickerBody', function() {
       expect(wrapper.state('currentPage')).to.equal(0);
       wrapper.instance().handleScroll(mockEvent);
       expect(wrapper.state('currentPage')).to.equal(0);
+    });
+  });
+  describe('handleBackgrounds', () => {
+    it('does not show backgrounds if not isBackgrounds and in spritelab', function() {
+      const body = shallow(
+        <AnimationPickerBody {...defaultProps} isSpriteLab={true} />
+      );
+      const items = body.find(AnimationPickerListItem);
+      expect(items.length).to.equal(4);
+    });
+
+    it('does shows backgrounds if not isBackgrounds and in gamelab', function() {
+      const body = shallow(<AnimationPickerBody {...defaultProps} />);
+      const items = body.find(AnimationPickerListItem);
+      expect(items.length).to.equal(5);
+    });
+
+    it('only shows backgrounds if isBackgrounds', function() {
+      const body = shallow(
+        <AnimationPickerBody
+          {...defaultProps}
+          isSpriteLab={true}
+          isBackground={true}
+        />
+      );
+      const items = body.find(AnimationPickerListItem);
+      expect(items.length).to.equal(1);
     });
   });
 });
