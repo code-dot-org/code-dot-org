@@ -1,5 +1,5 @@
 ---
-title: Guida
+title: How-to Guide for Hour of Code
 layout: wide
 nav: how_to_nav
 ---
@@ -8,23 +8,43 @@ nav: how_to_nav
 
 # Come pianificare la tua Ora del Codice
 
-### Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! Se hai bisogno di una mano, puoi trovare (solo per gli USA) un [volontario locale]({{ urls/volunteer_local }}) che ti aiuti a tenere l'Ora del Codice nella tua aula.
+### Join the movement and introduce your students to computer science with these steps.
 
-### Se hai ancora domande, dai un'occhiata alla nostra [guida alla partecipazione]({{ localized_files/participation_guide }}).
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Se hai ancora domande, dai un'occhiata alla nostra [guida alla partecipazione]({{ localized_files/participation_guide }}).
+
+An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+- [1. Watch the Hour of Code how-to video](#how-to-video)
+- [2. Explore activities and tutorials](#explore-activities)
+- [3. Create your plan for the day](#create-your-plan)
+- [Promuovi la tua Ora del Codice](#promote-your-hour)
+- [More ways to support the Hour of Code](#support-hour-of-code)
 
 * * *
 
-## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+* * *
+
+<a id="explore-activities"></a>
+
+## 2. Explore activities and tutorials
 
 Ti forniamo un'ampia varietà di divertenti [esercitazioni guidate]({{ urls/learn }}) per partecipanti di tutte le età e di diversi livelli di esperienza. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
 Esplora le attività e decidi prima se scegliere uno specifico tutorial da assegnare a tutti i tuoi studenti o se lasciarli liberi di scegliere ognuno il proprio.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Create your plan for the day
 
 ### Think about your technology needs - computers are optional!
 
@@ -33,11 +53,15 @@ Esplora le attività e decidi prima se scegliere uno specifico tutorial da asseg
 - Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle cuffie alla tua classe o chiedi agli studenti di portarsi le loro.
 - Non hai un numero sufficiente di dispositivi? Lascia che i tuoi studenti lavorino in coppia. Quando gli studenti lavorano in coppia, si aiutano a vicenda e fanno meno affidamento sull'insegnante. In questo modo capiscono anche che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Scegli un giorno ed un'ora.
 
 Le persone di tutto il mondo partecipano alla celebrazione dell'Ora del Codice durante la Settimana dell'Educazione Tecnologica (dal 9 al 13 dicembre), quando i video e le attività più recenti vengono messi online. Puoi comunque far svolgere ai tuoi alunni un'Ora del Codice in qualsiasi giorno dell'anno!
+
+* * *
+
+<a id="promote-your-hour"></a>
 
 ## 4. Promote your Hour of Code
 
@@ -59,6 +83,10 @@ Lead up to the event by sharing [inspirational videos](/promote/resources) highl
 
 Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
+* * *
+
+<a id="promote-your-hour"></a>
+
 ## 5. Start your Hour of Code Strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
@@ -75,6 +103,8 @@ It’s okay if both you and your students are brand new to computer science. Her
 - Spiega in che modo la tecnologia influisce sulle nostre vite con degli esempi che interessino sia i ragazzi che le ragazze (puoi parlare di come venga utilizzata per salvare delle vite, aiutare la gente, mettere in comunicazione le persone, ecc.).
 - Elenca tutto ciò che utilizza programmi informatici nella vita quotidiana.
 - Vedi interessare le ragazze all'informatica [qui]({{ urls/girls }}).
+
+* * *
 
 ## 6. Get Coding!
 
@@ -93,11 +123,13 @@ Cosa fare se uno studente finisce prima?
 - Gli studenti possono vedere tutte le esercitazioni e [provare un'altra attività dell'Ora del Codice]({{ urls/learn }}).
 - Oppure è possibile proporre agli studenti che hanno terminato prima, di aiutare i compagni di classe che hanno delle difficoltà.
 
+* * *
+
 ## 7. Celebrate your Students' Success
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 

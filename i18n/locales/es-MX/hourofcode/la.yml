@@ -204,6 +204,8 @@ la:
   codeorg_homepage_special2020_body: "¿Tu escuela está cerrada? Aprende desde casa.
     Toma un descanso con código, o ve los recursos para estudiantes, padres de familia,
     y educadores. "
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Comenzar
   codeorg_homepage_code_break_body: "¡Tómate un recreo con código! Tu dosis semanal
     de inspiración , comunidad, y ciencias de la computación."
@@ -890,7 +892,7 @@ la:
   resources_press_kit: Paquete de prensa
   resources_social: Social
   resources_country_resources: Recursos específicos para cada país
-  resources_stickers: Pegatinas
+  resources_stickers: Etiquetas
   resources_how_to_guides: Guías prácticas
   resources_promote: Promover
   resources_nav_tutorials: Prueba los tutoriales
