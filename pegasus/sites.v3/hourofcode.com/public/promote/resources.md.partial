@@ -50,8 +50,14 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 **"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
 1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
-    * **Good example**: "Participate in the Hour of Code™ at YOUR-COMPANY.com." 
-    * **Bad example**: "Try Hour of Code by YOUR-COMPANY."
+  <ul style="margin-top: 0px">
+    <li>
+      <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com." 
+    </li>
+    <li>
+      <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    </li>
+  </ul>
 2. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
 3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
 
