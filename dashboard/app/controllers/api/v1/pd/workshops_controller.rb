@@ -30,7 +30,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     @workshops = @workshops.exclude_summer if params[:exclude_summer]
 
-    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer, adapter: :attributes
   end
 
   def workshops_user_enrolled_in
@@ -44,7 +44,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
 
-    render json: workshops
+    render json: workshops, adapter: nil
   end
 
   # GET /api/v1/pd/workshops/filter
@@ -103,7 +103,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       workshops = Pd::Workshop.none
     end
 
-    render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+    render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer, adapter: :attributes
   rescue ArgumentError => e
     render json: {error: e.message}, status: :bad_request
   end
@@ -121,12 +121,12 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
       where(conditions).where.not(processed_location: nil)
-    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
+    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer, adapter: :attributes
   end
 
   # GET /api/v1/pd/workshops/1
   def show
-    render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
+    render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer, adapter: :attributes
   end
 
   # PATCH /api/v1/pd/workshops/1
@@ -141,7 +141,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     if @workshop.update(workshop_params(can_update_regional_partner))
       notify if should_notify?
-      render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
+      render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer, adapter: :attributes
     else
       render json: {errors: @workshop.errors.full_messages}, status: :bad_request
     end
@@ -152,7 +152,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     @workshop.organizer = current_user
     adjust_facilitators
     if @workshop.save
-      render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
+      render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer, adapter: :attributes
     else
       render json: {errors: @workshop.errors.full_messages}, status: :bad_request
     end
@@ -190,7 +190,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   # GET /api/v1/pd/workshops/1/summary
   def summary
-    render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
+    render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer, adapter: :attributes
   end
 
   use_database_pool potential_organizers: :persistent
