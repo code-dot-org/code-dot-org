@@ -1,7 +1,6 @@
 import React from 'react';
 import ActivitiesEditor from './ActivitiesEditor';
 import EditTipDialog from './EditTipDialog';
-import PreviewActivityDialog from './PreviewActivityDialog';
 import AddLevelDialog from './AddLevelDialog';
 import ActivityCard from './ActivityCard';
 import AddResourceDialog from './AddResourceDialog';
@@ -166,18 +165,6 @@ export default storybook => {
             type: 'teachingTip',
             markdown: 'Make sure you pass out the packets.'
           }}
-        />
-      )
-    },
-    {
-      name: 'PreviewActivityDialog',
-      story: () => (
-        <PreviewActivityDialog
-          isOpen={true}
-          handleConfirm={() => {
-            console.log('Close Dialog');
-          }}
-          activity={activity}
         />
       )
     },

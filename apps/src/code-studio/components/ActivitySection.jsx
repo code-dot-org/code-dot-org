@@ -68,7 +68,7 @@ export default class ActivitySection extends Component {
           {section.type === 'description' && (
             <SafeMarkdown markdown={section.text} />
           )}
-          {section.type === 'progression' && (
+          {section.type === 'progression' && section.levels.length > 0 && (
             <ProgressionDetails progression={section} />
           )}
           <div style={styles.tips}>
