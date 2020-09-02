@@ -275,6 +275,7 @@ FactoryGirl.define do
   end
 
   factory :csf_intro_post_facilitator_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    facilitator_id 1
     association :pd_workshop, factory: :csf_101_workshop
     association :user, factory: :teacher
 
