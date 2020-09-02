@@ -10,6 +10,6 @@ class Api::V1::Pd::CourseFacilitatorsController < ApplicationController
         Pd::CourseFacilitator.all.map(&:facilitator)
       end
 
-    render json: facilitators, each_serializer: Api::V1::Pd::CourseFacilitatorSerializer, adapter: :attributes
+    render json: facilitators, each_serializer: Api::V1::Pd::CourseFacilitatorSerializer
   end
 end

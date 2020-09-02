@@ -15,7 +15,7 @@ class Api::V1::Pd::WorkshopSummaryReportController < Api::V1::Pd::ReportControll
 
     respond_to do |format|
       format.json do
-        render json: report, adapter: nil
+        render json: report
       end
       format.csv do
         send_as_csv_attachment report, 'workshop_organizer_report.csv'

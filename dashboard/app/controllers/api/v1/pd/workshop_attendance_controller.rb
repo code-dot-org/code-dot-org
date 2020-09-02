@@ -13,7 +13,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   def index
     respond_to do |format|
       format.json do
-        render json: @workshop, serializer: ::Api::V1::Pd::WorkshopAttendanceSerializer, adapter: :attributes
+        render json: @workshop, serializer: ::Api::V1::Pd::WorkshopAttendanceSerializer
       end
       format.csv do
         # Use EnrollmentFlatAttendanceSerializer to get a single flat list of attendance
@@ -28,7 +28,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
 
   # GET /api/v1/pd/workshops/1/attendance/:session_id
   def show
-    render json: @session, serializer: Api::V1::Pd::SessionAttendanceSerializer, adapter: :attributes
+    render json: @session, serializer: Api::V1::Pd::SessionAttendanceSerializer
   end
 
   # PUT /api/v1/pd/workshops/1/attendance/:session_id/user/:user_id
