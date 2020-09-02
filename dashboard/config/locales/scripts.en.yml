@@ -16050,6 +16050,7 @@ en:
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
+              description: This is a description
             csd3_2:
               display_name: 'Chapter 2: Building Games'
             cspSurvey:
