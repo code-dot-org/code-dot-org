@@ -750,6 +750,8 @@ fil:
               name: Paggamit ng mga Variables sa mga Apps
             While Loops:
               name: While Loops
+            Creating Functions with Parameters:
+              name: Paglikha ng mga Functions na may mga Parameter
         algebraPD3:
           lessons:
             Computer Science Pedagogy:

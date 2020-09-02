@@ -9136,7 +9136,8 @@ it:
   tutorial_googlehero_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_codestersbball_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_scratchcartoon_string_platforms: Tutti i browser moderni, Android, iOS
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Tutti i browser moderni, tablet Android,
+    iPad, telefoni Android, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
   tutorial_scratchtales_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_msemoji_string_platforms: Chrome, Safari
