@@ -778,6 +778,14 @@ it:
     reminder_desc: 'Abbiamo aggiornato i nostri <a href="%{tos_url}" target="_blank">Termini di Servizio</a> e l''<a href="%{privacy_url}" target="_blank">Informativa sulla Privacy</a>. Si prega di leggerli attentamente prima di accettarli. Sii noti che i nostri strumenti per l''insegnamento di JavaScript potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente i termini aggiornati.'
     reminder_desc_markdown: Abbiamo aggiornato i nostri [Termini di Servizio](%{tos_url}) e l'[Informativa sulla Privacy](%{privacy_url}). Si prega di leggerli attentamente prima di accettarli. Sii noti che i nostri strumenti per l'insegnamento di JavaScript potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente i termini aggiornati.
     review_terms: "Rivedi i termini dell'aggiornamento"
+  donor_interstitial:
+    title: "Questi corsi di informatica sono gratuiti grazie a..."
+    subtitle: "Ringraziamo i generosi finanziatori il cui sostegno ha reso possibile il successo di Code.org. Ci impegniamo a mantenere Code.org gratuito sia per le scuole sia per gli studenti, in tutto il mondo, grazie alla continua generosità dei nostri [donors](%{donors_url})!\n"
+    local_supporters: "Sostenitori locali"
+    global_supporters: "Sostenitori globali"
+    support_codeorg_1: "Ogni dollaro donato a Code.org permette di dare un'opportunità a tantissimi studenti."
+    support_codeorg_2: "[Dona ora](%{donate_url}) per sostenere Code.org."
+    get_started: "Inizia con Code.org"
   school_info_interstitial:
     title: "Vogliamo portare l'Informatica ad ogni studente - aiutaci a tenere traccia dei nostri progressi!"
     message: "Per favore qui sotto inserisci le informazioni sulla scuola."

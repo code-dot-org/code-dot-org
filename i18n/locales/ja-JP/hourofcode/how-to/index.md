@@ -1,28 +1,48 @@
 ---
-title: イベント開催ガイド
+title: How-to Guide for Hour of Code
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### この運動に参加して、以下のステップで初めてのコンピュータサイエンスを生徒たちへ紹介しましょう。 Hour of Codeの運営は簡単です。初めての方でも心配いりません！ 誰かのサポートが必要ならば、Hour of Codeの実施をサポートしてくれる[地元のボランティア]({{ urls/volunteer_local }})を探すことができます。
+### Join the movement and introduce your students to computer science with these steps.
 
-### 分からないことがあれば、[イベント開催ガイド]({{ localized_files/participation_guide }})をご一読ください。
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. 分からないことがあれば、[イベント開催ガイド]({{ localized_files/participation_guide }})をご一読ください。
+
+An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+- [1. Watch the Hour of Code how-to video](#how-to-video)
+- [2. Explore activities and tutorials](#explore-activities)
+- [3. Create your plan for the day](#create-your-plan)
+- [Promote your Hour of Code](#promote-your-hour)
+- [More ways to support the Hour of Code](#support-hour-of-code)
 
 * * *
 
-## 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+* * *
+
+<a id="explore-activities"></a>
+
+## 2. Explore activities and tutorials
 
 生徒が自らのペースで学習できるバラエティに富んだ楽しい[チュートリアル]({{ urls/learn }})を年齢層や経験レベルに応じて提供しています。 It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Create your plan for the day
 
 ### Think about your technology needs - computers are optional!
 
@@ -31,11 +51,15 @@ Explore the activities and decide ahead of time if you want to choose a single t
 - いくつかのチュートリアルでは音声が流れます。その場合は、ヘッドフォンを準備するか、生徒に自分のものを持ってくるように頼みます。
 - Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Pick a day and time
 
 People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+
+* * *
+
+<a id="promote-your-hour"></a>
 
 ## 4. Promote your Hour of Code
 
@@ -57,6 +81,10 @@ Lead up to the event by sharing [inspirational videos](/promote/resources) highl
 
 Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
+* * *
+
+<a id="promote-your-hour"></a>
+
 ## 5. Start your Hour of Code Strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
@@ -73,6 +101,8 @@ It’s okay if both you and your students are brand new to computer science. Her
 - テクノロジーが私たちの生活にどのような影響を与えているかを、男の子と女の子がともに興味を持つような実例を交えて説明する。例えば、コンピュータが医療の分野でどの様に使われているのか、人々を助けるためにどんな役割を担っているのか、もしくは人々を国境を超えてつなげるためにどんなアプリケーションが使われているのかなど。
 - クラス全体で、コンピュータが使われているシーンをリストアップしてみる。
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+
+* * *
 
 ## 6. Get Coding!
 
@@ -91,11 +121,13 @@ It’s okay if both you and your students are brand new to computer science. Her
 - 生徒たちは、チュートリアルの一覧を確認して[他のHour of Codeアクティビティを試してみる]({{ urls/learn }})ことができます。
 - もしくは、困っている他の生徒を助けてあげるように伝えましょう。
 
+* * *
+
 ## 7. Celebrate your Students' Success
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
