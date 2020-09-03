@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import color from '@cdo/apps/util/color';
 import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
 import Activity from '@cdo/apps/code-studio/components/Activity';
+import {connect} from 'react-redux';
+import {addActivity} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 const styles = {
   activityEditAndPreview: {
@@ -18,12 +21,25 @@ const styles = {
   previewBox: {
     border: '1px solid black',
     padding: 10
+  },
+  addActivity: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none'
   }
 };
 
-export default class ActivitiesEditor extends Component {
+class ActivitiesEditor extends Component {
   static propTypes = {
-    activities: PropTypes.array
+    //redux
+    activities: PropTypes.array,
+    addActivity: PropTypes.func
+  };
+
+  handleAddActivity = () => {
+    this.props.addActivity(this.props.activities.length, '', '');
   };
 
   render() {
@@ -36,6 +52,15 @@ export default class ActivitiesEditor extends Component {
             {activities.map(activity => {
               return <ActivityCard activity={activity} key={activity.key} />;
             })}
+            <button
+              onMouseDown={this.handleAddActivity}
+              className="btn"
+              style={styles.addActivity}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Activity
+            </button>
           </div>
           <div style={styles.preview}>
             <h2>Preview</h2>
@@ -50,3 +75,16 @@ export default class ActivitiesEditor extends Component {
     );
   }
 }
+
+export const UnconnectedActivitiesEditor = ActivitiesEditor;
+
+export default connect(
+  state => ({
+    activities: state.activities
+  }),
+  dispatch => ({
+    addActivity(position, key, name) {
+      dispatch(addActivity(position, key, name));
+    }
+  })
+)(ActivitiesEditor);
