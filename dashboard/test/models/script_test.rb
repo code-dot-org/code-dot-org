@@ -1617,25 +1617,22 @@ class ScriptTest < ActiveSupport::TestCase
     refute sl.variants?
 
     sl = script_copy.script_levels[2]
-    assert_equal 2, sl.levels.count
+    assert_equal 1, sl.levels.count
     assert_equal 'Level 5_copy', sl.levels.first.name
-    assert_equal 'Level 6_copy', sl.levels.last.name
     assert sl.active?(sl.levels.first)
-    assert sl.active?(sl.levels.last)
+    refute sl.variants?
 
     sl = script_copy.script_levels[3]
     assert_equal 1, sl.levels.count
     assert_equal 'Level 8_copy', sl.levels.first.name
     assert sl.active?(sl.levels.first)
+    refute sl.variants?
 
     new_dsl = <<~SCRIPT
       lesson 'lesson1', display_name: 'lesson1'
       level 'Level 1_copy'
       level 'Level 4_copy'
-      variants
-        level 'Level 5_copy'
-        level 'Level 6_copy'
-      endvariants
+      level 'Level 5_copy'
       level 'Level 8_copy'
 
     SCRIPT
