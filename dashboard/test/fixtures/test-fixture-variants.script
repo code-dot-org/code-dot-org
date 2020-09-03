@@ -11,3 +11,7 @@ variants
   level 'Level 5'
   level 'Level 6'
 endvariants
+variants
+  level 'Level 7', experiments: ['experiment']
+  level 'Level 8'
+endvariants
