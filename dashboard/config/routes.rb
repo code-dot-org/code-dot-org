@@ -742,4 +742,6 @@ Dashboard::Application.routes.draw do
   get '/help', to: redirect("https://support.code.org")
 
   get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
+
+  post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 end

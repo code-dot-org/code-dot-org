@@ -195,6 +195,7 @@ class ScriptsController < ApplicationController
       :has_lesson_plan,
       :tts,
       :is_stable,
+      :is_course,
       :script_announcements,
       :pilot_experiment,
       :editor_experiment,
