@@ -730,6 +730,12 @@ class Level < ActiveRecord::Base
     (contained_levels + [project_template_level] - [self]).compact
   end
 
+  # There's a bit of trickery here. We consider a level to be
+  # hint_prompt_enabled for the sake of the level editing experience if any of # the scripts associated with the level are hint_prompt_enabled.
+  def hint_prompt_enabled?
+    !script_levels.map(&:script).select(&:hint_prompt_enabled?).empty?
+  end
+
   private
 
   # Returns the level name, removing the name_suffix first (if present).

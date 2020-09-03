@@ -41,10 +41,11 @@
     %div{style: '-webkit-user-select: text'}
     = f.text_area :authored_hints, rows: 4
 
-  .field
-    = f.label :hint_prompt_attempts_threshold, "How many times does a student need to attempt this level before being shown the hint prompt dialog? If you leave this field blank, the default is 7 attempts."
-    %div{style: '-webkit-user-select: text'}
-    = f.select :hint_prompt_attempts_threshold, options_for_select([*1..30], @level.properties["hint_prompt_attempts_threshold"])
+  - if @level.hint_prompt_enabled?
+    .field
+      = f.label :hint_prompt_attempts_threshold, "How many times does a student need to attempt this level before being shown the hint prompt dialog? If you leave this field blank, the default is 7 attempts."
+      %div{style: '-webkit-user-select: text'}
+      = f.select :hint_prompt_attempts_threshold, options_for_select([*1..30], @level.properties["hint_prompt_attempts_threshold"])
 
 - content_for :body_scripts do
   :javascript
