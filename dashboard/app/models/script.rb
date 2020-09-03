@@ -122,6 +122,9 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # is_course - true if this Script/Unit is intended to be the root of a CourseOffering version. Used during seeding
+  #   to create the appropriate CourseVersion and CourseOffering objects. For example, this should be true for
+  #   CourseA-CourseF .script files.
   serialized_attrs %w(
     hideable_lessons
     peer_reviews_to_complete
@@ -1243,6 +1246,7 @@ class Script < ActiveRecord::Base
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      is_course: is_course?
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
