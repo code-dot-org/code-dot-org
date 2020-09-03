@@ -11,7 +11,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..6).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
+    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
 
     @unit_group = create(:unit_group)
     @script_in_unit_group = create(:script, hidden: true)
@@ -1602,7 +1602,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-variants-copy', script_copy.name
 
-    assert_equal 3, script_copy.script_levels.count
+    assert_equal 4, script_copy.script_levels.count
 
     sl = script_copy.script_levels[0]
     assert_equal 1, sl.levels.count
@@ -1623,6 +1623,11 @@ class ScriptTest < ActiveSupport::TestCase
     assert sl.active?(sl.levels.first)
     assert sl.active?(sl.levels.last)
 
+    sl = script_copy.script_levels[3]
+    assert_equal 1, sl.levels.count
+    assert_equal 'Level 8_copy', sl.levels.first.name
+    assert sl.active?(sl.levels.first)
+
     new_dsl = <<~SCRIPT
       lesson 'lesson1', display_name: 'lesson1'
       level 'Level 1_copy'
@@ -1631,6 +1636,7 @@ class ScriptTest < ActiveSupport::TestCase
         level 'Level 5_copy'
         level 'Level 6_copy'
       endvariants
+      level 'Level 8_copy'
 
     SCRIPT
 
