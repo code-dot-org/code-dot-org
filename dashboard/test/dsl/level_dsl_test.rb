@@ -207,4 +207,18 @@ class LevelDslTest < ActiveSupport::TestCase
     level = External.create_from_level_builder({}, level_params)
     assert_equal level.editor_experiment, 'platformization-partners'
   end
+
+  test 'cloned dsl level drops old version suffix' do
+    old_dsl_text = <<~DSL
+      name 'markdown level_2017_2018_2019'
+      title 'title here'
+      description 'description here'
+    DSL
+    old_level = External.create_from_level_builder({}, {dsl_text: old_dsl_text})
+    old_level.stubs(:dsl_text).returns(old_dsl_text)
+    assert_equal 'markdown level_2017_2018_2019', old_level.name
+
+    new_level = old_level.clone_with_suffix('_2020')
+    assert_equal 'markdown level_2017_2018_2019_2020', new_level.name
+  end
 end
