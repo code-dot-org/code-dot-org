@@ -64,17 +64,15 @@ export default class ActivitySectionCardButtons extends Component {
       <div>
         <div style={styles.bottomControls}>
           <span>
-            {this.props.activitySection.type === 'progression' && (
-              <button
-                onMouseDown={this.handleOpenAddLevel}
-                className="btn"
-                style={styles.addLevel}
-                type="button"
-              >
-                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                Add Level
-              </button>
-            )}
+            <button
+              onMouseDown={this.handleOpenAddLevel}
+              className="btn"
+              style={styles.addLevel}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Level
+            </button>
             <button
               onMouseDown={this.handleOpenAddTip}
               className="btn"
@@ -120,13 +118,11 @@ export default class ActivitySectionCardButtons extends Component {
             markdown: ''
           }}
         />
-        {this.props.activitySection.type === 'progression' && (
-          <AddLevelDialog
-            isOpen={this.state.addLevelOpen}
-            handleConfirm={this.handleCloseAddLevel}
-            currentLevels={this.props.activitySection.levels}
-          />
-        )}
+        <AddLevelDialog
+          isOpen={this.state.addLevelOpen}
+          handleConfirm={this.handleCloseAddLevel}
+          currentLevels={this.props.activitySection.levels}
+        />
       </div>
     );
   }

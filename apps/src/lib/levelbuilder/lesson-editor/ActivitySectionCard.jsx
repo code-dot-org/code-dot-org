@@ -135,7 +135,7 @@ class ActivitySectionCard extends Component {
           </label>
           <div style={styles.checkboxesAndButtons}>
             <span style={styles.checkboxes}>
-              {this.props.activitySection.type === 'description' && (
+              {this.props.activitySection.levels.length === 0 && (
                 <label style={styles.labelAndCheckbox}>
                   Remarks
                   <input
@@ -166,7 +166,7 @@ class ActivitySectionCard extends Component {
           )}
           style={styles.input}
         />
-        {this.props.activitySection.type === 'progression' &&
+        {this.props.activitySection.levels.length > 0 &&
           this.props.activitySection.levels.map(level => (
             <LevelToken2
               key={level.position + '_' + level.ids[0]}

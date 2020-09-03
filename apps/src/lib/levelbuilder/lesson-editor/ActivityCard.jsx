@@ -73,19 +73,10 @@ class ActivityCard extends Component {
     };
   }
 
-  handleAddDescription = () => {
+  handleAddActivitySection = () => {
     this.props.addActivitySection(
       this.props.activity.position,
-      `activitySection-${this.props.activity.activitySections.length + 1}`,
-      'description'
-    );
-  };
-
-  handleAddProgression = () => {
-    this.props.addActivitySection(
-      this.props.activity.position,
-      `activitySection-${this.props.activity.activitySections.length + 1}`,
-      'progression'
+      `activitySection-${this.props.activity.activitySections.length + 1}`
     );
   };
 
@@ -151,22 +142,13 @@ class ActivityCard extends Component {
             );
           })}
           <button
-            onMouseDown={this.handleAddDescription.bind()}
+            onMouseDown={this.handleAddActivitySection.bind()}
             className="btn"
             style={styles.addLesson}
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Description
-          </button>
-          <button
-            onMouseDown={this.handleAddProgression.bind()}
-            className="btn"
-            style={styles.addLesson}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Progression
+            Add Activity Section
           </button>
         </div>
       </div>
@@ -177,8 +159,8 @@ class ActivityCard extends Component {
 export default connect(
   state => ({}),
   dispatch => ({
-    addActivitySection(position, key, type) {
-      dispatch(addActivitySection(position, key, type));
+    addActivitySection(position, key) {
+      dispatch(addActivitySection(position, key));
     },
     moveActivity(activityPosition, direction) {
       dispatch(moveActivity(activityPosition, direction));

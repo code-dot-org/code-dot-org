@@ -39,15 +39,10 @@ export const addActivity = (activityPosition, activityKey, activityName) => ({
   activityName
 });
 
-export const addActivitySection = (
-  activityPosition,
-  activitySectionKey,
-  activitySectionType
-) => ({
+export const addActivitySection = (activityPosition, activitySectionKey) => ({
   type: ADD_ACTIVITY_SECTION,
   activityPosition,
-  activitySectionKey,
-  activitySectionType
+  activitySectionKey
 });
 
 export const toggleExpand = (
@@ -322,7 +317,6 @@ function activities(state = [], action) {
       activitySections.push({
         key: action.activitySectionKey,
         title: '',
-        type: action.activitySectionType,
         levels: [],
         tips: [],
         remarks: false,

@@ -14,23 +14,23 @@ const activities = [
     time: 20,
     activitySections: [
       {
-        type: 'description',
         key: 'section-3',
         position: 1,
         displayName: 'Making programs',
         remarks: true,
         slide: false,
+        levels: [],
         text:
           'Today we are going to be looking at some sample apps to explore their purpose and function.',
         tips: []
       },
       {
-        type: 'description',
         key: 'section-1',
         position: 2,
         displayName: null,
         remarks: false,
         slide: true,
+        levels: [],
         text: 'In this activity you will be learning about making activities.',
         tips: [
           {
@@ -41,11 +41,12 @@ const activities = [
         ]
       },
       {
-        type: 'progression',
         tips: [],
         key: 'progression-1',
         position: 3,
         displayName: 'Programming Progression',
+        remarks: false,
+        slide: false,
         text: 'This progression teaches you programming!',
         levels: [
           {
@@ -97,12 +98,12 @@ const activities = [
         ]
       },
       {
-        type: 'description',
         key: 'section-2',
         displayName: 'Discussion',
         position: 4,
         remarks: false,
         slide: false,
+        levels: [],
         text:
           '**Prompt:** With a partner, discuss the following and note down in your journal:\n - How does the user interact with the app?\n - What is the overall purpose of this app?\n - Who is the target audience?\n\n**Share Out:** As a class, discuss student answers to the discussion questions.',
         tips: [
@@ -125,21 +126,24 @@ const activities = [
     position: 2,
     activitySections: [
       {
-        type: 'description',
         key: 'section-1',
-        title: null,
+        text: '',
+        displayName: null,
         remarks: false,
         slide: false,
-        text: '',
-        tips: []
+        tips: [],
+        levels: [],
+        position: 1
       },
       {
-        type: 'progression',
-        tips: [],
         key: 'progression-1',
         displayName: '',
         text: '',
-        levels: []
+        levels: [],
+        tips: [],
+        remarks: false,
+        slide: false,
+        position: 2
       }
     ]
   }

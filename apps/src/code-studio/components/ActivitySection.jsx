@@ -35,9 +35,11 @@ export default class ActivitySection extends Component {
   render() {
     const {section} = this.props;
 
+    const isProgressionSection = section.levels.length > 0;
+
     return (
       <div>
-        {section.type === 'description' && <h4>{section.title}</h4>}
+        {!isProgressionSection && <h4>{section.title}</h4>}
         {section.remarks && (
           <div>
             <h4>
@@ -65,12 +67,8 @@ export default class ActivitySection extends Component {
               );
             })}
           </div>
-          {section.type === 'description' && (
-            <SafeMarkdown markdown={section.text} />
-          )}
-          {section.type === 'progression' && section.levels.length > 0 && (
-            <ProgressionDetails progression={section} />
-          )}
+          {!isProgressionSection && <SafeMarkdown markdown={section.text} />}
+          {isProgressionSection && <ProgressionDetails progression={section} />}
           <div style={styles.tips}>
             {section.tips.map((tip, index) => {
               return <LessonTip key={`tip-${index}`} tip={tip} />;
