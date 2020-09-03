@@ -58,19 +58,19 @@ class ScriptLevel < ActiveRecord::Base
     raw_script_levels.map do |raw_script_level|
       raw_script_level.symbolize_keys!
 
-      properties = raw_script_level.delete(:properties) || {}
-      raw_levels = raw_script_level[:levels]
-
       # variants are deprecated. when cloning a script, retain only the first
       # active level in each script level, discarding any variants.
-      if new_suffix && raw_levels.length > 1
-        first_active_level = raw_levels.find do |raw_level|
-          variant = properties[:variants].try(:[], raw_level[:name])
+      if new_suffix && raw_script_level[:levels].length > 1
+        first_active_level = raw_script_level[:levels].find do |raw_level|
+          variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name])
           !(variant && variant[:active] == false)
         end
-        raw_levels = [first_active_level]
-        properties.delete(:variants)
+        raw_script_level[:levels] = [first_active_level]
+        raw_script_level[:properties].delete(:variants)
       end
+
+      properties = raw_script_level.delete(:properties) || {}
+      raw_levels = raw_script_level[:levels]
 
       levels = Level.add_levels(raw_levels, script, new_suffix, editor_experiment)
 
