@@ -18,7 +18,7 @@ const activities = [
         key: 'section-3',
         position: 1,
         displayName: 'Making programs',
-        isRemarks: true,
+        remarks: true,
         slide: false,
         text:
           'Today we are going to be looking at some sample apps to explore their purpose and function.',
@@ -29,7 +29,7 @@ const activities = [
         key: 'section-1',
         position: 2,
         displayName: null,
-        isRemarks: false,
+        remarks: false,
         slide: true,
         text: 'In this activity you will be learning about making activities.',
         tips: [
@@ -101,7 +101,7 @@ const activities = [
         key: 'section-2',
         displayName: 'Discussion',
         position: 4,
-        isRemarks: false,
+        remarks: false,
         slide: false,
         text:
           '**Prompt:** With a partner, discuss the following and note down in your journal:\n - How does the user interact with the app?\n - What is the overall purpose of this app?\n - Who is the target audience?\n\n**Share Out:** As a class, discuss student answers to the discussion questions.',
@@ -128,7 +128,7 @@ const activities = [
         type: 'description',
         key: 'section-1',
         title: null,
-        isRemarks: false,
+        remarks: false,
         slide: false,
         text: '',
         tips: []

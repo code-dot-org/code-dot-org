@@ -38,7 +38,7 @@ export default class ActivitySection extends Component {
     return (
       <div>
         {section.type === 'description' && <h4>{section.title}</h4>}
-        {section.isRemarks && (
+        {section.remarks && (
           <div>
             <h4>
               <FontAwesome icon="microphone" />
@@ -49,7 +49,7 @@ export default class ActivitySection extends Component {
         <div
           style={{
             ...styles.activitySection,
-            ...(section.isRemarks && {borderLeft: '5px solid #CCC'})
+            ...(section.remarks && {borderLeft: '5px solid #CCC'})
           }}
         >
           <div style={styles.tipIcons}>

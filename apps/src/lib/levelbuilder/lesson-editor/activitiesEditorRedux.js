@@ -325,7 +325,7 @@ function activities(state = [], action) {
         type: action.activitySectionType,
         levels: [],
         tips: [],
-        isRemarks: false,
+        remarks: false,
         slide: false,
         text: ''
       });
@@ -494,18 +494,14 @@ function activities(state = [], action) {
     case SET_ACTIVITY_SECTION_REMARKS: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
-      activitySections[
-        action.activitySectionPosition - activitySections[0].position
-      ].remarks = action.remarks;
-
+      activitySections[action.activitySectionPosition - 1].remarks =
+        action.remarks;
       break;
     }
     case SET_ACTIVITY_SECTION_SLIDES: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
-      activitySections[
-        action.activitySectionPosition - activitySections[0].position
-      ].slides = action.slides;
+      activitySections[action.activitySectionPosition - 1].slide = action.slide;
 
       break;
     }

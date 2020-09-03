@@ -4,8 +4,7 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
-import ActivityDescriptionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityDescriptionCard';
-import ProgressionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgressionCard';
+import ActivitySectionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   addActivitySection,
@@ -142,16 +141,14 @@ class ActivityCard extends Component {
         </div>
         <div style={styles.groupBody} hidden={this.state.collapsed}>
           {activity.activitySections.map(block => {
-            if (block.type === 'description') {
-              return (
-                <ActivityDescriptionCard
-                  key={block.key}
-                  activitySection={block}
-                />
-              );
-            } else {
-              return <ProgressionCard key={block.key} progression={block} />;
-            }
+            return (
+              <ActivitySectionCard
+                key={block.key}
+                activitySection={block}
+                activityPosition={activity.position}
+                activitySectionsCount={activity.activitySections.length}
+              />
+            );
           })}
           <button
             onMouseDown={this.handleAddDescription.bind()}
