@@ -1603,30 +1603,14 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'test-fixture-variants-copy', script_copy.name
 
     assert_equal 4, script_copy.script_levels.count
-
-    sl = script_copy.script_levels[0]
-    assert_equal 1, sl.levels.count
-    assert_equal 'Level 1_copy', sl.levels.first.name
-    assert sl.active?(sl.levels.first)
-    refute sl.variants?
-
-    sl = script_copy.script_levels[1]
-    assert_equal 1, sl.levels.count
-    assert_equal 'Level 4_copy', sl.levels.first.name
-    assert sl.active?(sl.levels.first)
-    refute sl.variants?
-
-    sl = script_copy.script_levels[2]
-    assert_equal 1, sl.levels.count
-    assert_equal 'Level 5_copy', sl.levels.first.name
-    assert sl.active?(sl.levels.first)
-    refute sl.variants?
-
-    sl = script_copy.script_levels[3]
-    assert_equal 1, sl.levels.count
-    assert_equal 'Level 8_copy', sl.levels.first.name
-    assert sl.active?(sl.levels.first)
-    refute sl.variants?
+    script_copy.script_levels.each do |sl|
+      assert_equal 1, sl.levels.count
+      assert sl.active?(sl.levels.first)
+      refute sl.variants?
+    end
+    expected_level_names = ['Level 1_copy', 'Level 4_copy', 'Level 5_copy', 'Level 8_copy']
+    actual_level_names = script_copy.script_levels.map(&:levels).map(&:first).map(&:name)
+    assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~SCRIPT
       lesson 'lesson1', display_name: 'lesson1'
