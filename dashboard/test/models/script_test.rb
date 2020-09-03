@@ -1593,14 +1593,14 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal true, script_copy.hidden
   end
 
-  test 'clone script with inactive variant' do
-    script_file = File.join(self.class.fixture_path, "test-fixture-variants.script")
+  test 'clone script with variants' do
+    script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
     scripts, _ = Script.setup([script_file])
     script = scripts[0]
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
-    assert_equal 'test-fixture-variants-copy', script_copy.name
+    assert_equal 'test-fixture-experiments-copy', script_copy.name
 
     assert_equal 4, script_copy.script_levels.count
     script_copy.script_levels.each do |sl|

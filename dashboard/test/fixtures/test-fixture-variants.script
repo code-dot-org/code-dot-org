@@ -3,15 +3,3 @@ variants
   level 'Level 1'
   level 'Level 2', active: false
 endvariants
-variants
-  level 'Level 3', active: false
-  level 'Level 4'
-endvariants
-variants
-  level 'Level 5'
-  level 'Level 6'
-endvariants
-variants
-  level 'Level 7', experiments: ['experiment']
-  level 'Level 8'
-endvariants
