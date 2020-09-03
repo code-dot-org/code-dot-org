@@ -20,9 +20,12 @@ const REMOVE_ACTIVITY = 'activitiesEditor/REMOVE_ACTIVITY';
 const REMOVE_ACTIVITY_SECTION = 'activitiesEditor/REMOVE_LESSON';
 const SET_ACTIVITY_SECTION_REMARKS =
   'activitiesEditor/SET_ACTIVITY_SECTION_REMARKS';
-const SET_ACTIVITY_SECTION_SLIDES =
-  'activitiesEditor/SET_ACTIVITY_SECTION_SLIDES';
+const SET_ACTIVITY_SECTION_SLIDE =
+  'activitiesEditor/SET_ACTIVITY_SECTION_SLIDE';
 const SET_ACTIVITY = 'activitiesEditor/SET_ACTIVITY';
+const UPDATE_ACTIVITY_FIELD = 'activitiesEditor/UPDATE_ACTIVITY_FIELD';
+const UPDATE_ACTIVITY_SECTION_FIELD =
+  'activitiesEditor/UPDATE_ACTIVITY_SECTION_FIELD';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
@@ -37,6 +40,30 @@ export const addActivity = (activityPosition, activityKey, activityName) => ({
   activityPosition,
   activityKey,
   activityName
+});
+
+export const updateActivityField = (
+  activityPosition,
+  fieldName,
+  fieldValue
+) => ({
+  type: UPDATE_ACTIVITY_FIELD,
+  activityPosition,
+  fieldName,
+  fieldValue
+});
+
+export const updateActivitySectionField = (
+  activityPosition,
+  activitySectionPosition,
+  fieldName,
+  fieldValue
+) => ({
+  type: UPDATE_ACTIVITY_SECTION_FIELD,
+  activityPosition,
+  activitySectionPosition,
+  fieldName,
+  fieldValue
 });
 
 export const addActivitySection = (activityPosition, activitySectionKey) => ({
@@ -206,15 +233,15 @@ export const setActivitySectionRemarks = (
   remarks
 });
 
-export const setActivitySectionSlides = (
+export const setActivitySectionSlide = (
   activityPosition,
   activitySectionPosition,
-  slides
+  slide
 ) => ({
-  type: SET_ACTIVITY_SECTION_SLIDES,
+  type: SET_ACTIVITY_SECTION_SLIDE,
   activityPosition,
   activitySectionPosition,
-  slides
+  slide
 });
 
 export const setActivity = (
@@ -309,6 +336,18 @@ function activities(state = [], action) {
         activitySections: []
       });
       updateActivityPositions(newState);
+      break;
+    }
+    case UPDATE_ACTIVITY_FIELD: {
+      newState[action.activityPosition - 1][action.fieldName] =
+        action.fieldValue;
+      break;
+    }
+    case UPDATE_ACTIVITY_SECTION_FIELD: {
+      const activitySections =
+        newState[action.activityPosition - 1].activitySections;
+      activitySections[action.activitySectionPosition - 1][action.fieldName] =
+        action.fieldValue;
       break;
     }
     case ADD_ACTIVITY_SECTION: {
@@ -492,7 +531,7 @@ function activities(state = [], action) {
         action.remarks;
       break;
     }
-    case SET_ACTIVITY_SECTION_SLIDES: {
+    case SET_ACTIVITY_SECTION_SLIDE: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections[action.activitySectionPosition - 1].slide = action.slide;

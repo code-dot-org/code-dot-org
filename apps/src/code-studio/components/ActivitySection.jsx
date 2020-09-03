@@ -39,7 +39,7 @@ export default class ActivitySection extends Component {
 
     return (
       <div>
-        {!isProgressionSection && <h4>{section.title}</h4>}
+        {!isProgressionSection && <h4>{section.displayName}</h4>}
         {section.remarks && (
           <div>
             <h4>

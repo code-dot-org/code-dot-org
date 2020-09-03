@@ -5,10 +5,11 @@ import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import ActivitySectionCardButtons from './ActivitySectionCardButtons';
 import {connect} from 'react-redux';
 import {
-  setActivitySectionSlides,
+  setActivitySectionSlide,
   setActivitySectionRemarks,
   moveActivitySection,
-  removeActivitySection
+  removeActivitySection,
+  updateActivitySectionField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken2';
 
@@ -73,14 +74,15 @@ class ActivitySectionCard extends Component {
     activitySectionsCount: PropTypes.number,
 
     //redux
-    setActivitySectionSlides: PropTypes.func,
+    setActivitySectionSlide: PropTypes.func,
     setActivitySectionRemarks: PropTypes.func,
     moveActivitySection: PropTypes.func,
-    removeActivitySection: PropTypes.func
+    removeActivitySection: PropTypes.func,
+    updateActivitySectionField: PropTypes.func
   };
 
   toggleSlides = () => {
-    this.props.setActivitySectionSlides(
+    this.props.setActivitySectionSlide(
       this.props.activityPosition,
       this.props.activitySection.position,
       !this.props.activitySection.slide
@@ -117,13 +119,34 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  handleChangeDisplayName = event => {
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'displayName',
+      event.target.value
+    );
+  };
+
+  handleChangeText = event => {
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'text',
+      event.target.value
+    );
+  };
+
   render() {
     return (
       <div style={styles.lessonCard}>
         <div style={styles.lessonCardHeader}>
           <label>
             <span style={styles.title}>Title:</span>
-            <input defaultValue={this.props.activitySection.displayName} />
+            <input
+              value={this.props.activitySection.displayName}
+              onChange={this.handleChangeDisplayName}
+            />
             <OrderControls
               name={
                 this.props.activitySection.displayName ||
@@ -159,12 +182,13 @@ class ActivitySectionCard extends Component {
           </div>
         </div>
         <textarea
-          defaultValue={this.props.activitySection.text}
+          value={this.props.activitySection.text}
           rows={Math.max(
             this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
             2
           )}
           style={styles.input}
+          onChange={this.handleChangeText}
         />
         {this.props.activitySection.levels.length > 0 &&
           this.props.activitySection.levels.map(level => (
@@ -184,9 +208,10 @@ class ActivitySectionCard extends Component {
 export default connect(
   state => ({}),
   {
-    setActivitySectionSlides,
+    setActivitySectionSlide,
     setActivitySectionRemarks,
     moveActivitySection,
-    removeActivitySection
+    removeActivitySection,
+    updateActivitySectionField
   }
 )(ActivitySectionCard);

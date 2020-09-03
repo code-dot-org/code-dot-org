@@ -122,7 +122,7 @@ const activities = [
   {
     key: 'activity-2',
     displayName: '',
-    time: null,
+    time: 0,
     position: 2,
     activitySections: [
       {

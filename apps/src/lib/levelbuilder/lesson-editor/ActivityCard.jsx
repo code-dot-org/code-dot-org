@@ -9,7 +9,8 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   addActivitySection,
   moveActivity,
-  removeActivity
+  removeActivity,
+  updateActivityField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 const styles = {
@@ -62,7 +63,8 @@ class ActivityCard extends Component {
     activitiesCount: PropTypes.number,
     addActivitySection: PropTypes.func,
     removeActivity: PropTypes.func,
-    moveActivity: PropTypes.func
+    moveActivity: PropTypes.func,
+    updateActivityField: PropTypes.func
   };
 
   constructor(props) {
@@ -94,6 +96,22 @@ class ActivityCard extends Component {
     this.props.removeActivity(this.props.activity.position);
   };
 
+  handleChangeDisplayName = event => {
+    this.props.updateActivityField(
+      this.props.activity.position,
+      'displayName',
+      event.target.value
+    );
+  };
+
+  handleChangeTime = event => {
+    this.props.updateActivityField(
+      this.props.activity.position,
+      'time',
+      event.target.value
+    );
+  };
+
   render() {
     const {activity} = this.props;
 
@@ -115,13 +133,18 @@ class ActivityCard extends Component {
           />
           <label style={styles.labelAndInput}>
             <span style={styles.label}>{`Activity:`}</span>
-            <input defaultValue={activity.displayName} style={styles.input} />
+            <input
+              value={activity.displayName}
+              style={styles.input}
+              onChange={this.handleChangeDisplayName}
+            />
           </label>
           <label style={styles.labelAndInput}>
             <span style={styles.label}>{`Time (mins):`}</span>
             <input
-              defaultValue={activity.time}
+              value={activity.time}
               style={{...styles.input, ...{width: 50}}}
+              onChange={this.handleChangeTime}
             />
           </label>
           <OrderControls
@@ -167,6 +190,9 @@ export default connect(
     },
     removeActivity(activityPosition) {
       dispatch(removeActivity(activityPosition));
+    },
+    updateActivityField(activityPosition, fieldName, value) {
+      dispatch(updateActivityField(activityPosition, fieldName, value));
     }
   })
 )(ActivityCard);
