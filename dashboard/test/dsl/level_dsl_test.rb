@@ -219,6 +219,6 @@ class LevelDslTest < ActiveSupport::TestCase
     assert_equal 'markdown level_2017_2018_2019', old_level.name
 
     new_level = old_level.clone_with_suffix('_2020')
-    assert_equal 'markdown level_2017_2018_2019_2020', new_level.name
+    assert_equal 'markdown level_2020', new_level.name
   end
 end
