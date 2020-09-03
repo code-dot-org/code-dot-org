@@ -1602,17 +1602,24 @@ class ScriptTest < ActiveSupport::TestCase
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-variants-copy', script_copy.name
 
-    assert_equal 1, script_copy.script_levels.count
-    sl = script_copy.script_levels.first
-    assert_equal 1, sl.levels.count
+    assert_equal 2, script_copy.script_levels.count
 
+    sl = script_copy.script_levels[0]
+    assert_equal 1, sl.levels.count
     assert_equal 'Level 1_copy', sl.levels.first.name
+    assert sl.active?(sl.levels.first)
+    refute sl.variants?
+
+    sl = script_copy.script_levels[1]
+    assert_equal 1, sl.levels.count
+    assert_equal 'Level 4_copy', sl.levels.first.name
     assert sl.active?(sl.levels.first)
     refute sl.variants?
 
     new_dsl = <<~SCRIPT
       lesson 'lesson1', display_name: 'lesson1'
       level 'Level 1_copy'
+      level 'Level 4_copy'
 
     SCRIPT
 
