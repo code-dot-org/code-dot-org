@@ -8,7 +8,7 @@ import {
   levelTokenMargin
 } from '@cdo/apps/lib/levelbuilder/constants';
 import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
-import {toggleExpand} from '@cdo/apps/lib/levelbuilder/editorRedux';
+import {toggleExpand} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {

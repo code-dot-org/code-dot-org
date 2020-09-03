@@ -330,7 +330,7 @@ function activities(state = [], action) {
     case ADD_ACTIVITY: {
       newState.push({
         key: action.activityKey,
-        display_name: '',
+        displayName: '',
         position: action.activityPosition,
         time: 0,
         activitySections: []

@@ -27,7 +27,7 @@ const activities = [
       {
         key: 'section-1',
         position: 2,
-        displayName: null,
+        displayName: '',
         remarks: false,
         slide: true,
         levels: [],
@@ -128,22 +128,12 @@ const activities = [
       {
         key: 'section-1',
         text: '',
-        displayName: null,
+        displayName: '',
         remarks: false,
         slide: false,
         tips: [],
         levels: [],
         position: 1
-      },
-      {
-        key: 'progression-1',
-        displayName: '',
-        text: '',
-        levels: [],
-        tips: [],
-        remarks: false,
-        slide: false,
-        position: 2
       }
     ]
   }

@@ -11,7 +11,7 @@ import {
   removeGroup,
   moveGroup,
   convertGroupToUserFacing
-} from '@cdo/apps/lib/levelbuilder/editorRedux';
+} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 
 const styles = {
   groupHeader: {

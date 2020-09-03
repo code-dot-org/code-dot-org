@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {removeLevel} from '@cdo/apps/lib/levelbuilder/editorRedux';
+import {removeLevel} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 import Dialog from '../../templates/Dialog';
 
 /**

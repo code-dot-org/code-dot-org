@@ -8,7 +8,7 @@ import {
   setActiveVariant,
   setField,
   NEW_LEVEL_ID
-} from '@cdo/apps/lib/levelbuilder/editorRedux';
+} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import LevelNameInput from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelNameInput';
 import ReactTooltip from 'react-tooltip';

@@ -16,7 +16,7 @@ import {
   setLessonGroup,
   moveLesson,
   removeLesson
-} from '@cdo/apps/lib/levelbuilder/editorRedux';
+} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 import LessonGroupSelector from './LessonGroupSelector';
 import color from '@cdo/apps/util/color';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
