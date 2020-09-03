@@ -49,8 +49,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       User.find(feedback.teacher_id).authorized_teacher?
     end
 
-    # TODO: is it ok to use the text/plain content type here? We're not actually returning JSON.
-    render text: @all_unseen_feedbacks.count, content_type: 'text/plain'
+    render json: @all_unseen_feedbacks.count
   end
 
   # POST /teacher_feedbacks
