@@ -362,10 +362,13 @@ tr:
       sections: Bölümler
       help_support: Yardım ve Destek
       report_bug: Hata bildir
+      report_abuse: Hata Rapor Et
       teacher_community: Öğretmen topluluğu
       professional_learning: Profesyonel öğrenme
       documentation: Belgeler
       tutorials: Eğitmler
+      app_lab_documentation: Uygulama Laboratuvarı Belgelendirmesi
+      app_lab_tutorials: Uygulama Laboratuvar Eğitimleri
       game_lab_documentation: Oyun Laboratuvar Belgelendirmesi
       game_lab_tutorials: Oyun Laboratuvar Eğitimi
       sprite_lab_documentation: Peri Laboratuvar Belgelendirmesi
@@ -395,6 +398,7 @@ tr:
       help_us: Bize yardım edin
       teach: Öğret
       about: Hakkında
+      legal: Gizlilik & Hukuk
       legal_privacy: Gizlilik Politikası
       legal_tos: Şartlar
     user:
@@ -549,6 +553,7 @@ tr:
       bu hesaba bir ebeveyn/veli e-posta adresi bağlayın. Bu e-posta adresini şifre
       kurtarma için de kullanabilirsiniz.
     parent_guardian_email_label: Veli e-posta
+    remove_parent_email_label: Kaldır
     none: Hiçbiri
     only_one_parent_email_supported_warning: 'Not: Şu anda öğrenci hesabı başına yalnızca
       bir ebeveyn/veli e-posta adresini destekleyebiliyoruz.'
@@ -602,6 +607,8 @@ tr:
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
     choose_next_course: Aşağıdaki Code Studio derslerinden birini seçerek deneyin
     print_certificate: Sertifikayı Yazdır
+  certificate_sponsor_message: "%{sponsor_name} öğreniminize sponsor olarak cömert
+    bir bağışta bulundu."
   move_students:
     new_section_dne: Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin.
@@ -976,6 +983,8 @@ tr:
       güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz. JavaScript
       öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir."
     review_terms: Güncellenen Hizmet ve Gizlilik politikasını göster
+  donor_interstitial:
+    title: Ücretsiz Bilgisayar Bilimi kurslarınız ... tarafından sağlanmaktadır
   school_info_interstitial:
     title: Her öğrenciye bilgisayar bilim ini getirmek için bize yardım etmeni istiyoruz!
     message: Lütfen aşağıya okul bilgilerinizi girin.
