@@ -1,4 +1,5 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+import {BlockSvgUnused} from '@cdo/apps/blockly/blockSvgUnused';
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -37,6 +38,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
   blocklyWrapper.wrapReadOnlyProperty('bindEvent_');
+  blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
@@ -48,6 +50,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
+  blocklyWrapper.wrapReadOnlyProperty('Events');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
@@ -146,6 +149,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
   blocklyWrapper.wrapSettableProperty('Xml');
 
+  blocklyWrapper.ieVersion = () => false; // TODO
+
+  blocklyWrapper.isRightButton = function(e) {
+    // Control-clicking in WebKit on Mac OS X fails to change button to 2.
+    return e.button === 2 || e.ctrlKey;
+  };
+
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
   };
@@ -210,7 +220,53 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Workspace.prototype.getToolboxWidth = function() {
     return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
   };
-  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
+
+  blocklyWrapper.BlockSvg.prototype.addUnusedFrame = function(callback) {
+    if (!this.unusedSvg_) {
+      this.unusedSvg_ = new BlockSvgUnused(this, callback);
+    }
+    this.unusedSvg_.render(this.svgGroup_);
+  };
+
+  blocklyWrapper.BlockSvg.prototype.removeUnusedFrame = function() {
+    if (this.unusedSvg_) {
+      this.unusedSvg_.dispose();
+      this.unusedSvg_ = null;
+    }
+  };
+  blocklyWrapper.BlockSvg.prototype.originalRender =
+    blocklyWrapper.BlockSvg.prototype.render;
+  blocklyWrapper.BlockSvg.prototype.render = function() {
+    this.originalRender();
+    this.removeUnusedFrame();
+  };
+  blocklyWrapper.BlockSvg.prototype.originalDispose =
+    blocklyWrapper.BlockSvg.prototype.dispose;
+  blocklyWrapper.BlockSvg.prototype.dispose = function() {
+    this.originalDispose();
+    this.removeUnusedFrame();
+  };
+
+  blocklyWrapper.blockRendering.PathObject.prototype.updateDisabled_ = function(
+    disabled
+  ) {
+    this.setClass_('blocklyDisabled', disabled);
+  };
+  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = callback => {
+    Blockly.mainBlockSpace.addChangeListener(Blockly.Events.disableOrphans);
+    Blockly.bindEvent_(
+      Blockly.mainBlockSpace.getCanvas(),
+      Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
+      Blockly.mainBlockSpace,
+      function() {
+        this.getTopBlocks().forEach(function(block) {
+          if (block.disabled) {
+            block.addUnusedFrame(callback);
+          }
+        });
+      }
+    );
+  };
   blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
     blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
   blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
