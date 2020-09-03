@@ -65,9 +65,8 @@ class ScriptLevel < ActiveRecord::Base
       end
 
       properties = raw_script_level.delete(:properties) || {}
-      raw_levels = raw_script_level[:levels]
 
-      levels = Level.add_levels(raw_levels, script, new_suffix, editor_experiment)
+      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
 
       script_level_attributes = {
         script_id: script.id,
