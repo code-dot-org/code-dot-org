@@ -83,7 +83,7 @@ const activities = [
             sublevels: [],
             position: 2,
             activeId: 10,
-            ids: [10],
+            ids: [10, 11],
             kind: 'assessment',
             skin: null,
             videoKey: null,

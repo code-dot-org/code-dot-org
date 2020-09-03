@@ -161,10 +161,10 @@ export default class LevelTokenDetails2 extends Component {
             </label>
           ))}
         </span>
-        <hr style={styles.divider} />
-        <div style={{clear: 'both'}} />
         {this.containsLegacyLevel() && (
           <div>
+            <hr style={styles.divider} />
+            <div style={{clear: 'both'}} />
             <span style={styles.levelFieldLabel}>Skin:</span>
             <input
               defaultValue={this.props.level.skin}
@@ -198,9 +198,9 @@ export default class LevelTokenDetails2 extends Component {
             />
           </div>
         )}
-        {this.props.level.ids.map((id, index) => (
-          <div key={id}>
-            {this.props.level.ids.length > 1 && (
+        {this.props.level.ids.length > 1 &&
+          this.props.level.ids.map((id, index) => (
+            <div key={id}>
               <div>
                 <hr style={styles.divider} />
                 <span>
@@ -230,37 +230,13 @@ export default class LevelTokenDetails2 extends Component {
                   </span>
                 )}
               </div>
-            )}
-            <span style={{...styles.levelFieldLabel}}>Level name:</span>
-            <LevelNameInput2
-              onSelectLevel={id => this.handleLevelSelected(index, id)}
-              initialLevelName={this.props.level.displayName}
-            />
-          </div>
-        ))}
-        {showAddVariants && <hr style={styles.divider} />}
-        <div style={styles.progression}>
-          <span
-            style={styles.levelFieldLabel}
-            data-for={tooltipIds.progression}
-            data-tip
-          >
-            Progression:
-          </span>
-          <ReactTooltip id={tooltipIds.progression} delayShow={500}>
-            <div style={styles.tooltip}>{tooltipText.progression}</div>
-          </ReactTooltip>
-
-          <span style={styles.levelSelect}>
-            <input
-              type="text"
-              onChange={event => this.handleFieldChange('progression', event)}
-              value={this.props.level.progression}
-              style={styles.progressionTextInput}
-              data-field-name="progression"
-            />
-          </span>
-        </div>
+              <span style={{...styles.levelFieldLabel}}>Level name:</span>
+              <LevelNameInput2
+                onSelectLevel={id => this.handleLevelSelected(index, id)}
+                initialLevelName={this.props.level.displayName}
+              />
+            </div>
+          ))}
         {showAddVariants && (
           <div>
             <hr style={styles.divider} />
