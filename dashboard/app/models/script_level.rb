@@ -59,14 +59,25 @@ class ScriptLevel < ActiveRecord::Base
       raw_script_level.symbolize_keys!
 
       properties = raw_script_level.delete(:properties) || {}
-
-      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
+      raw_levels = raw_script_level[:levels]
 
       if new_suffix && properties[:variants]
+        # reject any inactive variants
+        properties[:variants].keys.each do |level_name|
+          variant = properties[:variants][level_name]
+          if variant[:active] == false
+            raw_levels.reject! {|raw_level| raw_level[:name] == level_name}
+            properties[:variants].delete(level_name)
+          end
+        end
+
         properties[:variants] = properties[:variants].map do |old_level_name, value|
           ["#{old_level_name}_#{new_suffix}", value]
         end.to_h
+        properties.delete(:variants) if properties[:variants].keys.empty?
       end
+
+      levels = Level.add_levels(raw_levels, script, new_suffix, editor_experiment)
 
       script_level_attributes = {
         script_id: script.id,
