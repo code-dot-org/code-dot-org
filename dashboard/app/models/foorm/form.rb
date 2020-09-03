@@ -21,6 +21,7 @@ class Foorm::Form < ActiveRecord::Base
   class InvalidFoormConfigurationError < StandardError; end
 
   has_many :foorm_submissions
+  validate :validate_questions
 
   def self.setup
     forms = Dir.glob('config/foorm/forms/**/*.json').sort.map.with_index(1) do |path, id|
@@ -35,7 +36,6 @@ class Foorm::Form < ActiveRecord::Base
 
       # Let's load the JSON text.
       questions = File.read(path)
-      validate_questions(JSON.parse(questions))
 
       {
         id: id,
@@ -46,7 +46,7 @@ class Foorm::Form < ActiveRecord::Base
     end
 
     transaction do
-      reset_db
+      Foorm::Form.delete_all
       Foorm::Form.import! forms
     end
   end
@@ -92,21 +92,28 @@ class Foorm::Form < ActiveRecord::Base
     return questions
   end
 
-  def self.validate_questions(questions_to_validate)
+  def validate_questions
     # fill_in_library_items will throw an exception if any library items are invalid
-    filled_questions = Foorm::Form.fill_in_library_items(questions_to_validate)
-
-    # check for no duplicate names
-    # check all choices have key/value pairs
+    begin
+      filled_questions = Foorm::Form.fill_in_library_items(JSON.parse(questions))
+    rescue StandardError => e
+      errors.add(:questions, e.message)
+      return
+    end
     filled_questions.deep_symbolize_keys!
     element_names = Set.new
     filled_questions[:pages].each do |page|
       page[:elements].each do |element_data|
-        validate_element(element_data, element_names)
+        # validate_element will throw an exception if the element is invalid
+        Foorm::Form.validate_element(element_data, element_names)
+      rescue StandardError => e
+        errors.add(:questions, e.message)
       end
     end
   end
 
+  # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
+  # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
   def self.validate_element(element_data, element_names)
     return unless PANEL_TYPES.include?(element_data[:type]) || QUESTION_TYPES.include?(element_data[:type])
     if element_names.include?(element_data[:name])
@@ -146,7 +153,7 @@ class Foorm::Form < ActiveRecord::Base
         choice_values.add(choice[:value])
       elsif choice.class == String
         error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
-        raise InvalidFoormConfigurationError, error_msg
+        raise InvalidFoormConfigurationError,  error_msg
       end
     end
   end
