@@ -105,6 +105,7 @@ class Foorm::Form < ActiveRecord::Base
 
     CSV.open(file_path, "wb") do |csv|
       break if filtered_submissions.empty?
+      comma_separated_submissions = []
 
       # Submissions containing answers to facilitator-specific questions
       # don't have survey config stored in them.
@@ -117,16 +118,36 @@ class Foorm::Form < ActiveRecord::Base
         readable_questions :
         merge_form_questions_and_config_variables(submission_with_survey_config)
 
-      csv << headers.values
       filtered_submissions.each do |submission|
         answers = submission.formatted_answers
 
-        submission.associated_facilitator_submissions.each do |facilitator_response|
-          break if facilitator_response.nil?
-          answers.merge! facilitator_response.formatted_answers
+        if submission.associated_facilitator_submissions
+          submission.associated_facilitator_submissions.each_with_index do |facilitator_response, index|
+            next if facilitator_response.nil?
+            facilitator_number = index + 1
+
+            facilitator_headers_with_facilitator_number = Hash[
+              readable_questions[:facilitator].map do |key, value|
+                [key + "_#{facilitator_number}", "Facilitator : #{facilitator_number}" + value]
+              end
+            ]
+            headers.merge! facilitator_headers_with_facilitator_number
+
+            facilitator_response_with_facilitator_number = Hash[
+              facilitator_response.formatted_answers.map do |key, value|
+                [key + "_#{facilitator_number}", value]
+              end
+            ]
+            answers.merge! facilitator_response_with_facilitator_number
+            headers = Hash[facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}].merge headers
+          end
         end
-        csv << answers.values_at(*headers.keys)
+
+        comma_separated_submissions << answers.values_at(*headers.keys)
       end
+
+      csv << headers.values
+      comma_separated_submissions.each {|row| csv << row}
     end
   end
 
@@ -163,7 +184,7 @@ class Foorm::Form < ActiveRecord::Base
   # and workshop metadata (eg, pd_worskhop_id)
   # that appears in the form submission, but not the form itself.
   def merge_form_questions_and_config_variables(submission)
-    headers = readable_questions[:general].merge readable_questions[:facilitator]
+    headers = readable_questions[:general]
 
     config_and_metadata_question_ids = submission.keys.reject do |question_id|
       headers.keys.include? question_id
