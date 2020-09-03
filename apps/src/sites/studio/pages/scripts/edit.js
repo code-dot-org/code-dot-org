@@ -95,6 +95,10 @@ export default function initPage(scriptEditorData) {
         versionYearOptions={scriptEditorData.version_year_options}
         isLevelbuilder={scriptEditorData.is_levelbuilder}
         tts={scriptData.tts}
+        /* isCourse controls whether this Script/Unit is intended to be the root of a CourseOffering version.
+         * hasCourse indicates whether this Script/Unit is part of a UnitGroup. These two in theory should be
+         * complements, but currently (August 2020) they are not, so they are separate fields for now. */
+        isCourse={scriptData.is_course}
         hasCourse={scriptEditorData.has_course}
       />
     </Provider>,
