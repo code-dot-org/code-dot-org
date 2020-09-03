@@ -783,20 +783,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
-  test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
+  test 'login: google_oauth2 redirects unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, :demigrated, email: email)
+    create(:student, :demigrated, email: email)
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
     assert_does_not_create(User) do
       get :google_oauth2
     end
-    user.reload
-    assert_equal 'google_oauth2', user.provider
-    assert_equal user.uid, uid
-    assert_equal user.id, signed_in_user_id
+    assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
   end
 
   test 'login: microsoft_v2_auth silently takes over unmigrated student with matching email' do
@@ -829,42 +826,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal signed_in_user_id, user.id
   end
 
-  test 'login: google_oauth2 silently takes over unmigrated Google Classroom student with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:student, :demigrated, email: email)
-    google_classroom_student = create(:student, :migrated_imported_from_google_classroom, :demigrated, uid: uid)
-    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
-    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_destroys(User) do
-      get :google_oauth2
-    end
-    user.reload
-    assert_equal 'google_oauth2', user.provider
-    assert_equal user.uid, uid
-    assert_equal [google_classroom_section&.id], user.sections_as_student.pluck(:id)
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test 'login: google_oauth2 silently takes over unmigrated teacher with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:teacher, :demigrated, email: email)
-    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_TEACHER, email: email)
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :google_oauth2
-    end
-    user.reload
-    assert_equal 'google_oauth2', user.provider
-    assert_equal user.uid, uid
-    assert_equal user.id, signed_in_user_id
-  end
-
   test 'login: microsoft_v2_auth silently takes over unmigrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -895,7 +856,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal signed_in_user_id, user.id
   end
 
-  test 'login: google_oauth2 silently adds authentication_option to migrated student with matching email' do
+  test 'login: google_oauth2 redirects migrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:student, email: email)
@@ -906,50 +867,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
     user.reload
-    assert_equal 'migrated', user.provider
-    found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert found_google
-    assert_equal user.id, signed_in_user_id
+    assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
   end
-
-  test 'login: google_oauth2 silently takes over migrated Google Classroom student with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:student, email: email)
-    google_classroom_student = create(:student, :migrated_imported_from_google_classroom, uid: uid)
-    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
-    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_destroys(User) do
-      get :google_oauth2
-    end
-    user.reload
-    assert_equal 'migrated', user.provider
-    found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert found_google
-    assert [google_classroom_section&.id], user.sections_as_student.pluck(:id)
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test 'login: google_oauth2 silently adds authentication_option to migrated teacher with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:teacher, email: email)
-    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_TEACHER, email: email)
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :google_oauth2
-    end
-    user.reload
-    assert_equal 'migrated', user.provider
-    found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert found_google
-    assert_equal user.id, signed_in_user_id
-  end
-
   test 'login: microsoft_v2_auth silently adds authentication_option to migrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -1483,7 +1402,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'silent_takeover: Adds email to teacher account missing email' do
+  test 'teacher account missing email redirected when trying to add oauth' do
     # Set up existing account
     malformed_account = create :teacher, :demigrated
     email = malformed_account.email
@@ -1510,137 +1429,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
 
-    # Verify takeover completed
-    malformed_account.reload
-    assert_equal AuthenticationOption::GOOGLE, malformed_account.provider
-    assert_equal  uid, malformed_account.uid
-
-    # Verify the account has an email and is now well-formed
-    assert_equal email, malformed_account.email
-    assert malformed_account.valid?
-
-    # Verify that we signed the user into the taken-over account
-    assert_equal malformed_account.id, signed_in_user_id
-  end
-
-  test 'silent_takeover: Does not add email to student account' do
-    # Set up existing account
-    email = 'student+example@code.org'
-    student = create :student, :demigrated, email: email
-    uid = 'google-takeover-id'
-
-    Honeybadger.expects(:notify).never
-
-    # Hit google callback with matching email to trigger takeover
-    auth = generate_auth_user_hash(
-      provider: AuthenticationOption::GOOGLE,
-      uid: uid,
-      user_type: '',
-      email: email
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :google_oauth2
-    end
-
-    # Verify takeover completed
-    student.reload
-    assert_equal AuthenticationOption::GOOGLE, student.provider
-    assert_equal  uid, student.uid
-
-    # Verify the account has an email and is now well-formed
-    assert_empty student.email
-    assert student.valid?
-
-    # Verify that we signed the user into the taken-over account
-    assert_equal student.id, signed_in_user_id
-  end
-
-  test 'silent_takeover: Fails and notifies on malformed unmigrated user' do
-    # Set up existing account
-    malformed_account = create :teacher, :demigrated
-    email = malformed_account.email
-
-    # Make account invalid
-    malformed_account.name = nil
-    malformed_account.save(validate: false)
-    malformed_account.reload
-    refute malformed_account.valid?
-
-    # Expect notification about validation failure
-    Honeybadger.expects(:notify).with(
-      error_class: 'Failed to update User during silent takeover',
-      error_message: 'Validation failed: Display Name is required',
-      context: {
-        user_id: malformed_account.id,
-        tags: 'accounts'
-      }
-    )
-
-    # Hit google callback with matching email to trigger takeover
-    auth = generate_auth_user_hash(
-      provider: AuthenticationOption::GOOGLE,
-      uid: 'some-unused-uid',
-      user_type: '',
-      email: email
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :google_oauth2
-    end
-
-    # Verify takeover did not happen
-    malformed_account.reload
-    refute_equal AuthenticationOption::GOOGLE, malformed_account.provider
-    assert_nil malformed_account.uid
-
-    # We sign the user in anyway (weird, but okay because we know
-    # the email matches?)
-    assert_equal malformed_account.id, signed_in_user_id
-  end
-
-  test 'silent_takeover: Fails and notifies on malformed migrated user' do
-    # Set up existing account
-    account = create :teacher
-    email = account.email
-    assert_equal 1, account.authentication_options.count
-
-    # Stub to break creation of new AuthenticationOptions by returning
-    # an un-persisted instance
-    AuthenticationOption.stubs(:create!).raises('Intentional test failure')
-
-    # Expect notification about validation failure
-    Honeybadger.expects(:notify).with(
-      error_class: 'Failed to create AuthenticationOption during silent takeover',
-      error_message: 'Intentional test failure',
-      context: {
-        user_id: account.id,
-        tags: 'accounts'
-      }
-    )
-
-    # Hit google callback with matching email to trigger takeover
-    auth = generate_auth_user_hash(
-      provider: AuthenticationOption::GOOGLE,
-      uid: 'another-unused-uid',
-      user_type: '',
-      email: email
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :google_oauth2
-    end
-
-    # Verify takeover did not happen
-    account.reload
-    assert_equal 1, account.authentication_options.count
-
-    # We sign the user in anyway (weird, but okay because we know
-    # the email matches?)
-    assert_equal account.id, signed_in_user_id
+    assert_redirected_to 'http://test.host/users/existing_account?email=teacher_1%40code.org&provider=google_oauth2'
   end
 
   private

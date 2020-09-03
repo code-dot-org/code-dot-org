@@ -225,9 +225,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     prepare_locale_cookie user
 
-    if allows_silent_takeover user, auth_hash
-      user = silent_takeover user, auth_hash
-      sign_in_user user
+    if user_already_exists(user)
+      return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
     else
       register_new_user user
     end
@@ -451,6 +450,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.log_sign_in(user, session, request)
 
     sign_in_and_redirect user
+  end
+
+  def user_already_exists(user)
+    lookup_user = User.find_by_email_or_hashed_email(user.email)
+    return !!lookup_user
   end
 
   def allows_silent_takeover(oauth_user, auth_hash)
