@@ -39,7 +39,11 @@ class ActivitiesEditor extends Component {
   };
 
   handleAddActivity = () => {
-    this.props.addActivity(this.props.activities.length, '', '');
+    //To do - figure out how we want to set the key going forward
+    this.props.addActivity(
+      this.props.activities.length,
+      `activity-${this.props.activities.length + 1}`
+    );
   };
 
   render() {
@@ -76,15 +80,13 @@ class ActivitiesEditor extends Component {
   }
 }
 
-export const UnconnectedActivitiesEditor = ActivitiesEditor;
-
 export default connect(
   state => ({
     activities: state.activities
   }),
   dispatch => ({
-    addActivity(position, key, name) {
-      dispatch(addActivity(position, key, name));
+    addActivity(position, key) {
+      dispatch(addActivity(position, key));
     }
   })
 )(ActivitiesEditor);

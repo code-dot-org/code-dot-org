@@ -69,10 +69,10 @@ export default class ActivityDescriptionCard extends Component {
         <div style={styles.lessonCardHeader}>
           <label>
             <span style={styles.title}>Title:</span>
-            <input defaultValue={this.props.activitySection.title} />
+            <input defaultValue={this.props.activitySection.displayName} />
             <OrderControls
               name={
-                this.props.activitySection.title ||
+                this.props.activitySection.displayName ||
                 this.props.activitySection.key
               }
               move={() => {

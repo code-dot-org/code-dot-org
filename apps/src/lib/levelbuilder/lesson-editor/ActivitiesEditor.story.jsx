@@ -1,9 +1,5 @@
 import React from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
-import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
-import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
-import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
-import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import reducers, {
   init
@@ -21,7 +17,7 @@ const activities = [
         type: 'description',
         key: 'section-3',
         position: 1,
-        title: 'Making programs',
+        displayName: 'Making programs',
         isRemarks: true,
         slide: false,
         text:
@@ -32,7 +28,7 @@ const activities = [
         type: 'description',
         key: 'section-1',
         position: 2,
-        title: null,
+        displayName: null,
         isRemarks: false,
         slide: true,
         text: 'In this activity you will be learning about making activities.',
@@ -103,7 +99,7 @@ const activities = [
       {
         type: 'description',
         key: 'section-2',
-        title: 'Discussion',
+        displayName: 'Discussion',
         position: 4,
         isRemarks: false,
         slide: false,
@@ -165,57 +161,11 @@ const createStore = () => {
 export default storybook => {
   storybook.storiesOf('ActivitiesEditor', module).addStoryTable([
     {
-      name: 'New Lesson',
-      story: () => <ActivitiesEditor activities={[activities[1]]} />
-    },
-    {
       name: 'ActivitiesEditor',
       story: () => (
         <Provider store={createStore()}>
           <ActivitiesEditor />
         </Provider>
-      )
-    },
-    {
-      name: 'ActivityCard',
-      story: () => <ActivityCard activity={activities[0]} />
-    },
-    {
-      name: 'EditTipDialog',
-      story: () => (
-        <EditTipDialog
-          isOpen={true}
-          handleConfirm={() => {
-            console.log('Close Dialog');
-          }}
-          tip={{
-            type: 'teachingTip',
-            markdown: 'Make sure you pass out the packets.'
-          }}
-        />
-      )
-    },
-    {
-      name: 'AddLevelDialog',
-      story: () => (
-        <AddLevelDialog
-          isOpen={true}
-          handleConfirm={() => {
-            console.log('Close Dialog');
-          }}
-          currentLevels={activities[0].activitySections[2].levels}
-        />
-      )
-    },
-    {
-      name: 'AddResourceDialog',
-      story: () => (
-        <AddResourceDialog
-          isOpen={true}
-          handleConfirm={() => {
-            console.log('Close Dialog');
-          }}
-        />
       )
     }
   ]);

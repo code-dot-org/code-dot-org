@@ -39,10 +39,15 @@ export const addActivity = (activityPosition, activityKey, activityName) => ({
   activityName
 });
 
-export const addActivitySection = (activityPosition, activitySectionName) => ({
+export const addActivitySection = (
+  activityPosition,
+  activitySectionKey,
+  activitySectionType
+) => ({
   type: ADD_ACTIVITY_SECTION,
   activityPosition,
-  activitySectionName
+  activitySectionKey,
+  activitySectionType
 });
 
 export const toggleExpand = (
@@ -303,8 +308,9 @@ function activities(state = [], action) {
     case ADD_ACTIVITY: {
       newState.push({
         key: action.activityKey,
-        display_name: action.activityName,
+        display_name: '',
         position: action.activityPosition,
+        time: 0,
         activitySections: []
       });
       updateActivityPositions(newState);
@@ -314,8 +320,14 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       activitySections.push({
-        name: action.activitySectionName,
-        levels: []
+        key: action.activitySectionKey,
+        title: '',
+        type: action.activitySectionType,
+        levels: [],
+        tips: [],
+        isRemarks: false,
+        slide: false,
+        text: ''
       });
       updateActivitySectionPositions(newState);
       break;

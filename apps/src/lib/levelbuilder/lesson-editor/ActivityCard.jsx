@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import ActivityDescriptionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityDescriptionCard';
 import ProgressionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgressionCard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {addActivitySection} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 const styles = {
   groupHeader: {
@@ -51,9 +53,10 @@ const styles = {
   }
 };
 
-export default class ActivityCard extends Component {
+class ActivityCard extends Component {
   static propTypes = {
-    activity: PropTypes.object.isRequired
+    activity: PropTypes.object.isRequired,
+    addActivitySection: PropTypes.func
   };
 
   constructor(props) {
@@ -63,6 +66,22 @@ export default class ActivityCard extends Component {
       collapsed: false
     };
   }
+
+  handleAddDescription = () => {
+    this.props.addActivitySection(
+      this.props.activity.position,
+      `activitySection-${this.props.activity.activitySections.length + 1}`,
+      'description'
+    );
+  };
+
+  handleAddProgression = () => {
+    this.props.addActivitySection(
+      this.props.activity.position,
+      `activitySection-${this.props.activity.activitySections.length + 1}`,
+      'progression'
+    );
+  };
 
   render() {
     const {activity} = this.props;
@@ -123,9 +142,7 @@ export default class ActivityCard extends Component {
             }
           })}
           <button
-            onMouseDown={() => {
-              console.log('Add Description Card');
-            }}
+            onMouseDown={this.handleAddDescription.bind()}
             className="btn"
             style={styles.addLesson}
             type="button"
@@ -134,9 +151,7 @@ export default class ActivityCard extends Component {
             Add Description
           </button>
           <button
-            onMouseDown={() => {
-              console.log('Add Progression Card');
-            }}
+            onMouseDown={this.handleAddProgression.bind()}
             className="btn"
             style={styles.addLesson}
             type="button"
@@ -149,3 +164,12 @@ export default class ActivityCard extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({}),
+  dispatch => ({
+    addActivitySection(position, key, type) {
+      dispatch(addActivitySection(position, key, type));
+    }
+  })
+)(ActivityCard);
