@@ -11,7 +11,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
+    @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
 
     @unit_group = create(:unit_group)
     @script_in_unit_group = create(:script, hidden: true)
@@ -1611,17 +1611,16 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Level 2_copy', sl.levels.last.name
     refute sl.active?(sl.levels.last)
 
-    # Ignore level names, since we are just testing whether the
-    # variants / active / endvariants structure is correct.
-    new_dsl_regex = <<-SCRIPT
-lesson 'lesson1', display_name: 'lesson1'
-variants
-  level '[^']+'
-  level '[^']+', active: false
-endvariants
+    new_dsl = <<~SCRIPT
+      lesson 'lesson1', display_name: 'lesson1'
+      variants
+        level 'Level 1_copy'
+        level 'Level 2_copy', active: false
+      endvariants
+
     SCRIPT
 
-    assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
+    assert_equal new_dsl, ScriptDSL.serialize_to_string(script_copy)
   end
 
   test 'clone with suffix and add editor experiment' do
