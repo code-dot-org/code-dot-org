@@ -7,7 +7,11 @@ import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import ActivityDescriptionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityDescriptionCard';
 import ProgressionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgressionCard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {addActivitySection} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {
+  addActivitySection,
+  moveActivity,
+  removeActivity
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 const styles = {
   groupHeader: {
@@ -56,7 +60,10 @@ const styles = {
 class ActivityCard extends Component {
   static propTypes = {
     activity: PropTypes.object.isRequired,
-    addActivitySection: PropTypes.func
+    activitiesCount: PropTypes.number,
+    addActivitySection: PropTypes.func,
+    removeActivity: PropTypes.func,
+    moveActivity: PropTypes.func
   };
 
   constructor(props) {
@@ -81,6 +88,20 @@ class ActivityCard extends Component {
       `activitySection-${this.props.activity.activitySections.length + 1}`,
       'progression'
     );
+  };
+
+  handleMoveActivity = direction => {
+    if (
+      (this.props.activity.position !== 1 && direction === 'up') ||
+      (this.props.activity.position !== this.props.activitiesCount &&
+        direction === 'down')
+    ) {
+      this.props.moveActivity(this.props.activity.position, direction);
+    }
+  };
+
+  handleRemoveActivity = () => {
+    this.props.removeActivity(this.props.activity.position);
   };
 
   render() {
@@ -115,30 +136,21 @@ class ActivityCard extends Component {
           </label>
           <OrderControls
             name={activity.key || '(none)'}
-            move={() => {
-              console.log('Move Activity Card');
-            }}
-            remove={() => {
-              console.log('Remove Activity Card');
-            }}
+            move={this.handleMoveActivity}
+            remove={this.handleRemoveActivity}
           />
         </div>
         <div style={styles.groupBody} hidden={this.state.collapsed}>
-          {activity.activitySections.map((block, index) => {
+          {activity.activitySections.map(block => {
             if (block.type === 'description') {
               return (
                 <ActivityDescriptionCard
-                  key={`description-${index}`}
+                  key={block.key}
                   activitySection={block}
                 />
               );
             } else {
-              return (
-                <ProgressionCard
-                  key={`progression-${index}`}
-                  progression={block}
-                />
-              );
+              return <ProgressionCard key={block.key} progression={block} />;
             }
           })}
           <button
@@ -170,6 +182,12 @@ export default connect(
   dispatch => ({
     addActivitySection(position, key, type) {
       dispatch(addActivitySection(position, key, type));
+    },
+    moveActivity(activityPosition, direction) {
+      dispatch(moveActivity(activityPosition, direction));
+    },
+    removeActivity(activityPosition) {
+      dispatch(removeActivity(activityPosition));
     }
   })
 )(ActivityCard);

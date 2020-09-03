@@ -54,7 +54,13 @@ class ActivitiesEditor extends Component {
         <div style={styles.activityEditAndPreview}>
           <div style={styles.editor}>
             {activities.map(activity => {
-              return <ActivityCard activity={activity} key={activity.key} />;
+              return (
+                <ActivityCard
+                  activity={activity}
+                  activitiesCount={activities.length}
+                  key={activity.key}
+                />
+              );
             })}
             <button
               onMouseDown={this.handleAddActivity}
