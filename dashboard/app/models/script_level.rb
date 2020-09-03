@@ -61,12 +61,7 @@ class ScriptLevel < ActiveRecord::Base
       # variants are deprecated. when cloning a script, retain only the first
       # active level in each script level, discarding any variants.
       if new_suffix && raw_script_level[:levels].length > 1
-        first_active_level = raw_script_level[:levels].find do |raw_level|
-          variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name])
-          !(variant && variant[:active] == false)
-        end
-        raw_script_level[:levels] = [first_active_level]
-        raw_script_level[:properties].delete(:variants)
+        remove_variants(raw_script_level)
       end
 
       properties = raw_script_level.delete(:properties) || {}
@@ -95,6 +90,15 @@ class ScriptLevel < ActiveRecord::Base
       script_level.save! if script_level.changed?
       script_level
     end
+  end
+
+  def self.remove_variants(raw_script_level)
+    first_active_level = raw_script_level[:levels].find do |raw_level|
+      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name])
+      !(variant && variant[:active] == false)
+    end
+    raw_script_level[:levels] = [first_active_level]
+    raw_script_level[:properties].delete(:variants)
   end
 
   def script
