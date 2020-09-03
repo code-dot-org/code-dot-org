@@ -396,7 +396,7 @@ export default class ScriptEditor extends React.Component {
               pilotExperiment={this.props.pilotExperiment}
             />
             <label>
-              Is a CourseOffering
+              Is a Standalone Course
               <input
                 name="is_course"
                 type="checkbox"
@@ -406,8 +406,8 @@ export default class ScriptEditor extends React.Component {
               <HelpTip>
                 <p>
                   (Still in development) If checked, indicates that this Unit
-                  represents a standalone CourseOffering. Examples of such Units
-                  include CourseA-F.
+                  represents a standalone course. Examples of such Units include
+                  CourseA-F, Express, and Pre-Express.
                 </p>
               </HelpTip>
             </label>
