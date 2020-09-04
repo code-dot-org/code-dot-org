@@ -1,7 +1,7 @@
 import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
-import CourseEditor from '@cdo/apps/templates/courseOverview/CourseEditor';
+import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {
   stubRedux,
   restoreRedux,

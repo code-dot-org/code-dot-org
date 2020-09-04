@@ -1,5 +1,5 @@
+import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
 import React from 'react';
-import CourseScriptsEditor from './CourseScriptsEditor';
 
 const styles = {
   input: {
