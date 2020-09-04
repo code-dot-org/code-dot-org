@@ -335,7 +335,6 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    bigdecimal (2.0.0)
     bindata (2.4.4)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
@@ -344,7 +343,8 @@ GEM
     brakeman (4.5.0)
     builder (3.2.3)
     cancancan (1.15.0)
-    childprocess (3.0.0)
+    childprocess (0.9.0)
+      ffi (~> 1.0, >= 1.0.11)
     chronic (0.10.2)
     chunky_png (1.3.6)
     climate_control (0.0.3)
@@ -439,12 +439,12 @@ GEM
       redis (~> 3.2)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    faraday-cookie_jar (0.0.6)
-      faraday (>= 0.7.4)
+    faraday-cookie_jar (0.0.7)
+      faraday (>= 0.8.0)
       http-cookie (~> 1.0.0)
     faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.13.1)
+    ffi (1.10.0)
     firebase (0.2.6)
       httpclient
       json
@@ -571,7 +571,7 @@ GEM
     multi_json (1.13.1)
     multi_test (0.1.2)
     multi_xml (0.5.5)
-    multipart-post (2.1.1)
+    multipart-post (2.0.0)
     mustermann (1.0.3)
     mysql2 (0.5.2)
     nakayoshi_fork (0.0.4)
@@ -581,9 +581,10 @@ GEM
     net-scp (2.0.0)
       net-ssh (>= 2.6.5, < 6.0.0)
     net-ssh (5.2.0)
+    net_http_ssl_fix (0.0.10)
     netrc (0.11.0)
     nio4r (2.3.1)
-    nokogiri (1.10.10)
+    nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.1)
     oauth2 (1.4.1)
@@ -596,8 +597,7 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
-    oj (3.10.12)
-      bigdecimal (>= 1.0, < 3)
+    oj (3.3.10)
     omniauth (1.9.0)
       hashie (>= 3.4.6, < 3.7.0)
       rack (>= 1.6.2, < 3)
@@ -650,7 +650,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    public_suffix (3.1.1)
+    public_suffix (3.0.3)
     puma_worker_killer (0.1.0)
       get_process_mem (~> 0.2)
       puma (>= 2.7, < 4)
@@ -770,7 +770,7 @@ GEM
     ruby_dep (1.3.1)
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
-    rubyzip (2.3.0)
+    rubyzip (1.2.2)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sawyer (0.8.1)
@@ -788,9 +788,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    selenium-webdriver (3.142.7)
-      childprocess (>= 0.5, < 4.0)
-      rubyzip (>= 1.2.2)
+    selenium-webdriver (3.141.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.2, >= 1.2.2)
     sequel (5.9.0)
     sexp_processor (4.10.1)
     shotgun (0.9.1)
@@ -879,10 +879,11 @@ GEM
       activemodel (>= 5.0)
       debug_inspector
       railties (>= 5.0)
-    webdrivers (4.4.1)
+    webdrivers (3.7.2)
+      net_http_ssl_fix
       nokogiri (~> 1.6)
-      rubyzip (>= 1.3.0)
-      selenium-webdriver (>= 3.0, < 4.0)
+      rubyzip (~> 1.0)
+      selenium-webdriver (~> 3.0)
     webfinger (1.0.2)
       activesupport
       httpclient (>= 2.4)
@@ -949,7 +950,7 @@ DEPENDENCIES
   devise_invitable (~> 1.6.0)
   dotiw
   execjs
-  eyes_selenium
+  eyes_selenium (= 3.17.20)
   factory_girl_rails
   fakeredis
   firebase
@@ -1049,7 +1050,7 @@ DEPENDENCIES
   scss_lint
   sdoc
   seamless_database_pool!
-  selenium-webdriver
+  selenium-webdriver (= 3.141.0)
   sequel
   shotgun
   simplecov (~> 0.9)
@@ -1073,7 +1074,7 @@ DEPENDENCIES
   validates_email_format_of
   vcr
   web-console
-  webdrivers (~> 4.0)
+  webdrivers (~> 3.0)
   webmock
   xxhash
   youtube-dl.rb

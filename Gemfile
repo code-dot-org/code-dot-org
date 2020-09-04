@@ -99,17 +99,17 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium'
+  gem 'eyes_selenium', '3.17.20'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '3.141.0'
   gem 'spring'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 4.0'
+  gem 'webdrivers', '~> 3.0'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
