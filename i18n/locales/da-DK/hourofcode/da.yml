@@ -9003,7 +9003,8 @@ da:
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: Alle moderne browsere, Android tablet, iPad,
+    Android smartphone, iPhone
   tutorial_bananatales_string_platforms: Alle moderne browsere
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari

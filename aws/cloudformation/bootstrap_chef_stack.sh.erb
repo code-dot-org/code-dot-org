@@ -10,7 +10,7 @@ REGION=${AWS::Region}
 BRANCH=${Branch}
 S3_BUCKET=<%=S3_BUCKET%>
 ENVIRONMENT=<%=environment%>
-RUN_LIST='<%=run_list.to_json%>'
+RUN_LIST='<%=run_list.join(',')%>'
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
@@ -126,14 +126,37 @@ cat <<JSON > $FIRST_BOOT
     "daemon": true
   },
 <% end -%>
-  "run_list": $RUN_LIST
+  "run_list": []
 }
 JSON
 
-# Provision via Chef.
-OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '$RUN_LIST' -e $ENVIRONMENT -v $CHEF_VERSION"
+# Bootstrap Chef configuration: Install Chef, run chef-client with empty run-list to create node with first-boot config.
+OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENVIRONMENT -v $CHEF_VERSION"
 sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s -- $OPTIONS"
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=<%=daemon ? 'SUCCESS' : 'FAILURE'%>
+
+CHEF_CDO_APP=<%=CdoApp::CHEF_BIN%>
+cat <<SH > $CHEF_CDO_APP
+#!/bin/bash
+# Provisions the Code.org application using Chef.
+# Invokes chef-client with fetched config attributes and provided run-list.
+CHEF_CONFIG=\$(mktemp)
+aws secretsmanager get-secret-value \\
+  --region $REGION \\
+  --secret-id ${ChefConfig} \\
+  --version-stage AWSCURRENT \\
+  --query SecretString \\
+  --output text \\
+  > \$CHEF_CONFIG
+/opt/chef/bin/chef-client \\
+  --runlist '$RUN_LIST' \\
+  --chef-license accept-silent \\
+  --json-attributes \$CHEF_CONFIG
+rm -f "\$CHEF_CONFIG"
+SH
+chmod +x $CHEF_CDO_APP
+# Run chef-client as root with SUDO_USER set to `ubuntu`.
+sudo -u ubuntu bash -c "sudo $CHEF_CDO_APP"
 
 <% unless daemon -%>
 # Workaround for version-controlled files modified by seed.

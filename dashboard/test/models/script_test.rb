@@ -1556,6 +1556,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.tts
     assert script.is_stable
     assert script.script_announcements
+    assert script.is_course
 
     # some properties that should not change
     assert script.curriculum_path
@@ -1569,6 +1570,7 @@ class ScriptTest < ActiveSupport::TestCase
     refute script_copy.tts
     refute script_copy.is_stable
     refute script_copy.script_announcements
+    refute script_copy.is_course
 
     # some properties that should not change
     assert script_copy.curriculum_path

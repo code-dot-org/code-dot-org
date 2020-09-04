@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
-import LessonCard from './LessonCard';
+import LessonCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonCard';
 import {
   addLesson,
   removeGroup,
@@ -122,9 +122,6 @@ class LessonGroupCard extends Component {
                     this.props.setLessonMetrics(metrics, lesson.position);
                   }
                 }}
-                lessonMetrics={this.props.lessonMetrics}
-                setTargetLesson={this.props.setTargetLesson}
-                targetLessonPos={this.props.targetLessonPos}
               />
             );
           })}

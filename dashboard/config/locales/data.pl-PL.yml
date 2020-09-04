@@ -780,6 +780,8 @@ pl:
         hoc_dance_events: Potańcówka - Zdarzenia
         hoc_dance_properties: Potańcówka - Właściwości
         hoc_dance_congrats: Potańcówka - Rozpoczynamy!
+        c_and_c_great_to_create: Tworzenie i uczciwa gra są świetne.
+        c_and_c_digital_sharing: Udostępnianie cyfrowe
         teaching_csf_how_it_works: 'Nauczanie podstaw informatyki: Na czym polega
           kurs'
         elem_pd_2: Informatyka dla szkół podstawowych - wideo PD 2/2
@@ -832,6 +834,7 @@ pl:
         csd_what_computers_do: Co robią komputery?
         csf_my_online_neighborhood_2020: Moje internetowe sąsiedztwo
         csf_follow_the_digital_trail: Podążaj ścieżką cyfrową
+        csf_private_and_personal_information: Informacje prywatne i osobowe
         csd_what_computers_are: Czym jest komputer?
         codebreak_e01: 'Code Break 1.0: Algorytmy z Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypy z Markiem Cubanem i Lyndsey Scott'

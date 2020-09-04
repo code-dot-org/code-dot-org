@@ -7,14 +7,14 @@ import {
   borderRadius,
   levelTokenMargin
 } from '@cdo/apps/lib/levelbuilder/constants';
-import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
+import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/script-editor/LevelTokenDetails';
 import {toggleExpand} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   levelToken: {
-    position: 'relative',
     fontSize: 13,
+    position: 'relative',
     background: '#eee',
     borderRadius: borderRadius,
     margin: `${levelTokenMargin}px 0`

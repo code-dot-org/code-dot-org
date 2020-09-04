@@ -1,5 +1,5 @@
 import React from 'react';
-import RailsAuthenticityToken from '../util/RailsAuthenticityToken';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 const buttonStyle = {
   marginLeft: 0,

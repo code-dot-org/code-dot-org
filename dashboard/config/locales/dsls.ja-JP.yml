@@ -3521,5 +3521,5 @@ ja-JP:
         - text: プログラムを 実行したら どうなりますか？
       gradek1_activity_beNice:
         markdown: "# Behaving in the Computer Lab\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
-          target=\"_new\">\n<button>\nレッスン プラン\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+          target=\"_new\">\n<button>\nレッスンプランへ行く\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">続行</a>"
