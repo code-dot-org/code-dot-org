@@ -267,8 +267,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
       }
     );
   };
-  blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
-    blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
+  blocklyWrapper.Workspace.prototype.getAllUsedBlocks = function() {
+    return this.getAllBlocks().filter(block => !block.disabled);
+  };
   blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
   blocklyWrapper.Workspace.prototype.setEnableToolbox = () => {}; // TODO
   blocklyWrapper.Workspace.prototype.blockSpaceEditor = {
