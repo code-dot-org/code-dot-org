@@ -1,41 +1,65 @@
 ---
-title: How-to Anleitung
+title: How-to Guide for Hour of Code
 ---
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Wie planen Sie Ihr Hour of Code
 
-### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! Wenn Sie zusätzliche Kräfte zur Unterstützung benötigen, dann können Sie einen [ örtlichen Freiwilligen ]({{ urls/volunteer_local }}) finden, der Ihnen hilft, One Hour of Code in Ihrer Klasse auszuführen.
+### Join the movement and introduce your students to computer science with these steps.
 
-### Werfen Sie einen Blick auf unseren [Teilnahme Leitfaden]({{ localized_files/participation_guide }}), falls Sie noch Fragen haben.
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Werfen Sie einen Blick auf unseren [Teilnahme Leitfaden]({{ localized_files/participation_guide }}), falls Sie noch Fragen haben.
+
+An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+- [1. Watch the Hour of Code how-to video](#how-to-video)
+- [2. Explore activities and tutorials](#explore-activities)
+- [3. Create your plan for the day](#create-your-plan)
+- [Promote your Hour of Code](#promote-your-hour)
+- [More ways to support the Hour of Code](#support-hour-of-code)
 
 * * *
 
-## 1. Schauen Sie sich dieses Tutorialvideo an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-Wir bieten eine Vielzahl von unterhaltsamen, [von Schüler für Schüler Tutorials]({{ urls/learn }}) für alle Alters- und Erfahrungsgruppen an. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+* * *
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+<a id="explore-activities"></a>
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+## 2. Explore activities and tutorials
 
-## 3. Create your Plan for the Day
+Wir bieten eine Vielzahl von unterhaltsamen, [von Schüler für Schüler Tutorials]({{ urls/learn }}) für alle Alters- und Erfahrungsgruppen an. Für Studenten ist es populär, selbstgesteuerte Tutorials auszuprobieren, obwohl viele Tätigkeiten Unterrichtspläne für Lehrer enthalten, Diskussionen führen oder die Tätigkeit verlängern. 
 
-### Think about your technology needs - computers are optional!
+Erkunden die Tätigkeiten und entscheiden vorzeitig, ob Sie ein Tutorial für alle Studenten wählen wollen oder lassen Sie jedes Kind, ihr eigenes Tutorial zu wählen.
+
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Create your plan for the day
+
+### Denken Sie sich an Ihre technologische Anforderungen - Computers sind optional!
 
 - Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
 - Testen Sie Tutorials auf den Schüler-Computern oder Geräten. Stellen Sie sicher, dass sie im Browser mit Ton und Video ordnungsgemäß funktionieren. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
 - Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle welche mitzubringen, wenn das ausgewählte Tutorial am Besten mit Sound funktioniert.
 - Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Wenn Schüler in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf den Lehrer angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Pick a day and time
 
 People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+
+* * *
+
+<a id="promote-your-hour"></a>
 
 ## 4. Promote your Hour of Code
 
@@ -57,6 +81,10 @@ Lead up to the event by sharing [inspirational videos](/promote/resources) highl
 
 Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
+* * *
+
+<a id="promote-your-hour"></a>
+
 ## 5. Start your Hour of Code Strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
@@ -73,6 +101,8 @@ It’s okay if both you and your students are brand new to computer science. Her
 - Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die Jungen und Mädchen interessieren (Sprechen Sie über Apps und Technologien, die eingesetzt werden, um Leben zu retten, Menschen zu helfen, Menschen zu verbinden etc.).
 - Zählen Sie gemeinsam Dinge auf, die im Alltag Computerprogramme nutzen.
 - [Hier]({{ urls/girls }}) finden Sie Tipps, wie Sie Mädchen für Informatik begeistern können.
+
+* * *
 
 ## 6. Get Coding!
 
@@ -91,11 +121,13 @@ Was mache ich, wenn ein Schüler früher fertig wird?
 - Die Schüler können alle Tutorials sehen und [eine weitere Hour of Code Aktivität versuchen]({{ urls/learn }}}).
 - Oder Sie bitten die Schülerinnen und Schüler, die früher fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.
 
+* * *
+
 ## 7. Celebrate your Students' Success
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 

@@ -46,7 +46,7 @@ title: Recursos
 
 1. Cualquier referencia a la "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu marca, sino que haga referencia a la "Hora del Código" como un movimiento colectivo. **Correcto**: "Participa en la Hora del Código™ en ACMECorp.com." **Incorrecto**: "Participa en la Hora del Código de ACME Corp."
 2. Usa un "TM" como superíndice en los lugares más importantes donde menciones la "Hora del Código", ya sea en tu sitio web o en las descripciones de aplicaciones.
-3. Incluye mensajes en tu página (o en el pie de página), como enlaces a la Semana por la Educación en Ciencias de la Computación y a los sitios web de[Code.org]({{ codeorg_link }}), que digan lo siguiente:
+3. Incluye mensajes en tu página (o en el pie de página), como enlaces a la Semana por la Educación en Ciencias de la Computación y a los sitios web de [Code.org]({{ codeorg_link }}), que digan lo siguiente:
     
     *"La 'Hora del Código™' es una iniciativa nacional de la Semana por la Educación en Ciencias de Computación [csedweek.org] y Code.org [code.org] para que millones de estudiantes participen en una hora de ciencias de la computación y programación."*
 

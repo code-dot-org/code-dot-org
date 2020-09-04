@@ -96,7 +96,7 @@ GRAPH
     sudo-user (>= 0.0.0)
   cdo-cloudwatch-agent (0.1.1)
     aws_cloudwatch (>= 0.0.0)
-  cdo-github-access (0.1.9)
+  cdo-github-access (0.1.10)
   cdo-home-ubuntu (0.1.5)
   cdo-i18n (0.0.0)
     apt (~> 2.6.0)
