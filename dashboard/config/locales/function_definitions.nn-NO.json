@@ -345,20 +345,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "gjer noko"
+          },
+          "patrol": {
+            "name": "patruljer"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "spelar"
-            }
+            },
+            "name": "patruljer"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "spelar"
-            }
+            },
+            "name": "patruljer"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -366,7 +371,8 @@
             "parameters": {
               "actor": "spelar",
               "speed": "fart"
-            }
+            },
+            "name": "patruljer"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -374,7 +380,8 @@
             "parameters": {
               "actor": "spelar",
               "speed": "fart"
-            }
+            },
+            "name": "patruljer"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -565,13 +572,15 @@
           "n-sided shape": {
             "name": "n-sidig figur",
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           },
           "draw a loop": {
             "name": "teikn ei løkke",
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           },
           "draw spiral circle": {
@@ -585,7 +594,8 @@
           "draw a loop": {
             "name": "teikn ei løkke",
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           },
           "n-sided shape": {
@@ -767,41 +777,47 @@
         "NEW Course 4 Artist Params 11": {
           "draw a polygon": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           },
           "do something": {
             "name": "gjer noko",
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
         "NEW Course 4 Artist Params 12": {
           "draw a polygon": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
         "NEW Course 4 Artist Params 12a": {
           "draw a polygon": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
         "NEW Course 4 Artist Params 13": {
           "draw a polygon": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
@@ -811,15 +827,21 @@
             "parameters": {
               "points": "poeng",
               "length": "lengde"
-            }
+            },
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser"
           },
           "draw a circle": {
-            "name": "teikn ein sirkel"
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "lengde",
-              "repeat": "gjenta"
+              "repeat": "gjenta",
+              "sides": "Sider"
             }
           },
           "draw a triangle": {
@@ -830,8 +852,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "lengde"
-            }
+              "length": "lengde",
+              "sides": "Sider"
+            },
+            "name": "tegn en form"
           },
           "draw a house": {
             "name": "teikn eit hus",
@@ -842,7 +866,8 @@
           "draw a square": {
             "name": "teikn eit kvadrat",
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
@@ -931,7 +956,8 @@
         "NEW Course 4 Artist Params inspire": {
           "draw a polygon": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
@@ -941,13 +967,15 @@
             "parameters": {
               "height": "høgd",
               "actor": "spelar"
-            }
+            },
+            "description": "Hopp blokk med høyde og figurens «Parameter»"
           },
           "patrol": {
             "parameters": {
               "actor": "spelar",
               "speed": "fart"
-            }
+            },
+            "name": "patruljer"
           }
         },
         "New Artist Project": {
@@ -956,15 +984,21 @@
             "parameters": {
               "points": "poeng",
               "length": "lengde"
-            }
+            },
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser"
           },
           "draw a circle": {
-            "name": "teikn ein sirkel"
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "lengde",
-              "repeat": "gjenta"
+              "repeat": "gjenta",
+              "sides": "Sider"
             }
           },
           "draw a triangle": {
@@ -975,8 +1009,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "lengde"
-            }
+              "length": "lengde",
+              "sides": "Sider"
+            },
+            "name": "tegn en form"
           },
           "draw a house": {
             "name": "teikn eit hus",
@@ -1005,13 +1041,15 @@
             "parameters": {
               "height": "høgd",
               "actor": "spelar"
-            }
+            },
+            "description": "Hopp blokk med høyde og figurens «Parameter»"
           },
           "patrol": {
             "parameters": {
               "actor": "spelar",
               "speed": "fart"
-            }
+            },
+            "name": "patruljer"
           }
         },
         "Robot Doodle": {
@@ -1071,6 +1109,11 @@
           },
           "do something": {
             "name": "gjer noko"
+          },
+          "draw a polygon": {
+            "parameters": {
+              "sides": "Sider"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -2203,21 +2246,24 @@
         "courseF_artist_fwp4": {
           "draw a polygon": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
         "courseF_artist_fwp5": {
           "draw a polygon": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "lengde"
+              "length": "lengde",
+              "sides": "Sider"
             }
           }
         },
@@ -2225,7 +2271,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "lengde",
-              "min": "minimum"
+              "min": "minimum",
+              "sides": "Sider"
             }
           }
         },
@@ -2233,7 +2280,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "lengde",
-              "min": "minimum"
+              "min": "minimum",
+              "sides": "Sider"
             }
           }
         },
@@ -2243,15 +2291,21 @@
             "parameters": {
               "points": "poeng",
               "length": "lengde"
-            }
+            },
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser"
           },
           "draw a circle": {
-            "name": "teikn ein sirkel"
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "lengde",
-              "repeat": "gjenta"
+              "repeat": "gjenta",
+              "sides": "Sider"
             }
           },
           "draw a triangle": {
@@ -2262,8 +2316,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "lengde"
-            }
+              "length": "lengde",
+              "sides": "Sider"
+            },
+            "name": "tegn en form"
           },
           "draw a house": {
             "name": "teikn eit hus",
@@ -2280,7 +2336,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "lengde",
-              "min": "minimum"
+              "min": "minimum",
+              "sides": "Sider"
             }
           }
         },
@@ -2290,6 +2347,11 @@
           },
           "do something": {
             "name": "gjer noko"
+          },
+          "draw a polygon": {
+            "parameters": {
+              "sides": "Sider"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {

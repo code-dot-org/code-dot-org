@@ -192,6 +192,8 @@ hu:
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
   codeorg_homepage_special2020_link_text: Get started
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
@@ -8438,8 +8440,8 @@ hu:
   tutorial_mee_name: 'Minecraft Kódolás Órája: Az MI lehetőségei '
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_ai-oceans_name: MI az Óceánokért
-  tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
-    then bring it to life with Scratch!
+  tutorial_scratchimagine_longdescription: Képzelj el egy világot ahol bármi lehetséges,
+    és keltsd életre Scratch segítségével.
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
     creating your own Public Service Announcement. Choose a topic you find important
     and design you own animated or interactive PSA to share critical information about
@@ -8477,8 +8479,8 @@ hu:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Tanulj programozni alapvető parancsokkal
+    és tisztítsd meg a partot, hogy védd az óceán élővilágát.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -8486,8 +8488,8 @@ hu:
   tutorial_tynkerjavapro_longdescription: 'Part of the UN Sustainable Development
     Goals project, this coding prompt shows off a short project exploring recycling
     and reuse. Readers can create their own game by expanding the project. '
-  tutorial_grasshopperhack_longdescription: Learn coding skills to hack this game
-    to make it possible to play.
+  tutorial_grasshopperhack_longdescription: Tanulj kódolni, hogy feltörd ezt a játékot
+    és játszhatóvá tedd.
   tutorial_pbskids_longdescription: With PBS KIDS Scratch Jr, kids can create their
     own interactive stories and games through programming games and lessons. Learn
     to code through games and activities featuring characters from Odd Squad, Wild
@@ -8498,20 +8500,20 @@ hu:
     Get acquainted with the power of the PostgreSQL language, used by governments
     and businesses to manage database systems all over the world. PostgreSQL is written
     in plain English and is easy to learn. Try it out!
-  tutorial_grasshopperphoto_longdescription: Learn coding skills to create filters
-    to apply to different photos.
+  tutorial_grasshopperphoto_longdescription: Tanulj kódolni, hogy szűrőket készíthess,
+    amiket különböző fényképekre illeszthetsz.
   tutorial_tynkerpyland_longdescription: 'Part of the UN Sustainable Development Goals
     project, this Python project will have you create your own tree-planting game. '
-  tutorial_codeitimages_longdescription: Learn to program your own amazing images
-    and animations.
+  tutorial_codeitimages_longdescription: Tanuld meg hogyan programozz saját lenyűgöző
+    képeket és animációkat.
   tutorial_hyperpadenemy_longdescription: 'Learn logical thinking and programming
     by creating a platformer game enemy AI. '
   tutorial_tynkerpro_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring issues surrounding recycling
     and reuse. Beginners can play with working projects and advanced programmers can
     create their own projects from scratch. '
-  tutorial_trashtag_longdescription: 'Code your own game and raise awareness for protecting
-    our environment. '
+  tutorial_trashtag_longdescription: 'Programozd le saját játékod, és hívd fel a figyelmet
+    a környezetvédelemre. '
   tutorial_casiege_longdescription: Join Niko and Sakura on their virtual reality
     journey to Tubrosos Castle. Learn what it's like to be a gray hat hacker by helping
     the wizard elf, Cyrena find the Crown of Knowledge. You will expose the poor security
@@ -8721,16 +8723,17 @@ hu:
     through robotics. Using a drag-and-drop programming environment and a programmable
     robotic sphere, pupils design algorithms to program a robot to hide Easter eggs.
     Includes step-by-step lesson plan, teacher/pupil resources and assessment guidance.
-  tutorial_rootunplugged_longdescription: Solve offline printable puzzles using the
-    power of programming, math and more to crack the code to where the Root Robot
-    is hiding!
+  tutorial_rootunplugged_longdescription: Oldj meg olyan kinyomtatható rejtvényeket
+    a programozás, matematika és még sok más erejével, amikhez nincs szükség internetre,
+    és amelyek segítségével feltörheted a kódot, hogy megtaláld hol rejtőzik Root
+    Robot.
   tutorial_rgtreasure_longdescription: Robo Treasure Chest is an unplugged activity
     that teaches students computational thinking and programming fundamentals in an
     easy and enjoyable way. Students will learn simple movement commands and new programming
     expressions like 'Bug' and 'Debug'. This activity also teaches multi-label scenarios
     concept.
-  tutorial_peblioportraits_longdescription: 'Learn to program animated portraits for
-    a cause you believe in. '
+  tutorial_peblioportraits_longdescription: 'Tanuld meg animált portrék programozását
+    egy olyan cél érdekékében, amiben hiszel. '
   tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
     app to power through printable puzzles and challenges to crack the code to where
     Root is hiding.
@@ -8756,17 +8759,18 @@ hu:
     student-guided. For efficiency, we recommend that students complete one of the
     preceding no-code Unity Creator Kits to learn the Unity interface prior to this
     activity.
-  tutorial_blockscadtarget_longdescription: Test your target-hitting abilities by
-    writing code to move triangles around in three dimensions!
-  tutorial_tcadicicles_longdescription: Combine the power of code and computer-aided
-    design (CAD) to create a 3D icicle design. Then, learn how to print your design
-    if you have access to a 3D printer!
-  tutorial_blockscadscale_longdescription: Write code to create and 3D print scale
-    models of the world's most famous buildings!
-  tutorial_tcadloops_longdescription: Learn how code and computer-aided design (CAD)
-    can be combined to create a 3D model of a bursting star.
-  tutorial_phidgets_longdescription: Create an awesome musical instrument with Phidgets
-    and Processing!
+  tutorial_blockscadtarget_longdescription: 'Teszteld milyen jól célzol: írj kódot,
+    ami háromszögeket mozgat három dimenzióban!'
+  tutorial_tcadicicles_longdescription: Ötvözd a kódolás és számítógéppel segített
+    tervezés (CAD) erejét, hogy 3D jégcsap dizájnt hozhass létre. Ezután tanuld meg
+    hogyan nyomtathatod ki amit létrehoztál, ha hozzáférsz egy 3D nyomtatóhoz.
+  tutorial_blockscadscale_longdescription: Írj kódot, hogy elkészítsd és 3D-ben kinyomtathasd
+    a világ leghíresebb épületeinek makettjeit.
+  tutorial_tcadloops_longdescription: Tanuld meg, hogy hogyan kombinálhatsz kódot
+    és számítógéppel segített tervezést (CAD) annak érdekében, hogy elkészülhessen
+    egy kitörő csillag 3D modellje.
+  tutorial_phidgets_longdescription: Készits egy fantasztikus hangszert Phidgetek
+    és Processing segítségével.
   tutorial_kcjmerry_longdescription: Build an interactive coding project with the
     micro:bit to celebrate coding and the holiday season. Kids will use a combination
     of block coding and physical computing to create a sparkling snow globe animation.
@@ -8926,7 +8930,7 @@ hu:
   tutorial_tynkeren_string_detail_grades: 2-tól 8. osztályig
   tutorial_tynkerjavapro_string_detail_grades: 6. osztálytól
   tutorial_grasshopperhack_string_detail_grades: 9. osztálytól
-  tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
+  tutorial_pbskids_string_detail_grades: Óvodától 5. osztályig
   tutorial_nclabdata_string_detail_grades: 9. osztálytól
   tutorial_grasshopperphoto_string_detail_grades: 9. osztálytól
   tutorial_tynkerpyland_string_detail_grades: 6. osztálytól
@@ -8971,8 +8975,8 @@ hu:
   tutorial_baroborav_string_detail_grades: 6. osztálytól
   tutorial_baroboobstacle_string_detail_grades: 2. osztálytól
   tutorial_pbstorytelling_string_detail_grades: 6. osztálytól
-  tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
-  tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
+  tutorial_kibosnow_string_detail_grades: Óvodától 5. osztályig
+  tutorial_kibohappy_string_detail_grades: Óvodától 5. osztályig
   tutorial_rubylove_string_detail_grades: Óvodától 8. osztályig
   tutorial_spherosmiles_string_detail_grades: 2. osztálytól
   tutorial_spherobaby_string_detail_grades: Nem olvasótól 8. osztályig
@@ -9395,4 +9399,4 @@ hu:
   some: Néhány
   all: Összes
   dont_know: Nem tudom
-  language_label: Language
+  language_label: Nyelv

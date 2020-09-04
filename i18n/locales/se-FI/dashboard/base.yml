@@ -420,6 +420,7 @@ se:
     for_parents_and_guardians: "Váhnemiidda ja Oapmehaččaide"
     link_a_parent_email: "Liŋke váhnema/oapmehačča epoastačujuhussii dán kontoi vai beasat oaidnit iežat máná ovdáneami ja prošeavttaid birra. Don maiddái sáhtát geavahit dán epoastačujuhusa go čoavddasáni áiggut viežžat."
     parent_guardian_email_label: "Váhnema/oapmehačča epoasta"
+    remove_parent_email_label: "Váldde eret"
     only_one_parent_email_supported_warning: "Fuomáš: mii beassat dušše doarjut ovtta váhnema/oapmehačča epoastačujuhusa juohke oahppái juste dál."
   user_level:
     completed: 'Válbmejuvvon'
@@ -984,3 +985,4 @@ se:
     not_now: "Ii dál"
   behaviors:
     this_sprite: "dát sprite"
+  unit_prefix: "Unit %{n}"
