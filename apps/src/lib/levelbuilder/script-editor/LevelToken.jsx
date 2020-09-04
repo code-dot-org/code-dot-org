@@ -13,8 +13,8 @@ import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   levelToken: {
-    position: 'relative',
     fontSize: 13,
+    position: 'relative',
     background: '#eee',
     borderRadius: borderRadius,
     margin: `${levelTokenMargin}px 0`
