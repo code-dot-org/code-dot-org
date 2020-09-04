@@ -799,7 +799,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    (1..2).map {|n| create(:level, name: "Level #{n}")}
+    (1..8).map {|n| create(:level, name: "Level #{n}")}
     script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
     Script.setup([script_file])
 

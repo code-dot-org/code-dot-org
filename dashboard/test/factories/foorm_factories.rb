@@ -5,12 +5,57 @@ FactoryGirl.define do
     sequence(:name) {|n| "FormName#{n}"}
     version 0
     questions '{}'
+
+    trait :with_multi_select_question do
+      questions '{
+        "pages":[
+          {
+            "name":"page_1",
+            "elements":[
+              {
+                "type":"checkbox",
+                "name":"not_members_spice_girls",
+                "title":"Which of the following are NOT names of members of the Spice Girls?",
+                "choices":[
+                  {
+                    "value":"sporty",
+                    "text":"Sporty"
+                  },
+                  {
+                    "value":"radical",
+                    "text":"Radical"
+                  },
+                  {
+                    "value":"spicy",
+                    "text":"Spicy"
+                  },
+                  {
+                    "value":"posh",
+                    "text":"Posh"
+                  },
+                  {
+                    "value":"ginger",
+                    "text":"Ginger"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }'
+    end
   end
 
   factory :basic_foorm_submission, class: 'Foorm::Submission' do
     form_name "surveys/pd/sample"
     foorm_submission_metadata
     answers '{}'
+
+    trait :with_multi_select_answer do
+      answers '{
+        "not_members_spice_girls": ["radical", "spicy"]
+      }'
+    end
   end
 
   factory :pd_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
@@ -36,6 +81,7 @@ FactoryGirl.define do
   factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
     form_name "surveys/pd/summer_workshop_post_survey_test"
     foorm_submission_metadata
+    answers '{}'
 
     trait :answers_low do
       answers '{
@@ -89,6 +135,26 @@ FactoryGirl.define do
        "two_things_liked": "things",
        "permission_promotional": "yes_with_name"
       }'
+    end
+
+    trait :answers_high_with_survey_config_variables do
+      answers_high
+
+      after(:build) do |submission|
+        survey_config_answers = '{
+          "workshop_course":"CS Principles",
+          "workshop_subject":"5-day Summer",
+          "regional_partner_name":"",
+          "is_virtual":"true",
+          "num_facilitators":"0",
+          "day":"0",
+          "is_friday_institute":"false"
+        }'
+
+        parsed_answers = JSON.parse(submission.answers)
+        parsed_answers.merge! JSON.parse(survey_config_answers)
+        submission.answers = parsed_answers.to_json
+      end
     end
   end
 
