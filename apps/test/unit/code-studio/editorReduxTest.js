@@ -18,41 +18,12 @@ const getInitialState = () => ({
         {
           id: 100,
           name: 'A',
-          position: 1,
-          levels: [
-            {
-              ids: [1],
-              position: 1,
-              activeId: 1
-            },
-            {
-              ids: [4],
-              position: 2,
-              activeId: 4
-            },
-            {
-              ids: [5],
-              position: 3,
-              activeId: 5
-            },
-            {
-              ids: [6],
-              position: 4,
-              activeId: 6
-            }
-          ]
+          position: 1
         },
         {
           name: 'B',
           id: 101,
-          position: 2,
-          levels: [
-            {
-              ids: [2, 3],
-              position: 1,
-              activeId: 3
-            }
-          ]
+          position: 2
         }
       ]
     }
