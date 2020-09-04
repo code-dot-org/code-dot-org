@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/script-editor/LevelTokenDetails';
+import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/script-editor/LevelTokenDetails';
 
 const levelKeyList = {
   1: 'Level One',

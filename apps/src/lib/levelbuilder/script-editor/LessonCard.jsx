@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import {borderRadius, levelTokenMargin} from './constants';
-import OrderControls from './OrderControls';
-import LevelToken from './LevelToken';
+import {
+  borderRadius,
+  levelTokenMargin
+} from '@cdo/apps/lib/levelbuilder/constants';
+import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
+import LevelToken from '@cdo/apps/lib/levelbuilder/script-editor/LevelToken';
 import {
   reorderLevel,
   moveLevelToLesson,
@@ -13,10 +16,10 @@ import {
   setLessonGroup,
   moveLesson,
   removeLesson
-} from './editorRedux';
-import LessonGroupSelector from './LessonGroupSelector';
-import color from '../../util/color';
-import RemoveLevelDialog from './RemoveLevelDialog';
+} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import LessonGroupSelector from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupSelector';
+import color from '@cdo/apps/util/color';
+import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLevelDialog';
 
 const styles = {
   checkbox: {

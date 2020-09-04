@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import React from 'react';
 import {mount} from 'enzyme';
-import VisibleAndPilotExperiment from '@cdo/apps/lib/script-editor/VisibleAndPilotExperiment';
+import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 
 describe('VisibleAndPilotExperiment', () => {
   it('visible is disabled and unchecked when pilotExperiment is present', () => {
