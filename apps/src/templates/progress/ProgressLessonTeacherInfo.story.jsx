@@ -151,7 +151,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>
@@ -169,7 +169,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>
@@ -189,7 +189,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>
@@ -207,7 +207,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>
@@ -226,7 +226,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>
@@ -244,7 +244,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[1]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>
@@ -264,7 +264,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[1]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>
@@ -283,7 +283,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[3]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>
@@ -306,7 +306,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[3]}
-                  shareUrl="code.org"
+                  levelUrl="code.org"
                 />
               </div>
             </Provider>

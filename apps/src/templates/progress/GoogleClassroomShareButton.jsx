@@ -16,6 +16,9 @@ const styles = {
     justifyContent: 'start'
   }
 };
+
+const GooglePlatformApiId = 'GooglePlatformApiId';
+
 class GoogleClassroomShareButton extends React.Component {
   static propTypes = {
     buttonId: PropTypes.string.isRequired,
@@ -47,14 +50,14 @@ class GoogleClassroomShareButton extends React.Component {
    * but only the first will kick of the loading process.
    */
   loadApi() {
-    if (!document.getElementById('gapi')) {
+    if (!document.getElementById(GooglePlatformApiId)) {
       window.___gcfg = {
         parsetags: 'explicit'
       };
 
       const gapi = document.createElement('script');
       gapi.src = 'https://apis.google.com/js/platform.js';
-      gapi.id = 'gapi';
+      gapi.id = GooglePlatformApiId;
       gapi.addEventListener('load', this.waitForGapi);
       document.body.appendChild(gapi);
     } else {
@@ -72,9 +75,11 @@ class GoogleClassroomShareButton extends React.Component {
     }
   }
 
-  gapiReady = () =>
-    window.gapi && typeof window.gapi.sharetoclassroom !== 'undefined';
+  gapiReady() {
+    return !!window.gapi && typeof window.gapi.sharetoclassroom !== 'undefined';
+  }
 
+  // https://developers.google.com/classroom/guides/sharebutton
   renderButton() {
     window.gapi.sharetoclassroom.render(this.props.buttonId, {
       url: this.props.url,

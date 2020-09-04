@@ -1,4 +1,4 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import Immutable from 'immutable';
 import {shallow} from 'enzyme';
@@ -46,7 +46,7 @@ describe('ProgressLessonTeacherInfo', () => {
         <ProgressLessonTeacherInfo
           lesson={lesson}
           section={MOCK_NON_GOOGLE_SECTION}
-          shareUrl={'code.org'}
+          levelUrl={'code.org'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
             stagesBySection: {11: {}}
@@ -74,7 +74,7 @@ describe('ProgressLessonTeacherInfo', () => {
         <ProgressLessonTeacherInfo
           lesson={lesson}
           section={MOCK_NON_GOOGLE_SECTION}
-          shareUrl={'code.org'}
+          levelUrl={'code.org'}
           scriptAllowsHiddenStages={false}
           hiddenStageState={Immutable.fromJS({
             stagesBySection: {11: {}}
@@ -97,7 +97,7 @@ describe('ProgressLessonTeacherInfo', () => {
       <ProgressLessonTeacherInfo
         lesson={lockableLesson}
         section={MOCK_NON_GOOGLE_SECTION}
-        shareUrl={'code.org'}
+        levelUrl={'code.org'}
         scriptAllowsHiddenStages={false}
         hiddenStageState={Immutable.fromJS({
           stagesBySection: {11: {}}
@@ -120,7 +120,7 @@ describe('ProgressLessonTeacherInfo', () => {
         <ProgressLessonTeacherInfo
           lesson={fakeLesson('Maze', 1)}
           section={section}
-          shareUrl={'code.org'}
+          levelUrl={'code.org'}
           scriptAllowsHiddenStages={true}
           hiddenStageState={Immutable.fromJS({
             stagesBySection: {11: {}}
@@ -153,7 +153,7 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={fakeLesson('Maze', 1)}
           section={data.section}
           userProviders={data.providers}
-          shareUrl={'code.org'}
+          levelUrl={'code.org'}
           scriptAllowsHiddenStages={true}
           hiddenStageState={Immutable.fromJS({
             stagesBySection: {11: {}}

@@ -40,7 +40,7 @@ const styles = {
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
-    shareUrl: PropTypes.string.isRequired,
+    levelUrl: PropTypes.string.isRequired,
 
     // redux provided
     section: sectionShape,
@@ -77,7 +77,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       hiddenStageState,
       hasNoSections,
       lesson,
-      shareUrl
+      levelUrl
     } = this.props;
 
     const sectionId = (section && section.id.toString()) || '';
@@ -131,7 +131,7 @@ class ProgressLessonTeacherInfo extends React.Component {
           <div style={{...styles.buttonContainer, marginBottom: 5}}>
             <GoogleClassroomShareButton
               buttonId={`gc-button-${lesson.id}`}
-              url={shareUrl}
+              url={levelUrl}
               title={lesson.name}
               courseid={courseId}
             />
