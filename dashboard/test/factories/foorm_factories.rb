@@ -4,7 +4,20 @@ FactoryGirl.define do
   factory :foorm_form, class: 'Foorm::Form' do
     sequence(:name) {|n| "FormName#{n}"}
     version 0
-    questions '{}'
+    questions '{
+       "pages":[
+          {
+            "name":"page_1",
+            "elements":[
+              {
+                "type": "comment",
+                "name": "describe_favorite",
+                "title": "Please describe your favorite ice cream."
+              }
+            ]
+          }
+        ]
+    }'
 
     trait :with_multi_select_question do
       questions '{
