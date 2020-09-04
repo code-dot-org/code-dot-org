@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import CourseScriptsEditor from './CourseScriptsEditor';
-import ResourcesEditor from './ResourcesEditor';
+import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
+import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
+import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import MarkdownPreview from '@cdo/apps/lib/levelbuilder/script-editor/MarkdownPreview';

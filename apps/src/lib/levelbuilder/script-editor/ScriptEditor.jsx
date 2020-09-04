@@ -4,7 +4,7 @@ import LessonGroups from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroups'
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 import ScriptAnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptAnnouncementsEditor';
 import $ from 'jquery';
-import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
+import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
