@@ -2,10 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
-import {
-  NEW_LEVEL_ID,
-  addGroup
-} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import {addGroup} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 import NewLessonGroupInput from '@cdo/apps/lib/levelbuilder/script-editor/NewLessonGroupInput';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 
@@ -34,14 +31,11 @@ const escape = str => str.replace(/'/, "\\'");
 class LessonGroups extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
-    lessonGroups: PropTypes.array.isRequired,
-    levelKeyList: PropTypes.object.isRequired
+    lessonGroups: PropTypes.array.isRequired
   };
 
   state = {
-    addingLessonGroup: false,
-    // Which lesson a level is currently being dragged to.
-    targetLessonPos: null
+    addingLessonGroup: false
   };
 
   handleAddLessonGroup = () => {
@@ -96,63 +90,8 @@ class LessonGroups extends Component {
       t += ', lockable: true';
     }
     s.push(t);
-    lesson.levels.forEach(level => {
-      if (level.ids.length > 1) {
-        s.push('variants');
-        level.ids.forEach(id => {
-          s = s.concat(this.serializeLevel(id, level, level.activeId === id));
-        });
-        s.push('endvariants');
-      } else {
-        s = s.concat(this.serializeLevel(level.ids[0], level));
-      }
-    });
-    s.push('');
     return s.join('\n');
   };
-
-  serializeLevel(id, level, active) {
-    if (id === NEW_LEVEL_ID) {
-      return;
-    }
-
-    const s = [];
-    const key = this.props.levelKeyList[id];
-    if (/^blockly:/.test(key)) {
-      if (level.skin) {
-        s.push(`skin '${escape(level.skin)}'`);
-      }
-      if (level.videoKey) {
-        s.push(`video_key_for_next_level '${escape(level.videoKey)}'`);
-      }
-      if (level.concepts) {
-        // concepts is a comma-separated list of single-quoted strings, so do
-        // not escape its single quotes.
-        s.push(`concepts ${level.concepts}`);
-      }
-      if (level.conceptDifficulty) {
-        s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
-      }
-    }
-    let l = `level '${escape(key)}'`;
-    if (active === false) {
-      l += ', active: false';
-    }
-    if (level.progression) {
-      l += `, progression: '${escape(level.progression)}'`;
-    }
-    if (level.named) {
-      l += `, named: true`;
-    }
-    if (level.assessment) {
-      l += `, assessment: true`;
-    }
-    if (level.challenge) {
-      l += `, challenge: true`;
-    }
-    s.push(l);
-    return s;
-  }
 
   // To be populated with the bounding client rect of each LessonCard element.
   lessonMetrics = {};
@@ -217,7 +156,6 @@ export const UnconnectedLessonGroups = LessonGroups;
 
 export default connect(
   state => ({
-    levelKeyList: state.levelKeyList,
     lessonGroups: state.lessonGroups
   }),
   dispatch => ({
