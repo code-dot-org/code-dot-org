@@ -98,7 +98,7 @@ class Foorm::Submission < ActiveRecord::Base
   end
 
   def formatted_workshop_metadata
-    return {} if workshop_metadata.nil?
+    return {} if workshop_metadata.nil? || workshop_metadata.facilitator_specific?
 
     {
       'user_id' => workshop_metadata.user&.id,

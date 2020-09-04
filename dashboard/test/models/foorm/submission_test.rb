@@ -56,4 +56,25 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
           #{answers.keys}
       MISSING_KEYS_MESSAGE
   end
+
+  test 'associated_facilitator_submissions finds submissions when they exist' do
+    user = create :teacher
+    workshop = create :csf_101_workshop
+
+    workshop_submission_metadata = create :csf_intro_post_workshop_submission,
+      :answers_low,
+      user: user,
+      pd_workshop: workshop
+
+    assert_equal [],
+      workshop_submission_metadata.foorm_submission.associated_facilitator_submissions
+
+    facilitator_submission_metadata = create :csf_intro_post_facilitator_workshop_submission,
+      :answers_low,
+      user: user,
+      pd_workshop: workshop
+
+    assert_equal [facilitator_submission_metadata.foorm_submission],
+      workshop_submission_metadata.foorm_submission.associated_facilitator_submissions
+  end
 end
