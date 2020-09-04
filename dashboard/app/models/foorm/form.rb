@@ -99,7 +99,8 @@ class Foorm::Form < ActiveRecord::Base
   end
 
   def validate_questions
-    # fill_in_library_items will throw an exception if any library items are invalid
+    # fill_in_library_items will throw an exception if any library items are invalid.
+    # If the questions are not valid JSON, JSON.parse will throw an exception.
     begin
       filled_questions = Foorm::Form.fill_in_library_items(JSON.parse(questions))
     rescue StandardError => e
