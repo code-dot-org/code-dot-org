@@ -103,8 +103,7 @@ class Foorm::Form < ActiveRecord::Base
     filtered_submissions = submissions.
       reject {|submission| submission.workshop_metadata&.facilitator_specific?}
 
-    # Default headers are the non-facilitator specific
-    # set of questions.
+    # Default headers are the non-facilitator specific set of questions.
     headers = readable_questions[:general]
 
     comma_separated_submissions = []
@@ -113,7 +112,12 @@ class Foorm::Form < ActiveRecord::Base
 
       # Add in new headers for questions that are not in the form
       # but are in the submission (eg, survey config and workshop metadata).
-      headers.merge! new_headers_from_answers(headers, answers)
+      # Put new headers first, as they generally contain important general
+      # information (eg, user_id, pd_workshop_id, etc.)
+      potential_new_headers = Hash[
+        answers.keys.map {|question_id| [question_id, question_id]}
+      ]
+      headers = potential_new_headers.merge headers
 
       if submission.associated_facilitator_submissions
         submission.associated_facilitator_submissions.each_with_index do |facilitator_response, index|
@@ -135,13 +139,22 @@ class Foorm::Form < ActiveRecord::Base
             end
           ]
 
-          # Add facilitator-specific headers and responses.
-          headers.merge! facilitator_headers_with_facilitator_number
+          # Add facilitator-specific response to answers,
+          # and prep a new set of headers to add to cover facilitator-specific questions.
+          # Don't add to headers array yet, as we want important information
+          # in the response but not in the form itself (eg, facilitator ID)
+          # to come before answers to facilitator-specific questions.
+          facilitator_headers = facilitator_headers_with_facilitator_number
           answers.merge! facilitator_response_with_facilitator_number
 
           # Add any facilitator-specific questions as headers
           # that are in the submission but not already in the list of headers.
-          headers.merge! new_headers_from_answers(headers, facilitator_response_with_facilitator_number)
+          potential_new_headers = Hash[
+            facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}
+          ]
+          facilitator_headers = potential_new_headers.merge facilitator_headers
+
+          headers.merge! facilitator_headers
         end
       end
 
@@ -185,13 +198,5 @@ class Foorm::Form < ActiveRecord::Base
     end
 
     questions
-  end
-
-  def new_headers_from_answers(current_headers, answers)
-    potential_new_headers = Hash[
-      answers.keys.map {|question_id| [question_id, question_id]}
-    ]
-
-    potential_new_headers.select {|question_id, _| !current_headers.keys.include? question_id}
   end
 end
