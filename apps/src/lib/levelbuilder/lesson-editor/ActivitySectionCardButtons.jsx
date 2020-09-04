@@ -22,7 +22,9 @@ const styles = {
 
 export default class ActivitySectionCardButtons extends Component {
   static propTypes = {
-    activitySection: PropTypes.object
+    activitySection: PropTypes.object,
+    addTip: PropTypes.func,
+    editTip: PropTypes.func
   };
 
   constructor(props) {
@@ -30,8 +32,10 @@ export default class ActivitySectionCardButtons extends Component {
 
     this.state = {
       addTipOpen: false,
+      editingExistingTip: false,
       addResourceOpen: false,
-      addLevelOpen: false
+      addLevelOpen: false,
+      tipToEdit: {type: 'teachingTip', markdown: ''}
     };
   }
 
@@ -43,12 +47,26 @@ export default class ActivitySectionCardButtons extends Component {
     this.setState({addLevelOpen: false});
   };
 
-  handleOpenAddTip = () => {
-    this.setState({addTipOpen: true});
+  handleEditTip = tip => {
+    this.setState({tipToEdit: tip, addTipOpen: true, editingExistingTip: true});
   };
 
-  handleCloseAddTip = () => {
-    this.setState({addTipOpen: false});
+  handleOpenAddTip = () => {
+    this.setState({
+      tipToEdit: {
+        key: `tip-${Math.floor(Math.random() * 100)}`,
+        type: 'teachingTip',
+        markdown: ''
+      },
+      addTipOpen: true
+    });
+  };
+
+  handleCloseAddTip = tip => {
+    if (!this.state.editingExistingTip) {
+      this.props.addTip(tip);
+    }
+    this.setState({addTipOpen: false, editingExistingTip: false});
   };
 
   handleOpenAddResource = () => {
@@ -98,8 +116,8 @@ export default class ActivitySectionCardButtons extends Component {
                 return (
                   <TipWithTooltip
                     tip={tip}
-                    key={tip.markdown}
-                    onClick={this.handleOpenAddTip}
+                    key={tip.key}
+                    onClick={this.handleEditTip}
                   />
                 );
               })}
@@ -113,10 +131,7 @@ export default class ActivitySectionCardButtons extends Component {
         <EditTipDialog
           isOpen={this.state.addTipOpen}
           handleConfirm={this.handleCloseAddTip}
-          tip={{
-            type: 'teachingTip',
-            markdown: ''
-          }}
+          tip={this.state.tipToEdit}
         />
         <AddLevelDialog
           isOpen={this.state.addLevelOpen}

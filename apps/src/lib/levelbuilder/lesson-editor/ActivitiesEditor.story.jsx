@@ -34,6 +34,7 @@ const activities = [
         text: 'In this activity you will be learning about making activities.',
         tips: [
           {
+            key: 'tip-1',
             type: 'teachingTip',
             markdown:
               'After students are finished writing in their journals, discuss as a class or collect the journals to review student answers. \n- An input could be a user clicking a button or tapping the screen. \n- An output could be an image displayed or a sound played'
@@ -108,10 +109,12 @@ const activities = [
           '**Prompt:** With a partner, discuss the following and note down in your journal:\n - How does the user interact with the app?\n - What is the overall purpose of this app?\n - Who is the target audience?\n\n**Share Out:** As a class, discuss student answers to the discussion questions.',
         tips: [
           {
+            key: 'tip-2',
             type: 'discussionGoal',
             markdown: 'Make sure to get to the point'
           },
           {
+            key: 'tip-3',
             type: 'assessmentOpportunity',
             markdown: 'Are students getting it?'
           }

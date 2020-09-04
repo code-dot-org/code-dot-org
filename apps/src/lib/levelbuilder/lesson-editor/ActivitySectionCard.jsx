@@ -9,7 +9,8 @@ import {
   setActivitySectionRemarks,
   moveActivitySection,
   removeActivitySection,
-  updateActivitySectionField
+  updateActivitySectionField,
+  addTip
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken2';
 
@@ -78,7 +79,8 @@ class ActivitySectionCard extends Component {
     setActivitySectionRemarks: PropTypes.func,
     moveActivitySection: PropTypes.func,
     removeActivitySection: PropTypes.func,
-    updateActivitySectionField: PropTypes.func
+    updateActivitySectionField: PropTypes.func,
+    addTip: PropTypes.func
   };
 
   toggleSlides = () => {
@@ -135,6 +137,18 @@ class ActivitySectionCard extends Component {
       'text',
       event.target.value
     );
+  };
+
+  handleAddTip = tip => {
+    this.props.addTip(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      tip
+    );
+  };
+
+  handleEditTip = tip => {
+    console.log(`edit tip ${tip}`);
   };
 
   render() {
@@ -199,6 +213,8 @@ class ActivitySectionCard extends Component {
           ))}
         <ActivitySectionCardButtons
           activitySection={this.props.activitySection}
+          addTip={this.handleAddTip}
+          editTip={this.handleEditTip}
         />
       </div>
     );
@@ -212,6 +228,7 @@ export default connect(
     setActivitySectionRemarks,
     moveActivitySection,
     removeActivitySection,
-    updateActivitySectionField
+    updateActivitySectionField,
+    addTip
   }
 )(ActivitySectionCard);

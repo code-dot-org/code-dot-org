@@ -11,6 +11,10 @@ export default class TipWithTooltip extends Component {
     onClick: PropTypes.func
   };
 
+  handleClick = () => {
+    this.props.onClick(this.props.tip);
+  };
+
   render() {
     const {tip} = this.props;
     const tooltipId = _.uniqueId();
@@ -20,10 +24,7 @@ export default class TipWithTooltip extends Component {
           <FontAwesome
             icon={tipTypes[tip.type].icon}
             style={{color: tipTypes[tip.type].color, padding: '2px'}}
-            onClick={this.props.onClick}
-            onMouseOver={() => {
-              console.log('Show tool tip');
-            }}
+            onClick={this.handleClick}
           />
         </span>
         <ReactTooltip

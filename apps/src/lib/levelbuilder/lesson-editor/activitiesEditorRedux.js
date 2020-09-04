@@ -26,6 +26,7 @@ const SET_ACTIVITY = 'activitiesEditor/SET_ACTIVITY';
 const UPDATE_ACTIVITY_FIELD = 'activitiesEditor/UPDATE_ACTIVITY_FIELD';
 const UPDATE_ACTIVITY_SECTION_FIELD =
   'activitiesEditor/UPDATE_ACTIVITY_SECTION_FIELD';
+const ADD_TIP = 'activitiesEditor/ADD_TIP';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
@@ -253,6 +254,13 @@ export const setActivity = (
   activitySectionPosition,
   oldActivityPosition,
   newActivityPosition
+});
+
+export const addTip = (activityPosition, activitySectionPosition, tip) => ({
+  type: ADD_TIP,
+  activityPosition,
+  activitySectionPosition,
+  tip
 });
 
 function updateActivityPositions(activities) {
@@ -553,6 +561,14 @@ function activities(state = [], action) {
       newActivitySections.push(curActivitySection);
       updateActivitySectionPositions(newState);
 
+      break;
+    }
+    case ADD_TIP: {
+      const activitySections =
+        newState[action.activityPosition - 1].activitySections;
+      activitySections[action.activitySectionPosition - 1].tips.push(
+        action.tip
+      );
       break;
     }
   }

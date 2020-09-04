@@ -53,11 +53,15 @@ export default class EditTipDialog extends Component {
     this.setState({tip: newTip});
   };
 
+  handleClose = () => {
+    this.props.handleConfirm(this.state.tip);
+  };
+
   render() {
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
-        handleClose={this.props.handleConfirm}
+        handleClose={this.handleClose}
         useUpdatedStyles
         style={styles.dialog}
       >
@@ -89,7 +93,7 @@ export default class EditTipDialog extends Component {
           <Button
             __useDeprecatedTag
             text={i18n.closeAndSave()}
-            onClick={this.props.handleConfirm}
+            onClick={this.handleClose}
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
