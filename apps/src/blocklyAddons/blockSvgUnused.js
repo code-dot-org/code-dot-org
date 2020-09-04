@@ -70,7 +70,7 @@ BlockSvgUnused.prototype.initChildren = function() {
   );
 
   var frameTextVerticalPosition = -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2);
-  if (Blockly.ieVersion()) {
+  if (Blockly.utils.userAgent.IE) {
     // in non-IE browsers, we use dominant-baseline to vertically center
     // our text. That is unfortunately not supported in IE, so we
     // manually offset by 4 pixels to compensate.
@@ -80,7 +80,7 @@ BlockSvgUnused.prototype.initChildren = function() {
     'text',
     {
       class: 'blocklyText',
-      style: 'font-size: 12pt;fill: black',
+      style: 'font-size: 12pt;fill: #000',
       y: frameTextVerticalPosition,
       'dominant-baseline': 'central'
     },
@@ -108,9 +108,7 @@ BlockSvgUnused.prototype.initChildren = function() {
       'text',
       {
         class: 'blocklyText',
-        y: Blockly.ieVersion() ? 4 : 0, // again, offset text manually in IE
-        'dominant-baseline': 'central',
-        'text-anchor': 'middle'
+        y: Blockly.utils.userAgent.IE ? 4 : 0 // again, offset text manually in IE
       },
       this.frameHelp_
     )
@@ -138,7 +136,7 @@ BlockSvgUnused.prototype.bindClickEvent = function() {
   // We bind to mousedown rather than click so we can interrupt the drag
   // that would otherwise be initiated.
   Blockly.bindEvent_(this.frameHelp_, 'mousedown', this, function(e) {
-    if (Blockly.isRightButton(e)) {
+    if (Blockly.utils.isRightButton(e)) {
       // Right-click.
       return;
     }

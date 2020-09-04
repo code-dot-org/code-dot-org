@@ -1,5 +1,5 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
-import {BlockSvgUnused} from '@cdo/apps/blockly/blockSvgUnused';
+import {BlockSvgUnused} from '@cdo/apps/blocklyAddons/blockSvgUnused';
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -149,13 +149,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
   blocklyWrapper.wrapSettableProperty('Xml');
 
-  blocklyWrapper.ieVersion = () => false; // TODO
-
-  blocklyWrapper.isRightButton = function(e) {
-    // Control-clicking in WebKit on Mac OS X fails to change button to 2.
-    return e.button === 2 || e.ctrlKey;
-  };
-
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
   };
@@ -221,14 +214,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
   };
 
-  blocklyWrapper.BlockSvg.prototype.addUnusedFrame = function(callback) {
+  // Show Unused Code UI around unattached blocks
+  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function(
+    helpClickFunc
+  ) {
     if (!this.unusedSvg_) {
-      this.unusedSvg_ = new BlockSvgUnused(this, callback);
+      this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
     }
     this.unusedSvg_.render(this.svgGroup_);
   };
 
-  blocklyWrapper.BlockSvg.prototype.removeUnusedFrame = function() {
+  // Remove Unused Code UI around unattached blocks
+  blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function() {
     if (this.unusedSvg_) {
       this.unusedSvg_.dispose();
       this.unusedSvg_ = null;
@@ -238,22 +235,32 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.BlockSvg.prototype.render;
   blocklyWrapper.BlockSvg.prototype.render = function() {
     this.originalRender();
-    this.removeUnusedFrame();
+    this.removeUnusedBlockFrame();
   };
   blocklyWrapper.BlockSvg.prototype.originalDispose =
     blocklyWrapper.BlockSvg.prototype.dispose;
   blocklyWrapper.BlockSvg.prototype.dispose = function() {
     this.originalDispose();
-    this.removeUnusedFrame();
+    this.removeUnusedBlockFrame();
   };
 
+  // The built-in function also adds a cross-hatch fill pattern to disabled blocks, which we don't want.
+  // Overrriding the function here so we can just set the class but not add the fill pattern.
   blocklyWrapper.blockRendering.PathObject.prototype.updateDisabled_ = function(
     disabled
   ) {
     this.setClass_('blocklyDisabled', disabled);
   };
-  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = callback => {
+
+  /**
+   * Sets up the logic for tracking disabled blocks and showing our custom UI around them at runtime.
+   * @param helpClickFunc - callback to show tooltip when ? button in the unused block frame is clicked
+   */
+  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = helpClickFunc => {
+    // Adding this change listener enables Blockly's built-in logic for determining which blocks are unattached
     Blockly.mainBlockSpace.addChangeListener(Blockly.Events.disableOrphans);
+
+    // When run button is clicked, show the unused blocks UI
     Blockly.bindEvent_(
       Blockly.mainBlockSpace.getCanvas(),
       Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
@@ -261,7 +268,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       function() {
         this.getTopBlocks().forEach(function(block) {
           if (block.disabled) {
-            block.addUnusedFrame(callback);
+            block.addUnusedBlockFrame(helpClickFunc);
           }
         });
       }
