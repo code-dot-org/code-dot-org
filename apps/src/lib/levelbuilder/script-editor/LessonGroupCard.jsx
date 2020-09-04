@@ -122,9 +122,6 @@ class LessonGroupCard extends Component {
                     this.props.setLessonMetrics(metrics, lesson.position);
                   }
                 }}
-                lessonMetrics={this.props.lessonMetrics}
-                setTargetLesson={this.props.setTargetLesson}
-                targetLessonPos={this.props.targetLessonPos}
               />
             );
           })}
