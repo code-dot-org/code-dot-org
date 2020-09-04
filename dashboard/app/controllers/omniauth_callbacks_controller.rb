@@ -180,9 +180,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     prepare_locale_cookie user
 
-    if allows_silent_takeover(user, auth_hash)
-      user = silent_takeover user, auth_hash
-      sign_in_user user
+    if user_already_exists(user)
+      if windows_live_takeover_if_available(auth_hash)
+        return sign_in(user)
+      end
+      return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
     elsif user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
       sign_in_user user
@@ -345,6 +347,34 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     scopes.include?(scope_name)
   end
 
+  def windows_live_takeover_if_available(auth_hash)
+    return unless auth_hash.provider == AuthenticationOption::MICROSOFT
+    user = User.find_by_email_or_hashed_email(auth_hash.email)
+    return unless user
+    return if !!user.authentication_options.find {|a| a.provider != AuthenticationOption::MICROSOFT && a.provider != AuthenticationOption::WINDOWS_LIVE}
+
+    # If the user is now logging in through microsoft_v2_auth and has an existing
+    # windowslive AuthenticationOption, we want to delete windowslive since that is
+    # deprecated in favor of microsoft_v2_auth.
+    windowslive_auth_option = user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::WINDOWS_LIVE}
+    if windowslive_auth_option.present? && provider == AuthenticationOption::MICROSOFT
+      ao = AuthenticationOption.create!(
+        user: user,
+        email: user.email,
+        credential_type: provider,
+        authentication_id: auth_hash.uid,
+        data: {
+          oauth_token: auth_hash.credentials&.token,
+          oauth_token_expiration: auth_hash.credentials&.expires_at,
+          oauth_refresh_token: auth_hash.credentials&.refresh_token
+        }.to_json
+      )
+
+      lookup_user.update!(primary_contact_info: ao) if windowslive_auth_option.primary?
+      windowslive_auth_option.destroy!
+    end
+  end
+
   def allows_section_takeover(user)
     # OAuth providers do not necessarily provide student email addresses, so we
     # want to perform silent takeover on these accounts, but *only if* the
@@ -454,15 +484,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def user_already_exists(user)
     lookup_user = User.find_by_email_or_hashed_email(user.email)
-    return !!lookup_user
-  end
-
-  def allows_silent_takeover(oauth_user, auth_hash)
-    return false unless auth_hash.provider.present?
-    return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
-    return false if oauth_user.persisted?
-
-    lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
     return !!lookup_user
   end
 

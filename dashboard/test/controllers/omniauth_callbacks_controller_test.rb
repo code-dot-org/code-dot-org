@@ -329,67 +329,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  # The following tests actually test the user model, but relate specifically to
-  # oauth uniqueness checks so they are included here. These have not been working
-  # in the past for subtle reasons.
-
-  test "login: omniauth student is checked for email uniqueness against student" do
-    email = 'duplicate@email.com'
-    user = create(:user, email: email)
-
-    auth = generate_auth_user_hash(email: email, user_type: User::TYPE_STUDENT)
-
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_does_not_create(User) do
-      get :facebook
-    end
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test "login: omniauth teacher is checked for email uniqueness against student" do
-    email = 'duplicate@email.com'
-    user = create(:user, email: email)
-
-    auth = generate_auth_user_hash(email: email, user_type: User::TYPE_TEACHER)
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_does_not_create(User) do
-      get :facebook
-    end
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test "login: omniauth student is checked for email uniqueness against teacher" do
-    email = 'duplicate@email.com'
-    user = create(:teacher, email: email)
-
-    auth = generate_auth_user_hash(email: email, user_type: User::TYPE_STUDENT)
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_does_not_create(User) do
-      get :facebook
-    end
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test "login: omniauth teacher is checked for email uniqueness against teacher" do
-    email = 'duplicate@email.com'
-    user = create(:teacher, email: email)
-
-    auth = generate_auth_user_hash(email: email, user_type: User::TYPE_TEACHER)
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_does_not_create(User) do
-      get :facebook
-    end
-    assert_equal user.id, signed_in_user_id
-  end
-
   test 'clever: signs in user if user is found by credentials' do
     # Given I have a Clever-Code.org account
     user = create :student, :clever_sso_provider
@@ -796,10 +735,10 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
   end
 
-  test 'login: microsoft_v2_auth silently takes over unmigrated student with matching email' do
+  test 'login: microsoft_v2_auth redirects unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:student, email: email)
+    create(:student, email: email)
     auth = OmniAuth::AuthHash.new(
       provider: 'microsoft_v2_auth',
       uid: uid,
@@ -814,46 +753,10 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_creates(AuthenticationOption) do
-      assert_does_not_create(User) do
-        get :microsoft_v2_auth
-      end
+    assert_does_not_create(User) do
+      get :microsoft_v2_auth
     end
-    user.reload
-    takeover_auth = user.authentication_options.last
-    assert_equal 'microsoft_v2_auth', takeover_auth.credential_type
-    assert_equal uid, takeover_auth.authentication_id
-    assert_equal signed_in_user_id, user.id
-  end
-
-  test 'login: microsoft_v2_auth silently takes over unmigrated teacher with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:teacher, email: email)
-    auth = OmniAuth::AuthHash.new(
-      provider: 'microsoft_v2_auth',
-      uid: uid,
-      info: {},
-      extra: {
-        raw_info: {
-          userPrincipalName: email,
-          displayName: 'My Name'
-        }
-      },
-    )
-
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    assert_creates(AuthenticationOption) do
-      assert_does_not_create(User) do
-        get :microsoft_v2_auth
-      end
-    end
-    user.reload
-    takeover_auth = user.authentication_options.last
-    assert_equal 'microsoft_v2_auth', takeover_auth.credential_type
-    assert_equal uid, takeover_auth.authentication_id
-    assert_equal signed_in_user_id, user.id
+    assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=microsoft_v2_auth'
   end
 
   test 'login: google_oauth2 redirects migrated student with matching email' do
@@ -869,10 +772,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
   end
-  test 'login: microsoft_v2_auth silently adds authentication_option to migrated teacher with matching email' do
+
+  test 'login: microsoft_v2_auth redirects migrated teacher with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:teacher, email: email)
+    create(:teacher, email: email)
     auth = OmniAuth::AuthHash.new(
       provider: 'microsoft_v2_auth',
       uid: uid,
@@ -890,43 +794,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :microsoft_v2_auth
     end
-    user.reload
-    assert_equal 'migrated', user.provider
-    assert_equal 2, user.authentication_options.count
-    microsoft_auth_option = user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::MICROSOFT}
-    refute_nil microsoft_auth_option
-    assert_equal uid, microsoft_auth_option.authentication_id
-    assert_equal signed_in_user_id, user.id
-  end
-
-  test 'login: microsoft_v2_auth silently adds authentication_option to migrated student with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:student, email: email)
-    auth = OmniAuth::AuthHash.new(
-      provider: 'microsoft_v2_auth',
-      uid: uid,
-      info: {},
-      extra: {
-        raw_info: {
-          userPrincipalName: email,
-          displayName: 'My Name'
-        }
-      },
-    )
-
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :microsoft_v2_auth
-    end
-    user.reload
-    assert_equal 'migrated', user.provider
-    assert_equal 2, user.authentication_options.count
-    microsoft_auth_option = user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::MICROSOFT}
-    refute_nil microsoft_auth_option
-    assert_equal uid, microsoft_auth_option.authentication_id
-    assert_equal signed_in_user_id, user.id
+    assert_redirected_to 'http://test.host/users/existing_account?email=test%40foo.xyz&provider=microsoft_v2_auth'
   end
 
   test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do

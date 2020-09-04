@@ -453,6 +453,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   test "create causes SignIn creation" do
     frozen_time = Date.parse('1985-10-26 01:20:00')
     DateTime.stubs(:now).returns(frozen_time)
+    puts @default_params
     assert_creates(SignIn) do
       post :create, params: {user: @default_params}
     end
