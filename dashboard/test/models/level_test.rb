@@ -1064,4 +1064,31 @@ class LevelTest < ActiveSupport::TestCase
 
     assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
   end
+
+  test 'hint_prompt_enabled is true for levels in a script where hint_prompt_enabled is true' do
+    script = create :csf_script
+    assert script.hint_prompt_enabled?
+    level = create :level
+    script_level = create :script_level, levels: [level], script: script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is true for levels in many scripts if at least one script is hint_prompt_enabled' do
+    hint_script = create :csf_script
+    assert hint_script.hint_prompt_enabled?
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    script_level = create :script_level, levels: [level], script: hint_script
+    script_level = create :script_level, levels: [level], script: no_hint_script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is false for levels in scripts where hint_prompt_enabled is false' do
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    script_level = create :script_level, levels: [level], script: no_hint_script
+    refute level.hint_prompt_enabled?
+  end
 end
