@@ -103,49 +103,55 @@ class Foorm::Form < ActiveRecord::Base
     filtered_submissions = submissions.
       reject {|submission| submission.workshop_metadata&.facilitator_specific?}
 
-    CSV.open(file_path, "wb") do |csv|
-      break if filtered_submissions.empty?
-      comma_separated_submissions = []
+    # Default headers are the non-facilitator specific
+    # set of questions.
+    headers = readable_questions[:general]
 
-      # Submissions containing answers to facilitator-specific questions
-      # don't have survey config stored in them.
-      submission_with_survey_config = submissions.
-        reject {|submission| submission.workshop_metadata&.facilitator_specific?}&.
-        last&.
-        formatted_answers
+    comma_separated_submissions = []
+    filtered_submissions.each do |submission|
+      answers = submission.formatted_answers
 
-      headers = submission_with_survey_config.nil? ?
-        readable_questions :
-        merge_form_questions_and_config_variables(submission_with_survey_config)
+      # Add in new headers for questions that are not in the form
+      # but are in the submission (eg, survey config and workshop metadata).
+      headers.merge! new_headers_from_answers(headers, answers)
 
-      filtered_submissions.each do |submission|
-        answers = submission.formatted_answers
+      if submission.associated_facilitator_submissions
+        submission.associated_facilitator_submissions.each_with_index do |facilitator_response, index|
+          next if facilitator_response.nil?
+          facilitator_number = index + 1
 
-        if submission.associated_facilitator_submissions
-          submission.associated_facilitator_submissions.each_with_index do |facilitator_response, index|
-            next if facilitator_response.nil?
-            facilitator_number = index + 1
+          # Add facilitator number identifier to facilitator-specific questions
+          facilitator_headers_with_facilitator_number = Hash[
+            readable_questions[:facilitator].map do |question_id, question_text|
+              [question_id + "_#{facilitator_number}", "Facilitator #{facilitator_number}: " + question_text]
+            end
+          ]
 
-            facilitator_headers_with_facilitator_number = Hash[
-              readable_questions[:facilitator].map do |key, value|
-                [key + "_#{facilitator_number}", "Facilitator : #{facilitator_number}" + value]
-              end
-            ]
-            headers.merge! facilitator_headers_with_facilitator_number
+          # Add same facilitator number identifier to facilitator-specific questions,
+          # such that they map to the appropriate headers.
+          facilitator_response_with_facilitator_number = Hash[
+            facilitator_response.formatted_answers.map do |question_id, answer_text|
+              [question_id + "_#{facilitator_number}", answer_text]
+            end
+          ]
 
-            facilitator_response_with_facilitator_number = Hash[
-              facilitator_response.formatted_answers.map do |key, value|
-                [key + "_#{facilitator_number}", value]
-              end
-            ]
-            answers.merge! facilitator_response_with_facilitator_number
-            headers = Hash[facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}].merge headers
-          end
+          # Add facilitator-specific headers and responses.
+          headers.merge! facilitator_headers_with_facilitator_number
+          answers.merge! facilitator_response_with_facilitator_number
+
+          # Add any facilitator-specific questions as headers
+          # that are in the submission but not already in the list of headers.
+          headers.merge! new_headers_from_answers(headers, facilitator_response_with_facilitator_number)
         end
-
-        comma_separated_submissions << answers.values_at(*headers.keys)
       end
 
+      # Keep a list of submissions separate from the CSV, so that we can iteratively
+      # build the list of headers and add that as the first row.
+      comma_separated_submissions << answers.values_at(*headers.keys)
+    end
+
+    # Finally, add the header row and, subsequently, rows of survey responses.
+    CSV.open(file_path, "wb") do |csv|
       csv << headers.values
       comma_separated_submissions.each {|row| csv << row}
     end
@@ -155,10 +161,13 @@ class Foorm::Form < ActiveRecord::Base
     Pd::Foorm::FoormParser.parse_forms([self])
   end
 
+  # Returns a hash with keys matching what is produced by parsed_questions.
+  # Each item is comprised of a question key, and a human readable question as its value.
+  # It also flattens matrix questions into one entry per question.
   def readable_questions
     questions = {}
 
-    # Currently, the keys here are :general and :facilitator.
+    # As of September 2020, the keys here are :general and :facilitator.
     parsed_questions.each do |questions_section, questions_content|
       questions[questions_section] = {}
 
@@ -178,20 +187,11 @@ class Foorm::Form < ActiveRecord::Base
     questions
   end
 
-  # Takes the questions in the survey (readable_questions)
-  # and adds in entries for information
-  # like survey configuration variables (eg, workshop_subject)
-  # and workshop metadata (eg, pd_worskhop_id)
-  # that appears in the form submission, but not the form itself.
-  def merge_form_questions_and_config_variables(submission)
-    headers = readable_questions[:general]
+  def new_headers_from_answers(current_headers, answers)
+    potential_new_headers = Hash[
+      answers.keys.map {|question_id| [question_id, question_id]}
+    ]
 
-    config_and_metadata_question_ids = submission.keys.reject do |question_id|
-      headers.keys.include? question_id
-    end
-    return headers if config_and_metadata_question_ids.empty?
-
-    config_and_metadata_headers = Hash[config_and_metadata_question_ids.map {|question_id| [question_id, question_id]}]
-    config_and_metadata_headers.merge! headers
+    potential_new_headers.select {|question_id, _| !current_headers.keys.include? question_id}
   end
 end

@@ -10,21 +10,36 @@ class Foorm::FormTest < ActiveSupport::TestCase
     assert_equal form2.version, version
   end
 
-  test 'merge_form_questions_and_config_variables works with no config variables' do
+  test 'new_headers_from_answers gets new header from answer' do
     form = create :foorm_form_summer_post_survey
-    submission = create :daily_workshop_day_5_foorm_submission, :answers_high_with_survey_config_variables
+    headers = {
+      'could_improve' => 'What could be improved?',
+      'most_enjoyed' => 'What did you enjoy most?'
+    }
 
-    expected_keys = form.readable_questions.keys | submission.formatted_answers.keys
+    answers = {
+      'could_improve' => 'The food.',
+      'pd_workshop_id' => 25
+    }
 
-    assert_equal expected_keys,
-      form.merge_form_questions_and_config_variables(submission.formatted_answers).keys
+    expected_new_headers = {'pd_workshop_id' => 'pd_workshop_id'}
+
+    assert_equal expected_new_headers,
+      form.new_headers_from_answers(headers, answers)
   end
 
-  test 'merge_form_questions_and_config_variables works with config variables' do
+  test 'new_headers_from_answers returns blank hash when no new headers in answer' do
     form = create :foorm_form_summer_post_survey
-    submission = create :daily_workshop_day_5_foorm_submission, :answers_high
+    headers = {
+      'could_improve' => 'What could be improved?',
+      'most_enjoyed' => 'What did you enjoy most?'
+    }
 
-    assert_equal form.readable_questions.keys,
-      form.merge_form_questions_and_config_variables(submission.formatted_answers).keys
+    answers = {
+      'could_improve' => 'The food.',
+    }
+
+    assert_equal Hash[],
+      form.new_headers_from_answers(headers, answers)
   end
 end
