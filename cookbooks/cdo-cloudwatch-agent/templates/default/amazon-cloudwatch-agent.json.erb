@@ -31,7 +31,8 @@
         ],
         "append_dimensions": {
           "Environment": "<%=node.chef_environment%>"
-        }
+        },
+        "aggregation_dimensions": [["Environment"], ["Environment", "InstanceId"]]
       },
       "swap": {
         "measurement": [
