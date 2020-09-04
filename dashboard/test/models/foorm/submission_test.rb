@@ -15,6 +15,14 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     assert_equal 'Strongly Disagree', answers['overall_success-more_prepared']
   end
 
+  test 'formatted_answers formats matrix question response as expected for facilitator question' do
+    create :foorm_form_csf_intro_post_survey
+    submission = build :csf_intro_post_facilitator_foorm_submission, :answers_high
+    answers = submission.formatted_answers
+
+    assert_equal 'Strongly Agree', answers['facilitator_effectiveness-on_track']
+  end
+
   test 'formatted_answers formats comment question response as expected' do
     create :foorm_form_csf_intro_post_survey
     submission = build :csf_intro_post_foorm_submission, :answers_low

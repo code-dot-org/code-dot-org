@@ -46,28 +46,12 @@ class Foorm::Submission < ActiveRecord::Base
     facilitator_parsed_questions = form.parsed_questions[:facilitator][form.key]
 
     parsed_answers.each do |question_id, answer|
-      if general_parsed_questions.keys.include? question_id
-        question_details = general_parsed_questions[question_id]
+      if general_parsed_questions.keys.include?(question_id) ||
+        facilitator_parsed_questions.keys.include?(question_id)
 
-        case question_details[:type]
-        when 'matrix'
-          choices = question_details[:columns]
-
-          answer.each do |matrix_question_id, matrix_question_answer|
-            key = Foorm::Form.get_matrix_question_id(question_id, matrix_question_id)
-            question_answer_pairs[key] = choices[matrix_question_answer]
-          end
-        when 'scale', 'text'
-          question_answer_pairs[question_id] = answer
-        when 'singleSelect'
-          choices = question_details[:choices]
-          question_answer_pairs[question_id] = choices[answer]
-        when 'multiSelect'
-          choices = question_details[:choices]
-          question_answer_pairs[question_id] = answer.map {|selected| choices[selected]}.sort.join(', ')
-        end
-      elsif facilitator_parsed_questions.keys.include? question_id
-        question_details = facilitator_parsed_questions[question_id]
+        question_details = general_parsed_questions.keys.include?(question_id) ?
+          general_parsed_questions[question_id] :
+          facilitator_parsed_questions[question_id]
 
         case question_details[:type]
         when 'matrix'
