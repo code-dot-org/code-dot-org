@@ -380,15 +380,18 @@
         },
         "Course 4 Artist Functions Inspiration": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个边长 20像素 的正方形"
           }
         },
         "Course 4 Artist Functions challenge": {
           "draw a line of squares": {
-            "name": "画一条正方形线"
+            "name": "画一条正方形线",
+            "description": "画6个正方形紧邻着彼此"
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个边长 20像素 的正方形"
           }
         },
         "Course 4 Bee Params 1": {
@@ -436,7 +439,8 @@
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "跳跃"
+            "name": "跳跃",
+            "description": "使一个主角跳100像素"
           }
         },
         "Course 4 Play Lab Params 10": {
@@ -447,12 +451,14 @@
             "name": "积分",
             "parameters": {
               "points": "分数"
-            }
+            },
+            "description": "将给予分数添加到player_score（玩家得分）变量"
           }
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "跳跃"
+            "name": "跳跃",
+            "description": "使一个主角跳“高度”像素"
           }
         },
         "Course 4 Play Lab Params 3": {
@@ -461,12 +467,14 @@
             "parameters": {
               "height": "高度",
               "actor": "角色"
-            }
+            },
+            "description": "使所给予的演员跳所给予的高"
           }
         },
         "Course 4 Play Lab Params 4": {
           "patrol": {
-            "name": "巡逻"
+            "name": "巡逻",
+            "description": "使一个精灵图移动上下"
           },
           "do something": {
             "name": "做点什么"
@@ -477,7 +485,8 @@
             "name": "巡逻",
             "parameters": {
               "actor": "角色"
-            }
+            },
+            "description": "使一个精灵图移动上下"
           }
         },
         "Course 4 Play Lab Params 6": {
@@ -485,7 +494,8 @@
             "name": "巡逻",
             "parameters": {
               "actor": "角色"
-            }
+            },
+            "description": "使精灵图向上下按规定速度移动"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -494,7 +504,8 @@
             "parameters": {
               "actor": "角色",
               "speed": "速度"
-            }
+            },
+            "description": "使精灵图向上下按规定速度移动"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -503,7 +514,8 @@
             "parameters": {
               "actor": "角色",
               "speed": "速度"
-            }
+            },
+            "description": "使精灵图向上下按规定速度移动"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -511,7 +523,8 @@
             "name": "积分",
             "parameters": {
               "points": "分数"
-            }
+            },
+            "description": "将给予分数添加到player_score（玩家得分）变量"
           }
         },
         "Course 4 Play Lab Vars 1": {
@@ -538,7 +551,8 @@
             "name": "向下/向后移动"
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           }
         },
         "Course 4 SCF 1a": {
@@ -556,7 +570,8 @@
         },
         "Course 4 SCF 2": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "draw octagons": {
             "name": "画多个八边形"
@@ -570,7 +585,8 @@
         },
         "Course 4 SCF 3": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "do something": {
             "name": "做点什么"
@@ -603,7 +619,8 @@
             "name": "积分",
             "parameters": {
               "points": "分数"
-            }
+            },
+            "description": "将给予分数添加到player_score（玩家得分）变量"
           }
         },
         "Function intro Ryan": {
@@ -834,10 +851,12 @@
         },
         "NEW Course 4 Artist Functions 11": {
           "draw a line of  squares": {
-            "name": "画一条正方形的线"
+            "name": "画一条正方形的线",
+            "description": "画6个正方形紧邻着彼此"
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个边长 20 的正方形"
           },
           "draw a line of squares": {
             "name": "画一条正方形线"
@@ -845,7 +864,8 @@
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "draw a line of squares": {
             "name": "画一条正方形线"
@@ -864,13 +884,16 @@
             "name": "空函数"
           },
           "draw a line of squares": {
-            "name": "画一条正方形线"
+            "name": "画一条正方形线",
+            "description": "画一排正方形 "
           },
           "draw a square 40": {
-            "name": "画一个 40 的正方形"
+            "name": "画一个 40 的正方形",
+            "description": "画一个边长40的正方形"
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -880,7 +903,8 @@
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "画一个正方形"
+            "name": "画一个正方形",
+            "description": "画一个100像素的正方形"
           }
         },
         "NEW Course 4 Artist Functions 7": {
@@ -890,7 +914,8 @@
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "name": "画一个三角形"
+            "name": "画一个三角形",
+            "description": "画一个100像素的三角形"
           }
         },
         "NEW Course 4 Artist Functions 9": {
@@ -917,7 +942,8 @@
             "name": "画一个六边形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素大小的带有边长参数的六边形"
           }
         },
         "NEW Course 4 Artist Params 11": {
@@ -942,7 +968,8 @@
             "parameters": {
               "length": "长度",
               "sides": "边"
-            }
+            },
+            "description": "画一个带有边数和边长的多边形"
           }
         },
         "NEW Course 4 Artist Params 12a": {
@@ -951,7 +978,8 @@
             "parameters": {
               "length": "长度",
               "sides": "边"
-            }
+            },
+            "description": "画一个带有边数和边长的多边形"
           }
         },
         "NEW Course 4 Artist Params 13": {
@@ -1034,7 +1062,8 @@
         },
         "NEW Course 4 Artist Params 3": {
           "draw a triangle": {
-            "name": "画一个三角形"
+            "name": "画一个三角形",
+            "description": "画一个50像素大小的三角形"
           }
         },
         "NEW Course 4 Artist Params 4": {
@@ -1050,7 +1079,8 @@
             "name": "画一个五边形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素大小的五边形"
           }
         },
         "NEW Course 4 Artist Params 6": {
@@ -1064,19 +1094,22 @@
             "name": "画一个六边形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素的五边形"
           },
           "draw a square": {
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素周长的正方形"
           },
           "draw a sqaure": {
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素大小的正方形"
           }
         },
         "NEW Course 4 Artist Params 7": {
@@ -1084,7 +1117,8 @@
             "name": "画一个三角形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个带边长参数的三角形"
           }
         },
         "NEW Course 4 Artist Params 8": {
@@ -1129,7 +1163,8 @@
             "parameters": {
               "actor": "角色",
               "speed": "速度"
-            }
+            },
+            "description": "使精灵图向上下按规定速度移动"
           }
         },
         "New Artist Project": {
@@ -1366,7 +1401,8 @@
             }
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "do something": {
             "name": "做点什么"
@@ -3117,7 +3153,8 @@
             "parameters": {
               "length": "长度",
               "sides": "边"
-            }
+            },
+            "description": "画一个带有边数和边长的多边形"
           }
         },
         "courseF_artist_fwp5": {
@@ -3230,7 +3267,8 @@
             }
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "do something": {
             "name": "做点什么"
@@ -3238,7 +3276,8 @@
         },
         "courseF_artist_fwp_challenge2": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "do something": {
             "name": "做点什么"

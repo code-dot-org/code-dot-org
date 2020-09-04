@@ -3945,91 +3945,88 @@ de-DE:
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
-          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
-          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird den gesamten Nektar sammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Die Biene dreht die Schleife, indem sie sich vorwärts bewegt und
-            Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+          feedback: Die Biene führt die Schleife aus, indem sie sich vorwärts bewegt
+            und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         questions:
-        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+        - text: Schau dir die verschachtelte Schleife unten genau an! Was passiert,
             wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
-          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
-          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird den gesamten Nektar sammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Die Biene dreht die Schleife, indem sie sich vorwärts bewegt und
-            Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+          feedback: Die Biene führt die Schleife aus, indem sie sich vorwärts bewegt
+            und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         questions:
-        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+        - text: Schau dir die verschachtelte Schleife unten genau an! Was passiert,
             wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
-          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
-          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird den gesamten Nektar sammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Die Biene dreht die Schleife, indem sie sich vorwärts bewegt und
-            Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+          feedback: Die Biene führt die Schleife aus, indem sie sich vorwärts bewegt
+            und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         questions:
-        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+        - text: Schau dir die verschachtelte Schleife unten genau an! Was passiert,
             wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
-          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
-          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
             bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird den gesamten Nektar sammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Die Biene dreht die Schleife, indem sie sich vorwärts bewegt und
-            Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+          feedback: Die Biene führt die Schleife aus, indem sie sich vorwärts bewegt
+            und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         questions:
-        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+        - text: Schau dir die verschachtelte Schleife unten genau an! Was passiert,
             wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
-            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
-            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         - text: '8'
           correct: true
           feedback: Richtig!
         - text: '12'
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
-            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
-            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         - text: Ich weiß es nicht.
           feedback: Die Biene sammelt 2 Einheiten Nektar in einer Schleife vorwärts,
-            dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze Aktion
-            befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            dann 2 Einheiten Nektar in einer Schleife abwärts. Das alles in einer
+            weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
             Biene her, wenn du auf "Ausführen" klickst?
@@ -4037,22 +4034,19 @@ de-DE:
         answers:
         - text: '4'
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
-            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
-            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         - text: '8'
           correct: true
           feedback: Richtig!
         - text: '12'
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
-            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
-            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         - text: Ich weiß es nicht.
           feedback: Die Biene sammelt 2 Einheiten Nektar in einer Schleife vorwärts,
-            dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze Aktion
-            befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            dann 2 Einheiten Nektar in einer Schleife abwärts. Das alles in einer
+            weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
             Biene her, wenn du auf "Ausführen" klickst?
@@ -4060,22 +4054,19 @@ de-DE:
         answers:
         - text: '4'
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
-            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
-            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         - text: '8'
           correct: true
           feedback: Richtig!
         - text: '12'
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
-            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
-            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         - text: Ich weiß es nicht.
           feedback: Die Biene sammelt 2 Einheiten Nektar in einer Schleife vorwärts,
-            dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze Aktion
-            befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            dann 2 Einheiten Nektar in einer Schleife abwärts. Das alles in einer
+            weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
             Biene her, wenn du auf "Ausführen" klickst?
@@ -4083,22 +4074,19 @@ de-DE:
         answers:
         - text: '4'
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
-            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
-            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         - text: '8'
           correct: true
           feedback: Richtig!
         - text: '12'
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
-            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
-            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         - text: Ich weiß es nicht.
           feedback: Die Biene sammelt 2 Einheiten Nektar in einer Schleife vorwärts,
-            dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze Aktion
-            befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
-            wird. 4 x 2 = 8!
+            dann 2 Einheiten Nektar in einer Schleife abwärts. Das alles in einer
+            weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
             Biene her, wenn du auf "Ausführen" klickst?
@@ -4212,24 +4200,25 @@ de-DE:
       courseD_multi_farmer_ramp13:
         answers:
         - text: Der Bauer wird bis zum Ende des Weges gehen und den Kürbis ernten.
-          feedback: Falsch. Der "Kürbis einsammeln"-Baustein befindet sich innerhalb
-            der Schleife, so dass der Landwirt versuchen wird, Kürbisse bei jedem
-            Schritt und nicht erst am Ende einzusammeln.
-        - text: Der Bauer wird versuchen, in jedem Feld Kürbisse einzusammeln, aber
-            er wird es nie bis zum Kürbis schaffen.
+          feedback: Falsch. Der "Pflücke Kürbis" Block ist innerhalb der Schleife,
+            das heißt, der Bauer versucht, bei jedem Schritt einen Kürbis zu pflücken
+            und nicht nur am Ende.
+        - text: Der Bauer versucht, in jedem Feld Kürbisse einzusammeln, aber er wird
+            es nie bis zum Kürbis schaffen.
           correct: true
           feedback: Richtig!
-        - text: Der Landwirt geht vier Felder und versucht dann, einen Kürbis einzusammeln.
-          feedback: Falsch. Der "Kürbis einsammeln"-Baustein befindet sich innerhalb
-            der Schleife, so dass der Landwirt versuchen wird, Kürbisse bei jedem
-            Schritt und nicht erst am Ende einzusammeln.
+        - text: Der Bauer geht vier Felder vorwärts und versucht dann, einen Kürbis
+            einzusammeln.
+          feedback: Falsch. Der "Pflücke Kürbis" Block ist innerhalb der Schleife,
+            das heißt, der Bauer versucht, bei jedem Schritt einen Kürbis zu pflücken
+            und nicht nur am Ende.
         - text: Ich weiß es nicht.
-          feedback: Der "Kürbis einsammeln"-Baustein befindet sich innerhalb der Schleife,
-            so dass der Landwirt versuchen wird, Kürbisse bei jedem Schritt und nicht
-            erst am Ende einzusammeln.
-        markdown: Hier ist ein neuer Aufgabentyp, der Bausteine verwendet, die dem
-          ähneln, was du bereits gesehen hast. Kannst du vorhersagen, was passieren
-          wird, wenn du den nachfolgenden Code ausführst?
+          feedback: Der "Pflücke Kürbis" Block befindet sich innerhalb der Schleife,
+            so dass der Bauer versucht, bei jedem Schritt einen Kürbis zu pflücken
+            und nicht nur am Ende.
+        markdown: Hier ist ein neuer Aufgabentyp mit ähnlichen Blöcken,  die du bereits
+          gesehen hast. Kannst du vorhersagen, was passieren wird, wenn du den nachfolgenden
+          Code ausführst?
         questions:
         - text: " "
       courseD_multi_farmer_while10_predict2:
