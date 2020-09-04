@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   levelSelect: {

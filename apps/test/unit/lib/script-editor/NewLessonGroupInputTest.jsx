@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 
-import {UnconnectedNewLessonGroupInput as NewLessonGroupInput} from '@cdo/apps/lib/script-editor/NewLessonGroupInput';
+import {UnconnectedNewLessonGroupInput as NewLessonGroupInput} from '@cdo/apps/lib/levelbuilder/script-editor/NewLessonGroupInput';
 
 describe('LessonCard', () => {
   let defaultProps;

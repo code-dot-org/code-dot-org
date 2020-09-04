@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {removeLevel} from './editorRedux';
-import Dialog from '../../templates/Dialog';
+import {removeLevel} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import Dialog from '@cdo/apps/templates/Dialog';
 
 /**
  * Dialog which confirms removal of the level in the specified position

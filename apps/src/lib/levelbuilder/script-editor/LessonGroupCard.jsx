@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import color from '../../util/color';
-import {borderRadius} from './constants';
-import OrderControls from './OrderControls';
-import LessonCard from './LessonCard';
+import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
+import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
+import LessonCard from '@cdo/apps/lib/levelbuilder/script-editor/LessonCard';
 import {
   addLesson,
   removeGroup,
   moveGroup,
   convertGroupToUserFacing
-} from './editorRedux';
+} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 
 const styles = {
   groupHeader: {
