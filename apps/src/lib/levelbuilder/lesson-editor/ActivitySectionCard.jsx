@@ -10,9 +10,13 @@ import {
   moveActivitySection,
   removeActivitySection,
   updateActivitySectionField,
-  addTip
+  addTip,
+  reorderLevel,
+  moveLevelToActivitySection,
+  addLevel
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken2';
+import RemoveLevelDialog2 from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog2';
 
 const styles = {
   checkbox: {
@@ -80,7 +84,19 @@ class ActivitySectionCard extends Component {
     moveActivitySection: PropTypes.func,
     removeActivitySection: PropTypes.func,
     updateActivitySectionField: PropTypes.func,
-    addTip: PropTypes.func
+    addTip: PropTypes.func,
+    reorderLevel: PropTypes.func,
+    moveLevelToActivitySection: PropTypes.func,
+    addLevel: PropTypes.func
+  };
+
+  /**
+   * To be populated with the bounding client rect of each level token element.
+   */
+  metrics = {};
+
+  state = {
+    levelPosToRemove: null
   };
 
   toggleSlides = () => {
@@ -151,6 +167,14 @@ class ActivitySectionCard extends Component {
     console.log(`edit tip ${tip}`);
   };
 
+  handleRemoveLevel = levelPos => {
+    this.setState({levelPosToRemove: levelPos});
+  };
+
+  handleClose = () => {
+    this.setState({levelPosToRemove: null});
+  };
+
   render() {
     return (
       <div style={styles.lessonCard}>
@@ -209,12 +233,21 @@ class ActivitySectionCard extends Component {
             <LevelToken2
               key={level.position + '_' + level.ids[0]}
               level={level}
+              removeLevel={this.handleRemoveLevel}
             />
           ))}
         <ActivitySectionCardButtons
           activitySection={this.props.activitySection}
           addTip={this.handleAddTip}
           editTip={this.handleEditTip}
+        />
+        {/* This dialog lives outside LevelToken because moving it inside can
+           interfere with drag and drop or fail to show the modal backdrop. */}
+        <RemoveLevelDialog2
+          activitySection={this.props.activitySection}
+          activityPosition={this.props.activityPosition}
+          levelPosToRemove={this.state.levelPosToRemove}
+          handleClose={this.handleClose}
         />
       </div>
     );
@@ -224,6 +257,9 @@ class ActivitySectionCard extends Component {
 export default connect(
   state => ({}),
   {
+    reorderLevel,
+    moveLevelToActivitySection,
+    addLevel,
     setActivitySectionSlide,
     setActivitySectionRemarks,
     moveActivitySection,

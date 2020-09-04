@@ -7,6 +7,7 @@ import {
 import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import LevelTokenDetails2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails2';
+import PropTypes from 'prop-types';
 
 const styles = {
   levelToken: {
@@ -87,7 +88,8 @@ const styles = {
  */
 export default class LevelToken2 extends Component {
   static propTypes = {
-    level: levelShape.isRequired
+    level: levelShape.isRequired,
+    removeLevel: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -100,6 +102,10 @@ export default class LevelToken2 extends Component {
 
   toggleExpand = () => {
     this.setState({expand: !this.state.expand});
+  };
+
+  handleRemove = () => {
+    this.props.removeLevel(this.props.level.position);
   };
 
   render() {
@@ -152,12 +158,7 @@ export default class LevelToken2 extends Component {
         >
           <i className="fa fa-pencil" />
         </div>
-        <div
-          style={styles.remove}
-          onMouseDown={() => {
-            console.log('Remove Level');
-          }}
-        >
+        <div style={styles.remove} onMouseDown={this.handleRemove}>
           <i className="fa fa-times" />
         </div>
         {this.state.expand && <LevelTokenDetails2 level={this.props.level} />}

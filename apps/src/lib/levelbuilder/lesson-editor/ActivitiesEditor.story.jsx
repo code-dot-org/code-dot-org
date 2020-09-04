@@ -61,8 +61,8 @@ const activities = [
             isConceptLevel: true,
             sublevels: [],
             position: 1,
-            activeId: 5,
-            ids: [5],
+            activeId: 1,
+            ids: [1],
             kind: 'puzzle',
             skin: null,
             videoKey: null,
@@ -84,8 +84,8 @@ const activities = [
             isConceptLevel: false,
             sublevels: [],
             position: 2,
-            activeId: 10,
-            ids: [10, 11],
+            activeId: 2,
+            ids: [2, 3],
             kind: 'assessment',
             skin: null,
             videoKey: null,
@@ -143,9 +143,9 @@ const activities = [
 ];
 
 const levelKeyList = {
-  1: 'Level One',
-  2: 'Level Two',
-  3: 'Level Three',
+  1: 'Level 1',
+  2: 'Level 2 - 1',
+  3: 'Level 2 - 2',
   4: 'blockly:Studio:playlab_1'
 };
 

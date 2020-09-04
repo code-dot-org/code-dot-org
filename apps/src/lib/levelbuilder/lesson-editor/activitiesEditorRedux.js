@@ -433,10 +433,7 @@ function activities(state = [], action) {
     case REMOVE_ACTIVITY_SECTION: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
-      activitySections.splice(
-        action.activitySectionPosition - activitySections[0].position,
-        1
-      );
+      activitySections.splice(action.activitySectionPosition - 1, 1);
       updateActivitySectionPositions(newState);
       break;
     }
@@ -444,9 +441,7 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       const levels =
-        activitySections[
-          action.activitySectionPosition - activitySections[0].position
-        ].levels;
+        activitySections[action.activitySectionPosition - 1].levels;
       levels.splice(action.levelPosition - 1, 1);
       updateLevelPositions(levels);
       break;
@@ -455,9 +450,9 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       const level =
-        activitySections[
-          action.activitySectionPosition - activitySections[0].position
-        ].levels[action.levelPosition - 1];
+        activitySections[action.activitySectionPosition - 1].levels[
+          action.levelPosition - 1
+        ];
       if (level.ids[action.variant] === level.activeId) {
         level.activeId = action.value;
       }
@@ -468,9 +463,9 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       const level =
-        activitySections[
-          action.activitySectionPosition - activitySections[0].position
-        ].levels[action.levelPosition - 1];
+        activitySections[action.activitySectionPosition - 1].levels[
+          action.levelPosition - 1
+        ];
       level.expand = !level.expand;
       break;
     }
@@ -495,8 +490,7 @@ function activities(state = [], action) {
 
       const activitySections = newState[activityIndex].activitySections;
 
-      const activitySectionIndex =
-        action.activitySectionPosition - activitySections[0].position;
+      const activitySectionIndex = action.activitySectionPosition - 1;
       const activitySectionSwapIndex =
         action.direction === 'up'
           ? activitySectionIndex - 1
