@@ -77,7 +77,7 @@ const activities = [
             status: 'not started',
             url: 'https://levelbuilder-studio.code.org/levels/598/edit',
             icon: 'fa-desktop',
-            name: 'Level 1',
+            name: 'Level 2',
             isUnplugged: false,
             levelNumber: 2,
             isCurrentLevel: false,

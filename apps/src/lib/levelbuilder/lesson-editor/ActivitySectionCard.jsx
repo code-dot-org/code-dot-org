@@ -115,7 +115,7 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  handleMoveLesson = direction => {
+  handleMoveActivitySection = direction => {
     if (
       (this.props.activitySection.position !== 1 && direction === 'up') ||
       (this.props.activitySection.position !==
@@ -130,7 +130,7 @@ class ActivitySectionCard extends Component {
     }
   };
 
-  handleRemoveLesson = () => {
+  handleRemoveActivitySection = () => {
     this.props.removeActivitySection(
       this.props.activityPosition,
       this.props.activitySection.position
@@ -175,6 +175,17 @@ class ActivitySectionCard extends Component {
     this.setState({levelPosToRemove: null});
   };
 
+  preventSelect(e) {
+    e.preventDefault();
+  }
+
+  handleAddLevel = () => {
+    this.props.addLevel(
+      this.props.activityPosition,
+      this.props.activitySection.position
+    );
+  };
+
   render() {
     return (
       <div style={styles.lessonCard}>
@@ -190,8 +201,8 @@ class ActivitySectionCard extends Component {
                 this.props.activitySection.displayName ||
                 this.props.activitySection.key
               }
-              move={this.handleMoveLesson}
-              remove={this.handleRemoveLesson}
+              move={this.handleMoveActivitySection}
+              remove={this.handleRemoveActivitySection}
             />
           </label>
           <div style={styles.checkboxesAndButtons}>
@@ -240,6 +251,7 @@ class ActivitySectionCard extends Component {
           activitySection={this.props.activitySection}
           addTip={this.handleAddTip}
           editTip={this.handleEditTip}
+          addLevel={this.handleAddLevel}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

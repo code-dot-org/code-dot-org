@@ -378,13 +378,29 @@ function activities(state = [], action) {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
       const levels =
-        activitySections[
-          action.activitySectionPosition - activitySections[0].position
-        ].levels;
+        activitySections[action.activitySectionPosition - 1].levels;
       levels.push({
         ids: [NEW_LEVEL_ID],
         activeId: NEW_LEVEL_ID,
-        expand: true
+        status: 'not started',
+        url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+        icon: 'fa-desktop',
+        name: `Level ${levels.length + 1}`,
+        isUnplugged: false,
+        levelNumber: levels.length + 1,
+        isCurrentLevel: false,
+        isConceptLevel: false,
+        sublevels: [],
+        position: levels.length + 1,
+        kind: 'puzzle',
+        skin: null,
+        videoKey: null,
+        concepts: '',
+        conceptDifficulty: '',
+        named: false,
+        assessment: false,
+        challenge: false,
+        displayName: `Level ${levels.length + 1}`
       });
       updateLevelPositions(levels);
       break;

@@ -24,7 +24,8 @@ export default class ActivitySectionCardButtons extends Component {
   static propTypes = {
     activitySection: PropTypes.object,
     addTip: PropTypes.func,
-    editTip: PropTypes.func
+    editTip: PropTypes.func,
+    addLevel: PropTypes.func
   };
 
   constructor(props) {
@@ -44,6 +45,7 @@ export default class ActivitySectionCardButtons extends Component {
   };
 
   handleCloseAddLevel = () => {
+    this.props.addLevel();
     this.setState({addLevelOpen: false});
   };
 
