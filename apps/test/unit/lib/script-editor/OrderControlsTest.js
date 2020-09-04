@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import OrderControls from '@cdo/apps/lib/script-editor/OrderControls';
+import OrderControls from '@cdo/apps/lib/levelbuilder/script-editor/OrderControls';
 
 describe('OrderControls', () => {
   let move, remove, defaultProps;

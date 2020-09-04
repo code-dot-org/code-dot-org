@@ -8,9 +8,9 @@ import {
   setActiveVariant,
   setField,
   NEW_LEVEL_ID
-} from './editorRedux';
-import {levelShape} from './shapes';
-import LevelNameInput from './LevelNameInput';
+} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import LevelNameInput from '@cdo/apps/lib/levelbuilder/script-editor/LevelNameInput';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 

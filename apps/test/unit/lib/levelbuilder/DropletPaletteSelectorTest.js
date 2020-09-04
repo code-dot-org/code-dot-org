@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import CodeMirror from 'codemirror';
 import {expect} from '../../../util/deprecatedChai';
-import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/DropletPaletteSelector';
+import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/level-editor/DropletPaletteSelector';
 
 describe('DropletPaletteSelector', () => {
   let textArea, editor;

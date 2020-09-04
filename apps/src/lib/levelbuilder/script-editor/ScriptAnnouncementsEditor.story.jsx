@@ -1,5 +1,5 @@
 import React from 'react';
-import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
+import ScriptAnnouncementsEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptAnnouncementsEditor';
 
 const announcements = [
   {

@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 
-import {UnconnectedLessonCard as LessonCard} from '@cdo/apps/lib/script-editor/LessonCard';
+import {UnconnectedLessonCard as LessonCard} from '@cdo/apps/lib/levelbuilder/script-editor/LessonCard';
 
 describe('LessonCard', () => {
   let reorderLevel,
