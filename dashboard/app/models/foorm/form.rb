@@ -125,19 +125,12 @@ class Foorm::Form < ActiveRecord::Base
           facilitator_number = index + 1
 
           # Add facilitator number identifier to facilitator-specific questions
-          facilitator_headers_with_facilitator_number = Hash[
-            readable_questions[:facilitator].map do |question_id, question_text|
-              [question_id + "_#{facilitator_number}", "Facilitator #{facilitator_number}: " + question_text]
-            end
-          ]
+          facilitator_headers_with_facilitator_number = readable_questions_with_facilitator_number(facilitator_number)
 
           # Add same facilitator number identifier to facilitator-specific questions,
           # such that they map to the appropriate headers.
-          facilitator_response_with_facilitator_number = Hash[
-            facilitator_response.formatted_answers.map do |question_id, answer_text|
-              [question_id + "_#{facilitator_number}", answer_text]
-            end
-          ]
+          facilitator_response_with_facilitator_number = facilitator_response.
+            formatted_answers_with_facilitator_number(facilitator_number)
 
           # Add facilitator-specific response to answers,
           # and prep a new set of headers to add to cover facilitator-specific questions.
@@ -163,11 +156,15 @@ class Foorm::Form < ActiveRecord::Base
       comma_separated_submissions << answers.values_at(*headers.keys)
     end
 
+    rows_to_write = [headers.values]
+    comma_separated_submissions.each {|row| rows_to_write << row}
+
     # Finally, add the header row and, subsequently, rows of survey responses.
     CSV.open(file_path, "wb") do |csv|
-      csv << headers.values
-      comma_separated_submissions.each {|row| csv << row}
+      rows_to_write.each {|row| csv << row}
     end
+
+    rows_to_write
   end
 
   def parsed_questions
@@ -198,5 +195,13 @@ class Foorm::Form < ActiveRecord::Base
     end
 
     questions
+  end
+
+  def readable_questions_with_facilitator_number(number)
+    Hash[
+      readable_questions[:facilitator].map do |question_id, question_text|
+        [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
+      end
+    ]
   end
 end
