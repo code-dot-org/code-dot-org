@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import React from 'react';
 import {mount} from 'enzyme';
-import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
+import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
 
 describe('ScriptEditor', () => {
   const DEFAULT_PROPS = {
