@@ -50,7 +50,8 @@ export default class AddLevelDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    currentLevels: PropTypes.array
+    currentLevels: PropTypes.array,
+    addLevel: PropTypes.func
   };
 
   constructor(props) {
@@ -90,7 +91,7 @@ export default class AddLevelDialog extends Component {
             {this.state.methodOfAddingLevel === 'Find Level' && (
               <div style={styles.filtersAndLevels}>
                 <AddLevelFilters />
-                <AddLevelTable />
+                <AddLevelTable addLevel={this.props.addLevel} />
               </div>
             )}
             {this.state.methodOfAddingLevel === 'Create New Level' && (
@@ -104,6 +105,9 @@ export default class AddLevelDialog extends Component {
                 <LevelToken2
                   key={level.position + '_' + level.ids[0]}
                   level={level}
+                  removeLevel={() => {
+                    console.log('remove level');
+                  }}
                 />
               ))}
             </div>

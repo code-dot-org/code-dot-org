@@ -45,7 +45,6 @@ export default class ActivitySectionCardButtons extends Component {
   };
 
   handleCloseAddLevel = () => {
-    this.props.addLevel();
     this.setState({addLevelOpen: false});
   };
 
@@ -139,6 +138,7 @@ export default class ActivitySectionCardButtons extends Component {
           isOpen={this.state.addLevelOpen}
           handleConfirm={this.handleCloseAddLevel}
           currentLevels={this.props.activitySection.levels}
+          addLevel={this.props.addLevel}
         />
       </div>
     );

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Button, {ButtonColor, ButtonSize} from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import PropTypes from 'prop-types';
 
 const styles = {
   th: {
@@ -15,7 +16,9 @@ const styles = {
 };
 
 export default class AddLevelTable extends Component {
-  static propTypes = {};
+  static propTypes = {
+    addLevel: PropTypes.func
+  };
 
   render() {
     return (
@@ -48,9 +51,7 @@ export default class AddLevelTable extends Component {
                 <Button
                   icon="plus"
                   text={''}
-                  onClick={() => {
-                    console.log('Add level');
-                  }}
+                  onClick={this.props.addLevel}
                   color={ButtonColor.blue}
                   size={ButtonSize.narrow}
                 />
