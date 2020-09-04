@@ -2,7 +2,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
-import ResourceType, {stringForType, resourceShape} from './resourceType';
+import ResourceType, {
+  stringForType,
+  resourceShape
+} from '@cdo/apps/templates/courseOverview/resourceType';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const styles = {
