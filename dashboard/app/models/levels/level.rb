@@ -734,7 +734,7 @@ class Level < ActiveRecord::Base
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
   def hint_prompt_enabled?
-    !script_levels.map(&:script).select(&:hint_prompt_enabled?).empty?
+    script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
   end
 
   private
