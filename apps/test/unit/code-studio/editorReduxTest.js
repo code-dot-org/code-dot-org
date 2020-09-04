@@ -9,7 +9,7 @@ import reducers, {
   setActiveVariant,
   setField,
   setLessonGroup
-} from '@cdo/apps/lib/script-editor/editorRedux';
+} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 
 const getInitialState = () => ({
   levelKeyList: {},

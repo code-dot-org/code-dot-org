@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import LessonEditor from '@cdo/apps/lib/levelbuilder/LessonEditor';
+import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
 
 describe('LessonEditor', () => {
   let defaultProps;

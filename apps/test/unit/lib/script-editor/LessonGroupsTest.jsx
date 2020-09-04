@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedLessonGroups as LessonGroups} from '@cdo/apps/lib/script-editor/LessonGroups';
+import {UnconnectedLessonGroups as LessonGroups} from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroups';
 
 const defaultProps = {
   addGroup: () => {},

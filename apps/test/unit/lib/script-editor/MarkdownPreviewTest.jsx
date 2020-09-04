@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import React from 'react';
 import {mount} from 'enzyme';
-import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
+import MarkdownPreview from '@cdo/apps/lib/levelbuilder/script-editor/MarkdownPreview';
 
 const DEFAULT_PROPS = {
   markdown:
