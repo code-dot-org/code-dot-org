@@ -1,5 +1,5 @@
-  Critical: {Type: AWS::SNS::Topic}
-  Warning: {Type: AWS::SNS::Topic}
+  Critical: {Type: 'AWS::SNS::Topic'}
+  Warning: {Type: 'AWS::SNS::Topic'}
 <%{Warning: 70, Critical: 90}.each do |name, threshold| -%>
   DiskUsed<%=name%>:
     Type: AWS::CloudWatch::Alarm
