@@ -14,7 +14,7 @@ import {
   addLevel,
   NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import LevelToken2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken2';
+import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
 
 const styles = {
@@ -264,10 +264,12 @@ class ActivitySectionCard extends Component {
         />
         {this.props.activitySection.levels.length > 0 &&
           this.props.activitySection.levels.map(level => (
-            <LevelToken2
+            <LevelToken
               key={level.position + '_' + level.ids[0]}
               level={level}
               removeLevel={this.handleRemoveLevel}
+              activitySectionPosition={this.props.activitySection.position}
+              activityPosition={this.props.activityPosition}
             />
           ))}
         <ActivitySectionCardButtons

@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
-import LevelToken2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken2';
+import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
 import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
@@ -102,12 +102,14 @@ export default class AddLevelDialog extends Component {
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>
               {this.props.currentLevels.map(level => (
-                <LevelToken2
+                <LevelToken
                   key={level.position + '_' + level.ids[0]}
                   level={level}
                   removeLevel={() => {
                     console.log('remove level');
                   }}
+                  activitySectionPosition={1} //todo update
+                  activityPosition={1} //todo update
                 />
               ))}
             </div>
