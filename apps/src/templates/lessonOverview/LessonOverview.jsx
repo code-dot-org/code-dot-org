@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 
 export default class LessonOverview extends Component {
   static propTypes = {
     displayName: PropTypes.string.isRequired,
-    overview: PropTypes.string
+    overview: PropTypes.string,
+    activities: PropTypes.array
   };
 
   render() {
@@ -15,6 +17,11 @@ export default class LessonOverview extends Component {
 
         <h2>Overview</h2>
         <p>{overview}</p>
+
+        <h2>Teaching Guide</h2>
+        {this.props.activities.map(activity => (
+          <Activity activity={activity} key={activity.key} />
+        ))}
       </div>
     );
   }
