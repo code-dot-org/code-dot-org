@@ -4,14 +4,16 @@ import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
-import LessonTip, {tipTypes} from '@cdo/apps/code-studio/components/LessonTip';
+import LessonTip, {
+  tipTypes
+} from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import _ from 'lodash';
 
 const styles = {
   dialog: {
     paddingLeft: 20,
-    paddingRight: 20,
     paddingBottom: 20,
+    paddingRight: 20,
     fontFamily: '"Gotham 4r", sans-serif, sans-serif'
   },
   dialogContent: {

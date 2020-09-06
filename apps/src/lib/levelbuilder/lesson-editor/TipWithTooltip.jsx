@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import LessonTip, {tipTypes} from '@cdo/apps/code-studio/components/LessonTip';
+import LessonTip, {
+  tipTypes
+} from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
-import Activity from '@cdo/apps/code-studio/components/Activity';
+import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import {connect} from 'react-redux';
 import {addActivity} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
