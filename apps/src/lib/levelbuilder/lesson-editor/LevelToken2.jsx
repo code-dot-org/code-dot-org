@@ -6,7 +6,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/constants';
 import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import LevelTokenDetails2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails2';
+import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import PropTypes from 'prop-types';
 
 const styles = {
@@ -159,7 +159,13 @@ export default class LevelToken2 extends Component {
         <div style={styles.remove} onMouseDown={this.handleRemove}>
           <i className="fa fa-times" />
         </div>
-        {this.state.expand && <LevelTokenDetails2 level={this.props.level} />}
+        {this.state.expand && (
+          <LevelTokenDetails
+            level={this.props.level}
+            activitySectionPosition={1} //todo update
+            activityPosition={1} //todo update
+          />
+        )}
       </div>
     );
   }
