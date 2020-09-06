@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/script-editor/LessonGroupCard';
 
 const defaultProps = {

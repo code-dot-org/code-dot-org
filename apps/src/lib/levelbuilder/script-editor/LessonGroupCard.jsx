@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
@@ -43,10 +42,6 @@ class LessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: PropTypes.object.isRequired,
     lessonGroupsCount: PropTypes.number.isRequired,
-    setLessonMetrics: PropTypes.func.isRequired,
-    setTargetLesson: PropTypes.func.isRequired,
-    targetLessonPos: PropTypes.number,
-    lessonMetrics: PropTypes.object.isRequired,
 
     //redux
     addLesson: PropTypes.func.isRequired,
@@ -114,14 +109,6 @@ class LessonGroupCard extends Component {
                 lessonsCount={lessonGroup.lessons.length}
                 lesson={lesson}
                 lessonGroupPosition={lessonGroup.position}
-                ref={lessonCard => {
-                  if (lessonCard) {
-                    const metrics = ReactDOM.findDOMNode(
-                      lessonCard
-                    ).getBoundingClientRect();
-                    this.props.setLessonMetrics(metrics, lesson.position);
-                  }
-                }}
               />
             );
           })}
