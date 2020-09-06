@@ -5,15 +5,14 @@ import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import ActivitySectionCardButtons from './ActivitySectionCardButtons';
 import {connect} from 'react-redux';
 import {
-  setActivitySectionSlide,
-  setActivitySectionRemarks,
   moveActivitySection,
   removeActivitySection,
   updateActivitySectionField,
   addTip,
   reorderLevel,
   moveLevelToActivitySection,
-  addLevel
+  addLevel,
+  NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken2';
 import RemoveLevelDialog2 from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog2';
@@ -79,8 +78,6 @@ class ActivitySectionCard extends Component {
     activitySectionsCount: PropTypes.number,
 
     //redux
-    setActivitySectionSlide: PropTypes.func,
-    setActivitySectionRemarks: PropTypes.func,
     moveActivitySection: PropTypes.func,
     removeActivitySection: PropTypes.func,
     updateActivitySectionField: PropTypes.func,
@@ -100,17 +97,19 @@ class ActivitySectionCard extends Component {
   };
 
   toggleSlides = () => {
-    this.props.setActivitySectionSlide(
+    this.props.updateActivitySectionField(
       this.props.activityPosition,
       this.props.activitySection.position,
+      'slide',
       !this.props.activitySection.slide
     );
   };
 
   toggleRemarks = () => {
-    this.props.setActivitySectionRemarks(
+    this.props.updateActivitySectionField(
       this.props.activityPosition,
       this.props.activitySection.position,
+      'remarks',
       !this.props.activitySection.remarks
     );
   };
@@ -180,9 +179,34 @@ class ActivitySectionCard extends Component {
   }
 
   handleAddLevel = () => {
+    const newLevelPosition = this.props.activitySection.levels.length + 1;
     this.props.addLevel(
       this.props.activityPosition,
-      this.props.activitySection.position
+      this.props.activitySection.position,
+      //temporary set up where we just add a holding place level
+      {
+        ids: [NEW_LEVEL_ID],
+        activeId: NEW_LEVEL_ID,
+        status: 'not started',
+        url: 'https://levelbuilder-studio.code.org/levels/598/edit',
+        icon: 'fa-desktop',
+        name: `Level ${newLevelPosition}`,
+        isUnplugged: false,
+        levelNumber: newLevelPosition,
+        isCurrentLevel: false,
+        isConceptLevel: false,
+        sublevels: [],
+        position: newLevelPosition,
+        kind: 'puzzle',
+        skin: null,
+        videoKey: null,
+        concepts: '',
+        conceptDifficulty: '',
+        named: false,
+        assessment: false,
+        challenge: false,
+        displayName: `Level ${newLevelPosition}`
+      }
     );
   };
 
@@ -272,8 +296,6 @@ export default connect(
     reorderLevel,
     moveLevelToActivitySection,
     addLevel,
-    setActivitySectionSlide,
-    setActivitySectionRemarks,
     moveActivitySection,
     removeActivitySection,
     updateActivitySectionField,

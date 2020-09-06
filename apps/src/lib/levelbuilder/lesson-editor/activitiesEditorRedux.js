@@ -2,31 +2,27 @@ import _ from 'lodash';
 
 const INIT = 'activitiesEditor/INIT';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
-const ADD_ACTIVITY_SECTION = 'activitiesEditor/ADD_ACTIVITY_SECTION';
-const TOGGLE_EXPAND = 'activitiesEditor/TOGGLE_EXPAND';
-const REMOVE_LEVEL = 'activitiesEditor/REMOVE_LEVEL';
-const CHOOSE_LEVEL = 'activitiesEditor/CHOOSE_LEVEL';
-const ADD_VARIANT = 'activitiesEditor/ADD_VARIANT';
-const REMOVE_VARIANT = 'activitiesEditor/REMOVE_VARIANT';
-const SET_ACTIVE_VARIANT = 'activitiesEditor/SET_ACTIVE_VARIANT';
-const SET_FIELD = 'activitiesEditor/SET_FIELD';
-const REORDER_LEVEL = 'activitiesEditor/REORDER_LEVEL';
-const MOVE_LEVEL_TO_ACTIVITY_SECTION =
-  'activitiesEditor/MOVE_LEVEL_TO_ACTIVITY_SECTION';
-const ADD_LEVEL = 'activitiesEditor/ADD_LEVEL';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
-const MOVE_ACTIVITY_SECTION = 'activitiesEditor/MOVE_ACTIVITY_SECTION';
-const REMOVE_ACTIVITY = 'activitiesEditor/REMOVE_ACTIVITY';
-const REMOVE_ACTIVITY_SECTION = 'activitiesEditor/REMOVE_ACTIVITY_SECTION';
-const SET_ACTIVITY_SECTION_REMARKS =
-  'activitiesEditor/SET_ACTIVITY_SECTION_REMARKS';
-const SET_ACTIVITY_SECTION_SLIDE =
-  'activitiesEditor/SET_ACTIVITY_SECTION_SLIDE';
 const SET_ACTIVITY = 'activitiesEditor/SET_ACTIVITY';
+const REMOVE_ACTIVITY = 'activitiesEditor/REMOVE_ACTIVITY';
 const UPDATE_ACTIVITY_FIELD = 'activitiesEditor/UPDATE_ACTIVITY_FIELD';
+const ADD_ACTIVITY_SECTION = 'activitiesEditor/ADD_ACTIVITY_SECTION';
+const MOVE_ACTIVITY_SECTION = 'activitiesEditor/MOVE_ACTIVITY_SECTION';
+const REMOVE_ACTIVITY_SECTION = 'activitiesEditor/REMOVE_ACTIVITY_SECTION';
 const UPDATE_ACTIVITY_SECTION_FIELD =
   'activitiesEditor/UPDATE_ACTIVITY_SECTION_FIELD';
 const ADD_TIP = 'activitiesEditor/ADD_TIP';
+const ADD_LEVEL = 'activitiesEditor/ADD_LEVEL';
+const REMOVE_LEVEL = 'activitiesEditor/REMOVE_LEVEL';
+const CHOOSE_LEVEL = 'activitiesEditor/CHOOSE_LEVEL';
+const REORDER_LEVEL = 'activitiesEditor/REORDER_LEVEL';
+const MOVE_LEVEL_TO_ACTIVITY_SECTION =
+  'activitiesEditor/MOVE_LEVEL_TO_ACTIVITY_SECTION';
+const ADD_VARIANT = 'activitiesEditor/ADD_VARIANT';
+const SET_ACTIVE_VARIANT = 'activitiesEditor/SET_ACTIVE_VARIANT';
+const REMOVE_VARIANT = 'activitiesEditor/REMOVE_VARIANT';
+const SET_FIELD = 'activitiesEditor/SET_FIELD';
+const TOGGLE_EXPAND = 'activitiesEditor/TOGGLE_EXPAND';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
@@ -185,10 +181,11 @@ export const moveLevelToActivitySection = (
   newActivitySectionPosition
 });
 
-export const addLevel = (activityPosition, activitySectionPosition) => ({
+export const addLevel = (activityPosition, activitySectionPosition, level) => ({
   type: ADD_LEVEL,
   activityPosition,
-  activitySectionPosition
+  activitySectionPosition,
+  level
 });
 
 export const moveActivity = (activityPosition, direction) => ({
@@ -220,28 +217,6 @@ export const removeActivitySection = (
   type: REMOVE_ACTIVITY_SECTION,
   activityPosition,
   activitySectionPosition
-});
-
-export const setActivitySectionRemarks = (
-  activityPosition,
-  activitySectionPosition,
-  remarks
-) => ({
-  type: SET_ACTIVITY_SECTION_REMARKS,
-  activityPosition,
-  activitySectionPosition,
-  remarks
-});
-
-export const setActivitySectionSlide = (
-  activityPosition,
-  activitySectionPosition,
-  slide
-) => ({
-  type: SET_ACTIVITY_SECTION_SLIDE,
-  activityPosition,
-  activitySectionPosition,
-  slide
 });
 
 export const setActivity = (
@@ -374,29 +349,7 @@ function activities(state = [], action) {
         newState[action.activityPosition - 1].activitySections;
       const levels =
         activitySections[action.activitySectionPosition - 1].levels;
-      levels.push({
-        ids: [NEW_LEVEL_ID],
-        activeId: NEW_LEVEL_ID,
-        status: 'not started',
-        url: 'https://levelbuilder-studio.code.org/levels/598/edit',
-        icon: 'fa-desktop',
-        name: `Level ${levels.length + 1}`,
-        isUnplugged: false,
-        levelNumber: levels.length + 1,
-        isCurrentLevel: false,
-        isConceptLevel: false,
-        sublevels: [],
-        position: levels.length + 1,
-        kind: 'puzzle',
-        skin: null,
-        videoKey: null,
-        concepts: '',
-        conceptDifficulty: '',
-        named: false,
-        assessment: false,
-        challenge: false,
-        displayName: `Level ${levels.length + 1}`
-      });
+      levels.push(action.level);
       updateLevelPositions(levels);
       break;
     }
@@ -438,6 +391,7 @@ function activities(state = [], action) {
     }
     case REMOVE_ACTIVITY: {
       newState.splice(action.activityPosition - 1, 1);
+      updateActivityPositions(newState);
       updateActivitySectionPositions(newState);
       break;
     }
@@ -535,20 +489,6 @@ function activities(state = [], action) {
           : newActivitySections.unshift(curActivitySection);
       }
       updateActivitySectionPositions(newState);
-      break;
-    }
-    case SET_ACTIVITY_SECTION_REMARKS: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      activitySections[action.activitySectionPosition - 1].remarks =
-        action.remarks;
-      break;
-    }
-    case SET_ACTIVITY_SECTION_SLIDE: {
-      const activitySections =
-        newState[action.activityPosition - 1].activitySections;
-      activitySections[action.activitySectionPosition - 1].slide = action.slide;
-
       break;
     }
     case SET_ACTIVITY: {
