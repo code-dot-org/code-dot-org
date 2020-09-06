@@ -1,4 +1,4 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
 import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
