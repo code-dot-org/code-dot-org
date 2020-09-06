@@ -57,10 +57,6 @@ class LessonGroups extends Component {
     this.setState({addingLessonGroup: false});
   };
 
-  setTargetLesson = targetLessonPos => {
-    this.setState({targetLessonPos});
-  };
-
   serializeLessonGroups = lessonGroups => {
     let s = [];
     lessonGroups.forEach(lessonGroup => {
@@ -93,13 +89,6 @@ class LessonGroups extends Component {
     return s.join('\n');
   };
 
-  // To be populated with the bounding client rect of each LessonCard element.
-  lessonMetrics = {};
-
-  setLessonMetrics = (metrics, lessonPosition) => {
-    this.lessonMetrics[lessonPosition] = metrics;
-  };
-
   render() {
     const {lessonGroups} = this.props;
 
@@ -110,10 +99,6 @@ class LessonGroups extends Component {
             key={lessonGroup.key}
             lessonGroup={lessonGroup}
             lessonGroupsCount={lessonGroups.length}
-            setLessonMetrics={this.setLessonMetrics}
-            setTargetLesson={this.setTargetLesson}
-            targetLessonPos={this.state.targetLessonPos}
-            lessonMetrics={this.lessonMetrics}
           />
         ))}
         {!this.state.addingLessonGroup && (
