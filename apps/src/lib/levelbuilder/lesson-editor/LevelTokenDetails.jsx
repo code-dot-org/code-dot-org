@@ -312,6 +312,8 @@ class LevelTokenDetails extends Component {
   }
 }
 
+export const UnconnectedLevelTokenDetails = LevelTokenDetails;
+
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
