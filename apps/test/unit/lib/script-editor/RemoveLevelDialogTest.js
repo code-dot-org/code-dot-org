@@ -15,8 +15,8 @@ describe('RemoveLevelDialog', () => {
     handleClose = sinon.spy();
     removeLevel = sinon.spy();
     props = {
-      lessonGroupPosition: 1,
-      lesson: {
+      activityPosition: 1,
+      activitySection: {
         position: 3,
         levels: [
           {

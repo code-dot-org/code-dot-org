@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {removeLevel} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+import {removeLevel} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import Dialog from '@cdo/apps/templates/Dialog';
 
 /**
  * Dialog which confirms removal of the level in the specified position
- * within the lesson.
+ * within the activity section.
  */
 export class UnconnectedRemoveLevelDialog extends Component {
   static propTypes = {
-    lesson: PropTypes.object.isRequired,
-    lessonGroupPosition: PropTypes.number.isRequired,
+    activitySection: PropTypes.object.isRequired,
+    activityPosition: PropTypes.number.isRequired,
     // Position of level to remove. Dialog opens when this is set.
     levelPosToRemove: PropTypes.number,
     handleClose: PropTypes.func.isRequired,
@@ -23,21 +23,21 @@ export class UnconnectedRemoveLevelDialog extends Component {
 
   handleConfirm = () => {
     const {
-      lesson,
-      lessonGroupPosition,
+      activitySection,
+      activityPosition,
       levelPosToRemove,
       removeLevel,
       handleClose
     } = this.props;
-    removeLevel(lessonGroupPosition, lesson.position, levelPosToRemove);
+    removeLevel(activityPosition, activitySection.position, levelPosToRemove);
     handleClose();
   };
 
   render() {
-    const {lesson, handleClose, levelPosToRemove} = this.props;
+    const {activitySection, handleClose, levelPosToRemove} = this.props;
     let bodyText;
     if (levelPosToRemove) {
-      const levelId = lesson.levels[levelPosToRemove - 1].activeId;
+      const levelId = activitySection.levels[levelPosToRemove - 1].activeId;
       const levelName = this.props.levelKeyList[levelId];
       bodyText = `Are you sure you want to remove the level named "${levelName}" from the script?`;
     }

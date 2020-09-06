@@ -15,7 +15,7 @@ import {
   NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LevelToken2 from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken2';
-import RemoveLevelDialog2 from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog2';
+import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
 
 const styles = {
   checkbox: {
@@ -278,7 +278,7 @@ class ActivitySectionCard extends Component {
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}
-        <RemoveLevelDialog2
+        <RemoveLevelDialog
           activitySection={this.props.activitySection}
           activityPosition={this.props.activityPosition}
           levelPosToRemove={this.state.levelPosToRemove}

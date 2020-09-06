@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import {
   chooseLevel,
   addVariant,
@@ -11,7 +12,6 @@ import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import LevelNameInput from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelNameInput';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
-import {connect} from 'react-redux';
 
 const styles = {
   checkbox: {
