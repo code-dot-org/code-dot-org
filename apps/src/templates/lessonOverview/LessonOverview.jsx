@@ -6,7 +6,7 @@ export default class LessonOverview extends Component {
   static propTypes = {
     displayName: PropTypes.string.isRequired,
     overview: PropTypes.string,
-    activities: PropTypes.object
+    activities: PropTypes.array
   };
 
   render() {
