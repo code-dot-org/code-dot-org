@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 
