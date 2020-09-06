@@ -22,14 +22,14 @@ export const sampleActivities = [
         remarks: false,
         slide: true,
         levels: [],
-        text: 'Details about this section',
         tips: [
           {
             key: 'tip-1',
             type: 'teachingTip',
             markdown: 'Teaching tip content'
           }
-        ]
+        ],
+        text: 'Details about this section'
       },
       {
         tips: [],
