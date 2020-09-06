@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 
