@@ -12,6 +12,7 @@ import {
   removeActivity,
   updateActivityField
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import ReactDOM from 'react-dom';
 
 const styles = {
   groupHeader: {
@@ -64,7 +65,11 @@ class ActivityCard extends Component {
     addActivitySection: PropTypes.func,
     removeActivity: PropTypes.func,
     moveActivity: PropTypes.func,
-    updateActivityField: PropTypes.func
+    updateActivityField: PropTypes.func,
+    setActivitySectionMetrics: PropTypes.func.isRequired,
+    setTargetActivitySection: PropTypes.func.isRequired,
+    targetActivitySectionPos: PropTypes.number,
+    activitySectionMetrics: PropTypes.object.isRequired
   };
 
   constructor(props) {
@@ -154,13 +159,28 @@ class ActivityCard extends Component {
           />
         </div>
         <div style={styles.groupBody} hidden={this.state.collapsed}>
-          {activity.activitySections.map(block => {
+          {activity.activitySections.map(section => {
             return (
               <ActivitySectionCard
-                key={block.key}
-                activitySection={block}
+                key={section.key}
+                activitySection={section}
                 activityPosition={activity.position}
                 activitySectionsCount={activity.activitySections.length}
+                activitiesCount={this.props.activitiesCount}
+                ref={activitySectionCard => {
+                  if (activitySectionCard) {
+                    const metrics = ReactDOM.findDOMNode(
+                      activitySectionCard
+                    ).getBoundingClientRect();
+                    this.props.setActivitySectionMetrics(
+                      metrics,
+                      section.position
+                    );
+                  }
+                }}
+                activitySectionMetrics={this.props.activitySectionMetrics}
+                setTargetActivitySection={this.props.setTargetActivitySection}
+                targetActivitySectionPos={this.props.targetActivitySectionPos}
               />
             );
           })}

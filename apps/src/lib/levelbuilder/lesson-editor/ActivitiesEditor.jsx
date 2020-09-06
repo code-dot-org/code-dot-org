@@ -38,12 +38,31 @@ class ActivitiesEditor extends Component {
     addActivity: PropTypes.func
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      targetActivitySectionPos: null
+    };
+  }
+
   handleAddActivity = () => {
     //To do - figure out how we want to set the key going forward
     this.props.addActivity(
       this.props.activities.length,
       `activity-${this.props.activities.length + 1}`
     );
+  };
+
+  setTargetActivitySection = targetActivitySectionPos => {
+    this.setState({targetActivitySectionPos});
+  };
+
+  // To be populated with the bounding client rect of each LessonCard element.
+  activitySectionMetrics = {};
+
+  setActivitySectionMetrics = (metrics, activitySectionPosition) => {
+    this.activitySectionMetrics[activitySectionPosition] = metrics;
   };
 
   render() {
@@ -59,6 +78,10 @@ class ActivitiesEditor extends Component {
                   activity={activity}
                   activitiesCount={activities.length}
                   key={activity.key}
+                  setActivitySectionMetrics={this.setActivitySectionMetrics}
+                  setTargetActivitySection={this.setTargetActivitySection}
+                  targetActivitySectionPos={this.state.targetActivitySectionPos}
+                  activitySectionMetrics={this.activitySectionMetrics}
                 />
               );
             })}
