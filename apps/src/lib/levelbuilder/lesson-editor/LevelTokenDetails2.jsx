@@ -233,7 +233,7 @@ export default class LevelTokenDetails2 extends Component {
               <span style={{...styles.levelFieldLabel}}>Level name:</span>
               <LevelNameInput2
                 onSelectLevel={id => this.handleLevelSelected(index, id)}
-                initialLevelName={this.props.level.displayName}
+                initialLevelName={this.props.level.name}
               />
             </div>
           ))}

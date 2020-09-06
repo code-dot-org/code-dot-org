@@ -127,9 +127,7 @@ export default class LevelToken2 extends Component {
                 level={this.props.level}
                 disabled={true}
               />
-              <span style={styles.levelTitle}>
-                {this.props.level.displayName}
-              </span>
+              <span style={styles.levelTitle}>{this.props.level.name}</span>
             </span>
             <span>
               {this.props.level.ids.length > 1 && (

@@ -65,7 +65,6 @@ const getInitialState = () => ({
           text: 'This progression teaches you programming!',
           levels: [
             {
-              displayName: 'Level 1',
               name: 'Level 1',
               levelNumber: 1,
               position: 1,
@@ -88,7 +87,6 @@ const getInitialState = () => ({
               conceptDifficulty: ''
             },
             {
-              displayName: 'Level 2',
               name: 'Level 2',
               levelNumber: 2,
               position: 2,
@@ -167,7 +165,6 @@ describe('activitiesEditorRedux reducer tests', () => {
         initialState,
         addLevel(1, 3, {
           name: 'Level 3',
-          displayName: 'Level 3',
           levelNumber: 3,
           position: 3,
           icon: 'fa-desktop',
@@ -190,7 +187,7 @@ describe('activitiesEditorRedux reducer tests', () => {
         })
       ).activities;
       assert.deepEqual(
-        nextState[0].activitySections[2].levels.map(s => s.displayName),
+        nextState[0].activitySections[2].levels.map(s => s.name),
         ['Level 1', 'Level 2', 'Level 3']
       );
     });
@@ -198,7 +195,7 @@ describe('activitiesEditorRedux reducer tests', () => {
     it('remove level', () => {
       const nextState = reducer(initialState, removeLevel(1, 3, 1)).activities;
       assert.deepEqual(
-        nextState[0].activitySections[2].levels.map(s => s.displayName),
+        nextState[0].activitySections[2].levels.map(s => s.name),
         ['Level 2']
       );
     });

@@ -70,7 +70,6 @@ const activities = [
             conceptDifficulty: '',
             named: false,
             assessment: false,
-            displayName: 'Level 1',
             challenge: false
           },
           {
@@ -93,8 +92,7 @@ const activities = [
             conceptDifficulty: '',
             named: false,
             assessment: true,
-            challenge: false,
-            displayName: 'Level 2'
+            challenge: false
           }
         ]
       },

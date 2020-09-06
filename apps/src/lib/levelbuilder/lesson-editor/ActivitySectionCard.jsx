@@ -204,8 +204,7 @@ class ActivitySectionCard extends Component {
         conceptDifficulty: '',
         named: false,
         assessment: false,
-        challenge: false,
-        displayName: `Level ${newLevelPosition}`
+        challenge: false
       }
     );
   };
