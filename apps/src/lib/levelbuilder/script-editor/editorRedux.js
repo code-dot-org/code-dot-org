@@ -13,6 +13,9 @@ const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
 
 // NOTE: Position for Lesson Groups and Lessons is 1 based.
 
+//TODO: Move once activities editor controls levels
+export const NEW_LEVEL_ID = -1;
+
 export const init = lessonGroups => ({
   type: INIT,
   lessonGroups
