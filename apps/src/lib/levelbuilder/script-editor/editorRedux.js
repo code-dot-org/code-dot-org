@@ -22,8 +22,7 @@ const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
 const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
 
 // NOTE: Position for Lesson Groups, Lessons and Levels is 1 based.
-
-export const init = (lessonGroups, levelKeyList) => ({
+export const init = lessonGroups => ({
   type: INIT,
   lessonGroups,
   levelKeyList
