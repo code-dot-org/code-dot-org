@@ -101,7 +101,7 @@ class LevelToken extends Component {
 
     //redux
     levelKeyList: PropTypes.object.isRequired,
-    toggleExpand: PropTypes.func.isRequired,
+    toggleExpand: PropTypes.func,
     removeLevel: PropTypes.func.isRequired
   };
 
