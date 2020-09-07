@@ -47,7 +47,7 @@ level 'CSP - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap-Up (~10
 lesson 'Module 4', display_name: 'Module 4'
 level 'CSP-PL AYWA4 Workshop Overview', progression: 'Module 4 Overview (~5 minutes)'
 level 'CSP - Understanding the content of the Lists EIPM sequence', progression: 'Content of the Lists EIPM sequence (~25 minutes)'
-level 'CSP - Lists EIPM reflection', progression: 'The Lists EIPM sequence (~25 minutes)'
+level 'CSP - Lists EIPM reflection', progression: 'Content of the Lists EIPM sequence (~25 minutes)'
 level 'CSP AYW4 - Mental Models in Unit 5', progression: 'Mental models in Unit 5 (~35 minutes)'
 level 'CSP - Asynch4 - Intro to Traversals', progression: 'Traversals and datasets (~15 minutes)'
 level 'CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify', progression: 'Traversals and datasets (~15 minutes)'
