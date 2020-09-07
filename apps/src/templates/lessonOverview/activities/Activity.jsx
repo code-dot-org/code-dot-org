@@ -21,7 +21,7 @@ export default class Activity extends Component {
       <div>
         <h2 style={styles.activityHeader}>{`${activity.displayName} (${
           activity.time
-          } minutes)`}</h2>
+        } minutes)`}</h2>
         {activity.activitySections.map(item => {
           return <ActivitySection key={item.key} section={item} />;
         })}
