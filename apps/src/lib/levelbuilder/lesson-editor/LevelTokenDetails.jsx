@@ -6,9 +6,8 @@ import {
   addVariant,
   removeVariant,
   setActiveVariant,
-  setField,
-  NEW_LEVEL_ID
-} from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
+  setField
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {levelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import LevelNameInput from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelNameInput';
 import ReactTooltip from 'react-tooltip';
@@ -89,18 +88,20 @@ const ArrowRenderer = ({onMouseDown}) => {
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
-export class UnconnectedLevelTokenDetails extends Component {
+class LevelTokenDetails extends Component {
   static propTypes = {
+    level: levelShape.isRequired,
+    activitySectionPosition: PropTypes.number.isRequired,
+    activityPosition: PropTypes.number.isRequired,
+
+    //redux
     levelKeyList: PropTypes.object.isRequired,
     levelNameToIdMap: PropTypes.objectOf(PropTypes.number).isRequired,
     chooseLevel: PropTypes.func.isRequired,
     addVariant: PropTypes.func.isRequired,
     removeVariant: PropTypes.func.isRequired,
     setActiveVariant: PropTypes.func.isRequired,
-    setField: PropTypes.func.isRequired,
-    level: levelShape.isRequired,
-    lessonPosition: PropTypes.number.isRequired,
-    lessonGroupPosition: PropTypes.number.isRequired
+    setField: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -125,8 +126,8 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   handleLevelSelected = (variant, levelId) => {
     this.props.chooseLevel(
-      this.props.lessonGroupPosition,
-      this.props.lessonPosition,
+      this.props.activityPosition,
+      this.props.activitySectionPosition,
       this.props.level.position,
       variant,
       levelId
@@ -135,16 +136,16 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   handleAddVariant = () => {
     this.props.addVariant(
-      this.props.lessonGroupPosition,
-      this.props.lessonPosition,
+      this.props.activityPosition,
+      this.props.activitySectionPosition,
       this.props.level.position
     );
   };
 
   handleRemoveVariant = levelId => {
     this.props.removeVariant(
-      this.props.lessonGroupPosition,
-      this.props.lessonPosition,
+      this.props.activityPosition,
+      this.props.activitySectionPosition,
       this.props.level.position,
       levelId
     );
@@ -152,8 +153,8 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   handleActiveVariantChanged = id => {
     this.props.setActiveVariant(
-      this.props.lessonGroupPosition,
-      this.props.lessonPosition,
+      this.props.activityPosition,
+      this.props.activitySectionPosition,
       this.props.level.position,
       id
     );
@@ -161,8 +162,8 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   handleFieldChange = (field, event) => {
     this.props.setField(
-      this.props.lessonGroupPosition,
-      this.props.lessonPosition,
+      this.props.activityPosition,
+      this.props.activitySectionPosition,
       this.props.level.position,
       {
         [field]: event.target.value
@@ -172,8 +173,8 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   handleCheckboxChange = field => {
     this.props.setField(
-      this.props.lessonGroupPosition,
-      this.props.lessonPosition,
+      this.props.activityPosition,
+      this.props.activitySectionPosition,
       this.props.level.position,
       {
         [field]: !this.props.level[field]
@@ -215,10 +216,10 @@ export class UnconnectedLevelTokenDetails extends Component {
             </label>
           ))}
         </span>
-        <hr style={styles.divider} />
-        <div style={{clear: 'both'}} />
         {this.containsLegacyLevel() && (
           <div>
+            <hr style={styles.divider} />
+            <div style={{clear: 'both'}} />
             <span style={styles.levelFieldLabel}>Skin:</span>
             <input
               defaultValue={this.props.level.skin}
@@ -252,9 +253,9 @@ export class UnconnectedLevelTokenDetails extends Component {
             />
           </div>
         )}
-        {this.props.level.ids.map((id, index) => (
-          <div key={id}>
-            {this.props.level.ids.length > 1 && (
+        {this.props.level.ids.length > 1 &&
+          this.props.level.ids.map((id, index) => (
+            <div key={id}>
               <div>
                 <hr style={styles.divider} />
                 <span>
@@ -264,9 +265,7 @@ export class UnconnectedLevelTokenDetails extends Component {
                     onChange={this.handleActiveVariantChanged.bind(this, id)}
                     defaultChecked={id === this.props.level.activeId}
                     style={styles.checkbox}
-                    name={`radio-${this.props.lessonPosition}-${
-                      this.props.level.position
-                    }`}
+                    name={`radio-${this.props.level.position}`}
                   />
                 </span>
                 {id !== this.props.level.activeId && (
@@ -286,39 +285,16 @@ export class UnconnectedLevelTokenDetails extends Component {
                   </span>
                 )}
               </div>
-            )}
-            <span style={{...styles.levelFieldLabel}}>Level name:</span>
-            <LevelNameInput
-              onSelectLevel={id => this.handleLevelSelected(index, id)}
-              levelNameToIdMap={this.props.levelNameToIdMap}
-              initialLevelName={this.props.levelKeyList[id] || ''}
-            />
-          </div>
-        ))}
-        {showAddVariants && <hr style={styles.divider} />}
-        <div style={styles.progression}>
-          <span
-            style={styles.levelFieldLabel}
-            data-for={tooltipIds.progression}
-            data-tip
-          >
-            Progression:
-          </span>
-          <ReactTooltip id={tooltipIds.progression} delayShow={500}>
-            <div style={styles.tooltip}>{tooltipText.progression}</div>
-          </ReactTooltip>
-
-          <span style={styles.levelSelect}>
-            <input
-              type="text"
-              onChange={event => this.handleFieldChange('progression', event)}
-              value={this.props.level.progression}
-              style={styles.progressionTextInput}
-              data-field-name="progression"
-            />
-          </span>
-        </div>
-        {showAddVariants && !this.props.level.ids.includes(NEW_LEVEL_ID) && (
+              )}
+              <span style={{...styles.levelFieldLabel}}>Level name:</span>
+              <LevelNameInput
+                onSelectLevel={id => this.handleLevelSelected(index, id)}
+                levelNameToIdMap={this.props.levelNameToIdMap}
+                initialLevelName={this.props.levelKeyList[id] || ''}
+              />
+            </div>
+          ))}
+        {showAddVariants && (
           <div>
             <hr style={styles.divider} />
             <button
@@ -337,26 +313,18 @@ export class UnconnectedLevelTokenDetails extends Component {
   }
 }
 
+export const UnconnectedLevelTokenDetails = LevelTokenDetails;
+
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
     levelNameToIdMap: state.levelNameToIdMap
   }),
-  dispatch => ({
-    chooseLevel(group, lesson, level, variant, value) {
-      dispatch(chooseLevel(group, lesson, level, variant, value));
-    },
-    addVariant(group, lesson, level) {
-      dispatch(addVariant(group, lesson, level));
-    },
-    removeVariant(group, lesson, level, levelId) {
-      dispatch(removeVariant(group, lesson, level, levelId));
-    },
-    setActiveVariant(group, lesson, level, id) {
-      dispatch(setActiveVariant(group, lesson, level, id));
-    },
-    setField(group, lesson, level, modifier) {
-      dispatch(setField(group, lesson, level, modifier));
-    }
-  })
-)(UnconnectedLevelTokenDetails);
+  {
+    chooseLevel,
+    addVariant,
+    removeVariant,
+    setActiveVariant,
+    setField
+  }
+)(LevelTokenDetails);
