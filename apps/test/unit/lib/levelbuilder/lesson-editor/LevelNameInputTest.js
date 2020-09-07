@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
+import {expect} from '../../../../util/reconfiguredChai';
 import LevelNameInput from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelNameInput';
 
 const levelNameToIdMap = {
