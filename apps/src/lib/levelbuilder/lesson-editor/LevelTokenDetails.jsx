@@ -319,21 +319,11 @@ export default connect(
     levelKeyList: state.levelKeyList,
     levelNameToIdMap: state.levelNameToIdMap
   }),
-  dispatch => ({
-    chooseLevel(group, lesson, level, variant, value) {
-      dispatch(chooseLevel(group, lesson, level, variant, value));
-    },
-    addVariant(group, lesson, level) {
-      dispatch(addVariant(group, lesson, level));
-    },
-    removeVariant(group, lesson, level, levelId) {
-      dispatch(removeVariant(group, lesson, level, levelId));
-    },
-    setActiveVariant(group, lesson, level, id) {
-      dispatch(setActiveVariant(group, lesson, level, id));
-    },
-    setField(group, lesson, level, modifier) {
-      dispatch(setField(group, lesson, level, modifier));
-    }
-  })
+  {
+    chooseLevel,
+    addVariant,
+    removeVariant,
+    setActiveVariant,
+    setField
+  }
 )(LevelTokenDetails);

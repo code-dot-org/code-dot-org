@@ -15,7 +15,7 @@ import {
 import ReactDOM from 'react-dom';
 
 const styles = {
-  groupHeader: {
+  activityHeader: {
     fontSize: 18,
     color: 'white',
     background: color.cyan,
@@ -26,14 +26,14 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center'
   },
-  groupBody: {
+  activityBody: {
     background: color.lightest_cyan,
     borderBottomLeftRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
     padding: 10,
     marginBottom: 20
   },
-  addLesson: {
+  addButton: {
     fontSize: 14,
     color: '#5b6770',
     background: 'white',
@@ -124,7 +124,7 @@ class ActivityCard extends Component {
       <div>
         <div
           style={{
-            ...styles.groupHeader,
+            ...styles.activityHeader,
             ...(this.state.collapsed && {marginBottom: 10})
           }}
         >
@@ -158,7 +158,7 @@ class ActivityCard extends Component {
             remove={this.handleRemoveActivity}
           />
         </div>
-        <div style={styles.groupBody} hidden={this.state.collapsed}>
+        <div style={styles.activityBody} hidden={this.state.collapsed}>
           {activity.activitySections.map(section => {
             return (
               <ActivitySectionCard
@@ -187,7 +187,7 @@ class ActivityCard extends Component {
           <button
             onMouseDown={this.handleAddActivitySection.bind()}
             className="btn"
-            style={styles.addLesson}
+            style={styles.addButton}
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />

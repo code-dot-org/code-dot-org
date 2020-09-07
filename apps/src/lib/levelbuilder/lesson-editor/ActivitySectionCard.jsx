@@ -26,7 +26,7 @@ const styles = {
   checkbox: {
     margin: '0 0 0 7px'
   },
-  lessonCard: {
+  activitySectionCard: {
     fontSize: 18,
     background: 'white',
     borderWidth: 1,
@@ -36,7 +36,7 @@ const styles = {
     padding: 20,
     margin: 10
   },
-  lessonCardHeader: {
+  activitySectionCardHeader: {
     color: '#5b6770',
     marginBottom: 15
   },
@@ -76,8 +76,8 @@ const styles = {
   }
 };
 
-styles.targetLessonCard = {
-  ...styles.lessonCard,
+styles.targetActivitySectionCard = {
+  ...styles.activitySectionCard,
   borderWidth: 5,
   borderColor: color.cyan,
   padding: 16
@@ -348,10 +348,12 @@ class ActivitySectionCard extends Component {
     return (
       <div
         style={
-          isTargetActivitySection ? styles.targetLessonCard : styles.lessonCard
+          isTargetActivitySection
+            ? styles.targetActivitySectionCard
+            : styles.activitySectionCard
         }
       >
-        <div style={styles.lessonCardHeader}>
+        <div style={styles.activitySectionCardHeader}>
           <label>
             <span style={styles.title}>Title:</span>
             <input
