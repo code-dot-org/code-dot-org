@@ -11,10 +11,7 @@ const SET_LESSON_LOCKABLE = 'scriptEditor/SET_LESSON_LOCKABLE';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
 const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
 
-// NOTE: Position for Lesson Groups and Lessons is 1 based.
-
-//TODO: Move once activities editor controls levels
-export const NEW_LEVEL_ID = -1;
+// NOTE: Position for Lesson Groups, Lessons and Levels is 1 based.
 
 export const init = lessonGroups => ({
   type: INIT,
@@ -105,6 +102,8 @@ function updateLessonPositions(lessonGroups) {
     });
   });
 }
+
+export const NEW_LEVEL_ID = -1;
 
 function lessonGroups(state = [], action) {
   let newState = _.cloneDeep(state);
