@@ -72,7 +72,7 @@ FactoryGirl.define do
 
   factory :user do
     birthday Time.zone.today - 21.years
-    sequence(:email) {|n| "#{user_type}_#{n}@code.org"}
+    email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
     password "00secret"
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
@@ -386,7 +386,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: SecureRandom.uuid,
+          authentication_id: "abcd#{user.id}",
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
@@ -403,7 +403,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
-          authentication_id: SecureRandom.uuid,
+          authentication_id: '456efgh',
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
@@ -447,7 +447,7 @@ FactoryGirl.define do
     association :user
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     credential_type AuthenticationOption::EMAIL
-    authentication_id SecureRandom.uuid
+    authentication_id {User.hash_email email}
 
     factory :google_authentication_option do
       credential_type AuthenticationOption::GOOGLE
