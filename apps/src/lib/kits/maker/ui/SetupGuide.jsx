@@ -79,16 +79,16 @@ class Downloads extends React.Component {
       <div>
         <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
           <button type="button" value={WINDOWS}>
-            <FontAwesome icon="windows" /> Windows
+            <FontAwesome icon="windows" /> {i18n.windows()}
           </button>
           <button type="button" value={MAC}>
-            <FontAwesome icon="apple" /> Mac
+            <FontAwesome icon="apple" /> {i18n.mac()}
           </button>
           <button type="button" value={LINUX}>
-            <FontAwesome icon="linux" /> Linux
+            <FontAwesome icon="linux" /> {i18n.linux()}
           </button>
           <button type="button" value={CHROMEBOOK}>
-            <FontAwesome icon="chrome" /> Chromebook
+            <FontAwesome icon="chrome" /> {i18n.chromebook()}
           </button>
         </ToggleGroup>
         {WINDOWS === platform && <WindowsDownloads />}
