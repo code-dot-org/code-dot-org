@@ -166,12 +166,21 @@ frontend_device_name ||= '/dev/sda1'
 
           INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
           <%=indent(build_frontend, 10)%>
+          if [ $? -eq 0 ]
+          then
+            CFN_STATUS=SUCCESS
+            LIFECYCLE_ACTION=CONTINUE
+          else
+            CFN_STATUS=FAILURE
+            LIFECYCLE_ACTION=ABANDON
+          fi
+
           # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
           LIFECYCLE_HOOK=WebServerHook-${AWS::StackName}
           AUTO_SCALING_GROUP=Frontends-${AWS::StackName}
           if [ -n "$LIFECYCLE_HOOK" ] && [ -n "$AUTO_SCALING_GROUP" ]; then
             aws autoscaling complete-lifecycle-action \
-              --lifecycle-action-result CONTINUE \
+              --lifecycle-action-result $LIFECYCLE_ACTION \
               --instance-id $INSTANCE_ID \
               --lifecycle-hook-name $LIFECYCLE_HOOK \
               --auto-scaling-group-name $AUTO_SCALING_GROUP \
@@ -182,7 +191,7 @@ frontend_device_name ||= '/dev/sda1'
           # Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
           RESOURCE_ID=Frontends
           aws cloudformation signal-resource \
-            --status SUCCESS \
+            --status $CFN_STATUS \
             --unique-id $INSTANCE_ID \
             --stack-name $STACK \
             --logical-resource-id $RESOURCE_ID \

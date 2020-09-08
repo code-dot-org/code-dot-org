@@ -11,7 +11,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
+    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
 
     @unit_group = create(:unit_group)
     @script_in_unit_group = create(:script, hidden: true)
@@ -1599,35 +1599,35 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal true, script_copy.hidden
   end
 
-  test 'clone script with inactive variant' do
-    script_file = File.join(self.class.fixture_path, "test-fixture-variants.script")
+  test 'clone script with variants' do
+    script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
     scripts, _ = Script.setup([script_file])
     script = scripts[0]
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
-    assert_equal 'test-fixture-variants-copy', script_copy.name
+    assert_equal 'test-fixture-experiments-copy', script_copy.name
 
-    assert_equal 1, script_copy.script_levels.count
-    sl = script_copy.script_levels.first
+    assert_equal 4, script_copy.script_levels.count
+    script_copy.script_levels.each do |sl|
+      assert_equal 1, sl.levels.count
+      assert sl.active?(sl.levels.first)
+      refute sl.variants?
+    end
+    expected_level_names = ['Level 1_copy', 'Level 4_copy', 'Level 5_copy', 'Level 8_copy']
+    actual_level_names = script_copy.script_levels.map(&:levels).map(&:first).map(&:name)
+    assert_equal expected_level_names, actual_level_names
 
-    assert_equal 'Level 1_copy', sl.levels.first.name
-    assert sl.active?(sl.levels.first)
+    new_dsl = <<~SCRIPT
+      lesson 'lesson1', display_name: 'lesson1'
+      level 'Level 1_copy'
+      level 'Level 4_copy'
+      level 'Level 5_copy'
+      level 'Level 8_copy'
 
-    assert_equal 'Level 2_copy', sl.levels.last.name
-    refute sl.active?(sl.levels.last)
-
-    # Ignore level names, since we are just testing whether the
-    # variants / active / endvariants structure is correct.
-    new_dsl_regex = <<-SCRIPT
-lesson 'lesson1', display_name: 'lesson1'
-variants
-  level '[^']+'
-  level '[^']+', active: false
-endvariants
     SCRIPT
 
-    assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
+    assert_equal new_dsl, ScriptDSL.serialize_to_string(script_copy)
   end
 
   test 'clone with suffix and add editor experiment' do
