@@ -47,8 +47,6 @@ export default class AnimationPickerBody extends React.Component {
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
-    isBackground: PropTypes.bool.isRequired,
-    isSpriteLab: PropTypes.bool.isRequired,
     navigatable: PropTypes.bool.isRequired,
     defaultCategoryQuery: PropTypes.string,
     hideBackgrounds: PropTypes.bool.isRequired,
@@ -66,10 +64,10 @@ export default class AnimationPickerBody extends React.Component {
       const defaultCategoryQuery = this.props.defaultCategoryQuery;
       const currentPage = 0;
       const {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-        defaultCategoryQuery
+        categoryQuery: defaultCategoryQuery
       });
       this.state = {
-        defaultCategoryQuery,
+        categoryQuery: defaultCategoryQuery,
         currentPage,
         results,
         pageCount,
@@ -203,6 +201,7 @@ export default class AnimationPickerBody extends React.Component {
       return <div>{msg.loading()}</div>;
     }
     const {searchQuery, categoryQuery, results} = this.state;
+
     const {
       hideUploadOption,
       is13Plus,
