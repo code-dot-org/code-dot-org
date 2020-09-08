@@ -1114,6 +1114,13 @@ de:
             '"z"': z
       gamelab_locationAt:
         text: 'Position x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Ost
+            '"South"': Süd
+            '"West"': West
       gamelab_locationMouse:
         text: Mausposition
       gamelab_locationOf:
