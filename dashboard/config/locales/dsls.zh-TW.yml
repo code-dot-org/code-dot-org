@@ -1977,17 +1977,12 @@ zh-TW:
         - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: 這條程式不會失敗。Scrat 將獲得橡樹果實。
-          feedback: 不正確。Scrat 在最後一次轉彎的時候走錯了路。
-        - text: Scrat 在最後一次轉彎時將走錯路。
-          correct: true
-          feedback: 正確！
-        - text: Scrat 邁出的步數太少，最終不能得到橡樹果實。
-          feedback: 不正確。Scrat 轉錯方向後，還差了一步。
+        - {}
+        - correct: true
+        - correct: true
         - text: 我不知道。
-          feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
         questions:
-        - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
