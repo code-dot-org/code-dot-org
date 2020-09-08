@@ -29,7 +29,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     teacher_email = 'TESTcaseSANITIZATION@test.com'
     sanitized = 'testcasesanitization@test.com'
     teacher = create(:teacher, email: teacher_email)
-    email_auth = teacher.primary_contact_info
+    email_auth = create(:authentication_option, user: teacher, email: teacher_email)
     assert_equal sanitized, email_auth.email
     assert_equal email_auth.hashed_email, AuthenticationOption.hash_email(sanitized)
   end
@@ -37,7 +37,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   test 'student email is not stored but hashed_email is' do
     student_email = 'teststudent@test.com'
     student = create(:student, email: student_email)
-    email_auth = student.primary_contact_info
+    email_auth = create(:authentication_option, user: student, email: student_email)
     assert email_auth.user.student?
     assert_equal '', email_auth.email
     assert_equal student.hashed_email, email_auth.hashed_email
@@ -49,17 +49,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     create :authentication_option, credential_type: cred_type, authentication_id: auth_id
     new_auth_option = build :authentication_option, credential_type: cred_type, authentication_id: auth_id
     refute new_auth_option.valid?
-    assert_equal ['Authentication has already been taken'], new_auth_option.errors.full_messages
-  end
-
-  test 'deleted authentication options do not affect uniqueness' do
-    cred_type = AuthenticationOption::GOOGLE
-    auth_id = '54321'
-    first_auth_option = create :authentication_option, credential_type: cred_type, authentication_id: auth_id
-    new_auth_option = build :authentication_option, credential_type: cred_type, authentication_id: auth_id
-    refute new_auth_option.valid?
-    first_auth_option.delete
-    assert new_auth_option.valid?
+    assert_equal ['Credential type has already been taken'], new_auth_option.errors.full_messages
   end
 
   test 'user can have multiple authentication options' do
