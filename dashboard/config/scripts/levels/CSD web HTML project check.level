@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "project_template_level_name": "CSD web html project template",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "long_instructions": "# Review your Page\r\n\r\nNext, check to make sure your page has everything you want.\r\n\r\n# Do This\r\n* Check to make sure all the **content** is there.\r\n* Check that the HTML tags **structure** the content correctly.\r\n* Make sure your code is organized, readable and free of bugs.\r\n\r\n",
     "parent_level_id": 23015,
     "name_suffix": "_2020",
@@ -26,7 +26,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-01-30 21:12:15 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:34:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-27 19:14:11 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-27 19:15:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:28:44 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-01-30 21:12:15 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:34:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-27 19:14:11 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-27 19:15:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:28:44 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-09-08 16:44:06 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
