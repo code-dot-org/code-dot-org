@@ -1,5 +1,5 @@
 ---
-title: How-to Guide for Hour of Code
+title: Hour of Code How-to Guide
 layout: wide
 nav: how_to_nav
 ---
@@ -8,31 +8,34 @@ nav: how_to_nav
 
 # Cómo planificar tu Hora del Código
 
-### Join the movement and introduce your students to computer science with these steps.
+### Únete al movimiento e introduce a tus estudiantes en las ciencias de la computación con estos pasos.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+El pensamiento computacional ayuda a fomentar las habilidades de resolución de problemas, la lógica y la creatividad. Y la tecnología está transformando todas las industrias del planeta. Los estudiantes de hoy deben aprender a crear tecnología, no solo a usarla. Al comenzar en etapas tempranas, tendrán una base para el éxito en cualquier trayectoria profesional del siglo XXI.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Consulta nuestra [guía de participación]({{ localized_files/participation_guide }}) si aún tienes preguntas.
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Consulta nuestra [guía de participación]({{ localized_files/participation_guide }}) si aún tienes preguntas.
 
-An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
-
-- [1. Watch the Hour of Code how-to video](#how-to-video)
-- [2. Explore activities and tutorials](#explore-activities)
-- [3. Create your plan for the day](#create-your-plan)
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
 - [Promueve tu Hora del Código](#promote-your-hour)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [Otros recursos de la Hora del Código para educadores](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Mira el video instructivo de la Hora del Código <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Explora actividades y tutoriales
 
 Ofrecemos divertidos [tutoriales guiados por estudiantes]({{ urls/learn }}) para todas las edades y niveles de experiencia. Es habitual que los estudiantes prueben tutoriales autodirigidos, aunque muchas actividades incluyen planes de lecciones para que los docentes guíen la discusión o también extiendan la actividad.
 
@@ -44,7 +47,7 @@ Explora las actividades y decide con anticipación si deseas elegir un solo tuto
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Crea tu plan para el día
 
 ### Considera tus necesidades tecnológicas. ¡Las computadoras son opcionales!
 
@@ -63,7 +66,7 @@ Personas de todo el mundo se suman a la celebración de la Hora del Código dura
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Promociona tu Hora del Código
 
 Ahora que has planificado tu evento, ¡es hora de comenzar a promoverlo!
 
@@ -85,9 +88,9 @@ Descubre más sobre carteles, videos, adhesivos y otras maneras de [promover tu 
 
 * * *
 
-<a id="promote-your-hour"></a>
+<a id="how-to-start"></a>
 
-## 5. Start your Hour of Code Strong
+## 5. How to start your Hour of Code strong
 
 Una vez que haya llegado tu celebración de la Hora del Código, asegúrate de comenzar tu evento de la mejor manera con algunas de estas herramientas y consejos.
 
@@ -102,15 +105,17 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - Explica algunas formas en las que la tecnología tiene un impacto en nuestras vidas, con ejemplos que les interesen a niños y niñas (habla acerca de salvar vidas, ayudar a las personas, conectarlas, etc.).
 - Prepara con la clase una lista de cosas que utilizan programación en la vida cotidiana.
-- Echa un vistazo a los [consejos]({{ urls/girls }}) para que las niñas se interesen en las ciencias de la computación.
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
 * * *
 
-## 6. Get Coding!
+<a id="code"></a>
+
+## 6. Get coding!
 
 Involucra a los estudiantes en la actividad
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Escribe el enlace del tutorial en una pizarra. Encuentra el enlace que aparece en la [información del tutorial seleccionado]({{ urls/learn }}) debajo del número de participantes.
 
 Si los estudiantes encuentran dificultades, está bien responder:
 
@@ -125,7 +130,9 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 * * *
 
-## 7. Celebrate your Students' Success
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [col-33]
 
@@ -140,12 +147,14 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 * * *
 
+<a id="other-resources"></a>
+
 ## Otros recursos de la Hora del Código para educadores:
 
 - Visita el [Foro de la Hora del Código para docentes](http://forum.code.org/c/plc/hour-of-code) para obtener consejos, perspectivas y apoyo de otros educadores.
 - Consulta las [preguntas frecuentes sobre la Hora del Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## ¿Qué viene después de la Hora del Código?
+### ¿Qué viene después de la Hora del Código?
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 
