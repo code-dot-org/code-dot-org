@@ -139,7 +139,7 @@
           "2-3_Bee_Functions_6_a": "Tu n’as pas pas à utiliser une boucle avec une fonction. Essaie de bouger, utiliser la fonction, puis de bouger et de réutiliser la fonction."
         },
         "2-3 Bee Functions 8": {
-          "2-3_Bee_Functions_8_a": "Si le casse-tête semble difficile, essaie de construire ta fonction petit à petit.\n\nAjoutes-y quelques blocs, puis essaye. Ajoutes-en d’autres, puis réessaye. Bientôt, tu y arriveras !\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+          "2-3_Bee_Functions_8_a": "Si le casse-tête semble difficile, essaie de construire ta fonction petit à petit.\n\nAjoute quelques blocs, puis essaye. Ajoutes-en d’autres, puis réessaye. Bientôt, tu y arriveras !\n\n![0]"
         },
         "2-3 Bee Functions 9": {
           "2-3_Bee_Functions_8_a": "Si l'énigme te semble difficile, essaie de construire ta fonction petit à petit. \n\nAjoute quelques blocs, puis essaie-la. Ajoutes-en encore, puis réessaie. Bientôt, tu y arriveras !",
@@ -923,14 +923,14 @@
           "courseF_bee_for7_c": "Souviens-toi d'utiliser la variable `compteur` dans ta boucle `répéter`."
         },
         "OPD-K5-projects-2": {
-          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une ??? image` peut-être utilisé pour ajouter un acteur à cette étape.",
-          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
+          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
+          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter l'acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
           "courseE_playLab_scaffold1_c": "Utilise `définir un arrière plan ???` pour choisir l'arrière plan de ta scène."
         },
         "OPD-K5-projects-3": {
-          "courseE_playLab_scaffold1_a": "Appuie sur le menu déroulant de l'évènement `quand flêche __` pour changer la direction que le bloc contrôle.",
-          "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun.",
-          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flêches!"
+          "courseE_playLab_scaffold1_a": "Appuie sur le menu déroulant de l'évènement `quand flèche __` pour changer la direction que le bloc contrôle.",
+          "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun d'eux.",
+          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flèches!"
         },
         "OPD-K5-projects-5": {
           "courseE_playLab_scaffold4_a": "Utiliser `marquer 1 point` pour ajouter un point, et `enlever 1 point` pour en retirer un."
@@ -1334,7 +1334,7 @@
           "courseC_maze_debugging_challenge2_c": "Il y a deux chemins différents que tu peux suivre, simplement en avançant et en tournant quatre fois. Si tu trouves un moyen pour utiliser une boucle `Répéter`, il y en a peut-être même plus !\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
         "course3_playLab_challenge1": {
-          "courseE_playLab_challenge1_a": "Voici ce que tu pourrais faire lorsque le joueur gagne le jeu:\n\n-   Faire disparaitre le dinosaure\n-   Arrêter les écureuils.\n-   Rendre les écureuils et le chevalier de bonne humeur.\n-   Mettre un nouvel arrière plan\n-   Faire que le chevalier remercie le joueur de l'avoir aidé.\n-   Faire disparaitre tous les acteurs et montrer un message \"Tu as gagné!\".",
+          "courseE_playLab_challenge1_a": "Voici ce que tu pourrais faire lorsque le joueur gagne le jeu:\n\n-   Faire disparaitre le dinosaure\n-   Arrêter les écureuils.\n-   Faire plaisir aux écureuils et au chevalier.\n-   Mettre un nouvel arrière plan\n-   Faire que le chevalier remercie le joueur de l'avoir aidé.\n-   Faire disparaitre tous les acteurs et montrer un message \"Tu as gagné!\".",
           "courseE_playLab_challenge1_b": "Voici ce que tu pourrais faire lorsque le joueur perd le jeu:\n\n-   Faire disparaitre le chevalier.\n-   Rendre les écureuils tristes.\n-   Faire dire quelque chose au dinosaure.\n-   Mettre un nouvel arrière-plan.\n-   Faire disparaitre tous les acteurs et montrer un message \"Fin du Jeu\"."
         },
         "course4_artist_concept_challenge2": {
@@ -3412,24 +3412,24 @@
           "courseB_starWars_prog9_c": "Une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block></xml>loop pourrait-elle aider ici ?"
         },
         "courseC19_playLab_EOC1": {
-          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une ??? image` peut-être utilisé pour ajouter un acteur à cette étape.",
-          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
+          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
+          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter l'acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
           "courseE_playLab_scaffold1_c": "Utilise `définir un arrière plan ???` pour choisir l'arrière plan de ta scène."
         },
         "courseC19_playLab_EOC1_2020": {
-          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une ??? image` peut-être utilisé pour ajouter un acteur à cette étape.",
-          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
+          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
+          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter l'acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
           "courseE_playLab_scaffold1_c": "Utilise `définir un arrière plan ???` pour choisir l'arrière plan de ta scène."
         },
         "courseC19_playLab_EOC2": {
-          "courseE_playLab_scaffold1_a": "Appuie sur le menu déroulant de l'évènement `quand flêche __` pour changer la direction que le bloc contrôle.",
-          "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun.",
-          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flêches!"
+          "courseE_playLab_scaffold1_a": "Appuie sur le menu déroulant de l'évènement `quand flèche __` pour changer la direction que le bloc contrôle.",
+          "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun d'eux.",
+          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flèches!"
         },
         "courseC19_playLab_EOC2_2020": {
-          "courseE_playLab_scaffold1_a": "Appuie sur le menu déroulant de l'évènement `quand flêche __` pour changer la direction que le bloc contrôle.",
-          "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun.",
-          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flêches!"
+          "courseE_playLab_scaffold1_a": "Appuie sur le menu déroulant de l'évènement `quand flèche __` pour changer la direction que le bloc contrôle.",
+          "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun d'eux.",
+          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flèches!"
         },
         "courseC19_playLab_EOC4": {
           "courseE_playLab_scaffold4_a": "Utiliser `marquer 1 point` pour ajouter un point, et `enlever 1 point` pour en retirer un."
@@ -3826,15 +3826,15 @@
           "courseC_artist_prog2_b": "Vous avez des problèmes pour tourner ? Utilisez le bloc « tourner de 90 degrés à droite »."
         },
         "courseC_artist_prog2_2018": {
-          "courseC_artist_prog2_a": "Si vous utilisez le bloc pour me faire \"avancer de 100 pixels\", je tracerais une ligne automatiquement.",
+          "courseC_artist_prog2_a": "Si vous utilisez le bloc <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> pour me faire \"avancer de 100 pixels\", je tracerais une ligne automatiquement.",
           "courseC_artist_prog2_b": "Tu as des problèmes pour tourner ? Utilises le bloc <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2019": {
-          "courseC_artist_prog2_a": "Si vous utilisez le bloc pour me faire \"avancer de 100 pixels\", je tracerais une ligne automatiquement.",
+          "courseC_artist_prog2_a": "Si vous utilisez le bloc <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> pour me faire \"avancer de 100 pixels\", je tracerais une ligne automatiquement.",
           "courseC_artist_prog2_b": "Tu as des problèmes pour tourner ? Utilises le bloc <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2020": {
-          "courseC_artist_prog2_a": "Si vous utilisez le bloc pour me faire \"avancer de 100 pixels\", je tracerais une ligne automatiquement.",
+          "courseC_artist_prog2_a": "Si vous utilisez le bloc <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> pour me faire \"avancer de 100 pixels\", je tracerais une ligne automatiquement.",
           "courseC_artist_prog2_b": "Tu as des problèmes pour tourner ? Utilises le bloc <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog3": {
@@ -4442,127 +4442,127 @@
           "courseC_harvester_loops_challenge2_d": "Le modèle spirale peut être codé avec juste 18 blocs!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "courseC_maze_debugging1": {
-          "courseC_maze_debugging1_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
+          "courseC_maze_debugging1_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que tout fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
           "courseC_maze_debugging1_b": "Tu as besoin d'ajouter un bloc pour terminer ce puzzle."
         },
         "courseC_maze_debugging1_2018": {
-          "courseC_maze_debugging1_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
+          "courseC_maze_debugging1_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que tout fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
           "courseC_maze_debugging1_b": "Tu as besoin d'ajouter un bloc pour terminer ce puzzle."
         },
         "courseC_maze_debugging1_2019": {
-          "courseC_maze_debugging1_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
+          "courseC_maze_debugging1_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que tout fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
           "courseC_maze_debugging1_b": "Tu as besoin d'ajouter un bloc pour terminer ce puzzle."
         },
         "courseC_maze_debugging1_2020": {
-          "courseC_maze_debugging1_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
+          "courseC_maze_debugging1_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que tout fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
           "courseC_maze_debugging1_b": "Tu as besoin d'ajouter un bloc pour terminer ce puzzle."
         },
         "courseC_maze_debugging2": {
-          "courseC_maze_debugging2_a": "Il y a beaucoup de code intéressant dans l'espace de travail. Ne l'efface pas tout pour recommencer de zéro!",
-          "courseC_maze_debugging2_b": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
+          "courseC_maze_debugging2_a": "Il y a beaucoup de code intéressant dans l'espace de travail. Ne l'efface pas entièrement pour éviter de recommencer à zéro!",
+          "courseC_maze_debugging2_b": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que tout fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
           "courseC_maze_debugging2_c": "Tu ne trouves pas le problème ? Essaie d’exécuter le code quelques fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging2_2018": {
-          "courseC_maze_debugging2_a": "Il y a beaucoup de code intéressant dans l'espace de travail. Ne l'efface pas tout pour recommencer de zéro!",
-          "courseC_maze_debugging2_b": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
+          "courseC_maze_debugging2_a": "Il y a beaucoup de code intéressant dans l'espace de travail. Ne l'efface pas entièrement pour éviter de recommencer à zéro!",
+          "courseC_maze_debugging2_b": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que tout fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
           "courseC_maze_debugging2_c": "Tu ne trouves pas le problème ? Essaie d’exécuter le code quelques fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging2_2019": {
-          "courseC_maze_debugging2_a": "Il y a beaucoup de code intéressant dans l'espace de travail. Ne l'efface pas tout pour recommencer de zéro!",
-          "courseC_maze_debugging2_b": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
+          "courseC_maze_debugging2_a": "Il y a beaucoup de code intéressant dans l'espace de travail. Ne l'efface pas entièrement pour éviter de recommencer à zéro!",
+          "courseC_maze_debugging2_b": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que tout fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
           "courseC_maze_debugging2_c": "Tu ne trouves pas le problème ? Essaie d’exécuter le code quelques fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging2_2020": {
-          "courseC_maze_debugging2_a": "Il y a beaucoup de code intéressant dans l'espace de travail. Ne l'efface pas tout pour recommencer de zéro!",
-          "courseC_maze_debugging2_b": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
+          "courseC_maze_debugging2_a": "Il y a beaucoup de code intéressant dans l'espace de travail. Ne l'efface pas entièrement pour éviter de recommencer à zéro!",
+          "courseC_maze_debugging2_b": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que tout fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
           "courseC_maze_debugging2_c": "Tu ne trouves pas le problème ? Essaie d’exécuter le code quelques fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging3": {
-          "courseC_maze_debugging3_a": "Pour enlever un bloc au milieu du code, déplace tous les autres blocs à un endroit de l'espace de travail.\n\nRamène le bloc que tu souhaites retirer dans la boite à outils.\n\nEnfin, ramène les autres blocs où ils doivent être.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Pour enlever un bloc du  milieu du code, déplace tous les autres blocs à un endroit dans l'espace de travail.\n\nRamène le bloc que tu souhaites retirer dans la boite à outils.\n\nEnfin, ramène les autres blocs où ils doivent être.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "Tu ne trouves pas le problème ? Essaie d’exécuter le code quelques fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging3_2018": {
-          "courseC_maze_debugging3_a": "Pour enlever un bloc au milieu du code, déplace tous les autres blocs à un endroit de l'espace de travail.\n\nRamène le bloc que tu souhaites retirer dans la boite à outils.\n\nEnfin, ramène les autres blocs où ils doivent être.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Pour enlever un bloc du  milieu du code, déplace tous les autres blocs à un endroit dans l'espace de travail.\n\nRamène le bloc que tu souhaites retirer dans la boite à outils.\n\nEnfin, ramène les autres blocs où ils doivent être.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "Tu ne trouves pas le problème ? Essaie d’exécuter le code quelques fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging3_2019": {
-          "courseC_maze_debugging3_a": "Pour enlever un bloc au milieu du code, déplace tous les autres blocs à un endroit de l'espace de travail.\n\nRamène le bloc que tu souhaites retirer dans la boite à outils.\n\nEnfin, ramène les autres blocs où ils doivent être.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Pour enlever un bloc du  milieu du code, déplace tous les autres blocs à un endroit dans l'espace de travail.\n\nRamène le bloc que tu souhaites retirer dans la boite à outils.\n\nEnfin, ramène les autres blocs où ils doivent être.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "Tu ne trouves pas le problème ? Essaie d’exécuter le code quelques fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging3_2020": {
-          "courseC_maze_debugging3_a": "Pour enlever un bloc au milieu du code, déplace tous les autres blocs à un endroit de l'espace de travail.\n\nRamène le bloc que tu souhaites retirer dans la boite à outils.\n\nEnfin, ramène les autres blocs où ils doivent être.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "Pour enlever un bloc du  milieu du code, déplace tous les autres blocs à un endroit dans l'espace de travail.\n\nRamène le bloc que tu souhaites retirer dans la boite à outils.\n\nEnfin, ramène les autres blocs où ils doivent être.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "Tu ne trouves pas le problème ? Essaie d’exécuter le code quelques fois pour voir ce qui se passe."
         },
         "courseC_maze_debugging4": {
-          "courseC_maze_debugging4_a": "Utilise le bouton \"Etape\" pour passer les instructions pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?",
+          "courseC_maze_debugging4_a": "Utilise le bouton \"Étape\" pour faire passer les instructions pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?",
           "courseC_maze_debugging4_b": "Un des changements de direction fait aller Scrat dans la mauvaise direction. Est-ce que tu peux trouver lequel?"
         },
         "courseC_maze_debugging4_2018": {
-          "courseC_maze_debugging4_a": "Utilise le bouton \"Etape\" pour passer les instructions pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?",
+          "courseC_maze_debugging4_a": "Utilise le bouton \"Étape\" pour faire passer les instructions pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?",
           "courseC_maze_debugging4_b": "Un des changements de direction fait aller Scrat dans la mauvaise direction. Est-ce que tu peux trouver lequel?"
         },
         "courseC_maze_debugging4_2019": {
-          "courseC_maze_debugging4_a": "Utilise le bouton \"Etape\" pour passer les instructions pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?",
+          "courseC_maze_debugging4_a": "Utilise le bouton \"Étape\" pour faire passer les instructions pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?",
           "courseC_maze_debugging4_b": "Un des changements de direction fait aller Scrat dans la mauvaise direction. Est-ce que tu peux trouver lequel?"
         },
         "courseC_maze_debugging4_2020": {
-          "courseC_maze_debugging4_a": "Utilise le bouton \"Etape\" pour passer les instructions pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?",
+          "courseC_maze_debugging4_a": "Utilise le bouton \"Étape\" pour faire passer les instructions pas à pas. Est ce que cela t'aide à trouver la ligne qui pose problème?",
           "courseC_maze_debugging4_b": "Un des changements de direction fait aller Scrat dans la mauvaise direction. Est-ce que tu peux trouver lequel?"
         },
         "courseC_maze_debugging5": {
-          "courseC_maze_debugging5_a": "Il y a déjà beaucoup de blocs qui peuvent aider dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton \"Etape\" pour les passer et trouver où le code ne fonctionne pas.",
-          "courseC_maze_debugging5_b": "Essaie de dire ce que devrait faire Scrat à hautes voix. Est-ce que c'est la même chose que le code dans l'espace de travail? Qu'est ce qui ne va pas?"
+          "courseC_maze_debugging5_a": "Il y a déjà beaucoup de blocs qui peuvent aider dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton \"Étape\" pour les faire passer et trouver où le code ne fonctionne pas.",
+          "courseC_maze_debugging5_b": "Essaie de dire à haute voix ce que devrait faire Scrat. Est-ce que c'est la même chose que le code dans l'espace de travail? Qu'est ce qui ne va pas?"
         },
         "courseC_maze_debugging5_2018": {
-          "courseC_maze_debugging5_a": "Il y a déjà beaucoup de blocs qui peuvent aider dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton \"Etape\" pour les passer et trouver où le code ne fonctionne pas.",
+          "courseC_maze_debugging5_a": "Il y a déjà beaucoup de blocs qui peuvent aider dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton \"Étape\" pour les faire passer et trouver où le code ne fonctionne pas.",
           "courseC_maze_debugging5_c": "Tu peux changer la direction du bloc tourner en cliquant sur le menu déroulant.",
-          "courseC_maze_debugging5_b": "Essaie de dire ce que devrait faire Scrat à hautes voix. Est-ce que c'est la même chose que le code dans l'espace de travail? Qu'est ce qui ne va pas?"
+          "courseC_maze_debugging5_b": "Essaie de dire à haute voix ce que devrait faire Scrat. Est-ce que c'est la même chose que le code dans l'espace de travail? Qu'est ce qui ne va pas?"
         },
         "courseC_maze_debugging5_2019": {
-          "courseC_maze_debugging5_a": "Il y a déjà beaucoup de blocs qui peuvent aider dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton \"Etape\" pour les passer et trouver où le code ne fonctionne pas.",
+          "courseC_maze_debugging5_a": "Il y a déjà beaucoup de blocs qui peuvent aider dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton \"Étape\" pour les faire passer et trouver où le code ne fonctionne pas.",
           "courseC_maze_debugging5_c": "Tu peux changer la direction du bloc tourner en cliquant sur le menu déroulant.",
-          "courseC_maze_debugging5_b": "Essaie de dire ce que devrait faire Scrat à hautes voix. Est-ce que c'est la même chose que le code dans l'espace de travail? Qu'est ce qui ne va pas?"
+          "courseC_maze_debugging5_b": "Essaie de dire à haute voix ce que devrait faire Scrat. Est-ce que c'est la même chose que le code dans l'espace de travail? Qu'est ce qui ne va pas?"
         },
         "courseC_maze_debugging5_2020": {
-          "courseC_maze_debugging5_a": "Il y a déjà beaucoup de blocs qui peuvent aider dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton \"Etape\" pour les passer et trouver où le code ne fonctionne pas.",
+          "courseC_maze_debugging5_a": "Il y a déjà beaucoup de blocs qui peuvent aider dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton \"Étape\" pour les faire passer et trouver où le code ne fonctionne pas.",
           "courseC_maze_debugging5_c": "Tu peux changer la direction du bloc tourner en cliquant sur le menu déroulant.",
-          "courseC_maze_debugging5_b": "Essaie de dire ce que devrait faire Scrat à hautes voix. Est-ce que c'est la même chose que le code dans l'espace de travail? Qu'est ce qui ne va pas?"
+          "courseC_maze_debugging5_b": "Essaie de dire à haute voix ce que devrait faire Scrat. Est-ce que c'est la même chose que le code dans l'espace de travail? Qu'est ce qui ne va pas?"
         },
         "courseC_maze_debugging6": {
           "courseC_maze_debugging6_a": "-   Qu'est-ce que Scrat devrait faire?\n-   Qu'est-ce que Scrat fait ?\n-   Qu'est-ce que ça te dit ?",
-          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bogue, passe à nouveau en mode débogage pour trouver le second.\n\nRépéte le processus jusqu'à ce que le programme fonctionne!"
+          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bug, passe à nouveau en mode débugage pour trouver le second.\n\nRépète le processus jusqu'à ce que le programme fonctionne!"
         },
         "courseC_maze_debugging6_2018": {
           "courseC_maze_debugging6_a": "-   Qu'est-ce que Scrat devrait faire?\n-   Qu'est-ce que Scrat fait ?\n-   Qu'est-ce que ça te dit ?",
-          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bogue, passe à nouveau en mode débogage pour trouver le second.\n\nRépéte le processus jusqu'à ce que le programme fonctionne!"
+          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bug, passe à nouveau en mode débugage pour trouver le second.\n\nRépète le processus jusqu'à ce que le programme fonctionne!"
         },
         "courseC_maze_debugging6_2019": {
           "courseC_maze_debugging6_a": "-   Qu'est-ce que Scrat devrait faire?\n-   Qu'est-ce que Scrat fait ?\n-   Qu'est-ce que ça te dit ?",
-          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bogue, passe à nouveau en mode débogage pour trouver le second.\n\nRépéte le processus jusqu'à ce que le programme fonctionne!"
+          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bug, passe à nouveau en mode débugage pour trouver le second.\n\nRépète le processus jusqu'à ce que le programme fonctionne!"
         },
         "courseC_maze_debugging6_2020": {
           "courseC_maze_debugging6_a": "-   Qu'est-ce que Scrat devrait faire?\n-   Qu'est-ce que Scrat fait ?\n-   Qu'est-ce que ça te dit ?",
-          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bogue, passe à nouveau en mode débogage pour trouver le second.\n\nRépéte le processus jusqu'à ce que le programme fonctionne!"
+          "courseC_maze_debugging6_b": "Une fois que tu as trouvé et corrigé le premier bug, passe à nouveau en mode débugage pour trouver le second.\n\nRépète le processus jusqu'à ce que le programme fonctionne!"
         },
         "courseC_maze_debugging7": {
-          "courseC_maze_debugging7_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
-          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton \"Etape\" pour jouer le programme ligne par ligne!",
-          "courseC_maze_debugging7_c": "Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débogage pour trouver le suivant.\n\nRépéte le processus jusqu'à ce que le programme fonctionne!"
+          "courseC_maze_debugging7_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que ça ne fonctionne pas?",
+          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton \"Étape\" pour faire passer le programme ligne par ligne!",
+          "courseC_maze_debugging7_c": "Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débugage pour trouver le suivant.\n\nRépète le processus jusqu'à ce que le programme fonctionne!"
         },
         "courseC_maze_debugging7_2018": {
-          "courseC_maze_debugging7_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
-          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton \"Etape\" pour jouer le programme ligne par ligne!",
-          "courseC_maze_debugging7_c": "Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débogage pour trouver le suivant.\n\nRépéte le processus jusqu'à ce que le programme fonctionne!"
+          "courseC_maze_debugging7_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que ça ne fonctionne pas?",
+          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton \"Étape\" pour faire passer le programme ligne par ligne!",
+          "courseC_maze_debugging7_c": "Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débugage pour trouver le suivant.\n\nRépète le processus jusqu'à ce que le programme fonctionne!"
         },
         "courseC_maze_debugging7_2019": {
-          "courseC_maze_debugging7_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
-          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton \"Etape\" pour jouer le programme ligne par ligne!",
-          "courseC_maze_debugging7_c": "Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débogage pour trouver le suivant.\n\nRépéte le processus jusqu'à ce que le programme fonctionne!"
+          "courseC_maze_debugging7_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que ça ne fonctionne pas?",
+          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton \"Étape\" pour faire passer le programme ligne par ligne!",
+          "courseC_maze_debugging7_c": "Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débugage pour trouver le suivant.\n\nRépète le processus jusqu'à ce que le programme fonctionne!"
         },
         "courseC_maze_debugging7_2020": {
-          "courseC_maze_debugging7_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que cela ne fonctionne pas?",
-          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton \"Etape\" pour jouer le programme ligne par ligne!",
-          "courseC_maze_debugging7_c": "Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débogage pour trouver le suivant.\n\nRépéte le processus jusqu'à ce que le programme fonctionne!"
+          "courseC_maze_debugging7_a": "-   Est ce que tout fonctionne après la première étape?\n-   Est-ce que cela fonctionne toujours après la seconde?\n-   Où est ce que ça ne fonctionne pas?",
+          "courseC_maze_debugging7_b": "N'oublie pas d'utiliser le bouton \"Étape\" pour faire passer le programme ligne par ligne!",
+          "courseC_maze_debugging7_c": "Après avoir trouvé et corrigé le premier bogue, assure toi de passer à nouveau en mode débugage pour trouver le suivant.\n\nRépète le processus jusqu'à ce que le programme fonctionne!"
         },
         "courseC_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "Gauche ou droite? C'est à toi de décider!",
@@ -6662,36 +6662,36 @@
           "courseD_maze_nestedLoops6_c": "Tu auras besoin d’utiliser deux ensembles de boucles imbriquées ˋrépéter\\` pour résoudre cette énigme."
         },
         "courseD_maze_ramp1": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clic à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
           "courseC_maze_programming1_b": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si tu ne penses pas avoir encore résolu l’énigme."
         },
         "courseD_maze_ramp1_2018": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clic à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
           "courseC_maze_programming1_b": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si tu ne penses pas avoir encore résolu l’énigme."
         },
         "courseD_maze_ramp1_2019": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clic à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
           "courseC_maze_programming1_b": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si tu ne penses pas avoir encore résolu l’énigme."
         },
         "courseD_maze_ramp1_2020": {
-          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clic à nouveau sur \"Démarrer\".",
+          "courseC_maze_programming1_a": "Si l'oiseau ne va pas ver le cochon, assure toi que les 3 blocs sont bien assemblés ensemble, puis clique à nouveau sur \"Démarrer\".",
           "courseC_maze_programming1_b": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si tu ne penses pas avoir encore résolu l’énigme."
         },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés ensemble et aussi sur le bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp2_2018": {
           "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés ensemble et aussi sur le bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp2_2019": {
           "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés ensemble et aussi sur le bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp2_2020": {
           "courseC_maze_programming2_a": "Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand exécutéˋ.",
-          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés ensemble et aussi sur le bloc `quand l'exécution commence`."
+          "courseC_maze_programming2_b": "Assure toi que les 3 blocs sont attachés et aussi au bloc `quand l'exécution commence`."
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \n\nPour supprimer un bloc du milieu de ton code, fais glisser tous les blocs situés en-dessous vers la droite, et laisse-les de côté, dans l'espace de travail, pendant quelques instants.  \n\nClique sur le bloc que tu souhaites supprimer, et fais-le glisser vers la boîte à outils. \n\nPour finir, remets tes autres blocs bien à leur place."
@@ -6707,11 +6707,11 @@
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois de plus pour atteindre le cochon."
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon."
         },
         "courseD_maze_ramp4_2018": {
           "courseC_maze_programming4_a": "Tu peux tourner à gauche ou à droite du point de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera aller vers le bas.",
-          "courseC_maze_programming4_b": "Pour suive le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois de plus pour atteindre le cochon."
+          "courseC_maze_programming4_b": "Pour suivre le chemin, avance et tourne dans un sens, puis avance à nouveau et tourne dans le sens contraire. Avance une fois de plus pour atteindre le cochon."
         },
         "courseD_maze_ramp4_2019": {
           "courseC_maze_programming4_a": "Tu peux tourner à droite ou à gauche du point de vue de Scrat. Si tu es orienté à droite, tourner à droite te fera aller vers le bas.",
@@ -7012,33 +7012,33 @@
         },
         "courseE_artist_concept1": {
           "courseE_artist_concept1_a": "Les hexagones ont des côtés de 50 pixels et tournent de 60 degrés à droite.",
-          "courseE_artist_concept1_b": "Essaie d'utiliser une fonction qui te permettra de ne pas écrire le code pour un hexagone encore et encore.",
-          "courseE_artist_concept1_c": "Utilise le block `définis la largeur` pour changer l’épaisseur du stylo avant chaque appel à la fonction."
+          "courseE_artist_concept1_b": "Essaie d'utiliser une fonction qui te permettra de ne pas avoir à réécrire le code pour un hexagone.",
+          "courseE_artist_concept1_c": "Utilise le block `définir la largeur` pour changer l’épaisseur du stylo avant chaque appel à la fonction."
         },
         "courseE_artist_concept1_2018": {
           "courseE_artist_concept1_a": "Les hexagones ont des côtés de 50 pixels et tournent de 60 degrés à droite.",
-          "courseE_artist_concept1_b": "Essaie d'utiliser une fonction qui te permettra de ne pas écrire le code pour un hexagone encore et encore.",
-          "courseE_artist_concept1_c": "Utilise le block `définis la largeur` pour changer l’épaisseur du stylo avant chaque appel à la fonction."
+          "courseE_artist_concept1_b": "Essaie d'utiliser une fonction qui te permettra de ne pas avoir à réécrire le code pour un hexagone.",
+          "courseE_artist_concept1_c": "Utilise le block `définir la largeur` pour changer l’épaisseur du stylo avant chaque appel à la fonction."
         },
         "courseE_artist_concept4": {
-          "courseE_artist_concept4_a": "Il y a plusieurs façons de résoudre ce puzzle. Tu peux faire un plan ?",
+          "courseE_artist_concept4_a": "Il y a plusieurs façons de résoudre ce puzzle. Peux-tu faire un plan?",
           "courseE_artist_concept4_b": "Essaie de créer un carré. Puis fais une ligne de carrés. Qu'est ce qui vient ensuite ?",
-          "courseE_artist_concept4_c": "Après avoir dessiné une ligne de carrés, tu peux soi faire demi tour et dessiner une autre ligne de carrés en allant sur la gauche, ou tu peux sauter à gauche du dessin pour dessiner une autre ligne de carrés en allant sur la droite. Qu'est-ce que tu préfères ?"
+          "courseE_artist_concept4_c": "Après avoir dessiné une ligne de carrés, tu peux soit faire demi tour et dessiner une autre ligne de carrés en allant sur la gauche, soit sauter à gauche du dessin pour dessiner une autre ligne de carrés en allant sur la droite. Qu'est-ce que tu préfères ?"
         },
         "courseE_artist_concept4_2018": {
-          "courseE_artist_concept4_a": "Il y a plusieurs façons de résoudre ce puzzle. Tu peux faire un plan ?",
+          "courseE_artist_concept4_a": "Il y a plusieurs façons de résoudre ce puzzle. Peux-tu faire un plan?",
           "courseE_artist_concept4_b": "Essaie de créer un carré. Puis fais une ligne de carrés. Qu'est ce qui vient ensuite ?",
-          "courseE_artist_concept4_c": "Après avoir dessiné une ligne de carrés, tu peux soi faire demi tour et dessiner une autre ligne de carrés en allant sur la gauche, ou tu peux sauter à gauche du dessin pour dessiner une autre ligne de carrés en allant sur la droite. Qu'est-ce que tu préfères ?"
+          "courseE_artist_concept4_c": "Après avoir dessiné une ligne de carrés, tu peux soit faire demi tour et dessiner une autre ligne de carrés en allant sur la gauche, soit sauter à gauche du dessin pour dessiner une autre ligne de carrés en allant sur la droite. Qu'est-ce que tu préfères ?"
         },
         "courseE_artist_concept_challenge1": {
           "courseE_artist_concept_challenge1_a": "Le demi-hexagone a une **longueur de 30** et tourne à droite de **60 degrés**.  ",
           "courseE_artist_concept_challenge1_b": "Le 2/3 de triangle a une **longueur de 80** et tourne à droite de **120 degrés**. ",
-          "courseE_artist_concept_challenge1_c": "C'est le modèle que tu veux répéter pour créer la forme complète:\n\n![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)"
+          "courseE_artist_concept_challenge1_c": "Voici le modèle que tu veux répéter pour créer la forme complète:\n\n![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)"
         },
         "courseE_artist_concept_challenge1_2018": {
           "courseE_artist_concept_challenge1_a": "Le demi-hexagone a une **longueur de 30** et tourne à droite de **60 degrés**.  ",
           "courseE_artist_concept_challenge1_b": "Le 2/3 de triangle a une **longueur de 80** et tourne à droite de **120 degrés**. ",
-          "courseE_artist_concept_challenge1_c": "C'est le modèle que tu veux répéter pour créer la forme complète:\n\n![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)"
+          "courseE_artist_concept_challenge1_c": "Voici le modèle que tu veux répéter pour créer la forme complète:\n\n![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)"
         },
         "courseE_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "Dès que tu as définis une fonction, tu peux l'appeler encore et encore - n'importe quand, dès que tu le souhaites!",
@@ -7051,36 +7051,36 @@
         "courseE_artist_functions1": {
           "courseE_artist_functions1_a": "Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que tu devras avancer de 175 pixels avant de dessiner ton deuxième carré.",
           "courseE_artist_functions1_b": "Tu peux dessiner des lignes qui se superposent pour dessiner les lunettes.",
-          "courseE_artist_functions1_c": "Pour un code plus court, essaie d'utiliser une boucle `répète` pour dessiner le cadre des lunettes en carré."
+          "courseE_artist_functions1_c": "Pour un code plus court, essaie d'utiliser une boucle `répéter` pour dessiner les cercles carrés des lunettes."
         },
         "courseE_artist_functions10": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessine ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessine un hexagone` et appelle le plusieurs fois.",
-          "courseD_artist_functions10_c": "Est ce que tu vois où ce dessin pourrait utiliser une fonction appelé `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions10_2018": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessine ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessine un hexagone` et appelle le plusieurs fois.",
-          "courseD_artist_functions10_c": "Est ce que tu vois où ce dessin pourrait utiliser une fonction appelé `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions10_2019": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessine ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessine un hexagone` et appelle le plusieurs fois.",
-          "courseD_artist_functions10_c": "Est ce que tu vois où ce dessin pourrait utiliser une fonction appelé `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions10_2020": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessine ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessine un hexagone` et appelle le plusieurs fois.",
-          "courseD_artist_functions10_c": "Est ce que tu vois où ce dessin pourrait utiliser une fonction appelé `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions1_copy": {
           "courseE_artist_functions1_a": "Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que tu devras avancer de 175 pixels avant de dessiner ton deuxième carré.",
           "courseE_artist_functions1_b": "Tu peux dessiner des lignes qui se superposent pour dessiner les lunettes.",
-          "courseE_artist_functions1_c": "Pour un code plus court, essaie d'utiliser une boucle `répète` pour dessiner le cadre des lunettes en carré."
+          "courseE_artist_functions1_c": "Pour un code plus court, essaie d'utiliser une boucle `répéter` pour dessiner les cercles carrés des lunettes."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme. Seulement la partie qui dessine un carré de 100 pixels de côté.",
-          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessine un carré` pour \"appeler\" ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme, seulement la partie qui dessine un carré de 100 pixels de côté.",
+          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessiner un carré` pour \"appeler\" ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Ton programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
         },
         "courseE_artist_functions2_2018": {
@@ -7099,8 +7099,8 @@
           "courseD_artist_functions2_a": "Votre programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme. Seulement la partie qui dessine un carré de 100 pixels de côté.",
-          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessine un carré` pour \"appeler\" ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme, seulement la partie qui dessine un carré de 100 pixels de côté.",
+          "courseD_artist_functions2_c": "Utilise le bloc vert `Dessiner un carré` pour \"appeler\" ta fonction après le bloc `quand l'exécution commence`. Sinon, le code de ta fonction ne sera pas exécuté.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Ton programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
         },
         "courseE_artist_functions3": {
@@ -7113,18 +7113,18 @@
         },
         "courseE_artist_functions4": {
           "courseD_artist_functions4_a": "Essaie d'utiliser une fonction!",
-          "courseD_artist_functions4_b": "Prend le bloc de fonction `dessine une étoile` dans la boite à outils pour commencer à construire ta fonction. Il devrait avoir le même code que le puzzle précédent, puisque tu dessines la même forme d'étoile.",
-          "courseD_artist_functions4_c": "Utilise le bloc vert \\`dessine une étoile' pour appeler cette fonction dans ton programme principal. N'oublie pas de sauter en avant entre chaque étoile!"
+          "courseD_artist_functions4_b": "Prend le bloc de fonction `dessiner une étoile` de la boîte à outils pour commencer à construire ta fonction. Elle devrait avoir le même code que le puzzle précédent, puisque tu dessines la même forme d'étoile.",
+          "courseD_artist_functions4_c": "Utilise le bloc vert `dessiner une étoile` pour appeler cette fonction dans ton programme principal. N'oublie pas de sauter en avant entre chaque étoile!"
         },
         "courseE_artist_functions4_copy": {
           "courseD_artist_functions4_a": "Essaie d'utiliser une fonction!",
-          "courseD_artist_functions4_b": "Prend le bloc de fonction `dessine une étoile` dans la boite à outils pour commencer à construire ta fonction. Il devrait avoir le même code que le puzzle précédent, puisque tu dessines la même forme d'étoile.",
-          "courseD_artist_functions4_c": "Utilise le bloc vert \\`dessine une étoile' pour appeler cette fonction dans ton programme principal. N'oublie pas de sauter en avant entre chaque étoile!"
+          "courseD_artist_functions4_b": "Prend le bloc de fonction `dessiner une étoile` de la boîte à outils pour commencer à construire ta fonction. Elle devrait avoir le même code que le puzzle précédent, puisque tu dessines la même forme d'étoile.",
+          "courseD_artist_functions4_c": "Utilise le bloc vert `dessiner une étoile` pour appeler cette fonction dans ton programme principal. N'oublie pas de sauter en avant entre chaque étoile!"
         },
         "courseE_artist_functions5": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
           "courseD_artist_functions5_b": "Les fonctions rendent plus facile à n'importe quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur d'une boucle!",
-          "courseD_artist_functions5_c": "Commence par déplacer le code pour une forme d'étoile dans la fonction `dessine une étoile`, puis utilise la fonction pour dessiner 3 étoiles!"
+          "courseD_artist_functions5_c": "Commence par déplacer le code pour une forme d'étoile dans la fonction `dessiner une étoile`, puis utilise la fonction pour dessiner 3 étoiles!"
         },
         "courseE_artist_functions5_2018": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
@@ -7144,7 +7144,7 @@
         "courseE_artist_functions5_copy": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
           "courseD_artist_functions5_b": "Les fonctions rendent plus facile à n'importe quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur d'une boucle!",
-          "courseD_artist_functions5_c": "Commence par déplacer le code pour une forme d'étoile dans la fonction `dessine une étoile`, puis utilise la fonction pour dessiner 3 étoiles!"
+          "courseD_artist_functions5_c": "Commence par déplacer le code pour une forme d'étoile dans la fonction `dessiner une étoile`, puis utilise la fonction pour dessiner 3 étoiles!"
         },
         "courseE_artist_functions6": {
           "grade4_artist_functions_windows0_a": "Concentre-toi seulement sur le fait de dessiner une fenêtre pour le moment. Nous créerons une fonction dans le prochain puzzle.",
@@ -7152,50 +7152,50 @@
           "grade4_artist_functions_windows0_c": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter le code pour voir ce qui se passe, même si tu n'as pas encore résolu l'énigme."
         },
         "courseE_artist_functions7": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à une.",
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
           "courseD_artist_functions7_b": "Tu ne devrais pas avoir besoin d'ajouter des boucles pour répéter. Fais juste sauter l'artiste de 100 pixels entre chaque fenêtre du haut, puis de 150 pixels vers le bas pour faire les fenêtres du bas."
         },
         "courseE_artist_functions7_2018": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à une.",
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
           "courseD_artist_functions7_b": "Pour aller des fenêtres supérieures aux fenêtres inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la bonne direction pour achever la maison !"
         },
         "courseE_artist_functions7_2019": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à une.",
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
           "courseD_artist_functions7_b": "Pour aller des fenêtres supérieures aux fenêtres inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la bonne direction pour achever la maison !"
         },
         "courseE_artist_functions7_2020": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à une.",
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
           "courseD_artist_functions7_b": "Pour aller des fenêtres supérieures aux fenêtres inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la bonne direction pour achever la maison !"
         },
         "courseE_artist_functions8": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `saute en avant` et/ou `saute en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essai de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessine une ligne de carrés` pour faire cette image?",
+          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
+          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
           "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
-          "courseD_artist_functions8_c": "A la fin de chaque ligne de carrés, l'artiste aura besoin de sauter en arrière vers le bas avant qu'il trace la prochaine ligne de carrés.",
+          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "À la fin de chaque ligne de carrés, l'artiste aura besoin de sauter en arrière vers le bas avant qu'il trace la prochaine ligne de carrés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2018": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `saute en avant` et/ou `saute en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essai de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessine une ligne de carrés` pour faire cette image?",
+          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
+          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
           "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque série de carrés décalés, l'artiste devra sauter vers le bas et en arrière, avant de dessiner la série suivante de carrés décalés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2019": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `saute en avant` et/ou `saute en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essai de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessine une ligne de carrés` pour faire cette image?",
+          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
+          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
           "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque série de carrés décalés, l'artiste devra sauter vers le bas et en arrière, avant de dessiner la série suivante de carrés décalés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2020": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `saute en avant` et/ou `saute en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essai de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessine une ligne de carrés` pour faire cette image?",
+          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
+          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
           "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque série de carrés décalés, l'artiste devra sauter vers le bas et en arrière, avant de dessiner la série suivante de carrés décalés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
@@ -7231,31 +7231,31 @@
         },
         "courseE_artist_functions9": {
           "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessine un triangle`\n-   Fais la fonction `dessine une ligne de triangle`\n-   Utilise ta fonction `dessine une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangle.",
+          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
           "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce trésor :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n-   Dessine une ligne de triangles\n-   Tourne de 120 degrés"
+          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
         },
         "courseE_artist_functions9_2018": {
           "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessine un triangle`\n-   Fais la fonction `dessine une ligne de triangle`\n-   Utilise ta fonction `dessine une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangle.",
+          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
           "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce trésor :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n-   Dessine une ligne de triangles\n-   Tourne de 120 degrés"
+          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
         },
         "courseE_artist_functions9_2019": {
           "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessine un triangle`\n-   Fais la fonction `dessine une ligne de triangle`\n-   Utilise ta fonction `dessine une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangle.",
+          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
           "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce trésor :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n-   Dessine une ligne de triangles\n-   Tourne de 120 degrés"
+          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
         },
         "courseE_artist_functions9_2020": {
           "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessine un triangle`\n-   Fais la fonction `dessine une ligne de triangle`\n-   Utilise ta fonction `dessine une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangle.",
+          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
           "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce trésor :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n-   Dessine une ligne de triangles\n-   Tourne de 120 degrés"
+          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
         },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_a": "Si tu appelles la fonction une fois de plus, tu peux créer le même dessin dans le dernier coin.",
@@ -7287,45 +7287,45 @@
         },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_a": "Pour dessiner un côté, utilise le bloc `move forward by 100 pixels`, et remplace 100 par 200.",
-          "courseE_artist_ramp8_b": "Pour dessiner 4 côtés, met le bloc `avancer de 100 pixels` dans la boucle et assure-toi que la boucle soit bien configurée pour dessiner 4 fois !",
-          "courseE_artist_ramp8_c": "Ta boucle a 2 blocs à l'intérieur: `avancer`et `tourne à droite de 90 degrés`."
+          "courseE_artist_ramp8_b": "Pour dessiner 4 côtés, met le bloc `avancer de 100 pixels` dans la boucle et assure-toi que la boucle soit bien configurée pour dessiner 4 fois !\n\nN'oublie pas de tourner après!",
+          "courseE_artist_ramp8_c": "Ta boucle a 2 blocs à l'intérieur: `avancer`et `tourner à droite de 90 degrés`."
         },
         "courseE_artist_ramp8_2": {
           "courseE_artist_ramp8_a": "Pour dessiner un côté, utilise le bloc `move forward by 100 pixels`, et remplace 100 par 200.",
-          "courseE_artist_ramp8_b": "Pour dessiner 4 côtés, met le bloc `avancer de 100 pixels` dans la boucle et assure-toi que la boucle soit bien configurée pour dessiner 4 fois !",
-          "courseE_artist_ramp8_c": "Ta boucle a 2 blocs à l'intérieur: `avancer`et `tourne à droite de 90 degrés`."
+          "courseE_artist_ramp8_b": "Pour dessiner 4 côtés, met le bloc `avancer de 100 pixels` dans la boucle et assure-toi que la boucle soit bien configurée pour dessiner 4 fois !\n\nN'oublie pas de tourner après!",
+          "courseE_artist_ramp8_c": "Ta boucle a 2 blocs à l'intérieur: `avancer`et `tourner à droite de 90 degrés`."
         },
         "courseE_artist_ramp9": {
-          "courseD_artist_ramp12_a": "Comment est-ce similiaire à un carré ?  Qu'est-ce qui est différent ?",
+          "courseD_artist_ramp12_a": "Comment est-ce similaire à un carré ?  Qu'est-ce qui est différent ?",
           "courseD_artist_ramp12_b": "Tu peux utiliser le menu déroulant des blocs ˋtourner\\` pour voir de quel angle tu as besoin !",
           "courseD_artist_ramp12_c": "Pour dessiner chaque côté, tu devras avancer de 100 pixels, puis tourner de 120 degrés. De combien de côté as-tu besoin ?"
         },
         "courseE_artist_ramp9_2": {
-          "courseD_artist_ramp12_a": "Comment est-ce similiaire à un carré ?  Qu'est-ce qui est différent ?",
+          "courseD_artist_ramp12_a": "Comment est-ce similaire à un carré ?  Qu'est-ce qui est différent ?",
           "courseD_artist_ramp12_b": "Tu peux utiliser le menu déroulant des blocs ˋtourner\\` pour voir de quel angle tu as besoin !",
           "courseD_artist_ramp12_c": "Pour dessiner chaque côté, tu devras avancer de 100 pixels, puis tourner de 120 degrés. De combien de côté as-tu besoin ?"
         },
         "courseE_bee_concept1": {
           "courseE_bee_concept1_b": "Est-ce qu'il y a des motifs qui se _répétent_ ?",
-          "courseE_bee_concept1_a": "Si tu ne comprends pas comment utiliser des boucles imbriquées, essaie d'écrire les instructions pas à pas sur un morceau de papier. Entoure les motifs que tu vois."
+          "courseE_bee_concept1_a": "Si tu ne comprends pas comment utiliser des boucles imbriquées, essaie d'écrire les instructions pas à pas sur une feuille. Entoure les motifs que tu vois."
         },
         "courseE_bee_concept1_2018": {
           "courseE_bee_concept1_b": "Est-ce qu'il y a des motifs qui se _répétent_ ?",
-          "courseE_bee_concept1_a": "Si tu ne comprends pas comment utiliser des boucles imbriquées, essaie d'écrire les instructions pas à pas sur un morceau de papier. Entoure les motifs que tu vois."
+          "courseE_bee_concept1_a": "Si tu ne comprends pas comment utiliser des boucles imbriquées, essaie d'écrire les instructions pas à pas sur une feuille. Entoure les motifs que tu vois."
         },
         "courseE_bee_concept2": {
-          "courseE_bee_concept2_a": "Une boucle `Tant que` aiderait ici?",
+          "courseE_bee_concept2_a": "Une boucle `Tant que` aiderait-elle ici?",
           "courseE_bee_concept2_d": "Tu peux même vérifier les espaces vides pour voir si miel est > 0.",
           "courseE_bee_concept2_b": "Tu peux utiliser des boucles `tant que` pour aller au bout de chaque chemin, et ramasser tous le miel dans chaque espace.",
-          "courseE_bee_concept2_c": "Dans quel sens l'abeille doit tourner après chaque trajet ?"
+          "courseE_bee_concept2_c": "Dans quel sens l'abeille doit tourner après chaque chemin ?"
         },
         "courseE_bee_concept2_2018": {
-          "courseE_bee_concept2_a": "Une boucle `Tant que` aiderait ici?",
+          "courseE_bee_concept2_a": "Une boucle `Tant que` aiderait-elle ici?",
           "courseE_bee_concept2_b": "Tu peux utiliser des boucles `tant que` pour aller au bout de chaque chemin, et ramasser tous le miel dans chaque espace.",
-          "courseE_bee_concept2_c": "Dans quel sens l'abeille doit tourner après chaque trajet ?"
+          "courseE_bee_concept2_c": "Dans quel sens l'abeille doit tourner après chaque chemin ?"
         },
         "courseE_bee_concept3": {
-          "courseE_bee_concept3a_a": "Essai d'utiliser des boucles imbriquées `Répéter` pour résoudre ce puzzle.",
+          "courseE_bee_concept3a_a": "Essaie d'utiliser des boucles imbriquées `Répéter` pour résoudre ce puzzle.",
           "courseE_bee_concept3a_b": "Si tu ne sais pas où mettre des boucles, essaies d'écrire ton code pas à pas et de chercher des motifs.",
           "courseE_bee_concept3a_c": "Il y a 3 groupes de fleurs, donc ta boucle `répéter` extérieur devrait se répéter 3 fois."
         },
@@ -7335,23 +7335,23 @@
         },
         "courseE_bee_concept4": {
           "courseE_bee_concept4_a": "Une déclaration `si/autre` pourrait vraiment t'aider ici.",
-          "courseE_bee_concept4_b": "Le motif de marche d'escalier peut t'aider à passer sur toutes les fleurs et nids d'abeilles.",
-          "courseE_bee_concept4_c": "Si tu es sur une fleur, combien de fois tu dois ramasser le nectar? Est-ce que c'est pareil pour chaque fleur?"
+          "courseE_bee_concept4_b": "Le motif de marche d'escalier peut t'aider à passer sur toutes les fleurs et rayons de miel.",
+          "courseE_bee_concept4_c": "Si tu es sur une fleur, combien de fois dois-tu ramasser le nectar? Est-ce que c'est pareil pour chaque fleur?"
         },
         "courseE_bee_concept4_2018": {
           "courseE_bee_concept4_a": "Une déclaration `si/autre` pourrait vraiment t'aider ici.",
-          "courseE_bee_concept4_b": "Le motif de marche d'escalier peut t'aider à passer sur toutes les fleurs et nids d'abeilles.",
-          "courseE_bee_concept4_c": "Si tu es sur une fleur, combien de fois tu dois ramasser le nectar? Est-ce que c'est pareil pour chaque fleur?"
+          "courseE_bee_concept4_b": "Le motif de marche d'escalier peut t'aider à passer sur toutes les fleurs et rayons de miel.",
+          "courseE_bee_concept4_c": "Si tu es sur une fleur, combien de fois dois-tu ramasser le nectar? Est-ce que c'est pareil pour chaque fleur?"
         },
         "courseE_bee_concept5": {
-          "courseE_bee_concept5_a": "Les fleurs suivent un trajet rectangulaire. Tu peux tracer ce rectangle en utilisant un bloc `Tant que chemin devant` même avec un nombre différent de carrés par côté.",
+          "courseE_bee_concept5_a": "Les fleurs suivent un trajet rectangulaire. Tu peux tracer ce rectangle en utilisant un bloc `Tant qu'il y a un chemin devant` même avec un nombre différent de carrés par côté.",
           "courseE_bee_concept5_c": "Voici un dessin d'un trajet rectangulaire que l'abeille peut suivre.\n\n![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)",
-          "courseE_bee_concept5_b": "Tu peux vérifier s'il y a une fleur sur chaque carré en utilisant le bloc \\`si, même si tu sais déjà qu'il n'y en a pas là."
+          "courseE_bee_concept5_b": "Tu peux vérifier s'il y a une fleur sur chaque carré en utilisant le bloc `si` même si tu sais déjà qu'il n'y en a pas là."
         },
         "courseE_bee_concept5_2018": {
-          "courseE_bee_concept5_a": "Les fleurs suivent un trajet rectangulaire. Tu peux tracer ce rectangle en utilisant un bloc `Tant que chemin devant` même avec un nombre différent de carrés par côté.",
+          "courseE_bee_concept5_a": "Les fleurs suivent un trajet rectangulaire. Tu peux tracer ce rectangle en utilisant un bloc `Tant qu'il y a un chemin devant` même avec un nombre différent de carrés par côté.",
           "courseE_bee_concept5_c": "Voici un dessin d'un trajet rectangulaire que l'abeille peut suivre.\n\n![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)",
-          "courseE_bee_concept5_b": "Tu peux vérifier s'il y a une fleur sur chaque carré en utilisant le bloc \\`si, même si tu sais déjà qu'il n'y en a pas là."
+          "courseE_bee_concept5_b": "Tu peux vérifier s'il y a une fleur sur chaque carré en utilisant le bloc `si` même si tu sais déjà qu'il n'y en a pas là."
         },
         "courseE_bee_functions1": {
           "courseE_bee_functions1_a": "Souviens-toi que tourner à droite et à gauche se fait du point de vue de l'abeille.",
@@ -7359,7 +7359,7 @@
           "courseE_bee_functions1_c": "Souviens-toi que tourner à droite et à gauche se fait du point de vue de l'abeille."
         },
         "courseE_bee_functions10": {
-          "courseE_bee_functions10_a": "Tu auras besoin d'une boucle `tant que`pour ramasser tout le miel, puisqu'il varie entre chaque nid d'abeilles.",
+          "courseE_bee_functions10_a": "Tu auras besoin d'une boucle `tant que` pour ramasser tout le miel, puisqu'il varie entre chaque rayon de miel.",
           "courseE_bee_functions10_b": "Inclus les tournants et mouvements dans ta fonction pour que tu puisses l'appeler lorsque tu es sur le chemin principal.",
           "courseE_bee_functions10_c": "Souviens-toi d'appeler ta fonction dans le programme principal !"
         },
@@ -7370,9 +7370,9 @@
         },
         "courseE_bee_functions3": {
           "courseE_bee_functions3_a": "Ta fonction pour ce puzzle a besoin seulement de ramasser du nectar, elle ne doit pas contenir de blocs `avancer` ou `tourner`. ",
-          "courseE_bee_functions3_b": "Appelle ta fonction `Collecte 5` sous le bloc `quand l'exécution commence`.",
-          "courseE_bee_functions3_c": "Ton programe principal controlera tous les mouvements, la fonction sert juste pour ce qui arrive à l'abeille lorsqu'elle atteint une fleur.",
-          "courseE_bee_functions3_d": "Essaie de passer à travers."
+          "courseE_bee_functions3_b": "Appelle ta fonction `Collecter 5` sous le bloc `quand l'exécution commence`.",
+          "courseE_bee_functions3_c": "Ton programme principal contrôlera tous les mouvements, la fonction sert juste pour ce qui arrive à l'abeille lorsqu'elle atteint une fleur.",
+          "courseE_bee_functions3_d": "Essaie de suivre ce chemin à travers."
         },
         "courseE_bee_functions4": {
           "courseE_bee_functions4_a": "Ta fonction suivra déjà les sentiers secondaires et ramènera l'abeille sur la route principale. Tu n'as pas besoin d'ajouter cette partie à ton programme.",
@@ -7380,13 +7380,13 @@
           "courseE_bee_functions4_c": "Tu n'as pas besoin de modifier la fonction, utilise la juste dans ton programme."
         },
         "courseE_bee_functions5": {
-          "courseE_bee_functions5_a": "Edite la fonction pour qu'elle résolve le puzzle sans avoir à modifier le programme principal.",
+          "courseE_bee_functions5_a": "Édite la fonction pour qu'elle résolve le puzzle sans avoir à modifier le programme principal.",
           "courseE_bee_functions5_c": "Le bloc `avancer` peut-être modifié en bloc `reculer`. Utilise cela à la place de faire demi-tour à la fin des chemins !",
-          "courseE_bee_functions5_b": "Avec ta fonction, l'abeille doit :\n\n-   Tourner\n-   Avancer\n-   ramasser le nectar\n-   Reculer\n-   Retourner dans la direction d'origine de l'abeille"
+          "courseE_bee_functions5_b": "Avec ta fonction, l'abeille doit :\n\n-   Tourner\n-   Avancer\n-   Ramasser le nectar\n-   Reculer\n-   Retourner dans la direction d'origine de l'abeille"
         },
         "courseE_bee_functions6": {
-          "courseE_bee_functions6_a": "Si le casse-tête semble difficile, essaie de construire ta fonction petit à petit.\n\nAjoutes-y quelques blocs, puis essaye. Ajoutes-en d’autres, puis réessaye. Bientôt, tu y arriveras !\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)",
-          "courseE_bee_functions6_b": "Cela peut aider dans ce cas de bouger à l'intérieur de la fonction, mais tous les blocs de `mouvements` ne doivent pas forcément s'y trouver."
+          "courseE_bee_functions6_a": "Si le casse-tête semble difficile, essaie de construire ta fonction petit à petit.\n\nAjoute quelques blocs, puis essaye. Ajoutes-en d’autres, puis réessaye. Bientôt, tu y arriveras !\n\n![0]",
+          "courseE_bee_functions6_b": "Dans ce cas, il serait propice de bouger à l'intérieur de la fonction, mais tous les blocs de `mouvements` ne doivent pas forcément s'y trouver."
         },
         "courseE_bee_functions7": {
           "courseE_bee_functions7_a": "Si l'énigme te semble difficile, essaie de construire ta fonction petit à petit. \n\nAjoute quelques blocs, puis essaie-la. Ajoutes-en encore, puis réessaie. Bientôt, tu y arriveras !",
@@ -7394,9 +7394,9 @@
           "courseE_bee_functions7_c": "Cette fonction devrait tourner l'abeille vers le bas du chemin, récolter le nectar, faire du miel, puis faire demi-tour et la ramener."
         },
         "courseE_bee_functions8": {
-          "courseE_bee_functions8_a": "Ta fonction devra seulement ramasser le nectar. Essaie d'utiliser une boucle `tant que` au lieu d'une boucle \\`répéte'.",
+          "courseE_bee_functions8_a": "Ta fonction devra seulement ramasser le nectar. Essaie d'utiliser une boucle `tant que` au lieu d'une boucle \\`répéter'.",
           "courseE_bee_functions8_b": "Utilise `Tant que nectar > 0` pour être sur de ramasser tout le nectar.",
-          "courseE_bee_functions8_c": "Ton programme principal aura besoin d'un motif de mouvement de marche d'escalier. Souviens-toi le programe principal correspond au code sous le bloc `quand l'exécution commence`."
+          "courseE_bee_functions8_c": "Ton programme principal aura besoin d'un motif de mouvement de marche d'escalier. Souviens-toi le programme principal correspond au code sous le bloc `quand l'exécution commence`."
         },
         "courseE_bee_functions9": {
           "courseE_bee_functions9_a": "Tu peux utiliser exactement la même fonction pour ce puzzle que dans le précédent. Tu as juste à créer une fonction qui ramasse tout le nectar lorsque tu arrives sur chaque fleur.",
@@ -7411,56 +7411,56 @@
           "courseE_bee_functions_challenge1_b": "Souviens-toi de construire ton code à l'intérieur du bloc de fonction vert."
         },
         "courseE_farmer_concept1": {
-          "courseE_farmer_concept1_a": "Un bloc`tant qu'il y a un trou` t'aidera à remplir n'importe quel trou jusqu'à ce que ce soit plat.",
+          "courseE_farmer_concept1_a": "Un bloc `tant qu'il y a un trou` t'aidera à remplir n'importe quel trou jusqu'à ce que ce soit plat.",
           "courseE_farmer_concept1_b": "Tu peux utiliser un motif en marche d'escalier pour aller jusqu'aux trous."
         },
         "courseE_farmer_concept1_2018": {
-          "courseE_farmer_concept1_a": "Un bloc`tant qu'il y a un trou` t'aidera à remplir n'importe quel trou jusqu'à ce que ce soit plat.",
+          "courseE_farmer_concept1_a": "Un bloc `tant qu'il y a un trou` t'aidera à remplir n'importe quel trou jusqu'à ce que ce soit plat.",
           "courseE_farmer_concept1_b": "Tu peux utiliser un motif en marche d'escalier pour aller jusqu'aux trous."
         },
         "courseE_farmer_concept2": {
-          "courseE_farmer_concept2_a": "Les trajets ont tous la même longueur, mais ils sont séparés d'un nombre différents de carrés. Une boucle n'est pas l'idéal ici. Essaie une fonction.",
-          "courseE_farmer_concept2_b": "Une fonction qui tourne, va vers le bas, ramasse les citrouilles, et retourne vers le chemin principal doit aider pas mal ici.",
-          "courseE_farmer_concept2_c": "Ton programme principal peut appeler cette fonction avec le bloc vert `fais quelque chose`."
+          "courseE_farmer_concept2_a": "Les chemins ont tous la même longueur, mais ils sont séparés d'un nombre différents de carrés. Une boucle n'est pas idéale ici. Essaie une fonction.",
+          "courseE_farmer_concept2_b": "Une fonction qui tourne, va vers le bas, ramasse les citrouilles, et retourne vers le chemin principal serait utile ici.",
+          "courseE_farmer_concept2_c": "Ton programme principal peut appeler cette fonction avec le bloc vert `faire quelque chose`."
         },
         "courseE_farmer_concept2_2018": {
-          "courseE_farmer_concept2_a": "Les trajets ont tous la même longueur, mais ils sont séparés d'un nombre différents de carrés. Une boucle n'est pas l'idéal ici. Essaie une fonction.",
-          "courseE_farmer_concept2_b": "Une fonction qui tourne, va vers le bas, ramasse les citrouilles, et retourne vers le chemin principal doit aider pas mal ici.",
-          "courseE_farmer_concept2_c": "Ton programme principal peut appeler cette fonction avec le bloc vert `fais quelque chose`."
+          "courseE_farmer_concept2_a": "Les chemins ont tous la même longueur, mais ils sont séparés d'un nombre différents de carrés. Une boucle n'est pas idéale ici. Essaie une fonction.",
+          "courseE_farmer_concept2_b": "Une fonction qui tourne, va vers le bas, ramasse les citrouilles, et retourne vers le chemin principal serait utile ici.",
+          "courseE_farmer_concept2_c": "Ton programme principal peut appeler cette fonction avec le bloc vert `faire quelque chose`."
         },
         "courseE_farmer_concept3": {
           "grade3_robotFarmer_ConditionalsIntro_8_a": "Le bloc `tant que chemin continue` te permet de continuer, même si tu ne sais pas combien de carrés sont dans le chemin.",
-          "grade3_robotFarmer_ConditionalsIntro_8_b": "Qu'est ce que tu devrais faire dès que tu as atteint la fin du chemin?",
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Qu'est ce que tu devrais faire quand tu as atteint la fin du chemin?",
           "grade3_robotFarmer_ConditionalsIntro_8_c": "Utilise une boucle `répéter` pour exécuter ton code plusieurs fois pour chaque chemin droit."
         },
         "courseE_farmer_concept3_2018": {
           "grade3_robotFarmer_ConditionalsIntro_8_a": "Le bloc `tant que chemin continue` te permet de continuer, même si tu ne sais pas combien de carrés sont dans le chemin.",
-          "grade3_robotFarmer_ConditionalsIntro_8_b": "Qu'est ce que tu devrais faire dès que tu as atteint la fin du chemin?",
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Qu'est ce que tu devrais faire quand tu as atteint la fin du chemin?",
           "grade3_robotFarmer_ConditionalsIntro_8_c": "Utilise une boucle `répéter` pour exécuter ton code plusieurs fois pour chaque chemin droit."
         },
         "courseE_farmer_functions1": {
-          "courseE_farmer_functions1_a": "La boite à outils est organisé différemment ce coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'avoir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
+          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions10b": {
           "courseE_farmer_functions10b_a": "Tu devras re-créer ta fonction d'abord.",
-          "courseE_farmer_functions10b_b": "Dans quel sens tu dois tourner après la première citrouille?",
-          "courseE_farmer_functions10b_c": "Regarde ton dernier puzzle si tu as besoin d'aide pour faire ta fonction."
+          "courseE_farmer_functions10b_b": "Dans quel sens dois-tu tourner après la première citrouille?",
+          "courseE_farmer_functions10b_c": "Repense à ton dernier puzzle si tu as besoin d'aide pour faire ta fonction."
         },
         "courseE_farmer_functions1_2018": {
-          "courseE_farmer_functions1_a": "La boite à outils est organisé différemment ce coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'avoir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
+          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1_2019": {
-          "courseE_farmer_functions1_a": "La boite à outils est organisé différemment ce coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'avoir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
+          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1_2020": {
-          "courseE_farmer_functions1_a": "La boite à outils est organisé différemment ce coup-ci. Clic sur les différentes catégories pour voir les blocs à disposition.",
-          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'avoir ?"
+          "courseE_farmer_functions1_a": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition.",
+          "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1a": {
-          "courseE_farmer_functions1a_a": "Réfléchis à ce qu’il se passe dans la déclaration `si/autre` pas à pas. Que dois-tu faire si tu te trouves sur un plan de maïs ?",
+          "courseE_farmer_functions1a_a": "Réfléchis à ce qu’il se passe dans la déclaration `si/autre` pas à pas. Que dois-tu faire si tu te trouves près d'une plante de maïs ?",
           "courseE_farmer_functions1a_b": "Utilise un block `répéter jusqu`à\\` pour aller jusqu'à la citrouille!"
         },
         "courseE_farmer_functions1a_2018": {
@@ -7478,26 +7478,26 @@
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions2b_a": "Tu peux utiliser un bloc `Répéter jusqu'à ce qu’il y ait des citrouilles` pour aller à la fin de chaque chemin.",
           "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéte jusqu'à` pour attendre toutes les cultures."
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2b_2018": {
           "courseE_farmer_functions2b_a": "Tu peux `répéter jusqu'à la citrouille` pour arriver au bout des deux chemins.",
           "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéte jusqu'à` pour attendre toutes les cultures."
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2b_2019": {
           "courseE_farmer_functions2b_a": "Tu peux `répéter jusqu'à la citrouille` pour arriver au bout des deux chemins.",
           "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéte jusqu'à` pour attendre toutes les cultures."
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2b_2020": {
           "courseE_farmer_functions2b_a": "Tu peux `répéter jusqu'à la citrouille` pour arriver au bout des deux chemins.",
           "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéte jusqu'à` pour attendre toutes les cultures."
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2ba": {
           "courseE_farmer_functions2ba_a": "Utilise le bloc vert `maïs et citrouille` pour appeler cette fonction.",
-          "courseE_farmer_functions2ba_b": "Bouge ensemble tous les blocs dans l'espace de travail sous le bloc `quand l'exécution commence` pour voir comment cette fonction évolue."
+          "courseE_farmer_functions2ba_b": "Met ensemble tous les blocs dans l'espace de travail sous le bloc `quand l'exécution commence` pour voir comment cette fonction évolue."
         },
         "courseE_farmer_functions2ba_2018": {
           "courseE_farmer_functions2ba_a": "Utilise le bloc vert `ramasse toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
@@ -7526,17 +7526,17 @@
         },
         "courseE_farmer_functions4b": {
           "courseE_farmer_functions4b_a": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter le code pour voir ce qui se passe, même si tu n'as pas encore résolu l'énigme.",
-          "courseE_farmer_functions4b_b": "N'oublie pas de tourner après chaque trajet.",
-          "courseE_farmer_functions4b_c": "Les blocs vert `maïs et popcorn` se trouvent dans l'onglet Fonction de la boite à outils."
+          "courseE_farmer_functions4b_b": "N'oublie pas de tourner après chaque chemin.",
+          "courseE_farmer_functions4b_c": "Les blocs vert `maïs et citrouille` se trouvent dans l'onglet Fonction de la boite à outils."
         },
         "courseE_farmer_functions5c": {
           "courseE_farmer_functions5c_a": "Est-ce qu'il y a d'autres motifs que tu peux mettre dans une boucle dans ce puzzle?",
           "courseE_farmer_functions5c_b": "N'aie pas peur de faire une erreur ! Essaie d'ajouter des blocs et d'exécuter le code pour voir ce qui se passe, même si tu n'as pas encore résolu l'énigme."
         },
         "courseE_farmer_functions6c": {
-          "courseE_farmer_functions6c_a": "Edite ta fonction pour vérifier les salades aussi.",
-          "courseE_farmer_functions6c_b": "Est-ce qu'un bloc `si/autre` n'aiderai pas à vérifier qu'il y a une salade ?",
-          "courseE_farmer_functions6c_c": "N'oublie pas de vérifier pour le maïs!"
+          "courseE_farmer_functions6c_a": "Édite ta fonction pour vérifier aussi s'il y a des laitues.",
+          "courseE_farmer_functions6c_b": "Est-ce qu'un bloc `si/autre` n'aiderai pas à vérifier s'il y a une laitue? ",
+          "courseE_farmer_functions6c_c": "N'oublie pas de vérifier s'il y a du maïs!"
         },
         "courseE_farmer_functions7a1_2018": {
           "courseE_farmer_functions7a1_2018_a": "Crée ta fonction dans la section `fonctions` de la boîte à outils.",
@@ -7568,8 +7568,8 @@
           "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras effectuer un tour supplémentaire avant de pouvoir l'exécuter à nouveau."
         },
         "courseE_farmer_functions8b": {
-          "courseE_farmer_functions8b_a": "Essaies d'exécuter le code tel quel pour voir ce qu‘il fait. De quoi as-tu besoin ensuite ?",
-          "courseE_farmer_functions8b_b": "Met tous les blocs du départ dans une fonction pour que tu puisses les utiliser plus d'une fois.",
+          "courseE_farmer_functions8b_a": "Essaie d'exécuter le code tel quel pour voir ce qu‘il fait. De quoi as-tu besoin ensuite ?",
+          "courseE_farmer_functions8b_b": "Met tous les blocs de départ dans une fonction pour que tu puisses les utiliser plus d'une fois.",
           "courseE_farmer_functions8b_c": "Combien de fois as-tu besoin d'appeler la fonction?"
         },
         "courseE_farmer_functions9a1_2018": {
@@ -7588,25 +7588,25 @@
           "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` quelques fois et `avancer` pour arriver à la dernière récolte de laitue, avant de pouvoir appeler ta fonction à nouveau."
         },
         "courseE_farmer_functions9b": {
-          "courseE_farmer_functions9b_a": "Est ce que tu peux utiliser des déclarations imbriquées `si` et `si/autre` pour suivre le trajet?",
-          "courseE_farmer_functions9b_b": "Utilise `Répéter jusqu'à ce qu’ il y ait des citrouilles` pour suivre tout le trajet.",
+          "courseE_farmer_functions9b_a": "Est-ce que tu peux utiliser des déclarations imbriquées `si` et `si/autre` pour suivre le trajet?",
+          "courseE_farmer_functions9b_b": "Utilise `Répéter jusqu'à ce qu’il y ait des citrouilles` pour suivre tous les trajets.",
           "courseE_farmer_functions9b_c": "Tu voudras te déplacer dans les chemins comme s'il y avait des carrés qui devenaient de plus en plus grands après chaque boucle."
         },
         "courseE_farmer_ramp11a": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux utiliser maintenant un bloc `tant qu’il y a une pile`.  ",
-          "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour aller à la saleté."
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11a_2018": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux utiliser maintenant un bloc `tant qu’il y a une pile`.  ",
-          "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour aller à la saleté."
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11a_2019": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux utiliser maintenant un bloc `tant qu’il y a une pile`.  ",
-          "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour aller à la saleté."
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11a_2020": {
-          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux utiliser maintenant un bloc `tant qu’il y a une pile`.  ",
-          "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour aller à la saleté."
+          "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
+          "courseE_farmer_ramp12_b": "Tu dois seulement avancer une fois pour atteindre la saleté."
         },
         "courseE_farmer_ramp11b": {
           "courseE_farmer_ramp11b_a": "Tu peux imbriquer ta boucle `tant que` dans une boucle `répéter` pour raccourcir ton code."
@@ -7669,42 +7669,42 @@
           "courseE_farmer_ramp12e_b": "La solution à cette énigme ressemblera beaucoup à la solution au dernier puzzle, mais en tournant dans l'autre sens."
         },
         "courseE_farmer_ramp12f": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `si`\\\\autre\\`pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc `si/autre` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12f_2018": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `si`\\\\autre\\`pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc `si/autre` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12f_2019": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `si`\\\\autre\\`pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc `si/autre` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12f_2020": {
-          "courseE_farmer_ramp12f_b": "Utilise un bloc `si`\\\\autre\\`pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12f_b": "Utilise un bloc `si/autre` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12g": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `si`\\\\autre\\`pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc `si/autre` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12g_2018": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `si`\\\\autre\\`pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc `si/autre` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12g_2019": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `si`\\\\autre\\`pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc `si/autre` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
         },
         "courseE_farmer_ramp12g_2020": {
-          "courseE_farmer_ramp12G_b": "Utilise un bloc `si`\\\\autre\\`pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
+          "courseE_farmer_ramp12G_b": "Utilise un bloc `si/autre` pour aider le fermier à décider s'il doit tourner à droite ou à gauche."
         },
         "courseE_playLab_challenge1": {
-          "courseE_playLab_challenge1_a": "Voici ce que tu pourrais faire lorsque le joueur gagne le jeu:\n\n-   Faire disparaitre le dinosaure\n-   Arrêter les écureuils.\n-   Rendre les écureuils et le chevalier de bonne humeur.\n-   Mettre un nouvel arrière plan\n-   Faire que le chevalier remercie le joueur de l'avoir aidé.\n-   Faire disparaitre tous les acteurs et montrer un message \"Tu as gagné!\".",
+          "courseE_playLab_challenge1_a": "Voici ce que tu pourrais faire lorsque le joueur gagne le jeu:\n\n-   Faire disparaitre le dinosaure\n-   Arrêter les écureuils.\n-   Faire plaisir aux écureuils et au chevalier.\n-   Mettre un nouvel arrière plan\n-   Faire que le chevalier remercie le joueur de l'avoir aidé.\n-   Faire disparaitre tous les acteurs et montrer un message \"Tu as gagné!\".",
           "courseE_playLab_challenge1_b": "Voici ce que tu pourrais faire lorsque le joueur perd le jeu:\n\n-   Faire disparaitre le chevalier.\n-   Rendre les écureuils tristes.\n-   Faire dire quelque chose au dinosaure.\n-   Mettre un nouvel arrière-plan.\n-   Faire disparaitre tous les acteurs et montrer un message \"Fin du Jeu\"."
         },
         "courseE_playLab_scaffold1": {
-          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une ??? image` peut-être utilisé pour ajouter un acteur à cette étape.",
-          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
+          "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
+          "courseE_playLab_scaffold1_b": "Mets le bloc `Affecter l'acteur` sous `quand l'exécution commence` pour que ton acteur apparaisse au début du jeu.",
           "courseE_playLab_scaffold1_c": "Utilise `définir un arrière plan ???` pour choisir l'arrière plan de ta scène."
         },
         "courseE_playLab_scaffold2": {
-          "courseE_playLab_scaffold1_a": "Appuie sur le menu déroulant de l'évènement `quand flêche __` pour changer la direction que le bloc contrôle.",
-          "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun.",
-          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flêches!"
+          "courseE_playLab_scaffold1_a": "Appuie sur le menu déroulant de l'évènement `quand flèche __` pour changer la direction que le bloc contrôle.",
+          "courseE_playLab_scaffold1_b": "Tu devrais avoir 4 blocs d'évènements `Lorsque flêche`, avec une direction pour bouger sous chacun d'eux.",
+          "courseE_playLab_scaffold1_c": "Lorsque tu as terminé, tu devrais pouvoir bouger ton héros avec les flèches!"
         },
         "courseE_playLab_scaffold4": {
           "courseE_playLab_scaffold4_a": "Utiliser `marquer 1 point` pour ajouter un point, et `enlever 1 point` pour en retirer un."

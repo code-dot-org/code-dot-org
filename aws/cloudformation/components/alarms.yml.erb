@@ -1,25 +1,20 @@
-  DaemonStorageUtilizationAlarm:
-    Type: "AWS::CloudWatch::Alarm"
+  Critical: {Type: 'AWS::SNS::Topic'}
+  Warning: {Type: 'AWS::SNS::Topic'}
+<%{Warning: 70, Critical: 90}.each do |name, threshold| -%>
+  DiskUsed<%=name%>:
+    Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
-      AlarmDescription: Send page if daemon storage utilization exceeds 80% for an hour
-      AlarmName: <%="#{stack_name}_daemon_high_storage_utilization" %>
-      ComparisonOperator: GreaterThanThreshold
-      Dimensions:
-        - Name: Filesystem
-          Value: '/dev/xvda1'
-        - Name: MountPath
-          Value: '/'
-        - Name: InstanceId
-          Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
-      EvaluationPeriods: 60
-      MetricName: DiskSpaceUtilization
-      Namespace: 'System/Linux'
+      AlarmActions: [!Ref '<%=name%>']
+      AlarmDescription: Max disk usage in <%=environment%> env exceeds <%=threshold%>%
+      Dimensions: [{Name: Environment, Value: <%=environment%>}]
+      Namespace: CWAgent
+      MetricName: disk_used_percent
+      Statistic: Maximum
+      EvaluationPeriods: 1
       Period: 60
-      Statistic: Average
-      Threshold: 80
-      TreatMissingData: missing
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: <%=threshold%>
+<%end -%>
   DaemonMemoryUtilizationAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:

@@ -661,23 +661,22 @@ pl:
     help_from_html_old: Inżynierowie z Amazon, Google i Microsoft pomogli utworzyć
       te materiały.
     art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa
-      zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
-      Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney.
-      Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th
-      Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year}
-      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies
-      &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.
-      < br / > The Amazing World of Gumball jest znakiem towarowym i &copy; %{current_year}
+      zastrzeżone.<br /> Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
+      Wszystkie prawa zastrzeżone.<br /> Frozen&#8482; © %{current_year} Disney. Wszystkie
+      prawa zastrzeżone.<br /> Ice Age&#8482; © %{current_year} 20th Century Fox.
+      Wszystkie prawa zastrzeżone.<br /> Angry Birds&#8482; © 2009-%{current_year}
+      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone.<br /> Plants vs Zombies
+      &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.<br
+      /> The Amazing World of Gumball jest znakiem towarowym i &copy; %{current_year}
       Cartoon Network.
     art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa
-      zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
-      Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney.
-      Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th
-      Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year}
-      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies
-      &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.
-      < br / > The Amazing World of Gumball jest znakiem towarowym &copy; %{current_year}
-      Cartoon Network.
+      zastrzeżone. Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie
+      prawa zastrzeżone. Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone.
+      Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.
+      Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie
+      prawa zastrzeżone. Plants vs Zombies &#8482; © %{current_year} Electronic Arts
+      Inc. Wszystkie prawa zastrzeżone. The Amazing World of Gumball jest znakiem
+      towarowym &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Zasilany przez Amazon Web Services
