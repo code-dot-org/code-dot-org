@@ -85,7 +85,7 @@
       "type":"library_item",
       "library_name":"surveys/pd/ayw_module_3",
       "library_version": 0,
-      "name":"module_panel"
+      "name":"module_3_panel"
     }
   ]
  },
@@ -98,7 +98,7 @@
       "type":"library_item",
       "library_name":"surveys/pd/ayw_module_4",
       "library_version": 0,
-      "name":"module_panel"
+      "name":"module_4_panel"
     }
   ]
  },
