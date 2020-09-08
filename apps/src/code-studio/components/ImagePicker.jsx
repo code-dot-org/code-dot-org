@@ -4,6 +4,7 @@ import {getStore} from '@cdo/apps/redux';
 import AssetManager from './AssetManager';
 import color from '../../util/color';
 import IconLibrary from './IconLibrary';
+import ImageURLInput from './ImageURLInput';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 
 const extensionFilter = {
@@ -26,23 +27,24 @@ export default class ImagePicker extends React.Component {
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
+    currentValue: PropTypes.string,
+    currentImageType: PropTypes.string,
     //For logging purposes
     projectId: PropTypes.string,
     elementId: PropTypes.string
   };
 
-  state = {mode: 'files'};
+  state = {mode: 'file'};
 
   getAssetNameWithPrefix = icon => {
     this.props.assetChosen(ICON_PREFIX + icon);
   };
 
-  setIconMode = () => this.setState({mode: 'icons'});
-
-  setFileMode = () => this.setState({mode: 'files'});
+  setMode = mode => {
+    this.setState({mode: mode});
+  };
 
   render() {
-    const isFileMode = this.state.mode === 'files';
     const styles = {
       root: {
         margin: '0 0 0 5px'
@@ -50,16 +52,23 @@ export default class ImagePicker extends React.Component {
       fileModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        fontFamily: isFileMode ? '"Gotham 5r"' : null,
-        color: isFileMode ? null : '#999',
+        fontFamily: this.state.mode === 'file' ? '"Gotham 5r"' : null,
+        color: this.state.mode === 'file' ? null : '#999',
         fontSize: '16px',
         cursor: 'pointer'
       },
       iconModeToggle: {
         margin: 0,
         fontSize: '16px',
-        fontFamily: isFileMode ? null : '"Gotham 5r"',
-        color: isFileMode ? '#999' : null,
+        fontFamily: this.state.mode === 'icon' ? '"Gotham 5r"' : null,
+        color: this.state.mode === 'icon' ? null : '#999',
+        cursor: 'pointer'
+      },
+      urlModeToggle: {
+        margin: '0 20px 0 0',
+        fontSize: '16px',
+        fontFamily: this.state.mode === 'url' ? '"Gotham 5r"' : null,
+        color: this.state.mode === 'url' ? null : '#999',
         cursor: 'pointer'
       },
       divider: {
@@ -85,12 +94,24 @@ export default class ImagePicker extends React.Component {
     if (this.props.assetChosen && imageTypeFilter) {
       modeSwitch = (
         <div>
-          <p onClick={this.setFileMode} style={styles.fileModeToggle}>
+          <span
+            onClick={() => this.setMode('file')}
+            style={styles.fileModeToggle}
+          >
             My Files
-          </p>
-          <p onClick={this.setIconMode} style={styles.iconModeToggle}>
+          </span>
+          <span
+            onClick={() => this.setMode('url')}
+            style={styles.urlModeToggle}
+          >
+            Image from URL
+          </span>
+          <span
+            onClick={() => this.setMode('icon')}
+            style={styles.iconModeToggle}
+          >
             Icons
-          </p>
+          </span>
           <hr style={styles.divider} />
         </div>
       );
@@ -106,25 +127,40 @@ export default class ImagePicker extends React.Component {
       isStartMode = reduxState.level.isStartMode;
     }
 
-    const body =
-      !this.props.assetChosen || this.state.mode === 'files' ? (
-        <AssetManager
-          assetChosen={this.props.assetChosen}
-          assetsChanged={this.props.assetsChanged}
-          allowedExtensions={extensionFilter[this.props.typeFilter]}
-          uploadsEnabled={this.props.uploadsEnabled}
-          useFilesApi={this.props.useFilesApi}
-          projectId={this.props.projectId}
-          soundPlayer={this.props.soundPlayer}
-          disableAudioRecording={disableAudio}
-          imagePicker={true}
-          elementId={this.props.elementId}
-          levelName={levelName}
-          isStartMode={isStartMode}
-        />
-      ) : (
-        <IconLibrary assetChosen={this.getAssetNameWithPrefix} />
-      );
+    const getBody = () => {
+      if (!this.props.assetChosen || this.state.mode === 'file') {
+        return (
+          <AssetManager
+            assetChosen={this.props.assetChosen}
+            assetsChanged={this.props.assetsChanged}
+            allowedExtensions={extensionFilter[this.props.typeFilter]}
+            uploadsEnabled={this.props.uploadsEnabled}
+            useFilesApi={this.props.useFilesApi}
+            projectId={this.props.projectId}
+            soundPlayer={this.props.soundPlayer}
+            disableAudioRecording={disableAudio}
+            imagePicker={true}
+            elementId={this.props.elementId}
+            levelName={levelName}
+            isStartMode={isStartMode}
+          />
+        );
+      } else if (this.state.mode === 'icon') {
+        return <IconLibrary assetChosen={this.getAssetNameWithPrefix} />;
+      } else {
+        return (
+          <ImageURLInput
+            assetChosen={this.props.assetChosen}
+            allowedExtensions={extensionFilter[this.props.typeFilter]}
+            currentValue={
+              this.props.currentImageType === 'url'
+                ? this.props.currentValue
+                : ''
+            }
+          />
+        );
+      }
+    };
 
     return (
       <div className="modal-content" style={styles.root}>
@@ -135,7 +171,7 @@ export default class ImagePicker extends React.Component {
           </p>
         )}
         {modeSwitch}
-        {body}
+        {getBody()}
       </div>
     );
   }
