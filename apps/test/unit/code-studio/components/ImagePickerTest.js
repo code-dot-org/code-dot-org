@@ -4,6 +4,7 @@ import {shallow} from 'enzyme';
 import ImagePicker from '@cdo/apps/code-studio/components/ImagePicker';
 import IconLibrary from '@cdo/apps/code-studio/components/IconLibrary';
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
+import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
 
 describe('ImagePicker', () => {
   const defaultProps = {
@@ -21,11 +22,12 @@ describe('ImagePicker', () => {
 
   it('shows icons and files as options', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
-    const tabs = wrapper.find('#modeSwitch').find('p');
+    const tabs = wrapper.find('#modeSwitch').find('span');
 
-    assert.equal(tabs.length, 2);
-    assert.equal(tabs.find('p[children="Icons"]').length, 1);
-    assert.equal(tabs.find('p[children="My Files"]').length, 1);
+    assert.equal(tabs.length, 3);
+    assert.equal(tabs.find('span[children="Icons"]').length, 1);
+    assert.equal(tabs.find('span[children="My Files"]').length, 1);
+    assert.equal(tabs.find('span[children="Image from URL"]').length, 1);
   });
 
   it('initially shows file picker by default', () => {
@@ -35,7 +37,13 @@ describe('ImagePicker', () => {
 
   it('shows icon picker when clicked', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
-    wrapper.find('p[children="Icons"]').simulate('click');
+    wrapper.find('span[children="Icons"]').simulate('click');
     assert.equal(wrapper.find(IconLibrary).length, 1);
+  });
+
+  it('shows url picker when clicked', () => {
+    const wrapper = shallow(<ImagePicker {...defaultProps} />);
+    wrapper.find('span[children="Image from URL"]').simulate('click');
+    assert.equal(wrapper.find(ImageURLInput).length, 1);
   });
 });
