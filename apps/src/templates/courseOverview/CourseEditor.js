@@ -6,7 +6,7 @@ import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-import MarkdownPreview from '@cdo/apps/lib/levelbuilder/MarkdownPreview';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const styles = {
   input: {
@@ -134,14 +134,14 @@ export default class CourseEditor extends Component {
             style={styles.input}
           />
         </label>
-        <MarkdownPreview
+        <TextareaWithMarkdownPreview
           markdown={this.state.descriptionStudent}
           onChange={this.handleStudentDescriptionChange}
           label={'Student Description'}
           name={'description_student'}
           inputRows={5}
         />
-        <MarkdownPreview
+        <TextareaWithMarkdownPreview
           markdown={this.state.descriptionTeacher}
           onChange={this.handleTeacherDescriptionChange}
           label={'Teacher Description'}
