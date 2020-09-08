@@ -1683,7 +1683,7 @@
   "topRight": "вверху справа",
   "tos": "Условия предоставления услуг",
   "tosLong": "На этот проект поступала жалоба по поводу нарушения [Terms of Service]({url}) Code.org, и им нельзя делиться с другими пользователями.",
-  "totalNumLinesOfCodeWritten": "Общее количество за все время: {numLines, plural, one {1 line} other {# lines}} кода.",
+  "totalNumLinesOfCodeWritten": "Общее количество за все время: {numLines, plural, one {1 line} других {# lines}} кода.",
   "tryAgain": "Попробуй еще раз",
   "tryBlocksBelowFeedback": "Попробуй добавить один из блоков внизу:",
   "tryHOC": "Попробуй поучаствовать в Часе кода",
