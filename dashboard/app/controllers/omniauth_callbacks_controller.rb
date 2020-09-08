@@ -181,9 +181,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     prepare_locale_cookie user
 
     if user_already_exists(user)
-      if windows_live_takeover_if_available(auth_hash)
-        return sign_in(user)
-      end
+      takeover_user = windows_live_takeover_if_available(user, auth_hash)
+      return sign_in_user(takeover_user) if takeover_user
       return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
     elsif user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
@@ -347,21 +346,23 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     scopes.include?(scope_name)
   end
 
-  def windows_live_takeover_if_available(auth_hash)
+  def windows_live_takeover_if_available(oauth_user, auth_hash)
     return unless auth_hash.provider == AuthenticationOption::MICROSOFT
-    user = User.find_by_email_or_hashed_email(auth_hash.email)
+    lookup_email = oauth_user.email.presence || auth_hash.info.email
+    user = User.find_by_email_or_hashed_email(lookup_email)
     return unless user
-    return if !!user.authentication_options.find {|a| a.provider != AuthenticationOption::MICROSOFT && a.provider != AuthenticationOption::WINDOWS_LIVE}
+    return unless user.migrated?
+    return if !!user.authentication_options.find {|a| a.credential_type != AuthenticationOption::MICROSOFT && a.credential_type != AuthenticationOption::WINDOWS_LIVE}
 
     # If the user is now logging in through microsoft_v2_auth and has an existing
     # windowslive AuthenticationOption, we want to delete windowslive since that is
     # deprecated in favor of microsoft_v2_auth.
     windowslive_auth_option = user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::WINDOWS_LIVE}
-    if windowslive_auth_option.present? && provider == AuthenticationOption::MICROSOFT
+    if windowslive_auth_option.present? && auth_hash.provider == AuthenticationOption::MICROSOFT
       ao = AuthenticationOption.create!(
         user: user,
         email: user.email,
-        credential_type: provider,
+        credential_type: auth_hash.provider,
         authentication_id: auth_hash.uid,
         data: {
           oauth_token: auth_hash.credentials&.token,
@@ -370,8 +371,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         }.to_json
       )
 
-      lookup_user.update!(primary_contact_info: ao) if windowslive_auth_option.primary?
+      user.update!(primary_contact_info: ao) if windowslive_auth_option.primary?
       windowslive_auth_option.destroy!
+      return user
     end
   end
 
