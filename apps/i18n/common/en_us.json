@@ -1056,6 +1056,7 @@
   "makerSetupPlugInBoard": "Plug in your board to start using it with App Lab!",
   "makerSetupSignIn": "Open up the Code.org Maker App and sign in to Code.org.",
   "makerSetupTitle": "Visit the setup page",
+  "makerSetupWindows7Drivers": "(Windows 7) Install the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).",
   "makerViewProjectsButton": "Go to projects",
   "makerViewProjectsDesc": "Go to your project list to view all of your existing projects and continue working on them.",
   "makerViewProjectsTitle": "View your project list",
