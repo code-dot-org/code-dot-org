@@ -1,5 +1,5 @@
 import React from 'react';
-import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/script-editor/LevelTokenDetails';
+import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {action} from '@storybook/addon-actions';
 
 const levelKeyList = {

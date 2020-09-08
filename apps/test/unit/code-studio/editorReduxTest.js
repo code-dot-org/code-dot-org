@@ -1,18 +1,13 @@
 import {assert} from 'chai';
 import {combineReducers} from 'redux';
 import reducers, {
-  reorderLevel,
-  moveLevelToLesson,
   addGroup,
   addLesson,
   moveLesson,
-  setActiveVariant,
-  setField,
   setLessonGroup
 } from '@cdo/apps/lib/levelbuilder/script-editor/editorRedux';
 
 const getInitialState = () => ({
-  levelKeyList: {},
   lessonGroups: [
     {
       key: 'lg-key',
@@ -23,41 +18,12 @@ const getInitialState = () => ({
         {
           id: 100,
           name: 'A',
-          position: 1,
-          levels: [
-            {
-              ids: [1],
-              position: 1,
-              activeId: 1
-            },
-            {
-              ids: [4],
-              position: 2,
-              activeId: 4
-            },
-            {
-              ids: [5],
-              position: 3,
-              activeId: 5
-            },
-            {
-              ids: [6],
-              position: 4,
-              activeId: 6
-            }
-          ]
+          position: 1
         },
         {
           name: 'B',
           id: 101,
-          position: 2,
-          levels: [
-            {
-              ids: [2, 3],
-              position: 1,
-              activeId: 3
-            }
-          ]
+          position: 2
         }
       ]
     }
@@ -70,29 +36,6 @@ describe('editorRedux reducer tests', () => {
   let initialState;
   beforeEach(() => (initialState = getInitialState()));
 
-  it('reorder levels', () => {
-    const nextState = reducer(initialState, reorderLevel(1, 1, 3, 1))
-      .lessonGroups;
-    assert.deepEqual(nextState[0].lessons[0].levels.map(l => l.activeId), [
-      5,
-      1,
-      4,
-      6
-    ]);
-  });
-  it('moves level to lesson', () => {
-    const nextState = reducer(initialState, moveLevelToLesson(1, 1, 3, 2))
-      .lessonGroups;
-    assert.deepEqual(nextState[0].lessons[0].levels.map(l => l.activeId), [
-      1,
-      4,
-      6
-    ]);
-    assert.deepEqual(nextState[0].lessons[1].levels.map(l => l.activeId), [
-      3,
-      5
-    ]);
-  });
   it('add group', () => {
     const nextState = reducer(initialState, addGroup(2, 'key', 'Display Name'))
       .lessonGroups;
@@ -106,33 +49,6 @@ describe('editorRedux reducer tests', () => {
       'B',
       'New Lesson 2'
     ]);
-  });
-  it('set active variant', () => {
-    const nextState = reducer(initialState, setActiveVariant(1, 2, 1, 2))
-      .lessonGroups;
-    assert.equal(nextState[0].lessons[1].levels[0].activeId, 2);
-  });
-  it('set level field', () => {
-    let nextState = reducer(initialState, setField(1, 1, 1, {videoKey: '_a_'}));
-    assert.equal(
-      nextState.lessonGroups[0].lessons[0].levels[0].videoKey,
-      '_a_'
-    );
-    nextState = reducer(nextState, setField(1, 1, 1, {skin: '_b_'}));
-    assert.equal(nextState.lessonGroups[0].lessons[0].levels[0].skin, '_b_');
-    nextState = reducer(
-      nextState,
-      setField(1, 1, 1, {conceptDifficulty: '_c_'})
-    );
-    assert.equal(
-      nextState.lessonGroups[0].lessons[0].levels[0].conceptDifficulty,
-      '_c_'
-    );
-    nextState = reducer(nextState, setField(1, 1, 1, {concepts: '_d_'}));
-    assert.equal(
-      nextState.lessonGroups[0].lessons[0].levels[0].concepts,
-      '_d_'
-    );
   });
 
   describe('lesson groups', () => {
