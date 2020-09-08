@@ -11,7 +11,7 @@ import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from './LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
-import MarkdownPreview from '@cdo/apps/lib/script-editor/MarkdownPreview';
+import MarkdownPreview from '@cdo/apps/lib/levelbuilder/MarkdownPreview';
 
 const styles = {
   input: {
@@ -172,17 +172,13 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-        <label>
-          Description
-          <textarea
-            name="description"
-            defaultValue={this.state.description}
-            rows={5}
-            style={styles.input}
-            onChange={this.handleDescriptionChange}
-          />
-          <MarkdownPreview markdown={this.state.description} />
-        </label>
+        <MarkdownPreview
+          markdown={this.state.description}
+          onChange={this.handleDescriptionChange}
+          label={'Description'}
+          name={'description'}
+          inputRows={5}
+        />
         <h2>Basic Settings</h2>
         <label>
           Require Login To Use
