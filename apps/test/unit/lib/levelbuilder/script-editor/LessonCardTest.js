@@ -9,7 +9,6 @@ describe('LessonCard', () => {
   let reorderLevel,
     moveLevelToLesson,
     addLevel,
-    setLessonLockable,
     setLessonGroup,
     setTargetLesson,
     moveLesson,
@@ -20,7 +19,6 @@ describe('LessonCard', () => {
     reorderLevel = sinon.spy();
     moveLevelToLesson = sinon.spy();
     addLevel = sinon.spy();
-    setLessonLockable = sinon.spy();
     setLessonGroup = sinon.spy();
     setTargetLesson = sinon.spy();
     moveLesson = sinon.spy();
@@ -29,7 +27,6 @@ describe('LessonCard', () => {
       reorderLevel,
       moveLevelToLesson,
       addLevel,
-      setLessonLockable,
       moveLesson,
       removeLesson,
       lessonsCount: 1,
@@ -48,26 +45,10 @@ describe('LessonCard', () => {
     };
   });
 
-  it('displays lockable property', () => {
+  it('renders default props', () => {
     let wrapper = shallow(<LessonCard {...defaultProps} />);
-    let labelText = 'Require teachers to unlock this lesson';
-    let label = wrapper.findWhere(
-      n => n.name() === 'label' && n.text().includes(labelText)
-    );
-    expect(label.find('input').props().checked).to.equal(false);
-
-    const props = {
-      ...defaultProps,
-      lesson: {
-        ...defaultProps.lesson,
-        lockable: true
-      }
-    };
-    wrapper = shallow(<LessonCard {...props} />);
-    labelText = 'Require teachers to unlock this lesson';
-    label = wrapper.findWhere(
-      n => n.name() === 'label' && n.text().includes(labelText)
-    );
-    expect(label.find('input').props().checked).to.equal(true);
+    expect(wrapper.contains('Lesson 1: Lesson 1'));
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('button').length).to.equal(2);
   });
 });
