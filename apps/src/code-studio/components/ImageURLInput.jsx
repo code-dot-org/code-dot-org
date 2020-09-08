@@ -3,6 +3,7 @@ import React from 'react';
 import moment from 'moment';
 import InputPrompt from '@cdo/apps/templates/InputPrompt';
 import i18n from '@cdo/locale';
+import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
 
 const styles = {
   supportingText: {
@@ -14,6 +15,9 @@ const styles = {
     margin: '1em 0',
     fontSize: '16px',
     lineHeight: '20px'
+  },
+  error: {
+    color: 'red'
   }
 };
 
@@ -28,8 +32,19 @@ export default class ImageURLInput extends React.Component {
     allowedExtensions: PropTypes.string,
     currentValue: PropTypes.string
   };
+  constructor(props) {
+    super(props);
+    this.state = {showError: false};
+  }
 
-  handleSubmitWrapper = url => this.props.assetChosen(url, moment());
+  handleSubmitWrapper = url => {
+    console.log(ABSOLUTE_REGEXP.test(url));
+    if (ABSOLUTE_REGEXP.test(url)) {
+      this.props.assetChosen(url, moment());
+    } else {
+      this.setState({showError: true});
+    }
+  };
 
   render() {
     return (
@@ -40,6 +55,9 @@ export default class ImageURLInput extends React.Component {
           onInputReceived={this.handleSubmitWrapper}
           currentValue={this.props.currentValue}
         />
+        {this.state.showError && (
+          <div style={styles.error}>{i18n.imageURLInputInvalid()}</div>
+        )}
         <div style={styles.example}>{i18n.imageURLInputExample()}</div>
       </div>
     );
