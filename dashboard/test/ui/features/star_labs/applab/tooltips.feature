@@ -41,37 +41,37 @@ Feature: Applab visualization overlay tooltips
     When I hover over element with id "design_text_area1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for text area"
+    Then I see no difference for "tooltip for text area" using stitch mode "none"
 
     When I hover over element with id "design_button1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for button"
+    Then I see no difference for "tooltip for button" using stitch mode "none"
 
     When I hover over element with id "design_label1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for label"
+    Then I see no difference for "tooltip for label" using stitch mode "none"
 
     When I hover over the screen at xpos 300 and ypos 100
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for blank screen area at (300, 100)"
+    Then I see no difference for "tooltip for blank screen area at (300, 100)" using stitch mode "none"
 
     When I hover over element with id "design_text_input1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for text input"
+    Then I see no difference for "tooltip for text input" using stitch mode "none"
 
     When I hover over element with id "design_radio_button1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for radio button"
+    Then I see no difference for "tooltip for radio button" using stitch mode "none"
 
     When I hover over element with id "design_checkbox1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for checkbox"
+    Then I see no difference for "tooltip for checkbox" using stitch mode "none"
 
     When I hover over element with id "design_image1"
     And I save the project
@@ -81,7 +81,7 @@ Feature: Applab visualization overlay tooltips
     When I hover over the screen at xpos 300 and ypos 200
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for blank screen area at (300, 200)"
+    Then I see no difference for "tooltip for blank screen area at (300, 200)" using stitch mode "none"
 
     And I close my eyes
 
@@ -94,41 +94,41 @@ Feature: Applab visualization overlay tooltips
     When I hover over element with id "text_area1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for text area"
+    Then I see no difference for "tooltip for text area" using stitch mode "none"
 
     When I hover over element with id "button1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for button"
+    Then I see no difference for "tooltip for button" using stitch mode "none"
 
     When I hover over element with id "label1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for label"
+    Then I see no difference for "tooltip for label" using stitch mode "none"
 
     When I hover over the screen at xpos 300 and ypos 100
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for blank screen area at (300, 100)"
+    Then I see no difference for "tooltip for blank screen area at (300, 100)" using stitch mode "none"
 
     When I hover over element with id "text_input1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for text input"
+    Then I see no difference for "tooltip for text input" using stitch mode "none"
 
     When I hover over element with id "radio_button1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for radio button"
+    Then I see no difference for "tooltip for radio button" using stitch mode "none"
 
     When I hover over element with id "checkbox1"
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for checkbox"
+    Then I see no difference for "tooltip for checkbox" using stitch mode "none"
 
     When I hover over the screen at xpos 300 and ypos 200
     And I save the project
     And I wait until element ".project_updated_at" contains text "Saved"
-    Then I see no difference for "tooltip for blank screen area at (300, 200)"
+    Then I see no difference for "tooltip for blank screen area at (300, 200)" using stitch mode "none"
 
     And I close my eyes
