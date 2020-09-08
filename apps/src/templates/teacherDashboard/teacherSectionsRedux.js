@@ -13,7 +13,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'stageExtras',
   'pairingAllowed',
-  'autoplayEnabled',
+  'ttsAutoplayEnabled',
   'courseId',
   'scriptId',
   'grade',
@@ -501,7 +501,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     providerManaged: false,
     stageExtras: true,
     pairingAllowed: true,
-    autoplayEnabled: false,
+    ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
     code: '',
@@ -791,9 +791,9 @@ export default function teacherSections(state = initialState, action) {
     }
 
     const stageExtraSettings = {};
-    const autoplayEnabledSettings = {};
+    const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
-      autoplayEnabledSettings.autoplayEnabled =
+      ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
         state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
@@ -808,7 +808,7 @@ export default function teacherSections(state = initialState, action) {
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
         ...stageExtraSettings,
-        ...autoplayEnabledSettings,
+        ...ttsAutoplayEnabledSettings,
         ...action.props
       }
     };
@@ -1094,7 +1094,7 @@ export const sectionFromServerSection = serverSection => ({
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
-  autoplayEnabled: serverSection.autoplay_enabled,
+  ttsAutoplayEnabled: serverSection.tts_autoplay_enabled,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
@@ -1130,7 +1130,7 @@ export function serverSectionFromSection(section) {
     login_type: section.loginType,
     lesson_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
-    autoplay_enabled: section.autoplayEnabled,
+    tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined

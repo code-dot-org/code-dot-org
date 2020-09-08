@@ -18,7 +18,7 @@ const fakeSectionData = {
     name: 'csp2'
   },
   lesson_extras: false,
-  autoplay_enabled: false
+  tts_autoplay_enabled: false
 };
 
 const sortedFakeSectionData = {
@@ -38,7 +38,7 @@ const sortedFakeSectionData = {
     name: 'csp2'
   },
   stageExtras: false,
-  autoplayEnabled: false
+  ttsAutoplayEnabled: false
 };
 
 describe('sectionDataRedux', () => {

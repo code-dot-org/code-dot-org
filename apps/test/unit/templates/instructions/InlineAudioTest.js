@@ -15,7 +15,7 @@ const DEFAULT_PROPS = {
     button: {},
     buttonImg: {}
   },
-  autoplayEnabled: false
+  ttsAutoplayEnabled: false
 };
 
 describe('InlineAudio', function() {
@@ -117,7 +117,10 @@ describe('InlineAudio', function() {
 
   it('autoplays if autoplay of text-to-speech is enabled', function() {
     const component = mount(
-      <StatelessInlineAudio assetUrl={function() {}} autoplayEnabled={true} />
+      <StatelessInlineAudio
+        assetUrl={function() {}}
+        ttsAutoplayEnabled={true}
+      />
     );
 
     expect(component.state().playing).to.be.true;

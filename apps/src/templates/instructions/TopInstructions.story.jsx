@@ -32,7 +32,7 @@ const createCommonStore = function(options = {}) {
     script: null,
     students: [{id: 1, name: 'student'}],
     stageExtras: false,
-    autoplayEnabled: false
+    ttsAutoplayEnabled: false
   };
 
   // Things that apply to all courses

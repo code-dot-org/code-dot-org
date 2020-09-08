@@ -22,14 +22,14 @@ export const sectionDataPropType = PropTypes.shape({
     })
   ).isRequired,
   stageExtras: PropTypes.bool,
-  autoplayEnabled: PropTypes.bool
+  ttsAutoplayEnabled: PropTypes.bool
 });
 
 /**
  * Action type constants
  */
 export const SET_SECTION = 'sectionData/SET_SECTION';
-export const SET_AUTOPLAY_ENABLED = 'sectionData/SET_AUTOPLAY_ENABLED';
+export const SET_TTS_AUTOPLAY_ENABLED = 'sectionData/SET_TTS_AUTOPLAY_ENABLED';
 
 /**
  * Action creators
@@ -46,14 +46,14 @@ export const setSection = section => {
     script: section.script,
     students: sortedStudents,
     stageExtras: section.lesson_extras,
-    autoplayEnabled: section.autoplay_enabled
+    ttsAutoplayEnabled: section.tts_autoplay_enabled
   };
   return {type: SET_SECTION, section: filteredSectionData};
 };
 
-export const setAutoplayEnabled = autoplayEnabled => ({
-  type: SET_AUTOPLAY_ENABLED,
-  autoplayEnabled
+export const setTtsAutoplayEnabled = ttsAutoplayEnabled => ({
+  type: SET_TTS_AUTOPLAY_ENABLED,
+  ttsAutoplayEnabled
 });
 
 /**
@@ -76,12 +76,12 @@ export default function sectionData(state = initialState, action) {
       section: action.section
     };
   }
-  if (action.type === SET_AUTOPLAY_ENABLED) {
+  if (action.type === SET_TTS_AUTOPLAY_ENABLED) {
     return {
       ...initialState,
       section: {
         ...initialState.section,
-        autoplayEnabled: action.autoplayEnabled
+        ttsAutoplayEnabled: action.ttsAutoplayEnabled
       }
     };
   }
