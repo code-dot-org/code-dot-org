@@ -88,9 +88,6 @@ ro:
             MOVES.Kick: Stea
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} fă {MOVE} {DIR} tot mereu"
         options:
@@ -109,9 +106,6 @@ ro:
             MOVES.Kick: Stea
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: schimbă {SPRITE} {PROPERTY} cu {VAL}
         options:
@@ -188,9 +182,6 @@ ro:
             MOVES.XArmsUp: Mâini sus
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} fă {MOVE} {DIR} o dată"
         options:
@@ -219,9 +210,6 @@ ro:
             MOVES.XArmsUp: Mâini sus
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'repetă fiecare {N} măsuri după {START} '
       Dancelab_everySeconds:
@@ -1105,6 +1093,13 @@ ro:
             '"z"': z
       gamelab_locationAt:
         text: 'locaţie x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       gamelab_locationMouse:
         text: locația mouse-ului
       gamelab_locationOf:

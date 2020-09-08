@@ -755,10 +755,10 @@
         "courseC_maze_debugging4_2018": "Někdo má pomíchané směry! Pomůžeš?",
         "courseC_maze_debugging4_2019": "Někdo má pomíchané směry! Pomůžeš?",
         "courseC_maze_debugging4_2020": "Někdo má pomíchané směry! Pomůžeš?",
-        "courseC_maze_debugging5": "Vylaď toto úroveň přeskupením a změnou bloků.",
-        "courseC_maze_debugging5_2018": "Vylaď toto úroveň přeskupením a změnou bloků.",
-        "courseC_maze_debugging5_2019": "Vylaď toto úroveň přeskupením a změnou bloků.",
-        "courseC_maze_debugging5_2020": "Vylaď toto úroveň přeskupením a změnou bloků.",
+        "courseC_maze_debugging5": "Vylaď tuto úroveň přeskupením a změnou bloků.",
+        "courseC_maze_debugging5_2018": "Vylaď tuto úroveň přeskupením a změnou bloků.",
+        "courseC_maze_debugging5_2019": "Vylaď tuto úroveň přeskupením a změnou bloků.",
+        "courseC_maze_debugging5_2020": "Vylaď tuto úroveň přeskupením a změnou bloků.",
         "courseC_maze_debugging6": "Zjisti, co je špatně, a dostaň veverku k žaludu.",
         "courseC_maze_debugging6_2018": "Zjisti, co je špatně, a dostaň veverku k žaludu.",
         "courseC_maze_debugging6_2019": "Zjisti, co je špatně, a dostaň veverku k žaludu.",
@@ -1239,7 +1239,20 @@
         "ramp_artist_loops8": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus.",
         "ramp_artist_loops8_2018": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus.",
         "ramp_artist_loops8_2019": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus.",
-        "ramp_artist_loops8_2020": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus."
+        "ramp_artist_loops8_2020": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus.",
+        "course2_maze_programming_challenge2": "Někdy existuje více způsobů jak stejný problém vyřešit. Někdy je rychlejší jít zpět než jíž vpřed!",
+        "courseC_artist_prog_challenge2a": "_Pomoz mi namalovat žluté čáry na této silnici!_",
+        "courseC_artist_prog_challenge2a_2018": "_Pomoz mi namalovat žluté čáry na této silnici!_",
+        "courseC_artist_prog_challenge2a_2019": "_Pomoz mi namalovat žluté čáry na této silnici!_",
+        "courseC_artist_prog_challenge2a_2020": "_Pomoz mi namalovat žluté čáry na této silnici!_",
+        "courseC_maze_debugging_challenge1": "Pomoz Scratovi rozhodnout se, kterým směrem se vydat, aby se dostal k žaludu.",
+        "courseC_maze_debugging_challenge1_2018": "Pomoz Scratovi rozhodnout se, kterým směrem se vydat, aby se dostal k žaludu.",
+        "courseC_maze_debugging_challenge1_2019": "Pomoz Scratovi rozhodnout se, kterým směrem se vydat, aby se dostal k žaludu.",
+        "courseC_maze_debugging_challenge1_2020": "Pomoz Scratovi rozhodnout se, kterým směrem se vydat, aby se dostal k žaludu.",
+        "courseC_maze_programming_challenge2": "Někdy existuje více způsobů jak stejný problém vyřešit. Někdy je rychlejší jít zpět než jíž vpřed!",
+        "courseC_maze_programming_challenge2_2018": "Někdy existuje více způsobů jak stejný problém vyřešit. Někdy je rychlejší jít zpět než jíž vpřed!",
+        "courseC_maze_programming_challenge2_2019": "Někdy existuje více způsobů jak stejný problém vyřešit. Někdy je rychlejší jít zpět než jíž vpřed!",
+        "courseC_maze_programming_challenge2_2020": "Někdy existuje více způsobů jak stejný problém vyřešit. Někdy je rychlejší jít zpět než jíž vpřed!"
       }
     }
   }

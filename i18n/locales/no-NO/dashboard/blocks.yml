@@ -85,9 +85,6 @@
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gjør {MOVE} {DIR} for alltid"
         options:
@@ -106,9 +103,6 @@
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: endre {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -182,9 +176,6 @@
             MOVES.XArmsUp: Strekk
             MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} gjør {MOVE} {DIR} en gang"
         options:
@@ -213,9 +204,6 @@
             MOVES.XArmsUp: Strekk
             MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         text: 'hver {N} {UNIT} '
         options:
@@ -407,26 +395,6 @@
           lag {N} ny {COSTUME}
           i et {LAYOUT}
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           COSTUME:
             '"ALIEN"': Romvesener
             '"BEAR"': Bjørner
@@ -977,6 +945,13 @@
             '"z"': z
       gamelab_locationAt:
         text: 'plassering x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Sør
+            '"West"': Vest
       gamelab_locationMouse:
         text: musens plassering
       gamelab_locationOf:
@@ -1292,12 +1267,6 @@
         text: tilfeldig sted
       Vector_vectorNorth:
         text: nord
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_moveInDirection:
         text: gå {SPRITE} {DISTANCE} piksler {DIRECTION}
         options:
@@ -1306,12 +1275,6 @@
             '"East"': Øst
             '"South"': Sør
             '"West"': Vest
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:
