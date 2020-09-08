@@ -6,14 +6,14 @@ Scenario: Design elements are visible in local and shared projects
   When I open my eyes to test "applab eyes"
   Given I start a new Applab project
   And I wait for the page to fully load
-  Then I see no difference for "initial load"
+  Then I see no difference for "initial load" using stitch mode "none"
   And I press "show-code-header"
   And I add code for a canvas and a button
   And I press "runButton"
-  Then I see no difference for "button should be visible"
+  Then I see no difference for "button should be visible" using stitch mode "none"
   And I click selector ".project_share"
   And I wait to see a dialog titled "Share your project"
-  Then I see no difference for "project share dialog"
+  Then I see no difference for "project share dialog" using stitch mode "none"
   And I navigate to the share URL
   And I wait until element "#divApplab" is visible
   Then I see no difference for "app lab share"
