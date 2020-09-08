@@ -54,7 +54,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldButton');
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
-  blocklyWrapper.wrapReadOnlyProperty('FieldDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
@@ -87,12 +86,34 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
   blocklyWrapper.wrapReadOnlyProperty('RTL');
+  blocklyWrapper.wrapReadOnlyProperty('selected');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
+  blocklyWrapper.wrapReadOnlyProperty('utils');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
+
+  blocklyWrapper.FieldDropdown = function(
+    menuGenerator,
+    opt_changeHandler,
+    opt_alwaysCallChangeHandler
+  ) {
+    let validator;
+    if (opt_changeHandler) {
+      validator = function(val) {
+        if (
+          this.getSourceBlock() &&
+          !this.getSourceBlock().isInsertionMarker_ &&
+          this.value_ !== val
+        ) {
+          opt_changeHandler(val);
+        }
+      };
+    }
+    return new blocklyWrapper.blockly_.FieldDropdown(menuGenerator, validator);
+  };
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
@@ -155,10 +176,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getFieldValue;
   blocklyWrapper.Block.prototype.isUserVisible = () => false; // TODO
   // Google Blockly only allows you to set the hue, not saturation or value.
-  // TODO: determine if this will work for us, or if there's a workaround to
-  // allow us to keep our colors the same
+  // However, they also allow you to specify the color in #RRGGBB format, so we can
+  // just map our HSV value to hex using their util function.
   blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
-    return this.setColour(h);
+    return this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here

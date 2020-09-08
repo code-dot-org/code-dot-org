@@ -1,3 +1,8 @@
 // locale for turtle
+
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
-module.exports = safeLoadLocale('turtle_locale');
+import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
+
+let locale = safeLoadLocale('turtle_locale');
+locale = localeWithI18nStringTracker(locale, 'turtle_locale');
+module.exports = locale;
