@@ -90,7 +90,7 @@ class InlineAudio extends React.Component {
     src: PropTypes.string,
     message: PropTypes.string,
     style: PropTypes.object,
-    autoplayEnabled: PropTypes.bool,
+    ttsAutoplayEnabled: PropTypes.bool,
 
     // Provided by redux
     // To Log TTS usage
@@ -110,7 +110,7 @@ class InlineAudio extends React.Component {
 
   componentDidMount() {
     this.getAudioElement();
-    if (this.props.autoplayEnabled && !this.state.autoplayed) {
+    if (this.props.ttsAutoplayEnabled && !this.state.autoplayed) {
       this.setState({autoplayed: true});
       this.playAudio();
     }
@@ -283,7 +283,7 @@ class InlineAudio extends React.Component {
 }
 
 InlineAudio.defaultProps = {
-  autoplayEnabled: false
+  ttsAutoplayEnabled: false
 };
 
 export const StatelessInlineAudio = Radium(InlineAudio);
@@ -296,6 +296,6 @@ export default connect(function propsFromStore(state) {
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
-    autoplayEnabled: state.sectionData.section.autoplayEnabled
+    ttsAutoplayEnabled: state.sectionData.section.ttsAutoplayEnabled
   };
 })(StatelessInlineAudio);

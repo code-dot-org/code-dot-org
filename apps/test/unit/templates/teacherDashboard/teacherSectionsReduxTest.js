@@ -66,7 +66,7 @@ const sections = [
     grade: '2',
     code: 'PMTKVH',
     lesson_extras: false,
-    autoplay_enabled: false,
+    tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: null,
@@ -83,7 +83,7 @@ const sections = [
     grade: '11',
     code: 'DWGMFX',
     lesson_extras: false,
-    autoplay_enabled: false,
+    tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: {
@@ -103,7 +103,7 @@ const sections = [
     grade: '10',
     code: 'WGYXTR',
     lesson_extras: true,
-    autoplay_enabled: false,
+    tts_autoplay_enabled: false,
     pairing_allowed: false,
     sharing_disabled: false,
     script: {
@@ -554,7 +554,7 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         providerManaged: false,
         stageExtras: true,
-        autoplayEnabled: false,
+        ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
         studentCount: 0,
@@ -580,7 +580,7 @@ describe('teacherSectionsRedux', () => {
         providerManaged: false,
         code: 'DWGMFX',
         stageExtras: false,
-        autoplayEnabled: false,
+        ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
         scriptId: 36,
@@ -671,19 +671,19 @@ describe('teacherSectionsRedux', () => {
       expect(state.sectionBeingEdited.stageExtras).to.equal(true);
     });
 
-    it('switching script assignment updates default autoplay enabled value based on script', () => {
+    it('switching script assignment updates default tts autoplay enabled value based on script', () => {
       let state = reducer(
         editingNewSectionState,
         setPreReaderScriptIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
-      expect(state.sectionBeingEdited.autoplayEnabled).to.equal(false);
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
 
       state = reducer(state, editSectionProperties({scriptId: 37}));
-      expect(state.sectionBeingEdited.autoplayEnabled).to.equal(true);
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
 
       state = reducer(state, editSectionProperties({scriptId: 208}));
-      expect(state.sectionBeingEdited.autoplayEnabled).to.equal(true);
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
     });
   });
 
@@ -707,7 +707,7 @@ describe('teacherSectionsRedux', () => {
       grade: undefined,
       providerManaged: false,
       lesson_extras: false,
-      autoplay_enabled: false,
+      tts_autoplay_enabled: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -855,7 +855,7 @@ describe('teacherSectionsRedux', () => {
           grade: '3',
           providerManaged: false,
           stageExtras: false,
-          autoplayEnabled: false,
+          ttsAutoplayEnabled: false,
           pairingAllowed: true,
           sharingDisabled: undefined,
           studentCount: undefined,
@@ -912,7 +912,7 @@ describe('teacherSectionsRedux', () => {
       grade: undefined,
       providerManaged: false,
       lesson_extras: false,
-      autoplay_enabled: false,
+      tts_autoplay_enabled: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -1161,8 +1161,8 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.code, serverSection.code);
       assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
       assert.strictEqual(
-        section.autoplay_enabled,
-        serverSection.autoplay_enabled
+        section.tts_autoplay_enabled,
+        serverSection.ttsAutoplayEnabled
       );
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
       assert.strictEqual(

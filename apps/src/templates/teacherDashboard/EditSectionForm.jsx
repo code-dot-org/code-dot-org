@@ -222,10 +222,10 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
           />
           {ttsAvailable(section.scriptId) && (
-            <AutoplayField
-              value={section.autoplayEnabled}
-              onChange={autoplayEnabled =>
-                editSectionProperties({autoplayEnabled})
+            <TtsAutoplayField
+              value={section.ttsAutoplayEnabled}
+              onChange={ttsAutoplayEnabled =>
+                editSectionProperties({ttsAutoplayEnabled})
               }
               disabled={isSaveInProgress}
             />
@@ -427,18 +427,18 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
 );
 PairProgrammingField.propTypes = FieldProps;
 
-const AutoplayField = ({value, onChange, disabled}) => (
+const TtsAutoplayField = ({value, onChange, disabled}) => (
   <div>
-    <FieldName>{i18n.enableAutoplay()}</FieldName>
-    <FieldDescription>{i18n.explainAutoplay()} </FieldDescription>
+    <FieldName>{i18n.enableTtsAutoplay()}</FieldName>
+    <FieldDescription>{i18n.explainTtsAutoplay()} </FieldDescription>
     <YesNoDropdown
       value={value}
-      onChange={autoplayEnabled => onChange(autoplayEnabled)}
+      onChange={ttsAutoplayEnabled => onChange(ttsAutoplayEnabled)}
       disabled={disabled}
     />
   </div>
 );
-AutoplayField.propTypes = FieldProps;
+TtsAutoplayField.propTypes = FieldProps;
 
 const FieldName = props => (
   <div
