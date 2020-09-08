@@ -40,12 +40,15 @@ class RedshiftImport
   # Returns Array of Redshift table names.
   def self.temporary_import_tables(schema)
     redshift_client = RedshiftClient.instance
+    # Avoid Redshift system table pg_table_def because it contains some rows that label primary keys as tables.
+    # https://docs.aws.amazon.com/redshift/latest/dg/r_PG_TABLE_DEF.html
+    # Use Postgres 8.0 pg_tables instead.
+    # https://www.postgresql.org/docs/8.0/view-pg-tables.html
     query = <<~SQL
       SET search_path TO #{schema};
       SELECT DISTINCT t.tablename
-      FROM pg_table_def t LEFT JOIN pg_indexes i ON t.tablename = i.indexname
-      WHERE  i.indexname IS NULL -- Don't count primary keys, which appear in pg_table_def, as a table.
-        AND  t.schemaname ='#{schema}'
+      FROM pg_tables t
+      WHERE t.schemaname ='#{schema}'
         AND t.tablename LIKE '#{TEMP_TABLE_PREFIX}%';
     SQL
     redshift_client.exec(query).map {|row| row['tablename']}
