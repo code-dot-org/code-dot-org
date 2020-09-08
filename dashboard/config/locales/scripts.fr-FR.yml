@@ -789,6 +789,8 @@ fr:
               name: Utilisez des variables dans les applications
             While Loops:
               name: Boucles « Tant que »
+            Creating Functions with Parameters:
+              name: Créer des Fonctions avec des Paramètres
         algebraPD3:
           lessons:
             Computer Science Pedagogy:

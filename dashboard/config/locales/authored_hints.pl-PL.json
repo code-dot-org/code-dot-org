@@ -3072,19 +3072,19 @@
         },
         "courseC_artist_loops1a": {
           "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Użyj tego bloku, aby przyciągnąć nalepkę!"
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
         },
         "courseC_artist_loops1a_2018": {
           "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Użyj tego bloku, aby przyciągnąć nalepkę!"
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
         },
         "courseC_artist_loops1a_2019": {
           "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Użyj tego bloku, aby przyciągnąć nalepkę!"
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
         },
         "courseC_artist_loops1a_2020": {
           "courseC_artist_loops1a_a": "To jest pierwszy blok, którego będziesz potrzebował:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "Użyj tego bloku, aby przyciągnąć nalepkę!"
+          "courseC_artist_loops1a_b": "Użyj tego bloku, aby narysować nalepkę!"
         },
         "courseC_artist_loops2a": {
           "courseC_artist_loops2a_a": "Wewnątrz swojej pętli być może zechcesz skoczyć o 200 nad 200 w dół, następnie przeciągnij nalepkę z ptaszkiem, a potem skręć o 30 stopni.",

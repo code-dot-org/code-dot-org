@@ -88,9 +88,6 @@ sv:
             MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gör {MOVE} {DIR} för alltid"
         options:
@@ -109,9 +106,6 @@ sv:
             MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: ändra {SPRITE} {PROPERTY} via {VAL}
         options:
@@ -188,9 +182,6 @@ sv:
             MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} gör {MOVE} {DIR} en gång"
         options:
@@ -219,9 +210,6 @@ sv:
             MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'upprepa varje {N} takter efter {START} '
       Dancelab_everySeconds:
@@ -1097,6 +1085,13 @@ sv:
             '"z"': z
       gamelab_locationAt:
         text: 'plats x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Norr
+            '"East"': Österut
+            '"South"': Söder
+            '"West"': Väst
       gamelab_locationMouse:
         text: mus plats
       gamelab_locationOf:
