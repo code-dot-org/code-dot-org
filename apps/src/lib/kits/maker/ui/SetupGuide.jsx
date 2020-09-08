@@ -121,7 +121,7 @@ class WindowsDownloads extends React.Component {
     const {installer, error} = this.state;
     return (
       <div>
-        <h2>Code.org Maker App for Windows</h2>
+        <h2>{i18n.makerSetupMakerAppForWindows()}</h2>
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
@@ -138,12 +138,9 @@ class WindowsDownloads extends React.Component {
         )}
         {error && <FetchingLatestVersionError />}
         <div>
-          <h4>Instructions:</h4>
+          <h4>{i18n.instructions()}:</h4>
           <ol>
-            <li>
-              Download and install the Code.org Maker App using the download
-              button above.
-            </li>
+            <li>{i18n.makerSetupDownloadAndInstall()}</li>
             <li>
               (Windows 7) Install the{' '}
               <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">
@@ -151,8 +148,8 @@ class WindowsDownloads extends React.Component {
               </a>
               .
             </li>
-            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
-            <li>Plug in your board to start using it with App Lab!</li>
+            <li>{i18n.makerSetupSignIn()}</li>
+            <li>{i18n.makerSetupPlugInBoard()}</li>
           </ol>
         </div>
       </div>
