@@ -18,9 +18,6 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: 4,
     margin: 0
-  },
-  label: {
-    fontWeight: 'bold'
   }
 };
 
@@ -39,7 +36,7 @@ export default class TextareaWithMarkdownPreview extends React.Component {
   render() {
     return (
       <label>
-        <span style={styles.label}>{this.props.label}</span>
+        {this.props.label}
         <div style={styles.box}>
           <div style={{marginBottom: 5}}>Markdown:</div>
           <textarea
