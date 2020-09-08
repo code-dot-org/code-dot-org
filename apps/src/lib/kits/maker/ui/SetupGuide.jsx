@@ -141,13 +141,7 @@ class WindowsDownloads extends React.Component {
           <h4>{i18n.instructions()}:</h4>
           <ol>
             <li>{i18n.makerSetupDownloadAndInstall()}</li>
-            <li>
-              (Windows 7) Install the{' '}
-              <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">
-                Adafruit Windows drivers
-              </a>
-              .
-            </li>
+            <li>{i18n.makerSetupWindows7Drivers()}</li>
             <li>{i18n.makerSetupSignIn()}</li>
             <li>{i18n.makerSetupPlugInBoard()}</li>
           </ol>
