@@ -184,17 +184,7 @@ class MacDownloads extends React.Component {
           />
         )}
         {error && <FetchingLatestVersionError />}
-        <div>
-          <h4>Instructions:</h4>
-          <ol>
-            <li>
-              Download and install the Code.org Maker App using the download
-              button above.
-            </li>
-            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
-            <li>Plug in your board to start using it with App Lab!</li>
-          </ol>
-        </div>
+        <SetupInstructions />
       </div>
     );
   }
@@ -238,15 +228,7 @@ class LinuxDownloads extends React.Component {
         )}
         {error && <FetchingLatestVersionError />}
         <div>
-          <h4>Instructions:</h4>
-          <ol>
-            <li>
-              Download and install the Code.org Maker App using the download
-              button above.
-            </li>
-            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
-            <li>Plug in your board to start using it with App Lab!</li>
-          </ol>
+          <SetupInstructions />
           <h4>Alternative Installers</h4>
           <ul>
             {debFile && (
@@ -295,6 +277,17 @@ const FetchingLatestVersionError = () => (
       </a>{' '}
       is reachable from your network.
     </div>
+  </div>
+);
+
+const SetupInstructions = () => (
+  <div>
+    <h4>{i18n.instructions()}:</h4>
+    <ol>
+      <li>{i18n.makerSetupDownloadAndInstall()}</li>
+      <li>{i18n.makerSetupSignIn()}</li>
+      <li>{i18n.makerSetupPlugInBoard()}</li>
+    </ol>
   </div>
 );
 
