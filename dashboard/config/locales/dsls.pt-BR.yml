@@ -6033,20 +6033,12 @@ pt-BR:
             irá fazer o programa falhar? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: O programa não falhará. Scrat vai chegar à bolota.
-          feedback: Incorreto. Scrat irá para o caminho errado após sua última volta.
-        - text: Scrat irá para o caminho errado depois da sua última volta.
-          correct: true
-          feedback: Correto!
-        - text: Scrat dá poucos passos e acaba com a bolota.
-          feedback: Incorreta. Dar apenas alguns passos acontece depois que Scrat
-            vira na direção errada.
+        - {}
+        - correct: true
+        - correct: true
         - text: Eu não sei.
-          feedback: 'O primeiro erro é que o Scrat segue o caminho errado após a sua
-            volta final. '
         questions:
-        - text: 'Olhe atentamente para o código abaixo. Qual é o primeiro bug que
-            irá fazer o programa falhar? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: O pássaro vai acabar um passo antes do porco.

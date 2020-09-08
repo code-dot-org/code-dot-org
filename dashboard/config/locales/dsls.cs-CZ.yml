@@ -1384,15 +1384,12 @@ cs-CZ:
             způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program neselže. Veverka se dostane k žaludu.
-        - text: Veverka půjde po svém posledním otočení špatným směrem.
-          correct: true
-          feedback: Správně!
-        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
+        - {}
+        - correct: true
+        - correct: true
         - text: Nevím.
         questions:
-        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
-            způsobí selhání tohoto programu?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Ptáček skončí jeden krok od prasátka.

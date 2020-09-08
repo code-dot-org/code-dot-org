@@ -91,9 +91,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} للأبد"
         options:
@@ -113,9 +110,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
         options:
@@ -193,9 +187,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} مرة واحدة"
         options:
@@ -225,9 +216,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_eval:
         text: تقييم{CODE}
       Dancelab_everyMeasuresRange:
@@ -1113,6 +1101,13 @@ ar:
             '"z"': z
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
       gamelab_locationMouse:
         text: موقع الماوس
       gamelab_locationOf:

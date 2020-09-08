@@ -94,7 +94,7 @@ GRAPH
     apt (~> 2.6.0)
     poise-python (>= 0.0.0)
     sudo-user (>= 0.0.0)
-  cdo-cloudwatch-agent (0.1.1)
+  cdo-cloudwatch-agent (0.1.3)
     aws_cloudwatch (>= 0.0.0)
   cdo-github-access (0.1.10)
   cdo-home-ubuntu (0.1.5)

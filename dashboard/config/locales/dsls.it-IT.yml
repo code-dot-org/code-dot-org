@@ -4342,21 +4342,12 @@ it-IT:
             errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
-          feedback: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
-        - text: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
-          correct: true
-          feedback: Corretto!
-        - text: Scrat non farà abbastanza passi e si fermerà prima di aver raggiunto
-            la ghianda.
-          feedback: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene
-            dopo che ha già girato nella direzione sbagliata.
+        - {}
+        - correct: true
+        - correct: true
         - text: Non lo so.
-          feedback: Il primo errore è che Scrat va nella direzione sbagliata dopo
-            l'ultima curva.
         questions:
-        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
-            errore che farà fallire l''esecuzione di questo programma? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
