@@ -2933,10 +2933,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "age is set exactly for Google OAuth users between ages 4 and 20" do
-    four_year_old = build :user, birthday: (Date.today - 4.years), provider: 'google_oauth2'
+    four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'google_oauth2'
     assert_equal 4, four_year_old.age
 
-    twenty_year_old = build :user, birthday: (Date.today - 20.years), provider: 'google_oauth2'
+    twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'google_oauth2'
     assert_equal 20, twenty_year_old.age
   end
 
@@ -2958,10 +2958,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "age is set exactly for Clever users between ages 4 and 20" do
-    four_year_old = build :user, birthday: (Date.today - 4.years), provider: 'clever'
+    four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'clever'
     assert_equal 4, four_year_old.age
 
-    twenty_year_old = build :user, birthday: (Date.today - 20.years), provider: 'clever'
+    twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'clever'
     assert_equal 20, twenty_year_old.age
   end
 
