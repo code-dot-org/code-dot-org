@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import React from 'react';
 import {mount} from 'enzyme';
-import MarkdownPreview from '@cdo/apps/lib/levelbuilder/MarkdownPreview';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const DEFAULT_PROPS = {
   onChange: () => {},
@@ -11,9 +11,9 @@ const DEFAULT_PROPS = {
     '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
 };
 
-describe('MarkdownPreview', () => {
+describe('TextareaWithMarkdownPreview', () => {
   it('has correct markdown for preview of unit description', () => {
-    const wrapper = mount(<MarkdownPreview {...DEFAULT_PROPS} />);
+    const wrapper = mount(<TextareaWithMarkdownPreview {...DEFAULT_PROPS} />);
     expect(wrapper.contains('Section Name'));
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('textarea').prop('defaultValue')).to.equal(

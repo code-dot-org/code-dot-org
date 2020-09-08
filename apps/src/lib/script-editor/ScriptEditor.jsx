@@ -11,7 +11,7 @@ import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from './LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
-import MarkdownPreview from '@cdo/apps/lib/levelbuilder/MarkdownPreview';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const styles = {
   input: {
@@ -172,7 +172,7 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-        <MarkdownPreview
+        <TextareaWithMarkdownPreview
           markdown={this.state.description}
           onChange={this.handleDescriptionChange}
           label={'Description'}

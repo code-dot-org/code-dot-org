@@ -27,7 +27,7 @@ const styles = {
 /**
  * Component for previewing Markdown for a edit field
  */
-export default class MarkdownPreview extends React.Component {
+export default class TextareaWithMarkdownPreview extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
