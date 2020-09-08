@@ -79,8 +79,6 @@ class AnimationPicker extends React.Component {
         libraryManifest={this.props.libraryManifest}
         hideUploadOption={this.props.hideUploadOption}
         hideAnimationNames={this.props.hideAnimationNames}
-        isBackground={this.props.isBackground}
-        isSpriteLab={this.props.isSpriteLab}
         navigatable={!this.props.isBackground}
         defaultCategoryQuery={this.props.isBackground ? 'backgrounds' : null}
         hideBackgrounds={!this.props.isBackground && this.props.isSpriteLab}
