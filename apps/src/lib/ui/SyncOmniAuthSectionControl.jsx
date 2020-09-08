@@ -10,7 +10,7 @@ import {
   sectionProvider,
   sectionName
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
-import Button, {ButtonColor, ButtonSize} from '../../templates/Button';
+import Button from '../../templates/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const PROVIDER_NAME = {
@@ -131,8 +131,8 @@ export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
     <Button
       __useDeprecatedTag
       text={buttonText(buttonState, providerName)}
-      color={ButtonColor.gray}
-      size={ButtonSize.default}
+      color={Button.ButtonColor.gray}
+      size={Button.ButtonSize.default}
       disabled={buttonState === IN_PROGRESS}
       onClick={onClick}
       {...iconProps(buttonState)}

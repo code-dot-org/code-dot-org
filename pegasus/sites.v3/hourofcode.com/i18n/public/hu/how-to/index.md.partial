@@ -1,5 +1,5 @@
 ---
-title: Útmutató
+title: Hour of Code How-to Guide
 layout: wide
 nav: how_to_nav
 ---
@@ -8,23 +8,46 @@ nav: how_to_nav
 
 # How to plan your Hour of Code
 
-### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján. Egy "Hour of Code" alkalmat könnyű megszervezni, sőt tapasztalat sem szükséges hozzá! Ha további segítséget szeretnél, kereshetsz egy [helyi önkéntest]({{ urls/volunteer_local }}), aki segít a Kódolás Óráját szervezni az osztályodban.
+### Join the movement and introduce your students to computer science with these steps.
 
-### Nézd meg a [résztvevőknek szóló útmutatót, ha még kérdéseid vannak]({{ localized_files/participation_guide }}).
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Nézd meg a [résztvevőknek szóló útmutatót, ha még kérdéseid vannak]({{ localized_files/participation_guide }}).
+
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
+- [Promote your Hour of Code](#promote-your-hour)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [Egyéb "Hour of Code" forrás anyagok oktatóknak](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+* * *
+
+<a id="explore-activities"></a>
+
+## 2. Explore activities and tutorials
 
 Számos vicces [tutorial videót biztosítunk]({{ urls/learn }}) minden korosztálynak és tapasztalati szintnek. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Create your plan for the day
 
 ### Think about your technology needs - computers are optional!
 
@@ -33,11 +56,15 @@ Explore the activities and decide ahead of time if you want to choose a single t
 - Biztosíts fülhallgatókat, vagy kérd meg a tanulókat, hogy hozzanak magukkal, ha a kiválasztott gyakorlat hanggal együtt működik leginkább jól.
 - Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ha a tanulók összefognak, akkor tudják segíteni egymást és kevésbé támaszkodnak a tanárra. Megláthatják azt, hogy az informatika közösségépítő hatású, és együttműködésre sarkall.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Pick a day and time
 
 People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+
+* * *
+
+<a id="promote-your-hour"></a>
 
 ## 4. Promote your Hour of Code
 
@@ -59,7 +86,11 @@ Lead up to the event by sharing [inspirational videos](/promote/resources) highl
 
 Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
-## 5. Start your Hour of Code Strong
+* * *
+
+<a id="how-to-start"></a>
+
+## 5. How to start your Hour of Code strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -74,9 +105,13 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - Magyarázd el, hogyan hat az életünkre a technológia, olyan példákkal, amelyek a fiúk és a lányok számára is érdekesek (beszélj életmentésről, emberek segítéséről, az emberek közötti kapcsolatok ápolásáról stb...).
 - Az osztály gyűjtsön olyan mindennapi dolgokat, amelyeket a kódolás tesz lehetővé.
-- [Itt]({{ urls/girls }}) találhatsz tippeket, hogy lányokat is inspirálj a számítástechnikára.
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
-## 6. Get Coding!
+* * *
+
+<a id="code"></a>
+
+## 6. Get coding!
 
 Vezesd a tanulókat a tevékenységhez
 
@@ -93,11 +128,15 @@ Mi történjen, ha egy tanuló korábban végez?
 - A diákok tutorial videókat nézhetnek és [kipróbálhatnak egy másik Kódolás Óráját is]({{ urls/learn }}).
 - Vagy kérdd meg a korán végző tanulókat, hogy segítsenek egy társuknak, akinek nehezen megy a gyakorlat.
 
-## 7. Celebrate your Students' Success
+* * *
+
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
@@ -108,12 +147,14 @@ Mi történjen, ha egy tanuló korábban végez?
 
 * * *
 
+<a id="other-resources"></a>
+
 ## Egyéb "Kódolás Órája" források tanároknak:
 
 - Látogass el a [Kódolás Órája tanári fórumára](http://forum.code.org/c/plc/hour-of-code), hogy tanácsokat, tippeket és támogatást kapj a többi oktatótól.
 - Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét.
 
-## Mi jön a "Hour of Code" esemény után?
+### Mi jön a "Hour of Code" esemény után?
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 

@@ -6,7 +6,7 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Wie planen Sie Ihr Hour of Code
 
 ### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! Wenn Sie zusätzliche Kräfte zur Unterstützung benötigen, dann können Sie einen [ örtlichen Freiwilligen ]({{ urls/volunteer_local }}) finden, der Ihnen hilft, One Hour of Code in Ihrer Klasse auszuführen.
 
@@ -14,74 +14,74 @@ nav: how_to_nav
 
 ***
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 1. How-To Video anschauen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 2. Explore Activities and Tutorials
+## 2. Tätigkeiten und Tutorials erkunden
 
-Wir bieten eine Vielzahl von unterhaltsamen, [von Schüler für Schüler Tutorials]({{ urls/learn }}) für alle Alters- und Erfahrungsgruppen an. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Wir bieten eine Vielzahl von unterhaltsamen, [von Schüler für Schüler Tutorials]({{ urls/learn }}) für alle Alters- und Erfahrungsgruppen an. Für Studenten ist es populär, selbstgesteuerte Tutorials auszuprobieren, obwohl viele Tätigkeiten Unterrichtspläne für Lehrer enthalten, Diskussionen führen oder die Tätigkeit verlängern.
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+Erkunden die Tätigkeiten und entscheiden vorzeitig, ob Sie ein Tutorial für alle Studenten wählen wollen oder lassen Sie jedes Kind, ihr eigenes Tutorial zu wählen.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+## 3. Erstellen Ihr Tagesplan
 
-### Think about your technology needs - computers are optional!
+### Denken Sie sich an Ihre technologische Anforderungen - Computers sind optional!
 
-- Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Testen Sie Tutorials auf den Schüler-Computern oder Geräten. Stellen Sie sicher, dass sie im Browser mit Ton und Video ordnungsgemäß funktionieren. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+- Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Aber Sie brauchen ein Computer für jedes Kind nicht und Sie können sogar Hour of Code ohne ein Computer machen! Für [ unplugged Tätigkeiten ](/learn), filtern Sie einfach die Classroom Technology Abteilung, um Optionen für "Keine Computers oder Geräte" zu zeigen.
+- Testen Sie Tutorials auf den Schüler-Computern oder Geräten. Stellen Sie sicher, dass sie im Browser mit Ton und Video ordnungsgemäß funktionieren. Geringe Bandbreite haben? Abspielen Sie Videos vor der Klasse, damit jeder Student nicht seine eigene Videos herunterladen wird. Oder probieren Sie die Offline Tutorials.
 - Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle welche mitzubringen, wenn das ausgewählte Tutorial am Besten mit Sound funktioniert.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Wenn Schüler in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf den Lehrer angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
+- Nicht genug Geräte? [Paar Programmierung](https://www.youtube.com/watch?v=vgkahOzFH2Q) benutzen. Wenn Schüler in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf den Lehrer angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-### Pick a day and time
+### Datum und Uhrzeit wählen
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Menschen auf der ganzen Welt anschließen sich in der Hour of Code Feier während CS Education Week (Dezember 9-13) als die neuste Tutorials und Tätigkeiten freigeben sind. Aber Sie können ein Hour of Code jeder Tag des Jahres machen!
 
-## 4. Promote your Hour of Code
+## 4. Ihr Hour of Code bewerben
 
-Now that you've planned your event, it's time to start promoting it!
+Nachdem Sie Ihr Ereignis geplant haben, ist es Zeit, das zu bewerben!
 
-### Tell your School and Community
+### Sagen Sie Ihre Schule und Gemeinschaft
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+Bewerben die Hour of Code zu anderen Lehrern, die wohl bei dem Spaß beitreten wollen! Es ist auch eine großartige Möglichkeit, das PTSA der Schule erreichen oder in Eltern Newsletter teilen, wenn Kinder mehr Aktivitäten oder Tutorials zu Hause probieren wollen!
 
-### Let Volunteers Know by Registering Your Event
+### Lassen Sie Freiwillige wissen durch Registrierung der Ereignis
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Wenn Sie  [ Ihr Hour of Code Ereignis registrieren ](/), werden Sie hilfreiche Emails mit Nachrichten und Tipps zur einem erfolgreichen Hour of Code bekommen. Es ist auch wie Sie lokale Freiwillige wissen lassen, dass Ihre Schule teilnehmen wird.  Freiwillige sind großartige Ressource und können Ihre Klasse über Informatik ansprechen oder hilfen Ihren Studenten mit Hour of Code Tätigkeiten.
 
-### Get your Students Excited
+### Begeistern Ihre Studenten
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Teilen Sie bevor dem Ereignis  [ inspirierende Videos ](/promote/resources), die vielfältige Menschen und kreative Art von Anwendungsbereiche für Informatik zeigen. Oder bestellen inspirierende Poster für Ihr Klassenzimmer! Wenn Menschen etwas fördern, die wie die Studenten aus sehen, fühlen die Studenten sich aufgeregter, an ein Gebiet teilzunehmen.
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Lernen mehr über Poster, Videos, Aufkleber und andere Wege, um [ Ihr Ereignis ](/promote/resources#posters)  zu Ihrer Gemeinschaft zu bewerben.
 
-## 5. Start your Hour of Code Strong
+## 5. Starten Ihr Hour of Code stark
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+Nach dem Beginn Ihres Hour of Code Festes, machen einen guten Start mit diesen Methoden und Tipps.
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+Einladen einen lokalen Freiwilliger, um Ihre Studenten zu inspirieren, per einen Vortrage über Möglichkeiten in Informatik. Es gibt tausende Freiwillige weltweit, die bereit sind, um Ihr Hour of Code durch Unterrichtsbesuche oder Video-Chat zu helfen!
 
 Zeigen Sie ein inspirierendes Video:
 
 - Das originale Code.org Einführungsvideo mit Bill Gates, Mark Zuckerberg und dem NBA Star Chris Bosh. (Es stehen mehrere Versionen zur Verfügung: [1 Minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 Minuten](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9 Minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Mehr inspirierende [Ressourcen ]({{ urls/inspire }})  und [ Videos ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) finden.
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Es ist kein Problem, wenn Sie und Ihre Studenten Neulinge im Bereich Informatiks sind. Hier sind eigene Ideen, um Ihre Hour of Code Tätigkeit vorzustellen:
 
-- Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die Jungen und Mädchen interessieren (Sprechen Sie über Apps und Technologien, die eingesetzt werden, um Leben zu retten, Menschen zu helfen, Menschen zu verbinden etc.).
+- Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die Jungen und Mädchen sich interessieren (beschreiben Sie Leben retten, Menschen helfen, Menschen verbinden, etc.).
 - Zählen Sie gemeinsam Dinge auf, die im Alltag Computerprogramme nutzen.
 - [Hier]({{ urls/girls }}) finden Sie Tipps, wie Sie Mädchen für Informatik begeistern können.
 
 
-## 6. Get Coding!
+## 6. Coding starten!
 
-Bringen sie ihre Student zu ihrer Aktivität
+Führen Ihre Studenten zur Aktivität
 
-- Write the tutorial link on a whiteboard. Den Link, der auf der Seite [Informationen für das ausgewählte Tutorial]({{ urls/learn }}) aufgeführt ist, finden Sie unter der Teilnehmerzahl.
+- Schreiben den Tutorial Link auf das Whiteboard. Den Link, der auf der Seite [Informationen für das ausgewählte Tutorial]({{ urls/learn }}) aufgeführt ist, finden Sie unter der Teilnehmerzahl.
 
 When your students come across difficulties it's okay to respond:
 

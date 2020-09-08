@@ -30,3 +30,18 @@ export const lessonType = PropTypes.shape({
   description_student: PropTypes.string,
   description_teacher: PropTypes.string
 });
+
+/**
+ * @typedef {Object} LessonGroup
+ *
+ * @property {string} displayName
+ * @property {number} id
+ * @property {array} bigQuestion
+ * @property {string} description
+ */
+export const lessonGroupType = PropTypes.shape({
+  id: PropTypes.number,
+  displayName: PropTypes.string,
+  bigQuestions: PropTypes.array,
+  description: PropTypes.string
+});
