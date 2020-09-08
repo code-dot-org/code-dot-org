@@ -1,5 +1,5 @@
 ---
-title: How-to Guide for Hour of Code
+title: Hour of Code How-to Guide
 ---
 
 {{ signup_button }}
@@ -10,15 +10,18 @@ title: How-to Guide for Hour of Code
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Se vår [deltagarguide om du fortfarande har frågor]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Se vår [deltagarguide om du fortfarande har frågor]({{ localized_files/participation_guide }}).
 
-An Hour of Code can also be held **remotely, online**! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
-
-- [1. Watch the Hour of Code how-to video](#how-to-video)
-- [2. Explore activities and tutorials](#explore-activities)
-- [3. Create your plan for the day](#create-your-plan)
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
 - [Marknadsför din Hour of Code](#promote-your-hour)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [Andra Hour of Code-resurser för lärare](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -83,9 +86,9 @@ Lär dig mer om affischer, videos, klistermärken och andra sätt att [marknadsf
 
 * * *
 
-<a id="promote-your-hour"></a>
+<a id="how-to-start"></a>
 
-## 5. Start your Hour of Code Strong
+## 5. How to start your Hour of Code strong
 
 Inled din Hour of Code starkt med några av dessa tips. 
 
@@ -100,11 +103,13 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - Förklara hur teknik påverkar våra liv, med exempel som alla elever i klassrummet kommer att bry sig om och inte endast ett fåtal (berätta om appar och teknik som används för att rädda liv, hjälpa människor, och föra personer närmare, o.s.v.).
 - Gör en lista med vardagsprylar som använder kod tillsammans med dina elever.
-- Se tips för att få tjejer intresserade av datavetenskap [här](http://code.org/girls)
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
 * * *
 
-## 6. Get Coding!
+<a id="code"></a>
+
+## 6. Get coding!
 
 Visa eleverna hur de kommer in till övningen
 
@@ -123,7 +128,9 @@ Vad gör jag om en elev blir färdig tidigt?
 
 * * *
 
-## 7. Celebrate your Students' Success
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [col-33]
 
@@ -138,12 +145,14 @@ Vad gör jag om en elev blir färdig tidigt?
 
 * * *
 
+<a id="other-resources"></a>
+
 ## Andra Hour of Code resurser för lärare:
 
 - Besök [Hour of Code-forumet](http://forum.code.org/c/plc/hour-of-code) för att få råd, insikt och stöd från andra arrangörer.
 - Läs igenom [ vanliga frågor och svar](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## Vad kan jag göra efter Hour of Code?
+### Vad kan jag göra efter Hour of Code?
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 

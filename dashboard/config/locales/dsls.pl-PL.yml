@@ -1861,20 +1861,12 @@ pl-PL:
             program przestanie działać?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program nie zawiedzie. Scrat dotrze do żołędzia.
-          feedback: Niepoprawnie. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
-        - text: Scrat pójdzie złą drogą po pokonaniu ostatniego zakrętu.
-          correct: true
-          feedback: Poprawnie!
-        - text: Scrat wykonuje o kilka kroków za mało i nie zdobywa żołędzia
-          feedback: Niepoprawnie. Wykonanie o jednego kroku za mało, ma miejsce po
-            tym, gdy Scrat skręca w niewłaściwą stronę.
+        - {}
+        - correct: true
+        - correct: true
         - text: Nie wiem.
-          feedback: 'Pierwszym błędem jest, że Scrat idzie w złą stronę po pokonaniu
-            ostatniego skrętu. '
         questions:
-        - text: Spójrz uważnie na kod poniżej. Który błąd sprawi jako pierwszy, że
-            program przestanie działać?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Ptak znajdzie się o krok od świnki.

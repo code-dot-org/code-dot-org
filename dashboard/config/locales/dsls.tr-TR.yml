@@ -1704,19 +1704,12 @@ tr-TR:
             neden olacak ilk hata nedir?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program başarısız olmayacak. Scrat, meşe palamuduna ulaşacak.
-          feedback: Yanlış. Scrat, son dönüşünden sonra yanlış yöne gidiyor.
-        - text: " Scrat, son dönüşünden sonra yanlış yöne gidecek."
-          correct: true
-          feedback: Doğru!
-        - text: Scrat çok az adım atıyor ve meşe palamuduna varamadan duruyor.
-          feedback: Yanlış. Çok az adım atması, Scrat'in yanlış yöne dönüşünden sonra
-            gerçekleşiyor.
+        - {}
+        - correct: true
+        - correct: true
         - text: Bilmiyorum.
-          feedback: 'İlk hata, Scrat''in son dönüşünden sonra yanlış yöne gitmesi. '
         questions:
-        - text: Aşağıdaki kodu dikkatle inceleyin. Bu programın başarısız olmasına
-            neden olacak ilk hata nedir?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Kuş, domuza bir adım kala duracak.

@@ -2327,7 +2327,22 @@
         "ramp_artist_loops9": "Rozwiąż to zadanie rysując kwadrat.",
         "ramp_artist_loops9_2018": "Rozwiąż to zadanie rysując kwadrat.",
         "ramp_artist_loops9_2019": "Rozwiąż to zadanie rysując kwadrat.",
-        "ramp_artist_loops9_2020": "Rozwiąż to zadanie rysując kwadrat."
+        "ramp_artist_loops9_2020": "Rozwiąż to zadanie rysując kwadrat.",
+        "4-5 Bee Nested Loops 2": "Zbierz cały nektar z każdego kwiatka. Użyj zagnieżdżonej pętli. ",
+        "4-5 Bee Nested Loops 3": "Zbierz cały nektar umieszczając początkowy kod w kolejnej pętli.",
+        "4-5 Nested Loops 12": "Czy potrafisz narysować te 36 trójkątów używając zagnieżdżonej pętli?",
+        "4-5 Nested Loops 3": "Stwórz słońce zapętlając początkowy kod w kolejnej pętli. Aby uzyskać ten fajny wzór z pustym środkiem, będziesz musiał skoczyć naprzód o długość trójkąta przed skrętem. ",
+        "4-5 Nested Loops 7": "Zapętl ten wzór 10 razy. \n\nO ile musisz skręcić za każdym razem, gdy zapętlasz?",
+        "4-5 Nested Loops 8": "Zapętl ten kształt 6 razy. O ile musisz skręcić za każdym razem, gdy zapętlasz? ",
+        "4-5 Nested Loops Assessment 1": "Sprawdzian: Użyj zagnieżdżonej pętli by ukończyć wzór. ",
+        "4-5 While Loops 1": "Doprowadź mnie do dołu i wypełnij go dwoma łopatami ziemi przy użyciu bloku `wypełnij`.",
+        "4-5 While Loops 2": "Doprowadź mnie do chałdy ziemi i usuń ją za pomocą łopaty przy użyciu 5 razy bloku \"usuń 1\".",
+        "4-5 While Loops 4": "Wow, popatrz na to! Nie wiem, ile łopat ziemi ten dół pomieści.\\\\\n\n Czy potrafisz napisać program, który będzie używał bloku \"wypełnij\" dopóty, dopóki nie wypełni całego dołu aż do poziomu ziemi?  ",
+        "4-5 While Loops 5": "Wow, teraz są dwa głębokie doły! Czy potrafisz napisać program, który wypełni je całe (aż do poziomu ziemi)?",
+        "4-5 While Loops 6": "Wow, teraz jest tu duża chałda ziemi! Czy potrafisz napisać program, który usunie ją całą?",
+        "4-5 While Loops 7": "Wow, teraz są trzy kupy ziemi! Czy potrafisz napisać program, który usunie każdą z nich?",
+        "4-5 While Loops 8": " To jest naprawdę głęboki dół i duża chałda ziemi.  Ile łopat ziemi trzeba przełożyć do dołu, aby wyrównać teren?",
+        "4-5 While Loops Assessment 1": "Teraz jest tu wiele dołków i chałd ziemi.  Pomóż mi wypełnić doły i usunąć chałdy, by wyrównać teren."
       }
     }
   }
