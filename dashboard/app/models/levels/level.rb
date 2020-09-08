@@ -730,13 +730,38 @@ class Level < ActiveRecord::Base
     (contained_levels + [project_template_level] - [self]).compact
   end
 
+  # There's a bit of trickery here. We consider a level to be
+  # hint_prompt_enabled for the sake of the level editing experience if any of
+  # the scripts associated with the level are hint_prompt_enabled.
+  def hint_prompt_enabled?
+    script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
+  end
+
   private
 
-  # Returns the level name, removing the name_suffix first (if present).
+  # Returns the level name, removing the name_suffix first (if present), and
+  # also removing any additional suffixes of the format "_NNNN" which might
+  # represent a version year.
   def base_name
-    return name unless name_suffix
-    strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
-    name[strip_suffix_regex, 1] || name
+    base_name = name
+    if name_suffix
+      strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
+      base_name = name[strip_suffix_regex, 1] || name
+    end
+    base_name = strip_version_year_suffixes(base_name)
+    base_name
+  end
+
+  # repeatedly strip any version year suffix of the form _NNNN ()e.g. _2017)
+  # from the input string.
+  def strip_version_year_suffixes(str)
+    year_suffix_regex = /^(.*)_[0-9]{4}$/
+    loop do
+      matchdata = str.match(year_suffix_regex)
+      break unless matchdata
+      str = matchdata.captures.first
+    end
+    str
   end
 
   def write_to_file?

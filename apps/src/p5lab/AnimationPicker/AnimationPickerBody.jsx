@@ -48,7 +48,11 @@ export default class AnimationPickerBody extends React.Component {
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     isBackground: PropTypes.bool.isRequired,
-    isSpriteLab: PropTypes.bool.isRequired
+    isSpriteLab: PropTypes.bool.isRequired,
+    navigatable: PropTypes.bool.isRequired,
+    defaultCategoryQuery: PropTypes.string,
+    hideBackgrounds: PropTypes.bool.isRequired,
+    canDraw: PropTypes.bool.isRequired
   };
 
   state = {
@@ -58,14 +62,14 @@ export default class AnimationPickerBody extends React.Component {
   };
   constructor(props) {
     super(props);
-    if (this.props.isBackground) {
-      const categoryQuery = 'backgrounds';
+    if (this.props.defaultCategoryQuery) {
+      const defaultCategoryQuery = this.props.defaultCategoryQuery;
       const currentPage = 0;
       const {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-        categoryQuery
+        defaultCategoryQuery
       });
       this.state = {
-        categoryQuery,
+        defaultCategoryQuery,
         currentPage,
         results,
         pageCount,
@@ -122,7 +126,7 @@ export default class AnimationPickerBody extends React.Component {
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       searchQuery
     });
-    if (!this.props.isBackground && this.props.isSpriteLab) {
+    if (this.props.hideBackgrounds) {
       results = results.filter(
         animation => !animation.categories.includes('backgrounds')
       );
@@ -152,7 +156,7 @@ export default class AnimationPickerBody extends React.Component {
   animationCategoriesRendering() {
     const categories = Object.keys(this.props.libraryManifest.categories || []);
     categories.push('all');
-    if (this.props.isSpriteLab) {
+    if (this.props.hideBackgrounds) {
       return categories
         .filter(category => category !== 'backgrounds')
         .map(category => (
@@ -220,7 +224,7 @@ export default class AnimationPickerBody extends React.Component {
           <div style={animationPickerStyles.navigation}>
             {categoryQuery !== '' && (
               <div style={animationPickerStyles.breadCrumbs}>
-                {!this.props.isBackground && (
+                {this.props.navigatable && (
                   <span
                     onClick={this.onClearCategories}
                     style={animationPickerStyles.allAnimations}
@@ -245,7 +249,7 @@ export default class AnimationPickerBody extends React.Component {
               </div>
             )}
           {((searchQuery === '' && categoryQuery === '') ||
-            (results.length === 0 && !this.props.isBackground)) && (
+            (results.length === 0 && !this.props.canDraw)) && (
             <div>
               <AnimationPickerListItem
                 label={msg.animationPicker_drawYourOwn()}

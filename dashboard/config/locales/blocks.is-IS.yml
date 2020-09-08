@@ -89,9 +89,6 @@ is:
             MOVES.Kick: Stjarna
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gerir {MOVE} {DIR} alltaf"
         options:
@@ -110,9 +107,6 @@ is:
             MOVES.Kick: Stjarna
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: breyta {SPRITE} {PROPERTY} um {VAL}
         options:
@@ -189,9 +183,6 @@ is:
             MOVES.XArmsUp: Teygja
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} gerir {MOVE} {DIR} einu sinni"
         options:
@@ -220,9 +211,6 @@ is:
             MOVES.XArmsUp: Teygja
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'endurtaka hverja {N} takta eftir {START} '
       Dancelab_everySeconds:
@@ -1102,6 +1090,13 @@ is:
             '"z"': z
       gamelab_locationAt:
         text: 'staður x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': norður
+            '"East"': austur
+            '"South"': suður
+            '"West"': vestur
       gamelab_locationMouse:
         text: staður músar
       gamelab_locationOf:

@@ -33,7 +33,9 @@ const initialState = {
   goal: null,
   uploadInProgress: false,
   uploadFilename: null,
-  uploadError: null
+  uploadError: null,
+  isSpriteLab: false,
+  isBackground: false
 };
 
 export default function reducer(state, action) {

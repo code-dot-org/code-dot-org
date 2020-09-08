@@ -225,6 +225,8 @@ tr:
       swipeRightPassThrough-test123:
         title: İşe Alma Senaryoları Toplantısı
         desc: "# Öğrenci Alım Senaryoları Oturumu\\r\n\\r\n## Bilgisayar Bilimi için Sağa Kaydır\\r\nBu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş olan \"Bilgisayar Bilimi için Sağa Kaydır\" adında bir araç kullanacağız. Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız ve öğrencinin sizin Bilgisayar Bilimi İlkeleri kursunuza kaydolması için öğrenciyi ikna etmede kullanılabilecek özel ifadeleri düşüneceksiniz.\\r\n\\r\n### Nasıl Çalışır\\r\nBilgisayar Bilimi için Sağa Kaydır oynarken, öğrenciye söyleyebileceğiniz bir dizi alıntı göreceksiniz. Öğrenciyi kursa kaydolmaya ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum sırasında grup olarak, bir öğrenciyi Bilgisayar Bilimlerine kaydolmasını sağlayacak en etkili ifade türleri üzerine sizin düşüncelerinizi tartışacağız ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını görme şansınız olacak.\\r\n\\r\n\\r\nAşağıda devama tıkladığınızda, size oyunu göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz."
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Robot dostlarım
         desc: Arkadaşların için kod yazarak programlamayı öğren!
@@ -272,23 +274,41 @@ tr:
         desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor. Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
       MoveItMoveIt_2018:
         title: Çabuk, Çabuk Taşı
+      courseB_unplugged_CnC_2018:
+        title: Oluşturmak ve Adil Oynamak Mükemmel
+        desc: Telif Hakkı konusunda ekip tarafından verilen Bilgisayar Bilimi Temellerine borçlu olarak bu ders, paylaşma ve ilham vermeye dayalı yaratıcı süreci öğrencilerin anlamasına yardım etmek için bulunur. Bununla birlikte, yaratıcı ifadenin teşviki ve yaratıcı çalışmada adil davranma gerekliliği gelir.
       courseE_unplugged_CnC_2018:
         title: Dijital Paylaşım
+        desc: Telif Hakkı konusunda ekip  tarafından verilen Bilgisayar Bilimi Temellerine borçlu olarak bu ders, özellikle dijital ortamlarda sahiplik ve telif hakkına saygı göstermenin zorluklarını ve faydalarını öğrencilerin anlamasına yardım etmek için bulunur. Öğrenciler, etik bir dijital vatandaş olmanın önemli bir kısmı olarak sanatçıların haklarına saygı göstermesi için teşvik edilmelidir.
       RelayProgramming_2018:
         title: Röle Programlama
+        desc: Bu aktivite, hata ayıklama ve sebat ile başlayacaktır, sonra öğrenciler ekiplere girdiğinde ve bir defada bir programa bir talimat yazması için birlikte çalıştığında hızlı bir şekilde zamana karşı yarışacaktır. 
       courseB_unplugged_MRF_2019:
         title: Robot dostlarım
         desc: Arkadaşların için kod yazarak programlamayı öğren!
+      BuildingAFoundation_2019:
+        title: 'eksik çeviri: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'eksik çeviri: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
         title: 'Döngüler: Loopy robot dostlarım'
       Conditionals_2019:
         title: Koşullar
         desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir puan alırsın gibi kurallar yaratacaklar
+      courseF_unplugged_powerOfWords_2019:
+        title: 'eksik çeviri: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'eksik çeviri: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'eksik çeviri: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'eksik çeviri: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'eksik çeviri: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'eksik çeviri: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Grafik Kağıdı Programlama
         desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut kullanarak sınfı bir çizim oluşturmaya yönlendirir.
       RelayProgramming_2018_2019:
         title: Röle Programlama
+        desc: Bu aktivite, hata ayıklama ve sebat ile başlayacaktır, sonra öğrenciler ekiplere girdiğinde ve bir defada bir programa bir talimat yazması için birlikte çalıştığında hızlı bir şekilde zamana karşı yarışacaktır. 
       courseD_unplugged_digitalCitizenship_2019:
         title: Bilgisayarsız Etkinlik
         desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
@@ -297,8 +317,19 @@ tr:
         desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir. Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu öğretecek.
       courseE_unplugged_privateInformation_2019:
         title: Özel ve Kişisel Bilgiler
+        desc: Ortak Düşünce Eğitimi tarafından geliştirilen bu ders, çevrimiçi ortamda paylaşmak için güvenli olan bilgi ve güvenli olmayan bilgi arasındaki fark hakkındadır.
+      SongwritingParameters_2019:
+        title: 'eksik çeviri: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'eksik çeviri: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         title: Dijital Paylaşım
+        desc: Telif Hakkı konusunda ekip  tarafından verilen Bilgisayar Bilimi Temellerine borçlu olarak bu ders, özellikle dijital ortamlarda sahiplik ve telif hakkına saygı göstermenin zorluklarını ve faydalarını öğrencilerin anlamasına yardım etmek için bulunur. Öğrenciler, etik bir dijital vatandaş olmanın önemli bir kısmı olarak sanatçıların haklarına saygı göstermesi için teşvik edilmelidir.
+      Internet_2019:
+        title: 'eksik çeviri: en-US.data.unplugged.Internet_2018.title'
+        desc: 'eksik çeviri: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'eksik çeviri: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'eksik çeviri: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Döngüselleşme
         desc: Bu ders bir dans etkinliği ile döngülerle (tekrar) programlama hakkında bilgilendirme yapar.Öğrenciler kolay koreografi yapmayı öğrenecek ve bunu tekrar etmeyi öğrenecekler.
@@ -314,6 +345,8 @@ tr:
       PaperPlanes_2019:
         title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
         desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
+      test-uid-passthrough:
+        desc: "# Öğrenci Alım Senaryoları Oturumu\\r\n\\r\n## Bilgisayar Bilimi için Sağa Kaydır\\r\nBu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş olan \"Bilgisayar Bilimi için Sağa Kaydır\" adında bir araç kullanacağız. Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız ve Bilgisayar Bilimi İlkeleri kursunuza kaydolması için öğrenciyi ikna etmede kullanabileceğiniz özel ifadeleri düşüneceksiniz.\\r\n\\r\n## Nasıl Çalışır\\r\nBilgisayar Bilimi için Sağa Kaydır oynarken, her bir öğrenciye söyleyebileceğiniz bir dizi alıntı göreceksiniz. Belirli bir öğrenciyi kursa kaydolmaya ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum sırasında, bir öğrencinin Bilgisayar Bilimine kaydolmasını sağlayacak en etkili ifade türleri üzerine düşüncelerinizi bir grup olarak tartışacağız ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını görme şansınız olacak.\\r\n<br><br><br><br>\\r\n\\r\n<span style=\"display:none\">iletDüğmesi sonraki-aşama</span>\\r\n\\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\"> \nBilgisayar Bilimi için Sağa Kaydır'ı oynamak için buraya tıklayın</a>\\r\n\\r"
       PlantASeed_2019:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
@@ -331,8 +364,27 @@ tr:
       DigitalFootprint_2019:
         title: Dijital İziniz
         desc: Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını tartışacaklar.
+      courseB_unplugged_CnC_2019:
+        title: Oluşturmak ve Adil Oynamak Mükemmel
+        desc: Telif Hakkı konusunda ekip tarafından verilen Bilgisayar Bilimi Temellerine borçlu olarak bu ders, paylaşma ve ilham vermeye dayalı yaratıcı süreci öğrencilerin anlamasına yardım etmek için bulunur. Bununla birlikte, yaratıcı ifadenin teşviki ve yaratıcı çalışmada adil davranma gerekliliği gelir.
+      GraphingData_2019:
+        title: Verilerin Resmedilmesi
+        desc: Bu derste öğrenciler, bir Oyun Laboratuvarı projesi veya gerçek dünya senaryosundan veri toplayacaktır ve bu veriyi tahmin yapmak için kullanacaktır.
+      courseE_unplugged_accessAbility_2019:
+        title: Erişilebilirlik
+        desc: Varsayımsal uygulamalar üzerinden erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları tasarlayarak erişilebilirliği ve empatinin değerini öğrenin.
+      courseE_simon_says_2019:
+        title: Simon Diyor ki
+        desc: "Bir oyun oynayın ve doğru sonucu elde etmek için hangi komutların gerektiğini düşünün.\\r\n\\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Güçlü Şifreler
+        desc: İnsanların neden şifre kullandığını keşfedin, şifre kullanmanın faydalarını öğrenin ve şifrelerin güçlü ve güvenilir şekilde oluşturulmasına ve korunmasına yönelik stratejileri bulun.
       timeforcs_demo_crowdsourcing:
         title: Kalabalık Kaynaklandırma 'Crowdsourcing'
+        desc: '_Josh not: birinci ders olmasına rağmen, tipik bir bağlantısız ders şekilde bunu biçimlendirdim._'
       timeforcs_demo_conditionals:
         title: Koşullar
         desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir puan alırsın gibi kurallar yaratacaklar
+      TheRightApp_2019:
+        title: Doğru Uygulama
+        desc: "* Günümüzde herkes bilgisayarları, özellikle akıllı telefonları kullanır. \\r\n* Akıllı telefon uygulamaları veya \"uygulamalar\", insanların arkadaşlarla konuşmak, müzik dinleme, alışveriş yapmak veya yalnızca ağı keşfetmek gibi şeyleri yapmasına yardım eder.\\r\n* Programcıların başkalarının ihtiyaçlarını anlaması ve bunları akılda tutarak uygulamaları tasarlaması önemlidir!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

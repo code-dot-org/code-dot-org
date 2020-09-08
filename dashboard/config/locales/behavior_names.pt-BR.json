@@ -1074,6 +1074,10 @@
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
           "swimming left and right": "nadando para a esquerda e para a direita"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "perambulando 2",
+          "wandering 1": "perambulando 1"
         }
       }
     }

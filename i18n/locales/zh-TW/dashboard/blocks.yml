@@ -1115,6 +1115,13 @@ zh-TW:
             '"z"': z
       gamelab_locationAt:
         text: '座標 x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 東
+            '"South"': 南
+            '"West"': 西
       gamelab_locationMouse:
         text: 鼠標位置
       gamelab_locationOf:
