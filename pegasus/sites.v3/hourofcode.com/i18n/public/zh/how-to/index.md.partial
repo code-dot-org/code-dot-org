@@ -1,5 +1,5 @@
 ---
-title: 活動指引
+title: Hour of Code How-to Guide
 layout: wide
 nav: how_to_nav
 ---
@@ -8,36 +8,63 @@ nav: how_to_nav
 
 # How to plan your Hour of Code
 
-### 參與活動，并用下面的步驟向學生們介紹他們第一個小時的計算機科學。 編程一小時的課程對初學者來說都非常容易上手的！ If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Join the movement and introduce your students to computer science with these steps.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
+- [Promote your Hour of Code](#promote-your-hour)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [給教師的其他一小時玩程式活動資源：](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 2. 觀看視頻指導 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+* * *
+
+<a id="explore-activities"></a>
+
+## 2. Explore activities and tutorials
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Create your plan for the day
 
 ### Think about your technology needs - computers are optional!
 
 - 一小時玩程式課程在有網路連線的電腦上會有最佳的體驗。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
 - 在學生的電腦或其他設備上測試教程，確定音效、影片在瀏覽器能正常運作。 Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
 - 如果教程需要音效，請提供耳機或要求學員自備。
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 當學生們合作時，他們會互相幫忙，並減少對老師的依賴。 他們也將瞭解到電腦科學是需社交與合作的。
+- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 當學生們合作時，他們會互相幫忙，並減少對老師的依賴。 他們也將瞭解到計算機科學是需要社交與合作的。
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Pick a day and time
 
 People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+
+* * *
+
+<a id="promote-your-hour"></a>
 
 ## 4. Promote your Hour of Code
 
@@ -59,7 +86,11 @@ Lead up to the event by sharing [inspirational videos](/promote/resources) highl
 
 Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
-## 5. Start your Hour of Code Strong
+* * *
+
+<a id="how-to-start"></a>
+
+## 5. How to start your Hour of Code strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -74,9 +105,13 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - 通過男孩和女孩們都關心的例子，介紹科技如何影響我們的生活（比如拯救生命，幫助人們，連接人們等）
 - 全班一起列出在日常生活中用到程式碼的事情。
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
-## 6. Get Coding!
+* * *
+
+<a id="code"></a>
+
+## 6. Get coding!
 
 Direct students to the activity
 
@@ -93,11 +128,15 @@ What if a student finishes early?
 - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - 或者，請提前完成的學生協助那些在活動遇到麻煩與的同學。
 
-## 7. Celebrate your Students' Success
+* * *
+
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
@@ -108,12 +147,14 @@ What if a student finishes early?
 
 * * *
 
+<a id="other-resources"></a>
+
 ## 給教師的其他一小時玩程式活動資源：
 
 - 造訪[一小時玩程式的教師論壇](http://forum.code.org/c/plc/hour-of-code)，從其他教師身上獲得建議與支援。
 - 觀看[一小時玩程式的常見問答](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。
 
-## Hour of Code之後有什麼？
+### Hour of Code之後有什麼？
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 

@@ -1,12 +1,18 @@
 ---
-title: Etkinlik Rehberi
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # Etüt/Sosyal etkinlik veya okul sonrası faaliyetler için Kod Saati nasıl öğretilir
 
-### Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -28,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanmak isteğinize bağlı
 
-En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayara ihtiyaç yok **yok** hatta hiç bilgisayar olmadan bile Kod-Saati dersleri yapabilirsiniz.
+En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. **Bağlantı hızınız düşük mü?** Videoları sınıfın ön tarafından izletin, böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen içerikleri deneyin.
+Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kulaklıklar edinin ya da öğrencilere kendilerininkini getirmelerini söyleyin.
 
-**Yeterli ekipman yok mu?** O halde [ eşli programlamayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
 
 ## 5. Kod-Saati etkinliğinizi ilham verici bir video ile başlatın
 

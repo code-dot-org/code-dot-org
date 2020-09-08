@@ -373,10 +373,17 @@ pl:
       sections: Sekcje
       help_support: Pomoc i wsparcie
       report_bug: Zgłosić problem
+      report_abuse: Zgłoś nadużycie
       teacher_community: Społeczność nauczycieli
       professional_learning: Kształcenia Profesjonalne
       documentation: Dokumentacja
       tutorials: Samouczki
+      app_lab_documentation: Dokumentacja "App Lab"
+      app_lab_tutorials: Samouczki "App Lab"
+      game_lab_documentation: Dokumentacja "Game Lab"
+      game_lab_tutorials: Samouczki "Game Lab"
+      sprite_lab_documentation: Dokumentacja "Sprite Lab"
+      sprite_lab_tutorials: Samouczki "Sprite Lab"
       educate_overview: Przegląd edukatora
       educate_elementary: Szkoła podstawowa
       educate_middle: Gimnazjum
@@ -559,6 +566,7 @@ pl:
       na bieżąco z postępami i projektami Twojego dziecka. Będziesz także mógł używać
       tego adresu e-mail do odzyskiwania hasła.
     parent_guardian_email_label: Adres e-mail rodzica/opiekuna
+    remove_parent_email_label: Usuń
     none: Żaden
     only_one_parent_email_supported_warning: 'Uwaga: w tej chwili możemy uwzględnić
       tylko jeden adres e-mail rodzica/opiekuna na konto ucznia.'
@@ -613,6 +621,8 @@ pl:
     no_primary_course: Wypróbuj kurs w Code Studio
     choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
     print_certificate: Drukuj Certyfikat
+  certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci
+    sponsorowania Twojej nauki."
   move_students:
     new_section_dne: Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź
       kod innej sekcji.
@@ -651,23 +661,22 @@ pl:
     help_from_html_old: Inżynierowie z Amazon, Google i Microsoft pomogli utworzyć
       te materiały.
     art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa
-      zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
-      Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney.
-      Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th
-      Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year}
-      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies
-      &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.
-      < br / > The Amazing World of Gumball jest znakiem towarowym i &copy; %{current_year}
+      zastrzeżone.<br /> Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
+      Wszystkie prawa zastrzeżone.<br /> Frozen&#8482; © %{current_year} Disney. Wszystkie
+      prawa zastrzeżone.<br /> Ice Age&#8482; © %{current_year} 20th Century Fox.
+      Wszystkie prawa zastrzeżone.<br /> Angry Birds&#8482; © 2009-%{current_year}
+      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone.<br /> Plants vs Zombies
+      &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.<br
+      /> The Amazing World of Gumball jest znakiem towarowym i &copy; %{current_year}
       Cartoon Network.
     art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa
-      zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
-      Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney.
-      Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th
-      Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year}
-      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies
-      &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.
-      < br / > The Amazing World of Gumball jest znakiem towarowym &copy; %{current_year}
-      Cartoon Network.
+      zastrzeżone. Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie
+      prawa zastrzeżone. Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone.
+      Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.
+      Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie
+      prawa zastrzeżone. Plants vs Zombies &#8482; © %{current_year} Electronic Arts
+      Inc. Wszystkie prawa zastrzeżone. The Amazing World of Gumball jest znakiem
+      towarowym &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Zasilany przez Amazon Web Services
@@ -989,6 +998,19 @@ pl:
       mogą być niedostępne dla Twoich uczniów przed zaakceptowaniem zaktualizowanych
       postanowień.
     review_terms: Wyświetl zaktualizowane Warunki korzystania
+  donor_interstitial:
+    title: Twoje bezpłatne kursy CS są możliwe dzięki ...
+    subtitle: 'Chcielibyśmy podziękować hojnym darczyńcom, których wsparcie umożliwiło
+      sukces Code.org. Dążymy do tego, aby Code.org było bezpłatne dla szkół i uczniów
+      na całym świecie, dzięki nieustającej hojności naszych [darczyńców] (%{donors_url})!
+
+'
+    local_supporters: Lokalni zwolennicy
+    global_supporters: Globalni zwolennicy
+    support_codeorg_1: Każdy dolar przekazany Code.org daje szansę większej liczbie
+      uczniów.
+    support_codeorg_2: "[Przekaż darowiznę teraz] (%{donate_url}), aby wesprzeć Code.org."
+    get_started: Zacznij korzystać z Code.org
   school_info_interstitial:
     title: Chcemy przybliżyć Informatykę każdemu uczniowi - pomóż nam śledzić nasze
       postępy!
@@ -1357,6 +1379,8 @@ pl:
     true: Tak
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
+  page_not_found_description: Strona, której szukasz, nie istnieje pod tym adresem.
+    Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną.
   page_not_found_button: Powrót do strony domowej
   copy: Kopia/Kopiuj
   maker:
@@ -1380,3 +1404,4 @@ pl:
     not_now: Nie teraz
   behaviors:
     this_sprite: ten duszek
+  unit_prefix: Jednostka %{n}

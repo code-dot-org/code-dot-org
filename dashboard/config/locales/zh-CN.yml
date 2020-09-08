@@ -111,7 +111,10 @@ zh-CN:
     need_unlock: 未收到解锁指令吗？
     not_linked: 对不起，你的编程一小时账户没有连接到 %{provider}。需要通过输入密码来登录。
     use_clever: 对不起，你的 Code.org 帐号无法连接到%{provider}。请尝试通过 Clever 登录。
+    invalid_provider: 对不起，%{provider} 的账号不可以被连接到 Code.org 账号。
+    migration_required: 对不起，我们不能链接或断接还在使用旧版账号体验的账号。请升级到新版账号体验的账号。
     unable_to_connect_provider: 无法将您的 Code.org 帐户连接到 %{provider}。请重试。
+    disconnect_successful: 我们成功将你的第三方账号从你的Code.org 账号中移除。
     already_in_use: 你的 %{provider} 已连接到另一个 Code.org 帐户。
     already_linked: 你的 %{provider} 已连接到了 Code.org 帐户。
     existing_account:
@@ -471,6 +474,7 @@ zh-CN:
     for_parents_and_guardians: 针对家长和监护人
     link_a_parent_email: 将一位父母/监护人的电子邮箱地址链接到此帐户，以便随时了解你孩子的进度和项目。你还可以使用此电子邮箱地址恢复密码。
     parent_guardian_email_label: 父母/监护人电子邮箱
+    remove_parent_email_label: 移除
     none: 没有
     only_one_parent_email_supported_warning: 注：目前，针对每个学生帐户我们仅支持添加一个父母/监护人电子邮箱地址。
     encrypted: 已加密
@@ -807,6 +811,14 @@ zh-CN:
     reminder_desc_markdown: 我们更新了[服务条款](%{tos_url})和[隐私政策](%{privacy_url})。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，学生可能不能使用
       JavaScript 工具。
     review_terms: 查看更新后的条款
+  donor_interstitial:
+    title: 你的免费计算机科学课程是由...创造的。
+    subtitle: 我们想向能使 Code.org 成功的捐赠人表示感谢。我们下决心要使 Code.org 向所有地区的学校和学生免费开放，感谢您[donors]的（%{donors_url}）！
+    local_supporters: 地区支持者
+    global_supporters: 全球支持者
+    support_codeorg_1: 您所给予 Code.org 的每一元给予了更多学生机会。
+    support_codeorg_2: "[现在捐赠](%{donate_url})以支持 Code.org 。"
+    get_started: '开始使用 Code.org '
   school_info_interstitial:
     title: 我们想将计算机科学带给每一个学生——帮助我们记录进度！
     message: 请在下方输入您的学校信息。
@@ -987,6 +999,8 @@ zh-CN:
       school_city: 学校所在城市
       school_country: 学校所在国家
       colombian_school_city: 学校所在城市
+      colombian_school_department: 学校部门
+      colombian_school_municipality: 学校政府
       colombian_school_name: 学校名称
       ages: 今年将教什么年纪的学生？
       subjects: 今年教的科目是什么？
@@ -1009,6 +1023,7 @@ zh-CN:
       school_country:
         canada: 加拿大
         chile: 智利
+        colombia: 哥伦比亚
         israel: 以色列
         malaysia: 马来西亚
         mexico: 墨西哥
@@ -1057,6 +1072,7 @@ zh-CN:
         csf_express: 计算机科学基础课程（预快速或快速）
         csd: 计算机科学发现
         csp: 计算机科学原理
+        not_applicable: 不适用
       email_opt_in:
         opt_in_yes: 对
         opt_in_no: 不
@@ -1066,6 +1082,9 @@ zh-CN:
       instructions: 请填写下方的表格，表明 1) 你参加了一个由 Code.org 的国际合作伙伴运作的培训研讨班，并且 2) 你同意我们将你的情况告知我们在你所在国家的国际合作伙伴，以便他们支持你作为计算机科学教师的工作。
       thanks_markdown: 感谢提交！我们期待着能帮您熟悉 Code.org 的课程和教学工具。如有任何问题和反馈，请及时告知我们，可向 [support@code.org](%{support_email_url})
         发邮件或在[教师论坛](%{teacher_forum_url})发帖！
+      facilitator_not_listed: 我的主持人没有出现在此列表中
+      facilitator_not_applicable: 不适用
+      organizer_not_listed: 我的组织者没有出现在列表中
     logged_out:
       heading: 感谢您对专业学习计划的兴趣！
       body: 开始前，首先需要登录到 Code.org 帐户。如果希望在启动应用程序之前了解有关该程序的更多信息，请查看 <a href="%{url}">专业学习计划概述</a>。
@@ -1104,3 +1123,6 @@ zh-CN:
     text: "**你是一名父母还是监护人？**将你的电子邮箱链接到此帐户，以便随时了解你孩子的进度和项目！"
     link_your_email: 填写电子邮箱
     not_now: 以后再说
+  behaviors:
+    this_sprite: 这个精灵
+  unit_prefix: 单位%{n}

@@ -152,7 +152,7 @@ id:
             Songwriting:
               name: Menulis lagu
             'Studio: Create a Game':
-              name: 'Studio: Membuat Permainan'
+              name: 'Play Lab: Membuat Permainan'
             'Studio: Create a Story':
               name: 'Studio: Membuat Cerita'
         playlab:
@@ -746,6 +746,8 @@ id:
               name: Menggunakan variabel dalam aplikasi
             While Loops:
               name: Perulangan Selagi
+            Creating Functions with Parameters:
+              name: Membuat fungsi dengan parameter
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -2706,7 +2708,7 @@ id:
             Loops Intro:
               name: Pengenalan Loop
             Loops Unplugged:
-              name: Loop Unplugged
+              name: Loop Tanpa Komputer
             Persistence & Frustration:
               name: Kegigihan & Frustrasi
             Programming:
@@ -2766,7 +2768,7 @@ id:
             Loops Intro:
               name: Pengenalan Loop
             Loops Unplugged:
-              name: Loop Unplugged
+              name: Loop Tanpa Komputer
             More Computer Science:
               name: Ilmu Komputer Selengkapnya
             Persistence & Frustration:

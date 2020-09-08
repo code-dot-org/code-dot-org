@@ -75,6 +75,14 @@ zh-CN:
         questions:
         - text: 根据游戏规则，哪一组卡片的得分是正确的？
         title: 选择题
+        teacher_markdown: |-
+          ##老师们：
+
+          学生们也许会误解如何做，而这里是一个很好的改正的机会。假如学生认为这里**没有**正确的答案，他们也许有一个对条件语的误解。
+
+          这是一个能帮忙解释的视频：
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -4020,6 +4028,10 @@ zh-CN:
           <strong>主要思想：多个屏幕 - 一个代码工作区。</strong> 这是处理 "click" 事件的代码，来设置为<em>有不同图片的另一个屏幕</em> - <em>goodbyeScreen</em>。现在不能看到那张图片或屏幕，因为没有选择那个屏幕。无论如何，它的代码可以写在这里。</p>
 
           </div>
+        teacher_markdown: |-
+          #### 卡到屏幕
+
+          团队可以假设在纸质原型中的每张卡是一个在软件实验室中的一个屏幕，以简略实验过程。事实上，多个相似的屏幕可以由一个屏幕组成，但是屏幕中所含的东西按实际情况切换。在下节课中，学生将会学习这是则么做成的，但是，这是不在本活动应该预计学生使用这种方法。
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # 我的循环机器人朋友们Jr.
@@ -5125,6 +5137,15 @@ zh-CN:
 
           ### 接下来就要试试了！
 
+        teacher_markdown: "#### 事实：\n\n这节课有很多要学，但是许多关于事件是如何在应用实验室中运行是对于这节课是完全不需要的，假如学生对编程在应用实验室中完成的，在这些重点上要清楚：\n\n*没有“画”永久循环\n*`onEvent()`（当事件发生时）模块需要：\n
+          \   *元素标识\n    *一个事件（如“······被点击”或“鼠标在······”）\n    *程序在某事件发生时（这种句子叫做匿名函数，由绿色模块表示）\n
+          \   *在`onEvent()`（当事件发生时）中的程序会在任何时间运行，只要驱动性的事件发生。\n\n####与游戏实验室对比：\n\n在游戏实验室中，我们会用以下方式检测按钮是否被点击并反应：\n\n
+          \   function draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t//
+          Do something\n       \t}\n    }\n\n在应用实验室中,我们会用本方式检测假如一个按钮是否被点击并做什么作为反应：\n\n
+          \   onEvent(\"button\", \"click\", function () {\n    \t// Do something\n
+          \   });\n\n在应用实验室示例中，函数是另一种在onEvent（当事件发生时）函数的成分，只是成分必须是函数本身。我们可以另外建立一个函数然后这样写：\n\n
+          \   function doSomething() {\n    \t// Do something\n    }\n    \n    onEvent(\"button\",
+          \"click\", doSomething);\n\n\n在第二个示例中，注意我们有给予函数`doSomething`（做什么）到`onEvent`（当事件发生时）函数，我们不加入闭合符带后面。这是因为我们没有设定函数作为物品。"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # 远离网络欺凌
@@ -5508,17 +5529,12 @@ zh-CN:
         - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: 这个程序不会失败。松鼠会到达橡子的位置。
-          feedback: 不正确。斯奎特在最后转向时走错了路。
-        - text: 松鼠在转最后一个弯的时候，它会走错路。
-          correct: true
-          feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少，最终不会到达橡子的位置。
-          feedback: 不正确。在斯奎特转向错误的方向后，走的步数太少。
+        - {}
+        - correct: true
+        - correct: true
         - text: 我不知道。
-          feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 这只鸟最终会比猪少走一步。
@@ -7339,10 +7355,33 @@ zh-CN:
         title: 计算机科学发现快速问卷！
       csf_be_a_super_digital_citizen:
         content1: 描述
+        markdown: |-
+          # 超级电子公民
+
+          ## 我们应该在有网络霸凌时怎么做？
       csf_password_power-up:
         content1: 描述
+        markdown: |-
+          # 加强你的密码
+          ## 密码小窍门：
+
+          *使用你记得住的**短语**。
+          *只有**家长**能知道你的密码。
+          *绝对不能使用你的**私人资料**作为密码。
+          *密码必须要是**八字节**长。
+          *在密码中用字母，数字和**符号**。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: 描述
+        markdown: |
+          # STOP 意思
+
+          ## 假如有人在网上对你不友好，你应该怎么做？
+          ***S**离开（Step away）
+          ***T**告诉可信的成年人 （Tell a trusted adult）
+          ***O**
+          ***P**暂停然后在网上想   (Pause and thing online
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           我的网上邻居
@@ -7403,3 +7442,32 @@ zh-CN:
         markdown: "# 在电脑实验室中表现\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\n前往教学计划\n</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
           btn-large btn-primary next-stage submitButton\">继续</a>\n"
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # 个人资料和隐私
+
+          ## 你可以在网上分享什么信息？
+      courseD_EOC_2020:
+        description: 你已经完成了课程D！点击以创建项目。
+      courseE_EOC_2020:
+        description: 你已经完成了课程E！点击以创建项目。
+      csf_digital_trails:
+        markdown: |-
+          # 顺着电子线索
+          ##什么东西是可以在你的电子足迹
+      OPD-K5 About_copy:
+        markdown: "#欢迎到“如何教育计算机科学基础”\n\n<img src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
+          class=\"level-image\">\n\n##这个在线课程是做什么的？ \n这个在线课程时计划用于向老师们介绍 Code.org 的计算机科学基础教纲和资料。以阅读，观看视频，完成互动性难题和回顾学习进程，你会发展属于你自己对计算机科学基础教学的理解。\n\n##这个在线课程是给谁的？\n这个在线课程时设计给**计划教计算机科学基础的小学老师**。这意味着从一般教师到理工科教师到图使馆管理员及在中间的某类职业。\n\n假如你是<a
+          href=\"https://code.org/educate/csd\" target=\"blank\">中学</a>或<a href=\"https://code.org/educate/csp\"
+          target=\"blank\">高中</a>的老师， 我们建议您参考以下资料<a href=\"https://code.org/educate/professional-learning/middle-high\"
+          target=\"blank\">深入性，更专业性的职业成长机会</a>。\n\n##我可以从这个在线课程中学习计算机科学吗？\n虽然这里有机会了解和练习基本编程理论，并了解它们是如何向学生展示的。这不是一个专门性的对成年人开发的课程。不过，在课程的结尾，我们会为您提供其他资料以更深入钻研计算机科学理论。\n\n##为上这个网上课程我需要用经验吗？\n没有过往编程或计算机科学教学经历在写该课程时已经考虑了。
+          \n\n##这个在线课程需要多长时间? \n完成这个课程大概需要4至6小时。\n\n##我可以切换这个课程字的大小吗？\n我们知道并承认文本在此平台可能会有点小！
+          \n\n是文本变大：\n- 在苹果平台上，点击“命令”和“+”；\n- 在Windows系统上，点击“控制（Ctrl）”和“+”。\n\n使文本变小：
+          \n- 在苹果平台上，点击“命令”和“-”；\n- 在Windows系统上，点击“控制（Ctrl）”和“-”。"
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # 语言的力量
+
+          ## 在有人在网上用攻击性的语言时，你应该做什么？
+      courseF_EOC_2020:
+        description: 你已经完成了课程F！点击以创建项目。

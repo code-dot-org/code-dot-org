@@ -605,8 +605,10 @@ class ScriptsControllerTest < ActionController::TestCase
       is_stable: 'on',
       tts: 'on',
       project_sharing: 'on',
+      is_course: 'on',
       peer_reviews_to_complete: 1,
       curriculum_path: 'fake_curriculum_path',
+      family_name: 'coursea',
       version_year: '2020',
       pilot_experiment: 'fake-pilot-experiment',
       editor_experiment: 'fake-editor-experiment',
@@ -797,7 +799,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    (1..2).map {|n| create(:level, name: "Level #{n}")}
+    (1..8).map {|n| create(:level, name: "Level #{n}")}
     script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
     Script.setup([script_file])
 

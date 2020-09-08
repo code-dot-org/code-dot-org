@@ -2331,19 +2331,12 @@ is-IS:
             mun hindra að forritið virki? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Forritið mun ekki bregðast. Skrat mun komast til akarnsins.
-          feedback: Ekki rétt. Skrat fer í ranga átt eftir síðasta snúninginn.
-        - text: Skrat mun fara í ranga átt eftir síðasta snúninginn.
-          correct: true
-          feedback: Rétt!
-        - text: Skrat vantar eitt skref upp á að ná akarninu.
-          feedback: Ekki rétt. Að hann gengur einu skrefi of stutt gerist eftir að
-            Skrat snýr í ranga átt.
+        - {}
+        - correct: true
+        - correct: true
         - text: Veit ekki.
-          feedback: 'Fyrsta villan er að Skrat fer í ranga átt eftir síðasta snúninginn. '
         questions:
-        - text: 'Skoðaðu kóðann hér fyrir neðan vandlega.  Hver er fyrsta villan sem
-            mun hindra að forritið virki? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Fuglinn mun enda einum reit frá svíninu.

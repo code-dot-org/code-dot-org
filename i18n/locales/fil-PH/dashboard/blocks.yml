@@ -88,9 +88,6 @@ fil:
             MOVES.Kick: Bituin
             MOVES.ThisOrThat: Ito o Iyan
             MOVES.Rest: Wala
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: Gagawin ng {SPRITE} ang {MOVE} {DIR} magpakailanman
         options:
@@ -109,9 +106,6 @@ fil:
             MOVES.Kick: Bituin
             MOVES.ThisOrThat: Ito o Iyan
             MOVES.Rest: Wala
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: palitan ang {SPRITE} {PROPERTY} ng {VAL}
         options:
@@ -188,9 +182,6 @@ fil:
             MOVES.XArmsUp: Unatin
             MOVES.ThisOrThat: Ito o Iyan
             MOVES.Rest: Wala
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: Gagawin ng {SPRITE} ang {MOVE} {DIR} nang isang beses
         options:
@@ -219,9 +210,6 @@ fil:
             MOVES.XArmsUp: Unatin
             MOVES.ThisOrThat: Ito o Iyan
             MOVES.Rest: Wala
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ulitin bawat {N} measure makalipas ang {START} '
       Dancelab_everySeconds:
@@ -1106,6 +1094,13 @@ fil:
             '"z"': z
       gamelab_locationAt:
         text: 'Lokasyon x: {X} y {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': Silangan
+            '"South"': South
+            '"West"': West
       gamelab_locationMouse:
         text: Lokasyon ng mouse
       gamelab_locationOf:
