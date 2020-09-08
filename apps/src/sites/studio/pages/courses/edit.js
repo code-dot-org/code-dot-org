@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CourseEditor from '@cdo/apps/templates/courseOverview/CourseEditor';
+import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 

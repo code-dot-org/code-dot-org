@@ -22835,6 +22835,8 @@ es-MX:
           lessons:
             new stage:
               name: nueva etapa
+            Tools:
+              name: Herramientas
             Debugging:
               name: Depuración
             Module 1:

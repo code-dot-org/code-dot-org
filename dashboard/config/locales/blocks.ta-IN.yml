@@ -83,9 +83,6 @@ ta:
             MOVES.Kick: ஸ்டார்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} செய்க {MOVE} {DIR} எப்போதும்"
         options:
@@ -104,9 +101,6 @@ ta:
             MOVES.Kick: ஸ்டார்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
@@ -178,9 +172,6 @@ ta:
             MOVES.XArmsUp: நீட்டவும்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
@@ -209,9 +200,6 @@ ta:
             MOVES.XArmsUp: நீட்டவும்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         text: ஒவ்வொன்றையும் திரும்ப செய்யவும் {N} {UNIT}
         options:
